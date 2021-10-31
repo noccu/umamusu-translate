@@ -1,32 +1,28 @@
 {
     "SEMWBFDUF4T2GPEGXCQHWQA3RENJPKVE": [
         {
-            "jpText": "",
-            "enText": "",
-            "name": "",
-            "enName": "",
-            "pathId": 1084383558868419708
-        },
-        {
             "jpText": "『菊花賞』に向けて成長するため、\r\n絶好の機会であるこの夏合宿。",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 1501193755459555850
+            "pathId": 1501193755459555850,
+            "blockIdx": 1
         },
         {
             "jpText": "本来であれば、トレーニングのみに集中し、\r\n着実に実力をつけていきたいところだが――",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 4520886645151522953
+            "pathId": 4520886645151522953,
+            "blockIdx": 2
         },
         {
             "jpText": "――皆、絶好調のようだね。息を整えたら、\r\n次は200mダッシュに行こう。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -8079701892585485501
+            "pathId": -8079701892585485501,
+            "blockIdx": 3
         },
         {
             "jpText": "は、はいっ……！",
@@ -35,63 +31,66 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "何してるんだ？",
-                    "NextBlock": 5,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 1,
-                    "DifferenceFlag": 2
+                    "jpText": "何してるんだ？",
+                    "enText": "",
+                    "nextBlockIdx": 5
                 },
                 {
-                    "Text": "何してるの？",
-                    "NextBlock": 5,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 2,
-                    "DifferenceFlag": 4
+                    "jpText": "何してるの？",
+                    "enText": "",
+                    "nextBlockIdx": 5
                 }
             ],
-            "pathId": 8691120728176161650
+            "pathId": 8691120728176161650,
+            "blockIdx": 4
         },
         {
             "jpText": "ああ、トレーナー君。彼女たちの自主トレを、\r\n僭越ながら指導させてもらっているところだ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 7474049053242592378
+            "pathId": 7474049053242592378,
+            "blockIdx": 5
         },
         {
             "jpText": "彼女たちにはまだトレーナーがいないんだよ。\r\nであれば私が力になれると思ってね。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 203658890240214279
+            "pathId": 203658890240214279,
+            "blockIdx": 6
         },
         {
             "jpText": "確かに彼女であれば、並みのトレーナー\r\nよりもいい指導が出来るだろう。ただ――",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": -3354613898081956903
+            "pathId": -3354613898081956903,
+            "blockIdx": 7
         },
         {
             "jpText": "自分のトレーニングは問題ないのか？\r\n……とでも言いたげだな。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -2431490428043186422
+            "pathId": -2431490428043186422,
+            "blockIdx": 8
         },
         {
             "jpText": "勿論、君と組んだトレーニング計画には\r\nそのまま従うつもりだ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 8073155386444479909
+            "pathId": 8073155386444479909,
+            "blockIdx": 9
         },
         {
             "jpText": "その辺りの時間配分も計算に入れてある。\r\n想定外の事態に備え、バッファも加味してね。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 1575400498453749208
+            "pathId": 1575400498453749208,
+            "blockIdx": 10
         },
         {
             "jpText": "さて、他に何か気になることは？",
@@ -100,168 +99,189 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "……ない",
-                    "NextBlock": 12,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "……ない",
+                    "enText": "",
+                    "nextBlockIdx": 12
                 }
             ],
-            "pathId": 6301872183572530310
+            "pathId": 6301872183572530310,
+            "blockIdx": 11
         },
         {
             "jpText": "よろしい。さて、ちょうど休憩終わりだ。\r\nまたトレーニングの時間に。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -8871237298254615271
+            "pathId": -8871237298254615271,
+            "blockIdx": 12
         },
         {
             "jpText": "更にその後、トレーニング終わりに\r\n後輩に指導するシンボリルドルフを見かけた。",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 3802083686513167010
+            "pathId": 3802083686513167010,
+            "blockIdx": 13
         },
         {
             "jpText": "――ヒシアマゾンから話は聞いているぞ。\r\n模擬レースで結果を出せず煩悶していると。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -4589905618793034845
+            "pathId": -4589905618793034845,
+            "blockIdx": 14
         },
         {
             "jpText": "……はい。",
             "enText": "",
             "name": "アイネスフウジン",
             "enName": "",
-            "pathId": -5470215357736568719
+            "pathId": -5470215357736568719,
+            "blockIdx": 15
         },
         {
             "jpText": "練習で出せたタイムで走れてたら、\r\n勝てたのに……。",
             "enText": "",
             "name": "メジロライアン",
             "enName": "",
-            "pathId": -3975318335675089056
+            "pathId": -3975318335675089056,
+            "blockIdx": 16
         },
         {
             "jpText": "話を聞いた限り、問題点は明らかに思える。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -2138119970911714710
+            "pathId": -2138119970911714710,
+            "blockIdx": 17
         },
         {
             "jpText": "えっ……！？",
             "enText": "",
             "name": "メジロライアン",
             "enName": "",
-            "pathId": -583086799956190025
+            "pathId": -583086799956190025,
+            "blockIdx": 18
         },
         {
             "jpText": "まず前提として、練習結果がそのまま\r\nレース結果として反映されることは稀だ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 9194439334709636928
+            "pathId": 9194439334709636928,
+            "blockIdx": 19
         },
         {
             "jpText": "その差を埋めるために、皆レース経験を積む。\r\n君たちに今足りないのは経験だろう。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -8102953939510969438
+            "pathId": -8102953939510969438,
+            "blockIdx": 20
         },
         {
             "jpText": "そこを理解してもらった上で、\r\n今できる助言をしよう。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 2601767129618241220
+            "pathId": 2601767129618241220,
+            "blockIdx": 21
         },
         {
             "jpText": "試しに今から、\r\n私と走ってもらえるか？",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 8036446656257816029
+            "pathId": 8036446656257816029,
+            "blockIdx": 22
         },
         {
             "jpText": "……！\r\nもちろんですっ！",
             "enText": "",
             "name": "2人",
             "enName": "",
-            "pathId": -7731744876658151304
+            "pathId": -7731744876658151304,
+            "blockIdx": 23
         },
         {
             "jpText": "ふふっ、ありがとう。\r\nでは準備をしようか。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 7029222709238522669
+            "pathId": 7029222709238522669,
+            "blockIdx": 24
         },
         {
             "jpText": "ほとんどのウマ娘が自由時間を満喫する\r\n夜になっても――",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": -2553304048016136552
+            "pathId": -2553304048016136552,
+            "blockIdx": 25
         },
         {
             "jpText": "悪いね、会長。\r\nアタシらの仕事に付き合わせてさ。",
             "enText": "",
             "name": "ヒシアマゾン",
             "enName": "",
-            "pathId": 210339859667867399
+            "pathId": 210339859667867399,
+            "blockIdx": 26
         },
         {
             "jpText": "何、学園の問題は全て私の問題だ。\r\n気にすることはない。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -1445297879118905825
+            "pathId": -1445297879118905825,
+            "blockIdx": 27
         },
         {
             "jpText": "むしろ皆の一大事に、\r\n立ち会えないほうが寂しいね。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 639752694932295570
+            "pathId": 639752694932295570,
+            "blockIdx": 28
         },
         {
             "jpText": "ははっ、会長らしいです。\r\nそれでは、行きますか。",
             "enText": "",
             "name": "フジキセキ",
             "enName": "",
-            "pathId": -1411658030969220905
+            "pathId": -1411658030969220905,
+            "blockIdx": 29
         },
         {
             "jpText": "――オーバーワークしちゃってる、\r\n頑張り屋さんなポニーちゃんたちを探しに！",
             "enText": "",
             "name": "フジキセキ",
             "enName": "",
-            "pathId": 5266269257411913499
+            "pathId": 5266269257411913499,
+            "blockIdx": 30
         },
         {
             "jpText": "……シンボリルドルフが問題なく\r\n自己管理できているのはわかっている。\n今以上の心配は無用なのだろうが……。",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": -3334938333566635440
+            "pathId": -3334938333566635440,
+            "blockIdx": 31
         },
         {
             "jpText": "――次の日。",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 4276991038358479731
+            "pathId": 4276991038358479731,
+            "blockIdx": 32
         },
         {
             "jpText": "おはよう、トレーナー君。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 717485714480994472
+            "pathId": 717485714480994472,
+            "blockIdx": 33
         },
         {
             "jpText": "早速君に意見を求めたいのだが、\r\nいいだろうか？",
@@ -270,14 +290,13 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "もちろん！",
-                    "NextBlock": 35,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "もちろん！",
+                    "enText": "",
+                    "nextBlockIdx": 35
                 }
             ],
-            "pathId": 5907791249986212013
+            "pathId": 5907791249986212013,
+            "blockIdx": 34
         },
         {
             "jpText": "ありがとう。この合宿期間中に、\r\n更に実力向上の機会を設けたいと思ってね。",
@@ -286,35 +305,37 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "トレーニング計画外でってこと？",
-                    "NextBlock": 36,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "トレーニング計画外でってこと？",
+                    "enText": "",
+                    "nextBlockIdx": 36
                 }
             ],
-            "pathId": -1855362160168510306
+            "pathId": -1855362160168510306,
+            "blockIdx": 35
         },
         {
             "jpText": "そうだ。上乗せする形だな。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -2125433067566028899
+            "pathId": -2125433067566028899,
+            "blockIdx": 36
         },
         {
             "jpText": "ここ数日を過ごしてみて、『菊花賞』を\r\n突破するためには更なる成長が必須と感じた。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 2281331358472733985
+            "pathId": 2281331358472733985,
+            "blockIdx": 37
         },
         {
             "jpText": "故に今あるトレーニングの選択肢以外に、\r\n何か良い方法はあるだろうか？",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -2364906019649920065
+            "pathId": -2364906019649920065,
+            "blockIdx": 38
         },
         {
             "jpText": "彼女のストイックさには頭が下がるが、\r\n今以上にトレーニングを積むことは\n勧められない。ここは……。",
@@ -323,21 +344,18 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "いっぱい食べてパワーをつけよう",
-                    "NextBlock": 40,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "いっぱい食べてパワーをつけよう",
+                    "enText": "",
+                    "nextBlockIdx": 40
                 },
                 {
-                    "Text": "たまにはトレーニングを我慢してみる",
-                    "NextBlock": 55,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "たまにはトレーニングを我慢してみる",
+                    "enText": "",
+                    "nextBlockIdx": 55
                 }
             ],
-            "pathId": 8344025464468378418
+            "pathId": 8344025464468378418,
+            "blockIdx": 39
         },
         {
             "jpText": "……私は更なるトレーニングを、と伝えた\r\nつもりだったが……些か迂遠な表現だったか？",
@@ -346,21 +364,21 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "食事も大事なトレーニング",
-                    "NextBlock": 41,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "食事も大事なトレーニング",
+                    "enText": "",
+                    "nextBlockIdx": 41
                 }
             ],
-            "pathId": -2402462096070933124
+            "pathId": -2402462096070933124,
+            "blockIdx": 40
         },
         {
             "jpText": "その重要性は理解している。\r\nだが君、本音はそこではないだろう？",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -1659272092390473470
+            "pathId": -1659272092390473470,
+            "blockIdx": 41
         },
         {
             "jpText": "これ以上のトレーニングは体に毒だ。\r\nそう考えているね。",
@@ -369,14 +387,13 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "……",
-                    "NextBlock": 43,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "……",
+                    "enText": "",
+                    "nextBlockIdx": 43
                 }
             ],
-            "pathId": -5284557006625078217
+            "pathId": -5284557006625078217,
+            "blockIdx": 42
         },
         {
             "jpText": "……君もエアグルーヴも、\r\n私を心配しすぎだ。",
@@ -385,28 +402,29 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "え？",
-                    "NextBlock": 44,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "え？",
+                    "enText": "",
+                    "nextBlockIdx": 44
                 }
             ],
-            "pathId": -4303152190963244852
+            "pathId": -4303152190963244852,
+            "blockIdx": 43
         },
         {
             "jpText": "2人には、夢について伝えてある。\r\n達成には、尋常でない努力が必要なことも。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -1780485622536482520
+            "pathId": -1780485622536482520,
+            "blockIdx": 44
         },
         {
             "jpText": "だから私は、自分に限界を超えろと命じる。\r\n君も理解してくれていると思っていたが……。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -747228986765169579
+            "pathId": -747228986765169579,
+            "blockIdx": 45
         },
         {
             "jpText": "……これしきで倒れると思われるほど、\r\n私は弱く見えるのか？",
@@ -415,28 +433,29 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "そうじゃない！",
-                    "NextBlock": 47,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "そうじゃない！",
+                    "enText": "",
+                    "nextBlockIdx": 47
                 }
             ],
-            "pathId": 3176251295099691655
+            "pathId": 3176251295099691655,
+            "blockIdx": 46
         },
         {
             "jpText": "……っ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -4113862490852692679
+            "pathId": -4113862490852692679,
+            "blockIdx": 47
         },
         {
             "jpText": "すまない、詰まらないことを言ったね。\r\nこれではまるきり八つ当たりだ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 8855793036681255652
+            "pathId": 8855793036681255652,
+            "blockIdx": 48
         },
         {
             "jpText": "これ以上、皆に心配をかけないよう\r\n私が強くなればいいだけの話だな。",
@@ -445,49 +464,53 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "ルドルフ――",
-                    "NextBlock": 50,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "ルドルフ――",
+                    "enText": "",
+                    "nextBlockIdx": 50
                 }
             ],
-            "pathId": 5791537369846427944
+            "pathId": 5791537369846427944,
+            "blockIdx": 49
         },
         {
             "jpText": "待ってくれ。\r\nその先は1人で考えさせてほしい。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 3057517749919920678
+            "pathId": 3057517749919920678,
+            "blockIdx": 50
         },
         {
             "jpText": "ひとまず君のアドバイスを受け入れるよ。\r\n今夜は豪勢に頂くとしようかな。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -890194308700223060
+            "pathId": -890194308700223060,
+            "blockIdx": 51
         },
         {
             "jpText": "では……\r\nすまなかったね。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -860317352262533915
+            "pathId": -860317352262533915,
+            "blockIdx": 52
         },
         {
             "jpText": "……そう言い残して立ち去る彼女の背中は、\r\n励ましや慰めを拒むほど凛としていて――",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 6151513892793298099
+            "pathId": 6151513892793298099,
+            "blockIdx": 53
         },
         {
             "jpText": "何も言えなかった……。",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 8898774288039152247
+            "pathId": 8898774288039152247,
+            "blockIdx": 54
         },
         {
             "jpText": "……私は更なるトレーニングを、と伝えた\r\nつもりだったが……些か迂遠な表現だったか？",
@@ -496,21 +519,21 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "休むことも大事なトレーニング",
-                    "NextBlock": 56,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "休むことも大事なトレーニング",
+                    "enText": "",
+                    "nextBlockIdx": 56
                 }
             ],
-            "pathId": 3518486541456201871
+            "pathId": 3518486541456201871,
+            "blockIdx": 55
         },
         {
             "jpText": "その重要性は理解している。\r\nだが君、本音はそこではないだろう？",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -5033852188254507110
+            "pathId": -5033852188254507110,
+            "blockIdx": 56
         },
         {
             "jpText": "これ以上のトレーニングは体に毒だ。\r\nそう考えているね。",
@@ -519,14 +542,13 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "……",
-                    "NextBlock": 58,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "……",
+                    "enText": "",
+                    "nextBlockIdx": 58
                 }
             ],
-            "pathId": -5804482809145542357
+            "pathId": -5804482809145542357,
+            "blockIdx": 57
         },
         {
             "jpText": "……君もエアグルーヴも、\r\n私を心配しすぎだ。",
@@ -535,28 +557,29 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "え？",
-                    "NextBlock": 59,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "え？",
+                    "enText": "",
+                    "nextBlockIdx": 59
                 }
             ],
-            "pathId": -5199276381653580497
+            "pathId": -5199276381653580497,
+            "blockIdx": 58
         },
         {
             "jpText": "2人には、夢について伝えてある。\r\n達成には、尋常でない努力が必要なことも。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 8162725121424609098
+            "pathId": 8162725121424609098,
+            "blockIdx": 59
         },
         {
             "jpText": "だから私は、自分に限界を超えろと命じる。\r\n君も理解してくれていると思っていたが……。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 480857215378776852
+            "pathId": 480857215378776852,
+            "blockIdx": 60
         },
         {
             "jpText": "……これしきで倒れると思われるほど、\r\n私は弱く見えるのか？",
@@ -565,28 +588,29 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "そうじゃない！",
-                    "NextBlock": 62,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "そうじゃない！",
+                    "enText": "",
+                    "nextBlockIdx": 62
                 }
             ],
-            "pathId": 3007246491710765388
+            "pathId": 3007246491710765388,
+            "blockIdx": 61
         },
         {
             "jpText": "……っ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 7848523400284745941
+            "pathId": 7848523400284745941,
+            "blockIdx": 62
         },
         {
             "jpText": "すまない、詰まらないことを言ったね。\r\nこれではまるきり八つ当たりだ。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 486337817059488212
+            "pathId": 486337817059488212,
+            "blockIdx": 63
         },
         {
             "jpText": "これ以上、皆に心配をかけないよう\r\n私が強くなればいいだけの話だな。",
@@ -595,49 +619,53 @@
             "enName": "",
             "choices": [
                 {
-                    "Text": "ルドルフ――",
-                    "NextBlock": 65,
-                    "LoopExitNextBlock": -1,
-                    "DifferenceType": 0,
-                    "DifferenceFlag": 0
+                    "jpText": "ルドルフ――",
+                    "enText": "",
+                    "nextBlockIdx": 65
                 }
             ],
-            "pathId": -1574862990941918253
+            "pathId": -1574862990941918253,
+            "blockIdx": 64
         },
         {
             "jpText": "待ってくれ。\r\nその先は1人で考えさせてほしい。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -6189666347539643746
+            "pathId": -6189666347539643746,
+            "blockIdx": 65
         },
         {
             "jpText": "ひとまず君のアドバイスを受け入れるよ。\r\n全く、我慢を強いられるな。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": 7865102927796050040
+            "pathId": 7865102927796050040,
+            "blockIdx": 66
         },
         {
             "jpText": "では……\r\nすまなかったね。",
             "enText": "",
             "name": "シンボリルドルフ",
             "enName": "",
-            "pathId": -6533321529076762204
+            "pathId": -6533321529076762204,
+            "blockIdx": 67
         },
         {
             "jpText": "……そう言い残して立ち去る彼女の背中は、\r\n励ましや慰めを拒むほど凛としていて――",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 6220399193043402555
+            "pathId": 6220399193043402555,
+            "blockIdx": 68
         },
         {
             "jpText": "何も言えなかった……。",
             "enText": "",
             "name": "",
             "enName": "",
-            "pathId": 985492405393694448
+            "pathId": 985492405393694448,
+            "blockIdx": 69
         }
     ]
 }

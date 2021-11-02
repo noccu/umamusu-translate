@@ -6,6 +6,7 @@ If the content is already present in [translations](translations/) or you are TL
 Needed:
 - UmaMusu (DMM)
     - Possibly works on other versions but you're on your own then...
+- All game data downloaded (likely)
 - Install [python](https://www.python.org/downloads/) 3.6+
 - Install dependencies
     - From project root: `pip install -r src\requirements.txt`
@@ -25,8 +26,11 @@ Recommended:
 
 # Translating
 
-Simply open the files in a text editor or edit them on github and write the translations in the provided enText or enName fields.
-**Don't change anything else.**  
+Simply open the files in a text editor or edit them on github and write the translations in the provided enText or enName fields. BlockIdx is sequential and can help you follow a route through choices
+
+**Don't change anything else. It's there so text can be put back in the right place.**  
+**Please do not add global size markup to every line, but only when needed. Global size will be done in code if required later.**
+
 `\n` and `\r\n` are line breaks. Both essentially mean the same thing.
 As you can see, the game uses both. I don't know what difference it makes in game, if any.  
 [Unity Rich Text](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html) should be supported.
@@ -38,5 +42,5 @@ TODO: Integrate machine-tl.
 
 # Sharing
 
-If you used git; commit your changes (in organized chunks) and make a Pull Request once all done.  
+If you used git; commit your changes (in organized chunks preferably) and make a Pull Request once all done.  
 If not; upload your new files somewhere and open an Issue.

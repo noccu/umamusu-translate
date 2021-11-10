@@ -1,7 +1,7 @@
 import os
+from pathlib import Path
 import UnityPy
 import json
-import re
 import sqlite3
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
@@ -16,7 +16,7 @@ EXTRACT_GROUP = args.getArg("-g", "__")
 EXTRACT_ID = args.getArg("-id", "____")
 EXTRACT_LIMIT = args.getArg("-l", -1)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
-EXPORT_DIR = args.getArg("-dst", os.path.realpath("translations/"))
+EXPORT_DIR = args.getArg("-dst", "translations/")
 OVERWRITE_DST = args.getArg("-O", False)
 
 def queryDB():
@@ -28,50 +28,77 @@ def queryDB():
     return results
 
 
-def get_meta(filePath: str) -> tuple[str, UnityPy.environment.files.ObjectReader]:
-    env = UnityPy.load(filePath)
-    return env.file.name, next(iter(env.container.values())).get_obj()
+def extractAssets(path):
+    env = UnityPy.load(path)
+    index = next(iter(env.container.values())).get_obj()
 
-def extractFiles(obj, bundleName: str):
-    if obj.serialized_type.nodes:
+    if index.serialized_type.nodes:
+        tree = index.read_typetree()
         export = {
-            bundleName: list()
+            'version': 2,
+            'bundle': env.file.name,
+            'storyId': tree['StoryId'],
+            'title' : tree['Title'],
+            'text': list()
         }
-        tree = obj.read_typetree()
-        title = tree['Title']
         for block in tree['BlockList']:
             for clip in block['TextTrack']['ClipList']:
                 pathId = clip['m_PathID']
-                o = extractText(obj.assets_file.files[pathId])
-                if not o:
+                textData = extractText(index.assets_file.files[pathId])
+                if not textData:
                     continue
-                o['pathId'] = pathId  # important for re-importing           
-                o['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
-                export[bundleName].append(o)
-        return (tree["StoryId"], title, export)
+                textData['pathId'] = pathId  # important for re-importing           
+                textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
+                transferExisting(env.file.name, tree['StoryId'], textData)
+                export['text'].append(textData)
+        return export
 
 
 def extractText(obj):
     if obj.serialized_type.nodes:
         tree = obj.read_typetree()
         o = {
+            'jpName': tree['Name'],
+            'enName': "",  # todo: auto lookup
             'jpText': tree['Text'],
             'enText': "",
-            'name': tree['Name'],
-            'enName': "",  # todo: auto lookup
+            'nextBlock': tree['NextBlock'] # maybe for adding blocks to split dialogue later
         }
-        choices = tree['ChoiceDataList']
+        choices = tree['ChoiceDataList'] #always present
         if choices:
-            o['choices'] = []
+            o['choices'] = list()
             for c in choices:
                 o['choices'].append({
                     'jpText': c['Text'],
                     'enText': "",
-                    'nextBlockIdx': c['NextBlock']
+                    'nextBlock': c['NextBlock']
                 })
 
-        # return if text isn't empty
         return o if o['jpText'] else None
+
+def transferExisting(bundle, storyId, textData):
+    group, id, idx = parseStoryId(storyId)
+    existing = None
+    search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx} *")
+    for file in search:
+        if file.is_file():
+            existing = common.readJson(file)
+            break
+
+    if existing:
+        ver = existing['version'] if "version" in existing else 1
+        if ver == 1: textList = existing[bundle]
+        elif ver == 2: textList = existing['text']
+        
+        for block in textList:
+            if block['blockIdx'] == textData['blockIdx']:
+                textData['enText'] = block['enText']
+                textData['enName'] = block['enName']
+                if 'choices' in block:
+                    for idx, choice in enumerate(textData['choices']):
+                        choice['enText'] = block['choices'][idx]['enText']
+    return
+
 
 
 def exportData(data, filepath):
@@ -82,38 +109,29 @@ def exportData(data, filepath):
             f.write(export)
 
 
-def lookupId(id):
-    # todo: implement
-    return False
-def lookupGroup(id):
-    # todo: implement
-    return False
-
-
-def exportAsset(file):
-    assetName, obj = get_meta(file)
-    storyId, title, data = extractFiles(obj, assetName)
-    m = re.match(r"(\d\d)(\d{4,4})(\d+)", storyId)
-    if m:
-        group, id, idx = m.groups()
+def parseStoryId(storyId):
+    if len(storyId) == 9:
+       return storyId[:2], storyId[2:6], storyId[6:9]
     else:
-        print(f"ID error in {assetName}, matching {storyId}")
-        return
+        raise ValueError("Invalid Story ID format.")
 
-    groupName = lookupGroup(id)
-    groupString = f"{group} ({groupName})" if groupName else group
-    idName = lookupId(id)
-    idString = f"{id} ({idName})" if idName else id
-    idxString = f"{idx} ({title})"
-    path = f"{os.path.join(EXPORT_DIR, groupString, idString, idxString)}.json"
 
-    exportData(data, path)
+def exportAssets(bundle: str):
+    importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
+    data = extractAssets(importPath)
+
+    group, id, idx = parseStoryId(data['storyId'])
+
+    idxString = f"{idx} ({data['title']})"
+
+    exportPath = f"{os.path.join(EXPORT_DIR, group, id, idxString)}.json"
+    exportData(data, exportPath)
 
 
 def main():
     print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
     q = queryDB()
-    for file, in q:
-        exportAsset(os.path.join(GAME_ASSET_ROOT, file[0:2], file))
+    for bundle, in q:
+        exportAssets(bundle)
 
 main()

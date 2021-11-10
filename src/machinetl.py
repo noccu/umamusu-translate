@@ -41,25 +41,17 @@ async def startServer():
         STOP = asyncio.Future()
         await STOP  # run until stopped
 
-def readJsonFile(file) -> dict:
-    with open(file, "r", encoding="utf8") as f:
-        return json.load(f)
-
-def writeJsonFile(file, data):
-    with open(file, "w", encoding="utf8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
 def startTranslation(client, group, id):
     if TARGET_FILE: files = [TARGET_FILE]
     else: files = common.searchFiles(group, id)
 
     for file in files:
-        parsedFile = readJsonFile(file)
+        parsedFile = common.readJsonFile(file)
         fileData = getFileData(parsedFile)
         for dataBlock in fileData:
             yield dataBlock
         # parsedFile is updated
-        writeJsonFile(file, parsedFile)
+        common.writeJsonFile(file, parsedFile)
 
 
 def getFileData(fileData):

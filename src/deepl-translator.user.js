@@ -53,7 +53,7 @@ class Translator {
         clearInterval(this.interval)
         if (this.r) {
             if (this.clearText) this.input.value = ""
-            this.r(this.output.value)
+            this.r(this.output.value.trim())
             this.r = undefined
         }
         else console.error("Received translation but no Promise set.") // This should never trigger

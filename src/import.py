@@ -63,6 +63,15 @@ def swapAssetData(jsonImport: dict):
                     if choice['enText']:
                         jpChoices[idx]['Text'] = choice['enText']
 
+        if 'coloredText' in textData:
+            jpColored, enColored = assetData['ColorTextInfoList'], textData['coloredText']
+            if len(jpColored) != len(enColored):
+                print(f"Colored text lenghts do not match, skipping")
+            else:
+                for idx, text in enumerate(textData['coloredText']):
+                    if text['enText']:
+                        jpColored[idx]['Text'] = text['enText']
+
         asset.save_typetree(assetData)
     if assetsSkipped == len(textList):
         bundleChanged = False

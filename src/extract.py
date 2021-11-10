@@ -74,6 +74,15 @@ def extractText(obj):
                     'nextBlock': c['NextBlock']
                 })
 
+        textColor = tree['ColorTextInfoList'] #always present
+        if textColor:
+            o['coloredText'] = list()
+            for c in textColor:
+                o['coloredText'].append({
+                    'jpText': c['Text'],
+                    'enText': ""
+                })
+
         return o if o['jpText'] else None
 
 def transferExisting(bundle, storyId, textData):

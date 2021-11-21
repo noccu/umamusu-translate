@@ -14,7 +14,7 @@ TARGET_ID = args.getArg("-id", False)
 TARGET_FILE = args.getArg("-src", False)
 
 async def handler(client: server.WebSocketServerProtocol, path):
-    print(f"New client connected")
+    print("New client connected")
     async for message in client:
         msgData = json.loads(message)
         if msgData['action'] == "connect":

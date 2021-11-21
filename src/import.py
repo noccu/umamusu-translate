@@ -56,7 +56,7 @@ def swapAssetData(jsonImport: dict):
         if 'choices' in textData:
             jpChoices, enChoices = assetData['ChoiceDataList'], textData['choices']
             if len(jpChoices) != len(enChoices):
-                print(f"Choice lenghts do not match, skipping")
+                print("Choice lenghts do not match, skipping")
             else:
                 for idx, choice in enumerate(textData['choices']):
                     # ? Not sure if guaranteed same order. Maybe do a search on jpText instead?
@@ -66,7 +66,7 @@ def swapAssetData(jsonImport: dict):
         if 'coloredText' in textData:
             jpColored, enColored = assetData['ColorTextInfoList'], textData['coloredText']
             if len(jpColored) != len(enColored):
-                print(f"Colored text lenghts do not match, skipping")
+                print("Colored text lenghts do not match, skipping")
             else:
                 for idx, text in enumerate(textData['coloredText']):
                     if text['enText']:

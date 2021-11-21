@@ -52,6 +52,10 @@ class Args:
                 except IndexError:
                     val = ""
                 if val and not val.startswith("-"):
+                    if val.startswith('"'):
+                        while not val.endswith('"'):
+                            idx += 1
+                            val += args[idx + 1]
                     self.setArg(name, val)
                     idx += 2  # get next opt
                 else:

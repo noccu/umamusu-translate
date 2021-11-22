@@ -8,33 +8,31 @@
 // @description Translate API for DeepL using WebSockets
 // ==/UserScript==
 
-//todo: remove userscript data and use with selenium
+//todo: remove userscript data and use with selenium or someshit
 
 'use strict'
 
 class Translator {
     input = document.querySelector("textarea.lmt__source_textarea")
     output = document.querySelector("textarea.lmt__target_textarea")
-    tl = false
     obs = new MutationObserver(this.rcvText.bind(this))
-    r = undefined
-    clearText = false // DeepL seems to be affected by previous text sometimes. This might good for sequential text like stories (?), perhaps not for random text.
-    timeout = 5000
-    retries = 3
+    clearText = false // DeepL seems to be affected by previous text sometimes. This might good for sequential text like stories (?), perhaps not for random text. Idk
+    timeout = 3000
+    retries = 2
 
     constructor(clear) {
         this.obs.observe(document.querySelector("#target-dummydiv"), { childList: true })
         if (clear) this.clearText = clear
-        // this.output.addEventListener("input", this.rcvText.bind(this))
     }
     sendText(txt) {
         this.tl = true
         this.input.value = txt
         this.input.dispatchEvent(new InputEvent("input"))
         let attempt = 0
-        this.interval = setInterval(() => {
+        this.unstuck = setInterval(() => {
             if (attempt < this.retries) {
                 console.log(`No response from DeepL after ${this.timeout/1000}s. Retrying entry... (${attempt+1}/${this.retries})`)
+                this.input.dispatchEvent(new Event("change"))
                 this.input.dispatchEvent(new InputEvent("input"))
                 attempt++;
             }
@@ -42,7 +40,7 @@ class Translator {
                 console.log("Adding space to attempt unlock...")
                 this.input.value += " "
                 this.input.dispatchEvent(new InputEvent("input"))
-                clearInterval(this.interval)
+                clearInterval(this.unstuck)
             }
         }, this.timeout)
         return new Promise(r => this.r = r)
@@ -50,7 +48,7 @@ class Translator {
     rcvText() {
         if (!this.tl || !this.output.value) return
         this.tl = false
-        clearInterval(this.interval)
+        clearInterval(this.unstuck)
         if (this.r) {
             if (this.clearText) this.input.value = ""
             this.r(this.output.value.trim())
@@ -60,13 +58,14 @@ class Translator {
     }
 }
 
-let PREV_TL
+// let PREV_TL
 const DEEPL = new Translator(true)
 
 async function getTranslatedText(srcText) {
     let tl = await DEEPL.sendText(srcText)
+    // There are instances where the text is actually the same or is translated the exact same way so this is sort of not that useful, and not really needed from experience. Kept here for posterity.
     // if (tl == PREV_TL) { throw "Translated text has not changed" }
-    PREV_TL = tl
+    // PREV_TL = tl
     return tl;
 }
 

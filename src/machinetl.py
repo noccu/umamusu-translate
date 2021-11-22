@@ -15,63 +15,68 @@ TARGET_FILE = args.getArg("-src", False)
 
 async def handler(client: server.WebSocketServerProtocol, path):
     print("New client connected")
+    tl = Translator(client)
     async for message in client:
         msgData = json.loads(message)
         if msgData['action'] == "connect":
-            fileData = startTranslation(client, TARGET_GROUP, TARGET_ID)
+            asyncio.create_task(tl.translate())
         elif msgData['action'] == "tl-res":
-            recvTl(dataBlock, msgData)
+            tl.recvTl(msgData)
         else:
             print(f"Unknown message: {message}")
             continue
-
-        try:
-            dataBlock = next(fileData)
-            # translate(client, dataBlock)
-            await requestTl(client, dataBlock)
-        except StopIteration:
-            await client.close()
-            STOP.set_result(True)
-
-# async def translate(client, dataBlock):
         
 async def startServer():
     async with websockets.serve(handler, "localhost", 61017):
         global STOP 
         STOP = asyncio.Future()
         await STOP  # run until stopped
+class Translator:
+    def __init__(self, client: server.WebSocketServerProtocol):
+        if TARGET_FILE: self.files = [TARGET_FILE]
+        else: self.files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+        self.client = client
+        self.loop = asyncio.get_running_loop()
 
-def startTranslation(client, group, id):
-    if TARGET_FILE: files = [TARGET_FILE]
-    else: files = common.searchFiles(group, id)
+    def _entryGenerator(self, file: common.TranslationFile):
+        for block in file.getTextBlocks():
+            if block['jpText']:
+                yield block
+            if 'coloredText' in block: 
+                for entry in block['coloredText']:
+                    yield entry
+            if 'choices' in block:
+                for entry in block['choices']:
+                    yield entry
 
-    for file in files:
-        parsedFile = common.readJsonFile(file)
-        fileData = getFileData(parsedFile)
-        for dataBlock in fileData:
-            yield dataBlock
-        # parsedFile is updated
-        common.writeJsonFile(file, parsedFile)
+    def _fileGenerator(self):
+        for file in self.files:
+            yield common.TranslationFile(file)
 
+    async def translate(self):
+        for file in self._fileGenerator():
+            for entry in self._entryGenerator(file):
+                # Skip already translated text
+                if not entry['enText']:
+                    entry['enText'] = await self.requestTl(entry['jpText'])
+            file.save()
+        await self.client.close()
+        STOP.set_result(True)
 
-def getFileData(fileData):
-    for _, content in fileData.items():
-        return (dataBlock for dataBlock in content if not dataBlock['enText'])
+    async def requestTl(self, text: str):
+        await self.client.send(json.dumps({
+            'action': "tl",
+            'text': text,
+            }, ensure_ascii=False))
+        self.currentTl = self.loop.create_future()
+        return await self.currentTl
 
-async def requestTl(client: server.WebSocketServerProtocol, dataBlock: dict):
-    await client.send(json.dumps({
-        'action': "tl",
-        'text': dataBlock['jpText']
-        }, ensure_ascii=False))
+    def recvTl(self, tl):
+        self.currentTl.set_result(tl['text'])
 
-def recvTl(data, tl):
-    data['enText'] = tl['text']
 
 def main():
     asyncio.run(startServer())
     # #todo: start headless browser
 
-if not TARGET_GROUP:
-    print("Group is required. Pass arg -h for usage.")
-    raise SystemExit
 main()

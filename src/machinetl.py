@@ -60,7 +60,7 @@ class Translator:
                 # Skip already translated text
                 if not entry['enText']:
                     text = textprocess.process(entry['jpText'], {"noNewlines": True})
-                    entry['enText'] = textprocess.process(await self.requestTl(text), {"lineLen": False}) # defer to default
+                    entry['enText'] = textprocess.process(await self.requestTl(text), {"lineLen": False, "replace": True}) # defer to default
             file.save()
         await self.client.close()
         STOP.set_result(True)

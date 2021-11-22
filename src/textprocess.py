@@ -19,6 +19,8 @@ def process(text: str, options: dict):
         text = cleannewLines(text)
     if "lineLen" in options:
         text = adjustLength(text, options["lineLen"] or LINE_LENGTH)
+    if "replace" in options:
+        text = replace(text)
     return text
 
 def cleannewLines(text: str):
@@ -55,6 +57,12 @@ def adjustLength(text: str, lineLen: int = 0, numLines: int = 0, targetLines: in
         print("Exceeded target lines at:", lines)
     return "\n".join(lines)
 
+def replace(text: str):
+    data = common.readJson("src/data/replacer.json")
+    for sub in data:
+        text = re.sub(sub['re'], sub['repl'], text)
+    return text
+
 def main():
     if TARGET_FILE:
         files = [TARGET_FILE]
@@ -66,7 +74,7 @@ def main():
         file = common.TranslationFile(file)
         for block in file.getTextBlocks():
             if not "enText" in block or len(block['enText']) == 0: continue
-            block['enText'] = process(block['enText'], {"lineLen": LINE_LENGTH})
+            block['enText'] = process(block['enText'], {"lineLen": LINE_LENGTH, "replace": True})
         file.save()
     print("Files processed.")
 

@@ -47,9 +47,9 @@ def extractAssets(path):
                 textData = extractText(index.assets_file.files[pathId])
                 if not textData:
                     continue
-                textData['pathId'] = pathId  # important for re-importing           
+                textData['pathId'] = pathId  # important for re-importing
                 textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
-                transferExisting(env.file.name, tree['StoryId'], textData)
+                transferExisting(tree['StoryId'], textData)
                 export['text'].append(textData)
         return export
 
@@ -85,27 +85,27 @@ def extractText(obj):
 
         return o if o['jpText'] else None
 
-def transferExisting(bundle, storyId, textData):
+def transferExisting(storyId, textData):
+    if OVERWRITE_DST: return
     group, id, idx = parseStoryId(storyId)
     existing = None
     search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx} *")
     for file in search:
         if file.is_file():
-            existing = common.readJson(file)
+            existing = common.TranslationFile(file)
             break
 
     if existing:
-        ver = existing['version'] if "version" in existing else 1
-        if ver == 1: textList = existing[bundle]
-        elif ver == 2: textList = existing['text']
-        
-        for block in textList:
+        for block in existing.getTextBlocks():
             if block['blockIdx'] == textData['blockIdx']:
                 textData['enText'] = block['enText']
                 textData['enName'] = block['enName']
                 if 'choices' in block:
                     for idx, choice in enumerate(textData['choices']):
                         choice['enText'] = block['choices'][idx]['enText']
+                if 'coloredText' in block:
+                    for idx, cText in enumerate(textData['coloredText']):
+                        cText['enText'] = block['coloredText'][idx]['enText']
     return
 
 

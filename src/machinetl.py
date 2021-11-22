@@ -3,6 +3,7 @@ import websockets
 from websockets import server
 import json
 import common
+import textprocess
 
 # Globals & Parameter parsing
 args = common.Args().parse()
@@ -25,10 +26,10 @@ async def handler(client: server.WebSocketServerProtocol, path):
         else:
             print(f"Unknown message: {message}")
             continue
-        
+
 async def startServer():
     async with websockets.serve(handler, "localhost", 61017):
-        global STOP 
+        global STOP
         STOP = asyncio.Future()
         await STOP  # run until stopped
 class Translator:
@@ -42,7 +43,7 @@ class Translator:
         for block in file.getTextBlocks():
             if block['jpText']:
                 yield block
-            if 'coloredText' in block: 
+            if 'coloredText' in block:
                 for entry in block['coloredText']:
                     yield entry
             if 'choices' in block:
@@ -58,7 +59,8 @@ class Translator:
             for entry in self._entryGenerator(file):
                 # Skip already translated text
                 if not entry['enText']:
-                    entry['enText'] = await self.requestTl(entry['jpText'])
+                    text = textprocess.process(entry['jpText'], {"noNewlines": True})
+                    entry['enText'] = textprocess.process(await self.requestTl(text), {"lineLen": False}) # defer to default
             file.save()
         await self.client.close()
         STOP.set_result(True)

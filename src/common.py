@@ -10,7 +10,7 @@ GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
 
 
-def searchFiles(IMPORT_GROUP, IMPORT_ID):
+def searchFiles(IMPORT_GROUP, IMPORT_ID) -> list:
     found = list()
     for root, dirs, files in os.walk("translations/"):
         depth = len(dirs[0]) if dirs else 3
@@ -21,7 +21,7 @@ def searchFiles(IMPORT_GROUP, IMPORT_ID):
         found.extend(os.path.join(root, file) for file in files)
     return found
 
-def readJson(file):
+def readJson(file) -> dict:
     with open(file, "r", encoding="utf8") as f:
         return json.load(f)
 
@@ -64,6 +64,32 @@ class Args:
             else: raise SystemExit("Invalid arguments")
         return self
 
+class TranslationFile:
+    def __init__(self, file):
+        self.file = file
+        self.data = readJson(file)
+        self.version = self._getVersion()
+
+    def _getVersion(self) -> int:
+        if 'version' in self.data:
+            return self.data['version']
+        else:
+            return 1
+
+    def getTextBlocks(self) -> list:
+        if self.version > 1:
+            return self.data['text']
+        else:
+            return list(self.data.values())[0]
+
+    def getBundle(self):
+        if self.version > 1:
+            return self.data['bundle']
+        else:
+            return list(self.data.keys())[0]
+
+    def save(self):
+        writeJsonFile(self.file, self.data)
 
 def usage(args: str, *msg: str):
     joinedMsg = '\n'.join(msg)

@@ -1,5 +1,6 @@
 import common
 import re
+from math import ceil
 
 args = common.Args().parse()
 if args.getArg("-h"):
@@ -10,7 +11,7 @@ if args.getArg("-h"):
 TARGET_GROUP = args.getArg("-g", None)
 TARGET_ID = args.getArg("-id", None)
 TARGET_FILE = args.getArg("-src", None)
-LINE_LENGTH = args.getArg("-ll", 63)
+LINE_LENGTH = int(args.getArg("-ll", 63))
 
 if not TARGET_FILE and not TARGET_GROUP and not TARGET_ID: raise SystemExit("At least 1 arg is required.")
 
@@ -28,16 +29,15 @@ def cleannewLines(text: str):
 
 def adjustLength(text: str, lineLen: int = 0, numLines: int = 0, targetLines: int = 0):
     if len(text) < lineLen:
-        print("Short text line, skipping: ", text, "")
+        print("Short text line, skipping: ", text)
         return text
-
 
     if lineLen > 0:
         #check if it's ok already
         lines = text.splitlines()
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong:
-            print("Text passes length check, skipping: ", text, "")
+            print("Text passes length check, skipping: ", text)
             return text
 
         #adjust if not
@@ -46,11 +46,11 @@ def adjustLength(text: str, lineLen: int = 0, numLines: int = 0, targetLines: in
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{1,{lineLen}}}(?= |$)|(?<= ).+$", text)
         nLines = len(lines)
         if nLines > 1 and len(lines[-1]) < min(lineLen, len(text)) / nLines:
-            print("Last line is short, balancing on line number: ", lines, "")
-            return adjustLength(text, numLines = nLines)
+            print("Last line is short, balancing on line number: ", lines)
+            return adjustLength(text, numLines = nLines, targetLines=nLines)
 
     elif numLines > 0:
-        lineLen = len(text) / numLines
+        lineLen = ceil(len(text) / numLines)
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{{lineLen},}}?(?= |$)|(?:(?<= )|(?<=^)).+$", text)
 
     if targetLines > 0 and len(lines) > targetLines:

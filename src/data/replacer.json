@@ -1,6 +1,6 @@
 [
     {
-        "re": "\\.+ ?\\.+",
+        "re": " ?\\.+ ?\\.+",
         "repl": "…"
     },
     {
@@ -26,5 +26,9 @@
     {
         "re": "himself",
         "repl": "herself"
+    },
+    {
+        "re": "(?:Toresen|Trespassing) Academy",
+        "repl": "Tracen Academy"
     }
 ]

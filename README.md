@@ -40,7 +40,7 @@ script | desc
 filecopy | Simply copies files from the game dir to the project dir for backup. These will then be used by some other scripts for safety.
 restore-files | Downloads fully fresh files from cygames servers, in case of mess ups
 extract | Loads game data and writes relevant data to a local folder, ready to be translated. Creates *Translation Files*
-import | The reverse; loads translation files and writes them back to game assets for importing into the game
+import | The reverse; loads *Translation Files* and writes them back to game assets for importing into the game
 machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Translation Files* with deepl. Install the userscript in your browser. Run the python file first, then go to the deepl site and use your userscript manager's menu to connect and wait until python exits. This userscript setup is temporary (famous last words)
 names | Simply translates names in *Translation Files* using data from the [db-translate project](https://github.com/noccu/umamusume-db-translate)
 textprocess | Processes dialogue text in *Translation Files* in various ways. Most immediate manual use is adjusting lengths of lines for newline splits.

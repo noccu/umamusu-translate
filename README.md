@@ -35,6 +35,8 @@ All scripts are made to be run from the root dir, i.e: `py script.py -opt val`
 Arguments can be given to all and it is recommended you do so, processing the smallest amount of files you're comfortable with at a time.  
 For arg info run a script with the `-h` arg or just look at the code. Most are very similar.
 
+## Main / Stories
+
 script | desc
 ---|---
 filecopy | Simply copies files from the game dir to the project dir for backup. These will then be used by some other scripts for safety.
@@ -46,6 +48,11 @@ names | Simply translates names in *Translation Files* using data from the [db-t
 textprocess | Processes dialogue text in *Translation Files* in various ways. Most immediate manual use is adjusting lengths of lines for newline splits.
 common | Not a script. Is used by the other files and holds shared functions and data.
 
+## Others
+script | desc
+---|---
+UI/static | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify](https://github.com/GEEKiDoS/umamusume-localify)  
+
 # Contribute
 
 To contribute translations, see [translating.md](translating.md)  
@@ -56,4 +63,5 @@ For dev contributions, open a PR or Issue.
 
 [UnityPy](https://github.com/K0lb3/UnityPy)  
 FabulousCupcake and contributors for the [original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
+[umamusume-localify](https://github.com/GEEKiDoS/umamusume-localify)  
 [Unofficial Umamusume Discord server](https://discord.gg/umamusume) where I've gleaned some useful info

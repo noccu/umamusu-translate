@@ -131,7 +131,9 @@ def exportAssets(bundle: str):
 
     group, id, idx = parseStoryId(data['storyId'])
 
-    idxString = f"{idx} ({data['title']})"
+    #remove stray control chars
+    title = "".join(c for c in data['title'] if ord(c) > 31)
+    idxString = f"{idx} ({title})"
 
     exportPath = f"{os.path.join(EXPORT_DIR, group, id, idxString)}.json"
     exportData(data, exportPath)

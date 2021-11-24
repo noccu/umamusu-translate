@@ -51,7 +51,7 @@ common | Not a script. Is used by the other files and holds shared functions and
 ## Others
 script | desc
 ---|---
-UI/static | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify](https://github.com/GEEKiDoS/umamusume-localify)  
+static/manage | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify](https://github.com/GEEKiDoS/umamusume-localify)  
 
 # Contribute
 

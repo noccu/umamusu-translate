@@ -8,18 +8,18 @@ The structure used is simple: `00 0000 000`
 
 # Group IDs
 
- ID | Desc 
-----|---
- 00 | Short episodes (small intro stories on specific screens?) 
- 01 | Tutorial story 
+ ID | Desc | Notes
+----|--- | ---
+ 00 | Short episodes | Small intro stories on specific screens?
+ 01 | Tutorial story
  02 | Main story (story mode)
- 04 | Uma stories (story mode) 
- 08 | Story mode prologues/intro (URA/AOHARU)
+ 04 | Uma stories (story mode)
+ 08 | Story mode prologues/intro | `0000`: URA `0001`: Aoharu
  09 | Event stories (story mode)
  10 | Half anniv story (...?)
- 40 | System training events (clock usage, training equipment level up, ...)
+ 40 | Campaign training/story events |  `0000`: shared (clock usage, training equipment level up, ...) `0001`: URA `0002`: Aoharu
  50 | Uma training/story events
- 80 | Training events shared by umas and support cards? R supports?
+ 80 | R Support card events
  82 | SR Support card events
  83 | SSR Support card events
 

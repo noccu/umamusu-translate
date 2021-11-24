@@ -10,9 +10,9 @@ Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at yo
 
 > Install python 3.6+ and UnityPy  
 > Probably download all game data through the game menu...  
-> `extract.py`  
+> `extract.py <args>`  
 > Add translations to files in `translations/`  
-> `import.py`  
+> `import.py <args>`  
 > Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)
 
 A premade `dat` folder might be released every so often. Ignore everything but the last step then.  

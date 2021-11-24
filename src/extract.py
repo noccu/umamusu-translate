@@ -22,7 +22,7 @@ OVERWRITE_DST = args.getArg("-O", False)
 def queryDB():
     db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(
-        f"select h from a where n like 'story/data/{EXTRACT_GROUP}/{EXTRACT_ID}/storytimeline%' limit {EXTRACT_LIMIT};")
+        f"select h,n from a where n like 'story/data/{EXTRACT_GROUP}/{EXTRACT_ID}/storytimeline%' limit {EXTRACT_LIMIT};")
     results = cur.fetchall()
     db.close()
     return results
@@ -110,7 +110,7 @@ def transferExisting(storyId, textData):
 
 
 
-def exportData(data, filepath):
+def exportData(data, filepath: str):
     if OVERWRITE_DST == True or not os.path.exists(filepath):
         export = json.dumps(data, indent=4, ensure_ascii=False)
         os.makedirs(os.path.dirname(filepath), exist_ok=True)
@@ -125,7 +125,16 @@ def parseStoryId(storyId):
         raise ValueError("Invalid Story ID format.")
 
 
-def exportAssets(bundle: str):
+def exportAssets(bundle: str, path: str):
+    # check existing files first
+    if not OVERWRITE_DST:
+        group, id, idx = parseStoryId(path[-9:])
+        search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx} *.json")
+        for file in search:
+            if file.exists():
+                print(f"Skipping existing: {file.name}")
+                return
+
     importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
     data = extractAssets(importPath)
 
@@ -142,7 +151,7 @@ def exportAssets(bundle: str):
 def main():
     print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
     q = queryDB()
-    for bundle, in q:
-        exportAssets(bundle)
+    for bundle, path in q:
+        exportAssets(bundle, path)
 
 main()

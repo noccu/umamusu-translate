@@ -26,7 +26,7 @@ Recommended:
 
 # Translating
 ## Manual
-Simply open the files in a text editor or edit them on github and write the translations in the provided enText or enName fields. There is a script for names which you probably want to run first for QoL, [see below](#Further%20processing). BlockIdx is sequential and can help you follow a route through choices
+Simply open the files in a text editor or edit them on github and write the translations in the provided enText or enName fields. There is a script for names which you probably want to run first for QoL, [see below](#further-processing). BlockIdx is sequential and can help you follow a route through choices
 
 **Don't change anything else. It's there so text can be put back in the right place.**  (Except title, you can translate that for completion if you want but it isn't currently used.)
 
@@ -39,8 +39,8 @@ As you can see, the game uses both. It doesn't seem to make a difference so just
 
 ## MTL using DeepL
 
-- Install the [deepl-translator.user.js](src/deepl-translator.user.js) script in your browser
-    - This requires a userscript manager with menu support, like Violentmonkey
+- Install the [deepl-translator.user.js](https://cdn.jsdelivr.net/gh/noccu/umamusu-translate@master/src/deepl-translator.user.js) script in your browser
+    - This requires a userscript manager with menu support, like [Violentmonkey](https://violentmonkey.github.io/)
 - Run `python src\machinetl.py` with any options you want (refer to main readme)
 - Navigate your browser to [deepl's site](https://www.deepl.com/en/translator)
 - Open the userscript menu and click `Connect WebSocket`
@@ -51,7 +51,7 @@ As you can see, the game uses both. It doesn't seem to make a difference so just
 - When done with either method, run any extra processing on the file
     - `python src\textprocess.py` to apply some automatic formatting (line length in particular) and edits
         - This is run by the translation script (if you used that), but you can rerun it with custom settings if you like
-    - `python src\names.py -n <path/to/db-translate/data/uma-name.csv` to translate many names automatically
+    - `python src\names.py -n <path/to/db-translate/data/uma-name.csv>` to translate many names automatically
 
 ## Finishing up
 

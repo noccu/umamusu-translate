@@ -31,7 +31,7 @@ def main():
 
     root = PurePath(__file__).parent
     dumpFile = root / "data" / "dump.json"
-    hashFile = root / "release" / "localized_data" / "static.json"
+    hashFile = PurePath("localify") / "localized_data" / "static.json"
     tlFile = root / "data" / "static_en.json"
     dumpData = common.readJson(dumpFile)
     hashData = common.readJson(hashFile)

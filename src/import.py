@@ -9,6 +9,7 @@ if args.getArg("-h"):
     common.usage("[-g <group>] [-id <id>] [-src <game asset root>] [-dst <asset save path>] [-O(verwrite)] [-S(ilently skip unchanged)]",
                  "Saves all files to <project root>/dat by default")
 
+IMPORT_TYPE = args.getArg("-t", "story").lower()
 IMPORT_GROUP = args.getArg("-g", False)
 IMPORT_ID = args.getArg("-id", False)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
@@ -88,8 +89,8 @@ def saveAsset(env):
         f.write(b)
 
 def main():
-    print(f"Importing group {IMPORT_GROUP or 'all'}, id {IMPORT_ID or 'all'}\nfrom translations\ to {GAME_ASSET_ROOT if OVERWRITE_GAME_DATA else SAVE_DIR}")
-    files = common.searchFiles(IMPORT_GROUP, IMPORT_ID)
+    print(f"Importing group {IMPORT_GROUP or 'all'}, id {IMPORT_ID or 'all'}\nfrom translations\{IMPORT_TYPE} to {GAME_ASSET_ROOT if OVERWRITE_GAME_DATA else SAVE_DIR}")
+    files = common.searchFiles(IMPORT_TYPE, IMPORT_GROUP, IMPORT_ID)
     print(f"Importing {len(files)} files...")
 
     for file in files:

@@ -8,6 +8,7 @@ if args.getArg("-h"):
                  "At least 1 arg is required.",
                  "-src overwrites other options.")
 
+TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", None)
 TARGET_ID = args.getArg("-id", None)
 TARGET_FILE = args.getArg("-src", None)
@@ -67,7 +68,7 @@ def main():
     if TARGET_FILE:
         files = [TARGET_FILE]
     else:
-        files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+        files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
 
     print(f"Processing {len(files)} files...")
     for file in files:

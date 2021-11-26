@@ -10,6 +10,7 @@ args = common.Args().parse()
 if args.getArg("-h"):
     common.usage("-g <group> [-id <id>] [-src <file>]",
                  "-src overwrites other options")
+TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 TARGET_FILE = args.getArg("-src", False)
@@ -35,7 +36,7 @@ async def startServer():
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol):
         if TARGET_FILE: self.files = [TARGET_FILE]
-        else: self.files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+        else: self.files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
         self.client = client
         self.loop = asyncio.get_running_loop()
 

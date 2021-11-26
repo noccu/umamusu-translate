@@ -1,5 +1,5 @@
 import os
-from pathlib import Path
+from pathlib import Path, PurePath
 import UnityPy
 import json
 import sqlite3
@@ -12,23 +12,32 @@ if args.getArg("-h"):
     common.usage("[-g <group>] [-id <id>] [-l <limit files to process>] [-src <game asset root>] [-dst <extract to path>] [-O(verwrite existing)]",
                  "Any order. Defaults to extracting all text, skip existing")
 
+EXTRACT_TYPE = args.getArg("-t", "story").lower()
+if not EXTRACT_TYPE in ["story", "home"]: 
+    print(f"Invalid type {EXTRACT_TYPE}")
+    raise SystemExit
 EXTRACT_GROUP = args.getArg("-g", "__")
 EXTRACT_ID = args.getArg("-id", "____")
 EXTRACT_LIMIT = args.getArg("-l", -1)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
-EXPORT_DIR = args.getArg("-dst", "translations/")
+EXPORT_DIR = args.getArg("-dst", PurePath("translations").joinpath(EXTRACT_TYPE))
 OVERWRITE_DST = args.getArg("-O", False)
 
+
 def queryDB():
+    if EXTRACT_TYPE == "story":
+        pattern = f"{EXTRACT_TYPE}/data/{EXTRACT_GROUP}/{EXTRACT_ID}/{EXTRACT_TYPE}timeline%"
+    elif EXTRACT_TYPE == "home":
+        pattern = f"{EXTRACT_TYPE}/data/00000/{EXTRACT_GROUP}/{EXTRACT_TYPE}timeline_00000_{EXTRACT_GROUP}_{EXTRACT_ID}%"
     db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(
-        f"select h,n from a where n like 'story/data/{EXTRACT_GROUP}/{EXTRACT_ID}/storytimeline%' limit {EXTRACT_LIMIT};")
+        f"select h, n from a where n like '{pattern}' limit {EXTRACT_LIMIT};")
     results = cur.fetchall()
     db.close()
     return results
 
 
-def extractAssets(path):
+def extractAsset(path, storyId):
     env = UnityPy.load(path)
     index = next(iter(env.container.values())).get_obj()
 
@@ -49,7 +58,7 @@ def extractAssets(path):
                     continue
                 textData['pathId'] = pathId  # important for re-importing
                 textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
-                transferExisting(tree['StoryId'], textData)
+                transferExisting(storyId, textData)
                 export['text'].append(textData)
         return export
 
@@ -87,7 +96,7 @@ def extractText(obj):
 
 def transferExisting(storyId, textData):
     if OVERWRITE_DST: return
-    group, id, idx = parseStoryId(storyId)
+    group, id, idx = storyId
     existing = None
     search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx} *")
     for file in search:
@@ -118,33 +127,38 @@ def exportData(data, filepath: str):
             f.write(export)
 
 
-def parseStoryId(storyId):
-    if len(storyId) == 9:
-       return storyId[:2], storyId[2:6], storyId[6:9]
-    else:
-        raise ValueError("Invalid Story ID format.")
+def parseStoryId(path) -> tuple:
+    if EXTRACT_TYPE == "story":
+        storyId = path[-9:]
+        return  storyId[:2], storyId[2:6], storyId[6:9]
+    elif EXTRACT_TYPE == "home":
+        # storyId = path[-16:]
+        # return storyId[:5], storyId[6:8], storyId[9:13], storyId[13:]
+        storyId = path[-10:]
+        return storyId[:2], storyId[3:7], storyId[7:]
+        
 
 
-def exportAssets(bundle: str, path: str):
+def exportAsset(bundle: str, path: str):
+    group, id, idx = parseStoryId(path)
+    exportDir =  Path(EXPORT_DIR).joinpath(group, id)
+
     # check existing files first
     if not OVERWRITE_DST:
-        group, id, idx = parseStoryId(path[-9:])
-        search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx} *.json")
+        search = exportDir.glob(f"{idx} *.json")
         for file in search:
             if file.exists():
                 print(f"Skipping existing: {file.name}")
                 return
 
     importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
-    data = extractAssets(importPath)
-
-    group, id, idx = parseStoryId(data['storyId'])
+    data = extractAsset(importPath, (group, id, idx))
 
     #remove stray control chars
     title = "".join(c for c in data['title'] if ord(c) > 31)
     idxString = f"{idx} ({title})"
 
-    exportPath = f"{os.path.join(EXPORT_DIR, group, id, idxString)}.json"
+    exportPath = f"{os.path.join(exportDir, idxString)}.json"
     exportData(data, exportPath)
 
 
@@ -152,6 +166,6 @@ def main():
     print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
     q = queryDB()
     for bundle, path in q:
-        exportAssets(bundle, path)
+        exportAsset(bundle, path)
 
 main()

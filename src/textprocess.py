@@ -11,7 +11,7 @@ if args.getArg("-h"):
 TARGET_GROUP = args.getArg("-g", None)
 TARGET_ID = args.getArg("-id", None)
 TARGET_FILE = args.getArg("-src", None)
-LINE_LENGTH = int(args.getArg("-ll", 42)) #Roughly 42 for most training story dialogue, 63 for wide screen stories (events etc)
+LINE_LENGTH = int(args.getArg("-ll", 44)) #Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
 
 if not TARGET_FILE and not TARGET_GROUP and not TARGET_ID: raise SystemExit("At least 1 arg is required.")
 

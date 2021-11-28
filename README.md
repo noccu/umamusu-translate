@@ -10,12 +10,12 @@ Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at yo
 
 **If you just want to use the translations in your game with minimal fuss skip step 3, 4, 6 and use -O as arg in step 5: `import.py -O`**
 
-1. Install python 3.6+ and [UnityPy][]  
-1. Probably download all game data through the game menu...  
-1. `python extract.py <args>`  
-1. Add translations to files in `translations/`  
-1. `python import.py <args>`  
-1. Dialogue: Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)  
+1. Install python 3.6+ and [UnityPy][]
+1. (Optional but recommended) Download all game data through the game menu
+1. `python extract.py <args>`
+1. Add translations to files in `translations/`
+1. `python import.py <args>`
+1. Dialogue: Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)
 1. UI: Copy the [localify folder](localify) to your Umamusu install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are, `C:\DMM\Umamusu` or something similar, probably)
 
 A premade archive might be released every so often. Ignore everything but step 6-7 then.  

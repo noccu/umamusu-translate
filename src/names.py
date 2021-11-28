@@ -1,3 +1,4 @@
+from os import path
 import common
 import csv
 
@@ -11,7 +12,12 @@ TARGET_ID = args.getArg("-id", False)
 
 
 def createDict():
-    if not NAMES_FILE: raise FileNotFoundError
+    global NAMES_FILE
+    if not NAMES_FILE: 
+        NAMES_FILE = "../umamusume-db-translate/src/data/uma-name.csv"
+        if not path.exists(NAMES_FILE):
+            raise FileNotFoundError("You must specify the uma-name.csv file.")
+        print(f"Using auto-found names file {path.realpath(NAMES_FILE)}")
     names = dict()
     with open(NAMES_FILE, "r", newline='', encoding="utf8") as csvfile:
      reader = csv.reader(csvfile, delimiter=',', quotechar='"')
@@ -21,8 +27,8 @@ def createDict():
     # a few extras. misc.csv doesn't provide everything
     # todo: probably use an external file?
     names['駿川たづな'] = "Hayakawa Tazuna"
-    names['秋川理事長'] = "President Akikawa"
-    names['樫本代理'] = "Acting Pres. Kashimoto"
+    names['秋川理事長'] = "Chairwoman Akikawa"
+    names['樫本代理'] = "Acting Chair Kashimoto"
     names['モノローグ'] = "Monologue"
     names['記者A'] = "Reporter A"
     names['記者B'] = "Reporter B"

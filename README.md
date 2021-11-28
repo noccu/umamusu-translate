@@ -1,23 +1,25 @@
-This project aims to translate UmaMusume through Unity asset edits.
+This project aims to translate *Uma Musume Pretty Derby* through Unity asset edits.
 
 # Disclaimer
 
-This tool collection only changes text to translate it and it is my believe this is harmless and unlikely to be an issue.  
-Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at your own risk!  
-~~cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience.~~
+This tool collection only changes text to translate it and it is *my belief* this is harmless and unlikely to be an issue. [^1]  
+**Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at your own risk!**
+
+[^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience.
 
 # Usage 
 
 **If you just want to use the translations in your game with minimal fuss skip step 3, 4, 6 and use -O as arg in step 5: `import.py -O`**
 
-> Install python 3.6+ and UnityPy  
-> Probably download all game data through the game menu...  
-> `python extract.py <args>`  
-> Add translations to files in `translations/`  
-> `python import.py <args>`  
-> Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)
+1. Install python 3.6+ and [UnityPy][]
+1. (Optional but recommended) Download all game data through the game menu
+1. `python extract.py <args>`
+1. Add translations to files in `translations/`
+1. `python import.py <args>`
+1. Dialogue: Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)
+1. UI: Copy the [localify folder](localify) to your Umamusu install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are, `C:\DMM\Umamusu` or something similar, probably)
 
-A premade `dat` folder might be released every so often. Ignore everything but the last step then.  
+A premade archive might be released every so often. Ignore everything but step 6-7 then.  
 Both scripts take similar arguments, given as `-arg <opt>`:
 
 arg|desc
@@ -33,9 +35,11 @@ dst | `import.py`: define root dir to save modified asset files in (defaults to 
 
 # Script info
 
-All scripts are made to be run from the root dir, i.e: `py script.py -opt val`  
+All scripts are made to be run from the root dir, i.e: `py src/script.py -opt val`  
 Arguments can be given to all and it is recommended you do so, processing the smallest amount of files you're comfortable with at a time.  
 For arg info run a script with the `-h` arg or just look at the code. Most are very similar.
+
+## Main / Stories
 
 script | desc
 ---|---
@@ -48,6 +52,11 @@ names | Simply translates names in *Translation Files* using data from the [db-t
 textprocess | Processes dialogue text in *Translation Files* in various ways. Most immediate manual use is adjusting lengths of lines for newline splits.
 common | Not a script. Is used by the other files and holds shared functions and data.
 
+## Others
+script | desc
+---|---
+static/manage | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify][]
+
 # Contribute
 
 To contribute translations, see [translating.md](translating.md)  
@@ -56,6 +65,10 @@ For dev contributions, open a PR or Issue.
 
 # Thanks to
 
-[UnityPy](https://github.com/K0lb3/UnityPy)  
-FabulousCupcake and contributors for the [original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
-[Unofficial Umamusume Discord server](https://discord.gg/umamusume) where I've gleaned some useful info
+[UnityPy][]  
+[The original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
+[umamusume-localify][]  
+[Unofficial Umamusume Discord server](https://discord.gg/umamusume)
+
+[UnityPy]: https://github.com/K0lb3/UnityPy
+[umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify

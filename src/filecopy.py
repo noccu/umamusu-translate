@@ -3,6 +3,7 @@ import sqlite3
 from os import path
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
+from re import sub as resub
 
 # Parameter parsing
 args = common.Args().parse()
@@ -36,7 +37,8 @@ def buildSqlStmt():
     if TARGET_NAME:
         add(f"n like '%{TARGET_NAME}%'")
     if TARGET_HASHES:
-        add(f"h in ('{TARGET_HASHES}')")
+        hashes = resub("(\"?[A-Z0-9]+\"?) ?(?=,|$)", r"'\1'", TARGET_HASHES)
+        add(f"h in ({hashes})")
     if TARGET_GROUP:
         add(f"n like 'story/data/{TARGET_GROUP}/____/storytimeline%'")
     if TARGET_ID:

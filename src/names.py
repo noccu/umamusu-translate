@@ -27,8 +27,8 @@ def createDict():
     # a few extras. misc.csv doesn't provide everything
     # todo: probably use an external file?
     names['駿川たづな'] = "Hayakawa Tazuna"
-    names['秋川理事長'] = "President Akikawa"
-    names['樫本代理'] = "Acting Pres. Kashimoto"
+    names['秋川理事長'] = "Chairwoman Akikawa"
+    names['樫本代理'] = "Acting Chair Kashimoto"
     names['モノローグ'] = "Monologue"
     names['記者A'] = "Reporter A"
     names['記者B'] = "Reporter B"

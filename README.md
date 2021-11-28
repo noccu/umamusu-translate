@@ -1,10 +1,11 @@
-This project aims to translate UmaMusume through Unity asset edits.
+This project aims to translate *Uma Musume Pretty Derby* through Unity asset edits.
 
 # Disclaimer
 
-This tool collection only changes text to translate it and it is my believe this is harmless and unlikely to be an issue.  
-Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at your own risk!  
-~~cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience.~~
+This tool collection only changes text to translate it and it is *my belief* this is harmless and unlikely to be an issue. [^1]  
+**Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at your own risk!**
+
+[^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience.
 
 # Usage 
 

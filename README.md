@@ -10,15 +10,15 @@ Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at yo
 
 **If you just want to use the translations in your game with minimal fuss skip step 3, 4, 6 and use -O as arg in step 5: `import.py -O`**
 
-> Install python 3.6+ and [UnityPy][]  
-> Probably download all game data through the game menu...  
-> `python extract.py <args>`  
-> Add translations to files in `translations/`  
-> `python import.py <args>`  
-> Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)  
-> Copy the [localify folder](localify) to your Umamusu install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are, `C:\DMM\Umamusu` or something similar, probably)
+1. Install python 3.6+ and [UnityPy][]  
+1. Probably download all game data through the game menu...  
+1. `python extract.py <args>`  
+1. Add translations to files in `translations/`  
+1. `python import.py <args>`  
+1. Dialogue: Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)  
+1. UI: Copy the [localify folder](localify) to your Umamusu install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are, `C:\DMM\Umamusu` or something similar, probably)
 
-A premade `dat` folder might be released every so often. Ignore everything but the last step then.  
+A premade archive might be released every so often. Ignore everything but step 6-7 then.  
 Both scripts take similar arguments, given as `-arg <opt>`:
 
 arg|desc
@@ -34,7 +34,7 @@ dst | `import.py`: define root dir to save modified asset files in (defaults to 
 
 # Script info
 
-All scripts are made to be run from the root dir, i.e: `py script.py -opt val`  
+All scripts are made to be run from the root dir, i.e: `py src/script.py -opt val`  
 Arguments can be given to all and it is recommended you do so, processing the smallest amount of files you're comfortable with at a time.  
 For arg info run a script with the `-h` arg or just look at the code. Most are very similar.
 

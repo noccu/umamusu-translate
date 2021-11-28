@@ -1,3 +1,4 @@
+from os import path
 import common
 import csv
 
@@ -11,7 +12,12 @@ TARGET_ID = args.getArg("-id", False)
 
 
 def createDict():
-    if not NAMES_FILE: raise FileNotFoundError
+    global NAMES_FILE
+    if not NAMES_FILE: 
+        NAMES_FILE = "../umamusume-db-translate/src/data/uma-name.csv"
+        if not path.exists(NAMES_FILE):
+            raise FileNotFoundError("You must specify the uma-name.csv file.")
+        print(f"Using auto-found names file {path.realpath(NAMES_FILE)}")
     names = dict()
     with open(NAMES_FILE, "r", newline='', encoding="utf8") as csvfile:
      reader = csv.reader(csvfile, delimiter=',', quotechar='"')

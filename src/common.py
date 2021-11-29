@@ -26,6 +26,7 @@ def readJson(file) -> dict:
         return json.load(f)
 
 def writeJsonFile(file, data):
+    os.makedirs(os.path.dirname(file), exist_ok=True)
     with open(file, "w", encoding="utf8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 

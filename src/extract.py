@@ -1,7 +1,6 @@
 import os
 from pathlib import Path
 import UnityPy
-import json
 import sqlite3
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
@@ -111,10 +110,7 @@ def transferExisting(storyId, textData):
 
 def exportData(data, filepath: str):
     if OVERWRITE_DST == True or not os.path.exists(filepath):
-        export = json.dumps(data, indent=4, ensure_ascii=False)
-        os.makedirs(os.path.dirname(filepath), exist_ok=True)
-        with open(filepath, "w", encoding="utf8") as f:
-            f.write(export)
+        common.writeJsonFile(filepath, data)
 
 
 def parseStoryId(storyId):

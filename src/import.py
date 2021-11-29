@@ -54,10 +54,10 @@ def swapAssetData(tlFile: TranslationFile):
         else:
             try:
                 asset = assetList[textData['pathId']]
-                assetData = asset.read_typetree()
             except KeyError:
                 print(f"Skipping block {textData['blockIdx']} in {bundle}: Can't find pathId in original asset")
                 continue
+            assetData = asset.read_typetree()
 
         if assetType == "race":
             assetData['textData'][textIdx]['text'] = textData['enText']

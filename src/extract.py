@@ -13,7 +13,7 @@ if args.getArg("-h"):
                  "Any order. Defaults to extracting all text, skip existing")
 
 EXTRACT_TYPE = args.getArg("-t", "story").lower()
-if not EXTRACT_TYPE in ["story", "home"]: 
+if not EXTRACT_TYPE in ["story", "home", "race"]: 
     print(f"Invalid type {EXTRACT_TYPE}")
     raise SystemExit
 EXTRACT_GROUP = args.getArg("-g", "__")
@@ -29,6 +29,8 @@ def queryDB():
         pattern = f"{EXTRACT_TYPE}/data/{EXTRACT_GROUP}/{EXTRACT_ID}/{EXTRACT_TYPE}timeline%"
     elif EXTRACT_TYPE == "home":
         pattern = f"{EXTRACT_TYPE}/data/00000/{EXTRACT_GROUP}/{EXTRACT_TYPE}timeline_00000_{EXTRACT_GROUP}_{EXTRACT_ID}%"
+    elif EXTRACT_TYPE == "race":
+        pattern = f"race/storyrace/text/storyrace_{EXTRACT_GROUP}{EXTRACT_ID}%"
     db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(
         f"select h, n from a where n like '{pattern}' limit {EXTRACT_LIMIT};")
@@ -44,27 +46,46 @@ def extractAsset(path, storyId):
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': 2,
+            'version': 3,
             'bundle': env.file.name,
-            'storyId': tree['StoryId'],
-            'title' : tree['Title'],
+            'type': EXTRACT_TYPE,
+            'storyId': "",
+            'title' : "",
             'text': list()
         }
-        for block in tree['BlockList']:
-            for clip in block['TextTrack']['ClipList']:
-                pathId = clip['m_PathID']
-                textData = extractText(index.assets_file.files[pathId])
-                if not textData:
-                    continue
-                textData['pathId'] = pathId  # important for re-importing
-                textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
-                transferExisting(storyId, textData)
+
+        if EXTRACT_TYPE == "race":
+            export['storyId'] = tree['m_Name'][-9:]
+
+            for block in tree['textData']:
+                textData = extractText("race", block)
                 export['text'].append(textData)
+        else:
+            export['storyId'] = tree['StoryId']
+            export['title'] = tree['Title']
+
+            for block in tree['BlockList']:
+                for clip in block['TextTrack']['ClipList']:
+                    pathId = clip['m_PathID']
+                    textData = extractText(EXTRACT_TYPE, index.assets_file.files[pathId])
+                    if not textData:
+                        continue
+                    textData['pathId'] = pathId  # important for re-importing
+                    textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
+                    transferExisting(storyId, textData)
+                    export['text'].append(textData)
         return export
 
 
-def extractText(obj):
-    if obj.serialized_type.nodes:
+def extractText(assetType, obj):
+    if assetType == "race":
+        # obj is already read
+        o = {
+            'jpText': obj['text'],
+            'enText': "",
+            'blockIdx': obj['key']
+        }
+    elif obj.serialized_type.nodes:
         tree = obj.read_typetree()
         o = {
             'jpName': tree['Name'],
@@ -92,7 +113,7 @@ def extractText(obj):
                     'enText': ""
                 })
 
-        return o if o['jpText'] else None
+    return o if o['jpText'] else None
 
 def transferExisting(storyId, textData):
     if OVERWRITE_DST: return
@@ -128,14 +149,15 @@ def exportData(data, filepath: str):
 
 
 def parseStoryId(path) -> tuple:
-    if EXTRACT_TYPE == "story":
-        storyId = path[-9:]
-        return  storyId[:2], storyId[2:6], storyId[6:9]
-    elif EXTRACT_TYPE == "home":
+    if EXTRACT_TYPE == "home":
         # storyId = path[-16:]
         # return storyId[:5], storyId[6:8], storyId[9:13], storyId[13:]
         storyId = path[-10:]
         return storyId[:2], storyId[3:7], storyId[7:]
+    else:
+        # story and storyrace
+        storyId = path[-9:]
+        return  storyId[:2], storyId[2:6], storyId[6:9]
         
 
 
@@ -145,7 +167,7 @@ def exportAsset(bundle: str, path: str):
 
     # check existing files first
     if not OVERWRITE_DST:
-        search = exportDir.glob(f"{idx} *.json")
+        search = exportDir.glob(f"{idx}*.json")
         for file in search:
             if file.exists():
                 print(f"Skipping existing: {file.name}")
@@ -156,7 +178,7 @@ def exportAsset(bundle: str, path: str):
 
     #remove stray control chars
     title = "".join(c for c in data['title'] if ord(c) > 31)
-    idxString = f"{idx} ({title})"
+    idxString = f"{idx} ({title})" if title else idx
 
     exportPath = f"{os.path.join(exportDir, idxString)}.json"
     exportData(data, exportPath)
@@ -165,7 +187,8 @@ def exportAsset(bundle: str, path: str):
 def main():
     print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
     q = queryDB()
+    print(f"Found {len(q)} files.")
     for bundle, path in q:
         exportAsset(bundle, path)
-
+    print("Processing finished sucessfully.")
 main()

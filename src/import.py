@@ -26,55 +26,67 @@ def get_meta(filePath: str) -> tuple[UnityPy.environment.Environment, UnityPy.en
 def swapAssetData(tlFile: TranslationFile):
     bundle = tlFile.getBundle()
     textList = tlFile.getTextBlocks()
+    assetType = tlFile.getType()
     assetPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
 
     if not os.path.exists(assetPath):
         return f"AssetBundle {bundle} does not exist in your game data, skipping..."
 
     try:
-        env, metadata = get_meta(assetPath)
+        env, mainFile = get_meta(assetPath)
     except Exception as e:
         return f"UnityPy Error: {repr(e)}, skipping {bundle}..."
 
-    assetList = metadata.assets_file.files
-    assetsSkipped = 0
+    assetList = mainFile.assets_file.files
+    textBlocksSkipped = 0
+    lockAsset = False
 
-    for textData in textList:
+    for textIdx, textData in enumerate(textList):
         if not textData['enText']:
-            assetsSkipped += 1
+            textBlocksSkipped += 1
             continue
 
-        try:
-            asset = assetList[textData['pathId']]
-        except KeyError:
-            print(f"Skipping block {textData['blockIdx']} in {bundle}: Can't find pathId in original asset")
-            continue
+        if assetType == "race":
+            if not lockAsset:
+                asset = mainFile
+                assetData = asset.read_typetree()
+                lockAsset = True
+        else:
+            try:
+                asset = assetList[textData['pathId']]
+                assetData = asset.read_typetree()
+            except KeyError:
+                print(f"Skipping block {textData['blockIdx']} in {bundle}: Can't find pathId in original asset")
+                continue
 
-        assetData = asset.read_typetree()
-        assetData['Text'] = textData['enText']
-        assetData['Name'] = textData['enName'] or assetData['Name']
+        if assetType == "race":
+            assetData['textData'][textIdx]['text'] = textData['enText']
+        else:
+            assetData['Text'] = textData['enText']
+            assetData['Name'] = textData['enName'] or assetData['Name']
 
-        if 'choices' in textData:
-            jpChoices, enChoices = assetData['ChoiceDataList'], textData['choices']
-            if len(jpChoices) != len(enChoices):
-                print("Choice lenghts do not match, skipping...")
-            else:
-                for idx, choice in enumerate(textData['choices']):
-                    # ? Not sure if guaranteed same order. Maybe do a search on jpText instead?
-                    if choice['enText']:
-                        jpChoices[idx]['Text'] = choice['enText']
+            if 'choices' in textData:
+                jpChoices, enChoices = assetData['ChoiceDataList'], textData['choices']
+                if len(jpChoices) != len(enChoices):
+                    print("Choice lenghts do not match, skipping...")
+                else:
+                    for idx, choice in enumerate(textData['choices']):
+                        # ? Not sure if guaranteed same order. Maybe do a search on jpText instead?
+                        if choice['enText']:
+                            jpChoices[idx]['Text'] = choice['enText']
 
-        if 'coloredText' in textData:
-            jpColored, enColored = assetData['ColorTextInfoList'], textData['coloredText']
-            if len(jpColored) != len(enColored):
-                print("Colored text lenghts do not match, skipping...")
-            else:
-                for idx, text in enumerate(textData['coloredText']):
-                    if text['enText']:
-                        jpColored[idx]['Text'] = text['enText']
+            if 'coloredText' in textData:
+                jpColored, enColored = assetData['ColorTextInfoList'], textData['coloredText']
+                if len(jpColored) != len(enColored):
+                    print("Colored text lenghts do not match, skipping...")
+                else:
+                    for idx, text in enumerate(textData['coloredText']):
+                        if text['enText']:
+                            jpColored[idx]['Text'] = text['enText']
+            asset.save_typetree(assetData)
+    if assetType == "race": asset.save_typetree(assetData)
 
-        asset.save_typetree(assetData)
-    if assetsSkipped == len(textList):
+    if textBlocksSkipped == len(textList):
         env = None
 
     return env

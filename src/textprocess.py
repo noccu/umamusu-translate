@@ -1,10 +1,11 @@
 import common
+from common import TranslationFile
 import re
 from math import ceil
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("[-g <group>] [-id <id>] [-src <json file>] [-ll <line length>]",
+    common.usage("[-t <story|home|race>] [-g <group>] [-id <id>] [-src <json file>] [-ll <line length>]",
                  "At least 1 arg is required.",
                  "-src overwrites other options.")
 
@@ -16,19 +17,19 @@ LINE_LENGTH = int(args.getArg("-ll", 42)) #Roughly 42 for most training story di
 
 if not TARGET_FILE and not TARGET_GROUP and not TARGET_ID: raise SystemExit("At least 1 arg is required.")
 
-def process(text: str, options: dict):
+def process(file: TranslationFile, text: str, options: dict):
     if "noNewlines" in options:
-        text = cleannewLines(text)
+        text = cleannewLines(file, text)
     if "lineLen" in options:
-        text = adjustLength(text, options["lineLen"] or LINE_LENGTH)
+        text = adjustLength(file, text, options["lineLen"] or LINE_LENGTH)
     if "replace" in options:
         text = replace(text)
     return text
 
-def cleannewLines(text: str):
-    return re.sub("\r?\n", " ", text)
+def cleannewLines(file: TranslationFile, text: str):
+    return re.sub(r"\\n" if file.getType() == "race" else "\r?\n", " ", text)
 
-def adjustLength(text: str, lineLen: int = 0, numLines: int = 0, targetLines: int = 0):
+def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: int = 0, targetLines: int = 0):
     if len(text) < lineLen:
         print("Short text line, skipping: ", text)
         return text
@@ -42,13 +43,13 @@ def adjustLength(text: str, lineLen: int = 0, numLines: int = 0, targetLines: in
             return text
 
         #adjust if not
-        text = cleannewLines(text)
+        text = cleannewLines(file, text)
         # python regexes kinda suck
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{1,{lineLen}}}(?= |$)|(?<= ).+$", text)
         nLines = len(lines)
         if nLines > 1 and len(lines[-1]) < min(lineLen, len(text)) / nLines:
             print("Last line is short, balancing on line number: ", lines)
-            return adjustLength(text, numLines = nLines, targetLines=nLines)
+            return adjustLength(file, text, numLines = nLines, targetLines=nLines)
 
     elif numLines > 0:
         lineLen = ceil(len(text) / numLines)
@@ -56,7 +57,7 @@ def adjustLength(text: str, lineLen: int = 0, numLines: int = 0, targetLines: in
 
     if targetLines > 0 and len(lines) > targetLines:
         print("Exceeded target lines at:", lines)
-    return "\n".join(lines)
+    return "\\n".join(lines) if file.getType() == "race" else "\n".join(lines)
 
 def replace(text: str):
     data = common.readJson("src/data/replacer.json")
@@ -75,7 +76,7 @@ def main():
         file = common.TranslationFile(file)
         for block in file.getTextBlocks():
             if not "enText" in block or len(block['enText']) == 0: continue
-            block['enText'] = process(block['enText'], {"lineLen": LINE_LENGTH, "replace": True})
+            block['enText'] = process(file, block['enText'], {"lineLen": LINE_LENGTH, "replace": True})
         file.save()
     print("Files processed.")
 

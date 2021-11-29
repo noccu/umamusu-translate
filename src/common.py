@@ -88,6 +88,12 @@ class TranslationFile:
         else:
             return list(self.data.keys())[0]
 
+    def getType(self):
+        if self.version > 2:
+            return self.data['type']
+        else:
+            return "story/home"
+
     def save(self):
         writeJsonFile(self.file, self.data)
 

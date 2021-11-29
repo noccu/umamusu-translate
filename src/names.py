@@ -7,6 +7,7 @@ if args.getArg("-h"):
     common.usage("-n <db-translate uma-name.csv> [-src <file to process>]")
 NAMES_FILE = args.getArg("-n", False)
 TARGET_FILE = args.getArg("-src", False)
+TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 
@@ -39,7 +40,7 @@ def createDict():
 
 def translate(namesDict):
     if TARGET_FILE: files = [TARGET_FILE]
-    else: files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+    else: files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
 
     for file in files:
         file = common.TranslationFile(file)

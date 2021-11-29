@@ -1,4 +1,3 @@
-from ntpath import join
 import os
 import sys
 import json
@@ -10,14 +9,15 @@ GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
 
 
-def searchFiles(IMPORT_GROUP, IMPORT_ID) -> list:
+def searchFiles(targetType, targetGroup, targetId) -> list:
     found = list()
-    for root, dirs, files in os.walk("translations/"):
+    searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
+    for root, dirs, files in os.walk(searchDir):
         depth = len(dirs[0]) if dirs else 3
-        if IMPORT_GROUP and depth == 2:
-            dirs[:] = [d for d in dirs if d == IMPORT_GROUP]
-        elif IMPORT_ID and depth == 4:
-            dirs[:] = [d for d in dirs if d == IMPORT_ID]
+        if targetGroup and depth == 2:
+            dirs[:] = [d for d in dirs if d == targetGroup]
+        elif targetId and depth == 4:
+            dirs[:] = [d for d in dirs if d == targetId]
         found.extend(os.path.join(root, file) for file in files)
     return found
 
@@ -33,7 +33,7 @@ def writeJsonFile(file, data):
 class Args:
     parsed = dict()
 
-    def getArg(self, name, default=None):
+    def getArg(self, name, default=None) -> str:
         try:
             return self.parsed[name]
         except KeyError:
@@ -88,6 +88,12 @@ class TranslationFile:
             return self.data['bundle']
         else:
             return list(self.data.keys())[0]
+
+    def getType(self):
+        if self.version > 2:
+            return self.data['type']
+        else:
+            return "story/home"
 
     def save(self):
         writeJsonFile(self.file, self.data)

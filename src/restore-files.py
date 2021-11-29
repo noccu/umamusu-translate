@@ -14,6 +14,7 @@ if args.getArg("-h"):
     common.usage("[-g <group>] [-id <id>] [-src <file>]",
                  "-src overwrites other options")
 
+TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 TARGET_FILE = args.getArg("-src", False)
@@ -45,7 +46,7 @@ def save(fileName):
 if TARGET_FILE:
     save(TARGET_FILE)
 else:
-    files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+    files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
     for file in files:
         parsed = common.readJson(file)
         for bundleName in parsed.keys():

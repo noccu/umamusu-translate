@@ -86,10 +86,9 @@ def extractText(obj):
         return o if o['jpText'] else None
 
 def transferExisting(storyId, textData):
-    if OVERWRITE_DST: return
     group, id, idx = parseStoryId(storyId)
     existing = None
-    search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx} *")
+    search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx}*")
     for file in search:
         if file.is_file():
             existing = common.TranslationFile(file)

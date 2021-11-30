@@ -40,6 +40,7 @@ def createDict():
     names['ニュースキャスター'] = "Newscaster"
     names['ウマ娘ファンA'] = "UmaMusu Fan A"
     names['ウマ娘ファンB'] = "UmaMusu Fan B"
+    names['教師'] = "Teacher"
     return names
 
 def translate(namesDict):

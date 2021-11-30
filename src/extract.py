@@ -115,7 +115,7 @@ def extractText(assetType, obj):
     return o if o['jpText'] else None
 
 def transferExisting(storyId, textData):
-    group, id, idx = parseStoryId(storyId)
+    group, id, idx = storyId
     existing = None
     search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx}*")
     for file in search:

@@ -1,39 +1,48 @@
 This document gives an overview of translation progress.  
-If something isn't listed here the progress is NONE.
+
+### Legend
+term | meaning
+--- | ---
+Not listed | No progress
+Transferring | Translation exists elsewhere and is in the process, or planned to be, imported
+In progress | Translation work is planned, ongoing, or only part is translated (possibly with no work ongoing)
+Complete | All the relevant content is available in English
+Finished | Content satisfies this project's translation standards and style guide (to come)
 
 # Stories
-name | progress
---- | ---
-Main story | Transferring existing ([Holo][])
-The Sounds of Autumn | Complete (deepl old)
-Halloween | Tranferring existing ([Holo][])
-Christmas 2021 | In progress (deepl)(temp)
+name | progress | translator
+--- | --- | ---
+Main story | Transferring | [CatNipHoarder][] / [Holo][]
+The Sounds of Autumn | Complete | deepl (old)
+Halloween | Transferring | [CatNipHoarder][] / [Holo][]
+Christmas 2021 | In progress | deepl (temp)
 ## Umas
-name | progress
---- | ---
-Tachyon | In Progress ([Ren][] / deepl)
+name | progress | translator
+--- | --- | ---
+Tachyon | In Progress | [Ren][] (ep 1), deepl
 
 
 # Training story/events
-name | progress
---- | ---
-Campaign intro | Complete ([noccu][])
-Shared events | In progress ([noccu][])
+name | progress | translator
+--- | --- | ---
+Campaign intro | Complete | [noccu][]
+Shared events | In progress | [noccu][]
 
 ## Umas
-name | progress
---- | ---
-Maruzensky | Complete (deepl)
-Rudolph | In progress (deepl old)
-Bakushin | In progress (deepl)
-Agnes Tachyon | In progress (deepl)
+name | progress | translator
+--- | --- | ---
+Maruzensky | Complete | deepl
+Rudolph | In progress | deepl (old)
+Bakushin | In progress | deepl
+Agnes Tachyon | In progress | deepl
 
 ## Cards
 
-name | progress
---- | ---
+name | progress | translator
+--- | --- | ---
 
 
 [noccu]: https://github.com/noccu
 [Ren]: https://watatomo.github.io/tl/
 [Holo]: https://www.youtube.com/channel/UC1sbBH3dYW5K-WVKjFF2uEA
+[CatNipHoarder]: https://twitter.com/CatNipHoarder

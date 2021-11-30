@@ -8,11 +8,14 @@ import textprocess
 # Globals & Parameter parsing
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("-g <group> [-id <id>] [-src <file>]",
+    common.usage("-g <group> [-id <id>] [-src <file>] [-ll <line length>] [-O(verwrite existing tl)]",
                  "-src overwrites other options")
+TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 TARGET_FILE = args.getArg("-src", False)
+LINE_LENGTH = int(args.getArg("-ll", False))
+OVERWRITE_TEXT = args.getArg("-O", False)
 
 async def handler(client: server.WebSocketServerProtocol, path):
     print("New client connected")
@@ -35,7 +38,7 @@ async def startServer():
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol):
         if TARGET_FILE: self.files = [TARGET_FILE]
-        else: self.files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+        else: self.files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
         self.client = client
         self.loop = asyncio.get_running_loop()
 
@@ -52,15 +55,16 @@ class Translator:
 
     def _fileGenerator(self):
         for file in self.files:
+            print(f"Translating {file}...")
             yield common.TranslationFile(file)
 
     async def translate(self):
         for file in self._fileGenerator():
             for entry in self._entryGenerator(file):
                 # Skip already translated text
-                if not entry['enText']:
-                    text = textprocess.process(entry['jpText'], {"noNewlines": True})
-                    entry['enText'] = textprocess.process(await self.requestTl(text), {"lineLen": False, "replace": True}) # defer to default
+                if OVERWRITE_TEXT or not entry['enText']:
+                    text = textprocess.process(file, entry['jpText'], {"noNewlines": True})
+                    entry['enText'] = textprocess.process(file, await self.requestTl(text), {"lineLen": LINE_LENGTH, "replace": True}) # defer to default
             file.save()
         await self.client.close()
         STOP.set_result(True)

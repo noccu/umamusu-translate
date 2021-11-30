@@ -3,13 +3,14 @@ import sqlite3
 from os import path
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
+from re import sub as resub
 
 # Parameter parsing
 args = common.Args().parse()
 if args.getArg("-h"):
     common.usage("[-t <type>] [-n <unity filepath wildcard>] [-c <specific hash/asset filename>] [-g <story group>] [-id <story id>] [-O(verwrite)]",
                  "All args are combined with AND")
-TARGET_TYPE = args.getArg("-t", "")
+TARGET_TYPE = args.getArg("-t", "story")
 TARGET_HASHES = args.getArg("-c", False)
 TARGET_NAME = args.getArg("-n", "")
 # story shortcuts
@@ -32,15 +33,22 @@ def buildSqlStmt():
             stmt += f" and {expr}"
 
     if TARGET_TYPE:
-        add(f"m = {TARGET_TYPE}")
+        add(f"m = '{TARGET_TYPE}'")
     if TARGET_NAME:
         add(f"n like '%{TARGET_NAME}%'")
     if TARGET_HASHES:
-        add(f"h in ('{TARGET_HASHES}')")
+        hashes = resub("(\"?[A-Z0-9]+\"?) ?(?=,|$)", r"'\1'", TARGET_HASHES)
+        add(f"h in ({hashes})")
     if TARGET_GROUP:
-        add(f"n like 'story/data/{TARGET_GROUP}/____/storytimeline%'")
+        if TARGET_TYPE == "story":
+            add(f"n like 'story/data/{TARGET_GROUP}/____/storytimeline%'")
+        elif TARGET_TYPE == "home":
+            add(f"n like 'home/data/00000/{TARGET_GROUP}/hometimeline%'")
     if TARGET_ID:
-        add(f"n like 'story/data/__/{TARGET_ID}/storytimeline%'")
+        if TARGET_TYPE == "story":
+            add(f"n like 'story/data/__/{TARGET_ID}/storytimeline%'")
+        elif TARGET_TYPE == "home":
+            add(f"n like 'home/data/00000/__/hometimeline_00000____{TARGET_ID}%'")
 
     return None if firstExpr else stmt
 

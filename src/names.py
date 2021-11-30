@@ -1,3 +1,4 @@
+from os import path
 import common
 import csv
 
@@ -6,12 +7,18 @@ if args.getArg("-h"):
     common.usage("-n <db-translate uma-name.csv> [-src <file to process>]")
 NAMES_FILE = args.getArg("-n", False)
 TARGET_FILE = args.getArg("-src", False)
+TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 
 
 def createDict():
-    if not NAMES_FILE: raise FileNotFoundError
+    global NAMES_FILE
+    if not NAMES_FILE: 
+        NAMES_FILE = "../umamusume-db-translate/src/data/uma-name.csv"
+        if not path.exists(NAMES_FILE):
+            raise FileNotFoundError("You must specify the uma-name.csv file.")
+        print(f"Using auto-found names file {path.realpath(NAMES_FILE)}")
     names = dict()
     with open(NAMES_FILE, "r", newline='', encoding="utf8") as csvfile:
      reader = csv.reader(csvfile, delimiter=',', quotechar='"')
@@ -21,8 +28,8 @@ def createDict():
     # a few extras. misc.csv doesn't provide everything
     # todo: probably use an external file?
     names['駿川たづな'] = "Hayakawa Tazuna"
-    names['秋川理事長'] = "President Akikawa"
-    names['樫本代理'] = "Acting Pres. Kashimoto"
+    names['秋川理事長'] = "Chairwoman Akikawa"
+    names['樫本代理'] = "Acting Chair Kashimoto"
     names['モノローグ'] = "Monologue"
     names['記者A'] = "Reporter A"
     names['記者B'] = "Reporter B"
@@ -33,7 +40,7 @@ def createDict():
 
 def translate(namesDict):
     if TARGET_FILE: files = [TARGET_FILE]
-    else: files = common.searchFiles(TARGET_GROUP, TARGET_ID)
+    else: files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
 
     for file in files:
         file = common.TranslationFile(file)

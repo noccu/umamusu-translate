@@ -33,21 +33,21 @@ def buildSqlStmt():
             stmt += f" and {expr}"
 
     if TARGET_TYPE:
-        add(f"m = {TARGET_TYPE}")
+        add(f"m = '{TARGET_TYPE}'")
     if TARGET_NAME:
         add(f"n like '%{TARGET_NAME}%'")
     if TARGET_HASHES:
         hashes = resub("(\"?[A-Z0-9]+\"?) ?(?=,|$)", r"'\1'", TARGET_HASHES)
         add(f"h in ({hashes})")
     if TARGET_GROUP:
-        if TARGET_TYPE is "story":
+        if TARGET_TYPE == "story":
             add(f"n like 'story/data/{TARGET_GROUP}/____/storytimeline%'")
-        elif TARGET_TYPE is "home":
+        elif TARGET_TYPE == "home":
             add(f"n like 'home/data/00000/{TARGET_GROUP}/hometimeline%'")
     if TARGET_ID:
-        if TARGET_TYPE is "story":
+        if TARGET_TYPE == "story":
             add(f"n like 'story/data/__/{TARGET_ID}/storytimeline%'")
-        elif TARGET_TYPE is "home":
+        elif TARGET_TYPE == "home":
             add(f"n like 'home/data/00000/__/hometimeline_00000____{TARGET_ID}%'")
 
     return None if firstExpr else stmt

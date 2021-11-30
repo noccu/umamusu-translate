@@ -48,6 +48,5 @@ if TARGET_FILE:
 else:
     files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
     for file in files:
-        parsed = common.readJson(file)
-        for bundleName in parsed.keys():
-            save(bundleName)
+        file = common.TranslationFile(file)
+        save(file.getBundle())

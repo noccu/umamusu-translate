@@ -115,16 +115,15 @@ def extractText(assetType, obj):
     return o if o['jpText'] else None
 
 def transferExisting(storyId, textData):
+    # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
+    # Only continue when forced to.
+    if not OVERWRITE_DST: return
     group, id, idx = storyId
-    existing = None
-    search = Path(EXPORT_DIR).joinpath(group, id).glob(f"{idx}*")
-    for file in search:
-        if file.is_file():
-            existing = common.TranslationFile(file)
-            break
 
-    if existing:
-        for block in existing.getTextBlocks():
+    file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
+    if file is not None:
+        file = common.TranslationFile(file)
+        for block in file.getTextBlocks():
             if block['blockIdx'] == textData['blockIdx']:
                 textData['enText'] = block['enText']
                 textData['enName'] = block['enName']
@@ -134,8 +133,6 @@ def transferExisting(storyId, textData):
                 if 'coloredText' in block:
                     for idx, cText in enumerate(textData['coloredText']):
                         cText['enText'] = block['coloredText'][idx]['enText']
-    return
-
 
 
 def exportData(data, filepath: str):
@@ -162,11 +159,10 @@ def exportAsset(bundle: str, path: str):
 
     # check existing files first
     if not OVERWRITE_DST:
-        search = exportDir.glob(f"{idx}*.json")
-        for file in search:
-            if file.exists():
-                print(f"Skipping existing: {file.name}")
-                return
+        file = common.findExisting(exportDir, f"{idx}*.json")
+        if file is not None:
+            print(f"Skipping existing: {file.name}")
+            return
 
     importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
     data = extractAsset(importPath, (group, id, idx))

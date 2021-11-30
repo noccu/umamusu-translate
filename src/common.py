@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 import sys
 import json
 
@@ -29,6 +30,14 @@ def writeJsonFile(file, data):
     os.makedirs(os.path.dirname(file), exist_ok=True)
     with open(file, "w", encoding="utf8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
+
+def findExisting(searchPath: os.PathLike, filePattern: str):
+    searchPath = Path(searchPath)
+    search = searchPath.glob(filePattern)
+    for file in search:
+        if file.is_file():
+            return file
+    return None
 
 class Args:
     parsed = dict()

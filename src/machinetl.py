@@ -55,6 +55,7 @@ class Translator:
 
     def _fileGenerator(self):
         for file in self.files:
+            print(f"Translating {file}...")
             yield common.TranslationFile(file)
 
     async def translate(self):

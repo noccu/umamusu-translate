@@ -8,7 +8,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "ある日のトレーニング中。\nふと視線を感じ、目をやると……。",
-            "enText": "I was training one day. Suddenly, I felt a\ngaze and looked up to see …",
+            "enText": "During training one day. I felt a\ngaze and looked up to see…",
             "nextBlock": 2,
             "pathId": -1423689034308810620,
             "blockIdx": 1
@@ -26,12 +26,12 @@
             "jpName": "",
             "enName": "",
             "jpText": "トレーニングを終える頃になっても\n依然として、彼女はこちらを見ていた。\n……何か話したいことがあるのだろうか？",
-            "enText": "By the end of the training, she was still\nlooking at me. Is there … something\nshe wants to talk about?",
+            "enText": "At the end of training, she was still\nlooking at me. … Is there something\nshe wants to talk about?",
             "nextBlock": 4,
             "choices": [
                 {
                     "jpText": "……あの、どうかしましたか？",
-                    "enText": "… Um, how can I help you?",
+                    "enText": "… Um, can I help you?",
                     "nextBlock": 4
                 }
             ],
@@ -40,14 +40,14 @@
         },
         {
             "jpName": "？？？",
-            "enName": "",
+            "enName": "???",
             "jpText": "あ……申し訳ありません。\n練習の邪魔をしてしまったでしょうか？",
-            "enText": "Oh … I'm sorry. I hope I didn't\ninterrupt your practice.",
+            "enText": "Ah… I'm sorry. I hope I didn't\ninterrupt your practice.",
             "nextBlock": 5,
             "choices": [
                 {
                     "jpText": "いえ、もう終わりましたから",
-                    "enText": "No, I'm done.",
+                    "enText": "No, we're done.",
                     "nextBlock": 5
                 }
             ],
@@ -58,7 +58,7 @@
             "jpName": "？？？",
             "enName": "",
             "jpText": "それはよかったです！\n実は、お話したいことがございまして。",
-            "enText": "I'm glad to hear it! Actually,\nthere is something I would like\nto talk to you about.",
+            "enText": "I'm glad to hear that! Actually,\nthere is something I would like\nto talk to you about.",
             "nextBlock": 6,
             "pathId": -173157539527072787,
             "blockIdx": 5
@@ -67,7 +67,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "私、『月刊トゥインクル』の記者――\r\n乙名史　悦子【おとなし　えつこ】\nと申します。",
-            "enText": "I'm Etsuko Otonashi, a reporter for the\nmonthly magazine Twinkle.",
+            "enText": "I'm Etsuko Otonashi, a reporter\nfor \"Twinkle Monthly\".",
             "nextBlock": 7,
             "pathId": 5156232341518025791,
             "blockIdx": 6
@@ -76,7 +76,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "……トレーニングを拝見し、脱帽しました。\r\nぜひ、お2人の活躍を記事で後押ししたい。\nそのご相談をと、お待ちしていた次第です。",
-            "enText": "I saw the … training and took my hat\noff to you. I would love to encourage you\nboth to do more with your articles. I have\nbeen waiting to hear from you about it.",
+            "enText": "… I watched your training and was greatly\nimpressed. I would love to support you both\nwith articles. I have been waiting to\ndiscuss this with you.",
             "nextBlock": 8,
             "pathId": 5596422144192584900,
             "blockIdx": 7
@@ -85,12 +85,12 @@
             "jpName": "",
             "enName": "",
             "jpText": "礼儀正しく、誠実そうな人だ。\r\n丁寧な記事で、<chrname>の\nファンの支持を集めてくれるかもしれない。",
-            "enText": "She seems to be polite and sincere. With\nher polite articles, she may be able to\ngain the support of <chrname>'s fans.",
+            "enText": "She seems polite and sincere. With her\nconsidered articles, she may be able to gain\n<chrname> some fans.",
             "nextBlock": 9,
             "choices": [
                 {
                     "jpText": "こちらこそ、ぜひお願いします",
-                    "enText": "Please do the same!",
+                    "enText": "It would be my pleasure!",
                     "nextBlock": 9
                 }
             ],
@@ -101,12 +101,12 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "ご快諾、感謝いたします。では早速……\n練習内容は、どんな展望を見据えてお決めに？",
-            "enText": "Thank you for your willingness.\nSo, let's get right to it: …\nWhat kind of vision do you have\nin mind for your practice?",
+            "enText": "Thank you for your willingness. So, let's\nget right to it… What do you consider when\ndeciding on a training plan?",
             "nextBlock": 10,
             "choices": [
                 {
                     "jpText": "彼女が夢を掴めるように、熟考しています",
-                    "enText": "I'm pondering so that she\ncan catch her dream.",
+                    "enText": "I'm always considering her aspirations.",
                     "nextBlock": 10
                 }
             ],
@@ -117,12 +117,12 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "……なるほど。\nつまり、貴方のトレーナーとしての役割は――",
-            "enText": "… I see. So your role\nas a trainer is to――",
+            "enText": "… I see. So your role\nas a trainer is to—",
             "nextBlock": 11,
             "choices": [
                 {
                     "jpText": "ウマ娘が夢を掴む手伝いをすることです！",
-                    "enText": "It's about helping Uma Musume\nachieve her dreams!",
+                    "enText": "It's to help my Uma Musume achieve her dreams!",
                     "nextBlock": 11
                 }
             ],
@@ -133,12 +133,12 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "………………す。\r\nす……す、す…………。",
-            "enText": "… Su …\nSu, Su …",
+            "enText": "……… Su. Su… Su, Su……",
             "nextBlock": 12,
             "choices": [
                 {
                     "jpText": "す……？",
-                    "enText": "So …?",
+                    "enText": "Su…?",
                     "nextBlock": 12
                 }
             ],
@@ -149,7 +149,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "素晴らしいですっ！！",
-            "enText": "That's fantastic!",
+            "enText": "Splendid!",
             "nextBlock": 13,
             "pathId": -8253539079711740614,
             "blockIdx": 12
@@ -158,7 +158,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "つまり担当ウマ娘に夢を掴ませるため、\r\nどんなこともやる覚悟がおありだと！",
-            "enText": "In other words, you're prepared to do\nwhatever it takes to make sure that the\nhorse girl in your charge gets her dream!",
+            "enText": "In other words, you're prepared to do\nwhatever it takes to make sure that the\nhorse girl in your charge reaches her dream!",
             "nextBlock": 14,
             "pathId": 1593613688920078663,
             "blockIdx": 13
@@ -167,12 +167,12 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "トレーニングを頼まれたらいつでも付き合い、\r\nレースの後の疲労回復は名湯巡り、\n水が飲みたいと言えば山まで汲みにも行くと！",
-            "enText": "Whenever she was asked to train, she would\ngo along, when she was tired after a race,\nshe would visit famous hot springs, and\nwhen she wanted to drink water, she would go\nto the mountains to get it!",
+            "enText": "When she trains you train with her,\nwhen she's tired you provide hot springs,\nwhen she's thirsty you would scoop\nwater from mountains!",
             "nextBlock": 15,
             "choices": [
                 {
                     "jpText": "（そんな話したっけ……！？）",
-                    "enText": "(Did I ever tell you that …?)",
+                    "enText": "(Is that what I said…!?)",
                     "nextBlock": 15
                 }
             ],
@@ -183,7 +183,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "ああ……トレーナーさんのお覚悟、\r\nとても……とても感服いたしましたぁ……。\n必ず、心を熱くする記事にしてみせます……！",
-            "enText": "Oh …, I'm very … impressed with\nthe determination of your trainer. I'm\nsure I'll be able to make an article that\nwill blow your mind …!",
+            "enText": "Ahh… I'm floored… with your determination as\ntrainer. I'll turn this into an article that\nwill blow their minds…!",
             "nextBlock": 16,
             "pathId": -7016620369715280887,
             "blockIdx": 15
@@ -192,7 +192,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして、色んな意味で強力な助っ人と\n知り合えたのだった……！",
-            "enText": "This is how I came to know a powerful\nhelper in many ways: …!",
+            "enText": "This is how I came to know a powerful\nsupporter, in many ways…!",
             "nextBlock": -1,
             "pathId": -4380948543583659606,
             "blockIdx": 16

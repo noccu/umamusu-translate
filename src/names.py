@@ -36,6 +36,10 @@ def createDict():
     names['後輩のウマ娘A'] = "Junior UmaMusu A"
     names['後輩のウマ娘B'] = "Junior UmaMusu B"
     names['同期のウマ娘'] = "Contemporary UmaMusu"
+    names['？？？'] = "???"
+    names['ニュースキャスター'] = "Newscaster"
+    names['ウマ娘ファンA'] = "UmaMusu Fan A"
+    names['ウマ娘ファンB'] = "UmaMusu Fan B"
     return names
 
 def translate(namesDict):

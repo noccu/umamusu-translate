@@ -4,7 +4,7 @@
         "repl": "…"
     },
     {
-        "re": "--+",
+        "re": "--+|――",
         "repl": "—"
     },
     {
@@ -28,7 +28,19 @@
         "repl": "herself"
     },
     {
+        "re": "Mr.",
+        "repl": "Ms."
+    },
+    {
         "re": "(?:Toresen|Trespassing) Academy",
         "repl": "Tracen Academy"
+    },
+    {
+        "re": "Aohar Cup",
+        "repl": "Aoharu Hai"
+    },
+    {
+        "re": "the horse girl in charge",
+        "repl": "your horse girl"
     }
 ]

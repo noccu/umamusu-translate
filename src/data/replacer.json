@@ -1,6 +1,14 @@
 [
     {
-        "re": "[, :]?\\.+ ?\\.+",
+        "re": " ?\\.+ ?\\.+",
+        "repl": "…"
+    },
+    {
+        "re": "[,:]?…[,:]?",
+        "repl": "…"
+    },
+    {
+        "re": "[^a-z ]—",
         "repl": "…"
     },
     {
@@ -28,6 +36,10 @@
         "repl": "herself"
     },
     {
+        "re": "him",
+        "repl": "her"
+    },
+    {
         "re": "Mr.",
         "repl": "Ms."
     },
@@ -42,6 +54,14 @@
     {
         "re": "Simbolildorf",
         "repl": "Symboli Rudolf"
+    },
+    {
+        "re": "Chayahide",
+        "repl": "Hayahide"
+    },
+    {
+        "re": "Tysin",
+        "repl": "Taishin"
     },
     {
         "re": "the horse girl in charge",

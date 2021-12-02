@@ -19,7 +19,7 @@ Christmas 2021 | In progress | deepl (temp)
 ## Umas
 name | progress | translator
 --- | --- | ---
-Tachyon | In Progress | [Ren][] (ep 1), deepl
+Tachyon | In Progress | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl
 
 
 # Training story/events

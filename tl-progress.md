@@ -15,26 +15,26 @@ name | progress | translator
 Main story | Transferring | [CatNipHoarder][] / [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
 Halloween | Transferring | [CatNipHoarder][] / [Holo][]
-Christmas 2021 | In progress | deepl (temp)
+Miracles of the Holy Night | Complete | deepl (temp)
 ## Umas
 name | progress | translator
 --- | --- | ---
-Tachyon | In Progress | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl
+Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl (temp)
 
 
 # Training story/events
 name | progress | translator
 --- | --- | ---
 Campaign intro | Complete | [noccu][]
-Shared events | In progress | [noccu][]
+Shared events | Complete | [noccu][]
 
 ## Umas
 name | progress | translator
 --- | --- | ---
 Maruzensky | Complete | deepl
 Rudolph | In progress | deepl (old)
-Bakushin | In progress | deepl
-Agnes Tachyon | In progress | deepl
+Bakushin | Complete | deepl
+Agnes Tachyon | Complete | deepl
 
 ## Cards
 

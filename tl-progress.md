@@ -20,6 +20,7 @@ Miracles of the Holy Night | Complete | deepl (temp)
 name | progress | translator
 --- | --- | ---
 Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl (temp)
+Urara | Complete | [Vacxy][] (ep 1), deepl
 
 
 # Training story/events
@@ -46,3 +47,4 @@ name | progress | translator
 [Ren]: https://watatomo.github.io/tl/
 [Holo]: https://www.youtube.com/channel/UC1sbBH3dYW5K-WVKjFF2uEA
 [CatNipHoarder]: https://twitter.com/CatNipHoarder
+[Vacxy]: https://ko-fi.com/mobagetranslations

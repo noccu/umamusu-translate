@@ -21,7 +21,7 @@ OVERWRITE_DST = args.getArg("-O", False)
 
 
 def buildSqlStmt():
-    stmt = "select n, h from a"
+    stmt = "select h from a"
     firstExpr = True
 
     def add(expr: str):
@@ -44,11 +44,15 @@ def buildSqlStmt():
             add(f"n like 'story/data/{TARGET_GROUP}/____/storytimeline%'")
         elif TARGET_TYPE == "home":
             add(f"n like 'home/data/00000/{TARGET_GROUP}/hometimeline%'")
+        elif TARGET_TYPE == "race":
+            add(f"n like 'race/storyrace/text/storyrace_{TARGET_GROUP}____%'")
     if TARGET_ID:
         if TARGET_TYPE == "story":
             add(f"n like 'story/data/__/{TARGET_ID}/storytimeline%'")
         elif TARGET_TYPE == "home":
             add(f"n like 'home/data/00000/__/hometimeline_00000____{TARGET_ID}%'")
+        elif TARGET_TYPE == "race":
+            add(f"n like 'race/storyrace/text/storyrace___{TARGET_ID}%'")
 
     return None if firstExpr else stmt
 
@@ -63,12 +67,20 @@ def getFiles():
 
 
 def main():
-    for filepath, hash in getFiles():
+    n = 0
+    for hash, in getFiles():
         dst = path.join(DESTINATION, hash)
+        src = path.join(GAME_ASSET_ROOT, hash[:2], hash)
         if OVERWRITE_DST or not path.exists(dst):
-            src = path.join(GAME_ASSET_ROOT, hash[:2], hash)
-            print(f"Copying {src} to {dst}")
-            shutil.copyfile(src, dst)
+            try:
+                shutil.copyfile(src, dst)
+                n += 1
+                print(f"Copied {src} to {dst}")
+            except FileNotFoundError:
+                print(f"Couldn't find {src}, skipping...")
+        else:
+            print(f"Skipping existing: {src}")
+    print(f"Copied {n} files.")
 
 
 main()

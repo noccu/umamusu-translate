@@ -66,18 +66,18 @@ def importDump(path: PurePath):
     else:
         # if it's not a json file then it's definitely external as we only use dump.json
         if not isExternal: raise AssertionError("Dump file is not json and not external. This is a bug and you should never see this message.") # but just in case
-        obj = dict(localDumpData)
 
         extract = re.compile(r'"(\d+)": "(.+)",?')
         with open(path, "r", encoding="utf8") as f:
             for line in f:
                 match = extract.search(line)
+                if match is None: continue
                 key, val = map(lambda x: x.encode('latin1', 'backslashreplace').decode('unicode-escape'), match.group(1,2))
                 if key and val and not filter.fullmatch(val):
-                    obj[key] = val
+                    localDumpData[key] = val
         if DO_IMPORT:
-            common.writeJsonFile(LOCAL_DUMP, obj)
-        return obj
+            common.writeJsonFile(LOCAL_DUMP, localDumpData)
+        return localDumpData
 
 def clean():
     dump = common.readJson(DUMP_FILE)

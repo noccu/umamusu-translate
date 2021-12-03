@@ -7,7 +7,7 @@ import regex as re
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("-new|-upd [-add] [-src <dumpfile path>] [clean [both]]",
+    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-O(verwrite duplicate keys in dump with imported)]",
                  "Add new strings to tl file, or update/write final file with translations.",
                  "-add imports text files given by -src to local dump.json",
                  "-clean removes untranslated entries from tl file, or dump and tl file")
@@ -17,6 +17,7 @@ TRANSLATE_HASHES = args.getArg("-upd", False)
 
 DO_IMPORT = args.getArg("-add", False) #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
 DO_CLEAN = args.getArg("-clean", False)
+OVERWRITE_LOCAL_DUMP = args.getArg("-O", False)
 
 ROOT = PurePath(__file__).parent
 LOCAL_DUMP = ROOT / "data" / "dump.json"
@@ -51,8 +52,8 @@ def importDump(path: PurePath):
     if path.suffix == ".json":
         data = common.readJson(path)
         if isExternal:
-            # assume external is newer and overwrite local
-            data = {**localDumpData, **data}
+            if OVERWRITE_LOCAL_DUMP: data = {**localDumpData, **data}
+            else: data = {**data, **localDumpData}
             # now that we've already read the external file in path, we no longer need it so we can swap it to local for updating
             path = LOCAL_DUMP
         # copy to list so we don't run into issues deleting keys in our loop obj

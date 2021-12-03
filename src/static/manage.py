@@ -33,8 +33,14 @@ def updateTlData(dumpData: dict, tlData: dict):
 
 def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
     for hash, text in dumpData.items():
-        if text in tlData and tlData[text]:
-            hashData[hash] = tlData[text]
+        try:
+            translatedText = tlData[text]
+        except KeyError:
+            continue
+
+        # special case for effectively removing text
+        if translatedText == "<empty>": translatedText = ""
+        hashData[hash] = translatedText
 
 def importDump(path: PurePath):
     isExternal = path != LOCAL_DUMP

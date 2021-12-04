@@ -21,9 +21,9 @@ def createDict():
         print(f"Using auto-found names file {path.realpath(NAMES_FILE)}")
     names = dict()
     with open(NAMES_FILE, "r", newline='', encoding="utf8") as csvfile:
-     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-     for row in reader:
-         names[row[0]] = row[1]
+        reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+        for row in reader:
+            names[row[0]] = row[1]
 
     # a few extras. misc.csv doesn't provide everything
     # todo: probably use an external file?
@@ -33,6 +33,8 @@ def createDict():
     names['モノローグ'] = "Monologue"
     names['記者A'] = "Reporter A"
     names['記者B'] = "Reporter B"
+    names['ウマ娘A'] = "UmaMusu A"
+    names['ウマ娘B'] = "UmaMusu B"
     names['後輩のウマ娘A'] = "Junior UmaMusu A"
     names['後輩のウマ娘B'] = "Junior UmaMusu B"
     names['同期のウマ娘'] = "Contemporary UmaMusu"
@@ -43,6 +45,10 @@ def createDict():
     names['教師'] = "Teacher"
     names['実況'] = "Coverage"
     names['観客A'] = "Spectator A"
+    names['新人トレーナーA'] = "Rookie Trainer A"
+    names['中堅トレーナーA'] = "Average Trainer A"
+    names['ベテラントレーナーA'] = "Veteran Trainer A"
+    names['トレーナーたち'] = "Trainers"
     return names
 
 def translate(namesDict):

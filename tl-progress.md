@@ -20,8 +20,8 @@ Miracles of the Holy Night | Complete | deepl (temp)
 # Character stories
 name | progress | translator
 --- | --- | ---
-Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl (temp)
-Urara | Complete | [Vacxy][] (ep 1), deepl
+Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl (temp)
+Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 Maruzensky | Complete | deepl
 Grass Wonder | Complete | deepl
 Symboli Rudolf | Complete | deepl
@@ -30,6 +30,7 @@ Rice Shower  | Complete | deepl
 King Halo | Complete, Transferring | deepl, [burritoblaster][]
 Special Week | Complete | deepl
 Gold Ship | Complete | deepl
+Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 
 
 # Training story/events

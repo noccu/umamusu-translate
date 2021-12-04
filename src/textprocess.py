@@ -24,7 +24,7 @@ def process(file: TranslationFile, text: str, options: dict):
     if "noNewlines" in options and options['noNewlines']:
         text = cleannewLines(file, text)
     if "lineLen" in options:
-        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, options['targetLines'] if "targetLines" in options else 3)
+        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else 3))
     if "replace" in options:
         text = replace(text)
     return text
@@ -59,7 +59,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{{lineLen},}}?(?= |$)|(?:(?<= )|(?<=^)).+$", text)
 
     if targetLines > 0 and len(lines) > targetLines:
-        print(f"Exceeded target lines ({targetLines}) at: ", lines)
+        print(f"Exceeded target lines ({targetLines}) in {file.name} at: ", lines)
     return "\\n".join(lines) if file.getType() == "race" else "\n".join(lines)
 
 def replace(text: str):

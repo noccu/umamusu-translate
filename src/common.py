@@ -1,5 +1,5 @@
 import os
-from pathlib import Path
+from pathlib import Path, PurePath
 import sys
 import json
 
@@ -77,6 +77,7 @@ class Args:
 class TranslationFile:
     def __init__(self, file):
         self.file = file
+        self.name = PurePath(file).name
         self.data = readJson(file)
         self.version = self._getVersion()
 

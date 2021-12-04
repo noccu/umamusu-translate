@@ -44,7 +44,7 @@
         "repl": "Ms."
     },
     {
-        "re": "(?:Tore?sen|Trespassing) Academy",
+        "re": "(?:To?re?sen|Trespassing) (?:Academy|Gakuen)",
         "repl": "Tracen Academy"
     },
     {
@@ -54,6 +54,10 @@
     {
         "re": "selection race",
         "repl": "Selection Race"
+    },
+    {
+        "re": "make-?(?:out|up) debut",
+        "repl": "debut"
     },
     {
         "re": "Simbolildorf",
@@ -68,8 +72,8 @@
         "repl": "Taishin"
     },
     {
-        "re": "Sakura Baxin-o",
-        "repl": "Sakura Bakushin O"
+        "re": "Ba(?:x|ks)in(?:[- ]o)?",
+        "repl": "Bakushin O"
     },
     {
         "re": "the horse girl in charge",

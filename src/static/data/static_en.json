@@ -612,7 +612,7 @@
     "体力が<color=#2E85E6>{0}減った</color>": "Energy has <color=#2E85E6>diminished by {0}</color>",
     "体力が<color=#F16D27>{0}回復した</color>": "Energy has <color=#F16D27>recovered by {0}</color>",
     "やる気が<color=#2E85E6>下がった</color>": "Motivation has <color=#2E85E6>decreased</color>",
-    "やる気が<color=#F16D27>上がった</color>": "Motivation has <color=#F16D27>decreased</color>",
+    "やる気が<color=#F16D27>上がった</color>": "Motivation has <color=#F16D27>increased</color>",
     "芝適性": "Grass aptitude",
     "ダート適性": "Dirt aptitude",
     "短距離適性": "Short aptitude",
@@ -824,5 +824,7 @@
     "10PLAY分まとめて": "10-spin",
     "最大10回連続でルーレットを回します": "Spins a max of 10 times",
     "下記の場合、ルーレットの回転が停止します\n・ルーレットコイン不足\n・8ラインBINGO達成\n・出走回数達成": "Spinning will stop when:\n・Out of roulette coins\n・Achieving an 8-line BINGO\n・Specified number of spins reached",
-    "設定を変更しました": "Settings changed"
+    "設定を変更しました": "Settings changed",
+    "<color=#{0}>「{1}」</color>になった": "<color=#{0}>Became「{1}」</color>",
+    "<color=#{0}>「{1}」</color>の<color=#{2}>ヒントLvが{3}上がった</color>": "<color=#{0}>「{1}」</color>'s<color=#{2}>Hint Lv has increased by {3}</color>"
 }

@@ -17,10 +17,9 @@ This tool collection only changes text to translate it and it is *my belief* thi
 1. (Optional but recommended) Download all game data through the game menu
 1. Clone or download this project
 
-### Usage
-1. From project root: `python src/import.py -O`
+### Basic Usage
+1. **Dialogue**: From project root: `python src/import.py -O`
     - If you only want to install specific things, see [id-structure.md](id-structure.md) and use: `python src/import.py -O -g <group> -id <id>`
-1. **Dialogue**: Copy `dat` folder to game datafolder and overwrite (Usually `C:\Users\<name>\AppData\LocalLow\Cygames\umamusume`)
 1. **UI**: Copy the [localify folder](localify) to your Uma Musume install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are)
 1. **Skills and other variable text**: See the [db-translate project]
 

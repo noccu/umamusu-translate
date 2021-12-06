@@ -7,10 +7,11 @@ import regex as re
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-O(verwrite duplicate keys in dump with imported)]",
+    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)]",
                  "Add new strings to tl file, or update/write final file with translations.",
                  "-add imports text files given by -src to local dump.json",
-                 "-clean removes untranslated entries from tl file, or dump and tl file")
+                 "-clean removes untranslated entries from tl file, or dump and tl file",
+                 "-O overwrites local values with external ones, else vice versa")
 
 ADD_NEW_TEXT = args.getArg("-new", False)
 TRANSLATE_HASHES = args.getArg("-upd", False)
@@ -18,6 +19,7 @@ TRANSLATE_HASHES = args.getArg("-upd", False)
 DO_IMPORT = args.getArg("-add", False) #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
 DO_CLEAN = args.getArg("-clean", False)
 OVERWRITE_LOCAL_DUMP = args.getArg("-O", False)
+IMPORT_DUMP_ONLY = args.getArg("-I", False)
 
 ROOT = PurePath(__file__).parent
 LOCAL_DUMP = ROOT / "data" / "dump.json"
@@ -39,6 +41,7 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
         except KeyError:
             continue
 
+        if not translatedText: continue
         # special case for effectively removing text
         if translatedText == "<empty>": translatedText = ""
         hashData[hash] = translatedText
@@ -51,6 +54,7 @@ def importDump(path: PurePath):
 
     if path.suffix == ".json":
         data = common.readJson(path)
+        animationCheck = list()
         if isExternal:
             if OVERWRITE_LOCAL_DUMP: data = {**localDumpData, **data}
             else: data = {**data, **localDumpData}
@@ -59,7 +63,20 @@ def importDump(path: PurePath):
         # copy to list so we don't run into issues deleting keys in our loop obj
         for key, val in list(data.items()):
             if filter.fullmatch(val):
+                # remove non-japanese data
                 del data[key]
+            else:
+                # keep track of animated text
+                if len(animationCheck) == 0 or (val.startswith(animationCheck[-1][1]) and len(val) - len(animationCheck[-1][1]) < 2):
+                    animationCheck.append( (key, val) )
+                else:
+                    if len(animationCheck) > 4:
+                        # and remove it
+                        print (f"Removing animated text: {animationCheck}")
+                        for key, val in animationCheck:
+                            del data[key]
+                    animationCheck.clear()
+
         if DO_IMPORT:
             common.writeJsonFile(path, data)
         return data
@@ -75,7 +92,7 @@ def importDump(path: PurePath):
                 key, val = map(lambda x: x.encode('latin1', 'backslashreplace').decode('unicode-escape'), match.group(1,2))
                 if key and val and not filter.fullmatch(val):
                     localDumpData[key] = val
-        if DO_IMPORT:
+        if DO_IMPORT or IMPORT_DUMP_ONLY:
             common.writeJsonFile(LOCAL_DUMP, localDumpData)
         return localDumpData
 
@@ -114,6 +131,7 @@ def main():
         return
 
     dumpData = importDump(DUMP_FILE)
+    if IMPORT_DUMP_ONLY: return
     tlData = common.readJson(TL_FILE)
 
     if ADD_NEW_TEXT:

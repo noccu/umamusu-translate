@@ -1,0 +1,692 @@
+{
+    "version": 3,
+    "bundle": "ZFQTGRI67FKDAN2D2Z4JUIKHECTYTAQO",
+    "type": "story",
+    "storyId": "501041520",
+    "title": "バクシン的な謎解き！",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "最近、学園の生徒が作った『ウマ謎』という\r\n謎解きゲームが流行っている。",
+            "enText": "Recently, a puzzle solving game called \"Uma\nRiddle\" created by the students of the\nschool has become popular.",
+            "nextBlock": 2,
+            "pathId": -1923071777357659187,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "学園内に置かれた謎を解くというものらしく、\r\nサクラバクシンオーもクラスメイトの勧めで\n挑戦しているそうだが――",
+            "enText": "It seems the challenge is to solve a riddle\non the premises, and Sakura Bakushin O is\nplaying on recommendation of her classmates.",
+            "nextBlock": 3,
+            "pathId": 2932921605770618532,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ぬああああーーーーーっ！！\r\nまっったく解けません！！",
+            "enText": "Nooooooooooooo! I can't solve it at all!",
+            "nextBlock": 4,
+            "pathId": 2888969608069683090,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "私が率先して謎を解き、模範となるべき\r\nだというのに、これでは示しがつきません！",
+            "enText": "I'm supposed to be the one who solves the\nriddles and leads by example, but this is\nnot the way to go!",
+            "nextBlock": 5,
+            "choices": [
+                {
+                    "jpText": "手伝おうか？",
+                    "enText": "Do you need help?",
+                    "nextBlock": 5
+                }
+            ],
+            "pathId": 8078318087433391870,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ええっ！？　非常にありがたいですが\r\nそれでは手本にならないのでは？",
+            "enText": "What? That's very kind of you, but\nisn't that a good example?",
+            "nextBlock": 6,
+            "choices": [
+                {
+                    "jpText": "トレーナーと協力する姿勢は参考になるぞ",
+                    "enText": "Your willingness to work with\nthe trainer will be helpful.",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "トレーナーと協力する姿勢は参考になるよ",
+                    "enText": "Your willingness to work with\nyour trainer is helpful.",
+                    "nextBlock": 6
+                }
+            ],
+            "pathId": 6189675953668945339,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "む、ならば問題ありませんね！\r\n私たちの委員長力、見せつけてやりましょう！",
+            "enText": "Well, then there's no problem! Let's show\nthem what we're capable of!",
+            "nextBlock": 7,
+            "pathId": -5948561886876181906,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ふむふむ！\r\n『ヒントはナカヤマより得られる』ですか。",
+            "enText": "Hmmm…! \"Hints can be obtained\nfrom Nakayama\"?",
+            "nextBlock": 8,
+            "pathId": -5337509539662072487,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ナカヤマ、ナカヤマ……\r\nナカヤマといえば――",
+            "enText": "Nakayama, Nakayama…\nSpeaking of Nakayama—",
+            "nextBlock": 9,
+            "choices": [
+                {
+                    "jpText": "ナカヤマフェスタから聞き出す？",
+                    "enText": "Do you want to find out from Nakayama Festa?",
+                    "nextBlock": 9
+                },
+                {
+                    "jpText": "中山レース場に行けばわかる？",
+                    "enText": "Can you find out by going\nto Nakayama Racecourse?",
+                    "nextBlock": 36
+                }
+            ],
+            "pathId": 7899755440857774818,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "なるほど！　学園で有名な『ナカヤマ』\r\nといえば彼女ですね！！",
+            "enText": "I see! The famous \"Nakayama\" of\nthe school is her, isn't it!",
+            "nextBlock": 10,
+            "choices": [
+                {
+                    "jpText": "素直に教えてもらえるか？",
+                    "enText": "Can you be honest with me?",
+                    "nextBlock": 10
+                },
+                {
+                    "jpText": "素直に教えてもらえるかな？",
+                    "enText": "Can you be honest with me?",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": 1334347119255895905,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "課題達成に壁はつきもの！\r\n気合いと根性で乗り切ってみせますとも！！",
+            "enText": "There will always be obstacles to\novercome! I'll get through it with\nspirit and perseverance!",
+            "nextBlock": 11,
+            "pathId": 2751375080955653394,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "見つけましたよ、ナカヤマさん！\r\nさあ『ウマ謎』第3問のヒントをください！！",
+            "enText": "I found it, Nakayama-san! Now give me a hint\nfor the third \"Uma Riddle\"!",
+            "nextBlock": 12,
+            "choices": [
+                {
+                    "jpText": "それだけ言っても伝わらないんじゃ……",
+                    "enText": "That's all you can say, but you\nwon't get the message…",
+                    "nextBlock": 12
+                }
+            ],
+            "pathId": 5704132045026812972,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "いや、『ヒントはナカヤマより得られる』\r\nってヤツだろ？　私がその『ナカヤマ』だ。",
+            "enText": "No, it's called \"hints are better than\nnakayama,\" right? I am that \"Nakayama.",
+            "nextBlock": 13,
+            "pathId": 3425077637027370763,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "……けど、タダじゃ教えてやれねぇな。",
+            "enText": "… but I can't tell\nyou about it for free.",
+            "nextBlock": 14,
+            "pathId": 2642440863048087910,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "なんですとっ！？",
+            "enText": "What the hell?",
+            "nextBlock": 15,
+            "pathId": 6894404955085191541,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "これからヒントを賭けて私と勝負してもらう。\r\n勝ったら知りたいことを教えてやるよ。",
+            "enText": "Now you're going to play me for\na clue. If you win, I'll tell you\nwhat you want to know.",
+            "nextBlock": 16,
+            "choices": [
+                {
+                    "jpText": "負けたら？",
+                    "enText": "What if we lose?",
+                    "nextBlock": 16
+                }
+            ],
+            "pathId": 4662285942089501081,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "そうだな、バクシンオーなら……\r\n学級委員長を1日禁止するってのはどうだ？",
+            "enText": "Well, if you're Bakushin O, how about…\nbanning the class president for a day?",
+            "nextBlock": 17,
+            "pathId": 8960505225066176001,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "やりますッ！！！！！",
+            "enText": "I'll do it. ！！！！！",
+            "nextBlock": 18,
+            "choices": [
+                {
+                    "jpText": "即答！？",
+                    "enText": "Quick answer!",
+                    "nextBlock": 18
+                }
+            ],
+            "pathId": 5530887466194131210,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "心配ご無用ですよ、トレーナーさん！\r\n私の委員長力で必ず勝利を掴んで見せますッ！",
+            "enText": "Don't worry, trainer! I'll use my\nchairmanship powers to make sure we win!",
+            "nextBlock": 19,
+            "pathId": 101457774251254466,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "いいね、勝負師の目だ……！",
+            "enText": "Great, the eyes of a winner…!",
+            "nextBlock": 20,
+            "pathId": 3019731023096018600,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "競う内容はそっちに決めさせてやる。\r\n最高にヒリつく勝負をしようぜ！",
+            "enText": "I'll let you decide what you want to compete\nin. Let's have a great game!",
+            "nextBlock": 21,
+            "pathId": -7190618996906221881,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "……えーと、悪い。\r\nもう1回言ってくれるか？",
+            "enText": "… Uh, bad. Can you say that again?",
+            "nextBlock": 22,
+            "pathId": 7621891632168874431,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ハイッ！\r\n委員長力で勝負しましょう！！",
+            "enText": "Hi! Let's play with the chairman's power!",
+            "nextBlock": 23,
+            "pathId": 625900431697337853,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "なんだァ……？\r\nその委員長力ってのは。",
+            "enText": "What the heck is…? What\nis that chairman power?",
+            "nextBlock": 24,
+            "pathId": 5391010998535372539,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "学級委員長としてふさわしい心構え、\r\n立ち居振る舞いのことです！",
+            "enText": "I'm talking about the appropriate attitude\nand behavior for a class president!",
+            "nextBlock": 25,
+            "pathId": -6967188845588213820,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ナカヤマさん！　どちらが学級委員長に\r\nふさわしいかを競い合いましょう！",
+            "enText": "Nakayama-san! Let's have a competition\nto see who's better suited to be\nclass president!",
+            "nextBlock": 26,
+            "choices": [
+                {
+                    "jpText": "……断ってもいいぞ？",
+                    "enText": "You can say no to…, okay?",
+                    "nextBlock": 26
+                },
+                {
+                    "jpText": "……断ってもいいよ？",
+                    "enText": "You can say no to…, okay?",
+                    "nextBlock": 26
+                }
+            ],
+            "pathId": 4227398401298539381,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "いや、勝負師に二言はねぇ。",
+            "enText": "No, there's no two ways about it.",
+            "nextBlock": 27,
+            "pathId": -4928300396116893515,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "それに、圧倒的不利な勝負であれば\r\nあるほど、燃えてくる……！",
+            "enText": "Besides, the more overwhelming the\nodds, the more I burn…!",
+            "nextBlock": 28,
+            "pathId": -6061935842153090901,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "こうして2人の委員長力勝負が幕を開けた。",
+            "enText": "Thus began a contest of strength between the\ntwo committee chairmen.",
+            "nextBlock": 29,
+            "pathId": -5913105779992656322,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "さまざまなシチュエーションで、\r\nどちらが学級委員長らしい言動が取れるかを\n競う勝負――",
+            "enText": "A competition to see who can say and\ndo the most class president-like things\nin various situations.",
+            "nextBlock": 30,
+            "pathId": 1669140815971128290,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "序盤はサクラバクシンオーが優勢だったが、\r\nナカヤマフェスタも粘りを見せ、\n2人の戦いは熾烈を極めた。",
+            "enText": "Sakura Bakushin O had the upper hand\nin the early stages, but Nakayama\nFesta persisted, and the battle between\nthe two became fierce.",
+            "nextBlock": 31,
+            "pathId": 562145446343668500,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "はぁ、はぁ……。\r\nこれで私の勝利です……！",
+            "enText": "Haha, haha… Now that's\na victory for me…!",
+            "nextBlock": 32,
+            "pathId": 7087760299827861863,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "……フッ、負けたぜ。\r\n委員長力ってもんは奥が深いな。",
+            "enText": "… I lost, man. The power of the\nchairman is very deep.",
+            "nextBlock": 33,
+            "pathId": 1806269196156813223,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "ナカヤマフェスタ",
+            "enName": "Nakayama Festa",
+            "jpText": "約束通りヒントは教えてやる。\r\nこれからも頑張れよ、委員長！",
+            "enText": "I'll give you the hint as promised. Keep up\nthe good work, Commissioner!",
+            "nextBlock": 34,
+            "pathId": 5016436100699795971,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "その後、教えてもらったヒントのおかげで、\r\n無事に『ウマ謎』を解き終えることができた。",
+            "enText": "After that, thanks to the hints\nI received, I was able to finish\nsolving the \"Uma Riddle\".",
+            "nextBlock": 35,
+            "pathId": -5419874928733129584,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "委員長禁止が白紙となったこともあり、\r\nサクラバクシンオーは終始上機嫌だった。",
+            "enText": "Sakura Bakushin O was in a good mood\nthroughout the race, partly because the ban\non the chairman had been lifted.",
+            "nextBlock": -1,
+            "pathId": -7285440115644497688,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "なるほど！　ウマ娘といえばレース！\r\nレースといえばレース場！",
+            "enText": "I see! When I think of Uma Musume, I think\nof racing! And by races, I mean racetracks!",
+            "nextBlock": 37,
+            "pathId": -3356672429563481697,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "フフ、\r\n芯の通ったまっすぐな推理ですね。",
+            "enText": "Huh, that's straight to the core reasoning.",
+            "nextBlock": 38,
+            "choices": [
+                {
+                    "jpText": "でも学園の外なんだよな……",
+                    "enText": "But it's outside the school…",
+                    "nextBlock": 38
+                },
+                {
+                    "jpText": "でも学園の外なんだよね……",
+                    "enText": "But it's outside the school…",
+                    "nextBlock": 38
+                }
+            ],
+            "pathId": -6152664631107828174,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "いいえ！　レース場も学習の場と見れば、\r\n学園の中と言えるでしょう！",
+            "enText": "No! If you look at the racetrack as a place\nof learning, it's inside the academy!",
+            "nextBlock": 39,
+            "pathId": 2170228379839792382,
+            "blockIdx": 38
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "週末、中山レース場に行きますよ！\r\n謎のヒントは中山レース場にありです！！",
+            "enText": "I'll be at Nakayama Racecourse this\nweekend! The clue to the mystery is\nat the Nakayama Racecourse!",
+            "nextBlock": 40,
+            "choices": [
+                {
+                    "jpText": "わ、わかった",
+                    "enText": "Okay, okay.",
+                    "nextBlock": 40
+                }
+            ],
+            "pathId": -3370303691981347910,
+            "blockIdx": 39
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "推理が合っているか不安ではあるが、\r\n中山レース場に行くのは悪くない。",
+            "enText": "I'm not sure if my guess is correct,\nbut going to Nakayama Racecourse\nis not a bad idea.",
+            "nextBlock": 41,
+            "pathId": -8301295732585309861,
+            "blockIdx": 40
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "謎解きのついでに中山レース場について\r\n学ぶいい機会にもなるだろう。",
+            "enText": "It will be a good opportunity to\nlearn about Nakayama Racecourse\nwhile solving the puzzle.",
+            "nextBlock": 42,
+            "pathId": 6663650459230404239,
+            "blockIdx": 41
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "そして週末――",
+            "enText": "And the weekend—",
+            "nextBlock": 43,
+            "pathId": -6076837878853281802,
+            "blockIdx": 42
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ふっふっふ！\r\nやってきましたよ中山レース場！",
+            "enText": "Mmm-hmm! Here we are, Nakayama Race Track!",
+            "nextBlock": 44,
+            "choices": [
+                {
+                    "jpText": "せっかくだから見学していこう",
+                    "enText": "Since we're here, let's take a tour.",
+                    "nextBlock": 44
+                }
+            ],
+            "pathId": 2462884537995646697,
+            "blockIdx": 43
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "はいッ！　『ウマ謎』もレース場の研究も\r\n見事にこなしてみせましょう！",
+            "enText": "Yes! I'll do a great job with the Uma Riddle\nand researching the racetrack!",
+            "nextBlock": 45,
+            "pathId": 1112216503313551652,
+            "blockIdx": 44
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "見てくださいトレーナーさん、\r\nゴール前の登り坂を！",
+            "enText": "Look, trainer, at the uphill climb\nbefore the finish line!",
+            "nextBlock": 46,
+            "pathId": -5020611086404402085,
+            "blockIdx": 45
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "最後の難関とも言えるあの坂をバクシンし、\r\n1着でゴールできたら――",
+            "enText": "If I can make it up that hill, the final\nobstacle, and finish in first place…",
+            "nextBlock": 47,
+            "pathId": -6213443735932241044,
+            "blockIdx": 46
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "それはもう、\r\nとてつもなく気持ちいいでしょうね！",
+            "enText": "That would be a tremendous\nfeeling, wouldn't it!",
+            "nextBlock": 48,
+            "choices": [
+                {
+                    "jpText": "そのためにも体力づくりしよう",
+                    "enText": "Let's build up our strength for that.",
+                    "nextBlock": 48
+                }
+            ],
+            "pathId": -9201053954976143024,
+            "blockIdx": 47
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "もちろんですッ！\r\n今まで以上にキッチリやりましょう！",
+            "enText": "Of course! Let's do it better than ever!",
+            "nextBlock": 49,
+            "pathId": 8537544591563659829,
+            "blockIdx": 48
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "そして中山レース場に\r\nサクラバクシンオーの名を轟かせるのですッ！",
+            "enText": "And she will make Sakura Bakushin O's name\nknown at Nakayama Race Track!",
+            "nextBlock": 50,
+            "pathId": -5821308802792441271,
+            "blockIdx": 49
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "そうと決まったら、こうしてはおれません！",
+            "enText": "Once that's decided, I can't\nlet that happen!",
+            "nextBlock": 51,
+            "pathId": -4186043584297508490,
+            "blockIdx": 50
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "学園に戻り、\r\nトレーニングをこなさなければ！！",
+            "enText": "We need to get back to the academy\nand get some training in!",
+            "nextBlock": 52,
+            "pathId": -2503449686051290917,
+            "blockIdx": 51
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "栄光の未来へ向けてバクシーーーーーン！！",
+            "enText": "Baxiwn to a glorious future!",
+            "nextBlock": 53,
+            "choices": [
+                {
+                    "jpText": "な、謎解きは！？",
+                    "enText": "Hey, what's the riddle?",
+                    "nextBlock": 53
+                }
+            ],
+            "pathId": -4240327035132782731,
+            "blockIdx": 52
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "制止の声は届かなかったらしく、\r\nサクラバクシンオーの姿は\nあっという前に見えなくなってしまった。",
+            "enText": "It seemed that her voice hadn't reached her,\nand before she knew it, Sakura Bakushin-o\nwas out of sight.",
+            "nextBlock": 54,
+            "pathId": 1980701147600520246,
+            "blockIdx": 53
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "バク！　シン！\r\nバク！　シン！",
+            "enText": "Baku! Shin! Baku! Shin!",
+            "nextBlock": 55,
+            "pathId": 1156962774629906226,
+            "blockIdx": 54
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "ふぅ、今日はこの辺にしましょうか。",
+            "enText": "Hmm, I think that's it for today.",
+            "nextBlock": 56,
+            "pathId": -2689618624147116610,
+            "blockIdx": 55
+        },
+        {
+            "jpName": "クラスメイトＡ",
+            "enName": "",
+            "jpText": "おっ、委員長だ！\r\nおつかれー。",
+            "enText": "Oh, it's the chairman! Good night.",
+            "nextBlock": 57,
+            "pathId": 5329840862752651641,
+            "blockIdx": 56
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "これはどうも！\r\nみなさんもお疲れさまです！！",
+            "enText": "Thanks for this! Good work everyone!",
+            "nextBlock": 58,
+            "pathId": -4075809584321850637,
+            "blockIdx": 57
+        },
+        {
+            "jpName": "クラスメイトＢ",
+            "enName": "",
+            "jpText": "中山レース場に行くって言ってたけど、\r\nやめたんだね～？",
+            "enText": "You said you were going to Nakayama Race\nTrack, but you decided not to?",
+            "nextBlock": 59,
+            "pathId": 2357755522509824520,
+            "blockIdx": 58
+        },
+        {
+            "jpName": "クラスメイトＣ",
+            "enName": "",
+            "jpText": "ま、そもそも『ウマ謎』の『ナカヤマ』、\r\n中山レース場じゃないし……。",
+            "enText": "Well, to begin with, \"Nakayama\" in \"Uma\nMystery\" is not Nakayama Racecourse…",
+            "nextBlock": 60,
+            "pathId": 8240885465100967329,
+            "blockIdx": 59
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "『ウマ謎』……\r\n『ナカヤマ』……？",
+            "enText": "\"Uma Mystery\"… \"Nakayama\"…?",
+            "nextBlock": 61,
+            "pathId": 8104544004454771451,
+            "blockIdx": 60
+        },
+        {
+            "jpName": "サクラバクシンオー",
+            "enName": "Sakura Bakushin O",
+            "jpText": "あぁぁぁぁあああっ！！\r\n忘れてましたーーーーーッ！！！！！",
+            "enText": "Aaahhhh!!! I forgot!!! ！！！！！",
+            "nextBlock": 62,
+            "pathId": 4460396358714841353,
+            "blockIdx": 61
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "結局この日、サクラバクシンオーは\r\n『ウマ謎』を最後まで解けなかったが――",
+            "enText": "In the end, Sakura Bakushin O was\nunable to solve the Uma Riddle\nuntil the end of the day.",
+            "nextBlock": 63,
+            "pathId": -1469364061601895946,
+            "blockIdx": 62
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "中山レース場について知見を得たことで\r\nほんの少し成長できたのだった。",
+            "enText": "The knowledge I gained about Nakayama\nRacecourse helped me to grow a little.",
+            "nextBlock": -1,
+            "pathId": -3330920508881890194,
+            "blockIdx": 63
+        }
+    ]
+}

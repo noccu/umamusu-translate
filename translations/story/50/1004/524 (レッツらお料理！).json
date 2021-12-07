@@ -1,0 +1,383 @@
+{
+    "version": 2,
+    "bundle": "QGI4CAAIL5NHDP3SF76QAWVKW57UYNKL",
+    "storyId": "501004524",
+    "title": "レッツらお料理！",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ある日のトレーニング終わり、\nスペシャルウィークがマルゼンスキーに\n料理を教わりたいとやってきた。",
+            "enText": "One day, after training, Special Week came\nto Maruzensky to learn how to cook.",
+            "nextBlock": 2,
+            "pathId": -5622631243277908349,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "あらあら、スペちゃん！\n嬉しいけど、急にどうして？",
+            "enText": "Oh my goodness, Spe! I'm glad to see\nyou, but why all of a sudden?",
+            "nextBlock": 3,
+            "pathId": -4291443160416254363,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "実はさっき、たづなさんにマルゼンさんの\n作ったお料理の写真を見せてもらったんです！",
+            "enText": "Actually, Tazuna-san just showed me a\npicture of a dish that Maruzen-san made!",
+            "nextBlock": 4,
+            "pathId": 7046995676378377302,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "もうほんっっっとにおいしそうで、\n頭から離れなくなっちゃって……！",
+            "enText": "It smells so good, I can't\nstop thinking about it…!",
+            "nextBlock": 5,
+            "pathId": 1147533722753789979,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "私もああいう素敵なお料理、\n作れるようになりたいんです～っ！",
+            "enText": "I want to be able to make\nsuch wonderful dishes!",
+            "nextBlock": 6,
+            "pathId": -4690551194272156079,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "ふふ、そうだったの。\nスペちゃん、食べること大好きだものね♪",
+            "enText": "Oh, that's right. Spee, you\nlove to eat, don't you?",
+            "nextBlock": 7,
+            "pathId": -2146344838083517935,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "よし、そういうことなら任せて！\nスペちゃんにバッチリ仕込んであげる！",
+            "enText": "Okay, I'll take care of that! I'll make\nsure that Spe-chan gets it right!",
+            "nextBlock": 8,
+            "pathId": 5539845369651026769,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "それじゃ、早速だけど\nどんなお料理を作ろうかしら？",
+            "enText": "Okay, let's get started. What do\nyou want me to cook for you?",
+            "nextBlock": 9,
+            "pathId": 3354228117143331723,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "忙しい朝でもパパッと作れちゃう\nとっても美味しい具沢山スープか……。",
+            "enText": "This is a very tasty soup with lots of\ningredients that can be made quickly and\neasily even in a busy morning…",
+            "nextBlock": 10,
+            "pathId": 51412075956397563,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "じっくりゆっくり時間をかける、\nとっても美味しい煮込み料理か！",
+            "enText": "A very tasty stew that takes\na long, long time to cook!",
+            "nextBlock": 11,
+            "pathId": 6211613424048840573,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "わあ～、どうしよう！\n決めきれません～！",
+            "enText": "Wow~ What should I do! I can't decide!",
+            "nextBlock": 12,
+            "pathId": 2991185611999123729,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "じゃあ、トレーナー君に決めてもらっちゃう？\n美味しくできたらご馳走するわよ♪",
+            "enText": "So, why don't you let your trainer decide?\nI'll treat you to a delicious meal.",
+            "nextBlock": 13,
+            "choices": [
+                {
+                    "jpText": "パパッと作れる具沢山スープ！",
+                    "enText": "A quick and easy soup with lots of ingredients!",
+                    "nextBlock": 14
+                },
+                {
+                    "jpText": "じっくり作る煮込み料理！",
+                    "enText": "Slow-cooked stew!",
+                    "nextBlock": 27
+                }
+            ],
+            "pathId": 5744216217773712693,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "じゃあ、トレーナーちゃんに決めて\nもらっちゃう？\n美味しくできたらご馳走するわよ♪",
+            "enText": "So, why don't you let your trainer decide?\nIf it's good, I'll treat you.",
+            "nextBlock": 14,
+            "choices": [
+                {
+                    "jpText": "パパッと作れる具沢山スープ！",
+                    "enText": "A quick and easy soup with lots of ingredients!",
+                    "nextBlock": 14
+                },
+                {
+                    "jpText": "じっくり作る煮込み料理！",
+                    "enText": "Slow-cooked stew!",
+                    "nextBlock": 27
+                }
+            ],
+            "pathId": 7723524743430007595,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "がってん承知の助～！　それじゃ、\n5分で作れるようになりましょ♪",
+            "enText": "I know what I'm doing. Then you'll\nbe able to make it in 5 minutes.",
+            "nextBlock": 15,
+            "pathId": -8524315743605232174,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "ご、5分ですかぁ！？",
+            "enText": "Five minutes, huh?",
+            "nextBlock": 16,
+            "pathId": 1794645819676531225,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "うおお、がんばります！！",
+            "enText": "Oooh, I'll do my best!",
+            "nextBlock": 17,
+            "pathId": 2739920170384815440,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "――お鍋にコンソメとお水入れて、沸く\nまで、他の材料を全部みじん切りにしましょ！",
+            "enText": "――Put the consommé and water in a pot and\nchop up all the other ingredients until it\ncomes to a boil!",
+            "nextBlock": 18,
+            "pathId": -2187306887118052548,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "ぜ、ぜんぶですか！？\nにんじん、玉ねぎ、エノキにセロリ！？",
+            "enText": "Is it all of them? Carrots, onions,\nenoki mushrooms, and celery!",
+            "nextBlock": 19,
+            "pathId": 3911176624692554591,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "だいたい2分半で沸騰するから、\n手際よく行くわよ～！",
+            "enText": "It'll boil in about two and a half\nminutes, so we'll make short work of it!",
+            "nextBlock": 20,
+            "pathId": -6477609154932588705,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "ひえええ～～っ！",
+            "enText": "Heeeeaaahhh!",
+            "nextBlock": 21,
+            "pathId": -6459244760872801466,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "――やがて、彩り鮮やかな\n野菜スープが出来上がった！",
+            "enText": "――Eventually, we had a colorful\nvegetable soup!",
+            "nextBlock": 22,
+            "pathId": -6975933069443753504,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "お見事、5分以内でバッチグー！\nよく頑張ったわね、スペちゃん！",
+            "enText": "Well done, batch goo in under\n5 minutes! Well done, Spe!",
+            "nextBlock": 23,
+            "pathId": -818954071737621768,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "やったぁ！　私、やりました～！\nいい匂～い！",
+            "enText": "I did it! I did it! It smells so good!",
+            "nextBlock": 24,
+            "pathId": 1832978136077064989,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "……えへへ、ちょっとは\nマルゼンさんみたいになれたかな♪",
+            "enText": "… hehe, I guess I could be a\nlittle bit like Mr. Marzen…",
+            "nextBlock": 25,
+            "pathId": 8740866631965050086,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "ふふっ、ありがとスペちゃん。\nあたしもなんだか、腕が上がった気がするわ♪",
+            "enText": "Thank you, Spe-chan. I feel like\nI'm getting better at this too.",
+            "nextBlock": 26,
+            "pathId": -6878907237420167686,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "マルゼンスキーが教えた時短スープは\n野菜たっぷりでとっても美味しかった！",
+            "enText": "The short soup Maruzensky taught me was\nvery tasty and full of vegetables!",
+            "nextBlock": -1,
+            "pathId": 9059173390244984791,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "がってん承知の助！　それじゃ、\nじっくりゆっくり5時間かけて、\n煮込み料理作っちゃいましょ！",
+            "enText": "I know what I'm doing. Then let's take our\ntime and cook this stew for five hours!",
+            "nextBlock": 28,
+            "pathId": -3308771323597079090,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "ご、5時間ですか！！\nうおお～っ！！　がんばります！！",
+            "enText": "Gosh, five hours! Oooohhh! I'll\ndo my best!",
+            "nextBlock": 29,
+            "pathId": 2057173513260135467,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "じ～っくり、ゆ～っくり、弱火でことこと。\nアクが出たらすくうのよ～。",
+            "enText": "Cook slowly and gently over low heat.\nIf there is any scum, scoop it out.",
+            "nextBlock": 30,
+            "pathId": -5840477422324085913,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "……じ～っくり……ゆ～っくり……。\nなんだか、お腹がすいてきちゃいました。",
+            "enText": "… jikkuri … yukuri …\nI feel like I'm getting hungry.",
+            "nextBlock": 31,
+            "pathId": 3856189077900672814,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "ふふ、ガマンガマン！\n煮込み料理は、焦るべからずよ！",
+            "enText": "Phew, phew, phew! You can't rush a stew!",
+            "nextBlock": 32,
+            "pathId": 1155891921027055913,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "わあ～いい匂い！\nそろそろ完成じゃないですか！？",
+            "enText": "Wow, that smells good! I\nthink it's almost done!",
+            "nextBlock": 33,
+            "pathId": -5280967188591864958,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "あら、いい頃合いね。下茹で完了♪\nお鍋を替えて、お水と調味料を入れて――",
+            "enText": "Oh, it's about time. Change the pot,\nadd water and seasonings, and…",
+            "nextBlock": 34,
+            "pathId": -2934207546067838408,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "落し蓋で、さらに2時間煮込むわよ～！",
+            "enText": "Put the lid on and let it simmer\nfor another two hours!",
+            "nextBlock": 35,
+            "pathId": -9037275465952772431,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "2時間！？\nもう、お腹が限界ですぅ～！",
+            "enText": "Two hours? My stomach is killing me!",
+            "nextBlock": 36,
+            "pathId": 5269085823533872966,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "――やがて、味がしっかりしみ込んだ、\nほろほろの煮込み料理が完成した！",
+            "enText": "――Eventually, the stew was soaked with\nflavor and cooked to perfection!",
+            "nextBlock": 37,
+            "pathId": 3073126577383654306,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "スペシャルウィーク",
+            "enName": "Special Week",
+            "jpText": "うぅ～、いい匂い～！！\n今すぐっ、今すぐ食べたいです～！！",
+            "enText": "Ooo~, it smells so good~! I want\nto eat it right now, right now!",
+            "nextBlock": 38,
+            "pathId": 9130530614547414773,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "マルゼンスキー",
+            "enName": "Maruzensky",
+            "jpText": "ふふっ、実はあたしも我慢の限界だったの。\nさっそく、いただきマンモスしましょっか♪",
+            "enText": "I'm actually at the end of my patience.\nLet's start with the mammoth.",
+            "nextBlock": 39,
+            "pathId": -6936018560733048547,
+            "blockIdx": 38
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "マルゼンスキーが教えた煮込み料理は\n優しい味付けでとっても美味しかった！",
+            "enText": "The stew that Maruzensky taught me was\nvery tasty, with gentle flavors!",
+            "nextBlock": -1,
+            "pathId": -8058229743497167156,
+            "blockIdx": 39
+        }
+    ]
+}

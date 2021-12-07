@@ -15,7 +15,7 @@ TARGET_ID = args.getArg("-id", None)
 TARGET_FILE = args.getArg("-src", None)
 VERBOSE = args.getArg("-V", False)
 
-LINE_LENGTH = int(args.getArg("-ll", 42)) #Roughly 42 for most training story dialogue, 63 for wide screen stories (events etc)
+LINE_LENGTH = int(args.getArg("-ll", 44)) #Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
 NEWLINES = args.getArg("-nl", False)
 
 if not TARGET_FILE and not TARGET_GROUP and not TARGET_ID: raise SystemExit("At least 1 arg is required.")
@@ -24,7 +24,7 @@ def process(file: TranslationFile, text: str, options: dict):
     if "noNewlines" in options and options['noNewlines']:
         text = cleannewLines(file, text)
     if "lineLen" in options:
-        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, options['targetLines'] if "targetLines" in options else 3)
+        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else 3))
     if "replace" in options:
         text = replace(text)
     return text
@@ -59,7 +59,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{{lineLen},}}?(?= |$)|(?:(?<= )|(?<=^)).+$", text)
 
     if targetLines > 0 and len(lines) > targetLines:
-        print(f"Exceeded target lines ({targetLines}) at: ", lines)
+        print(f"Exceeded target lines ({targetLines}) in {file.name} at: ", lines)
     return "\\n".join(lines) if file.getType() == "race" else "\n".join(lines)
 
 def replace(text: str):

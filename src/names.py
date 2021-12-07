@@ -21,9 +21,9 @@ def createDict():
         print(f"Using auto-found names file {path.realpath(NAMES_FILE)}")
     names = dict()
     with open(NAMES_FILE, "r", newline='', encoding="utf8") as csvfile:
-     reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-     for row in reader:
-         names[row[0]] = row[1]
+        reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+        for row in reader:
+            names[row[0]] = row[1]
 
     # a few extras. misc.csv doesn't provide everything
     # todo: probably use an external file?
@@ -33,9 +33,60 @@ def createDict():
     names['モノローグ'] = "Monologue"
     names['記者A'] = "Reporter A"
     names['記者B'] = "Reporter B"
+    names['ウマ娘'] = "Uma Musume"
+    names['ウマ娘A'] = "Uma Musume A"
+    names['ウマ娘B'] = "Uma Musume B"
     names['後輩のウマ娘A'] = "Junior UmaMusu A"
     names['後輩のウマ娘B'] = "Junior UmaMusu B"
     names['同期のウマ娘'] = "Contemporary UmaMusu"
+    names['そばかす顔のウマ娘'] = "Freckled UmaMusu"
+    names['地元ウマ娘'] = "Local Uma Musume"
+    names['？？？'] = "???"
+    names['ニュースキャスター'] = "Newscaster"
+    names['ウマ娘ファンA'] = "UmaMusu Fan A"
+    names['ウマ娘ファンB'] = "UmaMusu Fan B"
+    names['教師'] = "Teacher"
+    names['実況'] = "Coverage"
+    names['観客A'] = "Spectator A"
+    names['観客B'] = "Spectator B"
+    names['観客たち'] = "Crowd"
+    names['観客'] = "Crowd"
+    names['新人トレーナーA'] = "Rookie Trainer A"
+    names['新人トレーナーＡ'] = "Rookie Trainer A"
+    names['中堅トレーナーA'] = "Average Trainer A"
+    names['中堅トレーナーＡ'] = "Average Trainer A"
+    names['ベテラントレーナーA'] = "Veteran Trainer A"
+    names['ベテラントレーナーＡ'] = "Veteran Trainer A"
+    names['トレーナーたち'] = "Trainers"
+    names['先生'] = "Teacher"
+    names['ファンの男性'] = "Male Fan"
+    names['ファンの女性'] = "Female Fan"
+    names['司会者'] = "Host"
+    names['テレビ番組の司会'] = "TV Host"
+    names['クラスメイトA'] = "Classmate A"
+    names['クラスメイトＡ'] = "Classmate A"
+    names['クラスメイトB'] = "Classmate B"
+    names['クラスメイトＢ'] = "Classmate B"
+    names['クラスメイトC'] = "Classmate C"
+    names['クラスメイトＣ'] = "Classmate C"
+    names['クラスメイトD'] = "Classmate D"
+    names['クラスメイトＤ'] = "Classmate D"
+    names['クラスメイトたち'] = "Classmates"
+    names['陽気なクラスメイト'] = "Cheerful Classmate"
+    names['優しいクラスメイト'] = "Gentle Classmate"
+    names['商店街の人'] = "Downtown Person"
+    names['商店街の人たち'] = "Downtown People"
+    names['遊園地のスタッフ'] = "Amusement Park Staff"
+    names['子ども'] = "Child"
+    names['子どもたち'] = "Children"
+    names['ファンの子ども'] = "Fan's Child"
+    names['ファンの子どもたち'] = "Fan's Children"
+    names['広報委員長'] = "PR Committee Chair"
+    names['広報委員'] = "PR Committee Member"
+    names['風紀委員たち'] = "PM Committee Member"
+    names['宇宙人'] = "Alien"
+    names['2人'] = "Both"
+    names['3人'] = "All 3"
     return names
 
 def translate(namesDict):

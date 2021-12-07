@@ -4,7 +4,15 @@
         "repl": "…"
     },
     {
-        "re": "--+",
+        "re": "[,:]?…[,:]?",
+        "repl": "…"
+    },
+    {
+        "re": "[^a-z ]—",
+        "repl": "…"
+    },
+    {
+        "re": "--+|――",
         "repl": "—"
     },
     {
@@ -28,7 +36,47 @@
         "repl": "herself"
     },
     {
-        "re": "(?:Toresen|Trespassing) Academy",
+        "re": "him",
+        "repl": "her"
+    },
+    {
+        "re": "Mr.",
+        "repl": "Ms."
+    },
+    {
+        "re": "(?:To?re?sen|Trespassing) (?:Academy|Gakuen)",
         "repl": "Tracen Academy"
+    },
+    {
+        "re": "Aohar Cup",
+        "repl": "Aoharu Hai"
+    },
+    {
+        "re": "selection race",
+        "repl": "Selection Race"
+    },
+    {
+        "re": "make-?(?:out|up) debut",
+        "repl": "debut"
+    },
+    {
+        "re": "Simbolildorf",
+        "repl": "Symboli Rudolf"
+    },
+    {
+        "re": "Chayahide",
+        "repl": "Hayahide"
+    },
+    {
+        "re": "Tysin",
+        "repl": "Taishin"
+    },
+    {
+        "re": "Ba(?:x|ks)in(?:[- ]o)?",
+        "repl": "Bakushin O"
+    },
+    {
+        "re": "the horse girl in charge",
+        "repl": "your horse girl"
     }
 ]

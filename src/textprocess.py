@@ -2,6 +2,7 @@ import common
 from common import TranslationFile
 import re
 from math import ceil
+from uwu import uwuify
 
 args = common.Args().parse()
 if args.getArg("-h"):
@@ -14,6 +15,7 @@ TARGET_GROUP = args.getArg("-g", None)
 TARGET_ID = args.getArg("-id", None)
 TARGET_FILE = args.getArg("-src", None)
 VERBOSE = args.getArg("-V", False)
+UWU = args.getArg("-uwu", False)
 
 LINE_LENGTH = int(args.getArg("-ll", 44)) #Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
 NEWLINES = args.getArg("-nl", False)
@@ -27,6 +29,8 @@ def process(file: TranslationFile, text: str, options: dict):
         text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else 3))
     if "replace" in options:
         text = replace(text)
+    if "uwu" in options and options["uwu"]:
+        text = uwuify(text)
     return text
 
 def cleannewLines(file: TranslationFile, text: str):
@@ -79,7 +83,7 @@ def main():
         file = common.TranslationFile(file)
         for block in file.getTextBlocks():
             if not "enText" in block or len(block['enText']) == 0: continue
-            block['enText'] = process(file, block['enText'], {"lineLen": LINE_LENGTH, "replace": True, "noNewlines": NEWLINES})
+            block['enText'] = process(file, block['enText'], {"lineLen": LINE_LENGTH, "replace": True, "noNewlines": NEWLINES, "uwu": UWU})
         file.save()
     print("Files processed.")
 

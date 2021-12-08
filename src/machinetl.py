@@ -4,6 +4,7 @@ from websockets import server
 import json
 import common
 import textprocess
+from uwu import uwuify
 
 # Globals & Parameter parsing
 args = common.Args().parse()
@@ -16,6 +17,7 @@ TARGET_ID = args.getArg("-id", False)
 TARGET_FILE = args.getArg("-src", False)
 LINE_LENGTH = int(args.getArg("-ll", False))
 OVERWRITE_TEXT = args.getArg("-O", False)
+UWU = args.getArg("-uwu", False)
 
 async def handler(client: server.WebSocketServerProtocol, path):
     print("New client connected")
@@ -65,6 +67,7 @@ class Translator:
                 if OVERWRITE_TEXT or not entry['enText']:
                     text = textprocess.process(file, entry['jpText'], {"noNewlines": True})
                     entry['enText'] = textprocess.process(file, await self.requestTl(text), {"lineLen": LINE_LENGTH, "replace": True}) # defer to default
+                    if UWU: entry['enText'] = uwuify(entry['enText'])
             file.save()
         await self.client.close()
         STOP.set_result(True)

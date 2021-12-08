@@ -1,0 +1,355 @@
+{
+    "version": 3,
+    "bundle": "5KJQXGHTKU6NCZZCMK4UFNLRV7FWEYN6",
+    "type": "story",
+    "storyId": "501025714",
+    "title": "無茶は厳禁！",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "マンハッタンカフェが、\r\nトレーニング中にケガをしたので、\n保健室に連れてきたのだが……。",
+            "enText": "Manhattan Cafe was brought to the infirmary\nafter she was injured during training…",
+            "nextBlock": 2,
+            "pathId": -1862285048343526133,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "っ……すみま、せん……私の不注意で……\r\nこんなケガを――",
+            "enText": "I'm sorry for… my carelessness…\nI'm sorry for… this injury.",
+            "nextBlock": 3,
+            "pathId": 1523269792075151855,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………。……え？\r\n『トレーニングを続行すべき』、ですか……？",
+            "enText": "… What? You should\ncontinue your training…?",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "そんな事言ってないぞ？",
+                    "enText": "I didn't say that, okay?",
+                    "nextBlock": 4
+                },
+                {
+                    "jpText": "そんな事言ってないよ？",
+                    "enText": "I didn't say that, okay?",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": -2298504388778128741,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………いえ、トレーナーさんではなく、\r\nなんだか熱血な方から……\nアドバイスを……いただいておりまして……。",
+            "enText": "… No, it's not a trainer. I got\n… advice from someone who is kind of\npassionate about…",
+            "nextBlock": 5,
+            "pathId": -1688271040582429675,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "マンハッタンカフェは、どうやら見えない\r\n“誰か”に話しかけられているようだ。",
+            "enText": "Manhattan Cafe is apparently being spoken to\nby an invisible \"someone\".",
+            "nextBlock": 6,
+            "pathId": 6067028663281336978,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "『ガッツ』……ですか。確かに、\r\nこの思念の持つ、熱量は……桁が違う……。",
+            "enText": "Guts.\"…? It is true that the amount of\nheat that this thought has is… an\norder of magnitude different…",
+            "nextBlock": 7,
+            "pathId": -970772121106855545,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "その熱量によっては……あり得ない事……\r\n――奇跡も……起こせる…………かも……。",
+            "enText": "Depending on the amount of heat…\nimpossible things… —miracles…\ncan happen… or even…",
+            "nextBlock": 8,
+            "choices": [
+                {
+                    "jpText": "ケガをしたまま走らせることはできない",
+                    "enText": "You can't let her run with an injury.",
+                    "nextBlock": 9
+                },
+                {
+                    "jpText": "ガッツだな！",
+                    "enText": "Guts!",
+                    "nextBlock": 15
+                },
+                {
+                    "jpText": "ガッツだね！",
+                    "enText": "Guts!",
+                    "nextBlock": 15
+                }
+            ],
+            "pathId": 3587259008504826622,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "その熱量によっては……あり得ない事……\r\n――奇跡も……起こせる…………かも……。",
+            "enText": "Depending on the amount of heat…\nimpossible things… —miracles…\ncan happen… or even…",
+            "nextBlock": 9,
+            "choices": [
+                {
+                    "jpText": "ケガをしたまま走らせることはできない",
+                    "enText": "You can't let her run with an injury.",
+                    "nextBlock": 9
+                },
+                {
+                    "jpText": "ガッツだな！",
+                    "enText": "Guts!",
+                    "nextBlock": 15
+                },
+                {
+                    "jpText": "ガッツだね！",
+                    "enText": "Guts!",
+                    "nextBlock": 15
+                }
+            ],
+            "pathId": -8164523244403988469,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "……ですが『ガッツで乗り切れる』……\r\n可能性も…………。",
+            "enText": "It's… but 'guts will get\nyou through it'… and the possibility\nof…",
+            "nextBlock": 10,
+            "choices": [
+                {
+                    "jpText": "悪化したら、走るどころじゃないぞ",
+                    "enText": "If it gets worse, you won't be able to run.",
+                    "nextBlock": 10
+                },
+                {
+                    "jpText": "悪化したら、走るどころじゃないよ",
+                    "enText": "If it gets worse, I won't be able to run.",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": -5181307955069752659,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………！",
+            "enText": "…!",
+            "nextBlock": 11,
+            "choices": [
+                {
+                    "jpText": "君の健康が第一！",
+                    "enText": "Your health comes first!",
+                    "nextBlock": 11
+                },
+                {
+                    "jpText": "貴方の健康が第一！",
+                    "enText": "Your health is our priority!",
+                    "nextBlock": 11
+                }
+            ],
+            "pathId": -3030006522730547825,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "？？？",
+            "enName": "???",
+            "jpText": "……、…………。",
+            "enText": "……",
+            "nextBlock": 12,
+            "pathId": -5480166472817771182,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "うん……そうですね。\r\nわかりました……伝えておきます……。",
+            "enText": "Yeah… that's right. Okay.\n… I'll tell them…",
+            "nextBlock": 13,
+            "choices": [
+                {
+                    "jpText": "なんて言ってるんだ……？",
+                    "enText": "What are you saying…?",
+                    "nextBlock": 13
+                },
+                {
+                    "jpText": "なんて言ってるの……？",
+                    "enText": "What are you saying…?",
+                    "nextBlock": 13
+                }
+            ],
+            "pathId": 5694498275625300033,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "……その……感銘を受けているようで……。\r\n『すまない』……『間違っていた』と……。",
+            "enText": "You seem… to be impressed\nwith that… 'I'm sorry,'…\n'I was wrong,'…",
+            "nextBlock": 14,
+            "pathId": -5846096011079912340,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "……トレーナーさんの言葉、嬉しかったです。\r\nしっかり休みますね……。",
+            "enText": "I was happy with what the… trainer\nsaid. I will rest well…",
+            "nextBlock": -1,
+            "pathId": -5281879951193193565,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "……ガッツ……ですね……。\r\nわかりました……。",
+            "enText": "It's… gutsy… Okay…",
+            "nextBlock": 16,
+            "pathId": -7343667450159600394,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………私のガッツ……お見せしま――",
+            "enText": "… My Guts…\nLet me show you—",
+            "nextBlock": 17,
+            "pathId": -6199465596434350995,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………痛っ！？",
+            "enText": "… pain っ!",
+            "nextBlock": 18,
+            "choices": [
+                {
+                    "jpText": "カフェ！？",
+                    "enText": "A cafe!",
+                    "nextBlock": 18
+                }
+            ],
+            "pathId": -7595883460243054287,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "うぅ……私の思念への熱量が……\r\n足りなかったようです…………。",
+            "enText": "Ugh… I guess my enthusiasm for the\nthought was… not enough…",
+            "nextBlock": 19,
+            "pathId": 7977580573384971459,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "これ以上、ケガを悪化させられない……。\r\nこの後、マンハッタンカフェには、\nしっかりと休養を取らせたのであった。",
+            "enText": "I couldn't let the injury get any\nworse… After this, Manhattan\nCafe was given a good rest.",
+            "nextBlock": -1,
+            "pathId": 3152469424543902503,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "……では、何から\r\n始めましょうか…………？",
+            "enText": "At… where should we\nstart…?",
+            "nextBlock": 21,
+            "choices": [
+                {
+                    "jpText": "今全力でできる事は？",
+                    "enText": "What can I do with all my strength now?",
+                    "nextBlock": 21
+                }
+            ],
+            "pathId": 517881978715104979,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………そうですね……全力でしたら、\r\n座学や、ストレッチなどです……。",
+            "enText": "… Well… all you can do is\nsit and stretch…",
+            "nextBlock": 22,
+            "pathId": -266683395862708583,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………もしかしてトレーナーさんの言う、\r\n『ガッツ』とは、それらに\n全力注ぐということですか……？",
+            "enText": "… Could it be that the trainer's\nterm \"guts\" means putting all your energy\ninto them?…?",
+            "nextBlock": 23,
+            "choices": [
+                {
+                    "jpText": "その通り",
+                    "enText": "I agree.",
+                    "nextBlock": 23
+                }
+            ],
+            "pathId": 4742824072919912907,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………ケガを治しつつ、トレーニングを\r\n行う……効率がいいですね……。",
+            "enText": "… training while healing\ninjuries… efficient…",
+            "nextBlock": 24,
+            "pathId": 1738018850099330685,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "？？？",
+            "enName": "???",
+            "jpText": "……、…………。",
+            "enText": "……",
+            "nextBlock": 25,
+            "pathId": 8212649191250777238,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "……熱血な方も、『勉強になる』と、\r\n頷いています…………。",
+            "enText": "… Even the hot-headed ones nodded,\nsaying, \"I'm learning…",
+            "nextBlock": 26,
+            "pathId": 1545153091588711448,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "マンハッタンカフェ",
+            "enName": "Manhattan Cafe",
+            "jpText": "…………わかりました。\r\n私のガッツ……お見せします……！",
+            "enText": "I understand… I'll show\nyou my guts…!",
+            "nextBlock": 27,
+            "pathId": 7085572660300724168,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "その後マンハッタンカフェは、治療しつつ\r\n全力でできるトレーニングを行い、\n見事に復帰したのであった。",
+            "enText": "After that, Manhattan Cafe was treated and\ntrained to the best of her ability, and was\nable to make a successful comeback.",
+            "nextBlock": -1,
+            "pathId": 4102062236481134157,
+            "blockIdx": 27
+        }
+    ]
+}

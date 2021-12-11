@@ -1,0 +1,250 @@
+{
+    "version": 3,
+    "bundle": "27KFY53IJMB463B2YCUK6EUCM65H25YT",
+    "type": "story",
+    "storyId": "501030713",
+    "title": "お大事に！",
+    "text": [
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ごめんなさい、お兄さま……\r\n心配させちゃって……。",
+            "enText": "I'm sorry, brother… I'm\nsorry I worried you…",
+            "nextBlock": 2,
+            "pathId": -3612789398682257984,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ごめんなさい、お姉さま……\r\n心配させちゃって……。",
+            "enText": "I'm sorry, sister… I'm\nsorry I worried you…",
+            "nextBlock": 3,
+            "pathId": 4497740607465416857,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "でも、ちょっとケガしちゃっただけだから、\r\nこのくらいなんてことないよ！",
+            "enText": "But I'm just a little injured, so this is\nnothing to worry about!",
+            "nextBlock": 4,
+            "pathId": 2153735894135527338,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "……だから、心配しないで。\r\nトレーニングの続き、しよ……？",
+            "enText": "Don't worry, it's… Continue\nwith your training, try…?",
+            "nextBlock": 5,
+            "choices": [
+                {
+                    "jpText": "安静にしておこう",
+                    "enText": "Let's keep her at rest.",
+                    "nextBlock": 5
+                },
+                {
+                    "jpText": "ちゃんと気を付けながらね",
+                    "enText": "Just be careful, okay?",
+                    "nextBlock": 9
+                },
+                {
+                    "jpText": "ちゃんと気を付けながらね",
+                    "enText": "Just be careful, okay?",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": 1933164811547664672,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "でもライス、このくらいの\r\nケガならなんともないから……。",
+            "enText": "But Rice, this kind of injury is\nnothing to worry about…",
+            "nextBlock": 6,
+            "choices": [
+                {
+                    "jpText": "実は俺、心配性なんだ",
+                    "enText": "I'm a worrier, actually.",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "実は私、心配性なんだ",
+                    "enText": "I'm a worrier, actually.",
+                    "nextBlock": 6
+                }
+            ],
+            "pathId": 3993482502379462274,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "心配性！　そうだったんだ……ごめんなさい、\r\nライスぜんぜん知らなかった……。",
+            "enText": "Worry! I didn't know that… I'm sorry,\nRice, I didn't know that at all…",
+            "nextBlock": 7,
+            "pathId": -7817758806317633393,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "わかった……ライス、よくなるまで、\r\nトレーニングはお休みするね……はぁ。",
+            "enText": "Okay… Rice, I'm going to\ntake a break from training until\nI feel better… Haha.",
+            "nextBlock": 8,
+            "pathId": -6939556014038092691,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "一応、説得を聞いてくれたライスシャワーは、\r\nそれからしばらくの間\n安静に過ごしてくれたのだった。",
+            "enText": "After some persuasion, Rice Shower spent the\nnext few days at rest.",
+            "nextBlock": -1,
+            "pathId": -6843622991310373284,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "う、うん……！\r\nライス、がんばるねお兄さま……！",
+            "enText": "Uh, yeah…! Rice, I'll\ndo my best brother…!",
+            "nextBlock": 10,
+            "pathId": 2601939703234812353,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "う、うん……！\r\nライス、がんばるねお姉さま……！",
+            "enText": "Uh, yeah…! Rice, keep up\nthe good work sis…!",
+            "nextBlock": 11,
+            "pathId": 5501974270882963856,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "……と、トレーニングに\r\n向かおうとしたのだが――",
+            "enText": "I was heading to… to work out, but…",
+            "nextBlock": 12,
+            "pathId": -8115798532316025116,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "保健室の先生",
+            "enName": "",
+            "jpText": "あら？　今日はもうトレーニングの\r\n時間は終わったはずよ？",
+            "enText": "What? Shouldn't you be done with\nyour training for the day?",
+            "nextBlock": 13,
+            "pathId": 1139769368499467633,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "保健室の先生",
+            "enName": "",
+            "jpText": "確か整備する必要があるとかなんとかで、\r\n急きょ利用時間が短くなったって連絡が……。",
+            "enText": "As I recall, I was informed that the hours\nof operation were suddenly shortened due to\nsome maintenance work that needed to be\ndone…",
+            "nextBlock": 14,
+            "pathId": -6064895099928149920,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "そんなあ……これじゃあ、\r\nお兄さまの期待に応えらえない……うぅ。",
+            "enText": "No way… I can't live up\nto my brother's expectations\nwith this… Ugh.",
+            "nextBlock": 15,
+            "pathId": 6097818238485630096,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "そんなあ……これじゃあ、\r\nお姉さまの期待に応えらえない……うぅ。",
+            "enText": "No way… I can't live up to your\nsister's expectations… Ugh.",
+            "nextBlock": 16,
+            "pathId": -3697909309618799754,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "Monologue",
+            "jpText": "その後、ライスシャワーを\r\n励ましたのだが、しばらくの間、\n落ち込んだままであった……。",
+            "enText": "Afterwards, I encouraged a rice shower, but\nshe remained depressed for a while…",
+            "nextBlock": -1,
+            "pathId": 5289160926482339777,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ふふっ……ありがとうお兄さま。",
+            "enText": "Phew… Thanks brother.",
+            "nextBlock": 18,
+            "pathId": 5709191196508848192,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ふふっ……ありがとうお姉さま。",
+            "enText": "Phew… Thanks sister.",
+            "nextBlock": 19,
+            "pathId": 6988998018634732546,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "このくらいのケガ、へっちゃらだってこと、\r\nお兄さまに見せてあげるね……！",
+            "enText": "I'll show your brother that this kind of\ninjury is nothing to worry about…!",
+            "nextBlock": 20,
+            "choices": [
+                {
+                    "jpText": "でもまず、ケガを治すのが先",
+                    "enText": "But first, you have to heal your injuries.",
+                    "nextBlock": 21
+                }
+            ],
+            "pathId": -5968819348358263693,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "このくらいのケガ、へっちゃらだってこと、\r\nお姉さまに見せてあげるね……！",
+            "enText": "I'll show your sister that I'm not afraid of\nthis kind of injury…!",
+            "nextBlock": 21,
+            "choices": [
+                {
+                    "jpText": "でもまず、ケガを治すのが先",
+                    "enText": "But first, you have to heal your injuries.",
+                    "nextBlock": 21
+                }
+            ],
+            "pathId": -4115563300066303135,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "え、ええ……\r\nでも、ライス……はぁ。",
+            "enText": "Eh, yeah… but rice… is huh.",
+            "nextBlock": 22,
+            "pathId": 571379844008006385,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "……わかった。だけど、ケガが治ったら、\r\nライス、うんとがんばるからね……！",
+            "enText": "… Okay. But when the injury is healed,\nRice, I'll work even harder…!",
+            "nextBlock": -1,
+            "pathId": 8610514377351269746,
+            "blockIdx": 22
+        }
+    ]
+}

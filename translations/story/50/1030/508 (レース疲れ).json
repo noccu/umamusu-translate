@@ -1,0 +1,84 @@
+{
+    "version": 3,
+    "bundle": "35MDI56AWQF5OFGO2KLR7L4UH5JZWKUS",
+    "type": "story",
+    "storyId": "501030508",
+    "title": "レース疲れ",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ライスシャワーとトレーニングを\r\nしていたのだが、どうにも動きが悪い……。",
+            "enText": "I've been working out with a rice shower,\nbut I can't seem to move…",
+            "nextBlock": 2,
+            "pathId": 6374563417883960052,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "はぁっ、はぁ……。",
+            "enText": "Hah, hah…",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "調子が悪いのか？",
+                    "enText": "What's wrong with you?",
+                    "nextBlock": 3
+                },
+                {
+                    "jpText": "調子が悪いの？",
+                    "enText": "What's wrong with you?",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": -3261080112170002809,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ご、ごめんなさい……お兄さま。\r\n前のレースで張り切り過ぎちゃったかも……。",
+            "enText": "I'm sorry… brother. I think\nI may have overstretched myself\nin the last race…",
+            "nextBlock": 4,
+            "pathId": 6423435042632752021,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ご、ごめんなさい……お姉さま。\r\n前のレースで張り切り過ぎちゃったかも……。",
+            "enText": "I'm sorry… sister. I think\nI may have overstretched myself\nin the last race…",
+            "nextBlock": 5,
+            "pathId": -5208980985491382844,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "えっと、でも……大丈夫だから！\r\nお兄さまは心配しないで……！",
+            "enText": "Um, but… is fine! Don't worry\nabout your brother…!",
+            "nextBlock": 6,
+            "pathId": -319041004388313112,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "えっと、でも……大丈夫だから！\r\nお姉さまは心配しないで……！",
+            "enText": "Um, but… is fine! Don't worry\nabout your sister…!",
+            "nextBlock": 7,
+            "pathId": -4370536603546786241,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "レースの疲れが残っているようだ。\r\n無理をさせているのかもしれない。\n気をつけなければ……。",
+            "enText": "I think she's still tired from the race.\nMaybe I'm pushing her too hard. I have to be\ncareful…",
+            "nextBlock": -1,
+            "pathId": -2576755561854507830,
+            "blockIdx": 7
+        }
+    ]
+}

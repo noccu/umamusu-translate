@@ -1,25 +1,5 @@
 [
     {
-        "re": " ?\\.+ ?\\.+",
-        "repl": "…"
-    },
-    {
-        "re": "[,:]?…[,:]?",
-        "repl": "…"
-    },
-    {
-        "re": "[^a-z ]—",
-        "repl": "…"
-    },
-    {
-        "re": "--+|――",
-        "repl": "—"
-    },
-    {
-        "re": "　",
-        "repl": " "
-    },
-    {
         "re": "\\bHe\\b",
         "repl": "She"
     },
@@ -28,16 +8,12 @@
         "repl": "she"
     },
     {
-        "re": "\\b(h)is\\b",
+        "re": "\\b(h|H)i[sm]\\b",
         "repl": "\\1er"
     },
     {
         "re": "himself",
         "repl": "herself"
-    },
-    {
-        "re": "him",
-        "repl": "her"
     },
     {
         "re": "Mr.",
@@ -78,5 +54,29 @@
     {
         "re": "the horse girl in charge",
         "repl": "your horse girl"
+    },
+    {
+        "re": " ?\\.+ ?\\.+",
+        "repl": "…"
+    },
+    {
+        "re": "[,:]?…[,:]?",
+        "repl": "…"
+    },
+    {
+        "re": "[^a-z ]—",
+        "repl": "…"
+    },
+    {
+        "re": "--+|――",
+        "repl": "—"
+    },
+    {
+        "re": "　",
+        "repl": " "
+    },
+    {
+        "re": "\\n ",
+        "repl": "\\n"
     }
 ]

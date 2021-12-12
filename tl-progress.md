@@ -12,10 +12,10 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main Stories
 name | progress | translator
 --- | --- | ---
-Main story | Transferring | [CatNipHoarder][] / [Holo][]
+Main story | Transferring | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
-Halloween | Transferring | [CatNipHoarder][] / [Holo][]
-Miracles of the Holy Night | Complete | deepl (temp)
+Halloween | Transferring | [CatNipHoarder][] & [Holo][]
+Miracles of the Holy Night | Complete, Transferring | [CatNipHoarder][] & [Holo][] (ep 1), deepl (temp)
 
 # Character stories
 name | progress | translator

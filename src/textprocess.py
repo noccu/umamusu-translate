@@ -41,7 +41,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         #check if it's ok already
         lines = text.splitlines()
         tooLong = [line for line in lines if len(line) > lineLen]
-        if not tooLong:
+        if not tooLong and len(lines) <= targetLines:
             if VERBOSE: print("Text passes length check, skipping: ", text)
             return text
 

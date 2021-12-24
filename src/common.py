@@ -40,6 +40,13 @@ def findExisting(searchPath: os.PathLike, filePattern: str):
             return file
     return None
 
+def isParseableInt(x):
+    try:
+        int(x)
+        return True
+    except ValueError:
+        return False
+        
 class Args:
     parsed = dict()
 
@@ -62,13 +69,14 @@ class Args:
                     val = args[idx+1]
                 except IndexError:
                     val = ""
-                if val and not val.startswith("-"):
-                    if val.startswith('"'):
-                        while not val.endswith('"'):
-                            idx += 1
-                            val += args[idx + 1]
-                    self.setArg(name, val)
-                    idx += 2  # get next opt
+                if val and (not val.startswith("-") or isParseableInt(val)):
+                        # if val.startswith('"'):
+                        #     while not val.endswith('"'):
+                        #         idx += 1
+                        #         val += args[idx + 1]
+                        #     val = val[1:-1]
+                        self.setArg(name, val)
+                        idx += 2  # get next opt
                 else:
                     self.setArg(name, True)
                     idx += 1

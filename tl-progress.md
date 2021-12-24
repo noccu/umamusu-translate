@@ -31,6 +31,7 @@ King Halo | Complete, Transferring | deepl, [burritoblaster][]
 Special Week | Complete | deepl
 Gold Ship | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
+Silence Suzuka | Complete | [LotoDS][]
 
 
 # Training story/events
@@ -58,3 +59,4 @@ name | progress | translator
 [CatNipHoarder]: https://twitter.com/CatNipHoarder
 [Vacxy]: https://ko-fi.com/mobagetranslations
 [burritoblaster]: https://twitter.com/burritoblaster
+[LotoDS]: https://www.youtube.com/user/LotoDS

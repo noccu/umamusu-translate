@@ -20,6 +20,10 @@
         "repl": "Ms."
     },
     {
+        "re": "baba",
+        "repl": "field"
+    },
+    {
         "re": "(?:To?re?sen|Trespassing) (?:Academy|Gakuen)",
         "repl": "Tracen Academy"
     },
@@ -34,6 +38,10 @@
     {
         "re": "make-?(?:out|up) debut",
         "repl": "debut"
+    },
+    {
+        "re": "(?:Yuuma|Arima) (?:Memorial)",
+        "repl": "Arima Kinen"
     },
     {
         "re": "Simbolildorf",
@@ -52,6 +60,14 @@
         "repl": "Bakushin O"
     },
     {
+        "re": "Reis[sc]h(?:ow|au)er",
+        "repl": "Rice Shower"
+    },
+    {
+        "re": "MedillomacQueen",
+        "repl": "Mejiro McQueen"
+    },
+    {
         "re": "the horse girl in charge",
         "repl": "your horse girl"
     },
@@ -68,11 +84,15 @@
         "repl": "—"
     },
     {
-        "re": "　",
+        "re": " at…",
+        "repl": "…"
+    },
+    {
+        "re": "　| {2,}",
         "repl": " "
     },
     {
-        "re": "\\n ",
-        "repl": "\\n"
+        "re": " *\\n *",
+        "repl": " \\n"
     }
 ]

@@ -33,7 +33,7 @@ Gold Ship | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Silence Suzuka | Complete | [LotoDS][]
 Fine Motion | In Progress | [LotoDS][] (ep 1-3)
-Tamamo Cross | Complete | deepl
+Tamamo Cross | Complete | [noccu][] (ep 1), deepl
 
 
 # Training story/events

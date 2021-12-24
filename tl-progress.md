@@ -47,8 +47,10 @@ name | progress | translator
 --- | --- | ---
 Maruzensky | Complete | deepl
 Rudolph | In progress | deepl (old)
-Bakushin | Complete | deepl
+Sakura Bakushin O | Complete | deepl
 Agnes Tachyon | Complete | deepl
+Manhattan Cafe | Complete | deepl
+Rice Shower | Complete | deepl
 
 ## Cards
 name | progress | translator

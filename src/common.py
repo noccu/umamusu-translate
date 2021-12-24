@@ -2,6 +2,7 @@ import os
 from pathlib import Path, PurePath
 import sys
 import json
+from typing import Generator
 
 
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
@@ -92,6 +93,17 @@ class TranslationFile:
             return self.data['text']
         else:
             return list(self.data.values())[0]
+
+    def genTextContainers(self) -> Generator[dict, None, None]:
+        for block in self.getTextBlocks():
+            if block['jpText']:
+                yield block
+            if 'coloredText' in block:
+                for entry in block['coloredText']:
+                    yield entry
+            if 'choices' in block:
+                for entry in block['choices']:
+                    yield entry
 
     def getBundle(self):
         if self.version > 1:

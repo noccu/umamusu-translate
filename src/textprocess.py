@@ -77,7 +77,7 @@ def main():
     print(f"Processing {len(files)} files...")
     for file in files:
         file = common.TranslationFile(file)
-        for block in file.getTextBlocks():
+        for block in file.genTextContainers():
             if not "enText" in block or len(block['enText']) == 0: continue
             block['enText'] = process(file, block['enText'], {"lineLen": LINE_LENGTH, "replace": True, "noNewlines": NEWLINES})
         file.save()

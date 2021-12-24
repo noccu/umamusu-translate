@@ -32,6 +32,7 @@ Special Week | Complete | deepl
 Gold Ship | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Silence Suzuka | Complete | [LotoDS][]
+Fine Motion | In Progress | [LotoDS][] (ep 1-3)
 
 
 # Training story/events
@@ -53,7 +54,7 @@ name | progress | translator
 --- | --- | ---
 
 
-[noccu]: https://github.com/noccu
+[noccu]: https://ko-fi.com/noccyu
 [Ren]: https://watatomo.github.io/tl/
 [Holo]: https://www.youtube.com/channel/UC1sbBH3dYW5K-WVKjFF2uEA
 [CatNipHoarder]: https://twitter.com/CatNipHoarder

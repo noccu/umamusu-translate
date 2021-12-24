@@ -44,6 +44,8 @@ def createDict():
     names['同期のウマ娘'] = "Contemporary UmaMusu"
     names['そばかす顔のウマ娘'] = "Freckled UmaMusu"
     names['地元ウマ娘'] = "Local Uma Musume"
+    names['どこか上品なウマ娘'] = "Somewhat Refined Uma Musume"
+    names['スーツのウマ娘'] = "Suited Uma Musume"
     names['ウマ娘たち'] = "Uma Musumes"
     names['？？？'] = "???"
     names['ニュースキャスター'] = "Newscaster"
@@ -66,6 +68,7 @@ def createDict():
     names['実況'] = "Coverage"
     names['イベント実況'] = "Event Coverage"
     names['テレビ'] = "TV"
+    names['テレビの音'] = "TV Report"
     names['新人トレーナーA'] = "Rookie Trainer A"
     names['新人トレーナーＡ'] = "Rookie Trainer A"
     names['中堅トレーナーA'] = "Average Trainer A"
@@ -105,10 +108,14 @@ def createDict():
     names['宇宙人'] = "Alien"
     names['2人'] = "Both"
     names['3人'] = "All 3"
+    names['みんな'] = "Everyone"
     names['通行人A'] = "Passerby A"
     names['通行人B'] = "Passerby B"
     names['カメラマンA'] = "Cameraman A"
     names['カメラマンB'] = "Cameraman B"
+    names['SP隊長'] = "SP Commander"
+    names['ネコ'] = "Cat"
+    names['ドラゴン'] = "Dragon"
     return names
 
 def translate(namesDict):

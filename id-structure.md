@@ -47,6 +47,8 @@ The structure used is simple: `00 0000 000`
 1018 |	Air Groove
 1019 |	Agnes Digital
 1020 |	Seiun Sky
+1021 |	Tamamo cross
+1022 |	Fine Motion
 1023 |	Biwa Hayahide
 1024 |	Mayano Top Gun
 1025 |	Manhattan Cafe

@@ -12,10 +12,10 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main Stories
 name | progress | translator
 --- | --- | ---
-Main story | Transferring | [CatNipHoarder][] / [Holo][]
+Main story | Transferring | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
-Halloween | Transferring | [CatNipHoarder][] / [Holo][]
-Miracles of the Holy Night | Complete | deepl (temp)
+Halloween | Transferring | [CatNipHoarder][] & [Holo][]
+Miracles of the Holy Night | Complete, Transferring | [CatNipHoarder][] & [Holo][] (ep 1), deepl (temp)
 
 # Character stories
 name | progress | translator
@@ -31,6 +31,9 @@ King Halo | Complete, Transferring | deepl, [burritoblaster][]
 Special Week | Complete | deepl
 Gold Ship | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
+Silence Suzuka | Complete | [LotoDS][]
+Fine Motion | In Progress | [LotoDS][] (ep 1-3)
+Tamamo Cross | Complete | [noccu][] (ep 1), deepl
 
 
 # Training story/events
@@ -44,17 +47,20 @@ name | progress | translator
 --- | --- | ---
 Maruzensky | Complete | deepl
 Rudolph | In progress | deepl (old)
-Bakushin | Complete | deepl
+Sakura Bakushin O | Complete | deepl
 Agnes Tachyon | Complete | deepl
+Manhattan Cafe | Complete | deepl
+Rice Shower | Complete | deepl
 
 ## Cards
 name | progress | translator
 --- | --- | ---
 
 
-[noccu]: https://github.com/noccu
+[noccu]: https://ko-fi.com/noccyu
 [Ren]: https://watatomo.github.io/tl/
 [Holo]: https://www.youtube.com/channel/UC1sbBH3dYW5K-WVKjFF2uEA
 [CatNipHoarder]: https://twitter.com/CatNipHoarder
 [Vacxy]: https://ko-fi.com/mobagetranslations
 [burritoblaster]: https://twitter.com/burritoblaster
+[LotoDS]: https://www.youtube.com/user/LotoDS

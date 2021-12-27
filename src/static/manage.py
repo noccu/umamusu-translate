@@ -18,6 +18,7 @@ TRANSLATE_HASHES = args.getArg("-upd", False)
 
 DO_IMPORT = args.getArg("-add", False) #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
 DO_CLEAN = args.getArg("-clean", False)
+DO_ORDER = args.getArg("-order", False)
 OVERWRITE_LOCAL_DUMP = args.getArg("-O", False)
 IMPORT_DUMP_ONLY = args.getArg("-I", False)
 
@@ -38,13 +39,18 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
     for hash, text in dumpData.items():
         try:
             translatedText = tlData[text]
-        except KeyError:
-            continue
+        except:
+            translatedText = None
 
-        if not translatedText: continue
-        # special case for effectively removing text
-        if translatedText == "<empty>": translatedText = ""
-        hashData[hash] = translatedText
+        if translatedText:
+            # special case for effectively removing text
+            hashData[hash] = "" if translatedText == "<empty>" else translatedText
+        else:
+            # Remove missing data on update to prevent garbled translations
+            if hash in hashData:
+                # print(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
+                del hashData[hash]
+
 
 def importDump(path: PurePath):
     isExternal = path != LOCAL_DUMP
@@ -62,8 +68,8 @@ def importDump(path: PurePath):
             path = LOCAL_DUMP
         # copy to list so we don't run into issues deleting keys in our loop obj
         for key, val in list(data.items()):
-            if filter.fullmatch(val):
-                # remove non-japanese data
+            if len(key) > 5 and filter.fullmatch(val):
+                # remove non-japanese data (excluding static)
                 del data[key]
             else:
                 # keep track of animated text
@@ -72,7 +78,7 @@ def importDump(path: PurePath):
                 else:
                     if len(animationCheck) > 4:
                         # and remove it
-                        print (f"Removing animated text: {animationCheck}")
+                        # print (f"Removing animated text: {animationCheck}")
                         for key, val in animationCheck:
                             del data[key]
                     animationCheck.clear()
@@ -90,8 +96,11 @@ def importDump(path: PurePath):
                 match = extract.search(line)
                 if match is None: continue
                 key, val = map(lambda x: x.encode('latin1', 'backslashreplace').decode('unicode-escape'), match.group(1,2))
-                if key and val and not filter.fullmatch(val):
-                    localDumpData[key] = val
+                if key and val:
+                    # static range always seems to dump in japanese, which helps
+                    # also assuming the problem this fixes only occurs/matters for static text
+                    if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not filter.fullmatch(val)):
+                        localDumpData[key] = val
         if DO_IMPORT or IMPORT_DUMP_ONLY:
             common.writeJsonFile(LOCAL_DUMP, localDumpData)
         return localDumpData
@@ -103,15 +112,15 @@ def clean():
 
     for key, value in list(targetData.items()):
         if DO_CLEAN == "both":
-            # ignore static and translated entries
-            if len(key) < 5 or (value in tlData and tlData[value]): continue
-
-            # remove the rest
+            # ignore translated entries
+            if (value in tlData and tlData[value]): continue
             try:
-                del dump[key]
                 del tlData[value]
             except KeyError:
                 pass
+            # ignore static entries in dump
+            if len(key) > 5:
+                del dump[key]
         else:
             # remove untranslated
             if not value:
@@ -120,14 +129,23 @@ def clean():
     common.writeJsonFile(TL_FILE, tlData)
     if DO_CLEAN == "both": common.writeJsonFile(DUMP_FILE, dump)
 
+def order():
+    for file in [LOCAL_DUMP, HASH_FILE]:
+        data = common.readJson(file)
+        data = dict(sorted(data.items(), key=lambda x: int(x[0])))
+        common.writeJsonFile(file, data)
+
 # Usage: use localify dll to dump entries
 # use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
 def main():
-    if not ADD_NEW_TEXT and not TRANSLATE_HASHES and not DO_CLEAN:
+    if not ADD_NEW_TEXT and not TRANSLATE_HASHES and not DO_CLEAN and not IMPORT_DUMP_ONLY and not DO_ORDER:
         raise SystemExit("1 required argument missing.")
 
     if DO_CLEAN:
         clean()
+        return
+    elif DO_ORDER:
+        order()
         return
 
     dumpData = importDump(DUMP_FILE)

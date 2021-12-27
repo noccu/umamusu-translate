@@ -2,6 +2,7 @@ import os
 from pathlib import Path, PurePath
 import sys
 import json
+from typing import Generator
 
 
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
@@ -39,6 +40,13 @@ def findExisting(searchPath: os.PathLike, filePattern: str):
             return file
     return None
 
+def isParseableInt(x):
+    try:
+        int(x)
+        return True
+    except ValueError:
+        return False
+        
 class Args:
     parsed = dict()
 
@@ -61,13 +69,14 @@ class Args:
                     val = args[idx+1]
                 except IndexError:
                     val = ""
-                if val and not val.startswith("-"):
-                    if val.startswith('"'):
-                        while not val.endswith('"'):
-                            idx += 1
-                            val += args[idx + 1]
-                    self.setArg(name, val)
-                    idx += 2  # get next opt
+                if val and (not val.startswith("-") or isParseableInt(val)):
+                        # if val.startswith('"'):
+                        #     while not val.endswith('"'):
+                        #         idx += 1
+                        #         val += args[idx + 1]
+                        #     val = val[1:-1]
+                        self.setArg(name, val)
+                        idx += 2  # get next opt
                 else:
                     self.setArg(name, True)
                     idx += 1
@@ -92,6 +101,17 @@ class TranslationFile:
             return self.data['text']
         else:
             return list(self.data.values())[0]
+
+    def genTextContainers(self) -> Generator[dict, None, None]:
+        for block in self.getTextBlocks():
+            if block['jpText']:
+                yield block
+            if 'coloredText' in block:
+                for entry in block['coloredText']:
+                    yield entry
+            if 'choices' in block:
+                for entry in block['choices']:
+                    yield entry
 
     def getBundle(self):
         if self.version > 1:

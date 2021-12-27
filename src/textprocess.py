@@ -41,7 +41,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         #check if it's ok already
         lines = text.splitlines()
         tooLong = [line for line in lines if len(line) > lineLen]
-        if not tooLong:
+        if not tooLong and len(lines) <= targetLines:
             if VERBOSE: print("Text passes length check, skipping: ", text)
             return text
 
@@ -77,7 +77,7 @@ def main():
     print(f"Processing {len(files)} files...")
     for file in files:
         file = common.TranslationFile(file)
-        for block in file.getTextBlocks():
+        for block in file.genTextContainers():
             if not "enText" in block or len(block['enText']) == 0: continue
             block['enText'] = process(file, block['enText'], {"lineLen": LINE_LENGTH, "replace": True, "noNewlines": NEWLINES})
         file.save()

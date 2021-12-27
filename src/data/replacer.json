@@ -1,25 +1,5 @@
 [
     {
-        "re": " ?\\.+ ?\\.+",
-        "repl": "…"
-    },
-    {
-        "re": "[,:]?…[,:]?",
-        "repl": "…"
-    },
-    {
-        "re": "[^a-z ]—",
-        "repl": "…"
-    },
-    {
-        "re": "--+|――",
-        "repl": "—"
-    },
-    {
-        "re": "　",
-        "repl": " "
-    },
-    {
         "re": "\\bHe\\b",
         "repl": "She"
     },
@@ -28,7 +8,7 @@
         "repl": "she"
     },
     {
-        "re": "\\b(h)is\\b",
+        "re": "\\b(h|H)i[sm]\\b",
         "repl": "\\1er"
     },
     {
@@ -36,12 +16,12 @@
         "repl": "herself"
     },
     {
-        "re": "him",
-        "repl": "her"
-    },
-    {
         "re": "Mr.",
         "repl": "Ms."
+    },
+    {
+        "re": "baba",
+        "repl": "field"
     },
     {
         "re": "(?:To?re?sen|Trespassing) (?:Academy|Gakuen)",
@@ -60,6 +40,10 @@
         "repl": "debut"
     },
     {
+        "re": "(?:Yuuma|Arima) (?:Memorial)",
+        "repl": "Arima Kinen"
+    },
+    {
         "re": "Simbolildorf",
         "repl": "Symboli Rudolf"
     },
@@ -76,7 +60,47 @@
         "repl": "Bakushin O"
     },
     {
+        "re": "Reis[sc]h(?:ow|au)er",
+        "repl": "Rice Shower"
+    },
+    {
+        "re": "MedillomacQueen",
+        "repl": "Mejiro McQueen"
+    },
+    {
+        "re": "Tamamocross",
+        "repl": "Tamamo Cross"
+    },
+    {
         "re": "the horse girl in charge",
         "repl": "your horse girl"
+    },
+    {
+        "re": " ?\\.+ ?\\.+",
+        "repl": "…"
+    },
+    {
+        "re": "[,:]?…[,:]?",
+        "repl": "…"
+    },
+    {
+        "re": "--+|――",
+        "repl": "—"
+    },
+    {
+        "re": " at…",
+        "repl": "…"
+    },
+    {
+        "re": "　| {2,}",
+        "repl": " "
+    },
+    {
+        "re": "([a-z])…([a-z])",
+        "repl": "\\1… \\2"
+    },
+    {
+        "re": " *\\n *",
+        "repl": " \\n"
     }
 ]

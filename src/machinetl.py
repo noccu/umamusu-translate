@@ -42,17 +42,6 @@ class Translator:
         self.client = client
         self.loop = asyncio.get_running_loop()
 
-    def _entryGenerator(self, file: common.TranslationFile):
-        for block in file.getTextBlocks():
-            if block['jpText']:
-                yield block
-            if 'coloredText' in block:
-                for entry in block['coloredText']:
-                    yield entry
-            if 'choices' in block:
-                for entry in block['choices']:
-                    yield entry
-
     def _fileGenerator(self):
         for file in self.files:
             print(f"Translating {file}...")
@@ -60,7 +49,7 @@ class Translator:
 
     async def translate(self):
         for file in self._fileGenerator():
-            for entry in self._entryGenerator(file):
+            for entry in file.genTextContainers():
                 # Skip already translated text
                 if OVERWRITE_TEXT or not entry['enText']:
                     text = textprocess.process(file, entry['jpText'], {"noNewlines": True})

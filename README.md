@@ -42,6 +42,7 @@ import | The reverse; loads *Translation Files* and writes them back to game ass
 machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Translation Files* with deepl. Install the userscript in your browser. Run the python file first, then go to the deepl site and use your userscript manager's menu to connect and wait until python exits. This userscript setup is temporary (famous last words)
 names | Simply translates names in *Translation Files* using data from the [db-translate project][]
 textprocess | Processes dialogue text in *Translation Files* in various ways. Most immediate manual use is adjusting lengths of lines for newline splits.
+subtransfer | Imports ASS or SRT subtitle files into *Translation Files*. A few conventions must be followed, see its -h switch
 common | Not a script. Is used by the other files and holds shared functions and data.
 
 ### Common Arguments

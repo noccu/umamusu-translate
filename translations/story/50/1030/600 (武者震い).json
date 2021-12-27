@@ -1,0 +1,75 @@
+{
+    "version": 3,
+    "bundle": "OG44GBQADXMCH34ZSFOCBFSK5W262O3P",
+    "type": "story",
+    "storyId": "501030600",
+    "title": "武者震い",
+    "text": [
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "うぅ……うう……。",
+            "enText": "Ugh… Ugh…",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "体調が悪いのか？",
+                    "enText": "You're not feeling well?",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "体調が悪いの？",
+                    "enText": "You're not feeling well?",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": -5696208784845986149,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "え？　ううん……違うの。\r\nちょっと、緊張してただけだから……。",
+            "enText": "What? No… No, I'm not. I'm just \na little nervous, that's all…",
+            "nextBlock": 3,
+            "pathId": -2329065499907513244,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "でも……もう大丈夫。こうして、\r\nお兄さまとお話したら、安心しちゃった……。",
+            "enText": "But… I'm fine now. I felt relieved when I \ntalked to your brother like this…",
+            "nextBlock": 4,
+            "pathId": 6422117946661886975,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "でも……もう大丈夫。こうして、\r\nお姉さまとお話したら、安心しちゃった……。",
+            "enText": "But… I'm fine now. I felt relieved when I \ntalked to your sister like this…",
+            "nextBlock": 5,
+            "pathId": 8375555199638216318,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ライス、がんばるから……。\r\nしっかり見ててね、お兄さま……！",
+            "enText": "Rice, will do her best… Keep \nan eye on us, brother…!",
+            "nextBlock": 6,
+            "pathId": -8909173251694279247,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ライスシャワー",
+            "enName": "Rice Shower",
+            "jpText": "ライス、がんばるから……。\r\nしっかり見ててね、お姉さま……！",
+            "enText": "Rice, will do her best… Keep \nan eye on us, sister…!",
+            "nextBlock": -1,
+            "pathId": -6852734862360145576,
+            "blockIdx": 6
+        }
+    ]
+}

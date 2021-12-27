@@ -112,15 +112,15 @@ def clean():
 
     for key, value in list(targetData.items()):
         if DO_CLEAN == "both":
-            # ignore static and translated entries
-            if len(key) < 5 or (value in tlData and tlData[value]): continue
-
-            # remove the rest
+            # ignore translated entries
+            if (value in tlData and tlData[value]): continue
             try:
-                del dump[key]
                 del tlData[value]
             except KeyError:
                 pass
+            # ignore static entries in dump
+            if len(key) > 5:
+                del dump[key]
         else:
             # remove untranslated
             if not value:

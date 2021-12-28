@@ -2,6 +2,7 @@ import ass
 import srt
 import common
 import re
+from Levenshtein import ratio
 # from datetime import timedelta
 
 args = common.Args().parse()
@@ -26,10 +27,26 @@ if type(OFFSET) is not int:
     OFFSET = int(OFFSET)
 NAME_PREFIX = args.getArg("-npre", False)
 
+# Helpers
 def specialProcessing(text: str):
     if NAME_PREFIX:
         text = re.sub(r".+: (.+)", r"\1", text)
     return text
+
+def duplicateSub(textList, idx, newText):
+    # duplicate text and choices
+    textList[idx]['enText'] = textList[idx-1]['enText']
+    if "choices" in textList[idx-1]:
+        for c, choice in enumerate(textList[idx-1]["choices"]):
+            textList[idx]['choices'][c]['enText'] = choice['enText']
+
+    # Add sub text to matching (next) block and return it as new pos
+    idx += 1
+    textList[idx]['enText'] = specialProcessing(newText)
+    return idx
+
+def isDuplicateBlock(textList, idx):
+    return textList[idx]['jpName'] == "<username>" and textList[idx - 1]['jpName'] == "<username>" and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
 
 # ASS
 def cleanLine(text):
@@ -94,11 +111,15 @@ def processSRT():
             if not sub.content.startswith(">"):
                 if sub.content.startswith("Trainer:"):
                     if not "choices" in textList[idx-1]:
-                        print("Found assumed choice subtitle, but no matching choice found, skipping...")
+                        print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
                         continue
-                    for entry in textList[idx-1]["choices"]:
+                    for entry in textList[idx - 1]["choices"]:
                         entry['enText'] = specialProcessing(sub.content)
                     continue # don't increment idx
+                if isDuplicateBlock(textList, idx):
+                    print(f"Found gender dupe at block {textList[idx]['blockIdx']}, duplicating.")
+                    idx = duplicateSub(textList, idx, sub.content) + 1
+                    continue
                 else:
                     textList[idx]['enText'] = specialProcessing(sub.content)
                 idx += 1

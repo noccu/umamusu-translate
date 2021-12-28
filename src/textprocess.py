@@ -43,7 +43,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             if VERBOSE: print("Text passes length check, skipping: ", text)
-            return text
+            return text.replace("\n", "\\n") if file.getType() == "race" else text
 
         #adjust if not
         text = cleannewLines(file, text)

@@ -73,7 +73,7 @@ def processASS():
         
         textList[idx]['enText'] = specialProcessing(line)
         if len(line) == 0:
-            print(f"Untranslated line at {idx}")
+            print(f"Untranslated line at {textList[idx]['blockIdx']}")
 
         idx += 1
     tlFile.save()

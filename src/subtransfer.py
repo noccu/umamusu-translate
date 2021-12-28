@@ -65,7 +65,7 @@ def processASS():
     inSplit = None
     lastSplit = None
     for line in doc.events:
-        if "MainText" in line.style:
+        if re.search("MainText|Default", line.style) and line.name != "Nameplate":
             cleanText = cleanLine(line.text)
             if line.effect.startswith("Split"):
                 if inSplit and line.effect[-2:] == lastSplit:

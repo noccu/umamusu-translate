@@ -32,7 +32,7 @@ Special Week | Complete | deepl
 Gold Ship | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Silence Suzuka | Complete | [LotoDS][]
-Fine Motion | In Progress | [LotoDS][] (ep 1-3)
+Fine Motion | Complete | [LotoDS][]
 Tamamo Cross | Complete | [noccu][] (ep 1), deepl
 
 

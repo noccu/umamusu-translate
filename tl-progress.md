@@ -1,4 +1,4 @@
-This document gives an overview of translation progress.  
+This document gives an overview of translation progress.
 
 ### Legend
 term | meaning
@@ -35,6 +35,7 @@ Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Silence Suzuka | Complete | [LotoDS][]
 Fine Motion | Complete | [LotoDS][]
 Tamamo Cross | Complete | [noccu][] (ep 1), deepl
+Vodka | Complete | [robflop][]
 
 
 # Training story/events
@@ -65,3 +66,4 @@ name | progress | translator
 [Vacxy]: https://ko-fi.com/mobagetranslations
 [burritoblaster]: https://twitter.com/burritoblaster
 [LotoDS]: https://www.youtube.com/user/LotoDS
+[robflop]: https://misskey.io/@robflop

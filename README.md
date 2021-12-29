@@ -13,7 +13,8 @@ This tool collection only changes text to translate it and it is *my belief* thi
 # Install 
 
 ### Requirements
-1. Install [Python](https://www.python.org/downloads/) 3.6+ and [UnityPy][]
+1. Install [Python](https://www.python.org/downloads/) 3.9 and [UnityPy][]
+    1. For other Python versions you may need to edit script sources (most of it is 3.6+) or have build tools installed to compile lz4)
 1. (Optional but recommended) Download all game data through the game menu
 1. Clone or download this project
 

@@ -58,6 +58,12 @@ Rice Shower | Complete | deepl
 name | progress | translator
 --- | --- | ---
 
+# Home Dialogue
+name | progress | translator
+--- | --- | ---
+Maruzensky | Complete | [noccu][]
+
+
 
 [noccu]: https://ko-fi.com/noccyu
 [Ren]: https://watatomo.github.io/tl/

@@ -51,7 +51,7 @@ def isDuplicateBlock(textList, idx):
 # ASS
 def cleanLine(text):
     text = text.replace("\\N", "\n")
-    text = re.sub(r"\{.+\}", "", text)
+    text = re.sub(r"\{.+?\}", "", text)
     return text
 
 def assPreFilter(doc):

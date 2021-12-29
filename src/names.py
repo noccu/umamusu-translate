@@ -30,7 +30,7 @@ def createDict():
     names['駿川たづな'] = "Hayakawa Tazuna"
     names['秋川理事長'] = "Chairwoman Akikawa"
     names['樫本代理'] = "Acting Chair Kashimoto"
-    names['モノローグ'] = "Monologue"
+    # names['モノローグ'] = "Monologue"
     names['記者A'] = "Reporter A"
     names['記者B'] = "Reporter B"
     names['記者たち'] = "Reporters"

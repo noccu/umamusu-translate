@@ -14,7 +14,7 @@ TARGET_ID = args.getArg("-id", False)
 
 def createDict():
     global NAMES_FILE
-    if not NAMES_FILE: 
+    if not NAMES_FILE:
         NAMES_FILE = "../umamusume-db-translate/src/data/uma-name.csv"
         if not path.exists(NAMES_FILE):
             raise FileNotFoundError("You must specify the uma-name.csv file.")
@@ -123,6 +123,9 @@ def createDict():
     names['SP隊長'] = "SP Commander"
     names['ネコ'] = "Cat"
     names['ドラゴン'] = "Dragon"
+    names['教官A'] = "Instructor A"
+    names['同級ウマ娘'] = "Classmate Horsegirl"
+    names['先輩ウマ娘'] = "Older Horsegirl"
     return names
 
 def translate(namesDict):

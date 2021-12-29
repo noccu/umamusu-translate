@@ -46,7 +46,9 @@ def duplicateSub(textList, idx, newText):
     return idx
 
 def isDuplicateBlock(textList, idx):
-    return textList[idx]['jpName'] == "<username>" and textList[idx - 1]['jpName'] == "<username>" and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
+    prevName = textList[idx - 1]['jpName']
+    curName = textList[idx]['jpName']
+    return curName in ["<username>", ""] and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
 
 # ASS
 def cleanLine(text):

@@ -7,8 +7,8 @@ For [existing content](translations/) you only wish to translate, TLC, or edit, 
 Needed:
 - If you haven't read the main [readme](readme.md), please check that first.
 - Install dependencies
-    - From project root: `pip install -r src\requirements.txt`
-    - Or `pip install -r src\devreqs.txt` if you have subtitles(SRT, ASS) to import or other additional needs
+    - From project root: `python -m pip install -r src\requirements.txt`
+    - Or `python -m pip install -r src\devreqs.txt` if you have subtitles(SRT, ASS) to import or other additional needs
 -  If you want to contribute: fork the project on github and clone that fork to work in
 
 Recommended:    

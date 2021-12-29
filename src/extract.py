@@ -157,7 +157,7 @@ def exportAsset(bundle: str, path: str):
     group, id, idx = parseStoryId(path)
     exportDir =  Path(EXPORT_DIR).joinpath(group, id)
 
-    # check existing files first
+    # check existing files firstrange
     if not OVERWRITE_DST:
         file = common.findExisting(exportDir, f"{idx}*.json")
         if file is not None:
@@ -167,8 +167,13 @@ def exportAsset(bundle: str, path: str):
     importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
     data = extractAsset(importPath, (group, id, idx))
 
-    #remove stray control chars
-    title = "".join(c for c in data['title'] if ord(c) > 31)
+    #remove invalid path chars (win)
+    delList = [34,42,47,58,60,62,63,92,124]
+    title = ""
+    for c in data['title']:
+        cp = ord(c)
+        if cp > 31 and cp not in delList:
+            title += c
     idxString = f"{idx} ({title})" if title else idx
 
     exportPath = f"{os.path.join(exportDir, idxString)}.json"

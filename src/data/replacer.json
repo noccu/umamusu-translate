@@ -1,23 +1,28 @@
 [
     {
         "re": "\\bHe\\b",
-        "repl": "She"
+        "repl": "She",
+        "limit": true
     },
     {
         "re": "\\bhe\\b",
-        "repl": "she"
+        "repl": "she",
+        "limit": true
     },
     {
         "re": "\\b(h|H)i[sm]\\b",
-        "repl": "\\1er"
+        "repl": "\\1er",
+        "limit": true
     },
     {
         "re": "himself",
-        "repl": "herself"
+        "repl": "herself",
+        "limit": true
     },
     {
         "re": "Mr.",
-        "repl": "Ms."
+        "repl": "Ms.",
+        "limit": true
     },
     {
         "re": "baba",
@@ -73,7 +78,8 @@
     },
     {
         "re": "the horse girl in charge",
-        "repl": "your horse girl"
+        "repl": "your horse girl",
+        "limit": true
     },
     {
         "re": " ?\\.+ ?\\.+",
@@ -89,7 +95,8 @@
     },
     {
         "re": " at…",
-        "repl": "…"
+        "repl": "…",
+        "limit": true
     },
     {
         "re": "　| {2,}",

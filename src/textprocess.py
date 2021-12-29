@@ -5,9 +5,12 @@ from math import ceil
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("[-t <story|home|race>] [-g <group>] [-id <id>] [-src <json file>] [-ll <line length>]",
+    common.usage("[-t <story|home|race>] [-g <group>] [-id <id>] [-src <json file>] [-ll <line length>] [-nl] [-rep <all|limit|none]",
                  "At least 1 arg is required.",
-                 "-src overwrites other options.")
+                 "-src overwrites other file options.",
+                 "-nl removes newlines first, useful for re-formatting the whole thing",
+                 "-ll in characters per line (useful: 65 for landscape, 45 (default) for portrait",
+                 "-rep allows you to turn off replacements or limit them to safer ones for non-mtl. Defaults to all")
 
 TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", None)
@@ -15,8 +18,11 @@ TARGET_ID = args.getArg("-id", None)
 TARGET_FILE = args.getArg("-src", None)
 VERBOSE = args.getArg("-V", False)
 
-LINE_LENGTH = int(args.getArg("-ll", 44)) #Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
+LINE_LENGTH = int(args.getArg("-ll", 45)) # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
 NEWLINES = args.getArg("-nl", False)
+REPLACEMENT = args.getArg("-rep", "all")
+
+REPLACEMENT_DATA = None
 
 if not TARGET_FILE and not TARGET_GROUP and not TARGET_ID: raise SystemExit("At least 1 arg is required.")
 
@@ -63,8 +69,12 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
     return "\\n".join(lines) if file.getType() == "race" else "\n".join(lines)
 
 def replace(text: str):
-    data = common.readJson("src/data/replacer.json")
-    for sub in data:
+    global REPLACEMENT_DATA
+    if REPLACEMENT == "none": return text
+    if REPLACEMENT_DATA is None:
+        REPLACEMENT_DATA = common.readJson("src/data/replacer.json")
+    for sub in REPLACEMENT_DATA:
+        if REPLACEMENT == "limit" and "limit" in sub: continue
         text = re.sub(sub['re'], sub['repl'], text)
     return text
 

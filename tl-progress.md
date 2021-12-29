@@ -51,6 +51,12 @@ Agnes Tachyon | Complete | deepl
 name | progress | translator
 --- | --- | ---
 
+# Home Dialogue
+name | progress | translator
+--- | --- | ---
+Maruzensky | Complete | [noccu][]
+
+
 
 [noccu]: https://github.com/noccu
 [Ren]: https://watatomo.github.io/tl/

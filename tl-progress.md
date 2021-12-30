@@ -57,6 +57,7 @@ Rice Shower | Complete | deepl
 ## Cards
 name | progress | translator
 --- | --- | ---
+All (up to 30/12/2021) | Complete | deepl
 
 # Home Dialogue
 name | progress | translator

@@ -1,0 +1,95 @@
+{
+    "version": 3,
+    "bundle": "HF3XGRHKWPCS2FQ4DKDEDVCMYVCGWGHC",
+    "type": "story",
+    "storyId": "809004002",
+    "title": "同期の桐生院トレーナー",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "トレーニングが少し長引いた日の夜、\r\n<chrname>を寮の前まで\n送り届けた直後のこと――",
+            "enText": "Just after dropping <chrname> off in front \nof her dormitory on a night when training \nwas a bit long…",
+            "nextBlock": 2,
+            "pathId": -3639403942601706114,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "桐生院トレーナー",
+            "enName": "Kiryuin Aoi",
+            "jpText": "<username>トレーナー！\r\nお疲れ様です。今から帰られるんですか？",
+            "enText": "<username> Trainer! Thank you for your time. \nAre you going home now?",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "はい",
+                    "enText": "Yes",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": -5048519059880862507,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "桐生院トレーナー",
+            "enName": "Kiryuin Aoi",
+            "jpText": "そうなんですね！　私もミークを送り届けて、\r\nこれからトレーナー寮へ戻るのですが――",
+            "enText": "Oh, I see! I've just dropped Meek off and \nI'm heading back to the trainers' dormitory.",
+            "nextBlock": 4,
+            "pathId": 1084068071357123816,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "桐生院トレーナー",
+            "enName": "Kiryuin Aoi",
+            "jpText": "よければ、ご一緒しても構いませんか？",
+            "enText": "If you don't mind, I'd like to join you.",
+            "nextBlock": 5,
+            "pathId": -869622741781932015,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "桐生院トレーナー",
+            "enName": "Kiryuin Aoi",
+            "jpText": "同期のよしみ……な、なんて言うと、\r\nちょっと馴れ馴れしいかもしれませんが。",
+            "enText": "It may sound a bit familiar to say that we \nare all in the same boat…",
+            "nextBlock": 6,
+            "choices": [
+                {
+                    "jpText": "そんなことありません",
+                    "enText": "No, I don't.",
+                    "nextBlock": 6
+                }
+            ],
+            "pathId": -2704177625238360385,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "桐生院トレーナー",
+            "enName": "Kiryuin Aoi",
+            "jpText": "<username>トレーナー……\r\nふふ、お優しいんですね。",
+            "enText": "<username> Trainer… Hmm, you're very kind.",
+            "nextBlock": 7,
+            "pathId": 2362109690635709809,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "桐生院トレーナー",
+            "enName": "Kiryuin Aoi",
+            "jpText": "それでは、行きましょうか。",
+            "enText": "So, let's go, shall we?",
+            "nextBlock": 8,
+            "pathId": 3357528353398127041,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "その日の夜は、桐生院トレーナーと\r\n道すがら色々と話しながら帰った。",
+            "enText": "That evening I went home with my \ntrainer Kiryuin, talking about \nmany things along the way.",
+            "nextBlock": -1,
+            "pathId": 6260970240242665380,
+            "blockIdx": 8
+        }
+    ]
+}

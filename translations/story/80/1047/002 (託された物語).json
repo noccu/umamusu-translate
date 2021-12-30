@@ -1,0 +1,265 @@
+{
+    "version": 3,
+    "bundle": "EB65RPFNWPNZJLEQIYUQYJQAHNTXAN5D",
+    "type": "story",
+    "storyId": "801047002",
+    "title": "託された物語",
+    "text": [
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "うーん……。\r\nやっぱり簡単には見つからないよね……。",
+            "enText": "Hmmm… It's still not easy to find…",
+            "nextBlock": 2,
+            "pathId": 4533547895740703070,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "小さな溜息をこぼすゼンノロブロイを\r\n見かけたので、何があったのか尋ねた。",
+            "enText": "I saw Zenno Rob Roy letting out a small sigh \nand asked her what had happened.",
+            "nextBlock": 3,
+            "pathId": -6127910755704537320,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "じ、実は栞の持ち主を探してまして……。",
+            "enText": "I'm actually looking for the \nowner of the bookmark…",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "栞……？",
+                    "enText": "Bookmark…?",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": -2965869435706057748,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "はい、借りた本に挟まっていたんです。\r\n前に読んだ方が使っていたものかと……。",
+            "enText": "Yes, it was tucked into a book I borrowed. I \nthought it might have been used by someone \nwho had read it before…",
+            "nextBlock": 5,
+            "pathId": 6625838572670877333,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "可愛い押し花の栞で、\r\nきっと本が好きな方なんだろうなって。",
+            "enText": "The bookmark was made of pressed \nflowers, which made me think that \nshe must be a book lover.",
+            "nextBlock": 6,
+            "pathId": 5897548782755117123,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "そう思ったら、ちゃんと持ち主に\r\n栞を返してあげたくなったんです。",
+            "enText": "I wanted to give the bookmark \nback to its rightful owner.",
+            "nextBlock": 7,
+            "pathId": -5408747899996014144,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "それに知る人ぞ知る名作『駆けろ、ウマス』\r\n愛読者ですからね、ふふっ。",
+            "enText": "And I'm also a fan of the famous novel \"Run, \nUmass\", which is known to all, phew.",
+            "nextBlock": 8,
+            "choices": [
+                {
+                    "jpText": "図書委員に確認するのがいいかもね",
+                    "enText": "You might want to check with \nthe library committee.",
+                    "nextBlock": 8
+                },
+                {
+                    "jpText": "その本、どんなストーリー？",
+                    "enText": "What is the story of the book?",
+                    "nextBlock": 15
+                }
+            ],
+            "pathId": 9086519869550776671,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "あ、その、図書委員……私なのですが。",
+            "enText": "Oh, well, it's me, the book committee…",
+            "nextBlock": 9,
+            "pathId": 4816809117202352132,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "というか……そうでした、貸出名簿データ！\r\nあれでお名前がわかるはず……！",
+            "enText": "I mean… yes, the lending list data! That \nshould tell us your name…!",
+            "nextBlock": 10,
+            "choices": [
+                {
+                    "jpText": "調べに行こう",
+                    "enText": "Let's go check it out.",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": -1119841297218931490,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "ゼンノロブロイの図書委員権限で、\r\n貸出名簿データにアクセスし、\n本を借りたウマ娘のことがわかった。",
+            "enText": "Zenno Rob Roy's library staff have access to \nthe lending list data and know who has \nborrowed the book.",
+            "nextBlock": 11,
+            "pathId": -3922907134082589879,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "あとは借りた日付の近い順に尋ねていけば、\r\n栞の持ち主も見つかるかと……。",
+            "enText": "You can also find the owner of the \nbookmark by asking them in order \nof the date of borrowing…",
+            "nextBlock": 12,
+            "pathId": 5897569080801322662,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "学園中を探し回るのは大変そうですが――",
+            "enText": "It's going to be hard to find them \nall over the school, but—",
+            "nextBlock": 13,
+            "pathId": 1176773906696635375,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "同じ本を読んだ方に会えるのは\r\nとっても楽しみです！",
+            "enText": "I'm so excited to meet someone who's \nread the same book as me!",
+            "nextBlock": 14,
+            "pathId": 4248402999016947079,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "ふふっ、本の感想とか語り合えたら\r\n素敵だなぁ……♪",
+            "enText": "Hmmm, it would be lovely to talk about the \nbook and what we think of it…♪",
+            "nextBlock": -1,
+            "pathId": -6942593764977347819,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "中距離レースで活躍するウマ娘の\r\n汗と涙の青春ストーリーです。",
+            "enText": "This is a coming-of-age story of sweat and \ntears of Uma Musume who are active in \nmiddle-distance races.",
+            "nextBlock": 16,
+            "pathId": 1172676353450506081,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "あらすじを説明しますと、主人公のウマスは\r\n純朴で優しいウマ娘。ただ、口下手で誤解を\n受けやすく、練習の時もいつも孤独で……。",
+            "enText": "The story is about Umass, a naive and kind \ngirl. However, she is not very good at \ntalking and is easily misunderstood. She is \nalways lonely at training…",
+            "nextBlock": 17,
+            "pathId": 6322427349262173620,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "そんなウマスにも、たった1人親友と呼べる\r\n存在ができます。彼女はウマスとは反対に\n明るく人気者で、将来も期待されており……。",
+            "enText": "Ummas has only one good friend, who she can \ncall her best friend. She is the opposite of \nUmass, she is bright, popular and has a \nbright future ahead of her…",
+            "nextBlock": 18,
+            "choices": [
+                {
+                    "jpText": "（すごい勢いで語り始めた！？）",
+                    "enText": "(She started to talk very fast!)",
+                    "nextBlock": 18
+                }
+            ],
+            "pathId": -9037340649123578777,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "しかし、ある日、親友に悲劇が訪れます。\r\n不意のアクシデントによる大ケガで2度と\nレースに出られなくなってしまい……。",
+            "enText": "One day, however, tragedy struck her best \nfriend. One day, however, tragedy struck her \nbest friend: a freak accident left her \nseriously injured and unable to race again…",
+            "nextBlock": 19,
+            "pathId": -7075244813400419368,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "引退の際、彼女はウマスに伝えます……\r\n『これからは私の夢と一緒に走ってよ』と。",
+            "enText": "When she retires, she tells Umass… \"From now \non, run with my dreams.",
+            "nextBlock": 20,
+            "pathId": -7164716345767675433,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "っ……うぅ……ぐすっ……ここは作中でも\r\n屈指の名シーンで思い出すと涙が……！",
+            "enText": "This is one of the most famous scenes in the \nfilm, and it brings tears to my eyes…!",
+            "nextBlock": 21,
+            "pathId": -2422624422381900336,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "こうして、ウマスは『秋シニア三冠』という\r\n親友の夢を引き継ぐのでした――",
+            "enText": "And so Umass inherited her best \nfriend's dream of the \"Triple \nCrown of Senior Autumn\".",
+            "nextBlock": 22,
+            "pathId": -2077597573870822058,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "いかがでしたか。\r\n私はとても好きなお話なのですが……。",
+            "enText": "How did you like it? I like \nthe story very much…",
+            "nextBlock": 23,
+            "choices": [
+                {
+                    "jpText": "面白そう！",
+                    "enText": "Sounds interesting!",
+                    "nextBlock": 23
+                }
+            ],
+            "pathId": -4026612036754385665,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "ゼンノロブロイ",
+            "enName": "Zenno Rob Roy",
+            "jpText": "でしたら、ぜひ本を読んで頂き、\r\n一緒に感想など語り合えると嬉しいです！",
+            "enText": "If so, we'd love for you to read the book \nand discuss your thoughts with us!",
+            "nextBlock": 24,
+            "pathId": -3340367684510991344,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "ゼンノロブロイは瞳をキラキラと\r\n輝かせるのだった。",
+            "enText": "Zenno Rob Roy had a twinkle in her eye.",
+            "nextBlock": -1,
+            "pathId": 6264266974813103149,
+            "blockIdx": 24
+        }
+    ]
+}

@@ -1,86 +1,100 @@
 {
-    "E5KSIE6KPTFQOQWWYVBGVVICNK3BWIFS": [
+    "version": 3,
+    "bundle": "E5KSIE6KPTFQOQWWYVBGVVICNK3BWIFS",
+    "type": "story",
+    "storyId": "801002001",
+    "title": "どこまでも",
+    "text": [
         {
-            "jpText": "ある日、河川敷を歩いていると――",
-            "enText": "",
-            "name": "モノローグ",
+            "jpName": "モノローグ",
             "enName": "",
+            "jpText": "ある日、河川敷を歩いていると――",
+            "enText": "One day, I was walking along the riverbed.",
+            "nextBlock": 2,
             "pathId": 8746947882004353588,
             "blockIdx": 1
         },
         {
+            "jpName": "サイレンススズカ",
+            "enName": "Silence Suzuka",
             "jpText": "あの……すみません。\r\n少しいいでしょうか。",
-            "enText": "",
-            "name": "サイレンススズカ",
-            "enName": "",
+            "enText": "Excuse me… Can I have a word with you?",
+            "nextBlock": 3,
             "pathId": -8094293854441118575,
             "blockIdx": 2
         },
         {
+            "jpName": "サイレンススズカ",
+            "enName": "Silence Suzuka",
             "jpText": "私が走るタイムを計っていただけませんか？\r\n1人だと、なかなか上手にできなくて……。",
-            "enText": "",
-            "name": "サイレンススズカ",
-            "enName": "",
+            "enText": "Would you be able to time my run? I'm not \nvery good at doing this on my own…",
+            "nextBlock": 4,
             "choices": [
                 {
                     "jpText": "構わないよ",
-                    "enText": "",
-                    "nextBlockIdx": 4
+                    "enText": "I don't mind.",
+                    "nextBlock": 4
                 },
                 {
                     "jpText": "全力で走ってみて",
-                    "enText": "",
-                    "nextBlockIdx": 7
+                    "enText": "Try to run as fast as you can.",
+                    "nextBlock": 7
                 }
             ],
             "pathId": 57466382703721819,
             "blockIdx": 3
         },
         {
+            "jpName": "サイレンススズカ",
+            "enName": "Silence Suzuka",
             "jpText": "ありがとうございます。\r\nそれじゃ、お願いしますね。",
-            "enText": "",
-            "name": "サイレンススズカ",
-            "enName": "",
+            "enText": "Thank you very much. I'll \ntake care of it then.",
+            "nextBlock": 5,
             "pathId": 8776116627668570801,
             "blockIdx": 4
         },
         {
+            "jpName": "サイレンススズカ",
+            "enName": "Silence Suzuka",
             "jpText": "はっ、はっ、はっ、はっ……！",
-            "enText": "",
-            "name": "サイレンススズカ",
-            "enName": "",
+            "enText": "Ha, ha, ha…!",
+            "nextBlock": 6,
             "pathId": 7427070086536349963,
             "blockIdx": 5
         },
         {
-            "jpText": "サイレンススズカのスピードに\r\n圧倒されながらも、\n彼女のトレーニングを手伝った。",
-            "enText": "",
-            "name": "モノローグ",
+            "jpName": "モノローグ",
             "enName": "",
+            "jpText": "サイレンススズカのスピードに\r\n圧倒されながらも、\n彼女のトレーニングを手伝った。",
+            "enText": "Even though I was overwhelmed by \nthe speed of Silence Suzuka, I helped \nher with her training.",
+            "nextBlock": -1,
             "pathId": -4062231933589374820,
             "blockIdx": 6
         },
         {
+            "jpName": "サイレンススズカ",
+            "enName": "Silence Suzuka",
             "jpText": "全力で……はい、わかりました。\r\nそれじゃ、よろしくお願いしますね。",
-            "enText": "",
-            "name": "サイレンススズカ",
-            "enName": "",
+            "enText": "I'll do my best to… Yes, I understand. \nI'll take care of it then.",
+            "nextBlock": 8,
             "pathId": -4834736125348303966,
             "blockIdx": 7
         },
         {
+            "jpName": "サイレンススズカ",
+            "enName": "Silence Suzuka",
             "jpText": "はっ、はっ、はっ、はっ……！\r\nふふ、気持ちいい……！",
-            "enText": "",
-            "name": "サイレンススズカ",
-            "enName": "",
+            "enText": "Ha, ha, ha…! Hmm, that feels good…!",
+            "nextBlock": 9,
             "pathId": 8808763448533159068,
             "blockIdx": 8
         },
         {
-            "jpText": "サイレンススズカは\r\nすごいスピードで走り抜け……\nそのまま、走り去っていってしまった。",
-            "enText": "",
-            "name": "モノローグ",
+            "jpName": "モノローグ",
             "enName": "",
+            "jpText": "サイレンススズカは\r\nすごいスピードで走り抜け……\nそのまま、走り去っていってしまった。",
+            "enText": "The Silence Suzuka ran through… at great \nspeed, and then ran away.",
+            "nextBlock": -1,
             "pathId": 885448983756099868,
             "blockIdx": 9
         }

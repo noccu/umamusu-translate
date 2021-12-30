@@ -1,0 +1,191 @@
+{
+    "version": 3,
+    "bundle": "OM7LRI6MOVMUITGY4JPL7STSBW35XO4B",
+    "type": "story",
+    "storyId": "801037002",
+    "title": "想定外への対応",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ある日、買い出しにやってくると――",
+            "enText": "One day, she comes in to buy some groceries.",
+            "nextBlock": 2,
+            "pathId": -635161291543062261,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "とある店の前で悩んでいる\r\nエイシンフラッシュが目についた。",
+            "enText": "I saw Aisinflash struggling \nin front of a shop.",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "どうかしたのか？",
+                    "enText": "What's wrong with you?",
+                    "nextBlock": 3
+                },
+                {
+                    "jpText": "どうかしたの？",
+                    "enText": "What's wrong?",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": -6832913952801130319,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "シュトレンを買いに来たのですが、\nご店主の急なご都合で、臨時休業のようです。",
+            "enText": "We came here to buy stollen, but the owner \nwas closed for a short time.",
+            "nextBlock": 4,
+            "pathId": -516411774274467357,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "このままでは予定に大幅な遅滞が発生……\n想定外でした。一体どうすれば――",
+            "enText": "If we don't, there will be a significant \ndelay in our schedule… We didn't expect \nthis. What can we do to…",
+            "nextBlock": 5,
+            "choices": [
+                {
+                    "jpText": "いっそ自分で作るのはどうだろう",
+                    "enText": "Why don't you make your own?",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "いっそ自分で作るのはどうかな",
+                    "enText": "Why don't you make your own?",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "取り扱ってる店を他に探すのはどうだろう",
+                    "enText": "How about finding another \nshop that sells it?",
+                    "nextBlock": 10
+                },
+                {
+                    "jpText": "取り扱ってる店を他に探すのはどうかな",
+                    "enText": "I'm not sure if you can find another \nshop that carries it.",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": -2926572804454063044,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "このままでは予定に大幅な遅滞が発生……\n想定外でした。一体どうすれば――",
+            "enText": "If we don't, there will be a significant \ndelay in our schedule… We didn't expect \nthis. What can we do to…",
+            "nextBlock": 6,
+            "choices": [
+                {
+                    "jpText": "いっそ自分で作るのはどうだろう",
+                    "enText": "Why don't you make your own?",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "いっそ自分で作るのはどうかな",
+                    "enText": "Why don't you make your own?",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "取り扱ってる店を他に探すのはどうだろう",
+                    "enText": "How about finding another \nshop that sells it?",
+                    "nextBlock": 10
+                },
+                {
+                    "jpText": "取り扱ってる店を他に探すのはどうかな",
+                    "enText": "I'm not sure if you can find another \nshop that carries it.",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": -4653384865302268058,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "……その発想は、ありませんでした。\nですが――仰る通りですね。",
+            "enText": "… I hadn't thought of that. \nBut - you're right.",
+            "nextBlock": 7,
+            "pathId": -8737410906696425536,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "無いなら作ればいい。幸い、味も鮮明に\n思い出せるほど此方には通っています。",
+            "enText": "If you don't have it, you can make it. \nFortunately, I've been coming here long \nenough to remember the taste very clearly.",
+            "nextBlock": 8,
+            "pathId": 4612586896842509959,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "父と母のシュトレンのレシピを元にして、\n近似した風味を再現できるかもしれません。",
+            "enText": "You may be able to recreate a similar \nflavour based on your father and mother's \nstollen recipe.",
+            "nextBlock": 9,
+            "pathId": -6457481088746911416,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "――助言いただき、ありがとうございます。\n早速、寮に戻って作成してみます。",
+            "enText": "—Thank you for your advice. I will \ntry to create it back at the dormitory \nas soon as possible.",
+            "nextBlock": -1,
+            "pathId": 7793168671157970812,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "――仰る通りですね。現状を考慮すると、\n今後のために選択肢を用意すべきです。",
+            "enText": "—Yes, you are right. Given the current \nsituation, we should be prepared with \noptions for the future.",
+            "nextBlock": 11,
+            "pathId": 2853761917585595103,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "幸い、私の今現在の予定は、\n『散歩、及びシュトレンの購入』",
+            "enText": "Fortunately, my current plan is to \"go for a \nwalk and buy a stollen\".",
+            "nextBlock": 12,
+            "pathId": 6077103888694051293,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "他のお店を探すことは、\n散歩の範疇に含まれるため、予定通りです。",
+            "enText": "The search for other shops is part of the \nwalk, so we are on schedule.",
+            "nextBlock": 13,
+            "pathId": -5293338379677090372,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "そうと決まれば、万難を排して時間内に\n別の店を見つけなければ……！",
+            "enText": "If that's the case, we'll have to find \nanother shop in time to save the day…!",
+            "nextBlock": 14,
+            "pathId": 3026295672406204540,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "――助言いただき、ありがとうございます。\n早速、他のお店を探してみます。",
+            "enText": "—Thank you for your advice. I will try to \nfind another shop as soon as possible.",
+            "nextBlock": -1,
+            "pathId": -8880786916729675801,
+            "blockIdx": 14
+        }
+    ]
+}

@@ -1,0 +1,218 @@
+{
+    "version": 3,
+    "bundle": "P3N7UCRYXKOGUERCYJTIWGG6RK3TVY45",
+    "type": "story",
+    "storyId": "801043001",
+    "title": "ガブッと、撲滅！",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "買い物中、商店街のパトロールをする\r\nビコーペガサスと……その後をコソコソと\n追うシンコウウインディを見かけた。",
+            "enText": "While shopping, I saw a Bicorpegasus \npatrolling the shopping street and a \nShinkouindi sneaking after it on…",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "……何してるんだ？",
+                    "enText": "… What are you doing?",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "……何してるの？",
+                    "enText": "… What are you doing?",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": -236209948688157276,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "むむっ！？　お前、気になるか！？\r\nウインディちゃんの計画が！　仕方ないなー！",
+            "enText": "Mmm! You're wondering! Windigo's \nplan! I don't have a choice!",
+            "nextBlock": 3,
+            "pathId": 3631504152257334790,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "その名も――……『正義撲滅計画』！\r\nビコーのパトロールの手柄を奪っているのだ！",
+            "enText": "It's called -… 'The Justice Eradication \nProject'! They are taking credit \nfor the Biko patrols!",
+            "nextBlock": 4,
+            "pathId": 299636378128741082,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "アイツほんと生意気なのだ！　鬼ごっこに\r\n誘っても、パトロールがって断ってくるし！",
+            "enText": "She's so cheeky! I'd ask her to play tag, but \nshe'd say no because she wanted to patrol!",
+            "nextBlock": 5,
+            "pathId": 1881286944383902950,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "それで……終わるのを待って誘っても、\r\n寮に戻っちゃうし……。",
+            "enText": "So you wait for… the end of the day to ask \nher out, but she goes back to her dorm…",
+            "nextBlock": 6,
+            "pathId": -2138420905636530632,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "だから決めたのだ！　どんなトラブルも\r\n先に解決して、アイツのやりがいを――",
+            "enText": "So I decided! No matter what the \nproblem, we'll solve it first and \nmake it worth her while.",
+            "nextBlock": 7,
+            "pathId": -4761375383826014624,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "ビコーペガサス",
+            "enName": "Biko Pegasus",
+            "jpText": "じゃーな、おばあちゃん！\r\n次は転ばないように気をつけるんだぞー！",
+            "enText": "See you later, Grandma! Next time, \nbe careful not to fall!",
+            "nextBlock": 8,
+            "pathId": 4756416263641493221,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "――はっ！？",
+            "enText": "—Ha!",
+            "nextBlock": 9,
+            "pathId": 8060095676170176360,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "おいビコー！　お前今、人助けしたな！？\r\nウインディちゃんの手柄を奪いやがってぇぇ！",
+            "enText": "Hey, Biko! You just saved a man's life! You \ntook all the credit from Windy!",
+            "nextBlock": 10,
+            "pathId": 8006574058389611141,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "ビコーペガサス",
+            "enName": "Biko Pegasus",
+            "jpText": "手柄？　もしかして先輩、手伝いに来たのか！\r\n助かるよ！　アタシだけじゃ助けきれない\nトラブルもあるからな！",
+            "enText": "Credit? You're here to help, by any chance, \nsenior! Thanks a lot! There's more trouble \nthan I can handle!",
+            "nextBlock": 11,
+            "pathId": -6069927849704039189,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "ちっがぁぁぁう！　別に手伝いになんか！\r\nんな疲れること、なんでウインディちゃんが！",
+            "enText": "No, no, no, no! I'm not here to help! Why \nare you so tired, Windy? !",
+            "nextBlock": 12,
+            "choices": [
+                {
+                    "jpText": "早く素直になろう！",
+                    "enText": "Let's get straight to it!",
+                    "nextBlock": 12
+                },
+                {
+                    "jpText": "疲れ、減らしてあげなよ",
+                    "enText": "Tiredness, reduce it!",
+                    "nextBlock": 16
+                }
+            ],
+            "pathId": -3695272244132732310,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "んな！？　ななな、なんの話なのだ！？",
+            "enText": "What are you talking about? What the hell \nare you talking about?",
+            "nextBlock": 13,
+            "pathId": 6509803894851720948,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "ビコーペガサス",
+            "enName": "Biko Pegasus",
+            "jpText": "素直？　他になにか言いたいことがあるのか？\r\nなんでも聞くぞ！",
+            "enText": "Straightforward? Is there something else you \nwant to say? I'm all ears!",
+            "nextBlock": 14,
+            "choices": [
+                {
+                    "jpText": "ほら、勇気を出して",
+                    "enText": "Here, be brave.",
+                    "nextBlock": 14
+                }
+            ],
+            "pathId": 2429070913025137186,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "うっ……ううっ……うるさぁぁ～～～～いっ！\r\nお前らなんてキライだー！",
+            "enText": "Ugh… Ugh… Shut up ～～～～! I hate you guys!",
+            "nextBlock": 15,
+            "pathId": -6800088568319382620,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "そう叫び、顔を真っ赤にしながら\r\nシンコウウインディは\n走り去ってしまうのだった……。",
+            "enText": "With this cry and a red face, \nShinkouindi ran away…",
+            "nextBlock": -1,
+            "pathId": 4327884613143588176,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "シンコウウインディに、\r\nパトロールの疲れのせいで鬼ごっこを\n断られた可能性について伝えた。",
+            "enText": "She told Shinkouindi that it was possible \nthat she had been refused a game of tag \nbecause she was tired from patrolling.",
+            "nextBlock": 17,
+            "pathId": -3682490218505639307,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "……！　ということは、\r\n疲れを減らせば鬼ごっこができるのか！？",
+            "enText": "…! So, if you're less tired, \nyou can play tag!",
+            "nextBlock": 18,
+            "choices": [
+                {
+                    "jpText": "そういうこと",
+                    "enText": "That kind of thing",
+                    "nextBlock": 18
+                }
+            ],
+            "pathId": -720128792807719876,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "シンコウウインディ",
+            "enName": "Shinko Windy",
+            "jpText": "し、仕方ないから……手伝ってやる！\r\nビコー、ありがたく思うのだ！",
+            "enText": "Shh, I can't help it, I'll \nhelp …! Thank you, Biko!",
+            "nextBlock": 19,
+            "pathId": -977495500853315054,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "こうして、2人仲良くパトロールをして……\r\n商店街の平和は守られるのだった。",
+            "enText": "In this way, the two patrolled together and… \nkept the peace in the shopping street.",
+            "nextBlock": -1,
+            "pathId": -5437042856086412194,
+            "blockIdx": 19
+        }
+    ]
+}

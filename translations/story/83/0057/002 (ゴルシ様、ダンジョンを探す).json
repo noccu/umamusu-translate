@@ -1,0 +1,371 @@
+{
+    "version": 3,
+    "bundle": "IR7XLUOYUFGIYQNOBRC4UG2XV5ZS3D6L",
+    "type": "story",
+    "storyId": "830057002",
+    "title": "ゴルシ様、ダンジョンを探す",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "ある日、校外でトレーニングに適した場所は\r\nないかと探していると――",
+            "enText": "One day, I was looking for a good \nplace to train off campus.",
+            "nextBlock": 2,
+            "pathId": 6962815881936549548,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "ゴルシ様が現れた！！　デデーン！！",
+            "enText": "Lady Golusi has appeared! Deden!",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "！？",
+                    "enText": "What?",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": -8291177002302799031,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "茶には菓子！　サンマには大根おろし！\r\n魔王城と言えば、ラストダンジョン！！",
+            "enText": "Tea and sweets! Grated radish for \nsaury! Speaking of the Demon's \nCastle, the last dungeon!",
+            "nextBlock": 4,
+            "pathId": 7720951603748257621,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "このセットは外せねぇ！　そうだろブラザー！",
+            "enText": "I can't miss this set! That's \nright, Brother!",
+            "nextBlock": 5,
+            "choices": [
+                {
+                    "jpText": "え、え？",
+                    "enText": "What? Huh?",
+                    "nextBlock": 5
+                }
+            ],
+            "pathId": 4289562836251734841,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "わかるぜ、その悩み。『人生は迷路だ』って、\r\n昔の偉いゴルシ様が言ってたからな。",
+            "enText": "I know what you mean. \"Life is a maze,\" as \nthe great Gorci used to say.",
+            "nextBlock": 6,
+            "pathId": -7153920148754094340,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "心配はいらねぇ、任せとけ！\r\n最高のダンジョンを用意してやるよ！",
+            "enText": "Don't worry, I'll take care of it! I'll get \nyou the best dungeon ever!",
+            "nextBlock": 7,
+            "pathId": -2976218181062749059,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "我はウマ王ゴルシ！\r\nダンジョン王にオレはなる！！　ついてきな！",
+            "enText": "I am Gorsh, the Horse King! I will be the \nking of the dungeons! Follow me!",
+            "nextBlock": 8,
+            "pathId": 8139965194034798029,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "何故、ダンジョンなのか。\r\nわけもわからず、連れて行かれた先は――",
+            "enText": "Why a dungeon? Without knowing why, I was \ntaken to a place where…",
+            "nextBlock": 9,
+            "pathId": 1397198622431745582,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "おお、素晴らしき水の都！\r\n我が支配下に置くにふさわしい！",
+            "enText": "Oh, splendid city of water! Worthy \nto be under my control!",
+            "nextBlock": 10,
+            "pathId": -2288466908360483895,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "ダンジョンは海中に決定か！？\r\nゴルシちゃん、悩んじゃう！",
+            "enText": "Is the dungeon decided to be under the sea! \nI can't stop thinking about it, Gorsuch!",
+            "nextBlock": 11,
+            "pathId": -1833128338631322026,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "セイウンスカイ",
+            "enName": "Seiun Sky",
+            "jpText": "ここは海じゃなくて、セイちゃん秘密の\r\n釣り場ですよー。見つかっちゃったけど。",
+            "enText": "This is not the ocean, but Sei-chan's secret \nfishing spot. They found me, though.",
+            "nextBlock": 12,
+            "pathId": 6727321509427490014,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "お、釣りウマ人。仲間にしてやろうか？",
+            "enText": "Oh, you're a fisherman. You \nwant me to join you?",
+            "nextBlock": 13,
+            "pathId": 4397668010454799387,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "セイウンスカイ",
+            "enName": "Seiun Sky",
+            "jpText": "どもども。で、ダンジョンって？\r\nテーマパークでも作るんですかー？",
+            "enText": "Hi there. So, what's a dungeon? Are you \ngoing to build a theme park?",
+            "nextBlock": 14,
+            "pathId": 6348861985884990218,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "天気がいいからな！",
+            "enText": "It's a beautiful day!",
+            "nextBlock": 15,
+            "pathId": 7080986440300892891,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "セイウンスカイ",
+            "enName": "Seiun Sky",
+            "jpText": "なるほどー、そっかそっか。",
+            "enText": "I see… I see…",
+            "nextBlock": 16,
+            "choices": [
+                {
+                    "jpText": "今ので理解したのか……？",
+                    "enText": "Do you understand that now…?",
+                    "nextBlock": 16
+                },
+                {
+                    "jpText": "今ので理解したの……？",
+                    "enText": "Do you understand now that…?",
+                    "nextBlock": 16
+                }
+            ],
+            "pathId": 5913178410164372698,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "セイウンスカイ",
+            "enName": "Seiun Sky",
+            "jpText": "あはは、いつものことだしね。\r\n深く考えたら負けですよー。",
+            "enText": "Haha, it happens all the time. If you think \ntoo much about it, you'll lose!",
+            "nextBlock": 17,
+            "pathId": 2040110801599199632,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "よっしゃ！　ここもダンジョン候補だな！\r\nまったくウマ王は忙しいぜ……次だ、次！",
+            "enText": "Yes! This is another potential dungeon! The \nUma King's been busy… Next, next!",
+            "nextBlock": 18,
+            "pathId": 1994544560476925180,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "セイウンスカイ",
+            "enName": "Seiun Sky",
+            "jpText": "ほいじゃ、私はここを守っておきまーす。\r\n行ってらっしゃい、ウマ王様～。",
+            "enText": "Okay, I'll take care of this. \nSee you later, Uma-oh-sama~.",
+            "nextBlock": 19,
+            "pathId": -442908206817322882,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "ダンジョンと言えば、\r\nラストバトル用のボス戦場だ！",
+            "enText": "And speaking of dungeons, here's a boss \nbattlefield for your last battle!",
+            "nextBlock": 20,
+            "pathId": 5119739864372861111,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "ムダに声が響くとこじゃねーとな！\r\nやっほー！！",
+            "enText": "It's got to be somewhere where \nI can hear my voice! Yoo-hoo!",
+            "nextBlock": 21,
+            "pathId": 1290118783415101296,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "ちょっと、ゴルシさん！　騒がしいわ！\r\nトレーニングしてるんですから、邪魔は――",
+            "enText": "Hey, Ms. Gorce! You're making \ntoo much noise! I'm training. \nI don't want to interrupt—",
+            "nextBlock": 22,
+            "pathId": 913598609955615898,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "オ、オマエは……！",
+            "enText": "Oh, you're…!",
+            "nextBlock": 23,
+            "pathId": -9008554748384803387,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "……待ってろ、今、配役考えてやっから。",
+            "enText": "… Wait for me, I'm working on the cast now.",
+            "nextBlock": 24,
+            "pathId": 7408896430759103070,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "またわけのわからないことを……とにかく、\r\nここは遊ぶ場所じゃありませんからね。",
+            "enText": "I don't know what I'm talking about again… \nAnyway, this is not the place to play.",
+            "nextBlock": 25,
+            "pathId": 2597704748120784480,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "お、なんだ闘志むき出しじゃねーか。\r\nよっしゃ、バトルすっか！？",
+            "enText": "Oh, you're a fighter, aren't \nyou? Okay, let's battle!",
+            "nextBlock": 26,
+            "pathId": -1509730539116279952,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "キングヘイロー相手に、ゴールドシップは\r\n相撲かプロレスでも始めそうな勢いだ。",
+            "enText": "Goldship looks like she's about to start sumo \nwrestling or wrestling with King Halo.",
+            "nextBlock": 27,
+            "choices": [
+                {
+                    "jpText": "ウマ王様、ここで戦ってはいけません",
+                    "enText": "King Uma, you can't fight here.",
+                    "nextBlock": 27
+                }
+            ],
+            "pathId": -8872236780684957050,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "うむ。この広さじゃ城も建てられ……待てよ。\r\nトレーニングくらいならできるんじゃねーか？",
+            "enText": "Hmmm. You can't even build a castle \nin this size… Wait. You can at \nleast train, can't you?",
+            "nextBlock": 28,
+            "pathId": 1633739663422128886,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "だから、さっきからそう言ってるでしょ！？",
+            "enText": "That's what I've been saying all along!",
+            "nextBlock": 29,
+            "pathId": -7319732319444627958,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "その後、あらゆる場所を巡って\r\nダンジョン候補を探し回ったが、結局――",
+            "enText": "After that, we scoured every nook and cranny \nfor potential dungeons, but eventually—",
+            "nextBlock": 30,
+            "pathId": -4220696765901029889,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "決まんねーな。どこも捨てがたい\r\n場所ばっかだ。ああ、世界は美しい……。",
+            "enText": "I can't decide. I can't decide. There \nare so many places I want to visit. \nOh, the world is beautiful…",
+            "nextBlock": 31,
+            "pathId": 2306898559623235584,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "でもダンジョンがなきゃ城も建てられねぇ。\r\n……くっ、どうすりゃいいんだ！？",
+            "enText": "But without a dungeon, you can't build a \ncastle… What am I supposed to do?",
+            "nextBlock": 32,
+            "choices": [
+                {
+                    "jpText": "もう全部に城を置けば……？",
+                    "enText": "Why don't you put castles on \nall of them already…?",
+                    "nextBlock": 32
+                }
+            ],
+            "pathId": 5861464326788416640,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "なっ、んだ……と……！？\r\n城を移動型にすればいいってのか！？",
+            "enText": "What the heck… and…! You're saying we should \nmake the castle mobile!",
+            "nextBlock": 33,
+            "pathId": 6333644872753047087,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "となると、変形か……なるほど、イカすぜ。\r\nだったら、ビーム出して空も飛べないとな！",
+            "enText": "So it's a transformer… I see, \nthat's cool. Then it should be \nable to emit beams and fly!",
+            "nextBlock": 34,
+            "choices": [
+                {
+                    "jpText": "いや、そういう意味じゃ――",
+                    "enText": "No, that's not what I meant—",
+                    "nextBlock": 34
+                }
+            ],
+            "pathId": 7100274670309097619,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "ゴールドシップ",
+            "enName": "Gold Ship",
+            "jpText": "アンタのアイディアもらったぜ。\r\n操縦は任せな……この天才ゴルシ様にな！",
+            "enText": "I got your idea. I'll leave the flying to \nthe… genius, Ms. Gorci!",
+            "nextBlock": 35,
+            "pathId": -6359837614329863049,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "夢の詰まった城を思い、\r\n目を輝かせるゴールドシップなのだった。",
+            "enText": "Goldship's eyes lit up as she thought of the \ncastle that held her dreams.",
+            "nextBlock": -1,
+            "pathId": 1639785669001896942,
+            "blockIdx": 35
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+{
+    "version": 3,
+    "bundle": "FS267INGW5THBN7SSYAUQIPMC7VW7QCF",
+    "type": "story",
+    "storyId": "801058002",
+    "title": "にんじん……買ってくださいっ",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "商店街で買い物をした後、\r\n帰路につこうとしたが――",
+            "enText": "After shopping in the shopping arcade, \nI was on my way home…",
+            "nextBlock": 2,
+            "pathId": 1261563060126165986,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "ぐすん……いらっしゃいませぇ……。\r\n……にんじん……にんじんいりませんかぁ～。",
+            "enText": "Gusun…Welcome… …Carrots…Would \nyou like some carrots?",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "どうしたんだ……？",
+                    "enText": "What's up with…?",
+                    "nextBlock": 3
+                },
+                {
+                    "jpText": "どうしたの……？",
+                    "enText": "What's wrong with…?",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": 2800148420962588688,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "へっ……！？\r\nあ、あぅ……。",
+            "enText": "Heh…! Oh, uh…",
+            "nextBlock": 4,
+            "pathId": -4462804533831325985,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "……その……青果店の店主さんとは\r\n知り合いなんです……。",
+            "enText": "I know… the owner of that… fruit \nand vegetable shop…",
+            "nextBlock": 5,
+            "pathId": -5022347639331101729,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "しばらく人手が足りないって聞いて、\r\nお手伝いをしていたんですけど……。",
+            "enText": "I was helping out when I heard they were \nshort staffed for a while…",
+            "nextBlock": 6,
+            "pathId": -2788779400508875530,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "……私のドジで発注数を2桁も\r\n間違えてしまって……うぅ。",
+            "enText": "… I made a mistake and got the order number \nwrong by two digits… Ugh.",
+            "nextBlock": 7,
+            "pathId": -859330739352799361,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "こ、こんなにたくさんのにんじん……\r\n私、どうすれば……。",
+            "enText": "There are so many carrots… \nI don't know what to do…",
+            "nextBlock": 8,
+            "choices": [
+                {
+                    "jpText": "トレセン学園に掛け合ってみよう",
+                    "enText": "Let's talk to the Tresemme Academy.",
+                    "nextBlock": 8
+                },
+                {
+                    "jpText": "人の多いところで呼び込みをしよう",
+                    "enText": "Let's call out to people in crowded places.",
+                    "nextBlock": 14
+                }
+            ],
+            "pathId": -5797593405762091911,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "秋川理事長",
+            "enName": "Chairwoman Akikawa",
+            "jpText": "『承諾ッ！　たづなに確認してもらったが\r\n予算面でも問題ないぞ！』",
+            "enText": "'Yes! I've checked with Tazuru \nand we're on a budget!",
+            "nextBlock": 9,
+            "pathId": -7215097794327734327,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "秋川理事長",
+            "enName": "Chairwoman Akikawa",
+            "jpText": "『むしろ備蓄が増えて有難い！\r\n早速、学園まで運んできてくれ！』",
+            "enText": "'I'm rather glad we're stocking \nup! Please bring them to the school \nas soon as possible!",
+            "nextBlock": 10,
+            "pathId": 8466202769704387830,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "あ、ありがとうございます……。\r\n学園に頼むなんて……考えもしませんでした。",
+            "enText": "Oh, thank you very much… I hadn't \n… thought of asking the school.",
+            "nextBlock": 11,
+            "pathId": -333321646639951867,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "私が全部運びます……！",
+            "enText": "I'll carry it all…!",
+            "nextBlock": 12,
+            "pathId": -7612144647724957733,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "よ、よいしょ～……\r\nひゃああ……っ！？",
+            "enText": "Yo, yo, yo~… Hiyaa…!",
+            "nextBlock": 13,
+            "choices": [
+                {
+                    "jpText": "お、俺も手伝うから！",
+                    "enText": "Oh, I'll help you!",
+                    "nextBlock": 13
+                },
+                {
+                    "jpText": "わ、私も手伝うから！",
+                    "enText": "I'll help you!",
+                    "nextBlock": 13
+                }
+            ],
+            "pathId": -4795529017059954432,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "その後、メイショウドトウと共に\r\nにんじんの山を学園へ運んだのだった。",
+            "enText": "Later, she and Meishoudou took a pile of \ncarrots to the school.",
+            "nextBlock": -1,
+            "pathId": -3128089958495201016,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "な、なるほど……。少しでもお客さんが\r\n呼べるように……がんばります。",
+            "enText": "I see… I'll do my best to get as many \nvisitors as possible to…",
+            "nextBlock": 15,
+            "pathId": 1626572885219772108,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "にんじん……にんじんいりませんか～……？\r\nにんじんいっぱい……きゃあっ！",
+            "enText": "Carrots… Do you want carrots~…? \nFull of carrots… kyah!",
+            "nextBlock": 16,
+            "pathId": 7990828877976514479,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "おばさんA",
+            "enName": "Elder Lady A",
+            "jpText": "大丈夫かい？",
+            "enText": "Are you OK?",
+            "nextBlock": 17,
+            "pathId": 5299835272556975850,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "は、はい……。あの……おいしいにんじん\r\nいかがでしょうか……？",
+            "enText": "Ha, yes… How about… delicious carrots…?",
+            "nextBlock": 18,
+            "pathId": -25255636634804369,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "おばさんA",
+            "enName": "Elder Lady A",
+            "jpText": "頑張り屋さんだねぇ。\r\nじゃあ頂こうか。",
+            "enText": "You're a hard worker. Let's have it then.",
+            "nextBlock": 19,
+            "pathId": -5229127031668012164,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ドジを踏みながらもひたむきに声掛けをする\r\nメイショウドトウに心を打たれ、通行人が\n青果店へと足を向け始めた。",
+            "enText": "Passers-by were so impressed by the \ndiligence and dedication of Maisho Doutou \nthat they began to turn to the fruit and \nvegetable shop.",
+            "nextBlock": 20,
+            "pathId": -2474189353650779264,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "はふぅ……。\r\nなんとか……売り切ることが出来ましたぁ。",
+            "enText": "Huh… We managed to sell out…",
+            "nextBlock": 21,
+            "pathId": -8008133759960823839,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "メイショウドトウ",
+            "enName": "Meishodoto",
+            "jpText": "ぐるぐる回って人の流れを見極めて……\r\nなんだか……レースを思い出しちゃいました。",
+            "enText": "I went round and round to find out \nthe flow of people… It kind of \nreminded me of the… race.",
+            "nextBlock": -1,
+            "pathId": -795936094610035930,
+            "blockIdx": 21
+        }
+    ]
+}

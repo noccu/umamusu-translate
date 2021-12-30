@@ -1,0 +1,211 @@
+{
+    "version": 3,
+    "bundle": "GI3DJTXCUJXY4H72FGOEUXA4CTQ2YPIO",
+    "type": "story",
+    "storyId": "801037001",
+    "title": "想定外のお昼",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "お昼にカフェテリアに来た。\r\nメニューを選ぼうとしていると――",
+            "enText": "I came to the cafeteria for lunch. I'm \ntrying to choose a menu…",
+            "nextBlock": 2,
+            "pathId": 7074495290776163166,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "想定外です……。",
+            "enText": "It's unexpected…",
+            "nextBlock": 3,
+            "pathId": -7617389287331072962,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "エイシンフラッシュが、\r\n並んでいるメニューを\n深刻な顔で見つめている。",
+            "enText": "Aisinflash is staring at the menu with a \nserious look on her face.",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "どうかしたのか？",
+                    "enText": "What's wrong with you?",
+                    "nextBlock": 4
+                },
+                {
+                    "jpText": "どうかしたの？",
+                    "enText": "What's wrong?",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": 3380896304525023214,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "私が此方で常用しているメニューが、\r\n本日は材料の都合で、急遽品切れらしく……。",
+            "enText": "It seems that the menu item that I use \nregularly here is suddenly out of stock \ntoday due to the availability of \ningredients…",
+            "nextBlock": 5,
+            "pathId": -403236175767662492,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "その影響で、私が予定していた食事内容が\r\n崩れてしまい、対応に困っています。",
+            "enText": "This has disrupted my dietary plans \nand I am struggling to cope.",
+            "nextBlock": 6,
+            "pathId": 3515985465067378042,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "今からメニューを組み直すとなると、今後の\r\n予定に大幅な遅滞が生じる可能性が……。",
+            "enText": "If we were to reconfigure the menu \nnow, there could be significant \ndelays in future plans…",
+            "nextBlock": 7,
+            "choices": [
+                {
+                    "jpText": "折角だし食べたことのないものを食べたら？",
+                    "enText": "Why not take the opportunity to try \nsomething you've never eaten before?",
+                    "nextBlock": 8
+                },
+                {
+                    "jpText": "なら急いでメニューを考え直すしかないな",
+                    "enText": "Then we'll have to hurry up \nand rethink the menu.",
+                    "nextBlock": 13
+                },
+                {
+                    "jpText": "なら急いでメニューを考え直すしかないね",
+                    "enText": "Then we'll have to rethink \nthe menu in a hurry.",
+                    "nextBlock": 13
+                }
+            ],
+            "pathId": -1079637533032123635,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "今からメニューを組み直すとなると、今後の\r\n予定に大幅な遅滞が生じる可能性が……。",
+            "enText": "If we were to reconfigure the menu \nnow, there could be significant \ndelays in future plans…",
+            "nextBlock": 8,
+            "choices": [
+                {
+                    "jpText": "折角だし食べたことのないものを食べたら？",
+                    "enText": "Why not take the opportunity to try \nsomething you've never eaten before?",
+                    "nextBlock": 8
+                },
+                {
+                    "jpText": "なら急いでメニューを考え直すしかないな",
+                    "enText": "Then we'll have to hurry up \nand rethink the menu.",
+                    "nextBlock": 13
+                },
+                {
+                    "jpText": "なら急いでメニューを考え直すしかないね",
+                    "enText": "Then we'll have to rethink \nthe menu in a hurry.",
+                    "nextBlock": 13
+                }
+            ],
+            "pathId": -1113329044438542405,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "……そうですね。これを機に、\r\nこのカフェでの食事の選択肢を広げてみます。",
+            "enText": "… Yes, it is. I'll take this opportunity to \nexpand my dining options at this cafe.",
+            "nextBlock": 9,
+            "pathId": 2128026359831259411,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "そうすればサブプランも立てられて、\r\n今日のような想定外にも対処出来るはず……。",
+            "enText": "That way we can make sub-plans and deal with \nthe unexpected, such as today's…",
+            "nextBlock": 10,
+            "choices": [
+                {
+                    "jpText": "思いがけず美味しいものとも出会えるかもな",
+                    "enText": "Maybe you'll even find something \nunexpectedly delicious.",
+                    "nextBlock": 10
+                },
+                {
+                    "jpText": "思いがけず美味しいものとも出会えるかもね",
+                    "enText": "You might even find something \nunexpectedly delicious!",
+                    "nextBlock": 10
+                }
+            ],
+            "pathId": -6267897957027550994,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "確かに。それであれば、この予定変更も\r\nより有意義なものになりそうです。",
+            "enText": "Indeed. Then the change of plans \nwill be more meaningful.",
+            "nextBlock": 11,
+            "pathId": -5916869632653692515,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "助言いただき、ありがとうございました。",
+            "enText": "Thank you very much for your advice.",
+            "nextBlock": 12,
+            "pathId": -8243678741727343946,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "エイシンフラッシュはそう言って、\r\nメニューを選びに戻った。",
+            "enText": "Aisin Flush said, and went back \nto choosing her menu.",
+            "nextBlock": -1,
+            "pathId": -5556613215088977893,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "……仰る通りですね。\r\n私が早くメニューを組みなおせばよい話です。",
+            "enText": "… You're right. The sooner I \nrework the menu the better.",
+            "nextBlock": 14,
+            "pathId": -7707491075229804935,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "今日摂取する予定の栄養量と、\r\n現在提示されているメニューを照合します。",
+            "enText": "Check the amount of nutrients you are \nexpected to consume today against the menu \nyou are currently presented with.",
+            "nextBlock": 15,
+            "pathId": -120371744953539084,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "エイシンフラッシュ",
+            "enName": "Eishin Flash",
+            "jpText": "助言いただき、ありがとうございました。",
+            "enText": "Thank you very much for your advice.",
+            "nextBlock": 16,
+            "pathId": 8025216387728074925,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "エイシンフラッシュはそう言って、\r\nメニューを選びに戻った。",
+            "enText": "Aisin Flush said, and went back \nto choosing her menu.",
+            "nextBlock": -1,
+            "pathId": 5398733647321846913,
+            "blockIdx": 16
+        }
+    ]
+}

@@ -198,6 +198,7 @@ def createDict():
     names['カモ'] = "Duck"
     names['キャロットマン'] = "Carrot Man"
     names['ビューティー安心沢'] = "Beauty Anshinzawa"
+    names['スズカのトレーナー'] = "Suzuka's Trainer"
     return names
 
 def translate(namesDict):

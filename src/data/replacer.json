@@ -29,7 +29,7 @@
         "repl": "field"
     },
     {
-        "re": "(?:To?re?sen|Trespassing) (?:Academy|Gakuen)",
+        "re": "(?:To?re?sen|Trespass(?:ing|er)) (?:Academy|Gakuen)",
         "repl": "Tracen Academy"
     },
     {
@@ -61,11 +61,19 @@
         "repl": "Taishin"
     },
     {
-        "re": "Ba(?:x|ks)in(?:[- ]o)?",
+        "re": "Ba(?:x|ks)ing?",
+        "repl": "Bakushin"
+    },
+    {
+        "re": "Bakushin[- ]o",
         "repl": "Bakushin O"
     },
     {
         "re": "Reis[sc]h(?:ow|au)er",
+        "repl": "Rice Shower"
+    },
+    {
+        "re": "The Rice Showers?",
         "repl": "Rice Shower"
     },
     {
@@ -77,8 +85,78 @@
         "repl": "Tamamo Cross"
     },
     {
+        "re": "Gold Chichee",
+        "repl": "Gold City"
+    },
+    {
+        "re": "Cici",
+        "repl": "City",
+        "limit": true
+    },
+    {
+        "re": "Yuki no Bijin|Yukinobidine",
+        "repl": "Yukino Bijin"
+    },
+    {
+        "re": "Daitak Helios",
+        "repl": "Daitaku Helios"
+    },
+    {
+        "re": "Daiwascaret",
+        "repl": "Daiwa Scarlet"
+    },
+    {
+        "re": "Hishi[y\\-]?amazon",
+        "repl": "Hishi Amazon"
+    },
+    {
+        "re": "Neycha",
+        "repl": "Nature",
+        "limit": true
+    },
+    {
+        "re": "[Ea]ish?in ?Fl[ua]sh",
+        "repl": "Eishin Flash",
+        "limit": true
+    },
+    {
+        "re": "Ma(?:ch|t)ikane Fuku(?:ki)?taru",
+        "repl": "Matikanefukukitaru",
+        "limit": true
+    },
+    {
+        "re": "Sh?inkouindi",
+        "repl": "Shinko Windy",
+        "limit": true
+    },
+    {
+        "re": "Smboli",
+        "repl": "Symboli",
+        "limit": true
+    },
+    {
+        "re": "Haluurara",
+        "repl": "Haru Urara",
+        "limit": true
+    },
+    {
+        "re": "Gorsh?in?",
+        "repl": "Golshi",
+        "limit": true
+    },
+    {
+        "re": "Glass Wonder",
+        "repl": "Grass Wonder",
+        "limit": true
+    },
+    {
         "re": "the horse girl in charge",
         "repl": "your horse girl",
+        "limit": true
+    },
+    {
+        "re": "Umadolu",
+        "repl": "Umadol",
         "limit": true
     },
     {

@@ -36,7 +36,7 @@ def process(file: TranslationFile, text: str, options: dict):
     return text
 
 def cleannewLines(file: TranslationFile, text: str):
-    return re.sub(r"\\n" if file.getType() == "race" else "\r?\n", " ", text)
+    return re.sub(r"\\n|\r?\n", " ", text)
 
 def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: int = 0, targetLines: int = 0):
     if len(text) < lineLen:

@@ -7,12 +7,13 @@ from Levenshtein import ratio
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("-src <translation file> -sub <subtitle file> [-off offset -npre]",
+    common.usage("-src <translation file> -sub <subtitle file> [-off <offset> -npre -auto]",
                  "Imports translations from subtitle files. A few conventions are used.",
                  "Files are only modified if they can be assumed to merge properly. This check relies on text block lenghts."
                  "-offset is subtracted from the game file's text block length during this checking. (default 0)",
                  "Events for example, have an unshown title logo display line. This script skips those automatically but requires offset to be set for correct checking, as per above.",
                  "-npre flags text lines as prefixed by the char name",
+                 "-auto assumes the sub file transfers correctly and stops when the -src file is filled, useful for multi-part episodes",
                  "\n"
                  "Conventions are to have 1 subtitle line per game text block/screen. Include empty lines if needed (say, if you leave a line untranslated).",
                  "For exceptions, the effect field is used as a mark in ASS. SRT does not provide mechanisms for this and will fail to import (correctly).",
@@ -26,6 +27,7 @@ OFFSET = args.getArg("-off", 0)
 if type(OFFSET) is not int:
     OFFSET = int(OFFSET)
 NAME_PREFIX = args.getArg("-npre", False)
+AUTO = args.getArg("-auto", False)
 
 # Helpers
 def specialProcessing(text: str):
@@ -45,7 +47,8 @@ def duplicateSub(textList, idx, newText):
     textList[idx]['enText'] = specialProcessing(newText)
     return idx
 
-def isDuplicateBlock(textList, idx):
+def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
+    if tlFile.getType() != "story": return False
     prevName = textList[idx - 1]['jpName']
     curName = textList[idx]['jpName']
     return curName in ["<username>", ""] and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
@@ -90,33 +93,35 @@ def processSubs(subs, format):
     tlFile = common.TranslationFile(TARGET_FILE)
     textList = tlFile.getTextBlocks()
     idx = 0
-    if len(subs) != len(textList) - OFFSET:
+    if not AUTO and len(subs) != len(textList) - OFFSET:
         print(f"Block lengths don't match: Sub: {len(subs)} to Src: {len(textList)} - {OFFSET}")
         raise SystemExit
         
     for line in subs:
         subText = line.content if format == "srt" else line.text
-        if not subText.startswith(">"):
-            # skip title logo on events
-            if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示"):
-                idx += 1
-            if subText.startswith("Trainer:") or (format == "ass" and line.effect == "choice"):
-                if not "choices" in textList[idx-1]:
-                    print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
-                    continue
-                for entry in textList[idx - 1]["choices"]:
-                    entry['enText'] = specialProcessing(subText)
-                continue # don't increment idx
-            if isDuplicateBlock(textList, idx):
-                print(f"Found gender dupe at block {textList[idx]['blockIdx']}, duplicating.")
-                idx = duplicateSub(textList, idx, subText) + 1
-                continue
-            else:
-                if len(subText) == 0:
-                    print(f"Untranslated line at {textList[idx]['blockIdx']}")
-                else:
-                    textList[idx]['enText'] = specialProcessing(subText)
+        if AUTO and idx == len(textList):
+            print(f"File filled at idx {idx}. Next file part starts at: {subText}")
+            break
+        # skip title logo on events
+        if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示"):
             idx += 1
+        if subText.startswith(">Trainer:") or (format == "ass" and line.effect == "choice"):
+            if not "choices" in textList[idx-1]:
+                print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
+                continue
+            for entry in textList[idx - 1]["choices"]:
+                entry['enText'] = specialProcessing(subText)
+            continue # don't increment idx
+        if isDuplicateBlock(tlFile, textList, idx):
+            print(f"Found gender dupe at block {textList[idx]['blockIdx']}, duplicating.")
+            idx = duplicateSub(textList, idx, subText) + 1
+            continue
+        else:
+            if len(subText) == 0:
+                print(f"Untranslated line at {textList[idx]['blockIdx']}")
+            else:
+                textList[idx]['enText'] = specialProcessing(subText)
+        idx += 1
 
     tlFile.save()
 

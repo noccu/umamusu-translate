@@ -120,8 +120,13 @@
         "limit": true
     },
     {
-        "re": "Ma(?:ch|t)ikane Fuku(?:ki)?taru",
+        "re": "Ma(?:ch|t)ikane Fuku(?:ki)?ta(?:r|l)u?",
         "repl": "Matikanefukukitaru",
+        "limit": true
+    },
+    {
+        "re": "Fuku(?:ki)?talu?",
+        "repl": "Fukukitaru",
         "limit": true
     },
     {
@@ -140,6 +145,11 @@
         "limit": true
     },
     {
+        "re": "Uralla",
+        "repl": "Urara",
+        "limit": true
+    },
+    {
         "re": "Gorsh?in?",
         "repl": "Golshi",
         "limit": true
@@ -150,6 +160,11 @@
         "limit": true
     },
     {
+        "re": "Teym-Opera-O",
+        "repl": "TM Opera O",
+        "limit": true
+    },
+    {
         "re": "the horse girl in charge",
         "repl": "your horse girl",
         "limit": true
@@ -157,6 +172,11 @@
     {
         "re": "Umadolu",
         "repl": "Umadol",
+        "limit": true
+    },
+    {
+        "re": "Siraoqui-sama",
+        "repl": "Shiraoki-sama",
         "limit": true
     },
     {

@@ -1,11 +1,11 @@
 [
     {
-        "re": "\\bHe\\b",
+        "re": "\\b(?-i:He)\\b",
         "repl": "She",
         "limit": true
     },
     {
-        "re": "\\bhe\\b",
+        "re": "\\b(?-i:he)\\b",
         "repl": "she",
         "limit": true
     },
@@ -102,7 +102,7 @@
         "repl": "Daitaku Helios"
     },
     {
-        "re": "Daiwascaret",
+        "re": "D(?:ai|e)wa ?scarl?ett?",
         "repl": "Daiwa Scarlet"
     },
     {
@@ -116,38 +116,31 @@
     },
     {
         "re": "[Ea]ish?in ?Fl[ua]sh",
-        "repl": "Eishin Flash",
-        "limit": true
+        "repl": "Eishin Flash"
     },
     {
         "re": "Ma(?:ch|t)ikane Fuku(?:ki)?ta(?:r|l)u?",
-        "repl": "Matikanefukukitaru",
-        "limit": true
+        "repl": "Matikanefukukitaru"
     },
     {
-        "re": "Fuku(?:ki)?talu?",
-        "repl": "Fukukitaru",
-        "limit": true
+        "re": "Fukk?u(?:ki)?talu?",
+        "repl": "Fukukitaru"
     },
     {
         "re": "Sh?inkouindi",
-        "repl": "Shinko Windy",
-        "limit": true
+        "repl": "Shinko Windy"
     },
     {
         "re": "Smboli",
-        "repl": "Symboli",
-        "limit": true
+        "repl": "Symboli"
     },
     {
         "re": "Haluurara",
-        "repl": "Haru Urara",
-        "limit": true
+        "repl": "Haru Urara"
     },
     {
-        "re": "Uralla",
-        "repl": "Urara",
-        "limit": true
+        "re": "U[rl]all?a",
+        "repl": "Urara"
     },
     {
         "re": "Gorsh?in?",
@@ -160,9 +153,13 @@
         "limit": true
     },
     {
-        "re": "Teym-Opera-O",
-        "repl": "TM Opera O",
+        "re": "Te[ye]mu?-?",
+        "repl": "TM",
         "limit": true
+    },
+    {
+        "re": "(Opera|Bakushin)-Oh?",
+        "repl": "\\1 O"
     },
     {
         "re": "the horse girl in charge",
@@ -176,8 +173,7 @@
     },
     {
         "re": "Siraoqui-sama",
-        "repl": "Shiraoki-sama",
-        "limit": true
+        "repl": "Shiraoki-sama"
     },
     {
         "re": " ?\\.+ ?\\.+",

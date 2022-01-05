@@ -1,0 +1,441 @@
+{
+    "version": 3,
+    "bundle": "KDBZUK44VTBD4RYROQMR6IL4FBLK3ZGJ",
+    "type": "story",
+    "storyId": "501008520",
+    "title": "河川敷でガチバトル！",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ある日、河川敷にやってくると――",
+            "enText": "One day, I come to a riverbed.",
+            "nextBlock": 2,
+            "pathId": -5489696221705277094,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "やりぃっ、またボクの勝ちー！\r\n無敗記録更新だっ♪",
+            "enText": "Yay, I'm winning again! I'm undefeated again.",
+            "nextBlock": 3,
+            "pathId": 6953970857325001554,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "だぁーっクソ、\r\nなんで勝てねぇんだっ！？",
+            "enText": "Dang it, why can't I win?",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "ウオッカ！",
+                    "enText": "Vodka!",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": -6206553899684458485,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "あっ、トレーナー！！\r\nちょうどいいとこにっ！",
+            "enText": "Oh, my trainer! You're in the right place!",
+            "nextBlock": 5,
+            "pathId": -6651619431180412082,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "テイオーと水切りしてんだけどさぁ、\r\nなんでか全然勝てねぇんだよっ！",
+            "enText": "I'm draining with Teio, but somehow \nI can't win at all!",
+            "nextBlock": 6,
+            "choices": [
+                {
+                    "jpText": "また懐かしい遊びしてるなぁ",
+                    "enText": "You're playing the same old game again.",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "また懐かしい遊びしてるねぇ",
+                    "enText": "You're playing the same old game again.",
+                    "nextBlock": 6
+                }
+            ],
+            "pathId": 6171754602404242865,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "いや、最初はヒマこいて川に石投げてただけ\r\nなんだけどさ……途中からマジになってよ。",
+            "enText": "No, at first I was just busy throwing rocks \nin the river… But then I got serious.",
+            "nextBlock": 7,
+            "pathId": -8104841691592981492,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "水切りってあんまり知らなかったケド、\r\nちゃーんとやると面白いね♪",
+            "enText": "I didn't know much about draining, but it's \nfun when you do it right.",
+            "nextBlock": 8,
+            "pathId": -5391105221766414308,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "チョイッと投げるだけで遠くへビューン！\r\n狙い通りに行くと気持ちイイしっ！",
+            "enText": "Just a quick throw and it's off! It feels \ngreat when it goes where you want it to go!",
+            "nextBlock": 9,
+            "pathId": -8812671950206792571,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "お前と俺、最初は同レベだっただろっ！\r\nなんで先に上手くなってんだよ！？",
+            "enText": "You and I started out at the same level! Why \ndid you get better before me?",
+            "nextBlock": 10,
+            "pathId": 303452311875045849,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "んー、ボクがテイオー様だからじゃん？",
+            "enText": "Well, that's because I'm Teio-sama, right?",
+            "nextBlock": 11,
+            "pathId": 4805390197708522544,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "ぐぅぅぅっ……！！\r\nクッソ悔しいが超かっけぇ……！",
+            "enText": "Geez…! Damn frustrating, \nbut super cool…!",
+            "nextBlock": 12,
+            "pathId": -1147491804617220927,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "トレーナー！\r\nどうしたらコイツを負かせられるんだ！？",
+            "enText": "Trainer! How do I beat this guy?",
+            "nextBlock": 13,
+            "choices": [
+                {
+                    "jpText": "石を選び抜こう",
+                    "enText": "Let's choose the right stone.",
+                    "nextBlock": 14
+                },
+                {
+                    "jpText": "回転がカギだぞ",
+                    "enText": "Rotation is the key.",
+                    "nextBlock": 28
+                },
+                {
+                    "jpText": "回転がカギだよ",
+                    "enText": "Spinning is the key.",
+                    "nextBlock": 28
+                }
+            ],
+            "pathId": -6765393193930178660,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "トレーナー！\r\nどうしたらコイツを負かせられるんだ！？",
+            "enText": "Trainer! How do I beat this guy?",
+            "nextBlock": 14,
+            "choices": [
+                {
+                    "jpText": "石を選び抜こう",
+                    "enText": "Let's choose the right stone.",
+                    "nextBlock": 14
+                },
+                {
+                    "jpText": "回転がカギだぞ",
+                    "enText": "Rotation is the key.",
+                    "nextBlock": 28
+                },
+                {
+                    "jpText": "回転がカギだよ",
+                    "enText": "Spinning is the key.",
+                    "nextBlock": 28
+                }
+            ],
+            "pathId": -2194216100245455677,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "石ぃ～？\r\nそんなの、デカけりゃいいんじゃねぇの？",
+            "enText": "Stone? Isn't it enough to be big?",
+            "nextBlock": 15,
+            "choices": [
+                {
+                    "jpText": "大事なのは自分に合ってること",
+                    "enText": "The important thing is that it suits you.",
+                    "nextBlock": 15
+                }
+            ],
+            "pathId": 4341749256346531046,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "他にも、なめらかさや形状、重さなど\r\n水切りに適切な石があることを教えた。",
+            "enText": "I also taught them that there are other \nstones that are appropriate for draining, \nsuch as smoothness, shape, and weight.",
+            "nextBlock": 16,
+            "pathId": 381549718201702866,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "そうだったのか……カッコいいからって、\r\n無駄にギザギザした石とか使ってたぜ……！",
+            "enText": "I didn't know that… I wasted a lot of \ntime using jagged rocks and stuff just \nbecause it looked cool…!",
+            "nextBlock": 17,
+            "pathId": -5008647684317181482,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "わかった、ちょっとイイ感じの探してくる！",
+            "enText": "Okay, I'm gonna go look for something cool!",
+            "nextBlock": 18,
+            "pathId": 3245876994577881610,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "あははっ、頑張って探しておいでっ。\r\nどーせボクには勝てっこないんだから！",
+            "enText": "Hahaha, go ahead and look for it. \nYou can't beat me, anyway!",
+            "nextBlock": 19,
+            "pathId": -8172234389079246305,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "しかし素直なウオッカは、アドバイス通り\r\n形のいい石を選び、その結果――",
+            "enText": "But the honest vodka took the advice \nand chose a stone with a good shape, \nand as a result—",
+            "nextBlock": 20,
+            "pathId": -5117981922652974226,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "いざ覚醒の時っっ！　飛べ！\r\n俺のグレート・ゴーレム・ジュニアッッッ！！",
+            "enText": "It's time to awaken! Fly! \nMy Great Golem Junior!",
+            "nextBlock": 21,
+            "pathId": 659875004028879720,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "（ヒューン……！）",
+            "enText": "(Hmmm…!)",
+            "nextBlock": 22,
+            "pathId": -8345410301119214830,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "なっ……！？\r\n向こう側の岸まで飛んだっ！？",
+            "enText": "What…? It flew to the \nother side of the shore!",
+            "nextBlock": 23,
+            "pathId": 5451916656627038475,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "ヒュ～～ッ、やりぃっ！！\r\n初勝利いただいたぜ～～！！",
+            "enText": "Yay! We got our first win!",
+            "nextBlock": 24,
+            "choices": [
+                {
+                    "jpText": "おめでとう！",
+                    "enText": "Congratulations!",
+                    "nextBlock": 24
+                }
+            ],
+            "pathId": 3232783121088036597,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "ボクの無敗記録が破られるなんて……！\r\nこんなの、絶対許せないっっ！！",
+            "enText": "I can't believe they're breaking \nmy undefeated record…! \nI can't let this happen!",
+            "nextBlock": 25,
+            "pathId": -3173856880047986794,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "ウオッカ、もっかい勝負してよっ！\r\n今のは単なるマグレだって、教えてやる……！",
+            "enText": "Come on, Vodka, give me another shot! I'll \nshow you that that was just a fluke…!",
+            "nextBlock": 26,
+            "pathId": 1916418130911033265,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "いいぜ！　俺のグレート・ゴーレム三世が\r\n負けるわけねぇけどなっ！",
+            "enText": "Yes! My Great Golem III is \nno match for you, though!",
+            "nextBlock": 27,
+            "pathId": -794144639850733883,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "こうして2人が戯れるのを、\r\n日が暮れるまで見守っていた……。",
+            "enText": "I watched them play like this \nuntil nightfall…",
+            "nextBlock": -1,
+            "pathId": -8710736976699395045,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "ああっ、なるほど……！？\r\nボール投げんのも、回転が大事っていうしな！",
+            "enText": "Oh, I see…! It's important to have a \ngood spin when throwing a ball!",
+            "nextBlock": 29,
+            "choices": [
+                {
+                    "jpText": "けどただ回転させるんじゃなくて――",
+                    "enText": "But I'm not just spinning it.",
+                    "nextBlock": 29
+                }
+            ],
+            "pathId": 1770117535704550350,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "よっしゃ、ものは試しだ！\r\n見てろトレーナー！",
+            "enText": "All right, let's see what you \ngot! Watch it, trainer!",
+            "nextBlock": 30,
+            "pathId": 6474929483415881069,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "……あーあ。絶対\r\n早合点してるよ、アレ。",
+            "enText": "… Oh, no. I'm sure you're jumping to \nconclusions, that thing.",
+            "nextBlock": 31,
+            "pathId": -7126811000301454850,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "ボクの予想では、体ごとめちゃくちゃに\r\n回転して目を回すに1票！",
+            "enText": "My vote is for the whole body to \nspin around and roll its eyes!",
+            "nextBlock": 32,
+            "choices": [
+                {
+                    "jpText": "……もう1票追加で",
+                    "enText": "… Add one more vote.",
+                    "nextBlock": 32
+                }
+            ],
+            "pathId": 7270877712170511503,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "そしてウオッカは、期待通りに――",
+            "enText": "And the vodka, as expected—",
+            "nextBlock": 33,
+            "pathId": -3948076155973271623,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "よっしゃあああああ！\r\nウオッカ・スクリュー・マックスだぁぁぁ！！",
+            "enText": "Yeah! Yeah! Vodka Screw Max!",
+            "nextBlock": 34,
+            "pathId": -1271435987146059932,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "――って、うわっ！\r\n回転しすぎて足が…………うわあああっ！！",
+            "enText": "—whoa! I'm spinning so much my \nlegs are… ohhh!",
+            "nextBlock": 35,
+            "pathId": -2943630766388683906,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "（バッシャァァァァァァァァン……）",
+            "enText": "(Bang, bang, bang…)",
+            "nextBlock": 36,
+            "pathId": 7647016914010994612,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "ああ～……やっぱり。",
+            "enText": "Oh~… I knew it.",
+            "nextBlock": 37,
+            "pathId": -2040072903004565293,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "トウカイテイオー",
+            "enName": "Tokai Teio",
+            "jpText": "ウオッカー！　そんなに予想しやすくちゃ、\r\nゲームになんないよーっっ！",
+            "enText": "Wooker! You can't play the game \nif you're so predictable!",
+            "nextBlock": 38,
+            "pathId": 5769289957502140596,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "う、うるせーっ！\r\nいいから助けにこーいっっ！！",
+            "enText": "Shut up! Just come help me!",
+            "nextBlock": 39,
+            "pathId": 3754788549503675356,
+            "blockIdx": 38
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "その後川から助け出したウオッカに、\r\n手首や石の回転についての重要さを\n改めて教えたのだった。",
+            "enText": "Later, when She rescued Vodka from the river, \nShe taught her once again the importance of \nspinning wrists and stones.",
+            "nextBlock": -1,
+            "pathId": 8080625275329407138,
+            "blockIdx": 39
+        }
+    ]
+}

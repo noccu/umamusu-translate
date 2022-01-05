@@ -1,0 +1,48 @@
+{
+    "version": 3,
+    "bundle": "4APY76DZE7CSXG37SCQJOXBE76PYLKWT",
+    "type": "story",
+    "storyId": "501008729",
+    "title": "クレーンゲーム失敗……",
+    "text": [
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "くっそー、惜しかったぜ～。\nこのアーム軟弱すぎだろぉ……！",
+            "enText": "Damn, that was close! This \narm is too soft…!",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "ごめん……",
+                    "enText": "Sorry…",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "ごめんね……",
+                    "enText": "Sorry…",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": 7641593770905608125,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ウオッカ",
+            "enName": "Vodka",
+            "jpText": "あ、いやっ、マジ気にすんなって！\nこういうのは運とかもあるしよ。",
+            "enText": "Oh, no, don't worry about it! There's luck in \nthis kind of thing, you know.",
+            "nextBlock": 3,
+            "pathId": 6291282050568001867,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "残念な結果に終わった……。",
+            "enText": "A disappointing result…",
+            "nextBlock": -1,
+            "pathId": 5158412973163638074,
+            "blockIdx": 3
+        }
+    ]
+}

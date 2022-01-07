@@ -1,5 +1,6 @@
 import os
 import UnityPy
+# import csv
 import common
 from common import GAME_ASSET_ROOT, TranslationFile
 
@@ -42,14 +43,22 @@ def swapAssetData(tlFile: TranslationFile):
     lockAsset = False
 
     for textIdx, textData in enumerate(textList):
-        if not textData['enText']:
+        if assetType != "lyrics" and not textData['enText']:
             textBlocksSkipped += 1
             continue
-
+        
+        # Set up assets
         if assetType == "race":
             if not lockAsset:
                 asset = mainFile
                 assetData = asset.read_typetree()
+                lockAsset = True
+        elif assetType == "lyrics":
+            if not lockAsset:
+                asset = mainFile
+                assetData = asset.read()
+                # r = csv.reader(assetData.text.splitlines())
+                assetText = "time,lyrics\n"
                 lockAsset = True
         else:
             try:
@@ -59,8 +68,11 @@ def swapAssetData(tlFile: TranslationFile):
                 continue
             assetData = asset.read_typetree()
 
+        # Swap data
         if assetType == "race":
             assetData['textData'][textIdx]['text'] = textData['enText']
+        elif assetType == "lyrics":
+            assetText += f"{textData['time']},{textData['enText'] or textData['jpText']}\n"
         else:
             assetData['Text'] = textData['enText']
             assetData['Name'] = textData['enName'] or assetData['Name']
@@ -71,7 +83,6 @@ def swapAssetData(tlFile: TranslationFile):
                     print("Choice lenghts do not match, skipping...")
                 else:
                     for idx, choice in enumerate(textData['choices']):
-                        # ? Not sure if guaranteed same order. Maybe do a search on jpText instead?
                         if choice['enText']:
                             jpChoices[idx]['Text'] = choice['enText']
 
@@ -84,10 +95,14 @@ def swapAssetData(tlFile: TranslationFile):
                         if text['enText']:
                             jpColored[idx]['Text'] = text['enText']
             asset.save_typetree(assetData)
-    if assetType == "race": asset.save_typetree(assetData)
 
     if textBlocksSkipped == len(textList):
         env = None
+    else:
+        if assetType == "race": asset.save_typetree(assetData)
+        elif assetType == "lyrics": 
+            assetData.script = bytes(assetText, "utf8")
+            assetData.save()
 
     return env
 

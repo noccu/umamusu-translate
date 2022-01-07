@@ -15,11 +15,15 @@ def searchFiles(targetType, targetGroup, targetId) -> list:
     found = list()
     searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
     for root, dirs, files in os.walk(searchDir):
-        depth = len(dirs[0]) if dirs else 3
+        depth = len(dirs[0]) if dirs else -1
         if targetGroup and depth == 2:
             dirs[:] = [d for d in dirs if d == targetGroup]
-        elif targetId and depth == 4:
-            dirs[:] = [d for d in dirs if d == targetId]
+        elif targetId:
+            if targetType == "lyrics":
+                found.extend(os.path.join(root, file) for file in files if PurePath(file).stem == targetId)
+                continue
+            elif depth == 4:
+                dirs[:] = [d for d in dirs if d == targetId]
         found.extend(os.path.join(root, file) for file in files)
     return found
 

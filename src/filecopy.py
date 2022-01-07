@@ -11,6 +11,7 @@ if args.getArg("-h"):
     common.usage("[-t <type>] [-n <unity filepath wildcard>] [-c <specific hash/asset filename>] [-g <story group>] [-id <story id>] [-O(verwrite)]",
                  "All args are combined with AND")
 TARGET_TYPE = args.getArg("-t", "story")
+if TARGET_TYPE == "lyrics": TARGET_TYPE = "live" # consistency with other scripts
 TARGET_HASHES = args.getArg("-c", False)
 TARGET_NAME = args.getArg("-n", "")
 # story shortcuts
@@ -53,6 +54,8 @@ def buildSqlStmt():
             add(f"n like 'home/data/00000/__/hometimeline_00000____{TARGET_ID}%'")
         elif TARGET_TYPE == "race":
             add(f"n like 'race/storyrace/text/storyrace___{TARGET_ID}%'")
+        elif TARGET_TYPE == "live":
+            add(f"n like 'live/musicscores/m{TARGET_ID}/m{TARGET_ID}_lyrics'")
 
     return None if firstExpr else stmt
 

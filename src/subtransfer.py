@@ -43,8 +43,9 @@ def duplicateSub(textList, idx, newText):
             textList[idx]['choices'][c]['enText'] = choice['enText']
 
     # Add sub text to matching (next) block and return it as new pos
-    idx += 1
-    textList[idx]['enText'] = specialProcessing(newText)
+    if newText:
+        idx += 1
+        textList[idx]['enText'] = specialProcessing(newText)
     return idx
 
 def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
@@ -91,6 +92,7 @@ def processSRT():
 
 def processSubs(subs, format):
     tlFile = common.TranslationFile(TARGET_FILE)
+    storyType = tlFile.getType()
     textList = tlFile.getTextBlocks()
     idx = 0
     if not AUTO and len(subs) != len(textList) - OFFSET:
@@ -105,7 +107,8 @@ def processSubs(subs, format):
         # skip title logo on events
         if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示"):
             idx += 1
-        if subText.startswith(">Trainer:") or (format == "ass" and line.effect == "choice"):
+        # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
+        if storyType == "story" and (subText.startswith(">Trainer:") or (format == "ass" and line.effect == "choice")):
             if not "choices" in textList[idx-1]:
                 print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
                 continue
@@ -122,6 +125,10 @@ def processSubs(subs, format):
             else:
                 textList[idx]['enText'] = specialProcessing(subText)
         idx += 1
+    # check niche case of duplicate last line (idx is already increased)
+    if idx < len(textList) and isDuplicateBlock(tlFile, textList, idx):
+        print("Last line is duplicate! (check correctness)")
+        duplicateSub(textList, idx, None)
 
     tlFile.save()
 

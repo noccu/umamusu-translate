@@ -13,7 +13,7 @@ Finished | Content satisfies this project's translation standards and style guid
 name | progress | translator
 --- | --- | ---
 Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][]
-Main story (ch5) | In Progress | [LotoDS][] (ep 1-5)
+Main story (ch5) | Complete | [LotoDS][]
 The Sounds of Autumn | Complete | deepl (old)
 Halloween | Transferring | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete, Transferring | [CatNipHoarder][] & [Holo][] (ep 1-3), deepl (temp)

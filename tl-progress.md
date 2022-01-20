@@ -16,7 +16,7 @@ Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][]
 Main story (ch5) | Complete | [LotoDS][]
 The Sounds of Autumn | Complete | deepl (old)
 Halloween | Transferring | [CatNipHoarder][] & [Holo][]
-Miracles of the Holy Night | Complete, Transferring | [CatNipHoarder][] & [Holo][] (ep 1-3), deepl (temp)
+Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 
 # Character stories
 name | progress | translator

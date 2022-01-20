@@ -74,8 +74,8 @@ def assPreFilter(doc):
                 inSplit = True
             else:
                 inSplit = False
-                line.text = cleanLine(line.text)
 
+            line.text = cleanLine(line.text)
             filtered.append(line)
     return filtered
 

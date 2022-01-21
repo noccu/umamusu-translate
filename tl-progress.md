@@ -64,6 +64,12 @@ name | progress | translator
 --- | --- | ---
 Maruzensky | Complete | [noccu][]
 
+# Lyrics
+name | progress | translator
+--- | --- | ---
+transforming | In Progress | [noccu][]
+Blaze | Complete | [noccu][]
+
 
 
 [noccu]: https://ko-fi.com/noccyu

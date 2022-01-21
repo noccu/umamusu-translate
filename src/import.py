@@ -72,7 +72,13 @@ def swapAssetData(tlFile: TranslationFile):
         if assetType == "race":
             assetData['textData'][textIdx]['text'] = textData['enText']
         elif assetType == "lyrics":
-            assetText += f"{textData['time']},{textData['enText'] or textData['jpText']}\n"
+            # Format the CSV text. Their parser uses quotes, no escape chars. For novelty: \t = space; \v and \f = ,; \r = \n
+            text = textData['enText']
+            if not text:
+                 text = textData['jpText']
+            elif "," in text or "\"" in text:
+                text = '"' + text.replace('\"','\"\"') + '"'
+            assetText += f"{textData['time']},{text}\n"
         else:
             assetData['Text'] = textData['enText']
             assetData['Name'] = textData['enName'] or assetData['Name']

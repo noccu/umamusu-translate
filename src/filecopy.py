@@ -22,6 +22,7 @@ OVERWRITE_DST = args.getArg("-O", False)
 
 
 def buildSqlStmt():
+    global TARGET_ID
     stmt = "select h from a"
     firstExpr = True
 
@@ -35,6 +36,8 @@ def buildSqlStmt():
 
     if TARGET_TYPE:
         add(f"m = '{TARGET_TYPE}'")
+        if TARGET_TYPE == "live" and not TARGET_ID:
+            TARGET_ID = "____"
     if TARGET_NAME:
         add(f"n like '%{TARGET_NAME}%'")
     if TARGET_HASHES:

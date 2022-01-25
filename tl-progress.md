@@ -69,7 +69,9 @@ name | progress | translator
 --- | --- | ---
 transforming | In Progress | [noccu][]
 Blaze | Complete | [noccu][]
-
+winning the soul | Complete | [Kuun0][] (?)
+Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
+Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 
 
 [noccu]: https://ko-fi.com/noccyu
@@ -80,3 +82,4 @@ Blaze | Complete | [noccu][]
 [burritoblaster]: https://twitter.com/burritoblaster
 [LotoDS]: https://www.youtube.com/user/LotoDS
 [robflop]: https://misskey.io/@robflop
+[Kuun0]: https://www.reddit.com/user/Kuun0/

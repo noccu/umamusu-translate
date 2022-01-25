@@ -1,0 +1,78 @@
+{
+    "version": 3,
+    "bundle": "X6I5OUAYQQSSCZEFW5NJF4EEVPACYU4E",
+    "type": "story",
+    "storyId": "501061729",
+    "title": "クレーンゲーム失敗……",
+    "text": [
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "な、なんですって……！？",
+            "enText": "What the heck is…?",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "ごめん……",
+                    "enText": "Sorry…",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "ごめんね……",
+                    "enText": "Sorry…",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": -2651024664083631204,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "もうっ、このへっぽこ！\r\n謝ったって何も解決しないじゃない！",
+            "enText": "Come on, you little punk! Apologizing isn't \ngoing to solve anything!",
+            "nextBlock": 3,
+            "pathId": -8115182148717109240,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "あなたがキングのために努力した経験は、\r\n今後に活かすことにしなさい。いいわね？",
+            "enText": "The work you've done for King will be put \nto good use in the future. Is that clear?",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "……そうだな",
+                    "enText": "… I guess.",
+                    "nextBlock": 4
+                },
+                {
+                    "jpText": "……そうだね",
+                    "enText": "… Yeah.",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": -5232485077907632978,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "キングヘイロー",
+            "enName": "King Halo",
+            "jpText": "ふんっ、この程度で落ち込むと思わないで。\r\n私は気持ちの切り替えだって一流よっ……！",
+            "enText": "Don't expect me to be depressed about this. \nI'm top notch at changing my mind…!",
+            "nextBlock": 5,
+            "pathId": 7208116596071802285,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "残念な結果に終わった……。",
+            "enText": "A disappointing result…",
+            "nextBlock": -1,
+            "pathId": -2772168483386247777,
+            "blockIdx": 5
+        }
+    ]
+}

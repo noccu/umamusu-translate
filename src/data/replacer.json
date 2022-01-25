@@ -162,6 +162,15 @@
         "repl": "\\1 O"
     },
     {
+        "re": "El Condor Passer",
+        "repl": "El Condor Pasa"
+    },
+    {
+        "re": "\\bSupe\\b",
+        "repl": "Spe",
+        "limit": true
+    },
+    {
         "re": "the horse girl in charge",
         "repl": "your horse girl",
         "limit": true

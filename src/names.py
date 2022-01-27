@@ -75,6 +75,8 @@ def createDict():
     names['読手のウマ娘'] = "Reader Horsegirl" #They might bring this back later now that umakaruta exists?
     names['美浦寮のウマ娘'] = "Miho Dorm Horsegirl"
     names['栗東寮のウマ娘'] = "Rittou Dorm Horsegirl"
+    names['合宿中のウマ娘A'] = "Fellow Camp Horsegirl A"
+    names['合宿中のウマ娘B'] = "Fellow Camp Horsegirl B"
     names['ウマ娘の母親'] = "Horsegirl's Mom"
     names['ウマ娘たち'] = "Horsegirls"
     names['？？？'] = "???"
@@ -85,6 +87,7 @@ def createDict():
     names['先生'] = "Teacher"
     names['先生A'] = "Teacher A"
     names['生徒たち'] = "Teachers"
+    names['教官'] = "Instructor"
     names['教官A'] = "Instructor A"
     names['図書委員'] = "Librarian"
     names['スタッフ'] = "Staff"
@@ -112,6 +115,7 @@ def createDict():
     names['イベント実況'] = "Event Coverage"
     names['テレビ'] = "TV"
     names['テレビの音'] = "TV Report"
+    names['手紙'] = "Letter"
     names['新人トレーナーA'] = "Rookie Trainer A"
     names['新人トレーナーＡ'] = "Rookie Trainer A"
     names['新人トレーナーB'] = "Rookie Trainer B"
@@ -158,6 +162,7 @@ def createDict():
     names['遊園地のスタッフ'] = "Amusement Park Staff"
     names['呼び込みの男性'] = "Male Barker"
     names['カフェ店員'] = "Cafe Employee"
+    names['屋台の店主'] = "Stallkeeper"
     names['店主'] = "Shopkeeper"
     names['店員'] = "Shop Assistant"
     names['店員A'] = "Shop Assistant A"
@@ -195,7 +200,8 @@ def createDict():
     names['整備士Ａ'] = "Mechanic A"
     names['整備士B'] = "Mechanic B"
     names['整備士Ｂ'] = "Mechanic B"
-    names['船乗り'] = "Sialor"
+    names['整備スタッフ'] = "Maintenance Staff"
+    names['船乗り'] = "Sailor"
     names['SP隊長'] = "SP Commander"
     names['女優'] = "Actress"
     names['ネコ'] = "Cat"
@@ -207,6 +213,7 @@ def createDict():
     names['キャロットマン'] = "Carrot Man"
     names['ビューティー安心沢'] = "Beauty Anshinzawa"
     names['スズカのトレーナー'] = "Suzuka's Trainer"
+    names['親戚'] = "Relative"
     return names
 
 def translate(namesDict):

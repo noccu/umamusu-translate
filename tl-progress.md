@@ -36,6 +36,7 @@ Silence Suzuka | Complete | [LotoDS][]
 Fine Motion | Complete | [LotoDS][]
 Tamamo Cross | Complete | [noccu][] (ep 1), deepl
 Vodka | Complete | [robflop][]
+Sakura Chiyono O | Complete | [LotoDS][]
 
 
 # Training story/events

@@ -113,6 +113,7 @@ def createDict():
     names['歓声'] = "Cheers"
     names['実況'] = "Coverage"
     names['イベント実況'] = "Event Coverage"
+    names['審査員'] = "Judge"
     names['テレビ'] = "TV"
     names['テレビの音'] = "TV Report"
     names['手紙'] = "Letter"
@@ -190,6 +191,7 @@ def createDict():
     names['宇宙人'] = "Alien"
     names['2人'] = "Both"
     names['3人'] = "All 3"
+    names['4人'] = "All 4"
     names['みんな'] = "Everyone"
     names['通行人A'] = "Passerby A"
     names['通行人B'] = "Passerby B"
@@ -213,6 +215,7 @@ def createDict():
     names['キャロットマン'] = "Carrot Man"
     names['ビューティー安心沢'] = "Beauty Anshinzawa"
     names['スズカのトレーナー'] = "Suzuka's Trainer"
+    names['フラッシュの父親'] = "Flash' Father"
     names['親戚'] = "Relative"
     return names
 

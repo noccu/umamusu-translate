@@ -1,4 +1,6 @@
-This document gives an overview of translation progress.
+This document gives an overview of translation progress.  
+Note: [deepl](https://www.deepl.com/) is machine translation. These have limited and mostly arbitrary manual edits stemming from fixing common issues.
+Quality varies based on content (speech patterns, topics, etc).
 
 ### Legend
 term | meaning
@@ -9,14 +11,16 @@ In progress | Translation work is planned, ongoing, or only part is translated (
 Complete | All the relevant content is available in English
 Finished | Content satisfies this project's translation standards and style guide (to come)
 
-# Main Stories
+# Main/Event Stories
 name | progress | translator
 --- | --- | ---
 Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][]
 Main story (ch5) | Complete | [LotoDS][]
 The Sounds of Autumn | Complete | deepl (old)
-Halloween | Transferring | [CatNipHoarder][] & [Holo][]
+Make up in Halloween！ | Transferring | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
+Blossoming New Year's Karuta Contest | Complete | deepl
+Patisserie Grandeur | Complete | deepl
 
 # Character stories
 name | progress | translator
@@ -37,6 +41,8 @@ Fine Motion | Complete | [LotoDS][]
 Tamamo Cross | Complete | [noccu][] (ep 1), deepl
 Vodka | Complete | [robflop][]
 Sakura Chiyono O | Complete | [LotoDS][]
+Mihono Bourbon | Complete | deepl
+Eishin Flash | Complete | deepl
 
 
 # Training story/events
@@ -54,6 +60,9 @@ Sakura Bakushin O | Complete | deepl
 Agnes Tachyon | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Rice Shower | Complete | deepl
+King Halo | Complete | deepl
+Mihono Bourbon | In progress | deepl
+Eishin Flash | In progress | deepl
 
 ## Cards
 name | progress | translator
@@ -70,7 +79,7 @@ name | progress | translator
 --- | --- | ---
 transforming | In Progress | [noccu][]
 Blaze | Complete | [noccu][]
-winning the soul | Complete | [Kuun0][] (?)
+winning the soul | Complete | [Kuun0][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 

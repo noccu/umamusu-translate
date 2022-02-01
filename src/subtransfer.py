@@ -65,8 +65,8 @@ def assPreFilter(doc):
     inSplit = None
     lastSplit = None
     for line in doc.events:
-        if re.search("MainText|Default", line.style) and line.name != "Nameplate":
-            if line.effect.startswith("Split"):
+        if re.search("MainText|Default|Button", line.style, re.IGNORECASE) and line.name != "Nameplate":
+            if re.match("split", line.effect, re.IGNORECASE):
                 if inSplit and line.effect[-2:] == lastSplit:
                     filtered[-1].text += f"\n{cleanLine(line.text)}"
                     continue
@@ -95,6 +95,7 @@ def processSubs(subs, format):
     storyType = tlFile.getType()
     textList = tlFile.getTextBlocks()
     idx = 0
+    lastChoice = 0
     if not AUTO and len(subs) != len(textList) - OFFSET:
         print(f"Block lengths don't match: Sub: {len(subs)} to Src: {len(textList)} - {OFFSET}")
         raise SystemExit
@@ -108,13 +109,18 @@ def processSubs(subs, format):
         if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示"):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
-        if storyType == "story" and (subText.startswith(">Trainer:") or (format == "ass" and line.effect == "choice")):
-            if not "choices" in textList[idx-1]:
-                print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
-                continue
-            for entry in textList[idx - 1]["choices"]:
-                entry['enText'] = specialProcessing(subText)
-            continue # don't increment idx
+        if storyType == "story":
+            if (subText.startswith(">Trainer:") or 
+            (format == "ass" and (line.effect == "choice" or line.style.endswith("Button")))):
+                if not "choices" in textList[idx-1]:
+                    print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
+                    continue
+                for entry in textList[idx-1]["choices"]:
+                    entry['enText'] = specialProcessing(subText)
+                    lastChoice = idx
+                continue # don't increment idx
+            elif idx > 0 and "choices" in textList[idx-1] and idx - lastChoice > 0:
+                print(f"Missing choice subtitle at block {textList[idx-1]['blockIdx']}")
         if isDuplicateBlock(tlFile, textList, idx):
             print(f"Found gender dupe at block {textList[idx]['blockIdx']}, duplicating.")
             idx = duplicateSub(textList, idx, subText) + 1
@@ -126,9 +132,12 @@ def processSubs(subs, format):
                 textList[idx]['enText'] = specialProcessing(subText)
         idx += 1
     # check niche case of duplicate last line (idx is already increased)
-    if idx < len(textList) and isDuplicateBlock(tlFile, textList, idx):
-        print("Last line is duplicate! (check correctness)")
-        duplicateSub(textList, idx, None)
+    if idx < len(textList):
+        if isDuplicateBlock(tlFile, textList, idx):
+            print("Last line is duplicate! (check correctness)")
+            duplicateSub(textList, idx, None)
+        else:
+            print(f"Lacking {len(textList) - idx} subtitle(s).")
 
     tlFile.save()
 

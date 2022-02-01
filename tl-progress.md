@@ -25,7 +25,7 @@ Patisserie Grandeur | Complete | deepl
 # Character stories
 name | progress | translator
 --- | --- | ---
-Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), deepl (temp)
+Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][], deepl (rest)
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 Maruzensky | Complete | deepl
 Grass Wonder | Complete | deepl
@@ -93,3 +93,4 @@ Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 [LotoDS]: https://www.youtube.com/user/LotoDS
 [robflop]: https://misskey.io/@robflop
 [Kuun0]: https://www.reddit.com/user/Kuun0/
+[xct]: https://www.youtube.com/user/ADSRM

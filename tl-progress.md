@@ -43,6 +43,7 @@ Vodka | Complete | [robflop][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Mihono Bourbon | Complete | deepl
 Eishin Flash | Complete | deepl
+Seiun Sky | In progress | [CatNipHoarder][] & [Holo][]
 
 
 # Training story/events

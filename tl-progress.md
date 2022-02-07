@@ -20,7 +20,7 @@ The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Transferring | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete | deepl
-Patisserie Grandeur | Complete | deepl
+Patisserie Grandeur | Complete | [noccu][] (ep 1-4), deepl
 
 # Character stories
 name | progress | translator

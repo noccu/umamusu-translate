@@ -52,7 +52,7 @@ Open the files in a text editor or edit them on github and write the translation
 - When done with either method, run any extra processing on the file
     - `python src\textprocess.py` to apply some automatic formatting (line length in particular) and edits
         - This is run by the translation script (if you used that), but you can rerun it with custom settings if you like
-        - Useful line length for vertical screens is ~43, and for horizontal ~63 
+        - Recommended line length for vertical screens is 45, and for horizontal 65  
     - `python src\names.py -n <path/to/db-translate/data/uma-name.csv>` to translate many names automatically
 
 ## Finishing up

@@ -25,26 +25,26 @@ Patisserie Grandeur | Complete | [noccu][] (ep 1-4), deepl
 # Character stories
 name | progress | translator
 --- | --- | ---
-Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][], deepl (rest)
-Haru Urara | Complete | [Vacxy][] (ep 1), deepl
-Maruzensky | Complete | deepl
-Grass Wonder | Complete | deepl
-Symboli Rudolf | Complete | deepl
-Manhattan Cafe | Complete | deepl
-Rice Shower  | Complete | deepl
-King Halo | Complete, Transferring | deepl, [burritoblaster][]
-Special Week | Complete | deepl
-Gold Ship | Complete | deepl
-Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
-Silence Suzuka | Complete | [LotoDS][]
+Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4), deepl
+Eishin Flash | Complete | deepl
 Fine Motion | Complete | [LotoDS][]
+Gold Ship | Complete | deepl
+Grass Wonder | Complete | deepl
+Haru Urara | Complete | [Vacxy][] (ep 1), deepl
+King Halo | Complete, Transferring | deepl, [burritoblaster][]
+Manhattan Cafe | Complete | deepl
+Maruzensky | Complete | deepl
+Mihono Bourbon | Complete | deepl
+Rice Shower  | Complete | deepl
+Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
+Sakura Chiyono O | Complete | [LotoDS][]
+Seiun Sky | In progress | [CatNipHoarder][] & [Holo][]
+Silence Suzuka | Complete | [LotoDS][]
+Special Week | Complete | deepl
+Symboli Rudolf | Complete | deepl
+Taiki Shuttle | Complete | [LotoDS][]
 Tamamo Cross | Complete | [noccu][] (ep 1), deepl
 Vodka | Complete | [robflop][]
-Sakura Chiyono O | Complete | [LotoDS][]
-Mihono Bourbon | Complete | deepl
-Eishin Flash | Complete | deepl
-Seiun Sky | In progress | [CatNipHoarder][] & [Holo][]
-Taiki Shuttle | Complete | [LotoDS][]
 
 
 # Training story/events
@@ -56,15 +56,15 @@ Shared events | Complete | [noccu][]
 ## Umas
 name | progress | translator
 --- | --- | ---
+Agnes Tachyon | Complete | deepl
+Eishin Flash | In progress | deepl
+King Halo | Complete | deepl
+Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl
+Mihono Bourbon | In progress | deepl
+Rice Shower | Complete | deepl
 Rudolph | In progress | deepl (old)
 Sakura Bakushin O | Complete | deepl
-Agnes Tachyon | Complete | deepl
-Manhattan Cafe | Complete | deepl
-Rice Shower | Complete | deepl
-King Halo | Complete | deepl
-Mihono Bourbon | In progress | deepl
-Eishin Flash | In progress | deepl
 
 ## Cards
 name | progress | translator
@@ -79,10 +79,10 @@ Maruzensky | Complete | [noccu][]
 # Lyrics
 name | progress | translator
 --- | --- | ---
-transforming | In Progress | [noccu][]
 Blaze | Complete | [noccu][]
-winning the soul | Complete | [Kuun0][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
+transforming | In Progress | [noccu][]
+winning the soul | Complete | [Kuun0][]
 Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 
 

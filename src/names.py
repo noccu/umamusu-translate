@@ -77,6 +77,7 @@ def createDict():
     names['栗東寮のウマ娘'] = "Rittou Dorm Horsegirl"
     names['合宿中のウマ娘A'] = "Fellow Camp Horsegirl A"
     names['合宿中のウマ娘B'] = "Fellow Camp Horsegirl B"
+    names['気弱そうなウマ娘'] = "Timid-looking Horsegirl"
     names['素直なウマ娘'] = "Honest Horsegirl"
     names['ウマ娘の母親'] = "Horsegirl's Mom"
     names['ウマ娘たち'] = "Horsegirls"

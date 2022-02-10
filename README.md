@@ -16,12 +16,13 @@ This tool collection only changes text to translate it and it is *my belief* thi
 > Note on possible install issues!  
 > One of the dependencies, lz4, [currently has a broken build system for windows meaning they are not releasing prebuilt windows binaries](https://github.com/python-lz4/python-lz4/issues/231).
 > This project limits the lz4 version to the last version that does come with them but it is only up to Python 3.9.
+> This is only to help less technologically inclined users. If you already have lz4 you can just install UnityPy and ignore the requirements file.
 > Python installs of different versions can coexist but if you want to use Python 3.10+ only you will need to **EITHER**:
 > - Have vc++ built tools installed & compile lz4 yourself
-> - Download the unofficial binary `lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl` (win64) file from https://www.lfd.uci.edu/~gohlke/pythonlibs/#lz4 and install that first: `python -m pip install wherever/you/downloaded/lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl`
+> - Download the unofficial binary of whatever version is latest (currently `lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl` for 64-bit windows) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#lz4 and install that first: `python -m pip install wherever/you/downloaded/lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl`
 
 1. Install [Python](https://www.python.org/downloads/) 3.9 and [UnityPy][]
-    - From project root: `python -m pip install -r src\requirements.txt`
+    - If you have issues: `python -m pip install -r src\requirements.txt` from project root
     - Most of it is 3.6+ so if you really want to you could edit sources for older Python versions
 1. (Optional but recommended) Download all game data through the game menu
 1. Clone or download this project

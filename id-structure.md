@@ -14,7 +14,7 @@ The structure used is simple: `00 0000 000`
  01 | Tutorial story
  02 | Main story (story mode)
  04 | Uma stories (story mode)
- 08 | Story mode prologues/intro | `0000`: URA `0001`: Aoharu
+ 08 | Story mode prologues/intro | `0000`: URA (001), Aoharu (002)
  09 | Event stories (story mode)
  10 | Half anniv story (...?)
  40 | Campaign training/story events |  `0000`: shared (clock usage, training equipment level up, ...) `0001`: URA `0002`: Aoharu

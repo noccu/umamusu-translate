@@ -14,16 +14,17 @@ This tool collection only changes text to translate it and it is *my belief* thi
 
 ### Requirements
 > Note on possible install issues!  
-> One of the dependencies, lz4, [currently has a broken build system for windows meaning they are not releasing prebuilt windows binaries](https://github.com/python-lz4/python-lz4/issues/231).
-> This project limits the lz4 version to the last version that does come with them but it is only up to Python 3.9.
-> This is only to help less technologically inclined users. If you already have lz4 you can just install UnityPy and ignore the requirements file.
+> One of UnityPy's dependencies, lz4, [currently has a broken build system for windows meaning they are not releasing prebuilt windows binaries](https://github.com/python-lz4/python-lz4/issues/231).  
+> The requirements.txt file in this project limits the lz4 version to the last version that does come with them but it comes only up to Python 3.9.
+> If you already have lz4 you can just install the other reqs or remove it from the requirements file.  
 > Python installs of different versions can coexist but if you want to use Python 3.10+ only you will need to **EITHER**:
 > - Have vc++ built tools installed & compile lz4 yourself
 > - Download the unofficial binary of whatever version is latest (currently `lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl` for 64-bit windows) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#lz4 and install that first: `python -m pip install wherever/you/downloaded/lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl`
 
-1. Install [Python](https://www.python.org/downloads/) 3.9 and [UnityPy][]
-    - If you have issues: `python -m pip install -r src\requirements.txt` from project root
+1. Install [Python](https://www.python.org/downloads/) 3.9
     - Most of it is 3.6+ so if you really want to you could edit sources for older Python versions
+1. Install [UnityPy][]
+    - If you run into issues see the note above and: `python -m pip install -r src\requirements.txt` from project root 
 1. (Optional but recommended) Download all game data through the game menu
 1. Clone or download this project
 
@@ -31,6 +32,7 @@ This tool collection only changes text to translate it and it is *my belief* thi
 1. **Dialogue**: From project root: `python src/import.py -O`
     - If you only want to install specific things, see [id-structure.md](id-structure.md) and use: `python src/import.py -O -g <group> -id <id>`
 1. **UI**: Copy the contents of the [localify folder](localify) to your Uma Musume install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are)
+    - You need localify's dll from [here](https://github.com/GEEKiDoS/umamusume-localify/releases/tag/test6)
 1. **Skills and other variable text**: See the [db-translate project]
 
 If you want to add additional translations through deepl, or contibute your own, see [translating.md](translating.md)

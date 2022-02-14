@@ -43,7 +43,7 @@ Silence Suzuka | Complete | [LotoDS][]
 Special Week | Complete | deepl
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
-Tamamo Cross | Complete | [noccu][] (ep 1), deepl
+Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]
 
 

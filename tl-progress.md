@@ -28,6 +28,7 @@ name | progress | translator
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4), deepl
 Eishin Flash | Complete | deepl
 Fine Motion | Complete | [LotoDS][]
+Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
@@ -96,3 +97,4 @@ Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 [robflop]: https://misskey.io/@robflop
 [Kuun0]: https://www.reddit.com/user/Kuun0/
 [xct]: https://www.youtube.com/user/ADSRM
+[Hades of Games]: https://www.youtube.com/c/HadesofGames

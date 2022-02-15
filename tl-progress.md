@@ -83,6 +83,8 @@ name | progress | translator
 Blaze | Complete | [noccu][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 transforming | In Progress | [noccu][]
+Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
+UNLIMITED IMPACT | In Progress | [noccu][]
 winning the soul | Complete | [Kuun0][]
 Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 
@@ -98,3 +100,5 @@ Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 [Kuun0]: https://www.reddit.com/user/Kuun0/
 [xct]: https://www.youtube.com/user/ADSRM
 [Hades of Games]: https://www.youtube.com/c/HadesofGames
+[Karimenrider]: https://umamusume.fandom.com/wiki/User:Karimenrider
+[ebi]: https://twitter.com/tamamolife

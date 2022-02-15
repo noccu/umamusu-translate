@@ -96,7 +96,10 @@ The structure used is simple: `00 0000 000`
 1067 | Satono Diamond
 1068 | Kitasan Black
 1069 | Sakura Chiyono O
+1070 | Sirius Symboli
+1071 | Mejiro Ardan
 1072 | Yaeno Muteki
+1074 | Mejiro Bright
 2001 | Happy Meek
 9001 | Hayakawa Tazuna
 9002 | President Akikawa

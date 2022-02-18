@@ -1,3 +1,4 @@
+from pydoc import text
 import ass
 import srt
 import common
@@ -44,15 +45,18 @@ def duplicateSub(textList, idx, newText):
 
     # Add sub text to matching (next) block and return it as new pos
     if newText:
-        idx += 1
-        textList[idx]['enText'] = specialProcessing(newText)
+        if idx < len(textList) - 1:
+            idx += 1
+            textList[idx]['enText'] = specialProcessing(newText)
+        else:
+            print("Attempted to duplicate beyond last line of file. Subtitle file does not match?")
     return idx
 
 def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
     if tlFile.getType() != "story": return False
     prevName = textList[idx - 1]['jpName']
     curName = textList[idx]['jpName']
-    return curName in ["<username>", ""] and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
+    return curName in ["<username>", "", "モノローグ"] and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
 
 # ASS
 def cleanLine(text):

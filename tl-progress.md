@@ -14,7 +14,7 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][]
+Main story (ch1) | In progress | [CatNipHoarder][] & [Holo][] (ep 1-5)
 Main story (ch5) | Complete | [LotoDS][]
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Transferring | [CatNipHoarder][] & [Holo][]
@@ -39,7 +39,7 @@ Mihono Bourbon | Complete | deepl
 Rice Shower  | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Sakura Chiyono O | Complete | [LotoDS][]
-Seiun Sky | In progress | [CatNipHoarder][] & [Holo][]
+Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-2)
 Silence Suzuka | Complete | [LotoDS][]
 Special Week | Complete | deepl
 Symboli Rudolf | Complete | deepl

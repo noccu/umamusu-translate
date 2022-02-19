@@ -39,7 +39,7 @@ Mihono Bourbon | Complete | deepl
 Rice Shower  | Complete | deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Sakura Chiyono O | Complete | [LotoDS][]
-Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-2)
+Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
 Silence Suzuka | Complete | [LotoDS][]
 Special Week | Complete | deepl
 Symboli Rudolf | Complete | deepl

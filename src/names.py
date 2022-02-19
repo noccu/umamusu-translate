@@ -179,6 +179,7 @@ def createDict():
     names['カフェの店員'] = "Cafe Employee"
     names['屋台の店主'] = "Stallkeeper"
     names['屋台のおばさん'] = "Elder Stallkeeper Lady"
+    names['八百屋のおばあさん'] = "Elder Greengrocer Lady"
     names['店主'] = "Shopkeeper"
     names['店員'] = "Shop Assistant"
     names['店員A'] = "Shop Assistant A"
@@ -232,6 +233,7 @@ def createDict():
     names['スズカのトレーナー'] = "Suzuka's Trainer"
     names['フラッシュの父親'] = "Flash' Father"
     names['親戚'] = "Relative"
+    names['主婦'] = "Housewive"
     names['射的屋'] = "Shooting Gallery"
     return names
 

@@ -63,6 +63,7 @@ King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl
 Mihono Bourbon | In progress | deepl
+Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | In progress | deepl (old)
 Sakura Bakushin O | Complete | deepl

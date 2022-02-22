@@ -1,0 +1,329 @@
+{
+    "version": 3,
+    "bundle": "MW2SNAM24E7MN6CXVNV2OON725HVLXMZ",
+    "type": "story",
+    "storyId": "501006107",
+    "title": "バレンタイン",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "トレーニング後、オグリキャップに\r\nなぜか校舎裏に呼び出されたので、\n早速向かうと……。",
+            "enText": "After training, Oguri-cap summoned me to the \nback of the school building for some reason, \nso I headed over to…",
+            "nextBlock": 2,
+            "pathId": -2190031168715256341,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "来てくれたか。\r\n待っていた。",
+            "enText": "You're here. I've been waiting for you.",
+            "nextBlock": 3,
+            "pathId": 8922191071745155978,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "キミに渡したいものがある。\r\n……受け取ってくれ。",
+            "enText": "I have something for you. \nPlease take it from…",
+            "nextBlock": 4,
+            "pathId": 6851883343633090909,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "渡されたのは、\r\n透明な袋で綺麗にラッピングされた\nチョコレートだった。",
+            "enText": "What she gave me was a beautifully wrapped \nchocolate in a transparent bag.",
+            "nextBlock": 5,
+            "pathId": -5438038157708988216,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "今日はバレンタインだろう。\r\nだから、私もチョコを作ってみた。",
+            "enText": "Today is Valentine's Day, right? So \nI made myself some chocolate.",
+            "nextBlock": 6,
+            "choices": [
+                {
+                    "jpText": "君の手作りなのか？",
+                    "enText": "Did you make this?",
+                    "nextBlock": 6
+                },
+                {
+                    "jpText": "貴方の手作りなの？",
+                    "enText": "Did you make this?",
+                    "nextBlock": 6
+                }
+            ],
+            "pathId": -3418970462113567714,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "うん。クリークに教えてもらったから、\r\nちゃんと美味しくできたと思う。",
+            "enText": "Yeah. Creek taught me how to make it, so I \nthink it turned out good.",
+            "nextBlock": 7,
+            "pathId": 1621824545738112743,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "色々試行錯誤していたら、\r\nついこんな時間になってしまったが……。",
+            "enText": "I've been doing a lot of trial and error, \nand it's gotten to this time…",
+            "nextBlock": 8,
+            "pathId": -2279900777351793761,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "キミにはたくさんお世話になっているから、\r\n感謝の気持ちを、ちゃんと伝えたかった。",
+            "enText": "I just wanted to say thank you for \neverything you've done for me.",
+            "nextBlock": 9,
+            "choices": [
+                {
+                    "jpText": "ありがとう！",
+                    "enText": "Thank you!",
+                    "nextBlock": 9
+                }
+            ],
+            "pathId": 4783113588471060978,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "ふふ……。",
+            "enText": "Phew…",
+            "nextBlock": 10,
+            "pathId": 6511040178263794157,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "この学園に来てから、\r\nたくさんチョコをもらってきたが……。",
+            "enText": "I've gotten a lot of chocolate since I've \nbeen at this school, but…",
+            "nextBlock": 11,
+            "pathId": 7088680651716125461,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "渡す側も、\r\nこんなに嬉しいものなんだな。",
+            "enText": "The person who gives it to \nyou is also so happy.",
+            "nextBlock": 12,
+            "choices": [
+                {
+                    "jpText": "でも、どうして校舎裏？",
+                    "enText": "But why the back of the school building?",
+                    "nextBlock": 12
+                }
+            ],
+            "pathId": 8187864745839425370,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "ん？\r\nチョコを渡す時の定番じゃないのか？",
+            "enText": "Hmm? Isn't that the standard \nway to give chocolate?",
+            "nextBlock": 13,
+            "pathId": 4223445777203984859,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "初めの頃、私はよくここでチョコをもらった。\r\n最近は、その場でもらうことが多いが。",
+            "enText": "In the beginning, I used to get chocolates \nhere. These days, though, I tend to \nget them on the spot.",
+            "nextBlock": 14,
+            "pathId": -7427616977441024306,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "今でこそ大食いで親しまれる\r\nオグリキャップだが、\n最初の頃は遠巻きに憧れられる存在だった。",
+            "enText": "Today, Oguri Cap is known as a friendly \nglutton, but in her early days, she was \nadmired from a distance.",
+            "nextBlock": 15,
+            "pathId": 7479268015217726323,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "それが今では、どこででもたくさんの\r\n気持ちをぶつけてもらえる存在となった。\n学園内でも人気が安定している証拠だろう。",
+            "enText": "These days she's become a person that people \ncan express their feelings to. I guess it's \na sign of her popularity in the school.",
+            "nextBlock": 16,
+            "pathId": 4324128372126531297,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "さて、それじゃあ行くか。",
+            "enText": "Well, let's go then.",
+            "nextBlock": 17,
+            "choices": [
+                {
+                    "jpText": "行くって、どこへ？",
+                    "enText": "Going where?",
+                    "nextBlock": 17
+                }
+            ],
+            "pathId": -5298811781842438329,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "寮の食糧庫だ。\r\nそこに残りのチョコも置いてある。",
+            "enText": "The dormitory pantry. That's where you'll \nfind the rest of the chocolates.",
+            "nextBlock": 18,
+            "choices": [
+                {
+                    "jpText": "残り……？",
+                    "enText": "Remaining…?",
+                    "nextBlock": 18
+                }
+            ],
+            "pathId": 6336603775451262063,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "色々試行錯誤した結果生まれたチョコたちだ。\r\n20kgくらい板チョコを溶かしただろうか。",
+            "enText": "These chocolates were the result of \na lot of trial and error. I think I \nmelted about 20kg of chocolate.",
+            "nextBlock": 19,
+            "choices": [
+                {
+                    "jpText": "20kg！？",
+                    "enText": "20 kg!",
+                    "nextBlock": 19
+                }
+            ],
+            "pathId": 2783450277899816565,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "量が量だから、学校まで運べなくてな。\r\n安心してくれ、しっかり冷やしてるから。",
+            "enText": "I couldn't carry it to school because of the \nquantity. Don't worry, it's chilled well.",
+            "nextBlock": 20,
+            "pathId": 8976598173912640482,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "どれも自信作なんだ！\r\n私も食べるから、一緒に楽しもう。",
+            "enText": "I'm very proud of all of them! I'll eat them \ntoo, so we can enjoy them together.",
+            "nextBlock": 21,
+            "pathId": 3451465840940685047,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "こうして、オグリキャップと過ごす\r\nバレンタインは幕を閉じた……。",
+            "enText": "That's how I ended my Valentine's \nDay with Oguri Cap…",
+            "nextBlock": -1,
+            "pathId": -6799757594183648196,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……ふぅ。",
+            "enText": "… Huh.",
+            "nextBlock": 23,
+            "choices": [
+                {
+                    "jpText": "どうした？",
+                    "enText": "What's wrong?",
+                    "nextBlock": 23
+                },
+                {
+                    "jpText": "どうしたの？",
+                    "enText": "What's going on?",
+                    "nextBlock": 23
+                }
+            ],
+            "pathId": 7243146136659140060,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "いや……なんだか、ホッとして……。",
+            "enText": "No… I'm kind of relieved…",
+            "nextBlock": 24,
+            "pathId": 4785023459366077516,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "キミが来るまで、とてもドキドキしていた。\r\n走っている時とは、ちょっと違う。",
+            "enText": "I was very nervous until you arrived. It's a \nlittle different when you're running.",
+            "nextBlock": 25,
+            "pathId": -1404781908799189158,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "もっとたくさん渡すべきじゃないかとか、\r\n色々考えてしまって……。",
+            "enText": "I've been thinking a lot about whether or \nnot I should give more away…",
+            "nextBlock": 26,
+            "pathId": 8206391281473551402,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "でもそのチョコが完成した時、\r\nたったひとつだけを渡したくなったんだ。",
+            "enText": "But when the chocolates were finished, I \nwanted to give only one.",
+            "nextBlock": 27,
+            "pathId": -3150976978428557594,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "キミのことをたくさん考えた、\r\nその気持ちがギュッと詰まったチョコを……。",
+            "enText": "I've thought about you a lot, and I'd \nlike to send you chocolates that are \npacked with my feelings to…",
+            "nextBlock": 28,
+            "pathId": -2647409995058970853,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "だから……もらってくれてありがとう、\r\nトレーナー。",
+            "enText": "So thanks for getting me… Trainer.",
+            "nextBlock": 29,
+            "pathId": -6193809535211963468,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "どこか照れたようなオグリキャップと、\r\n残り少ないバレンタインデーを\n楽しく過ごした……。",
+            "enText": "With a somewhat embarrassed Oguri Cap… spent \nthe last few Valentine's Days having fun.",
+            "nextBlock": -1,
+            "pathId": 3569745312432197310,
+            "blockIdx": 29
+        }
+    ]
+}

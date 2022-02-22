@@ -1,0 +1,708 @@
+{
+    "version": 3,
+    "bundle": "RMTJTJZCDEAS5LMZ7MUBKMVDTFON3464",
+    "type": "story",
+    "storyId": "501006302",
+    "title": "福引チャンス！",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "オグリキャップと出かけた帰りに、\r\n商店街へと立ち寄った。すると――",
+            "enText": "On my way back from an outing with Oguri-cap, \nI stopped by the shopping district. Then—",
+            "nextBlock": 2,
+            "pathId": -2947299939326376616,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "いい匂いがする……。\r\nこの時間帯の商店街は、食欲がそそられるな。",
+            "enText": "It smells good… The shopping street at this \ntime of day is so appetizing.",
+            "nextBlock": 3,
+            "pathId": 5815404927929848046,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "ああ……\r\nお腹が、すいた……。",
+            "enText": "Oh… I'm hungry, I'm hungry…",
+            "nextBlock": 4,
+            "pathId": -8125471296206984229,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "さあさ、新春・大福引祭り開催中だよ～！\r\n特賞はなんと『温泉旅行券』！",
+            "enText": "Come on, it's time for the New Year's Big \nLuck Draw Festival! The special prize is a \nhot spring trip ticket!",
+            "nextBlock": 5,
+            "coloredText": [
+                {
+                    "jpText": "温泉旅行券",
+                    "enText": "hot-spring resort voucher"
+                }
+            ],
+            "pathId": -4907210405440720961,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "1等は『特上にんじんハンバーグ』\r\n2等は『にんじん山盛り』\n3等は『にんじん1本』！",
+            "enText": "First prize is a \"special carrot hamburger \nsteak\", second prize is a \"pile of carrots\", \nand third prize is a \"carrot\"!",
+            "nextBlock": 6,
+            "pathId": -3072286045863851665,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "そこの仲良しそうなお2人！\r\nよければやっていかないかい～！",
+            "enText": "You two look like good friends! Why \ndon't you go ahead and do it?",
+            "nextBlock": 7,
+            "pathId": 6424843981399100328,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "特上にんじんハンバーグ、だと……！",
+            "enText": "Special carrot hamburger, it says…!",
+            "nextBlock": 8,
+            "pathId": 5192846682486486843,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "トレーナー！\r\nやろう……福引を！",
+            "enText": "Trainer! Let's do the… lucky draw!",
+            "nextBlock": 9,
+            "pathId": -9006750163499403996,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "1回……うん、1回だけでいいんだ。\r\n私にチャンスをくれないか？",
+            "enText": "One time… Yeah, one time is all I \nneed. Give me a chance, will you?",
+            "nextBlock": 10,
+            "pathId": 3666402692617198806,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "1回で何も出なければ、潔く諦める。\r\nだから、どうか……頼む！",
+            "enText": "If I don't get anything in one try, I'll give \nup gracefully. So please… please!",
+            "nextBlock": 11,
+            "choices": [
+                {
+                    "jpText": "もちろんいいぞ",
+                    "enText": "Of course you can.",
+                    "nextBlock": 11
+                },
+                {
+                    "jpText": "もちろんいいよ",
+                    "enText": "Sure, sure.",
+                    "nextBlock": 11
+                }
+            ],
+            "pathId": 5919101912268140696,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……っ！\r\nありがとう！",
+            "enText": "…! Thank you!",
+            "nextBlock": 12,
+            "pathId": -4855105792648548656,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "もらったチャンスは、必ず活かす。\r\n特上にんじんハンバーグを、手に入れてくる！",
+            "enText": "I'll take the chance I get. I'm going to get \nmy hands on that special carrot hamburger!",
+            "nextBlock": 13,
+            "choices": [
+                {
+                    "jpText": "待て、まず福引券を手に入れないと！",
+                    "enText": "Wait, first I have to get \nthe lucky draw ticket!",
+                    "nextBlock": 13
+                },
+                {
+                    "jpText": "待って、まず福引券を手に入れないと！",
+                    "enText": "Wait, first I have to get \nthe lucky draw ticket!",
+                    "nextBlock": 13
+                }
+            ],
+            "pathId": -6717158698903051139,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "む、福引券？\r\nそれはどこで手に入るんだ？",
+            "enText": "No, a lucky draw ticket? Where \ncan I get one of those?",
+            "nextBlock": 14,
+            "choices": [
+                {
+                    "jpText": "買い物をしたらもらえるぞ",
+                    "enText": "You'll get it when you shop.",
+                    "nextBlock": 14
+                },
+                {
+                    "jpText": "買い物をしたらもらえるよ",
+                    "enText": "You'll get it when you shop.",
+                    "nextBlock": 14
+                }
+            ],
+            "pathId": -4972600876403255480,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "わかった。\r\nおやつでも買っておこう。",
+            "enText": "Okay, okay. I'll buy you a snack.",
+            "nextBlock": 15,
+            "pathId": 3206554334470110446,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "……ということで、福引券1枚をゲットした。",
+            "enText": "It was… and I got one of \nthe lucky draw tickets.",
+            "nextBlock": 16,
+            "pathId": -2798453485911702894,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "よし……！\r\n行こう、トレーナー！",
+            "enText": "Okay…! Let's go, trainer!",
+            "nextBlock": 17,
+            "pathId": -8331045775769792000,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "真剣な表情のオグリキャップが、\r\n抽選器に手をかける。\nまるでレース前のような緊張感だ……。",
+            "enText": "Oguri-cap, with a serious expression on her \nface, puts her hand on the drawing board. \nIt's as tense as before a race…",
+            "nextBlock": 18,
+            "pathId": 68035535411704861,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "そして――力強く回した！\r\n結果は――",
+            "enText": "And—and turned it hard! The result—",
+            "nextBlock": 19,
+            "pathId": 255288893679438182,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "なんとっ！　おめでとうございまぁぁぁす！！\r\n特賞『温泉旅行券』、出ましたぁ～～～～！！",
+            "enText": "Oh, my God! Congratulations! The special \nprize, a trip to the hot springs, is now \navailable at ～～～～!",
+            "nextBlock": 20,
+            "pathId": 904623425057578771,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "『<itemname>』を獲得した",
+            "enText": "I got \"<itemname>\".",
+            "nextBlock": 21,
+            "coloredText": [
+                {
+                    "jpText": "<itemname>",
+                    "enText": "<itemname"
+                }
+            ],
+            "pathId": 2110018737236017900,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "なっ……！\r\n温泉旅行……！",
+            "enText": "なっ…! A trip to the hot springs…!",
+            "nextBlock": 22,
+            "pathId": -4331839270059021309,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "この福引は、\r\n温泉旅行に連れて行ってくれるのか！？",
+            "enText": "Will this lucky draw take \nme to a hot spring trip?",
+            "nextBlock": 23,
+            "choices": [
+                {
+                    "jpText": "ああ、特賞のチケットだ",
+                    "enText": "Yeah, a special prize ticket.",
+                    "nextBlock": 23
+                },
+                {
+                    "jpText": "うん、特賞のチケットだよ",
+                    "enText": "Yeah, it's a special prize ticket.",
+                    "nextBlock": 23
+                }
+            ],
+            "pathId": 1721635530706745949,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "そうだったのか。特上にんじんハンバーグ\r\nしか聞こえていなかった……。",
+            "enText": "I didn't know that. The only thing I heard \nwas a special carrot hamburger…",
+            "nextBlock": 24,
+            "choices": [
+                {
+                    "jpText": "ハンバーグじゃなくて残念？",
+                    "enText": "Too bad it's not a hamburger?",
+                    "nextBlock": 24
+                }
+            ],
+            "pathId": 621634850703934087,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……いや、すごく嬉しい。\r\nむしろ、ハンバーグよりも嬉しいな。",
+            "enText": "… No, I'm very happy. In fact, I'm more than \nhappy with the hamburger.",
+            "nextBlock": 25,
+            "pathId": -6829793568756814683,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "温泉は大好きなんだ。\r\n故郷でも、よく秘湯巡りをしたものだ。",
+            "enText": "I love hot springs. Even in my hometown, I \nused to visit hidden hot springs.",
+            "nextBlock": 26,
+            "pathId": -8783447191931560133,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "そうか、温泉に行けるのか……。",
+            "enText": "Oh yeah, you can go to the hot springs…",
+            "nextBlock": 27,
+            "choices": [
+                {
+                    "jpText": "誰か友だちを誘っておいで",
+                    "enText": "Invite some friends over.",
+                    "nextBlock": 27
+                }
+            ],
+            "pathId": -6395151883451417774,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "友だち……ううん、悩むな。\r\n一緒に温泉に行きたい、友だち……。",
+            "enText": "I want to go to the hot springs with you, my \nfriend… Umm, don't bother. I want to go to \nthe spa with you, my friend…",
+            "nextBlock": 28,
+            "pathId": -4809704403065196914,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……なあ、この券、\r\nしばらく預かっておいてくれないか？",
+            "enText": "… Hey, can you hold onto these \ntickets for me for a while?",
+            "nextBlock": 29,
+            "choices": [
+                {
+                    "jpText": "いいけど……どうして？",
+                    "enText": "Okay, but… why?",
+                    "nextBlock": 29
+                }
+            ],
+            "pathId": -4822756995999538908,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "いずれにせよ、いますぐには行けないだろう。\r\n私もみんなも、やるべきことがある。",
+            "enText": "In any case, I won't be able to go right now. \nI and everyone else have things to do.",
+            "nextBlock": 30,
+            "pathId": -6676421438954951256,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "なら、キミが持っていた方が安全だ。\r\n私だと、洗濯物と一緒に回しかねない。",
+            "enText": "Then it's safer for you to have it. I'll \njust throw it in with the laundry.",
+            "nextBlock": 31,
+            "pathId": -7908333233572880287,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "だから、よろしく頼む。",
+            "enText": "So take care of it.",
+            "nextBlock": 32,
+            "pathId": -3713642596216701112,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "……一理あると思ったので、\r\n温泉旅行券を預かることになった。",
+            "enText": "I thought… she had a point, so I decided to \nkeep the spa trip ticket.",
+            "nextBlock": -1,
+            "pathId": -234180761195734944,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "おめでとうございます、1等賞～！\r\n賞品は『特上にんじんハンバーグ』です！",
+            "enText": "Congratulations, first prize~! The prize is \na \"Special Carrot Hamburger\"!",
+            "nextBlock": 34,
+            "pathId": 3384110504545228100,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "『<itemname>』を獲得した",
+            "enText": "I got \"<itemname>\".",
+            "nextBlock": 35,
+            "coloredText": [
+                {
+                    "jpText": "<itemname>",
+                    "enText": "<itemname"
+                }
+            ],
+            "pathId": -3644260712032485969,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "おお……！\r\nおおおお……！",
+            "enText": "Oh…! Oh, oh…!",
+            "nextBlock": 36,
+            "pathId": -8706829407077339604,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "これが特上にんじんハンバーグ……！\r\nなんという大きさ、なんという厚さ……！",
+            "enText": "This is the special carrot hamburger…! What \na size, what a thickness…!",
+            "nextBlock": 37,
+            "pathId": -3472082327895319763,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……ごくっ。",
+            "enText": "Go to…",
+            "nextBlock": 38,
+            "choices": [
+                {
+                    "jpText": "まだだぞ、オグリ",
+                    "enText": "Not yet, Ogri.",
+                    "nextBlock": 38
+                },
+                {
+                    "jpText": "まだだよ、オグリ",
+                    "enText": "Not yet, Ogri.",
+                    "nextBlock": 38
+                }
+            ],
+            "pathId": 4037785441952757742,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……大丈夫だ。\r\nここで食べるような真似はしない。",
+            "enText": "… It's okay. I'm not going \nto try to eat here.",
+            "nextBlock": 39,
+            "pathId": 1161470012700501063,
+            "blockIdx": 38
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "だから、早く帰ろう。\r\n私の口が、暴走しないうちに！",
+            "enText": "So let's get home. Before my \nmouth gets out of control!",
+            "nextBlock": 40,
+            "pathId": 6599443570205931813,
+            "blockIdx": 39
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "……その後、いつもよりもだいぶ早歩きな\r\nオグリキャップを必死で追いかけ、\nなんとか美味しいごちそうを頂いたのだった。",
+            "enText": "… Afterwards, I chased after Oguri Cap, who \nwas walking much faster than usual, and \nmanaged to get a delicious meal.",
+            "nextBlock": -1,
+            "pathId": 5409867978091695171,
+            "blockIdx": 40
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "2等賞～！！\r\n賞品は『にんじん山盛り』です！",
+            "enText": "Second prize~! The prize \nis a pile of carrots!",
+            "nextBlock": 42,
+            "pathId": -3823749788429316258,
+            "blockIdx": 41
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "『<itemname>』を獲得した",
+            "enText": "I got \"<itemname>\".",
+            "nextBlock": 43,
+            "coloredText": [
+                {
+                    "jpText": "<itemname>",
+                    "enText": "<itemname"
+                }
+            ],
+            "pathId": -3325036054102998357,
+            "blockIdx": 42
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "む、にんじん山盛りか……。\r\nこれはこれで、嬉しいものだな！",
+            "enText": "Mmm, a pile of carrots… Now that's \nsomething to be happy about!",
+            "nextBlock": 44,
+            "pathId": -6278426374029946802,
+            "blockIdx": 43
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "だが、ハンバーグ……\r\nやっぱり、食べたかったな……。",
+            "enText": "But I still wanted to eat a hamburger…",
+            "nextBlock": 45,
+            "pathId": -6336770231152960870,
+            "blockIdx": 44
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……あ。",
+            "enText": "… Oh.",
+            "nextBlock": 46,
+            "choices": [
+                {
+                    "jpText": "どうしたんだ？",
+                    "enText": "What's going on?",
+                    "nextBlock": 46
+                },
+                {
+                    "jpText": "どうしたの？",
+                    "enText": "What's going on?",
+                    "nextBlock": 46
+                }
+            ],
+            "pathId": -7928837280918740739,
+            "blockIdx": 45
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "にんじんハンバーグは、元を辿ればにんじん。\r\nつまりこのにんじんたちは――",
+            "enText": "Carrot hamburger comes from carrots. In \nother words, these carrots are…",
+            "nextBlock": 47,
+            "pathId": -3666882751458017268,
+            "blockIdx": 46
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "ハンバーグでもあるということだ。\r\nうん……いける！",
+            "enText": "It means it's also a hamburger. \nYeah… I can do that!",
+            "nextBlock": 48,
+            "pathId": -5195142678952929042,
+            "blockIdx": 47
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "その後オグリキャップと、\r\nたくさんのにんじんを抱えて\n仲良く持ち帰った。",
+            "enText": "After that, she and Oguri-cap brought back a \nlot of carrots, all in good company.",
+            "nextBlock": -1,
+            "pathId": 2812296271799881141,
+            "blockIdx": 48
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "3等賞～！\r\n賞品は『にんじん1本』です！",
+            "enText": "Third prize! The prize is \"a carrot\"!",
+            "nextBlock": 50,
+            "pathId": -1663561217959904998,
+            "blockIdx": 49
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "『<itemname>』を獲得した",
+            "enText": "I got \"<itemname>\".",
+            "nextBlock": 51,
+            "coloredText": [
+                {
+                    "jpText": "<itemname>",
+                    "enText": "<itemname"
+                }
+            ],
+            "pathId": 206619966100681641,
+            "blockIdx": 50
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……い、1本……。",
+            "enText": "… Yes, one bottle…",
+            "nextBlock": 52,
+            "choices": [
+                {
+                    "jpText": "……大丈夫か？",
+                    "enText": "… Are you okay?",
+                    "nextBlock": 52
+                },
+                {
+                    "jpText": "……大丈夫？",
+                    "enText": "… great husband?",
+                    "nextBlock": 52
+                }
+            ],
+            "pathId": -6700542248905714272,
+            "blockIdx": 51
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……大丈夫だ。\r\n思い出したんだ……。",
+            "enText": "… It's okay. I just remembered…",
+            "nextBlock": 53,
+            "pathId": 237361271022336505,
+            "blockIdx": 52
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "幼い頃、故郷で……\r\nどうしてもお腹がすいたときがあった。",
+            "enText": "When I was a little girl in my hometown… \nthere were times when I was really hungry.",
+            "nextBlock": 54,
+            "pathId": -5637221141101499494,
+            "blockIdx": 53
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "そのとき道端で会ったシゲさんが、\r\n1本のにんじんをくれたんだ。",
+            "enText": "At that time, I met Ms. Shige on the street \nand she gave me a carrot.",
+            "nextBlock": 55,
+            "pathId": 6031363322060565771,
+            "blockIdx": 54
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "それをかじった時、それまで食べた\r\nどのにんじんよりもずっと……甘く感じた。",
+            "enText": "When I bit into it, it felt much… sweeter \nthan any carrot I had ever eaten before.",
+            "nextBlock": 56,
+            "pathId": -9054477518671371923,
+            "blockIdx": 55
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……このにんじんも、きっと\r\nそんな味がする……気がする。",
+            "enText": "… I'm sure this carrot tastes like \nthat too… I have a feeling.",
+            "nextBlock": 57,
+            "pathId": 4168880041318063355,
+            "blockIdx": 56
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "1本のにんじんを大切にかじる\r\nオグリキャップを眺めつつ、\nその日はゆっくり帰った……。",
+            "enText": "Watching Oguri Cap carefully nibbling on a \ncarrot, I went home slowly that day…",
+            "nextBlock": -1,
+            "pathId": -2578282016815295263,
+            "blockIdx": 57
+        },
+        {
+            "jpName": "商店街の人",
+            "enName": "Market Person",
+            "jpText": "残念、はずれ！\r\n参加賞は『ティッシュ』だよ～。",
+            "enText": "Too bad we didn't make it! The prize for \nparticipation is a tissue!",
+            "nextBlock": 59,
+            "pathId": 6562219685804697066,
+            "blockIdx": 58
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "『<itemname>』を獲得した",
+            "enText": "I got \"<itemname>\".",
+            "nextBlock": 60,
+            "coloredText": [
+                {
+                    "jpText": "<itemname>",
+                    "enText": "<アイテム名>"
+                }
+            ],
+            "pathId": -2995863087915392459,
+            "blockIdx": 59
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……っ！\r\nティッシュ……ティッシュか……。",
+            "enText": "…! Tissue… tissue or…",
+            "nextBlock": 61,
+            "pathId": 1986785174862850112,
+            "blockIdx": 60
+        },
+        {
+            "jpName": "オグリキャップ",
+            "enName": "Oguri Cap",
+            "jpText": "……茹でれば、\r\n食べられたりしないだろうか……。",
+            "enText": "I wonder if I could boil it and eat it…",
+            "nextBlock": 62,
+            "pathId": -3708115386739937106,
+            "blockIdx": 61
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "オグリキャップが早まらないよう、\r\n必死に慰めたのだった……。",
+            "enText": "She tried desperately to comfort Oguri Cap \nso that she wouldn't be too quick…",
+            "nextBlock": -1,
+            "pathId": -932097573229815160,
+            "blockIdx": 62
+        }
+    ]
+}

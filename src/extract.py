@@ -155,6 +155,8 @@ def transferExisting(storyId, textData):
                 if 'coloredText' in block:
                     for idx, cText in enumerate(textData['coloredText']):
                         cText['enText'] = block['coloredText'][idx]['enText']
+                if 'skip' in block:
+                    textData['skip'] = block['skip']
 
 
 def exportData(data, filepath: str):

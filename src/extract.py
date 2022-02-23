@@ -13,7 +13,7 @@ if args.getArg("-h"):
                  "Any order. Defaults to extracting all text, skip existing")
 
 EXTRACT_TYPE = args.getArg("-t", "story").lower()
-if not EXTRACT_TYPE in ["story", "home", "race", "lyrics"]: 
+if not EXTRACT_TYPE in ["story", "home", "race", "lyrics", "preview"]: 
     print(f"Invalid type {EXTRACT_TYPE}")
     raise SystemExit
 EXTRACT_GROUP = args.getArg("-g", "__")
@@ -33,6 +33,8 @@ def queryDB():
         pattern = f"race/storyrace/text/storyrace_{EXTRACT_GROUP}{EXTRACT_ID}%"
     elif EXTRACT_TYPE == "lyrics":
         pattern = f"live/musicscores/m{EXTRACT_ID}/m{EXTRACT_ID}_lyrics"
+    elif EXTRACT_TYPE == "preview":
+        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{EXTRACT_ID}"
     db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(
         f"select h, n from a where n like '{pattern}' limit {EXTRACT_LIMIT};")
@@ -68,6 +70,11 @@ def extractAsset(path, storyId):
             # export['text'] = extractText("lyrics", data.text)
             export['storyId'] = tree['m_Name'][1:5]
             export['text'] = extractText("lyrics", tree['m_Script'])
+        elif EXTRACT_TYPE == "preview":
+            export['storyId'] = tree['m_Name'][-4:]
+            for block in tree['DataArray']:
+                textData = extractText("preview", block)
+                export['text'].append(textData)
         else:
             export['storyId'] = tree['StoryId']
             export['title'] = tree['Title']
@@ -106,6 +113,13 @@ def extractText(assetType, obj):
                 'time': time
             })
         return o
+    elif assetType == "preview":
+        o = {
+                'jpName': obj['Name'],
+                'enName': "",
+                'jpText': obj['Text'],
+                'enText': "",
+            }
     elif obj.serialized_type.nodes:
         tree = obj.read_typetree()
         o = {
@@ -172,6 +186,8 @@ def parseStoryId(path) -> tuple:
         return storyId[:2], storyId[3:7], storyId[7:]
     elif EXTRACT_TYPE == "lyrics":
         return None, path[-11:-7], path[-11:-7]
+    elif EXTRACT_TYPE == "preview":
+        return None, None, path[-4:]
     else:
         # story and storyrace
         storyId = path[-9:]
@@ -181,7 +197,7 @@ def parseStoryId(path) -> tuple:
 
 def exportAsset(bundle: str, path: str):
     group, id, idx = parseStoryId(path)
-    if EXTRACT_TYPE == "lyrics":
+    if EXTRACT_TYPE in ("lyrics", "preview"):
         exportDir = Path(EXPORT_DIR)
     else:
         exportDir =  Path(EXPORT_DIR).joinpath(group, id)

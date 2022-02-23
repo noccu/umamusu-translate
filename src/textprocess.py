@@ -66,7 +66,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
 
     if targetLines > 0 and len(lines) > targetLines:
         print(f"Exceeded target lines ({targetLines}) in {file.name} at: ", lines)
-    return "\\n".join(lines) if file.getType() == "race" else "\n".join(lines)
+    return "\\n".join(lines) if file.getType() in ("race", "preview") else "\n".join(lines)
 
 def replace(text: str):
     global REPLACEMENT_DATA

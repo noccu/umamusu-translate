@@ -48,7 +48,7 @@ def swapAssetData(tlFile: TranslationFile):
             continue
         
         # Set up assets
-        if assetType == "race":
+        if assetType in ("race", "preview"):
             if not lockAsset:
                 asset = mainFile
                 assetData = asset.read_typetree()
@@ -71,6 +71,9 @@ def swapAssetData(tlFile: TranslationFile):
         # Swap data
         if assetType == "race":
             assetData['textData'][textIdx]['text'] = textData['enText']
+        elif assetType == "preview":
+            assetData['DataArray'][textIdx]['Name'] = textData['enName']
+            assetData['DataArray'][textIdx]['Text'] = textData['enText']
         elif assetType == "lyrics":
             # Format the CSV text. Their parser uses quotes, no escape chars. For novelty: \t = space; \v and \f = ,; \r = \n
             text = textData['enText']
@@ -105,7 +108,7 @@ def swapAssetData(tlFile: TranslationFile):
     if textBlocksSkipped == len(textList):
         env = None
     else:
-        if assetType == "race": asset.save_typetree(assetData)
+        if assetType in ("race", "preview"): asset.save_typetree(assetData)
         elif assetType == "lyrics": 
             assetData.script = bytes(assetText, "utf8")
             assetData.save()

@@ -19,7 +19,7 @@ def searchFiles(targetType, targetGroup, targetId) -> list:
         if targetGroup and depth == 2:
             dirs[:] = [d for d in dirs if d == targetGroup]
         elif targetId:
-            if targetType == "lyrics":
+            if targetType in ("lyrics", "preview"):
                 found.extend(os.path.join(root, file) for file in files if PurePath(file).stem == targetId)
                 continue
             elif depth == 4:

@@ -1,7 +1,23 @@
 This project aims to translate *Uma Musume Pretty Derby* through (mainly) Unity asset edits.  
+The intent is to be an all-in-one toolset/patch but right now it is focused on any dialogues with a few extras.  
 Translation progress can be checked on the [overview][tl-progress].
 
 This is based on the DMM version of the game. If you can figure out how to run it on other versions, it may (should) work as well, but no support is provided right now.
+
+# Features
+Translates (or *can* translate):
+- Character stories
+- Main & Event stories
+    - Race segments
+    - Event prologues
+- Training stories
+- Home screen interactions
+- Lyrics
+- Planned: images
+- Deepl integration for automatic machine translation
+
+Provides text strings and related tools for UI translation using [umamusume-localify][]  
+Toolset: see [scripts](#script-info)
 
 # Disclaimer
 

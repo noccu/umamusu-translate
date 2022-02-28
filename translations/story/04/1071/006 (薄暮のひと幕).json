@@ -1,0 +1,545 @@
+{
+    "version": 3,
+    "bundle": "2LXDG2JESNDWTZ2CJ5GLMUQZ2UJJ2H74",
+    "type": "story",
+    "storyId": "041071006",
+    "title": "薄暮のひと幕",
+    "text": [
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "……そろそろでしょうか？\r\nふふっ、こうして開演を待つ時間も、楽しいものですね。",
+            "enText": "… Isn't it about time? It's fun to \nwait for the show to start, isn't it?",
+            "nextBlock": 2,
+            "pathId": 6590619045464670916,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "時間は少し遡る――",
+            "enText": "Let's go back in time a little.",
+            "nextBlock": 3,
+            "pathId": 1858915097345865243,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "？？？",
+            "enName": "???",
+            "jpText": "では行って参ります。\r\n帰宅の際には連絡をいれますので。",
+            "enText": "I'm going to go now. I'll call \nyou when I get home.",
+            "nextBlock": 4,
+            "pathId": -8592069554516724528,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "あら、トレーナーさん？\r\nごきげんよう、偶然ですね。",
+            "enText": "Oh, you're a trainer? How do \nyou do? What a coincidence.",
+            "nextBlock": 5,
+            "choices": [
+                {
+                    "jpText": "どこかへお出かけ？",
+                    "enText": "Going somewhere?",
+                    "nextBlock": 5
+                }
+            ],
+            "pathId": -5691541025601939434,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "はい、劇場で観劇を。\r\n実は主催者様にペアチケットでご招待をいただきまして。",
+            "enText": "Yes, I saw a play at the theater. \nActually, I was invited by the organizer \nas a pair of tickets.",
+            "nextBlock": 6,
+            "pathId": -5263261997476276389,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "当初は姉と来る予定だったのですが、\r\nあいにくレースの出走が重なってしまい――……あっ。",
+            "enText": "I had originally planned to come \nwith my sister, but unfortunately, \nwe had a race to run—…",
+            "nextBlock": 7,
+            "pathId": -8281109405649736385,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "あの、突然のお誘いになりますけれど、\r\nよろしければ、ご一緒にいかがですか？",
+            "enText": "I know this is a bit sudden, but if you \ndon't mind, would you like to join us?",
+            "nextBlock": 8,
+            "pathId": -953646834272318001,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "トレーナーさんとご一緒できて、嬉しく思います。\r\nとても人気のある作品で、ずっと観たいと考えておりましたから。",
+            "enText": "It was a pleasure to be with you and your \ntrainer. It's a very popular film and I've \nalways wanted to see it.",
+            "nextBlock": 9,
+            "choices": [
+                {
+                    "jpText": "どんな話なんだ？",
+                    "enText": "What's the story?",
+                    "nextBlock": 9
+                },
+                {
+                    "jpText": "どんな話？",
+                    "enText": "What's the story?",
+                    "nextBlock": 9
+                }
+            ],
+            "pathId": -4892269854188122937,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "仲良しの騎士2人が、有名になるために\r\n古城へ幽霊退治に行くという、いわゆる喜劇です。",
+            "enText": "It's a comedy about two knights who are good \nfriends and go to an old castle to kill \nghosts in order to become famous.",
+            "nextBlock": 10,
+            "pathId": -7066606348242465588,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "古典をベースにしておりますが、現代劇としても\r\n見ごたえがあるそうで……ああ、始まりますね。",
+            "enText": "It's based on the classics, but it's also a \ngreat modern drama… Oh, it's starting.",
+            "nextBlock": 11,
+            "pathId": -3872124598345415340,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "騎士A",
+            "enName": "",
+            "jpText": "見ろ、友よ。あれこそ、薄暮にしか現れぬという呪いの城だ！\r\nなんという威容であろう……。",
+            "enText": "Look, my friend. That's the cursed \ncastle that only appears at dusk! \nWhat a majestic sight… is.",
+            "nextBlock": 12,
+            "pathId": -7525844182998031775,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "騎士B",
+            "enName": "",
+            "jpText": "だが、忌まわしき悪霊など恐れはしない！　ああ神よ、\r\nこの討伐を見届け給え！　今こそ我らが英雄と世に知らしめる時――",
+            "enText": "But I fear no abominable demon! Oh, Lord, see \nto it that we are defeated! Now is the time \nfor the world to know that we are heroes.",
+            "nextBlock": 13,
+            "pathId": -4447085242481985884,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "2人の騎士",
+            "enName": "",
+            "jpText": "おおおお化けっ！？　って、今のはお前か！？\r\n……おいっ、真似をするな！！　このぉ～～っ！",
+            "enText": "Oh, no! You're the one who did that!… Hey, \ndon't do that! I'm not sure what to do.",
+            "nextBlock": 14,
+            "pathId": -2830788631847794947,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "まあ！　……ふふっ。",
+            "enText": "Well! … Hmmm.",
+            "nextBlock": 15,
+            "pathId": 1176038754866487332,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "話題の演目だけあって劇は面白く、なによりメジロアルダンが\r\nコロコロと表情を変えるのが印象的だった――",
+            "enText": "The play was interesting as it was a hot topic, and above all, \nit was impressive to see the expression on the face of Mejiro \nArdan change from one moment to the next.",
+            "nextBlock": 16,
+            "pathId": -2431624758067618118,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "評判通りの演目でしたね。\r\n物音に驚いて飛び跳ねたお2人が、本当に可愛らしくて。",
+            "enText": "The performance was as good as its reputation. \nThe two of them jumping up and down when they \nwere startled by a noise was really cute.",
+            "nextBlock": 17,
+            "pathId": 947288830170299913,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "ただ……最後まで幽霊に会えなかったのは残念でした。\r\n私なら、諦めきれずにまたお城へ伺ってしまうかもしれません。",
+            "enText": "It was just a pity that I couldn't see the \nghost until the end of the… I might not be \nable to give up and visit the castle again.",
+            "nextBlock": 18,
+            "choices": [
+                {
+                    "jpText": "そんなに会ってみたい？",
+                    "enText": "You want to meet her that badly?",
+                    "nextBlock": 18
+                }
+            ],
+            "pathId": -9005992142027442990,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "紅茶を手に語り合いたいほどに。\r\nきっと長い時間、お城の歴史を見つめていらした方ですし――",
+            "enText": "I wanted to talk to her over a cup of tea. \nI'm sure you've been looking at the history \nof the castle for a long time.",
+            "nextBlock": 19,
+            "pathId": 8482351656509715167,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "お話できれば……忘れ去られてしまった誰かの輝きを\r\nほんの刹那でも、甦らせることができますでしょう？",
+            "enText": "If you can talk to… even for a moment, you \ncan bring back the sparkle of someone who \nhas been forgotten, can you not?",
+            "nextBlock": 20,
+            "pathId": -8750214493196278209,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "…………まあ、心地いい風ですね。",
+            "enText": "… Well, it's a pleasant breeze.",
+            "nextBlock": 21,
+            "pathId": 3972887531474889636,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "あの、トレーナーさん？　よろしければ、少し歩きませんか。\r\n夕暮れがとても綺麗で、なんだか――",
+            "enText": "Um, trainer? If you don't mind, I'd like to \ntake a short walk. The sunset is so \nbeautiful, it's kind of—",
+            "nextBlock": 22,
+            "choices": [
+                {
+                    "jpText": "今なら、あの城が見つかるかも？",
+                    "enText": "Maybe now we can find that castle?",
+                    "nextBlock": 22
+                }
+            ],
+            "pathId": -5047940499207314182,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "……ふふっ、そうなったら、とても素敵ですよね。",
+            "enText": "… Hmmm, that would be very nice.",
+            "nextBlock": 23,
+            "pathId": 8095732105538932267,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "子どもの頃はよく、その日に観た劇の\r\n登場人物に自分がなったら、という想像をしておりました。",
+            "enText": "When I was a child, I used to imagine \nthat I was a character in a play \nthat I saw that day.",
+            "nextBlock": 24,
+            "pathId": 909642320367408282,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "男の子になったり、おばあさんになったり。\r\n元気に冒険したり、時には悪いことをして怒られてしまったり。",
+            "enText": "You can be a boy or a grandmother. You can be a boy or a \ngrandmother. You can be cheerful and adventurous, or you can be \nangry and do bad things.",
+            "nextBlock": 25,
+            "pathId": -5204680219309037055,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "誰しも1度きりのはずの人生を、想像の中でだけ入れ替わってみる。\r\n内緒の遊びのようで、とても楽しく思えて……。",
+            "enText": "We all live only once, but we can switch our \nlives only in our imagination. It's like a \nsecret game, but it seems so much fun…",
+            "nextBlock": 26,
+            "choices": [
+                {
+                    "jpText": "今は、騎士になった想像をしてる？",
+                    "enText": "Now you're imagining you're a knight?",
+                    "nextBlock": 26
+                }
+            ],
+            "pathId": -6392848559457116091,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "どうでしょう？　もしかしたら自分を退治しにきた騎士様を、\r\n興味津々に観察している幽霊かもしれませんよ？",
+            "enText": "What do you think? Maybe it's a ghost who is \ncuriously observing the knight who came to \nexterminate her?",
+            "nextBlock": 27,
+            "choices": [
+                {
+                    "jpText": "観察するだけ？",
+                    "enText": "Just to observe?",
+                    "nextBlock": 27
+                }
+            ],
+            "pathId": -7426623199488880463,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "……そうですね、騎士様が気づいてくださるなら、\r\n幽霊はきっと騎士様とお話ししたいと考えるかと。",
+            "enText": "… Well, if the knight notices, I'm sure \nthe ghost will want to talk to the knight.",
+            "nextBlock": 28,
+            "pathId": 9177530938747775057,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "私が幽霊でしたら、騎士様がどんな方なのか\r\n知りたいと思いますもの。",
+            "enText": "If I were a ghost, I would want to know what \nkind of person the knight-sama is.",
+            "nextBlock": 29,
+            "pathId": -626552610205657893,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "例えば、騎士様はご幼少のみぎり、\r\nどのように過ごしていらしたのでしょう？",
+            "enText": "For example, how did the knight \nspend her early years?",
+            "nextBlock": 30,
+            "pathId": -6210032545434855196,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "――まあ、そんなことが！　ふふっ、子どもの頃の\r\nトレーナーさんは、きっと可愛らしくていらしたのでしょうね。",
+            "enText": "—Well, that's just it! Hmmm, I bet \nyour trainer must have been adorable \nwhen you were a kid.",
+            "nextBlock": 31,
+            "pathId": 3134615566949093042,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "なんだか、いくらお話ししても足りない気がいたします。\r\nトレーナーさんは他に、なにをして遊ばれたのですか？",
+            "enText": "I feel like no matter how much we talk about \nit, it's not enough. What else did the \ntrainer do for fun?",
+            "nextBlock": 32,
+            "choices": [
+                {
+                    "jpText": "そうだなあ、確か今の季節なら……",
+                    "enText": "Yeah, I'm pretty sure it's… \nthis time of year.",
+                    "nextBlock": 32
+                }
+            ],
+            "pathId": 2199331641927914491,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "……え？　あ……っ。",
+            "enText": "… huh? Oh…",
+            "nextBlock": 33,
+            "pathId": 3944733184897267668,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "し、失礼いたしました。こんな……私としたことが……。",
+            "enText": "I'm sorry for the inconvenience. \nThis is the… thing I did.",
+            "nextBlock": 34,
+            "choices": [
+                {
+                    "jpText": "ずいぶん歩いたから、お腹も空くよな",
+                    "enText": "We've been walking a lot, \nso we must be hungry.",
+                    "nextBlock": 34
+                },
+                {
+                    "jpText": "ずいぶん歩いたから、お腹も空くよね",
+                    "enText": "We've been walking a lot, \nso we must be hungry.",
+                    "nextBlock": 34
+                }
+            ],
+            "pathId": -3121144238076083221,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "まあ……いつの間にこんなところまで？\r\nお話に夢中で、気づいておりませんでした。",
+            "enText": "Well… when did you get here? I \nwas so engrossed in your story \nthat I hadn't noticed.",
+            "nextBlock": 35,
+            "pathId": -8831038096581061673,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "……こんなに歩き回ってしまうなんて。\r\nみんなに心配をかけないよう、控えなければならないのに。",
+            "enText": "… I can't believe I'm walking around so much. \nI had to refrain from doing so so as not to \nworry everyone.",
+            "nextBlock": 36,
+            "choices": [
+                {
+                    "jpText": "このぐらい“今の”君なら大丈夫だろう？",
+                    "enText": "I'm sure you can handle this, right?",
+                    "nextBlock": 36
+                },
+                {
+                    "jpText": "このぐらい“今の”貴方なら大丈夫だよね？",
+                    "enText": "I'm sure you can handle this, right?",
+                    "nextBlock": 36
+                }
+            ],
+            "pathId": -4788220172417115051,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "あ……。",
+            "enText": "Oh…",
+            "nextBlock": 37,
+            "pathId": 3531025930605020463,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "ですから……いかがでしょうか。\r\n明日からこのメニューを基準に組む、というのは。",
+            "enText": "So how about…? You can use this \nmenu as a starting point tomorrow.",
+            "nextBlock": 38,
+            "pathId": -4416865513546152604,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "『同じことを言おうと思ってた』",
+            "enText": "\"I was going to say the same thing.\"",
+            "nextBlock": 39,
+            "pathId": -550938846685887539,
+            "blockIdx": 38
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "まあ！　……ふふっ“今”に感謝しなければ。このところは\r\n特に調子がよくて、体の熱で動けなくなることもありませんし。",
+            "enText": "Well! I should be grateful for the \"now\". I'm \nfeeling especially good these days, and I \ndon't get stuck in a fever.",
+            "nextBlock": 40,
+            "pathId": 7309710064996802800,
+            "blockIdx": 39
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "（そうだ……あの時も今も。\r\nトレーナーさんはいつだって……）",
+            "enText": "(Yes… then and now. Your trainer \nwill always be…)",
+            "nextBlock": 41,
+            "pathId": 5615846885027870588,
+            "blockIdx": 40
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "（不思議……なんだか、胸が温かい……。\r\nトレーナーさんは、本当に私を――）",
+            "enText": "(Wonder… something, my heart is warm \n… The trainer really makes me—)",
+            "nextBlock": 42,
+            "choices": [
+                {
+                    "jpText": "どうかした？",
+                    "enText": "What's wrong?",
+                    "nextBlock": 42
+                }
+            ],
+            "pathId": -7220425369350908362,
+            "blockIdx": 41
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "あ……いいえ、なんでもありません。\r\nただ、今日は楽しかったなと考えておりました。",
+            "enText": "Oh… No, it's nothing. I was just thinking \nabout how much fun I had today.",
+            "nextBlock": 43,
+            "choices": [
+                {
+                    "jpText": "楽しんだ分、きっと夕飯が美味しいな",
+                    "enText": "I'm sure you'll have a great dinner \nafter all the fun you had.",
+                    "nextBlock": 43
+                },
+                {
+                    "jpText": "楽しんだ分、きっと夕飯が美味しいよね",
+                    "enText": "I'm sure you'll have a great dinner \nafter all the fun you had.",
+                    "nextBlock": 43
+                }
+            ],
+            "pathId": 5431116204002262747,
+            "blockIdx": 42
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "もう、あまりからかわないでください。\r\nですが――",
+            "enText": "Please don't tease me too \nmuch anymore. But, sir…",
+            "nextBlock": 44,
+            "pathId": -314734714863045172,
+            "blockIdx": 43
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "ええ……今日は本当に充実した1日でした。\r\n思いがけず、知らない自分を知ることができましたし。",
+            "enText": "Yes… today was a really fulfilling day for \nme. I was able to learn about myself in a \nway that I didn't expect.",
+            "nextBlock": 45,
+            "choices": [
+                {
+                    "jpText": "それって、どんな？",
+                    "enText": "What's that like?",
+                    "nextBlock": 45
+                }
+            ],
+            "pathId": -2820309408870876715,
+            "blockIdx": 44
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "……ふふっ、秘密です。",
+            "enText": "… Hmmm, it's a secret.",
+            "nextBlock": 46,
+            "pathId": 786204626534203090,
+            "blockIdx": 45
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "もう日も落ちますね。本物の幽霊に会ってしまう前に、\r\n私たちは帰路につくことにいたしましょうか。",
+            "enText": "The sun is going down. Let's go home \nbefore we meet a real ghost.",
+            "nextBlock": 47,
+            "pathId": -1576990782376641276,
+            "blockIdx": 46
+        },
+        {
+            "jpName": "メジロアルダン",
+            "enName": "Mejiro Ardan",
+            "jpText": "トレーナーさん、本日は\r\n急なお誘いにお付き合いくださってありがとうございました。",
+            "enText": "Thank you, trainer, for taking me \nout on such short notice today.",
+            "nextBlock": 48,
+            "pathId": 2144291978439452994,
+            "blockIdx": 47
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "さらりと冗談でごまかされてしまったが、少しだけ\r\nメジロアルダンとの距離が縮まったように感じたのだった。",
+            "enText": "I felt a little closer to Mejiro Ardan, even \nthough she was just joking with me.",
+            "nextBlock": -1,
+            "pathId": 1128690813620312494,
+            "blockIdx": 48
+        }
+    ]
+}

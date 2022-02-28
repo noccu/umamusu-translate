@@ -49,6 +49,7 @@ This tool collection only changes text to translate it and it is *my belief* thi
     - If you only want to install specific things, see [id-structure.md](id-structure.md) and use: `python src/import.py -O -g <group> -id <id>`
 1. **UI**: Copy the contents of the [localify folder](localify) to your Uma Musume install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are)
     - You need localify's dll from [here](https://github.com/GEEKiDoS/umamusume-localify/releases/tag/test6)
+    - To update yourself when the translations are jumbled, see [here](updating-ui.md)
 1. **Skills and other variable text**: See the [db-translate project]
 
 If you want to add additional translations through deepl, or contibute your own, see [translating.md](translating.md)

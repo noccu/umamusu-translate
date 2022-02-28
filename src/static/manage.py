@@ -7,9 +7,11 @@ import regex as re
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)]",
+    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-order] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)]",
                  "Add new strings to tl file, or update/write final file with translations.",
-                 "-add imports text files given by -src to local dump.json",
+                 "-add imports text files (dumps) given by -src to local dump.json",
+                 "-new adds all new entries from dump.json or src file to static_en.json for translating",
+                 "-upd creates the final static.json file used by the dll from dump.json and static_en.json",
                  "-clean removes untranslated entries from tl file, or dump and tl file",
                  "-O overwrites local values with external ones, else vice versa")
 

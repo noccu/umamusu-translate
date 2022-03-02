@@ -11,10 +11,9 @@ if args.getArg("-h"):
     common.usage("-src <translation file> -sub <subtitle file> [-off <offset> -npre -auto]",
                  "Imports translations from subtitle files. A few conventions are used.",
                  "Files are only modified if they can be assumed to merge properly. This check relies on text block lenghts."
-                 "-offset is subtracted from the game file's text block length during this checking. (default 0)",
+                 "-offset is subtracted from the game file's text block length during this checking. (default -1 = off, set to 0 to start checking)",
                  "Events for example, have an unshown title logo display line. This script skips those automatically but requires offset to be set for correct checking, as per above.",
                  "-npre flags text lines as prefixed by the char name",
-                 "-auto assumes the sub file transfers correctly and stops when the -src file is filled, useful for multi-part episodes",
                  "\n"
                  "Conventions are to have 1 subtitle line per game text block/screen. Include empty lines if needed (say, if you leave a line untranslated).",
                  "For exceptions, the effect field is used as a mark in ASS. SRT does not provide mechanisms for this and will fail to import (correctly).",
@@ -24,11 +23,12 @@ if args.getArg("-h"):
 TARGET_FILE = args.getArg("-src", None)
 SUBTITLE_FILE = args.getArg("-sub", None)
 
-OFFSET = args.getArg("-off", 0)
+OFFSET = args.getArg("-off", -1)
 if type(OFFSET) is not int:
     OFFSET = int(OFFSET)
 NAME_PREFIX = args.getArg("-npre", False)
-AUTO = args.getArg("-auto", False)
+AUTO = True
+if OFFSET > -1: AUTO = False
 
 # Helpers
 def specialProcessing(text: str):

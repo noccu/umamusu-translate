@@ -14,13 +14,15 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story (ch1) | In progress | [CatNipHoarder][] & [Holo][] (ep 1-5)
+Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][] (ep 1-5)
 Main story (ch5) | Complete | [LotoDS][]
+Half Anniversary Story | Transferring | [CatNipHoarder][] & [Holo][]
+1st Anniversary Story | In Progress | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Transferring | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete | deepl
-Patisserie Grandeur | Complete | [noccu][] (ep 1-4), deepl
+Patisserie Grandeur | Complete | [noccu][]
 
 # Character stories
 name | progress | translator
@@ -34,10 +36,11 @@ Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 King Halo | Complete, Transferring | deepl, [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
-Manhattan Cafe | Complete | deepl
+Manhattan Cafe | Complete, Transferring | deepl, [xct][]
+Matikanetannhauser | In Progress | [Snep][]
 Maruzensky | Complete | deepl
 Mihono Bourbon | Complete | deepl
-Rice Shower  | Complete | deepl
+Rice Shower  | Complete, Transferring | deepl, [Ben][] (ep 1-4)
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
@@ -83,12 +86,13 @@ Maruzensky | Complete | [noccu][]
 name | progress | translator
 --- | --- | ---
 Blaze | Complete | [noccu][]
+Blow My Gale | In Progress | [noccu][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 transforming | In Progress | [noccu][]
 Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
-UNLIMITED IMPACT | In Progress | [noccu][]
+UNLIMITED IMPACT | Complete | [noccu][]
 winning the soul | Complete | [Kuun0][]
-Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
+Yume wo Kakeru! | In progress/Transferring | Unknown (https://www.animesonglyrics.com/)
 
 
 [noccu]: https://ko-fi.com/noccyu
@@ -104,3 +108,5 @@ Yume wo Kakeru! | In progress | Unknown (https://www.animesonglyrics.com/)
 [Hades of Games]: https://www.youtube.com/c/HadesofGames
 [Karimenrider]: https://umamusume.fandom.com/wiki/User:Karimenrider
 [ebi]: https://twitter.com/tamamolife
+[Snep]: https://twitter.com/ProfessorSnep
+[Ben]: https://www.youtube.com/user/sheepawolf

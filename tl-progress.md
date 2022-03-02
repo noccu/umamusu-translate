@@ -87,7 +87,9 @@ name | progress | translator
 --- | --- | ---
 Blaze | Complete | [noccu][]
 Blow My Gale | In Progress | [noccu][]
+Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
+Sasayaka na Inori | Complete | [Eight][]
 transforming | In Progress | [noccu][]
 Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
@@ -110,3 +112,4 @@ Yume wo Kakeru! | In progress/Transferring | Unknown (https://www.animesonglyric
 [ebi]: https://twitter.com/tamamolife
 [Snep]: https://twitter.com/ProfessorSnep
 [Ben]: https://www.youtube.com/user/sheepawolf
+[Eight]: https://twitter.com/hachikure

@@ -211,6 +211,7 @@ def createDict():
     names['おばさん'] = "Elder Lady"
     names['おばさんA'] = "Elder Lady A"
     names['おばさんB'] = "Elder Lady B"
+    names['おじいさん'] = "Elder Man"
     names['広報委員長'] = "PR Committee Chair"
     names['広報委員'] = "PR Committee Member"
     names['風紀委員たち'] = "PM Committee Member"

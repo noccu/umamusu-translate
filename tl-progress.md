@@ -33,6 +33,7 @@ Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 King Halo | Complete, Transferring | deepl, [burritoblaster][]
+Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl
 Mihono Bourbon | Complete | deepl

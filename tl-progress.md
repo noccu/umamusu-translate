@@ -93,6 +93,7 @@ Sasayaka na Inori | Complete | [Eight][]
 transforming | In Progress | [noccu][]
 Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
+We are DREAMERS!! | Complete | TR
 winning the soul | Complete | [Kuun0][]
 Yume wo Kakeru! | In progress/Transferring | Unknown (https://www.animesonglyrics.com/)
 

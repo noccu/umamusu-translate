@@ -69,10 +69,6 @@
         "repl": "Bakushin"
     },
     {
-        "re": "Bakushin[- ]o",
-        "repl": "Bakushin O"
-    },
-    {
         "re": "Reis[sc]h(?:ow|au)er",
         "repl": "Rice Shower"
     },
@@ -94,11 +90,7 @@
         "limit": true
     },
     {
-        "re": "Gold Chichee",
-        "repl": "Gold City"
-    },
-    {
-        "re": "Cici|Shichi",
+        "re": "[CS]h?(?:i|ee)ch?(?:i|ee)",
         "repl": "City",
         "limit": true
     },
@@ -167,8 +159,9 @@
         "limit": true
     },
     {
-        "re": "(Opera|Bakushin)-Oh?",
-        "repl": "\\1 O"
+        "re": "([a-zA-Z]+)[- ]Oh?(?!,)\\b",
+        "repl": "\\1 O",
+        "limit": true
     },
     {
         "re": "El Condor Passer",
@@ -218,8 +211,8 @@
         "repl": "…"
     },
     {
-        "re": "--+|――",
-        "repl": "—"
+        "re": "--+|(?<=[a-zA-Z]{4})- ",
+        "repl": " — "
     },
     {
         "re": "~+",

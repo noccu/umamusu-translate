@@ -3,11 +3,13 @@
 from .. import common
 from pathlib import PurePath
 import regex as re
+import shutil
+import winreg
 
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-order] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)]",
+    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-order] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)] [-M(ove static.json to game dir)]",
                  "Add new strings to tl file, or update/write final file with translations.",
                  "-add imports text files (dumps) given by -src to local dump.json",
                  "-new adds all new entries from dump.json or src file to static_en.json for translating",
@@ -23,6 +25,7 @@ DO_CLEAN = args.getArg("-clean", False)
 DO_ORDER = args.getArg("-order", False)
 OVERWRITE_LOCAL_DUMP = args.getArg("-O", False)
 IMPORT_DUMP_ONLY = args.getArg("-I", False)
+AUTO_MOVE = args.getArg("-M", False)
 
 ROOT = PurePath(__file__).parent
 LOCAL_DUMP = ROOT / "data" / "dump.json"
@@ -140,7 +143,7 @@ def order():
 # Usage: use localify dll to dump entries
 # use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
 def main():
-    if not ADD_NEW_TEXT and not TRANSLATE_HASHES and not DO_CLEAN and not IMPORT_DUMP_ONLY and not DO_ORDER:
+    if not ADD_NEW_TEXT and not TRANSLATE_HASHES and not DO_CLEAN and not IMPORT_DUMP_ONLY and not DO_ORDER and not AUTO_MOVE:
         raise SystemExit("1 required argument missing.")
 
     if DO_CLEAN:
@@ -150,9 +153,10 @@ def main():
         order()
         return
 
-    dumpData = importDump(DUMP_FILE)
-    if IMPORT_DUMP_ONLY: return
-    tlData = common.readJson(TL_FILE)
+    if ADD_NEW_TEXT or TRANSLATE_HASHES or IMPORT_DUMP_ONLY:
+        dumpData = importDump(DUMP_FILE)
+        if IMPORT_DUMP_ONLY: return
+        tlData = common.readJson(TL_FILE)
 
     if ADD_NEW_TEXT:
         updateTlData(dumpData, tlData)
@@ -161,5 +165,14 @@ def main():
         hashData = common.readJson(HASH_FILE)
         updateHashData(dumpData, tlData, hashData)
         common.writeJsonFile(HASH_FILE, hashData)
+
+    if AUTO_MOVE:
+        try:
+            with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume") as k:
+                path = PurePath(winreg.QueryValueEx(k, "Path")[0]) / "localized_data" / "static.json"
+                shutil.copyfile(HASH_FILE, path)
+                print("static.json moved to game dir")
+        except:
+            print("Error reading registry. static.json not moved.")
 
 main()

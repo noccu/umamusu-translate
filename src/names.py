@@ -264,7 +264,6 @@ def translate(namesDict):
 def main():
     dict = createDict()
     translate(dict)
-    # print(file.data)
-    # file.save()
+    print("Names translated")
 
 main()

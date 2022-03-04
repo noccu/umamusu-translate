@@ -54,6 +54,7 @@ This tool collection only changes text to translate it and it is *my belief* thi
     - To update yourself when the translations are jumbled, see [here](updating-ui.md)
 1. **Skills and other variable text**: See the [db-translate project]
 
+Updating: Just download the project again and overwrite, or use git for ease and finer control (but it's confusing, find a guide somewhere!)  
 If you want to add additional translations through deepl, or contibute your own, see [translating.md](translating.md)
 
 # Script info

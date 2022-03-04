@@ -21,5 +21,5 @@ Here's how to fix this yourself if you don't want to wait on an update:
 1. `py -m src.static.manage -I -O -src path/to/dump.txt` (see step 3 and point it to that file)  
    `py -m src.static.manage -upd`
 1. The UI translation file in the `localify` folder should now be updated and can be copied over to your game folder
-    - Basically follow [the usual step](readme.md#basic-usage)
+    - Basically follow [the usual step](README.md#basic-usage)
 1. Revert the changes from step 2.

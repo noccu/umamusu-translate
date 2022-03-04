@@ -18,6 +18,7 @@ if not EXTRACT_TYPE in ["story", "home", "race", "lyrics", "preview"]:
     raise SystemExit
 EXTRACT_GROUP = args.getArg("-g", "__")
 EXTRACT_ID = args.getArg("-id", "____")
+EXTRACT_IDX = args.getArg("-idx", "___")
 EXTRACT_LIMIT = args.getArg("-l", -1)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
 EXPORT_DIR = args.getArg("-dst", PurePath("translations").joinpath(EXTRACT_TYPE))
@@ -26,7 +27,7 @@ OVERWRITE_DST = args.getArg("-O", False)
 
 def queryDB():
     if EXTRACT_TYPE == "story":
-        pattern = f"{EXTRACT_TYPE}/data/{EXTRACT_GROUP}/{EXTRACT_ID}/{EXTRACT_TYPE}timeline%"
+        pattern = f"{EXTRACT_TYPE}/data/{EXTRACT_GROUP}/{EXTRACT_ID}/{EXTRACT_TYPE}timeline%{EXTRACT_IDX}"
     elif EXTRACT_TYPE == "home":
         pattern = f"{EXTRACT_TYPE}/data/00000/{EXTRACT_GROUP}/{EXTRACT_TYPE}timeline_00000_{EXTRACT_GROUP}_{EXTRACT_ID}%"
     elif EXTRACT_TYPE == "race":
@@ -79,6 +80,7 @@ def extractAsset(path, storyId):
             export['storyId'] = tree['StoryId']
             export['title'] = tree['Title']
 
+            fileCache = None
             for block in tree['BlockList']:
                 for clip in block['TextTrack']['ClipList']:
                     pathId = clip['m_PathID']
@@ -87,7 +89,7 @@ def extractAsset(path, storyId):
                         continue
                     textData['pathId'] = pathId  # important for re-importing
                     textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
-                    transferExisting(storyId, textData)
+                    fileCache = transferExisting(storyId, textData, fileCache)
                     export['text'].append(textData)
         return export
 
@@ -150,27 +152,33 @@ def extractText(assetType, obj):
 
     return o if o['jpText'] else None
 
-def transferExisting(storyId, textData):
+def transferExisting(storyId, textData, file):
     # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
     # Only continue when forced to.
     if not OVERWRITE_DST: return
     group, id, idx = storyId
 
-    file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
-    if file is not None:
-        file = common.TranslationFile(file)
-        for block in file.getTextBlocks():
-            if block['blockIdx'] == textData['blockIdx']:
-                textData['enText'] = block['enText']
-                textData['enName'] = block['enName']
-                if 'choices' in block:
-                    for idx, choice in enumerate(textData['choices']):
+    if file is None:
+        file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
+        if file is not None: # Check we actually found a file above
+            file = common.TranslationFile(file)
+
+    for block in file.getTextBlocks():
+        if block['blockIdx'] == textData['blockIdx']:
+            textData['enText'] = block['enText']
+            textData['enName'] = block['enName']
+            if 'choices' in block:
+                for idx, choice in enumerate(textData['choices']):
+                    try:
                         choice['enText'] = block['choices'][idx]['enText']
-                if 'coloredText' in block:
-                    for idx, cText in enumerate(textData['coloredText']):
-                        cText['enText'] = block['coloredText'][idx]['enText']
-                if 'skip' in block:
-                    textData['skip'] = block['skip']
+                    except IndexError:
+                        print(f"New choice in {file.name} at {idx}. Requires translation.")
+            if 'coloredText' in block:
+                for idx, cText in enumerate(textData['coloredText']):
+                    cText['enText'] = block['coloredText'][idx]['enText']
+            if 'skip' in block:
+                textData['skip'] = block['skip']
+    return file
 
 
 def exportData(data, filepath: str):

@@ -260,10 +260,11 @@ def translate(namesDict):
             if name and name in namesDict:
                 block['enName'] = namesDict[name]
         file.save()
+    return len(files)
 
 def main():
     dict = createDict()
-    translate(dict)
-    print("Names translated")
+    n = translate(dict)
+    print(f"Names translated in {n} files.")
 
 main()

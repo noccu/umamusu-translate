@@ -13,9 +13,7 @@ if args.getArg("-h"):
                  "Any order. Defaults to extracting all text, skip existing")
 
 EXTRACT_TYPE = args.getArg("-t", "story").lower()
-if not EXTRACT_TYPE in ["story", "home", "race", "lyrics", "preview"]: 
-    print(f"Invalid type {EXTRACT_TYPE}")
-    raise SystemExit
+common.checkTypeValid(EXTRACT_TYPE)
 EXTRACT_GROUP = args.getArg("-g", "__")
 EXTRACT_ID = args.getArg("-id", "____")
 EXTRACT_IDX = args.getArg("-idx", "___")
@@ -239,5 +237,5 @@ def main():
     print(f"Found {len(q)} files.")
     for bundle, path in q:
         exportAsset(bundle, path)
-    print("Processing finished sucessfully.")
+    print("Processing finished successfully.")
 main()

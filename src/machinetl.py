@@ -13,6 +13,7 @@ if args.getArg("-h"):
 TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
+TARGET_IDX = args.getArg("-idx", False)
 TARGET_FILE = args.getArg("-src", False)
 LINE_LENGTH = int(args.getArg("-ll", False))
 OVERWRITE_TEXT = args.getArg("-O", False)
@@ -34,11 +35,12 @@ async def startServer():
     async with websockets.serve(handler, "localhost", 61017):
         global STOP
         STOP = asyncio.Future()
+        print("Server started, awaiting connection to deepl script. See README for info.")
         await STOP  # run until stopped
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol):
         if TARGET_FILE: self.files = [TARGET_FILE]
-        else: self.files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
+        else: self.files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
         self.client = client
         self.loop = asyncio.get_running_loop()
 

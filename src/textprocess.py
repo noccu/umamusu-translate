@@ -13,8 +13,10 @@ if args.getArg("-h"):
                  "-rep allows you to turn off replacements or limit them to safer ones for non-mtl. Defaults to all")
 
 TARGET_TYPE = args.getArg("-t", "story").lower()
+common.checkTypeValid(TARGET_TYPE)
 TARGET_GROUP = args.getArg("-g", None)
 TARGET_ID = args.getArg("-id", None)
+TARGET_IDX = args.getArg("-idx", None)
 TARGET_FILE = args.getArg("-src", None)
 VERBOSE = args.getArg("-V", False)
 
@@ -82,7 +84,7 @@ def main():
     if TARGET_FILE:
         files = [TARGET_FILE]
     else:
-        files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
+        files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
 
     print(f"Processing {len(files)} files...")
     for file in files:

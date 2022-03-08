@@ -9,9 +9,16 @@ GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalL
 GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
+TARGET_TYPES =  ["story", "home", "race", "lyrics", "preview"]
+
+def checkTypeValid(t):
+    if t in TARGET_TYPES: 
+        return True
+    print(f"Invalid type: {t}. Expecting one of: {', '.join(TARGET_TYPES)}")
+    raise SystemExit
 
 
-def searchFiles(targetType, targetGroup, targetId) -> list:
+def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
     found = list()
     searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
     for root, dirs, files in os.walk(searchDir):
@@ -24,7 +31,9 @@ def searchFiles(targetType, targetGroup, targetId) -> list:
                 continue
             elif depth == 4:
                 dirs[:] = [d for d in dirs if d == targetId]
-        found.extend(os.path.join(root, file) for file in files)
+        if targetIdx and files:
+            found.extend(os.path.join(root, file) for file in files if file.startswith(targetIdx))
+        else: found.extend(os.path.join(root, file) for file in files)
     return found
 
 def readJson(file) -> dict:

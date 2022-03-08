@@ -11,8 +11,10 @@ if args.getArg("-h"):
                  "Saves all files to <project root>/dat by default")
 
 IMPORT_TYPE = args.getArg("-t", "story").lower()
+common.checkTypeValid(IMPORT_TYPE)
 IMPORT_GROUP = args.getArg("-g", False)
 IMPORT_ID = args.getArg("-id", False)
+IMPORT_IDX = args.getArg("-idx", False)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
 SAVE_DIR = args.getArg("-dst", os.path.realpath("dat/"))
 OVERWRITE_GAME_DATA = args.getArg("-O", False)
@@ -89,7 +91,7 @@ def swapAssetData(tlFile: TranslationFile):
             if 'choices' in textData:
                 jpChoices, enChoices = assetData['ChoiceDataList'], textData['choices']
                 if len(jpChoices) != len(enChoices):
-                    print("Choice lenghts do not match, skipping...")
+                    print("Choice lengths do not match, skipping...")
                 else:
                     for idx, choice in enumerate(textData['choices']):
                         if choice['enText']:
@@ -98,7 +100,7 @@ def swapAssetData(tlFile: TranslationFile):
             if 'coloredText' in textData:
                 jpColored, enColored = assetData['ColorTextInfoList'], textData['coloredText']
                 if len(jpColored) != len(enColored):
-                    print("Colored text lenghts do not match, skipping...")
+                    print("Colored text lengths do not match, skipping...")
                 else:
                     for idx, text in enumerate(textData['coloredText']):
                         if text['enText']:
@@ -126,7 +128,7 @@ def saveAsset(env):
 
 def main():
     print(f"Importing group {IMPORT_GROUP or 'all'}, id {IMPORT_ID or 'all'} from translations\{IMPORT_TYPE} to {GAME_ASSET_ROOT if OVERWRITE_GAME_DATA else SAVE_DIR}")
-    files = common.searchFiles(IMPORT_TYPE, IMPORT_GROUP, IMPORT_ID)
+    files = common.searchFiles(IMPORT_TYPE, IMPORT_GROUP, IMPORT_ID, IMPORT_IDX)
     processedFiles = len(files)
     print(f"Found {processedFiles} files.")
 

@@ -1,8 +1,9 @@
 This project aims to translate *Uma Musume Pretty Derby* through (mainly) Unity asset edits.  
 The intent is to be an all-in-one toolset/patch but right now it is focused on any dialogues with a few extras.  
-Translation progress can be checked on the [overview][tl-progress].
+Translation progress and credits can be checked on the [overview][tl-progress]. Guides can be found below.
 
-This is based on the DMM version of the game. If you can figure out how to run it on other versions, it may (should) work as well, but no support is provided right now.
+This is based on the DMM version of the game. If you can figure out how to run it on other versions, it may (should) work as well, but no support is provided right now.  
+Please consider [supporting the project](https://ko-fi.com/noccyu).  
 
 # Features
 Translates (or *can* translate):
@@ -22,40 +23,41 @@ Toolset: see [scripts](#script-info)
 # Disclaimer
 
 This tool collection only changes text to translate it and it is *my belief* this is harmless and unlikely to be an issue. [^1]  
-**Nonetheless such edits are of course againt cygames/Umamusu TOS so proceed at your own risk!**
+**Nonetheless such edits are of course against cygames/Umamusu TOS so proceed at your own risk!**
 
-[^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience.
+[^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. any possible crackdown is also likely to start with announcements and warnings before bans.
 
 # Install 
-
 ### Requirements
-> Note on possible install issues!  
-> One of UnityPy's dependencies, lz4, [currently has a broken build system for windows meaning they are not releasing prebuilt windows binaries](https://github.com/python-lz4/python-lz4/issues/231).  
-> The requirements.txt file in this project limits the lz4 version to the last version that does come with them but it comes only up to Python 3.9.
-> If you already have lz4 you can just install the other reqs or remove it from the requirements file.  
-> Python installs of different versions can coexist but if you want to use Python 3.10+ only you will need to **EITHER**:
-> - Have vc++ built tools installed & compile lz4 yourself
-> - Download the unofficial binary of whatever version is latest (currently `lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl` for 64-bit windows) from https://www.lfd.uci.edu/~gohlke/pythonlibs/#lz4 and install that first: `python -m pip install wherever/you/downloaded/lz4‑3.1.10‑cp310‑cp310‑win_amd64.whl`
-
-1. Install [Python](https://www.python.org/downloads/) 3.9
-    - Most of it is 3.6+ so if you really want to you could edit sources for older Python versions
-1. Install [UnityPy][]
-    - If you run into issues see the note above and: `python -m pip install -r src\requirements.txt` from project root 
+1. Install [Python](https://www.python.org/downloads/) 3.9+
+    - During install, make sure to check the `Add to PATH` option.
+1. Download this project
+1. Open the (extracted) folder and double click `install.bat`
 1. (Optional but recommended) Download all game data through the game menu
-1. Clone or download this project
 
 ### Basic Usage
-1. **Dialogue**: From project root: `python src/import.py -O`
-    - If you only want to install specific things, see [id-structure.md](id-structure.md) and use: `python src/import.py -O -g <group> -id <id>`
-1. **UI**: Copy the contents of the [localify folder](localify) to your Uma Musume install dir (where the `Umamusume.exe` and *[localify][umamusume-localify]'s `version.dll`* are)
-    - You need localify's dll from [here](https://github.com/GEEKiDoS/umamusume-localify/releases/tag/test6)
-    - If it doesn't work (and you double checked everything is correct), try renaming version.dll to uxtheme.dll
-    - In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming)
+1. **Dialogue**: double click `run.bat` 
+1. **UI**: Open the game's *install folder* (where the `Umamusume.exe` is)
+    1. Download [localify][umamusume-localify]'s `release.7z` from [here](https://github.com/GEEKiDoS/umamusume-localify/releases/tag/test6) and extract the `version.dll` inside to the *install folder*
+    1. Copy the *contents* of the [localify folder](localify) to the *install folder*
+        - If it doesn't work when you start the game, try renaming the `version.dll` file to `uxtheme.dll`
+        - In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)
+1. **Skills and other variable text**: See the [db-translate project] and follow its guide.
+
+### Updating
+1. Download the project again and overwrite
+    - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! You could keep a backup of any edits at the moment you make them, or try picking up git or other version control software.
+1. Double click `run.bat` 
+
+### Advanced Usage
+In general, check out the [scripts](#script-info)
+1. **Dialogue**
+    - To install specific things, see [id-structure.md](id-structure.md) and use: `py src/import.py -O -g <group> -id <id>`
+    - To add additional translations through deepl, or contribute your own, see [translating.md](translating.md)
+1. **UI**
     - To update yourself when the translations are jumbled, see [here](updating-ui.md)
 1. **Skills and other variable text**: See the [db-translate project]
 
-Updating: Just download the project again and overwrite, or use git for ease and finer control (but it's confusing, find a guide somewhere!)  
-If you want to add additional translations through deepl, or contibute your own, see [translating.md](translating.md)
 
 # Script info
 

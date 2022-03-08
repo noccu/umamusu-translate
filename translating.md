@@ -1,25 +1,21 @@
 An overview of the full translation process.
 
 For [existing content](translations/) you only wish to translate, TLC, or edit, skip to [Translating](#Translating).  
-For details on how github and git work, there are good guides and docs to be found through any search engine. Please refer to those. They're too complex to explain here or for me to help out with.  
+**For details on how github and git work, there are good guides and docs to be found through any search engine. Please refer to those. They're too complex to explain here or for me to help out with.**  
 I also suggest you look over all of the process before starting.
 
 # Prerequisites
-
 Needed:
-- If you haven't read the main [readme](readme.md), please check that first.
-- Install dependencies
-    - From project root: `py -m pip install -r src\requirements.txt`
-    - And `py -m pip install -r src\devreqs.txt` for non-basic stuff like UI editing, deepl translation or subtitle import (SRT, ASS)
+- If you haven't read the main [readme](readme.md), please check and follow that first.
+- Install additional  dependencies
+    - From project root: `py -m pip install -r src\devreqs.txt`
 -  If you want to contribute through github: fork the project and clone that fork to work in
 
 Recommended for easy updates or contributing:    
 - [Git](https://git-scm.com/downloads) or a GUI client like [GitHub Desktop](https://desktop.github.com/)
     - git comes with git-gui so you don't *need* a separate client
-    - git is complex and confusing to newcomers, please find a guide to learn about it!
 
 # Extracting text
-
 - Open a shell in the project root (the `umamusu-translate` folder)
     - tip: type cmd in explorer's address bar on windows when in said folder
 - Run `py src/extract.py -g <group> -id <id>`
@@ -42,7 +38,6 @@ Open the files in a text editor or edit them on github and write the translation
 
 
 ## MTL using DeepL
-
 - Install the [deepl-translator.user.js](https://cdn.jsdelivr.net/gh/noccu/umamusu-translate@master/src/deepl-translator.user.js) script in your browser
     - This requires a userscript manager with menu support, like [Violentmonkey](https://violentmonkey.github.io/)
 - Run `py src\machinetl.py` with any options you want (refer to main readme)
@@ -63,10 +58,11 @@ Open the files in a text editor or edit them on github and write the translation
         - Translates the namecards, not the dialogue!
 
 ## Finishing up
-
 Use the `import.py` script to get your translations in the game. See the main readme or the scripts themselves for details.
 
-# Sharing
+## Translating UI
+See [here](updating-ui.md#translating)
 
+# Sharing
 If you used git; commit your changes (in organized chunks) and make a Pull Request once all done.  
 If not; upload your new files somewhere and open an Issue. ~~Or DM me on discord.~~

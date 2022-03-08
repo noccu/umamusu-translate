@@ -28,6 +28,7 @@ Patisserie Grandeur | Complete | [noccu][]
 name | progress | translator
 --- | --- | ---
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4), deepl
+Biwa Hayahide | In Progress | deepl (contributed by CryDuringItAll)
 Eishin Flash | Complete | deepl
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]

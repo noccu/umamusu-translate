@@ -17,7 +17,7 @@ name | progress | translator
 Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][] (ep 1-5)
 Main story (ch5) | Complete | [LotoDS][]
 Half Anniversary Story | Transferring | [CatNipHoarder][] & [Holo][]
-1st Anniversary Story | In Progress | [CatNipHoarder][] & [Holo][]
+1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Transferring | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        deepl-translator
 // @namespace   https://github.com/noccu/
-// @match       https://www.deepl.com/en/translator
+// @match       https://www.deepl.com/*translator
 // @grant       GM_registerMenuCommand
 // @version     1.3
 // @author      noccu
@@ -50,8 +50,8 @@ class Translator {
         this.tl = false
         clearInterval(this.unstuck)
         if (this.r) {
-            if (this.clearText) this.input.value = ""
             this.r(this.output.value.trim())
+            if (this.clearText) this.input.value = ""
             this.r = undefined
         }
         else console.error("Received translation but no Promise set.") // This should never trigger

@@ -35,7 +35,7 @@ Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 King Halo | Complete, Transferring | deepl, [burritoblaster][]
-Kitasan Black | Transferring | [LotoDS][] (ep 1-5)
+Kitasan Black | Transferring | [LotoDS][] (ep 1-6)
 Manhattan Cafe | Complete, Transferring | deepl, [xct][]
 Matikanetannhauser | In Progress | [Snep][]
 Maruzensky | Complete | deepl

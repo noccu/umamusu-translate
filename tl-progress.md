@@ -29,6 +29,7 @@ name | progress | translator
 --- | --- | ---
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4), deepl
 Biwa Hayahide | In Progress | deepl (contributed by CryDuringItAll)
+Daiwa Scarlet | Transferring | [XiantheMiguel][] (commissioned by AhriParty)
 Eishin Flash | Complete | deepl
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]
@@ -36,7 +37,7 @@ Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 King Halo | Complete, Transferring | deepl, [burritoblaster][]
-Kitasan Black | Transferring | [LotoDS][] (ep 1-6)
+Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete, Transferring | deepl, [xct][]
 Matikanetannhauser | In Progress | [Snep][]
 Maruzensky | Complete | deepl
@@ -115,3 +116,4 @@ Yume wo Kakeru! | In progress/Transferring | Unknown (https://www.animesonglyric
 [Snep]: https://twitter.com/ProfessorSnep
 [Ben]: https://www.youtube.com/user/sheepawolf
 [Eight]: https://twitter.com/hachikure
+[XiantheMiguel]: https://twitter.com/XiantheMiguel

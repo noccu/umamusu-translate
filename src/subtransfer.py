@@ -10,9 +10,9 @@ args = common.Args().parse()
 if args.getArg("-h"):
     common.usage("-src <translation file> -sub <subtitle file> [-off <offset> -npre -auto]",
                  "Imports translations from subtitle files. A few conventions are used.",
-                 "Files are only modified if they can be assumed to merge properly. This check relies on text block lenghts."
+                 "Files are only modified if they can be assumed to merge properly. This check relies on text block lengths."
                  "-offset is subtracted from the game file's text block length during this checking. (default -1 = off, set to 0 to start checking)",
-                 "Events for example, have an unshown title logo display line. This script skips those automatically but requires offset to be set for correct checking, as per above.",
+                 "Events for example, have an undisplayed title logo display line. This script skips those automatically but requires offset to be set for correct checking, as per above.",
                  "-npre flags text lines as prefixed by the char name",
                  "\n"
                  "Conventions are to have 1 subtitle line per game text block/screen. Include empty lines if needed (say, if you leave a line untranslated).",
@@ -27,14 +27,21 @@ OFFSET = args.getArg("-off", -1)
 if type(OFFSET) is not int:
     OFFSET = int(OFFSET)
 NAME_PREFIX = args.getArg("-npre", False)
+OVERWRITE_NAMES = args.getArg("-ON", False)
 AUTO = True
 if OFFSET > -1: AUTO = False
 
 # Helpers
-def specialProcessing(text: str):
+def addSub(target, text: str):
     if NAME_PREFIX:
-        text = re.sub(r".+: (.+)", r"\1", text)
-    return text
+        m = re.match(r"(.+): (.+)", text, flags=re.DOTALL)
+        if m:
+            name, text = m.group(1,2)
+            if 'enName' in target and (not target['enName'] or OVERWRITE_NAMES):
+                target['enName'] = name
+    if text.startswith(">"): text = text[1:]
+    target['enText'] = text
+    # return text
 
 def duplicateSub(textList, idx, newText):
     # duplicate text and choices
@@ -47,7 +54,7 @@ def duplicateSub(textList, idx, newText):
     if newText:
         if idx < len(textList) - 1:
             idx += 1
-            textList[idx]['enText'] = specialProcessing(newText)
+            addSub(textList[idx], newText)
         else:
             print("Attempted to duplicate beyond last line of file. Subtitle file does not match?")
     return idx
@@ -120,7 +127,7 @@ def processSubs(subs, format):
                     print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
                     continue
                 for entry in textList[idx-1]["choices"]:
-                    entry['enText'] = specialProcessing(subText)
+                    addSub(entry, subText)
                     lastChoice = idx
                 continue # don't increment idx
             elif idx > 0 and "choices" in textList[idx-1] and idx - lastChoice > 0:
@@ -133,7 +140,7 @@ def processSubs(subs, format):
             if len(subText) == 0:
                 print(f"Untranslated line at {textList[idx]['blockIdx']}")
             else:
-                textList[idx]['enText'] = specialProcessing(subText)
+                addSub(textList[idx], subText)
         idx += 1
     # check niche case of duplicate last line (idx is already increased)
     if idx < len(textList):

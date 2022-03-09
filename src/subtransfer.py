@@ -114,7 +114,7 @@ def processSubs(subs, format):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":
-            if (subText.startswith(">") or 
+            if (subText.startswith(">") or subText.startswith("Trainer:") or 
             (format == "ass" and (line.effect == "choice" or line.style.endswith("Button")))):
                 if not "choices" in textList[idx-1]:
                     print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")

@@ -27,6 +27,7 @@ Patisserie Grandeur | Complete | [noccu][]
 # Character stories
 name | progress | translator
 --- | --- | ---
+Air Groove | In progress | [burritoblaster][]
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4), deepl
 Biwa Hayahide | In Progress | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Transferring | [XiantheMiguel][] (commissioned by AhriParty)

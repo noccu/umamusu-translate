@@ -43,6 +43,7 @@ Manhattan Cafe | Complete, Transferring | deepl, [xct][]
 Matikanetannhauser | In Progress | [Snep][]
 Maruzensky | Complete | deepl
 Mihono Bourbon | Complete | deepl
+Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Rice Shower  | Complete, Transferring | deepl, [Ben][] (ep 1-4)
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Sakura Chiyono O | Complete | [LotoDS][]

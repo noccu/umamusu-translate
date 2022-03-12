@@ -37,7 +37,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
-King Halo | Complete, Transferring | deepl, [burritoblaster][]
+King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete, Transferring | deepl, [xct][]
 Matikanetannhauser | In Progress | [Snep][]

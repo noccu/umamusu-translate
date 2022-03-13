@@ -6,7 +6,7 @@ Quality varies based on content (speech patterns, topics, etc).
 term | meaning
 --- | ---
 Not listed | No progress
-Transferring | Translation exists elsewhere and is in the process, or planned to be, imported
+Transferring | Translation exists elsewhere and is in the process, or planned to be, imported (progress noted)
 In progress | Translation work is planned, ongoing, or only part is translated (possibly with no work ongoing)
 Complete | All the relevant content is available in English
 Finished | Content satisfies this project's translation standards and style guide (to come)
@@ -14,12 +14,12 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][] (ep 1-5)
+Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][] (ep 1-5/13)
 Main story (ch5) | Complete | [LotoDS][]
 Half Anniversary Story | Transferring | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
-Make up in Halloween！ | Transferring | [CatNipHoarder][] & [Holo][]
+Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete | deepl
 Patisserie Grandeur | Complete | [noccu][]
@@ -40,7 +40,7 @@ Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete, Transferring | deepl, [xct][]
-Matikanetannhauser | In Progress | [Snep][]
+Matikanetannhauser | In progress | [Snep][]
 Maruzensky | Complete | deepl
 Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
@@ -94,7 +94,7 @@ BLOW my GALE | Complete | [noccu][]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Sasayaka na Inori | Complete | [Eight][]
-transforming | In Progress | [noccu][]
+transforming | In progress | [noccu][]
 Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
 We are DREAMERS!! | Complete | TR

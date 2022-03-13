@@ -25,8 +25,13 @@
         "limit": true
     },
     {
-        "re": "baba",
-        "repl": "field"
+        "re": "’",
+        "repl": "'"
+    },
+    {
+        "re": "\\bbaba\\b",
+        "repl": "field",
+        "limit": true
     },
     {
         "re": "(?:To?re?sen|Trespass(?:ing|er)) (?:Academy|Gakuen)",
@@ -159,7 +164,7 @@
         "limit": true
     },
     {
-        "re": "([a-zA-Z]+)[- ]Oh?(?!,)\\b",
+        "re": "([a-zA-Z]{4,})[- ]Oh?(?![,\\-])\\b",
         "repl": "\\1 O",
         "limit": true
     },
@@ -241,6 +246,10 @@
     },
     {
         "re": "^ *\\n?",
+        "repl": ""
+    },
+    {
+        "re": "\\s$",
         "repl": ""
     }
 ]

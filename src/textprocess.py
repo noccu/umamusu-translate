@@ -5,12 +5,13 @@ from math import ceil
 
 args = common.Args().parse()
 if args.getArg("-h"):
-    common.usage("[-t <story|home|race>] [-g <group>] [-id <id>] [-src <json file>] [-ll <line length>] [-nl] [-rep <all|limit|none]",
+    common.usage("[-t <story|home|race>] [-g <group>] [-id <id>] [-src <json file>] [-ll <line length>] [-nl] [-rep <all|limit|none] [-tl <target lines>]",
                  "At least 1 arg is required.",
                  "-src overwrites other file options.",
                  "-nl removes newlines first, useful for re-formatting the whole thing",
                  "-ll in characters per line (useful: 65 for landscape, 45 (default) for portrait",
-                 "-rep allows you to turn off replacements or limit them to safer ones for non-mtl. Defaults to all")
+                 "-rep allows you to turn off replacements or limit them to safer ones for non-mtl. Defaults to all",
+                 "-tl length adjustment skips input obeying -ll and not exceeding -tl")
 
 TARGET_TYPE = args.getArg("-t", "story").lower()
 common.checkTypeValid(TARGET_TYPE)
@@ -23,6 +24,7 @@ VERBOSE = args.getArg("-V", False)
 LINE_LENGTH = int(args.getArg("-ll", 45)) # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
 NEWLINES = args.getArg("-nl", False)
 REPLACEMENT = args.getArg("-rep", "all")
+TARGET_LINES = int(args.getArg("-tl", 3)) # 3 is old max and visually ideal (game-intended). Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
 
 REPLACEMENT_DATA = None
 
@@ -32,7 +34,7 @@ def process(file: TranslationFile, text: str, options: dict):
     if "noNewlines" in options and options['noNewlines']:
         text = cleannewLines(file, text)
     if "lineLen" in options:
-        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else 3))
+        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else TARGET_LINES))
     if "replace" in options:
         text = replace(text)
     return text

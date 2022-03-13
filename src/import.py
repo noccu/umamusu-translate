@@ -146,8 +146,6 @@ def main():
         else:
             if modifiedBundle is None and not SILENT_UNCHANGEDS:
                 print(f"Bundle {data.getBundle()} not changed, skipping...")
-            else:
-                print(modifiedBundle)
             processedFiles -= 1
 
     print(f"Imported {processedFiles} files.")

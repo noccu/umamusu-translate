@@ -41,12 +41,12 @@
             "choices": [
                 {
                     "jpText": "……どうしたんだ？",
-                    "enText": "… What's up with that?",
+                    "enText": "…What's wrong?",
                     "nextBlock": 5
                 },
                 {
                     "jpText": "……どうしたの？",
-                    "enText": "… What's up?",
+                    "enText": "…What's wrong?",
                     "nextBlock": 5
                 }
             ],
@@ -57,7 +57,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……バッジからトレセン学園のトレーナーであることを確認。\r\n初めまして、私の名前はミホノブルボンです。",
-            "enText": "… badge confirms that I am a trainer at \nthe Tracen Academy. Nice to meet you, my \nname is Mihono Bourbon.",
+            "enText": "…I've confirmed from the badge that you're \na trainer from Trecen Academy. Nice to meet \nyou. My name is Mihono Bourbon.",
             "nextBlock": 6,
             "pathId": 2018057287337414201,
             "blockIdx": 5
@@ -66,7 +66,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "現在、バッドステータス『万事休す』が発生中。\r\nこの近辺に新しくできたトレーニング用品店が見当たりません。",
-            "enText": "We are currently experiencing the bad status \n\"All is not well\". I can't find any new \ntraining supply stores in the vicinity.",
+            "enText": "The Bad Status is currently active. I don't \nsee any new training equipment stores nearby.",
             "nextBlock": 7,
             "pathId": 1958785806600039231,
             "blockIdx": 6
@@ -93,7 +93,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "店の場所はわからなかったが、\r\n代わりにアプリで調べることならできそうだ。",
-            "enText": "I couldn't find the location of the store, \nbut I could look it up on the app instead.",
+            "enText": "I didn't know where the store was, but I \ncould look it up on the app instead.",
             "nextBlock": 10,
             "choices": [
                 {
@@ -109,7 +109,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "恐れ入ります。",
-            "enText": "I'm sorry.",
+            "enText": "Thank you very much.",
             "nextBlock": 11,
             "pathId": -4825990850853831541,
             "blockIdx": 10
@@ -123,12 +123,12 @@
             "choices": [
                 {
                     "jpText": "ここから、もう少し歩いたところにある",
-                    "enText": "From here, it's a bit more of a walk.",
+                    "enText": "It's a short walk from here.",
                     "nextBlock": 12
                 },
                 {
                     "jpText": "ここから、もう少し歩いたところにあるよ",
-                    "enText": "It's just a few more steps from here.",
+                    "enText": "It's a short walk from here.",
                     "nextBlock": 12
                 }
             ],
@@ -139,12 +139,12 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……すみません、『もう少し』とは？",
-            "enText": "… Sorry, what do you \nmean 'a little more'?",
+            "enText": "… Sorry, what do you \nmean 'a short'?",
             "nextBlock": 13,
             "choices": [
                 {
                     "jpText": "え？",
-                    "enText": "What?",
+                    "enText": "Huh?",
                     "nextBlock": 13
                 }
             ],
@@ -155,7 +155,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "つまり『もう少し』とは、数値化するとどれほどの距離でしょうか。",
-            "enText": "In other words, how far is 'almost \nthere' in quantitative terms?",
+            "enText": "In other words, how far is 'a short'?",
             "nextBlock": 14,
             "choices": [
                 {
@@ -187,7 +187,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "認識完了。ありがとうございます。ここから42m先、ですね。\r\n先ほどインプットした情報に42mの誤差があったと判明。",
-            "enText": "Recognition complete. Thank you very much. 42 meters from here, \nright? It turns out that there was an error of 42 meters in the \ninformation I just inputted.",
+            "enText": "Confirmed. Thank you very much. It's 42 \nmeters away from here. It turns out there was \nan error of 42 meters in the information I \ninput earlier.",
             "nextBlock": 16,
             "pathId": -4071105900480212778,
             "blockIdx": 15
@@ -196,7 +196,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "想定外でしたが、そもそもこれは私のリサーチ不足。\r\nエラーログに記録し、再発防止に努めます。",
-            "enText": "It was unexpected, but this was my lack of research to begin \nwith. I will record it in the error log and try to prevent it \nfrom happening again.",
+            "enText": "I wasn't expecting this, but this is my lack \nof research in the first place. I'll record \nit in the error log to prevent it from \nreoccurring.",
             "nextBlock": 17,
             "pathId": -2035923442729394254,
             "blockIdx": 16
@@ -205,7 +205,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "それでは、ありがとうございました。\r\n大変、助かりました。",
-            "enText": "Thank you very much for your time. Thank you \nvery much for your help.",
+            "enText": "Thank you very much. You've \nbeen a great help.",
             "nextBlock": 18,
             "pathId": 2586670384710024208,
             "blockIdx": 17
@@ -214,12 +214,12 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "42m前進。オペレーション開始。",
-            "enText": "Advance 42 meters. Commence operations.",
+            "enText": "42 meters forward. Operation initiated.",
             "nextBlock": 19,
             "choices": [
                 {
                     "jpText": "（不思議な子だなぁ……）",
-                    "enText": "(She's a strange one…)",
+                    "enText": "(What a strange girl…)",
                     "nextBlock": 19
                 }
             ],
@@ -239,7 +239,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そんな一風変わったウマ娘と出会った翌日のこと。\r\nスカウトしたいウマ娘を探すべく、模擬レースを観に来ていた。",
-            "enText": "It was the day after I met this unusual horse \ngirl. She had come to watch a mock race to \nfind a horse girl to scout.",
+            "enText": "It was the day after I had met such an \neccentric horse girl. I had come to watch \nthe mock race in order to find the horse girl \nshe wanted to recruit.",
             "nextBlock": 21,
             "pathId": -8287288985063701993,
             "blockIdx": 20
@@ -248,7 +248,7 @@
             "jpName": "新人トレーナー",
             "enName": "Rookie Trainer",
             "jpText": "このレース、ミホノブルボンがいるんすね。\r\n入学前のレースでも結構いい成績残してませんでした？",
-            "enText": "You have Michino Bourbon in this race, don't \nyou? Didn't she do pretty well in the race \nbefore she entered?",
+            "enText": "You have Mihono Bourbon in this race, don't \nyou? Didn't she do pretty well in the race \nbefore she enrolled?",
             "nextBlock": 22,
             "pathId": -5562102169179410348,
             "blockIdx": 21
@@ -257,7 +257,7 @@
             "jpName": "中堅トレーナー",
             "enName": "Average Trainer",
             "jpText": "サイボーグみたいな子よね？\r\nグラウンドで見たことがあるわ。でも、たしかもう――",
-            "enText": "She looks like a cyborg, right? I've seen her \non the field before. But I think it's—",
+            "enText": "She's like a cyborg, isn't she? I've \nseen her on the field before. But \nI think she's already…",
             "nextBlock": 23,
             "pathId": 4263348161975641800,
             "blockIdx": 22
@@ -266,7 +266,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "観客席は、同じようにスカウト目的で見学に来たトレーナーで\r\n賑わっており、誰もが有望株を引き抜こうと目を凝らしていた。",
-            "enText": "The bleachers were crowded with trainers who had also come to \nwatch for scouting purposes, and everyone was looking at each \nother to see if they could pull off something promising.",
+            "enText": "The spectator seats were filled with trainers \nwho had come to observe for scouting in the \nsame way, and everyone strained their eyes to \npull out their promising stock.",
             "nextBlock": 24,
             "pathId": 5363147630467091618,
             "blockIdx": 23
@@ -275,7 +275,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ガコンッ）",
-            "enText": "(GUNSHOT)",
+            "enText": "(Bang)",
             "nextBlock": 25,
             "pathId": -7146205236400005031,
             "blockIdx": 24
@@ -284,7 +284,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ゲートが開く音が響く。\r\nジャージに身を包んだウマ娘たちが、一斉に飛び出した。",
-            "enText": "The sound of the gate opening echoed. \nThe horse girls in their jerseys \ntook off in unison.",
+            "enText": "The sound of the gate opening resounds. \nThe horse girls in their jerseys \ntook off in unison.",
             "nextBlock": 26,
             "pathId": -2236343124135897878,
             "blockIdx": 25
@@ -293,7 +293,7 @@
             "jpName": "新人トレーナー",
             "enName": "Rookie Trainer",
             "jpText": "先頭、随分飛ばしてますね！",
-            "enText": "That's a lot of flying at the front!",
+            "enText": "You're flying pretty far ahead!",
             "nextBlock": 27,
             "pathId": 5075469339116393419,
             "blockIdx": 26
@@ -302,7 +302,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "先頭のウマ娘――ミホノブルボンは、早々に抜け出し\r\n先行集団からあっという間に距離を開いてみせた。",
-            "enText": "The first horse girl in the race, Mihono \nBourbon, got out early and quickly opened up \na distance from the leading pack.",
+            "enText": "The horsegirl in the lead, Mihono \nBourbon, got out early and quickly opened up \na distance from the leading pack.",
             "nextBlock": 28,
             "pathId": 5432854181793903029,
             "blockIdx": 27
@@ -311,7 +311,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "はっ、はっ、はっ、はっ！",
-            "enText": "Ha, ha, ha, ha!",
+            "enText": "*pant pant*!",
             "nextBlock": 29,
             "pathId": 5681211253256653989,
             "blockIdx": 28
@@ -338,7 +338,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "はぁっ、はぁっ、はぁっ――！！",
-            "enText": "Huh, huh, huh—!",
+            "enText": "*pant pant*!!",
             "nextBlock": 32,
             "pathId": 2922795302645145689,
             "blockIdx": 31
@@ -382,12 +382,12 @@
             "choices": [
                 {
                     "jpText": "（そうだ、俺も急いで――）",
-                    "enText": "（Yeah, I'm in a hurry—)",
+                    "enText": "(That's right, I need to hurry――)",
                     "nextBlock": 35
                 },
                 {
                     "jpText": "（そうだ、私も急いで――）",
-                    "enText": "(Yes, I'll hurry too—)",
+                    "enText": "(That's right, I need to hurry――)",
                     "nextBlock": 35
                 }
             ],
@@ -398,12 +398,12 @@
             "jpName": "中堅トレーナー",
             "enName": "Average Trainer",
             "jpText": "あー、ダメよ。\r\nもうあの子、トレーナーついちゃってるの……。",
-            "enText": "Oh, no. She's already got \nher trainers on…",
+            "enText": "Oh, no. She's already got a trainer…",
             "nextBlock": 36,
             "choices": [
                 {
                     "jpText": "えーっ！？",
-                    "enText": "What the hell?",
+                    "enText": "What?!",
                     "nextBlock": 36
                 }
             ],
@@ -414,12 +414,12 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ミホノブルボンに目をやると、確かに1人のトレーナーと\r\n話をしている様子が見えた。",
-            "enText": "I looked at Mihono Bourbon and saw that she \nwas indeed talking to one of the trainers.",
+            "enText": "I glanced at Mihono Bourbon and saw that she \nwas indeed talking to a single trainer.",
             "nextBlock": 37,
             "choices": [
                 {
                     "jpText": "（お、遅かった……！）",
-                    "enText": "(Oh, I'm too late…!)",
+                    "enText": "(I-I was too late!)",
                     "nextBlock": 37
                 }
             ],
@@ -430,7 +430,7 @@
             "jpName": "新人トレーナー",
             "enName": "Rookie Trainer",
             "jpText": "あの人、やり手のベテラントレーナーじゃないすか。\r\nあーあ、先越されちゃったなー。",
-            "enText": "She's a very experienced trainer, isn't \nshe? Oh no, she beat me to it.",
+            "enText": "She's a seasoned trainer, isn't \nshe? Man, she beat me to it.",
             "nextBlock": 38,
             "pathId": 9163781016131698720,
             "blockIdx": 37
@@ -448,7 +448,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "すでにトレーナーがいるのなら諦めるほかない。\r\n今後の活躍を陰ながら応援しようと心に決めた……。",
-            "enText": "If you already have a trainer, you have no choice \nbut to give up. I made up my mind to support her \nin the shadows for her future activities…",
+            "enText": "I had no choice but to give up if the trainer \nwas already here. I decided to secretly \nsupport her from now on…",
             "nextBlock": 40,
             "pathId": 274001593929473918,
             "blockIdx": 39
@@ -457,7 +457,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その日の夜。\r\n帰宅がてら、ぶらぶらと校内を散歩していると――",
-            "enText": "That evening. On my way home, I was \nstrolling around the school.",
+            "enText": "That night, while I was walking around the \nschool on my way home――",
             "nextBlock": 41,
             "pathId": -5118680158689698928,
             "blockIdx": 40
@@ -466,12 +466,12 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "はぁっ、はぁっ、はぁっ、はぁっ！",
-            "enText": "Huh, huh, huh, huh!",
+            "enText": "*pant pant*!",
             "nextBlock": 42,
             "choices": [
                 {
                     "jpText": "（ミホノブルボン……！）",
-                    "enText": "(Michonobourbon…!)",
+                    "enText": "(Mihono Bourbon!)",
                     "nextBlock": 42
                 }
             ],
@@ -491,7 +491,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "はぁっ、はぁっ、1800m通過、残り1200m。\r\nタイム2分04秒っ……。目標速度より大幅に低下……！",
-            "enText": "Haha, haha, 1800m passed, 1200m to \ngo. Time 2:04… Much slower \nthan target speed…!",
+            "enText": "Hah, hah, 1800m passed, 1200m to \ngo. Time 2:04… Much slower \nthan target speed…!",
             "nextBlock": 44,
             "pathId": 7130393128977985556,
             "blockIdx": 43
@@ -500,12 +500,12 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "タイムを計っているのだろうか。\r\nそれにしても――",
-            "enText": "I wonder if they are measuring \nthe time. But still—",
+            "enText": "I wonder if she's counting \nthe time. But still―",
             "nextBlock": 45,
             "choices": [
                 {
                     "jpText": "（……3000m！？）",
-                    "enText": "(…3000m!?)",
+                    "enText": "(3,000 meters?!)",
                     "nextBlock": 45
                 }
             ],
@@ -534,7 +534,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "はぁ、はぁ、はぁ……。",
-            "enText": "Ha, ha, ha…",
+            "enText": "*pant pant*…",
             "nextBlock": 48,
             "pathId": -5091012673985860751,
             "blockIdx": 47
@@ -548,7 +548,7 @@
             "choices": [
                 {
                     "jpText": "！！",
-                    "enText": "No!",
+                    "enText": "!!",
                     "nextBlock": 49
                 }
             ],
@@ -559,7 +559,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "突如倒れこんだミホノブルボンに、慌てて駆け寄った――",
-            "enText": "She rushed over to Mihonobourbon, \nwho suddenly collapsed.",
+            "enText": "I rushed over to Mihono Bourbon, \nwho suddenly collapsed.",
             "nextBlock": -1,
             "pathId": 7642043380533049783,
             "blockIdx": 49

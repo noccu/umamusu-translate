@@ -1,6 +1,6 @@
 import shutil
 import sqlite3
-from os import path
+from os import makedirs, path
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
 from re import sub as resub
@@ -79,6 +79,7 @@ def main():
         src = path.join(GAME_ASSET_ROOT, hash[:2], hash)
         if OVERWRITE_DST or not path.exists(dst):
             try:
+                makedirs(path.dirname(dst), exist_ok=True)
                 shutil.copyfile(src, dst)
                 n += 1
                 print(f"Copied {src} to {dst}")

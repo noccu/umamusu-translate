@@ -1,6 +1,5 @@
 import os
 import UnityPy
-# import csv
 import common
 from common import GAME_ASSET_ROOT, TranslationFile
 
@@ -66,7 +65,7 @@ def swapAssetData(tlFile: TranslationFile):
             try:
                 asset = assetList[textData['pathId']]
             except KeyError:
-                print(f"Skipping block {textData['blockIdx']} in {bundle}: Can't find pathId in original asset")
+                print(f"Skipping block {textData['blockIdx']} in {bundle}: Can't find pathId")
                 continue
             assetData = asset.read_typetree()
 
@@ -85,7 +84,7 @@ def swapAssetData(tlFile: TranslationFile):
                 text = '"' + text.replace('\"','\"\"') + '"'
             assetText += f"{textData['time']},{text}\n"
         else:
-            assetData['Text'] = textData['enText']
+            assetData['Text'] = textData['enText'] # no entext -> skipped
             assetData['Name'] = textData['enName'] or assetData['Name']
 
             if 'choices' in textData:

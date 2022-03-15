@@ -41,6 +41,19 @@ def queryDB():
     db.close()
     return results
 
+class CheckPatched():
+    def __init__(self, asset):
+        self.n = 0
+        self.asset = asset
+    
+    def __call__(self, textData):
+        if len(textData['jpText']) < 3: return False
+        if not common.isJapanese(textData['jpText']): self.n += 1
+        if (self.n > 5):
+            print(f"Asset {self.asset} looks patched, skipping...")
+            return True
+        else:
+            return False
 
 def extractAsset(path, storyId):
     env = UnityPy.load(path)
@@ -56,23 +69,35 @@ def extractAsset(path, storyId):
             'title' : "",
             'text': list()
         }
+        isPatched = CheckPatched(env.file.name)
 
         if EXTRACT_TYPE == "race":
             export['storyId'] = tree['m_Name'][-9:]
 
             for block in tree['textData']:
                 textData = extractText("race", block)
+                if isPatched(textData): return
                 export['text'].append(textData)
         elif EXTRACT_TYPE == "lyrics":
             # data = index.read()
             # export['storyId'] = data.name[1:5]
             # export['text'] = extractText("lyrics", data.text)
             export['storyId'] = tree['m_Name'][1:5]
-            export['text'] = extractText("lyrics", tree['m_Script'])
+
+            r = csv.reader(tree['m_Script'].splitlines(), skipinitialspace=True)
+            header = True
+            # intern-kun can't help goof up even csv
+            for row in r:
+                if header: header = False; continue
+                textData = extractText("lyrics", row)
+                if isPatched(textData): return
+                export['text'].append(textData)
+                
         elif EXTRACT_TYPE == "preview":
             export['storyId'] = tree['m_Name'][-4:]
             for block in tree['DataArray']:
                 textData = extractText("preview", block)
+                if isPatched(textData): return
                 export['text'].append(textData)
         else:
             export['storyId'] = tree['StoryId']
@@ -85,6 +110,7 @@ def extractAsset(path, storyId):
                     textData = extractText(EXTRACT_TYPE, index.assets_file.files[pathId])
                     if not textData:
                         continue
+                    if isPatched(textData): return
                     textData['pathId'] = pathId  # important for re-importing
                     textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
                     fileCache = transferExisting(storyId, textData, fileCache)
@@ -101,18 +127,12 @@ def extractText(assetType, obj):
             'blockIdx': obj['key']
         }
     elif assetType == "lyrics":
-        o = list()
-        r = csv.reader(obj.splitlines(), skipinitialspace=True)
-        header = True
-        # intern-kun can't help goof up even csv
-        for time, text, *_ in r:
-            if header: header = False; continue
-            o.append({
-                'jpText': text,
-                'enText': "",
-                'time': time
-            })
-        return o
+        time, text, *_ = obj
+        o = {
+            'jpText': text,
+            'enText': "",
+            'time': time
+        }
     elif assetType == "preview":
         o = {
                 'jpName': obj['Name'],
@@ -220,6 +240,7 @@ def exportAsset(bundle: str, path: str):
 
     importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
     data = extractAsset(importPath, (group, id, idx))
+    if not data: return
 
     #remove invalid path chars (win)
     delList = [34,42,47,58,60,62,63,92,124]

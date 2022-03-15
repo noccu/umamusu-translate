@@ -3,6 +3,7 @@ from pathlib import Path, PurePath
 import sys
 import json
 from typing import Generator
+import regex
 
 
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
@@ -140,6 +141,10 @@ class TranslationFile:
 
     def save(self):
         writeJsonFile(self.file, self.data)
+
+def isJapanese(text):
+    # Should be cached according to docs
+    return regex.search(r"[\p{scx=Katakana}\p{scx=Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}\p{General_Punctuation}]{3,}", text)
 
 def usage(args: str, *msg: str):
     joinedMsg = '\n'.join(msg)

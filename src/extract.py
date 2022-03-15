@@ -158,13 +158,16 @@ def transferExisting(storyId, textData, file):
 
     if file is None:
         file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
-        if file is not None: # Check we actually found a file above
+        if file is None: # Check we actually found a file above
+            return
+        else: 
             file = common.TranslationFile(file)
 
     for block in file.getTextBlocks():
         if block['blockIdx'] == textData['blockIdx']:
             textData['enText'] = block['enText']
-            textData['enName'] = block['enName']
+            if 'enName' in block:
+                textData['enName'] = block['enName']
             if 'choices' in block:
                 for idx, choice in enumerate(textData['choices']):
                     try:

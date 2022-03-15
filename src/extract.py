@@ -59,7 +59,7 @@ class CheckPatched():
         else:
             return False
 
-def extractAsset(path, storyId):
+def extractAsset(path, storyId, tlFile = None):
     env = UnityPy.load(path)
     index = next(iter(env.container.values())).get_obj()
 
@@ -74,7 +74,7 @@ def extractAsset(path, storyId):
             'text': list()
         }
         isPatched = CheckPatched(env.file.name)
-        fileCache = tlFile
+        transferExisting = DataTransfer(tlFile)
 
         if EXTRACT_TYPE == "race":
             export['storyId'] = tree['m_Name'][-9:]
@@ -82,7 +82,7 @@ def extractAsset(path, storyId):
             for block in tree['textData']:
                 textData = extractText("race", block)
                 if isPatched(textData): return
-                fileCache = transferExisting(storyId, textData, fileCache)
+                transferExisting(storyId, textData)
                 export['text'].append(textData)
         elif EXTRACT_TYPE == "lyrics":
             # data = index.read()
@@ -97,7 +97,7 @@ def extractAsset(path, storyId):
                 if header: header = False; continue
                 textData = extractText("lyrics", row)
                 if isPatched(textData): return
-                fileCache = transferExisting(storyId, textData, fileCache)
+                transferExisting(storyId, textData)
                 export['text'].append(textData)
                 
         elif EXTRACT_TYPE == "preview":
@@ -105,7 +105,7 @@ def extractAsset(path, storyId):
             for block in tree['DataArray']:
                 textData = extractText("preview", block)
                 if isPatched(textData): return
-                fileCache = transferExisting(storyId, textData, fileCache)
+                transferExisting(storyId, textData)
                 export['text'].append(textData)
         else:
             export['storyId'] = "".join(storyId) if EXTRACT_TYPE == "home" else  tree['StoryId']
@@ -120,10 +120,9 @@ def extractAsset(path, storyId):
                     if isPatched(textData): return
                     textData['pathId'] = pathId  # important for re-importing
                     textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
-                    fileCache = transferExisting(storyId, textData, fileCache)
+                    transferExisting(storyId, textData)
                     export['text'].append(textData)
         return export
-
 
 def extractText(assetType, obj):
     if assetType == "race":
@@ -176,37 +175,69 @@ def extractText(assetType, obj):
                 })
 
     return o if o['jpText'] else None
+    
+class DataTransfer():
+    def __init__(self, file: common.TranslationFile = None):
+        self.file = file
+        self.offset = 0
 
-def transferExisting(storyId, textData, file):
-    # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
-    # Only continue when forced to.
-    if not OVERWRITE_DST: return
-    group, id, idx = storyId
+    def __call__(self, storyId, textData):
+        # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
+        # Only continue when forced to.
+        if not OVERWRITE_DST: return
+        group, id, idx = storyId
 
-    if file is None:
-        file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
-        if file is None: # Check we actually found a file above
-            return
+        if self.file is None:
+            file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
+            if file is None: # Check we actually found a file above
+                return
+            else: 
+                self.file = common.TranslationFile(file)
+
+        textSearch = False
+        targetBlock = None
+        textBlocks = self.file.getTextBlocks()
+        if 'blockIdx' in textData:
+            idx = textData["blockIdx"] - 1 - self.offset
+            if idx < len(textBlocks):
+                targetBlock = textBlocks[idx]
+                if targetBlock['jpText'] != textData['jpText']:
+                    print(f"jp text does not match at bIdx {textData['blockIdx']}")
+                    targetBlock = None
+                    textSearch = True
+            else: textSearch = True
         else: 
-            file = common.TranslationFile(file)
+            print("no block idx")
+            textSearch = True
 
-    for block in file.getTextBlocks():
-        if not 'blockIdx' in block or block['blockIdx'] == textData['blockIdx']:
-            textData['enText'] = block['enText']
-            if 'enName' in block:
-                textData['enName'] = block['enName']
-            if 'choices' in block:
+        if textSearch:
+            print("searching by text")
+            for i, block in enumerate(textBlocks):
+                if block['jpText'] == textData['jpText']:
+                    print(f"found text at block {i}")
+                    self.offset = idx - i
+                    targetBlock = block
+                    break
+            if not targetBlock:
+                print("text not found")
+
+        if targetBlock:
+            textData['enText'] = targetBlock['enText']
+            if 'enName' in targetBlock:
+                textData['enName'] = targetBlock['enName']
+            if 'choices' in targetBlock:
                 for idx, choice in enumerate(textData['choices']):
                     try:
-                        choice['enText'] = block['choices'][idx]['enText']
+                        choice['enText'] = targetBlock['choices'][idx]['enText']
                     except IndexError:
-                        print(f"New choice in {file.name} at {idx}. Requires translation.")
-            if 'coloredText' in block:
+                        print(f"New choice in {self.file.name} at {idx}. Requires translation.")
+                    except KeyError:
+                        print(f"Choice mismatch when attempting data transfer in {self.file.name} at {idx}")
+            if 'coloredText' in targetBlock:
                 for idx, cText in enumerate(textData['coloredText']):
-                    cText['enText'] = block['coloredText'][idx]['enText']
-            if 'skip' in block:
-                textData['skip'] = block['skip']
-    return file
+                    cText['enText'] = targetBlock['coloredText'][idx]['enText']
+            if 'skip' in targetBlock:
+                textData['skip'] = targetBlock['skip']
 
 
 def exportData(data, filepath: str):

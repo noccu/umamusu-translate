@@ -27,13 +27,17 @@ def queryDB():
     if EXTRACT_TYPE == "story":
         pattern = f"{EXTRACT_TYPE}/data/{EXTRACT_GROUP}/{EXTRACT_ID}/{EXTRACT_TYPE}timeline%{EXTRACT_IDX}"
     elif EXTRACT_TYPE == "home":
-        pattern = f"{EXTRACT_TYPE}/data/00000/{EXTRACT_GROUP}/{EXTRACT_TYPE}timeline_00000_{EXTRACT_GROUP}_{EXTRACT_ID}%"
+        pattern = f"{EXTRACT_TYPE}/data/00000/{EXTRACT_GROUP}/{EXTRACT_TYPE}timeline_00000_{EXTRACT_GROUP}_{EXTRACT_ID}{EXTRACT_IDX}%"
     elif EXTRACT_TYPE == "race":
-        pattern = f"race/storyrace/text/storyrace_{EXTRACT_GROUP}{EXTRACT_ID}%"
+        pattern = f"race/storyrace/text/storyrace_{EXTRACT_GROUP}{EXTRACT_ID}{EXTRACT_IDX}%"
     elif EXTRACT_TYPE == "lyrics":
-        pattern = f"live/musicscores/m{EXTRACT_ID}/m{EXTRACT_ID}_lyrics"
+        id = EXTRACT_ID
+        if EXTRACT_ID == "____" and EXTRACT_IDX != "___": id = EXTRACT_IDX
+        pattern = f"live/musicscores/m{id}/m{id}_lyrics"
     elif EXTRACT_TYPE == "preview":
-        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{EXTRACT_ID}"
+        id = EXTRACT_ID
+        if EXTRACT_ID == "____" and EXTRACT_IDX != "___": id = EXTRACT_IDX
+        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{id}"
     db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(
         f"select h, n from a where n like '{pattern}' limit {EXTRACT_LIMIT};")
@@ -256,7 +260,7 @@ def exportAsset(bundle: str, path: str):
 
 
 def main():
-    print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
+    print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID}, idx {EXTRACT_IDX} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
     q = queryDB()
     print(f"Found {len(q)} files.")
     for bundle, path in q:

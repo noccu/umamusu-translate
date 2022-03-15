@@ -66,7 +66,7 @@ def extractAsset(path, storyId):
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': 3,
+            'version': 4,
             'bundle': env.file.name,
             'type': EXTRACT_TYPE,
             'storyId': "",
@@ -104,7 +104,7 @@ def extractAsset(path, storyId):
                 if isPatched(textData): return
                 export['text'].append(textData)
         else:
-            export['storyId'] = tree['StoryId']
+            export['storyId'] = "".join(storyId) if EXTRACT_TYPE == "home" else  tree['StoryId']
             export['title'] = tree['Title']
 
             fileCache = None

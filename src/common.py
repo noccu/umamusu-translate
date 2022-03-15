@@ -139,6 +139,19 @@ class TranslationFile:
         else:
             return "story/home"
 
+    def getStoryId(self):
+        if self.version > 3:
+            return self.data['storyId']
+        elif self.version > 2 and self.getType() != "000000000":
+            return self.data['storyId']
+        else:
+            isN = regex.compile(r"\d+")
+            g, id, idx = PurePath(self.file).parts[-3:] # project structure provides at least 3 levels, luckily
+            if not isN.match(g): g = ""
+            if not isN.match(id): id = ""
+            idx = isN.match(idx)[0]
+            return f"{g}{id}{idx}"
+
     def save(self):
         writeJsonFile(self.file, self.data)
 

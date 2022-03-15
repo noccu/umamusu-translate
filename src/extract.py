@@ -74,6 +74,7 @@ def extractAsset(path, storyId):
             'text': list()
         }
         isPatched = CheckPatched(env.file.name)
+        fileCache = tlFile
 
         if EXTRACT_TYPE == "race":
             export['storyId'] = tree['m_Name'][-9:]
@@ -81,6 +82,7 @@ def extractAsset(path, storyId):
             for block in tree['textData']:
                 textData = extractText("race", block)
                 if isPatched(textData): return
+                fileCache = transferExisting(storyId, textData, fileCache)
                 export['text'].append(textData)
         elif EXTRACT_TYPE == "lyrics":
             # data = index.read()
@@ -95,6 +97,7 @@ def extractAsset(path, storyId):
                 if header: header = False; continue
                 textData = extractText("lyrics", row)
                 if isPatched(textData): return
+                fileCache = transferExisting(storyId, textData, fileCache)
                 export['text'].append(textData)
                 
         elif EXTRACT_TYPE == "preview":
@@ -102,12 +105,12 @@ def extractAsset(path, storyId):
             for block in tree['DataArray']:
                 textData = extractText("preview", block)
                 if isPatched(textData): return
+                fileCache = transferExisting(storyId, textData, fileCache)
                 export['text'].append(textData)
         else:
             export['storyId'] = "".join(storyId) if EXTRACT_TYPE == "home" else  tree['StoryId']
             export['title'] = tree['Title']
 
-            fileCache = None
             for block in tree['BlockList']:
                 for clip in block['TextTrack']['ClipList']:
                     pathId = clip['m_PathID']
@@ -188,7 +191,7 @@ def transferExisting(storyId, textData, file):
             file = common.TranslationFile(file)
 
     for block in file.getTextBlocks():
-        if block['blockIdx'] == textData['blockIdx']:
+        if not 'blockIdx' in block or block['blockIdx'] == textData['blockIdx']:
             textData['enText'] = block['enText']
             if 'enName' in block:
                 textData['enName'] = block['enName']

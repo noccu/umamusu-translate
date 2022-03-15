@@ -1,4 +1,3 @@
-from pydoc import text
 import ass
 import srt
 import common

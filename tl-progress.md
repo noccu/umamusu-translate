@@ -27,7 +27,7 @@ Patisserie Grandeur | Complete | [noccu][]
 # Character stories
 name | progress | translator
 --- | --- | ---
-Air Groove | In progress | [burritoblaster][]
+Air Groove | In progress/Transferring | [burritoblaster][] (ep 1-2)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4-6), deepl
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Transferring | [XiantheMiguel][] (commissioned by AhriParty)
@@ -76,7 +76,7 @@ Mihono Bourbon | In progress | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
-Rudolph | In progress | deepl (old)
+Rudolph | In progress | [ebi][]
 Sakura Bakushin O | Complete | deepl
 
 ## Cards

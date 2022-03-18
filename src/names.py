@@ -10,6 +10,7 @@ TARGET_FILE = args.getArg("-src", False)
 TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
+TARGET_IDX = args.getArg("-idx", False)
 
 
 def createDict():
@@ -261,7 +262,7 @@ def createDict():
 
 def translate(namesDict):
     if TARGET_FILE: files = [TARGET_FILE]
-    else: files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
+    else: files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
 
     for file in files:
         file = common.TranslationFile(file)

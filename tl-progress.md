@@ -89,6 +89,7 @@ All (up to 30/12/2021) | Complete | deepl
 name | progress | translator
 --- | --- | ---
 Maruzensky | Complete | [noccu][]
+Curren Chan | Complete | [noccu][]
 
 # Lyrics
 name | progress | translator

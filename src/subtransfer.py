@@ -25,22 +25,28 @@ SUBTITLE_FILE = args.getArg("-sub", None)
 OFFSET = args.getArg("-off", -1)
 if type(OFFSET) is not int:
     OFFSET = int(OFFSET)
-NAME_PREFIX = args.getArg("-npre", False)
+FILTER = args.getArg("-filter", False) # x,y,...
 OVERWRITE_NAMES = args.getArg("-ON", False)
+DUPE_CHECK_ALL = args.getArg("-DUPEALL", False)
 AUTO = True
 if OFFSET > -1: AUTO = False
 
 # Helpers
 def addSub(target, text: str):
-    if NAME_PREFIX:
-        m = re.match(r"(.+): (.+)", text, flags=re.DOTALL)
-        if m:
-            name, text = m.group(1,2)
-            if 'enName' in target and (not target['enName'] or OVERWRITE_NAMES):
-                target['enName'] = name
+    if FILTER:
+        fList = FILTER.split(",")
+        if "npre" in fList:
+            m = re.match(r"(.+): (.+)", text, flags=re.DOTALL)
+            if m:
+                name, text = m.group(1,2)
+                if 'enName' in target and (not target['enName'] or OVERWRITE_NAMES):
+                    target['enName'] = name
+        if "brak" in fList and not target['jpText'].startswith("（"):
+            m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
+            if m:
+                text = m.group(1)
     if text.startswith(">"): text = text[1:]
     target['enText'] = text
-    # return text
 
 def duplicateSub(textList, idx, newText):
     # duplicate text and choices
@@ -62,7 +68,7 @@ def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
     if tlFile.getType() != "story": return False
     prevName = textList[idx - 1]['jpName']
     curName = textList[idx]['jpName']
-    return curName in ["<username>", "", "モノローグ"] and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
+    return (DUPE_CHECK_ALL or curName in ["<username>", "", "モノローグ"]) and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
 
 # ASS
 def cleanLine(text):

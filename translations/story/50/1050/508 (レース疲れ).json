@@ -1,0 +1,100 @@
+{
+    "version": 4,
+    "bundle": "6R34C3KW2ACMLDFGQ3HAX5MW6LKUQJJE",
+    "type": "story",
+    "storyId": "501050508",
+    "title": "レース疲れ",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "校門前でナリタタイシンを見かけたが、\r\nいつもより元気がない気がする。",
+            "enText": "I saw Narita Taishin in front of \nthe school gate, but she seemed \nless energetic than usual.",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "もしかして体調悪いのか？",
+                    "enText": "Maybe you're not feeling well?",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "もしかして体調悪い？",
+                    "enText": "Maybe you're not feeling well?",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": -3234174010881201261,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "……は？　誰が！",
+            "enText": "What about…? Who!",
+            "nextBlock": 3,
+            "pathId": 9036910236132550093,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "レースだってちゃんとこなしてるでしょ？\r\nアタシはそんなにヤワじゃない……！",
+            "enText": "You're doing well in the race, aren't you? \nI'm not that naive…!",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "でも……",
+                    "enText": "But…",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": -7165101692672629934,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "うっさい、過保護すぎ！",
+            "enText": "Ugh, too overprotective!",
+            "nextBlock": 5,
+            "pathId": 8564103078719020385,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "（……何やってんだろ、アタシ。\r\n疲れてイライラして、八つ当たりして）",
+            "enText": "(… What am I doing, Atashi? I'm tired, \nfrustrated, and taking it out on you.)",
+            "nextBlock": 6,
+            "pathId": -6933944622775658175,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "（アイツの言う通り、\r\nちょっと休んだ方がいいのかな……）",
+            "enText": "(She's right, maybe I should take \nsome time off…)",
+            "nextBlock": 7,
+            "pathId": -7188876164573293762,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "その後、ナリタタイシンと別れたが、\r\n去り際の後ろ姿も覇気がなかった。",
+            "enText": "After that, we parted ways with \nNarita Taishin, who was not looking \ntoo good as she left.",
+            "nextBlock": 8,
+            "pathId": -6385990218729824823,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "もしかすると、疲れが溜まっているのかも\r\nしれない。今後のレースの予定を\n見直す必要がありそうだ。",
+            "enText": "Perhaps she is just tired. I will have to \nreevaluate my racing schedule.",
+            "nextBlock": -1,
+            "pathId": -425208962048818747,
+            "blockIdx": 8
+        }
+    ]
+}

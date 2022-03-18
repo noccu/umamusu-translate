@@ -1,0 +1,87 @@
+{
+    "version": 4,
+    "bundle": "4C5VXCLV23AJWFIGXAHPFMAELXZHJDXF",
+    "type": "story",
+    "storyId": "501050700",
+    "title": "寝不足で……",
+    "text": [
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "ふぁ……。",
+            "enText": "Huh…",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "眠れてないのか？",
+                    "enText": "You haven't slept?",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "眠れてないの？",
+                    "enText": "Not sleeping?",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": 8935377568396603606,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "別に……ちょっと寝つきが悪かっただけ。",
+            "enText": "Not really… I just had \na little trouble sleeping.",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "大丈夫か！？無理するなよ！？",
+                    "enText": "Are you okay? Take it easy!",
+                    "nextBlock": 3
+                },
+                {
+                    "jpText": "大丈夫！？無理しないようにね！？",
+                    "enText": "Are you okay! Don't overdo it!",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": -7300322291639035380,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "いや、大げさ……！\r\nんな血相変えないでよ。",
+            "enText": "No, exaggeration…! Don't \nbe such a bleeding heart.",
+            "nextBlock": 4,
+            "pathId": -6765751041212512075,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "こんなのよくあるし……気分悪かったり、\r\nムカムカしてると、眠れないことがあるだけ。",
+            "enText": "This happens all the time and… \nI just can't sleep when I'm feeling \nbad or sick to my stomach.",
+            "nextBlock": 5,
+            "pathId": 6730940572273440807,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "ナリタタイシン",
+            "enName": "Narita Taishin",
+            "jpText": "……あーもう、なんでこんなこと話して……。\r\n調子狂うな、ホント……。",
+            "enText": "… Oh my god, why are you talking about \nthis… Don't go crazy, really…",
+            "nextBlock": 6,
+            "pathId": -1069949846661844890,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "ナリタタイシンは寝不足なようだ……。\r\nあまり無理をさせないようにしよう。",
+            "enText": "Narita Taishin doesn't seem to be sleeping \nwell… Let's not push her too hard.",
+            "nextBlock": -1,
+            "pathId": -3635724731884364983,
+            "blockIdx": 6
+        }
+    ]
+}

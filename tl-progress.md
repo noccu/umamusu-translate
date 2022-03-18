@@ -42,6 +42,7 @@ Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete, Transferring | deepl, [xct][]
 Matikanetannhauser | In progress | [Snep][]
 Maruzensky | Complete | deepl
+Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
 Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Rice Shower  | Complete, Transferring | deepl, [Ben][] (ep 1-4)

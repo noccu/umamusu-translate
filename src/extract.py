@@ -192,6 +192,13 @@ class DataTransfer():
         self.file = file
         self.offset = 0
         self.simRatio = 0.9 if UPDATE and EXTRACT_TYPE != "lyrics" else 0.99
+        self.printed = False
+
+    def filePrint(self, text):
+        if not self.printed:
+            print(f"\nIn {self.file.name}:")
+            self.printed = True
+        print(text)
 
     def __call__(self, storyId, textData):
         # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
@@ -210,45 +217,45 @@ class DataTransfer():
         targetBlock = None
         textBlocks = self.file.getTextBlocks()
         if 'blockIdx' in textData:
-            idx = max(textData["blockIdx"] - 1 - self.offset, 0)
-            if idx < len(textBlocks):
-                targetBlock = textBlocks[idx]
+            txtIdx = max(textData["blockIdx"] - 1 - self.offset, 0)
+            if txtIdx < len(textBlocks):
+                targetBlock = textBlocks[txtIdx]
                 if similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
-                    print(f"jpText does not match at bIdx {textData['blockIdx']}")
+                    self.filePrint(f"jpText does not match at bIdx {textData['blockIdx']}")
                     targetBlock = None
                     textSearch = True
             else: textSearch = True
         else: 
-            print(f"No block idx at {idx}")
-            idx = int(idx)
+            self.filePrint(f"No block idx at {txtIdx}")
+            txtIdx = int(txtIdx)
             textSearch = True
 
         if textSearch:
-            print("Searching by text")
+            self.filePrint("Searching by text")
             for i, block in enumerate(textBlocks):
                 if similarity(block['jpText'], textData['jpText']) > self.simRatio:
-                    print(f"Found text at block {i}")
-                    self.offset = idx - i
+                    self.filePrint(f"Found text at block {i}")
+                    self.offset = txtIdx - i
                     targetBlock = block
                     break
             if not targetBlock:
-                print("Text not found")
+                self.filePrint("Text not found")
 
         if targetBlock:
             textData['enText'] = targetBlock['enText']
             if 'enName' in targetBlock:
                 textData['enName'] = targetBlock['enName']
             if 'choices' in targetBlock:
-                for idx, choice in enumerate(textData['choices']):
+                for txtIdx, choice in enumerate(textData['choices']):
                     try:
-                        choice['enText'] = targetBlock['choices'][idx]['enText']
+                        choice['enText'] = targetBlock['choices'][txtIdx]['enText']
                     except IndexError:
-                        print(f"New choice in {self.file.name} at bIdx {targetBlock['blockIdx']}.")
+                        self.filePrint(f"New choice at bIdx {targetBlock['blockIdx']}.")
                     except KeyError:
-                        print(f"Choice mismatch when attempting data transfer in {self.file.name} at {idx}")
+                        self.filePrint(f"Choice mismatch when attempting data transfer at {txtIdx}")
             if 'coloredText' in targetBlock:
-                for idx, cText in enumerate(textData['coloredText']):
-                    cText['enText'] = targetBlock['coloredText'][idx]['enText']
+                for txtIdx, cText in enumerate(textData['coloredText']):
+                    cText['enText'] = targetBlock['coloredText'][txtIdx]['enText']
             if 'skip' in targetBlock:
                 textData['skip'] = targetBlock['skip']
 

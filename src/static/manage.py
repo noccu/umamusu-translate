@@ -61,7 +61,6 @@ def importDump(path: PurePath):
     isExternal = path != LOCAL_DUMP
     # load local dump to update if using an external file
     localDumpData = common.readJson(LOCAL_DUMP) if isExternal else None
-    filter = re.compile(r'[^\p{Katakana}\p{Hiragana}\p{Han}]+')
 
     if path.suffix == ".json":
         data = common.readJson(path)
@@ -73,7 +72,7 @@ def importDump(path: PurePath):
             path = LOCAL_DUMP
         # copy to list so we don't run into issues deleting keys in our loop obj
         for key, val in list(data.items()):
-            if len(key) > 5 and filter.fullmatch(val):
+            if len(key) > 5 and common.isEnglish(val):
                 # remove non-japanese data (excluding static)
                 del data[key]
             else:
@@ -104,7 +103,7 @@ def importDump(path: PurePath):
                 if key and val:
                     # static range always seems to dump in japanese, which helps
                     # also assuming the problem this fixes only occurs/matters for static text
-                    if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not filter.fullmatch(val)):
+                    if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not common.isEnglish(val)):
                         localDumpData[key] = val
         if DO_IMPORT or IMPORT_DUMP_ONLY:
             common.writeJsonFile(LOCAL_DUMP, localDumpData)

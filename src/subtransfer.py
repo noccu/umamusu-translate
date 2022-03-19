@@ -106,6 +106,13 @@ def processSRT():
         doc = list(srt.parse(f))
     processSubs(doc, "srt")
 
+def processTXT():
+    # Built on Holo's docs
+    # Expects: No newlines in block, blocks separated by newline (or any number of blank lines).
+    with open(SUBTITLE_FILE, "r", encoding="utf8") as f:
+        lines = [l for l in f if common.isEnglish(l) and not re.match(r"\n+\s*", l)]
+    processSubs(lines, "txt")
+
 def processSubs(subs, format):
     tlFile = common.TranslationFile(TARGET_FILE)
     storyType = tlFile.getType()
@@ -117,7 +124,12 @@ def processSubs(subs, format):
         raise SystemExit
         
     for line in subs:
-        subText = line.content if format == "srt" else line.text
+        if format == "srt":
+            subText = line.content 
+        elif format == "ass":
+            subText =  line.text
+        elif format == "txt":
+            subText = line
         if AUTO and idx == len(textList):
             print(f"File filled at idx {idx}. Next file part starts at: {subText}")
             break
@@ -167,6 +179,8 @@ def main():
         processASS()
     elif type == "srt":
         processSRT()
+    elif type == "txt":
+        processTXT()
     else:
         print("Unsupported subtitle format.")
         raise NotImplementedError

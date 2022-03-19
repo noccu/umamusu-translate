@@ -159,6 +159,8 @@ class TranslationFile:
 def isJapanese(text):
     # Should be cached according to docs
     return regex.search(r"[\p{scx=Katakana}\p{scx=Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}\p{General_Punctuation}]{3,}", text)
+def isEnglish(text):
+    return regex.fullmatch(r"[^\p{Katakana}\p{Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}。]+", text)
 
 def usage(args: str, *msg: str):
     joinedMsg = '\n'.join(msg)

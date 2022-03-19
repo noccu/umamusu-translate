@@ -29,6 +29,10 @@
         "repl": "'"
     },
     {
+        "re": "\\balot\\b",
+        "repl": "a lot"
+    },
+    {
         "re": "\\bbaba\\b",
         "repl": "field",
         "limit": true

@@ -151,7 +151,7 @@ def createDict():
     names['ベテラントレーナーＡ'] = "Veteran Trainer A"
     names['ベテラントレーナーB'] = "Veteran Trainer B"
     names['ベテラントレーナーＢ'] = "Veteran Trainer B"
-    names['先代トレーナー'] = "Previous Trainer"
+    names['先代トレーナー'] = "Chief Trainer"
     names['チーフトレーナー'] = "Chief Trainer"
     names['トレーナー代表'] = "Trainer Representative"
     names['トレーナーたち'] = "Trainers"

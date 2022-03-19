@@ -14,7 +14,7 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story (ch1) | Transferring | [CatNipHoarder][] & [Holo][] (ep 1-5/13)
+Main story (ch1) | Complete | [CatNipHoarder][] & [Holo][]
 Main story (ch5) | Complete | [LotoDS][]
 Half Anniversary Story | Transferring | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]

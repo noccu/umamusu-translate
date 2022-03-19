@@ -1,0 +1,442 @@
+{
+    "version": 4,
+    "bundle": "RMDHRJH42QZEGIOOS5JWUM56RCWZOX7O",
+    "type": "story",
+    "storyId": "501040513",
+    "title": "order from client",
+    "text": [
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "ある日、中央広場で秋川理事長と話している\r\nゴールドシチーを見かけた。",
+            "enText": "One day, I saw Gold City talking with \nChancellor Akikawa in the central plaza.",
+            "nextBlock": 2,
+            "pathId": 3454123033125123415,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "秋川理事長",
+            "enName": "Chairwoman Akikawa",
+            "jpText": "何卒ッ！　よろしく頼む！\r\n納期対応のため、突然ですまないが……。",
+            "enText": "Gentlemen! Best regards! Sorry for the \nabruptness in responding to your delivery \ndate, but please contact us…",
+            "nextBlock": 3,
+            "pathId": -265317423347766699,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "わかりました。任せてください。",
+            "enText": "I understand. I'll take care of it.",
+            "nextBlock": 4,
+            "choices": [
+                {
+                    "jpText": "どうしたんだ？",
+                    "enText": "What's going on?",
+                    "nextBlock": 4
+                },
+                {
+                    "jpText": "どうしたの？",
+                    "enText": "What's wrong?",
+                    "nextBlock": 4
+                }
+            ],
+            "pathId": 3452211004866951871,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "これから新入生歓迎用のパンフで\r\n使う写真を撮るんだって。\nアタシ、撮影モデルの代打するから。",
+            "enText": "They are going to take pictures for a \npamphlet to welcome new students. I'm going \nto be the model for the photo shoot.",
+            "nextBlock": 5,
+            "pathId": 6714787234959646168,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "電話先のウマ娘",
+            "enName": "",
+            "jpText": "『うぅ～……ごめんなさい……！　ぐすっ。\r\nどうして私、風邪なんか引いて……！』",
+            "enText": "'Ugh～… sorry…! Gush. \nWhy did I catch a cold…!",
+            "nextBlock": 6,
+            "pathId": 9178149707992242476,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "秋川理事長",
+            "enName": "Chairwoman Akikawa",
+            "jpText": "わ、わわっ。泣かないでくれ！\r\n風邪というのは誰でもかかるもので――",
+            "enText": "Wow. Wow. Don't cry! The common cold is \nsomething we all get…",
+            "nextBlock": 7,
+            "pathId": -3213105513926182275,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "……スミマセン。その電話貸してもらえます？",
+            "enText": "… Smithsonian. Can I borrow that phone?",
+            "nextBlock": 8,
+            "pathId": -3566878012468158651,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "もう泣かないの。アタシがアンタの\r\n代わりをするって決めたんだから。",
+            "enText": "I don't cry anymore. I've decided \nthat I will take your place.",
+            "nextBlock": 9,
+            "pathId": -9091300587319543890,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "電話越しのウマ娘",
+            "enName": "",
+            "jpText": "『ぐすっ……ごめんなさい……。\r\nシチーさんにも迷惑かけて……』",
+            "enText": "'Gosh… sorry… I'm sorry… \nfor bothering Ms. Cichy.\"",
+            "nextBlock": 10,
+            "pathId": -7308103661979022397,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "こーら、違うでしょ？\r\nアンタが今すべきことは謝ること\nじゃなくて、その風邪を治すこと！",
+            "enText": "Come on, you know you're not right. \nWhat you need to do now is not apologize, \nbut get over that cold!",
+            "nextBlock": 11,
+            "pathId": -2193885666562388085,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "だから栄養あるものを食べて、さっさと寝る！\r\nアタシからは以上、わかった？",
+            "enText": "So eat something nutritious and get some \nsleep! That's all from me, got it?",
+            "nextBlock": 12,
+            "pathId": 9174249695183097606,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "電話越しのウマ娘",
+            "enName": "",
+            "jpText": "『は、はいっ！』",
+            "enText": "Yes!",
+            "nextBlock": 13,
+            "pathId": -8340428914039462841,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ん、上出来。それくらいいい返事ができれば、\r\n新しい仕事もすぐ舞い込んでくるはずだよ。",
+            "enText": "Well done. If you can respond that well, you \nshould get a new job soon.",
+            "nextBlock": 14,
+            "pathId": -3842726477008512806,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "じゃ、こっちも始めよっか。\r\n制服以外に勝負服も使うっしょ？",
+            "enText": "Then, let's start this one too. We'll use the \nuniform as well as the uniform, right?",
+            "nextBlock": 15,
+            "pathId": -8788296291953442350,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "カメラマン",
+            "enName": "",
+            "jpText": "ではまず登校風景からお願いしまーす！",
+            "enText": "Let's start with a scene from \nmy first day at school!",
+            "nextBlock": 16,
+            "pathId": -2615562053228432904,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "カメラマン",
+            "enName": "",
+            "jpText": "次は校舎内で！\r\nいいですねー、その表情！",
+            "enText": "Next time in the school building! \nI love it… that look!",
+            "nextBlock": 17,
+            "pathId": 6683520853701422475,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "カメラマン",
+            "enName": "",
+            "jpText": "では次は勝負服で！　おっ、かっこいい！\r\nもう1枚もお願いします！",
+            "enText": "Now let's move on to the next one, \nin the winning outfit! Whoa, cool! \nAnother one please!",
+            "nextBlock": 18,
+            "pathId": -6856373188623635321,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "っし。ラストは走っている姿か。",
+            "enText": "I'm sorry. Is the last one a running figure?",
+            "nextBlock": 19,
+            "pathId": 731200479719910012,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "撮影スタッフA",
+            "enName": "",
+            "jpText": "すごい……さすが現役モデル。\r\n求められる画がわかっているというか……。",
+            "enText": "It's amazing… indeed a working model. \nYou know what you're looking for…",
+            "nextBlock": 20,
+            "pathId": 8325363858655815058,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "撮影スタッフB",
+            "enName": "",
+            "jpText": "いやー、マジでかっこいいわ。撮影、\r\n巻き巻きで1時間前に終わりそうっすよ。",
+            "enText": "Wow, that's really cool. I think I'm going to \nfinish filming an hour ago.",
+            "nextBlock": 21,
+            "pathId": 6154093614115618928,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "スタッフの言う通り、撮影中の\r\nゴールドシチーの姿はプロそのものだった。",
+            "enText": "The staff was right, Gold City was a \nprofessional herself during the shoot.",
+            "nextBlock": 22,
+            "pathId": -7630336157507676047,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "普段の走る彼女とはまた違う、\r\n煌びやかで、遠い存在のようで――",
+            "enText": "She's different from her normal running \nself, shimmering, distant…",
+            "nextBlock": 23,
+            "pathId": 7261655934676567007,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "カメラマン",
+            "enName": "",
+            "jpText": "ではラストカット！　シチーさんの\r\nここ1番の武器を見せてください！",
+            "enText": "Last cut then! Let's see your \nbest weapon here, Ms. Cichy!",
+            "nextBlock": 24,
+            "pathId": 7732229202992556608,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "……1番の武器……。",
+            "enText": "Weapons of…1 number…",
+            "nextBlock": 25,
+            "pathId": -2196546754254122989,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ねぇ、トレーナー。\r\nちょっといい？",
+            "enText": "Hey, trainer. Can I talk to you for a second?",
+            "nextBlock": 26,
+            "choices": [
+                {
+                    "jpText": "俺？",
+                    "enText": "Me?",
+                    "nextBlock": 26
+                },
+                {
+                    "jpText": "私？",
+                    "enText": "Private?",
+                    "nextBlock": 26
+                }
+            ],
+            "pathId": -4583509956209642656,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "そ。アンタ。アンタは\r\nアタシの武器はなんだと思う？",
+            "enText": "That. Anta. What do you think is my weapon?",
+            "nextBlock": 27,
+            "choices": [
+                {
+                    "jpText": "先に進もうとする意志",
+                    "enText": "Willingness to move on",
+                    "nextBlock": 27
+                },
+                {
+                    "jpText": "泥臭さとか……？",
+                    "enText": "Muddy or…?",
+                    "nextBlock": 30
+                }
+            ],
+            "pathId": -3240026500957814087,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "へ～、そんなこと思ってたんだ。\r\nアタシの走りに？",
+            "enText": "Heh, I didn't know you thought \nthat. For Atashi's running?",
+            "nextBlock": 28,
+            "choices": [
+                {
+                    "jpText": "思ってるよ！",
+                    "enText": "I'm thinking!",
+                    "nextBlock": 28
+                }
+            ],
+            "pathId": 3876419094818233334,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "……。",
+            "enText": "…",
+            "nextBlock": 29,
+            "pathId": -2272063930786322276,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ははっ……暑っ苦しい回答、ドーモ。",
+            "enText": "Haha… hot and bothered answer, Domo.",
+            "nextBlock": 33,
+            "pathId": -7189829604337700985,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "……ぷっ。",
+            "enText": "…p.",
+            "nextBlock": 31,
+            "pathId": 8041643646393674643,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ははっ、やば。\r\nアタシが『泥臭い』か。",
+            "enText": "Haha, yikes. I'm \"muddy\"?",
+            "nextBlock": 32,
+            "pathId": -7776542696579538288,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ふふふっ。そんなこと言うの、\r\nアンタくらいだわ。",
+            "enText": "Hmmm. You're the only one who can say that.",
+            "nextBlock": 33,
+            "pathId": 8349479526026925268,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "こうしてゴールドシチーは\r\n最後の撮影に臨み――",
+            "enText": "And so Goldschy went on \nher final photo shoot.",
+            "nextBlock": 34,
+            "pathId": -4034422608928725625,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "お疲れっしたー。",
+            "enText": "Thanks for all your hard work!",
+            "nextBlock": 35,
+            "pathId": -922191155775654598,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "撮影スタッフB",
+            "enName": "",
+            "jpText": "いやー、さすが。最後の走りとか『らしさ』\r\nを存分に押し出してるポーズだったな～。",
+            "enText": "Wow, as expected. The last run and the poses \nwere very \"in character\".",
+            "nextBlock": 36,
+            "pathId": 4189360011248264363,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "スタッフの言う通り、撮影に関しての\r\n彼女は終始完璧だった。ならばなぜ……。",
+            "enText": "The staff was right about the filming, \nshe was perfect from start to finish. \nThen why…",
+            "nextBlock": 37,
+            "pathId": 8003803367483555919,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "？　なに、トレーナー？",
+            "enText": "? What, trainer?",
+            "nextBlock": 38,
+            "choices": [
+                {
+                    "jpText": "どうして君は自分の武器を俺に聞いたんだ？",
+                    "enText": "Why did you ask me about your weapon?",
+                    "nextBlock": 38
+                },
+                {
+                    "jpText": "どうして貴方は自分の武器を私に聞いたの？",
+                    "enText": "Why did you ask me about my weapon?",
+                    "nextBlock": 38
+                }
+            ],
+            "pathId": 7526513517452563828,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "……あの時、わざわざ自分に聞かずとも\r\n彼女ならばわかっていたのではないだろうか。",
+            "enText": "I think she would have known without \nbothering to ask herself at that… time.",
+            "nextBlock": 39,
+            "pathId": 3292815609487983301,
+            "blockIdx": 38
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "あのさ。モデルっつーのはクライアントの\r\nオーダーに応えてこそなの。",
+            "enText": "You know what? A model is only a model when \nshe responds to a client's order.",
+            "nextBlock": 40,
+            "pathId": -4878273932021832912,
+            "blockIdx": 39
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "だから聞いただけ。\r\n『アタシの1番の武器』を\nアタシよりもわかってる人に。",
+            "enText": "That's why I asked. Someone who knows \"my \nnumber one weapon\" better than I do.",
+            "nextBlock": 41,
+            "pathId": 6266519337216050292,
+            "blockIdx": 40
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "……アンタはアタシのトレーナーでしょ？",
+            "enText": "… You are my trainer, right?",
+            "nextBlock": 42,
+            "pathId": 5390713963870812034,
+            "blockIdx": 41
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "夕日に照らされた彼女の表情は、\r\n先程までのモデルの彼女ではなく、\nトレセン学園生徒の顔になっていた。",
+            "enText": "Her face, lit up by the setting sun, was no \nlonger that of a model, but that of a \nstudent at Thoresen Academy.",
+            "nextBlock": -1,
+            "pathId": 3930898683915668331,
+            "blockIdx": 42
+        }
+    ]
+}

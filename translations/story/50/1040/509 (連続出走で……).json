@@ -1,0 +1,66 @@
+{
+    "version": 4,
+    "bundle": "BAPVIBP5PE5BAEPQFV7NOM7KKJCGWFSY",
+    "type": "story",
+    "storyId": "501040509",
+    "title": "連続出走で……",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "トレーナー室で仕事をしていると、\r\n疲れた顔のゴールドシチーがやってきた。",
+            "enText": "While I was working in the trainer's office, \na tired-looking Gold City came in.",
+            "nextBlock": 2,
+            "choices": [
+                {
+                    "jpText": "授業はどうしたんだ？",
+                    "enText": "What happened to class?",
+                    "nextBlock": 2
+                },
+                {
+                    "jpText": "授業はどうしたの？",
+                    "enText": "What happened to class?",
+                    "nextBlock": 2
+                }
+            ],
+            "pathId": -4359116981074276849,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "休んだらちゃんと出るから、\r\nちょっとだけここに居させてくれない？",
+            "enText": "I'll get out after I rest. Can I \nstay here for a little while?",
+            "nextBlock": 3,
+            "pathId": 2898455545017544620,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "へばってるとこ、誰にも見られたくないの。\r\n心配されんのも、見くびられんのもイヤ。",
+            "enText": "I don't want anyone to see me in a bad spot. \nI don't want to be worried, and I don't want \nto be looked down upon.",
+            "nextBlock": 4,
+            "pathId": 8318829930338143421,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "こんなんじゃダメってわかってんだけど……\r\nなんか気合いが入んなくって……はぁ……。",
+            "enText": "I know it's not supposed to be like \nthis, but… I'm just not feeling \nup to it… haha…",
+            "nextBlock": 5,
+            "pathId": 4003056392196115552,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ひどく疲れているようだが、\r\n最近レースが続いたのが原因だろうか。\n出走予定を見直した方がよさそうだ。",
+            "enText": "She looks very tired, but I wonder if this is \ndue to the recent string of races. Perhaps \nit is due to a series of recent races.",
+            "nextBlock": -1,
+            "pathId": 3996204000349859122,
+            "blockIdx": 5
+        }
+    ]
+}

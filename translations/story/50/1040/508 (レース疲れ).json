@@ -1,0 +1,61 @@
+{
+    "version": 4,
+    "bundle": "GEZIJR3ZUY3JKS7NRJ7IVRTR5TQ2DB6R",
+    "type": "story",
+    "storyId": "501040508",
+    "title": "レース疲れ",
+    "text": [
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "ゴールドシチーは、そろそろモデルの仕事に\r\n行かなければならない。\nその前に話し込んでいると……。",
+            "enText": "Gold City has to go to her modeling job soon. \nBefore that, you can talk to her…",
+            "nextBlock": 2,
+            "pathId": 7419075252171573927,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ごめん、ちょっとだけベンチ座っていい？\r\n話は聞いてるから。",
+            "enText": "Sorry, can I sit on the bench for \na minute? I'm listening to you.",
+            "nextBlock": 3,
+            "choices": [
+                {
+                    "jpText": "もしかして疲れてる？",
+                    "enText": "Maybe you're tired?",
+                    "nextBlock": 3
+                }
+            ],
+            "pathId": 7769846504778404709,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "まぁね。だから休める時に休ませてよ。\r\nフラついてるの見せると、マネジうっさいし。",
+            "enText": "Well, yeah. So let me rest when \nI can. Manej is a pain in the ass \nwhen I show her I'm dizzy.",
+            "nextBlock": 4,
+            "pathId": -7394015753865504086,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "ゴールドシチー",
+            "enName": "Gold City",
+            "jpText": "ま、心配しなくても上手くやるから。\r\nはぁ……けど、ホントはサボりてー……。",
+            "enText": "Well, don't worry, I'll do well. \nI'll do well… but I really \nwant to skip it…",
+            "nextBlock": 5,
+            "pathId": -7009376967870663010,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "",
+            "enName": "",
+            "jpText": "どうやらずいぶん疲れが溜まっているらしい。\r\n今後の出走予定を見直すべきだろうか……。",
+            "enText": "Apparently, she is very tired. I \nwonder if I should rethink my future \nrunning schedule…",
+            "nextBlock": -1,
+            "pathId": -8850036319962059258,
+            "blockIdx": 5
+        }
+    ]
+}

@@ -34,7 +34,7 @@
         "limit": true
     },
     {
-        "re": "(?:To?re?sen|Trespass(?:ing|er)|Tradesmen(?:'s)?) (?:Academy|Gakuen)",
+        "re": "(?:To?re?sc?ent?|Trespass(?:ing|er)|Tradesmen(?:'s)?) (?:Academy|Gakuen)",
         "repl": "Tracen Academy"
     },
     {
@@ -97,6 +97,11 @@
     {
         "re": "[CS]h?(?:i|ee)ch?(?:i|ee)",
         "repl": "City",
+        "limit": true
+    },
+    {
+        "re": "Gold ?[cs]i(?:ch|t)y",
+        "repl": "Gold City",
         "limit": true
     },
     {

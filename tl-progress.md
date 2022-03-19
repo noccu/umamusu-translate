@@ -70,6 +70,7 @@ name | progress | translator
 --- | --- | ---
 Agnes Tachyon | Complete | deepl
 Eishin Flash | In progress | deepl
+Gold City | Complete | deepl (contributed by CryDuringItAll)
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl

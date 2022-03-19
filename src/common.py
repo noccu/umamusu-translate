@@ -21,6 +21,7 @@ def checkTypeValid(t):
 
 def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
     found = list()
+    isJson = lambda f: PurePath(f).suffix == ".json"
     searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
     for root, dirs, files in os.walk(searchDir):
         depth = len(dirs[0]) if dirs else -1
@@ -28,13 +29,13 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
             dirs[:] = [d for d in dirs if d == targetGroup]
         elif targetId:
             if targetType in ("lyrics", "preview"):
-                found.extend(os.path.join(root, file) for file in files if PurePath(file).stem == targetId)
+                found.extend(os.path.join(root, file) for file in files if PurePath(file).stem == targetId and isJson(file))
                 continue
             elif depth == 4:
                 dirs[:] = [d for d in dirs if d == targetId]
         if targetIdx and files:
-            found.extend(os.path.join(root, file) for file in files if file.startswith(targetIdx))
-        else: found.extend(os.path.join(root, file) for file in files)
+            found.extend(os.path.join(root, file) for file in files if file.startswith(targetIdx) and isJson(file))
+        else: found.extend(os.path.join(root, file) for file in files if isJson(file))
     return found
 
 def readJson(file) -> dict:

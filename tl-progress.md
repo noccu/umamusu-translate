@@ -68,6 +68,7 @@ Shared events | Complete | [noccu][]
 ## Umas
 name | progress | translator
 --- | --- | ---
+Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Agnes Tachyon | Complete | deepl
 Eishin Flash | In progress | deepl
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)

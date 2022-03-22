@@ -114,6 +114,9 @@ def swapAssetData(tlFile: TranslationFile):
             assetData.script = bytes(assetText, "utf8")
             assetData.save()
 
+    mainTree = mainFile.read_typetree()
+    mainTree['TypewriteCountPerSecond'] = int(mainTree['TypewriteCountPerSecond'] * 2.25)
+    mainFile.save_typetree(mainTree)
     return env
 
 

@@ -17,6 +17,7 @@ if args.getArg("-h"):
 TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
+TARGET_IDX = args.getArg("-idx", False)
 TARGET_FILE = args.getArg("-src", False)
 FORCE_DL = args.getArg("-F", False)
 
@@ -46,7 +47,7 @@ def save(fileName):
 if TARGET_FILE:
     save(TARGET_FILE)
 else:
-    files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID)
+    files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
     for file in files:
         file = common.TranslationFile(file)
         save(file.getBundle())

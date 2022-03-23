@@ -28,7 +28,7 @@ def get_meta(filePath: str) -> tuple[UnityPy.environment.Environment, UnityPy.en
 def swapAssetData(tlFile: TranslationFile):
     bundle = tlFile.getBundle()
     textList = tlFile.getTextBlocks()
-    assetType = tlFile.getType()
+    bundleType = tlFile.getType()
     assetPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
 
     if not os.path.exists(assetPath):
@@ -44,17 +44,17 @@ def swapAssetData(tlFile: TranslationFile):
     lockAsset = False
 
     for textIdx, textData in enumerate(textList):
-        if assetType != "lyrics" and not textData['enText']:
+        if bundleType != "lyrics" and not textData['enText']:
             textBlocksSkipped += 1
             continue
         
         # Set up assets
-        if assetType in ("race", "preview"):
+        if bundleType in ("race", "preview"):
             if not lockAsset:
                 asset = mainFile
                 assetData = asset.read_typetree()
                 lockAsset = True
-        elif assetType == "lyrics":
+        elif bundleType == "lyrics":
             if not lockAsset:
                 asset = mainFile
                 assetData = asset.read()
@@ -70,12 +70,12 @@ def swapAssetData(tlFile: TranslationFile):
             assetData = asset.read_typetree()
 
         # Swap data
-        if assetType == "race":
+        if bundleType == "race":
             assetData['textData'][textIdx]['text'] = textData['enText']
-        elif assetType == "preview":
+        elif bundleType == "preview":
             assetData['DataArray'][textIdx]['Name'] = textData['enName']
             assetData['DataArray'][textIdx]['Text'] = textData['enText']
-        elif assetType == "lyrics":
+        elif bundleType == "lyrics":
             # Format the CSV text. Their parser uses quotes, no escape chars. For novelty: \t = space; \v and \f = ,; \r = \n
             text = textData['enText']
             if not text:
@@ -104,19 +104,26 @@ def swapAssetData(tlFile: TranslationFile):
                     for idx, text in enumerate(textData['coloredText']):
                         if text['enText']:
                             jpColored[idx]['Text'] = text['enText']
+
+            try:
+                mainTree = mainFile.read_typetree()
+                mainTree['TypewriteCountPerSecond'] = int(mainTree['TypewriteCountPerSecond'] * 2.25)
+                mainFile.save_typetree(mainTree)
+            except KeyError:
+                print(f"Text speed not found in {bundle}")
+            except Exception as e:
+                print(f"Unexpected error in {bundle}: {type(e).__name__}: {e}")
+
             asset.save_typetree(assetData)
 
     if textBlocksSkipped == len(textList):
         env = None
     else:
-        if assetType in ("race", "preview"): asset.save_typetree(assetData)
-        elif assetType == "lyrics": 
+        if bundleType in ("race", "preview"): asset.save_typetree(assetData)
+        elif bundleType == "lyrics": 
             assetData.script = bytes(assetText, "utf8")
             assetData.save()
 
-    mainTree = mainFile.read_typetree()
-    mainTree['TypewriteCountPerSecond'] = int(mainTree['TypewriteCountPerSecond'] * 2.25)
-    mainFile.save_typetree(mainTree)
     return env
 
 

@@ -14,8 +14,9 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story (ch1) | Complete | [CatNipHoarder][] & [Holo][]
-Main story (ch5) | Complete | [LotoDS][]
+Main story Act 1 Ch 5 | Complete | [LotoDS][]
+Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
+Main story Act 1 Ch 6 (Final) | In progress/Transferring | [LotoDS][] (ep 1-2)
 Half Anniversary Story | Transferring | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
@@ -28,11 +29,13 @@ Flapping Run-up | In progress/Transferring | [Hades of Games][] (ep 1-7)
 # Character stories
 name | progress | translator
 --- | --- | ---
+Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | In progress/Transferring | [burritoblaster][] (ep 1-2)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4-6), deepl
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Transferring | [XiantheMiguel][] (commissioned by AhriParty)
 Eishin Flash | Complete | deepl
+El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
@@ -68,10 +71,8 @@ Shared events | Complete | [noccu][]
 ## Umas
 name | progress | translator
 --- | --- | ---
-Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Agnes Tachyon | Complete | deepl
 Eishin Flash | In progress | deepl
-El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Gold City | Complete | deepl (contributed by CryDuringItAll)
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl

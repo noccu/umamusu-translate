@@ -105,15 +105,6 @@ def swapAssetData(tlFile: TranslationFile):
                         if text['enText']:
                             jpColored[idx]['Text'] = text['enText']
 
-            try:
-                mainTree = mainFile.read_typetree()
-                mainTree['TypewriteCountPerSecond'] = int(mainTree['TypewriteCountPerSecond'] * 2.25)
-                mainFile.save_typetree(mainTree)
-            except KeyError:
-                print(f"Text speed not found in {bundle}")
-            except Exception as e:
-                print(f"Unexpected error in {bundle}: {type(e).__name__}: {e}")
-
             asset.save_typetree(assetData)
 
     if textBlocksSkipped == len(textList):
@@ -123,6 +114,17 @@ def swapAssetData(tlFile: TranslationFile):
         elif bundleType == "lyrics": 
             assetData.script = bytes(assetText, "utf8")
             assetData.save()
+
+    if bundleType in ("story", "home"):
+        try:
+            mainTree = mainFile.read_typetree()
+            mainTree['TypewriteCountPerSecond'] = int(mainTree['TypewriteCountPerSecond'] * 2.25)
+            mainFile.save_typetree(mainTree)
+        except KeyError:
+            print(f"Text speed not found in {bundle}")
+        except Exception as e:
+            print(f"Unexpected error in {bundle}: {type(e).__name__}: {e}")
+
 
     return env
 

@@ -24,7 +24,7 @@ Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete | deepl
 Patisserie Grandeur | Complete | [noccu][]
-Flapping Run-up | In progress/Transferring | [Hades of Games][] (ep 1-7)
+Flapping Run-up | In progress/Transferring | [Hades of Games][] (ep 1-9)
 
 # Character stories
 name | progress | translator

@@ -256,7 +256,7 @@
     "レアリティ": "Rarity",
     "親愛度": "Affection",
     "イベント": "Event",
-    "{0} 戦 {1} 勝": "{0} Races {1} Wins",
+    "{0} 戦 {1} 勝": "R: {0} W:{1}",
     "ダウンロード": "Download",
     "サポートカード": "Support Cards",
     "才能開花": "Uncap",
@@ -739,7 +739,7 @@
     "新キャラストーリー解放中！": "New character stories!",
     "スキル\n発動数": "# Skill\nactivations",
     "デイリーレース": "Daily Race",
-    "{0}が不足しています\n\nチケットを購入しますか？": "Lacking {0}. Buy a ticket?",
+    "{0}が不足しています\n\nチケットを購入しますか？": "Lacking {0}.\nBuy a ticket?",
     "{0}を購入しました": "Bought {0}",
     "初回報酬": "First-time rewards",
     "左回り": "CCW",
@@ -1150,7 +1150,7 @@
     "目標達成": "Achieved",
     "次の目標": "Next target",
     "{0} に出走": "Enter {0}",
-    "コンティニュー": "Continue",
+    "コンティニュー": "Retry",
     "{0}ターン後": "{0} turns later",
     "ファンを{0}人集める": "Obtain {0} fans",
     "{0}に{1}回先着する": "Win {0} {1} times",
@@ -1378,7 +1378,7 @@
     "{0}以上で{1}回{2}着以内に入着する": "Finish at least #{2} in {0} or up {1} times",
     "{0}で{1}回1着を獲る": "Win {0} at least {1} times",
     "{0}以上で{1}回1着を獲る": "Win {0} or up at least {1} times",
-    "コンティニューは<color=#ff911c>あと {0} 回</color>可能です": "You can continue {0} more times",
+    "コンティニューは<color=#ff911c>あと {0} 回</color>可能です": "You can retry {0} more times",
     "{0}を {1} 個消費して\n目覚まし時計を購入しますか？": "Purchase alarm clock\nfor {1} {0}?",
     "目覚まし時計購入": "Buy alarm clock",
     "次の目標まで{0}ターンです！\n頑張りましょう！": "{0} turns until the next target\nDo your best!",
@@ -1437,5 +1437,6 @@
     "変 換": "Change",
     "継承ウマ娘を\n選択してください": "Select\na parent",
     "因子表示": "Factor Display",
-    "因 子": "Factor"
+    "因 子": "Factor",
+    "継 承": "Inheritance"
 }

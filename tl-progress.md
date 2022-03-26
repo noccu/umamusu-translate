@@ -33,7 +33,7 @@ Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | In progress/Transferring | [burritoblaster][] (ep 1-3)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4-6), deepl
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
-Daiwa Scarlet | Transferring | [XiantheMiguel][] (commissioned by AhriParty)
+Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Eishin Flash | Complete | deepl
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]

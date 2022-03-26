@@ -30,7 +30,7 @@ Flapping Run-up | In progress/Transferring | [Hades of Games][] (ep 1-9)
 name | progress | translator
 --- | --- | ---
 Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
-Air Groove | In progress/Transferring | [burritoblaster][] (ep 1-2)
+Air Groove | In progress/Transferring | [burritoblaster][] (ep 1-3)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4-6), deepl
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Transferring | [XiantheMiguel][] (commissioned by AhriParty)

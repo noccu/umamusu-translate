@@ -240,6 +240,7 @@ def createDict():
     names['3人'] = "All 3"
     names['4人'] = "All 4"
     names['みんな'] = "Everyone"
+    names['全員'] = "Everyone"
     names['通行人A'] = "Passerby A"
     names['通行人B'] = "Passerby B"
     names['通行人たち'] = "Passersby"

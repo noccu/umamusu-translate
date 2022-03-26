@@ -17,7 +17,7 @@ name | progress | translator
 Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
 Main story Act 1 Ch 6 (Final) | In progress/Transferring | [LotoDS][] (ep 1-3)
-Half Anniversary Story | Transferring | [CatNipHoarder][] & [Holo][]
+Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]

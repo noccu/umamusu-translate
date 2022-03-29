@@ -134,7 +134,7 @@ def processSubs(subs, format):
             print(f"File filled at idx {idx}. Next file part starts at: {subText}")
             break
         # skip title logo on events
-        if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示"):
+        if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示") or textList[idx]['jpText'].startswith("ダミーテキスト"):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":

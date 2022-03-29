@@ -266,6 +266,7 @@ def createDict():
     names['ビューティー安心沢'] = "Beauty Anshinzawa"
     names['スズカのトレーナー'] = "Suzuka's Trainer"
     names['フラッシュの父親'] = "Flash' Father"
+    names['ツルマルツヨシ'] = "Tsurumaru Tsuyoshi"
     names['親戚'] = "Relative"
     names['主婦'] = "Housewive"
     names['射的屋'] = "Shooting Gallery"

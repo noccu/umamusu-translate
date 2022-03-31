@@ -17,7 +17,7 @@ IMPORT_IDX = args.getArg("-idx", False)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
 SAVE_DIR = args.getArg("-dst", os.path.realpath("dat/"))
 OVERWRITE_GAME_DATA = args.getArg("-O", False)
-SILENT_UNCHANGEDS = args.getArg("-S", False)
+VERBOSE = args.getArg("-V", False)
 
 
 def get_meta(filePath: str) -> tuple[UnityPy.environment.Environment, UnityPy.environment.files.ObjectReader]:
@@ -140,25 +140,27 @@ def saveAsset(env):
 def main():
     print(f"Importing group {IMPORT_GROUP or 'all'}, id {IMPORT_ID or 'all'} from translations\{IMPORT_TYPE} to {GAME_ASSET_ROOT if OVERWRITE_GAME_DATA else SAVE_DIR}")
     files = common.searchFiles(IMPORT_TYPE, IMPORT_GROUP, IMPORT_ID, IMPORT_IDX)
-    processedFiles = len(files)
-    print(f"Found {processedFiles} files.")
+    nFiles = len(files)
+    print(f"Found {nFiles} files.")
 
     for file in files:
+        if VERBOSE: print(f"Importing {file}... ", end="", flush=True)
         try:
             data = TranslationFile(file)
         except:
             print(f"Couldn't load translation data from {file}, skipping...")
-            processedFiles -= 1
+            nFiles -= 1
             continue
 
         modifiedBundle = swapAssetData(data)
         if isinstance(modifiedBundle, UnityPy.environment.Environment):
             saveAsset(modifiedBundle)
+            if VERBOSE: print(f"done. ({data.getBundle()})")
         else:
-            if modifiedBundle is None and not SILENT_UNCHANGEDS:
+            if modifiedBundle is None and VERBOSE:
                 print(f"Bundle {data.getBundle()} not changed, skipping...")
-            processedFiles -= 1
+            nFiles -= 1
 
-    print(f"Imported {processedFiles} files.")
+    print(f"Imported {nFiles} files.")
 
 main()

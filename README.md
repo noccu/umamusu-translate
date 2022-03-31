@@ -70,13 +70,13 @@ For arg info run a script with the `-h` arg or just look at the code. Most are v
 script | desc
 ---|---
 filecopy | Simply copies files from the game dir to the project dir for backup. These will also be used by some other scripts where useful.
-restore-files | Downloads fully fresh files from cygames servers, in case of mess ups
-extract | Loads game data and writes relevant data to a local folder, ready to be translated. Creates *Translation Files*
+restore | Downloads fully fresh files from cygames servers, in case of mess ups
+extract | Reads game files and writes relevant data to a local folder, ready to be translated. Creates *Translation Files*
 import | The reverse; loads *Translation Files* and writes them back to game assets for importing into the game
-machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Translation Files* with deepl. Install the userscript in your browser. Run the python file first, then go to the deepl site and use your userscript manager's menu to connect and wait until python exits. This userscript setup is temporary (famous last words)
+machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Translation Files* with deepl. Install the userscript in your browser. Run the python file first, then go to the deepl site and use your userscript manager's menu to connect and wait until python exits. The script can also use trained neural net models through fairseq.
 names | Simply translates names in *Translation Files* using data from the [db-translate project][]
 textprocess | Processes dialogue text in *Translation Files* in various ways. Most immediate manual use is adjusting lengths of lines for newline splits.
-subtransfer | Imports ASS or SRT subtitle files into *Translation Files*. A few conventions must be followed, see its -h switch
+subtransfer | Imports ASS, SRT or TXT subtitle files into *Translation Files*. A few conventions must be followed, see its -h switch
 common | Not a script. Is used by the other files and holds shared functions and data.
 
 ### Common Arguments
@@ -87,12 +87,13 @@ arg|desc
 h | Print basic usage information. Use this to see script-specific options
 g | Process specific group
 id | Process specific id
+idx | Process specific idx
 l | Limit processing to given number of files
-O | `extract.py`: overwrite files in extract folder `import.py`: (over)write directly to game dir instead of `dat/`
-src | Define umamusu game dir (defaults to the usual location in `LocalLow`)
+O | General overwrite option. `extract.py`: overwrite files in extract folder `import.py`: (over)write directly to game dir instead of `dat/`
+src | Define umamusu game dir (defaults to the usual location in `LocalLow`) or script input
 dst | Define root dir to save output in (defaults to `dat/` for `import.py` and `translations/` for `extract.py`)
 
-For g and id see [id-structure.md](id-structure.md)
+For g, id, and idx see [id-structure.md](id-structure.md)
 
 > An example to extract Special Week's story: `python src/extract.py -g 04 -id 1001`
 

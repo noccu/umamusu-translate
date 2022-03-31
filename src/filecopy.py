@@ -19,6 +19,7 @@ TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 DESTINATION = args.getArg("-dst", "dump/")
 OVERWRITE_DST = args.getArg("-O", False)
+BACKUP = args.getArg("-B", False)
 
 
 def buildSqlStmt():
@@ -62,7 +63,6 @@ def buildSqlStmt():
 
     return None if firstExpr else stmt
 
-
 def getFiles():
     with sqlite3.connect(GAME_META_FILE) as db:
         stmt = buildSqlStmt()
@@ -71,23 +71,38 @@ def getFiles():
         cur = db.execute(stmt)
         return cur
 
+def backup():
+    print("Backing up extracted files...")
+    for type in common.TARGET_TYPES:
+        files = common.searchFiles(type, False, False)
+        for file in files:
+            file = common.TranslationFile(file)
+            copy(file.getBundle())
+
+def copy(hash):
+    dst = path.join(DESTINATION, hash)
+    src = path.join(GAME_ASSET_ROOT, hash[:2], hash)
+    if OVERWRITE_DST or not path.exists(dst):
+        try:
+            makedirs(path.dirname(dst), exist_ok=True)
+            shutil.copyfile(src, dst)
+            print(f"Copied {src} to {dst}")
+            return 1
+        except FileNotFoundError:
+            print(f"Couldn't find {src}, skipping...")
+            return 0
+    else:
+        print(f"Skipping existing: {src}")
+        return 0
 
 def main():
-    n = 0
-    for hash, in getFiles():
-        dst = path.join(DESTINATION, hash)
-        src = path.join(GAME_ASSET_ROOT, hash[:2], hash)
-        if OVERWRITE_DST or not path.exists(dst):
-            try:
-                makedirs(path.dirname(dst), exist_ok=True)
-                shutil.copyfile(src, dst)
-                n += 1
-                print(f"Copied {src} to {dst}")
-            except FileNotFoundError:
-                print(f"Couldn't find {src}, skipping...")
-        else:
-            print(f"Skipping existing: {src}")
-    print(f"Copied {n} files.")
+    if BACKUP:
+        backup()
+    else:
+        n = 0
+        for hash, in getFiles():
+            n += copy(hash)
+        print(f"Copied {n} files.")
 
 
 main()

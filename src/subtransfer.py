@@ -81,6 +81,7 @@ def assPreFilter(doc):
     inSplit = None
     lastSplit = None
     for line in doc.events:
+        if re.match("skip", line.effect, re.IGNORECASE): continue
         if re.search("MainText|Default|Button", line.style, re.IGNORECASE) and line.name != "Nameplate":
             if re.match("split", line.effect, re.IGNORECASE):
                 if inSplit and line.effect[-2:] == lastSplit:

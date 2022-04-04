@@ -29,7 +29,7 @@ def download(file):
 
 def save(fileName):
     dstPath = join(GAME_ASSET_ROOT, fileName[:2], fileName)
-    localFile = join(LOCAL_DUMP_DIR, fileName[:2], fileName)
+    localFile = join(LOCAL_DUMP_DIR, fileName)
 
     print(f"Saving file to {dstPath}")
     if not FORCE_DL and isfile(localFile):

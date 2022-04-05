@@ -70,6 +70,11 @@ def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
     curName = textList[idx]['jpName']
     return (DUPE_CHECK_ALL or curName in ["<username>", "", "モノローグ"]) and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
 
+def isChoice(subText, line):
+    if re.match(r">|Trainer:", subText) or (format == "ass" and (line.effect == "choice" or line.style.endswith("Button") or line.name == "Choice")):
+        return True
+    else: return False
+
 # ASS
 def cleanLine(text):
     text = text.replace("\\N", "\n")
@@ -119,7 +124,7 @@ def processSubs(subs, format):
     storyType = tlFile.getType()
     textList = tlFile.getTextBlocks()
     idx = 0
-    lastChoice = 0
+    lastChoice = [0, 0]
     if not AUTO and len(subs) != len(textList) - OFFSET:
         print(f"Block lengths don't match: Sub: {len(subs)} to Src: {len(textList)} - {OFFSET}")
         raise SystemExit
@@ -135,21 +140,28 @@ def processSubs(subs, format):
             print(f"File filled at idx {idx}. Next file part starts at: {subText}")
             break
         # skip title logo on events
-        if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示") or textList[idx]['jpText'].startswith("ダミーテキスト"):
+        if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト", textList[idx]['jpText']):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":
-            if (subText.startswith(">") or subText.startswith("Trainer:") or 
-            (format == "ass" and (line.effect == "choice" or line.style.endswith("Button")))):
+            if isChoice(subText, line):
                 if not "choices" in textList[idx-1]:
                     print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
                     continue
-                for entry in textList[idx-1]["choices"]:
-                    addSub(entry, subText)
-                    lastChoice = idx
+                if lastChoice[0] == idx:
+                    try: addSub(textList[idx-1]["choices"][lastChoice[1]], subText)
+                    except IndexError: print(f"Choice idx error at {textList[idx-1]['blockIdx']}")
+                else:
+                    for entry in textList[idx-1]["choices"]:
+                        addSub(entry, subText)
+                lastChoice[0] = idx
+                lastChoice[1] += 1
                 continue # don't increment idx
-            elif idx > 0 and "choices" in textList[idx-1] and idx - lastChoice > 0:
+            elif idx > 0 and "choices" in textList[idx-1] and idx - lastChoice[0] > 0:
                 print(f"Missing choice subtitle at block {textList[idx-1]['blockIdx']}")
+            lastChoice[1] == 0
+        
+        # Add text
         if isDuplicateBlock(tlFile, textList, idx):
             print(f"Found gender dupe at block {textList[idx]['blockIdx']}, duplicating.")
             idx = duplicateSub(textList, idx, subText) + 1

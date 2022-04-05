@@ -23,7 +23,7 @@ VERBOSE = args.getArg("-V", False)
 
 LINE_LENGTH = int(args.getArg("-ll", 45)) # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
 NEWLINES = args.getArg("-nl", False)
-REPLACEMENT = args.getArg("-rep", "all")
+REPLACEMENT = args.getArg("-rep", "all").lower()
 TARGET_LINES = int(args.getArg("-tl", 3)) # 3 is old max and visually ideal (game-intended). Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
 
 REPLACEMENT_DATA = None

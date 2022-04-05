@@ -17,8 +17,10 @@ IMPORT_IDX = args.getArg("-idx", False)
 GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
 SAVE_DIR = args.getArg("-dst", os.path.realpath("dat/"))
 OVERWRITE_GAME_DATA = args.getArg("-O", False)
+IS_UPDATE = args.getArg("-U", False)
 VERBOSE = args.getArg("-V", False)
-
+if OVERWRITE_GAME_DATA:
+    SAVE_DIR = GAME_ASSET_ROOT
 
 def get_meta(filePath: str) -> tuple[UnityPy.environment.Environment, UnityPy.environment.files.ObjectReader]:
     env = UnityPy.load(filePath)
@@ -32,12 +34,19 @@ def swapAssetData(tlFile: TranslationFile):
     assetPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
 
     if not os.path.exists(assetPath):
-        return f"AssetBundle {bundle} does not exist in your game data, skipping..."
+        return f"AssetBundle {bundle} does not exist in your game data, skipping."
+    elif IS_UPDATE:
+        savePath = os.path.join(SAVE_DIR, bundle[0:2], bundle)
+        if os.path.exists(savePath):
+            with open(savePath, "rb") as f:
+                f.seek(-2, os.SEEK_END)
+                if f.read(2) == b"\x08\x04":
+                    return f"Bundle {bundle} already edited, skipping."
 
     try:
         env, mainFile = get_meta(assetPath)
     except Exception as e:
-        return f"UnityPy Error: {repr(e)}, skipping {bundle}..."
+        return f"UnityPy Error: {repr(e)}, skipping {bundle}."
 
     assetList = mainFile.assets_file.files
     textBlocksSkipped = 0
@@ -90,7 +99,7 @@ def swapAssetData(tlFile: TranslationFile):
             if 'choices' in textData:
                 jpChoices, enChoices = assetData['ChoiceDataList'], textData['choices']
                 if len(jpChoices) != len(enChoices):
-                    print("Choice lengths do not match, skipping...")
+                    print("Choice lengths do not match, skipping choice block...", end = "" if VERBOSE else None)
                 else:
                     for idx, choice in enumerate(textData['choices']):
                         if choice['enText']:
@@ -99,7 +108,7 @@ def swapAssetData(tlFile: TranslationFile):
             if 'coloredText' in textData:
                 jpColored, enColored = assetData['ColorTextInfoList'], textData['coloredText']
                 if len(jpColored) != len(enColored):
-                    print("Colored text lengths do not match, skipping...")
+                    print("Colored text lengths do not match, skipping color block...", end = "" if VERBOSE else None)
                 else:
                     for idx, text in enumerate(textData['coloredText']):
                         if text['enText']:
@@ -108,7 +117,7 @@ def swapAssetData(tlFile: TranslationFile):
             asset.save_typetree(assetData)
 
     if textBlocksSkipped == len(textList):
-        env = None
+        return f"Bundle {bundle} not changed, skipping write."
     else:
         if bundleType in ("race", "preview"): asset.save_typetree(assetData)
         elif bundleType == "lyrics": 
@@ -118,7 +127,7 @@ def swapAssetData(tlFile: TranslationFile):
     if bundleType in ("story", "home"):
         try:
             mainTree = mainFile.read_typetree()
-            mainTree['TypewriteCountPerSecond'] = int(mainTree['TypewriteCountPerSecond'] * 2.25)
+            mainTree['TypewriteCountPerSecond'] = 60
             mainFile.save_typetree(mainTree)
         except KeyError:
             print(f"Text speed not found in {bundle}")
@@ -131,14 +140,15 @@ def swapAssetData(tlFile: TranslationFile):
 
 def saveAsset(env):
     b = env.file.save() #! packer="original" or any compression doesn't seem to work, the game will crash or get stuck loading forever
+    b += b"\x08\x04"
     fn = env.file.name
-    fp = os.path.join(GAME_ASSET_ROOT if OVERWRITE_GAME_DATA else SAVE_DIR, fn[0:2], fn)
+    fp = os.path.join(SAVE_DIR, fn[0:2], fn)
     os.makedirs(os.path.dirname(fp), exist_ok=True)
     with open(fp, "wb") as f:
         f.write(b)
 
 def main():
-    print(f"Importing group {IMPORT_GROUP or 'all'}, id {IMPORT_ID or 'all'} from translations\{IMPORT_TYPE} to {GAME_ASSET_ROOT if OVERWRITE_GAME_DATA else SAVE_DIR}")
+    print(f"Importing group {IMPORT_GROUP or 'all'}, id {IMPORT_ID or 'all'} , idx {IMPORT_IDX or 'all'} from translations\{IMPORT_TYPE} to {SAVE_DIR}")
     files = common.searchFiles(IMPORT_TYPE, IMPORT_GROUP, IMPORT_ID, IMPORT_IDX)
     nFiles = len(files)
     print(f"Found {nFiles} files.")
@@ -148,7 +158,7 @@ def main():
         try:
             data = TranslationFile(file)
         except:
-            print(f"Couldn't load translation data from {file}, skipping...")
+            print(f"Couldn't load translation data from {file}, skipping.")
             nFiles -= 1
             continue
 
@@ -157,8 +167,8 @@ def main():
             saveAsset(modifiedBundle)
             if VERBOSE: print(f"done. ({data.getBundle()})")
         else:
-            if modifiedBundle is None and VERBOSE:
-                print(f"Bundle {data.getBundle()} not changed, skipping...")
+            if VERBOSE:
+                print(modifiedBundle)
             nFiles -= 1
 
     print(f"Imported {nFiles} files.")

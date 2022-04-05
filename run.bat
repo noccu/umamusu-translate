@@ -23,12 +23,12 @@ IF [%1] NEQ [] (
 
 :open 
 REM %snek% src\ui.py
-ECHO Importing all translatable types that are present in your game files...
-%snek% src/import.py -O
-%snek% src/import.py -O -t race
-%snek% src/import.py -O -t home
-%snek% src/import.py -O -t lyrics
-%snek% src/import.py -O -t preview
+ECHO Importing all translatable types that are present in your game files. This could take up to 20m.
+%snek% src/import.py -O -U
+%snek% src/import.py -O -U -t race
+%snek% src/import.py -O -U -t home
+%snek% src/import.py -O -U -t lyrics
+%snek% src/import.py -O -U -t preview
 ECHO Imports complete!
 PAUSE
 EXIT /B

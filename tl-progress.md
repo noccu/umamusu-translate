@@ -1,4 +1,4 @@
-This document gives an overview of translation progress.  
+This document gives an overview of translation progress.
 Note: [deepl](https://www.deepl.com/) is machine translation. These have limited and mostly arbitrary manual edits stemming from fixing common issues.
 Quality varies based on content (speech patterns, topics, etc).
 
@@ -87,7 +87,9 @@ Sakura Bakushin O | Complete | deepl
 ## Cards
 name | progress | translator
 --- | --- | ---
-All (up to 30/12/2021) | Complete | deepl
+All except the below (up to 30/12/2021) | Complete | deepl
+Vodka (Tracen Academy) | Complete | [robflop][]
+Vodka (Annoying Observer) | Complete | [robflop][]
 
 # Home Dialogue
 name | progress | translator

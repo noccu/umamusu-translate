@@ -87,7 +87,9 @@ Sakura Bakushin O | Complete | deepl
 ## Cards
 name | progress | translator
 --- | --- | ---
-All (up to 30/12/2021) | Complete | deepl
+All except the below (up to 30/12/2021) | Complete | deepl
+Vodka (R, Tracen Academy) | Complete | [robflop][]
+Vodka (SR, Annoying Observer) | Complete | [robflop][]
 
 # Home Dialogue
 name | progress | translator

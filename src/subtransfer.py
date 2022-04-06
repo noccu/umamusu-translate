@@ -70,7 +70,7 @@ def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
     curName = textList[idx]['jpName']
     return (DUPE_CHECK_ALL or curName in ["<username>", "", "モノローグ"]) and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
 
-def isChoice(subText, line):
+def isChoice(format, subText, line):
     if re.match(r">|Trainer:", subText) or (format == "ass" and (line.effect == "choice" or line.style.endswith("Button") or line.name == "Choice")):
         return True
     else: return False
@@ -144,7 +144,7 @@ def processSubs(subs, format):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":
-            if isChoice(subText, line):
+            if isChoice(format, subText, line):
                 if not "choices" in textList[idx-1]:
                     print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
                     continue
@@ -159,7 +159,7 @@ def processSubs(subs, format):
                 continue # don't increment idx
             elif idx > 0 and "choices" in textList[idx-1] and idx - lastChoice[0] > 0:
                 print(f"Missing choice subtitle at block {textList[idx-1]['blockIdx']}")
-            lastChoice[1] == 0
+            lastChoice[1] = 0
         
         # Add text
         if isDuplicateBlock(tlFile, textList, idx):

@@ -1,4 +1,4 @@
-This document gives an overview of translation progress.
+This document gives an overview of translation progress. 
 Note: [deepl](https://www.deepl.com/) is machine translation. These have limited and mostly arbitrary manual edits stemming from fixing common issues.
 Quality varies based on content (speech patterns, topics, etc).
 

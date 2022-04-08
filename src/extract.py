@@ -29,7 +29,7 @@ UPDATE = args.getArg("-upd", False)
 def queryDB(db = None, storyId = None):
     externalDb = bool(db)
     if storyId:
-        group, id, idx = parseStoryId(storyId, False)
+        group, id, idx = common.parseStoryId(EXTRACT_TYPE, storyId, False)
     else:
         group = EXTRACT_GROUP or "__"
         id = EXTRACT_ID or "____"
@@ -263,25 +263,6 @@ class DataTransfer():
 def exportData(data, filepath: str):
     if OVERWRITE_DST == True or not os.path.exists(filepath):
         common.writeJsonFile(filepath, data)
-
-
-def parseStoryId(input, fromPath = True) -> tuple:
-    if EXTRACT_TYPE == "home":
-        if fromPath:
-            input = input[-10:]
-            return input[:2], input[3:7], input[7:]
-        else:
-            return input[:2], input[2:6], input[6:]
-    elif EXTRACT_TYPE == "lyrics":
-        if fromPath: input = input[-11:-7]
-        return None, None, input
-    elif EXTRACT_TYPE == "preview":
-        if fromPath: input = input[-4:]
-        return None, None, input
-    else:
-        # story and storyrace
-        if fromPath: input = input[-9:]
-        return  input[:2], input[2:6], input[6:9]
         
 def exportAsset(bundle: str, path: str, db = None):
     if bundle is None:
@@ -290,12 +271,11 @@ def exportAsset(bundle: str, path: str, db = None):
         bundle, _ = queryDB(db, storyId)[0]
     else: # make sure tlFile is set for the call later
         tlFile = None
-    group, id, idx = parseStoryId(storyId if UPDATE else path, not UPDATE)
+    group, id, idx = common.parseStoryId(EXTRACT_TYPE, storyId if UPDATE else path, not UPDATE)
     if EXTRACT_TYPE in ("lyrics", "preview"):
         exportDir = Path(EXPORT_DIR)
     else:
         exportDir =  Path(EXPORT_DIR).joinpath(group, id)
-    
 
     # check existing files first
     if not OVERWRITE_DST:
@@ -357,4 +337,6 @@ def main():
         for bundle, path in q:
             exportAsset(bundle, path)
     print("Processing finished successfully.")
-main()
+
+if __name__ == '__main__':
+    main()

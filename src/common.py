@@ -55,6 +55,24 @@ def findExisting(searchPath: os.PathLike, filePattern: str):
             return file
     return None
 
+def parseStoryId(t, input, fromPath = True) -> tuple:
+    if t == "home":
+        if fromPath:
+            input = input[-10:]
+            return input[:2], input[3:7], input[7:]
+        else:
+            return input[:2], input[2:6], input[6:]
+    elif t == "lyrics":
+        if fromPath: input = input[-11:-7]
+        return None, None, input
+    elif t == "preview":
+        if fromPath: input = input[-4:]
+        return None, None, input
+    else:
+        # story and storyrace
+        if fromPath: input = input[-9:]
+        return  input[:2], input[2:6], input[6:9]
+
 def isParseableInt(x):
     try:
         int(x)

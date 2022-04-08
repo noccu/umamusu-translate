@@ -44,6 +44,7 @@ class BasicSubProcessor:
         if options[Options.FILTER]:
             options[Options.FILTER] = options[Options.FILTER].split(",")
         self.options = options
+        self.skipNames = ["<username>", "", "モノローグ"]
 
     def saveSrc(self):
         self.srcFile.save()
@@ -54,10 +55,12 @@ class BasicSubProcessor:
         return TextLine(self.srcLines[idx]['enText'], self.srcLines[idx]['enName'])
     def setEn(self, idx, line: TextLine):
         self.srcLines[idx]['enText'] = self.filter(line.text, self.srcLines[idx])
-        # don't transfer names when there is no japanese name, like for trainer or narration
-        if line.name and "jpName" in self.srcLines[idx] and self.srcLines[idx]['jpName']:
-            if not self.srcLines[idx]['enName'] or self.options[Options.OVERRIDE_NAMES]:
+        if "jpName" in self.srcLines[idx]:
+            if self.srcLines[idx]['jpName'] in self.skipNames:
+                self.srcLines[idx]['enName'] = "" # forcefully clear names that should not be translated
+            elif line.name and (not self.srcLines[idx]['enName'] or self.options[Options.OVERRIDE_NAMES]):
                 self.srcLines[idx]['enName'] = line.name
+
     def getChoices(self, idx):
         if not "choices" in self.srcLines[idx]: return None
         else: return self.srcLines[idx]['choices']
@@ -118,7 +121,7 @@ class BasicSubProcessor:
         if self.srcFile.getType() != "story": return False
         prevName = self.srcLines[idx - 1]['jpName']
         curName = self.srcLines[idx]['jpName']
-        if not Options.DUPE_CHECK_ALL in self.options and curName not in ["<username>", "", "モノローグ"]: return False
+        if not Options.DUPE_CHECK_ALL in self.options and curName not in self.skipNames: return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx-1)) > 0.6
 
 class AssSubProcessor(BasicSubProcessor):

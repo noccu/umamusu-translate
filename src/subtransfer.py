@@ -1,203 +1,271 @@
+import common
 import ass
 import srt
-import common
 import re
 from Levenshtein import ratio
-# from datetime import timedelta
+from enum import Enum, auto
 
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("-src <translation file> -sub <subtitle file> [-off <offset> -npre -auto]",
-                 "Imports translations from subtitle files. A few conventions are used.",
-                 "Files are only modified if they can be assumed to merge properly. This check relies on text block lengths."
-                 "-offset is subtracted from the game file's text block length during this checking. (default -1 = off, set to 0 to start checking)",
-                 "Events for example, have an undisplayed title logo display line. This script skips those automatically but requires offset to be set for correct checking, as per above.",
-                 "-npre flags text lines as prefixed by the char name",
-                 "\n"
-                 "Conventions are to have 1 subtitle line per game text block/screen. Include empty lines if needed (say, if you leave a line untranslated).",
-                 "For exceptions, the effect field is used as a mark in ASS. SRT does not provide mechanisms for this and will fail to import (correctly).",
-                 "For block splits, the mark is 'Split'. Either on EXTRANOUS (the split off) lines, OR on ALL lines, with either: empty lines/comments between 'groups', or with a NUMBER added: 'Split00', 'Split01', ...",
-                 "For text effects that span multiple lines, ADDITIONAL lines are marked with 'Effect'")
+class SubFormat(Enum):
+    NONE = auto()
+    SRT = auto()
+    ASS = auto()
+    TXT = auto()
+class Options(Enum):
+    OVERRIDE_NAMES = "ovrNames"
+    DUPE_CHECK_ALL = "dupeCheckAll"
+    FILTER = "filter"
 
-TARGET_FILE = args.getArg("-src", None)
-SUBTITLE_FILE = args.getArg("-sub", None)
 
-OFFSET = args.getArg("-off", -1)
-if type(OFFSET) is not int:
-    OFFSET = int(OFFSET)
-FILTER = args.getArg("-filter", False) # x,y,...
-OVERWRITE_NAMES = args.getArg("-ON", False)
-DUPE_CHECK_ALL = args.getArg("-DUPEALL", False)
-AUTO = True
-if OFFSET > -1: AUTO = False
+class TextLine:
+    def __init__(self, text, name = "", effect = "") -> None:
+        self.text: str = text
+        self.name: str = name.lower()
+        self.effect: str = effect.lower()
 
-# Helpers
-def addSub(target, text: str):
-    if FILTER:
-        fList = FILTER.split(",")
-        if "npre" in fList:
-            m = re.match(r"(.+): (.+)", text, flags=re.DOTALL)
-            if m:
-                name, text = m.group(1,2)
-                if 'enName' in target and (not target['enName'] or OVERWRITE_NAMES):
-                    target['enName'] = name
-        if "brak" in fList and not target['jpText'].startswith("（"):
-            m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
-            if m:
-                text = m.group(1)
-    if text.startswith(">"): text = text[1:]
-    target['enText'] = text
+    def isChoice(self) -> bool:
+        return self.effect == "choice"
 
-def duplicateSub(textList, idx, newText):
-    # duplicate text and choices
-    textList[idx]['enText'] = textList[idx-1]['enText']
-    if "choices" in textList[idx-1]:
-        for c, choice in enumerate(textList[idx-1]["choices"]):
-            textList[idx]['choices'][c]['enText'] = choice['enText']
+# class Options():
+#     def __init__(self, opts: dict) -> None:
+#         for arg, val in opts.items():
+#             if arg == "filter":
+#                 val = val.split(",")
+#             setattr(self, arg, val)
+#     def __getattr__(self, attr):
+#         return None
 
-    # Add sub text to matching (next) block and return it as new pos
-    if newText:
-        if idx < len(textList) - 1:
-            idx += 1
-            addSub(textList[idx], newText)
+class BasicSubProcessor:
+    #todo: Make options optional and deal with defaults here
+    def __init__(self, srcFile, options: dict) -> None:
+        self.srcFile = common.TranslationFile(srcFile)
+        self.srcLines = self.srcFile.getTextBlocks()
+        self.subLines: list[TextLine] = list()
+        self.format = SubFormat.NONE
+        if options[Options.FILTER]:
+            options[Options.FILTER] = options[Options.FILTER].split(",")
+        self.options = options
+
+    def saveSrc(self):
+        self.srcFile.save()
+
+    def getJp(self, idx):
+        return self.srcLines[idx]['jpText']
+    def getEn(self, idx):
+        return TextLine(self.srcLines[idx]['enText'], self.srcLines[idx]['enName'])
+    def setEn(self, idx, line: TextLine):
+        self.srcLines[idx]['enText'] = self.filter(line.text, self.srcLines[idx])
+        # don't transfer names when there is no japanese name, like for trainer or narration
+        if line.name and "jpName" in self.srcLines[idx] and self.srcLines[idx]['jpName']:
+            if not self.srcLines[idx]['enName'] or self.options[Options.OVERRIDE_NAMES]:
+                self.srcLines[idx]['enName'] = line.name
+    def getChoices(self, idx):
+        if not "choices" in self.srcLines[idx]: return None
+        else: return self.srcLines[idx]['choices']
+    def setChoices(self, idx, cIdx, text):
+        if not "choices" in self.srcLines[idx]: return None
         else:
-            print("Attempted to duplicate beyond last line of file. Subtitle file does not match?")
-    return idx
+            if (cIdx):
+                self.srcLines[idx]['choices'][cIdx]['enText'] = self.filter(text, self.srcLines[idx]['choices'][cIdx])
+            else:
+                for entry in self.srcLines[idx]['choices']:
+                    entry['enText'] = self.filter(text, entry)
 
-def isDuplicateBlock(tlFile: common.TranslationFile, textList, idx):
-    if tlFile.getType() != "story": return False
-    prevName = textList[idx - 1]['jpName']
-    curName = textList[idx]['jpName']
-    return (DUPE_CHECK_ALL or curName in ["<username>", "", "モノローグ"]) and curName == prevName and ratio(textList[idx]['jpText'], textList[idx-1]['jpText']) > 0.6
+    def getBlockIdx(self, idx):
+        return self.srcLines[idx]['blockIdx']
 
-def isChoice(format, subText, line):
-    if re.match(r">|Trainer:", subText) or (format == "ass" and (line.effect == "choice" or line.style.endswith("Button") or line.name == "Choice")):
-        return True
-    else: return False
+    def cleanLine(text):
+        if text.startswith(">"): text = text[1:]
+        return text
 
-# ASS
-def cleanLine(text):
-    text = text.replace("\\N", "\n")
-    text = re.sub(r"\{.+?\}", "", text)
-    return text
+    def filter(self, text, target):
+        filter = self.options[Options.FILTER]
+        if filter:
+            if "brak" in filter and not target['jpText'].startswith("（"):
+                m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
+                if m:
+                    text = m.group(1)
 
-def assPreFilter(doc):
-    filtered = list()
-    inSplit = None
-    lastSplit = None
-    for line in doc.events:
-        if re.match("skip", line.effect, re.IGNORECASE): continue
-        if re.search("MainText|Default|Button", line.style, re.IGNORECASE) and line.name != "Nameplate":
+        return text
+
+    def preprocess(self):
+        filter = self.options[Options.FILTER]
+        for line in self.subLines:
+            if filter and "npre" in filter:
+                m = re.match(r"(.+): (.+)", line.text, flags=re.DOTALL)
+                if m:
+                    line.name, line.text = m.group(1,2)
+            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
+                line.effect = "choice"
+
+    def duplicateSub(self, idx: int, line: TextLine = None):
+        # duplicate text and choices
+        self.setEn(idx, self.getEn(idx-1))
+        choices = self.getChoices(idx-1)
+        if choices and self.getChoices(idx):
+            for c, choice in enumerate(choices):
+                self.setChoices(idx, c, choice['enText'])
+
+        # Add sub text to matching (next) block and return it as new pos
+        if line:
+            if idx < len(self.srcLines) - 1:
+                idx += 1
+                self.setEn(idx, line)
+            else:
+                print("Attempted to duplicate beyond last line of file. Subtitle file does not match?")
+        return idx
+
+    def isDuplicateBlock(self, idx: int) -> bool:
+        if self.srcFile.getType() != "story": return False
+        prevName = self.srcLines[idx - 1]['jpName']
+        curName = self.srcLines[idx]['jpName']
+        if not Options.DUPE_CHECK_ALL in self.options and curName not in ["<username>", "", "モノローグ"]: return False
+        return curName == prevName and ratio(self.getJp(idx), self.getJp(idx-1)) > 0.6
+
+class AssSubProcessor(BasicSubProcessor):
+    def __init__(self, srcFile, subFile, opts) -> None:
+        super().__init__(srcFile, opts)
+        self.format = SubFormat.ASS
+        with open(subFile, encoding='utf_8_sig') as f:
+            self.preprocess(ass.parse(f))
+
+    def cleanLine(self, text):
+        text = re.sub(r"\{(?:\([ib])1|(\[ib])0)\}", r"<\1\2>", text) # transform italic/bold tags
+        text = re.sub(r"\{.+?\}", "", text) # remove others
+        text = text.replace("\\N", "\n")
+        text = super().cleanLine(text)
+        return text
+
+    def preprocess(self, parsed):
+        lastSplit = None
+        for line in parsed:
+            if re.match("skip", line.effect, re.IGNORECASE): continue
+            if line.name == "Nameplate": continue
+            if not re.search("MainText|Default|Button", line.style, re.IGNORECASE): continue
+            
             if re.match("split", line.effect, re.IGNORECASE):
-                if inSplit and line.effect[-2:] == lastSplit:
-                    filtered[-1].text += f"\n{cleanLine(line.text)}"
+                if lastSplit and line.effect[-2:] == lastSplit:
+                    self.subLines[-1].text += f"\n{self.cleanLine(line.text)}"
                     continue
                 lastSplit = line.effect[-2:]
-                inSplit = True
-            else:
-                inSplit = False
+            else: lastSplit = None
 
-            line.text = cleanLine(line.text)
-            filtered.append(line)
-    return filtered
+            line.text = self.cleanLine(line.text)
+            if not line.effect and line.style.endswith("Button") or line.name == "Choice":
+                line.effect = "choice"
+            self.subLines.append(TextLine(line.text, line.name, line.effect))
+            
+class SrtSubProcessor(BasicSubProcessor):
+    def __init__(self, srcFile, subFile, opts) -> None:
+        super().__init__(srcFile, opts)
+        self.format = SubFormat.SRT
+        with open(subFile, encoding='utf_8') as f:
+            self.preprocess(srt.parse(f))
 
-def processASS():
-    with open(SUBTITLE_FILE, encoding='utf_8_sig') as f:
-        doc = ass.parse(f)
-    processSubs(assPreFilter(doc), "ass")
+    def preprocess(self, parsed):
+        for line in parsed:
+            self.subLines.append(TextLine(line.content))
+        super().preprocess()
 
-# SRT
-def processSRT():
-    with open(SUBTITLE_FILE, encoding='utf_8') as f:
-        doc = list(srt.parse(f))
-    processSubs(doc, "srt")
-
-def processTXT():
+class TxtSubProcessor(BasicSubProcessor):
     # Built on Holo's docs
     # Expects: No newlines in block, blocks separated by newline (or any number of blank lines).
-    with open(SUBTITLE_FILE, "r", encoding="utf8") as f:
-        lines = [l for l in f if common.isEnglish(l) and not re.match(r"\n+\s*", l)]
-    processSubs(lines, "txt")
+    def __init__(self, srcFile, subFile, opts) -> None:
+        super().__init__(srcFile, opts)
+        self.format = SubFormat.TXT
+        with open(subFile, "r", encoding="utf8") as f:
+            self.preprocess(f)
 
-def processSubs(subs, format):
-    tlFile = common.TranslationFile(TARGET_FILE)
-    storyType = tlFile.getType()
-    textList = tlFile.getTextBlocks()
-    idx = 0
-    lastChoice = [0, 0]
-    if not AUTO and len(subs) != len(textList) - OFFSET:
-        print(f"Block lengths don't match: Sub: {len(subs)} to Src: {len(textList)} - {OFFSET}")
-        raise SystemExit
-        
-    for line in subs:
-        if format == "srt":
-            subText = line.content 
-        elif format == "ass":
-            subText =  line.text
-        elif format == "txt":
-            subText = line
-        if AUTO and idx == len(textList):
-            print(f"File filled at idx {idx}. Next file part starts at: {subText}")
-            break
-        # skip title logo on events
-        if textList[idx]['jpText'].startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト", textList[idx]['jpText']):
-            idx += 1
-        # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
-        if storyType == "story":
-            if isChoice(format, subText, line):
-                if not "choices" in textList[idx-1]:
-                    print(f"Found assumed choice subtitle, but no matching choice found at block {textList[idx-1]['blockIdx']}, skipping...")
-                    continue
-                if lastChoice[0] == idx:
-                    try: addSub(textList[idx-1]["choices"][lastChoice[1]], subText)
-                    except IndexError: print(f"Choice idx error at {textList[idx-1]['blockIdx']}")
-                else:
-                    for entry in textList[idx-1]["choices"]:
-                        addSub(entry, subText)
-                lastChoice[0] = idx
-                lastChoice[1] += 1
-                continue # don't increment idx
-            elif idx > 0 and "choices" in textList[idx-1] and idx - lastChoice[0] > 0:
-                print(f"Missing choice subtitle at block {textList[idx-1]['blockIdx']}")
-            lastChoice[1] = 0
-        
-        # Add text
-        if isDuplicateBlock(tlFile, textList, idx):
-            print(f"Found gender dupe at block {textList[idx]['blockIdx']}, duplicating.")
-            idx = duplicateSub(textList, idx, subText) + 1
-            continue
-        else:
-            if len(subText) == 0:
-                print(f"Untranslated line at {textList[idx]['blockIdx']}")
-            else:
-                addSub(textList[idx], subText)
-        idx += 1
-    # check niche case of duplicate last line (idx is already increased)
-    if idx < len(textList):
-        if isDuplicateBlock(tlFile, textList, idx):
-            print("Last line is duplicate! (check correctness)")
-            duplicateSub(textList, idx, None)
-        else:
-            print(f"Lacking {len(textList) - idx} subtitle(s).")
+    def preprocess(self, raw):
+        self.subLines = [TextLine(l) for l in raw if common.isEnglish(l) and not re.match(r"\n+\s*", l)]
 
-    tlFile.save()
-
-def main():
-    if not TARGET_FILE and not SUBTITLE_FILE:
-        print("No files to process given")
-        raise SystemExit
-
-    type = SUBTITLE_FILE[-3:]
-    if type == "ass":
-        processASS()
-    elif type == "srt":
-        processSRT()
-    elif type == "txt":
-        processTXT()
+def process(srcFile, subFile, opts):
+    format = subFile[-3:]
+    if format == "srt":
+        p = SrtSubProcessor(srcFile, subFile, opts)
+    elif format == "ass":
+        p = AssSubProcessor(srcFile, subFile, opts)
+    elif format == "txt":
+        p = TxtSubProcessor(srcFile, subFile, opts)
     else:
         print("Unsupported subtitle format.")
         raise NotImplementedError
 
+    storyType = p.srcFile.getType()
+    idx = 0
+    srcLen = len(p.srcLines)
+    lastChoice = [0, 0]
+
+    for subLine in p.subLines:
+        if idx == srcLen:
+            print(f"File filled at idx {idx}. Next file part starts at: {subLine.text}")
+            break
+
+        # skip title logo on events and dummy text
+        if p.getJp(idx).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト", p.getJp(idx)):
+            idx += 1
+        # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
+        if storyType == "story":
+            if subLine.isChoice():
+                if not p.getChoices(idx-1):
+                    print(f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping...")
+                    continue
+                if lastChoice[0] == idx: # Try adding multiple choice translations
+                    try: p.setChoices(idx-1, lastChoice[1], subLine.text)
+                    except IndexError: print(f"Choice idx error at {p.getBlockIdx(idx-1)}")
+                else: # Copy text to all choices
+                    p.setChoices(idx-1, None, subLine.text)
+                lastChoice[0] = idx
+                lastChoice[1] += 1
+                continue # don't increment idx
+            elif idx > 0 and p.getChoices(idx-1) and idx - lastChoice[0] > 0:
+                print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
+            lastChoice[1] = 0
+        
+        # Add text
+        if p.isDuplicateBlock(idx):
+            print(f"Found gender dupe at block {p.getBlockIdx(idx)}, duplicating.")
+            idx = p.duplicateSub(idx, subLine) + 1
+            continue
+        else:
+            if len(subLine.text) == 0:
+                print(f"Untranslated line at {p.getBlockIdx(idx)}")
+            else:
+                p.setEn(idx, subLine)
+        idx += 1
+    # check niche case of duplicate last line (idx is already increased)
+    if idx < srcLen:
+        if p.isDuplicateBlock(idx):
+            print("Last line is duplicate! (check correctness)")
+            p.duplicateSub(idx)
+        else:
+            print(f"Lacking {srcLen - idx} subtitle(s).")
+
+    p.saveSrc()
+
+def main():
+    args = common.Args().parse()
+    if args.getArg("-h"):
+        common.usage("-src <translation file> -sub <subtitle file> [-filter <npre, brak, ...>] [-OVRNAMES] [-DUPEALL]",
+                    "Imports translations from subtitle files. A few conventions are used.", "\n",
+                    "OVRNAMES: Replace existing names with names from subs",
+                    "DUPEALL: Check all lines for duplicates (default only trainer's/narration)",
+                    "Filters:",
+                    "npre: remove char name prefixes and extracts them to the name field",
+                    "brak: remove brackets from text entirely encased in them if original is not", "\n",
+                    "Conventions:",
+                    "1 subtitle per game text screen. Include empty lines if needed (say, if you leave a line untranslated)",
+                    "The effect field in ASS can be set to 'Split' for ALL lines that break the above. When 2 consecutive screens are both split, use 'SplitXX', where XX is a unique ID for each screen. Others formats will fail to import correctly.",
+                    "For any additional lines not present in game (such as ASS effects) set the effect field to 'skip'")
+
+    TARGET_FILE = args.getArg("-src", None)
+    SUBTITLE_FILE = args.getArg("-sub", None)
+
+    process(TARGET_FILE, SUBTITLE_FILE, {
+        Options.OVERRIDE_NAMES: args.getArg("-OVRNAMES", False),
+        Options.DUPE_CHECK_ALL: args.getArg("-DUPEALL", False),
+        Options.FILTER: args.getArg("-filter", False) # x,y,...,
+        })
     print("Successfully transferred.")
 
-main()
+if __name__ == '__main__':
+    main()

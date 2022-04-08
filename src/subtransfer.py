@@ -73,7 +73,7 @@ class BasicSubProcessor:
     def getBlockIdx(self, idx):
         return self.srcLines[idx]['blockIdx']
 
-    def cleanLine(text):
+    def cleanLine(self, text):
         if text.startswith(">"): text = text[1:]
         return text
 
@@ -129,7 +129,7 @@ class AssSubProcessor(BasicSubProcessor):
             self.preprocess(ass.parse(f))
 
     def cleanLine(self, text):
-        text = re.sub(r"\{(?:\([ib])1|(\[ib])0)\}", r"<\1\2>", text) # transform italic/bold tags
+        text = re.sub(r"\{(?:\\([ib])1|(\\[ib])0)\}", r"<\1\2>", text) # transform italic/bold tags
         text = re.sub(r"\{.+?\}", "", text) # remove others
         text = text.replace("\\N", "\n")
         text = super().cleanLine(text)
@@ -137,7 +137,7 @@ class AssSubProcessor(BasicSubProcessor):
 
     def preprocess(self, parsed):
         lastSplit = None
-        for line in parsed:
+        for line in parsed.events:
             if re.match("skip", line.effect, re.IGNORECASE): continue
             if line.name == "Nameplate": continue
             if not re.search("MainText|Default|Button", line.style, re.IGNORECASE): continue

@@ -90,6 +90,7 @@ name | progress | translator
 All except the below (up to 30/12/2021) | Complete | deepl
 Vodka (R, Tracen Academy) | Complete | [robflop][]
 Vodka (SR, Annoying Observer) | Complete | [robflop][]
+Vodka (SSR, Road of Vodka) | Complete | [robflop][]
 
 # Home Dialogue
 name | progress | translator

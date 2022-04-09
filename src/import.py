@@ -127,7 +127,7 @@ def swapAssetData(tlFile: TranslationFile):
     if bundleType in ("story", "home"):
         try:
             mainTree = mainFile.read_typetree()
-            mainTree['TypewriteCountPerSecond'] = 60
+            mainTree['TypewriteCountPerSecond'] = 95
             mainFile.save_typetree(mainTree)
         except KeyError:
             print(f"Text speed not found in {bundle}")

@@ -45,7 +45,7 @@ King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete, Transferring | deepl, [xct][]
 Matikanetannhauser | In progress | [Snep][]
-Maruzensky | In progress/Complete | [noccu][] (ep 1-5), deepl
+Maruzensky | In progress/Complete | [noccu][] (ep 1-6), deepl
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | deepl

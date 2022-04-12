@@ -279,7 +279,7 @@ def translate(namesDict):
 
     for file in files:
         file = common.TranslationFile(file)
-        for block in file.getTextBlocks():
+        for block in file.textBlocks:
             name = block['jpName']
             if name and name in namesDict:
                 block['enName'] = namesDict[name]

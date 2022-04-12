@@ -28,9 +28,9 @@ def get_meta(filePath: str) -> tuple[UnityPy.environment.Environment, UnityPy.en
 
 # Main import controller
 def swapAssetData(tlFile: TranslationFile):
-    bundle = tlFile.getBundle()
-    textList = tlFile.getTextBlocks()
-    bundleType = tlFile.getType()
+    bundle = tlFile.bundle
+    textList = tlFile.textBlocks
+    bundleType = tlFile.type
     assetPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
 
     if not os.path.exists(assetPath):
@@ -165,7 +165,7 @@ def main():
         modifiedBundle = swapAssetData(data)
         if isinstance(modifiedBundle, UnityPy.environment.Environment):
             saveAsset(modifiedBundle)
-            if VERBOSE: print(f"done. ({data.getBundle()})")
+            if VERBOSE: print(f"done. ({data.bundle})")
         else:
             if VERBOSE:
                 print(modifiedBundle)

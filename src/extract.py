@@ -215,7 +215,7 @@ class DataTransfer():
 
         textSearch = False
         targetBlock = None
-        textBlocks = self.file.getTextBlocks()
+        textBlocks = self.file.textBlocks
         if 'blockIdx' in textData:
             txtIdx = max(textData["blockIdx"] - 1 - self.offset, 0)
             if txtIdx < len(textBlocks):

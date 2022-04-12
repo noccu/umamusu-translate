@@ -129,14 +129,15 @@ class TranslationFile:
         else:
             return 1
 
-    def getTextBlocks(self) -> list:
+    @property
+    def textBlocks(self) -> list:
         if self.version > 1:
             return self.data['text']
         else:
             return list(self.data.values())[0]
 
     def genTextContainers(self) -> Generator[dict, None, None]:
-        for block in self.getTextBlocks():
+        for block in self.textBlocks:
             if block['jpText']:
                 yield block
             if 'coloredText' in block:
@@ -146,13 +147,15 @@ class TranslationFile:
                 for entry in block['choices']:
                     yield entry
 
-    def getBundle(self):
+    @property
+    def bundle(self):
         if self.version > 1:
             return self.data['bundle']
         else:
             return list(self.data.keys())[0]
-
-    def getType(self):
+    
+    @property
+    def type(self):
         if self.version > 2:
             return self.data['type']
         else:

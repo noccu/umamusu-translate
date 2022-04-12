@@ -50,4 +50,4 @@ else:
     files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
     for file in files:
         file = common.TranslationFile(file)
-        save(file.getBundle())
+        save(file.bundle)

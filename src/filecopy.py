@@ -77,7 +77,7 @@ def backup():
         files = common.searchFiles(type, False, False)
         for file in files:
             file = common.TranslationFile(file)
-            copy(file.getBundle())
+            copy(file.bundle)
 
 def copy(hash):
     dst = path.join(DESTINATION, hash)

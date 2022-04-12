@@ -38,7 +38,7 @@ class BasicSubProcessor:
     #todo: Make options optional and deal with defaults here
     def __init__(self, srcFile, options: dict) -> None:
         self.srcFile = common.TranslationFile(srcFile)
-        self.srcLines = self.srcFile.getTextBlocks()
+        self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         if options[Options.FILTER]:
@@ -118,7 +118,7 @@ class BasicSubProcessor:
         return idx
 
     def isDuplicateBlock(self, idx: int) -> bool:
-        if self.srcFile.getType() != "story": return False
+        if self.srcFile.type != "story": return False
         prevName = self.srcLines[idx - 1]['jpName']
         curName = self.srcLines[idx]['jpName']
         if not Options.DUPE_CHECK_ALL in self.options and curName not in self.skipNames: return False
@@ -193,7 +193,7 @@ def process(srcFile, subFile, opts):
         print("Unsupported subtitle format.")
         raise NotImplementedError
 
-    storyType = p.srcFile.getType()
+    storyType = p.srcFile.type
     idx = 0
     srcLen = len(p.srcLines)
     lastChoice = [0, 0]

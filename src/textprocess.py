@@ -53,7 +53,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             if VERBOSE: print("Text passes length check, skipping: ", text)
-            return text.replace("\n", "\\n") if file.getType() == "race" else text
+            return text.replace("\n", "\\n") if file.type == "race" else text
 
         #adjust if not
         text = cleannewLines(file, text)
@@ -74,7 +74,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in {file.getStoryId()}: ", lines)
             print("WARN: Encountered a text encoding/codepage error. Should not affect output but you may want to try another terminal.")
-    return "\\n".join(lines) if file.getType() in ("race", "preview") else "\n".join(lines)
+    return "\\n".join(lines) if file.type in ("race", "preview") else "\n".join(lines)
 
 def replace(text: str):
     global REPLACEMENT_DATA

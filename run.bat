@@ -9,13 +9,12 @@ IF %ERRORLEVEL% NEQ 0 (
     WHERE %snek% >nul 2>&1
     IF %ERRORLEVEL% NEQ 0 (
         ECHO Can't find python. Likely not added to PATH ^(google it^) or not installed.
-        PAUSE
-        EXIT /B
+        goto quit
     )
 )
-ECHO.
 ECHO Using %snek%
 %snek% --version
+ECHO(
 
 IF [%1] NEQ [] (
     IF [%1] EQU [install] GOTO install
@@ -24,14 +23,11 @@ IF [%1] NEQ [] (
 :open 
 REM %snek% src\ui.py
 ECHO Importing all translatable types that are present in your game files. This could take up to 20m.
-%snek% src/import.py -O -U
-%snek% src/import.py -O -U -t race
-%snek% src/import.py -O -U -t home
-%snek% src/import.py -O -U -t lyrics
-%snek% src/import.py -O -U -t preview
+ECHO Update-only mode is default. To forcefully write new files, remove -U in this .bat
+REM Or manually import parts, see import.py -h
+%snek% src/import.py -FI -O -U -S
 ECHO Imports complete!
-PAUSE
-EXIT /B
+goto quit
 
 :install
 ECHO Installing required libraries...
@@ -41,3 +37,7 @@ IF %ERRORLEVEL% NEQ 0 (
     echo [93mSomething went wrong. Please screenshot this window when asking for help. You can hide your username if you want.[0m
     PAUSE
 )
+
+:quit
+PAUSE
+EXIT /B

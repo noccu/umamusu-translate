@@ -161,7 +161,7 @@ class TranslationFile:
     def getStoryId(self):
         if self.version > 3:
             return self.data['storyId']
-        elif self.version > 2 and self.getType() != "000000000":
+        elif self.version > 2 and self.data['storyId'] != "000000000":
             return self.data['storyId']
         else:
             isN = regex.compile(r"\d+")

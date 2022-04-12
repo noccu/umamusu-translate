@@ -11,6 +11,20 @@ GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
 TARGET_TYPES =  ["story", "home", "race", "lyrics", "preview"]
+VERSION = None
+
+def version():
+    global VERSION
+    if VERSION: return VERSION
+    try:
+        with open(".git/refs/heads/master", "r") as f:
+            VERSION = f.readline()
+    except FileNotFoundError:
+        VERSION = "not.cloned"
+    except:
+        VERSION = "unknown"
+    finally: 
+        return VERSION
 
 def checkTypeValid(t):
     if t in TARGET_TYPES: 

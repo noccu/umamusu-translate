@@ -1,3 +1,4 @@
+import argparse
 import os
 from pathlib import Path, PurePath
 import sys
@@ -129,6 +130,15 @@ class Args:
                     idx += 1
             else: raise SystemExit("Invalid arguments")
         return self
+
+commonArgs = argparse.ArgumentParser(add_help=False)
+commonArgs.add_argument("-v", "--version", action="version", version=version())
+commonArgs.add_argument("-t", "--type", choices=TARGET_TYPES, default=TARGET_TYPES[0], help="The type of assets to process. Default: %(default)s")
+commonArgs.add_argument("-g", "--group", help="The group to process")
+commonArgs.add_argument("-id", help="The id (subgroup) to process")
+commonArgs.add_argument("-idx", help="The specific asset index to process")
+commonArgs.add_argument("-src", default=GAME_ASSET_ROOT, help="Default: %(default)s")
+commonArgs.add_argument("-dst", default=Path("dat/").resolve(), help="Default: %(default)s")
 
 class TranslationFile:
     def __init__(self, file):

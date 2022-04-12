@@ -32,15 +32,15 @@ if not TARGET_FILE and not TARGET_GROUP and not TARGET_ID: raise SystemExit("At 
 
 def process(file: TranslationFile, text: str, options: dict):
     if "noNewlines" in options and options['noNewlines']:
-        text = cleannewLines(file, text)
-    if "lineLen" in options:
-        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else TARGET_LINES))
+        text = cleannewLines(text)
     if "replace" in options:
         text = replace(text)
+    if "lineLen" in options:
+        text = adjustLength(file, text, options['lineLen'] or LINE_LENGTH, targetLines = (options['targetLines'] if "targetLines" in options else TARGET_LINES))
     return text
 
-def cleannewLines(file: TranslationFile, text: str):
-    return re.sub(r"\\n|\r?\n", " ", text)
+def cleannewLines(text: str):
+    return re.sub(r" *(?:\\n|\r?\n) *", " ", text)
 
 def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: int = 0, targetLines: int = 0):
     if len(text) < lineLen:
@@ -56,7 +56,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
             return text.replace("\n", "\\n") if file.type == "race" else text
 
         #adjust if not
-        text = cleannewLines(file, text)
+        text = cleannewLines(text)
         # python regexes kinda suck
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{1,{lineLen}}}(?= |$)|(?<= ).+$", text)
         nLines = len(lines)
@@ -74,7 +74,7 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in {file.getStoryId()}: ", lines)
             print("WARN: Encountered a text encoding/codepage error. Should not affect output but you may want to try another terminal.")
-    return "\\n".join(lines) if file.type in ("race", "preview") else "\n".join(lines)
+    return " \\n".join(lines) if file.type in ("race", "preview") else " \n".join(lines)
 
 def replace(text: str):
     global REPLACEMENT_DATA

@@ -251,6 +251,11 @@
         "limit": true
     },
     {
+        "re": "(?<= )i(?=[' ])",
+        "repl": "I",
+        "disabled": true
+    },
+    {
         "re": "　| {2,}",
         "repl": " "
     },

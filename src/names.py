@@ -226,6 +226,8 @@ def createDict():
     names['ファンの子'] = "Child Fan"
     names['ファンの子どもたち'] = "Fan's Children"
     names['ウマ娘の子どもたち'] = "Horsegirl Children"
+    names['子どものウマ娘A'] = "Child Horsegirl A"
+    names['子どものウマ娘B'] = "Child Horsegirl B"
     names['おばさん'] = "Elder Lady"
     names['おばさんA'] = "Elder Lady A"
     names['おばさんB'] = "Elder Lady B"

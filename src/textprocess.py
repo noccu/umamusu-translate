@@ -83,6 +83,7 @@ def replace(text: str):
         REPLACEMENT_DATA = common.readJson("src/data/replacer.json")
     for sub in REPLACEMENT_DATA:
         if REPLACEMENT == "limit" and "limit" in sub: continue
+        if "disabled" in sub and sub['disabled']: continue
         text = re.sub(sub['re'], sub['repl'], text, flags=re.IGNORECASE)
     return text
 

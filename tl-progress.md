@@ -19,7 +19,7 @@ Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
 Main story Act 1 Ch 6 (Final) | In progress/Transferring | [LotoDS][] (ep 1-9)
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
-Brand-New Friend | Complete | [Hades of Games][]
+Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]

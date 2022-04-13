@@ -94,7 +94,7 @@ class BasicSubProcessor:
         filter = self.options[Options.FILTER]
         for line in self.subLines:
             if filter and "npre" in filter:
-                m = re.match(r"(.+): (.+)", line.text, flags=re.DOTALL)
+                m = re.match(r"\[?([\w\s]+)\]?: (.+)", line.text, flags=re.DOTALL)
                 if m:
                     line.name, line.text = m.group(1,2)
             if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):

@@ -167,6 +167,11 @@ class SrtSubProcessor(BasicSubProcessor):
 
     def preprocess(self, parsed):
         for line in parsed:
+            if len(self.subLines):
+                m = re.search(r" {2,}$", self.subLines[-1].text)
+                if m:
+                    self.subLines[-1].text = self.subLines[-1].text[:m.start()] + f" \n{line.content}"
+                    continue
             self.subLines.append(TextLine(line.content))
         super().preprocess()
 

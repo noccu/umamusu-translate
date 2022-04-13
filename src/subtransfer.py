@@ -99,6 +99,7 @@ class BasicSubProcessor:
                     line.name, line.text = m.group(1,2)
             if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
                 line.effect = "choice"
+            line.text = self.cleanLine(line.text)
 
     def duplicateSub(self, idx: int, line: TextLine = None):
         # duplicate text and choices
@@ -145,14 +146,14 @@ class AssSubProcessor(BasicSubProcessor):
             if line.name == "Nameplate": continue
             if not re.search("MainText|Default|Button", line.style, re.IGNORECASE): continue
             
+            line.text = self.cleanLine(line.text)
             if re.match("split", line.effect, re.IGNORECASE):
                 if lastSplit and line.effect[-2:] == lastSplit:
-                    self.subLines[-1].text += f"\n{self.cleanLine(line.text)}"
+                    self.subLines[-1].text += f"\n{line.text}"
                     continue
                 lastSplit = line.effect[-2:]
             else: lastSplit = None
 
-            line.text = self.cleanLine(line.text)
             if not line.effect and line.style.endswith("Button") or line.name == "Choice":
                 line.effect = "choice"
             self.subLines.append(TextLine(line.text, line.name, line.effect))

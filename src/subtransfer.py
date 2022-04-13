@@ -83,10 +83,14 @@ class BasicSubProcessor:
     def filter(self, text, target):
         filter = self.options[Options.FILTER]
         if filter:
-            if "brak" in filter and not target['jpText'].startswith("（"):
-                m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
-                if m:
-                    text = m.group(1)
+            if "brak" in filter:
+                if target['jpText'].startswith("（"):
+                    if not text.startswith("("):
+                        text = f"({text})"
+                elif text.startswith("("):
+                        m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
+                        if m:
+                            text = m.group(1)
 
         return text
 

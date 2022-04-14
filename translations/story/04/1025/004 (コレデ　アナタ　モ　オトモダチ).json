@@ -9,7 +9,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "いよいよ選抜レースの日。",
-            "enText": "Finally, the day of the selection race.",
+            "enText": "The day of the qualifying race…",
             "nextBlock": 2,
             "pathId": 5612981666822328536,
             "blockIdx": 1
@@ -18,21 +18,21 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "マンハッタンカフェをスカウトしようと思っていたのだが、\nすっかりそのタイミングを逃してしまっていた。",
-            "enText": "I had been planning to scout for Manhattan Cafe,\nbut I had completely missed the timing.",
+            "enText": "I'd hoped to make an offer to be Manhattan Cafe's \ntrainer… but the chance hadn't come up…",
             "nextBlock": 3,
             "pathId": -6690804886266821617,
             "blockIdx": 2
         },
         {
             "jpName": "同僚A",
-            "enName": "",
+            "enName": "Colleague A",
             "jpText": "<username>……もしかして、\r\nあの子をスカウトするつもり？",
-            "enText": "<username>… Are you trying to\nrecruit that girl, by any chance?",
+            "enText": "Wait, wait, <username>. You're not seriously \nplanning on scouting HER are you?",
             "nextBlock": 4,
             "choices": [
                 {
                     "jpText": "そのつもりだけど",
-                    "enText": "I'm planning on it.",
+                    "enText": "You'd better believe it.",
                     "nextBlock": 4
                 }
             ],
@@ -41,14 +41,14 @@
         },
         {
             "jpName": "同僚B",
-            "enName": "",
+            "enName": "Colleague B",
             "jpText": "確かに走りはいいけど……私も『お友だち』がどうのって、\nはぐらかされたよ？　あなたもそうでしょ？",
-            "enText": "I'm sure it's a good run, but… I've had\nmy fair share of \"friends\" talk me off the ledge,\nhaven't I? I'm sure you do too.",
+            "enText": "I mean sure, she can run, but when I talked to \nher she just started talking nonsense about her \nimaginary friend… She say that to you too?",
             "nextBlock": 5,
             "choices": [
                 {
                     "jpText": "『お友だち』はいると思う",
-                    "enText": "I think I have a friend.",
+                    "enText": "I think her friend is real.",
                     "nextBlock": 5
                 }
             ],
@@ -57,9 +57,9 @@
         },
         {
             "jpName": "同僚A",
-            "enName": "",
+            "enName": "Colleague A",
             "jpText": "い、いやいや、まさか……。\nその、信じてあげたい気持ちはわかるけどさ……。",
-            "enText": "No, no, no, no way… I mean, I\nknow you want to believe it…",
+            "enText": "What? Surely not. \nI mean, I can see why you might want to humor her, but come on…",
             "nextBlock": 6,
             "pathId": -5639149257520499642,
             "blockIdx": 5
@@ -68,7 +68,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……おはよう……ございます……。",
-            "enText": "Good morning… Thank you…",
+            "enText": "Good… morning.",
             "nextBlock": 7,
             "pathId": 5071089434996217881,
             "blockIdx": 6
@@ -77,7 +77,7 @@
             "jpName": "2人",
             "enName": "Both",
             "jpText": "うわぁぁぁぁぁああ！？\nきゃあああああああ！？",
-            "enText": "Whoa! Kyaaaaaaaah!",
+            "enText": "Uwaaaaa!? \nGyaaaaaa!?",
             "nextBlock": 8,
             "pathId": -4008670676778806142,
             "blockIdx": 7
@@ -86,7 +86,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ダダダダダダッ……！！）",
-            "enText": "(da da da da da da…!!!)",
+            "enText": "(Dashdashdashdash…!!)",
             "nextBlock": 9,
             "pathId": -9088316549527019623,
             "blockIdx": 8
@@ -95,12 +95,12 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。\nお話の最中……ごめんなさい……。",
-            "enText": "… I'm in the middle of a conversation.\n… I'm sorry…",
+            "enText": "…… \nSorry… to interrupt.",
             "nextBlock": 10,
             "choices": [
                 {
                     "jpText": "大丈夫だよ",
-                    "enText": "I'm fine.",
+                    "enText": "It's okay. We'd just finished.",
                     "nextBlock": 10
                 }
             ],
@@ -111,12 +111,12 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。",
-            "enText": "…",
+            "enText": "………",
             "nextBlock": 11,
             "choices": [
                 {
                     "jpText": "今日も『お友だち』はいる？",
-                    "enText": "Do you have any 'friends' today?",
+                    "enText": "Is your friend here today?",
                     "nextBlock": 11
                 }
             ],
@@ -127,7 +127,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。\n……はい……。",
-            "enText": "… yes…",
+            "enText": "She's here.",
             "nextBlock": 12,
             "pathId": 1023203179883888030,
             "blockIdx": 11
@@ -136,12 +136,12 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今日は大勢のウマ娘もいる。それを頭に置いて\n走った方がいいだろう。それに、お友だちの背中が見えても――",
-            "enText": "There are a lot of horse girls here today.\nYou'd better keep that in mind as you run.\nBesides, if you see your friend's back—",
+            "enText": "There were a lot of other fast Uma Musume lining \nup that day. She'd be better off concentrating \non them rather than chasing her friend…",
             "nextBlock": 13,
             "choices": [
                 {
                     "jpText": "焦らず自分のペースで行こう！",
-                    "enText": "Take your time, go at your own pace!",
+                    "enText": "Just relax and run your own race!",
                     "nextBlock": 13
                 }
             ],
@@ -152,7 +152,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。",
-            "enText": "…",
+            "enText": "………",
             "nextBlock": 14,
             "pathId": -4212732501310016539,
             "blockIdx": 13
@@ -161,12 +161,12 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……アナタには……見えていないはずなのに……\nまるで……見えているみたい……。",
-            "enText": "It's like… you can't see… but…\nyou can see… It's like…",
+            "enText": "I know you… can't see her… \nBut… it feels almost as if you do…",
             "nextBlock": 15,
             "choices": [
                 {
                     "jpText": "え？今なんて――",
-                    "enText": "What? Now what?",
+                    "enText": "Hm? Did you say something?",
                     "nextBlock": 15
                 }
             ],
@@ -177,7 +177,7 @@
             "jpName": "選抜レース係員A",
             "enName": "Selection Race Official A",
             "jpText": "間もなく、選抜レースが始まりまーす！\n出走するウマ娘は、速やかに――",
-            "enText": "The selection race is about to begin! If you are\ninterested in running, please do so promptly.",
+            "enText": "The race is about to begin! \nAll starters, make your way to the track!",
             "nextBlock": 16,
             "pathId": -5134514129398920590,
             "blockIdx": 15
@@ -186,7 +186,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。\n……夜に、またここで……。",
-            "enText": "… at night, also here…",
+            "enText": "Meet me here… tonight.",
             "nextBlock": 17,
             "pathId": -6554730535762426505,
             "blockIdx": 16
@@ -195,7 +195,7 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "各ウマ娘、ゲートに入りました。\n今一斉に――スタート！　始まりました！",
-            "enText": "Each horse girl has entered the gate. Now\nall at once— start! It's started!",
+            "enText": "All the Uma Musume are in the starting gates, and… \nthey're off!",
             "nextBlock": 18,
             "pathId": -1281276315641968612,
             "blockIdx": 17
@@ -204,7 +204,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（――走る、走る、走る。\n芝の匂い……大地を蹴る感覚が気持ちいい）",
-            "enText": "(—Run, run, run. The smell of the grass… and the feeling\nof kicking the earth feels good)",
+            "enText": "(Run… run… run… The smell of the grass… \nGood legs, good turf… today feels right…)",
             "nextBlock": 19,
             "pathId": -6433852169513633554,
             "blockIdx": 18
@@ -213,7 +213,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（あの人の……トレーナーさんの言葉が、私の脚を軽くしたみたい。\n呼吸が安定して、いつもより長く走れそう）",
-            "enText": "(That guy's… trainer's words seem to have\nlightened my legs. My breathing is more steady,\nand I can run longer than usual.)",
+            "enText": "(It's as though his words… trainer-san's words… have made my feet \nlighter… My breathing is calm, controlled… I could run forever…)",
             "nextBlock": 20,
             "pathId": -3449861723482504486,
             "blockIdx": 19
@@ -222,7 +222,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（……たくさんのウマ娘が、私の前を走ってる）",
-            "enText": "(… lots of horse girls are running in front of me)",
+            "enText": "(There are many Uma Musume ahead of me…)",
             "nextBlock": 21,
             "pathId": -726066067257709612,
             "blockIdx": 20
@@ -231,7 +231,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（それでもあの子は……私の『お友だち』は、\nきっとこの先で……私が来るのを待ってる）",
-            "enText": "(Still, that girl… my \"friend\", is probably\nwaiting for me… down the road.)",
+            "enText": "(But ahead of them… I know… \nMy friend is waiting for me…)",
             "nextBlock": 22,
             "pathId": 8966976950148012405,
             "blockIdx": 21
@@ -240,7 +240,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（私以外の誰にも見えない、大切な『お友だち』）",
-            "enText": "(A precious \"friend\" that no one can see but me)",
+            "enText": "(My dear friend… who none but I have eyes to see…)",
             "nextBlock": 23,
             "pathId": 9044064898487021665,
             "blockIdx": 22
@@ -249,7 +249,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（誰に信じてもらえなくても構わなかった。\r\nただ、どうでもいいもののように、扱わないでほしかっただけ）",
-            "enText": "(I didn't care if no one believed me. I just didn't want them\nto treat me like I was something unimportant.)",
+            "enText": "(I never cared if people believed in her or not… \nOnly… that they show her respect……)",
             "nextBlock": 24,
             "pathId": 245121923179290198,
             "blockIdx": 23
@@ -258,7 +258,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（――でも）",
-            "enText": "（But…)",
+            "enText": "(But…)",
             "nextBlock": 25,
             "pathId": -1762755257787317311,
             "blockIdx": 24
@@ -267,7 +267,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（あの人は……知りたいと言ってくれた……！）",
-            "enText": "(That guy wanted to know about…!)",
+            "enText": "(He said… he wants to know…)",
             "nextBlock": 26,
             "pathId": 9110264032620539930,
             "blockIdx": 25
@@ -276,7 +276,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（見えないから、教えてほしいと。\nただの一言も、私の『お友だち』を侮辱しなかった……！）",
-            "enText": "(I can't see it, so she wants me to tell her. Not a single word\nwas insulting to my 'friend'…!)",
+            "enText": "(Because he cannot see her… he wants me to teach him… \nHe speaks of my friend like any other person… with respect…)",
             "nextBlock": 27,
             "pathId": -2477640286537071588,
             "blockIdx": 26
@@ -285,7 +285,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "ハァァァァアアアア！！",
-            "enText": "Haaaaaaaaaa!",
+            "enText": "Haaaaaaaaa!!",
             "nextBlock": 28,
             "pathId": 7736249980966158229,
             "blockIdx": 27
@@ -294,7 +294,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（――たとえ多くの拒絶であっても、無慈悲な\r\n否定であっても、私たちを計れるものなんて何もない）",
-            "enText": "(There's nothing that can measure us, even if it's a lot of\nrejection, even if it's ruthless denial.)",
+            "enText": "(No matter what anyone might say… whatever their cruel words… \nThey cannot understand… they cannot judge us…)",
             "nextBlock": 29,
             "pathId": 4161746889682373309,
             "blockIdx": 28
@@ -303,7 +303,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "（……だから、すべてを追い抜いて、\n昨日よりも近い、アナタの背中が見えたら、私は――）",
-            "enText": "(… so if I can overtake everything and see your back,\ncloser than yesterday, I will—)",
+            "enText": "(So I'll leave it behind, all of it… I'll follow you. I'll chase \nyou. Every day, closer than the day before…)",
             "nextBlock": 30,
             "pathId": -6887577938102028580,
             "blockIdx": 29
@@ -312,7 +312,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "これからも……あの背中を……夢を……！　追い続けていく……！！",
-            "enText": "I'll keep… that back… dream\n…! I'll keep chasing…!",
+            "enText": "Closer to that shadow… that dream… \nFor as long as it takes.",
             "nextBlock": 31,
             "pathId": -340228167471826863,
             "blockIdx": 30
@@ -321,7 +321,7 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "一気に加速していく！　なんという鋭い追い込み……！！\n黒い影が、前方のウマ娘たちを呑み込んでいったー！！",
-            "enText": "She's accelerating all at once! What a sharp pursuit…! A\nblack shadow swallowed the horse girls in front of us!",
+            "enText": "Look at that acceleration! \nA black shadow! Consuming everything in its path!",
             "nextBlock": 32,
             "pathId": -3691006944228030596,
             "blockIdx": 31
@@ -330,7 +330,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ワァァァァァァァァァァァアアア！！！！！）",
-            "enText": "(Waaaaaaaaaaaaaaaaaaaaa ！！！！！)",
+            "enText": "(Wooooooaaaaaaahh!!!!)",
             "nextBlock": 33,
             "pathId": 8181530439219659914,
             "blockIdx": 32
@@ -339,7 +339,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――昼間とは真逆の静けさに包まれたトレーニングコースに、\nマンハッタンカフェは立っていた。",
-            "enText": "—Manhattan Cafe stood on the training course, surrounded by a\nquietness that was the complete opposite of daytime.",
+            "enText": "Manhattan Cafe stood waiting. The track was silent, the crowds \nand noise of the day's race a distant memory.",
             "nextBlock": 34,
             "pathId": 367692878961621937,
             "blockIdx": 33
@@ -348,7 +348,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……少しだけ、話を聞いてください。\n私の……『お友だち』の話を……。",
-            "enText": "Please… listen to me for a moment. I'd like to tell you a\nstory about my… \"friends\" at…",
+            "enText": "Please… listen to what I have to say. \nIt's about… my friend…",
             "nextBlock": 35,
             "pathId": -4050626479228449398,
             "blockIdx": 34
@@ -357,7 +357,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "私は……色々なものが見えるんです。\n他の人には見えない、不思議な子たちが……。",
-            "enText": "I can see… a lot of things. I see strange\nchildren that other people can't see…",
+            "enText": "I can …see things. Things that others can't. \nMysterious things. Mysterious people.",
             "nextBlock": 36,
             "pathId": 4342676489870477047,
             "blockIdx": 35
@@ -366,7 +366,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "でも……それを信じてくれる人はいませんでした。",
-            "enText": "But there was no one who believed… it.",
+            "enText": "But… nobody ever believed me.",
             "nextBlock": 37,
             "pathId": 3912662344754378,
             "blockIdx": 36
@@ -375,7 +375,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "『そんなものはいない』『気味が悪い』\n『ただの幻覚』『妄想』『思い込み』",
-            "enText": "There is no such thing, it's creepy, it's just\na hallucination, a delusion, an assumption.",
+            "enText": "\"They're not there,\" they'd say. \n\"You're scaring me…\" \"You're hallucinating…\" \n\"It's just your imagination… just your mind playing tricks…\"",
             "nextBlock": 38,
             "pathId": -4960041671090504452,
             "blockIdx": 37
@@ -384,7 +384,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "たくさんの言葉が……私の大切なものを\n傷つけているようで……悲しかった……。",
-            "enText": "A lot of words… seemed to be hurting my precious\n… things, and I was sad…",
+            "enText": "To hear so many cruel words spoken \nabout my special friends… made me so sad.",
             "nextBlock": 39,
             "pathId": 7246524742198509279,
             "blockIdx": 38
@@ -393,7 +393,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……だから、幼く小さかった私は、閉じこもったんです。\n大切なものが……傷つけられないように……。",
-            "enText": "That's why I was so… young and small, and I locked myself\naway. I didn't want… anything important to get hurt.",
+            "enText": "That's why… \nWhen I was still very small… I decided to close myself off. \nSo my dear friends wouldn't be hurt any more.",
             "nextBlock": 40,
             "pathId": -1578388493550752748,
             "blockIdx": 39
@@ -402,7 +402,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "もともと体も弱かったですし……\r\n周りを納得させるだけの理由は、ありました。",
-            "enText": "I was weak to begin with… and I had\ngood reason to convince those around me.",
+            "enText": "I was already a weak child… sickly… \nSo when I hid myself away, nobody tried to stop me.",
             "nextBlock": 41,
             "pathId": 3808677408759711430,
             "blockIdx": 40
@@ -411,7 +411,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……でも、ある日。\n私によく似た後ろ姿の女の子が……走っていたんです。",
-            "enText": "… But one day. There was a girl running\n… behind me who looked a lot like me.",
+            "enText": "But… one day… \nI saw one who looked just like me… Running……",
             "nextBlock": 42,
             "pathId": 1571916630406796536,
             "blockIdx": 41
@@ -420,7 +420,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "顔は見えなかったけど、楽しさだけは伝わってきて……\r\n私は……とても……羨ましくなって……。",
-            "enText": "I couldn't see her face, but I could just feel her enjoyment.\n… I became… very… jealous…",
+            "enText": "I couldn't see her face, but …I could feel her joy… \nAnd I knew …I wanted to feel that joy too…",
             "nextBlock": 43,
             "pathId": 246158120713496484,
             "blockIdx": 42
@@ -429,7 +429,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……閉じこもっていた暗い部屋から、\n外に飛び出したんです。",
-            "enText": "I ran out of the dark room I had been cooped up in…",
+            "enText": "I burst out of the dark room where \nI'd been hiding all those years…",
             "nextBlock": 44,
             "pathId": -2948791296711017424,
             "blockIdx": 43
@@ -438,7 +438,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "そこは眩しくて……目が眩みそうになったけど……でも、\n『お友だち』は、楽しそうに走っていて……。",
-            "enText": "It was so bright… that it almost blinded me… but\nmy friend was running happily…",
+            "enText": "The sun was so bright… it burned my eyes, but… \nMy friend was running… joyful…!",
             "nextBlock": 45,
             "pathId": 1446903898007162283,
             "blockIdx": 44
@@ -447,7 +447,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "何を気にしていたんだろうって……思いました……。\n誰に信じてもらえなくても……あの子は楽しそうに走っているのに。",
-            "enText": "I wondered… what I was worrying about… Even if no\none believes me… that girl is running happily.",
+            "enText": "And I asked myself… just what had I been worried \nabout all this time…? Because even if no one believed \nin her… She still ran with that same joy…",
             "nextBlock": 46,
             "pathId": -5359070041550549340,
             "blockIdx": 45
@@ -456,17 +456,17 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……それから、『お友だち』はずっと……\r\n私の前を走り続けています……。",
-            "enText": "… And since then, my \"friend\" has been\nrunning… in front of me…",
+            "enText": "And ever since then, my friend has kept on running… \njust ahead of me…",
             "nextBlock": 47,
             "choices": [
                 {
                     "jpText": "大切な『お友だち』なんだな",
-                    "enText": "You're a very important \"friend\".",
+                    "enText": "I can tell your friend is very important to you.",
                     "nextBlock": 47
                 },
                 {
                     "jpText": "大切な『お友だち』なんだね",
-                    "enText": "You're a very important \"friend\".",
+                    "enText": "I can tell your friend is very important to you.",
                     "nextBlock": 47
                 }
             ],
@@ -477,7 +477,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "はい……。\n……でも……。",
-            "enText": "Yes… You can also go to…",
+            "enText": "She is… \nBut…",
             "nextBlock": 48,
             "pathId": 2634477794405673847,
             "blockIdx": 47
@@ -486,7 +486,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……本当は、私も知らないんです……。\n彼女の……顔は……。",
-            "enText": "The… truth is, I don't even know\n… Her… face is…",
+            "enText": "Even I don't really know her… \nTo this day… I have never seen her face.",
             "nextBlock": 49,
             "pathId": 2645596563612900974,
             "blockIdx": 48
@@ -495,7 +495,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "私……追いつけないから……振り返っては、くれないから……。\n……だから、いつも背中だけを……見ているんです……。",
-            "enText": "I… can't catch up with you, so you won't… look back\nat me, because you won't… look back at me. That's why I'm\nalways… only looking at your back…",
+            "enText": "Because I can't catch her. She never turns to look at me… \nAll I have ever seen… is her back…",
             "nextBlock": 50,
             "pathId": 5258449100752805377,
             "blockIdx": 49
@@ -504,7 +504,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……私は、彼女に追いつきたい。\n隣で一緒に……走りたい……。",
-            "enText": "I… want to catch up with her. I want\nto… run with her next to me…",
+            "enText": "I need to catch her. \nAnd run together with her, side by side.",
             "nextBlock": 51,
             "pathId": -8783807774922929495,
             "blockIdx": 50
@@ -513,7 +513,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "囁くような小さな声から、\r\n強く真っすぐな想いが伝わってくる。",
-            "enText": "Her whispery voice conveyed her strong\nand straightforward feelings.",
+            "enText": "In her small voice, barely a whisper… I could \nsense a powerful, unwavering will.",
             "nextBlock": 52,
             "pathId": -786845817691330490,
             "blockIdx": 51
@@ -522,12 +522,12 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……。今も……アナタには見えませんよね……？\nだけど……あの……。",
-            "enText": "… You still can't see… you, can\nyou…? But… that…",
+            "enText": "You… still can't see her… can you…? \nBut… um…",
             "nextBlock": 53,
             "choices": [
                 {
                     "jpText": "これからも『お友だち』のことを教えて",
-                    "enText": "Please keep telling me about your \"friends\".",
+                    "enText": "You'll just have to be my eyes.",
                     "nextBlock": 53
                 }
             ],
@@ -538,17 +538,17 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。",
-            "enText": "…",
+            "enText": "………",
             "nextBlock": 54,
             "choices": [
                 {
                     "jpText": "君をスカウトしたいんだ",
-                    "enText": "I'm trying to recruit you.",
+                    "enText": "Let me be your trainer.",
                     "nextBlock": 54
                 },
                 {
                     "jpText": "貴方をスカウトしたいんだ",
-                    "enText": "I'm trying to recruit you.",
+                    "enText": "Let me be your trainer.",
                     "nextBlock": 54
                 }
             ],
@@ -559,12 +559,12 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "…………。\n……あの子に、追いつけますか……？",
-            "enText": "… Can you catch up with that girl…?",
+            "enText": "Will I… catch her…?",
             "nextBlock": 55,
             "choices": [
                 {
                     "jpText": "追い越そう！！",
-                    "enText": "Let's get past them!",
+                    "enText": "You'll beat her!",
                     "nextBlock": 55
                 }
             ],
@@ -575,7 +575,7 @@
             "jpName": "マンハッタンカフェ",
             "enName": "Manhattan Cafe",
             "jpText": "……――はい。",
-            "enText": "…—Yes.",
+            "enText": "Alright.",
             "nextBlock": 56,
             "pathId": -6724202749356453221,
             "blockIdx": 55
@@ -584,7 +584,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ドンッ！！）",
-            "enText": "(DONG!)",
+            "enText": "(bonk!)",
             "nextBlock": 57,
             "pathId": 8580809856956484058,
             "blockIdx": 56
@@ -593,7 +593,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "小さく笑ったマンハッタンカフェに笑い返した瞬間、\n背中を強く叩かれた気がした。そして――",
-            "enText": "As I smiled back at Manhattan Cafe's small smile, I felt a\nstrong slap on my back. And then—",
+            "enText": "Just as I smiled back at Manhattan Cafe, I felt \na powerful whack between my shoulder blades…",
             "nextBlock": 58,
             "pathId": 507780764690643483,
             "blockIdx": 57
@@ -602,7 +602,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『頼んだ』",
-            "enText": "I asked.",
+            "enText": "D̸̩̍ ̵̜̌Ò̷̼ ̵̟͐I̶̜͂ ̶̱̋T̷̙͐",
             "nextBlock": 59,
             "pathId": -1400720467618383236,
             "blockIdx": 58
@@ -611,7 +611,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――と、声でも言葉でもない、\n『誰か』の感情に、触れられた気がした。",
-            "enText": "—I felt as if I had been touched by someone's\nemotion, not by a voice or words.",
+            "enText": "A voice without voice… words without words… \nBut whatever it was, it was real.",
             "nextBlock": -1,
             "pathId": 3316884314226552518,
             "blockIdx": 59

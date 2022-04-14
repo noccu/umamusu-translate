@@ -44,7 +44,7 @@ Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
-Manhattan Cafe | Complete, Transferring | deepl, [xct][]
+Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | In progress | [Snep][]
 Maruzensky | In progress/Complete | [noccu][] (ep 1-6), deepl
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)

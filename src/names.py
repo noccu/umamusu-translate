@@ -255,6 +255,8 @@ def createDict():
     names['整備士B'] = "Mechanic B"
     names['整備士Ｂ'] = "Mechanic B"
     names['整備スタッフ'] = "Maintenance Staff"
+    names['同僚A'] = "Colleague A"
+    names['同僚B'] = "Colleague B"
     names['船乗り'] = "Sailor"
     names['SP隊長'] = "SP Commander"
     names['女優'] = "Actress"

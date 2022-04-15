@@ -70,10 +70,10 @@ def adjustLength(file: TranslationFile, text: str, lineLen: int = 0, numLines: i
 
     if targetLines > 0 and len(lines) > targetLines:
         try:
-            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in {file.name}: ", lines)
+            linesStr = '\n\t'.join(lines)
+            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
-            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in {file.getStoryId()}: ", lines)
-            print("WARN: Encountered a text encoding/codepage error. Should not affect output but you may want to try another terminal.")
+            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
     return " \\n".join(lines) if file.type in ("race", "preview") else " \n".join(lines)
 
 def replace(text: str):

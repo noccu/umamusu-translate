@@ -5,6 +5,7 @@ import sys
 import json
 from typing import Generator
 import regex
+from datetime import datetime, timezone
 
 
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
@@ -12,20 +13,6 @@ GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
 TARGET_TYPES =  ["story", "home", "race", "lyrics", "preview"]
-VERSION = None
-
-def version():
-    global VERSION
-    if VERSION: return VERSION
-    try:
-        with open(".git/refs/heads/master", "r") as f:
-            VERSION = f.readline()
-    except FileNotFoundError:
-        VERSION = "not.cloned"
-    except:
-        VERSION = "unknown"
-    finally: 
-        return VERSION
 
 def checkTypeValid(t):
     if t in TARGET_TYPES: 
@@ -131,14 +118,38 @@ class Args:
             else: raise SystemExit("Invalid arguments")
         return self
 
-commonArgs = argparse.ArgumentParser(add_help=False)
-commonArgs.add_argument("-v", "--version", action="version", version=version())
-commonArgs.add_argument("-t", "--type", choices=TARGET_TYPES, default=TARGET_TYPES[0], help="The type of assets to process. Default: %(default)s")
-commonArgs.add_argument("-g", "--group", help="The group to process")
-commonArgs.add_argument("-id", help="The id (subgroup) to process")
-commonArgs.add_argument("-idx", help="The specific asset index to process")
-commonArgs.add_argument("-src", default=GAME_ASSET_ROOT, help="Default: %(default)s")
-commonArgs.add_argument("-dst", default=Path("dat/").resolve(), help="Default: %(default)s")
+def patchVersion():
+    try:
+        with open(".git/refs/heads/master", "r") as f:
+            v = f.readline()
+    except FileNotFoundError:
+        v = os.path.getmtime("tl-progress.md")
+        v = datetime.fromtimestamp(v, tz=timezone.utc).isoformat()
+    except:
+        v = "unknown"
+    finally: 
+        return v
+
+class NewArgs(argparse.ArgumentParser):
+    def __init__(self, desc) -> None:
+        if sys.argv[1] in ("-v", "--version"):
+            print(f"Patch version: {patchVersion()}")
+            sys.exit()
+        super().__init__(description=desc, conflict_handler='resolve')
+        self.add_argument("-v", "--version", help="Show version and exit")
+        self.add_argument("-t", "--type", choices=TARGET_TYPES, default=TARGET_TYPES[0], help="The type of assets to process.")
+        self.add_argument("-g", "--group", help="The group to process")
+        self.add_argument("-id", help="The id (subgroup) to process")
+        self.add_argument("-idx", help="The specific asset index to process")
+        self.add_argument("-src", default=GAME_ASSET_ROOT)
+        self.add_argument("-dst", default=Path("dat/").resolve())
+    def add_argument(self, *args, **kwargs):
+        if 'default' in kwargs and not args[0].startswith("-h"):
+            if 'help' in kwargs:
+                kwargs['help'] += ". Default: %(default)s"
+            else:
+                kwargs['help'] = "Default: %(default)s"
+        return super().add_argument(*args, **kwargs)
 
 class TranslationFile:
     def __init__(self, file):

@@ -20,7 +20,6 @@ class PatchManager:
     def __init__(self, args: argparse.Namespace) -> None:
         self.errorLog = stdout
         self.config(args)
-        print(f"Patch version: {common.version()}")
 
     def config(self, args = None, **kwargs):
         if args:
@@ -252,13 +251,13 @@ class LyricsPatcher(StoryPatcher):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Write Game Assets from Translation Files", parents=[common.commonArgs])
+    ap = common.NewArgs("Write Game Assets from Translation Files")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="(Over)Write files straight to game directory")
     ap.add_argument("-U", "--update", dest="update", action="store_true", help="Skip already imported files")
     ap.add_argument("-FI", "--full-import", dest="fullImport", action="store_true", help="Import all available types")
     ap.add_argument("-S", "--silent", dest="silent", action="store_true", help="Ignore some errors and print debug info to file. Default: terminal (stdout)")
-    ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices). Default: %(default)s")
-    ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed. Default: %(default)s")
+    ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
+    ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")
 
     args = ap.parse_args()
     process(args)

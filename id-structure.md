@@ -107,6 +107,37 @@ The structure used is simple: `00 0000 000`
 9004 | Kiryuin Aoi
 9005 | Anshinzawa Sasami
 
+# Song IDs
+1001 | Umapyoi Densetsu
+1004 | Never Looking Back
+1005 | Irodori Phantasia
+1006 | Make debut!
+1007 | ENDLESS DREAM!!
+1008 | NEXT FRONTIER
+1009 | UNLIMITED IMPACT
+1010 | Special Record!
+1012 | Grow Up・Shine!
+1023 | ぼくらのブルーバードデイズ
+1025 | Hajimari no Signal
+1026 | Sasayaka na Inori
+1027 | Honnou Speed
+1028 | winning the soul
+1030 | Namida hikatte asu ni nare!
+1031 | BLAZE
+1032 | Yume wo kakeru
+1034 | Pyoitto♪Hallelujah!
+1035 | WINnin’ 5 －ウイニング☆ファイヴ－
+1037 | transforming
+1040 | 青春が待ってる
+1042 | Go This Way
+1043 | 木漏れ日のエール
+1044 | 全速！前進！ウマドルパワー☆
+1048 | BLOW my GALE
+1049 | バクシンバクシンバクシンシン
+1050 | We are DREAMERS!!
+1052 | プロムダンスパート
+1056 | メジロ讃歌
+
 # Index IDs
 
 Too many to list.  

@@ -57,6 +57,8 @@ def load_block(event = None):
     global next_index
     global btn_choices
     global cur_choices
+    global cur_choices_textboxes
+    global cur_choices_texts
 
     # print(cur_chapter, cur_block)
 
@@ -64,7 +66,7 @@ def load_block(event = None):
 
     blocks = read_json(files[cur_chapter])['text']
 
-    block_dropdown['values'] = [str(i+1) for i in range(len(blocks))]
+    block_dropdown['values'] = [f"{i+1} - {blocks[i]['jpText'][:8]}" for i in range(len(blocks))]
     block_dropdown.current(cur_block)
 
     cur_block_data =  blocks[cur_block]
@@ -95,6 +97,8 @@ def load_block(event = None):
     btn_choices['state'] = 'disabled'
     btn_choices.config(bg='SystemButtonFace')
     cur_choices = None
+    cur_choices_textboxes = list()
+    cur_choices_texts = list()
     if 'choices' in cur_block_data:
         btn_choices['state'] = 'normal'
         btn_choices.config(bg='#00ff00')
@@ -110,12 +114,12 @@ def save_block():
     global cur_choices_texts
 
     cur_file = read_json(files[cur_chapter])
-    cur_file['text'][cur_block]['enName'] = speaker_en_entry.get().strip()
-    cur_file['text'][cur_block]['enText'] = text_box_en.get(1.0, tk.END).strip().replace("\n", " \n")
+    cur_file['text'][cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
+    cur_file['text'][cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
 
     if cur_choices and cur_choices_texts:
         for i in range(len(cur_choices_texts)):
-            cur_file['text'][cur_block]['choices'][i]['enText'] = cur_choices_texts[i].strip().replace("\n", " \n")
+            cur_file['text'][cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
 
     save_json(cur_file, files[cur_chapter])
 
@@ -134,16 +138,20 @@ def next_block():
 
 def close_choices(popup_window):
     global cur_choices_texts
-    cur_choices_texts = [textbox.get(1.0, tk.END) for textbox in cur_choices_texts]
+    global cur_choices_textboxes
+    global cur_choices
+    cur_choices_texts = [textbox.get(1.0, tk.END).strip().replace("\n", " \n") for textbox in cur_choices_textboxes]
+    for i in range(len(cur_choices_texts)):
+        cur_choices[i]['enText'] = cur_choices_texts[i]
     popup_window.destroy()
 
 
 def show_choices():
     global files
     global cur_choices
-    global cur_choices_texts
+    global cur_choices_textboxes
 
-    cur_choices_texts = list()
+    cur_choices_textboxes = list()
 
     if cur_choices:
         popup_window = tk.Toplevel()
@@ -172,7 +180,7 @@ def show_choices():
             cur_jp_text['state'] = 'disabled'
             cur_jp_text.pack()
             cur_en_text = tk.Text(window_frame, height=4, width=80)
-            cur_choices_texts.append(cur_en_text)
+            cur_choices_textboxes.append(cur_en_text)
             cur_en_text.insert(tk.END, choice['enText'])
             cur_en_text.pack()
             ttk.Separator(window_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
@@ -191,9 +199,11 @@ def main():
     global text_box_en
     global btn_choices
     global save_on_next
+    global cur_choices_texts
 
     cur_chapter = 0
     cur_block = 0
+    cur_choices_texts = list()
 
     if TARGET_FILE:
         files = [TARGET_FILE]

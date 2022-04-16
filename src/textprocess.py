@@ -76,9 +76,9 @@ def main():
     ap.add_argument("-V", "--verbose", action="store_true", help="Print additional info")
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
     #Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
-    ap.add_argument("-ll", dest="lineLength", type=int, default=45, help="Characters per line. Generally 65 for landscape, 45 for portrait")
+    ap.add_argument("-ll", dest="lineLength", type=int, help="Characters per line. Default: 65 for landscape, 45 otherwise")
     ap.add_argument("-nl", dest="redoNewlines", action="store_true", help="Remove existing newlines for complete reformatting")
-    ap.add_argument("-rep", dest="replaceMode", choices=["all", "limit", "none"], default="all", help="Mode/aggressiveness of replacements")
+    ap.add_argument("-rep", dest="replaceMode", choices=["all", "limit", "none"], default="limit", help="Mode/aggressiveness of replacements")
     # 3 is old max and visually ideal as intended by the game. Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
     ap.add_argument("-tl", dest="targetLines", default=3, type=int, help="Target lines. Length adjustment skips input obeying -ll and not exceeding -tl")
     args = ap.parse_args()
@@ -92,8 +92,18 @@ def processFiles(args):
         if not args.group and not args.id: raise SystemExit("At least 1 file arg is required.")
         files = common.searchFiles(args.type, args.group, args.id, args.idx)
     print(f"Processing {len(files)} files...")
+    useDynamicLength = args.lineLength is None
+    if useDynamicLength: print(f"Automatically setting line length based on story type/id")
     for file in files:
         file = common.TranslationFile(file)
+
+        if useDynamicLength:
+            if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
+                args.lineLength = 65
+            else:
+                args.lineLength = 45
+            if args.verbose: print(f"Line length set to {args.lineLength} for {file.name}")
+
         for block in file.genTextContainers():
             if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
             block['enText'] = processText(file, block['enText'], args)

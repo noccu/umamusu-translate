@@ -130,7 +130,7 @@ def extractAsset(path, storyId, tlFile = None):
                         continue
                     if isPatched(textData): return
 
-                    if "origTxtLen" in textData: # added for unvoiced clips
+                    if "origClipLength" in textData:
                         print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
                         animClips = block['CharacterTrackList'][0]['StoryTimelineCharaMotionTrackData']['ClipList']
                         animClips = [(i, t['StoryTimelineCharaMotionTrackData']['ClipList']) for i, t in enumerate(block['CharacterTrackList'])]
@@ -191,10 +191,9 @@ def extractText(assetType, obj):
             'enName': "",  # todo: auto lookup
             'jpText': tree['Text'],
             'enText': "",
-            'nextBlock': tree['NextBlock'] # maybe for adding blocks to split dialogue later
+            'nextBlock': tree['NextBlock'], # maybe for adding blocks to split dialogue later
+            'origClipLength': tree['ClipLength']
         }
-        if tree['VoiceLength'] == -1:
-            o['origTxtLen'] = tree['ClipLength']
         choices = tree['ChoiceDataList'] #always present
         if choices:
             o['choices'] = list()

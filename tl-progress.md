@@ -32,7 +32,7 @@ name | progress | translator
 --- | --- | ---
 Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | In progress/Transferring | [burritoblaster][] (ep 1-5)
-Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] (ep 2-3), [xct][] (ep 4-7)
+Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Eishin Flash | Complete | deepl

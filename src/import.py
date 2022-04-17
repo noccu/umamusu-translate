@@ -171,7 +171,12 @@ class StoryPatcher:
                     newClipLen = max(textBlock['origClipLength'], newClipLen)
                     newBlockLen = newClipLen + assetData['StartFrame'] + 1
                     assetData['ClipLength'] = newClipLen
+
+                    if assetData['VoiceLength'] != -1:
+                        assetData['VoiceLength'] = assetData['ClipLength'] - assetData['WaitFrame']
+
                     mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+
                     if "animData" in textBlock:
                         print(f"Adjusting anim length at {blockIdx}")
                         for animGroup in textBlock['animData']:

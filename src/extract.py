@@ -25,7 +25,6 @@ EXPORT_DIR = args.getArg("-dst", PurePath("translations").joinpath(EXTRACT_TYPE)
 OVERWRITE_DST = args.getArg("-O", False)
 UPDATE = args.getArg("-upd", False)
 
-
 def queryDB(db = None, storyId = None):
     externalDb = bool(db)
     if storyId:
@@ -132,26 +131,24 @@ def extractAsset(path, storyId, tlFile = None):
 
                     if "origClipLength" in textData:
                         print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
-                        animClips = block['CharacterTrackList'][0]['StoryTimelineCharaMotionTrackData']['ClipList']
-                        animClips = [(i, t['StoryTimelineCharaMotionTrackData']['ClipList']) for i, t in enumerate(block['CharacterTrackList'])]
-                        animClips = list(filter(lambda x: len(x[1]) > 0, animClips))
-                        if len(animClips):
+                        clipsToUpdate = list()
+                        for trackGroup in block['CharacterTrackList']:
+                            keys = trackGroup.keys()
+                            for key in keys:
+                                if key.endswith("MotionTrackData") and trackGroup[key]['ClipList']:
+                                    clipsToUpdate.append(trackGroup[key]['ClipList'][-1]['m_PathID'])
+                        if clipsToUpdate:
                             textData['animData'] = list()
-                            for trackListIdx, clips in animClips:
-                                lastClip = clips[-1]
-                                animAsset = assetList[lastClip['m_PathID']]
+                            for clipPathId in clipsToUpdate:
+                                animAsset = assetList[clipPathId]
                                 if animAsset:
                                     animData = animAsset.read_typetree()
-                                    if animData['StateType'] == 1: # 0 = start, 1 = loop, 2 = end
-                                        animGroupData = dict()
-                                        animGroupData['origLen'] = animData['ClipLength']
-                                        animGroupData['groupIdx'] = trackListIdx
-                                        animGroupData['pathId'] = lastClip['m_PathID']
-                                        textData['animData'].append(animGroupData)
-                                    else:
-                                        print(f"Anim data not loop at BlockIndex {block['BlockIndex']}")
+                                    animGroupData = dict()
+                                    animGroupData['origLen'] = animData['ClipLength']
+                                    animGroupData['pathId'] = clipPathId
+                                    textData['animData'].append(animGroupData)
                                 else:
-                                    print(f"No anim asset ({lastClip['m_PathID']}) found at BlockIndex {block['BlockIndex']}")
+                                    print(f"No anim asset ({clipPathId}) found at BlockIndex {block['BlockIndex']}")
                         else:
                             print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
 

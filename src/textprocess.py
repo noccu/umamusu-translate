@@ -41,7 +41,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         # python regexes kinda suck
         lines = re.findall(f"(?:(?<= )|(?<=^)).{{1,{lineLen}}}(?= |$)|(?<= ).+$", text)
         nLines = len(lines)
-        if nLines > 1 and len(lines[-1]) < min(lineLen, len(text)) / nLines:
+        if nLines > 1 and len(lines[-1]) < lineLen / 3.25:
             linesStr = '\n\t'.join(lines)
             if opts.verbose: print(f"Last line is short, balancing on line number:\n\t{linesStr}")
             return adjustLength(file, text, opts, lineLength = 0, numLines = nLines, targetLines = targetLines)
@@ -53,9 +53,9 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     if targetLines > 0 and len(lines) > targetLines:
         try:
             linesStr = '\n\t'.join(lines)
-            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in {file.name}:\n\t{linesStr}")
+            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
-            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
+            print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
     return " \\n".join(lines) if file.type in ("race", "preview") else " \n".join(lines)
 
 def replace(text: str, mode):

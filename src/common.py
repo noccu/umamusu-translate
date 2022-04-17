@@ -3,7 +3,7 @@ import os
 from pathlib import Path, PurePath
 import sys
 import json
-from typing import Generator
+from typing import Generator, Union
 import regex
 from datetime import datetime, timezone
 
@@ -40,7 +40,7 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
         else: found.extend(os.path.join(root, file) for file in files if isJson(file))
     return found
 
-def readJson(file) -> dict:
+def readJson(file) -> Union[dict, list]:
     with open(file, "r", encoding="utf8") as f:
         return json.load(f)
 

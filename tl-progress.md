@@ -16,7 +16,7 @@ name | progress | translator
 --- | --- | ---
 Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
-Main story Act 1 Ch 6 (Final) | In progress/Transferring | [LotoDS][] (ep 1-9, 12, 13)
+Main story Act 1 Ch 6 (Final) | Complete | [LotoDS][] (ep 1-13)
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
@@ -51,6 +51,7 @@ Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
+Nice Nature | In progress | [xct][] (ep 1-3)
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
 Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
 Sakura Chiyono O | Complete | [LotoDS][]

@@ -22,8 +22,8 @@ IF [%1] NEQ [] (
 
 :open 
 REM %snek% src\ui.py
-ECHO Importing all translatable types that are present in your game files. This could take up to 20m.
-ECHO Update-only mode is default. To forcefully write new files, remove -U in this .bat
+ECHO Importing all translatable types that are present in your game files...
+ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
 REM Or manually import parts, see import.py -h
 %snek% src/import.py -FI -O -U -S
 ECHO Imports complete!

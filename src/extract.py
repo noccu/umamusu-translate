@@ -76,7 +76,7 @@ def extractAsset(path, storyId, tlFile = None):
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': 4,
+            'version': 5,
             'bundle': env.file.name,
             'type': EXTRACT_TYPE,
             'storyId': "",
@@ -85,6 +85,7 @@ def extractAsset(path, storyId, tlFile = None):
         }
         isPatched = CheckPatched(env.file.name)
         transferExisting = DataTransfer(tlFile)
+        assetList = index.assets_file.files
 
         if EXTRACT_TYPE == "race":
             export['storyId'] = tree['m_Name'][-9:]
@@ -128,6 +129,32 @@ def extractAsset(path, storyId, tlFile = None):
                     if not textData:
                         continue
                     if isPatched(textData): return
+
+                    if "origTxtLen" in textData: # added for unvoiced clips
+                        print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
+                        animClips = block['CharacterTrackList'][0]['StoryTimelineCharaMotionTrackData']['ClipList']
+                        animClips = [(i, t['StoryTimelineCharaMotionTrackData']['ClipList']) for i, t in enumerate(block['CharacterTrackList'])]
+                        animClips = list(filter(lambda x: len(x[1]) > 0, animClips))
+                        if len(animClips):
+                            textData['animData'] = list()
+                            for trackListIdx, clips in animClips:
+                                lastClip = clips[-1]
+                                animAsset = assetList[lastClip['m_PathID']]
+                                if animAsset:
+                                    animData = animAsset.read_typetree()
+                                    if animData['StateType'] == 1: # 0 = start, 1 = loop, 2 = end
+                                        animGroupData = dict()
+                                        animGroupData['origLen'] = animData['ClipLength']
+                                        animGroupData['groupIdx'] = trackListIdx
+                                        animGroupData['pathId'] = lastClip['m_PathID']
+                                        textData['animData'].append(animGroupData)
+                                    else:
+                                        print(f"Anim data not loop at BlockIndex {block['BlockIndex']}")
+                                else:
+                                    print(f"No anim asset ({lastClip['m_PathID']}) found at BlockIndex {block['BlockIndex']}")
+                        else:
+                            print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
+
                     textData['pathId'] = pathId  # important for re-importing
                     textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
                     transferExisting(storyId, textData)
@@ -166,6 +193,8 @@ def extractText(assetType, obj):
             'enText': "",
             'nextBlock': tree['NextBlock'] # maybe for adding blocks to split dialogue later
         }
+        if tree['VoiceLength'] == -1:
+            o['origTxtLen'] = tree['ClipLength']
         choices = tree['ChoiceDataList'] #always present
         if choices:
             o['choices'] = list()

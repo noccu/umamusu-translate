@@ -38,8 +38,12 @@ class PatchManager:
                 self.errorLog = stdout
 
     def start(self):
-        print(f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}")
-        files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx)
+        if self.args.src:
+            print(f"Importing {self.args.src} to {self.args.dst}")
+            files = [self.args.src]
+        else:
+            print(f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}")
+            files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx)
         nFiles = len(files)
         nErrors = 0
         print(f"Found {nFiles} files.")
@@ -165,10 +169,29 @@ class StoryPatcher:
                 # blocklength = cliplength + startframe + 1
                 # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
                 # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
-                if assetData['VoiceLength'] == -1 and textBlock['enText']:
-                    newLen = int(assetData['WaitFrame'] + len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps)
-                    assetData['ClipLength'] = max(assetData['ClipLength'], newLen)
-                    mainTree['BlockList'][blockIdx]['BlockLength'] = assetData['ClipLength'] + assetData['StartFrame'] + 1
+                if "origTxtLen" in textBlock and textBlock['enText']:
+                    if assetData['VoiceLength'] != -1:
+                        print(f"Extract indicates unvoiced but asset contradicts at {blockIdx}")
+                    else:
+                        print(f"Adjusting text length at {blockIdx}")
+                        newClipLen = int(assetData['WaitFrame'] + len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps)
+                        newClipLen = max(textBlock['origTxtLen'], newClipLen)
+                        newBlockLen = newClipLen + assetData['StartFrame'] + 1
+                        assetData['ClipLength'] = newClipLen
+                        mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+                        if "animData" in textBlock:
+                            print(f"Adjusting anim length at {blockIdx}")
+                            for animGroup in textBlock['animData']:
+                                animAsset = self.manager.assets[animGroup['pathId']]
+                                if animAsset:
+                                    animData = animAsset.read_typetree()
+                                    animFullLen = animData['StartFrame'] + animGroup['origLen']
+                                    animData['ClipLength'] = animGroup['origLen'] + newClipLen - textBlock['origTxtLen']
+                                    animAsset.save_typetree(animData)
+                                    print(f"Adjusted anim length from {animGroup['origLen']} to {animData['ClipLength']}")
+                                else: print(f"Can't find animation pathId ({animGroup['pathId']}) at {blockIdx}")
+                        else:
+                            print(f"Text length adjusted but no anim data found at {blockIdx}")
 
                 if 'choices' in textBlock:
                     jpChoices, enChoices = assetData['ChoiceDataList'], textBlock['choices']

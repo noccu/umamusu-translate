@@ -3,6 +3,7 @@ import common
 import json
 import tkinter as tk
 from tkinter import ttk
+from tkinter import messagebox
 
 args = common.Args().parse()
 if args.getArg("-h"):
@@ -53,6 +54,8 @@ def load_block(event = None):
     global text_box_en
     global speaker_jp_entry
     global speaker_en_entry
+    global block_duration_label
+    global block_duration_spinbox
     global btn_next
     global next_index
     global btn_choices
@@ -86,6 +89,18 @@ def load_block(event = None):
     speaker_en_entry.delete(0, tk.END)
     speaker_en_entry.insert(0, cur_block_data['enName'])
 
+    # Spinbox for text block duration
+    block_duration_spinbox.delete(0, tk.END)
+    if "origClipLength" in cur_block_data:
+        block_duration_label.config(text=f"Text Duration ({cur_block_data['origClipLength']})")
+    if "newClipLength" in cur_block_data:
+        block_duration_spinbox.insert(0, cur_block_data['newClipLength'])
+    else:
+        if "origClipLength" in cur_block_data:
+            block_duration_spinbox.insert(0, cur_block_data['origClipLength'])
+        else:
+            block_duration_spinbox.insert(0, "-1")
+
     text_box_jp.configure(state='normal')
     text_box_jp.delete(1.0, tk.END)
     text_box_jp.insert(tk.END, cur_block_data['jpText'])
@@ -112,6 +127,9 @@ def save_block():
     global cur_chapter
     global cur_choices
     global cur_choices_texts
+    global speaker_en_entry
+    global text_box_en
+    global block_duration_spinbox
 
     cur_file = read_json(files[cur_chapter])
     cur_file['text'][cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
@@ -120,6 +138,21 @@ def save_block():
     if cur_choices and cur_choices_texts:
         for i in range(len(cur_choices_texts)):
             cur_file['text'][cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
+    
+    # Get the new clip length from spinbox
+    new_clip_length = block_duration_spinbox.get()
+    if new_clip_length.isnumeric():
+        new_clip_length = int(new_clip_length)
+        if "origClipLength" in cur_file['text'][cur_block] and new_clip_length != cur_file['text'][cur_block]['origClipLength']:
+            cur_file['text'][cur_block]['newClipLength'] = new_clip_length
+        else:
+            cur_file['text'][cur_block].pop('newClipLength', None)
+            if not "origClipLength" in cur_file['text'][cur_block]:
+                messagebox.showwarning(master=block_duration_spinbox, title="Cannot save clip length", message="This text block does not have an original clip length defined and thus cannot save a custom clip length. Resetting to -1.")
+                block_duration_spinbox.delete(0, tk.END)
+                block_duration_spinbox.insert(0, "-1")
+    elif new_clip_length != "-1":
+        cur_file['text'][cur_block].pop('newClipLength', None)
 
     save_json(cur_file, files[cur_chapter])
 
@@ -179,7 +212,7 @@ def show_choices():
             cur_jp_text.insert(tk.END, choice['jpText'])
             cur_jp_text['state'] = 'disabled'
             cur_jp_text.pack()
-            cur_en_text = tk.Text(window_frame, height=4, width=80)
+            cur_en_text = tk.Text(window_frame, height=4, width=80, undo=True)
             cur_choices_textboxes.append(cur_en_text)
             cur_en_text.insert(tk.END, choice['enText'])
             cur_en_text.pack()
@@ -195,6 +228,8 @@ def main():
     global btn_next
     global speaker_jp_entry
     global speaker_en_entry
+    global block_duration_label
+    global block_duration_spinbox
     global text_box_jp
     global text_box_en
     global btn_choices
@@ -239,27 +274,30 @@ def main():
     speaker_en_entry = tk.Entry(root, width=30)
     speaker_en_entry.grid(row=1, column=3)
 
+    block_duration_label = tk.Label(root, text="Text Duration")
+    block_duration_label.grid(row=2, column=2)
+    block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
+    block_duration_spinbox.grid(row=2, column=3)
 
     text_box_jp = tk.Text(root, width=86, height=4, state='disabled')
-    text_box_jp.grid(row=2, column=0, columnspan=4)
+    text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=86, height=4)
-    text_box_en.grid(row=3, column=0, columnspan=4)
+    text_box_en = tk.Text(root, width=86, height=4, undo=True)
+    text_box_en.grid(row=4, column=0, columnspan=4)
 
     btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)
-    btn_choices.grid(row=4, column=0)
+    btn_choices.grid(row=5, column=0)
     btn_reload = tk.Button(root, text="Reload", command=load_block, width=10)
-    btn_reload.grid(row=4, column=1)
+    btn_reload.grid(row=5, column=1)
     btn_save = tk.Button(root, text="Save", command=save_block, width=10)
-    btn_save.grid(row=4, column=2)
+    btn_save.grid(row=5, column=2)
     btn_next = tk.Button(root, text="Next", command=next_block, width=10)
-    btn_next.grid(row=4, column=3)
+    btn_next.grid(row=5, column=3)
 
     save_on_next = tk.IntVar()
     save_on_next.set(1)
     save_checkbox = tk.Checkbutton(root, text="Save on next", variable=save_on_next)
-    save_checkbox.grid(row=5, column=3)
-
+    save_checkbox.grid(row=6, column=3)
 
     load_block()
 
@@ -269,7 +307,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # TARGET_ID = '1007'
-    # TARGET_GROUP = '04'
+    TARGET_ID = '1026'
+    TARGET_GROUP = '04'
 
     main()

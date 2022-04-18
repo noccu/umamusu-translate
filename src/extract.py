@@ -282,6 +282,8 @@ class DataTransfer():
                     cText['enText'] = targetBlock['coloredText'][txtIdx]['enText']
             if 'skip' in targetBlock:
                 textData['skip'] = targetBlock['skip']
+            if 'newClipLength' in targetBlock:
+                textData['newClipLength'] = targetBlock['newClipLength']
 
 
 def exportData(data, filepath: str):

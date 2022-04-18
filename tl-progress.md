@@ -16,7 +16,7 @@ name | progress | translator
 --- | --- | ---
 Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
-Main story Act 1 Ch 6 (Final) | Complete | [LotoDS][] (ep 1-13)
+Main story Act 1 Ch 6 (Final) | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
@@ -107,6 +107,7 @@ Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
+Next Frontier | Complete | [LotoDS][]
 Sasayaka na Inori | Complete | [Eight][]
 transforming | In progress | [noccu][]
 Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)

@@ -1,30 +1,14 @@
-from numpy import block
 import common
-import json
 import tkinter as tk
-from tkinter import ttk
-from tkinter import messagebox
+from tkinter import ttk, messagebox
+from tkinter.font import Font
 
 args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("-n <db-translate uma-name.csv> [-src <file to process>]")
-NAMES_FILE = args.getArg("-n", False)
 TARGET_FILE = args.getArg("-src", False)
 TARGET_TYPE = args.getArg("-t", "story").lower()
 TARGET_GROUP = args.getArg("-g", False)
 TARGET_ID = args.getArg("-id", False)
 TARGET_IDX = args.getArg("-idx", False)
-
-
-def read_json(file):
-    with open(file, "r", encoding='utf-8') as f:
-        data = json.load(f)
-    return data
-
-
-def save_json(data, file):
-    with open(file, "w", encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 def change_chapter(event = None):
@@ -33,18 +17,24 @@ def change_chapter(event = None):
     global chapter_dropdown
     cur_chapter = chapter_dropdown.current()
     cur_block = 0
-    load_block()
-
+    load_block(None, True)
 
 def change_block(event = None):
     global cur_chapter
     global cur_block
     global block_dropdown
+    global files
+    global save_on_next
+
+
+    save_block()
+    if save_on_next.get() == 1:
+        saveFile()
+
     cur_block = block_dropdown.current()
     load_block()
 
-
-def load_block(event = None):
+def load_block(event = None, loadBlocks = False, reload = False):
     global files
     global cur_chapter
     global cur_block
@@ -65,11 +55,15 @@ def load_block(event = None):
 
     # print(cur_chapter, cur_block)
 
-    chapter_dropdown.current(cur_chapter)
 
-    blocks = read_json(files[cur_chapter])['text']
+    if isinstance(files[cur_chapter], str):
+        files[cur_chapter] = common.TranslationFile(files[cur_chapter])
+    elif reload:
+        files[cur_chapter] = common.TranslationFile(files[cur_chapter].file)
+    blocks = files[cur_chapter].textBlocks
 
-    block_dropdown['values'] = [f"{i+1} - {blocks[i]['jpText'][:8]}" for i in range(len(blocks))]
+    if loadBlocks:
+        block_dropdown['values'] = [f"{i+1} - {blocks[i]['jpText'][:8]}" for i in range(len(blocks))]
     block_dropdown.current(cur_block)
 
     cur_block_data =  blocks[cur_block]
@@ -131,42 +125,53 @@ def save_block():
     global text_box_en
     global block_duration_spinbox
 
-    cur_file = read_json(files[cur_chapter])
-    cur_file['text'][cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
-    cur_file['text'][cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
+    cur_file = files[cur_chapter]
+    cur_file.textBlocks[cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
+    cur_file.textBlocks[cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
 
     if cur_choices and cur_choices_texts:
         for i in range(len(cur_choices_texts)):
-            cur_file['text'][cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
-    
+            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
+
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
     if new_clip_length.isnumeric():
         new_clip_length = int(new_clip_length)
-        if "origClipLength" in cur_file['text'][cur_block] and new_clip_length != cur_file['text'][cur_block]['origClipLength']:
-            cur_file['text'][cur_block]['newClipLength'] = new_clip_length
+        if "origClipLength" in cur_file.textBlocks[cur_block] and new_clip_length != cur_file.textBlocks[cur_block]['origClipLength']:
+            cur_file.textBlocks[cur_block]['newClipLength'] = new_clip_length
         else:
-            cur_file['text'][cur_block].pop('newClipLength', None)
-            if not "origClipLength" in cur_file['text'][cur_block]:
+            cur_file.textBlocks[cur_block].pop('newClipLength', None)
+            if not "origClipLength" in cur_file.textBlocks[cur_block]:
                 messagebox.showwarning(master=block_duration_spinbox, title="Cannot save clip length", message="This text block does not have an original clip length defined and thus cannot save a custom clip length. Resetting to -1.")
                 block_duration_spinbox.delete(0, tk.END)
                 block_duration_spinbox.insert(0, "-1")
     elif new_clip_length != "-1":
-        cur_file['text'][cur_block].pop('newClipLength', None)
+        cur_file.textBlocks[cur_block].pop('newClipLength', None)
 
-    save_json(cur_file, files[cur_chapter])
-
-
-def next_block():
+def prev_block(event = None):
     global next_index
     global cur_block
-    global save_on_next
 
-    if save_on_next.get() == 1:
-        save_block()
+    block_dropdown.current(cur_block - 1)
+    change_block()
 
-    cur_block = next_index
-    load_block()
+def next_block(event = None):
+    global next_index
+    global cur_block
+
+    if next_index != -1:
+        block_dropdown.current(next_index)
+        change_block()
+    else: print("Reached end of chapter")
+
+def copy_block(event = None):
+    global files
+    global cur_block
+    global cur_chapter
+    global root
+
+    root.clipboard_clear()
+    root.clipboard_append(files[cur_chapter].textBlocks[cur_block]['jpText'])
 
 
 def close_choices(popup_window):
@@ -178,11 +183,19 @@ def close_choices(popup_window):
         cur_choices[i]['enText'] = cur_choices_texts[i]
     popup_window.destroy()
 
+def saveFile(event = None):
+    global files
+    global cur_chapter
+    if save_on_next.get() == 0:
+        print("Saved")
+    save_block()
+    files[cur_chapter].save()
 
 def show_choices():
     global files
     global cur_choices
     global cur_choices_textboxes
+    global large_font
 
     cur_choices_textboxes = list()
 
@@ -208,11 +221,11 @@ def show_choices():
         scroll_canvas.create_window((0, 0), window=window_frame, anchor='nw')
 
         for choice in cur_choices:
-            cur_jp_text = tk.Text(window_frame, width=80, height=4)
+            cur_jp_text = tk.Text(window_frame, width=50, height=2, font=large_font)
             cur_jp_text.insert(tk.END, choice['jpText'])
             cur_jp_text['state'] = 'disabled'
             cur_jp_text.pack()
-            cur_en_text = tk.Text(window_frame, height=4, width=80, undo=True)
+            cur_en_text = tk.Text(window_frame, height=2, width=50, undo=True, font=large_font)
             cur_choices_textboxes.append(cur_en_text)
             cur_en_text.insert(tk.END, choice['enText'])
             cur_en_text.pack()
@@ -235,6 +248,7 @@ def main():
     global btn_choices
     global save_on_next
     global cur_choices_texts
+    global large_font
 
     cur_chapter = 0
     cur_block = 0
@@ -244,12 +258,13 @@ def main():
         files = [TARGET_FILE]
     else:
         files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
-    
+
     files.sort()
-    
+
     root = tk.Tk()
     root.title("Edit Story")
-    root.geometry("693x250")
+    # root.geometry("693x250")
+    large_font = Font(root, size=18)
 
     chapter_label = tk.Label(root, text="Chapter")
     chapter_label.grid(row=0, column=0)
@@ -279,35 +294,41 @@ def main():
     block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
     block_duration_spinbox.grid(row=2, column=3)
 
-    text_box_jp = tk.Text(root, width=86, height=4, state='disabled')
+    text_box_jp = tk.Text(root, width=65, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=86, height=4, undo=True)
+    text_box_en = tk.Text(root, width=65, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
     btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)
     btn_choices.grid(row=5, column=0)
-    btn_reload = tk.Button(root, text="Reload", command=load_block, width=10)
+    btn_reload = tk.Button(root, text="Reload", command=lambda: load_block(reload=True), width=10)
     btn_reload.grid(row=5, column=1)
-    btn_save = tk.Button(root, text="Save", command=save_block, width=10)
+    btn_save = tk.Button(root, text="Save", command=saveFile, width=10)
     btn_save.grid(row=5, column=2)
     btn_next = tk.Button(root, text="Next", command=next_block, width=10)
     btn_next.grid(row=5, column=3)
 
     save_on_next = tk.IntVar()
     save_on_next.set(1)
-    save_checkbox = tk.Checkbutton(root, text="Save on next", variable=save_on_next)
+    save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
 
-    load_block()
+    root.bind("<Control-Enter>", next_block)
+    root.bind("<Alt-Enter>", next_block)
+    root.bind("<Control-S>", saveFile)
+    root.bind("<Alt-S>", saveFile)
+    root.bind("<Alt-Up>", prev_block)
+    root.bind("<Alt-Down>", next_block)
+    root.bind("<Alt-Right>", copy_block)
+
+    chapter_dropdown.current(cur_chapter)
+    change_chapter()
 
     root.mainloop()
-    
+
 
 
 
 if __name__ == "__main__":
-    TARGET_ID = '1026'
-    TARGET_GROUP = '04'
-
     main()

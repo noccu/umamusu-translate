@@ -53,7 +53,7 @@ Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Nice Nature | In progress | [xct][] (ep 1-3)
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
-Sakura Bakushin O | Complete | [noccu][] (ep 1-2), deepl
+Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
 Silence Suzuka | Complete | [LotoDS][]

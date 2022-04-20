@@ -155,7 +155,7 @@ class TranslationFile:
     def __init__(self, file):
         self.file = file
         self.name = PurePath(file).name
-        self.data = readJson(file)
+        self.reload()
         self.version = self._getVersion()
 
     def _getVersion(self) -> int:
@@ -209,6 +209,8 @@ class TranslationFile:
             idx = isN.match(idx)[0]
             return f"{g}{id}{idx}"
 
+    def reload(self):
+        self.data = readJson(self.file)
     def save(self):
         writeJsonFile(self.file, self.data)
 

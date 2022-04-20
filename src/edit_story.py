@@ -152,8 +152,9 @@ def prev_block(event = None):
     global next_index
     global cur_block
 
-    block_dropdown.current(cur_block - 1)
-    change_block()
+    if cur_block - 1 > -1:
+        block_dropdown.current(cur_block - 1)
+        change_block()
 
 def next_block(event = None):
     global next_index

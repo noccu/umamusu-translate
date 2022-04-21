@@ -175,29 +175,29 @@ class StoryPatcher:
                             print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length defined, falling back to calculated value.")
                         else:
                             if newClipLen < textBlock['origClipLength']: print(f"{self.manager.tlFile.bundle}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original.")
-                    newClipLen = max(textBlock['origClipLength'], newClipLen)
-                    newBlockLen = newClipLen + assetData['StartFrame'] + 1
-                    assetData['ClipLength'] = newClipLen
-                    mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
-                    if not self.manager.args.silent and newClipLen > textBlock['origClipLength']:
-                        print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
+                    if newClipLen > textBlock['origClipLength']:
+                        newBlockLen = newClipLen + assetData['StartFrame'] + 1
+                        assetData['ClipLength'] = newClipLen
+                        mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+                        if not self.manager.args.silent:
+                            print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
 
-                    if "animData" in textBlock:
-                        for animGroup in textBlock['animData']:
-                            newAnimLen = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
-                            if newAnimLen > animGroup['origLen']:
-                                try:
-                                    animAsset = self.manager.assets[animGroup['pathId']]
-                                except KeyError:
-                                    if not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
-                                else:
-                                    animData = animAsset.read_typetree()
-                                    animData['ClipLength'] = newAnimLen
-                                    animAsset.save_typetree(animData)
-                                    if not self.manager.args.silent:
-                                        print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}")
-                    else:
-                        print(f"Text length adjusted but no anim data found at {blockIdx}")
+                        if "animData" in textBlock:
+                            for animGroup in textBlock['animData']:
+                                newAnimLen = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
+                                if newAnimLen > animGroup['origLen']:
+                                    try:
+                                        animAsset = self.manager.assets[animGroup['pathId']]
+                                    except KeyError:
+                                        if not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
+                                    else:
+                                        animData = animAsset.read_typetree()
+                                        animData['ClipLength'] = newAnimLen
+                                        animAsset.save_typetree(animData)
+                                        if not self.manager.args.silent:
+                                            print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}")
+                        elif not self.manager.args.silent:
+                            print(f"Text length adjusted but no anim data found at {blockIdx}")
 
                 if 'choices' in textBlock:
                     jpChoices, enChoices = assetData['ChoiceDataList'], textBlock['choices']

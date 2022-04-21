@@ -182,14 +182,18 @@ class StoryPatcher:
 
                     if "animData" in textBlock:
                         for animGroup in textBlock['animData']:
-                            animAsset = self.manager.assets[animGroup['pathId']]
-                            if animAsset:
-                                animData = animAsset.read_typetree()
-                                animData['ClipLength'] = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
-                                animAsset.save_typetree(animData)
-                                if not self.manager.args.silent:
-                                    print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {animData['ClipLength']}")
-                            elif not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
+                            newAnimLen = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
+                            if newAnimLen > animGroup['origLen']:
+                                try:
+                                    animAsset = self.manager.assets[animGroup['pathId']]
+                                except KeyError:
+                                    if not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
+                                else:
+                                    animData = animAsset.read_typetree()
+                                    animData['ClipLength'] = newAnimLen
+                                    animAsset.save_typetree(animData)
+                                    if not self.manager.args.silent:
+                                        print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}")
                     else:
                         print(f"Text length adjusted but no anim data found at {blockIdx}")
 

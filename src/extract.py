@@ -188,8 +188,10 @@ def extractText(assetType, obj):
             'jpText': tree['Text'],
             'enText': "",
             'nextBlock': tree['NextBlock'], # maybe for adding blocks to split dialogue later
-            'origClipLength': tree['ClipLength']
         }
+        # home has no auto mode so adjustments aren't needed
+        if assetType == "story":
+            o['origClipLength'] = tree['ClipLength']
         choices = tree['ChoiceDataList'] #always present
         if choices:
             o['choices'] = list()

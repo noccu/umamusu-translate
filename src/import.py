@@ -166,7 +166,6 @@ class StoryPatcher:
                 # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
                 # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
                 if "origClipLength" in textBlock and textBlock['enText']:
-                    print(f"Adjusting text length at {blockIdx}")
                     newTxtLen = len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps
                     newClipLen = int(assetData['WaitFrame'] + max(newTxtLen, assetData['VoiceLength']))
                     if "newClipLength" in textBlock and textBlock["newClipLength"]:
@@ -178,17 +177,19 @@ class StoryPatcher:
                     newBlockLen = max(textBlock['origClipLength'], newClipLen) + assetData['StartFrame'] + 1
                     assetData['ClipLength'] = newClipLen
                     mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+                    if not self.manager.args.silent and newClipLen > textBlock['origClipLength']:
+                        print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
 
                     if "animData" in textBlock:
-                        print(f"Adjusting anim length at {blockIdx}")
                         for animGroup in textBlock['animData']:
                             animAsset = self.manager.assets[animGroup['pathId']]
                             if animAsset:
                                 animData = animAsset.read_typetree()
                                 animData['ClipLength'] = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
                                 animAsset.save_typetree(animData)
-                                print(f"Adjusted anim length from {animGroup['origLen']} to {animData['ClipLength']}")
-                            else: print(f"Can't find animation pathId ({animGroup['pathId']}) at {blockIdx}")
+                                if not self.manager.args.silent:
+                                    print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {animData['ClipLength']}")
+                            elif not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
                     else:
                         print(f"Text length adjusted but no anim data found at {blockIdx}")
 

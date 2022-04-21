@@ -133,8 +133,7 @@ def extractAsset(path, storyId, tlFile = None):
                         print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
                         clipsToUpdate = list()
                         for trackGroup in block['CharacterTrackList']:
-                            keys = trackGroup.keys()
-                            for key in keys:
+                            for key in trackGroup.keys():
                                 if key.endswith("MotionTrackData") and trackGroup[key]['ClipList']:
                                     clipsToUpdate.append(trackGroup[key]['ClipList'][-1]['m_PathID'])
                         if clipsToUpdate:
@@ -148,7 +147,7 @@ def extractAsset(path, storyId, tlFile = None):
                                     animGroupData['pathId'] = clipPathId
                                     textData['animData'].append(animGroupData)
                                 else:
-                                    print(f"No anim asset ({clipPathId}) found at BlockIndex {block['BlockIndex']}")
+                                    print(f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}")
                         else:
                             print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
 

@@ -167,20 +167,16 @@ class StoryPatcher:
                 # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
                 if "origClipLength" in textBlock and textBlock['enText']:
                     print(f"Adjusting text length at {blockIdx}")
-                    newClipLen = int(assetData['WaitFrame'] + len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps)
+                    newTxtLen = len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps
+                    newClipLen = int(assetData['WaitFrame'] + max(newTxtLen, assetData['VoiceLength']))
                     if "newClipLength" in textBlock and textBlock["newClipLength"]:
                         try:
                             newClipLen = int(textBlock["newClipLength"])
                         except ValueError:
                             print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length, skipping.")
                             continue
-                    newClipLen = max(textBlock['origClipLength'], newClipLen)
-                    newBlockLen = newClipLen + assetData['StartFrame'] + 1
+                    newBlockLen = max(textBlock['origClipLength'], newClipLen) + assetData['StartFrame'] + 1
                     assetData['ClipLength'] = newClipLen
-
-                    if assetData['VoiceLength'] != -1:
-                        assetData['VoiceLength'] = assetData['ClipLength'] - assetData['WaitFrame']
-
                     mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
 
                     if "animData" in textBlock:

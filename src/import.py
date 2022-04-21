@@ -168,12 +168,13 @@ class StoryPatcher:
                 if "origClipLength" in textBlock and textBlock['enText']:
                     newTxtLen = len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps
                     newClipLen = int(assetData['WaitFrame'] + max(newTxtLen, assetData['VoiceLength']))
-                    if "newClipLength" in textBlock and textBlock["newClipLength"]:
+                    if textBlock.get("newClipLength"): # manual length override
                         try:
                             newClipLen = int(textBlock["newClipLength"])
                         except ValueError:
-                            print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length, skipping.")
-                            continue
+                            print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length defined, falling back to calculated value.")
+                        else:
+                            if newClipLen < textBlock['origClipLength']: print(f"{self.manager.tlFile.bundle}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original.")
                     newClipLen = max(textBlock['origClipLength'], newClipLen)
                     newBlockLen = newClipLen + assetData['StartFrame'] + 1
                     assetData['ClipLength'] = newClipLen

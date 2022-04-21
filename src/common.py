@@ -165,7 +165,7 @@ class TranslationFile:
             return 1
 
     @property
-    def textBlocks(self) -> list:
+    def textBlocks(self) -> list[dict]:
         if self.version > 1:
             return self.data['text']
         else:

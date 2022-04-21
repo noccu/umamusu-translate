@@ -174,7 +174,8 @@ class StoryPatcher:
                         except ValueError:
                             print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length, skipping.")
                             continue
-                    newBlockLen = max(textBlock['origClipLength'], newClipLen) + assetData['StartFrame'] + 1
+                    newClipLen = max(textBlock['origClipLength'], newClipLen)
+                    newBlockLen = newClipLen + assetData['StartFrame'] + 1
                     assetData['ClipLength'] = newClipLen
                     mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
                     if not self.manager.args.silent and newClipLen > textBlock['origClipLength']:

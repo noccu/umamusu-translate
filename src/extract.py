@@ -12,7 +12,8 @@ args = common.Args().parse()
 if args.getArg("-h"):
     common.usage("[-g <group>] [-id <id>] [-l <limit files to process>] [-src <game asset root>] [-dst <extract to path>] [-O(verwrite existing)] [-upd]",
                  "Any order. Defaults to extracting all text, skip existing",
-                 "-upd Re-extracts existing files. Implies -O, ignores -dst")
+                 "-upd Re-extracts existing files. Implies -O, ignores -dst",
+                 "-upgrade skips text extraction to attempt tlfile version upgrades")
 
 EXTRACT_TYPE = args.getArg("-t", "story").lower()
 common.checkTypeValid(EXTRACT_TYPE)
@@ -24,6 +25,8 @@ GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
 EXPORT_DIR = args.getArg("-dst", PurePath("translations").joinpath(EXTRACT_TYPE))
 OVERWRITE_DST = args.getArg("-O", False)
 UPDATE = args.getArg("-upd", False)
+UPGRADE = args.getArg("-upgrade", False)
+if UPGRADE: OVERWRITE_DST = True
 
 def queryDB(db = None, storyId = None):
     externalDb = bool(db)
@@ -60,6 +63,7 @@ class CheckPatched():
         self.asset = asset
     
     def __call__(self, textData):
+        if UPGRADE: return False
         if len(textData['jpText']) < 3: return False
         if not common.isJapanese(textData['jpText']): self.n += 1
         if (self.n > 5):
@@ -210,7 +214,6 @@ def extractText(assetType, obj):
                     'jpText': c['Text'],
                     'enText': ""
                 })
-
     return o if o['jpText'] else None
     
 class DataTransfer():
@@ -246,7 +249,7 @@ class DataTransfer():
             txtIdx = max(textData["blockIdx"] - 1 - self.offset, 0)
             if txtIdx < len(textBlocks):
                 targetBlock = textBlocks[txtIdx]
-                if similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
+                if not UPGRADE and similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
                     self.filePrint(f"jpText does not match at bIdx {textData['blockIdx']}")
                     targetBlock = None
                     textSearch = True
@@ -268,12 +271,18 @@ class DataTransfer():
                 self.filePrint("Text not found")
 
         if targetBlock:
+            if UPGRADE: 
+                textData['jpText'] = targetBlock['jpText']
             textData['enText'] = targetBlock['enText']
             if 'enName' in targetBlock:
+                if UPGRADE: 
+                    textData['jpName'] = targetBlock['jpName']
                 textData['enName'] = targetBlock['enName']
             if 'choices' in targetBlock:
                 for txtIdx, choice in enumerate(textData['choices']):
                     try:
+                        if UPGRADE: 
+                            choice['jpText'] = targetBlock['choices'][txtIdx]['jpText']
                         choice['enText'] = targetBlock['choices'][txtIdx]['enText']
                     except IndexError:
                         self.filePrint(f"New choice at bIdx {targetBlock['blockIdx']}.")
@@ -281,11 +290,17 @@ class DataTransfer():
                         self.filePrint(f"Choice mismatch when attempting data transfer at {txtIdx}")
             if 'coloredText' in targetBlock:
                 for txtIdx, cText in enumerate(textData['coloredText']):
+                    if UPGRADE:
+                        cText['jpText'] = targetBlock['coloredText'][txtIdx]['jpText']
                     cText['enText'] = targetBlock['coloredText'][txtIdx]['enText']
             if 'skip' in targetBlock:
                 textData['skip'] = targetBlock['skip']
             if 'newClipLength' in targetBlock:
                 textData['newClipLength'] = targetBlock['newClipLength']
+            if UPGRADE and self.file.version > 4:
+                textData['origClipLength'] = targetBlock['origClipLength']
+                for i, group in enumerate(textData.get("animData", [])):
+                    group['origLen'] = targetBlock['animData'][i]['origLen']
 
 
 def exportData(data, filepath: str):

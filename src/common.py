@@ -44,7 +44,7 @@ def readJson(file) -> Union[dict, list]:
     with open(file, "r", encoding="utf8") as f:
         return json.load(f)
 
-def writeJsonFile(file, data):
+def writeJson(file, data):
     os.makedirs(os.path.dirname(os.path.realpath(file)), exist_ok=True)
     with open(file, "w", encoding="utf8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
@@ -212,7 +212,7 @@ class TranslationFile:
     def reload(self):
         self.data = readJson(self.file)
     def save(self):
-        writeJsonFile(self.file, self.data)
+        writeJson(self.file, self.data)
 
 def isJapanese(text):
     # Should be cached according to docs

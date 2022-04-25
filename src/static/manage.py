@@ -88,7 +88,7 @@ def importDump(path: PurePath):
                     animationCheck.clear()
 
         if DO_IMPORT:
-            common.writeJsonFile(path, data)
+            common.writeJson(path, data)
         return data
     else:
         # if it's not a json file then it's definitely external as we only use dump.json
@@ -106,7 +106,7 @@ def importDump(path: PurePath):
                     if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not common.isEnglish(val)):
                         localDumpData[key] = val
         if DO_IMPORT or IMPORT_DUMP_ONLY:
-            common.writeJsonFile(LOCAL_DUMP, localDumpData)
+            common.writeJson(LOCAL_DUMP, localDumpData)
         return localDumpData
 
 def clean():
@@ -130,14 +130,14 @@ def clean():
             if not value:
                 del tlData[key]
 
-    common.writeJsonFile(TL_FILE, tlData)
-    if DO_CLEAN == "both": common.writeJsonFile(DUMP_FILE, dump)
+    common.writeJson(TL_FILE, tlData)
+    if DO_CLEAN == "both": common.writeJson(DUMP_FILE, dump)
 
 def order():
     for file in [LOCAL_DUMP, HASH_FILE]:
         data = common.readJson(file)
         data = dict(sorted(data.items(), key=lambda x: int(x[0])))
-        common.writeJsonFile(file, data)
+        common.writeJson(file, data)
 
 # Usage: use localify dll to dump entries
 # use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
@@ -159,11 +159,11 @@ def main():
 
     if ADD_NEW_TEXT:
         updateTlData(dumpData, tlData)
-        common.writeJsonFile(TL_FILE, tlData)
+        common.writeJson(TL_FILE, tlData)
     elif TRANSLATE_HASHES:
         hashData = common.readJson(HASH_FILE)
         updateHashData(dumpData, tlData, hashData)
-        common.writeJsonFile(HASH_FILE, hashData)
+        common.writeJson(HASH_FILE, hashData)
 
     if AUTO_MOVE:
         try:

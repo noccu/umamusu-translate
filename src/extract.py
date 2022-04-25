@@ -305,7 +305,7 @@ class DataTransfer():
 
 def exportData(data, filepath: str):
     if OVERWRITE_DST == True or not os.path.exists(filepath):
-        common.writeJsonFile(filepath, data)
+        common.writeJson(filepath, data)
         
 def exportAsset(bundle: str, path: str, db = None):
     if bundle is None:

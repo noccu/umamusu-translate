@@ -110,21 +110,14 @@ class NewArgs(argparse.ArgumentParser):
         if len(sys.argv) > 1 and sys.argv[1] in ("-v", "--version"):
             print(f"Patch version: {patchVersion()}")
             sys.exit()
-        super().__init__(description=desc, conflict_handler='resolve')
-        self.add_argument("-v", "--version", help="Show version and exit")
+        super().__init__(description=desc, conflict_handler='resolve', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        self.add_argument("-v", "--version", action="store_true", default=argparse.SUPPRESS, help="Show version and exit")
         self.add_argument("-t", "--type", choices=TARGET_TYPES, default=TARGET_TYPES[0], help="The type of assets to process.")
         self.add_argument("-g", "--group", help="The group to process")
         self.add_argument("-id", help="The id (subgroup) to process")
         self.add_argument("-idx", help="The specific asset index to process")
         self.add_argument("-src", default=GAME_ASSET_ROOT)
         self.add_argument("-dst", default=Path("dat/").resolve())
-    def add_argument(self, *args, **kwargs):
-        if 'default' in kwargs and not args[0].startswith("-h"):
-            if 'help' in kwargs:
-                kwargs['help'] += ". Default: %(default)s"
-            else:
-                kwargs['help'] = "Default: %(default)s"
-        return super().add_argument(*args, **kwargs)
 
 class TranslationFile:
     def __init__(self, file):

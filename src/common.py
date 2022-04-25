@@ -2,10 +2,10 @@ import argparse
 import os
 from pathlib import Path, PurePath
 import sys
-import json
-from typing import Generator, Union
+from typing import Generator
 import regex
 from datetime import datetime, timezone
+import helpers
 
 
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
@@ -19,7 +19,6 @@ def checkTypeValid(t):
         return True
     print(f"Invalid type: {t}. Expecting one of: {', '.join(TARGET_TYPES)}")
     raise SystemExit
-
 
 def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
     found = list()
@@ -40,23 +39,6 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
         else: found.extend(os.path.join(root, file) for file in files if isJson(file))
     return found
 
-def readJson(file) -> Union[dict, list]:
-    with open(file, "r", encoding="utf8") as f:
-        return json.load(f)
-
-def writeJson(file, data):
-    os.makedirs(os.path.dirname(os.path.realpath(file)), exist_ok=True)
-    with open(file, "w", encoding="utf8", newline="\n") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
-
-def findExisting(searchPath: os.PathLike, filePattern: str):
-    searchPath = Path(searchPath)
-    search = searchPath.glob(filePattern)
-    for file in search:
-        if file.is_file():
-            return file
-    return None
-
 def parseStoryId(t, input, fromPath = True) -> tuple:
     if t == "home":
         if fromPath:
@@ -75,13 +57,6 @@ def parseStoryId(t, input, fromPath = True) -> tuple:
         if fromPath: input = input[-9:]
         return  input[:2], input[2:6], input[6:9]
 
-def isParseableInt(x):
-    try:
-        int(x)
-        return True
-    except ValueError:
-        return False
-        
 class Args:
     parsed = dict()
 
@@ -104,7 +79,7 @@ class Args:
                     val = args[idx+1]
                 except IndexError:
                     val = ""
-                if val and (not val.startswith("-") or isParseableInt(val)):
+                if val and (not val.startswith("-") or helpers.isParseableInt(val)):
                         # if val.startswith('"'):
                         #     while not val.endswith('"'):
                         #         idx += 1
@@ -210,15 +185,9 @@ class TranslationFile:
             return f"{g}{id}{idx}"
 
     def reload(self):
-        self.data = readJson(self.file)
+        self.data = helpers.readJson(self.file)
     def save(self):
-        writeJson(self.file, self.data)
-
-def isJapanese(text):
-    # Should be cached according to docs
-    return regex.search(r"[\p{scx=Katakana}\p{scx=Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}\p{General_Punctuation}]{3,}", text)
-def isEnglish(text):
-    return regex.fullmatch(r"[^\p{Katakana}\p{Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}。]+", text)
+        helpers.writeJson(self.file, self.data)
 
 def usage(args: str, *msg: str):
     joinedMsg = '\n'.join(msg)

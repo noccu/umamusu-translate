@@ -2,6 +2,7 @@ import common
 from common import TranslationFile
 import re
 from math import ceil
+import helpers
 
 
 REPLACEMENT_DATA = None
@@ -61,7 +62,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
 def replace(text: str, mode):
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
-        REPLACEMENT_DATA = common.readJson("src/data/replacer.json")
+        REPLACEMENT_DATA = helpers.readJson("src/data/replacer.json")
         for rep in REPLACEMENT_DATA:
             rep['re'] = re.compile(rep['re'], flags=re.IGNORECASE)
     for rep in REPLACEMENT_DATA:

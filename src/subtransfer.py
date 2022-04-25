@@ -4,6 +4,7 @@ import srt
 import re
 from Levenshtein import ratio
 from enum import Enum, auto
+import helpers
 
 class SubFormat(Enum):
     NONE = auto()
@@ -189,7 +190,7 @@ class TxtSubProcessor(BasicSubProcessor):
             self.preprocess(f)
 
     def preprocess(self, raw):
-        self.subLines = [TextLine(l) for l in raw if common.isEnglish(l) and not re.match(r"\n+\s*", l)]
+        self.subLines = [TextLine(l) for l in raw if helpers.isEnglish(l) and not re.match(r"\n+\s*", l)]
 
 def process(srcFile, subFile, opts):
     format = subFile[-3:]

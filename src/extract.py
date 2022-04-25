@@ -6,6 +6,7 @@ import csv
 from Levenshtein import ratio as similarity
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
+import helpers
 
 # Globals & Parameter parsing
 args = common.Args().parse()
@@ -65,7 +66,7 @@ class CheckPatched():
     def __call__(self, textData):
         if UPGRADE: return False
         if len(textData['jpText']) < 3: return False
-        if not common.isJapanese(textData['jpText']): self.n += 1
+        if not helpers.isJapanese(textData['jpText']): self.n += 1
         if (self.n > 5):
             print(f"Asset {self.asset} looks patched, skipping...")
             return True
@@ -236,7 +237,7 @@ class DataTransfer():
         group, id, idx = storyId
 
         if self.file is None:
-            file = common.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
+            file = helpers.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
             if file is None: # Check we actually found a file above
                 return
             else: 
@@ -305,7 +306,7 @@ class DataTransfer():
 
 def exportData(data, filepath: str):
     if OVERWRITE_DST == True or not os.path.exists(filepath):
-        common.writeJson(filepath, data)
+        helpers.writeJson(filepath, data)
         
 def exportAsset(bundle: str, path: str, db = None):
     if bundle is None:
@@ -322,7 +323,7 @@ def exportAsset(bundle: str, path: str, db = None):
 
     # check existing files first
     if not OVERWRITE_DST:
-        file = common.findExisting(exportDir, f"{idx}*.json")
+        file = helpers.findExisting(exportDir, f"{idx}*.json")
         if file is not None:
             print(f"Skipping existing: {file.name}")
             return

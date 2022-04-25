@@ -2,26 +2,9 @@ from os import path
 import common
 import csv
 
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("-n <db-translate uma-name.csv> [-src <file to process>]")
-NAMES_FILE = args.getArg("-n", False)
-TARGET_FILE = args.getArg("-src", False)
-TARGET_TYPE = args.getArg("-t", "story").lower()
-TARGET_GROUP = args.getArg("-g", False)
-TARGET_ID = args.getArg("-id", False)
-TARGET_IDX = args.getArg("-idx", False)
-
-
-def createDict():
-    global NAMES_FILE
-    if not NAMES_FILE:
-        NAMES_FILE = "../umamusume-db-translate/src/data/uma-name.csv"
-        if not path.exists(NAMES_FILE):
-            raise FileNotFoundError("You must specify the uma-name.csv file.")
-        print(f"Using auto-found names file {path.realpath(NAMES_FILE)}")
+def createDict(namesFile):
     names = dict()
-    with open(NAMES_FILE, "r", newline='', encoding="utf8") as csvfile:
+    with open(namesFile, "r", newline='', encoding="utf8") as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
         for row in reader:
             names[row[0]] = row[1]
@@ -277,9 +260,9 @@ def createDict():
     names['射的屋'] = "Shooting Gallery"
     return names
 
-def translate(namesDict):
-    if TARGET_FILE: files = [TARGET_FILE]
-    else: files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
+def translate(namesDict, args):
+    if args.src: files = args.src
+    else: files = common.searchFiles(args.type, args.group, args.id, args.idx)
 
     for file in files:
         file = common.TranslationFile(file)
@@ -291,8 +274,16 @@ def translate(namesDict):
     return len(files)
 
 def main():
-    dict = createDict()
-    n = translate(dict)
+    ap = common.NewArgs("Translate many enName fields in Translation Files by lookup")
+    ap.add_argument("-n", dest="namesFile", default="../umamusume-db-translate/src/data/uma-name.csv", help="Path to (external) db-translate's uma-name.csv")
+    ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
+    args = ap.parse_args()
+
+    if not path.exists(args.namesFile):
+        raise FileNotFoundError("You must specify the uma-name.csv file.")
+
+    dict = createDict(args.namesFile)
+    n = translate(dict, args)
     print(f"Names translated in {n} files.")
 
 main()

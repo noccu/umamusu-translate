@@ -267,7 +267,7 @@ def translate(namesDict, args):
     for file in files:
         file = common.TranslationFile(file)
         for block in file.textBlocks:
-            name = block['jpName']
+            name = block.get('jpName')
             if name and name in namesDict:
                 block['enName'] = namesDict[name]
         file.save()
@@ -278,7 +278,10 @@ def main():
     ap.add_argument("-n", dest="namesFile", default="../umamusume-db-translate/src/data/uma-name.csv", help="Path to (external) db-translate's uma-name.csv")
     ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
     args = ap.parse_args()
-
+    
+    if args.type in ("race", "lyrics"):
+        print("No names in given type.")
+        raise SystemExit
     if not path.exists(args.namesFile):
         raise FileNotFoundError("You must specify the uma-name.csv file.")
 

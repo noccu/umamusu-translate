@@ -8,51 +8,31 @@ import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
 import helpers
 
-# Globals & Parameter parsing
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("[-g <group>] [-id <id>] [-l <limit files to process>] [-src <game asset root>] [-dst <extract to path>] [-O(verwrite existing)] [-upd]",
-                 "Any order. Defaults to extracting all text, skip existing",
-                 "-upd Re-extracts existing files. Implies -O, ignores -dst",
-                 "-upgrade skips text extraction to attempt tlfile version upgrades")
-
-EXTRACT_TYPE = args.getArg("-t", "story").lower()
-common.checkTypeValid(EXTRACT_TYPE)
-EXTRACT_GROUP = args.getArg("-g", None)
-EXTRACT_ID = args.getArg("-id", None)
-EXTRACT_IDX = args.getArg("-idx", None)
-EXTRACT_LIMIT = args.getArg("-l", -1)
-GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
-EXPORT_DIR = args.getArg("-dst", PurePath("translations").joinpath(EXTRACT_TYPE))
-OVERWRITE_DST = args.getArg("-O", False)
-UPDATE = args.getArg("-upd", False)
-UPGRADE = args.getArg("-upgrade", False)
-if UPGRADE: OVERWRITE_DST = True
 
 def queryDB(db = None, storyId = None):
     externalDb = bool(db)
     if storyId:
-        group, id, idx = common.parseStoryId(EXTRACT_TYPE, storyId, False)
+        group, id, idx = common.parseStoryId(args.type, storyId, False)
     else:
-        group = EXTRACT_GROUP or "__"
-        id = EXTRACT_ID or "____"
-        idx = EXTRACT_IDX or "___"
-    if EXTRACT_TYPE == "story":
-        pattern = f"{EXTRACT_TYPE}/data/{group}/{id}/{EXTRACT_TYPE}timeline%{idx}"
-    elif EXTRACT_TYPE == "home":
-        pattern = f"{EXTRACT_TYPE}/data/00000/{group}/{EXTRACT_TYPE}timeline_00000_{group}_{id}{idx}%"
-    elif EXTRACT_TYPE == "race":
+        group = args.group or "__"
+        id = args.id or "____"
+        idx = args.idx or "___"
+    if args.type == "story":
+        pattern = f"{args.type}/data/{group}/{id}/{args.type}timeline%{idx}"
+    elif args.type == "home":
+        pattern = f"{args.type}/data/00000/{group}/{args.type}timeline_00000_{group}_{id}{idx}%"
+    elif args.type == "race":
         pattern = f"race/storyrace/text/storyrace_{group}{id}{idx}%"
-    elif EXTRACT_TYPE == "lyrics":
-        if EXTRACT_ID and not EXTRACT_IDX: idx = EXTRACT_ID
+    elif args.type == "lyrics":
+        if args.id and not args.idx: idx = args.id
         pattern = f"live/musicscores/m{idx}/m{idx}_lyrics"
-    elif EXTRACT_TYPE == "preview":
-        if EXTRACT_ID and not EXTRACT_IDX: idx = EXTRACT_ID
+    elif args.type == "preview":
+        if args.id and not args.idx: idx = args.id
         pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{idx}"
     if not externalDb:
         db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(
-        f"select h, n from a where n like '{pattern}' limit {EXTRACT_LIMIT};")
+        f"select h, n from a where n like '{pattern}';")
     results = cur.fetchall()
     if not externalDb: 
         db.close()
@@ -64,7 +44,7 @@ class CheckPatched():
         self.asset = asset
     
     def __call__(self, textData):
-        if UPGRADE: return False
+        if args.upgrade: return False
         if len(textData['jpText']) < 3: return False
         if not helpers.isJapanese(textData['jpText']): self.n += 1
         if (self.n > 5):
@@ -82,7 +62,7 @@ def extractAsset(path, storyId, tlFile = None):
         export = {
             'version': 5,
             'bundle': env.file.name,
-            'type': EXTRACT_TYPE,
+            'type': args.type,
             'storyId': "",
             'title' : "",
             'text': list()
@@ -91,7 +71,7 @@ def extractAsset(path, storyId, tlFile = None):
         transferExisting = DataTransfer(tlFile)
         assetList = index.assets_file.files
 
-        if EXTRACT_TYPE == "race":
+        if args.type == "race":
             export['storyId'] = tree['m_Name'][-9:]
 
             for block in tree['textData']:
@@ -99,7 +79,7 @@ def extractAsset(path, storyId, tlFile = None):
                 if isPatched(textData): return
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
-        elif EXTRACT_TYPE == "lyrics":
+        elif args.type == "lyrics":
             # data = index.read()
             # export['storyId'] = data.name[1:5]
             # export['text'] = extractText("lyrics", data.text)
@@ -115,7 +95,7 @@ def extractAsset(path, storyId, tlFile = None):
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
                 
-        elif EXTRACT_TYPE == "preview":
+        elif args.type == "preview":
             export['storyId'] = tree['m_Name'][-4:]
             for block in tree['DataArray']:
                 textData = extractText("preview", block)
@@ -123,13 +103,13 @@ def extractAsset(path, storyId, tlFile = None):
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
         else:
-            export['storyId'] = "".join(storyId) if EXTRACT_TYPE == "home" else  tree['StoryId']
+            export['storyId'] = "".join(storyId) if args.type == "home" else  tree['StoryId']
             export['title'] = tree['Title']
 
             for block in tree['BlockList']:
                 for clip in block['TextTrack']['ClipList']:
                     pathId = clip['m_PathID']
-                    textData = extractText(EXTRACT_TYPE, index.assets_file.files[pathId])
+                    textData = extractText(args.type, index.assets_file.files[pathId])
                     if not textData:
                         continue
                     if isPatched(textData): return
@@ -221,7 +201,7 @@ class DataTransfer():
     def __init__(self, file: common.TranslationFile = None):
         self.file = file
         self.offset = 0
-        self.simRatio = 0.9 if UPDATE and EXTRACT_TYPE != "lyrics" else 0.99
+        self.simRatio = 0.9 if args.update and args.type != "lyrics" else 0.99
         self.printed = False
 
     def filePrint(self, text):
@@ -233,11 +213,11 @@ class DataTransfer():
     def __call__(self, storyId, textData):
         # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
         # Only continue when forced to.
-        if not OVERWRITE_DST: return
+        if not args.overwrite: return
         group, id, idx = storyId
 
         if self.file is None:
-            file = helpers.findExisting(PurePath(EXPORT_DIR).joinpath(group, id), f"{idx}*.json")
+            file = helpers.findExisting(PurePath(args.dst).joinpath(group, id), f"{idx}*.json")
             if file is None: # Check we actually found a file above
                 return
             else: 
@@ -250,7 +230,7 @@ class DataTransfer():
             txtIdx = max(textData["blockIdx"] - 1 - self.offset, 0)
             if txtIdx < len(textBlocks):
                 targetBlock = textBlocks[txtIdx]
-                if not UPGRADE and similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
+                if not args.upgrade and similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
                     self.filePrint(f"jpText does not match at bIdx {textData['blockIdx']}")
                     targetBlock = None
                     textSearch = True
@@ -272,17 +252,17 @@ class DataTransfer():
                 self.filePrint("Text not found")
 
         if targetBlock:
-            if UPGRADE: 
+            if args.upgrade: 
                 textData['jpText'] = targetBlock['jpText']
             textData['enText'] = targetBlock['enText']
             if 'enName' in targetBlock:
-                if UPGRADE: 
+                if args.upgrade: 
                     textData['jpName'] = targetBlock['jpName']
                 textData['enName'] = targetBlock['enName']
             if 'choices' in targetBlock:
                 for txtIdx, choice in enumerate(textData['choices']):
                     try:
-                        if UPGRADE: 
+                        if args.upgrade: 
                             choice['jpText'] = targetBlock['choices'][txtIdx]['jpText']
                         choice['enText'] = targetBlock['choices'][txtIdx]['enText']
                     except IndexError:
@@ -291,21 +271,21 @@ class DataTransfer():
                         self.filePrint(f"Choice mismatch when attempting data transfer at {txtIdx}")
             if 'coloredText' in targetBlock:
                 for txtIdx, cText in enumerate(textData['coloredText']):
-                    if UPGRADE:
+                    if args.upgrade:
                         cText['jpText'] = targetBlock['coloredText'][txtIdx]['jpText']
                     cText['enText'] = targetBlock['coloredText'][txtIdx]['enText']
             if 'skip' in targetBlock:
                 textData['skip'] = targetBlock['skip']
             if 'newClipLength' in targetBlock:
                 textData['newClipLength'] = targetBlock['newClipLength']
-            if UPGRADE and self.file.version > 4:
+            if args.upgrade and self.file.version > 4:
                 textData['origClipLength'] = targetBlock['origClipLength']
                 for i, group in enumerate(textData.get("animData", [])):
                     group['origLen'] = targetBlock['animData'][i]['origLen']
 
 
 def exportData(data, filepath: str):
-    if OVERWRITE_DST == True or not os.path.exists(filepath):
+    if args.overwrite == True or not os.path.exists(filepath):
         helpers.writeJson(filepath, data)
         
 def exportAsset(bundle: str, path: str, db = None):
@@ -315,14 +295,14 @@ def exportAsset(bundle: str, path: str, db = None):
         bundle, _ = queryDB(db, storyId)[0]
     else: # make sure tlFile is set for the call later
         tlFile = None
-    group, id, idx = common.parseStoryId(EXTRACT_TYPE, storyId if UPDATE else path, not UPDATE)
-    if EXTRACT_TYPE in ("lyrics", "preview"):
-        exportDir = Path(EXPORT_DIR)
+    group, id, idx = common.parseStoryId(args.type, storyId if args.update else path, not args.update)
+    if args.type in ("lyrics", "preview"):
+        exportDir = Path(args.dst)
     else:
-        exportDir =  Path(EXPORT_DIR).joinpath(group, id)
+        exportDir =  Path(args.dst).joinpath(group, id)
 
     # check existing files first
-    if not OVERWRITE_DST:
+    if not args.overwrite:
         file = helpers.findExisting(exportDir, f"{idx}*.json")
         if file is not None:
             print(f"Skipping existing: {file.name}")
@@ -351,20 +331,28 @@ def exportAsset(bundle: str, path: str, db = None):
     exportPath = f"{os.path.join(exportDir, idxString)}.json"
     exportData(data, exportPath)
 
+def parseArgs():
+    global args
+    ap = common.NewArgs("Extract Game Assets to Translation Files")
+    ap.add_argument("-dst")
+    ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing Translation Files")
+    ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type (NOT -t). Implies -O, ignores -dst")
+    ap.add_argument("-upg", "--upgrade", action="store_true", help="Attempt tlfile version upgrade. Implies -O")
+    args = ap.parse_args()
+
+    if args.dst is None: args.dst = PurePath("translations").joinpath(args.type)
+    if args.upgrade or args.update: args.overwrite = True
+
 def main():
-    if UPDATE:
-        global EXTRACT_TYPE
-        global OVERWRITE_DST
-        global EXPORT_DIR
-        OVERWRITE_DST = True
+    parseArgs()
+    if args.update is not None:
         print(f"Updating exports, this could take a while...")
-        # check if a type was specifically given and use that if so, otherwise use all
         db = sqlite3.connect(GAME_META_FILE)
         try:
-            for type in [EXTRACT_TYPE] if args.getArg("-t") else common.TARGET_TYPES:
-                EXTRACT_TYPE = type
-                EXPORT_DIR = PurePath("translations").joinpath(EXTRACT_TYPE)
-                files = common.searchFiles(type, EXTRACT_GROUP, EXTRACT_ID, EXTRACT_IDX)
+            # check if a type was specifically given and use that if so, otherwise use all
+            for type in args.update or common.TARGET_TYPES:
+                args.dst = PurePath("translations").joinpath(type)
+                files = common.searchFiles(type, args.group, args.id, args.idx)
                 print(f"Found {len(files)} files for {type}.")
                 for i, file in enumerate(files):
                     try:
@@ -375,7 +363,7 @@ def main():
         finally:
             db.close()
     else:
-        print(f"Extracting group {EXTRACT_GROUP}, id {EXTRACT_ID}, idx {EXTRACT_IDX} (limit {EXTRACT_LIMIT or 'ALL'}, overwrite: {OVERWRITE_DST})\nfrom {GAME_ASSET_ROOT} to {EXPORT_DIR}")
+        print(f"Extracting group {args.group}, id {args.id}, idx {args.idx} (overwrite: {args.overwrite})\nfrom {GAME_ASSET_ROOT} to {args.dst}")
         q = queryDB()
         print(f"Found {len(q)} files.")
         for bundle, path in q:

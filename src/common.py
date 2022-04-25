@@ -132,7 +132,7 @@ def patchVersion():
 
 class NewArgs(argparse.ArgumentParser):
     def __init__(self, desc) -> None:
-        if sys.argv[1] in ("-v", "--version"):
+        if len(sys.argv) > 1 and sys.argv[1] in ("-v", "--version"):
             print(f"Patch version: {patchVersion()}")
             sys.exit()
         super().__init__(description=desc, conflict_handler='resolve')
@@ -165,7 +165,7 @@ class TranslationFile:
             return 1
 
     @property
-    def textBlocks(self) -> list:
+    def textBlocks(self) -> list[dict]:
         if self.version > 1:
             return self.data['text']
         else:

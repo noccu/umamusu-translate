@@ -6,6 +6,7 @@ from UnityPy.files import ObjectReader
 from os import SEEK_END, PathLike
 from traceback import print_exc
 from sys import stdout
+from functools import reduce
 
 class ConfigError(Exception): pass
 class PatchError(Exception): pass
@@ -140,6 +141,8 @@ class StoryPatcher:
         self.skipped = 0
         self.totalBlocks = len(self.manager.tlFile.textBlocks)
     def patch(self):
+        mainTree = self.manager.rootAsset.read_typetree()
+
         for textBlock in self.manager.tlFile.textBlocks:
             blockIdx = textBlock['blockIdx']
             try:
@@ -156,6 +159,45 @@ class StoryPatcher:
             else:
                 assetData['Text'] = textBlock['enText'] or assetData['Text']
                 assetData['Name'] = textBlock['enName'] or assetData['Name']
+
+                # Calculate length
+                # index length = sum(blocklenghts)
+                # blocklength = cliplength + startframe + 1
+                # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
+                # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
+                if "origClipLength" in textBlock and textBlock['enText']:
+                    newTxtLen = len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps
+                    newClipLen = int(assetData['WaitFrame'] + max(newTxtLen, assetData['VoiceLength']))
+                    if textBlock.get("newClipLength"): # manual length override
+                        try:
+                            newClipLen = int(textBlock["newClipLength"])
+                        except ValueError:
+                            print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length defined, falling back to calculated value.")
+                        else:
+                            if newClipLen < textBlock['origClipLength']: print(f"{self.manager.tlFile.bundle}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original.")
+                    if newClipLen > textBlock['origClipLength']:
+                        newBlockLen = newClipLen + assetData['StartFrame'] + 1
+                        assetData['ClipLength'] = newClipLen
+                        mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+                        if not self.manager.args.silent:
+                            print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
+
+                        if "animData" in textBlock:
+                            for animGroup in textBlock['animData']:
+                                newAnimLen = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
+                                if newAnimLen > animGroup['origLen']:
+                                    try:
+                                        animAsset = self.manager.assets[animGroup['pathId']]
+                                    except KeyError:
+                                        if not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
+                                    else:
+                                        animData = animAsset.read_typetree()
+                                        animData['ClipLength'] = newAnimLen
+                                        animAsset.save_typetree(animData)
+                                        if not self.manager.args.silent:
+                                            print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}")
+                        elif not self.manager.args.silent:
+                            print(f"Text length adjusted but no anim data found at {blockIdx}")
 
                 if 'choices' in textBlock:
                     jpChoices, enChoices = assetData['ChoiceDataList'], textBlock['choices']
@@ -176,15 +218,13 @@ class StoryPatcher:
                                 jpColored[idx]['Text'] = text['enText']
             self.assetData = assetData
             self.save()
-        if self.isModified:
-            try:
-                mainTree = self.manager.rootAsset.read_typetree()
-                mainTree['TypewriteCountPerSecond'] = 95
-                self.manager.rootAsset.save_typetree(mainTree)
-            except KeyError:
-                print(f"Text speed not found in {self.manager.tlFile.bundle}")
-            except Exception as e:
-                print(f"Unexpected error in {self.manager.tlFile.bundle}: {type(e).__name__}: {e}")
+
+        try:
+            mainTree['TypewriteCountPerSecond'] = self.manager.args.fps * 3
+            mainTree['Length'] = reduce(lambda x, b: x + b['BlockLength'], mainTree['BlockList'], 0)
+            self.manager.rootAsset.save_typetree(mainTree)
+        except Exception as e:
+            print(f"Unexpected error in {self.manager.tlFile.bundle}: {type(e).__name__}: {e}")
     def save(self):
         if self.isModified:
             self.asset.save_typetree(self.assetData)
@@ -245,6 +285,8 @@ def main():
     ap.add_argument("-U", "--update", dest="update", action="store_true", help="Skip already imported files")
     ap.add_argument("-FI", "--full-import", dest="fullImport", action="store_true", help="Import all available types")
     ap.add_argument("-S", "--silent", dest="silent", action="store_true", help="Ignore some errors and print debug info to file. Default: terminal (stdout)")
+    ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
+    ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")
 
     args = ap.parse_args()
     process(args)

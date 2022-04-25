@@ -12,7 +12,8 @@ args = common.Args().parse()
 if args.getArg("-h"):
     common.usage("[-g <group>] [-id <id>] [-l <limit files to process>] [-src <game asset root>] [-dst <extract to path>] [-O(verwrite existing)] [-upd]",
                  "Any order. Defaults to extracting all text, skip existing",
-                 "-upd Re-extracts existing files. Implies -O, ignores -dst")
+                 "-upd Re-extracts existing files. Implies -O, ignores -dst",
+                 "-upgrade skips text extraction to attempt tlfile version upgrades")
 
 EXTRACT_TYPE = args.getArg("-t", "story").lower()
 common.checkTypeValid(EXTRACT_TYPE)
@@ -24,7 +25,8 @@ GAME_ASSET_ROOT = args.getArg("-src", GAME_ASSET_ROOT)
 EXPORT_DIR = args.getArg("-dst", PurePath("translations").joinpath(EXTRACT_TYPE))
 OVERWRITE_DST = args.getArg("-O", False)
 UPDATE = args.getArg("-upd", False)
-
+UPGRADE = args.getArg("-upgrade", False)
+if UPGRADE: OVERWRITE_DST = True
 
 def queryDB(db = None, storyId = None):
     externalDb = bool(db)
@@ -61,6 +63,7 @@ class CheckPatched():
         self.asset = asset
     
     def __call__(self, textData):
+        if UPGRADE: return False
         if len(textData['jpText']) < 3: return False
         if not common.isJapanese(textData['jpText']): self.n += 1
         if (self.n > 5):
@@ -76,7 +79,7 @@ def extractAsset(path, storyId, tlFile = None):
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': 4,
+            'version': 5,
             'bundle': env.file.name,
             'type': EXTRACT_TYPE,
             'storyId': "",
@@ -85,6 +88,7 @@ def extractAsset(path, storyId, tlFile = None):
         }
         isPatched = CheckPatched(env.file.name)
         transferExisting = DataTransfer(tlFile)
+        assetList = index.assets_file.files
 
         if EXTRACT_TYPE == "race":
             export['storyId'] = tree['m_Name'][-9:]
@@ -128,6 +132,29 @@ def extractAsset(path, storyId, tlFile = None):
                     if not textData:
                         continue
                     if isPatched(textData): return
+
+                    if "origClipLength" in textData:
+                        print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
+                        clipsToUpdate = list()
+                        for trackGroup in block['CharacterTrackList']:
+                            for key in trackGroup.keys():
+                                if key.endswith("MotionTrackData") and trackGroup[key]['ClipList']:
+                                    clipsToUpdate.append(trackGroup[key]['ClipList'][-1]['m_PathID'])
+                        if clipsToUpdate:
+                            textData['animData'] = list()
+                            for clipPathId in clipsToUpdate:
+                                animAsset = assetList[clipPathId]
+                                if animAsset:
+                                    animData = animAsset.read_typetree()
+                                    animGroupData = dict()
+                                    animGroupData['origLen'] = animData['ClipLength']
+                                    animGroupData['pathId'] = clipPathId
+                                    textData['animData'].append(animGroupData)
+                                else:
+                                    print(f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}")
+                        else:
+                            print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
+
                     textData['pathId'] = pathId  # important for re-importing
                     textData['blockIdx'] = block['BlockIndex'] # to help translators look for specific routes
                     transferExisting(storyId, textData)
@@ -164,8 +191,11 @@ def extractText(assetType, obj):
             'enName': "",  # todo: auto lookup
             'jpText': tree['Text'],
             'enText': "",
-            'nextBlock': tree['NextBlock'] # maybe for adding blocks to split dialogue later
+            'nextBlock': tree['NextBlock'], # maybe for adding blocks to split dialogue later
         }
+        # home has no auto mode so adjustments aren't needed
+        if assetType == "story":
+            o['origClipLength'] = tree['ClipLength']
         choices = tree['ChoiceDataList'] #always present
         if choices:
             o['choices'] = list()
@@ -184,7 +214,6 @@ def extractText(assetType, obj):
                     'jpText': c['Text'],
                     'enText': ""
                 })
-
     return o if o['jpText'] else None
     
 class DataTransfer():
@@ -220,7 +249,7 @@ class DataTransfer():
             txtIdx = max(textData["blockIdx"] - 1 - self.offset, 0)
             if txtIdx < len(textBlocks):
                 targetBlock = textBlocks[txtIdx]
-                if similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
+                if not UPGRADE and similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
                     self.filePrint(f"jpText does not match at bIdx {textData['blockIdx']}")
                     targetBlock = None
                     textSearch = True
@@ -242,12 +271,18 @@ class DataTransfer():
                 self.filePrint("Text not found")
 
         if targetBlock:
+            if UPGRADE: 
+                textData['jpText'] = targetBlock['jpText']
             textData['enText'] = targetBlock['enText']
             if 'enName' in targetBlock:
+                if UPGRADE: 
+                    textData['jpName'] = targetBlock['jpName']
                 textData['enName'] = targetBlock['enName']
             if 'choices' in targetBlock:
                 for txtIdx, choice in enumerate(textData['choices']):
                     try:
+                        if UPGRADE: 
+                            choice['jpText'] = targetBlock['choices'][txtIdx]['jpText']
                         choice['enText'] = targetBlock['choices'][txtIdx]['enText']
                     except IndexError:
                         self.filePrint(f"New choice at bIdx {targetBlock['blockIdx']}.")
@@ -255,9 +290,17 @@ class DataTransfer():
                         self.filePrint(f"Choice mismatch when attempting data transfer at {txtIdx}")
             if 'coloredText' in targetBlock:
                 for txtIdx, cText in enumerate(textData['coloredText']):
+                    if UPGRADE:
+                        cText['jpText'] = targetBlock['coloredText'][txtIdx]['jpText']
                     cText['enText'] = targetBlock['coloredText'][txtIdx]['enText']
             if 'skip' in targetBlock:
                 textData['skip'] = targetBlock['skip']
+            if 'newClipLength' in targetBlock:
+                textData['newClipLength'] = targetBlock['newClipLength']
+            if UPGRADE and self.file.version > 4:
+                textData['origClipLength'] = targetBlock['origClipLength']
+                for i, group in enumerate(textData.get("animData", [])):
+                    group['origLen'] = targetBlock['animData'][i]['origLen']
 
 
 def exportData(data, filepath: str):

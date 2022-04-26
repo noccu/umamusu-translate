@@ -105,12 +105,13 @@ def patchVersion():
     finally: 
         return v
 
+class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTextHelpFormatter): pass
 class NewArgs(argparse.ArgumentParser):
     def __init__(self, desc, defaultArgs = True) -> None:
         if len(sys.argv) > 1 and sys.argv[1] in ("-v", "--version"):
             print(f"Patch version: {patchVersion()}")
             sys.exit()
-        super().__init__(description=desc, conflict_handler='resolve', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+        super().__init__(description=desc, conflict_handler='resolve', formatter_class=RawDefaultFormatter)
         if defaultArgs:
             self.add_argument("-v", "--version", action="store_true", default=argparse.SUPPRESS, help="Show version and exit")
             self.add_argument("-t", "--type", choices=TARGET_TYPES, default=TARGET_TYPES[0], help="The type of assets to process.")

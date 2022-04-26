@@ -42,8 +42,6 @@ class BasicSubProcessor:
         self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
-        if options[Options.FILTER]:
-            options[Options.FILTER] = options[Options.FILTER].split(",")
         self.options = options
         self.skipNames = ["<username>", "", "モノローグ"]
 
@@ -257,27 +255,23 @@ def process(srcFile, subFile, opts):
     p.saveSrc()
 
 def main():
-    args = common.Args().parse()
-    if args.getArg("-h"):
-        common.usage("-src <translation file> -sub <subtitle file> [-filter <npre, brak, ...>] [-OVRNAMES] [-DUPEALL]",
-                    "Imports translations from subtitle files. A few conventions are used.", "\n",
-                    "OVRNAMES: Replace existing names with names from subs",
-                    "DUPEALL: Check all lines for duplicates (default only trainer's/narration)",
-                    "Filters:",
-                    "npre: remove char name prefixes and extracts them to the name field",
-                    "brak: remove brackets from text entirely encased in them if original is not", "\n",
-                    "Conventions:",
-                    "1 subtitle per game text screen. Include empty lines if needed (say, if you leave a line untranslated)",
-                    "The effect field in ASS can be set to 'Split' for ALL lines that break the above. When 2 consecutive screens are both split, use 'SplitXX', where XX is a unique ID for each screen. Others formats will fail to import correctly.",
-                    "For any additional lines not present in game (such as ASS effects) set the effect field to 'skip'")
-
-    TARGET_FILE = args.getArg("-src", None)
-    SUBTITLE_FILE = args.getArg("-sub", None)
-
-    process(TARGET_FILE, SUBTITLE_FILE, {
-        Options.OVERRIDE_NAMES: args.getArg("-OVRNAMES", False),
-        Options.DUPE_CHECK_ALL: args.getArg("-DUPEALL", False),
-        Options.FILTER: args.getArg("-filter", False) # x,y,...,
+    ap = common.NewArgs("Imports translations from subtitle files. A few conventions are used.", defaultArgs=False,
+                        epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\
+                        \nASS: Actor field for names, Effect field for 'choice', 'skip', 'split' (all lines)\
+                        \nSRT: Prefix name 'Name: Dialogue', '>' for choices, 2+ spaces for splits (all except last line)")
+    ap.add_argument("src", help="Target Translation File, overwrites other file options")
+    ap.add_argument("sub", help="Target subtitle file. Supports ASS, SRT, TXT")
+    ap.add_argument("-OVRNAMES", action="store_true", help="Replace existing names with names from subs")
+    ap.add_argument("-DUPEALL", action="store_true", help="Check all lines for duplicates instead of only trainer's/narration")
+    ap.add_argument("-filter", nargs="+", choices=["npre", "brak"],
+                    help="Process some common patterns (default: %(default)s)\
+                    \nnpre: remove char name prefixes and extract them to enName field\
+                    \nbrak: sync enclosing brackets with original text")
+    args = ap.parse_args()
+    process(args.src, args.sub, {
+        Options.OVERRIDE_NAMES: args.OVRNAMES,
+        Options.DUPE_CHECK_ALL: args.DUPEALL,
+        Options.FILTER: args.filter
         })
     print("Successfully transferred.")
 

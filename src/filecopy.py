@@ -3,7 +3,6 @@ import sqlite3
 from os import makedirs, path
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
-from re import sub as resub
 
 
 def buildSqlStmt(args):
@@ -20,31 +19,27 @@ def buildSqlStmt(args):
 
     if args.type == "lyrics":
         args.type = "live"
-        if not args.id:
-            args.id = "____"
+    if not args.group:
+        args.group = "__"
+    if not args.id:
+        args.id = "____"
 
     add(f"m = '{args.type}'") # always set
     if args.name:
         add(f"n like '%{args.name}%'")
     if args.hash:
-        hashes = resub("(\"?[A-Z0-9]+\"?) ?(?=,|$)", r"'\1'", args.hash)
+        hashes = ",".join([f"'{h}'" for h in args.hash])
         add(f"h in ({hashes})")
-    if args.group:
-        if args.type == "story":
-            add(f"n like 'story/data/{args.group}/____/storytimeline%'")
-        elif args.type == "home":
-            add(f"n like 'home/data/00000/{args.group}/hometimeline%'")
-        elif args.type == "race":
-            add(f"n like 'race/storyrace/text/storyrace_{args.group}____%'")
-    if args.id:
-        if args.type == "story":
-            add(f"n like 'story/data/__/{args.id}/storytimeline%'")
-        elif args.type == "home":
-            add(f"n like 'home/data/00000/__/hometimeline_00000____{args.id}%'")
-        elif args.type == "race":
-            add(f"n like 'race/storyrace/text/storyrace___{args.id}%'")
-        elif args.type == "live":
-            add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
+    if args.type == "story":
+        add(f"n like 'story/data/{args.group}/{args.id}/storytimeline%'")
+    elif args.type == "home":
+        add(f"n like 'home/data/00000/{args.group}/hometimeline_00000_{args.group}_{args.id}%'")
+    elif args.type == "race":
+        add(f"n like 'race/storyrace/text/storyrace_{args.group}{args.id}%'")
+    elif args.type == "live":
+        add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
+    elif args.type == "preview":
+        add(f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'")
 
     return None if firstExpr else stmt
 
@@ -82,7 +77,7 @@ def copy(hash, args):
 
 def main():
     ap = common.NewArgs("Copy files for backup or testing")
-    ap.add_argument("-c", "--hash", "--checksum", help="Hash/asset filename")
+    ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-n", "--name", help="Unity filepath wildcard")
     ap.add_argument("-dst", default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")

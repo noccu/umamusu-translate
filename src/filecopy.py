@@ -5,25 +5,8 @@ import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT
 from re import sub as resub
 
-# Parameter parsing
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("[-t <type>] [-n <unity filepath wildcard>] [-c <specific hash/asset filename>] [-g <story group>] [-id <story id>] [-O(verwrite)]",
-                 "All args are combined with AND")
-TARGET_TYPE = args.getArg("-t", "story")
-if TARGET_TYPE == "lyrics": TARGET_TYPE = "live" # consistency with other scripts
-TARGET_HASHES = args.getArg("-c", False)
-TARGET_NAME = args.getArg("-n", "")
-# story shortcuts
-TARGET_GROUP = args.getArg("-g", False)
-TARGET_ID = args.getArg("-id", False)
-DESTINATION = args.getArg("-dst", "dump/")
-OVERWRITE_DST = args.getArg("-O", False)
-BACKUP = args.getArg("-B", False)
 
-
-def buildSqlStmt():
-    global TARGET_ID
+def buildSqlStmt(args):
     stmt = "select h from a"
     firstExpr = True
 
@@ -35,54 +18,56 @@ def buildSqlStmt():
         else:
             stmt += f" and {expr}"
 
-    if TARGET_TYPE:
-        add(f"m = '{TARGET_TYPE}'")
-        if TARGET_TYPE == "live" and not TARGET_ID:
-            TARGET_ID = "____"
-    if TARGET_NAME:
-        add(f"n like '%{TARGET_NAME}%'")
-    if TARGET_HASHES:
-        hashes = resub("(\"?[A-Z0-9]+\"?) ?(?=,|$)", r"'\1'", TARGET_HASHES)
+    if args.type == "lyrics":
+        args.type = "live"
+        if not args.id:
+            args.id = "____"
+
+    add(f"m = '{args.type}'") # always set
+    if args.name:
+        add(f"n like '%{args.name}%'")
+    if args.hash:
+        hashes = resub("(\"?[A-Z0-9]+\"?) ?(?=,|$)", r"'\1'", args.hash)
         add(f"h in ({hashes})")
-    if TARGET_GROUP:
-        if TARGET_TYPE == "story":
-            add(f"n like 'story/data/{TARGET_GROUP}/____/storytimeline%'")
-        elif TARGET_TYPE == "home":
-            add(f"n like 'home/data/00000/{TARGET_GROUP}/hometimeline%'")
-        elif TARGET_TYPE == "race":
-            add(f"n like 'race/storyrace/text/storyrace_{TARGET_GROUP}____%'")
-    if TARGET_ID:
-        if TARGET_TYPE == "story":
-            add(f"n like 'story/data/__/{TARGET_ID}/storytimeline%'")
-        elif TARGET_TYPE == "home":
-            add(f"n like 'home/data/00000/__/hometimeline_00000____{TARGET_ID}%'")
-        elif TARGET_TYPE == "race":
-            add(f"n like 'race/storyrace/text/storyrace___{TARGET_ID}%'")
-        elif TARGET_TYPE == "live":
-            add(f"n like 'live/musicscores/m{TARGET_ID}/m{TARGET_ID}_lyrics'")
+    if args.group:
+        if args.type == "story":
+            add(f"n like 'story/data/{args.group}/____/storytimeline%'")
+        elif args.type == "home":
+            add(f"n like 'home/data/00000/{args.group}/hometimeline%'")
+        elif args.type == "race":
+            add(f"n like 'race/storyrace/text/storyrace_{args.group}____%'")
+    if args.id:
+        if args.type == "story":
+            add(f"n like 'story/data/__/{args.id}/storytimeline%'")
+        elif args.type == "home":
+            add(f"n like 'home/data/00000/__/hometimeline_00000____{args.id}%'")
+        elif args.type == "race":
+            add(f"n like 'race/storyrace/text/storyrace___{args.id}%'")
+        elif args.type == "live":
+            add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
 
     return None if firstExpr else stmt
 
-def getFiles():
+def getFiles(args):
     with sqlite3.connect(GAME_META_FILE) as db:
-        stmt = buildSqlStmt()
+        stmt = buildSqlStmt(args)
         if not stmt:
             raise SystemExit("Invalid statement. No args given? Pass -h for usage")
         cur = db.execute(stmt)
         return cur
 
-def backup():
+def backup(args):
     print("Backing up extracted files...")
-    for type in common.TARGET_TYPES:
+    for type in common.args.typeS:
         files = common.searchFiles(type, False, False)
         for file in files:
             file = common.TranslationFile(file)
-            copy(file.bundle)
+            copy(file.bundle, args)
 
-def copy(hash):
-    dst = path.join(DESTINATION, hash)
+def copy(hash, args):
+    dst = path.join(args.dst, hash)
     src = path.join(GAME_ASSET_ROOT, hash[:2], hash)
-    if OVERWRITE_DST or not path.exists(dst):
+    if args.overwrite or not path.exists(dst):
         try:
             makedirs(path.dirname(dst), exist_ok=True)
             shutil.copyfile(src, dst)
@@ -96,12 +81,20 @@ def copy(hash):
         return 0
 
 def main():
-    if BACKUP:
-        backup()
+    ap = common.NewArgs("Copy files for backup or testing")
+    ap.add_argument("-c", "--hash", "--checksum", help="Hash/asset filename")
+    ap.add_argument("-n", "--name", help="Unity filepath wildcard")
+    ap.add_argument("-dst", default="dump/")
+    ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
+    ap.add_argument("-B", "--backup", action="store_true", help="Backup all assets for which Translation Files exist")
+    args = ap.parse_args()
+
+    if args.backup:
+        backup(args)
     else:
         n = 0
-        for hash, in getFiles():
-            n += copy(hash)
+        for hash, in getFiles(args):
+            n += copy(hash, args)
         print(f"Copied {n} files.")
 
 

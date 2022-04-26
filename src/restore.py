@@ -3,23 +3,10 @@ import common
 from common import GAME_ASSET_ROOT
 from os.path import join, realpath, isfile
 import shutil
+from argparse import SUPPRESS
 
-# Globals & Parameter parsing
 HOSTNAME = 'https://prd-storage-umamusume.akamaized.net/dl/resources'
 ASSETS_ENDPOINT = HOSTNAME + '/Windows/assetbundles/{0:.2}/{0}'
-LOCAL_DUMP_DIR = realpath("dump") # A folder where original files were copied to before. (and not modified)
-
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("[-g <group>] [-id <id>] [-src <file>]",
-                 "-src overwrites other options")
-
-TARGET_TYPE = args.getArg("-t", "story").lower()
-TARGET_GROUP = args.getArg("-g", False)
-TARGET_ID = args.getArg("-id", False)
-TARGET_IDX = args.getArg("-idx", False)
-TARGET_FILE = args.getArg("-src", False)
-FORCE_DL = args.getArg("-F", False)
 
 
 def download(file):
@@ -27,12 +14,12 @@ def download(file):
     print(f"Downloading {file} from {url}")
     return requests.get(url)
 
-def save(fileName):
+def save(fileName, backupDir, forceDl = False):
     dstPath = join(GAME_ASSET_ROOT, fileName[:2], fileName)
-    localFile = join(LOCAL_DUMP_DIR, fileName)
+    localFile = join(backupDir, fileName)
 
     print(f"Saving file to {dstPath}")
-    if not FORCE_DL and isfile(localFile):
+    if not forceDl and isfile(localFile):
         print (f"Copying file from {localFile}")
         shutil.copyfile(localFile, dstPath)
     else:
@@ -43,11 +30,21 @@ def save(fileName):
         else:
             print(f"Error downloading file {fileName}")
 
-#* Main
-if TARGET_FILE:
-    save(TARGET_FILE)
-else:
-    files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
-    for file in files:
-        file = common.TranslationFile(file)
-        save(file.bundle)
+def main():
+    ap = common.NewArgs("Restore game files from backup or CDN download")
+    ap.add_argument("-F", "--forcedl", action="store_true", help="Force new file dl over copying from local backup")
+    ap.add_argument("-bdir", default=realpath("dump"), help="Local backup dir")
+    ap.add_argument("-src", help="Target filename/bundle hash")
+    ap.add_argument("-dst", help=SUPPRESS)
+    args = ap.parse_args()
+
+    if args.src:
+        save(args.src, args.bdir, args.forcedl)
+    else:
+        files = common.searchFiles(args.type, args.group, args.id, args.idx)
+        for file in files:
+            file = common.TranslationFile(file)
+            save(file.bundle, args.bdir, args.forcedl)
+
+if __name__ == '__main__':
+    main()

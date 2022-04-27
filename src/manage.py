@@ -5,31 +5,8 @@ import regex as re
 import shutil
 import winreg
 
-
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-order] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)] [-M(ove static.json to game dir)]",
-                 "Add new strings to tl file, or update/write final file with translations.",
-                 "-add imports text files (dumps) given by -src to local static_dump.json",
-                 "-new adds all new entries from static_dump.json or src file to static_en.json for translating",
-                 "-upd creates the final static.json file used by the dll from static_dump.json and static_en.json",
-                 "-clean removes untranslated entries from tl file, or dump and tl file",
-                 "-O overwrites local values with external ones, else vice versa")
-
-ADD_NEW_TEXT = args.getArg("-new", False)
-TRANSLATE_HASHES = args.getArg("-upd", False)
-
-DO_IMPORT = args.getArg("-add", False) #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
-DO_CLEAN = args.getArg("-clean", False)
-DO_ORDER = args.getArg("-order", False)
-OVERWRITE_LOCAL_DUMP = args.getArg("-O", False)
-IMPORT_DUMP_ONLY = args.getArg("-I", False)
-AUTO_MOVE = args.getArg("-M", False)
-
 ROOT = PurePath("src")
 LOCAL_DUMP = ROOT / "data" / "static_dump.json"
-DUMP_FILE: PurePath = args.getArg("-src", LOCAL_DUMP)
-if type(DUMP_FILE) is not PurePath: DUMP_FILE = PurePath(DUMP_FILE)
 HASH_FILE = PurePath("localify") / "localized_data" / "static.json"
 TL_FILE = ROOT / "data" / "static_en.json"
 
@@ -56,7 +33,7 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
                 del hashData[hash]
 
 
-def importDump(path: PurePath):
+def importDump(path: PurePath, args):
     isExternal = path != LOCAL_DUMP
     # load local dump to update if using an external file
     localDumpData = helpers.readJson(LOCAL_DUMP) if isExternal else None
@@ -65,7 +42,7 @@ def importDump(path: PurePath):
         data = helpers.readJson(path)
         animationCheck = list()
         if isExternal:
-            if OVERWRITE_LOCAL_DUMP: data = {**localDumpData, **data}
+            if args.overwrite: data = {**localDumpData, **data}
             else: data = {**data, **localDumpData}
             # now that we've already read the external file in path, we no longer need it so we can swap it to local for updating
             path = LOCAL_DUMP
@@ -86,7 +63,7 @@ def importDump(path: PurePath):
                             del data[key]
                     animationCheck.clear()
 
-        if DO_IMPORT:
+        if args.save:
             helpers.writeJson(path, data)
         return data
     else:
@@ -102,19 +79,19 @@ def importDump(path: PurePath):
                 if key and val:
                     # static range always seems to dump in japanese, which helps
                     # also assuming the problem this fixes only occurs/matters for static text
-                    if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not helpers.isEnglish(val)):
+                    if (args.overwrite or key not in localDumpData) and (len(key) < 5 or not helpers.isEnglish(val)):
                         localDumpData[key] = val
-        if DO_IMPORT or IMPORT_DUMP_ONLY:
+        if args.save or args.import_only:
             helpers.writeJson(LOCAL_DUMP, localDumpData)
         return localDumpData
 
-def clean():
+def clean(mode):
     dump = helpers.readJson(DUMP_FILE)
     tlData = helpers.readJson(TL_FILE)
-    targetData = dump if DO_CLEAN == "both" else tlData
+    targetData = dump if mode == "both" else tlData
 
     for key, value in list(targetData.items()):
-        if DO_CLEAN == "both":
+        if mode == "both":
             # ignore translated entries
             if (value in tlData and tlData[value]): continue
             try:
@@ -130,7 +107,7 @@ def clean():
                 del tlData[key]
 
     helpers.writeJson(TL_FILE, tlData)
-    if DO_CLEAN == "both": helpers.writeJson(DUMP_FILE, dump)
+    if mode == "both": helpers.writeJson(DUMP_FILE, dump)
 
 def order():
     for file in [LOCAL_DUMP, HASH_FILE]:
@@ -138,33 +115,53 @@ def order():
         data = dict(sorted(data.items(), key=lambda x: int(x[0])))
         helpers.writeJson(file, data)
 
+def parseArgs():
+    ap = common.NewArgs("Manages localify data files for UI translations", defaultArgs=False)
+
+    ap.add_argument("-new", "--populate", action="store_true", help="Add dump (local or target) entries to static_en.json for translating")
+    #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
+    ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump")
+    ap.add_argument("-upd", "--update", action="store_true", help="Create/update the final static.json file used by the dll from static_dump.json and static_en.json")
+    ap.add_argument("-clean", default=False, const=True, nargs="?", help="Remove untranslated entries from tl file, or local dump and tl file")
+    ap.add_argument("-sort", "-order", action="store_true", help="Sort keys in local dump and final file")
+    ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite/update local dump keys instead of only adding new ones")
+    ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save")
+    ap.add_argument("-M", "--move", action="store_true", help="Move final static.json to game dir")
+    ap.add_argument("-src", default=LOCAL_DUMP, type=PurePath, help="Target dump file for imports")
+    args = ap.parse_args()
+
+    global DUMP_FILE
+    DUMP_FILE = args.src
+    return args
+
 # Usage: use localify dll to dump entries
 # use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
 def main():
-    if not ADD_NEW_TEXT and not TRANSLATE_HASHES and not DO_CLEAN and not IMPORT_DUMP_ONLY and not DO_ORDER and not AUTO_MOVE:
+    args = parseArgs()
+    if not args.populate and not args.update and not args.clean and not args.import_only and not args.sort and not args.move:
         raise SystemExit("1 required argument missing.")
 
-    if DO_CLEAN:
-        clean()
+    if args.clean:
+        clean(args.clean)
         return
-    elif DO_ORDER:
+    elif args.sort:
         order()
         return
 
-    if ADD_NEW_TEXT or TRANSLATE_HASHES or IMPORT_DUMP_ONLY:
-        dumpData = importDump(DUMP_FILE)
-        if IMPORT_DUMP_ONLY: return
+    if args.populate or args.update or args.import_only:
+        dumpData = importDump(DUMP_FILE, args)
+        if args.import_only: return
         tlData = helpers.readJson(TL_FILE)
 
-    if ADD_NEW_TEXT:
+    if args.populate:
         updateTlData(dumpData, tlData)
         helpers.writeJson(TL_FILE, tlData)
-    elif TRANSLATE_HASHES:
+    elif args.update:
         hashData = helpers.readJson(HASH_FILE)
         updateHashData(dumpData, tlData, hashData)
         helpers.writeJson(HASH_FILE, hashData)
 
-    if AUTO_MOVE:
+    if args.move:
         try:
             with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume") as k:
                 path = PurePath(winreg.QueryValueEx(k, "Path")[0]) / "localized_data" / "static.json"

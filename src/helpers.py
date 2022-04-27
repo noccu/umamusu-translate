@@ -3,6 +3,7 @@ import regex
 import json
 from pathlib import Path
 from os import PathLike
+import winreg
 
 
 def readJson(file: PathLike) -> Union[dict, list]:
@@ -35,3 +36,10 @@ def isJapanese(text):
     return regex.search(r"[\p{scx=Katakana}\p{scx=Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}\p{General_Punctuation}]{3,}", text)
 def isEnglish(text):
     return regex.fullmatch(r"[^\p{Katakana}\p{Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}。]+", text)
+
+def getUmaInstallPath():
+    try:
+        with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume") as k:
+            return Path(winreg.QueryValueEx(k, "Path")[0])
+    except:
+        return None

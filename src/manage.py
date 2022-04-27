@@ -127,9 +127,19 @@ def parseArgs():
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite/update local dump keys instead of only adding new ones")
     ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save")
     ap.add_argument("-M", "--move", action="store_true", help="Move final static.json to game dir")
-    ap.add_argument("-src", default=LOCAL_DUMP, type=PurePath, help="Target dump file for imports")
+    ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath, help="Target dump file for imports")
     args = ap.parse_args()
 
+    if args.src is None:
+        path = helpers.getUmaInstallPath()
+        if path: path = path.joinpath("dump.txt")
+        else: print("Couldn't find game path.")
+        if path.exists():
+            args.src = path
+        else:
+            print("Dump file not found.")
+            args.src = LOCAL_DUMP
+        print(f"Using dump: {args.src}")
     global DUMP_FILE
     DUMP_FILE = args.src
     return args

@@ -1,6 +1,7 @@
 This project aims to translate *Uma Musume Pretty Derby* through (mainly) Unity asset edits.  
 The intent is to be an all-in-one toolset/patch but right now it is focused on any dialogues with a few extras.  
-Translation progress and credits can be checked on the [overview][tl-progress]. Guides can be found below.
+Translation progress and credits can be checked on the [overview][tl-progress]. Guides can be found below.  
+**For troubleshooting, please open an issue or ask in the [translation discord](https://discord.gg/HpMRFNvsMv).**
 
 This is based on the DMM version of the game. If you can figure out how to run it on other versions, it may (should) work as well, but no support is provided right now.  
 Please consider [supporting the project](https://ko-fi.com/noccyu).  

@@ -70,15 +70,15 @@ class Translator:
                 for entry in file.genTextContainers():
                     # Skip already translated text
                     if args.overwrite or not entry['enText']:
-                        text = textprocess.process(file, entry['jpText'], {"noNewlines": True})
-                        entry['enText'] = textprocess.process(file, await self.requestTl(text), {"lineLen": args.lineLength, "replace": True}) # defer to default
+                        text = textprocess.processText(file, entry['jpText'], {"redoNewlines": True})
+                        entry['enText'] = textprocess.processText(file, await self.requestTl(text), {"lineLength": args.lineLength, "replace": "all"}) # defer to default
             elif args.model == "sugoi":
                 entries = list(file.genTextContainers())
-                textArray = [textprocess.process(file, entry['jpText'], {"noNewlines": True}) for entry in entries]
+                textArray = [textprocess.processText(file, entry['jpText'], {"redoNewlines": True}) for entry in entries]
                 resultArray = self.sugoi.translate(textArray)
                 for idx, entry in enumerate(entries):
                     if args.overwrite or not entry['enText']:
-                        entry['enText'] = textprocess.process(file, resultArray[idx], {"lineLen": args.lineLength, "replace": True})
+                        entry['enText'] = textprocess.processText(file, resultArray[idx], {"lineLength": args.lineLength, "replace": "all"})
             file.save()
         if USING_SERVER:
             await self.client.close()

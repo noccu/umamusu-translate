@@ -104,7 +104,7 @@ For details run with `-h` or check the code.
 
 script | desc
 ---|---
-static/manage | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify][]. Note this is a module-script, run as: `python -m src.static.manage [-opts]`
+manage | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify][].
 
 # Contribute
 

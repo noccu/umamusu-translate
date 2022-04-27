@@ -1,6 +1,5 @@
-# Script as module to use relative imports. py -m src.static.manage [args]
-# TODO: Uhhh... do not do that? Somehow.
-from .. import common
+import common
+import helpers
 from pathlib import PurePath
 import regex as re
 import shutil
@@ -11,9 +10,9 @@ args = common.Args().parse()
 if args.getArg("-h"):
     common.usage("-new|-upd [-add] [-src <dumpfile path>] [-clean [both]] [-order] [-O(verwrite duplicate keys in dump with imported)] [-I(mport only the dump from external)] [-M(ove static.json to game dir)]",
                  "Add new strings to tl file, or update/write final file with translations.",
-                 "-add imports text files (dumps) given by -src to local dump.json",
-                 "-new adds all new entries from dump.json or src file to static_en.json for translating",
-                 "-upd creates the final static.json file used by the dll from dump.json and static_en.json",
+                 "-add imports text files (dumps) given by -src to local static_dump.json",
+                 "-new adds all new entries from static_dump.json or src file to static_en.json for translating",
+                 "-upd creates the final static.json file used by the dll from static_dump.json and static_en.json",
                  "-clean removes untranslated entries from tl file, or dump and tl file",
                  "-O overwrites local values with external ones, else vice versa")
 
@@ -27,8 +26,8 @@ OVERWRITE_LOCAL_DUMP = args.getArg("-O", False)
 IMPORT_DUMP_ONLY = args.getArg("-I", False)
 AUTO_MOVE = args.getArg("-M", False)
 
-ROOT = PurePath(__file__).parent
-LOCAL_DUMP = ROOT / "data" / "dump.json"
+ROOT = PurePath("src")
+LOCAL_DUMP = ROOT / "data" / "static_dump.json"
 DUMP_FILE: PurePath = args.getArg("-src", LOCAL_DUMP)
 if type(DUMP_FILE) is not PurePath: DUMP_FILE = PurePath(DUMP_FILE)
 HASH_FILE = PurePath("localify") / "localized_data" / "static.json"
@@ -60,10 +59,10 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
 def importDump(path: PurePath):
     isExternal = path != LOCAL_DUMP
     # load local dump to update if using an external file
-    localDumpData = common.readJson(LOCAL_DUMP) if isExternal else None
+    localDumpData = helpers.readJson(LOCAL_DUMP) if isExternal else None
 
     if path.suffix == ".json":
-        data = common.readJson(path)
+        data = helpers.readJson(path)
         animationCheck = list()
         if isExternal:
             if OVERWRITE_LOCAL_DUMP: data = {**localDumpData, **data}
@@ -72,7 +71,7 @@ def importDump(path: PurePath):
             path = LOCAL_DUMP
         # copy to list so we don't run into issues deleting keys in our loop obj
         for key, val in list(data.items()):
-            if len(key) > 5 and common.isEnglish(val):
+            if len(key) > 5 and helpers.isEnglish(val):
                 # remove non-japanese data (excluding static)
                 del data[key]
             else:
@@ -88,10 +87,10 @@ def importDump(path: PurePath):
                     animationCheck.clear()
 
         if DO_IMPORT:
-            common.writeJson(path, data)
+            helpers.writeJson(path, data)
         return data
     else:
-        # if it's not a json file then it's definitely external as we only use dump.json
+        # if it's not a json file then it's definitely external as we only use static_dump.json
         if not isExternal: raise AssertionError("Dump file is not json and not external. This is a bug and you should never see this message.") # but just in case
 
         extract = re.compile(r'"(\d+)": "(.+)",?')
@@ -103,15 +102,15 @@ def importDump(path: PurePath):
                 if key and val:
                     # static range always seems to dump in japanese, which helps
                     # also assuming the problem this fixes only occurs/matters for static text
-                    if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not common.isEnglish(val)):
+                    if (OVERWRITE_LOCAL_DUMP or key not in localDumpData) and (len(key) < 5 or not helpers.isEnglish(val)):
                         localDumpData[key] = val
         if DO_IMPORT or IMPORT_DUMP_ONLY:
-            common.writeJson(LOCAL_DUMP, localDumpData)
+            helpers.writeJson(LOCAL_DUMP, localDumpData)
         return localDumpData
 
 def clean():
-    dump = common.readJson(DUMP_FILE)
-    tlData = common.readJson(TL_FILE)
+    dump = helpers.readJson(DUMP_FILE)
+    tlData = helpers.readJson(TL_FILE)
     targetData = dump if DO_CLEAN == "both" else tlData
 
     for key, value in list(targetData.items()):
@@ -130,14 +129,14 @@ def clean():
             if not value:
                 del tlData[key]
 
-    common.writeJson(TL_FILE, tlData)
-    if DO_CLEAN == "both": common.writeJson(DUMP_FILE, dump)
+    helpers.writeJson(TL_FILE, tlData)
+    if DO_CLEAN == "both": helpers.writeJson(DUMP_FILE, dump)
 
 def order():
     for file in [LOCAL_DUMP, HASH_FILE]:
-        data = common.readJson(file)
+        data = helpers.readJson(file)
         data = dict(sorted(data.items(), key=lambda x: int(x[0])))
-        common.writeJson(file, data)
+        helpers.writeJson(file, data)
 
 # Usage: use localify dll to dump entries
 # use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
@@ -155,15 +154,15 @@ def main():
     if ADD_NEW_TEXT or TRANSLATE_HASHES or IMPORT_DUMP_ONLY:
         dumpData = importDump(DUMP_FILE)
         if IMPORT_DUMP_ONLY: return
-        tlData = common.readJson(TL_FILE)
+        tlData = helpers.readJson(TL_FILE)
 
     if ADD_NEW_TEXT:
         updateTlData(dumpData, tlData)
-        common.writeJson(TL_FILE, tlData)
+        helpers.writeJson(TL_FILE, tlData)
     elif TRANSLATE_HASHES:
-        hashData = common.readJson(HASH_FILE)
+        hashData = helpers.readJson(HASH_FILE)
         updateHashData(dumpData, tlData, hashData)
-        common.writeJson(HASH_FILE, hashData)
+        helpers.writeJson(HASH_FILE, hashData)
 
     if AUTO_MOVE:
         try:

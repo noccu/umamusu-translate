@@ -3,7 +3,6 @@ import helpers
 from pathlib import PurePath
 import regex as re
 import shutil
-import winreg
 
 ROOT = PurePath("src")
 LOCAL_DUMP = ROOT / "data" / "static_dump.json"
@@ -18,20 +17,16 @@ def updateTlData(dumpData: dict, tlData: dict):
 
 def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
     for hash, text in dumpData.items():
-        try:
-            translatedText = tlData[text]
-        except:
-            translatedText = None
+        translatedText = tlData.get(text)
 
         if translatedText:
             # special case for effectively removing text
             hashData[hash] = "" if translatedText == "<empty>" else translatedText
         else:
-            # Remove missing data on update to prevent garbled translations
+            # Remove previously translated hashes that no longer are to prevent garbled text
             if hash in hashData:
                 # print(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
                 del hashData[hash]
-
 
 def importDump(path: PurePath, args):
     isExternal = path != LOCAL_DUMP
@@ -48,11 +43,11 @@ def importDump(path: PurePath, args):
             path = LOCAL_DUMP
         # copy to list so we don't run into issues deleting keys in our loop obj
         for key, val in list(data.items()):
+            # remove non-japanese data (excluding static)
             if len(key) > 5 and helpers.isEnglish(val):
-                # remove non-japanese data (excluding static)
                 del data[key]
+            # remove animated text
             else:
-                # keep track of animated text
                 if len(animationCheck) == 0 or (val.startswith(animationCheck[-1][1]) and len(val) - len(animationCheck[-1][1]) < 2):
                     animationCheck.append( (key, val) )
                 else:
@@ -68,7 +63,7 @@ def importDump(path: PurePath, args):
         return data
     else:
         # if it's not a json file then it's definitely external as we only use static_dump.json
-        if not isExternal: raise AssertionError("Dump file is not json and not external. This is a bug and you should never see this message.") # but just in case
+        assert isExternal, "Dump file is not json and not external"
 
         extract = re.compile(r'"(\d+)": "(.+)",?')
         with open(path, "r", encoding="utf8") as f:
@@ -92,12 +87,10 @@ def clean(mode):
 
     for key, value in list(targetData.items()):
         if mode == "both":
-            # ignore translated entries
-            if (value in tlData and tlData[value]): continue
-            try:
+            if value in tlData:
+                # ignore translated entries
+                if tlData[value]: continue
                 del tlData[value]
-            except KeyError:
-                pass
             # ignore static entries in dump
             if len(key) > 5:
                 del dump[key]
@@ -117,7 +110,6 @@ def order():
 
 def parseArgs():
     ap = common.NewArgs("Manages localify data files for UI translations", defaultArgs=False)
-
     ap.add_argument("-new", "--populate", action="store_true", help="Add dump (local or target) entries to static_en.json for translating")
     #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
     ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump")
@@ -148,7 +140,7 @@ def parseArgs():
 # use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
 def main():
     args = parseArgs()
-    if not args.populate and not args.update and not args.clean and not args.import_only and not args.sort and not args.move:
+    if not any([args.populate, args.update, args.clean, args.import_only, args.sort, args.move]):
         raise SystemExit("1 required argument missing.")
 
     if args.clean:
@@ -172,12 +164,11 @@ def main():
         helpers.writeJson(HASH_FILE, hashData)
 
     if args.move:
-        try:
-            with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume") as k:
-                path = PurePath(winreg.QueryValueEx(k, "Path")[0]) / "localized_data" / "static.json"
-                shutil.copyfile(HASH_FILE, path)
-                print("static.json moved to game dir")
-        except:
-            print("Error reading registry. static.json not moved.")
+        path = helpers.getUmaInstallPath()
+        if path:
+            path = path.joinpath("localized_data", "static.json")
+            shutil.copyfile(HASH_FILE, path)
+        else:
+            print("Couldn't find game path, static.json not moved.")
 
 main()

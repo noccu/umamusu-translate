@@ -6,22 +6,10 @@ import common
 import textprocess
 from importlib import import_module
 from pathlib import Path
-
-# Globals & Parameter parsing
-args = common.Args().parse()
-if args.getArg("-h"):
-    common.usage("-g <group> [-id <id>] [-src <file>] [-ll <line length>] [-O(verwrite existing tl)]",
-                 "-src overwrites other options")
-TARGET_TYPE = args.getArg("-t", "story").lower()
-TARGET_GROUP = args.getArg("-g", False)
-TARGET_ID = args.getArg("-id", False)
-TARGET_IDX = args.getArg("-idx", False)
-TARGET_FILE = args.getArg("-src", False)
-TARGET_MODEL = args.getArg("-model", "deepl")
-LINE_LENGTH = int(args.getArg("-ll", False))
-OVERWRITE_TEXT = args.getArg("-O", False)
+from argparse import SUPPRESS
 
 SUGOI_ROOT = "src/data/sugoi-model"
+
 
 async def handler(client: server.WebSocketServerProtocol, path):
     print("New client connected")
@@ -44,14 +32,14 @@ async def startServer():
         await STOP  # run until stopped
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol = None):
-        if TARGET_FILE: self.files = [TARGET_FILE]
-        else: self.files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
+        if args.src: self.files = [args.src]
+        else: self.files = common.searchFiles(args.type, args.group, args.id, args.idx)
         if USING_SERVER:
             self.client = client
             
-        if TARGET_MODEL == "deepl":
+        if args.model == "deepl":
             self.loop = asyncio.get_running_loop()
-        elif TARGET_MODEL == "sugoi":
+        elif args.model == "sugoi":
             try:
                 self.model = getattr(import_module("fairseq.models.transformer"), "TransformerModel")
             except ModuleNotFoundError:
@@ -78,19 +66,19 @@ class Translator:
 
     async def translate(self):
         for file in self._fileGenerator():
-            if TARGET_MODEL == "deepl":
+            if args.model == "deepl":
                 for entry in file.genTextContainers():
                     # Skip already translated text
-                    if OVERWRITE_TEXT or not entry['enText']:
+                    if args.overwrite or not entry['enText']:
                         text = textprocess.process(file, entry['jpText'], {"noNewlines": True})
-                        entry['enText'] = textprocess.process(file, await self.requestTl(text), {"lineLen": LINE_LENGTH, "replace": True}) # defer to default
-            elif TARGET_MODEL == "sugoi":
+                        entry['enText'] = textprocess.process(file, await self.requestTl(text), {"lineLen": args.lineLength, "replace": True}) # defer to default
+            elif args.model == "sugoi":
                 entries = list(file.genTextContainers())
                 textArray = [textprocess.process(file, entry['jpText'], {"noNewlines": True}) for entry in entries]
                 resultArray = self.sugoi.translate(textArray)
                 for idx, entry in enumerate(entries):
-                    if OVERWRITE_TEXT or not entry['enText']:
-                        entry['enText'] = textprocess.process(file, resultArray[idx], {"lineLen": LINE_LENGTH, "replace": True})
+                    if args.overwrite or not entry['enText']:
+                        entry['enText'] = textprocess.process(file, resultArray[idx], {"lineLen": args.lineLength, "replace": True})
             file.save()
         if USING_SERVER:
             await self.client.close()
@@ -116,12 +104,22 @@ async def sugoiTranslate():
     await tl.translate()
 
 def main():
+    global args
+    ap = common.NewArgs("Machine translate files. Requires sugoi model or deepl userscript")
+    ap.add_argument("-src", help="Target Translation File")
+    ap.add_argument("-dst", help=SUPPRESS)
+    ap.add_argument("-m", "--model", choices=["deepl", "sugoi"], default="deepl", help="Translation model")
+    ap.add_argument("-ll", type=int, dest="lineLength", help="Line length for wrapping/newlines")
+    ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing tl")
+    args = ap.parse_args()
+    args.replaceMode = "all"
+    
     global USING_SERVER
-    if TARGET_MODEL == "deepl":
+    if args.model == "deepl":
         USING_SERVER = True
         asyncio.run(startServer())
         # #todo: start headless browser
-    elif TARGET_MODEL == "sugoi":
+    elif args.model == "sugoi":
         USING_SERVER = False
         asyncio.run(sugoiTranslate())
 

@@ -4,15 +4,15 @@ import re
 from math import ceil
 import helpers
 
-
 REPLACEMENT_DATA = None
 
-def processText(file: TranslationFile, text: str, opts):
-    if opts.redoNewlines:
+
+def processText(file: TranslationFile, text: str, opts: dict):
+    if opts.get("redoNewlines"):
         text = cleannewLines(text)
-    if opts.replaceMode != "none":
-        text = replace(text, opts.replaceMode)
-    if opts.lineLength:
+    if opts.get("replaceMode"):
+        text = replace(text, opts["replaceMode"])
+    if opts.get("lineLength") not in (0, None):
         text = adjustLength(file, text, opts)
     return text
 
@@ -22,11 +22,11 @@ def cleannewLines(text: str):
 def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     #todo: Find better way to deal with options
     numLines: int = overrides.get("numLines", 0)
-    targetLines: int = overrides.get("targetLines", opts.targetLines)
-    lineLen: int = overrides.get("lineLength", opts.lineLength)
+    targetLines: int = overrides.get("targetLines", opts["targetLines"])
+    lineLen: int = overrides.get("lineLength", opts["lineLength"])
 
     if len(text) < lineLen:
-        if opts.verbose: print("Short text line, skipping: ", text)
+        if opts["verbose"]: print("Short text line, skipping: ", text)
         return text
 
     if lineLen > 0:
@@ -34,7 +34,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         lines = text.splitlines()
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
-            if opts.verbose: print("Text passes length check, skipping: ", text)
+            if opts["verbose"]: print("Text passes length check, skipping: ", text)
             return text.replace("\n", "\\n") if file.type == "race" else text
 
         #adjust if not
@@ -44,7 +44,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         nLines = len(lines)
         if nLines > 1 and len(lines[-1]) < lineLen / 3.25:
             linesStr = '\n\t'.join(lines)
-            if opts.verbose: print(f"Last line is short, balancing on line number:\n\t{linesStr}")
+            if opts["verbose"]: print(f"Last line is short, balancing on line number:\n\t{linesStr}")
             return adjustLength(file, text, opts, lineLength = 0, numLines = nLines, targetLines = targetLines)
 
     elif numLines > 0:
@@ -60,6 +60,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     return " \\n".join(lines) if file.type in ("race", "preview") else " \n".join(lines)
 
 def replace(text: str, mode):
+    if mode == "none": return
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
         REPLACEMENT_DATA = helpers.readJson("src/data/replacer.json")
@@ -90,7 +91,6 @@ def processFiles(args):
     if args.src:
         files = [args.src]
     else:
-        if not args.group and not args.id: raise SystemExit("At least 1 file arg is required.")
         files = common.searchFiles(args.type, args.group, args.id, args.idx)
     print(f"Processing {len(files)} files...")
     useDynamicLength = args.lineLength is None
@@ -107,7 +107,7 @@ def processFiles(args):
 
         for block in file.genTextContainers():
             if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
-            block['enText'] = processText(file, block['enText'], args)
+            block['enText'] = processText(file, block['enText'], vars(args))
         file.save()
     print("Files processed.")
 

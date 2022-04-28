@@ -114,7 +114,7 @@ Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
 We are DREAMERS!! | Complete | TR
 winning the soul | Complete | [Kuun0][]
-Yume wo Kakeru! | In progress/Transferring | Unknown (https://www.animesonglyrics.com/)
+Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 
 
 [noccu]: https://ko-fi.com/noccyu

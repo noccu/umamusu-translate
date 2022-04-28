@@ -310,7 +310,7 @@ def main():
     btn_next.grid(row=5, column=3)
 
     save_on_next = tk.IntVar()
-    save_on_next.set(1)
+    save_on_next.set(0)
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
 

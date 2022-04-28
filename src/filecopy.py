@@ -76,7 +76,7 @@ def copy(hash, args):
         return 0
 
 def main():
-    ap = common.NewArgs("Copy files for backup or testing")
+    ap = common.Args("Copy files for backup or testing")
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-n", "--name", help="Unity filepath wildcard")
     ap.add_argument("-dst", default="dump/")

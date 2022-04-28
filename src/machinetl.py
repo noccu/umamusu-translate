@@ -105,7 +105,7 @@ async def sugoiTranslate():
 
 def main():
     global args
-    ap = common.NewArgs("Machine translate files. Requires sugoi model or deepl userscript")
+    ap = common.Args("Machine translate files. Requires sugoi model or deepl userscript")
     ap.add_argument("-src", help="Target Translation File")
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("-m", "--model", choices=["deepl", "sugoi"], default="deepl", help="Translation model")

@@ -26,7 +26,7 @@ def translate(namesDict, args):
     return len(files)
 
 def main():
-    ap = common.NewArgs("Translate many enName fields in Translation Files by lookup")
+    ap = common.Args("Translate many enName fields in Translation Files by lookup")
     ap.add_argument("-n", dest="namesFile", default="../umamusume-db-translate/src/data/uma-name.csv", help="Path to (external) db-translate's uma-name.csv")
     ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
     args = ap.parse_args()

@@ -31,7 +31,7 @@ def save(fileName, backupDir, forceDl = False):
             print(f"Error downloading file {fileName}")
 
 def main():
-    ap = common.NewArgs("Restore game files from backup or CDN download")
+    ap = common.Args("Restore game files from backup or CDN download")
     ap.add_argument("-F", "--forcedl", action="store_true", help="Force new file dl over copying from local backup")
     ap.add_argument("-bdir", default=realpath("dump"), help="Local backup dir")
     ap.add_argument("-src", help="Target filename/bundle hash")

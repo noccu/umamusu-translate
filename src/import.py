@@ -280,7 +280,7 @@ class LyricsPatcher(StoryPatcher):
 
 
 def main():
-    ap = common.NewArgs("Write Game Assets from Translation Files")
+    ap = common.Args("Write Game Assets from Translation Files")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="(Over)Write files straight to game directory")
     ap.add_argument("-U", "--update", dest="update", action="store_true", help="Skip already imported files")
     ap.add_argument("-FI", "--full-import", dest="fullImport", action="store_true", help="Import all available types")

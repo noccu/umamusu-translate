@@ -73,7 +73,7 @@ def replace(text: str, mode):
     return text
 
 def main():
-    ap = common.NewArgs("Process text for linebreaks (game length limits), common errors, and standardized formatting")
+    ap = common.Args("Process text for linebreaks (game length limits), common errors, and standardized formatting")
     ap.add_argument("-src", help="Target Translation File, overwrites other file options")
     ap.add_argument("-V", "--verbose", action="store_true", help="Print additional info")
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)

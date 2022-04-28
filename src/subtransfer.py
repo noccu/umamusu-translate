@@ -255,7 +255,7 @@ def process(srcFile, subFile, opts):
     p.saveSrc()
 
 def main():
-    ap = common.NewArgs("Imports translations from subtitle files. A few conventions are used.", defaultArgs=False,
+    ap = common.Args("Imports translations from subtitle files. A few conventions are used.", defaultArgs=False,
                         epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\
                         \nASS: Actor field for names, Effect field for 'choice', 'skip', 'split' (all lines)\
                         \nSRT: Prefix name 'Name: Dialogue', '>' for choices, 2+ spaces for splits (all except last line)")

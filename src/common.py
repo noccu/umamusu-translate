@@ -7,18 +7,12 @@ import regex
 from datetime import datetime, timezone
 import helpers
 
-
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
 GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
 TARGET_TYPES =  ["story", "home", "race", "lyrics", "preview"]
 
-def checkTypeValid(t):
-    if t in TARGET_TYPES: 
-        return True
-    print(f"Invalid type: {t}. Expecting one of: {', '.join(TARGET_TYPES)}")
-    raise SystemExit
 
 def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:
     found = list()
@@ -57,42 +51,6 @@ def parseStoryId(t, input, fromPath = True) -> tuple:
         if fromPath: input = input[-9:]
         return  input[:2], input[2:6], input[6:9]
 
-class Args:
-    parsed = dict()
-
-    def getArg(self, name, default=None) -> str:
-        try:
-            return self.parsed[name]
-        except KeyError:
-            return default
-
-    def setArg(self, name, val):
-        self.parsed[name] = val
-
-    def parse(self):
-        args = sys.argv[1:]
-        idx = 0
-        while idx < len(args):
-            name = args[idx]
-            if name.startswith("-"):
-                try:
-                    val = args[idx+1]
-                except IndexError:
-                    val = ""
-                if val and (not val.startswith("-") or helpers.isParseableInt(val)):
-                        # if val.startswith('"'):
-                        #     while not val.endswith('"'):
-                        #         idx += 1
-                        #         val += args[idx + 1]
-                        #     val = val[1:-1]
-                        self.setArg(name, val)
-                        idx += 2  # get next opt
-                else:
-                    self.setArg(name, True)
-                    idx += 1
-            else: raise SystemExit("Invalid arguments")
-        return self
-
 def patchVersion():
     try:
         with open(".git/refs/heads/master", "r") as f:
@@ -106,7 +64,7 @@ def patchVersion():
         return v
 
 class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTextHelpFormatter): pass
-class NewArgs(argparse.ArgumentParser):
+class Args(argparse.ArgumentParser):
     def __init__(self, desc, defaultArgs = True, **kwargs) -> None:
         if len(sys.argv) > 1 and sys.argv[1] in ("-v", "--version"):
             print(f"Patch version: {patchVersion()}")
@@ -183,8 +141,3 @@ class TranslationFile:
         self.data = helpers.readJson(self.file)
     def save(self):
         helpers.writeJson(self.file, self.data)
-
-def usage(args: str, *msg: str):
-    joinedMsg = '\n'.join(msg)
-    print(f"Usage: {sys.argv[0]} {args}\n{joinedMsg}")
-    raise SystemExit

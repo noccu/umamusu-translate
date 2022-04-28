@@ -109,7 +109,7 @@ def order():
         helpers.writeJson(file, data)
 
 def parseArgs():
-    ap = common.NewArgs("Manages localify data files for UI translations", defaultArgs=False)
+    ap = common.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument("-new", "--populate", action="store_true", help="Add dump (local or target) entries to static_en.json for translating")
     #? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to work right but ok. can't say there's no choice at least :^)
     ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump")

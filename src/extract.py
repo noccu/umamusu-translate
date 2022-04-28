@@ -333,7 +333,7 @@ def exportAsset(bundle: str, path: str, db = None):
 
 def parseArgs():
     global args
-    ap = common.NewArgs("Extract Game Assets to Translation Files")
+    ap = common.Args("Extract Game Assets to Translation Files")
     ap.add_argument("-dst")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing Translation Files")
     ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type (NOT -t). Implies -O, ignores -dst")

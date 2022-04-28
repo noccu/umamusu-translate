@@ -108,6 +108,9 @@ The structure used is simple: `00 0000 000`
 9005 | Anshinzawa Sasami
 
 # Song IDs
+
+| ID | Name |
+|----|------|
 1001 | Umapyoi Densetsu
 1004 | Never Looking Back
 1005 | Irodori Phantasia

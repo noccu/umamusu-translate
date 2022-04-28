@@ -79,6 +79,7 @@ machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Tr
 names | Translates name fields in *Translation Files* using data from the [db-translate project][].
 textprocess | Processes dialogue text in *Translation Files* in various ways. Main use is adjusting lengths of lines for game display.
 subtransfer | Imports ASS, SRT or TXT subtitle files into *Translation Files*. A few conventions must be followed, see -h.
+edit_story | GUI for editing *Translation Files* by [KevinVG207](https://github.com/KevinVG207).
 manage | Small tool to manage localify's data for translating static strings. Requires use of [umamusume-localify][].
 common/helpers | Not scripts. Holds shared functions and data for other scripts.
 

@@ -1,14 +1,8 @@
+from argparse import SUPPRESS
 import common
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
-
-args = common.Args().parse()
-TARGET_FILE = args.getArg("-src", False)
-TARGET_TYPE = args.getArg("-t", "story").lower()
-TARGET_GROUP = args.getArg("-g", False)
-TARGET_ID = args.getArg("-id", False)
-TARGET_IDX = args.getArg("-idx", False)
 
 
 def change_chapter(event = None):
@@ -255,10 +249,14 @@ def main():
     cur_block = 0
     cur_choices_texts = list()
 
-    if TARGET_FILE:
-        files = [TARGET_FILE]
+    ap = common.Args("Story editor")
+    ap.add_argument("-src")
+    ap.add_argument("-dst", help=SUPPRESS)
+    args = ap.parse_args()
+    if args.src:
+        files = [args.src]
     else:
-        files = common.searchFiles(TARGET_TYPE, TARGET_GROUP, TARGET_ID, TARGET_IDX)
+        files = common.searchFiles(args.type, args.group, args.id, args.idx)
 
     files.sort()
 

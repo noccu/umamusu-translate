@@ -61,7 +61,7 @@ def load_block(event = None, loadBlocks = False, reload = False):
     block_dropdown.current(cur_block)
 
     cur_block_data =  blocks[cur_block]
-    next_index = cur_block_data['nextBlock'] - 1
+    next_index = cur_block_data.get('nextBlock', cur_block + 2 if cur_block + 1 < len(blocks) else 0) - 1
     if next_index < 1:
         next_index = -1
     if next_index > 0:
@@ -73,9 +73,9 @@ def load_block(event = None, loadBlocks = False, reload = False):
 
     # Fill in the text boxes
     speaker_jp_entry.delete(0, tk.END)
-    speaker_jp_entry.insert(0, cur_block_data['jpName'])
+    speaker_jp_entry.insert(0, cur_block_data.get('jpName', ""))
     speaker_en_entry.delete(0, tk.END)
-    speaker_en_entry.insert(0, cur_block_data['enName'])
+    speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
 
     # Spinbox for text block duration
     block_duration_spinbox.delete(0, tk.END)
@@ -120,7 +120,8 @@ def save_block():
     global block_duration_spinbox
 
     cur_file = files[cur_chapter]
-    cur_file.textBlocks[cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
+    if "enName" in cur_file.textBlocks[cur_block]: 
+        cur_file.textBlocks[cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
     cur_file.textBlocks[cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
 
     if cur_choices and cur_choices_texts:

@@ -57,6 +57,7 @@ Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
 Silence Suzuka | Complete | [LotoDS][]
+Smart Falcon | Complete | deepl (contributed by CryDuringItAll)
 Special Week | Complete | Mann
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]

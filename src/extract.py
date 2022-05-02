@@ -115,7 +115,7 @@ def extractAsset(path, storyId, tlFile = None):
                     if isPatched(textData): return
 
                     if "origClipLength" in textData:
-                        print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
+                        if args.verbose: print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
                         clipsToUpdate = list()
                         for trackGroup in block['CharacterTrackList']:
                             for key in trackGroup.keys():
@@ -131,9 +131,9 @@ def extractAsset(path, storyId, tlFile = None):
                                     animGroupData['origLen'] = animData['ClipLength']
                                     animGroupData['pathId'] = clipPathId
                                     textData['animData'].append(animGroupData)
-                                else:
+                                elif args.verbose:
                                     print(f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}")
-                        else:
+                        elif args.verbose:
                             print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
 
                     textData['pathId'] = pathId  # important for re-importing
@@ -338,6 +338,7 @@ def parseArgs():
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing Translation Files")
     ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type (NOT -t). Implies -O, ignores -dst")
     ap.add_argument("-upg", "--upgrade", action="store_true", help="Attempt tlfile version upgrade. Implies -O")
+    ap.add_argument("-v", "--verbose", action="store_true", help="Print extra info")
     args = ap.parse_args()
 
     if args.dst is None: args.dst = PurePath("translations").joinpath(args.type)

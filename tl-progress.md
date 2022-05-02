@@ -48,6 +48,7 @@ Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | In progress | [Snep][]
 Maruzensky | Complete | [noccu][]
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
+Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1EeJrGT5gFchEZTnx68A) (ep 1)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)

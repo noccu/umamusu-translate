@@ -36,6 +36,8 @@ class TextLine:
 #         return None
 
 class BasicSubProcessor:
+    skipNames = ["<username>", "", "モノローグ"]
+
     #todo: Make options optional and deal with defaults here
     def __init__(self, srcFile, options: dict) -> None:
         self.srcFile = common.TranslationFile(srcFile)
@@ -43,7 +45,6 @@ class BasicSubProcessor:
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         self.options = options
-        self.skipNames = ["<username>", "", "モノローグ"]
 
     def saveSrc(self):
         self.srcFile.save()
@@ -90,18 +91,17 @@ class BasicSubProcessor:
                         m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
                         if m:
                             text = m.group(1)
-
         return text
 
     def preprocess(self):
         filter = self.options[Options.FILTER]
         for line in self.subLines:
+            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
+                line.effect = "choice"
             if filter and "npre" in filter:
                 m = re.match(r"\[?([^\]:]+)\]?: (.+)", line.text, flags=re.DOTALL)
                 if m:
                     line.name, line.text = m.group(1,2)
-            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
-                line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
     def duplicateSub(self, idx: int, line: TextLine = None):

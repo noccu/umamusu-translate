@@ -80,7 +80,7 @@ class BasicSubProcessor:
         return self.srcLines[idx]['blockIdx']
 
     def cleanLine(self, text):
-        if text.startswith(">"): text = text[1:]
+        if text.startswith(self.options.choicePrefix): text = text[len(self.options.choicePrefix):]
         return text
 
     def filter(self, line: TextLine, target):

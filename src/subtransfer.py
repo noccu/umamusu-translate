@@ -11,12 +11,24 @@ class SubFormat(Enum):
     SRT = auto()
     ASS = auto()
     TXT = auto()
-class Options(Enum):
-    OVERRIDE_NAMES = "ovrNames"
-    DUPE_CHECK_ALL = "dupeCheckAll"
-    FILTER = "filter"
-    CHOICE_PREFIX = "cpre"
 
+class SubTransferOptions():
+    def __init__(self) -> None:
+        self.setDefault()
+    # separate so it can be used to reset
+    def setDefault(self):
+        self.overrideNames = False
+        self.dupeCheckAll = False
+        self.filter = None
+        self.choicePrefix = ">"
+        
+    @classmethod
+    def fromArgs(cls, args):
+        o = cls()
+        for k, v in vars(args).items():
+            if hasattr(o, k):
+                setattr(o, k, v)
+        return o
 
 class TextLine:
     def __init__(self, text, name = "", effect = "") -> None:
@@ -27,20 +39,10 @@ class TextLine:
     def isChoice(self) -> bool:
         return self.effect == "choice"
 
-# class Options():
-#     def __init__(self, opts: dict) -> None:
-#         for arg, val in opts.items():
-#             if arg == "filter":
-#                 val = val.split(",")
-#             setattr(self, arg, val)
-#     def __getattr__(self, attr):
-#         return None
-
 class BasicSubProcessor:
     skipNames = ["<username>", "", "モノローグ"]
 
-    #todo: Make options optional and deal with defaults here
-    def __init__(self, srcFile, options: dict) -> None:
+    def __init__(self, srcFile, options = SubTransferOptions()):
         self.srcFile = common.TranslationFile(srcFile)
         self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
@@ -59,7 +61,7 @@ class BasicSubProcessor:
         if "jpName" in self.srcLines[idx]:
             if self.srcLines[idx]['jpName'] in self.skipNames:
                 self.srcLines[idx]['enName'] = "" # forcefully clear names that should not be translated
-            elif line.name and (not self.srcLines[idx]['enName'] or self.options[Options.OVERRIDE_NAMES]):
+            elif line.name and (not self.srcLines[idx]['enName'] or self.options.overrideNames):
                 self.srcLines[idx]['enName'] = line.name
 
     def getChoices(self, idx):
@@ -82,7 +84,7 @@ class BasicSubProcessor:
         return text
 
     def filter(self, line: TextLine, target):
-        filter = self.options[Options.FILTER]
+        filter = self.options.filter
         if filter:
             if "npre" in filter:
                 m = re.match(r"\[?([^\]:]+)\]?: (.+)", line.text, flags=re.DOTALL)
@@ -100,7 +102,7 @@ class BasicSubProcessor:
 
     def preprocess(self):
         for line in self.subLines:
-            if not line.effect and (line.text.startswith(self.options[Options.CHOICE_PREFIX])):
+            if not line.effect and (line.text.startswith(self.options.choicePrefix)):
                 line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
@@ -125,7 +127,7 @@ class BasicSubProcessor:
         if self.srcFile.type != "story": return False
         prevName = self.srcLines[idx - 1]['jpName']
         curName = self.srcLines[idx]['jpName']
-        if not Options.DUPE_CHECK_ALL in self.options and curName not in self.skipNames: return False
+        if not self.options.dupeCheckAll and curName not in self.skipNames: return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx-1)) > 0.6
 
 class AssSubProcessor(BasicSubProcessor):
@@ -190,7 +192,7 @@ class TxtSubProcessor(BasicSubProcessor):
     def preprocess(self, raw):
         self.subLines = [TextLine(l) for l in raw if helpers.isEnglish(l) and not re.match(r"\n+\s*", l)]
 
-def process(srcFile, subFile, opts):
+def process(srcFile, subFile, opts: SubTransferOptions):
     format = subFile[-3:]
     if format == "srt":
         p = SrtSubProcessor(srcFile, subFile, opts)
@@ -261,20 +263,15 @@ def main():
                         \nSRT: Prefix name 'Name: Dialogue', '>' for choices, 2+ spaces for splits (all except last line)")
     ap.add_argument("src", help="Target Translation File, overwrites other file options")
     ap.add_argument("sub", help="Target subtitle file. Supports ASS, SRT, TXT")
-    ap.add_argument("-OVRNAMES", action="store_true", help="Replace existing names with names from subs")
-    ap.add_argument("-DUPEALL", action="store_true", help="Check all lines for duplicates instead of only trainer's/narration")
+    ap.add_argument("-OVRNAMES", dest="overrideNames", action="store_true", help="Replace existing names with names from subs")
+    ap.add_argument("-DUPEALL", dest="dupeCheckAll", action="store_true", help="Check all lines for duplicates instead of only trainer's/narration")
     ap.add_argument("-filter", nargs="+", choices=["npre", "brak"],
                     help="Process some common patterns (default: %(default)s)\
                     \nnpre: remove char name prefixes and extract them to enName field\
                     \nbrak: sync enclosing brackets with original text")
-    ap.add_argument("-cpre", default=">", help="Prefix string that marks choices")
+    ap.add_argument("-cpre", dest="choicePrefix", default=">", help="Prefix string that marks choices")
     args = ap.parse_args()
-    process(args.src, args.sub, {
-        Options.OVERRIDE_NAMES: args.OVRNAMES,
-        Options.DUPE_CHECK_ALL: args.DUPEALL,
-        Options.FILTER: args.filter,
-        Options.CHOICE_PREFIX: args.cpre
-        })
+    process(args.src, args.sub, SubTransferOptions.fromArgs(args))
     print("Successfully transferred.")
 
 if __name__ == '__main__':

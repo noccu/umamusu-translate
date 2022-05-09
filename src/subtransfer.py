@@ -36,6 +36,8 @@ class TextLine:
 #         return None
 
 class BasicSubProcessor:
+    skipNames = ["<username>", "", "モノローグ"]
+
     #todo: Make options optional and deal with defaults here
     def __init__(self, srcFile, options: dict) -> None:
         self.srcFile = common.TranslationFile(srcFile)
@@ -43,7 +45,6 @@ class BasicSubProcessor:
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         self.options = options
-        self.skipNames = ["<username>", "", "モノローグ"]
 
     def saveSrc(self):
         self.srcFile.save()
@@ -53,7 +54,7 @@ class BasicSubProcessor:
     def getEn(self, idx):
         return TextLine(self.srcLines[idx]['enText'], self.srcLines[idx]['enName'])
     def setEn(self, idx, line: TextLine):
-        self.srcLines[idx]['enText'] = self.filter(line.text, self.srcLines[idx])
+        self.srcLines[idx]['enText'] = self.filter(line, self.srcLines[idx])
         if "jpName" in self.srcLines[idx]:
             if self.srcLines[idx]['jpName'] in self.skipNames:
                 self.srcLines[idx]['enName'] = "" # forcefully clear names that should not be translated
@@ -63,14 +64,14 @@ class BasicSubProcessor:
     def getChoices(self, idx):
         if not "choices" in self.srcLines[idx]: return None
         else: return self.srcLines[idx]['choices']
-    def setChoices(self, idx, cIdx, text):
+    def setChoices(self, idx, cIdx, line: TextLine):
         if not "choices" in self.srcLines[idx]: return None
         else:
             if (cIdx):
-                self.srcLines[idx]['choices'][cIdx]['enText'] = self.filter(text, self.srcLines[idx]['choices'][cIdx])
+                self.srcLines[idx]['choices'][cIdx]['enText'] = self.filter(line, self.srcLines[idx]['choices'][cIdx])
             else:
                 for entry in self.srcLines[idx]['choices']:
-                    entry['enText'] = self.filter(text, entry)
+                    entry['enText'] = self.filter(line, entry)
 
     def getBlockIdx(self, idx):
         return self.srcLines[idx]['blockIdx']
@@ -79,29 +80,27 @@ class BasicSubProcessor:
         if text.startswith(">"): text = text[1:]
         return text
 
-    def filter(self, text, target):
+    def filter(self, line: TextLine, target):
         filter = self.options[Options.FILTER]
         if filter:
-            if "brak" in filter:
-                if target['jpText'].startswith("（"):
-                    if not text.startswith("("):
-                        text = f"({text})"
-                elif text.startswith("("):
-                        m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
-                        if m:
-                            text = m.group(1)
-
-        return text
-
-    def preprocess(self):
-        filter = self.options[Options.FILTER]
-        for line in self.subLines:
-            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
-                line.effect = "choice"
-            if filter and "npre" in filter:
+            if "npre" in filter:
                 m = re.match(r"\[?([^\]:]+)\]?: (.+)", line.text, flags=re.DOTALL)
                 if m:
                     line.name, line.text = m.group(1,2)
+            if "brak" in filter:
+                if target['jpText'].startswith("（"):
+                    if not line.text.startswith("("):
+                        line.text = f"({line.text})"
+                elif line.text.startswith("("):
+                        m = re.match(r"^\((.+)\)$", line.text, flags=re.DOTALL)
+                        if m:
+                            line.text = m.group(1)
+        return line.text
+
+    def preprocess(self):
+        for line in self.subLines:
+            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
+                line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
     def duplicateSub(self, idx: int, line: TextLine = None):
@@ -110,7 +109,7 @@ class BasicSubProcessor:
         choices = self.getChoices(idx-1)
         if choices and self.getChoices(idx):
             for c, choice in enumerate(choices):
-                self.setChoices(idx, c, choice['enText'])
+                self.setChoices(idx, c, TextLine(choice['enText']))
 
         # Add sub text to matching (next) block and return it as new pos
         if line:
@@ -222,10 +221,10 @@ def process(srcFile, subFile, opts):
                     print(f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping...")
                     continue
                 if lastChoice[0] == idx: # Try adding multiple choice translations
-                    try: p.setChoices(idx-1, lastChoice[1], subLine.text)
+                    try: p.setChoices(idx-1, lastChoice[1], subLine)
                     except IndexError: print(f"Choice idx error at {p.getBlockIdx(idx-1)}")
                 else: # Copy text to all choices
-                    p.setChoices(idx-1, None, subLine.text)
+                    p.setChoices(idx-1, None, subLine)
                 lastChoice[0] = idx
                 lastChoice[1] += 1
                 continue # don't increment idx

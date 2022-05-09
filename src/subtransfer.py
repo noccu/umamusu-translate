@@ -15,6 +15,7 @@ class Options(Enum):
     OVERRIDE_NAMES = "ovrNames"
     DUPE_CHECK_ALL = "dupeCheckAll"
     FILTER = "filter"
+    CHOICE_PREFIX = "cpre"
 
 
 class TextLine:
@@ -99,7 +100,7 @@ class BasicSubProcessor:
 
     def preprocess(self):
         for line in self.subLines:
-            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
+            if not line.effect and (line.text.startswith(self.options[Options.CHOICE_PREFIX])):
                 line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
@@ -266,11 +267,13 @@ def main():
                     help="Process some common patterns (default: %(default)s)\
                     \nnpre: remove char name prefixes and extract them to enName field\
                     \nbrak: sync enclosing brackets with original text")
+    ap.add_argument("-cpre", default=">", help="Prefix string that marks choices")
     args = ap.parse_args()
     process(args.src, args.sub, {
         Options.OVERRIDE_NAMES: args.OVRNAMES,
         Options.DUPE_CHECK_ALL: args.DUPEALL,
-        Options.FILTER: args.filter
+        Options.FILTER: args.filter,
+        Options.CHOICE_PREFIX: args.cpre
         })
     print("Successfully transferred.")
 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Umamusume DB Translate">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Translates master.mdb for in-game english translation">
+    <title>Umamusume DB Translate</title>
+    <script src="./script.js" defer></script>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA==" crossorigin="anonymous">
+    <style type="text/css">
+    html, body, .container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .jumbotron {
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    #tl-prog-cont {
+      visibility: hidden;
+    }
+    #tl-prog-cont > * {
+      display: block;
+      margin: auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex align-items-center">
+      <div class="jumbotron">
+        <h2>Umamusume DB Translate</h2>
+        <p>
+          This tool aims to translate a portion of Uma Musume ingame text by patching relevant tables in the <code>master.mdb</code> file.<br/>
+          This process is done completely in the browser. To contribute or get more details, please check the <a id="repo-link" href="https://github.com/noccu/umamusume-db-translate">GitHub Repository</a>.
+        </p>
+        <h3>Usage</h3>
+        <ol>
+          <li>Locate your <code>master.mdb</code> file after clicking the button below, or drag and drop it in the area</li>
+          <small>By default it is located at <code>C:\Users\YourUsername\AppData\LocalLow\Cygames\umamusume\master\master.mdb</code></small>
+          <li>Replace the game <code>master.mdb</code> file with the translated <code>master.mdb</code> file</li>
+        </ol>
+        <div class="text-center m-4">
+          <div id="overrides" class="text-justify text-secondary">
+            <div class="form-row">
+              <!-- Add additional field sets for new options. -->
+              <fieldset class="form-group col-auto">
+                <h6 class="">Skill descriptions</h6>
+                <div class="form-check">
+                  <input checked type="radio" name="opt-skill" value="desc" id="opt-skill-desc" class="form-check-input">
+                  <label for="opt-skill-desc" class="form-check-label">Flavour text (Original)</label>
+                </div>
+                <div class="form-check">
+                  <input type="radio" name="opt-skill" value="data" id="opt-skill-data" class="form-check-input">
+                  <label for="opt-skill-data" class="form-check-label">Data values (Effects & Conditions)</label>
+                  <small class="d-block">For a handful of skills, subtleties only present in flavour text will be lost.</small>
+                </div>
+              </fieldset>
+            </div>
+            <!-- <fieldset> -->
+            <!-- <legend>Skill descriptions:</legend> -->
+            <!-- </fieldset> -->
+            <!-- <div class="form-group">            </div> -->
+          </div>
+          <input id="dbfile" type="file" hidden>
+          <label for="dbfile" class="btn btn-lg btn-primary">Choose File</label>
+          <div id="tl-prog-cont">
+            <label for="tl-progress">Translating<span id="tl-progress-part"></span>...</label>
+            <progress id="tl-progress" value="0" max="100"></progress>
+          </div>
+          <div id="upd-info">Last update on <span id="upd-time">whenever</span> based on <a id="upd-sha" href="https://github.com/noccu/umamusume-db-translate/commits">commits</a>.</div>
+        </div>
+        
+        <h3>Support the project</h3>
+          <ol>
+            <a href="https://ko-fi.com/noccyu" id="ns-kofi" style="display: none;">Support on Ko-fi</a>
+            <script type='text/javascript'>if (!window.kofiwidget2) {document.getElementById("ns-kofi").style.display = "initial"} else {kofiwidget2.init('Support on Ko-fi', '#29abe0', 'D1D0MUIZ');kofiwidget2.draw();}</script>
+          </ol>
+        <h3>Notes and Caveats</h3>
+        <ul>
+          <li>
+            This process modifies game files and is <strong>NOT</strong> allowed per game Terms of Service!<br/>
+            Use this tool at your own risk! You are responsible for any actions taken to your account!
+          </li>
+          <li>Not all ingame text is in <code>master.mdb</code>, so this method does not fully translate the game; e.g. story text remains intact.</li>
+          <small>For translations of other game parts, check out <a href="https://github.com/noccu/umamusu-translate">this project</a>.</small>
+          <li>There are length limits so some things may get cut off or look wonky.</li>
+          <li>If the game is updated and <code>master.mdb</code> is replaced, you will need to redo the process.</li>
+          <li>This tool is made primarily for <a href="https://dmg.umamusume.jp/">DMM (Windows) distribution of the game</a>, as it is way easier to replace the file.</li>
+          <small>On android it's in <code>root/data/data/jp.co.cygames.umamusume/files/master/master.mdb</code> and requires root access.</small><br>
+          <small>It's likely not possible on iOS.</small>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

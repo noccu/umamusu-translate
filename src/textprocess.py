@@ -22,8 +22,8 @@ def cleannewLines(text: str):
 def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     #todo: Find better way to deal with options
     numLines: int = overrides.get("numLines", 0)
-    targetLines: int = overrides.get("targetLines", opts["targetLines"])
-    lineLen: int = overrides.get("lineLength", opts["lineLength"])
+    targetLines: int = overrides.get("targetLines", opts.get("targetLines", 3))
+    lineLen: int = overrides.get("lineLength", opts.get("lineLength", 45))
 
     if len(text) < lineLen:
         if opts["verbose"]: print("Short text line, skipping: ", text)

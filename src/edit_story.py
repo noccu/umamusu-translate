@@ -314,10 +314,8 @@ def main():
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
 
-    root.bind("<Control-Enter>", next_block)
-    root.bind("<Alt-Enter>", next_block)
-    root.bind("<Control-S>", saveFile)
-    root.bind("<Alt-S>", saveFile)
+    root.bind("<Control-Return>", next_block)
+    root.bind("<Control-s>", saveFile)
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
     root.bind("<Alt-Right>", copy_block)

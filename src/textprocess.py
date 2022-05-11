@@ -5,14 +5,14 @@ from math import ceil
 import helpers
 
 REPLACEMENT_DATA = None
-
+LL_CACHE = None, None
 
 def processText(file: TranslationFile, text: str, opts: dict):
     if opts.get("redoNewlines"):
         text = cleannewLines(text)
     if opts.get("replaceMode"):
         text = replace(text, opts["replaceMode"])
-    if opts.get("lineLength") not in (0, None):
+    if opts.get("lineLength") != 0:
         text = adjustLength(file, text, opts)
     return text
 
@@ -23,7 +23,8 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     #todo: Find better way to deal with options
     numLines: int = overrides.get("numLines", 0)
     targetLines: int = overrides.get("targetLines", opts.get("targetLines", 3))
-    lineLen: int = overrides.get("lineLength", opts.get("lineLength", 45))
+    lineLen: int = overrides.get("lineLength", opts.get("lineLength", -1))
+    if lineLen == -1: lineLen = calcLineLen(file, opts.get('verbose'))
 
     if len(text) < lineLen:
         if opts["verbose"]: print("Short text line, skipping: ", text)
@@ -78,7 +79,7 @@ def main():
     ap.add_argument("-V", "--verbose", action="store_true", help="Print additional info")
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
     #Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
-    ap.add_argument("-ll", dest="lineLength", type=int, help="Characters per line. Default: 65 for landscape, 45 otherwise")
+    ap.add_argument("-ll", dest="lineLength", default=-1, type=int, help="Characters per line. 0: disable, -1: auto")
     ap.add_argument("-nl", dest="redoNewlines", action="store_true", help="Remove existing newlines for complete reformatting")
     ap.add_argument("-rep", dest="replaceMode", choices=["all", "limit", "none"], default="limit", help="Mode/aggressiveness of replacements")
     # 3 is old max and visually ideal as intended by the game. Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
@@ -93,23 +94,28 @@ def processFiles(args):
     else:
         files = common.searchFiles(args.type, args.group, args.id, args.idx)
     print(f"Processing {len(files)} files...")
-    useDynamicLength = args.lineLength is None
-    if useDynamicLength: print(f"Automatically setting line length based on story type/id")
+    if args.lineLength == -1: print(f"Automatically setting line length based on story type/id")
     for file in files:
         file = common.TranslationFile(file)
-
-        if useDynamicLength:
-            if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
-                args.lineLength = 65
-            else:
-                args.lineLength = 45
-            if args.verbose: print(f"Line length set to {args.lineLength} for {file.name}")
 
         for block in file.genTextContainers():
             if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
             block['enText'] = processText(file, block['enText'], vars(args))
         file.save()
     print("Files processed.")
+
+def calcLineLen(file: TranslationFile, verbose):
+    global LL_CACHE
+    if LL_CACHE[0] is file: # should be same as id() -> fast
+        return LL_CACHE[1]
+
+    if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
+        lineLength = 65
+    else:
+        lineLength = 45
+    LL_CACHE = file, lineLength
+    if verbose: print(f"Line length set to {lineLength} for {file.name}")
+    return lineLength
 
 if __name__ == '__main__':
     main()

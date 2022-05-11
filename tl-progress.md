@@ -47,6 +47,7 @@ Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | In progress | [Snep][]
 Maruzensky | Complete | [noccu][]
+Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
 Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1EeJrGT5gFchEZTnx68A) (ep 1)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
@@ -137,3 +138,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Ben]: https://www.youtube.com/user/sheepawolf
 [Eight]: https://twitter.com/hachikure
 [XiantheMiguel]: https://twitter.com/XiantheMiguel
+[Mini Fox]: https://github.com/MiniFoxx

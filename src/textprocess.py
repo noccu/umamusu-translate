@@ -27,7 +27,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     if lineLen == -1: lineLen = calcLineLen(file, opts.get('verbose'))
 
     if len(text) < lineLen:
-        if opts["verbose"]: print("Short text line, skipping: ", text)
+        if opts.get("verbose"): print("Short text line, skipping: ", text)
         return text
 
     if lineLen > 0:
@@ -35,7 +35,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         lines = text.splitlines()
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
-            if opts["verbose"]: print("Text passes length check, skipping: ", text)
+            if opts.get("verbose"): print("Text passes length check, skipping: ", text)
             return text.replace("\n", "\\n") if file.type == "race" else text
 
         #adjust if not
@@ -45,7 +45,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         nLines = len(lines)
         if nLines > 1 and len(lines[-1]) < lineLen / 3.25:
             linesStr = '\n\t'.join(lines)
-            if opts["verbose"]: print(f"Last line is short, balancing on line number:\n\t{linesStr}")
+            if opts.get("verbose"): print(f"Last line is short, balancing on line number:\n\t{linesStr}")
             return adjustLength(file, text, opts, lineLength = 0, numLines = nLines, targetLines = targetLines)
 
     elif numLines > 0:

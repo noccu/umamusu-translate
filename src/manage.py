@@ -117,12 +117,12 @@ def parseArgs():
     ap.add_argument("-clean", default=False, const=True, nargs="?", help="Remove untranslated entries from tl file, or local dump and tl file")
     ap.add_argument("-sort", "-order", action="store_true", help="Sort keys in local dump and final file")
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite/update local dump keys instead of only adding new ones")
-    ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save")
-    ap.add_argument("-M", "--move", action="store_true", help="Move final static.json to game dir")
-    ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath, help="Target dump file for imports")
+    ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save and -src (auto mode, can be overridden)")
+    ap.add_argument("-M", "--move", action="count", default=False, help="Move final static.json to game dir")
+    ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath, help="Target dump file for imports. When given without value: auto-detect in game dir")
     args = ap.parse_args()
 
-    if args.src is None:
+    if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
         path = helpers.getUmaInstallPath()
         if path: path = path.joinpath("dump.txt")
         else: print("Couldn't find game path.")
@@ -136,8 +136,6 @@ def parseArgs():
     DUMP_FILE = args.src
     return args
 
-# Usage: use localify dll to dump entries
-# use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
 def main():
     args = parseArgs()
     if not any([args.populate, args.update, args.clean, args.import_only, args.sort, args.move]):
@@ -166,9 +164,10 @@ def main():
     if args.move:
         path = helpers.getUmaInstallPath()
         if path:
-            path = path.joinpath("localized_data", "static.json")
-            shutil.copyfile(HASH_FILE, path)
+            shutil.copyfile(HASH_FILE, path.joinpath("localized_data", "static.json"))
+            if args.move > 1: shutil.copyfile(TL_FILE, path.joinpath("localized_data", "static_en.json"))
         else:
             print("Couldn't find game path, static.json not moved.")
 
-main()
+if __name__ == '__main__':
+    main()

@@ -103,7 +103,7 @@ def extractAsset(path, storyId, tlFile = None):
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
         else:
-            export['storyId'] = "".join(storyId) if args.type == "home" else  tree['StoryId']
+            export['storyId'] = "".join(storyId) if args.type == "home" else tree['StoryId']
             export['title'] = tree['Title']
 
             for block in tree['BlockList']:
@@ -289,9 +289,13 @@ def exportData(data, filepath: str):
         helpers.writeJson(filepath, data)
         
 def exportAsset(bundle: str, path: str, db = None):
-    if bundle is None:
+    if bundle is None: # update mode
+        assert db is not None
         tlFile = common.TranslationFile(path)
         storyId = tlFile.getStoryId()
+        if args.upgrade and tlFile.version == common.TranslationFile.latestVersion:
+            print(f"File already on latest version, skipping: {path}")
+            return
         bundle, _ = queryDB(db, storyId)[0]
     else: # make sure tlFile is set for the call later
         tlFile = None

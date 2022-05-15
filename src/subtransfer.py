@@ -51,6 +51,12 @@ class BasicSubProcessor:
         self.format = SubFormat.NONE
         self.options = options
 
+        self.choiceName = None
+        if len(options.choicePrefix) > 1:
+            idx = options.choicePrefix.rfind(":") # update this when npre logic changes
+            if idx > 0:
+                self.choiceName = options.choicePrefix[0:idx]
+
     def saveSrc(self):
         self.srcFile.save()
 
@@ -108,7 +114,7 @@ class BasicSubProcessor:
                 line.name = lastName
             else:
                 lastName = line.name
-            if not line.effect and (line.text.startswith(self.options.choicePrefix)):
+            if not line.effect and (line.text.startswith(self.options.choicePrefix) or line.name == self.choiceName):
                 line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
@@ -279,7 +285,7 @@ def main():
     ap.add_argument("-filter", nargs="+", choices=["brak"],
                     help="Process some common patterns (default: %(default)s)\
                     \nbrak: sync enclosing brackets with original text")
-    ap.add_argument("-cpre", dest="choicePrefix", default=">", help="Prefix string that marks choices")
+    ap.add_argument("-cpre", dest="choicePrefix", default=">", help="Prefix string that marks choices.\nChecks name as a special case if prefix includes ':'")
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     args = ap.parse_args()
     process(args.src, args.sub, SubTransferOptions.fromArgs(args))

@@ -41,6 +41,7 @@ class TextLine:
 
 class BasicSubProcessor:
     skipNames = ["<username>", "", "モノローグ"]
+    npreRe = re.compile(r"\[?([^\]:]+)\]?: (.+)", flags=re.DOTALL)
 
     def __init__(self, srcFile, options = SubTransferOptions()):
         self.srcFile = common.TranslationFile(srcFile)
@@ -86,10 +87,6 @@ class BasicSubProcessor:
     def filter(self, line: TextLine, target):
         filter = self.options.filter
         if filter:
-            if "npre" in filter:
-                m = re.match(r"\[?([^\]:]+)\]?: (.+)", line.text, flags=re.DOTALL)
-                if m:
-                    line.name, line.text = m.group(1,2)
             if "brak" in filter:
                 if target['jpText'].startswith("（"):
                     if not line.text.startswith("("):
@@ -102,6 +99,9 @@ class BasicSubProcessor:
 
     def preprocess(self):
         for line in self.subLines:
+            m = self.npreRe.match(line.text)
+            if m:
+                line.name, line.text = m.group(1,2)
             if not line.effect and (line.text.startswith(self.options.choicePrefix)):
                 line.effect = "choice"
             line.text = self.cleanLine(line.text)
@@ -265,9 +265,8 @@ def main():
     ap.add_argument("sub", help="Target subtitle file. Supports ASS, SRT, TXT")
     ap.add_argument("-OVRNAMES", dest="overrideNames", action="store_true", help="Replace existing names with names from subs")
     ap.add_argument("-DUPEALL", dest="dupeCheckAll", action="store_true", help="Check all lines for duplicates instead of only trainer's/narration")
-    ap.add_argument("-filter", nargs="+", choices=["npre", "brak"],
+    ap.add_argument("-filter", nargs="+", choices=["brak"],
                     help="Process some common patterns (default: %(default)s)\
-                    \nnpre: remove char name prefixes and extract them to enName field\
                     \nbrak: sync enclosing brackets with original text")
     ap.add_argument("-cpre", dest="choicePrefix", default=">", help="Prefix string that marks choices")
     args = ap.parse_args()

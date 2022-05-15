@@ -343,6 +343,7 @@ def parseArgs():
 
     if args.dst is None: args.dst = PurePath("translations").joinpath(args.type)
     if args.upgrade or args.update: args.overwrite = True
+    if isinstance(args.update, list) and len(args.update) == 0: args.update = common.TARGET_TYPES
 
 def main():
     parseArgs()
@@ -353,6 +354,7 @@ def main():
             # check if a type was specifically given and use that if so, otherwise use all
             for type in args.update or common.TARGET_TYPES:
                 args.dst = PurePath("translations").joinpath(type)
+                args.type = type
                 files = common.searchFiles(type, args.group, args.id, args.idx)
                 print(f"Found {len(files)} files for {type}.")
                 for i, file in enumerate(files):

@@ -33,7 +33,7 @@ class SubTransferOptions():
 class TextLine:
     def __init__(self, text, name = "", effect = "") -> None:
         self.text: str = text
-        self.name: str = name.lower()
+        self.name: str = name
         self.effect: str = effect.lower()
 
     def isChoice(self) -> bool:

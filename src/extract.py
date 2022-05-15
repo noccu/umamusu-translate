@@ -336,8 +336,8 @@ def parseArgs():
     ap = common.Args("Extract Game Assets to Translation Files")
     ap.add_argument("-dst")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing Translation Files")
-    ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type (NOT -t). Implies -O, ignores -dst")
-    ap.add_argument("-upg", "--upgrade", action="store_true", help="Attempt tlfile version upgrade. Implies -O")
+    ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type.\nImplies -O, ignores -dst and -t")
+    ap.add_argument("-upg", "--upgrade", action="store_true", help="Attempt tlfile version upgrade with minimal extraction.\nCan be used on patched files. Implies -O")
     ap.add_argument("-v", "--verbose", action="store_true", help="Print extra info")
     args = ap.parse_args()
 

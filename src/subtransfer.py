@@ -21,6 +21,7 @@ class SubTransferOptions():
         self.dupeCheckAll = False
         self.filter = None
         self.choicePrefix = ">"
+        self.strictChoices = True
         
     @classmethod
     def fromArgs(cls, args):
@@ -212,7 +213,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
     storyType = p.srcFile.type
     idx = 0
     srcLen = len(p.srcLines)
-    lastChoice = [0, 0]
+    lastChoice = [0, 0] # text idx, choice idx
 
     for subLine in p.subLines:
         if idx == srcLen:
@@ -225,17 +226,22 @@ def process(srcFile, subFile, opts: SubTransferOptions):
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":
             if subLine.isChoice():
-                if not p.getChoices(idx-1):
+                skipLine = True
+                if p.getChoices(idx-1):
+                    if lastChoice[0] == idx: # Try adding multiple choice translations
+                        try: p.setChoices(idx-1, lastChoice[1], subLine)
+                        except IndexError:
+                            # can give false positives
+                            skipLine = opts.strictChoices
+                            print(f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}")
+                    else: # Copy text to all choices
+                        p.setChoices(idx-1, None, subLine)
+                    lastChoice[0] = idx
+                    lastChoice[1] += 1
+                    if skipLine: continue # don't increment idx
+                elif opts.strictChoices:
                     print(f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping...")
                     continue
-                if lastChoice[0] == idx: # Try adding multiple choice translations
-                    try: p.setChoices(idx-1, lastChoice[1], subLine)
-                    except IndexError: print(f"Choice idx error at {p.getBlockIdx(idx-1)}")
-                else: # Copy text to all choices
-                    p.setChoices(idx-1, None, subLine)
-                lastChoice[0] = idx
-                lastChoice[1] += 1
-                continue # don't increment idx
             elif idx > 0 and p.getChoices(idx-1) and idx - lastChoice[0] > 0:
                 print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
             lastChoice[1] = 0
@@ -274,6 +280,7 @@ def main():
                     help="Process some common patterns (default: %(default)s)\
                     \nbrak: sync enclosing brackets with original text")
     ap.add_argument("-cpre", dest="choicePrefix", default=">", help="Prefix string that marks choices")
+    ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     args = ap.parse_args()
     process(args.src, args.sub, SubTransferOptions.fromArgs(args))
     print("Successfully transferred.")

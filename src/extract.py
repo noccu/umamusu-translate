@@ -60,7 +60,7 @@ def extractAsset(path, storyId, tlFile = None):
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': 5,
+            'version': common.TranslationFile.latestVersion,
             'bundle': env.file.name,
             'type': args.type,
             'storyId': "",

@@ -80,6 +80,7 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-dst", default=Path("dat/").resolve())
 
 class TranslationFile:
+    latestVersion = 5
     def __init__(self, file):
         self.file = file
         self.name = PurePath(file).name

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "O2DN57GR5HSZKRHBC26VRQPAZPD645JH",
     "type": "story",
     "storyId": "020001021",
@@ -11,6 +11,7 @@
             "jpText": "感動の『有馬記念』から一夜明け、\r\n新生・チーム＜シリウス＞の門出は――",
             "enText": "The morning after the emotional Arima Kinen, \nTeam Sirius embarks on a new chapter…",
             "nextBlock": 2,
+            "origClipLength": 91,
             "pathId": -5644197932582886930,
             "blockIdx": 1
         },
@@ -20,6 +21,17 @@
             "jpText": "チーム解散ってどういうことですのぉぉ！？",
             "enText": "What do you mean the team is going to be disbanded!?",
             "nextBlock": 3,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -5410029322192574614
+                },
+                {
+                    "origLen": 163,
+                    "pathId": 92052227116697039
+                }
+            ],
             "pathId": 1742484208175902662,
             "blockIdx": 2
         },
@@ -29,6 +41,17 @@
             "jpText": "メジロマックイーンの絶叫から\r\nスタートしたのだった。",
             "enText": "It started with a scream from Mejiro McQueen.",
             "nextBlock": 4,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 2366566881487117017
+                },
+                {
+                    "origLen": 163,
+                    "pathId": 2020197443816129030
+                }
+            ],
             "pathId": 2776676961428336126,
             "blockIdx": 3
         },
@@ -38,6 +61,17 @@
             "jpText": "実は、ほかのメンバーは移籍してしまいこのチームには\r\nマックイーンさんだけが残っているという状況でして……。",
             "enText": "The truth of the matter is, all of the other members have \ntransferred to different teams. McQueen-san, you're the only \none left on this team.",
             "nextBlock": 5,
+            "origClipLength": 249,
+            "animData": [
+                {
+                    "origLen": 214,
+                    "pathId": 7894546952209513219
+                },
+                {
+                    "origLen": 261,
+                    "pathId": 1916434353346710702
+                }
+            ],
             "pathId": 2776379570858266633,
             "blockIdx": 4
         },
@@ -47,6 +81,21 @@
             "jpText": "チーム登録に必要な最低人数を\n下回ってしまったんです。",
             "enText": "This team unfortunately doesn't have the minimum \nrequired number of members anymore.",
             "nextBlock": 6,
+            "origClipLength": 137,
+            "animData": [
+                {
+                    "origLen": 214,
+                    "pathId": -5385523878487100848
+                },
+                {
+                    "origLen": 261,
+                    "pathId": 4991400556877048782
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 4169426993516254554
+                }
+            ],
             "pathId": -6209410167856796396,
             "blockIdx": 5
         },
@@ -56,6 +105,21 @@
             "jpText": "なので、新規メンバーが\n増えない限りは解散ということに。",
             "enText": "So unless more members join, \nthis team will have to be disbanded.",
             "nextBlock": 7,
+            "origClipLength": 150,
+            "animData": [
+                {
+                    "origLen": 214,
+                    "pathId": -3551038432601406686
+                },
+                {
+                    "origLen": 261,
+                    "pathId": 3273770871768508923
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -4224992813521920915
+                }
+            ],
             "pathId": -3012827957861673600,
             "blockIdx": 6
         },
@@ -65,6 +129,7 @@
             "jpText": "たった一夜にしてチームがもぬけの殻になってしまうだなんて、\r\n皆さん、あまりに薄情すぎますわっ！",
             "enText": "I can't believe that, in one night, our team became a shell of \nits former self! You are all so heartless!",
             "nextBlock": 8,
+            "origClipLength": 238,
             "choices": [
                 {
                     "jpText": "まあ、まずは落ち着こうよ",
@@ -77,6 +142,16 @@
                     "nextBlock": 8
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 4622206685452623271
+                },
+                {
+                    "origLen": 261,
+                    "pathId": -8718643041178688976
+                }
+            ],
             "pathId": -3171023017865332829,
             "blockIdx": 7
         },
@@ -86,6 +161,17 @@
             "jpText": "どうして貴方はそんなに落ち着いていますのっ！？",
             "enText": "How can you be so calm?",
             "nextBlock": 9,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": 2018540000261170041
+                },
+                {
+                    "origLen": 261,
+                    "pathId": -7487734293949160404
+                }
+            ],
             "pathId": 469019958040785991,
             "blockIdx": 8
         },
@@ -95,6 +181,17 @@
             "jpText": "受け継いだチームが\r\n無くなってしまうかもしれませんのに！",
             "enText": "Despite the fact that the team \nyou inherited may be disbanded!",
             "nextBlock": 10,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -4487949249245884215
+                },
+                {
+                    "origLen": 261,
+                    "pathId": 1473159620250578401
+                }
+            ],
             "pathId": -4023653738861718822,
             "blockIdx": 9
         },
@@ -104,6 +201,21 @@
             "jpText": "たづなさん、これってすぐに\n解散になってしまうんですか？",
             "enText": "Tazuna-san, will our team be disbanded immediately?",
             "nextBlock": 11,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 174,
+                    "pathId": -1031289714998588259
+                },
+                {
+                    "origLen": 261,
+                    "pathId": -4511482281273534316
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -4576002865719472298
+                }
+            ],
             "pathId": -3689022895940442487,
             "blockIdx": 10
         },
@@ -113,6 +225,21 @@
             "jpText": "いえ、今回のようなケースは初めてですから\r\nいきなり解散しろってことにはならないと思いますが……。",
             "enText": "No, since this is the first time something like this has \nhappened, we wouldn't suddenly force you to disband…",
             "nextBlock": 12,
+            "origClipLength": 229,
+            "animData": [
+                {
+                    "origLen": 241,
+                    "pathId": -6155786355066733447
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 706063323231391379
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2649207024466698163
+                }
+            ],
             "pathId": -7693136777873958773,
             "blockIdx": 11
         },
@@ -122,11 +249,22 @@
             "jpText": "ただ、それはあくまで一時的な猶予。どのくらい猶予期間が\r\nもらえるかは、運営側と話してみないことには。",
             "enText": "That being said, this is only a temporary postponement. I don't \nknow how much time you have, but I'll be speaking with the \nschool's management about it.",
             "nextBlock": 13,
+            "origClipLength": 277,
             "choices": [
                 {
                     "jpText": "どのみち急ぐ必要があるわけですね？",
                     "enText": "So, regardless, we need to hurry, huh?",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 289,
+                    "pathId": -7900058707592484043
+                },
+                {
+                    "origLen": 235,
+                    "pathId": 2336800548199338572
                 }
             ],
             "pathId": -4565035624814246639,
@@ -138,6 +276,21 @@
             "jpText": "はい。チームを引き継いでいきなり\r\nこのような状況になってしまい、大変かとは思いますが……。",
             "enText": "That's correct. I know it must be hard to be put in this kind of \nsituation immediately after inheriting the team…",
             "nextBlock": 14,
+            "origClipLength": 240,
+            "animData": [
+                {
+                    "origLen": 289,
+                    "pathId": -1789972207941634955
+                },
+                {
+                    "origLen": 252,
+                    "pathId": 8210975372384617227
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -1946293124177402325
+                }
+            ],
             "pathId": 5488114299275766925,
             "blockIdx": 13
         },
@@ -147,6 +300,21 @@
             "jpText": "ふんっ、上等ですわ！\r\nチームメンバーなんてすぐにでも集めてみせます！",
             "enText": "Hmph! You'll see! I'll find more \nteam members in no time!",
             "nextBlock": 15,
+            "origClipLength": 184,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -5479322605027983288
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 7274561809089454816
+                },
+                {
+                    "origLen": 252,
+                    "pathId": -7589354133354760839
+                }
+            ],
             "pathId": 7814372587169492608,
             "blockIdx": 14
         },
@@ -156,6 +324,21 @@
             "jpText": "私は名門メジロ家のウマ娘。このくらいのトラブル、\r\nお茶の子さいさいで解決してみせますわ！",
             "enText": "I'm an Uma Musume of the Mejiro family. Taking care of something \nlike this will be a piece of cake!",
             "nextBlock": 16,
+            "origClipLength": 240,
+            "animData": [
+                {
+                    "origLen": 219,
+                    "pathId": 1254946312617670055
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 3716477751409839959
+                },
+                {
+                    "origLen": 252,
+                    "pathId": 5384049179466334682
+                }
+            ],
             "pathId": 2107192545300566029,
             "blockIdx": 15
         },
@@ -165,6 +348,13 @@
             "jpText": "チームメンバー募集中ですわ～！\n一緒に汗を流しましょう～！",
             "enText": "We're currently recruiting new members! \nLet's work hard together!",
             "nextBlock": 17,
+            "origClipLength": 170,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8449512851714972030
+                }
+            ],
             "pathId": -7345109231633905014,
             "blockIdx": 16
         },
@@ -174,6 +364,13 @@
             "jpText": "未勝利の方でも大歓迎！\r\nアットホームなチームですわよ～！",
             "enText": "Even those that have yet to win races are welcome! \nOur team is like a second family!",
             "nextBlock": 18,
+            "origClipLength": 154,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 2073845177203421226
+                }
+            ],
             "pathId": -3913007500710005972,
             "blockIdx": 17
         },
@@ -183,6 +380,17 @@
             "jpText": "安いですわよー！　安いですわよー！\n獲れたてのにんじんがお買い得ですわよー！",
             "enText": "Freshly harvested carrots at a bargain price! \nThey're quite cheap!",
             "nextBlock": 19,
+            "origClipLength": 170,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 3187495443500745854
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 2104117748692986105
+                }
+            ],
             "pathId": 8051258090123882287,
             "blockIdx": 18
         },
@@ -192,6 +400,25 @@
             "jpText": "しかも、今ならもれなくチーム＜シリウス＞のメンバーになれる\r\n特典付きですわー！　さあ、そこの貴方！　いかがです！？",
             "enText": "And if you act now, you can become \na member of Team Sirius as a bonus! \nHey, you over there! Are you interested!?",
             "nextBlock": 20,
+            "origClipLength": 269,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -7348946746690901161
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 2403185743674294744
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -8970901322609594940
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 4742985221528268260
+                }
+            ],
             "pathId": 4247161081678155992,
             "blockIdx": 19
         },
@@ -201,6 +428,21 @@
             "jpText": "って、どうして1人も希望者が現れないんですの！？\r\nこの私が勧誘しているというのに！",
             "enText": "Why is it that, despite someone such as I doing the recruiting, \nnot a single person has shown any interest!?",
             "nextBlock": 21,
+            "origClipLength": 233,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": 519481493895452980
+                },
+                {
+                    "origLen": 148,
+                    "pathId": 2376727233014886227
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5840935003689121156
+                }
+            ],
             "pathId": -4324231747089921865,
             "blockIdx": 20
         },
@@ -210,6 +452,17 @@
             "jpText": "まあトレーナーが新人になって、メンバーも一気に抜けたチームに\r\nわざわざ入ろうなんて普通思わないよ。",
             "enText": "To be fair, I don't think people would want to join a team with \nan inexperienced trainer. Especially when almost all of that \nteam's members left at once.",
             "nextBlock": 22,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 3512274755879929063
+                },
+                {
+                    "origLen": 122,
+                    "pathId": 9116282073400831893
+                }
+            ],
             "pathId": -4363474057816162879,
             "blockIdx": 21
         },
@@ -219,6 +472,17 @@
             "jpText": "まあトレーナーが新人になって、メンバーも一気に抜けたチームに\r\nわざわざ入ろうなんて普通思わないよね。",
             "enText": "To be fair, I don't think people would want to join a team with \nan inexperienced trainer. Especially when almost all of that \nteam's members left at once.",
             "nextBlock": 23,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": -3611733605790685354
+                },
+                {
+                    "origLen": 123,
+                    "pathId": -8397663718001099284
+                }
+            ],
             "pathId": 8983769727170677417,
             "blockIdx": 22
         },
@@ -228,6 +492,21 @@
             "jpText": "ちょっ、なに冷静に分析してますの！\r\nもっと危機感を持ってくださいまし！",
             "enText": "Why are you standing there and analyzing this \nso calmly!? Have a sense of urgency!",
             "nextBlock": 24,
+            "origClipLength": 169,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -6051224018356850974
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -4738584062600503645
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -5600278174719617631
+                }
+            ],
             "pathId": -2757879392245006265,
             "blockIdx": 23
         },
@@ -237,6 +516,17 @@
             "jpText": "いや、これでも危機感は\n持っているつもりだよ。",
             "enText": "Trust me, I'm worried too.",
             "nextBlock": 25,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 3591018652896699414
+                },
+                {
+                    "origLen": 137,
+                    "pathId": -6128024454022825961
+                }
+            ],
             "pathId": -976111662685054969,
             "blockIdx": 24
         },
@@ -246,6 +536,17 @@
             "jpText": "いえ、これでも危機感は\r\n持っているつもりだけど。",
             "enText": "Trust me, I'm worried too.",
             "nextBlock": 26,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": -2879173561698317701
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8558584932299543093
+                }
+            ],
             "pathId": -1969453343906912608,
             "blockIdx": 25
         },
@@ -255,6 +556,17 @@
             "jpText": "俺のことを信じてチームを託してくれた\n先生の期待を裏切るわけにはいかない。",
             "enText": "He believed in me and entrusted this team \nto me. I can't betray his expectations.",
             "nextBlock": 27,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -6040593003224897954
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 7689440039113131220
+                }
+            ],
             "pathId": 6328276737608986601,
             "blockIdx": 26
         },
@@ -264,6 +576,17 @@
             "jpText": "私のことを信じてチームを託してくれた\r\n先生の期待を裏切るわけにはいかない。",
             "enText": "He believed in me and entrusted this team \nto me. I can't betray his expectations.",
             "nextBlock": 28,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -4393772044834908664
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -5338461092246188200
+                }
+            ],
             "pathId": 1482470616805487075,
             "blockIdx": 27
         },
@@ -273,6 +596,17 @@
             "jpText": "とはいえ、勧誘を続けたところで今の＜シリウス＞に入ってくれる\r\nウマ娘はいないんじゃないかとも思う。",
             "enText": "That being said, if we continue to recruit while Team \nSirius is in such a sorry state, I don't think we'll \nbe able to get any new members to join.",
             "nextBlock": 29,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 137,
+                    "pathId": 3228052503241248218
+                },
+                {
+                    "origLen": 144,
+                    "pathId": 5962497305622217415
+                }
+            ],
             "pathId": 4247809445728769699,
             "blockIdx": 28
         },
@@ -282,6 +616,17 @@
             "jpText": "もっと別の方法を考えないと。ウマ娘たちが入りたいと\r\n思ってくれるようなチームにするための何かを……。",
             "enText": "We have to think of a new strategy that'll \nentice Uma Musume to join our team…",
             "nextBlock": 30,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": 1185558086403314108
+                },
+                {
+                    "origLen": 144,
+                    "pathId": -3169055768792485783
+                }
+            ],
             "pathId": -8002821788519183306,
             "blockIdx": 29
         },
@@ -291,6 +636,17 @@
             "jpText": "それはそうと、今日の勧誘はこのくらいにしておいて\r\nそろそろトレーニングを始めないか？",
             "enText": "Well anyways, I think we should call \nit a day here and begin our training.",
             "nextBlock": 31,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": -5220067589173158753
+                },
+                {
+                    "origLen": 144,
+                    "pathId": -5429890628183855374
+                }
+            ],
             "pathId": 8687160359284224265,
             "blockIdx": 30
         },
@@ -300,6 +656,17 @@
             "jpText": "それはそうと、今日の勧誘はこのくらいにしておいて\r\nそろそろトレーニングを始めない？",
             "enText": "Well anyways, I think we should call \nit a day here and begin our training.",
             "nextBlock": 32,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": -101625824311683909
+                },
+                {
+                    "origLen": 144,
+                    "pathId": 3093450972095922998
+                }
+            ],
             "pathId": -8656291109786600300,
             "blockIdx": 31
         },
@@ -309,6 +676,17 @@
             "jpText": "……そうですわね。",
             "enText": "…You're right.",
             "nextBlock": 33,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": 7757394703354069198
+                },
+                {
+                    "origLen": 28,
+                    "pathId": 3045851594167608962
+                }
+            ],
             "pathId": -820575108858533116,
             "blockIdx": 32
         },
@@ -318,6 +696,13 @@
             "jpText": "勧誘に気を取られてトレーニングをおろそかにしていたら\r\n本末転倒……。では、準備をして参りますわ。",
             "enText": "I've been prioritizing the wrong things by focusing \non recruitment. I'll go get ready!",
             "nextBlock": 34,
+            "origClipLength": 240,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 2520191200353620006
+                }
+            ],
             "pathId": -607761997106598182,
             "blockIdx": 33
         },
@@ -327,6 +712,7 @@
             "jpText": "俺とメジロマックイーンの1番の目標は\r\n4月末に行なわれる『天皇賞（春）』、3200mの超長距離戦だ。",
             "enText": "Our next race is happening at the end of April. It will be the \nSpring Tennō Shō, a 3200 meter long distance race.",
             "nextBlock": 35,
+            "origClipLength": 111,
             "pathId": -3287271464092274584,
             "blockIdx": 34
         },
@@ -336,6 +722,7 @@
             "jpText": "私とメジロマックイーンの1番の目標は\r\n4月末に行なわれる『天皇賞（春）』、3200mの超長距離戦。",
             "enText": "Our next race is happening at the end of April. It will be the \nSpring Tennō Shō, a 3200 meter long distance race.",
             "nextBlock": 36,
+            "origClipLength": 110,
             "pathId": 7667583923436535492,
             "blockIdx": 35
         },
@@ -345,6 +732,13 @@
             "jpText": "あらゆる持久力が試されるこのレースに向け、\r\n最善を尽くすため、俺はフォームの改良を提案してみた。",
             "enText": "Since this race will be an incredible test of endurance, I \nrecommended that she work on her form.",
             "nextBlock": 37,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 4804266279878706733
+                }
+            ],
             "pathId": 1201387392656613802,
             "blockIdx": 36
         },
@@ -354,6 +748,13 @@
             "jpText": "あらゆる持久力が試されるこのレースに向け、\r\n最善を尽くすため、私はフォームの改良を提案してみた。",
             "enText": "Since this race will be an incredible test of endurance, I \nrecommended that she work on her form.",
             "nextBlock": 38,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 8995393619053653470
+                }
+            ],
             "pathId": -3735066067309568491,
             "blockIdx": 37
         },
@@ -363,6 +764,13 @@
             "jpText": "はっ……はっ……ふっ……。",
             "enText": "Hah… Ha… Ueh…",
             "nextBlock": 39,
+            "origClipLength": 123,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -5323060924778562576
+                }
+            ],
             "pathId": 3866118239882590620,
             "blockIdx": 38
         },
@@ -372,6 +780,17 @@
             "jpText": "コーナー終わりのタイミングで、もうちょっと左脚を意識してみて。\r\n右よりも左脚で強く地面を蹴るイメージで。",
             "enText": "At the end of the corner, make sure to be conscious of which foot \nyou're kicking off with. You should be kicking off harder with \nyour left foot, rather than your right.",
             "nextBlock": 40,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 2794538703837495889
+                },
+                {
+                    "origLen": 43,
+                    "pathId": 6827042670604913926
+                }
+            ],
             "pathId": -4411847496287344997,
             "blockIdx": 39
         },
@@ -381,6 +800,17 @@
             "jpText": "ええ、わかりましたわ。",
             "enText": "Okay, understood.",
             "nextBlock": 41,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 3806136683602855715
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 3452877473343301598
+                }
+            ],
             "pathId": -2413573642324852611,
             "blockIdx": 40
         },
@@ -390,6 +820,17 @@
             "jpText": "じゃあそこを意識しつつトラックを3周。\r\n今日はそれで終わりにしよう。",
             "enText": "Okay, do 3 more laps around the track, \nthen we can call it a day.",
             "nextBlock": 42,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -8389680411319531319
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -8953319006284260028
+                }
+            ],
             "pathId": 6532013432364263178,
             "blockIdx": 41
         },
@@ -399,6 +840,17 @@
             "jpText": "じゃあそこを意識しつつトラックを3周。\r\n今日はそれで終わりにしよう。",
             "enText": "Okay, do 3 more laps around the track, \nthen we can call it a day.",
             "nextBlock": 43,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -2280317098240160384
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -4364391342854187576
+                }
+            ],
             "pathId": -6471542957073841821,
             "blockIdx": 42
         },
@@ -408,6 +860,17 @@
             "jpText": "……あと3周だけ、ですか？",
             "enText": "…Only 3 more laps?",
             "nextBlock": 44,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -9180394944202980272
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 6669479881741065192
+                }
+            ],
             "pathId": 6297221014813926332,
             "blockIdx": 43
         },
@@ -417,6 +880,17 @@
             "jpText": "今はフォームを弄っている最中だから、思ったよりも体に負担が\r\nかかっていると思う。ここで無理をするのはよくないよ。",
             "enText": "You're still working on your form, so I'm worried that it might \nbe putting a heavy strain on your body and mind. We need to make \nsure you aren't pushing yourself too hard.",
             "nextBlock": 45,
+            "origClipLength": 119,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": 8898324620549627682
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 2614616514112236495
+                }
+            ],
             "pathId": -4291089235251414697,
             "blockIdx": 44
         },
@@ -426,6 +900,17 @@
             "jpText": "今はフォームを弄っている最中だから、思ったよりも体に負担が\r\nかかっていると思う。ここで無理をするのはよくないから。",
             "enText": "You're still working on your form, so I'm worried that it might \nbe putting a heavy strain on your body and mind. We need to make \nsure you aren't pushing yourself too hard.",
             "nextBlock": 46,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -3268855383056454121
+                },
+                {
+                    "origLen": 131,
+                    "pathId": -8257547114126234017
+                }
+            ],
             "pathId": -8101735006840128791,
             "blockIdx": 45
         },
@@ -435,6 +920,17 @@
             "jpText": "……なるほど。\n承知いたしましたわ。",
             "enText": "…I see. I didn't think about that.",
             "nextBlock": 47,
+            "origClipLength": 104,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": 5513984930696374844
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5554976148054078616
+                }
+            ],
             "pathId": -401333638472305118,
             "blockIdx": 46
         },
@@ -444,6 +940,13 @@
             "jpText": "もし不満があったら遠慮なく言ってくれな？\r\n押し付けのトレーニングはしたくないから。",
             "enText": "If you're unsatisfied, please let me know. \nI wouldn't want to push anything onto you after all.",
             "nextBlock": 48,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 6143463488823775108
+                }
+            ],
             "pathId": -2639043487073595153,
             "blockIdx": 47
         },
@@ -453,6 +956,13 @@
             "jpText": "もし不満があったら遠慮なく言ってよ？\r\n押し付けのトレーニングはしたくないから。",
             "enText": "If you're unsatisfied, please let me know. \nI wouldn't want to push anything onto you after all.",
             "nextBlock": 49,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 8105762904109294896
+                }
+            ],
             "pathId": -3728700716334963161,
             "blockIdx": 48
         },
@@ -462,6 +972,17 @@
             "jpText": "いえ、トレーナーさんの指導は理にかなっています。\r\nですから不満なんてありません。",
             "enText": "No, what you said makes sense. \nSo I have no complaints.",
             "nextBlock": 50,
+            "origClipLength": 193,
+            "animData": [
+                {
+                    "origLen": 205,
+                    "pathId": 520154709518620004
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -6192247478700810627
+                }
+            ],
             "pathId": -3583112324741371548,
             "blockIdx": 49
         },
@@ -471,6 +992,13 @@
             "jpText": "そう言ってトラックへと\r\n駆けだしていったメジロマックイーン。",
             "enText": "With that, she went back to the track.",
             "nextBlock": 51,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -5054871823152777831
+                }
+            ],
             "pathId": 6032293730894604409,
             "blockIdx": 50
         },
@@ -480,6 +1008,7 @@
             "jpText": "その横顔には微かに\n不満が浮かんでいるように見えた。",
             "enText": "As I watched her, she seemed to be a \nlittle bit upset with only doing 3 laps.",
             "nextBlock": 52,
+            "origClipLength": 78,
             "pathId": 6081485855026219640,
             "blockIdx": 51
         },
@@ -489,6 +1018,7 @@
             "jpText": "あまり納得はしていないんだろうなぁ。",
             "enText": "I guess she really wasn't convinced, huh?",
             "nextBlock": 53,
+            "origClipLength": 68,
             "pathId": -1043466732229494242,
             "blockIdx": 52
         },
@@ -498,6 +1028,7 @@
             "jpText": "先生のトレーニングに比べて物足りなさがあるのか、\r\nそれとも信頼関係がまだ築ききれていないのか……。",
             "enText": "When compared to Sensei's training, mine is probably \nlacking somewhere… Or maybe her and I have yet \nto build a trusting relationship…",
             "nextBlock": 54,
+            "origClipLength": 110,
             "pathId": 1901938365736576338,
             "blockIdx": 53
         },
@@ -507,6 +1038,7 @@
             "jpText": "メンバー集めといい、\r\n俺のチーム運営はまだまだ問題が山積みだ。",
             "enText": "My ability to manage a team is still lacking, and it would be \ngreat if we could find more members.",
             "nextBlock": 55,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "けど、絶対に乗り越えてみせる！",
@@ -523,6 +1055,7 @@
             "jpText": "メンバー集めといい、\r\n私のチーム運営はまだまだ問題が山積みだ。",
             "enText": "My ability to manage a team is still lacking, and it would be \ngreat if we could find more members.",
             "nextBlock": 56,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "けど、絶対に乗り越えてみせる！",
@@ -539,6 +1072,7 @@
             "jpText": "俺は気合いを入れなおしたのだった。",
             "enText": "Thinking about this got me fired up.",
             "nextBlock": 57,
+            "origClipLength": 67,
             "pathId": 6584155912781542466,
             "blockIdx": 56
         },
@@ -548,6 +1082,7 @@
             "jpText": "私は気合いを入れなおしたのだった。",
             "enText": "Thinking about this got me fired up.",
             "nextBlock": -1,
+            "origClipLength": 67,
             "pathId": -5028721871819529178,
             "blockIdx": 57
         }

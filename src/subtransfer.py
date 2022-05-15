@@ -98,10 +98,15 @@ class BasicSubProcessor:
         return line.text
 
     def preprocess(self):
+        lastName = None
         for line in self.subLines:
             m = self.npreRe.match(line.text)
             if m:
                 line.name, line.text = m.group(1,2)
+            if not line.name and lastName:
+                line.name = lastName
+            else:
+                lastName = line.name
             if not line.effect and (line.text.startswith(self.options.choicePrefix)):
                 line.effect = "choice"
             line.text = self.cleanLine(line.text)

@@ -20,7 +20,7 @@ class SubTransferOptions():
         self.overrideNames = False
         self.dupeCheckAll = False
         self.filter = None
-        self.choicePrefix = ">"
+        self.choicePrefix = [">"]
         self.strictChoices = True
         
     @classmethod
@@ -50,12 +50,14 @@ class BasicSubProcessor:
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         self.options = options
+        self.cpreRe = re.compile("|".join(options.choicePrefix), re.IGNORECASE) # match searches start only
 
-        self.choiceName = None
-        if len(options.choicePrefix) > 1:
-            idx = options.choicePrefix.rfind(":") # update this when npre logic changes
-            if idx > 0:
-                self.choiceName = options.choicePrefix[0:idx]
+        self.choiceNames = list()
+        for cpre in options.choicePrefix:
+            if len(cpre) > 1:
+                idx = cpre.rfind(":") # update this when npre logic changes
+                if idx > 0:
+                    self.choiceNames.append(cpre[0:idx])
 
     def saveSrc(self):
         self.srcFile.save()
@@ -114,10 +116,11 @@ class BasicSubProcessor:
             else:
                 lastName = line.name
             if not line.effect:
-                if line.text.startswith(self.options.choicePrefix):
+                m = self.cpreRe.match(line.text)
+                if m:
                     line.effect = "choice"
-                    line.text = line.text[len(self.options.choicePrefix):]
-                elif line.name == self.choiceName:
+                    line.text = line.text[len(m.group(0)):]
+                elif line.name in self.choiceNames:
                     line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
@@ -298,7 +301,7 @@ def main():
     ap.add_argument("-filter", nargs="+", choices=["brak"],
                     help="Process some common patterns (default: %(default)s)\
                     \nbrak: sync enclosing brackets with original text")
-    ap.add_argument("-cpre", dest="choicePrefix", default=">", help="Prefix string that marks choices.\nChecks name as a special case if prefix includes ':'")
+    ap.add_argument("-cpre", dest="choicePrefix", nargs="+", default=[">"], help="Prefixes that mark choices. Supports regex\nChecks name as a special case if prefix includes ':'")
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     args = ap.parse_args()
     process(args.src, args.sub, SubTransferOptions.fromArgs(args))

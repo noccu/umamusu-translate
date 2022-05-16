@@ -220,6 +220,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
     idx = 0
     srcLen = len(p.srcLines)
     lastChoice = [0, 0] # text idx, choice idx
+    errors = 0
 
     for subLine in p.subLines:
         if idx == srcLen:
@@ -240,6 +241,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                             # can give false positives
                             skipLine = opts.strictChoices
                             print(f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}")
+                            if skipLine: errors += 1
                     else: # Copy text to all choices
                         p.setChoices(idx-1, None, subLine)
                     lastChoice[0] = idx
@@ -247,9 +249,11 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                     if skipLine: continue # don't increment idx
                 elif opts.strictChoices:
                     print(f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping...")
+                    errors += 1
                     continue
             elif idx > 0 and p.getChoices(idx-1) and idx - lastChoice[0] > 0:
                 print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
+                errors += 1
             lastChoice[1] = 0
         
         # Add text
@@ -260,6 +264,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
         else:
             if len(subLine.text) == 0:
                 print(f"Untranslated line at {p.getBlockIdx(idx)}")
+                errors += 1
             else:
                 p.setEn(idx, subLine)
         idx += 1
@@ -270,8 +275,13 @@ def process(srcFile, subFile, opts: SubTransferOptions):
             p.duplicateSub(idx)
         else:
             print(f"Lacking {srcLen - idx} subtitle(s).")
+            errors += 1
 
     p.saveSrc()
+    if errors > 0:
+        print(f"Transferred with {errors} errors.")
+    else:
+        print("Successfully transferred.")
 
 def main():
     ap = common.Args("Imports translations from subtitle files. A few conventions are used.", defaultArgs=False,
@@ -289,7 +299,6 @@ def main():
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     args = ap.parse_args()
     process(args.src, args.sub, SubTransferOptions.fromArgs(args))
-    print("Successfully transferred.")
 
 if __name__ == '__main__':
     main()

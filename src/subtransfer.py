@@ -42,7 +42,7 @@ class TextLine:
 
 class BasicSubProcessor:
     skipNames = ["<username>", "", "モノローグ"]
-    npreRe = re.compile(r"\[?([^\]:]+)\]?: (.+)", flags=re.DOTALL)
+    npreRe = re.compile(r"\[?([^\]:]{2,40})\]?: (.+)", flags=re.DOTALL)
 
     def __init__(self, srcFile, options = SubTransferOptions()):
         self.srcFile = common.TranslationFile(srcFile)

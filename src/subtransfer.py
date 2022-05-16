@@ -234,7 +234,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
             break
 
         # skip title logo on events and dummy text
-        if p.getJp(idx).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト", p.getJp(idx)):
+        if p.getJp(idx).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト|欠番", p.getJp(idx)):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":

@@ -88,7 +88,6 @@ class BasicSubProcessor:
         return self.srcLines[idx]['blockIdx']
 
     def cleanLine(self, text):
-        if text.startswith(self.options.choicePrefix): text = text[len(self.options.choicePrefix):]
         return text
 
     def filter(self, line: TextLine, target):
@@ -114,8 +113,12 @@ class BasicSubProcessor:
                 line.name = lastName
             else:
                 lastName = line.name
-            if not line.effect and (line.text.startswith(self.options.choicePrefix) or line.name == self.choiceName):
-                line.effect = "choice"
+            if not line.effect:
+                if line.text.startswith(self.options.choicePrefix):
+                    line.effect = "choice"
+                    line.text = line.text[len(self.options.choicePrefix):]
+                elif line.name == self.choiceName:
+                    line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
     def duplicateSub(self, idx: int, line: TextLine = None):

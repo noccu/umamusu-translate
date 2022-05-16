@@ -14,8 +14,11 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
+Main story Act 1 Ch 2 | Complete | [Hades of Games]
+Main story Act 1 Ch 3 | Complete | [Hades of Games]
+Main story Act 1 Ch 4 | Complete | [Hades of Games]
+Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 6 (Final) | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]

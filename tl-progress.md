@@ -26,9 +26,11 @@ Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
-Blossoming New Year's Karuta Contest | Complete | deepl
+Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
+Tonight at the Ligne Droite | In progress | [ebi]
+Roar, Tracen Academy Cheerleading Squad! | In progress | [LotoDS]
 
 # Character stories
 name | progress | translator
@@ -38,13 +40,14 @@ Air Groove | Complete | [burritoblaster][]
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
-Eishin Flash | Complete | deepl
+Eishin Flash | Complete, In progress | deepl, [noccu]
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
+Ines Fujin | In progress | [noccu] (ep 1-4)
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]

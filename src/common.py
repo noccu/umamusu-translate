@@ -12,6 +12,7 @@ GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
 TARGET_TYPES =  ["story", "home", "race", "lyrics", "preview"]
+NAMES_BLACKLIST = ["<username>", "", "モノローグ"] # special-use game names, don't touch
 
 
 def searchFiles(targetType, targetGroup, targetId, targetIdx = False) -> list:

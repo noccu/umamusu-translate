@@ -41,7 +41,6 @@ class TextLine:
         return self.effect == "choice"
 
 class BasicSubProcessor:
-    skipNames = ["<username>", "", "モノローグ"]
     npreRe = re.compile(r"\[?([^\]:]{2,40})\]?: (.+)", flags=re.DOTALL)
 
     def __init__(self, srcFile, options = SubTransferOptions()):
@@ -69,7 +68,7 @@ class BasicSubProcessor:
     def setEn(self, idx, line: TextLine):
         self.srcLines[idx]['enText'] = self.filter(line, self.srcLines[idx])
         if "jpName" in self.srcLines[idx]:
-            if self.srcLines[idx]['jpName'] in self.skipNames:
+            if self.srcLines[idx]['jpName'] in common.NAMES_BLACKLIST:
                 self.srcLines[idx]['enName'] = "" # forcefully clear names that should not be translated
             elif line.name and (not self.srcLines[idx]['enName'] or self.options.overrideNames):
                 self.srcLines[idx]['enName'] = line.name
@@ -145,7 +144,7 @@ class BasicSubProcessor:
         if self.srcFile.type != "story": return False
         prevName = self.srcLines[idx - 1]['jpName']
         curName = self.srcLines[idx]['jpName']
-        if not self.options.dupeCheckAll and curName not in self.skipNames: return False
+        if not self.options.dupeCheckAll and curName not in common.NAMES_BLACKLIST: return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx-1)) > 0.6
 
 class AssSubProcessor(BasicSubProcessor):

@@ -1,4 +1,5 @@
 from argparse import SUPPRESS
+import re
 import common
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -227,6 +228,27 @@ def show_choices():
             cur_en_text.pack()
             ttk.Separator(window_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
 
+def char_convert(event = None):
+    pos = text_box_en.index(tk.INSERT)
+    start = pos + "-6c"
+    txt = text_box_en.get(start, pos)
+    m = re.search(r"[A-Z0-9]+", txt)
+    if m:
+        try:
+            res = chr(int(m.group(0), 16))
+        except:
+            return
+        text_box_en.replace(f"{start}+{str(m.start())}c", pos, res)
+
+def del_word(event):
+    pos = text_box_en.index(tk.INSERT)
+    start = "linestart" if event.state & 0x0001 else "wordstart"
+    end = "lineend" if event.state & 0x0001 else "wordend"
+    if event.keycode == 8:
+        text_box_en.delete(f"{pos} -1c {start}", pos)
+    elif event.keycode == 46:
+        text_box_en.delete(pos, f"{pos} {end}")
+
 def main():
     global files
     global root
@@ -319,6 +341,11 @@ def main():
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
     root.bind("<Alt-Right>", copy_block)
+    root.bind("<Alt-x>", char_convert)
+    root.bind("<Control-BackSpace>", del_word)
+    root.bind("<Control-Shift-BackSpace>", del_word)
+    root.bind("<Control-Delete>", del_word)
+    root.bind("<Control-Shift-Delete>", del_word)
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()

@@ -32,7 +32,7 @@ This tool collection only changes text to translate it and it is *my belief* thi
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. any possible crackdown is also likely to start with announcements and warnings before bans.
 
 # Install 
-### Requirements
+## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
     - During install, check the `Add to PATH` option.
 1. Download this project
@@ -40,27 +40,27 @@ This tool collection only changes text to translate it and it is *my belief* thi
 1. (Optional but recommended) Download all game data through the game menu
     - Only files existing in your game data will be updated. You can simply rerun the import for new content.
 
-### Basic Usage
+## Basic Usage
 1. **Dialogue**: double click `run.bat` 
 1. **UI**: Open the game's *install folder* (where the `Umamusume.exe` is)
     1. Download [localify][umamusume-localify]'s `release.7z` from [here](https://github.com/GEEKiDoS/umamusume-localify/releases/tag/test6) and extract the `version.dll` inside to the *install folder*
-    1. Copy the *contents* of the [localify folder](localify) to the *install folder*
+    1. Copy the *contents* of this project's [localify folder](localify) to the *install folder*
         - If it doesn't work when you start the game, try renaming the `version.dll` file to `uxtheme.dll`
         - In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)
 1. **Skills and other variable text**: See the [db-translate project] and follow its guide.
 
-### Updating
+## Updating
 1. Download the project again and overwrite
     - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! You could keep a backup of any edits at the moment you make them, or try picking up git or other version control software.
 1. Double click `run.bat` 
 
-### Advanced Usage
+## Advanced Usage
 In general, check out the [scripts](#script-info).
 1. **Dialogue**
     - To install specific things, see [id-structure.md](id-structure.md) and use: `py src/import.py -O -g <group> -id <id>`
     - To add additional translations through deepl, or contribute your own, see [translating.md](translating.md)
 1. **UI**
-    - To update yourself when the translations are jumbled, see [here](updating-ui.md)
+    - To update yourself when the translations are jumbled, see [here](translating.md#updating)
 1. **Skills and other variable text**: See the [db-translate project]
 
 # Script info

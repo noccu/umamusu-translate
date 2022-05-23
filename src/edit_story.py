@@ -75,8 +75,13 @@ def load_block(event = None, loadBlocks = False, reload = False):
     # Fill in the text boxes
     speaker_jp_entry.delete(0, tk.END)
     speaker_jp_entry.insert(0, cur_block_data.get('jpName', ""))
-    speaker_en_entry.delete(0, tk.END)
-    speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
+    if cur_block_data.get('jpName') in common.NAMES_BLACKLIST:
+        speaker_en_entry.delete(0, tk.END)
+        speaker_en_entry['state'] = 'disabled'
+    else:
+        speaker_en_entry['state'] = 'normal'
+        speaker_en_entry.delete(0, tk.END)
+        speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
 
     # Spinbox for text block duration
     block_duration_spinbox.delete(0, tk.END)

@@ -47,7 +47,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
-Ines Fujin | In progress | [noccu] (ep 1-4)
+Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]
@@ -57,7 +57,7 @@ Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
 Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1EeJrGT5gFchEZTnx68A) (ep 1)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
-Mihono Bourbon | Complete | deepl
+Mihono Bourbon | Complete, In progress | deepl, [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Nice Nature | In progress | [xct][] (ep 1-4)
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl

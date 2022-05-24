@@ -1,4 +1,5 @@
 from argparse import SUPPRESS
+import re
 import common
 import tkinter as tk
 from tkinter import ttk, messagebox
@@ -74,8 +75,13 @@ def load_block(event = None, loadBlocks = False, reload = False):
     # Fill in the text boxes
     speaker_jp_entry.delete(0, tk.END)
     speaker_jp_entry.insert(0, cur_block_data.get('jpName', ""))
-    speaker_en_entry.delete(0, tk.END)
-    speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
+    if cur_block_data.get('jpName') in common.NAMES_BLACKLIST:
+        speaker_en_entry.delete(0, tk.END)
+        speaker_en_entry['state'] = 'disabled'
+    else:
+        speaker_en_entry['state'] = 'normal'
+        speaker_en_entry.delete(0, tk.END)
+        speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
 
     # Spinbox for text block duration
     block_duration_spinbox.delete(0, tk.END)
@@ -227,6 +233,27 @@ def show_choices():
             cur_en_text.pack()
             ttk.Separator(window_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
 
+def char_convert(event = None):
+    pos = text_box_en.index(tk.INSERT)
+    start = pos + "-6c"
+    txt = text_box_en.get(start, pos)
+    m = re.search(r"[A-Z0-9]+", txt)
+    if m:
+        try:
+            res = chr(int(m.group(0), 16))
+        except:
+            return
+        text_box_en.replace(f"{start}+{str(m.start())}c", pos, res)
+
+def del_word(event):
+    pos = text_box_en.index(tk.INSERT)
+    start = "linestart" if event.state & 0x0001 else "wordstart"
+    end = "lineend" if event.state & 0x0001 else "wordend"
+    if event.keycode == 8:
+        text_box_en.delete(f"{pos} -1c {start}", pos)
+    elif event.keycode == 46:
+        text_box_en.delete(pos, f"{pos} {end}")
+
 def main():
     global files
     global root
@@ -294,10 +321,10 @@ def main():
     block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
     block_duration_spinbox.grid(row=2, column=3)
 
-    text_box_jp = tk.Text(root, width=65, height=4, state='disabled', font=large_font)
+    text_box_jp = tk.Text(root, width=54, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=65, height=5, undo=True, font=large_font)
+    text_box_en = tk.Text(root, width=54, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
     btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)
@@ -314,13 +341,16 @@ def main():
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
 
-    root.bind("<Control-Enter>", next_block)
-    root.bind("<Alt-Enter>", next_block)
-    root.bind("<Control-S>", saveFile)
-    root.bind("<Alt-S>", saveFile)
+    root.bind("<Control-Return>", next_block)
+    root.bind("<Control-s>", saveFile)
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
     root.bind("<Alt-Right>", copy_block)
+    root.bind("<Alt-x>", char_convert)
+    root.bind("<Control-BackSpace>", del_word)
+    root.bind("<Control-Shift-BackSpace>", del_word)
+    root.bind("<Control-Delete>", del_word)
+    root.bind("<Control-Shift-Delete>", del_word)
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()

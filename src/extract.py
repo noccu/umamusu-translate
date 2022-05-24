@@ -60,7 +60,7 @@ def extractAsset(path, storyId, tlFile = None):
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': 5,
+            'version': common.TranslationFile.latestVersion,
             'bundle': env.file.name,
             'type': args.type,
             'storyId': "",
@@ -103,7 +103,7 @@ def extractAsset(path, storyId, tlFile = None):
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
         else:
-            export['storyId'] = "".join(storyId) if args.type == "home" else  tree['StoryId']
+            export['storyId'] = "".join(storyId) if args.type == "home" else tree['StoryId']
             export['title'] = tree['Title']
 
             for block in tree['BlockList']:
@@ -289,9 +289,13 @@ def exportData(data, filepath: str):
         helpers.writeJson(filepath, data)
         
 def exportAsset(bundle: str, path: str, db = None):
-    if bundle is None:
+    if bundle is None: # update mode
+        assert db is not None
         tlFile = common.TranslationFile(path)
         storyId = tlFile.getStoryId()
+        if args.upgrade and tlFile.version == common.TranslationFile.latestVersion:
+            print(f"File already on latest version, skipping: {path}")
+            return
         bundle, _ = queryDB(db, storyId)[0]
     else: # make sure tlFile is set for the call later
         tlFile = None
@@ -336,13 +340,14 @@ def parseArgs():
     ap = common.Args("Extract Game Assets to Translation Files")
     ap.add_argument("-dst")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing Translation Files")
-    ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type (NOT -t). Implies -O, ignores -dst")
-    ap.add_argument("-upg", "--upgrade", action="store_true", help="Attempt tlfile version upgrade. Implies -O")
+    ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES, help="Re-extract existing files, optionally limited to given type.\nImplies -O, ignores -dst and -t")
+    ap.add_argument("-upg", "--upgrade", action="store_true", help="Attempt tlfile version upgrade with minimal extraction.\nCan be used on patched files. Implies -O")
     ap.add_argument("-v", "--verbose", action="store_true", help="Print extra info")
     args = ap.parse_args()
 
     if args.dst is None: args.dst = PurePath("translations").joinpath(args.type)
     if args.upgrade or args.update: args.overwrite = True
+    if isinstance(args.update, list) and len(args.update) == 0: args.update = common.TARGET_TYPES
 
 def main():
     parseArgs()
@@ -353,6 +358,7 @@ def main():
             # check if a type was specifically given and use that if so, otherwise use all
             for type in args.update or common.TARGET_TYPES:
                 args.dst = PurePath("translations").joinpath(type)
+                args.type = type
                 files = common.searchFiles(type, args.group, args.id, args.idx)
                 print(f"Found {len(files)} files for {type}.")
                 for i, file in enumerate(files):

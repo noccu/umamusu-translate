@@ -20,8 +20,11 @@ def translate(namesDict, args):
         file = common.TranslationFile(file)
         for block in file.textBlocks:
             name = block.get('jpName')
-            if name and name in namesDict:
-                block['enName'] = namesDict[name]
+            if name is not None:
+                if name in common.NAMES_BLACKLIST:
+                    block['enName'] = ""
+                elif name in namesDict:
+                    block['enName'] = namesDict[name]
         file.save()
     return len(files)
 

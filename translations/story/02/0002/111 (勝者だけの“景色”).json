@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "D7MLBI5YXKDGVHY3GBTWXRFUPKUXJ4V2",
     "type": "story",
     "storyId": "020002111",
@@ -9,8 +9,9 @@
             "jpName": "観客たち",
             "enName": "Crowd",
             "jpText": "（ざわざわ…………）",
-            "enText": "",
+            "enText": "(Booing……)",
             "nextBlock": 2,
+            "origClipLength": 58,
             "pathId": 279493924600367808,
             "blockIdx": 1
         },
@@ -18,8 +19,9 @@
             "jpName": "観客A",
             "enName": "Spectator A",
             "jpText": "今日だけはマックイーンに勝ってほしかったよなぁ……。",
-            "enText": "",
+            "enText": "I only wanted McQueen to win today…",
             "nextBlock": 3,
+            "origClipLength": 109,
             "pathId": -896362039077714620,
             "blockIdx": 2
         },
@@ -27,8 +29,9 @@
             "jpName": "観客B",
             "enName": "Spectator B",
             "jpText": "3連覇を目の前で見るために、\r\n1週間前から場所取りしてたのにさ。",
-            "enText": "",
+            "enText": "I had to set up a place for an entire week to see the 3 \nconsecutive wins in front of the audience.",
             "nextBlock": 4,
+            "origClipLength": 161,
             "pathId": -4612084318126483477,
             "blockIdx": 3
         },
@@ -36,8 +39,19 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "…………。",
-            "enText": "",
+            "enText": "……",
             "nextBlock": 5,
+            "origClipLength": 40,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -4590487446197157638
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -5027145504850825081
+                }
+            ],
             "pathId": 5570031647186049821,
             "blockIdx": 4
         },
@@ -45,8 +59,19 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ライスさん……。",
-            "enText": "",
+            "enText": "Rice-san…",
             "nextBlock": 6,
+            "origClipLength": 44,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 1016142436538609578
+                },
+                {
+                    "origLen": 127,
+                    "pathId": 2001043902816574423
+                }
+            ],
             "pathId": -5870658887179342254,
             "blockIdx": 5
         },
@@ -54,8 +79,23 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "えへへ……みんな、がっかりしてるね。",
-            "enText": "",
+            "enText": "hehe… Everyone is disappointed.",
             "nextBlock": 7,
+            "origClipLength": 123,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -6667238901735927303
+                },
+                {
+                    "origLen": 176,
+                    "pathId": 7474694763184827176
+                },
+                {
+                    "origLen": 189,
+                    "pathId": -1671791555738111671
+                }
+            ],
             "pathId": -4687206318677341820,
             "blockIdx": 6
         },
@@ -63,8 +103,23 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "マックイーンさんは見せたい“景色”があったみたいだけど、\r\n『菊花賞』のときと、なんにも違わないみたい……。",
-            "enText": "",
+            "enText": "McQueen-san seems to have a “Scenery” that she \nwanted to show me, but there is nothing different \nfrom the time of the “Kikkashou Award”.",
             "nextBlock": 8,
+            "origClipLength": 307,
+            "animData": [
+                {
+                    "origLen": 319,
+                    "pathId": 3879663372099214587
+                },
+                {
+                    "origLen": 31,
+                    "pathId": 7574674838685450975
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 704719424614466774
+                }
+            ],
             "pathId": -2811052850741013953,
             "blockIdx": 7
         },
@@ -72,8 +127,23 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "こうなるのは、もちろんわかってたけど……。\r\nやっぱりちょっと……胸が痛いかも……。",
-            "enText": "",
+            "enText": "Of course I knew this would happen. After all, my chest is hurt…",
             "nextBlock": 9,
+            "origClipLength": 278,
+            "animData": [
+                {
+                    "origLen": 153,
+                    "pathId": 4060711776295416774
+                },
+                {
+                    "origLen": 174,
+                    "pathId": 4765382492703808730
+                },
+                {
+                    "origLen": 290,
+                    "pathId": 8731637275591601505
+                }
+            ],
             "pathId": 4464594555764466243,
             "blockIdx": 8
         },
@@ -81,8 +151,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "……私も、秋の『天皇賞』で降着した時、\r\n似たような体験をしましたわ。",
-            "enText": "",
+            "enText": "I also had a similar experience when I \nran at the “Emperor Award” in autumn.",
             "nextBlock": 10,
+            "origClipLength": 224,
+            "animData": [
+                {
+                    "origLen": 274,
+                    "pathId": -515669960880906991
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 1705829042588581595
+                },
+                {
+                    "origLen": 203,
+                    "pathId": 7775788143007725984
+                }
+            ],
             "pathId": 947177641648636665,
             "blockIdx": 9
         },
@@ -90,8 +175,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "多くの人の期待を裏切ってしまい、\nしっかりと前を向くことができなかったことが……。",
-            "enText": "",
+            "enText": "I have betrayed the expectations of many people, and I have not \nbeen able to firmly move forward.",
             "nextBlock": 11,
+            "origClipLength": 195,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -934161377914087019
+                },
+                {
+                    "origLen": 206,
+                    "pathId": 191823350244750998
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6219735857203063105
+                }
+            ],
             "pathId": -393839552398508448,
             "blockIdx": 10
         },
@@ -99,8 +199,27 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ですが、そこで私はその“景色”を目の当たりにしましたの。",
-            "enText": "",
+            "enText": "But, that was when I saw the “Scenery” in front of me.",
             "nextBlock": 12,
+            "origClipLength": 164,
+            "animData": [
+                {
+                    "origLen": 186,
+                    "pathId": -4767520203969296126
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7626646334983897435
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 2753645667103319448
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -3408533904082146805
+                }
+            ],
             "pathId": -6132071346740083784,
             "blockIdx": 11
         },
@@ -108,8 +227,31 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "“景色”……。",
-            "enText": "",
+            "enText": "“Scenery”…",
             "nextBlock": 13,
+            "origClipLength": 38,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": -880081339052660574
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -2335062213879124425
+                },
+                {
+                    "origLen": 56,
+                    "pathId": 813591691450962511
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 7139490144889210857
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -6131523602129270829
+                }
+            ],
             "pathId": -6684544382534189703,
             "blockIdx": 12
         },
@@ -117,8 +259,31 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "きっとライスさんにも見えるはずですわ。\nさあ、ステージに出ますわよ。",
-            "enText": "",
+            "enText": "I'm sure you will be able to see it too \nRice. Come on, let's go on stage.",
             "nextBlock": 14,
+            "origClipLength": 181,
+            "animData": [
+                {
+                    "origLen": 199,
+                    "pathId": -3774719921326638348
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 1863152834020143602
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -1194018332582130687
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 4375447101319766430
+                },
+                {
+                    "origLen": 169,
+                    "pathId": 4067502194327277132
+                }
+            ],
             "pathId": -1908083357533715728,
             "blockIdx": 13
         },
@@ -126,8 +291,23 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "え……あっ！？",
-            "enText": "",
+            "enText": "Eh… Yeah!?",
             "nextBlock": 15,
+            "origClipLength": 56,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -777778068496298449
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3059868631283081472
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 1664582317923042351
+                }
+            ],
             "pathId": 357068001616538448,
             "blockIdx": 14
         },
@@ -135,8 +315,23 @@
             "jpName": "観客たち",
             "enName": "Crowd",
             "jpText": "（ざわざわ…………）",
-            "enText": "",
+            "enText": "(Booing……)",
             "nextBlock": 16,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -3300886967999738001
+                },
+                {
+                    "origLen": 15,
+                    "pathId": 5746374254434942986
+                },
+                {
+                    "origLen": 90,
+                    "pathId": 4531764506557268346
+                }
+            ],
             "pathId": 6850738300676257431,
             "blockIdx": 15
         },
@@ -144,8 +339,19 @@
             "jpName": "観客A",
             "enName": "Spectator A",
             "jpText": "あ、ライスシャワーが出て来たぞ！\r\nなんで3連覇の邪魔をすんだよーっ！！",
-            "enText": "",
+            "enText": "Oh, Rice Shower is coming out! Why did you get in the way of the \n3 consecutive wins!!",
             "nextBlock": 17,
+            "origClipLength": 166,
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": -3356349446994294216
+                },
+                {
+                    "origLen": 153,
+                    "pathId": -4935886247311685384
+                }
+            ],
             "pathId": -1484669957538142641,
             "blockIdx": 16
         },
@@ -153,8 +359,19 @@
             "jpName": "観客B",
             "enName": "Spectator B",
             "jpText": "俺たちはマックイーンの勝利を見に来たってのにー！！",
-            "enText": "",
+            "enText": "We came here to see McQueen win!!",
             "nextBlock": 18,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": -8742745353984014504
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -4896314016629408874
+                }
+            ],
             "pathId": 6500814966884364078,
             "blockIdx": 17
         },
@@ -162,8 +379,23 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "んにゃろ～、アタシたちも声出してくぞっ！\nライスよくやったー！　サイコー！！",
-            "enText": "",
+            "enText": "Bastards, we are gonna shout too! Rice good job! Awesome!!",
             "nextBlock": 19,
+            "origClipLength": 287,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 5038532737745673916
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8423317177622362298
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 3232136150357182587
+                }
+            ],
             "pathId": -5593671451161892720,
             "blockIdx": 18
         },
@@ -171,8 +403,15 @@
             "jpName": "前髪ぱっつんのウマ娘",
             "enName": "Horsegirl with Straight-cut Bangs",
             "jpText": "おめでとうございます、ライスさーん！",
-            "enText": "",
+            "enText": "Congratulations, Rice-san!",
             "nextBlock": 20,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 135,
+                    "pathId": 2842335093753911003
+                }
+            ],
             "pathId": -103346155415606573,
             "blockIdx": 19
         },
@@ -180,8 +419,15 @@
             "jpName": "観客C",
             "enName": "Spectator C",
             "jpText": "い……いい走りだったよー。",
-            "enText": "",
+            "enText": "hh…. That was a good run.",
             "nextBlock": 21,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 1599878095704612578
+                }
+            ],
             "pathId": 965962632781976445,
             "blockIdx": 20
         },
@@ -189,8 +435,23 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "おっ！　オマエ、わかってんじゃん！\r\nはいもう1度、もっと大きな声でっ！",
-            "enText": "",
+            "enText": "Hoo! You get it, Ok 1 more time with a higher voice!",
             "nextBlock": 22,
+            "origClipLength": 204,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -8588671416744391005
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -4525307283789337544
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -720012466874869175
+                }
+            ],
             "pathId": 7700758911694293348,
             "blockIdx": 21
         },
@@ -198,8 +459,19 @@
             "jpName": "観客C",
             "enName": "Spectator C",
             "jpText": "え……！？　あ、はいっ！\nいい走りだったよーっ！！",
-            "enText": "",
+            "enText": "eh!? ah, Yeah! That was a good run!!",
             "nextBlock": 23,
+            "origClipLength": 150,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 1551367171987234305
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7341532131059219388
+                }
+            ],
             "pathId": -3032604247451138652,
             "blockIdx": 22
         },
@@ -207,8 +479,15 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスを応援してくれてる人がいる……。",
-            "enText": "",
+            "enText": "There are people who are cheering for Rice…",
             "nextBlock": 24,
+            "origClipLength": 103,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 2260517970436651359
+                }
+            ],
             "pathId": -8395191851567636570,
             "blockIdx": 23
         },
@@ -216,8 +495,9 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "これが、レースを勝利した者だけが見られる“景色”――",
-            "enText": "",
+            "enText": "This is a “Scenery” only seen by those who won the race.",
             "nextBlock": 25,
+            "origClipLength": 137,
             "pathId": 105116817807190571,
             "blockIdx": 24
         },
@@ -225,8 +505,9 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "自分に期待してくれた方々、期待が叶わなかった方々……。\nこの場に立つと、様々な顔を見ることができます。",
-            "enText": "",
+            "enText": "Those who have expectations for me, those who did \nnot expect it to come true. When you stand in this \nplace, you can see all those different faces.",
             "nextBlock": 26,
+            "origClipLength": 308,
             "pathId": 6651676486912724094,
             "blockIdx": 25
         },
@@ -234,8 +515,9 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "そうした方々の想いをここでしっかりと受け止めるのが、\n勝者の義務であり、誇りでもあるのです。",
-            "enText": "",
+            "enText": "It is important to accept the feelings of such people firmly \nhere. That is the duty and pride of the winner",
             "nextBlock": 27,
+            "origClipLength": 266,
             "pathId": -3454726829074142939,
             "blockIdx": 26
         },
@@ -243,8 +525,9 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "勝者の義務と誇り……。",
-            "enText": "",
+            "enText": "Duty and pride of the winner…",
             "nextBlock": 28,
+            "origClipLength": 82,
             "pathId": 5302362774815519257,
             "blockIdx": 27
         },
@@ -252,8 +535,9 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "僅かでも自分に期待をしてくださった人のために……そして、\r\n期待が叶わなかった人のためにも、胸を張ってくださいませ。",
-            "enText": "",
+            "enText": "For those who have little expectations, and for those who have \nnot fulfilled their expectations, Hold your chest high.",
             "nextBlock": 29,
+            "origClipLength": 303,
             "pathId": 2195087228368981782,
             "blockIdx": 28
         },
@@ -261,8 +545,9 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "さあ、見せて差し上げましょう。\n勝者に相応しい姿を。",
-            "enText": "",
+            "enText": "Now, show me a figure worthy of the winner.",
             "nextBlock": 30,
+            "origClipLength": 158,
             "pathId": 6684242094922013424,
             "blockIdx": 29
         },
@@ -270,8 +555,9 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……うん！",
-            "enText": "",
+            "enText": "Yeah!",
             "nextBlock": 31,
+            "origClipLength": 34,
             "pathId": 2150142961298694287,
             "blockIdx": 30
         },
@@ -279,8 +565,9 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスのせいでがっかりした人たちも、ライスがしっかりしなきゃ\nもっとがっかりしちゃうよね。",
-            "enText": "",
+            "enText": "People who are disappointed because of Rice will also be \ndisappointed if Rice does not do well.",
             "nextBlock": 32,
+            "origClipLength": 221,
             "pathId": -3488258421258267262,
             "blockIdx": 31
         },
@@ -288,8 +575,9 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライス、胸を張る。\nみんなの顔をしっかり見て、これからも走り続けて……。",
-            "enText": "",
+            "enText": "Rice will hold her chest high. Look at everyone's faces firmly, \ncontinue running from now on…",
             "nextBlock": 33,
+            "origClipLength": 234,
             "pathId": -8134146523422155528,
             "blockIdx": 32
         },
@@ -297,8 +585,9 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "いつか、みんなに喜んでもらえるようなウマ娘になるね！",
-            "enText": "",
+            "enText": "Someday, I will become a Horse Girl that can make everyone happy!",
             "nextBlock": 34,
+            "origClipLength": 147,
             "pathId": -5349538321881776960,
             "blockIdx": 33
         },
@@ -306,8 +595,9 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "期待していますわ、ライスさん。",
-            "enText": "",
+            "enText": "I'm looking forward to it, Rice-san.",
             "nextBlock": 35,
+            "origClipLength": 82,
             "pathId": -8769692966978328046,
             "blockIdx": 34
         },
@@ -315,8 +605,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "メジロマックイーンの偉業を阻んだ、\r\nライスシャワーのウイニングライブ。",
-            "enText": "",
+            "enText": "The winning live of Rice Shower, which \nlimited the work of Mejiro McQueen.",
             "nextBlock": 36,
+            "origClipLength": 91,
             "pathId": -5087562077309554567,
             "blockIdx": 35
         },
@@ -324,8 +615,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "だが、『菊花賞』の時とは異なり、その歌声はとても力強く感じた。",
-            "enText": "",
+            "enText": "However, it was different from the time of the “Kikkashou Award”, \nthe voice of the song felt very powerful.",
             "nextBlock": 37,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8918676228938276497
+                }
+            ],
             "pathId": 7467016277054656662,
             "blockIdx": 36
         },
@@ -333,8 +631,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "マックイーン、今日はお疲れ様。",
-            "enText": "",
+            "enText": "Great work today, McQueen.",
             "nextBlock": 38,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": 5745177320854354263
+                }
+            ],
             "pathId": 4793982714291939596,
             "blockIdx": 37
         },
@@ -342,8 +647,19 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "……トレーナーさん。",
-            "enText": "",
+            "enText": "Trainer-san.",
             "nextBlock": 39,
+            "origClipLength": 42,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -3761114882810875234
+                },
+                {
+                    "origLen": 56,
+                    "pathId": -1464830945922627675
+                }
+            ],
             "pathId": -1005176101417422720,
             "blockIdx": 38
         },
@@ -351,8 +667,19 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ライスさん、自分が足りなかったものに\n気が付いてくださったようですわ。",
-            "enText": "",
+            "enText": "Rice-san seems to have realized what she was missing.",
             "nextBlock": 40,
+            "origClipLength": 171,
+            "animData": [
+                {
+                    "origLen": 166,
+                    "pathId": 6203933814572883036
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4594140000953124198
+                }
+            ],
             "pathId": -8863251340864250101,
             "blockIdx": 39
         },
@@ -360,8 +687,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ウイニングライブを見て、よくわかったよ。",
-            "enText": "",
+            "enText": "I saw the winning live, and I understood it well.",
             "nextBlock": 41,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 166,
+                    "pathId": -4749222717776191763
+                }
+            ],
             "pathId": -7232884958499741886,
             "blockIdx": 40
         },
@@ -369,8 +703,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ウイニングライブを見て、よくわかったよ。",
-            "enText": "",
+            "enText": "I saw the winning live, and I understood it well.",
             "nextBlock": 42,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 166,
+                    "pathId": 2464873323107135619
+                }
+            ],
             "pathId": -5390017056836613202,
             "blockIdx": 41
         },
@@ -378,8 +719,19 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "まったく、格好付かないですわね。\nレースに出すよう頼んでおいて、負けてしまったのですから。",
-            "enText": "",
+            "enText": "That was not cool at all. It was I who asked her to race with me \nand I ended up losing.",
             "nextBlock": 43,
+            "origClipLength": 276,
+            "animData": [
+                {
+                    "origLen": 274,
+                    "pathId": -3133274225981973079
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4197504576745088116
+                }
+            ],
             "pathId": 2292614603907818289,
             "blockIdx": 42
         },
@@ -387,8 +739,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "本当に……素晴らしい走りでしたわ。",
-            "enText": "",
+            "enText": "For real… That was an amazing run.",
             "nextBlock": 44,
+            "origClipLength": 107,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 1017311483478524171
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 3188578731821582396
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -6158907850325885061
+                }
+            ],
             "pathId": 836378114950811531,
             "blockIdx": 43
         },
@@ -396,8 +763,23 @@
             "jpName": "",
             "enName": "",
             "jpText": "メジロマックイーンがそうまで言うほどに、\r\n今日のライスシャワーの走りは今までで最高だった。",
-            "enText": "",
+            "enText": "As Mejiro McQueen said, today's Rice Shower had an amazing run.",
             "nextBlock": 45,
+            "origClipLength": 105,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": -339133297088625121
+                },
+                {
+                    "origLen": 152,
+                    "pathId": 6767218589394715615
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -1090026598055701154
+                }
+            ],
             "pathId": 3312604754907082378,
             "blockIdx": 44
         },
@@ -405,13 +787,28 @@
             "jpName": "",
             "enName": "",
             "jpText": "でも、メジロマックイーンの走りだって\r\n『天皇賞』にかける想いが伝わってくるほどで……。",
-            "enText": "",
+            "enText": "But, Mejiro McQueen ran in the “Emperor Prize” in the hope that \nher feelings could be conveyed.",
             "nextBlock": 46,
+            "origClipLength": 102,
             "choices": [
                 {
                     "jpText": "……頑張ったね、マックイーン",
-                    "enText": "",
+                    "enText": "Good Work, McQueen.",
                     "nextBlock": 46
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": -8731858707156307692
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 1882944423772240750
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -6416633462866261545
                 }
             ],
             "pathId": -5956804473647603742,
@@ -421,8 +818,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "……うう……うううっ……。",
-            "enText": "",
+            "enText": "Sob… Sobbing…",
             "nextBlock": 47,
+            "origClipLength": 150,
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": -5167548328661595455
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7614881445397094969
+                },
+                {
+                    "origLen": 176,
+                    "pathId": 7775403027039989625
+                }
+            ],
             "pathId": -7644103849783744771,
             "blockIdx": 46
         },
@@ -430,8 +842,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "あと一歩でしたのに……勝ちたかったですのにぃ……っ！",
-            "enText": "",
+            "enText": "I was just one step away… I would've won it… hic!",
             "nextBlock": 48,
+            "origClipLength": 258,
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": 1631220926759002719
+                },
+                {
+                    "origLen": 85,
+                    "pathId": -6404232517693460736
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 3967972217853416664
+                }
+            ],
             "pathId": -8585855789530715597,
             "blockIdx": 47
         },
@@ -439,8 +866,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ううう……トレーナーさんっ！\nうあああ……っ！！",
-            "enText": "",
+            "enText": "Sob… Trainer-san! Sobbing… Hic!!",
             "nextBlock": 49,
+            "origClipLength": 355,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -5978471398228004060
+                },
+                {
+                    "origLen": 46,
+                    "pathId": -1106564578443190679
+                },
+                {
+                    "origLen": 40,
+                    "pathId": -8680279720714865585
+                }
+            ],
             "pathId": 2502051852267749540,
             "blockIdx": 48
         },
@@ -448,8 +890,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "エースとしての役割と、彼女自身が『天皇賞』にかける想い……。\nその2つを背負って走ったメジロマックイーンには感謝しかない。",
-            "enText": "",
+            "enText": "The role of an ace and her feeling for the “Emperor Prize”, there \nis nothing but gratitude to Mejiro McQueen, who ran bearing those \n2 heavy feelings on her back.",
             "nextBlock": 50,
+            "origClipLength": 124,
             "pathId": -7676087463002714347,
             "blockIdx": 49
         },
@@ -457,8 +900,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "それはきっとライスシャワーにも伝わっていることだろう。",
-            "enText": "",
+            "enText": "I'm sure those feelings were also transmitted to Rice Shower.",
             "nextBlock": 51,
+            "origClipLength": 80,
             "pathId": -1240959186759478853,
             "blockIdx": 50
         },
@@ -466,8 +910,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "ひとりぼっちになってしまった魔法使い。\nそんなある日、男の子が訪ねてきました。",
-            "enText": "",
+            "enText": "One day a boy came to visit the lonely wizard.",
             "nextBlock": 52,
+            "origClipLength": 233,
             "pathId": 2969658387212976604,
             "blockIdx": 51
         },
@@ -475,8 +920,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "『ぼく、鳥のように空を飛んでみたい』",
-            "enText": "",
+            "enText": "“I want to fly in the sky like a bird”.",
             "nextBlock": 53,
+            "origClipLength": 111,
             "pathId": 4095934860355024928,
             "blockIdx": 52
         },
@@ -484,8 +930,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "魔法使いは喜んで魔法を使い、願いが叶った男の子は\r\n笑顔になりました。『わあぁ！　すごいすごい！』",
-            "enText": "",
+            "enText": "The wizard uses her magic with pleasure, and the boy whose wish \ncame true with a smile said. Wow! That's amazing, amazing!!",
             "nextBlock": 54,
+            "origClipLength": 332,
             "pathId": 1364417519935804543,
             "blockIdx": 53
         },
@@ -493,8 +940,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "すると、それをみた人々は\n魔法使いのところへ集まってくるようになりました。",
-            "enText": "",
+            "enText": "Then, the people who saw it came to gather around the Wizard.",
             "nextBlock": 55,
+            "origClipLength": 210,
             "pathId": -3845671664771200364,
             "blockIdx": 54
         },
@@ -502,8 +950,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "怖がる人はまだいるけど、\r\nだんだんと周りに笑顔が増えてゆきます。",
-            "enText": "",
+            "enText": "There are still people who are scared, but the smiles began to \ngradually increase around them.",
             "nextBlock": 56,
+            "origClipLength": 195,
             "pathId": 9055198392526063112,
             "blockIdx": 55
         },
@@ -511,8 +960,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "魔法使いはみんなを幸せにしようと、\r\nありったけの力で、たくさん魔法を使いました。",
-            "enText": "",
+            "enText": "The wizard used a lot of magic to make everyone \nhappy with her natural power.",
             "nextBlock": 57,
+            "origClipLength": 256,
             "pathId": 7265203219433304498,
             "blockIdx": 56
         },
@@ -520,8 +970,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "――しかし突然、\r\n魔法が使えなくなってしまったのです。",
-            "enText": "",
+            "enText": "But suddenly, the wizard couldn't use magic anymore.",
             "nextBlock": 58,
+            "origClipLength": 146,
             "pathId": 2829662688077527674,
             "blockIdx": 57
         },
@@ -529,8 +980,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "魔法を使うのにがんばりすぎて、倒れてしまいました。",
-            "enText": "",
+            "enText": "The wizard used too much magic, and ended up collapsing.",
             "nextBlock": 59,
+            "origClipLength": 143,
             "pathId": -6901363627568072870,
             "blockIdx": 58
         },
@@ -538,8 +990,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "いままで魔法使いを怖がっていた人たちは、\n魔法使いがみんなを幸せにするためにがんばっていたことを知り、",
-            "enText": "",
+            "enText": "People who have been afraid of the wizard until now, realized how \nhard the wizard worked to make everyone happy.",
             "nextBlock": 60,
+            "origClipLength": 271,
             "pathId": 1226416257116497330,
             "blockIdx": 59
         },
@@ -547,8 +1000,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "魔法使いの本当の気持ちを知って、\n看病をしに来るようになりました。",
-            "enText": "",
+            "enText": "Knowing the true feelings of the wizard, they looked after her.",
             "nextBlock": 61,
+            "origClipLength": 180,
             "pathId": -2390495372015371940,
             "blockIdx": 60
         },
@@ -556,8 +1010,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "そして再び、幸せの魔法が使えるようになるときを\r\n誰もが待ち望むようになりました。",
-            "enText": "",
+            "enText": "And once again, everyone began to look forward to when the magic \nof happiness could be used.",
             "nextBlock": -1,
+            "origClipLength": 261,
             "pathId": -3072602497514410495,
             "blockIdx": 61
         }

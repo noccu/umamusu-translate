@@ -14,8 +14,11 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main/Event Stories
 name | progress | translator
 --- | --- | ---
-Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
+Main story Act 1 Ch 2 | Complete | [Hades of Games]
+Main story Act 1 Ch 3 | Complete | [Hades of Games]
+Main story Act 1 Ch 4 | Complete | [Hades of Games]
+Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 6 (Final) | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
@@ -23,9 +26,11 @@ Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)
 The Sounds of Autumn | Complete | deepl (old)
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
-Blossoming New Year's Karuta Contest | Complete | deepl
+Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
+Tonight at the Ligne Droite | In progress | [ebi]
+Roar, Tracen Academy Cheerleading Squad! | In progress | [LotoDS]
 
 # Character stories
 name | progress | translator
@@ -35,22 +40,24 @@ Air Groove | Complete | [burritoblaster][]
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
-Eishin Flash | Complete | deepl
+Eishin Flash | Complete, In progress | deepl, [noccu]
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
+Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | In progress | [Snep][]
 Maruzensky | Complete | [noccu][]
+Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
 Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1EeJrGT5gFchEZTnx68A) (ep 1)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
-Mihono Bourbon | Complete | deepl
+Mihono Bourbon | Complete, In progress | deepl, [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Nice Nature | In progress | [xct][] (ep 1-4)
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
@@ -137,3 +144,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Ben]: https://www.youtube.com/user/sheepawolf
 [Eight]: https://twitter.com/hachikure
 [XiantheMiguel]: https://twitter.com/XiantheMiguel
+[Mini Fox]: https://github.com/MiniFoxx

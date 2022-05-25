@@ -5,6 +5,7 @@ import common
 import helpers
 import sqlite3
 from pathlib import Path
+import shutil
 
 def translator(srcdir, files):
     for file in files:
@@ -21,10 +22,26 @@ def parseArgs():
     ap = common.Args("Imports translations to master.mdb", False)
     ap.add_argument("-src", default="translations/master_db", help="Import path")
     ap.add_argument("-dst", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
+    ap.add_argument("-B", "--backup", action="store_true", help="Backup the master.mdb file")
+    ap.add_argument("-R", "--restore", action="store_true", help="Restore the master.mdb file from backup")
     return ap.parse_args()
 
 def main():
     args = parseArgs()
+    if args.backup:
+        shutil.copyfile(args.dst, args.dst + ".bak")
+        print("master.mdb backed up.")
+        return
+    elif args.restore:
+        try:
+            shutil.copyfile(args.dst + ".bak", args.dst)
+        except FileNotFoundError:
+            print("No backup found.")
+        else:
+            print("master.mdb restored.")
+        return
+
+
     with sqlite3.connect(args.dst, isolation_level=None) as db:
         index = helpers.readJson("src/master-db/index.json")
         db.execute("PRAGMA journal_mode = MEMORY;")

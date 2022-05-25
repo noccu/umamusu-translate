@@ -33,7 +33,10 @@ def main():
             stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"
             if entry.get("specifier"):
                 for specval, filename in entry['files'].items():
-                    specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
+                    if specval.startswith("+"):
+                        specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval[1:]});"
+                    else:
+                        specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
                     extract(db, specStmt, Path(args.dst, filename + ".json"))
             else:
                 extract(db, stmt, Path(args.dst, entry['file'] + ".json"))

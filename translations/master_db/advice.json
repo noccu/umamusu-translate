@@ -1,110 +1,28 @@
 {
-    "version": 4,
-    "type": "db-lookup",
-    "text": [
-        {
-            "jpText": "基礎能力は十分育っているようなので\\nスキルを獲得しましょう。",
-            "enText": "Your stats seems well developed.\\nLet's acquire some skills."
-        },
-        {
-            "jpText": "基礎能力に比べてスキルが物足りない\\nので獲得してはどうでしょうか。",
-            "enText": "Your stats seems well but you lack\\nin skills. Let's acquire some."
-        },
-        {
-            "jpText": "そろそろスキル獲得を視野に入れても\\n良さそうです。",
-            "enText": "It's about time to consider acquiring some skills."
-        },
-        {
-            "jpText": "スピードが不足しているようなので\\n重点的に鍛えてみましょう。",
-            "enText": "Your speed seems a bit low.\\nLet's focus on training it."
-        },
-        {
-            "jpText": "スピードを伸ばすと基礎能力の\\nバランスが良くなりそうです。",
-            "enText": "Training some speed may help\\nyou keep a good balance."
-        },
-        {
-            "jpText": "スタミナが不足しているようなので\\n重点的に鍛えてみましょう。",
-            "enText": "Your stamina seems a bit low.\\nLet's focus on training it."
-        },
-        {
-            "jpText": "スタミナを伸ばすと基礎能力の\\nバランスが良くなりそうです。",
-            "enText": "Training some stamina may help\\nyou keep a good balance."
-        },
-        {
-            "jpText": "パワーが不足しているようなので\\n重点的に鍛えてみましょう。",
-            "enText": "Your power seems a bit low.\\nLet's focus on training it."
-        },
-        {
-            "jpText": "パワーを伸ばすと基礎能力の\\nバランスが良くなりそうです。",
-            "enText": "Training some power may help\\nyou keep a good balance."
-        },
-        {
-            "jpText": "根性が不足しているようなので\\n重点的に鍛えてみましょう。",
-            "enText": "Your guts seems a bit low.\\nLet's focus on training it."
-        },
-        {
-            "jpText": "根性を伸ばすと基礎能力の\\nバランスが良くなりそうです。",
-            "enText": "Training some guts may help\\nyou keep a good balance."
-        },
-        {
-            "jpText": "賢さが不足しているようなので\\n重点的に鍛えてみましょう。",
-            "enText": "Your wisdom seems a bit low.\\nLet's focus on training it."
-        },
-        {
-            "jpText": "賢さを伸ばすと基礎能力の\\nバランスが良くなりそうです。",
-            "enText": "Training some wisdom may help\\nyou keep a good balance."
-        },
-        {
-            "jpText": "バランスよくしっかりと\\nトレーニングしていきましょう！",
-            "enText": "Make sure to get some good balanced training!"
-        },
-        {
-            "jpText": "ファン不足で目標のレースに出走\\nできません。レースに出走しましょう。",
-            "enText": "You lack the minimum amount of fans\\nfor the target race, let's run in a race."
-        },
-        {
-            "jpText": "このままでは目標のファン数に到達\\nできません。レースに出走しましょう。",
-            "enText": "You can't reach the target number\\n of fans as it is. Let's do some race."
-        },
-        {
-            "jpText": "目標としてきたレース当日ですね。\\nあとはレースの結果を見守りましょう。",
-            "enText": "It's the day of the race we've been\\naiming for. Let's keep an eye on it."
-        },
-        {
-            "jpText": "トレーニングに差し支えのある状態に\\nなっているので保健室に行きましょう。",
-            "enText": "The condition seems unsuitable for\\ntraining. Let's go to the infirmary."
-        },
-        {
-            "jpText": "体力が低下しているのでケガの恐れが\\nあります。お休みも大切ですよ。",
-            "enText": "Low energy may cause injury.\\nIt's important to have some rest too."
-        },
-        {
-            "jpText": "体力が低いのでケガの恐れがあります。\\nお出かけしてリフレッシュしましょう。",
-            "enText": "Fatigue may cause injury in training.\\n Let's rest and recover some energy."
-        },
-        {
-            "jpText": "レース直前なのに調子がイマイチです。\\nお出かけして気分転換も大切ですよ。",
-            "enText": "Keep your mood in a good state before the race.\\nLet's go out and find change of pace."
-        },
-        {
-            "jpText": "デビューまでの調整期間です。\\nトレーニングをしっかりやりましょう。",
-            "enText": "It's adjustment period before debut.\\nLet's take the time to train well."
-        },
-        {
-            "jpText": "未勝利のままでは9月以降育成を続行\\nできません。レースで勝利しましょう。",
-            "enText": "You need to win a race before\\nSeptember. Let's win a race."
-        },
-        {
-            "jpText": "未勝利のため目標のレースに出走\\nできません。レースに出走しましょう。",
-            "enText": "You cannot participate in the\\ntarget race. Let's win some race."
-        },
-        {
-            "jpText": "このままでは目標を達成できません。\\nレースに出走しましょう。",
-            "enText": "You can't achieve the goal as it is.\\nLet's do some race."
-        },
-        {
-            "jpText": "このままでは目標の成績Ptに到達\\nできません。レースに出走しましょう。",
-            "enText": "You're running behind on your target Result Pt. Enter a few races."
-        }
-    ]
+    "基礎能力は十分育っているようなので\\nスキルを獲得しましょう。": "Your stats seems well developed.\\nLet's acquire some skills.",
+    "基礎能力に比べてスキルが物足りない\\nので獲得してはどうでしょうか。": "Your stats seems well but you lack\\nin skills. Let's acquire some.",
+    "そろそろスキル獲得を視野に入れても\\n良さそうです。": "It's about time to consider acquiring some skills.",
+    "スピードが不足しているようなので\\n重点的に鍛えてみましょう。": "Your speed seems a bit low.\\nLet's focus on training it.",
+    "スピードを伸ばすと基礎能力の\\nバランスが良くなりそうです。": "Training some speed may help\\nyou keep a good balance.",
+    "スタミナが不足しているようなので\\n重点的に鍛えてみましょう。": "Your stamina seems a bit low.\\nLet's focus on training it.",
+    "スタミナを伸ばすと基礎能力の\\nバランスが良くなりそうです。": "Training some stamina may help\\nyou keep a good balance.",
+    "パワーが不足しているようなので\\n重点的に鍛えてみましょう。": "Your power seems a bit low.\\nLet's focus on training it.",
+    "パワーを伸ばすと基礎能力の\\nバランスが良くなりそうです。": "Training some power may help\\nyou keep a good balance.",
+    "根性が不足しているようなので\\n重点的に鍛えてみましょう。": "Your guts seems a bit low.\\nLet's focus on training it.",
+    "根性を伸ばすと基礎能力の\\nバランスが良くなりそうです。": "Training some guts may help\\nyou keep a good balance.",
+    "賢さが不足しているようなので\\n重点的に鍛えてみましょう。": "Your wisdom seems a bit low.\\nLet's focus on training it.",
+    "賢さを伸ばすと基礎能力の\\nバランスが良くなりそうです。": "Training some wisdom may help\\nyou keep a good balance.",
+    "バランスよくしっかりと\\nトレーニングしていきましょう！": "Make sure to get some good balanced training!",
+    "ファン不足で目標のレースに出走\\nできません。レースに出走しましょう。": "You lack the minimum amount of fans\\nfor the target race, let's run in a race.",
+    "このままでは目標のファン数に到達\\nできません。レースに出走しましょう。": "You can't reach the target number\\n of fans as it is. Let's do some race.",
+    "目標としてきたレース当日ですね。\\nあとはレースの結果を見守りましょう。": "It's the day of the race we've been\\naiming for. Let's keep an eye on it.",
+    "トレーニングに差し支えのある状態に\\nなっているので保健室に行きましょう。": "The condition seems unsuitable for\\ntraining. Let's go to the infirmary.",
+    "体力が低下しているのでケガの恐れが\\nあります。お休みも大切ですよ。": "Low energy may cause injury.\\nIt's important to have some rest too.",
+    "体力が低いのでケガの恐れがあります。\\nお出かけしてリフレッシュしましょう。": "Fatigue may cause injury in training.\\n Let's rest and recover some energy.",
+    "レース直前なのに調子がイマイチです。\\nお出かけして気分転換も大切ですよ。": "Keep your mood in a good state before the race.\\nLet's go out and find change of pace.",
+    "デビューまでの調整期間です。\\nトレーニングをしっかりやりましょう。": "It's adjustment period before debut.\\nLet's take the time to train well.",
+    "未勝利のままでは9月以降育成を続行\\nできません。レースで勝利しましょう。": "You need to win a race before\\nSeptember. Let's win a race.",
+    "未勝利のため目標のレースに出走\\nできません。レースに出走しましょう。": "You cannot participate in the\\ntarget race. Let's win some race.",
+    "このままでは目標を達成できません。\\nレースに出走しましょう。": "You can't achieve the goal as it is.\\nLet's do some race.",
+    "このままでは目標の成績Ptに到達\\nできません。レースに出走しましょう。": "You're running behind on your target Result Pt. Enter a few races."
 }

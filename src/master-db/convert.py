@@ -9,11 +9,15 @@ from pathlib import Path
 def parseArgs():
     ap = common.Args("Converts mdb patch files to uma-tl format", False)
     ap.add_argument("-src", default=Path("../umamusume-db-translate/src/data").resolve(), help="mdb patch data dir")
+    ap.add_argument("-file", type=Path, help="Specific file to convert. Otherwise all files in tl folder.")
     return ap.parse_args()
 
 def main():
     args = parseArgs()
-    files = Path("translations/master_db").glob("*.json")
+    if args.file:
+        files = [args.file]
+    else:
+        files = Path("translations/master_db").glob("*.json")
 
     for file in files:
         jsonData = helpers.readJson(file)

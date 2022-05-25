@@ -18,10 +18,11 @@ def main():
     for file in files:
         jsonData = helpers.readJson(file)
         csvData = dict()
+        csvPath = Path(args.src, file.stem + ".csv")
         try:
-            csvfile = open(args.src + file.stem + ".csv", "r", newline='', encoding="utf8")
+            csvfile = open(csvPath, "r", newline='', encoding="utf8")
         except FileNotFoundError:
-            print("Not found:", args.src + file.stem + ".csv")
+            print("Not found:", csvPath)
             continue
         with csvfile:
             reader = csv.reader(csvfile, delimiter=',', quotechar='"')

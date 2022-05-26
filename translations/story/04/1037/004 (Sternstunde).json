@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "UB4UNDUDT2IH5SCV4C27DZJVHXZOJJNR",
     "type": "story",
     "storyId": "041037004",
@@ -11,6 +11,13 @@
             "jpText": "そして迎えた、選抜レース当日――",
             "enText": "Then came the day of the Selection Race.",
             "nextBlock": 2,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5553698982037130802
+                }
+            ],
             "pathId": 4146622833943504997,
             "blockIdx": 1
         },
@@ -20,6 +27,17 @@
             "jpText": "次の1600mに出走するため準備中のエイシンフラッシュ。\r\n体調は問題なさそうだが、何かきょろきょろしている……。",
             "enText": "Eishin Flash is preparing to run in the next 1600m race. She \nseems to be in good shape, but there's something about her that \nmakes her look a little hazy…",
             "nextBlock": 3,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 203,
+                    "pathId": -813821630831043682
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3605328525189218524
+                }
+            ],
             "pathId": 6867510319727517088,
             "blockIdx": 2
         },
@@ -29,6 +47,17 @@
             "jpText": "あ……。",
             "enText": "Oh…",
             "nextBlock": 4,
+            "origClipLength": 30,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": 616318649904256158
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 8776321019488528756
+                }
+            ],
             "pathId": 1269841181134616734,
             "blockIdx": 3
         },
@@ -38,6 +67,17 @@
             "jpText": "彼女の視線が止まった先を辿ると、外国人と思われる夫婦がいた。\r\nエイシンフラッシュの両親らしく、真面目な雰囲気が少し似ている。",
             "enText": "I followed where her gaze stopped and saw a couple who seemed to \nbe foreigners. They looked like the parents of Eishin Flash, and \ntheir seriousness was a little similar.",
             "nextBlock": 5,
+            "origClipLength": 127,
+            "animData": [
+                {
+                    "origLen": 163,
+                    "pathId": -1063971937614871605
+                },
+                {
+                    "origLen": 185,
+                    "pathId": 7512279042486696931
+                }
+            ],
             "pathId": 865194763650960306,
             "blockIdx": 4
         },
@@ -47,6 +87,25 @@
             "jpText": "……ふぅ。\r\ntoi,toi,toi……――",
             "enText": "… Huh. toi,toi,toi…—",
             "nextBlock": 6,
+            "origClipLength": 149,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -4033669143145928997
+                },
+                {
+                    "origLen": 31,
+                    "pathId": -6216443834485062497
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 2303686594840424725
+                },
+                {
+                    "origLen": 31,
+                    "pathId": 5954011173218647274
+                }
+            ],
             "pathId": 2857472416769835258,
             "blockIdx": 5
         },
@@ -56,6 +115,17 @@
             "jpText": "時間です！\r\n1600mに出走するみなさん、集まってください！",
             "enText": "It's time! All those running for the 1600 meters, gather around!",
             "nextBlock": 7,
+            "origClipLength": 151,
+            "animData": [
+                {
+                    "origLen": 177,
+                    "pathId": 1285680409463633528
+                },
+                {
+                    "origLen": 176,
+                    "pathId": -3606376876146504248
+                }
+            ],
             "pathId": -2755728171099711008,
             "blockIdx": 6
         },
@@ -65,6 +135,17 @@
             "jpText": "……Auf geht's！",
             "enText": "…There you go！",
             "nextBlock": 8,
+            "origClipLength": 38,
+            "animData": [
+                {
+                    "origLen": 155,
+                    "pathId": 6943022136094248168
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 5434365704104029839
+                }
+            ],
             "pathId": 3985352490621797821,
             "blockIdx": 7
         },
@@ -74,6 +155,17 @@
             "jpText": "こうして両親の見守る中、エイシンフラッシュの\r\n選抜レースは始まった。その結果は――",
             "enText": "Thus, under the watchful eyes of her parents, Eishin Flash's \nSelection Race began. The result was…",
             "nextBlock": 9,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": 8692701168553981991
+                },
+                {
+                    "origLen": 15,
+                    "pathId": -6905895410543406945
+                }
+            ],
             "pathId": 6706056634309278304,
             "blockIdx": 8
         },
@@ -83,11 +175,22 @@
             "jpText": "――あ……トレーナーさん。\r\nやはり、見てくださっていたんですね。",
             "enText": "—Ah… trainer. I knew you were watching me.",
             "nextBlock": 10,
+            "origClipLength": 195,
             "choices": [
                 {
                     "jpText": "お疲れ様",
                     "enText": "thank you",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": 1822482352132852856
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 8621013124807947122
                 }
             ],
             "pathId": 1356118063598349460,
@@ -99,6 +202,17 @@
             "jpText": "……ありがとうございます。",
             "enText": "Thank you for…",
             "nextBlock": 11,
+            "origClipLength": 46,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": 3093987971575102806
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8532796291023223306
+                }
+            ],
             "pathId": -2420220959325111197,
             "blockIdx": 10
         },
@@ -108,6 +222,7 @@
             "jpText": "浮かない表情なのも仕方がない。結局エイシンフラッシュは\r\n6着という結果で選抜レースを終えた。だが――",
             "enText": "It was no wonder she looked so unhappy. In the end, Eishin Flash \nfinished sixth in the Selection Race. But…",
             "nextBlock": 12,
+            "origClipLength": 111,
             "choices": [
                 {
                     "jpText": "いい走りだった",
@@ -120,6 +235,16 @@
                     "nextBlock": 12
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": 3460346616531658998
+                },
+                {
+                    "origLen": 174,
+                    "pathId": 3252952690898284232
+                }
+            ],
             "pathId": -7701832658454220701,
             "blockIdx": 11
         },
@@ -129,11 +254,22 @@
             "jpText": "いいえ。『可』か『不可』かで言えば不可でしょう。\r\n6着という結果が全てです。",
             "enText": "No, it's not. If I had to choose between \"acceptable\" \nand \"unacceptable,\" I would say \"unacceptable. The \nsixth place result is all that matters.",
             "nextBlock": 13,
+            "origClipLength": 175,
             "choices": [
                 {
                     "jpText": "でも将来を期待できる走りだった",
                     "enText": "But it was a run that showed promise for the future.",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -4760386929987902124
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 2504460269105883318
                 }
             ],
             "pathId": 2337136493775641593,
@@ -145,6 +281,13 @@
             "jpText": "……やはり貴方は私とは違うものを見ていますね。\r\nだからこそ……――",
             "enText": "…You still see things differently \nthan I do. That's why…—",
             "nextBlock": 14,
+            "origClipLength": 189,
+            "animData": [
+                {
+                    "origLen": 176,
+                    "pathId": -7453975620325946603
+                }
+            ],
             "pathId": 242262059476351096,
             "blockIdx": 13
         },
@@ -154,6 +297,7 @@
             "jpText": "あの、お願いがあるんです。この後、両親と会うのですが……\r\n一緒に来ていただけませんか？",
             "enText": "Um, I have a favor to ask. I'm meeting my parents after this. \n… Could you please come with me?",
             "nextBlock": 15,
+            "origClipLength": 257,
             "choices": [
                 {
                     "jpText": "いいのか？",
@@ -166,6 +310,12 @@
                     "nextBlock": 15
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": -2803736270980669906
+                }
+            ],
             "pathId": -2724316312287446886,
             "blockIdx": 14
         },
@@ -175,6 +325,17 @@
             "jpText": "はい。このような結果になってしまい……\r\n上手く話せる自信がないんです。でも――",
             "enText": "Yes. This is the result of… I'm \nnot sure I can speak well. But…",
             "nextBlock": 16,
+            "origClipLength": 235,
+            "animData": [
+                {
+                    "origLen": 261,
+                    "pathId": -5289004551143499408
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 7222287580075116194
+                }
+            ],
             "pathId": -6637175969096701881,
             "blockIdx": 15
         },
@@ -184,11 +345,22 @@
             "jpText": "以前貴方は、『気持ちは伝わる』と仰いました。\r\nですから……その。",
             "enText": "You once said, \"Feelings are transmitted. That's why…",
             "nextBlock": 17,
+            "origClipLength": 199,
             "choices": [
                 {
                     "jpText": "わかった、行こう",
                     "enText": "All right, let's go.",
                     "nextBlock": 17
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -4757524137753822220
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -1110116476657832759
                 }
             ],
             "pathId": 7142195181913139423,
@@ -200,6 +372,17 @@
             "jpText": "……！\r\nありがとうございます――",
             "enText": "…! Thank you—",
             "nextBlock": 18,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -5892884276899697991
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8239278953699090875
+                }
+            ],
             "pathId": 6087900627352111715,
             "blockIdx": 17
         },
@@ -209,6 +392,21 @@
             "jpText": "エイシンフラッシュのご両親は、肩を並べて待っていた。\r\n視線の先に2人を認めると、彼女は立ち止まり――",
             "enText": "Eishin Flash's parents were waiting for her, shoulder \nto shoulder. When she recognized them out of the \ncorner of her eye, she stopped—",
             "nextBlock": 19,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 225,
+                    "pathId": 914966026920753574
+                },
+                {
+                    "origLen": 208,
+                    "pathId": -9155545455705621670
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 5945286908538726330
+                }
+            ],
             "pathId": -7588261979704708890,
             "blockIdx": 18
         },
@@ -218,6 +416,17 @@
             "jpText": "……。",
             "enText": "…",
             "nextBlock": 20,
+            "origClipLength": 42,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -7941788344883729842
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 5702565273997290069
+                }
+            ],
             "pathId": -2722809976019636808,
             "blockIdx": 19
         },
@@ -227,6 +436,17 @@
             "jpText": "心細げに見つめられたので、促すように頷く。\r\nすると決心した様子で、彼女は1歩踏み出していった――",
             "enText": "She looked at me nervously, and I nodded as if to encourage her. \nThen, with a determined look, she took a step forward…",
             "nextBlock": 21,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 9036026131772575947
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4224526554050542989
+                }
+            ],
             "pathId": -4942737378303104116,
             "blockIdx": 20
         },
@@ -236,6 +456,17 @@
             "jpText": "『お父さん、お母さん。お久しぶりです。\r\n約束通り、レースを観に来てくれてありがとうございます』",
             "enText": "\"Father, mother. It's been a while. Thank you for \ncoming to watch the race as you promised.\"",
             "nextBlock": 22,
+            "origClipLength": 290,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -7302362902860234043
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 1145103625008307179
+                }
+            ],
             "pathId": 9041413700928763528,
             "blockIdx": 21
         },
@@ -245,6 +476,17 @@
             "jpText": "『なのに、私は約束を守れませんでした。2人の娘として、\r\n正しく成長した姿を見せたかった。……あの、私――』",
             "enText": "But I couldn't keep my promise, because I wanted to show them \nthat I had grown up right as their daughter…",
             "nextBlock": 23,
+            "origClipLength": 366,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5830734054956986156
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7478546023155599956
+                }
+            ],
             "pathId": 8213584034645942997,
             "blockIdx": 22
         },
@@ -254,6 +496,13 @@
             "jpText": "『フラッシュ、よく頑張りましたね』",
             "enText": "\"Good work, Flash.\"",
             "nextBlock": 24,
+            "origClipLength": 100,
+            "animData": [
+                {
+                    "origLen": 186,
+                    "pathId": 5211036291628275416
+                }
+            ],
             "pathId": -4846076369384597763,
             "blockIdx": 23
         },
@@ -263,6 +512,13 @@
             "jpText": "え……。",
             "enText": "E…",
             "nextBlock": 25,
+            "origClipLength": 38,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 5553270351941249343
+                }
+            ],
             "pathId": -2081703040695547615,
             "blockIdx": 24
         },
@@ -272,6 +528,17 @@
             "jpText": "『うん。結果こそ完璧ではなかったけれど、努力の跡が見えた。\r\n昔はよく力んでしまっていたけど、抑えられるようになったね』",
             "enText": "\"Yes. The result wasn't perfect, but I could \nsee the signs of effort. I used to exert myself \na lot, but I've learned to control it.",
             "nextBlock": 26,
+            "origClipLength": 334,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 2920827053173219913
+                },
+                {
+                    "origLen": 408,
+                    "pathId": -8580574864295242876
+                }
+            ],
             "pathId": -3099124413492539082,
             "blockIdx": 25
         },
@@ -281,6 +548,17 @@
             "jpText": "『私たちのために、一生懸命努力してくれたんだろう？\r\n君はよく教えを守ってくれた。親として誇りに思うよ』",
             "enText": "\"You've worked so hard for us, haven't you? You've done well to \nfollow our teachings. I'm proud of you as a parent.\"",
             "nextBlock": 27,
+            "origClipLength": 325,
+            "animData": [
+                {
+                    "origLen": 369,
+                    "pathId": -5527328315159290009
+                },
+                {
+                    "origLen": 408,
+                    "pathId": 8565448527251424056
+                }
+            ],
             "pathId": 6986289105974776194,
             "blockIdx": 26
         },
@@ -290,6 +568,17 @@
             "jpText": "『喜ばせてくれてありがとう。\r\n私たちのSchatzi……』",
             "enText": "Thank you for making me happy. Our Schatzi…\"",
             "nextBlock": 28,
+            "origClipLength": 137,
+            "animData": [
+                {
+                    "origLen": 234,
+                    "pathId": 5253201801596506043
+                },
+                {
+                    "origLen": 408,
+                    "pathId": 5305120207937280305
+                }
+            ],
             "pathId": 7176197255255312808,
             "blockIdx": 27
         },
@@ -299,6 +588,17 @@
             "jpText": "……！",
             "enText": "…!",
             "nextBlock": 29,
+            "origClipLength": 46,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -5321624182018077610
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -1114190877996757583
+                }
+            ],
             "pathId": -7174137245915894928,
             "blockIdx": 28
         },
@@ -308,6 +608,17 @@
             "jpText": "（思い出した。クリスマスの時、父は……）",
             "enText": "(I remember. At Christmas, my father was…)",
             "nextBlock": 30,
+            "origClipLength": 141,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": 4817845194670943391
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 8234711390388774327
+                }
+            ],
             "pathId": -7274562861420549450,
             "blockIdx": 29
         },
@@ -317,6 +628,7 @@
             "jpText": "『フラッシュ、私たちのSchatzi。けれど忘れてはいけないよ。\r\n誤差を許さないその理由は、もちろん品質のためだ』",
             "enText": "\"Flash, our Schatzi, but don't forget. But don't forget that the \nreason we don't allow for errors is, of course, quality.",
             "nextBlock": 31,
+            "origClipLength": 333,
             "pathId": 5891116557360394410,
             "blockIdx": 30
         },
@@ -326,6 +638,7 @@
             "jpText": "『だがそれ以上に大切なのは――誰かの幸せのために、\r\n自分のなすべきことを手を抜かずに正しく行うこと』",
             "enText": "But what's more important is that you do what you have to do, and \ndo it right, for the sake of someone else's happiness.",
             "nextBlock": 32,
+            "origClipLength": 273,
             "pathId": 7737681355813809934,
             "blockIdx": 31
         },
@@ -335,6 +648,7 @@
             "jpText": "『誰かの、幸せのため……？』",
             "enText": "\"To make someone else happy…?",
             "nextBlock": 33,
+            "origClipLength": 81,
             "pathId": -6160340583297438018,
             "blockIdx": 32
         },
@@ -344,6 +658,7 @@
             "jpText": "『でなければ、レシピさえ守れば誰でもいいことになる。\r\n祈りを、心を込めて仕上げるから、私たちのなす意味があるんだ』",
             "enText": "Otherwise, anyone can do it, as long as they follow the recipe. \nPrayers, finished with care, are what we are about.",
             "nextBlock": 34,
+            "origClipLength": 344,
             "pathId": 7616672348996341044,
             "blockIdx": 33
         },
@@ -353,6 +668,7 @@
             "jpText": "『でも、心に味はついてないよ？\r\nパパのレシピにも書いてない……』",
             "enText": "\"But the heart doesn't taste good, does it? \nIt's not even in my dad's recipe…\"",
             "nextBlock": 35,
+            "origClipLength": 177,
             "pathId": -3186985074645658238,
             "blockIdx": 34
         },
@@ -362,6 +678,7 @@
             "jpText": "『ふふっ……その通りだ。今は違いをわからなくてもいいさ。\r\nいつか君にも――自分を誇れる仕事ができれば、わかるよ』",
             "enText": "\"Hmmm… You're right. You don't need to know \nthe difference right now. One day, when you have a \njob you can be proud of, you'll understand.",
             "nextBlock": 36,
+            "origClipLength": 402,
             "pathId": 2663319706004543359,
             "blockIdx": 35
         },
@@ -371,6 +688,17 @@
             "jpText": "（――ただ予定通りに勝利すればよいわけじゃなかった。\r\nふたりのために成長しようとした想いが、喜びに繋がったんだ）",
             "enText": "(It wasn't just a matter of winning as planned. It was the \nthought of growing up for the two of us that brought us joy.)",
             "nextBlock": 37,
+            "origClipLength": 252,
+            "animData": [
+                {
+                    "origLen": 342,
+                    "pathId": -6888079966166069950
+                },
+                {
+                    "origLen": 160,
+                    "pathId": -3748159085751404521
+                }
+            ],
             "pathId": -8482385381781199866,
             "blockIdx": 36
         },
@@ -380,6 +708,17 @@
             "jpText": "（全てを狂わせてしまうことを、私は必要以上に恐れていた。\r\nでも、そうじゃない。本当に大事なことは――）",
             "enText": "（I was more afraid than I should have been, that I'd screw \neverything up. But that's not it. What really matters is…)",
             "nextBlock": 38,
+            "origClipLength": 289,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 7315821200273812148
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -8634424165090405097
+                }
+            ],
             "pathId": -2870750279768781087,
             "blockIdx": 37
         },
@@ -389,6 +728,17 @@
             "jpText": "『……お父さん、お母さん。ありがとう。\r\n私……頑張ったよ』",
             "enText": "\"… Dad, Mom. Thank you. I… did my best.\"",
             "nextBlock": 39,
+            "origClipLength": 218,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 2437868827175489680
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8152013466356880138
+                }
+            ],
             "pathId": -8591622022351119148,
             "blockIdx": 38
         },
@@ -398,11 +748,18 @@
             "jpText": "話が終わったらしく、晴れやかな表情のエイシンフラッシュに\r\n連れられ、ご両親に挨拶することになった。",
             "enText": "When the conversation seemed to be over, a radiant-looking \nEishinbash took me to greet her parents.",
             "nextBlock": 40,
+            "origClipLength": 110,
             "choices": [
                 {
                     "jpText": "ええと……",
                     "enText": "Uh…",
                     "nextBlock": 40
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 158,
+                    "pathId": -5492042026539187175
                 }
             ],
             "pathId": -7220312981446978473,
@@ -414,6 +771,17 @@
             "jpText": "日本語、大丈夫です。娘と学んだので、少しわかります。\r\nフラッシュ、こちらの方は？",
             "enText": "Japanese is fine. I learned it with my daughter, so I understand \na little. Flash, how about this one?",
             "nextBlock": 41,
+            "origClipLength": 335,
+            "animData": [
+                {
+                    "origLen": 358,
+                    "pathId": -2130253415376696947
+                },
+                {
+                    "origLen": 353,
+                    "pathId": 3127847474925407671
+                }
+            ],
             "pathId": 1751095018329618920,
             "blockIdx": 40
         },
@@ -423,11 +791,22 @@
             "jpText": "私のトレーナーさん――",
             "enText": "My trainer—",
             "nextBlock": 42,
+            "origClipLength": 73,
             "choices": [
                 {
                     "jpText": "……！",
                     "enText": "…!",
                     "nextBlock": 42
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -5963981426484833841
+                },
+                {
+                    "origLen": 94,
+                    "pathId": -4479423942244378129
                 }
             ],
             "pathId": -8167295712759109029,
@@ -439,6 +818,17 @@
             "jpText": "……に、なってほしいと考えている方です。\r\nまだ予定ですが。",
             "enText": "This is the person I would like… \nto become. I'm still planning on it.",
             "nextBlock": 43,
+            "origClipLength": 159,
+            "animData": [
+                {
+                    "origLen": 201,
+                    "pathId": -3360787657050750178
+                },
+                {
+                    "origLen": 184,
+                    "pathId": 969689163804042939
+                }
+            ],
             "pathId": 3347296926368269918,
             "blockIdx": 42
         },
@@ -448,11 +838,22 @@
             "jpText": "あまりにも突然で驚いたが、どこか納得している自分がいた。\r\n恐らく初めて見たときから、心は決まっていたのだろう。なので――",
             "enText": "I was surprised at how sudden it was, but I was also \nsomewhat convinced. Perhaps my mind had been made \nup from the first time I saw her. So…",
             "nextBlock": 44,
+            "origClipLength": 124,
             "choices": [
                 {
                     "jpText": "訂正します",
                     "enText": "I stand corrected.",
                     "nextBlock": 44
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 201,
+                    "pathId": -3378304335755223319
+                },
+                {
+                    "origLen": 162,
+                    "pathId": -4317573090529782042
                 }
             ],
             "pathId": -7812059894119115725,
@@ -464,11 +865,22 @@
             "jpText": "……っ？",
             "enText": "…?",
             "nextBlock": 45,
+            "origClipLength": 28,
             "choices": [
                 {
                     "jpText": "予定ではなく、彼女のトレーナーです",
                     "enText": "It's not a schedule, it's her trainer.",
                     "nextBlock": 45
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 201,
+                    "pathId": 3740573251254366153
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7383711581638618562
                 }
             ],
             "pathId": 8059076501460656043,
@@ -480,6 +892,13 @@
             "jpText": "……！",
             "enText": "…!",
             "nextBlock": 46,
+            "origClipLength": 39,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 3377754101864525198
+                }
+            ],
             "pathId": -9153377472682628535,
             "blockIdx": 45
         },
@@ -489,6 +908,17 @@
             "jpText": "……そうですか。娘を、よろしくお願いします。\r\nフラッシュ、この方と、頑張るんだよ。",
             "enText": "… I see. Take care of my daughter, please. Flash, you're \ngoing to work hard with this guy.",
             "nextBlock": 47,
+            "origClipLength": 328,
+            "animData": [
+                {
+                    "origLen": 354,
+                    "pathId": -6641793359633822706
+                },
+                {
+                    "origLen": 289,
+                    "pathId": -8792716867735151533
+                }
+            ],
             "pathId": 9082842069890413499,
             "blockIdx": 46
         },
@@ -498,6 +928,17 @@
             "jpText": "――はいっ！",
             "enText": "—Yes!",
             "nextBlock": 48,
+            "origClipLength": 32,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4204042756948799014
+                },
+                {
+                    "origLen": 66,
+                    "pathId": 7528454048965070050
+                }
+            ],
             "pathId": 8374880911911510442,
             "blockIdx": 47
         },
@@ -507,6 +948,17 @@
             "jpText": "私の作ったスケジュールは完璧で、その通りに進むことも\r\n決して間違いではありませんでした。ただ――",
             "enText": "The schedule I made was perfect, and it was never \na mistake to follow it. It was just—",
             "nextBlock": 49,
+            "origClipLength": 253,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 8563238479650320013
+                },
+                {
+                    "origLen": 205,
+                    "pathId": -3697777118255468496
+                }
+            ],
             "pathId": -1214317558140708241,
             "blockIdx": 48
         },
@@ -516,6 +968,17 @@
             "jpText": "それを再現するための実力が足りていなかっただけ。\r\n未熟な思い込みで、自分を追い込んでしまいました。",
             "enText": "I just didn't have enough ability to reproduce it. I pushed \nmyself too hard with my immature beliefs.",
             "nextBlock": 50,
+            "origClipLength": 235,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -2506002829965262216
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -4088945695148625114
+                }
+            ],
             "pathId": 600132234265874822,
             "blockIdx": 49
         },
@@ -525,6 +988,17 @@
             "jpText": "……私は不器用なようなので、\r\n1度引いた線からはみ出せば修正の仕方がわかりません。",
             "enText": "… I'm kind of clumsy, so I don't know how to fix it if I \nstray from the line once I draw it.",
             "nextBlock": 51,
+            "origClipLength": 199,
+            "animData": [
+                {
+                    "origLen": 223,
+                    "pathId": -5660527406252936561
+                },
+                {
+                    "origLen": 238,
+                    "pathId": -1712385010576581359
+                }
+            ],
             "pathId": -5208006626642427308,
             "blockIdx": 50
         },
@@ -534,11 +1008,22 @@
             "jpText": "だから別の視点から、私の線が真っすぐかどうか\r\n見てくれる方が必要だと思いました。",
             "enText": "So I thought I needed someone to look at my line from a different \nperspective, to see if it was straight.",
             "nextBlock": 52,
+            "origClipLength": 207,
             "choices": [
                 {
                     "jpText": "それがトレーナーに選んでくれた理由？",
                     "enText": "Is that why you chose me as your trainer?",
                     "nextBlock": 52
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 218,
+                    "pathId": 2057381511576032567
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 8044547077921488520
                 }
             ],
             "pathId": 4225429817099847859,
@@ -550,11 +1035,18 @@
             "jpText": "はい。……貴方は、なぜ受け入れてくれたのですか？",
             "enText": "Yes… Why did you accept it?",
             "nextBlock": 53,
+            "origClipLength": 171,
             "choices": [
                 {
                     "jpText": "ひと目惚れしてたからかな",
                     "enText": "Maybe it's because I fell in love at first sight.",
                     "nextBlock": 53
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": 8616171951860014214
                 }
             ],
             "pathId": -1760939346791773835,
@@ -566,6 +1058,17 @@
             "jpText": "……へっ！？\r\nひ、ひとめぼれ……？",
             "enText": "… Heh! Hi, Hitomebore…?",
             "nextBlock": 54,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -6654367405676823271
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 2922621175560964672
+                }
+            ],
             "pathId": -4987280299504276213,
             "blockIdx": 53
         },
@@ -575,11 +1078,22 @@
             "jpText": "彼女の走る姿、その真摯な瞳と出会って……\r\n美しい走りをどこまでも伸ばしていきたいと思っていた。",
             "enText": "When I met her running and her sincere eyes… I wanted to \nextend my beautiful running everywhere.",
             "nextBlock": 55,
+            "origClipLength": 107,
             "choices": [
                 {
                     "jpText": "きっとこうなる予定だったんだよ",
                     "enText": "I'm sure this is what was supposed to happen.",
                     "nextBlock": 55
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": 2314177176744057154
+                },
+                {
+                    "origLen": 130,
+                    "pathId": -497013953879195040
                 }
             ],
             "pathId": -5407472548948039490,
@@ -591,6 +1105,17 @@
             "jpText": "……！",
             "enText": "…!",
             "nextBlock": 56,
+            "origClipLength": 32,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 9156604630094994897
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -652731508550288819
+                }
+            ],
             "pathId": -7935248798147722123,
             "blockIdx": 55
         },
@@ -600,11 +1125,22 @@
             "jpText": "……いえ、そんな予定はありえません。\r\n少なくとも私の中には存在しませんでした。",
             "enText": "… No, there is no such plan. It never \nexisted, at least not in my mind.",
             "nextBlock": 57,
+            "origClipLength": 181,
             "choices": [
                 {
                     "jpText": "そ、そっか",
                     "enText": "Oh, I see.",
                     "nextBlock": 57
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 231,
+                    "pathId": 7178995448513607353
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3889984395511034334
                 }
             ],
             "pathId": 6423444882710563661,
@@ -616,6 +1152,17 @@
             "jpText": "ですから、修正が必要ですね。この先、私はウマ娘として\r\nレースを走り抜いていかなければなりません。",
             "enText": "So I need to make some corrections. From now on, I have to run \nthrough the race as a horse girl.",
             "nextBlock": 58,
+            "origClipLength": 257,
+            "animData": [
+                {
+                    "origLen": 246,
+                    "pathId": 9053969949131879972
+                },
+                {
+                    "origLen": 160,
+                    "pathId": -7838021255337525026
+                }
+            ],
             "pathId": -3174573847821372140,
             "blockIdx": 57
         },
@@ -625,6 +1172,21 @@
             "jpText": "そのスケジュールの中に、貴方も組み込んでおきます。\r\n――ともに、誇りある仕事を全うしましょう。",
             "enText": "I will include you in that schedule. —Let's work \ntogether to complete our work with pride.",
             "nextBlock": 59,
+            "origClipLength": 210,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -7202561625390956872
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -6614311350927480983
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 1592691623612444249
+                }
+            ],
             "pathId": 4225894258155717799,
             "blockIdx": 58
         },
@@ -634,6 +1196,17 @@
             "jpText": "こうして、エイシンフラッシュとの\r\nトゥインクル・シリーズを目指す日々が始まったのだった。",
             "enText": "And so began her quest for the Twinkle Series with Eishin Flash.",
             "nextBlock": -1,
+            "origClipLength": 103,
+            "animData": [
+                {
+                    "origLen": 103,
+                    "pathId": 6822174544169190867
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9005412352250746373
+                }
+            ],
             "pathId": 7348987250650207510,
             "blockIdx": 59
         }

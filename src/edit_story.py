@@ -254,6 +254,23 @@ def del_word(event):
     elif event.keycode == 46:
         text_box_en.delete(pos, f"{pos} {end}")
 
+def format_text(event):
+    if not text_box_en.tag_ranges("sel"):
+        print("No selection to format.")
+        return
+    if event.keycode == 73:
+        open = "<i>"
+        close = "</i>"
+    elif event.keycode == 66:
+        open = "<b>"
+        close = "</b>"
+    else:
+        return
+
+    text_box_en.insert(tk.SEL_FIRST, open)
+    text_box_en.insert(tk.SEL_LAST, close)
+    return "break" # prevent control char entry
+
 def main():
     global files
     global root
@@ -351,6 +368,8 @@ def main():
     root.bind("<Control-Shift-BackSpace>", del_word)
     root.bind("<Control-Delete>", del_word)
     root.bind("<Control-Shift-Delete>", del_word)
+    text_box_en.bind("<Control-i>", format_text)
+    text_box_en.bind("<Control-b>", format_text)
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()

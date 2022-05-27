@@ -4,6 +4,7 @@ import common
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
+import textprocess
 
 
 def change_chapter(event = None):
@@ -54,7 +55,7 @@ def load_block(event = None, loadBlocks = False, reload = False):
     if isinstance(files[cur_chapter], str):
         files[cur_chapter] = common.TranslationFile(files[cur_chapter])
     elif reload:
-        files[cur_chapter] = common.TranslationFile(files[cur_chapter].file)
+        files[cur_chapter].reload()
     blocks = files[cur_chapter].textBlocks
 
     if loadBlocks:
@@ -127,12 +128,12 @@ def save_block():
 
     cur_file = files[cur_chapter]
     if "enName" in cur_file.textBlocks[cur_block]: 
-        cur_file.textBlocks[cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
-    cur_file.textBlocks[cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
+        cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
+    cur_file.textBlocks[cur_block]['enText'] = cleanText(text_box_en.get(1.0, tk.END))
 
     if cur_choices and cur_choices_texts:
         for i in range(len(cur_choices_texts)):
-            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
+            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = cleanText(cur_choices_texts[i])
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -271,6 +272,15 @@ def format_text(event):
     text_box_en.insert(tk.SEL_LAST, close)
     return "break" # prevent control char entry
 
+def process_text(event):
+    proc_text = textprocess.processText(files[cur_chapter], cleanText(text_box_en.get(1.0, tk.END)), {"redoNewlines": True if event.state & 0x0001 else False, "replaceMode": "limit", "lineLength": 60, "targetLines": 99})
+    text_box_en.delete(1.0, tk.END)
+    text_box_en.insert(tk.END, proc_text)
+    return "break"
+
+def cleanText(txt: str):
+    return " \n".join([line.strip() for line in txt.strip().split("\n")])
+
 def main():
     global files
     global root
@@ -370,6 +380,8 @@ def main():
     root.bind("<Control-Shift-Delete>", del_word)
     text_box_en.bind("<Control-i>", format_text)
     text_box_en.bind("<Control-b>", format_text)
+    text_box_en.bind("<Alt-f>", process_text)
+    text_box_en.bind("<Alt-F>", process_text)
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()

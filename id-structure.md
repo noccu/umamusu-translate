@@ -17,7 +17,7 @@ The structure used is simple: `00 0000 000`
  08 | Story mode prologues/intro | `0000`: URA (001), Aoharu (002)
  09 | Event stories (story mode)
  10 | Half anniv story (...?)
- 40 | Campaign training/story events |  `0000`: shared (clock usage, training equipment level up, ...) `0001`: URA `0002`: Aoharu
+ 40 | Campaign training/story events |  `0000`: shared (clock usage, training equipment level up, ...) `0001`: URA `0002`: Aoharu `0004`: MNT
  50 | Uma training/story events
  80 | R Support card events
  82 | SR Support card events
@@ -88,7 +88,7 @@ The structure used is simple: `00 0000 000`
 1059 | Mejiro Dober
 1060 | Nice Nature
 1061 | King Halo
-1062 | Machikane Tannhäuser
+1062 | Matikanetannhauser
 1063 | Ikuno Dictus
 1064 | Mejiro Palmer
 1065 | Daitaku Helios

@@ -51,7 +51,7 @@ Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]
-Matikanetannhauser | In progress | [Snep][]
+Matikanetannhauser | Complete | [Snep][]
 Maruzensky | Complete | [noccu][]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)

@@ -80,6 +80,12 @@ name | progress | translator
 Campaign intro | Complete | [noccu][]
 Shared events | Complete | [noccu][]
 
+## Make a New Track
+id | name (short) | progress | translator
+--- | --- | --- | ---
+249 | Nyan Nyan Island | Complete | [nem]
+259 | A sudden rain | Complete | [Snep]
+
 ## Umas
 name | progress | translator
 --- | --- | ---
@@ -145,3 +151,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Eight]: https://twitter.com/hachikure
 [XiantheMiguel]: https://twitter.com/XiantheMiguel
 [Mini Fox]: https://github.com/MiniFoxx
+[nem]: https://twitter.com/nemupyoi

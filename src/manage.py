@@ -118,7 +118,7 @@ def parseArgs():
     ap.add_argument("-sort", "-order", action="store_true", help="Sort keys in local dump and final file")
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite/update local dump keys instead of only adding new ones")
     ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save and -src (auto mode, can be overridden)")
-    ap.add_argument("-M", "--move", action="count", default=False, help="Move final static.json to game dir")
+    ap.add_argument("-M", "--move", action="count", default=False, help="Move final static.json to game dir. Repeat: Also move static_en.json")
     ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath, help="Target dump file for imports. When given without value: auto-detect in game dir")
     args = ap.parse_args()
 

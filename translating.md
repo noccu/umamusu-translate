@@ -54,7 +54,7 @@ You can also add a `skip` key to any block to have the text processing completel
 - `py src\textprocess.py` to apply automatic formatting and edits.
     - This is run by the translation script (if you used that), but you can rerun it with custom settings if you like.
     - This uses the [replacer.json](src/data/replacer.json) file. You can add your own entries here, useful for names in particular.
-        - If you're doing manual translation, add `-rep limit` to skip more aggressive edits intended for machine translations.
+        - If you're doing machine translation, add `-rep all` to make a bit more aggressive edits.
 - `py src\names.py -n <path/to/db-translate/data/uma-name.csv>` to translate many names automatically
     - The csv file is from the db-translate project. Download it [here](https://github.com/noccu/umamusume-db-translate/blob/playtest/src/data/uma-name.csv) if you don't have it and point the `-n` argument to its location.
         - The file will be auto-detected if `db-translate` is in the same parent directory as `umamusu-translate`.

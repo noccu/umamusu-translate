@@ -34,6 +34,7 @@ def parseArgs():
     ap.add_argument("-dst", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-B", "--backup", action="store_true", help="Backup the master.mdb file")
     ap.add_argument("-R", "--restore", action="store_true", help="Restore the master.mdb file from backup")
+    ap.add_argument("-sd", "--skill-data", action="store_true", help="Replace skill descriptions with skill data (effect, conditions, etc)")
     return ap.parse_args()
 
 def main():

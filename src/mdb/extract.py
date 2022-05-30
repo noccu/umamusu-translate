@@ -28,6 +28,7 @@ def parseArgs():
     ap = common.Args("Extracts master.mdb data for translation", False)
     ap.add_argument("-src", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-dst", default="translations/mdb", help="Extraction path")
+    ap.add_argument("-sd", "--skill-data", action="store_true", help="Extract skill data too (requires nodeJS)")
     return ap.parse_args()
 
 def main():
@@ -47,6 +48,10 @@ def main():
             else:
                 extract(db, stmt, Path(args.dst, entry['file']))
     db.close()
+    if args.skill_data:
+        print("Extracting skill data...")
+        from subprocess import run
+        run(["node", "src/mdb/extract-skill-data.js"], check=True)
 
 if __name__ == '__main__':
     main()

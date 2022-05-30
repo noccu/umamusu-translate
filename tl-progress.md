@@ -134,7 +134,7 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 
 
 [noccu]: https://ko-fi.com/noccyu
-[Ren]: https://watatomo.github.io/tl/
+[Ren]: https://tomoya.moe
 [Holo]: https://www.youtube.com/channel/UC1sbBH3dYW5K-WVKjFF2uEA
 [CatNipHoarder]: https://twitter.com/CatNipHoarder
 [Vacxy]: https://ko-fi.com/mobagetranslations

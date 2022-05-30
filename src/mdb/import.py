@@ -41,16 +41,17 @@ def main():
             print("master.mdb restored.")
         return
 
-
-    with sqlite3.connect(args.dst, isolation_level=None) as db:
-        index = helpers.readJson("src/mdb/index.json")
-        db.execute("PRAGMA journal_mode = MEMORY;")
-        db.execute("BEGIN;")
-        for entry in index:
-            stmt = f"UPDATE {entry['table']} SET {entry['field']}=:enText WHERE {entry['field']}=:jpText;"
-            inputGen = translator(args.src, entry['files'].keys() if entry.get("specifier") else [entry['file']])
-            db.executemany(stmt, inputGen)
-    db.close()
+    try:
+        with sqlite3.connect(args.dst, isolation_level=None) as db:
+            index = helpers.readJson("src/mdb/index.json")
+            db.execute("PRAGMA journal_mode = MEMORY;")
+            db.execute("BEGIN;")
+            for entry in index:
+                stmt = f"UPDATE {entry['table']} SET {entry['field']}=:enText WHERE {entry['field']}=:jpText;"
+                inputGen = translator(args.src, entry['files'].keys() if entry.get("specifier") else [entry['file']])
+                db.executemany(stmt, inputGen)
+            # COMMIT; handled by with:
+    finally: db.close()
 
 if __name__ == '__main__':
     main()

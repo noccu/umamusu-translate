@@ -109,10 +109,12 @@ def calcLineLen(file: TranslationFile, verbose):
     if LL_CACHE[0] is file: # should be same as id() -> fast
         return LL_CACHE[1]
 
-    if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
-        lineLength = 65
-    else:
-        lineLength = 45
+    lineLength = file.data.get('lineLength')
+    if not lineLength:
+        if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
+            lineLength = 65
+        else:
+            lineLength = 45
     LL_CACHE = file, lineLength
     if verbose: print(f"Line length set to {lineLength} for {file.name}")
     return lineLength

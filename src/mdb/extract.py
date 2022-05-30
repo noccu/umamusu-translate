@@ -9,15 +9,20 @@ from pathlib import Path
 def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
     # In the spirit of the original db patch, we don't modify old files to keep the db order
     try:
-        oldData = helpers.readJson(savePath)
+        oldData = common.TranslationFile(savePath)
     except FileNotFoundError:
-        oldData = dict()
+        oldData = None
     newData = dict()
     cur = db.execute(stmt)
     for row in cur:
         val = row[0]
-        newData[val] = oldData.get(val, "")
-    helpers.writeJson(savePath, newData)
+        newData[val] = oldData.textBlocks.get(val, "") if oldData else ""
+    if oldData:
+        oldData.textBlocks = newData
+        oldData.save()
+    else:
+        o = {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': newData}
+        helpers.writeJson(savePath.with_suffix(".json"), o)
 
 def parseArgs():
     ap = common.Args("Extracts master.mdb data for translation", False)
@@ -32,14 +37,15 @@ def main():
         for entry in index:
             stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"
             if entry.get("specifier"):
-                for specval, filename in entry['files'].items():
-                    if specval.startswith("+"):
-                        specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval[1:]});"
+                for filename, specval in entry['files'].items():
+                    if isinstance(specval, list):
+                        specval = ",".join([str(x) for x in specval])
+                        specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"
                     else:
                         specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
-                    extract(db, specStmt, Path(args.dst, filename + ".json"))
+                    extract(db, specStmt, Path(args.dst, filename))
             else:
-                extract(db, stmt, Path(args.dst, entry['file'] + ".json"))
+                extract(db, stmt, Path(args.dst, entry['file']))
     db.close()
 
 if __name__ == '__main__':

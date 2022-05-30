@@ -11,10 +11,10 @@ def translator(srcdir, files):
     for file in files:
         print(f"Importing {file}...")
         try:
-            data = helpers.readJson(Path(srcdir, file + ".json"))
+            data = common.TranslationFile(Path(srcdir, file + ".json"))
         except FileNotFoundError:
             raise StopIteration
-        for k, v in data.items():
+        for k, v in data.textBlocks.items():
             if not v: continue
             yield {'jpText': k, 'enText': v}
 
@@ -48,7 +48,7 @@ def main():
         db.execute("BEGIN;")
         for entry in index:
             stmt = f"UPDATE {entry['table']} SET {entry['field']}=:enText WHERE {entry['field']}=:jpText;"
-            inputGen = translator(args.src, entry['files'].values() if entry.get("specifier") else [entry['file']])
+            inputGen = translator(args.src, entry['files'].keys() if entry.get("specifier") else [entry['file']])
             db.executemany(stmt, inputGen)
     db.close()
 

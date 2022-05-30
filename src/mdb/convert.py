@@ -20,7 +20,7 @@ def main():
         files = Path("translations/mdb").glob("*.json")
 
     for file in files:
-        jsonData = helpers.readJson(file)
+        tlFile = common.TranslationFile(file)
         csvData = dict()
         csvPath = Path(args.src, file.stem + ".csv")
         try:
@@ -32,11 +32,11 @@ def main():
             reader = csv.reader(csvfile, delimiter=',', quotechar='"')
             for row in reader:
                 csvData[row[0]] = row[1]
-        for k, v in jsonData.items():
+        for k, v in tlFile.textBlocks.items():
             if v: continue
             if k in csvData:
-                jsonData[k] = csvData[k]
-        helpers.writeJson(file, jsonData)
+                tlFile.textBlocks[k] = csvData[k]
+        tlFile.save()
 
 if __name__ == '__main__':
     main()

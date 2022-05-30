@@ -40,7 +40,7 @@ Air Groove | Complete | [burritoblaster][]
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
-Eishin Flash | Complete, In progress | deepl, [noccu]
+Eishin Flash | Complete, In progress | deepl, [noccu] (ep 1)
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]

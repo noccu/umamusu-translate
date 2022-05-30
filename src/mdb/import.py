@@ -7,13 +7,23 @@ import sqlite3
 from pathlib import Path
 import shutil
 
-def translator(srcdir, files):
+def translator(args, entry: dict):
+    files = entry['files'].keys() if entry.get("specifier") else [entry['file']]
+    ovrList = entry.get("overrides")
     for file in files:
+        # could just make alt/same-name.json a standard and remove the list from index.json
+        if ovrList:
+            for argName, data in ovrList.items():
+                if getattr(args, argName) and file == data[0]:
+                    file = data[1]
+                    break
+
         print(f"Importing {file}...")
         try:
-            data = common.TranslationFile(Path(srcdir, file + ".json"))
+            data = common.TranslationFile(Path(args.src, file + ".json"))
         except FileNotFoundError:
             raise StopIteration
+
         for k, v in data.textBlocks.items():
             if not v: continue
             yield {'jpText': k, 'enText': v}
@@ -48,7 +58,7 @@ def main():
             db.execute("BEGIN;")
             for entry in index:
                 stmt = f"UPDATE {entry['table']} SET {entry['field']}=:enText WHERE {entry['field']}=:jpText;"
-                inputGen = translator(args.src, entry['files'].keys() if entry.get("specifier") else [entry['file']])
+                inputGen = translator(args, entry)
                 db.executemany(stmt, inputGen)
             # COMMIT; handled by with:
     finally: db.close()

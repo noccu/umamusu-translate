@@ -22,12 +22,12 @@ def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
 def parseArgs():
     ap = common.Args("Extracts master.mdb data for translation", False)
     ap.add_argument("-src", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
-    ap.add_argument("-dst", default="translations/master_db", help="Extraction path")
+    ap.add_argument("-dst", default="translations/mdb", help="Extraction path")
     return ap.parse_args()
 
 def main():
     args = parseArgs()
-    index = helpers.readJson("src/master-db/index.json")
+    index = helpers.readJson("src/mdb/index.json")
     with sqlite3.connect(args.src) as db:
         for entry in index:
             stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"

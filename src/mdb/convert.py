@@ -17,7 +17,7 @@ def main():
     if args.file:
         files = [args.file]
     else:
-        files = Path("translations/master_db").glob("*.json")
+        files = Path("translations/mdb").glob("*.json")
 
     for file in files:
         jsonData = helpers.readJson(file)

@@ -67,7 +67,7 @@ In general, check out the [scripts](#script-info).
 
 All scripts are made to be run from the root dir, i.e: `py src/script.py -arg val`  
 Arguments can be given to all and it is recommended you do so, processing the smallest amount of files you're comfortable with at a time.  
-For detailed info and args, run a script with the `-h` arg. See also [id-structure.md]() for `g`, `id`, and `idx`.
+For detailed info and args, run a script with the `-h` arg. See also [id-structure.md](id-structure.md) for `g`, `id`, and `idx`.
 
 script | desc
 ---|---

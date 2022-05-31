@@ -58,7 +58,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
-    return " \\n".join(lines) if file.type in ("race", "preview") else " \n".join(lines)
+    return " \\n".join(lines) if file.type in ("race", "preview", "mdb") else " \n".join(lines)
 
 def replace(text: str, mode):
     if mode == "none": return
@@ -97,10 +97,14 @@ def processFiles(args):
     if args.lineLength == -1: print(f"Automatically setting line length based on story type/id")
     for file in files:
         file = common.TranslationFile(file)
-
-        for block in file.genTextContainers():
-            if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
-            block['enText'] = processText(file, block['enText'], vars(args))
+        if file.type == "mdb":
+            for k, v in file.genTextContainers():
+                if not v: continue
+                file.textBlocks[k] = processText(file, v, vars(args))
+        else:
+            for block in file.genTextContainers():
+                if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
+                block['enText'] = processText(file, block['enText'], vars(args))
         file.save()
     print("Files processed.")
 

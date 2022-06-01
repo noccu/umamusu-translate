@@ -56,7 +56,7 @@ def main():
     if args.skill_data:
         print("Extracting skill data...")
         from subprocess import run
-        run(["node", "src/mdb/extract-skill-data.js"], check=True)
+        run(["node", "src/mdb/extract-skill-data.js", args.src], check=True)
 
 if __name__ == '__main__':
     main()

@@ -29,6 +29,7 @@ def parseArgs():
     ap.add_argument("-src", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-dst", default="translations/mdb", help="Extraction path")
     ap.add_argument("-sd", "--skill-data", action="store_true", help="Extract skill data too (requires nodeJS)")
+    ap.add_argument("-f", "--file", help="Extract specific file name (as found in index.json)")
     return ap.parse_args()
 
 def main():
@@ -39,6 +40,7 @@ def main():
             stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"
             if entry.get("specifier"):
                 for filename, specval in entry['files'].items():
+                    if args.file and filename != args.file: continue
                     if isinstance(specval, list):
                         specval = ",".join([str(x) for x in specval])
                         specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"
@@ -46,6 +48,7 @@ def main():
                         specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
                     extract(db, specStmt, Path(args.dst, filename))
             else:
+                if args.file and entry['file'] != args.file: continue
                 extract(db, stmt, Path(args.dst, entry['file']))
     db.close()
     if args.skill_data:

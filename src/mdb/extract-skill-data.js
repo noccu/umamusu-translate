@@ -31,7 +31,7 @@ const DATA_TL = JSON.parse(fs.readFileSync(DATA_TL_PATH, "utf-8"));
         jsonOut['text'][skill] = `<size=18>${translateData(id, data)}\\n</size>`;
     });
     fs.mkdirSync("translations/mdb/alt", {recursive: true})
-    fs.writeFileSync("translations/mdb/alt/skill-desc.json", JSON.stringify(jsonOut, null, 2));
+    fs.writeFileSync("translations/mdb/alt/skill-desc.json", JSON.stringify(jsonOut, null, 4));
 })();
 
 function translateData(id, sqlData) {

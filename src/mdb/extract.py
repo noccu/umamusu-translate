@@ -8,9 +8,11 @@ from pathlib import Path
 
 def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
     # In the spirit of the original db patch, we don't modify old files to keep the db order
+    savePath = savePath.with_suffix(".json")
     try:
         oldData = common.TranslationFile(savePath)
     except FileNotFoundError:
+        print(f"File not found, creating new: {savePath}")
         oldData = None
     newData = dict()
     cur = db.execute(stmt)
@@ -22,7 +24,7 @@ def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
         oldData.save()
     else:
         o = {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': newData}
-        helpers.writeJson(savePath.with_suffix(".json"), o)
+        helpers.writeJson(savePath, o)
 
 def parseArgs():
     ap = common.Args("Extracts master.mdb data for translation", False)

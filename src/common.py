@@ -102,6 +102,12 @@ class TranslationFile:
             return self.data['text']
         else:
             return list(self.data.values())[0]
+    @textBlocks.setter
+    def textBlocks(self, val):
+        if self.version > 1:
+            self.data['text'] = val
+        else:
+            raise NotImplementedError
 
     def genTextContainers(self) -> Generator[dict, None, None]:
         if self.version > self.ver_offset_mdb:

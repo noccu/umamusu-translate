@@ -5,6 +5,7 @@ import csv
 import common
 import helpers
 from pathlib import Path
+import re
 
 def parseArgs():
     ap = common.Args("Converts mdb patch files to uma-tl format", False)
@@ -29,9 +30,10 @@ def main():
             print("Not found:", csvPath)
             continue
         with csvfile:
-            reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-            for row in reader:
-                csvData[row[0]] = row[1]
+            for row in csvfile:
+                m = re.match(r"^\"(.+)(?<!\\)\", ?(?<!\\)\"(.+)\"$", row)
+                if m:
+                    csvData[m.group(1)] = re.sub(r'\\"', "\"", m.group(2))
         for k, v in tlFile.textBlocks.items():
             if v: continue
             if k in csvData:

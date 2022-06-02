@@ -14,7 +14,7 @@ def change_chapter(event = None):
     cur_block = 0
     load_block(None, True)
 
-def change_block(event = None):
+def change_block(event = None, dir = 1):
     global cur_chapter
     global cur_block
     global block_dropdown
@@ -27,7 +27,7 @@ def change_block(event = None):
         saveFile()
 
     cur_block = block_dropdown.current()
-    load_block()
+    load_block(dir=dir)
 
 def txt_for_display(text, reverse = False):
     if files[cur_chapter].type in ("mdb", "race", "preview"):
@@ -44,7 +44,7 @@ def txt_for_display(text, reverse = False):
 def cleanText(text):
     return " \n".join([line.strip() for line in text.strip().split("\n")])
 
-def load_block(event = None, loadBlocks = False, reload = False):
+def load_block(event = None, loadBlocks = False, reload = False, dir = 1):
     global files
     global cur_chapter
     global cur_block
@@ -76,6 +76,13 @@ def load_block(event = None, loadBlocks = False, reload = False):
         block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(blocks)]
 
     cur_block_data =  blocks[cur_block]
+
+    if skip_translated.get() == 1:
+        while cur_block_data['enText'] and cur_block > 0 and cur_block < len(blocks)-1:
+            cur_block += dir
+            cur_block_data =  blocks[cur_block]
+        block_dropdown.current(cur_block)
+
     next_index = cur_block_data.get('nextBlock', cur_block + 2) - 1
     if next_index < 1 or next_index >= len(blocks):
         next_index = -1
@@ -166,7 +173,7 @@ def save_block():
 def prev_block(event = None):
     if cur_block - 1 > -1:
         block_dropdown.current(cur_block - 1)
-        change_block()
+        change_block(dir=-1)
 
 def next_block(event = None):
     if next_index != -1:
@@ -273,6 +280,7 @@ def main():
     global text_box_en
     global btn_choices
     global save_on_next
+    global skip_translated
     global cur_choices_texts
     global large_font
 
@@ -343,6 +351,10 @@ def main():
     save_on_next.set(0)
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
+    skip_translated = tk.IntVar()
+    skip_translated.set(0)
+    skip_checkbox = tk.Checkbutton(root, text="Skip translated blocks", variable=skip_translated)
+    skip_checkbox.grid(row=6, column=2)
 
     root.bind("<Control-Return>", next_block)
     root.bind("<Control-s>", saveFile)

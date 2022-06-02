@@ -25,6 +25,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     targetLines: int = overrides.get("targetLines", opts.get("targetLines", 3))
     lineLen: int = overrides.get("lineLength", opts.get("lineLength", -1))
     if lineLen == -1: lineLen = calcLineLen(file, opts.get('verbose'))
+    if lineLen == 0: return text # auto mode can return 0
 
     if len(text) < lineLen:
         if opts.get("verbose"): print("Short text line, skipping: ", text)
@@ -110,7 +111,7 @@ def calcLineLen(file: TranslationFile, verbose):
         return LL_CACHE[1]
 
     lineLength = file.data.get('lineLength')
-    if not lineLength:
+    if lineLength is None:
         if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
             lineLength = 65
         else:

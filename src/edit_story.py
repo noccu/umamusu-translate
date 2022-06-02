@@ -29,6 +29,21 @@ def change_block(event = None):
     cur_block = block_dropdown.current()
     load_block()
 
+def txt_for_display(text, reverse = False):
+    if files[cur_chapter].type in ("mdb", "race", "preview"):
+        if reverse:
+            text = cleanText(text)
+            return text.replace("\n", "\\n")
+        else:
+            return text.replace("\\n", "\n")
+    else: 
+        if reverse:
+            text = cleanText(text)
+        return text
+
+def cleanText(text):
+    return " \n".join([line.strip() for line in text.strip().split("\n")])
+
 def load_block(event = None, loadBlocks = False, reload = False):
     global files
     global cur_chapter
@@ -58,12 +73,11 @@ def load_block(event = None, loadBlocks = False, reload = False):
     blocks = files[cur_chapter].textBlocks
 
     if loadBlocks:
-        block_dropdown['values'] = [f"{i+1} - {blocks[i]['jpText'][:8]}" for i in range(len(blocks))]
-    block_dropdown.current(cur_block)
+        block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(blocks)]
 
     cur_block_data =  blocks[cur_block]
-    next_index = cur_block_data.get('nextBlock', cur_block + 2 if cur_block + 1 < len(blocks) else 0) - 1
-    if next_index < 1:
+    next_index = cur_block_data.get('nextBlock', cur_block + 2) - 1
+    if next_index < 1 or next_index >= len(blocks):
         next_index = -1
     if next_index > 0:
         btn_next['state'] = 'normal'
@@ -97,10 +111,10 @@ def load_block(event = None, loadBlocks = False, reload = False):
 
     text_box_jp.configure(state='normal')
     text_box_jp.delete(1.0, tk.END)
-    text_box_jp.insert(tk.END, cur_block_data['jpText'])
+    text_box_jp.insert(tk.END, txt_for_display(cur_block_data['jpText']))
     text_box_jp.configure(state='disabled')
     text_box_en.delete(1.0, tk.END)
-    text_box_en.insert(tk.END, cur_block_data['enText'])
+    text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
 
     # Update choices button
     btn_choices['state'] = 'disabled'
@@ -127,12 +141,12 @@ def save_block():
 
     cur_file = files[cur_chapter]
     if "enName" in cur_file.textBlocks[cur_block]: 
-        cur_file.textBlocks[cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
-    cur_file.textBlocks[cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
+        cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
+    cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
 
     if cur_choices and cur_choices_texts:
         for i in range(len(cur_choices_texts)):
-            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
+            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = txt_for_display(cur_choices_texts[i], reverse=True)
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -150,28 +164,17 @@ def save_block():
         cur_file.textBlocks[cur_block].pop('newClipLength', None)
 
 def prev_block(event = None):
-    global next_index
-    global cur_block
-
     if cur_block - 1 > -1:
         block_dropdown.current(cur_block - 1)
         change_block()
 
 def next_block(event = None):
-    global next_index
-    global cur_block
-
     if next_index != -1:
         block_dropdown.current(next_index)
         change_block()
     else: print("Reached end of chapter")
 
 def copy_block(event = None):
-    global files
-    global cur_block
-    global cur_chapter
-    global root
-
     root.clipboard_clear()
     root.clipboard_append(files[cur_chapter].textBlocks[cur_block]['jpText'])
 
@@ -354,6 +357,7 @@ def main():
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()
+    block_dropdown.current(cur_block)
 
     root.mainloop()
 

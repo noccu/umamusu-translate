@@ -54,7 +54,8 @@ def main():
         if args.convert:
             helpers.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
         else:
-            for k, v in tlFile.textBlocks.items():
+            for block in tlFile.textBlocks:
+                k, v = block.get("jpText"), block.get("enText")
                 if v: continue
                 if k in csvData:
                     tlFile.textBlocks[k] = csvData[k]

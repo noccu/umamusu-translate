@@ -14,7 +14,13 @@ def writeJson(file: PathLike, data):
     file = Path(file)
     file.parent.mkdir(parents=True, exist_ok=True)
     with open(file, "w", encoding="utf8", newline="\n") as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+        json.dump(data, f, ensure_ascii=False, indent=4, default=_to_json)
+
+def _to_json(o):
+    try:
+        return o.__json__()
+    except:
+        raise TypeError
 
 def findExisting(searchPath: PathLike, filePattern: str):
     searchPath = Path(searchPath)

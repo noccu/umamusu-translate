@@ -12,6 +12,7 @@ def parseArgs():
     ap.add_argument("-src", type=Path, default=Path("../umamusume-db-translate/src/data").resolve(), help="mdb patch data dir")
     ap.add_argument("-f", "--file", type=Path, help="Specific file to transfer/convert. Otherwise all files in tl folder, or src in convert mode.")
     ap.add_argument("-convert", action="store_true", help="Convert mode (csv -> tlfile).")
+    ap.add_argument("-R", "--reverse", action="store_true", help="Convert json to csv")
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite destinations.")
     return ap.parse_args()
 
@@ -29,6 +30,17 @@ def readCsv(path: Path):
             if m:
                 data[m.group(1)] = re.sub(r'\\"', "\"", m.group(2))
     return data
+
+def writeCsv(path, data):
+    try:
+        file = open(path, "w", newline='', encoding="utf8")
+    except FileNotFoundError:
+        print("Not found:", path)
+        return
+    with file:
+        file.write("\"text\", \"translation\"\n")
+        for k, v in data.items():
+                file.write(f"\"{k}\",\"{v}\"\n")
 
 def main():
     args = parseArgs()
@@ -53,6 +65,8 @@ def main():
         csvData = readCsv(csvPath)
         if args.convert:
             helpers.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
+        elif args.reverse:
+            writeCsv(csvPath, tlFile.textBlocks.toNative())
         else:
             for block in tlFile.textBlocks:
                 k, v = block.get("jpText"), block.get("enText")

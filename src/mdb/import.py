@@ -24,9 +24,9 @@ def translator(args, entry: dict):
         except FileNotFoundError:
             raise StopIteration
 
-        for k, v in data.textBlocks.items():
-            if not v: continue
-            yield {'jpText': k, 'enText': v}
+        for e in data.textBlocks:
+            if not e.get('enText'): continue
+            yield e
 
 def parseArgs():
     ap = common.Args("Imports translations to master.mdb", False)

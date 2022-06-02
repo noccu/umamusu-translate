@@ -97,14 +97,10 @@ def processFiles(args):
     if args.lineLength == -1: print(f"Automatically setting line length based on story type/id")
     for file in files:
         file = common.TranslationFile(file)
-        if file.type == "mdb":
-            for k, v in file.genTextContainers():
-                if not v: continue
-                file.textBlocks[k] = processText(file, v, vars(args))
-        else:
-            for block in file.genTextContainers():
-                if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
-                block['enText'] = processText(file, block['enText'], vars(args))
+
+        for block in file.genTextContainers():
+            if not "enText" in block or len(block['enText']) == 0 or "skip" in block: continue
+            block['enText'] = processText(file, block['enText'], vars(args))
         file.save()
     print("Files processed.")
 

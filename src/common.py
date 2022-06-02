@@ -167,19 +167,15 @@ class TranslationFile:
             raise NotImplementedError
 
     def genTextContainers(self) -> Generator[dict, None, None]:
-        if self.version > self.ver_offset_mdb:
-            for k, v in self.textBlocks.items():
-                yield k, v
-        else:
-            for block in self.textBlocks:
-                if block['jpText']:
-                    yield block
-                if 'coloredText' in block:
-                    for entry in block['coloredText']:
-                        yield entry
-                if 'choices' in block:
-                    for entry in block['choices']:
-                        yield entry
+        for block in self.textBlocks:
+            if block['jpText']:
+                yield block
+            if 'coloredText' in block:
+                for entry in block['coloredText']:
+                    yield entry
+            if 'choices' in block:
+                for entry in block['choices']:
+                    yield entry
 
     @property
     def bundle(self):

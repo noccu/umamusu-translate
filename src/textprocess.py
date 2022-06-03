@@ -81,7 +81,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     return "\\n".join(lines) if file.type in ("race", "preview", "mdb") else "\n".join(lines)
 
 def replace(text: str, mode):
-    if mode == "none": return
+    if mode == "none": return text
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
         REPLACEMENT_DATA = helpers.readJson("src/data/replacer.json")

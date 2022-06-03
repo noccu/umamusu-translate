@@ -66,7 +66,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
                 lineFits = pureLen[-1] < lineLen
             else:
                 lineFits = pureLen[-1] + len(m.group(0)) - 1 < lineLen
-            if isTag or lineFits:
+            if isTag or lineFits or len(m[0]) == 1:
                 lines[-1] += m.group(0)
             else:
                 if lines[-1][-1] not in (" ", ">"):

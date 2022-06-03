@@ -40,7 +40,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         lineLen = ceil(len(pureText) / numLines)
     if lineLen > 0:
         #check if it's ok already
-        lines = pureText.splitlines()
+        lines = re.split(r"\r?\n|\\n", pureText)
         tooLong = [line for line in lines if len(line) > lineLen and len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             if opts.get("verbose"): print("Text passes length check, skipping: ", text)

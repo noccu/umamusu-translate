@@ -6,6 +6,7 @@ from tkinter import ttk, messagebox
 from tkinter.font import Font
 import textprocess
 
+TEXTBOX_WIDTH = 54
 
 def change_chapter(event = None):
     global cur_chapter
@@ -60,6 +61,10 @@ def load_block(event = None, loadBlocks = False, reload = False, dir = 1):
 
     if loadBlocks:
         block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(blocks)]
+        ll = textprocess.calcLineLen(files[cur_chapter], False)
+        ll = int(ll / (0.958 * ll**0.057) +1) if ll else TEXTBOX_WIDTH # attempt to calc the relation of line length to text box size
+        text_box_en.config(width=ll)
+        text_box_jp.config(width=ll)
 
     cur_block_data =  blocks[cur_block]
 
@@ -356,10 +361,10 @@ def main():
     block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
     block_duration_spinbox.grid(row=2, column=3)
 
-    text_box_jp = tk.Text(root, width=54, height=4, state='disabled', font=large_font)
+    text_box_jp = tk.Text(root, width=TEXTBOX_WIDTH, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=54, height=5, undo=True, font=large_font)
+    text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
     btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)

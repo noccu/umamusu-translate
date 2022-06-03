@@ -4,6 +4,7 @@ import common
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
+import textprocess
 
 
 def change_chapter(event = None):
@@ -28,21 +29,6 @@ def change_block(event = None, dir = 1):
 
     cur_block = block_dropdown.current()
     load_block(dir=dir)
-
-def txt_for_display(text, reverse = False):
-    if files[cur_chapter].type in ("mdb", "race", "preview"):
-        if reverse:
-            text = cleanText(text)
-            return text.replace("\n", "\\n")
-        else:
-            return text.replace("\\n", "\n")
-    else: 
-        if reverse:
-            text = cleanText(text)
-        return text
-
-def cleanText(text):
-    return " \n".join([line.strip() for line in text.strip().split("\n")])
 
 def load_block(event = None, loadBlocks = False, reload = False, dir = 1):
     global files
@@ -69,7 +55,7 @@ def load_block(event = None, loadBlocks = False, reload = False, dir = 1):
     if isinstance(files[cur_chapter], str):
         files[cur_chapter] = common.TranslationFile(files[cur_chapter])
     elif reload:
-        files[cur_chapter] = common.TranslationFile(files[cur_chapter].file)
+        files[cur_chapter].reload()
     blocks = files[cur_chapter].textBlocks
 
     if loadBlocks:
@@ -264,6 +250,44 @@ def del_word(event):
     elif event.keycode == 46:
         text_box_en.delete(pos, f"{pos} {end}")
 
+def format_text(event):
+    if not text_box_en.tag_ranges("sel"):
+        print("No selection to format.")
+        return
+    if event.keycode == 73:
+        open = "<i>"
+        close = "</i>"
+    elif event.keycode == 66:
+        open = "<b>"
+        close = "</b>"
+    else:
+        return
+
+    text_box_en.insert(tk.SEL_FIRST, open)
+    text_box_en.insert(tk.SEL_LAST, close)
+    return "break" # prevent control char entry
+
+def process_text(event):
+    proc_text = textprocess.processText(files[cur_chapter], cleanText(text_box_en.get(1.0, tk.END)), {"redoNewlines": True if event.state & 0x0001 else False, "replaceMode": "limit", "lineLength": 60, "targetLines": 99})
+    text_box_en.delete(1.0, tk.END)
+    text_box_en.insert(tk.END, proc_text)
+    return "break"
+
+def txt_for_display(text, reverse = False):
+    if files[cur_chapter].type in ("mdb", "race", "preview"):
+        if reverse:
+            text = cleanText(text)
+            return text.replace("\n", "\\n")
+        else:
+            return text.replace("\\n", "\n")
+    else: 
+        if reverse:
+            text = cleanText(text)
+        return text
+
+def cleanText(text: str):
+    return " \n".join([line.strip() for line in text.strip().split("\n")])
+
 def main():
     global files
     global root
@@ -366,6 +390,10 @@ def main():
     root.bind("<Control-Shift-BackSpace>", del_word)
     root.bind("<Control-Delete>", del_word)
     root.bind("<Control-Shift-Delete>", del_word)
+    text_box_en.bind("<Control-i>", format_text)
+    text_box_en.bind("<Control-b>", format_text)
+    text_box_en.bind("<Alt-f>", process_text)
+    text_box_en.bind("<Alt-F>", process_text)
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()

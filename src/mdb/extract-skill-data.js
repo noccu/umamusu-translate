@@ -21,7 +21,16 @@ const SQL_STMT = `select text, skill_data.id,
 const DATA_TL = JSON.parse(fs.readFileSync(DATA_TL_PATH, "utf-8"));
 
 (function main() {
-    let jsonOut = {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': {}};
+    let outPath = "translations/mdb/alt/skill-desc.json"
+    let jsonOut;
+    try {
+        jsonOut = JSON.parse(fs.readFileSync(outPath, "utf-8"))
+    }
+    catch (e) {
+        if (e.code !== 'ENOENT') throw e
+        jsonOut = {'version': 101, 'type': "mdb", 'lineLength': 0};
+    }
+    jsonOut['text'] = {}
     const db = sqlite3(DB_PATH);
     const stmt = db.prepare(SQL_STMT).raw(true);
     let res = stmt.all();
@@ -31,7 +40,7 @@ const DATA_TL = JSON.parse(fs.readFileSync(DATA_TL_PATH, "utf-8"));
         jsonOut['text'][skill] = `<size=18>${translateData(id, data)}\\n</size>`;
     });
     fs.mkdirSync("translations/mdb/alt", {recursive: true})
-    fs.writeFileSync("translations/mdb/alt/skill-desc.json", JSON.stringify(jsonOut, null, 4));
+    fs.writeFileSync(outPath, JSON.stringify(jsonOut, null, 4));
 })();
 
 function translateData(id, sqlData) {

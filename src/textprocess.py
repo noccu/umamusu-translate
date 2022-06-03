@@ -20,7 +20,16 @@ def processText(file: TranslationFile, text: str, opts: dict):
         text = adjustLength(file, text, opts)
     return text
 
+# def _cleanRep(m):
+#     # don't add spaces after opening tags
+#     if m[1]:
+#         x = m[1]
+#         if m[1][1] == "/": 
+#             x += " "
+#     else: return " "
+
 def cleannewLines(text: str):
+    # return re.sub(f"({RE_TAGS.pattern})?" + r" *(?:\\n|\r?\n) *", _cleanRep, text)
     return re.sub(r" *(?:\\n|\r?\n) *", " ", text)
 
 def adjustLength(file: TranslationFile, text: str, opts, **overrides):
@@ -50,6 +59,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         text = cleannewLines(text)
         lines = [""]
         pureLen = [0]
+        lastIsOpenTag = 0
         for m in RE_BREAK_WORDS.finditer(text):
             isTag = m.group(0).startswith("<") and m.group(1) and m.group(1) in SUPPORTED_TAGS
             if numLines > 0: # allow one-word "overflow" in line split mode
@@ -61,10 +71,18 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             else:
                 if lines[-1][-1] not in (" ", ">"):
                     lines[-1] = lines[-1] + " "
-                lines.append(m.group(0))
+                if lastIsOpenTag: # move tags to new line
+                    lines.append(lines[-1][-lastIsOpenTag:].strip())
+                    lines[-2] = lines[-2][:-lastIsOpenTag]
+                    lines[-1] += m[0]
+                else:
+                    lines.append(m.group(0))
                 pureLen.append(0)
             if not isTag:
                 pureLen[-1] += len(m[0])
+                lastIsOpenTag = 0
+            elif m[0][1] != "/":
+                lastIsOpenTag = m.end() - m.start()
 
         nLines = len(lines)
         if nLines > 1 and pureLen[-1] < lineLen / 3.25:

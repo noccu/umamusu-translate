@@ -6,6 +6,10 @@ import helpers
 
 REPLACEMENT_DATA = None
 LL_CACHE = None, None
+SUPPORTED_TAGS = ["i", "b", "color", "size"]
+RE_TAGS = re.compile(r"(?<!\\)</?" + f"(?:{'|'.join(SUPPORTED_TAGS)})" + r"(?:=[^>]+)?(?<!\\)>")
+RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]+)[^ <>]*[> ]{0,2}")
+
 
 def processText(file: TranslationFile, text: str, opts: dict):
     if opts.get("redoNewlines"):
@@ -26,32 +30,47 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     lineLen: int = overrides.get("lineLength", opts.get("lineLength", -1))
     if lineLen == -1: lineLen = calcLineLen(file, opts.get('verbose'))
     if lineLen == 0: return text # auto mode can return 0
+    pureText = RE_TAGS.sub("", text)
 
-    if len(text) < lineLen:
+    if len(pureText) < lineLen:
         if opts.get("verbose"): print("Short text line, skipping: ", text)
         return text
 
+    if numLines > 0:
+        lineLen = ceil(len(pureText) / numLines)
     if lineLen > 0:
         #check if it's ok already
-        lines = text.splitlines()
-        tooLong = [line for line in lines if len(line) > lineLen]
+        lines = pureText.splitlines()
+        tooLong = [line for line in lines if len(line) > lineLen and len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             if opts.get("verbose"): print("Text passes length check, skipping: ", text)
-            return text.replace("\n", "\\n") if file.type == "race" else text
+            return text.replace("\n", "\\n") if file.type in ("race", "preview", "mdb") else text # I guess this ensures it's correct but should really be skipped
 
         #adjust if not
         text = cleannewLines(text)
-        # python regexes kinda suck
-        lines = re.findall(f"(?:(?<= )|(?<=^)).{{1,{lineLen}}}(?= |$)|(?<= ).+$", text)
+        lines = [""]
+        pureLen = [0]
+        for m in RE_BREAK_WORDS.finditer(text):
+            isTag = m.group(0).startswith("<") and m.group(1) and m.group(1) in SUPPORTED_TAGS
+            if numLines > 0: # allow one-word "overflow" in line split mode
+                lineFits = pureLen[-1] < lineLen
+            else:
+                lineFits = pureLen[-1] + len(m.group(0)) - 1 < lineLen
+            if isTag or lineFits:
+                lines[-1] += m.group(0)
+            else:
+                if lines[-1][-1] not in (" ", ">"):
+                    lines[-1] = lines[-1] + " "
+                lines.append(m.group(0))
+                pureLen.append(0)
+            if not isTag:
+                pureLen[-1] += len(m[0])
+
         nLines = len(lines)
-        if nLines > 1 and len(lines[-1]) < lineLen / 3.25:
+        if nLines > 1 and pureLen[-1] < lineLen / 3.25:
             linesStr = '\n\t'.join(lines)
             if opts.get("verbose"): print(f"Last line is short, balancing on line number:\n\t{linesStr}")
-            return adjustLength(file, text, opts, lineLength = 0, numLines = nLines, targetLines = targetLines)
-
-    elif numLines > 0:
-        lineLen = ceil(len(text) / numLines)
-        lines = re.findall(f"(?:(?<= )|(?<=^)).{{{lineLen},}}?(?= |$)|(?:(?<= )|(?<=^)).+$", text)
+            return adjustLength(file, text, opts, numLines = nLines, lineLen = -2)
 
     if targetLines > 0 and len(lines) > targetLines:
         try:
@@ -59,7 +78,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
-    return " \\n".join(lines) if file.type in ("race", "preview", "mdb") else " \n".join(lines)
+    return "\\n".join(lines) if file.type in ("race", "preview", "mdb") else "\n".join(lines)
 
 def replace(text: str, mode):
     if mode == "none": return
@@ -95,7 +114,7 @@ def processFiles(args):
     else:
         files = common.searchFiles(args.type, args.group, args.id, args.idx)
     print(f"Processing {len(files)} files...")
-    if args.lineLength == -1: print(f"Automatically setting line length based on story type/id")
+    if args.lineLength == -1: print(f"Automatically setting line length based on story type/id or file value")
     for file in files:
         file = common.TranslationFile(file)
 

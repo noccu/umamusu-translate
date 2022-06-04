@@ -45,7 +45,7 @@ def main():
                 stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"
                 if entry.get("specifier"):
                     for filename, specval in entry['files'].items():
-                        if args.file and filename != args.file: continue
+                        if not specval or args.file and filename != args.file: continue
                         if isinstance(specval, list):
                             specval = ",".join([str(x) for x in specval])
                             specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"

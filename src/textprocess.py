@@ -65,7 +65,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             if numLines > 0: # allow one-word "overflow" in line split mode
                 lineFits = pureLen[-1] < lineLen
             else:
-                lineFits = pureLen[-1] + len(m.group(0)) - 1 < lineLen
+                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen # -2 = -1 for spaces (common), -1 for <= comparison
             if isTag or lineFits or len(m[0]) == 1 or len(lines[-1]) == 0:
                 lines[-1] += m.group(0)
             else:

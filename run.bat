@@ -18,6 +18,7 @@ ECHO(
 
 IF [%1] NEQ [] (
     IF [%1] EQU [install] GOTO install
+    IF [%1] EQU [mdb] GOTO mdb
 ) 
 
 :open 
@@ -27,7 +28,7 @@ ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in 
 REM Or manually import parts, see import.py -h
 %snek% src/import.py -FI -O -U -S
 ECHO Imports complete!
-goto quit
+GOTO quit
 
 :install
 ECHO Installing required libraries...
@@ -37,6 +38,11 @@ IF %ERRORLEVEL% NEQ 0 (
     echo [93mSomething went wrong. Please screenshot this window when asking for help. You can hide your username if you want.[0m
     PAUSE
 )
+GOTO quit
+
+:mdb
+ECHO Importing mdb text...
+%snek% src/mdb/import.py %2
 
 :quit
 PAUSE

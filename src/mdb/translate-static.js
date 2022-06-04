@@ -242,7 +242,7 @@ function translateSpecific (type, jpText, file) {
         if (m) {
             let [, grade] = m;
             if (grade && enText) {
-                data[jpText] = `${enText} ${CM_GRADE[grade]}`;
+                data[jpText] = `${enText} ${CM_GRADE[grade]}${jpText.endsWith("★") ? " ★" : ""}`;
             }
         }
     }

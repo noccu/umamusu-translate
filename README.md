@@ -43,11 +43,12 @@ This tool collection only changes text to translate it and it is *my belief* thi
 ## Basic Usage
 1. **Dialogue**: double click `run.bat` 
 1. **UI**: Open the game's *install folder* (where the `Umamusume.exe` is)
-    1. Download [localify][umamusume-localify]'s `release.7z` from [here](https://github.com/GEEKiDoS/umamusume-localify/releases/tag/test6) and extract the `version.dll` inside to the *install folder*
+    1. Download [tlg]'s latest `version.dll` from [here](https://github.com/MinamiChiwa/Trainers-Legend-G/raw/main/version/version.dll) and put it in the game's *install folder*
     1. Copy the *contents* of this project's [localify folder](localify) to the *install folder*
-        - If it doesn't work when you start the game, try renaming the `version.dll` file to `uxtheme.dll`
+        - If it doesn't work when you start the game and you double checked you did it correctly, try renaming the `version.dll` file to `uxtheme.dll`
         - In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)
-1. **Skills and other variable text**: See the [db-translate project] and follow its guide.
+1. **Skills and other variable text**: Run either of the `mdb import.bat` files
+    - For a web version (slightly outdated) see the [db-translate project] and follow its guide for now. It wil be moved to this project soon™
 
 ## Updating
 1. Download the project again and overwrite
@@ -100,6 +101,7 @@ For dev contributions, open a PR or Issue.
 
 [UnityPy]: https://github.com/K0lb3/UnityPy
 [umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
+[tlg]: https://github.com/MinamiChiwa/Trainers-Legend-G
 [db-translate project]: https://github.com/noccu/umamusume-db-translate
 
 [tl-progress]: tl-progress.md

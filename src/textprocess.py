@@ -6,6 +6,10 @@ import helpers
 
 REPLACEMENT_DATA = None
 LL_CACHE = None, None
+SUPPORTED_TAGS = ["i", "b", "color", "size"]
+RE_TAGS = re.compile(r"(?<!\\)</?" + f"(?:{'|'.join(SUPPORTED_TAGS)})" + r"(?:=[^>]+)?(?<!\\)>")
+RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]+)[^ <>]*[> ]{0,2}")
+
 
 def processText(file: TranslationFile, text: str, opts: dict):
     if opts.get("redoNewlines"):
@@ -16,7 +20,16 @@ def processText(file: TranslationFile, text: str, opts: dict):
         text = adjustLength(file, text, opts)
     return text
 
+# def _cleanRep(m):
+#     # don't add spaces after opening tags
+#     if m[1]:
+#         x = m[1]
+#         if m[1][1] == "/": 
+#             x += " "
+#     else: return " "
+
 def cleannewLines(text: str):
+    # return re.sub(f"({RE_TAGS.pattern})?" + r" *(?:\\n|\r?\n) *", _cleanRep, text)
     return re.sub(r" *(?:\\n|\r?\n) *", " ", text)
 
 def adjustLength(file: TranslationFile, text: str, opts, **overrides):
@@ -25,32 +38,57 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     targetLines: int = overrides.get("targetLines", opts.get("targetLines", 3))
     lineLen: int = overrides.get("lineLength", opts.get("lineLength", -1))
     if lineLen == -1: lineLen = calcLineLen(file, opts.get('verbose'))
+    if lineLen == 0: return text # auto mode can return 0
+    pureText = RE_TAGS.sub("", text)
 
-    if len(text) < lineLen:
+    if len(pureText) < lineLen:
         if opts.get("verbose"): print("Short text line, skipping: ", text)
         return text
 
+    if numLines > 0:
+        lineLen = ceil(len(pureText) / numLines)
     if lineLen > 0:
         #check if it's ok already
-        lines = text.splitlines()
-        tooLong = [line for line in lines if len(line) > lineLen]
+        lines = re.split(r"\r?\n|\\n", pureText)
+        tooLong = [line for line in lines if len(line) > lineLen and len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             if opts.get("verbose"): print("Text passes length check, skipping: ", text)
-            return text.replace("\n", "\\n") if file.type == "race" else text
+            return text.replace("\n", "\\n") if file.type in ("race", "preview", "mdb") else text # I guess this ensures it's correct but should really be skipped
 
         #adjust if not
         text = cleannewLines(text)
-        # python regexes kinda suck
-        lines = re.findall(f"(?:(?<= )|(?<=^)).{{1,{lineLen}}}(?= |$)|(?<= ).+$", text)
+        lines = [""]
+        pureLen = [0]
+        lastIsOpenTag = 0
+        for m in RE_BREAK_WORDS.finditer(text):
+            isTag = m.group(0).startswith("<") and m.group(1) and m.group(1) in SUPPORTED_TAGS
+            if numLines > 0: # allow one-word "overflow" in line split mode
+                lineFits = pureLen[-1] < lineLen
+            else:
+                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen # -2 = -1 for spaces (common), -1 for <= comparison
+            if isTag or lineFits or len(m[0]) == 1 or len(lines[-1]) == 0:
+                lines[-1] += m.group(0)
+            else:
+                if lines[-1][-1] not in (" ", ">"):
+                    lines[-1] = lines[-1] + " "
+                if lastIsOpenTag: # move tags to new line
+                    lines.append(lines[-1][-lastIsOpenTag:].strip())
+                    lines[-2] = lines[-2][:-lastIsOpenTag]
+                    lines[-1] += m[0]
+                else:
+                    lines.append(m.group(0))
+                pureLen.append(0)
+            if not isTag:
+                pureLen[-1] += len(m[0])
+                lastIsOpenTag = 0
+            elif m[0][1] != "/":
+                lastIsOpenTag = m.end() - m.start()
+
         nLines = len(lines)
-        if nLines > 1 and len(lines[-1]) < lineLen / 3.25:
+        if numLines < 1 and nLines > 1 and pureLen[-1] < lineLen / 3.25:
             linesStr = '\n\t'.join(lines)
             if opts.get("verbose"): print(f"Last line is short, balancing on line number:\n\t{linesStr}")
-            return adjustLength(file, text, opts, lineLength = 0, numLines = nLines, targetLines = targetLines)
-
-    elif numLines > 0:
-        lineLen = ceil(len(text) / numLines)
-        lines = re.findall(f"(?:(?<= )|(?<=^)).{{{lineLen},}}?(?= |$)|(?:(?<= )|(?<=^)).+$", text)
+            return adjustLength(file, text, opts, numLines = nLines, lineLen = -2)
 
     if targetLines > 0 and len(lines) > targetLines:
         try:
@@ -58,10 +96,10 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
-    return " \\n".join(lines) if file.type in ("race", "preview") else " \n".join(lines)
+    return "\\n".join(lines) if file.type in ("race", "preview", "mdb") else "\n".join(lines)
 
 def replace(text: str, mode):
-    if mode == "none": return
+    if mode == "none": return text
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
         REPLACEMENT_DATA = helpers.readJson("src/data/replacer.json")
@@ -94,7 +132,7 @@ def processFiles(args):
     else:
         files = common.searchFiles(args.type, args.group, args.id, args.idx)
     print(f"Processing {len(files)} files...")
-    if args.lineLength == -1: print(f"Automatically setting line length based on story type/id")
+    if args.lineLength == -1: print(f"Automatically setting line length based on story type/id or file value")
     for file in files:
         file = common.TranslationFile(file)
 
@@ -109,10 +147,12 @@ def calcLineLen(file: TranslationFile, verbose):
     if LL_CACHE[0] is file: # should be same as id() -> fast
         return LL_CACHE[1]
 
-    if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
-        lineLength = 65
-    else:
-        lineLength = 45
+    lineLength = file.data.get('lineLength')
+    if lineLength is None:
+        if file.type in ("lyrics","race") or (file.type == "story" and common.parseStoryId(file.type, file.getStoryId(), False)[0] in ("02", "04", "09")):
+            lineLength = 65
+        else:
+            lineLength = 45
     LL_CACHE = file, lineLength
     if verbose: print(f"Line length set to {lineLength} for {file.name}")
     return lineLength

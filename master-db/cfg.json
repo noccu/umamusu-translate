@@ -1,0 +1,17 @@
+[
+    {
+        "table": "text_data",
+        "field": "text",
+        "file": "text_data.json",
+        "overrides": {
+            "opt-skill": {
+                "data": "alt/skill-desc.json"
+            }
+        }
+    },
+    {
+        "table": "character_system_text",
+        "field": "text",
+        "file": "character_system_text.json"
+    }
+]

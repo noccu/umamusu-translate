@@ -6,6 +6,7 @@ from tkinter import ttk, messagebox
 from tkinter.font import Font
 import textprocess
 
+TEXTBOX_WIDTH = 54
 
 def change_chapter(event = None):
     global cur_chapter
@@ -15,7 +16,7 @@ def change_chapter(event = None):
     cur_block = 0
     load_block(None, True)
 
-def change_block(event = None):
+def change_block(event = None, dir = 1):
     global cur_chapter
     global cur_block
     global block_dropdown
@@ -28,9 +29,9 @@ def change_block(event = None):
         saveFile()
 
     cur_block = block_dropdown.current()
-    load_block()
+    load_block(dir=dir)
 
-def load_block(event = None, loadBlocks = False, reload = False):
+def load_block(event = None, loadBlocks = False, reload = False, dir = 1):
     global files
     global cur_chapter
     global cur_block
@@ -59,12 +60,22 @@ def load_block(event = None, loadBlocks = False, reload = False):
     blocks = files[cur_chapter].textBlocks
 
     if loadBlocks:
-        block_dropdown['values'] = [f"{i+1} - {blocks[i]['jpText'][:8]}" for i in range(len(blocks))]
-    block_dropdown.current(cur_block)
+        block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(blocks)]
+        ll = textprocess.calcLineLen(files[cur_chapter], False)
+        ll = int(ll / (0.958 * ll**0.057) +1) if ll else TEXTBOX_WIDTH # attempt to calc the relation of line length to text box size
+        text_box_en.config(width=ll)
+        text_box_jp.config(width=ll)
 
     cur_block_data =  blocks[cur_block]
-    next_index = cur_block_data.get('nextBlock', cur_block + 2 if cur_block + 1 < len(blocks) else 0) - 1
-    if next_index < 1:
+
+    if skip_translated.get() == 1:
+        while cur_block_data['enText'] and cur_block > 0 and cur_block < len(blocks)-1:
+            cur_block += dir
+            cur_block_data =  blocks[cur_block]
+        block_dropdown.current(cur_block)
+
+    next_index = cur_block_data.get('nextBlock', cur_block + 2) - 1
+    if next_index < 1 or next_index >= len(blocks):
         next_index = -1
     if next_index > 0:
         btn_next['state'] = 'normal'
@@ -98,10 +109,10 @@ def load_block(event = None, loadBlocks = False, reload = False):
 
     text_box_jp.configure(state='normal')
     text_box_jp.delete(1.0, tk.END)
-    text_box_jp.insert(tk.END, cur_block_data['jpText'])
+    text_box_jp.insert(tk.END, txt_for_display(cur_block_data['jpText']))
     text_box_jp.configure(state='disabled')
     text_box_en.delete(1.0, tk.END)
-    text_box_en.insert(tk.END, cur_block_data['enText'])
+    text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
 
     # Update choices button
     btn_choices['state'] = 'disabled'
@@ -129,11 +140,11 @@ def save_block():
     cur_file = files[cur_chapter]
     if "enName" in cur_file.textBlocks[cur_block]: 
         cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
-    cur_file.textBlocks[cur_block]['enText'] = cleanText(text_box_en.get(1.0, tk.END))
+    cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
 
     if cur_choices and cur_choices_texts:
         for i in range(len(cur_choices_texts)):
-            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = cleanText(cur_choices_texts[i])
+            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = txt_for_display(cur_choices_texts[i], reverse=True)
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -151,28 +162,17 @@ def save_block():
         cur_file.textBlocks[cur_block].pop('newClipLength', None)
 
 def prev_block(event = None):
-    global next_index
-    global cur_block
-
     if cur_block - 1 > -1:
         block_dropdown.current(cur_block - 1)
-        change_block()
+        change_block(dir=-1)
 
 def next_block(event = None):
-    global next_index
-    global cur_block
-
     if next_index != -1:
         block_dropdown.current(next_index)
         change_block()
     else: print("Reached end of chapter")
 
 def copy_block(event = None):
-    global files
-    global cur_block
-    global cur_chapter
-    global root
-
     root.clipboard_clear()
     root.clipboard_append(files[cur_chapter].textBlocks[cur_block]['jpText'])
 
@@ -278,8 +278,20 @@ def process_text(event):
     text_box_en.insert(tk.END, proc_text)
     return "break"
 
-def cleanText(txt: str):
-    return " \n".join([line.strip() for line in txt.strip().split("\n")])
+def txt_for_display(text, reverse = False):
+    if files[cur_chapter].type in ("mdb", "race", "preview"):
+        if reverse:
+            text = cleanText(text)
+            return text.replace("\n", "\\n")
+        else:
+            return text.replace("\\n", "\n")
+    else: 
+        if reverse:
+            text = cleanText(text)
+        return text
+
+def cleanText(text: str):
+    return " \n".join([line.strip() for line in text.strip().split("\n")])
 
 def main():
     global files
@@ -297,6 +309,7 @@ def main():
     global text_box_en
     global btn_choices
     global save_on_next
+    global skip_translated
     global cur_choices_texts
     global large_font
 
@@ -348,10 +361,10 @@ def main():
     block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
     block_duration_spinbox.grid(row=2, column=3)
 
-    text_box_jp = tk.Text(root, width=54, height=4, state='disabled', font=large_font)
+    text_box_jp = tk.Text(root, width=TEXTBOX_WIDTH, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=54, height=5, undo=True, font=large_font)
+    text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
     btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)
@@ -367,6 +380,10 @@ def main():
     save_on_next.set(0)
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
+    skip_translated = tk.IntVar()
+    skip_translated.set(0)
+    skip_checkbox = tk.Checkbutton(root, text="Skip translated blocks", variable=skip_translated)
+    skip_checkbox.grid(row=6, column=2)
 
     root.bind("<Control-Return>", next_block)
     root.bind("<Control-s>", saveFile)
@@ -385,6 +402,7 @@ def main():
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()
+    block_dropdown.current(cur_block)
 
     root.mainloop()
 

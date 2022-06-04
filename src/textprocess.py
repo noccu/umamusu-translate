@@ -8,7 +8,7 @@ REPLACEMENT_DATA = None
 LL_CACHE = None, None
 SUPPORTED_TAGS = ["i", "b", "color", "size"]
 RE_TAGS = re.compile(r"(?<!\\)</?" + f"(?:{'|'.join(SUPPORTED_TAGS)})" + r"(?:=[^>]+)?(?<!\\)>")
-RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]+)[^ <>]*[> ]{0,2}")
+RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}")
 
 
 def processText(file: TranslationFile, text: str, opts: dict):

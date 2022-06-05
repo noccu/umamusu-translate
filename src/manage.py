@@ -19,15 +19,20 @@ def updateTlData(dumpData: dict, tlData: dict):
 def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
     for hash, text in dumpData.items():
         translatedText = tlData.get(text)
-        data = hashData[1] if len(hash) > 5 else hashData[0]
+        if len(hash) > 5:
+            data = hashData[1]
+            key = hash
+        else:
+            data = hashData[0]
+            key = text
         if translatedText:
             # special case for effectively removing text
-            data[hash] = "" if translatedText == "<empty>" else translatedText
+            data[key] = "" if translatedText == "<empty>" else translatedText
         else:
             # Remove previously translated hashes that no longer are to prevent garbled text
-            if hash in data:
+            if key in data:
                 # print(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
-                del data[hash]
+                del data[key]
 
 def importDump(path: PurePath, args):
     isExternal = path != LOCAL_DUMP

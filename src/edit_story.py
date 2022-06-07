@@ -317,7 +317,7 @@ def main():
     cur_block = 0
     cur_choices_texts = list()
 
-    ap = common.Args("Story editor")
+    ap = common.Args("Story editor", types=common.SUPPORTED_TYPES)
     ap.add_argument("-src")
     ap.add_argument("-dst", help=SUPPRESS)
     args = ap.parse_args()

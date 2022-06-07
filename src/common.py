@@ -11,7 +11,8 @@ GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalL
 GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
 GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
-TARGET_TYPES =  ["story", "home", "race", "lyrics", "preview", "mdb"]
+SUPPORTED_TYPES =  ["story", "home", "race", "lyrics", "preview", "mdb"] # update indexing on next line
+TARGET_TYPES =  SUPPORTED_TYPES[:5]
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"] # special-use game names, don't touch
 
 
@@ -66,19 +67,21 @@ def patchVersion():
 
 class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTextHelpFormatter): pass
 class Args(argparse.ArgumentParser):
-    def __init__(self, desc, defaultArgs = True, **kwargs) -> None:
+    def __init__(self, desc, defaultArgs = True, types = None, **kwargs) -> None:
         if len(sys.argv) > 1 and sys.argv[1] in ("-v", "--version"):
             print(f"Patch version: {patchVersion()}")
             sys.exit()
         super().__init__(description=desc, conflict_handler='resolve', formatter_class=RawDefaultFormatter, **kwargs)
         if defaultArgs:
             self.add_argument("-v", "--version", action="store_true", default=argparse.SUPPRESS, help="Show version and exit")
-            self.add_argument("-t", "--type", choices=TARGET_TYPES, default=TARGET_TYPES[0], help="The type of assets to process.")
+            self.add_argument("-t", "--type", choices=types or TARGET_TYPES, default=types[0] if types else TARGET_TYPES[0], help="The type of assets to process.")
             self.add_argument("-g", "--group", help="The group to process")
             self.add_argument("-id", help="The id (subgroup) to process")
             self.add_argument("-idx", help="The specific asset index to process")
             self.add_argument("-src", default=GAME_ASSET_ROOT)
             self.add_argument("-dst", default=Path("dat/").resolve())
+        elif types:
+            self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
 
 class TranslationFile:
     latestVersion = 5

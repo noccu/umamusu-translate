@@ -84,7 +84,7 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
 
 class TranslationFile:
-    latestVersion = 5
+    latestVersion = 6
     ver_offset_mdb = 100
 
     def __init__(self, file):
@@ -213,4 +213,5 @@ class TranslationFile:
         self.data['text'] = self.TextData(self)
 
     def save(self):
+        self.data['modified'] = int(datetime.now(timezone.utc).timestamp())
         helpers.writeJson(self.file, self.data)

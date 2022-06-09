@@ -84,7 +84,7 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
 
 class TranslationFile:
-    latestVersion = 6
+    latestVersion = 5
     ver_offset_mdb = 100
 
     def __init__(self, file):

@@ -201,6 +201,8 @@ def create_choices():
     global cur_choices_textboxes
     global choices_window
     global cur_choices
+    global choice_scrollable 
+    choice_scrollable = False
 
     cur_choices_textboxes = list()
     cur_choices = None
@@ -224,6 +226,15 @@ def create_choices():
 
     window_frame = ttk.Frame(scroll_canvas)
     scroll_canvas.create_window((0, 0), window=window_frame, anchor='nw')
+
+    def toggle_scroll(e):
+        global choice_scrollable
+        choice_scrollable = not choice_scrollable
+    def scroll(e):
+        if choice_scrollable: scroll_canvas.yview_scroll(int(-1* (e.delta/35)), "units")
+    scroll_canvas.bind_all("<MouseWheel>", scroll)
+    window_frame.bind('<Enter>', toggle_scroll)
+    window_frame.bind('<Leave>', toggle_scroll)
 
     for i in range(0,5):
         cur_jp_text = tk.Text(window_frame, width=42, height=2, font=large_font)
@@ -399,6 +410,8 @@ def main():
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
     root.bind("<Alt-Right>", copy_block)
+    root.bind("<Alt-c>", toggleChoices)
+    choices_window.bind("<Alt-c>", toggleChoices)
     root.bind("<Alt-x>", char_convert)
     root.bind("<Control-BackSpace>", del_word)
     root.bind("<Control-Shift-BackSpace>", del_word)

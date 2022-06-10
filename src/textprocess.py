@@ -8,7 +8,7 @@ REPLACEMENT_DATA = None
 LL_CACHE = None, None
 SUPPORTED_TAGS = ["i", "b", "color", "size"]
 RE_TAGS = re.compile(r"(?<!\\)</?" + f"(?:{'|'.join(SUPPORTED_TAGS)})" + r"(?:=[^>]+)?(?<!\\)>")
-RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}")
+RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}") # yes we want to allow null matches
 
 
 def processText(file: TranslationFile, text: str, opts: dict):
@@ -68,7 +68,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
                 lineFits = pureLen[-1] < lineLen
             else:
                 lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen # -2 = -1 for spaces (common), -1 for <= comparison
-            if isTag or lineFits or len(m[0]) == 1 or len(lines[-1]) == 0:
+            if isTag or lineFits or len(m[0]) < 2 or len(lines[-1]) == 0:
                 lines[-1] += m.group(0)
             else:
                 if lines[-1][-1] not in (" ", ">"):

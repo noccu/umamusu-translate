@@ -296,7 +296,7 @@ def process_text(event):
     return "break"
 
 def txt_for_display(text, reverse = False):
-    if files[cur_chapter].type in ("mdb", "race", "preview"):
+    if files[cur_chapter].escapeNewline:
         if reverse:
             text = cleanText(text)
             return text.replace("\n", "\\n")

@@ -53,7 +53,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         tooLong = [line for line in lines if len(line) > lineLen and len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             if opts.get("verbose"): print("Text passes length check, skipping: ", text)
-            return text.replace("\n", "\\n") if file.type in ("race", "preview", "mdb") else text # I guess this ensures it's correct but should really be skipped
+            return text.replace("\n", "\\n") if file.escapeNewline else text # I guess this ensures it's correct but should really be skipped
 
         #adjust if not
         text = cleannewLines(text)
@@ -96,7 +96,10 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
-    return "\\n".join(lines) if file.type in ("race", "preview", "mdb") else "\n".join(lines)
+    return getNewline().join(lines)
+
+def getNewline(tlFile: TranslationFile):
+    return "\\n" if tlFile.escapeNewline else "\n"
 
 def replace(text: str, mode):
     if mode == "none": return text

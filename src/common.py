@@ -91,6 +91,7 @@ class TranslationFile:
         self.file = file
         self.name = PurePath(file).name
         self.reload()
+        self.escapeNewline = True if self.type in ("race", "preview", "mdb") else False
 
     class TextData:
         def __init__(self, root: 'TranslationFile', data = None) -> None:

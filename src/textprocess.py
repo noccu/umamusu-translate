@@ -103,7 +103,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
 def resizeText(tlFile: TranslationFile, text: str, force = False):
     size = tlFile.data.get("textSize")
     if not size: return text
-    if text.startswith("<"):
+    if text.startswith("<s"):
         if force:
             text = re.sub(r"^<size=\d+>(.+?) *(?:\\+n)?</size>$", r"\1", text, flags=re.DOTALL)
         else:

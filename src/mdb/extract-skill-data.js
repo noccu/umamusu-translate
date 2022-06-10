@@ -37,7 +37,7 @@ const DATA_TL = JSON.parse(fs.readFileSync(DATA_TL_PATH, "utf-8"));
     db.close();
     res.forEach(row => {
         let [skill, id, ...data] = row;
-        jsonOut['text'][skill] = `<size=18>${translateData(id, data)}\\n</size>`;
+        jsonOut['text'][skill] = translateData(id, data);
     });
     fs.mkdirSync("translations/mdb/alt", {recursive: true})
     fs.writeFileSync(outPath, JSON.stringify(jsonOut, null, 4));
@@ -51,7 +51,7 @@ function translateData(id, sqlData) {
         type3, strength3, strengthMod3, targetType3, targetValue3,
         ...skill2] = sqlData;
 
-    let outString = translateEffect(id, type, strength, strengthMod);
+    let outString = "<color=#e06f0b>" + translateEffect(id, type, strength, strengthMod);
     if (targetType > 1) outString += translateTarget(targetType, targetValue);
 
     if (type2) outString += `, ${translateEffect(id, type2, strength2, strengthMod2)}`;
@@ -63,7 +63,7 @@ function translateData(id, sqlData) {
     if (duration == -1) { duration = "indefinitely"; }
     else if (duration == 0) { duration = "immediately"; }
     else { duration = "for " + parseInt(duration) / 10000 + "s"; }
-    outString += ` ${duration}`;
+    outString += ` ${duration}</color>`;
 
     cooldown /= 10000 // in seconds, then limit to potentially usable range
     if (cooldown > 0 && cooldown < 90) {
@@ -71,7 +71,7 @@ function translateData(id, sqlData) {
     }
 
     outString += ` when: ${translateConditions(conditions)}`;
-    if (precondition) outString += ` after: ${translateConditions(precondition)}`
+    if (precondition) outString += ` <color=#29b39e>after</color>: ${translateConditions(precondition)}`
 
     if (skill2.length && skill2[2] != 0) { outString += "\\n" + translateData(id, skill2) }
     return outString;

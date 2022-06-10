@@ -249,11 +249,12 @@ function translateSpecific (type, jpText, file) {
     else if (type == "cmRes") {
         let enText = data[jpText]
         if (enText.length > 22) return
-        m = jpText.match(/杯で(.+)成績/)
+        m = jpText.match(/杯で(?:(\d)回)?(.+)成績/)
         if (m) {
-            let [, res] = m;
+            let [, i, res] = m;
+            i = i ? `${i}x ` : ""
             if (res && enText) {
-                data[jpText] = `Achieve ${CM_RESULT[res]} results in the ${enText}`;
+                data[jpText] = `Achieve ${i}${CM_RESULT[res]} results in the ${enText}`;
             }
         }
     }

@@ -18,6 +18,8 @@ def processText(file: TranslationFile, text: str, opts: dict):
         text = replace(text, opts["replaceMode"])
     if opts.get("lineLength") != 0:
         text = adjustLength(file, text, opts)
+
+    text = resizeText(file, text, force = opts.get("forceResize"))
     return text
 
 # def _cleanRep(m):
@@ -96,7 +98,17 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}")
         except UnicodeEncodeError:
             print(f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors.")
-    return getNewline().join(lines)
+    return getNewline(file).join(lines)
+
+def resizeText(tlFile: TranslationFile, text: str, force = False):
+    size = tlFile.data.get("textSize")
+    if not size: return text
+    if text.startswith("<"):
+        if force:
+            text = re.sub(r"^<size=\d+>(.+?) *(?:\\+n)?</size>$", r"\1", text, flags=re.DOTALL)
+        else:
+            return text # ignore already-sized textpy src\
+    return f"<size={size}>{text}{getNewline(tlFile)}</size>"
 
 def getNewline(tlFile: TranslationFile):
     return "\\n" if tlFile.escapeNewline else "\n"
@@ -123,6 +135,7 @@ def main():
     ap.add_argument("-ll", dest="lineLength", default=-1, type=int, help="Characters per line. 0: disable, -1: auto")
     ap.add_argument("-nl", dest="redoNewlines", action="store_true", help="Remove existing newlines for complete reformatting")
     ap.add_argument("-rep", dest="replaceMode", choices=["all", "limit", "none"], default="limit", help="Mode/aggressiveness of replacements")
+    ap.add_argument("-fsize", "--force-resize", dest="forceResize", action="store_true", help="Re-resize text when input already had size tags. (Still requires size key in tlfile)")
     # 3 is old max and visually ideal as intended by the game. Through overflow (thanks anni update!) up to 4 work for landscape content, and up to 5 for portrait (quite pushing it though)
     ap.add_argument("-tl", dest="targetLines", default=3, type=int, help="Target lines. Length adjustment skips input obeying -ll and not exceeding -tl")
     args = ap.parse_args()

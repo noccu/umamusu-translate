@@ -1,9 +1,12 @@
 from argparse import SUPPRESS
+import re
 import common
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
+import textprocess
 
+TEXTBOX_WIDTH = 54
 
 def change_chapter(event = None):
     global cur_chapter
@@ -13,7 +16,7 @@ def change_chapter(event = None):
     cur_block = 0
     load_block(None, True)
 
-def change_block(event = None):
+def change_block(event = None, dir = 1):
     global cur_chapter
     global cur_block
     global block_dropdown
@@ -26,9 +29,9 @@ def change_block(event = None):
         saveFile()
 
     cur_block = block_dropdown.current()
-    load_block()
+    load_block(dir=dir)
 
-def load_block(event = None, loadBlocks = False, reload = False):
+def load_block(event = None, loadBlocks = False, reload = False, dir = 1):
     global files
     global cur_chapter
     global cur_block
@@ -45,7 +48,6 @@ def load_block(event = None, loadBlocks = False, reload = False):
     global btn_choices
     global cur_choices
     global cur_choices_textboxes
-    global cur_choices_texts
 
     # print(cur_chapter, cur_block)
 
@@ -53,16 +55,26 @@ def load_block(event = None, loadBlocks = False, reload = False):
     if isinstance(files[cur_chapter], str):
         files[cur_chapter] = common.TranslationFile(files[cur_chapter])
     elif reload:
-        files[cur_chapter] = common.TranslationFile(files[cur_chapter].file)
+        files[cur_chapter].reload()
     blocks = files[cur_chapter].textBlocks
 
     if loadBlocks:
-        block_dropdown['values'] = [f"{i+1} - {blocks[i]['jpText'][:8]}" for i in range(len(blocks))]
-    block_dropdown.current(cur_block)
+        block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(blocks)]
+        ll = textprocess.calcLineLen(files[cur_chapter], False)
+        ll = int(ll / (0.958 * ll**0.057) +1) if ll else TEXTBOX_WIDTH # attempt to calc the relation of line length to text box size
+        text_box_en.config(width=ll)
+        text_box_jp.config(width=ll)
 
     cur_block_data =  blocks[cur_block]
-    next_index = cur_block_data.get('nextBlock', cur_block + 2 if cur_block + 1 < len(blocks) else 0) - 1
-    if next_index < 1:
+
+    if skip_translated.get() == 1:
+        while cur_block_data['enText'] and cur_block > 0 and cur_block < len(blocks)-1:
+            cur_block += dir
+            cur_block_data =  blocks[cur_block]
+        block_dropdown.current(cur_block)
+
+    next_index = cur_block_data.get('nextBlock', cur_block + 2) - 1
+    if next_index < 1 or next_index >= len(blocks):
         next_index = -1
     if next_index > 0:
         btn_next['state'] = 'normal'
@@ -74,8 +86,13 @@ def load_block(event = None, loadBlocks = False, reload = False):
     # Fill in the text boxes
     speaker_jp_entry.delete(0, tk.END)
     speaker_jp_entry.insert(0, cur_block_data.get('jpName', ""))
-    speaker_en_entry.delete(0, tk.END)
-    speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
+    if cur_block_data.get('jpName') in common.NAMES_BLACKLIST:
+        speaker_en_entry.delete(0, tk.END)
+        speaker_en_entry['state'] = 'disabled'
+    else:
+        speaker_en_entry['state'] = 'normal'
+        speaker_en_entry.delete(0, tk.END)
+        speaker_en_entry.insert(0, cur_block_data.get('enName', ""))
 
     # Spinbox for text block duration
     block_duration_spinbox.delete(0, tk.END)
@@ -91,42 +108,32 @@ def load_block(event = None, loadBlocks = False, reload = False):
 
     text_box_jp.configure(state='normal')
     text_box_jp.delete(1.0, tk.END)
-    text_box_jp.insert(tk.END, cur_block_data['jpText'])
+    text_box_jp.insert(tk.END, txt_for_display(cur_block_data['jpText']))
     text_box_jp.configure(state='disabled')
     text_box_en.delete(1.0, tk.END)
-    text_box_en.insert(tk.END, cur_block_data['enText'])
+    text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
 
     # Update choices button
     btn_choices['state'] = 'disabled'
     btn_choices.config(bg='SystemButtonFace')
-    cur_choices = None
-    cur_choices_textboxes = list()
-    cur_choices_texts = list()
     if 'choices' in cur_block_data:
         btn_choices['state'] = 'normal'
         btn_choices.config(bg='#00ff00')
+        toggleChoices(allowShow=False)
         cur_choices = cur_block_data['choices']
-
-    # print(cur_block_data)
-
 
 def save_block():
     global files
     global cur_chapter
     global cur_choices
-    global cur_choices_texts
     global speaker_en_entry
     global text_box_en
     global block_duration_spinbox
 
     cur_file = files[cur_chapter]
     if "enName" in cur_file.textBlocks[cur_block]: 
-        cur_file.textBlocks[cur_block]['enName'] = " \n".join([line.strip() for line in speaker_en_entry.get().strip().split("\n")])
-    cur_file.textBlocks[cur_block]['enText'] = " \n".join([line.strip() for line in text_box_en.get(1.0, tk.END).strip().split("\n")])
-
-    if cur_choices and cur_choices_texts:
-        for i in range(len(cur_choices_texts)):
-            cur_file.textBlocks[cur_block]['choices'][i]['enText'] = " \n".join([line.strip() for line in cur_choices_texts[i].strip().split("\n")])
+        cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
+    cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -144,40 +151,19 @@ def save_block():
         cur_file.textBlocks[cur_block].pop('newClipLength', None)
 
 def prev_block(event = None):
-    global next_index
-    global cur_block
-
     if cur_block - 1 > -1:
         block_dropdown.current(cur_block - 1)
-        change_block()
+        change_block(dir=-1)
 
 def next_block(event = None):
-    global next_index
-    global cur_block
-
     if next_index != -1:
         block_dropdown.current(next_index)
         change_block()
     else: print("Reached end of chapter")
 
 def copy_block(event = None):
-    global files
-    global cur_block
-    global cur_chapter
-    global root
-
     root.clipboard_clear()
     root.clipboard_append(files[cur_chapter].textBlocks[cur_block]['jpText'])
-
-
-def close_choices(popup_window):
-    global cur_choices_texts
-    global cur_choices_textboxes
-    global cur_choices
-    cur_choices_texts = [textbox.get(1.0, tk.END).strip().replace("\n", " \n") for textbox in cur_choices_textboxes]
-    for i in range(len(cur_choices_texts)):
-        cur_choices[i]['enText'] = cur_choices_texts[i]
-    popup_window.destroy()
 
 def saveFile(event = None):
     global files
@@ -188,44 +174,141 @@ def saveFile(event = None):
     files[cur_chapter].save()
 
 def show_choices():
-    global files
-    global cur_choices
+    if cur_choices:
+        for i, t in enumerate(cur_choices_textboxes):
+            if i < len(cur_choices):
+                jpBox, enBox = t
+                jpBox['state'] = 'normal' # enable insertion...
+                enBox['state'] = 'normal'
+                jpBox.insert(tk.END, cur_choices[i]['jpText'])
+                enBox.insert(tk.END, cur_choices[i]['enText'])
+                jpBox['state'] = 'disabled'
+        choices_window.deiconify()
+
+def close_choices():
+    for i, t in enumerate(cur_choices_textboxes):
+        jpBox, enBox = t
+        if cur_choices and i < len(cur_choices):
+            cur_choices[i]['enText'] = cleanText(enBox.get(1.0, tk.END)) #choice don't really need special handling
+        jpBox['state'] = 'normal' # enable deletion...
+        jpBox.delete(1.0, tk.END)
+        enBox.delete(1.0, tk.END)
+        jpBox['state'] = 'disabled'
+        enBox['state'] = 'disabled'
+    choices_window.withdraw()
+
+def create_choices():
     global cur_choices_textboxes
-    global large_font
+    global choices_window
+    global cur_choices
+    global choice_scrollable 
+    choice_scrollable = False
 
     cur_choices_textboxes = list()
+    cur_choices = None
 
-    if cur_choices:
-        popup_window = tk.Toplevel()
-        popup_window.protocol("WM_DELETE_WINDOW", lambda: close_choices(popup_window))
-        popup_window.title("Choices")
-        popup_window.geometry("693x400")
+    choices_window = tk.Toplevel()
+    choices_window.protocol("WM_DELETE_WINDOW", close_choices)
+    choices_window.title("Choices")
+    choices_window.geometry("600x400") # 800 for full
 
-        scroll_frame = ttk.Frame(popup_window)
-        scroll_frame.pack(fill='both', expand=True)
+    scroll_frame = ttk.Frame(choices_window)
+    scroll_frame.pack(fill='both', expand=True)
 
-        scroll_canvas = tk.Canvas(scroll_frame)
-        scroll_canvas.pack(side='left', fill='both', expand=True)
+    scroll_canvas = tk.Canvas(scroll_frame)
+    scroll_canvas.pack(side='left', fill='both', expand=True)
 
-        scroll_bar = ttk.Scrollbar(scroll_frame, orient='vertical', command=scroll_canvas.yview)
-        scroll_bar.pack(side='right', fill='y')
+    scroll_bar = ttk.Scrollbar(scroll_frame, orient='vertical', command=scroll_canvas.yview)
+    scroll_bar.pack(side='right', fill='y')
 
-        scroll_canvas.configure(yscrollcommand=scroll_bar.set)
-        scroll_canvas.bind('<Configure>', lambda e: scroll_canvas.configure(scrollregion=scroll_canvas.bbox('all')))
+    scroll_canvas.configure(yscrollcommand=scroll_bar.set)
+    scroll_canvas.bind('<Configure>', lambda e: scroll_canvas.configure(scrollregion=scroll_canvas.bbox('all')))
 
-        window_frame = ttk.Frame(scroll_canvas)
-        scroll_canvas.create_window((0, 0), window=window_frame, anchor='nw')
+    window_frame = ttk.Frame(scroll_canvas)
+    scroll_canvas.create_window((0, 0), window=window_frame, anchor='nw')
 
-        for choice in cur_choices:
-            cur_jp_text = tk.Text(window_frame, width=50, height=2, font=large_font)
-            cur_jp_text.insert(tk.END, choice['jpText'])
-            cur_jp_text['state'] = 'disabled'
-            cur_jp_text.pack()
-            cur_en_text = tk.Text(window_frame, height=2, width=50, undo=True, font=large_font)
-            cur_choices_textboxes.append(cur_en_text)
-            cur_en_text.insert(tk.END, choice['enText'])
-            cur_en_text.pack()
+    def toggle_scroll(e):
+        global choice_scrollable
+        choice_scrollable = not choice_scrollable
+    def scroll(e):
+        if choice_scrollable: scroll_canvas.yview_scroll(int(-1* (e.delta/35)), "units")
+    scroll_canvas.bind_all("<MouseWheel>", scroll)
+    window_frame.bind('<Enter>', toggle_scroll)
+    window_frame.bind('<Leave>', toggle_scroll)
+
+    for i in range(0,5):
+        cur_jp_text = tk.Text(window_frame, width=42, height=2, font=large_font)
+        cur_jp_text.pack(anchor="w")
+        cur_en_text = tk.Text(window_frame, height=2, width=42, undo=True, font=large_font)
+        cur_en_text.pack(anchor="w")
+        cur_choices_textboxes.append((cur_jp_text, cur_en_text))
+        if i < 4:
             ttk.Separator(window_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
+    close_choices()
+
+def toggleChoices(event = None, allowShow = True):
+    if choices_window.state() == "normal":
+        close_choices()
+    elif allowShow: show_choices()
+
+def char_convert(event = None):
+    pos = text_box_en.index(tk.INSERT)
+    start = pos + "-6c"
+    txt = text_box_en.get(start, pos)
+    m = re.search(r"[A-Z0-9]+", txt)
+    if m:
+        try:
+            res = chr(int(m.group(0), 16))
+        except:
+            return
+        text_box_en.replace(f"{start}+{str(m.start())}c", pos, res)
+
+def del_word(event):
+    pos = text_box_en.index(tk.INSERT)
+    start = "linestart" if event.state & 0x0001 else "wordstart"
+    end = "lineend" if event.state & 0x0001 else "wordend"
+    if event.keycode == 8:
+        text_box_en.delete(f"{pos} -1c {start}", pos)
+    elif event.keycode == 46:
+        text_box_en.delete(pos, f"{pos} {end}")
+
+def format_text(event):
+    if not text_box_en.tag_ranges("sel"):
+        print("No selection to format.")
+        return
+    if event.keycode == 73:
+        open = "<i>"
+        close = "</i>"
+    elif event.keycode == 66:
+        open = "<b>"
+        close = "</b>"
+    else:
+        return
+
+    text_box_en.insert(tk.SEL_FIRST, open)
+    text_box_en.insert(tk.SEL_LAST, close)
+    return "break" # prevent control char entry
+
+def process_text(event):
+    proc_text = textprocess.processText(files[cur_chapter], cleanText(text_box_en.get(1.0, tk.END)), {"redoNewlines": True if event.state & 0x0001 else False, "replaceMode": "limit", "lineLength": 60, "targetLines": 99})
+    text_box_en.delete(1.0, tk.END)
+    text_box_en.insert(tk.END, proc_text)
+    return "break"
+
+def txt_for_display(text, reverse = False):
+    if files[cur_chapter].type in ("mdb", "race", "preview"):
+        if reverse:
+            text = cleanText(text)
+            return text.replace("\n", "\\n")
+        else:
+            return text.replace("\\n", "\n")
+    else: 
+        if reverse:
+            text = cleanText(text)
+        return text
+
+def cleanText(text: str):
+    return " \n".join([line.strip() for line in text.strip().split("\n")])
 
 def main():
     global files
@@ -243,14 +326,13 @@ def main():
     global text_box_en
     global btn_choices
     global save_on_next
-    global cur_choices_texts
+    global skip_translated
     global large_font
 
     cur_chapter = 0
     cur_block = 0
-    cur_choices_texts = list()
 
-    ap = common.Args("Story editor")
+    ap = common.Args("Story editor", types=common.SUPPORTED_TYPES)
     ap.add_argument("-src")
     ap.add_argument("-dst", help=SUPPRESS)
     args = ap.parse_args()
@@ -294,10 +376,10 @@ def main():
     block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
     block_duration_spinbox.grid(row=2, column=3)
 
-    text_box_jp = tk.Text(root, width=65, height=4, state='disabled', font=large_font)
+    text_box_jp = tk.Text(root, width=TEXTBOX_WIDTH, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=65, height=5, undo=True, font=large_font)
+    text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
     btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)
@@ -313,21 +395,34 @@ def main():
     save_on_next.set(0)
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
     save_checkbox.grid(row=6, column=3)
-
-    root.bind("<Control-Enter>", next_block)
-    root.bind("<Alt-Enter>", next_block)
-    root.bind("<Control-S>", saveFile)
-    root.bind("<Alt-S>", saveFile)
-    root.bind("<Alt-Up>", prev_block)
-    root.bind("<Alt-Down>", next_block)
-    root.bind("<Alt-Right>", copy_block)
+    skip_translated = tk.IntVar()
+    skip_translated.set(0)
+    skip_checkbox = tk.Checkbutton(root, text="Skip translated blocks", variable=skip_translated)
+    skip_checkbox.grid(row=6, column=2)
 
     chapter_dropdown.current(cur_chapter)
     change_chapter()
+    block_dropdown.current(cur_block)
+    create_choices()
+
+    root.bind("<Control-Return>", next_block)
+    root.bind("<Control-s>", saveFile)
+    root.bind("<Alt-Up>", prev_block)
+    root.bind("<Alt-Down>", next_block)
+    root.bind("<Alt-Right>", copy_block)
+    root.bind("<Alt-c>", toggleChoices)
+    choices_window.bind("<Alt-c>", toggleChoices)
+    root.bind("<Alt-x>", char_convert)
+    root.bind("<Control-BackSpace>", del_word)
+    root.bind("<Control-Shift-BackSpace>", del_word)
+    root.bind("<Control-Delete>", del_word)
+    root.bind("<Control-Shift-Delete>", del_word)
+    text_box_en.bind("<Control-i>", format_text)
+    text_box_en.bind("<Control-b>", format_text)
+    text_box_en.bind("<Alt-f>", process_text)
+    text_box_en.bind("<Alt-F>", process_text)
 
     root.mainloop()
-
-
 
 
 if __name__ == "__main__":

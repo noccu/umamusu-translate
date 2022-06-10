@@ -11,39 +11,52 @@ class SubFormat(Enum):
     SRT = auto()
     ASS = auto()
     TXT = auto()
-class Options(Enum):
-    OVERRIDE_NAMES = "ovrNames"
-    DUPE_CHECK_ALL = "dupeCheckAll"
-    FILTER = "filter"
 
+class SubTransferOptions():
+    def __init__(self) -> None:
+        self.setDefault()
+    # separate so it can be used to reset
+    def setDefault(self):
+        self.overrideNames = False
+        self.dupeCheckAll = False
+        self.filter = None
+        self.choicePrefix = [">"]
+        self.strictChoices = True
+        
+    @classmethod
+    def fromArgs(cls, args):
+        o = cls()
+        for k, v in vars(args).items():
+            if hasattr(o, k):
+                setattr(o, k, v)
+        return o
 
 class TextLine:
     def __init__(self, text, name = "", effect = "") -> None:
         self.text: str = text
-        self.name: str = name.lower()
+        self.name: str = name
         self.effect: str = effect.lower()
 
     def isChoice(self) -> bool:
         return self.effect == "choice"
 
-# class Options():
-#     def __init__(self, opts: dict) -> None:
-#         for arg, val in opts.items():
-#             if arg == "filter":
-#                 val = val.split(",")
-#             setattr(self, arg, val)
-#     def __getattr__(self, attr):
-#         return None
-
 class BasicSubProcessor:
-    #todo: Make options optional and deal with defaults here
-    def __init__(self, srcFile, options: dict) -> None:
+    npreRe = re.compile(r"\[?([^\]:]{2,40})\]?: (.+)", flags=re.DOTALL)
+
+    def __init__(self, srcFile, options = SubTransferOptions()):
         self.srcFile = common.TranslationFile(srcFile)
         self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         self.options = options
-        self.skipNames = ["<username>", "", "モノローグ"]
+        self.cpreRe = re.compile("|".join(options.choicePrefix), re.IGNORECASE) # match searches start only
+
+        self.choiceNames = list()
+        for cpre in options.choicePrefix:
+            if len(cpre) > 1:
+                idx = cpre.rfind(":") # update this when npre logic changes
+                if idx > 0:
+                    self.choiceNames.append(cpre[0:idx])
 
     def saveSrc(self):
         self.srcFile.save()
@@ -53,55 +66,61 @@ class BasicSubProcessor:
     def getEn(self, idx):
         return TextLine(self.srcLines[idx]['enText'], self.srcLines[idx]['enName'])
     def setEn(self, idx, line: TextLine):
-        self.srcLines[idx]['enText'] = self.filter(line.text, self.srcLines[idx])
+        self.srcLines[idx]['enText'] = self.filter(line, self.srcLines[idx])
         if "jpName" in self.srcLines[idx]:
-            if self.srcLines[idx]['jpName'] in self.skipNames:
+            if self.srcLines[idx]['jpName'] in common.NAMES_BLACKLIST:
                 self.srcLines[idx]['enName'] = "" # forcefully clear names that should not be translated
-            elif line.name and (not self.srcLines[idx]['enName'] or self.options[Options.OVERRIDE_NAMES]):
+            elif line.name and (not self.srcLines[idx]['enName'] or self.options.overrideNames):
                 self.srcLines[idx]['enName'] = line.name
 
     def getChoices(self, idx):
         if not "choices" in self.srcLines[idx]: return None
         else: return self.srcLines[idx]['choices']
-    def setChoices(self, idx, cIdx, text):
+    def setChoices(self, idx, cIdx, line: TextLine):
         if not "choices" in self.srcLines[idx]: return None
         else:
             if (cIdx):
-                self.srcLines[idx]['choices'][cIdx]['enText'] = self.filter(text, self.srcLines[idx]['choices'][cIdx])
+                self.srcLines[idx]['choices'][cIdx]['enText'] = self.filter(line, self.srcLines[idx]['choices'][cIdx])
             else:
                 for entry in self.srcLines[idx]['choices']:
-                    entry['enText'] = self.filter(text, entry)
+                    entry['enText'] = self.filter(line, entry)
 
     def getBlockIdx(self, idx):
         return self.srcLines[idx]['blockIdx']
 
     def cleanLine(self, text):
-        if text.startswith(">"): text = text[1:]
         return text
 
-    def filter(self, text, target):
-        filter = self.options[Options.FILTER]
+    def filter(self, line: TextLine, target):
+        filter = self.options.filter
         if filter:
             if "brak" in filter:
                 if target['jpText'].startswith("（"):
-                    if not text.startswith("("):
-                        text = f"({text})"
-                elif text.startswith("("):
-                        m = re.match(r"^\((.+)\)$", text, flags=re.DOTALL)
+                    if not line.text.startswith("("):
+                        line.text = f"({line.text})"
+                elif line.text.startswith("("):
+                        m = re.match(r"^\((.+)\)$", line.text, flags=re.DOTALL)
                         if m:
-                            text = m.group(1)
-
-        return text
+                            line.text = m.group(1)
+        return line.text
 
     def preprocess(self):
-        filter = self.options[Options.FILTER]
+        lastName = None
         for line in self.subLines:
-            if filter and "npre" in filter:
-                m = re.match(r"\[?([^\]:]+)\]?: (.+)", line.text, flags=re.DOTALL)
+            m = self.npreRe.match(line.text)
+            if m:
+                line.name, line.text = m.group(1,2)
+            if not line.name and lastName:
+                line.name = lastName
+            else:
+                lastName = line.name
+            if not line.effect:
+                m = self.cpreRe.match(line.text)
                 if m:
-                    line.name, line.text = m.group(1,2)
-            if not line.effect and (line.text.startswith(">") or line.name == "Trainer"):
-                line.effect = "choice"
+                    line.effect = "choice"
+                    line.text = line.text[len(m.group(0)):]
+                elif line.name in self.choiceNames:
+                    line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
     def duplicateSub(self, idx: int, line: TextLine = None):
@@ -110,7 +129,7 @@ class BasicSubProcessor:
         choices = self.getChoices(idx-1)
         if choices and self.getChoices(idx):
             for c, choice in enumerate(choices):
-                self.setChoices(idx, c, choice['enText'])
+                self.setChoices(idx, c, TextLine(choice['enText']))
 
         # Add sub text to matching (next) block and return it as new pos
         if line:
@@ -125,7 +144,7 @@ class BasicSubProcessor:
         if self.srcFile.type != "story": return False
         prevName = self.srcLines[idx - 1]['jpName']
         curName = self.srcLines[idx]['jpName']
-        if not Options.DUPE_CHECK_ALL in self.options and curName not in self.skipNames: return False
+        if not self.options.dupeCheckAll and curName not in common.NAMES_BLACKLIST: return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx-1)) > 0.6
 
 class AssSubProcessor(BasicSubProcessor):
@@ -190,7 +209,7 @@ class TxtSubProcessor(BasicSubProcessor):
     def preprocess(self, raw):
         self.subLines = [TextLine(l) for l in raw if helpers.isEnglish(l) and not re.match(r"\n+\s*", l)]
 
-def process(srcFile, subFile, opts):
+def process(srcFile, subFile, opts: SubTransferOptions):
     format = subFile[-3:]
     if format == "srt":
         p = SrtSubProcessor(srcFile, subFile, opts)
@@ -205,7 +224,8 @@ def process(srcFile, subFile, opts):
     storyType = p.srcFile.type
     idx = 0
     srcLen = len(p.srcLines)
-    lastChoice = [0, 0]
+    lastChoice = [0, 0] # text idx, choice idx
+    errors = 0
 
     for subLine in p.subLines:
         if idx == srcLen:
@@ -213,24 +233,32 @@ def process(srcFile, subFile, opts):
             break
 
         # skip title logo on events and dummy text
-        if p.getJp(idx).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト", p.getJp(idx)):
+        if p.getJp(idx).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト|欠番", p.getJp(idx)):
             idx += 1
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":
             if subLine.isChoice():
-                if not p.getChoices(idx-1):
+                skipLine = True
+                if p.getChoices(idx-1):
+                    if lastChoice[0] == idx: # Try adding multiple choice translations
+                        try: p.setChoices(idx-1, lastChoice[1], subLine)
+                        except IndexError:
+                            # can give false positives
+                            skipLine = opts.strictChoices
+                            print(f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}")
+                            if skipLine: errors += 1
+                    else: # Copy text to all choices
+                        p.setChoices(idx-1, None, subLine)
+                    lastChoice[0] = idx
+                    lastChoice[1] += 1
+                    if skipLine: continue # don't increment idx
+                elif opts.strictChoices:
                     print(f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping...")
+                    errors += 1
                     continue
-                if lastChoice[0] == idx: # Try adding multiple choice translations
-                    try: p.setChoices(idx-1, lastChoice[1], subLine.text)
-                    except IndexError: print(f"Choice idx error at {p.getBlockIdx(idx-1)}")
-                else: # Copy text to all choices
-                    p.setChoices(idx-1, None, subLine.text)
-                lastChoice[0] = idx
-                lastChoice[1] += 1
-                continue # don't increment idx
             elif idx > 0 and p.getChoices(idx-1) and idx - lastChoice[0] > 0:
                 print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
+                errors += 1
             lastChoice[1] = 0
         
         # Add text
@@ -241,6 +269,7 @@ def process(srcFile, subFile, opts):
         else:
             if len(subLine.text) == 0:
                 print(f"Untranslated line at {p.getBlockIdx(idx)}")
+                errors += 1
             else:
                 p.setEn(idx, subLine)
         idx += 1
@@ -251,8 +280,13 @@ def process(srcFile, subFile, opts):
             p.duplicateSub(idx)
         else:
             print(f"Lacking {srcLen - idx} subtitle(s).")
+            errors += 1
 
     p.saveSrc()
+    if errors > 0:
+        print(f"Transferred with {errors} errors.")
+    else:
+        print("Successfully transferred.")
 
 def main():
     ap = common.Args("Imports translations from subtitle files. A few conventions are used.", defaultArgs=False,
@@ -261,19 +295,15 @@ def main():
                         \nSRT: Prefix name 'Name: Dialogue', '>' for choices, 2+ spaces for splits (all except last line)")
     ap.add_argument("src", help="Target Translation File, overwrites other file options")
     ap.add_argument("sub", help="Target subtitle file. Supports ASS, SRT, TXT")
-    ap.add_argument("-OVRNAMES", action="store_true", help="Replace existing names with names from subs")
-    ap.add_argument("-DUPEALL", action="store_true", help="Check all lines for duplicates instead of only trainer's/narration")
-    ap.add_argument("-filter", nargs="+", choices=["npre", "brak"],
+    ap.add_argument("-OVRNAMES", dest="overrideNames", action="store_true", help="Replace existing names with names from subs")
+    ap.add_argument("-DUPEALL", dest="dupeCheckAll", action="store_true", help="Check all lines for duplicates instead of only trainer's/narration")
+    ap.add_argument("-filter", nargs="+", choices=["brak"],
                     help="Process some common patterns (default: %(default)s)\
-                    \nnpre: remove char name prefixes and extract them to enName field\
                     \nbrak: sync enclosing brackets with original text")
+    ap.add_argument("-cpre", dest="choicePrefix", nargs="+", default=[">"], help="Prefixes that mark choices. Supports regex\nChecks name as a special case if prefix includes ':'")
+    ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     args = ap.parse_args()
-    process(args.src, args.sub, {
-        Options.OVERRIDE_NAMES: args.OVRNAMES,
-        Options.DUPE_CHECK_ALL: args.DUPEALL,
-        Options.FILTER: args.filter
-        })
-    print("Successfully transferred.")
+    process(args.src, args.sub, SubTransferOptions.fromArgs(args))
 
 if __name__ == '__main__':
     main()

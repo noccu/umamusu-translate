@@ -1,0 +1,1 @@
+reduce .[].text as $x ([]; . + $x) | reduce .[] as $x ({}; .[$x.jpText] = $x.enText)

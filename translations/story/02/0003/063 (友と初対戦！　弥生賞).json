@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "2GWA5RIWWK2M3MW3NDZDYJJ4FUW2K72D",
     "type": "story",
     "storyId": "020003063",
@@ -9,18 +9,41 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "あ、トレーナーさんにハヤヒデー！",
-            "enText": "",
+            "enText": "Huh, Trainer-san and Hayahide!",
             "nextBlock": 2,
+            "origClipLength": 100,
             "choices": [
                 {
                     "jpText": "最高のレースだった",
-                    "enText": "",
+                    "enText": "It was your best race so far.",
                     "nextBlock": 2
                 },
                 {
                     "jpText": "最高のレースだったよ",
-                    "enText": "",
+                    "enText": "It was your best race so far.",
                     "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": -1137534633410985067
+                },
+                {
+                    "origLen": 26,
+                    "pathId": -8255490400906257026
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -3354422568699873909
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 4039464301252993758
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 5434726464428688659
                 }
             ],
             "pathId": -6889251571999568270,
@@ -30,8 +53,35 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "えへへ～、アタシ自身がビックリしちゃった！\r\n弥生賞レコードタイムだって！",
-            "enText": "",
+            "enText": "Hehe～, I even surprised myself! To beat \nthe “Yayoi Prize” record time!",
             "nextBlock": 3,
+            "origClipLength": 209,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": -5597614927223498469
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 3733742673050061412
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 628514280291754011
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -8566531849583507670
+                },
+                {
+                    "origLen": 220,
+                    "pathId": 1129655583924814915
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -24265759389069935
+                }
+            ],
             "pathId": 5296391092838224165,
             "blockIdx": 2
         },
@@ -39,8 +89,31 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "タイシンが追い込んでくるのを見て、\r\nアタシも力が湧いてきたっていうか……。",
-            "enText": "",
+            "enText": "When I saw Taishin come up, some strength \nwelled up from inside me…",
             "nextBlock": 4,
+            "origClipLength": 154,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 283063042372911282
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -5083157965144268445
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 9069306482349584423
+                },
+                {
+                    "origLen": 165,
+                    "pathId": -3796760077095124777
+                },
+                {
+                    "origLen": 165,
+                    "pathId": -1001365958335999885
+                }
+            ],
             "pathId": 8752721958237085241,
             "blockIdx": 3
         },
@@ -48,8 +121,35 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ライバルって、自分でも気づかなかった力を引き出してくれる存在\r\nなんだって、タイシンが教えてくれてぇっ、お～～んおんおん！",
-            "enText": "",
+            "enText": "A rival is a presence that brings out the power \nthat you do not even notice yourself, and Taishin \nwas the one who taught me that, Waaaa!",
             "nextBlock": 5,
+            "origClipLength": 426,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": 4135764965876812051
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -3973693765707215888
+                },
+                {
+                    "origLen": 437,
+                    "pathId": -8031907875285389047
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -6645707569491344962
+                },
+                {
+                    "origLen": 367,
+                    "pathId": 545319596134211216
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 3150610116027298143
+                }
+            ],
             "pathId": 1450078365530963804,
             "blockIdx": 4
         },
@@ -57,8 +157,31 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "まあ、負けたけどさ……\r\nいいレースができたって実感はあったよ。",
-            "enText": "",
+            "enText": "Well,I lost… I feel like I had a good race.",
             "nextBlock": 6,
+            "origClipLength": 176,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 1696903023884770509
+                },
+                {
+                    "origLen": 61,
+                    "pathId": 1474282928822292055
+                },
+                {
+                    "origLen": 158,
+                    "pathId": -5477903746035540642
+                },
+                {
+                    "origLen": 116,
+                    "pathId": 3679419184286853355
+                },
+                {
+                    "origLen": 367,
+                    "pathId": -6253519428518615900
+                }
+            ],
             "pathId": -7874225487360917786,
             "blockIdx": 5
         },
@@ -66,8 +189,35 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "まったく、ズルいな2人とも。\n私も一緒に走れたらと嫉妬したぞ。",
-            "enText": "",
+            "enText": "Geez, It's not fair, both of you. I \nalso wish I could run with you.",
             "nextBlock": 7,
+            "origClipLength": 207,
+            "animData": [
+                {
+                    "origLen": 174,
+                    "pathId": -6033267965204284053
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -2350152107090210057
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -1775895327536742793
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 4079120929331296719
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -1993183309508290954
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -5317678235352175423
+                }
+            ],
             "pathId": 2582312050408584904,
             "blockIdx": 6
         },
@@ -75,8 +225,35 @@
             "jpName": "",
             "enName": "",
             "jpText": "このままいけば、3人はクラシックレース1戦目の\r\n『皐月賞』でぶつかるはずだ。",
-            "enText": "",
+            "enText": "If this goes on, the 3 girls will surely race in their first \nclassic race together at the “SatsukiShou”.",
             "nextBlock": 8,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 9045917049253705633
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -7177649717635062606
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 2108117676286261604
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 3487887523239059136
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 3415868801669851347
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 6019798257703817911
+                }
+            ],
             "pathId": 5052580913303824322,
             "blockIdx": 7
         },
@@ -84,8 +261,35 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "次は絶対に負けない。\r\nいくらいいレースでも、勝たなきゃ意味ないし。",
-            "enText": "",
+            "enText": "Next time I will make sure I don't lose. No matter how good the \nrace was, there is no point if you don't win.",
             "nextBlock": 9,
+            "origClipLength": 170,
+            "animData": [
+                {
+                    "origLen": 140,
+                    "pathId": 1229736894002745739
+                },
+                {
+                    "origLen": 168,
+                    "pathId": 771150544852155832
+                },
+                {
+                    "origLen": 128,
+                    "pathId": -1969803546170530348
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -414700210078807342
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 2487826586169826804
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 5988808204825920422
+                }
+            ],
             "pathId": 5169466330292534985,
             "blockIdx": 8
         },
@@ -93,8 +297,35 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "ふふっ、私も必ず『皐月賞』に行く。\r\n今度は3人で走るぞ。",
-            "enText": "",
+            "enText": "haha, I will also make sure to appear at the “SatsukiShou”. And \nthis time we will run together all 3 of us.",
             "nextBlock": 10,
+            "origClipLength": 191,
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": 2885011340270031455
+                },
+                {
+                    "origLen": 43,
+                    "pathId": 1150900185738046443
+                },
+                {
+                    "origLen": 202,
+                    "pathId": 9114442017619876731
+                },
+                {
+                    "origLen": 202,
+                    "pathId": 7001693732249691395
+                },
+                {
+                    "origLen": 132,
+                    "pathId": 3077542480128356608
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 4660689649650333373
+                }
+            ],
             "pathId": -8392618003554877198,
             "blockIdx": 9
         },
@@ -102,8 +333,39 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うん！　3人で一緒に！",
-            "enText": "",
+            "enText": "Yeah! The 3 of us together!",
             "nextBlock": 11,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 341254000937533827
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -1392858253097363051
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 5974524809444652961
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -6751194224854214779
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -3880421249368086817
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -4256509179031731594
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -6588926174378890065
+                }
+            ],
             "pathId": 8374267163623478557,
             "blockIdx": 10
         },
@@ -111,8 +373,35 @@
             "jpName": "",
             "enName": "",
             "jpText": "初めてのライバル対決――信頼し合うライバルと走った\r\nウイニングチケットは今までにも増して充実した笑顔を見せていた。",
-            "enText": "",
+            "enText": "First Rival Showdownー Winning Ticket that ran win her rival \nshowed a bigger smile than ever before.",
             "nextBlock": 12,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": 6444231788251933411
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2739355429958685753
+                },
+                {
+                    "origLen": 131,
+                    "pathId": -8851006625988378866
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 712402342491800574
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 5389188477417005915
+                },
+                {
+                    "origLen": 131,
+                    "pathId": -5135749633070603855
+                }
+            ],
             "pathId": 3234640050861630507,
             "blockIdx": 11
         },
@@ -120,8 +409,35 @@
             "jpName": "",
             "enName": "",
             "jpText": "これから一生に一度の大舞台、クラシック戦線が始まり、\nそして目標のダービーが目前にまで迫っている。",
-            "enText": "",
+            "enText": "From now on, the once in a lifetime showdown, the classic front \nbegins and the goal of the Derby is slowly approaching.",
             "nextBlock": -1,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 4681165945926347499
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 1735013320480979705
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -7249545513875489946
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -2981241915685500763
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -1613056110315127048
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -4668957579391191132
+                }
+            ],
             "pathId": -9114284506949982786,
             "blockIdx": 12
         }

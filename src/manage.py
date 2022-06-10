@@ -6,8 +6,9 @@ import shutil
 
 ROOT = PurePath("src")
 LOCAL_DUMP = ROOT / "data" / "static_dump.json"
-HASH_FILE = PurePath("localify") / "localized_data" / "static.json"
-TL_FILE = ROOT / "data" / "static_en.json"
+HASH_FILE_STATIC = PurePath("localify") / "localized_data" / "static.json"
+HASH_FILE_DYNAMIC = PurePath("localify") / "localized_data" / "dynamic.json"
+TL_FILE = PurePath("translations") / "localify" / "ui.json"
 
 
 def updateTlData(dumpData: dict, tlData: dict):
@@ -15,18 +16,23 @@ def updateTlData(dumpData: dict, tlData: dict):
         if not text in tlData:
             tlData[text] = ""
 
-def updateHashData(dumpData: dict, tlData: dict, hashData: dict):
+def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
     for hash, text in dumpData.items():
         translatedText = tlData.get(text)
-
+        if len(hash) > 5:
+            data = hashData[1]
+            key = hash
+        else:
+            data = hashData[0]
+            key = text
         if translatedText:
             # special case for effectively removing text
-            hashData[hash] = "" if translatedText == "<empty>" else translatedText
+            data[key] = "" if translatedText == "<empty>" else translatedText
         else:
             # Remove previously translated hashes that no longer are to prevent garbled text
-            if hash in hashData:
+            if key in data:
                 # print(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
-                del hashData[hash]
+                del data[key]
 
 def importDump(path: PurePath, args):
     isExternal = path != LOCAL_DUMP
@@ -80,6 +86,13 @@ def importDump(path: PurePath, args):
             helpers.writeJson(LOCAL_DUMP, localDumpData)
         return localDumpData
 
+def importTlgStatic(dumpPath, tlData):
+    data = helpers.readJson(dumpPath)
+    for k in data.keys():
+        if not k in tlData:
+            tlData[k] = ""
+
+
 def clean(mode):
     dump = helpers.readJson(DUMP_FILE)
     tlData = helpers.readJson(TL_FILE)
@@ -103,7 +116,7 @@ def clean(mode):
     if mode == "both": helpers.writeJson(DUMP_FILE, dump)
 
 def order():
-    for file in [LOCAL_DUMP, HASH_FILE]:
+    for file in [LOCAL_DUMP, HASH_FILE_STATIC, HASH_FILE_DYNAMIC]:
         data = helpers.readJson(file)
         data = dict(sorted(data.items(), key=lambda x: int(x[0])))
         helpers.writeJson(file, data)
@@ -117,12 +130,13 @@ def parseArgs():
     ap.add_argument("-clean", default=False, const=True, nargs="?", help="Remove untranslated entries from tl file, or local dump and tl file")
     ap.add_argument("-sort", "-order", action="store_true", help="Sort keys in local dump and final file")
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite/update local dump keys instead of only adding new ones")
-    ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save")
-    ap.add_argument("-M", "--move", action="store_true", help="Move final static.json to game dir")
-    ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath, help="Target dump file for imports")
+    ap.add_argument("-I", "--import-only", action="store_true", help="Purely import target dump to local and exit. Implies -save and -src (auto mode, can be overridden)")
+    ap.add_argument("-M", "--move", action="store_true", help="Move final json files to game dir.")
+    ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath, help="Target dump file for imports. When given without value: auto-detect in game dir")
+    ap.add_argument("-tlg", default=None, const=PurePath(common.GAME_ROOT, "static_dump.json"), nargs="?", type=PurePath, help="Import TLG-style static dump. Optionally pass a path to the dump, else auto-detects in game dir")
     args = ap.parse_args()
 
-    if args.src is None:
+    if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
         path = helpers.getUmaInstallPath()
         if path: path = path.joinpath("dump.txt")
         else: print("Couldn't find game path.")
@@ -136,8 +150,6 @@ def parseArgs():
     DUMP_FILE = args.src
     return args
 
-# Usage: use localify dll to dump entries
-# use -new to copy said entries to static_en.json (the tl file), translate the entries you want, use -upd to create the final static.json to copy into your game's localized_data dir
 def main():
     args = parseArgs()
     if not any([args.populate, args.update, args.clean, args.import_only, args.sort, args.move]):
@@ -157,18 +169,22 @@ def main():
 
     if args.populate:
         updateTlData(dumpData, tlData)
+        if args.tlg:
+            importTlgStatic(args.tlg, tlData)
         helpers.writeJson(TL_FILE, tlData)
     elif args.update:
-        hashData = helpers.readJson(HASH_FILE)
+        hashData = helpers.readJson(HASH_FILE_STATIC), helpers.readJson(HASH_FILE_DYNAMIC)
         updateHashData(dumpData, tlData, hashData)
-        helpers.writeJson(HASH_FILE, hashData)
+        helpers.writeJson(HASH_FILE_STATIC, hashData[0])
+        helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
 
     if args.move:
         path = helpers.getUmaInstallPath()
         if path:
-            path = path.joinpath("localized_data", "static.json")
-            shutil.copyfile(HASH_FILE, path)
+            shutil.copyfile(HASH_FILE_STATIC, path.joinpath(HASH_FILE_STATIC.relative_to(HASH_FILE_STATIC.parents[1])))
+            shutil.copyfile(HASH_FILE_DYNAMIC, path.joinpath(HASH_FILE_DYNAMIC.relative_to(HASH_FILE_DYNAMIC.parents[1])))
         else:
-            print("Couldn't find game path, static.json not moved.")
+            print("Couldn't find game path, files not moved.")
 
-main()
+if __name__ == '__main__':
+    main()

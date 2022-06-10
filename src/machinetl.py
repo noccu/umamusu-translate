@@ -71,7 +71,7 @@ class Translator:
                     # Skip already translated text
                     if args.overwrite or not entry['enText']:
                         text = textprocess.processText(file, entry['jpText'], {"redoNewlines": True})
-                        entry['enText'] = textprocess.processText(file, await self.requestTl(text), {"lineLength": args.lineLength, "replace": "all"}) # defer to default
+                        entry['enText'] = textprocess.processText(file, await self.requestTl(text), {"lineLength": args.lineLength, "replace": "all"})
             elif args.model == "sugoi":
                 entries = list(file.genTextContainers())
                 textArray = [textprocess.processText(file, entry['jpText'], {"redoNewlines": True}) for entry in entries]
@@ -109,7 +109,7 @@ def main():
     ap.add_argument("-src", help="Target Translation File")
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("-m", "--model", choices=["deepl", "sugoi"], default="deepl", help="Translation model")
-    ap.add_argument("-ll", type=int, dest="lineLength", help="Line length for wrapping/newlines")
+    ap.add_argument("-ll", type=int, default=-1, dest="lineLength", help="Line length for wrapping/newlines. 0: disable, -1: auto")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing tl")
     args = ap.parse_args()
     args.replaceMode = "all"

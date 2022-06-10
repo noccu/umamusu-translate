@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "MKFKI6VPYKRJ4FQUQJBRVUBLKWFUXVNE",
     "type": "story",
     "storyId": "020003101",
@@ -9,8 +9,9 @@
             "jpName": "ナレーション",
             "enName": "",
             "jpText": "史上最高メンバーのダービー。そう言われていた。",
-            "enText": "",
+            "enText": "Derby's greatest lineup ever. That's what they said.",
             "nextBlock": 2,
+            "origClipLength": 136,
             "pathId": -603999656320151111,
             "blockIdx": 1
         },
@@ -18,8 +19,9 @@
             "jpName": "ナレーション",
             "enName": "",
             "jpText": "そのとき揃った、あまりに煌びやかなメンバーの中で、\n君は特別な存在ではなかった。",
-            "enText": "",
+            "enText": "That she was not a special among the glittering \nmembers that were there at the time.",
             "nextBlock": 3,
+            "origClipLength": 220,
             "pathId": -6773542157461058469,
             "blockIdx": 2
         },
@@ -27,8 +29,9 @@
             "jpName": "ナレーション",
             "enName": "",
             "jpText": "でも、『私は私』",
-            "enText": "",
+            "enText": "But, “I'm me”.",
             "nextBlock": 4,
+            "origClipLength": 92,
             "pathId": -5288473234278488810,
             "blockIdx": 3
         },
@@ -36,8 +39,9 @@
             "jpName": "ナレーション",
             "enName": "",
             "jpText": "過去の負けだって今は関係ない、とでも言いたげな君はじっと蓄え\r\nた末脚を解き放つと、閃光のような鋭い輝きを放って先頭に立った。",
-            "enText": "",
+            "enText": "It doesn't matter if you lost in the past, it doesn't matter now, \nbut as she slowly releases everything in the last straight, and \ntakes the lead she shone like light.",
             "nextBlock": 5,
+            "origClipLength": 386,
             "pathId": -8845297718082915042,
             "blockIdx": 4
         },
@@ -45,8 +49,9 @@
             "jpName": "ナレーション",
             "enName": "",
             "jpText": "その光の名は、エイシンフラッシュ。",
-            "enText": "",
+            "enText": "The name of that light is Eishin Flash",
             "nextBlock": 6,
+            "origClipLength": 98,
             "pathId": 6708097848850466353,
             "blockIdx": 5
         },
@@ -54,8 +59,9 @@
             "jpName": "ナレーション",
             "enName": "",
             "jpText": "『私は私の道を往く』――\r\nいつだって強い人は自分を信じているものだから。",
-            "enText": "",
+            "enText": "“I will go my way” Because strong people believe in themselves.",
             "nextBlock": 7,
+            "origClipLength": 276,
             "pathId": 7193680661504330275,
             "blockIdx": 6
         },
@@ -63,8 +69,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "クラシック第1戦、『皐月賞』で\r\nウイニングチケットは敗戦に終わった。",
-            "enText": "",
+            "enText": "Winning Tickets first round of the classic front the \n“SatsukiShou” ended in defeat.",
             "nextBlock": 8,
+            "origClipLength": 90,
             "pathId": 2817701674736440075,
             "blockIdx": 7
         },
@@ -72,8 +79,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "その翌日――",
-            "enText": "",
+            "enText": "The next dayー",
             "nextBlock": 9,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -5810928179057218485
+                }
+            ],
             "pathId": -2905267473363932609,
             "blockIdx": 8
         },
@@ -81,8 +95,15 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "はぁ……はぁ……ふぅ～～。",
-            "enText": "",
+            "enText": "heh… heh… heh～～",
             "nextBlock": 10,
+            "origClipLength": 146,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 8331453990062534080
+                }
+            ],
             "pathId": -2074739783493702461,
             "blockIdx": 9
         },
@@ -90,8 +111,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "トレーナーさん、次は坂路トレーニングだっけ？",
-            "enText": "",
+            "enText": "Trainer-san, next up is slope training?",
             "nextBlock": 11,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -5606708106585295527
+                },
+                {
+                    "origLen": 15,
+                    "pathId": -4142924325664493767
+                }
+            ],
             "pathId": -8102490837449698624,
             "blockIdx": 10
         },
@@ -99,18 +131,25 @@
             "jpName": "",
             "enName": "",
             "jpText": "レース直後ということでトレーニングは休みでいいと伝えたのだが、\r\nウイニングチケットは今日もこうして走っている。",
-            "enText": "",
+            "enText": "Just after the race. I told her that it would be ok to take a \nbreak, but Winning Ticket is still running today.",
             "nextBlock": 12,
+            "origClipLength": 118,
             "choices": [
                 {
                     "jpText": "疲労は大丈夫なのか？",
-                    "enText": "",
+                    "enText": "Are you not tired?",
                     "nextBlock": 12
                 },
                 {
                     "jpText": "疲労は大丈夫？",
-                    "enText": "",
+                    "enText": "Are you not tired?",
                     "nextBlock": 12
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": 5575463990167288536
                 }
             ],
             "pathId": -1912229122723374850,
@@ -120,8 +159,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "え……？　うん、大丈夫。",
-            "enText": "",
+            "enText": "Huh…? No, I'm alright.",
             "nextBlock": 13,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -1998704860972333769
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 1821734747558892140
+                }
+            ],
             "pathId": -6318404623461637032,
             "blockIdx": 12
         },
@@ -129,8 +179,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "それにさ、1日も休んでいられないって\r\nそんな風に思っちゃって……えへへ。",
-            "enText": "",
+            "enText": "Besides I can't afford to rest for one \nday, that's what I thought… Hehe.",
             "nextBlock": 14,
+            "origClipLength": 220,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 6178781192832239726
+                },
+                {
+                    "origLen": 17,
+                    "pathId": -9039960277306711141
+                }
+            ],
             "pathId": 2455621131988787165,
             "blockIdx": 13
         },
@@ -138,8 +199,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ってことで、坂路トレーニングしてくるね！",
-            "enText": "",
+            "enText": "So with that said, I'm going to do slope training!",
             "nextBlock": 15,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -1325000764368141380
+                },
+                {
+                    "origLen": 11,
+                    "pathId": 5914783039235774504
+                }
+            ],
             "pathId": -6931196331325689713,
             "blockIdx": 14
         },
@@ -147,8 +219,27 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "いっつも感情むき出しのヤツだから、\r\n負けたーって泣き叫ぶもんかと思ってたけど……。",
-            "enText": "",
+            "enText": "She's always emotional, so I thought \nshe would cry when she lost but…",
             "nextBlock": 16,
+            "origClipLength": 191,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": 4080283691486722275
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 7753634259259783012
+                },
+                {
+                    "origLen": 208,
+                    "pathId": -2070399084125337201
+                },
+                {
+                    "origLen": 208,
+                    "pathId": 1498717140309362202
+                }
+            ],
             "pathId": -3866604329783043957,
             "blockIdx": 15
         },
@@ -156,8 +247,27 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "いつもの気合いも、底抜けな元気も感じませんわね。\r\n『皐月賞』で負けたことが、それだけショックなのでしょう。",
-            "enText": "",
+            "enText": "I do not feel her usual bottomless spirit. I think her losing the \n“SatsukiShou” was that big of a shock.",
             "nextBlock": 17,
+            "origClipLength": 274,
+            "animData": [
+                {
+                    "origLen": 286,
+                    "pathId": 2846256164506022874
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 2199276724933696728
+                },
+                {
+                    "origLen": 103,
+                    "pathId": 1325862654908014576
+                },
+                {
+                    "origLen": 142,
+                    "pathId": 1835448842079784524
+                }
+            ],
             "pathId": 6580891176775725123,
             "blockIdx": 16
         },
@@ -165,8 +275,27 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "次はダービーってところで負けちまったわけだからな。",
-            "enText": "",
+            "enText": "Next time she loses will be in the Derby.",
             "nextBlock": 18,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 4144305657158197066
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -5588488606926607500
+                },
+                {
+                    "origLen": 132,
+                    "pathId": 7153167717933297669
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -5147460091586867929
+                }
+            ],
             "pathId": -6007006116611721658,
             "blockIdx": 17
         },
@@ -174,13 +303,32 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "トレーナーさん、チケットさんのことを\r\nしっかり見てあげてくださいませ。",
-            "enText": "",
+            "enText": "Trainer-san, please make sure to firmly look over Ticket-san.",
             "nextBlock": 19,
+            "origClipLength": 159,
             "choices": [
                 {
                     "jpText": "もちろん",
-                    "enText": "",
+                    "enText": "Of course.",
                     "nextBlock": 19
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 171,
+                    "pathId": 4366813654130270407
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6490614044750455285
+                },
+                {
+                    "origLen": 126,
+                    "pathId": 4818364285376994965
+                },
+                {
+                    "origLen": 33,
+                    "pathId": 8165114389877213186
                 }
             ],
             "pathId": 4274961262033350730,
@@ -190,8 +338,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "そう言ったものの、今のウイニングチケットに何をしてあげる\r\nべきか、答えは何も思いつかないままだった。",
-            "enText": "",
+            "enText": "Even though I said so, I had no idea what \nto do with the current Winning Ticket.",
             "nextBlock": 20,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 171,
+                    "pathId": 6775199327352793635
+                },
+                {
+                    "origLen": 123,
+                    "pathId": -6077942221228902876
+                }
+            ],
             "pathId": 36138865184016255,
             "blockIdx": 19
         },
@@ -199,8 +358,27 @@
             "jpName": "",
             "enName": "",
             "jpText": "トレーニング終了後、トレーナー室に戻ると、\r\nそこにはウイニングチケットが1人佇んでいた。",
-            "enText": "",
+            "enText": "After the training, I went back to my trainer room and there \nstood Winning Ticket alone.",
             "nextBlock": 21,
+            "origClipLength": 103,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -6710867688764679224
+                },
+                {
+                    "origLen": 31,
+                    "pathId": 745243195040691127
+                },
+                {
+                    "origLen": 140,
+                    "pathId": -6321774319324545708
+                },
+                {
+                    "origLen": 151,
+                    "pathId": 5905873589009601774
+                }
+            ],
             "pathId": -6938905594412760104,
             "blockIdx": 20
         },
@@ -208,8 +386,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "あ、トレーナーさん。",
-            "enText": "",
+            "enText": "Ah, Trainer-san.",
             "nextBlock": 22,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -2803588614849295116
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -7766598791893092512
+                }
+            ],
             "pathId": -2854662462760677192,
             "blockIdx": 21
         },
@@ -217,8 +406,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "忘れ物でもした？",
-            "enText": "",
+            "enText": "Did you forget something?",
             "nextBlock": 23,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 2610342301278050812
+                }
+            ],
             "pathId": 7876768172934449705,
             "blockIdx": 22
         },
@@ -226,8 +422,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ううん、ちょっとレースの映像を見ようと思って。",
-            "enText": "",
+            "enText": "No, I just wanted to watch a video of a race.",
             "nextBlock": 24,
+            "origClipLength": 115,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": 3505874022517292949
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 5501925452672901449
+                }
+            ],
             "pathId": 9071621584288564638,
             "blockIdx": 23
         },
@@ -235,8 +442,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "ウイニングチケットが見ていたのは、いつも通りダービーの映像\r\nだった。彼女がここでレース映像を見ることは、よくあることだ。",
-            "enText": "",
+            "enText": "What Winning Ticket was watching was a video of \nthe Derby, which I always used to watch. It's common \nfor her to watch race footage here.",
             "nextBlock": 25,
+            "origClipLength": 124,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 7407389889557343445
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -7845781585418813480
+                }
+            ],
             "pathId": 909763324920316273,
             "blockIdx": 24
         },
@@ -244,8 +462,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "…………。",
-            "enText": "",
+            "enText": "……",
             "nextBlock": 26,
+            "origClipLength": 132,
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": 3680615772053473113
+                },
+                {
+                    "origLen": 144,
+                    "pathId": 2775226268933973715
+                }
+            ],
             "pathId": -8454750346648440351,
             "blockIdx": 25
         },
@@ -253,18 +482,29 @@
             "jpName": "",
             "enName": "",
             "jpText": "しかし、いつもなら必ず感動して叫んでいたのに、\n今日は大人しく映像を見つめている……。",
-            "enText": "",
+            "enText": "However, even though she would always shout with emotion, this \ntime, she's staring at the image quietly today.",
             "nextBlock": 27,
+            "origClipLength": 101,
             "choices": [
                 {
                     "jpText": "今度はチケゾーがダービーの舞台に立つ番だ",
-                    "enText": "",
+                    "enText": "Now it's Tickezou's turn to take the stage of the Derby.",
                     "nextBlock": 27
                 },
                 {
                     "jpText": "今度はチケゾーがダービーの舞台に立つ番ね",
-                    "enText": "",
+                    "enText": "Now it's Tickezou's turn to take the stage of the Derby.",
                     "nextBlock": 27
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": 5271301940574560358
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 6705450506107228920
                 }
             ],
             "pathId": 3681335791949596160,
@@ -274,8 +514,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "えっ！？　う、うん……そうだね。\n何度も見続けたこの舞台に、アタシも。",
-            "enText": "",
+            "enText": "Eh!? Y-Yeah… that's right. On this stage \nthat I have seen many times, I also.",
             "nextBlock": 28,
+            "origClipLength": 222,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": 1156718938438558247
+                },
+                {
+                    "origLen": 22,
+                    "pathId": -7993513847397376485
+                }
+            ],
             "pathId": 8100509568834403465,
             "blockIdx": 27
         },
@@ -283,8 +534,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "いつもダービーの話となると興奮を抑えきれない様子の\r\nウイニングチケットだが、今日はどこかたどたどしい……。",
-            "enText": "",
+            "enText": "Winning Ticket that always seems to be unable to suppress her \nexcitement when it comes to talk about the Derby, but it's \nsomehow difficult today",
             "nextBlock": 29,
+            "origClipLength": 115,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": -4310171917422178503
+                }
+            ],
             "pathId": 1155554953284699331,
             "blockIdx": 28
         },
@@ -292,8 +550,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "……『皐月賞』は残念だったな。",
-            "enText": "",
+            "enText": "The “SatsukiShou” was a pity.",
             "nextBlock": 30,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": -4354210581783713207
+                },
+                {
+                    "origLen": 40,
+                    "pathId": -1450171939955464503
+                }
+            ],
             "pathId": -5381793732517113093,
             "blockIdx": 29
         },
@@ -301,8 +570,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "……『皐月賞』は残念だったね。",
-            "enText": "",
+            "enText": "The “SatsukiShou” was a pity.",
             "nextBlock": 31,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": 8271321879451858472
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 4909508730897040567
+                }
+            ],
             "pathId": -7592789442538383355,
             "blockIdx": 30
         },
@@ -310,8 +590,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "……あのさ、トレーナーさん。\nすっごく当たり前のこと言っていい？",
-            "enText": "",
+            "enText": "Say, Trainer-san. Can I say something selfish?",
             "nextBlock": 32,
+            "origClipLength": 216,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 1072786495835811297
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 8016868446252442874
+                }
+            ],
             "pathId": -2564874240651816813,
             "blockIdx": 31
         },
@@ -319,8 +610,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "当たり前のこと……？",
-            "enText": "",
+            "enText": "Of course…?",
             "nextBlock": 33,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 1382842977740757940
+                }
+            ],
             "pathId": 4488669035819706607,
             "blockIdx": 32
         },
@@ -328,8 +626,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "……レースって、負けることもあるんだよね。",
-            "enText": "",
+            "enText": "Racing is like, there are times when you lose right?",
             "nextBlock": 34,
+            "origClipLength": 125,
+            "animData": [
+                {
+                    "origLen": 137,
+                    "pathId": -4292527851561730510
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 5064464090356029323
+                }
+            ],
             "pathId": 6371931103711105579,
             "blockIdx": 33
         },
@@ -337,8 +646,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "それはそうだけど、負けないためにも努力だろ？",
-            "enText": "",
+            "enText": "That's right, but you are making an effort \nto not lose, isn't that right?",
             "nextBlock": 35,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 137,
+                    "pathId": 8117250319898019134
+                }
+            ],
             "pathId": 775864574965504099,
             "blockIdx": 34
         },
@@ -346,8 +662,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "それはそうだけど、負けないためにも努力でしょ？",
-            "enText": "",
+            "enText": "That's right, but you are making an effort \nto not lose, isn't that right?",
             "nextBlock": 36,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 137,
+                    "pathId": -3572266497098586651
+                }
+            ],
             "pathId": 2095788965207860824,
             "blockIdx": 35
         },
@@ -355,8 +678,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "でもさ、『皐月賞』に向けて努力は欠かさなかった。\r\nやることはしっかりやった。",
-            "enText": "",
+            "enText": "However, efforts were made to achieve the “SatsukiShou”. I did \nwhat I wanted to do.",
             "nextBlock": 37,
+            "origClipLength": 214,
+            "animData": [
+                {
+                    "origLen": 174,
+                    "pathId": -2533559783575942295
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -4527549076431600136
+                }
+            ],
             "pathId": 8621444216872837635,
             "blockIdx": 36
         },
@@ -364,8 +698,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "けど……それでも負けた。\nレースって簡単じゃないんだって、いまさら思い知っちゃった。",
-            "enText": "",
+            "enText": "But… I still lost. I know now, racing is not easy.",
             "nextBlock": 38,
+            "origClipLength": 299,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": -2668803249958155364
+                },
+                {
+                    "origLen": 23,
+                    "pathId": -4603980642438116677
+                }
+            ],
             "pathId": 3518895112638208824,
             "blockIdx": 37
         },
@@ -373,8 +718,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "そしたら、いつも興奮しながら見てたはずの映像も、\r\nなんか別のものが見えてきちゃったっていうか……。",
-            "enText": "",
+            "enText": "And then, the images I was always excited to see, they like \nappeared as something else…",
             "nextBlock": 39,
+            "origClipLength": 286,
+            "animData": [
+                {
+                    "origLen": 263,
+                    "pathId": -1226181256201781435
+                },
+                {
+                    "origLen": 47,
+                    "pathId": 1164629561523091356
+                }
+            ],
             "pathId": -531377779506946598,
             "blockIdx": 38
         },
@@ -382,8 +738,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "負けた人の姿にも感動して、ドラマがあるだなんて\r\n勝手に盛り上がってたけど……。",
-            "enText": "",
+            "enText": "I was also impressed by the appearance of the losing person, and \nthe drama was so exciting.",
             "nextBlock": 40,
+            "origClipLength": 199,
+            "animData": [
+                {
+                    "origLen": 211,
+                    "pathId": 6040122250346440405
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 1340252398500017216
+                }
+            ],
             "pathId": -6647839088154454603,
             "blockIdx": 39
         },
@@ -391,13 +758,24 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "全然わかってなかったんだ、負けた人の気持ち……。\r\n夢が破れちゃった人の気持ちを……。",
-            "enText": "",
+            "enText": "I didn't understand at all the feelings of the losing person… the \nfeelings of the person whose dreams have been broken…",
             "nextBlock": 41,
+            "origClipLength": 215,
             "choices": [
                 {
                     "jpText": "チケゾー……",
-                    "enText": "",
+                    "enText": "Tickezou…",
                     "nextBlock": 41
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 227,
+                    "pathId": 8590471191119260834
+                },
+                {
+                    "origLen": 43,
+                    "pathId": -5363391713591731371
                 }
             ],
             "pathId": 6689564976722320146,
@@ -407,8 +785,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ア、アハハッ……ちょっと緊張してるみたい、アタシ！",
-            "enText": "",
+            "enText": "Ah, ah ha… you seem nervous, me!",
             "nextBlock": 42,
+            "origClipLength": 159,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": -6590341283877271958
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -6391956608680679017
+                }
+            ],
             "pathId": -2272354389511747159,
             "blockIdx": 41
         },
@@ -416,8 +805,23 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "さあ、そろそろ戻らないと寮長に怒られちゃう！\nじゃあまた明日ね、トレーナーさん！",
-            "enText": "",
+            "enText": "Then, if I don't come back soon, the dorm supervisor will get \nangry! See you tomorrow, Trainer-san!",
             "nextBlock": 43,
+            "origClipLength": 236,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 4999499042230128587
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -2054366713065927943
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 2114804009691485990
+                }
+            ],
             "pathId": -6140245615945946147,
             "blockIdx": 42
         },
@@ -425,8 +829,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "ウイニングチケットが去っていったトレーナー室には、\r\nダービーの映像の音だけが流れていた。",
-            "enText": "",
+            "enText": "In the trainer room where Winning Ticket had left, only the sound \nof the Derby video was flowing.",
             "nextBlock": -1,
+            "origClipLength": 133,
             "pathId": -8029673423202327673,
             "blockIdx": 43
         }

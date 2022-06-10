@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "G3KXGX6QIPEIWHRR7VJQFE74TSELN2QA",
     "type": "story",
     "storyId": "020004111",
@@ -11,15 +11,17 @@
             "jpText": "※ダミーテキスト",
             "enText": "",
             "nextBlock": 2,
+            "origClipLength": 106,
             "pathId": -6339923400330060557,
             "blockIdx": 1
         },
         {
             "jpName": "テレビの実況",
-            "enName": "",
+            "enName": "Live Commentary",
             "jpText": "『残り200m！！　“女傑”ヒシアマゾンが先頭を猛追する！\r\nナリタブライアンは伸びが苦しいっ！』",
-            "enText": "",
+            "enText": "200m left!! Hishi Amazon is leading the way! Narita Brian has a \nhard time catching up!",
             "nextBlock": 3,
+            "origClipLength": 199,
             "pathId": 949005809850859361,
             "blockIdx": 2
         },
@@ -27,8 +29,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "『天皇賞（秋）』に続き『ジャパンカップ』でも敗退――",
-            "enText": "",
+            "enText": "After the “Emperor Prize (Autumn)”, she \nwas also defeated in the “Japan Cup”ー",
             "nextBlock": 4,
+            "origClipLength": 78,
             "pathId": -7744345033396304402,
             "blockIdx": 3
         },
@@ -36,8 +39,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "あれほど圧勝を続けたナリタブライアンが、こうして連敗を重ねる\r\n原因はいったいなんなのか……レース映像を振り返って探っていた。",
-            "enText": "",
+            "enText": "I looked back again and again at the race video \nto find out what caused Narita Brian, who continued \nto win so much, to go on a losing streak.",
             "nextBlock": 5,
+            "origClipLength": 127,
             "pathId": 577864539180862424,
             "blockIdx": 4
         },
@@ -45,17 +49,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "今のローテーションで行けば、次は『有馬記念』。\r\nあの強さが戻ってくるヒントは、どこかにないだろうか……。",
-            "enText": "",
+            "enText": "If we go with the current rotation, the next is “Arima Kinen”. I \nwonder if there is a hint of that strength coming back somewhere…",
             "nextBlock": 6,
+            "origClipLength": 114,
             "pathId": -3507354397642960013,
             "blockIdx": 5
         },
         {
             "jpName": "テレビの実況",
-            "enName": "",
+            "enName": "Live Commentary",
             "jpText": "『ヒシアマゾン、僅かに及ばず2着でゴォール！\r\nナリタブライアンはさらに後方、6番手でゴール板を通過！』",
-            "enText": "",
+            "enText": "Hishi Amazon, reaches the goal with slightly 2 lengths! Narita \nBrian is further behind, passing the goal board in 6th position!",
             "nextBlock": 7,
+            "origClipLength": 264,
             "pathId": 3110309620825770591,
             "blockIdx": 6
         },
@@ -63,8 +69,9 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "やっぱり、力が出し切れていない感じだな。\r\nそれに以前のような重心の低いフォームも――",
-            "enText": "",
+            "enText": "After all, the feeling is not out yet. Her form with a lower \ncenter of gravity like beforeー",
             "nextBlock": 8,
+            "origClipLength": 101,
             "pathId": -4028282204390400266,
             "blockIdx": 7
         },
@@ -72,8 +79,9 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "やっぱり、力が出し切れていない感じだね。\r\nそれに以前のような重心の低いフォームも――",
-            "enText": "",
+            "enText": "After all, the feeling is not out yet. Her form with a lower \ncenter of gravity like beforeー",
             "nextBlock": 9,
+            "origClipLength": 101,
             "pathId": -5342536054783793485,
             "blockIdx": 8
         },
@@ -81,8 +89,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "（コンコンッ）",
-            "enText": "",
+            "enText": "(Knock-Knock)",
             "nextBlock": 10,
+            "origClipLength": 54,
             "pathId": -3739074732394795013,
             "blockIdx": 9
         },
@@ -90,8 +99,15 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "突然すまないな、邪魔をする。",
-            "enText": "",
+            "enText": "Excuse me for interrupting so suddenly, I'm coming in.",
             "nextBlock": 11,
+            "origClipLength": 96,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -337862646272777644
+                }
+            ],
             "pathId": -6859847225907869069,
             "blockIdx": 10
         },
@@ -99,8 +115,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "珍しいね、君が訪ねてくるだなんて。",
-            "enText": "",
+            "enText": "It's unusual, you're coming to visit me.",
             "nextBlock": 12,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8678967286583244035
+                }
+            ],
             "pathId": -687650441582856052,
             "blockIdx": 11
         },
@@ -108,8 +131,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "珍しいね、貴方が訪ねてくるだなんて。",
-            "enText": "",
+            "enText": "It's unusual, you're coming to visit me.",
             "nextBlock": 13,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -7500771444173098009
+                }
+            ],
             "pathId": -1068937239065496085,
             "blockIdx": 12
         },
@@ -117,8 +147,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "ああ、何かと世話をかけている妹のことで話があってな。",
-            "enText": "",
+            "enText": "Yeah, I have something to talk about my \nsister who you are taking care of.",
             "nextBlock": 14,
+            "origClipLength": 169,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": 5837912196456818807
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8224222985189751061
+                }
+            ],
             "pathId": -8422781637381324785,
             "blockIdx": 13
         },
@@ -126,8 +167,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "冗談めいた言葉を口にしてはいるが、表情は真剣そのものだった。\r\n今、ナリタブライアンを1番気にかけているのはきっと彼女だろう。",
-            "enText": "",
+            "enText": "Although she spoke the words she used to say, her \nexpressions were serious. Now, she must be the one \nwho cares about Narita Brian the most.",
             "nextBlock": 15,
+            "origClipLength": 127,
+            "animData": [
+                {
+                    "origLen": 181,
+                    "pathId": 2078659918393146388
+                }
+            ],
             "pathId": 8363282104876624480,
             "blockIdx": 14
         },
@@ -135,8 +183,15 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "世間では『ケガが完治していないのでは』などという\r\n噂が立っているようだが……。",
-            "enText": "",
+            "enText": "In the world it seems there is talk which refers to “I wonder if \nshe's injured or not cured”…",
             "nextBlock": 16,
+            "origClipLength": 165,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -4419829979424315380
+                }
+            ],
             "pathId": 1027586477623560257,
             "blockIdx": 15
         },
@@ -144,8 +199,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "それはあくまで噂だよ。\r\n走る素振りを見ても、間違いなくブライアンのケガは治っている。",
-            "enText": "",
+            "enText": "That's just what they say. Even when I look at the footage, \nBrian's injury is definitely healed.",
             "nextBlock": 17,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -63925989028696125
+                }
+            ],
             "pathId": 8747395317018524819,
             "blockIdx": 16
         },
@@ -153,8 +215,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "だろうな、君がブライアンに無理をさせるとは考え難い。\r\nしかし結果が出ていないのも事実だ。",
-            "enText": "",
+            "enText": "I thought so, it's hard to believe you're forcing Brian to do \nthis. However, it is also true that no results are coming out.",
             "nextBlock": 18,
+            "origClipLength": 279,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 3515267123923931838
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -5208426165658490312
+                }
+            ],
             "pathId": -1118363856865661795,
             "blockIdx": 17
         },
@@ -162,8 +235,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "そんな状況で、それでも君はブライアンを\r\n『有馬記念』で走らせるつもりなのだろうか？",
-            "enText": "",
+            "enText": "In this situation, do you still intend to \nlet Brian run in the “Arima Kinen”?",
             "nextBlock": 19,
+            "origClipLength": 204,
+            "animData": [
+                {
+                    "origLen": 216,
+                    "pathId": 8515996900453419566
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9027489337950622070
+                }
+            ],
             "pathId": -6061411967761660050,
             "blockIdx": 18
         },
@@ -171,8 +255,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ブライアンが望むなら、それに応えるまでだよ。",
-            "enText": "",
+            "enText": "It's up to Brian if she wants to do it.",
             "nextBlock": 20,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 216,
+                    "pathId": -6816926233310405276
+                }
+            ],
             "pathId": -3296162701786647581,
             "blockIdx": 19
         },
@@ -180,8 +271,15 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "だが、不調である原因もわからぬままだろう？",
-            "enText": "",
+            "enText": "However, you don't even know what caused this, right?",
             "nextBlock": 21,
+            "origClipLength": 112,
+            "animData": [
+                {
+                    "origLen": 216,
+                    "pathId": 2284000473106514506
+                }
+            ],
             "pathId": 3982095091587484978,
             "blockIdx": 20
         },
@@ -189,8 +287,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "……もし『有馬記念』で同じように負ければ、君の方針を\r\n疑問視する声も強くなるだろうが、それでも走らせると？",
-            "enText": "",
+            "enText": "…If she loses in the same way in the “Arima Kinen”, \nthe voice that questions your policy will get \nstronger, will you still let her run?",
             "nextBlock": 22,
+            "origClipLength": 283,
+            "animData": [
+                {
+                    "origLen": 173,
+                    "pathId": -7970979407242460799
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -6806477039754339616
+                }
+            ],
             "pathId": 6164567149809500118,
             "blockIdx": 21
         },
@@ -198,18 +307,25 @@
             "jpName": "",
             "enName": "",
             "jpText": "たしかにビワハヤヒデが言うような反応も起こるだろうが、\r\nそんなことはどうでもいい――",
-            "enText": "",
+            "enText": "I'm sure that the reactions that Biwa Hayahide talked about will \nhappen, but I don't care about thoseー",
             "nextBlock": 23,
+            "origClipLength": 101,
             "choices": [
                 {
                     "jpText": "ブライアンの意思を1番に考えるだけだ",
-                    "enText": "",
+                    "enText": "I'm just thinking about Brian's intentions \nas my number 1 priority",
                     "nextBlock": 23
                 },
                 {
                     "jpText": "ブライアンの意思を1番に考えるだけだよ",
-                    "enText": "",
+                    "enText": "I'm just thinking about Brian's intentions \nas my number 1 priority",
                     "nextBlock": 23
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 295,
+                    "pathId": 500277427432980384
                 }
             ],
             "pathId": -5248988120154710413,
@@ -219,8 +335,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "ふふっ……なるほど、それを聞いて安心した。",
-            "enText": "",
+            "enText": "Ehehe… I see, hearing you say that makes me relieved.",
             "nextBlock": 24,
+            "origClipLength": 173,
+            "animData": [
+                {
+                    "origLen": 204,
+                    "pathId": -322112081381659753
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2776038966385481599
+                }
+            ],
             "pathId": 4409372640941524086,
             "blockIdx": 23
         },
@@ -228,8 +355,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "実を言うと、私は今日\r\nブライアンを『有馬記念』で走らせてほしいと頼みに来たんだ。",
-            "enText": "",
+            "enText": "To tell you the truth, I came here today to ask you to let Brian \nrun in the “Arima Kinen”.",
             "nextBlock": 25,
+            "origClipLength": 218,
+            "animData": [
+                {
+                    "origLen": 205,
+                    "pathId": 2094950065950431896
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -9092540631087913625
+                }
+            ],
             "pathId": 2552700981125035235,
             "blockIdx": 24
         },
@@ -237,8 +375,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "頼みに……？",
-            "enText": "",
+            "enText": "Pardon…?",
             "nextBlock": 26,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 205,
+                    "pathId": 1763952929979895763
+                }
+            ],
             "pathId": 4949285975477359896,
             "blockIdx": 25
         },
@@ -246,8 +391,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "だが、その必要はなかったようだな。\r\n君はウマ娘を……ブライアンを第一に考えてくれている。",
-            "enText": "",
+            "enText": "But, it seems that there was no need for that. Your Horse Girl… \nYou think about Brian as your first priority.",
             "nextBlock": 27,
+            "origClipLength": 285,
+            "animData": [
+                {
+                    "origLen": 297,
+                    "pathId": -5615533748388632908
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -9049092649926367534
+                }
+            ],
             "pathId": -6590468028738281359,
             "blockIdx": 26
         },
@@ -255,8 +411,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "ひとつ、君へ伝えておきたいことがある。\r\n『天皇賞（秋）』でアイツが負けた時のことを。",
-            "enText": "",
+            "enText": "I have something to tell you. About the time she lost in the \n“Emperor Prize (Autumn)”.",
             "nextBlock": 28,
+            "origClipLength": 262,
+            "animData": [
+                {
+                    "origLen": 234,
+                    "pathId": -2452663474592066126
+                },
+                {
+                    "origLen": 170,
+                    "pathId": -9203593698440847531
+                }
+            ],
             "pathId": -8874533130408653248,
             "blockIdx": 27
         },
@@ -264,8 +431,31 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "私自身も、アイツが12着に敗れるとは予想外でな。\r\nレース後に声をかけに行ったのだが……。",
-            "enText": "",
+            "enText": "I myself was not expecting her to lose to 12th place. So I went \nto talk to her after the race…",
             "nextBlock": 29,
+            "origClipLength": 233,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -6996642416091696640
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 5915557646212303711
+                },
+                {
+                    "origLen": 207,
+                    "pathId": -5706752898754383445
+                },
+                {
+                    "origLen": 262,
+                    "pathId": -2189118287529897621
+                },
+                {
+                    "origLen": 262,
+                    "pathId": 6784615442755542779
+                }
+            ],
             "pathId": -2438820122882942875,
             "blockIdx": 28
         },
@@ -273,8 +463,23 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ブライアンが泣いていた……？",
-            "enText": "",
+            "enText": "Brian was crying…?",
             "nextBlock": 30,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 199,
+                    "pathId": -1351060976925104035
+                },
+                {
+                    "origLen": 262,
+                    "pathId": -8730467193699714926
+                },
+                {
+                    "origLen": 256,
+                    "pathId": -8851379025901351370
+                }
+            ],
             "pathId": -95590242391502657,
             "blockIdx": 29
         },
@@ -282,8 +487,23 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "長年姉妹をやっているが、アイツが泣いているのを見たのは\r\nいつぶりかわからないほどだ。",
-            "enText": "",
+            "enText": "I've been her sister for many years, but I don't know when was \nthe last time I saw her crying.",
             "nextBlock": 31,
+            "origClipLength": 218,
+            "animData": [
+                {
+                    "origLen": 230,
+                    "pathId": 190147467238712959
+                },
+                {
+                    "origLen": 180,
+                    "pathId": 4001159905105888045
+                },
+                {
+                    "origLen": 256,
+                    "pathId": 2546272176777563718
+                }
+            ],
             "pathId": -8674324057514807017,
             "blockIdx": 30
         },
@@ -291,8 +511,27 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "だがアイツは、走ることを簡単にやめるような奴ではない。",
-            "enText": "",
+            "enText": "But she's not the kind of girl who can easily stop running.",
             "nextBlock": 32,
+            "origClipLength": 150,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": 914594328543097373
+                },
+                {
+                    "origLen": 150,
+                    "pathId": 8630944766920817778
+                },
+                {
+                    "origLen": 35,
+                    "pathId": -1559354459259522356
+                },
+                {
+                    "origLen": 35,
+                    "pathId": -464381649151835374
+                }
+            ],
             "pathId": 4263632110255689105,
             "blockIdx": 31
         },
@@ -300,8 +539,19 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "トレーナー、妹の力になってやってくれ……頼む。",
-            "enText": "",
+            "enText": "Trainer, With your strength help my sister… Please.",
             "nextBlock": 33,
+            "origClipLength": 227,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -5795936588848931077
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -5175073691489865936
+                }
+            ],
             "pathId": -7288359103055908127,
             "blockIdx": 32
         },
@@ -309,8 +559,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "ビワハヤヒデは、ナリタブライアンに何があったのかを\r\nすでに理解しているのかもしれない。",
-            "enText": "",
+            "enText": "Biwa Hayahide, You may already know \nwhat happened to Narita Brian.",
             "nextBlock": 34,
+            "origClipLength": 118,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": -1734063442808375546
+                }
+            ],
             "pathId": -6582773140655765871,
             "blockIdx": 33
         },
@@ -318,8 +575,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "『妹を頼む』と言ってきた彼女の目は、\r\nそれほどに強い想いが滲み出ていた。",
-            "enText": "",
+            "enText": "Her eyes that said “Please my sister”, \nharbored such strong feelings.",
             "nextBlock": 35,
+            "origClipLength": 122,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 1218217273560807018
+                }
+            ],
             "pathId": 2526034679925340956,
             "blockIdx": 34
         },
@@ -327,8 +591,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "はぁ……はぁ……。",
-            "enText": "",
+            "enText": "Heh… heh…",
             "nextBlock": 36,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 6052877379771017022
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -5298965785599555532
+                }
+            ],
             "pathId": -5327053334032502424,
             "blockIdx": 35
         },
@@ -336,8 +611,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "もうコースの使用は禁止の時間だぞ、ブライアン。",
-            "enText": "",
+            "enText": "It's time to stop using the course, Brian.",
             "nextBlock": 37,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -2235250183131650590
+                }
+            ],
             "pathId": 4243945939296703516,
             "blockIdx": 36
         },
@@ -345,8 +627,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "もうコースの使用は禁止の時間だよ、ブライアン。",
-            "enText": "",
+            "enText": "It's time to stop using the course, Brian.",
             "nextBlock": 38,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -8145298275047663298
+                }
+            ],
             "pathId": 5814006746478293084,
             "blockIdx": 37
         },
@@ -354,8 +643,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……『有馬記念』は目前だ。\r\n悠長なことを言っている暇はない。",
-            "enText": "",
+            "enText": "…The ”Arima Kinen” is just around the corner. I don't have the \ntime to be leisurely around.",
             "nextBlock": 39,
+            "origClipLength": 144,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -6365686084834668612
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6240466748898383664
+                }
+            ],
             "pathId": -8251778958697050144,
             "blockIdx": 38
         },
@@ -363,8 +663,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "それでトレーナーは……私のトレーニングを止めに来たのか？",
-            "enText": "",
+            "enText": "So Trainer… Are you here to stop my training?",
             "nextBlock": 40,
+            "origClipLength": 136,
+            "animData": [
+                {
+                    "origLen": 187,
+                    "pathId": 482258340034537967
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3110309539276909483
+                }
+            ],
             "pathId": 118537072481909925,
             "blockIdx": 39
         },
@@ -372,8 +683,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "いや、君の姿を見に来たんだ。",
-            "enText": "",
+            "enText": "No, I came to see you.",
             "nextBlock": 41,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -3494122074211146981
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -7813581028607484526
+                }
+            ],
             "pathId": -5177821781898968094,
             "blockIdx": 40
         },
@@ -381,8 +703,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "いえ、貴方の姿を見に来たんだ。",
-            "enText": "",
+            "enText": "No, I came to see you.",
             "nextBlock": 42,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -9105951812029435974
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 427327476542516911
+                }
+            ],
             "pathId": 3103819848763756021,
             "blockIdx": 41
         },
@@ -390,8 +723,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……私の姿を？",
-            "enText": "",
+            "enText": "…To see me?",
             "nextBlock": 43,
+            "origClipLength": 49,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 914652484423318870
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8553230010908732399
+                }
+            ],
             "pathId": -3608891027083948062,
             "blockIdx": 42
         },
@@ -399,8 +743,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ハヤヒデから聞いたよ、『天皇賞（秋）』のレース後のことを。",
-            "enText": "",
+            "enText": "I heard from Hayahide about the “Emperor \nPrize (Autumn)” after the race.",
             "nextBlock": 44,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 94,
+                    "pathId": 8361353051352113745
+                }
+            ],
             "pathId": 9046190429474378676,
             "blockIdx": 43
         },
@@ -408,8 +759,15 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "…………。",
-            "enText": "",
+            "enText": "……",
             "nextBlock": 45,
+            "origClipLength": 57,
+            "animData": [
+                {
+                    "origLen": 94,
+                    "pathId": 5833919850892911948
+                }
+            ],
             "pathId": 3372212378553698628,
             "blockIdx": 44
         },
@@ -417,8 +775,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "君の涙の意味は、今の俺にはわからない。",
-            "enText": "",
+            "enText": "I don't know what your tears mean.",
             "nextBlock": 46,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2986425598550012283
+                }
+            ],
             "pathId": 8333207083219020539,
             "blockIdx": 45
         },
@@ -426,8 +791,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "貴方の涙の意味は、今の私にはわからない。",
-            "enText": "",
+            "enText": "I don't know what your tears mean.",
             "nextBlock": 47,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5422809376601454376
+                }
+            ],
             "pathId": 5832904306890715510,
             "blockIdx": 46
         },
@@ -435,8 +807,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ただ、あの『天皇賞（秋）』が君にとって\r\nとても大きな出来事だったということはわかった。",
-            "enText": "",
+            "enText": "But, Um I understood that the “Emperor Prize \n(Autumn)” was a very big event for you.",
             "nextBlock": 48,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 8747788875298795132
+                }
+            ],
             "pathId": -2232888842296479349,
             "blockIdx": 47
         },
@@ -444,8 +823,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ただ、あの『天皇賞（秋）』が貴方にとって\r\nとても大きな出来事だったということはわかった。",
-            "enText": "",
+            "enText": "But, Um I understood that the “Emperor Prize \n(Autumn)” was a very big event for you.",
             "nextBlock": 49,
+            "origClipLength": 103,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 7491387483194100578
+                }
+            ],
             "pathId": 1977654321304506742,
             "blockIdx": 48
         },
@@ -453,8 +839,15 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……なるほど、だから私の姿を見に来たというわけか。",
-            "enText": "",
+            "enText": "…I see, that's why you came to see me.",
             "nextBlock": 50,
+            "origClipLength": 160,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": -7038176119772410858
+                }
+            ],
             "pathId": -7747821523485922930,
             "blockIdx": 49
         },
@@ -462,8 +855,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "それでどうする？\r\n『有馬記念』の出走は、取りやめにするとでも言うか？",
-            "enText": "",
+            "enText": "So what do we do? Are you saying you want \nto cancel the “Arima Kinen” race?",
             "nextBlock": 51,
+            "origClipLength": 180,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": 3984893165651610984
+                },
+                {
+                    "origLen": 182,
+                    "pathId": 2849315673956652829
+                }
+            ],
             "pathId": 1491867928794366315,
             "blockIdx": 50
         },
@@ -471,8 +875,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "レースに負けて涙する……そんな情けないウマ娘は\r\nグランプリに出る資格などないと！",
-            "enText": "",
+            "enText": "Are you saying such a pathetic Horse Girl who loses and tears up \nhas no qualification to appear in the Grand Prix!",
             "nextBlock": 52,
+            "origClipLength": 194,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -1604332300158831787
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2504114140237670815
+                }
+            ],
             "pathId": 4758002502100689484,
             "blockIdx": 51
         },
@@ -480,8 +895,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "ナリタブライアンは睨みつけるような鋭い視線を\r\nこちらに向けてくる。",
-            "enText": "",
+            "enText": "Narita Brian gazed at me with a clear vision.",
             "nextBlock": 53,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -5056525399326497343
+                }
+            ],
             "pathId": -2232407632170349521,
             "blockIdx": 52
         },
@@ -489,18 +911,25 @@
             "jpName": "",
             "enName": "",
             "jpText": "その瞳には微かに光るものが浮かんでいるように見えた。\r\nだからこそ、俺は確信できた。",
-            "enText": "",
+            "enText": "It seemed that there was something faintly shining in her eyes. \nThat's why, I was convinced.",
             "nextBlock": 54,
+            "origClipLength": 99,
             "choices": [
                 {
                     "jpText": "いや、『有馬記念』に出るぞ",
-                    "enText": "",
+                    "enText": "No, you will appear in the “Arima Kinen”",
                     "nextBlock": 55
                 },
                 {
                     "jpText": "いえ、『有馬記念』に出よう",
-                    "enText": "",
+                    "enText": "No, you will appear in the “Arima Kinen”",
                     "nextBlock": 55
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -4435582892526856415
                 }
             ],
             "pathId": -1122519497602106817,
@@ -510,18 +939,25 @@
             "jpName": "",
             "enName": "",
             "jpText": "その瞳には微かに光るものが浮かんでいるように見えた。\r\nだからこそ、私は確信できた。",
-            "enText": "",
+            "enText": "It seemed that there was something faintly shining in her eyes. \nThat's why, I was convinced.",
             "nextBlock": 55,
+            "origClipLength": 99,
             "choices": [
                 {
                     "jpText": "いや、『有馬記念』に出るぞ",
-                    "enText": "",
+                    "enText": "No, you will appear in the “Arima Kinen”",
                     "nextBlock": 55
                 },
                 {
                     "jpText": "いえ、『有馬記念』に出よう",
-                    "enText": "",
+                    "enText": "No, you will appear in the “Arima Kinen”",
                     "nextBlock": 55
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -2715305188481135591
                 }
             ],
             "pathId": -349493230721550163,
@@ -531,8 +967,15 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……なぜ、そうしようと？",
-            "enText": "",
+            "enText": "…Why, would you do that?",
             "nextBlock": 56,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 8811885699830100577
+                }
+            ],
             "pathId": -6882438233964660498,
             "blockIdx": 55
         },
@@ -540,8 +983,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "君の涙の意味が少しだけ理解できたからだ。\r\n君の気持ちは、決して折れていない。",
-            "enText": "",
+            "enText": "Because I understood the meaning of your tears a little. Your \nfeelings will never change.",
             "nextBlock": 57,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 107,
+                    "pathId": 9005148832187781481
+                }
+            ],
             "pathId": -8034276286065678904,
             "blockIdx": 56
         },
@@ -549,8 +999,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "貴方の涙の意味が少しだけ理解できたからだよ。\r\n貴方の気持ちは、決して折れていない。",
-            "enText": "",
+            "enText": "Because I understood the meaning of your tears a little. Your \nfeelings will never change.",
             "nextBlock": 58,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -5850598563191788243
+                }
+            ],
             "pathId": 6232559672048236014,
             "blockIdx": 57
         },
@@ -558,8 +1015,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "だったら俺は、君の好きにさせる。\r\nウマ娘を支えるのがトレーナーだから。",
-            "enText": "",
+            "enText": "Then I said, I'll let you do as you like. I'm a trainer who \nsupports Horse Girls.",
             "nextBlock": 59,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 4615849782290529818
+                }
+            ],
             "pathId": -7991925916021032873,
             "blockIdx": 58
         },
@@ -567,8 +1031,15 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "だったら私は、貴方の好きにさせる。\r\nウマ娘を支えるのがトレーナーだから。",
-            "enText": "",
+            "enText": "Then I said, I'll let you do as you like. I'm a trainer who \nsupports Horse Girls.",
             "nextBlock": 60,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -8463031602236879253
+                }
+            ],
             "pathId": -2147476928822965288,
             "blockIdx": 59
         },
@@ -576,8 +1047,19 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……そうか。",
-            "enText": "",
+            "enText": "…I see.",
             "nextBlock": 61,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 1035178337522637114
+                },
+                {
+                    "origLen": 94,
+                    "pathId": -6188570910237357227
+                }
+            ],
             "pathId": -5895194041657980151,
             "blockIdx": 60
         },
@@ -585,18 +1067,29 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "悪かった、責めるような言い方をしてしまって。\r\nそして……感謝する。",
-            "enText": "",
+            "enText": "I'm sorry, I said it in a blaming way. And then… Thank you.",
             "nextBlock": 62,
+            "origClipLength": 256,
             "choices": [
                 {
                     "jpText": "勝ってこい、ブライアン！",
-                    "enText": "",
+                    "enText": "Go and win, Brian!",
                     "nextBlock": 62
                 },
                 {
                     "jpText": "勝ってきて、ブライアン！",
-                    "enText": "",
+                    "enText": "Go and win, Brian!",
                     "nextBlock": 62
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 107,
+                    "pathId": -4063304105620263988
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -8563302214116072715
                 }
             ],
             "pathId": 7665269924445585634,
@@ -606,8 +1099,15 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "ああ、全力で挑もう……！",
-            "enText": "",
+            "enText": "Yeah, Let's challenge them with all our might!",
             "nextBlock": 63,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": -1807285723679994371
+                }
+            ],
             "pathId": 9196180561945064531,
             "blockIdx": 62
         },
@@ -615,8 +1115,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "なぜ、ナリタブライアンの調子が戻らないのかはわからない。\r\n彼女が涙を流した真意もわからない。",
-            "enText": "",
+            "enText": "I don't know why Narita Brian's condition was bad. And I don't \nknow the true meaning behind the tears she shed.",
             "nextBlock": 64,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": 6137678111656029656
+                }
+            ],
             "pathId": -5905218198593440572,
             "blockIdx": 63
         },
@@ -624,8 +1131,15 @@
             "jpName": "",
             "enName": "",
             "jpText": "だが、それでも彼女を信じよう。\r\nあの眼差しに込められた、強い想いを。",
-            "enText": "",
+            "enText": "But, I still believe in her. The strong \nfeelings that were put into that gaze.",
             "nextBlock": 65,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -8815986074656149044
+                }
+            ],
             "pathId": -2384527140551722687,
             "blockIdx": 64
         },
@@ -633,8 +1147,27 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアン、絶好のポジションで最後の直線へ入ります！\r\nさあ、今日は来るのかナリタブライアン！！",
-            "enText": "",
+            "enText": "Narita Brian, enter the last straight line in the perfect \ncondition! Now, will Narita Brian come back today!!?",
             "nextBlock": 66,
+            "origClipLength": 192,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 7238275290749456587
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 4998499319552932286
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -7531900040002676621
+                },
+                {
+                    "origLen": 238,
+                    "pathId": -3752451386580073769
+                }
+            ],
             "pathId": -2730579105169837408,
             "blockIdx": 65
         },
@@ -642,8 +1175,23 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "位置取りは申し分ないですわっ！\r\nここから一気にっ！！",
-            "enText": "",
+            "enText": "The positioning is perfect! From here at once!!",
             "nextBlock": 67,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 132,
+                    "pathId": -1934956704832307323
+                },
+                {
+                    "origLen": 132,
+                    "pathId": 8957238841895629498
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -4252451564441749007
+                }
+            ],
             "pathId": 8829272074068474168,
             "blockIdx": 66
         },
@@ -651,8 +1199,27 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "先頭は、『菊花賞』を制したマヤノトップガン！！\r\nナリタブライアン、必死に追いかける！",
-            "enText": "",
+            "enText": "The first is Mayano Top Gun, who won the “Kikkashou”!! Narita \nBrian is chasing desperately!",
             "nextBlock": 68,
+            "origClipLength": 154,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 6704066295812299703
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 2502652414023243954
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 3184498984975957160
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3848384073371100769
+                }
+            ],
             "pathId": 2296248784793423200,
             "blockIdx": 67
         },
@@ -660,8 +1227,23 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "いけ、ブライアンっ！　オマエの走りを見せてやれ～っ！！",
-            "enText": "",
+            "enText": "Go, Brian! Show me your run!!",
             "nextBlock": 69,
+            "origClipLength": 112,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -3194313365508592088
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1526710315762722685
+                },
+                {
+                    "origLen": 124,
+                    "pathId": 6994202550275576176
+                }
+            ],
             "pathId": 2817641365588441101,
             "blockIdx": 68
         },
@@ -669,8 +1251,23 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "しかし伸びが苦しい！\r\nブライアン、ここでもあの驚異的な脚は出てこないか！？",
-            "enText": "",
+            "enText": "However, the growth is painful! Brian, can't that amazing leg \ncome out here again!?",
             "nextBlock": 70,
+            "origClipLength": 162,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": -3195654158502275225
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -5738949542574276118
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -4020785082875062045
+                }
+            ],
             "pathId": 7494241539774579455,
             "blockIdx": 69
         },
@@ -678,8 +1275,23 @@
             "jpName": "",
             "enName": "",
             "jpText": "やがて、目の前を駆け抜けるナリタブライアンの表情が\r\nはっきりと視界に飛び込んできた。",
-            "enText": "",
+            "enText": "Before long, the expression of Narita Brian running in front of \nme jumped into my field of vision clearly.",
             "nextBlock": 71,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": 5862582797512476683
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -1889131258252354231
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 927098820681718596
+                }
+            ],
             "pathId": -6223792134202439376,
             "blockIdx": 70
         },
@@ -687,8 +1299,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "まるで足掻くように必死に走るナリタブライアン。",
-            "enText": "",
+            "enText": "Narita Brian is running desperately with her legs.",
             "nextBlock": 72,
+            "origClipLength": 75,
             "pathId": 1362508386707529238,
             "blockIdx": 71
         },
@@ -696,8 +1309,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "しかし、前を走るマヤノトップガンの影も踏めず、\r\n後方から追い上げてきた相手にも交わされていく。",
-            "enText": "",
+            "enText": "However, the shadow of Mayano Top Gun running in front is also \nstepped on, and is also exchanged by the opponent who has been \nchasing up from the rear.",
             "nextBlock": 73,
+            "origClipLength": 107,
             "pathId": 7805365855006773989,
             "blockIdx": 72
         },
@@ -705,8 +1319,9 @@
             "jpName": "観客A",
             "enName": "Spectator A",
             "jpText": "ダメだっ、伸びてこない！",
-            "enText": "",
+            "enText": "It's not working, it's not growing!",
             "nextBlock": 74,
+            "origClipLength": 73,
             "pathId": -7481615730672615315,
             "blockIdx": 73
         },
@@ -714,8 +1329,9 @@
             "jpName": "観客B",
             "enName": "Spectator B",
             "jpText": "やっぱり、最強だったブライアンはもう……！",
-            "enText": "",
+            "enText": "After all, Brain the strongest is no longer…!",
             "nextBlock": 75,
+            "origClipLength": 100,
             "pathId": -3116687195679384812,
             "blockIdx": 74
         },
@@ -723,8 +1339,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "だが、彼女の眼差しは変わらない。\r\n勝利を渇望し、ゴールだけを見据える、あの鋭い眼差しのままだ。",
-            "enText": "",
+            "enText": "However, her eyes don't change. It is still that preaching gaze \nthat holds the victory and only looks at the goal.",
             "nextBlock": 76,
+            "origClipLength": 107,
             "pathId": 8419543963699948406,
             "blockIdx": 75
         },
@@ -732,8 +1349,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "ナリタブライアンの必死な表情を見て、そしてようやく気がついた。",
-            "enText": "",
+            "enText": "When I saw Narita Brian's desperate \nexpression, I finally realized.",
             "nextBlock": 77,
+            "origClipLength": 85,
             "pathId": -843501977368780700,
             "blockIdx": 76
         },
@@ -741,8 +1359,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "彼女が負け続けたのは、ケガの痛みや調整不足が理由じゃない。\r\nかつての“あの走り”ができなくなってしまったんだ。",
-            "enText": "",
+            "enText": "The reason she continued to lose was not because of the pain of \nher injury or lack of coordination. She can no longer do “That \nrun” the same as before…",
             "nextBlock": 78,
+            "origClipLength": 118,
             "pathId": 4228378577693432879,
             "blockIdx": 77
         },
@@ -750,8 +1369,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "そのことを『天皇賞（秋）』の時に気づき、絶望し、涙を流した。",
-            "enText": "",
+            "enText": "She realized that at the time of “Emperor Prize (Autumn)”, that's \nwhy she was in despair and shed tears.",
             "nextBlock": 79,
+            "origClipLength": 84,
             "pathId": 6794935410912329868,
             "blockIdx": 78
         },
@@ -759,8 +1379,9 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアン、その差は縮められない！\r\nマヤノトップガンが独走！",
-            "enText": "",
+            "enText": "Narita Brian, the difference can't be reduced! \nMayano Top Gun is on her own!",
             "nextBlock": 80,
+            "origClipLength": 140,
             "pathId": 8008533685255884569,
             "blockIdx": 79
         },
@@ -768,8 +1389,9 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "はああああ～～っ！！！！",
-            "enText": "",
+            "enText": "Haaaa～～!!!!",
             "nextBlock": 81,
+            "origClipLength": 92,
             "pathId": 4871511569492399813,
             "blockIdx": 80
         },
@@ -777,8 +1399,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "……だけど、彼女はこうして走り続けている。\r\n振り返ることなどせず、ずっと前を向いて。",
-            "enText": "",
+            "enText": "…But, she keeps running like this. Looking \nforward instead of looking back.",
             "nextBlock": 82,
+            "origClipLength": 101,
             "pathId": 3253179809201218186,
             "blockIdx": 81
         },
@@ -786,12 +1409,13 @@
             "jpName": "",
             "enName": "",
             "jpText": "それを知った瞬間、自然と言葉が湧いてきて――",
-            "enText": "",
+            "enText": "The moment I learned that, the words suddenly came to meー",
             "nextBlock": 83,
+            "origClipLength": 73,
             "choices": [
                 {
                     "jpText": "ブライアン、頑張れっ！！！！",
-                    "enText": "",
+                    "enText": "Brian, You can do it!!!!",
                     "nextBlock": 83
                 }
             ],
@@ -802,8 +1426,9 @@
             "jpName": "観客A",
             "enName": "Spectator A",
             "jpText": "……っ！？　頑張れぇ～～っ！！！！",
-            "enText": "",
+            "enText": "…Eh!? You can do it～～!!!!",
             "nextBlock": 84,
+            "origClipLength": 74,
             "pathId": -1897657217845119025,
             "blockIdx": 83
         },
@@ -811,8 +1436,9 @@
             "jpName": "観客B",
             "enName": "Spectator B",
             "jpText": "頑張れブライアンっ！！　頑張れーっ！！",
-            "enText": "",
+            "enText": "You can do it, Brian!! You can do it!!",
             "nextBlock": 85,
+            "origClipLength": 100,
             "pathId": -3470157861303096457,
             "blockIdx": 84
         },
@@ -820,8 +1446,9 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "マヤノトップガン、今1着でゴォール！！\r\n『菊花賞』を勝利した勢いままに『有馬記念』も制しましたー！",
-            "enText": "",
+            "enText": "Mayano Top Gun, the first to cross the goal!! The winner of the \n“Kikkashou” also wins the “Arima Kinen”!",
             "nextBlock": 86,
+            "origClipLength": 265,
             "pathId": -6417426609636581173,
             "blockIdx": 85
         },
@@ -829,8 +1456,9 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアンは伸びきれずの4着！",
-            "enText": "",
+            "enText": "Narita Brian finishes in 4th place!",
             "nextBlock": 87,
+            "origClipLength": 103,
             "pathId": -8039019610688157194,
             "blockIdx": 86
         },
@@ -838,8 +1466,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "圧倒的な強さを誇った彼女に対し、\r\n『頑張れ』と言ったのは初めてだったかもしれない。",
-            "enText": "",
+            "enText": "It may have been the first time that I said “You can do it” to \nher who boasted overwhelming strength.",
             "nextBlock": 88,
+            "origClipLength": 99,
             "pathId": -7789676434821383256,
             "blockIdx": 87
         },
@@ -847,8 +1476,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "それでもようやく、彼女のトレーナーである自分も\r\n前に進めた気がした。",
-            "enText": "",
+            "enText": "And yet as her trainer myself, I felt like I have moved forward.",
             "nextBlock": 89,
+            "origClipLength": 90,
             "pathId": -4008336453467904386,
             "blockIdx": 88
         },
@@ -856,8 +1486,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "ただひたすらに勝利へ向かって走り続ける、ナリタブライアン。\r\nだから、彼女は間違いなく今でも最強のウマ娘だ……！",
-            "enText": "",
+            "enText": "Narita Brian just runs towards victory and continues. That's why \nshe's definitely the strongest Horse Girl even now…!",
             "nextBlock": -1,
+            "origClipLength": 118,
             "pathId": -5982473730662822608,
             "blockIdx": 89
         }

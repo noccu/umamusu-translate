@@ -5,7 +5,25 @@
     "maxFps": -1,
     "unlockSize": true,
     "uiScale": 1.0,
+    "extraAssetBundlePath": "localized_data/includes",
     "replaceFont": true,
+    "customFontPath": "assets/UMAMUSUMERodinWanpakuPro-EB-edit.otf",
+    "customFontSizeOffset": -3,
+    "customFontStyle": 0,
+    "customFontLinespacing": 0.65,
+    "replaceAssets": false,
+    "assetLoadLog": false,
     "autoFullscreen": false,
-    "dicts": ["localized_data/static.json"]
+    "LineBreakHotKey": "u",
+    "autoChangeLineBreakMode": true,
+    "resolution_start": [-1, -1],
+    "aspect_ratio": [16.0, 9.0],
+    "dicts": ["localized_data/dynamic.json"],
+    "static_dict": "localized_data/static.json",
+    "no_static_dict_cache": true,
+    "stories_path": "",
+    "autoUpdate": {
+        "source": "",
+        "path": ""
+    }
 }

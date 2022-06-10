@@ -82,8 +82,13 @@ class PatchManager:
             raise NoAssetError(f"{bundle} does not exist in your game data.")
         elif self.args.update:
             savePath = Path(self.args.dst, bundle[0:2], bundle)
-            if self.checkFilePatched(savePath):
-                raise AlreadyPatchedError(f"{bundle} already patched.")
+            isPatched, fileModTime = self.checkFilePatched(savePath)
+            tlModTime = self.tlFile.data.get("modified")
+            if isPatched:
+                if tlModTime and fileModTime != tlModTime:
+                    print("translations modified... ", end="", flush=True)
+                else:
+                    raise AlreadyPatchedError(f"{self.tlFile.bundle} already patched.")
 
         try:
             self.bundle = UnityPy.load(str(bundlePath))
@@ -96,6 +101,7 @@ class PatchManager:
         """Swaps game assets with translation file data, returns modified state."""
         self.loadTranslationFile(path)
         self.loadBundle(self.tlFile.bundle)
+
         if self.tlFile.type in ("story", "home"):
             patcher = StoryPatcher(self)
         elif self.tlFile.type == "race":
@@ -114,7 +120,7 @@ class PatchManager:
     def saveAsset(self):
         # b = self.bundle.file.save() #! packer="original" or any compression doesn't seem to work, the game will crash or get stuck loading forever
         # b += b"\x08\x04"
-        b = self.markFilePatched(self.bundle.file.save())
+        b = self.markFilePatched(self.tlFile, self.bundle.file.save())
         fn = self.bundle.file.name
         fp = Path(self.args.dst, fn[0:2], fn)
         fp.parent.mkdir(parents=True, exist_ok=True)
@@ -122,18 +128,30 @@ class PatchManager:
             f.write(b)
 
     @classmethod
-    def markFilePatched(cls, data: bytes):
-        return data + cls.editMark
+    def markFilePatched(cls, tlFile: common.TranslationFile, data: bytes):
+        m = tlFile.data.get("modified")
+        if m:
+            m = m.to_bytes(5, byteorder='big', signed=False)
+            # Have a nice day and good training if you're reading this in the year 15xxx somewhere :spemini:
+        else:
+            m = b""
+        return data + m + cls.editMark
     @classmethod
     def checkFilePatched(cls, filePath: PathLike):
         try:
             with open(filePath, "rb") as f:
-                f.seek(-2, SEEK_END)
-                if f.read(2) == cls.editMark:
-                    return True
+                f.seek(-7, SEEK_END)
+                modified = f.read(5)
+                mark = f.read(2)
+                if mark == cls.editMark:
+                    try:
+                        modified = int.from_bytes(modified, byteorder='big')
+                    except:
+                        modified = None
+                    return True, modified
         except FileNotFoundError:
             pass # Should normally not occur
-        return False
+        return False, None
 
 class StoryPatcher:
     def __init__(self, manager: PatchManager) -> None:

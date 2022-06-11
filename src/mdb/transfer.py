@@ -6,6 +6,10 @@ import common
 import helpers
 from pathlib import Path
 import re
+import textprocess
+
+CSV_FILES_MANUAL_NEWLINE = ("uma-profile-tagline.json", "tutorial-text.json", "support-bonus.json", "special-transfer-thanks.json", "special-transfer-desc.json", "advice.json", "conditions-desc.json", "item-acquisition-methods-shop.json", "load-screens.json", "presents-desc.json", "item-desc.json")
+CSV_FILES_PASSTHROUGH = ("uma-nickname-requirements.json", "special-transfer-requirements.json", "miscellaneous.json", "mission-groups.json", "predictions.json")
 
 def parseArgs():
     ap = common.Args("Transfers missing data from mdb patch files to Translation Files", False)
@@ -39,8 +43,10 @@ def writeCsv(path, data):
         return
     with file:
         file.write("\"text\", \"translation\"\n")
+        w = csv.writer(file, quoting=csv.QUOTE_ALL, escapechar="\\", doublequote=False, lineterminator="\n")
         for k, v in data.items():
-                file.write(f"\"{k}\",\"{v}\"\n")
+                # file.write(f"\"{k}\",\"{v}\"\n")
+                w.writerow((k, v))
 
 def main():
     args = parseArgs()
@@ -49,7 +55,7 @@ def main():
     elif args.convert:
         files = args.src.glob("*.csv")
     else:
-        files = Path("translations/mdb").glob("*.json")
+        files = list(Path("translations/mdb").glob("**/*.json"))
 
     for file in files:
         if args.convert:
@@ -59,14 +65,32 @@ def main():
                 print(f"Output exists, skipping: {tlFile}")
                 continue
         else:
-            csvPath = Path(args.src, file.stem + ".csv")
+            csvPath = Path(args.src, file.relative_to("translations/mdb").with_suffix(".csv"))
             tlFile = common.TranslationFile(file)
 
         csvData = readCsv(csvPath)
         if args.convert:
             helpers.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
         elif args.reverse:
-            writeCsv(csvPath, tlFile.textBlocks.toNative())
+            nativeJson = False
+            if not csvData:
+                nativeJson = csvPath.with_suffix(".json").exists()
+                csvPath = csvPath.with_suffix(".json")
+
+            data = tlFile.textBlocks.toNative()
+            ll = tlFile.data.get("lineLength")
+            for k,v in data.items():
+                if tlFile.name in CSV_FILES_MANUAL_NEWLINE:
+                    if ll > 0:
+                        data[k] = textprocess.adjustLength(tlFile, v, {"lineLength": int(ll * 0.8), "targetLines": 99, "forceResize": True})
+                    #else don't process
+                elif tlFile.name not in CSV_FILES_PASSTHROUGH:
+                    v = textprocess.cleannewLines(v)
+                    data[k] = textprocess.resizeText(tlFile, v, True)
+            if nativeJson:
+                helpers.writeJson(csvPath, data)
+            else:
+                writeCsv(csvPath, data)
         else:
             for block in tlFile.textBlocks:
                 k, v = block.get("jpText"), block.get("enText")

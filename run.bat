@@ -14,6 +14,8 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 ECHO Using %snek%
 %snek% --version
+%snek% -m pip show unitypy
+
 ECHO(
 
 IF [%1] NEQ [] (

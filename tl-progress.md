@@ -30,7 +30,8 @@ Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
 Tonight at the Ligne Droite | In progress | [ebi]
-Roar, Tracen Academy Cheerleading Squad! | In progress | [LotoDS]
+A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
+
 
 # Character stories
 name | progress | translator
@@ -47,6 +48,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
+Inari One | In progress | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]

@@ -35,18 +35,18 @@ This tool collection only changes text to translate it and it is *my belief* thi
 ## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
     - During install, check the `Add to PATH` option.
-1. Download this project
+    1. Download this project
 1. Open the (extracted) folder and double click `install.bat`
-1. (Optional but recommended) Download all game data through the game menu
+1. (Optional but recommended *for dialogue*) Download all game data [through the game menu](guide_batch_download.jpg)
     - Only files existing in your game data will be updated. You can simply rerun the import for new content.
 
 ## Basic Usage
-1. **Dialogue**: double click `run.bat` 
-1. **UI**: Open the game's *install folder* (where the `Umamusume.exe` is)
+1. **UI** (menus, buttons, ...): Open the game's *install folder* (where the `Umamusume.exe` is)
     1. Download [tlg]'s latest [release](https://github.com/MinamiChiwa/Trainers-Legend-G/releases), extract the `version.dll` and put it in the game's *install folder*
     1. Copy the *contents* of this project's [localify folder](localify) to the *install folder*
         - If the game won't start and you double checked you did it correctly, try renaming the `version.dll` file to `uxtheme.dll` (errors mean the issue is elsewhere)
         - In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)
+1. **Dialogue**: double click `run.bat` 
 1. **Skills and other variable text**: Run either of the `mdb import.bat` files
     - For a web version (slightly outdated) see the [db-translate project] and follow its guide for now. It wil be moved to this project soon™
 

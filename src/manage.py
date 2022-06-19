@@ -137,7 +137,7 @@ def parseArgs():
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
-        path = helpers.getUmaInstallPath()
+        path = helpers.getUmaInstallDir()
         if path: path = path.joinpath("dump.txt")
         else: print("Couldn't find game path.")
         if path.exists():
@@ -179,7 +179,7 @@ def main():
         helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
 
     if args.move:
-        path = helpers.getUmaInstallPath()
+        path = helpers.getUmaInstallDir()
         if path:
             shutil.copyfile(HASH_FILE_STATIC, path.joinpath(HASH_FILE_STATIC.relative_to(HASH_FILE_STATIC.parents[1])))
             shutil.copyfile(HASH_FILE_DYNAMIC, path.joinpath(HASH_FILE_DYNAMIC.relative_to(HASH_FILE_DYNAMIC.parents[1])))

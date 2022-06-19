@@ -1,7 +1,9 @@
 from os import path
-import common
 import csv
+
+import common
 import helpers
+
 
 def createDict(namesFile):
     names = dict()
@@ -12,9 +14,9 @@ def createDict(namesFile):
     names.update(helpers.readJson("src/data/names.json"))
     return names
 
+
 def translate(namesDict, args):
-    if args.src: files = args.src
-    else: files = common.searchFiles(args.type, args.group, args.id, args.idx)
+    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx)
 
     for file in files:
         file = common.TranslationFile(file)
@@ -28,12 +30,14 @@ def translate(namesDict, args):
         file.save()
     return len(files)
 
+
 def main():
     ap = common.Args("Translate many enName fields in Translation Files by lookup")
-    ap.add_argument("-n", dest="namesFile", default="../umamusume-db-translate/src/data/uma-name.csv", help="Path to (external) db-translate's uma-name.csv")
+    ap.add_argument("-n", dest="namesFile", default="../umamusume-db-translate/src/data/uma-name.csv",
+                    help="Path to (external) db-translate's uma-name.csv")
     ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
     args = ap.parse_args()
-    
+
     if args.type in ("race", "lyrics"):
         print("No names in given type.")
         raise SystemExit
@@ -43,5 +47,6 @@ def main():
     dict = createDict(args.namesFile)
     n = translate(dict, args)
     print(f"Names translated in {n} files.")
+
 
 main()

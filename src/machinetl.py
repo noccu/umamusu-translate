@@ -1,12 +1,13 @@
 import asyncio
-import websockets
-from websockets import server
 import json
 import common
 import textprocess
 from importlib import import_module
 from pathlib import Path
 from argparse import SUPPRESS
+
+import websockets
+from websockets import server
 
 SUGOI_ROOT = "src/data/sugoi-model"
 
@@ -24,19 +25,22 @@ async def handler(client: server.WebSocketServerProtocol, path):
             print(f"Unknown message: {message}")
             continue
 
+
 async def startServer():
     async with websockets.serve(handler, "localhost", 61017):
         global STOP
         STOP = asyncio.Future()
         print("Server started, awaiting connection to deepl script. See README for info.")
         await STOP  # run until stopped
+
+
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol = None):
-        if args.src: self.files = [args.src]
-        else: self.files = common.searchFiles(args.type, args.group, args.id, args.idx)
+        self.files = [args.src] if args.src else common.searchFiles(args.type, args.group, args.id, args.idx)
+
         if USING_SERVER:
             self.client = client
-            
+
         if args.model == "deepl":
             self.loop = asyncio.get_running_loop()
         elif args.model == "sugoi":
@@ -95,6 +99,7 @@ class Translator:
     def recvTl(self, tl):
         self.currentTl.set_result(tl['text'])
 
+
 async def sugoiTranslate():
     if not Path(SUGOI_ROOT).joinpath("japaneseModel", "big.pretrain.pt").is_file():
         print("Translation model not found. See sugoi-readme.txt")
@@ -103,17 +108,19 @@ async def sugoiTranslate():
     print("\n")
     await tl.translate()
 
+
 def main():
     global args
     ap = common.Args("Machine translate files. Requires sugoi model or deepl userscript")
     ap.add_argument("-src", help="Target Translation File")
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("-m", "--model", choices=["deepl", "sugoi"], default="deepl", help="Translation model")
-    ap.add_argument("-ll", type=int, default=-1, dest="lineLength", help="Line length for wrapping/newlines. 0: disable, -1: auto")
-    ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing tl")
+    ap.add_argument("-ll", type=int, default=-1, dest="lineLength",
+                    help="Line length for wrapping/newlines. 0: disable, -1: auto. Default auto.")
+    ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite existing tl")
     args = ap.parse_args()
     args.replaceMode = "all"
-    
+
     global USING_SERVER
     if args.model == "deepl":
         USING_SERVER = True
@@ -122,5 +129,6 @@ def main():
     elif args.model == "sugoi":
         USING_SERVER = False
         asyncio.run(sugoiTranslate())
+
 
 main()

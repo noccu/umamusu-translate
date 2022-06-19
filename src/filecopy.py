@@ -24,7 +24,7 @@ def buildSqlStmt(args):
     if not args.id:
         args.id = "____"
 
-    add(f"m = '{args.type}'") # always set
+    add(f"m = '{args.type}'")  # always set
     if args.name:
         add(f"n like '%{args.name}%'")
     if args.hash:
@@ -43,6 +43,7 @@ def buildSqlStmt(args):
 
     return None if firstExpr else stmt
 
+
 def getFiles(args):
     with sqlite3.connect(GAME_META_FILE) as db:
         stmt = buildSqlStmt(args)
@@ -51,6 +52,7 @@ def getFiles(args):
         cur = db.execute(stmt)
         return cur
 
+
 def backup(args):
     print("Backing up extracted files...")
     for type in common.TARGET_TYPES:
@@ -58,6 +60,7 @@ def backup(args):
         for file in files:
             file = common.TranslationFile(file)
             copy(file.bundle, args)
+
 
 def copy(hash, args):
     dst = path.join(args.dst, hash)
@@ -75,6 +78,7 @@ def copy(hash, args):
         print(f"Skipping existing: {src}")
         return 0
 
+
 def main():
     ap = common.Args("Copy files for backup or testing")
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
@@ -88,7 +92,7 @@ def main():
         backup(args)
     else:
         n = 0
-        for hash, in getFiles(args):
+        for hash, in getFiles(args):  # Sneaky one-item iterables unwrapper
             n += copy(hash, args)
         print(f"Copied {n} files.")
 

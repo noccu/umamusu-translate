@@ -1,14 +1,17 @@
-from typing import Union, Optional
-import regex
+from typing import Optional, Union
 import json
 from pathlib import Path
 from os import PathLike, environ
 
+import regex
+
 DMM_CONFIG = Path(environ['APPDATA']) / "dmmgameplayer5" / "dmmgame.cnf"
+
 
 def readJson(file: PathLike) -> Union[dict, list]:
     with open(file, "r", encoding="utf8") as f:
         return json.load(f)
+
 
 def writeJson(file: PathLike, data):
     file = Path(file)
@@ -16,11 +19,13 @@ def writeJson(file: PathLike, data):
     with open(file, "w", encoding="utf8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=4, default=_to_json)
 
+
 def _to_json(o):
     try:
         return o.__json__()
     except:
         raise TypeError
+
 
 def findExisting(searchPath: PathLike, filePattern: str):
     searchPath = Path(searchPath)
@@ -30,6 +35,7 @@ def findExisting(searchPath: PathLike, filePattern: str):
             return file
     return None
 
+
 def isParseableInt(x):
     try:
         int(x)
@@ -37,11 +43,15 @@ def isParseableInt(x):
     except ValueError:
         return False
 
+
 def isJapanese(text):
     # Should be cached according to docs
     return regex.search(r"[\p{scx=Katakana}\p{scx=Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}\p{General_Punctuation}]{3,}", text)
+
+
 def isEnglish(text):
     return regex.fullmatch(r"[^\p{Katakana}\p{Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}。]+", text)
+
 
 def getUmaInstallDir() -> Optional[Path]:
     """Return the path to the directory umamusume.exe was installed in, or None if it can't be found."""
@@ -51,7 +61,7 @@ def getUmaInstallDir() -> Optional[Path]:
             if dmm_um_config is not None:
                 return Path(dmm_um_config['detail']['path'])
     except FileNotFoundError:
-        # Older DMM installations might not have the DMM config file, if it wasn't found try an old registry check approach
+        # Older DMM installs might not have the DMM config file, if it wasn't found try an old registry check approach
         import winreg
         try:
             with winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE,

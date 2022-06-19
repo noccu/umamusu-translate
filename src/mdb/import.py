@@ -1,11 +1,13 @@
 import sys
 from os.path import realpath
-sys.path.append(realpath("src"))
-import common
-import helpers
 import sqlite3
 from pathlib import Path
 import shutil
+
+sys.path.append(realpath("src"))
+import common
+import helpers
+
 
 def translator(args, entry: dict):
     files = entry['files'].keys() if entry.get("specifier") else [entry['file']]
@@ -25,17 +27,20 @@ def translator(args, entry: dict):
             raise StopIteration
 
         for e in data.textBlocks:
-            if not e.get('enText'): continue
-            yield e
+            if e.get('enText'):
+                yield e
+
 
 def parseArgs():
-    ap = common.Args("Imports translations to master.mdb", False)
+    ap = common.Args("Imports translations to master.mdb", defaultArgs=False)
     ap.add_argument("-src", default="translations/mdb", help="Import path")
     ap.add_argument("-dst", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-B", "--backup", action="store_true", help="Backup the master.mdb file")
     ap.add_argument("-R", "--restore", action="store_true", help="Restore the master.mdb file from backup")
-    ap.add_argument("-sd", "--skill-data", action="store_true", help="Replace skill descriptions with skill data (effect, conditions, etc)")
+    ap.add_argument("-sd", "--skill-data", action="store_true",
+                    help="Replace skill descriptions with skill data (effect, conditions, etc)")
     return ap.parse_args()
+
 
 def main():
     args = parseArgs()
@@ -62,7 +67,9 @@ def main():
                 inputGen = translator(args, entry)
                 db.executemany(stmt, inputGen)
             # COMMIT; handled by with:
-    finally: db.close()
+    finally:
+        db.close()
+
 
 if __name__ == '__main__':
     main()

@@ -21,16 +21,16 @@ ECHO(
 IF [%1] NEQ [] (
     IF [%1] EQU [install] GOTO install
     IF [%1] EQU [mdb] GOTO mdb
-) 
+)
 
-:open 
+:open
 REM %snek% src\ui.py
 ECHO Importing all translatable types that are present in your game files...
 ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
 REM Or manually import parts, see import.py -h
-%snek% src/import.py -FI -O -U -S
+%snek% src/import.py --full-import --overwrite --update --silent
 ECHO Copying TLG translation files...
-%snek% src/manage.py -M
+%snek% src/manage.py --move
 ECHO Imports complete!
 GOTO quit
 

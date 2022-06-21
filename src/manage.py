@@ -157,16 +157,17 @@ def parseArgs():
         raise SystemExit("1 required argument missing.")
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
+        args.src = LOCAL_DUMP
         path = helpers.getUmaInstallDir()
-        if not path:
+        if path:
+            path = path / "dump.txt"
+            if path.exists():
+                args.src = path
+            else:
+                print("Dump file not found.")
+        else:
             print("Couldn't find game path.")
 
-        path = path / "dump.txt"
-        if path.exists():
-            args.src = path
-        else:
-            print("Dump file not found.")
-            args.src = LOCAL_DUMP
         print(f"Using dump: {args.src}")
 
     global DUMP_FILE

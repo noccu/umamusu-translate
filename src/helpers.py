@@ -28,15 +28,6 @@ def _to_json(o):
         raise TypeError
 
 
-def findExisting(searchPath: PathLike, filePattern: str):
-    searchPath = Path(searchPath)
-    search = searchPath.glob(filePattern)
-    for file in search:
-        if file.is_file():
-            return file
-    return None
-
-
 def isParseableInt(x):
     try:
         int(x)

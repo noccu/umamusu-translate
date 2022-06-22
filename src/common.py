@@ -46,7 +46,7 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=Fals
             elif targetId:
                 if targetType in ("lyrics", "preview"):
                     found.extend(os.path.join(root, file) for file in files
-                                if PurePath(file).stem == targetId and isJson(file))
+                                 if PurePath(file).stem == targetId and isJson(file))
                     continue
                 elif depth == 4:
                     dirs[:] = [d for d in dirs if d == targetId]
@@ -56,22 +56,26 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=Fals
     return found
 
 
-def parseStoryId(t, input, fromPath=True) -> tuple:
-    if t == "home":
-        if fromPath:
-            input = input[-10:]
-            return input[:2], input[3:7], input[7:]
-        else:
-            return input[:2], input[2:6], input[6:]
-    elif t == "lyrics":
-        return None, None, input[-11:-7] if fromPath else input
-    elif t == "preview":
-        return None, None, input[-4:] if fromPath else input
+# TODO: This is unpacking a string we packed ourselves, refactoring should eliminate this fn entirely.
+def parseStoryId(text_type, s) -> tuple:
+    if text_type in ("lyrics", "preview"):
+        return None, None, s
     else:
-        # story and storyrace
-        if fromPath:
-            input = input[-9:]
-        return input[:2], input[2:6], input[6:9]
+        return s[:2], s[2:6], s[6:]
+
+
+def parseStoryIdFromPath(text_type: str, path: str):
+    """Given a text type (story, lyrics, etc.) and a game data filepath, extract and return the group, id, and index."""
+    if text_type == "home":
+        path = path[-10:]
+        return path[:2], path[3:7], path[7:]
+    elif text_type == "lyrics":
+        return None, None, path[-11:-7]
+    elif text_type == "preview":
+        return None, None, path[-4:]
+    else:  # story and storyrace
+        path = path[-9:]
+        return path[:2], path[2:6], path[6:9]
 
 
 def patchVersion():
@@ -102,7 +106,8 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-g", "--group", help="The group to process")
             self.add_argument("-id", help="The id (subgroup) to process")
             self.add_argument("-idx", help="The specific asset index to process")
-            self.add_argument("--changed", nargs="?", default=False, const=True, help="Limit to changed files (requires git)")
+            self.add_argument("--changed", nargs="?", default=False, const=True,
+                              help="Limit to changed files (requires git)")
             self.add_argument("-src", default=GAME_ASSET_ROOT)
             self.add_argument("-dst", default=Path("dat/").resolve())
             self.add_argument("--verbose", action="store_true")
@@ -114,12 +119,12 @@ class TranslationFile:
     latestVersion = 5
     ver_offset_mdb = 100
 
-    def __init__(self, file = None, load=True, readOnly = False):
+    def __init__(self, file=None, load=True, readOnly=False):
         self.readOnly = readOnly
         if load:
             if not file: raise RuntimeError("Attempting to load tlfile but no file provided.")
             self.setFile(file)
-            self.fileExists = True # should error if it does not
+            self.fileExists = True  # should error if it does not
             self.reload()
         else:
             self.fileExists = False
@@ -279,6 +284,7 @@ class TranslationFile:
         c.init(snapshot)
         return c
 
+
 class GameBundle:
     editMark = b"\x08\x04"
 
@@ -344,12 +350,10 @@ class GameBundle:
     def fromName(cls, name, load=True):
         bundlePath = PurePath(GAME_ASSET_ROOT, name[0:2], name)
         return cls(bundlePath, load)
-    
+
     @staticmethod
     def createPath(dstFolder, dstName):
         return PurePath(dstFolder, dstName[0:2], dstName)
-
-
 
 
 def currentTimestamp():

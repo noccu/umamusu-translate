@@ -187,7 +187,7 @@ def calcLineLen(file: TranslationFile, verbose):
     if lineLength is None:
         if (file.type in ("lyrics", "race")
             or (file.type == "story"
-                and common.parseStoryId(file.type, file.getStoryId(), fromPath=False)[0] in ("02", "04", "09"))):
+                and common.parseStoryId(file.type, file.getStoryId())[0] in ("02", "04", "09"))):
             lineLength = 65
         else:
             lineLength = 45

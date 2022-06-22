@@ -6,10 +6,10 @@ from os import system as run
 snep = Path("translations/snep").glob("story_*")
 
 for file in snep:
-    g, id, idx = common.parseStoryId("story", file.stem, True)
+    g, id, idx = common.parseStoryIdFromPath("story", file.stem)
 
     extract = common.searchFiles("story", g, id, idx)
-    if not extract: 
+    if not extract:
         print("Can't find own file")
         raise SystemExit
     extract = common.TranslationFile(extract[0])
@@ -18,7 +18,7 @@ for file in snep:
     if not sneptl:
         print("Can't find snep text")
         raise SystemExit
-        
+
     for k, v in sneptl.items():
         if k.startswith("*"): continue
         try:
@@ -27,7 +27,7 @@ for file in snep:
         except:
             idx, dunno, type = k.split(".")
         idx = int(idx) - 1
-        
+
         ourblock = extract.textBlocks[idx]
         if type == "text":
             ourblock["enText"] = v
@@ -37,4 +37,3 @@ for file in snep:
                 raise SystemExit
             ourblock["choices"][subidx]["enText"]= v
     extract.save()
-

@@ -99,28 +99,15 @@ def importTlgStatic(dumpPath, tlData):
 
 
 def clean(mode):
-    dump = helpers.readJson(DUMP_FILE)
-    tlData = helpers.readJson(TL_FILE)
-    targetData = dump if mode == "both" else tlData
+    """Clean ui.json and/or static_dump.json of empty translations. Keep the dump's static hashes regardless."""
+    translations = {jp: en for jp, en in helpers.readJson(TL_FILE).items() if en}  # Remove empty translations
+    if mode in ("both", "ui"):
+        helpers.writeJson(file=TL_FILE, data=translations)
 
-    for key, value in list(targetData.items()):
-        if mode == "both":
-            if value in tlData:
-                # ignore translated entries
-                if tlData[value]:
-                    continue
-                del tlData[value]
-            # ignore static entries in dump
-            if len(key) > 5:
-                del dump[key]
-        else:
-            # remove untranslated
-            if not value:
-                del tlData[key]
-
-    helpers.writeJson(TL_FILE, tlData)
-    if mode == "both":
-        helpers.writeJson(DUMP_FILE, dump)
+    if mode in ("both", "dump"):
+        helpers.writeJson(file=DUMP_FILE,
+                          data={ui_hash: jp for ui_hash, jp in helpers.readJson(DUMP_FILE).items()
+                                if len(ui_hash) <= 5 or jp in translations})  # Keep static hashes even if untranslated
 
 
 def order():
@@ -139,8 +126,9 @@ def parseArgs():
     ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump")
     ap.add_argument("-upd", "--update", action="store_true",
                     help="Create/update the final static.json file used by the dll from static_dump.json and static_en.json")
-    ap.add_argument("-clean", default=False, const=True, nargs="?",
-                    help="Remove untranslated entries from tl file, or local dump and tl file")
+    ap.add_argument("-clean", "--clean", choices=["dump", "ui", "both"],  nargs='?', const="both", default=False,
+                    help="Remove untranslated entries from tl file and local dump."
+                         'Pass "ui" or "dump" to clean only one or the other file; default "both".')
     ap.add_argument("-sort", "-order", action="store_true", help="Sort keys in local dump and final file")
     ap.add_argument("-O", "--overwrite", action="store_true",
                     help="Overwrite/update local dump keys instead of only adding new ones")
@@ -192,16 +180,16 @@ def main():
             return
         tlData = helpers.readJson(TL_FILE)
 
-    if args.populate:
-        updateTlData(dumpData, tlData)
-        if args.tlg:
-            importTlgStatic(args.tlg, tlData)
-        helpers.writeJson(TL_FILE, tlData)
-    elif args.update:
-        hashData = helpers.readJson(HASH_FILE_STATIC), helpers.readJson(HASH_FILE_DYNAMIC)
-        updateHashData(dumpData, tlData, hashData)
-        helpers.writeJson(HASH_FILE_STATIC, hashData[0])
-        helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
+        if args.populate:
+            updateTlData(dumpData, tlData)
+            if args.tlg:
+                importTlgStatic(args.tlg, tlData)
+            helpers.writeJson(TL_FILE, tlData)
+        elif args.update:
+            hashData = helpers.readJson(HASH_FILE_STATIC), helpers.readJson(HASH_FILE_DYNAMIC)
+            updateHashData(dumpData, tlData, hashData)
+            helpers.writeJson(HASH_FILE_STATIC, hashData[0])
+            helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
 
     if args.move:
         installDir = helpers.getUmaInstallDir()

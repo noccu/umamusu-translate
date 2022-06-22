@@ -64,11 +64,13 @@ In general, check out the [scripts](#script-info).
 1. **Dialogue**
     - To install specific things, see [id-structure.md](id-structure.md) and use: `py src/import.py -O -g <group> -id <id>`
     - To add additional translations through deepl, or contribute your own, see [translating.md](translating.md)
-1. **UI**
+2. **UI**
     - To update yourself when the translations are jumbled, see [here](translating.md#updating)
-1. **Skills and other variable text**: See the [db-translate project]
+3. **Skills and other variable text**: See the [db-translate project]
 
 # Script info
+
+See [data-layout.md](data-layout.md) for an overview of the game's data files and how this repo maps translation files to them.
 
 All scripts are made to be run from the root dir, i.e: `py src/script.py -arg val`  
 Arguments can be given to all and it is recommended you do so, processing the smallest amount of files you're comfortable with at a time.  

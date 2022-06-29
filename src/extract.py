@@ -30,8 +30,8 @@ def queryDB(db=None, storyId=None):
         if args.id and not args.idx: idx = args.id
         pattern = f"live/musicscores/m{idx}/m{idx}_lyrics"
     elif args.type == "preview":
-        if args.id and not args.idx: idx = args.id
-        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{idx}"
+        if args.idx and not args.id: id = args.idx
+        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{id}"
     if not externalDb:
         db = sqlite3.connect(GAME_META_FILE)
     cur = db.execute(

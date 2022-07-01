@@ -62,8 +62,10 @@ def main():
         db.close()
     if not args.no_skill_data:
         print("Extracting skill data...")
+        # This is just a QoL thing
         from subprocess import run
         run(["node", "src/mdb/extract-skill-data.js", args.src], check=True)
+        run(["py", "src/textprocess.py", "-fsize", "-src", "translations/mdb/alt/skill-desc.json"]) # :tmo:
 
 
 if __name__ == '__main__':

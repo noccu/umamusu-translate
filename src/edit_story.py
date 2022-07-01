@@ -1,6 +1,7 @@
 from argparse import SUPPRESS
 import re
 import common
+from helpers import isEnglish
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
@@ -70,7 +71,7 @@ def load_block(event=None, loadBlocks=False, reload=False, dir=1):
     cur_block_data =  blocks[cur_block]
 
     if skip_translated.get() == 1:
-        while cur_block_data['enText'] and 0 < cur_block < len(blocks) - 1:
+        while 0 < cur_block < len(blocks) - 1 and (cur_block_data['enText'] or isEnglish(cur_block_data['jpText'])):
             cur_block += dir
             cur_block_data = blocks[cur_block]
         block_dropdown.current(cur_block)

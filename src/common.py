@@ -16,24 +16,32 @@ TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
 
 
-def searchFiles(targetType, targetGroup, targetId, targetIdx=False) -> list:
+def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False) -> list:
     found = list()
-    isJson = lambda f: PurePath(f).suffix == ".json"
-    searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
-    for root, dirs, files in os.walk(searchDir):
-        depth = len(dirs[0]) if dirs else -1
-        if targetGroup and depth == 2:
-            dirs[:] = [d for d in dirs if d == targetGroup]
-        elif targetId:
-            if targetType in ("lyrics", "preview"):
-                found.extend(os.path.join(root, file) for file in files
-                             if PurePath(file).stem == targetId and isJson(file))
-                continue
-            elif depth == 4:
-                dirs[:] = [d for d in dirs if d == targetId]
-        if targetIdx and files:
-            found.extend(os.path.join(root, file) for file in files if file.startswith(targetIdx) and isJson(file))
-        else: found.extend(os.path.join(root, file) for file in files if isJson(file))
+    if changed:
+        from subprocess import run, PIPE
+        for l in run(["git", "status", "--short", "--porcelain"], stdout=PIPE, text=True).stdout.splitlines():
+            state, path = l[1], PurePath(l[3:])
+            if state in ("A", "M") and path.parts[0] == "translations" and path.parts[1] == targetType:
+                found.append(str(path))
+        print(found)
+    else:
+        isJson = lambda f: PurePath(f).suffix == ".json"
+        searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
+        for root, dirs, files in os.walk(searchDir):
+            depth = len(dirs[0]) if dirs else -1
+            if targetGroup and depth == 2:
+                dirs[:] = [d for d in dirs if d == targetGroup]
+            elif targetId:
+                if targetType in ("lyrics", "preview"):
+                    found.extend(os.path.join(root, file) for file in files
+                                if PurePath(file).stem == targetId and isJson(file))
+                    continue
+                elif depth == 4:
+                    dirs[:] = [d for d in dirs if d == targetId]
+            if targetIdx and files:
+                found.extend(os.path.join(root, file) for file in files if file.startswith(targetIdx) and isJson(file))
+            else: found.extend(os.path.join(root, file) for file in files if isJson(file))
     return found
 
 

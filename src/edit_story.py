@@ -363,11 +363,15 @@ def main():
     ap = common.Args("Story editor", types=common.SUPPORTED_TYPES)
     ap.add_argument("-src")
     ap.add_argument("-dst", help=SUPPRESS)
+    ap.add_argument("--changed", action="store_true", help="Open all changed files (requires git)")
     args = ap.parse_args()
     if args.src:
         files = [args.src]
     else:
-        files = common.searchFiles(args.type, args.group, args.id, args.idx)
+        files = common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
+        if not files:
+            print("No files match given criteria")
+            raise SystemExit
 
     files.sort()
 

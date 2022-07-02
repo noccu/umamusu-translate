@@ -32,7 +32,7 @@ def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
 def parseArgs():
     ap = common.Args("Extracts master.mdb data for translation", defaultArgs=False)
     ap.add_argument("-src", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
-    ap.add_argument("-dst", default="translations/mdb", help="Extraction path")
+    ap.add_argument("-dst", default="translations/mdb", type=Path, help="Extraction path")
     ap.add_argument("--no-skill-data", action="store_true", help="Skip extracting skill data (requires nodeJS)")
     ap.add_argument("--no-text", action="store_true", help="Skip extracting standard text data")
     ap.add_argument("-f", "--file", help="Extract specific file name (as found in index.json)")
@@ -55,10 +55,10 @@ def main():
                             specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"
                         else:
                             specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
-                        extract(db, specStmt, Path(args.dst, entry['table'] if entry.get("subdir") else "", filename))
+                        extract(db, specStmt, args.dst / (entry['table'] if entry.get("subdir") else "") / filename)
                 else:
                     if args.file and entry['file'] != args.file: continue
-                    extract(db, stmt, Path(args.dst, entry['file']))
+                    extract(db, stmt, args.dst / entry['file'])
         db.close()
     if not args.no_skill_data:
         print("Extracting skill data...")

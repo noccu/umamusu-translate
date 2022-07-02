@@ -22,7 +22,7 @@ def translator(args, entry: dict):
 
         print(f"Importing {file}...")
         try:
-            data = common.TranslationFile(args.src / entry['table'] if entry.get("subdir") else "" / file + ".json")
+            data = common.TranslationFile(args.src / (entry['table'] if entry.get("subdir") else "") / (file + ".json"))
         except FileNotFoundError:
             raise StopIteration
 

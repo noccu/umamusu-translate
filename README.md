@@ -38,7 +38,7 @@ This tool collection only changes text to translate it and it is *my belief* thi
 1. Download this project
 1. Open the (extracted) folder and double click `install.bat`
 1. (Optional but recommended *for dialogue*) Download all game data [through the game menu](guide_batch_download.jpg)
-    - THe patch will only edit files existing in your game data. You can simply rerun the import below for new content.
+    - The patch will only edit files existing in your game data. You can simply rerun the import below for new content.
 
 ## Basic Usage
 1. **UI** (menus, buttons, ...): Open the game's *install folder* (where the `Umamusume.exe` is)
@@ -48,6 +48,8 @@ This tool collection only changes text to translate it and it is *my belief* thi
         - ~~ In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)~~ (fixed in TLG, I think)
 1. **Dialogue**: double click `run.bat` 
 1. **Skills and other variable text**: Run either of the `mdb import.bat` files
+    - The mdb file that is modified updates often, you will need to redo this step every time it does. Usually when there is an in-game update.
+    - Requires restarting the game after applying.
     - For a web version (slightly outdated) see the [db-translate project] and follow its guide for now. It wil be moved to this project soon™
 
 ## Updating

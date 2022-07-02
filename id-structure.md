@@ -17,8 +17,8 @@ The structure used is simple: `00 0000 000`
  08 | Story mode prologues/intro | `0000`: URA (001), Aoharu (002)
  09 | Event stories (story mode)
  10 | Half anniv story (...?)
- 40 | Campaign training/story events |  `0000`: shared (clock usage, training equipment level up, ...) `0001`: URA `0002`: Aoharu `0004`: MNT
- 50 | Uma training/story events
+ 40 | Scenario story events |  `0000`: shared (clock usage, training equipment level up, ...) `0001`: URA `0002`: Aoharu `0004`: MNT
+ 50 | Uma training events
  80 | R Support card events
  82 | SR Support card events
  83 | SSR Support card events

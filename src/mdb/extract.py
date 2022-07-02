@@ -55,7 +55,7 @@ def main():
                             specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"
                         else:
                             specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
-                        extract(db, specStmt, Path(args.dst, filename))
+                        extract(db, specStmt, Path(args.dst, entry['table'] if entry.get("subdir") else "", filename))
                 else:
                     if args.file and entry['file'] != args.file: continue
                     extract(db, stmt, Path(args.dst, entry['file']))

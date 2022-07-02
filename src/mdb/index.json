@@ -75,5 +75,15 @@
         "table": "race_jikkyo_message",
         "field": "message",
         "file": "race_jikkyo_message"
+    },
+    {
+        "table": "character_system_text",
+        "field": "text",
+        "specifier": "character_id",
+        "subdir": true,
+        "files": {
+            "ines": 1031,
+            "tachyon": 1032
+        }
     }
 ]

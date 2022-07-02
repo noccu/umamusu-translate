@@ -22,7 +22,7 @@ def translator(args, entry: dict):
 
         print(f"Importing {file}...")
         try:
-            data = common.TranslationFile(Path(args.src, file + ".json"))
+            data = common.TranslationFile(args.src / entry['table'] if entry.get("subdir") else "" / file + ".json")
         except FileNotFoundError:
             raise StopIteration
 
@@ -33,7 +33,7 @@ def translator(args, entry: dict):
 
 def parseArgs():
     ap = common.Args("Imports translations to master.mdb", defaultArgs=False)
-    ap.add_argument("-src", default="translations/mdb", help="Import path")
+    ap.add_argument("-src", default="translations/mdb", type=Path, help="Import path")
     ap.add_argument("-dst", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-B", "--backup", action="store_true", help="Backup the master.mdb file")
     ap.add_argument("-R", "--restore", action="store_true", help="Restore the master.mdb file from backup")

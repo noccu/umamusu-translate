@@ -32,7 +32,7 @@ Flapping Run-up | Complete | [Hades of Games][]
 Tonight at the Ligne Droite | In progress | [ebi]
 A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
 The Promised Time: Silks & Three Riddles | In progress/Transferring | [Snep][]
-Seek, Solve, Summer Walk! | Complete | [noccu][] (ep 1), deepl
+Seek, Solve, Summer Walk! | Complete | [noccu][] (ep 1-3), deepl
 
 
 # Character stories

@@ -230,5 +230,8 @@ class TranslationFile:
 
     def save(self):
         if self.version < self.ver_offset_mdb:
-            self.data['modified'] = int(datetime.now(timezone.utc).timestamp())
+            self.data['modified'] = currentTimestamp()
         helpers.writeJson(self.file, self.data)
+
+def currentTimestamp():
+    return int(datetime.now(timezone.utc).timestamp())

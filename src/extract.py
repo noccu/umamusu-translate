@@ -8,7 +8,7 @@ import UnityPy
 from Levenshtein import ratio as similarity
 
 import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT
+from common import GAME_META_FILE, GAME_ASSET_ROOT, currentTimestamp
 import helpers
 
 
@@ -70,7 +70,8 @@ def extractAsset(path, storyId, tlFile=None):
             'type': args.type,
             'storyId': "",
             'title': "",
-            'text': list()
+            'text': list(),
+            'modified': currentTimestamp()
         }
         isPatched = CheckPatched(env.file.name)
         transferExisting = DataTransfer(tlFile)

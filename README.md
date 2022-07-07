@@ -45,7 +45,7 @@ This tool collection only changes text to translate it and it is *my belief* thi
     1. Download [tlg]'s latest [release](https://github.com/MinamiChiwa/Trainers-Legend-G/releases), extract the `version.dll` and put it in the game's *install folder*
     1. Copy the *contents* of this project's [localify folder](localify) to the *install folder*
         - If the game won't start and you double checked you did it correctly, try renaming the `version.dll` file to `uxtheme.dll` (errors mean the issue is elsewhere)
-        - ~~ In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)~~ (fixed in TLG, I think)
+        - ~~In rare cases when a story overlay pops up in the main menus, your UI may blur and get stuck that way. Temporarily remove the dll and restart the game to do the action. (may only affect uxtheme.dll naming?)~~ (fixed in TLG, I think)
 1. **Dialogue**: double click `run.bat` 
 1. **Skills and other variable text**: Run either of the `mdb import.bat` files
     - The mdb file that is modified updates often, you will need to redo this step every time it does. Usually when there is an in-game update.

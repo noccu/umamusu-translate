@@ -6,7 +6,7 @@ import helpers
 
 
 def createDict():
-    names = helpers.readJson("translations/mdb/uma-name.json")
+    names = helpers.readJson("translations/mdb/uma-name.json").get("text")
     names.update(helpers.readJson("translations/mdb/miscellaneous.json"))
     names.update(helpers.readJson("src/data/names.json"))
     return names

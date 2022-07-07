@@ -8,7 +8,7 @@ I also suggest you look over all of the process before starting.
 - If you haven't read the main [readme](readme.md), please check and follow that first.
 - Open a shell in the project root (the 'base' `umamusu-translate` folder)
     - tip: type cmd in explorer's address bar on windows when in said folder
-- Install additional  dependencies: `py -m pip install -r src\devreqs.txt`
+- Install additional  dependencies: `py -m pip install -r src\devreq.txt`
 - (info) Check [id-structure.md](id-structure.md) for help choosing your *targets*.
     - All scripts take the following target arguments: `-g <group> -id <id> (-idx <idx>)`
     - To know other options use `-h`

@@ -5,12 +5,9 @@ import common
 import helpers
 
 
-def createDict(namesFile):
-    names = dict()
-    with open(namesFile, "r", newline='', encoding="utf8") as csvfile:
-        reader = csv.reader(csvfile, delimiter=',', quotechar='"')
-        for row in reader:
-            names[row[0]] = row[1]
+def createDict():
+    names = helpers.readJson("translations/mdb/uma-name.json")
+    names.update(helpers.readJson("translations/mdb/miscellaneous.json"))
     names.update(helpers.readJson("src/data/names.json"))
     return names
 
@@ -33,18 +30,14 @@ def translate(namesDict, args):
 
 def main():
     ap = common.Args("Translate many enName fields in Translation Files by lookup")
-    ap.add_argument("-n", dest="namesFile", default="../umamusume-db-translate/src/data/uma-name.csv",
-                    help="Path to (external) db-translate's uma-name.csv")
     ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
     args = ap.parse_args()
 
     if args.type in ("race", "lyrics"):
         print("No names in given type.")
         raise SystemExit
-    if not path.exists(args.namesFile):
-        raise FileNotFoundError("You must specify the uma-name.csv file.")
 
-    dict = createDict(args.namesFile)
+    dict = createDict()
     n = translate(dict, args)
     print(f"Names translated in {n} files.")
 

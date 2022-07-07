@@ -94,6 +94,7 @@ id | name (short) | progress | translator
 name | progress | translator
 --- | --- | ---
 Agnes Tachyon | Complete | deepl
+Daiwa Scarlet | Complete | deepl (contributed by Korgi)
 Eishin Flash | In progress | deepl
 Gold City | Complete | deepl (contributed by CryDuringItAll)
 King Halo | Complete | deepl

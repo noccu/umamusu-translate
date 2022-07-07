@@ -38,6 +38,16 @@
         "limit": true
     },
     {
+        "re": "\\b[Aa]tashi\\b",
+        "repl": "I",
+        "limit": true
+    },
+    {
+        "re": "horse girl|umamusu|uma ?musume",
+        "repl": "horsegirl",
+        "limit": true
+    },
+    {
         "re": "(?:To?re?sc?ent?|Trespass(?:ing|er)|Tradesmen(?:'s)?) (?:Academy|Gakuen)",
         "repl": "Tracen Academy"
     },

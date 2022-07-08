@@ -361,7 +361,7 @@ def parseArgs():
 
     if args.dst is None:
         args.dst = PurePath("translations") / args.type
-    if args.upgrade or args.update:
+    if args.upgrade or args.update is not None:
         args.overwrite = True
     if isinstance(args.update, list) and len(args.update) == 0:
         args.update = common.TARGET_TYPES

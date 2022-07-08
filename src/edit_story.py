@@ -50,7 +50,8 @@ def load_block(event=None, loadBlocks=False, reload=False, dir=1):
     global next_index
     global btn_choices
     global cur_choices
-    global cur_choices_textboxes
+    global cur_colored
+    global extra_text_list_textboxes
 
     # print(cur_chapter, cur_block)
 
@@ -117,19 +118,29 @@ def load_block(event=None, loadBlocks=False, reload=False, dir=1):
     text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
 
     # Update choices button
-    btn_choices['state'] = 'disabled'
-    btn_choices.config(bg='SystemButtonFace')
-    if 'choices' in cur_block_data:
+    cur_choices = cur_block_data.get('choices')
+    if cur_choices:
         btn_choices['state'] = 'normal'
         btn_choices.config(bg='#00ff00')
-        toggleChoices(allowShow=False)
-        cur_choices = cur_block_data['choices']
-
+        toggleTextListPopup(allowShow=False, target=cur_choices)
+    else:
+        btn_choices['state'] = 'disabled'
+        btn_choices.config(bg='SystemButtonFace')
+        
+    # Update colored button
+    cur_colored = cur_block_data.get('coloredText')
+    if cur_colored:
+        btn_colored['state'] = 'normal'
+        btn_colored.config(bg='#00ff00')
+        toggleTextListPopup(allowShow=False, target=cur_colored)
+    else:
+        btn_colored['state'] = 'disabled'
+        btn_colored.config(bg='SystemButtonFace')
+        
 
 def save_block():
     global files
     global cur_chapter
-    global cur_choices
     global speaker_en_entry
     global text_box_en
     global block_duration_spinbox
@@ -175,56 +186,61 @@ def copy_block(event=None):
 
 
 def saveFile(event=None):
-    global files
-    global cur_chapter
     if save_on_next.get() == 0:
         print("Saved")
     save_block()
     files[cur_chapter].save()
 
 
-def show_choices():
-    if cur_choices:
-        for i, t in enumerate(cur_choices_textboxes):
-            if i < len(cur_choices):
+def show_text_list():
+    global cur_text_list
+
+    if cur_text_list:
+        cur_text_list = cur_text_list
+        for i, t in enumerate(extra_text_list_textboxes):
+            if i < len(cur_text_list):
                 jpBox, enBox = t
                 jpBox['state'] = 'normal' # enable insertion...
                 enBox['state'] = 'normal'
-                jpBox.insert(tk.END, cur_choices[i]['jpText'])
-                enBox.insert(tk.END, cur_choices[i]['enText'])
+                jpBox.insert(tk.END, cur_text_list[i]['jpText'])
+                enBox.insert(tk.END, cur_text_list[i]['enText'])
                 jpBox['state'] = 'disabled'
-        choices_window.deiconify()
+        text_list_window.deiconify()
 
 
-def close_choices():
-    for i, t in enumerate(cur_choices_textboxes):
+def close_text_list():
+    for i, t in enumerate(extra_text_list_textboxes):
         jpBox, enBox = t
-        if cur_choices and i < len(cur_choices):
-            cur_choices[i]['enText'] = cleanText(enBox.get(1.0, tk.END))  # choice don't really need special handling
+        if cur_text_list and i < len(cur_text_list):
+            cur_text_list[i]['enText'] = cleanText(enBox.get(1.0, tk.END))  # choice don't really need special handling
         jpBox['state'] = 'normal'  # enable deletion...
         jpBox.delete(1.0, tk.END)
         enBox.delete(1.0, tk.END)
         jpBox['state'] = 'disabled'
         enBox['state'] = 'disabled'
-    choices_window.withdraw()
+    text_list_window.withdraw()
 
 
-def create_choices():
-    global cur_choices_textboxes
-    global choices_window
+def create_text_list_popup():
+    global extra_text_list_textboxes
+    global text_list_window
     global cur_choices
-    global choice_scrollable
-    choice_scrollable = False
+    global cur_colored
+    global cur_text_list
+    global text_list_popup_scrollable
+    text_list_popup_scrollable = False
 
-    cur_choices_textboxes = list()
+    extra_text_list_textboxes = list()
     cur_choices = None
+    cur_colored = None
+    cur_text_list = None
 
-    choices_window = tk.Toplevel()
-    choices_window.protocol("WM_DELETE_WINDOW", close_choices)
-    choices_window.title("Choices")
-    choices_window.geometry("600x400")  # 800 for full
+    text_list_window = tk.Toplevel()
+    text_list_window.protocol("WM_DELETE_WINDOW", close_text_list)
+    text_list_window.title("Additional Text Lists")
+    text_list_window.geometry("580x450")  # 800 for full
 
-    scroll_frame = ttk.Frame(choices_window)
+    scroll_frame = ttk.Frame(text_list_window)
     scroll_frame.pack(fill='both', expand=True)
 
     scroll_canvas = tk.Canvas(scroll_frame)
@@ -240,11 +256,11 @@ def create_choices():
     scroll_canvas.create_window((0, 0), window=window_frame, anchor='nw')
 
     def toggle_scroll(e):
-        global choice_scrollable
-        choice_scrollable = not choice_scrollable
+        global text_list_popup_scrollable
+        text_list_popup_scrollable = not text_list_popup_scrollable
 
     def scroll(e):
-        if choice_scrollable:
+        if text_list_popup_scrollable:
             scroll_canvas.yview_scroll(-1 * int(e.delta / 35), "units")
 
     scroll_canvas.bind_all("<MouseWheel>", scroll)
@@ -256,16 +272,21 @@ def create_choices():
         cur_jp_text.pack(anchor="w")
         cur_en_text = tk.Text(window_frame, height=2, width=42, undo=True, font=large_font)
         cur_en_text.pack(anchor="w")
-        cur_choices_textboxes.append((cur_jp_text, cur_en_text))
+        extra_text_list_textboxes.append((cur_jp_text, cur_en_text))
         if i < 4:
             ttk.Separator(window_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
-    close_choices()
+    close_text_list()
 
 
-def toggleChoices(event=None, allowShow=True):
-    if choices_window.state() == "normal":
-        close_choices()
-    elif allowShow: show_choices()
+def toggleTextListPopup(event=None, allowShow=True, target=None):
+    global cur_text_list
+    if text_list_window.state() == "normal":
+        close_text_list()
+        # Actually open other type if old window closed by opening another type, 
+        if target is not cur_text_list: toggleTextListPopup(allowShow=allowShow, target=target)
+    elif allowShow: 
+        cur_text_list = target
+        show_text_list()
 
 
 def char_convert(event=None):
@@ -353,6 +374,7 @@ def main():
     global text_box_jp
     global text_box_en
     global btn_choices
+    global btn_colored
     global save_on_next
     global skip_translated
     global large_font
@@ -414,14 +436,16 @@ def main():
     text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
-    btn_choices = tk.Button(root, text="Choices", command=show_choices, state='disabled', width=10)
+    btn_choices = tk.Button(root, text="Choices", command=lambda: toggleTextListPopup(target=cur_choices), state='disabled', width=10)
     btn_choices.grid(row=5, column=0)
+    btn_colored = tk.Button(root, text="Colored", command=lambda: toggleTextListPopup(target=cur_colored), state='disabled', width=10)
+    btn_colored.grid(row=5, column=1)
     btn_reload = tk.Button(root, text="Reload", command=lambda: load_block(reload=True), width=10)
-    btn_reload.grid(row=5, column=1)
+    btn_reload.grid(row=5, column=2)
     btn_save = tk.Button(root, text="Save", command=saveFile, width=10)
-    btn_save.grid(row=5, column=2)
+    btn_save.grid(row=5, column=3)
     btn_next = tk.Button(root, text="Next", command=next_block, width=10)
-    btn_next.grid(row=5, column=3)
+    btn_next.grid(row=5, column=4)
 
     save_on_next = tk.IntVar()
     save_on_next.set(0)
@@ -435,15 +459,17 @@ def main():
     chapter_dropdown.current(cur_chapter)
     change_chapter()
     block_dropdown.current(cur_block)
-    create_choices()
+    create_text_list_popup()
 
     root.bind("<Control-Return>", next_block)
     root.bind("<Control-s>", saveFile)
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
     root.bind("<Alt-Right>", copy_block)
-    root.bind("<Alt-c>", toggleChoices)
-    choices_window.bind("<Alt-c>", toggleChoices)
+    root.bind("<Alt-c>", lambda _: toggleTextListPopup(target=cur_choices))
+    text_list_window.bind("<Alt-c>", lambda _: toggleTextListPopup(target=cur_choices))
+    root.bind("<Control-Alt-c>", lambda _: toggleTextListPopup(target=cur_colored))
+    text_list_window.bind("<Control-Alt-c>", lambda _: toggleTextListPopup(target=cur_colored))
     root.bind("<Alt-x>", char_convert)
     root.bind("<Control-BackSpace>", del_word)
     root.bind("<Control-Shift-BackSpace>", del_word)

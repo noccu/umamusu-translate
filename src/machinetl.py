@@ -36,7 +36,7 @@ async def startServer():
 
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol = None):
-        self.files = [args.src] if args.src else common.searchFiles(args.type, args.group, args.id, args.idx)
+        self.files = [args.src] if args.src else common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
 
         if USING_SERVER:
             self.client = client

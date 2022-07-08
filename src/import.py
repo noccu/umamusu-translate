@@ -44,7 +44,7 @@ class PatchManager:
 
     def start(self):
         print(f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}")
-        files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx)
+        files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx, changed = self.args.changed)
         nFiles = len(files)
         nErrors = 0
         print(f"Found {nFiles} files.")

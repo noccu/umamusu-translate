@@ -379,7 +379,7 @@ def main():
             for type in args.update or common.TARGET_TYPES:
                 args.dst = PurePath("translations") / type
                 args.type = type
-                files = common.searchFiles(type, args.group, args.id, args.idx)
+                files = common.searchFiles(type, args.group, args.id, args.idx, changed = args.changed)
                 print(f"Found {len(files)} files for {type}.")
                 for i, file in enumerate(files):
                     try:

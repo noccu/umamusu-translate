@@ -18,15 +18,20 @@ NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game name
 
 def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False) -> list:
     found = list()
+    isJson = lambda f: PurePath(f).suffix == ".json"
     if changed:
         from subprocess import run, PIPE
-        for l in run(["git", "status", "--short", "--porcelain"], stdout=PIPE, text=True).stdout.splitlines():
-            state, path = l[1], PurePath(l[3:])
+        cmd = ["git", "status", "--short", "--porcelain"] if changed is True else ["git", "show", "--pretty=", "--name-status", changed]
+        # assumes git-config quotedPath = true, which is default I believe. :tmopera:
+        for l in run(cmd, stdout=PIPE).stdout.decode('unicode-escape').encode("latin-1").decode().splitlines():
+            m = regex.match(".?([^\s])\s*\"?([^\"]+)\"?", l)
+            state, path = m[1], PurePath(m[2])
             if state in ("A", "M") and path.parts[0] == "translations" and path.parts[1] == targetType:
+                if not isJson(path): continue
+                if targetGroup and path.parts[2] != targetGroup: continue
+                if targetId and path.parts[3] != targetId: continue
                 found.append(str(path))
-        print(found)
     else:
-        isJson = lambda f: PurePath(f).suffix == ".json"
         searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
         for root, dirs, files in os.walk(searchDir):
             depth = len(dirs[0]) if dirs else -1
@@ -91,6 +96,7 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-g", "--group", help="The group to process")
             self.add_argument("-id", help="The id (subgroup) to process")
             self.add_argument("-idx", help="The specific asset index to process")
+            self.add_argument("--changed", nargs="?", default=False, const=True, help="Limit to changed files (requires git)")
             self.add_argument("-src", default=GAME_ASSET_ROOT)
             self.add_argument("-dst", default=Path("dat/").resolve())
         elif types:

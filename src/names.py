@@ -13,7 +13,7 @@ def createDict():
 
 
 def translate(namesDict, args):
-    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx)
+    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
 
     for file in files:
         file = common.TranslationFile(file)

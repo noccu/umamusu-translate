@@ -43,7 +43,7 @@ def main():
     if args.src:
         save(args.src, args.backup_dir, args.forcedl)
     else:
-        files = common.searchFiles(args.type, args.group, args.id, args.idx)
+        files = common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
         for file in files:
             file = common.TranslationFile(file)
             save(file.bundle, args.backup_dir, args.forcedl)

@@ -56,7 +56,7 @@ def getFiles(args):
 def backup(args):
     print("Backing up extracted files...")
     for type in common.TARGET_TYPES:
-        files = common.searchFiles(type, False, False)
+        files = common.searchFiles(type, False, False, changed = args.changed)
         for file in files:
             file = common.TranslationFile(file)
             copy(file.bundle, args)

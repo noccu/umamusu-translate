@@ -398,7 +398,6 @@ def main():
     ap = common.Args("Story editor", types=common.SUPPORTED_TYPES)
     ap.add_argument("-src")
     ap.add_argument("-dst", help=SUPPRESS)
-    ap.add_argument("--changed", action="store_true", help="Open all changed files (requires git)")
     args = ap.parse_args()
     if args.src:
         files = [args.src]

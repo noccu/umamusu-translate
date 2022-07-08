@@ -18,6 +18,19 @@ def change_chapter(event=None):
     cur_block = 0
     load_block(None, True)
 
+def prev_ch(event=None):
+    if cur_chapter - 1 > -1:
+        chapter_dropdown.current(cur_chapter - 1)
+        change_chapter()
+    else: print("Reached first chapter")
+
+
+def next_ch(event=None):
+    if cur_chapter + 1 < len(files):
+        chapter_dropdown.current(cur_chapter + 1)
+        change_chapter()
+    else: print("Reached last chapter")
+
 
 def change_block(event=None, dir=1):
     global cur_chapter
@@ -465,6 +478,8 @@ def main():
     root.bind("<Control-s>", saveFile)
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
+    root.bind("<Control-Alt-Up>", prev_ch)
+    root.bind("<Control-Alt-Down>", next_ch)
     root.bind("<Alt-Right>", copy_block)
     root.bind("<Alt-c>", lambda _: toggleTextListPopup(target=cur_choices))
     text_list_window.bind("<Alt-c>", lambda _: toggleTextListPopup(target=cur_choices))

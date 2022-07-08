@@ -55,8 +55,8 @@ def getFiles(args):
 
 def backup(args):
     print("Backing up extracted files...")
-    for type in common.TARGET_TYPES:
-        files = common.searchFiles(type, False, False, changed = args.changed)
+    for type in common.TARGET_TYPES if args.backup is True else [args.backup]:
+        files = common.searchFiles(type, args.group, args.id, args.idx, changed = args.changed)
         for file in files:
             file = common.TranslationFile(file)
             copy(file.bundle, args)
@@ -85,7 +85,7 @@ def main():
     ap.add_argument("-n", "--name", help="Unity filepath wildcard")
     ap.add_argument("-dst", default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
-    ap.add_argument("-B", "--backup", action="store_true", help="Backup all assets for which Translation Files exist")
+    ap.add_argument("-B", "--backup", nargs="?", default=False, const=True, help="Backup all assets for which Translation Files exist")
     args = ap.parse_args()
 
     if args.backup:

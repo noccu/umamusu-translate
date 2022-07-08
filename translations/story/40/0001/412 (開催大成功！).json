@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "NFYDQ4QKCKS3F5BODQTYX256YSZJWQB6",
     "type": "story",
     "storyId": "400001412",
@@ -11,6 +11,17 @@
             "jpText": "『URAファイナルズ』は\r\n大盛況ののちに幕を閉じた。\nだが、それだけでなく――",
             "enText": "The \"URA Finals\" ended with a bang. But \nthat's not all.",
             "nextBlock": 2,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": -4471101191234823831
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -1997720317754558200
+                }
+            ],
             "pathId": 2605361558614715120,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "<chrname>は\r\n初代ファイナルズ・チャンピオンに輝いた！",
             "enText": "<chrname> is our first Finals Champion!",
             "nextBlock": 3,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6067306979773505070
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3002045339046861825
+                }
+            ],
             "pathId": -8739510651018393150,
             "blockIdx": 2
         },
@@ -29,6 +51,7 @@
             "jpText": "<chrname>の存在は大会を盛り上げ、\r\n秋川理事長も大いに満足していたのだった。",
             "enText": "The presence of <chrname> livened up the \ncompetition, much to the satisfaction of \nChancellor Akikawa.",
             "nextBlock": -1,
+            "origClipLength": 73,
             "pathId": -8448410824034437587,
             "blockIdx": 3
         },
@@ -38,6 +61,7 @@
             "jpText": "<chrname>の存在は大会を大いに\r\n盛り上げ、人々を熱狂させた。",
             "enText": "The presence of <chrname> added a lot of \nexcitement to the event, and people were \nenthusiastic about it.",
             "nextBlock": 5,
+            "origClipLength": 67,
             "pathId": -6057917109671362233,
             "blockIdx": 4
         },
@@ -47,6 +71,7 @@
             "jpText": "URAファイナルズの大成功を祝し、\r\n秋川理事長は宴席を用意してくれ――",
             "enText": "To celebrate the great success \nof the URA Finals, Chancellor Akikawa \nhas arranged a banquet.",
             "nextBlock": 6,
+            "origClipLength": 68,
             "pathId": 5220781539137829596,
             "blockIdx": 5
         },
@@ -56,6 +81,17 @@
             "jpText": "そこで、扇子と盛大な褒め言葉を\r\nいただいたのだった。",
             "enText": "There, she received a fan \nand a grand compliment.",
             "nextBlock": 7,
+            "origClipLength": 62,
+            "animData": [
+                {
+                    "origLen": 152,
+                    "pathId": -3748780193556954001
+                },
+                {
+                    "origLen": 219,
+                    "pathId": 3492426051403690535
+                }
+            ],
             "pathId": -787489057081882540,
             "blockIdx": 6
         },
@@ -65,10 +101,21 @@
             "jpText": "『<itemname>』を獲得した",
             "enText": "I got \"<itemname>\".",
             "nextBlock": 8,
+            "origClipLength": 56,
             "coloredText": [
                 {
                     "jpText": "<itemname>",
                     "enText": "<itemname>"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 813175496837013965
+                },
+                {
+                    "origLen": 219,
+                    "pathId": 3951104301102356852
                 }
             ],
             "pathId": -7605292206868256842,
@@ -80,9 +127,20 @@
             "jpText": "いただいた扇子はしっかりと懐にしまい、\r\n秋川理事長の熱い想いにこれからも\n応えていこうと<chrname>と誓った！",
             "enText": "I put the fan in my pocket and vowed to live \nup to Chancellor Akikawa's passionate wishes. \n<chrname> and vowed to continue to live up to \nthe passionate wishes of Chancellor Akikawa!",
             "nextBlock": -1,
+            "origClipLength": 83,
+            "animData": [
+                {
+                    "origLen": 199,
+                    "pathId": 4792337128555751960
+                },
+                {
+                    "origLen": 232,
+                    "pathId": -644142579598872848
+                }
+            ],
             "pathId": 3258516571579038402,
             "blockIdx": 8
         }
     ],
-    "modified": 1657214453
+    "modified": 1657285600
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "4WA4PF5YBLDBCTDLMB5LDEIIJAII7S5M",
     "type": "story",
     "storyId": "400002112",
@@ -11,6 +11,17 @@
             "jpText": "お疲れ様です、トレーナーさん。\n素晴らしいチームワークですね。",
             "enText": "Thanks for your hard work, \ntrainer. Great teamwork.",
             "nextBlock": 2,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": -3745214519054366468
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 3781876625879617597
+                }
+            ],
             "pathId": 439382448834807429,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "応援の気持ちを込めて、\n特別にご用意させていただきました。",
             "enText": "We are pleased to offer this special program \nas a token of our support.",
             "nextBlock": 3,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 6310892735193939017
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -4012390405843426678
+                }
+            ],
             "pathId": 4175787083272263145,
             "blockIdx": 2
         },
@@ -29,10 +51,21 @@
             "jpText": "『<itemname>』を獲得した",
             "enText": "I got \"<itemname>\".",
             "nextBlock": 4,
+            "origClipLength": 67,
             "coloredText": [
                 {
                     "jpText": "<itemname>",
                     "enText": "<itemname>"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": -2400166153829255521
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 8334112459953152113
                 }
             ],
             "pathId": -3370567853644907331,
@@ -44,6 +77,17 @@
             "jpText": "たづなさんの特別な差し入れに団結力が増し、\n『アオハル杯』への意欲が高まった！",
             "enText": "Tazuna-san's special gift to us strengthened \nour unity and increased our motivation for \nthe \"Aoharu Cup\"!",
             "nextBlock": 5,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 4462532688321728309
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 9185872208924205749
+                }
+            ],
             "pathId": -8137282346302774069,
             "blockIdx": 4
         },
@@ -53,6 +97,17 @@
             "jpText": "……ちなみに、部室のグレードアップも\r\n行わせていただきました♪",
             "enText": "…… By the way, we also upgraded \nthe club room… ♪",
             "nextBlock": 6,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": 2100415858735711711
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 4567188307459695669
+                }
+            ],
             "pathId": -2401232262800899795,
             "blockIdx": 5
         },
@@ -62,9 +117,20 @@
             "jpText": "気に入っていただけると嬉しいです。\nこれからも、がんばってくださいね。",
             "enText": "I hope you like it. Please \nkeep up the good work.",
             "nextBlock": -1,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 2384996146256899180
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 530721872278829344
+                }
+            ],
             "pathId": 1428905658820606983,
             "blockIdx": 6
         }
     ],
-    "modified": 1657215161
+    "modified": 1657285618
 }

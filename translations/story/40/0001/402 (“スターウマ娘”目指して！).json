@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "SYEZHDSG3NX2LI2BRZ3RNUY3AV26G5PY",
     "type": "story",
     "storyId": "400001402",
@@ -11,6 +11,7 @@
             "jpText": "やる事なす事破天荒だが、ウマ娘への\r\n愛と情熱はピカイチのちびっこ理事長・秋川。",
             "enText": "Akikawa is a little boy who is a maverick in \neverything she does, but her love and passion \nfor the Uma Musume is unparalleled.",
             "nextBlock": 2,
+            "origClipLength": 71,
             "pathId": -8784393976315434533,
             "blockIdx": 1
         },
@@ -20,6 +21,17 @@
             "jpText": "そんな彼女から、『URAファイナルズ』の\r\n立役者となってほしい旨を伝えられた。",
             "enText": "She told me that she wanted me to play a \nleading role in \"URA Finals.",
             "nextBlock": 3,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 209,
+                    "pathId": 7815953729309346461
+                },
+                {
+                    "origLen": 147,
+                    "pathId": -1595360287716109253
+                }
+            ],
             "pathId": -1334271784851654672,
             "blockIdx": 2
         },
@@ -29,6 +41,17 @@
             "jpText": "多くのファンの期待と夢を背負う存在――\r\n“スターウマ娘”に<chrname>を\n育て上げること。",
             "enText": "To raise <chrname> into a \"Star Uma \nMusume,\" an existence that bears the \nhopes and dreams of many fans. <chrname> \ninto a \"star horse girl\".",
             "nextBlock": 4,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 196,
+                    "pathId": 7454380791984242862
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 7385268648901672938
+                }
+            ],
             "pathId": -8210160600024404548,
             "blockIdx": 3
         },
@@ -38,9 +61,20 @@
             "jpText": "そのために、まずは多くの人々の心を掴み、\r\nファンを増やさねばならない！",
             "enText": "To do this, we must first win the hearts and \nminds of many, and build our fan base!",
             "nextBlock": -1,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 196,
+                    "pathId": -350486141316267657
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 3013512901496056853
+                }
+            ],
             "pathId": 2799061598748518000,
             "blockIdx": 4
         }
     ],
-    "modified": 1657214429
+    "modified": 1657285599
 }

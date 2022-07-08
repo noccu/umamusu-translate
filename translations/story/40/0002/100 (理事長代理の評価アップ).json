@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "GMFZT7T2E54C3RVQGVSRHD6NAA65OL4T",
     "type": "story",
     "storyId": "400002100",
@@ -11,6 +11,17 @@
             "jpText": "トレーニング、拝見しました。\nそれなりに、頑張っているようですね。",
             "enText": "I saw your training. It seems that you are \ndoing a good job, in your own way.",
             "nextBlock": 2,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -4942747812176301750
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -3494820117734107761
+                }
+            ],
             "pathId": -1174881282927365059,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "努力する様子は嫌いではありません。\nこれからも、その調子で。",
             "enText": "I do not dislike the way you are trying. Keep \nup the good work.",
             "nextBlock": 3,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 2783728457100328494
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -3916569321815451498
+                }
+            ],
             "pathId": -5607467434103920640,
             "blockIdx": 2
         },
@@ -29,9 +51,20 @@
             "jpText": "――ただし、\r\n目を離さないように気をつけてください。",
             "enText": "―But be careful to keep an eye on them.",
             "nextBlock": -1,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -7441077739559189526
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -3769258300900957401
+                }
+            ],
             "pathId": -2424100076696790014,
             "blockIdx": 3
         }
     ],
-    "modified": 1657215152
+    "modified": 1657285617
 }

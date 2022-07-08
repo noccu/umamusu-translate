@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "QQPNKCDWGM2P5GL45B57BEYCW2FOCZJN",
     "type": "story",
     "storyId": "400002024",
@@ -11,6 +11,17 @@
             "jpText": "うぅ……\nごめんなさい……。",
             "enText": "Ugh…… sorry ……",
             "nextBlock": 2,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 7452744315023989681
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 9038353895180973904
+                }
+            ],
             "pathId": -5615557747712061942,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "ライス……もっと、みんなのために\nできることあったのに……。",
             "enText": "Rice…… could have done more for everyone. ……",
             "nextBlock": 3,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 6698046266945843710
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -1289618503605622955
+                }
+            ],
             "pathId": -8908749979547911839,
             "blockIdx": 2
         },
@@ -29,11 +51,22 @@
             "jpText": "次の『アオハル杯』……\r\nチーム＜ファースト＞との\nレースなのに……っ。",
             "enText": "The next \"AOHAL Cup\"…… is \na race with team <First>.",
             "nextBlock": 4,
+            "origClipLength": 91,
             "choices": [
                 {
                     "jpText": "次はきっと勝てる",
                     "enText": "We'll win next time.",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 4864637364041444860
+                },
+                {
+                    "origLen": 132,
+                    "pathId": 4180165325805972970
                 }
             ],
             "pathId": 624485589737655601,
@@ -45,11 +78,22 @@
             "jpText": "……う、うん……。",
             "enText": "……Uh, yeah……",
             "nextBlock": 5,
+            "origClipLength": 56,
             "choices": [
                 {
                     "jpText": "チームを信じよう",
                     "enText": "Believe in the team",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": -4780168885655635556
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 2494976030931125114
                 }
             ],
             "pathId": 4077613643910737877,
@@ -61,6 +105,17 @@
             "jpText": "そう、だよね……。\nライスだけじゃ、ないもん……。",
             "enText": "Yes, right.…… Rice is not the only thing. ……",
             "nextBlock": 6,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": 2999632728165985021
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 7963344395726738161
+                }
+            ],
             "pathId": -2969536645138277877,
             "blockIdx": 5
         },
@@ -70,9 +125,20 @@
             "jpText": "うん……次は絶対……\nみんなで、勝つんだ……！",
             "enText": "Yeah…… next time I'm sure…… we'll all win ……!",
             "nextBlock": -1,
+            "origClipLength": 79,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 8989672318049298712
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -4415108978864753116
+                }
+            ],
             "pathId": -3954566259473558982,
             "blockIdx": 6
         }
     ],
-    "modified": 1657214836
+    "modified": 1657285609
 }

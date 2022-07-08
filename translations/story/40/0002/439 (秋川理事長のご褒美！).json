@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "ZWUFSOMIBUWCSGZLWR5QLXTXVAPIR2TQ",
     "type": "story",
     "storyId": "400002439",
@@ -11,6 +11,17 @@
             "jpText": "『アオハル杯』の結果は見事優勝！\n目覚ましい奮闘により、樫本理子と\nそのチームメンバーの心は救われた。",
             "enText": "Aoharu Cup\" was won by a landslide! The \nremarkable effort saved the hearts of Riko \nKashimoto and her team members. and her team \nmembers' hearts were saved.",
             "nextBlock": 2,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": 9033825558334496632
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -2044444787627139380
+                }
+            ],
             "pathId": -4490291199937078207,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "その功績をたたえ、\n秋川理事長から特別ボーナスとして、\nにんじんBBQいってらっしゃい券が贈呈――",
             "enText": "In honor of this achievement, President \nAkikawa presented a special bonus a special \nbonus ticket to the Carrot BBQ…",
             "nextBlock": 3,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -7996079981125353043
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -7454676617930925211
+                }
+            ],
             "pathId": -6175775317866948812,
             "blockIdx": 2
         },
@@ -29,6 +51,21 @@
             "jpText": "さらにチーム＜キャロッツ＞に\r\nふさわしい副賞も授けられた。",
             "enText": "In addition, Team Carrots received a prize \nworthy of its name.",
             "nextBlock": 4,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -6542543130666658671
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -2861763324848713003
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 1450264495080783157
+                }
+            ],
             "pathId": -2091036761290167239,
             "blockIdx": 3
         },
@@ -38,10 +75,17 @@
             "jpText": "『<itemname>』を獲得した！",
             "enText": "I got \"<itemname>\"!",
             "nextBlock": 5,
+            "origClipLength": 68,
             "coloredText": [
                 {
                     "jpText": "itemname",
                     "enText": "itemname"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": -7989930084737803900
                 }
             ],
             "pathId": 4760108225720583649,
@@ -53,6 +97,13 @@
             "jpText": "かくしてお祝いをしていると、樫本理子と\r\n教え子たちに遭遇。同じトレーナーとして\n今後ともよろしくと挨拶を交わした。",
             "enText": "While celebrating, I ran into Riko Kashimoto \nand her students. As the same trainer I \ngreeted them and said hello to them as we \nshare the same trainer.",
             "nextBlock": 6,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 8389064280349174271
+                }
+            ],
             "pathId": 6651022330316262041,
             "blockIdx": 5
         },
@@ -62,9 +113,10 @@
             "jpText": "まだまだこれからも道は続く。\r\n今後もしっかり頑張っていこうと、\n<chrname>と誓うのだった。",
             "enText": "We still have a ways to go in the future. I \nvowed with <chrname> that I would continue to \ndo my best in the future. <chrname> and vowed \nto do our best in the future.",
             "nextBlock": -1,
+            "origClipLength": 110,
             "pathId": -958111084212165876,
             "blockIdx": 6
         }
     ],
-    "modified": 1657215352
+    "modified": 1657285625
 }

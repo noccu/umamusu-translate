@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "FYNNF74JNMYXSBLR4U2FJFCMXTA54IV5",
     "type": "story",
     "storyId": "400002022",
@@ -11,6 +11,17 @@
             "jpText": "ついに『アオハル杯』\r\nプレシーズン4戦目を迎えた！",
             "enText": "Finally, the fourth preseason \ngame of the \"Aoharu Hai!\"",
             "nextBlock": 2,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 7253878609023744825
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 3006385079180440010
+                }
+            ],
             "pathId": 4825464263555538735,
             "blockIdx": 1
         },
@@ -20,6 +31,7 @@
             "jpText": "がんばれー、がんばれー。\nが……がんばれー。",
             "enText": "Hang in there - hang in there! You can find \nthe website at ……",
             "nextBlock": 3,
+            "origClipLength": 75,
             "choices": [
                 {
                     "jpText": "何してるんだ？",
@@ -32,6 +44,16 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": -2248667770040368903
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 6937465855012796588
+                }
+            ],
             "pathId": 8242741466271103569,
             "blockIdx": 2
         },
@@ -41,6 +63,17 @@
             "jpText": "あっ、え、えっと……その……。",
             "enText": "Oh, uh, uh…… that ……",
             "nextBlock": 4,
+            "origClipLength": 74,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 73213612730438737
+                },
+                {
+                    "origLen": 85,
+                    "pathId": -7279746796935636999
+                }
+            ],
             "pathId": 5268792066721728329,
             "blockIdx": 3
         },
@@ -50,6 +83,17 @@
             "jpText": "いっつも、ライスの不幸のせいで\nみんなに迷惑かけちゃってるから……。",
             "enText": "Rice's misfortunes have always caused trouble \nfor everyone. ……",
             "nextBlock": 5,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 158,
+                    "pathId": 6035153854734004881
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -3273106073494805589
+                }
+            ],
             "pathId": -2791102354096230332,
             "blockIdx": 4
         },
@@ -59,11 +103,22 @@
             "jpText": "せめて、少しだけでも力になれるように……\n応援の練習してたの……。",
             "enText": "I was practicing my cheering…… so that I \ncould help at least a little. ……",
             "nextBlock": 6,
+            "origClipLength": 89,
             "choices": [
                 {
                     "jpText": "きっと力になるよ",
                     "enText": "I'm sure I can help you.",
                     "nextBlock": 6
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": 8045347915423375407
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -4862835194147562197
                 }
             ],
             "pathId": -296843844652347184,
@@ -75,6 +130,17 @@
             "jpText": "……！\nほ、ほんとう……？",
             "enText": "……! Really, really ……?",
             "nextBlock": 7,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -4906139929610936291
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 4425010453567829299
+                }
+            ],
             "pathId": -5947283701559269235,
             "blockIdx": 6
         },
@@ -84,9 +150,20 @@
             "jpText": "だったら、うれしいな……。",
             "enText": "If so, I'd be happy. ……",
             "nextBlock": -1,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 4298513289067950407
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 7615815215392049655
+                }
+            ],
             "pathId": -4326607675328624982,
             "blockIdx": 7
         }
     ],
-    "modified": 1657214822
+    "modified": 1657285608
 }

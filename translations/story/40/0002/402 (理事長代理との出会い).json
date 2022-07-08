@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "XA5N25SWIOD4C472FIMYFLVLK5VJ65KL",
     "type": "story",
     "storyId": "400002402",
@@ -11,6 +11,17 @@
             "jpText": "トレーニング中に見知らぬ女性と出会う。\nその女性は『トレーニング内容がぬるい』と\n辛らつに言い放った。",
             "enText": "You meet a stranger during a training \nsession. The woman said bitterly, 'The \ntraining is not good enough. She said \nbitterly, 'The training is too lukewarm.",
             "nextBlock": 2,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -4817905646482771493
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 4140341491637388803
+                }
+            ],
             "pathId": -3163900471723154567,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "冷徹な批判はさらに続く。ウマ娘の自主性を\n尊重する学園の教育方針は間違っている、と。",
             "enText": "The cold-blooded criticism continues. The \nschool's educational policy of respecting the \nautonomy of Uma Musume is wrong.",
             "nextBlock": 3,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": 4530273934134288371
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -6192235216331390433
+                }
+            ],
             "pathId": -8257457237617275891,
             "blockIdx": 2
         },
@@ -29,6 +51,17 @@
             "jpText": "遠くに見えるあの森林も、人の管理で\n美しさを保てている。それはウマ娘に\nついても同様なのだ、と。",
             "enText": "Even that forest in the distance is \nkept beautiful by human management. \nIt is the same for Uma Musume. The \nsame is true for the Uma Musume.",
             "nextBlock": 4,
+            "origClipLength": 107,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": 1314355118383661375
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 3369152110161001868
+                }
+            ],
             "pathId": -183854904523178377,
             "blockIdx": 3
         },
@@ -38,15 +71,26 @@
             "jpText": "そう、彼女こそ理事長代理として派遣された\r\n『樫本　理子』【かしもと　りこ】\nなのであった。",
             "enText": "Yes, she was Riko Kashimoto, who was \ndispatched as the acting president.",
             "nextBlock": -1,
+            "origClipLength": 105,
             "coloredText": [
                 {
                     "jpText": "樫本　理子",
                     "enText": "Riko Kashimoto"
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": 2298555358395878758
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -748704748888976594
+                }
+            ],
             "pathId": 7719850981276823876,
             "blockIdx": 4
         }
     ],
-    "modified": 1657215282
+    "modified": 1657285622
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "TXBZHCMP7ADAQVTM66X44OQ7VNELO3L4",
     "type": "story",
     "storyId": "400001021",
@@ -11,6 +11,7 @@
             "jpText": "<chrname>と共に走り続け、\nあっという間に月日が流れた。",
             "enText": "The days passed by in a blink of an eye as we \ncontinued to run with <chrname>.",
             "nextBlock": 2,
+            "origClipLength": 86,
             "pathId": -3651636175232817992,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "そして――",
             "enText": "And―",
             "nextBlock": 3,
+            "origClipLength": 51,
             "pathId": -5111755799988411243,
             "blockIdx": 2
         },
@@ -29,6 +31,21 @@
             "jpText": "吉報ッ！\r\nよい知らせを持ってきたぞ！",
             "enText": "Good news! I have good news!",
             "nextBlock": 4,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -6542394583382184071
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 3263306400321649925
+                },
+                {
+                    "origLen": 226,
+                    "pathId": 8096110670755313958
+                }
+            ],
             "pathId": 5609442897234102668,
             "blockIdx": 3
         },
@@ -38,6 +55,21 @@
             "jpText": "君の担当するウマ娘は、\nその活躍を評価され――",
             "enText": "Your horsegirls will be recognized \nfor their achievements.",
             "nextBlock": 5,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": -8600374348244060955
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -5020338999864058995
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 3523205316055231134
+                }
+            ],
             "pathId": 7808596247626444211,
             "blockIdx": 4
         },
@@ -47,11 +79,26 @@
             "jpText": "見事ッ！！　『URAファイナルズ』への\r\n出走が決定したぞ！！",
             "enText": "Well done! You have been selected to \nparticipate in the URA Finals!",
             "nextBlock": 6,
+            "origClipLength": 85,
             "choices": [
                 {
                     "jpText": "ありがとうございます！",
                     "enText": "Thank you!",
                     "nextBlock": 6
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 1701867282636688843
+                },
+                {
+                    "origLen": 130,
+                    "pathId": 540884665855447631
+                },
+                {
+                    "origLen": 10,
+                    "pathId": 1552847332549880411
                 }
             ],
             "pathId": 666485391133746340,
@@ -63,6 +110,21 @@
             "jpText": "恐縮ッ！\n礼を言いたいのはこっちだ！",
             "enText": "Thank you! I'm the one who wants to thank you!",
             "nextBlock": 7,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 3635514880340159285
+                },
+                {
+                    "origLen": 190,
+                    "pathId": 5206026212567241899
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 131983849181355607
+                }
+            ],
             "pathId": -591971942367078658,
             "blockIdx": 6
         },
@@ -72,6 +134,17 @@
             "jpText": "君は、スターウマ娘を育ててほしいという\r\nわたしの期待に――",
             "enText": "You've lived up to my expectations of raising \na star horse girl.",
             "nextBlock": 8,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 190,
+                    "pathId": 7628254465943582193
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -4849647044881609204
+                }
+            ],
             "pathId": 7085805561976592619,
             "blockIdx": 7
         },
@@ -81,6 +154,17 @@
             "jpText": "見事ッ！\r\nしっかりと応えてくれた！！",
             "enText": "Brilliant! They responded well!",
             "nextBlock": 9,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 6448260626891811383
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -7636889655839149325
+                }
+            ],
             "pathId": 5446358170718320315,
             "blockIdx": 8
         },
@@ -90,6 +174,21 @@
             "jpText": "多くの人の心を掴むウマ娘が出走となれば、\r\nレースも盛り上がるに違いない！",
             "enText": "With the Uma Musume running, which has \ncaptured the hearts of so many, the race is \nbound to be a lot of fun!",
             "nextBlock": 10,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -7157677027233113583
+                },
+                {
+                    "origLen": 173,
+                    "pathId": -8229173123566296098
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -8718601727646543957
+                }
+            ],
             "pathId": -2719012449185514719,
             "blockIdx": 9
         },
@@ -99,6 +198,17 @@
             "jpText": "『URAファイナルズ』は、誰もが楽しめる\r\n夢の大舞台となるだろう！",
             "enText": "The URA Finals will be a dream \ncome true for everyone!",
             "nextBlock": 14,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 7338925003334610510
+                },
+                {
+                    "origLen": 134,
+                    "pathId": -165779225933598587
+                }
+            ],
             "pathId": -6850074720352530275,
             "blockIdx": 10
         },
@@ -108,6 +218,17 @@
             "jpText": "花丸ッ！　こちらの想像を\n遥かに超える結果を出してくれた！",
             "enText": "Hanamaru! You did far better than we could \nhave ever imagined!",
             "nextBlock": 12,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": 7043426860832548263
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 1348401209910797924
+                }
+            ],
             "pathId": -6907910660436392928,
             "blockIdx": 11
         },
@@ -117,6 +238,17 @@
             "jpText": "きっとレースでもたくさんの声援が飛び交い、\n大盛り上がりは間違いないだろう！",
             "enText": "I'm sure there will be lots of cheering and \nexcitement at the race!",
             "nextBlock": 13,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": 587126422019505990
+                },
+                {
+                    "origLen": 134,
+                    "pathId": -6160897600589840555
+                }
+            ],
             "pathId": -6311324971556793052,
             "blockIdx": 12
         },
@@ -126,6 +258,17 @@
             "jpText": "君の担当が走って、『URAファイナルズ』\r\nが失敗に終わるわけがないっ！",
             "enText": "There is no way \"URA Finals\" will fail with \nyou in charge running it!",
             "nextBlock": 14,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -5276491180652063956
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 8498773912518764654
+                }
+            ],
             "pathId": -2315929006294481505,
             "blockIdx": 13
         },
@@ -135,6 +278,17 @@
             "jpText": "……それと、もう1つ。",
             "enText": "…… And one more thing.",
             "nextBlock": 15,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 2403978958149688845
+                },
+                {
+                    "origLen": 134,
+                    "pathId": -3745764565737752634
+                }
+            ],
             "pathId": -4489846613513645643,
             "blockIdx": 14
         },
@@ -144,6 +298,21 @@
             "jpText": "君たちの協力があったからこそ、\r\nここまで至ることができた。",
             "enText": "It is your cooperation that has \nbrought us to this point.",
             "nextBlock": 16,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 142,
+                    "pathId": 3933589038079778668
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -3873251584359539052
+                },
+                {
+                    "origLen": 134,
+                    "pathId": -6481551383540006247
+                }
+            ],
             "pathId": -2661918307749593799,
             "blockIdx": 15
         },
@@ -153,6 +322,21 @@
             "jpText": "『URAファイナルズ』のコースには、\r\n君たちが声をかけ――",
             "enText": "The URA Finals course is a great place for \nyou guys to meet and talk…",
             "nextBlock": 17,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 4349580550651023136
+                },
+                {
+                    "origLen": 160,
+                    "pathId": -6991593654076197455
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 1187387811766708492
+                }
+            ],
             "pathId": 1424344575544227856,
             "blockIdx": 16
         },
@@ -162,6 +346,17 @@
             "jpText": "そして、多くの人々が育て上げてくれた、\r\n青々とした芝が風にそよぐことだろう！",
             "enText": "And the lush green grass that so many people \nhave nurtured will be swaying in the breeze!",
             "nextBlock": 18,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -3327051267901516906
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 4911417921113885806
+                }
+            ],
             "pathId": -5561163000899849145,
             "blockIdx": 17
         },
@@ -171,6 +366,21 @@
             "jpText": "多謝ッ！　深謝ッ！！\r\n本当にありがとうございましたっ！",
             "enText": "Many thanks! Thank you very \nmuch! Thank you very much!",
             "nextBlock": 19,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": 1270863389759467075
+                },
+                {
+                    "origLen": 134,
+                    "pathId": -8592821169126099088
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -1039810588415689707
+                }
+            ],
             "pathId": -7234909265700532678,
             "blockIdx": 18
         },
@@ -180,11 +390,26 @@
             "jpText": "――さあ『URAファイナルズ』はもう目前！\r\n最高の走りを期待している！",
             "enText": "―Now, the \"URA Finals\" are just around the \ncorner! We're expecting your best run yet!",
             "nextBlock": 20,
+            "origClipLength": 91,
             "choices": [
                 {
                     "jpText": "みんなの記憶に残るレースにします！",
                     "enText": "We'll make this race one \nto remember for everyone!",
                     "nextBlock": 20
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 7275662938665378753
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 3116941223360717875
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 5522110417464864933
                 }
             ],
             "pathId": -921925410087970323,
@@ -196,6 +421,17 @@
             "jpText": "うむっ！　後に続くウマ娘たちの\n憧れとなり、目標となってくれ！",
             "enText": "Mm! Be a role model and a goal for the \nhorsegirls that follow you!",
             "nextBlock": 21,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": -3828939959489359676
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 2276060828977117048
+                }
+            ],
             "pathId": 5738359378433055983,
             "blockIdx": 20
         },
@@ -205,6 +441,37 @@
             "jpText": "おめでとうございます、\r\n<username>トレーナー！",
             "enText": "Congratulations, <username> trainer!",
             "nextBlock": 22,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": 3183895179110200962
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -2886104038160472346
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 102448431506869328
+                },
+                {
+                    "origLen": 151,
+                    "pathId": 6110534958357036219
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 118392229090373258
+                },
+                {
+                    "origLen": 224,
+                    "pathId": 6298984833207902718
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 4200905432110274617
+                }
+            ],
             "pathId": 3712333625011335948,
             "blockIdx": 21
         },
@@ -214,6 +481,25 @@
             "jpText": "……ぱちぱち。",
             "enText": "…… crackle.",
             "nextBlock": 23,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 151,
+                    "pathId": -5580159680058763172
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -7499682439827651235
+                },
+                {
+                    "origLen": 48,
+                    "pathId": 8240590358946231206
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 7379991346828079277
+                }
+            ],
             "pathId": -5180585933379503673,
             "blockIdx": 22
         },
@@ -223,6 +509,25 @@
             "jpText": "実は……私たちも、出走が叶ったんです。\r\n先程そのご連絡をいただきました。",
             "enText": "Actually…… we were able to make the run, too. \nWe have just received that notice.",
             "nextBlock": 24,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": 5255287431550539993
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -4317524223517910251
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 4167855773701813833
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 8289296384519945965
+                }
+            ],
             "pathId": 5491397904331626350,
             "blockIdx": 23
         },
@@ -232,6 +537,25 @@
             "jpText": "……ぶい。",
             "enText": "…… buoy.",
             "nextBlock": 25,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": 4473469229536951589
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -5536653484118058741
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 4217217358032671
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -7112955692463557250
+                }
+            ],
             "pathId": 3102947178153063294,
             "blockIdx": 24
         },
@@ -241,6 +565,25 @@
             "jpText": "私はミークと共に、必ず栄冠を掴みます。",
             "enText": "I will surely grab the crown \ntogether with Meek.",
             "nextBlock": 26,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3191914203098817764
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 6019845525424452640
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -4847720754970195158
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -3078387509205835566
+                }
+            ],
             "pathId": -953506911006434298,
             "blockIdx": 25
         },
@@ -250,6 +593,25 @@
             "jpText": "そして……トレーナーとして、\r\n貴方に負けないくらい成長してみせます！",
             "enText": "And as a…… trainer, I will \ngrow as much as you!",
             "nextBlock": 27,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 822007502621700453
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 4761638724202133198
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -8449712545467974623
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 8459666275646307702
+                }
+            ],
             "pathId": 8367467707658049476,
             "blockIdx": 26
         },
@@ -259,6 +621,25 @@
             "jpText": "貴方に教えを乞うばかりでなく……\r\n貴方と並べる私になれるように。",
             "enText": "Not only to ask you to teach me, but also \nto…… be me alongside you.",
             "nextBlock": 28,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 6693959267438825349
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 3769586041656762498
+                },
+                {
+                    "origLen": 114,
+                    "pathId": 2807034700947893665
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 4336915229776572364
+                }
+            ],
             "pathId": -7416006814663381903,
             "blockIdx": 27
         },
@@ -268,6 +649,29 @@
             "jpText": "……なれます。",
             "enText": "You can visit ……",
             "nextBlock": 29,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 706965245663594600
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 3461818675259467287
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 620414887686931704
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -5378218194065256047
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -7945228184095314056
+                }
+            ],
             "pathId": 3154101489146894122,
             "blockIdx": 28
         },
@@ -277,6 +681,29 @@
             "jpText": "……あなたにも、あなたの担当ウマ娘にも。\r\n……負けません。",
             "enText": "…… to you and to the Uma girl in charge of \nyou. We will not lose ……",
             "nextBlock": 30,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 2351074824859081969
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -8525998535319238690
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 8470007089750856008
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3206155532788353211
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -5804207589727255680
+                }
+            ],
             "pathId": 3532688468399017064,
             "blockIdx": 29
         },
@@ -286,6 +713,29 @@
             "jpText": "……私のトレーナーは、すごいので。\r\n…………どや。",
             "enText": "…… because my trainer is awesome.……… doya.",
             "nextBlock": 31,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 1691050321607124749
+                },
+                {
+                    "origLen": 130,
+                    "pathId": -8962013309322122893
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 5138491834728231029
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -4339017889875408508
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -2670647280262634260
+                }
+            ],
             "pathId": -4386321300949946363,
             "blockIdx": 30
         },
@@ -295,6 +745,29 @@
             "jpText": "ふふっ……ありがとう、ミーク。",
             "enText": "Phew.…… Thanks, Meek.",
             "nextBlock": 32,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": -6035443160686626594
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 7611714154742031716
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -8652402873377069826
+                },
+                {
+                    "origLen": 127,
+                    "pathId": 6113931864465821227
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 2013947051263100774
+                }
+            ],
             "pathId": -7063686647150804647,
             "blockIdx": 31
         },
@@ -304,6 +777,29 @@
             "jpText": "さて……<username>トレーナー！\r\n共に担当ウマ娘を輝かせましょう！",
             "enText": "Well ……<username>trainer! Together, let's \nmake the horsegirls in our charge shine!",
             "nextBlock": 33,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -8927703276027811916
+                },
+                {
+                    "origLen": 94,
+                    "pathId": 8708117494928333456
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -5853548252445867718
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8613694489208802456
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -8232695553222320054
+                }
+            ],
             "pathId": -784631000906159158,
             "blockIdx": 32
         },
@@ -313,9 +809,28 @@
             "jpText": "こうして、選りすぐりの強豪が集う\r\n『URAファイナルズ』への出走が決定した！",
             "enText": "And so, the best of the best have decided to \nrun in the \"URA Finals\"!",
             "nextBlock": -1,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -4201188805964219110
+                },
+                {
+                    "origLen": 17,
+                    "pathId": -3227917612736758235
+                },
+                {
+                    "origLen": 22,
+                    "pathId": -6952198465246074189
+                },
+                {
+                    "origLen": 22,
+                    "pathId": -2130620761820306195
+                }
+            ],
             "pathId": -235938954885409325,
             "blockIdx": 33
         }
     ],
-    "modified": 1657214195
+    "modified": 1657285594
 }

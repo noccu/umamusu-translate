@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "5WURDEW72XFBFGINCLQP5XSZKD62ZEYK",
     "type": "story",
     "storyId": "400002002",
@@ -11,6 +11,7 @@
             "jpText": "秋川理事長が飛び立ってから数日が経った\r\nある日、<chrname>を\n外周に送り出したころ――",
             "enText": "One day, a few days after Chancellor Akikawa \ntook off Around the time she sent <chrname> \nout to the outer perimeter―",
             "nextBlock": 2,
+            "origClipLength": 107,
             "pathId": 8527859782031025613,
             "blockIdx": 1
         },
@@ -20,6 +21,17 @@
             "jpText": "…………。",
             "enText": "…………",
             "nextBlock": 3,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -7425002049034719377
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -391128059593885664
+                }
+            ],
             "pathId": 1301320344128708051,
             "blockIdx": 2
         },
@@ -29,11 +41,22 @@
             "jpText": "見覚えのない女性が、トレーニング中の\r\nウマ娘たちを見つめていることに気づいた。",
             "enText": "I noticed an unfamiliar woman staring at the \nUma girls in training.",
             "nextBlock": 4,
+            "origClipLength": 97,
             "choices": [
                 {
                     "jpText": "あの……？",
                     "enText": "That ……?",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -4815954265955611398
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 4787866868601500606
                 }
             ],
             "pathId": -250470491911066552,
@@ -45,6 +68,17 @@
             "jpText": "……貴方……。\r\n先ほど外周へ行った子のトレーナーですね。",
             "enText": "…… Your…… You are the trainer of the girl who \njust went to the perimeter.",
             "nextBlock": 5,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": 8048425971678458181
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -3514337246484707394
+                }
+            ],
             "pathId": -4521907990508868143,
             "blockIdx": 4
         },
@@ -54,6 +88,17 @@
             "jpText": "貴方のトレーニング、拝見させていただき\r\nました。出会い頭に不躾を承知で言います。",
             "enText": "I have been watching your training. \nI know it is rude to say this at \nthe outset of our meeting.",
             "nextBlock": 6,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 7230007653760048162
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -5129951698424474161
+                }
+            ],
             "pathId": -7048168417081816021,
             "blockIdx": 5
         },
@@ -63,11 +108,26 @@
             "jpText": "――ぬるい。",
             "enText": "―Lukewarm.",
             "nextBlock": 7,
+            "origClipLength": 52,
             "choices": [
                 {
                     "jpText": "えっ",
                     "enText": "What's up?",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 6253625735713696757
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6232793734265602121
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -5653730450713467751
                 }
             ],
             "pathId": -3497161111436402465,
@@ -79,6 +139,17 @@
             "jpText": "自主トレーニングの容認、開始時刻の不徹底。\r\n休憩時間の他ウマ娘との無駄話の許可――",
             "enText": "Permission for independent training, \nand non-observance of start times. \nPermission for idle chats with other \nhorse girls during breaks.",
             "nextBlock": 8,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 2617053472152639607
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 1665374184043757700
+                }
+            ],
             "pathId": 423785986682230556,
             "blockIdx": 7
         },
@@ -88,6 +159,17 @@
             "jpText": "あら、納得のいっていない顔ですね。",
             "enText": "Oh, you look unconvinced.",
             "nextBlock": 9,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2496339159363890698
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -3867442162987177514
+                }
+            ],
             "pathId": 8213195006638371558,
             "blockIdx": 8
         },
@@ -97,11 +179,26 @@
             "jpText": "では、彼女の睡眠時間と日々の睡眠満足度は？\r\n毎日欠かさずヒアリングしていますか？",
             "enText": "So how much sleep does she get and how \nsatisfied is she with her daily sleep? Do you \nhave a daily hearing without fail?",
             "nextBlock": 10,
+            "origClipLength": 98,
             "choices": [
                 {
                     "jpText": "い、いえ……",
                     "enText": "Yes and no: ……",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": -5131246314369822328
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -7231205340104753099
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -3744573659112760948
                 }
             ],
             "pathId": 6537868652830978042,
@@ -113,11 +210,26 @@
             "jpText": "睡眠不足はパフォーマンスの低下ばかりか\r\n事故を誘発します。把握して当然の事項です。",
             "enText": "Lack of sleep not only reduces performance, \nit can also cause accidents. It is a matter \nof course to be understood.",
             "nextBlock": 11,
+            "origClipLength": 99,
             "choices": [
                 {
                     "jpText": "すみません……",
                     "enText": "Sorry ……",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 445406557732510203
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -6140872505101559344
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -9149621304175342067
                 }
             ],
             "pathId": -1219709271654175279,
@@ -129,6 +241,17 @@
             "jpText": "……この学園が、生徒の自主性を\r\n重んじていることは、当然、知っています。",
             "enText": "We know, of course, that this school values \nthe autonomy of its students. ……",
             "nextBlock": 12,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 6298196651517341846
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -8764253498335098318
+                }
+            ],
             "pathId": 318164111537156489,
             "blockIdx": 11
         },
@@ -138,6 +261,21 @@
             "jpText": "しかし、その指針がそもそも――無責任です。",
             "enText": "But the guidelines are - in the first place - \nirresponsible.",
             "nextBlock": 13,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -4674832867731009391
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7053595506204882684
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 4301015617052697005
+                }
+            ],
             "pathId": -324377984585135325,
             "blockIdx": 12
         },
@@ -147,6 +285,21 @@
             "jpText": "と、女性は静かに遠くの山へ視線を投げた。",
             "enText": "The woman quietly threw her gaze to the \nmountains in the distance.",
             "nextBlock": 14,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -2788978870892694346
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 9118286667314995286
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 8944998079896516635
+                }
+            ],
             "pathId": 8943664238277393327,
             "blockIdx": 13
         },
@@ -156,6 +309,21 @@
             "jpText": "――遠くに見えるあの杉山、シーズンには\r\n登山客で賑わう人気のスポットです。",
             "enText": "―The cedar mountain seen in the distance is a \npopular spot for climbers during the season.",
             "nextBlock": 15,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": 1254997260509779945
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -5931519872101196142
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -592516202820832249
+                }
+            ],
             "pathId": 8111593626147918882,
             "blockIdx": 14
         },
@@ -165,6 +333,7 @@
             "jpText": "立派な杉の大木がざわめき、小鳥がさえずり、\r\nやわらかい腐葉土が足元を包み込んでくれる。",
             "enText": "The large cedar trees rustle, birds chirp, \nand the soft humus envelops our feet.",
             "nextBlock": 16,
+            "origClipLength": 102,
             "pathId": -4251802666241748371,
             "blockIdx": 15
         },
@@ -174,6 +343,21 @@
             "jpText": "しかし、この国の多くの山がそうである\r\nように、あれは人の手が加えられてこその姿。",
             "enText": "However, like many mountains in this country, \nthey are only as good as the human touch.",
             "nextBlock": 17,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 170,
+                    "pathId": 8770060780825033266
+                },
+                {
+                    "origLen": 147,
+                    "pathId": -8176223063931707879
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -2087377957047704482
+                }
+            ],
             "pathId": -1225340716694399499,
             "blockIdx": 16
         },
@@ -183,6 +367,21 @@
             "jpText": "管理が届かない山は荒廃します。\r\n陽は差さず、草は枯れ、足元には\n堆積した腐植土か、枯死した倒木ばかり。",
             "enText": "Mountains that are not managed well fall into \ndisrepair. The sun does not shine, the grass \nis dead, and underfoot the grass is dead, and \nunderfoot there is only accumulated humus or \ndead fallen trees.",
             "nextBlock": 18,
+            "origClipLength": 112,
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": -6570367584650269047
+                },
+                {
+                    "origLen": 147,
+                    "pathId": 6083714916906014019
+                },
+                {
+                    "origLen": 148,
+                    "pathId": 382560227197400791
+                }
+            ],
             "pathId": 451649427500120386,
             "blockIdx": 17
         },
@@ -192,6 +391,21 @@
             "jpText": "土砂災害や洪水の原因ともなり得ます。\r\n“管理”というのはそういうこと。",
             "enText": "It can also cause landslides and flooding. \nThat is what \"management\" means.",
             "nextBlock": 19,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -8371414223849003136
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 531825798158310658
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 6560858761400409155
+                }
+            ],
             "pathId": -5871011936681169773,
             "blockIdx": 18
         },
@@ -201,6 +415,17 @@
             "jpText": "未成熟な少女が荒廃していくのをただ見守る、\r\nというのは優しくありたい大人のエゴです。",
             "enText": "It is the ego of an adult who wants \nto be kind, to simply watch an immature \ngirl fall into ruin.",
             "nextBlock": 20,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -8254253200361047385
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -5479168263606340773
+                }
+            ],
             "pathId": -6670990368080662244,
             "blockIdx": 19
         },
@@ -210,6 +435,17 @@
             "jpText": "そう語る女性の目が徐々に鋭くなっていく。\r\n緊迫した空気が流れた、その時――",
             "enText": "The woman's eyes gradually became sharper as \nshe spoke. The air was tense, and then…",
             "nextBlock": 21,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 8465343647135066784
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -2503887394330364630
+                }
+            ],
             "pathId": -4727774264138881407,
             "blockIdx": 20
         },
@@ -219,10 +455,33 @@
             "jpText": "こんなところにいらしたんですね！\r\n探しましたよ、樫本代理！",
             "enText": "I didn't know you were here! I've been \nlooking for you, Deputy Kashimoto!",
             "nextBlock": 22,
+            "origClipLength": 95,
             "coloredText": [
                 {
                     "jpText": "樫本",
                     "enText": "oakum"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 215,
+                    "pathId": 1424251509015723195
+                },
+                {
+                    "origLen": 231,
+                    "pathId": -5466372859653564710
+                },
+                {
+                    "origLen": 212,
+                    "pathId": -1425049938758583333
+                },
+                {
+                    "origLen": 107,
+                    "pathId": -3804799566269946286
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 1276043789606647419
                 }
             ],
             "pathId": 2336868858183430015,
@@ -234,6 +493,29 @@
             "jpText": "すみません、\r\nトレーニング風景が気になったもので。",
             "enText": "Sorry, I was just curious \nabout the training scene.",
             "nextBlock": 23,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6812551396983519712
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7762544760043019265
+                },
+                {
+                    "origLen": 159,
+                    "pathId": 4350214474292726021
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 8344777908100693588
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 5877966496587166929
+                }
+            ],
             "pathId": -8519652299208713582,
             "blockIdx": 22
         },
@@ -243,6 +525,25 @@
             "jpText": "あら、トレーナーさん！　ちょうどよかった、\r\nこちら、秋川理事長の代理でいらした――",
             "enText": "Hey, trainer! Just in time. I'm here on \nbehalf of Chancellor Akikawa.",
             "nextBlock": 24,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 185,
+                    "pathId": 1773170988941431577
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -7176135542412435395
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 7831314434558432083
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -3803633626798308371
+                }
+            ],
             "pathId": -8792045312864164099,
             "blockIdx": 23
         },
@@ -252,10 +553,29 @@
             "jpText": "樫本理子【かしもと りこ】です。\r\n任期中の学園の方針は一任されています。",
             "enText": "I am Riko Kashimoto [Riko Kashimoto]. I have \nbeen entrusted with the policy of the school \nduring my term of office.",
             "nextBlock": 25,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "樫本理子",
                     "enText": "Riko Kashimoto"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -3416223694427929486
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 2602353481637806910
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 2567732550911846284
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -3787681931516650317
                 }
             ],
             "pathId": -1709200174192166361,
@@ -267,9 +587,32 @@
             "jpText": "どうぞ……以後よろしく。",
             "enText": "Please visit…… and onward.",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 8636581271201091253
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 5074518920572705922
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 1064854745400408492
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 5407870570016926584
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 608515270985691378
+                }
+            ],
             "pathId": 3267748161756096088,
             "blockIdx": 25
         }
     ],
-    "modified": 1657214500
+    "modified": 1657285601
 }

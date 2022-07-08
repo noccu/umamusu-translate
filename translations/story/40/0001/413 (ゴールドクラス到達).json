@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "OT7YF5I2RJW73224NR6UKCLEXNTYPTEB",
     "type": "story",
     "storyId": "400001413",
@@ -11,6 +11,7 @@
             "jpText": "桐生院トレーナーが落とした1冊のノート。\r\nそこには、ハッピーミークを支えるための\n情報が事細かに書き綴られていた。",
             "enText": "One notebook dropped by Kiryuin trainer. In \nit, information to support Happy Meek was \nwritten in detail. information was written \ndown in detail.",
             "nextBlock": 2,
+            "origClipLength": 120,
             "pathId": 8875661678629764715,
             "blockIdx": 1
         },
@@ -20,6 +21,25 @@
             "jpText": "伸び悩むハッピーミークを想い、\r\n常に彼女を優先して行動する\n桐生院トレーナー。",
             "enText": "The Kiryuin trainer always puts Happy Meek, \nwho is struggling to grow, first.",
             "nextBlock": 3,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": 1208640216325935857
+                },
+                {
+                    "origLen": 151,
+                    "pathId": -1229854375510176297
+                },
+                {
+                    "origLen": 138,
+                    "pathId": -5357214722890943085
+                },
+                {
+                    "origLen": 134,
+                    "pathId": -7200094199968881401
+                }
+            ],
             "pathId": -6754999848669736727,
             "blockIdx": 2
         },
@@ -29,9 +49,28 @@
             "jpText": "けれど、ハッピーミークの気持ちとは\r\nどこかすれ違っているのだった――",
             "enText": "However, her feelings were somewhat at odds \nwith Happy Meek's…",
             "nextBlock": -1,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": -2667430704701177673
+                },
+                {
+                    "origLen": 151,
+                    "pathId": 2555993305048796230
+                },
+                {
+                    "origLen": 138,
+                    "pathId": 1949227721412576171
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 4379465595906400701
+                }
+            ],
             "pathId": -6877333826125140330,
             "blockIdx": 3
         }
     ],
-    "modified": 1657214454
+    "modified": 1657285600
 }

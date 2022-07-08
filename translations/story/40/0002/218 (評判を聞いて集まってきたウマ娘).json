@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "PY6Y6N7RX2W5LSF3FJJK4S73TVW6IRMJ",
     "type": "story",
     "storyId": "400002218",
@@ -11,6 +11,13 @@
             "jpText": "チームの評判を聞きつけ、\r\nウマ娘たちが集まってきてくれた。",
             "enText": "Hearing of the team's reputation, the Uma \nMusume gathered there.",
             "nextBlock": 2,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": 6666052868174280227
+                }
+            ],
             "pathId": -913819051791601814,
             "blockIdx": 1
         },
@@ -20,9 +27,16 @@
             "jpText": "残念ながら、すぐ参加とはならなかったが、\r\n今後のチームの活躍次第では期待できそうだ。",
             "enText": "Unfortunately, they were not able to \njoin us right away, but we can expect \nto see them in the future, depending \non the success of the team.",
             "nextBlock": -1,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 151,
+                    "pathId": 8687139467632621662
+                }
+            ],
             "pathId": -2689408558626852679,
             "blockIdx": 2
         }
     ],
-    "modified": 1657215193
+    "modified": 1657285620
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "7YR6SJCQ54LDAB7DXC5FZKRASAM436ES",
     "type": "story",
     "storyId": "010000001",
@@ -11,6 +11,7 @@
             "jpText": "某月某日『東京レース場』にて――",
             "enText": "A certain day in a certain month \nat the Tokyo Racecourse",
             "nextBlock": 2,
+            "origClipLength": 65,
             "pathId": 2182762144566865093,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "――新人トレーナーさーん！\nこちらですよ～！！",
             "enText": "New Trainer-san!! I'm over here～!",
             "nextBlock": 3,
+            "origClipLength": 136,
             "pathId": -7664258297522162570,
             "blockIdx": 2
         },
@@ -29,6 +31,21 @@
             "jpText": "東京レース場は今日も賑わっていますね～！\nうっかりはぐれないよう、気をつけましょう。",
             "enText": "The race track is busy today～! \nBe sure not to get lost.",
             "nextBlock": 4,
+            "origClipLength": 188,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -3868911418718650838
+                },
+                {
+                    "origLen": 235,
+                    "pathId": -4937787155234501554
+                },
+                {
+                    "origLen": 233,
+                    "pathId": -2373990710791225993
+                }
+            ],
             "pathId": 2184013108099347876,
             "blockIdx": 3
         },
@@ -38,6 +55,17 @@
             "jpText": "……では、改めまして。",
             "enText": "Well then, let me introduce myself.",
             "nextBlock": 5,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 3498454980367908074
+                },
+                {
+                    "origLen": 209,
+                    "pathId": -8032862118909532291
+                }
+            ],
             "pathId": -867115112468709434,
             "blockIdx": 4
         },
@@ -47,6 +75,7 @@
             "jpText": "ご案内を担当いたします、トレセン学園\n理事長秘書の駿川【はやかわ】たづなです！",
             "enText": "I'm Tazuna Hayakawa, and I'm the secretary \nto the president of Tracen Academy, and \nalso in charge of information!",
             "nextBlock": 10,
+            "origClipLength": 194,
             "choices": [
                 {
                     "jpText": "よろしくお願いします",
@@ -68,6 +97,16 @@
                     "enText": "Tazuna"
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 206,
+                    "pathId": 5990342165577142018
+                },
+                {
+                    "origLen": 209,
+                    "pathId": -2106376918950894982
+                }
+            ],
             "pathId": -5944368966626709818,
             "blockIdx": 5
         },
@@ -77,6 +116,17 @@
             "jpText": "はいっ♪　将来有望な新人トレーナーさんと\nこうしてお会いできて、光栄です！",
             "enText": "Yes ♪ It's an honor to meet a promising \nnew trainer like you!",
             "nextBlock": 7,
+            "origClipLength": 201,
+            "animData": [
+                {
+                    "origLen": 180,
+                    "pathId": 7465702916703810582
+                },
+                {
+                    "origLen": 213,
+                    "pathId": -6426281911700924289
+                }
+            ],
             "pathId": 455984909787979808,
             "blockIdx": 6
         },
@@ -86,6 +136,17 @@
             "jpText": "ではさっそく学園案内――の、前に。",
             "enText": "So let's get started with the school guide.",
             "nextBlock": 8,
+            "origClipLength": 121,
+            "animData": [
+                {
+                    "origLen": 142,
+                    "pathId": -6172910784357127227
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 1656260234029433997
+                }
+            ],
             "pathId": 2313381588787571134,
             "blockIdx": 7
         },
@@ -95,6 +156,17 @@
             "jpText": "まずは、これから始まるレースを\nご一緒にご覧ください！",
             "enText": "First of all, please take a look, \nthe race is about to begin!",
             "nextBlock": 9,
+            "origClipLength": 128,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 81021072669668980
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 8575161281838089219
+                }
+            ],
             "pathId": 7194052702892356038,
             "blockIdx": 8
         },
@@ -104,6 +176,21 @@
             "jpText": "ほら……聞こえますか、この大歓声！",
             "enText": "Look… can you hear it, those loud cheers!",
             "nextBlock": 10,
+            "origClipLength": 130,
+            "animData": [
+                {
+                    "origLen": 155,
+                    "pathId": 5177709017552778506
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -2383584971811177932
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 539930392538939749
+                }
+            ],
             "pathId": 5847062869871204250,
             "blockIdx": 9
         },
@@ -113,6 +200,21 @@
             "jpText": "（ワァアアアアアアア！！）",
             "enText": "(Ahhhhhhhh!!!)",
             "nextBlock": 11,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 155,
+                    "pathId": -4403738480344166963
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 6570349765341211650
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 9205920021066574466
+                }
+            ],
             "pathId": -4444579045776106341,
             "blockIdx": 10
         },
@@ -122,6 +224,21 @@
             "jpText": "世界中の人々が愛してやまない、\nウマ娘たちが競い合うレース――",
             "enText": "A race where horsegirls compete, which \npeople all over the world love…",
             "nextBlock": 12,
+            "origClipLength": 175,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -1420275974805101836
+                },
+                {
+                    "origLen": 164,
+                    "pathId": -1748846272933101872
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 4147435061675381097
+                }
+            ],
             "pathId": -8761598691356597836,
             "blockIdx": 11
         },
@@ -131,9 +248,24 @@
             "jpText": "あなたの担当ウマ娘と共に目指す夢の舞台、\r\nレース開幕のファンファーレですよ！",
             "enText": "It's the fanfare of the opening race, \nthe stage of your dreams, where you \nand your horsegirls will be going!",
             "nextBlock": -1,
+            "origClipLength": 221,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -6497876019593746084
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -4821173858371667962
+                },
+                {
+                    "origLen": 233,
+                    "pathId": -2181192831402812018
+                }
+            ],
             "pathId": -1195088795250239630,
             "blockIdx": 12
         }
     ],
-    "modified": 1657253382
+    "modified": 1657279910
 }

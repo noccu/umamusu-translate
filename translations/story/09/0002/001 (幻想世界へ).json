@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "YVSBOQG5DU6TYVYPKVSR3OWS2YTZH7AH",
     "type": "story",
     "storyId": "090002001",
@@ -11,6 +11,7 @@
             "jpText": "――剣と魔法の王国『ウマネスト』",
             "enText": "―Umanest, a kingdom of swords and magic",
             "nextBlock": 2,
+            "origClipLength": 130,
             "pathId": 742001785013027438,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "この世界で最も速い疾駆者は\r\nダイアウルフでもワイバーンでもない。",
             "enText": "The fastest speeders in this world are not direwolves or wyverns.",
             "nextBlock": 3,
+            "origClipLength": 230,
             "pathId": 3346940740500102324,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "ブゴッ、ブゴブゴ、ブゴゴォォォ！？\r\n（バカな！？　この速度で追ってくるだとぉ！？）",
             "enText": "Buggoo, buggoo, buggooooooooo! (Stupid! \nThey're chasing us at this speed?)",
             "nextBlock": 4,
+            "origClipLength": 99,
             "pathId": 9149120404020319254,
             "blockIdx": 3
         },
@@ -38,6 +41,17 @@
             "jpText": "ウオオオオオッ！\r\n泥棒オーク、待て待てデース！",
             "enText": "Wooooooooooo! Thieving orcs, wait, wait, wait!",
             "nextBlock": 5,
+            "origClipLength": 188,
+            "animData": [
+                {
+                    "origLen": 256,
+                    "pathId": -2024829523599756814
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -585795555838295138
+                }
+            ],
             "pathId": 2706055400127287613,
             "blockIdx": 4
         },
@@ -47,6 +61,21 @@
             "jpText": "……追いつきましたよ、エル。\r\n――仕掛けどころです！",
             "enText": "…… I'm catching up, Elle. ―This is the place to set it up!",
             "nextBlock": 6,
+            "origClipLength": 146,
+            "animData": [
+                {
+                    "origLen": 256,
+                    "pathId": -7830682963042146366
+                },
+                {
+                    "origLen": 10,
+                    "pathId": -9066434427211525455
+                },
+                {
+                    "origLen": 158,
+                    "pathId": -2940034093202450848
+                }
+            ],
             "pathId": -1316886509680853082,
             "blockIdx": 5
         },
@@ -56,6 +85,21 @@
             "jpText": "スィー、グラス！　はぁぁぁぁぁ！\r\nコンドル猛撃波ー！！！！！！！！！",
             "enText": "Sue, glass! Haaaa! Condor onslaught wave: ！！！！！！！！！",
             "nextBlock": 7,
+            "origClipLength": 208,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 1869153762563995100
+                },
+                {
+                    "origLen": 116,
+                    "pathId": -8528579491117136443
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -6482134108643256894
+                }
+            ],
             "pathId": 695040484307297077,
             "blockIdx": 6
         },
@@ -65,6 +109,7 @@
             "jpText": "イベントタイトルロゴ表示",
             "enText": "",
             "nextBlock": 8,
+            "origClipLength": 194,
             "pathId": 6133472382677158163,
             "blockIdx": 7
         },
@@ -74,6 +119,17 @@
             "jpText": "――遡ること数時間前。",
             "enText": "―few hours ago, back in the day.",
             "nextBlock": 9,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 159,
+                    "pathId": -4314482929420995210
+                },
+                {
+                    "origLen": 199,
+                    "pathId": 1487879379258002795
+                }
+            ],
             "pathId": -6962065287420785652,
             "blockIdx": 8
         },
@@ -83,6 +139,21 @@
             "jpText": "導入ッ！　『VRウマレーター』！",
             "enText": "Introducing! VR Umarator!",
             "nextBlock": 10,
+            "origClipLength": 127,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 7958320482721744918
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -3062246480131834230
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 2905219237644963613
+                }
+            ],
             "pathId": -7555351296471895994,
             "blockIdx": 9
         },
@@ -92,6 +163,29 @@
             "jpText": "VR……ウマレーター？\r\n理事長さん、この3機の鉄の棺のようなマシンは？",
             "enText": "VR…… umalator? Ms. Chancellor, what are these three iron \ncoffin-like machines?",
             "nextBlock": 11,
+            "origClipLength": 332,
+            "animData": [
+                {
+                    "origLen": 207,
+                    "pathId": -2304812283472997104
+                },
+                {
+                    "origLen": 183,
+                    "pathId": 4700387454624758407
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -5253567208756343749
+                },
+                {
+                    "origLen": 208,
+                    "pathId": -3520462455152898146
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 7879886887503120753
+                }
+            ],
             "pathId": -850472369061612750,
             "blockIdx": 10
         },
@@ -101,6 +195,29 @@
             "jpText": "解説しましょう。『VRウマレーター』は、トレセン学園のウマ娘の\r\nために開発された、レース用シミュレーターなんです。",
             "enText": "Let me explain. VR Umarator\" is a racing simulator developed for \nthe Uma Musume of Tracen Academy.",
             "nextBlock": 12,
+            "origClipLength": 255,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 2903960825403619451
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 6370474909283993736
+                },
+                {
+                    "origLen": 127,
+                    "pathId": 2757342998616114059
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -6311842221002052690
+                },
+                {
+                    "origLen": 17,
+                    "pathId": 7282561916795556323
+                }
+            ],
             "pathId": 1528572318679073146,
             "blockIdx": 11
         },
@@ -110,6 +227,17 @@
             "jpText": "芝、ダート、良バ場、重バ場。\r\nどんな条件のレースコースでも再現可能なんですよ。",
             "enText": "Turf, dirt, good ba field, heavy ba field. It's possible to \nreproduce any race course in any conditions.",
             "nextBlock": 13,
+            "origClipLength": 251,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": -6883747392642164153
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 2928859041725100848
+                }
+            ],
             "pathId": -6104018392771281684,
             "blockIdx": 12
         },
@@ -119,6 +247,25 @@
             "jpText": "へぇ～、ありとあらゆる条件を再現できるなんて\r\n便利なのね。",
             "enText": "Wow, it's so convenient to be able to \nreproduce all kinds of conditions.",
             "nextBlock": 14,
+            "origClipLength": 195,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -5730636371560804990
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -5694943388770047501
+                },
+                {
+                    "origLen": 151,
+                    "pathId": -2117239660777188531
+                },
+                {
+                    "origLen": 217,
+                    "pathId": -1027860231404394984
+                }
+            ],
             "pathId": 7775736235818452113,
             "blockIdx": 13
         },
@@ -128,6 +275,25 @@
             "jpText": "にゃはは、シミュレーターなんだー。\r\nてっきり私専用のお昼寝ポッドかと思ったよ。",
             "enText": "Meh, it's a simulator. I thought it was a nap pod just for me.",
             "nextBlock": 15,
+            "origClipLength": 214,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -6552139692433666007
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 399450739645181209
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 6397658714544369270
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 2063798784317119477
+                }
+            ],
             "pathId": 4614352905549681648,
             "blockIdx": 14
         },
@@ -137,6 +303,37 @@
             "jpText": "さらにッ、提携した様々なオンラインゲームに接続し、\r\nウマ娘のまま、遊戯が可能ッ！",
             "enText": "In addition, you can connect to various affiliated online games \nand play as Uma Musume!",
             "nextBlock": 16,
+            "origClipLength": 231,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -6506410017051423655
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 4145818539661980068
+                },
+                {
+                    "origLen": 49,
+                    "pathId": -2213766639124144856
+                },
+                {
+                    "origLen": 17,
+                    "pathId": 4270547449706252913
+                },
+                {
+                    "origLen": 17,
+                    "pathId": 217104556051606777
+                },
+                {
+                    "origLen": 12,
+                    "pathId": -3406089870791115851
+                },
+                {
+                    "origLen": 12,
+                    "pathId": -8723399885888024957
+                }
+            ],
             "pathId": -7177230665341661443,
             "blockIdx": 15
         },
@@ -146,6 +343,29 @@
             "jpText": "この機能により、愛するウマ娘たちを魔法の国、SF、\r\nサイバーパンクなど、あらゆる世界に送り込むことができる！",
             "enText": "With this feature, you can send your beloved \nUma Musume into magical lands, science fiction, \ncyberpunk, and everything in between!",
             "nextBlock": 17,
+            "origClipLength": 321,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -7489848453620699639
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7712204754385664818
+                },
+                {
+                    "origLen": 264,
+                    "pathId": -564240657370224781
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 5157167241338419775
+                },
+                {
+                    "origLen": 356,
+                    "pathId": 786803998233644949
+                }
+            ],
             "pathId": -141900806829531615,
             "blockIdx": 16
         },
@@ -155,6 +375,25 @@
             "jpText": "り、理事長……。あの機能はいろいろ無理があるって、\r\nあれほど反対されたのに……。",
             "enText": "I am very happy to hear from you, Ms. Chairman…… I was opposed to \nthat function, saying that it was impossible in many ways. ……",
             "nextBlock": 18,
+            "origClipLength": 221,
+            "animData": [
+                {
+                    "origLen": 172,
+                    "pathId": -248516208448146894
+                },
+                {
+                    "origLen": 202,
+                    "pathId": 3581180795993990211
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -4474277626135419315
+                },
+                {
+                    "origLen": 122,
+                    "pathId": 6847942831976909278
+                }
+            ],
             "pathId": 3144093728674869430,
             "blockIdx": 17
         },
@@ -164,6 +403,25 @@
             "jpText": "それでもトラブル覚悟で、実装したんですね……。",
             "enText": "Still, you were prepared for trouble and implemented it. ……",
             "nextBlock": 19,
+            "origClipLength": 126,
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": -7280392401224922215
+                },
+                {
+                    "origLen": 235,
+                    "pathId": 6988617414210569300
+                },
+                {
+                    "origLen": 138,
+                    "pathId": -7574569489737175527
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -6292008370255761681
+                }
+            ],
             "pathId": -875094731380148783,
             "blockIdx": 18
         },
@@ -173,6 +431,29 @@
             "jpText": "無論ッ！　これもウマ娘の素晴らしさを広めるため！\r\nつぎ込んだポケットマネーは不還ッ！　火の車ッ！",
             "enText": "Of course! I did this to spread the word about \nhow wonderful Uma Musume is! The money in my \npocket will never come back! I'm on fire!",
             "nextBlock": 20,
+            "origClipLength": 277,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2859690762759901225
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4875139694464499819
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 7516905740544184144
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 1567226982951755289
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -4839448129717842004
+                }
+            ],
             "pathId": 2458766765692311156,
             "blockIdx": 19
         },
@@ -182,6 +463,33 @@
             "jpText": "おおおっ、走るだけじゃなくゲームも！\r\nまさに至れり尽くせりデース！",
             "enText": "Oh wow, not only can you run, but you \ncan play games! That's just perfect!",
             "nextBlock": 21,
+            "origClipLength": 205,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 7349084448658400188
+                },
+                {
+                    "origLen": 45,
+                    "pathId": -8482474239216787396
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 8634004946445314532
+                },
+                {
+                    "origLen": 244,
+                    "pathId": -3452991286307906623
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -2424904729586504977
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5369052848960216037
+                }
+            ],
             "pathId": 692193051532977401,
             "blockIdx": 20
         },
@@ -191,6 +499,25 @@
             "jpText": "あら？　すでに1機動いてますね。あちらはどなたが？",
             "enText": "Oh? I see one plane is already in motion. Who's that over there?",
             "nextBlock": 22,
+            "origClipLength": 192,
+            "animData": [
+                {
+                    "origLen": 244,
+                    "pathId": 2564499568933392974
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1824648885455793361
+                },
+                {
+                    "origLen": 262,
+                    "pathId": -925542446865388279
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -4153587703480297593
+                }
+            ],
             "pathId": -6634743073030129446,
             "blockIdx": 21
         },
@@ -200,6 +527,29 @@
             "jpText": "学園を代表して、シンボリルドルフ会長に、まずは試走して\r\nもらっているんです。何か不具合があったらいけないと。",
             "enText": "On behalf of the school, I asked Ms. Symbol Rudolf, \nthe president of the school, to run a test run first. \nWe didn't want to have any problems.",
             "nextBlock": 23,
+            "origClipLength": 272,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -6671332956293781476
+                },
+                {
+                    "origLen": 244,
+                    "pathId": -1896989017669997237
+                },
+                {
+                    "origLen": 290,
+                    "pathId": 6714997822165859446
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 9069284800121012956
+                },
+                {
+                    "origLen": 214,
+                    "pathId": 6023137576264430227
+                }
+            ],
             "pathId": 7296175255031427865,
             "blockIdx": 22
         },
@@ -209,6 +559,29 @@
             "jpText": "さっすが会長！　ねぇ理事長理事長、\r\nエルもあの機械……。",
             "enText": "Way to go, Chairman! Hey, Chairman of the Board, Chairman of the \nBoard, Elle also has that machine ……",
             "nextBlock": 24,
+            "origClipLength": 180,
+            "animData": [
+                {
+                    "origLen": 283,
+                    "pathId": 8258779771037941419
+                },
+                {
+                    "origLen": 225,
+                    "pathId": -3036198945605999469
+                },
+                {
+                    "origLen": 278,
+                    "pathId": 7361252227213529475
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -824337797768067937
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -345408469071722187
+                }
+            ],
             "pathId": 265650312118647431,
             "blockIdx": 23
         },
@@ -218,6 +591,29 @@
             "jpText": "な、なんでしょう、この警報は！？",
             "enText": "What, what is this alarm!",
             "nextBlock": 25,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -6256954329644886797
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8464025110745689390
+                },
+                {
+                    "origLen": 68,
+                    "pathId": 8860686409332471961
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 2520929155567159625
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -5918001603591541839
+                }
+            ],
             "pathId": 3237565296536679012,
             "blockIdx": 24
         },
@@ -227,6 +623,25 @@
             "jpText": "エマージェンシー、エマージェンシー。\r\n1号機に起因する、全体プログラム異常発生。",
             "enText": "EMERGENCY, EMERGENCY. Overall program error caused by Unit 1.",
             "nextBlock": 26,
+            "origClipLength": 213,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": 8519836679283911361
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 8040714949558671198
+                },
+                {
+                    "origLen": 39,
+                    "pathId": 3038406616268230042
+                },
+                {
+                    "origLen": 26,
+                    "pathId": 6519245412634725156
+                }
+            ],
             "pathId": 2990848864348085736,
             "blockIdx": 25
         },
@@ -236,6 +651,7 @@
             "jpText": "2号機、3号機より同セッションにアサインし、解除する必要あり。\r\n解除できなければ、全ソフトリセットの必要あり。",
             "enText": "It is necessary to assign to the same session from \nUnits 2 and 3 and release the session. If it cannot \nbe released, all software must be reset.",
             "nextBlock": 27,
+            "origClipLength": 333,
             "pathId": 64961981652278697,
             "blockIdx": 26
         },
@@ -245,6 +661,21 @@
             "jpText": "全ソフトリセット！？\r\nいかーんッ！",
             "enText": "All software reset! No!",
             "nextBlock": 28,
+            "origClipLength": 129,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 6913907597047393052
+                },
+                {
+                    "origLen": 164,
+                    "pathId": -4767632396920303657
+                },
+                {
+                    "origLen": 161,
+                    "pathId": 7731369118466623198
+                }
+            ],
             "pathId": 1941631711041270893,
             "blockIdx": 27
         },
@@ -254,6 +685,25 @@
             "jpText": "そんなことになったら、設定も全てやり直しですね……。\r\n1号機に何が！？",
             "enText": "If that happens, we'll have to redo the \nwhole setup.…… What happened to Unit 1!",
             "nextBlock": 29,
+            "origClipLength": 207,
+            "animData": [
+                {
+                    "origLen": 278,
+                    "pathId": -4127512043771573549
+                },
+                {
+                    "origLen": 263,
+                    "pathId": -8879366158470164574
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -5544843674301263757
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 7503737656478556018
+                }
+            ],
             "pathId": 7607956553425392185,
             "blockIdx": 28
         },
@@ -263,6 +713,25 @@
             "jpText": "はっ、はっ……はっ、はっ……。",
             "enText": "Ha, ha…… ha, ha ……",
             "nextBlock": 30,
+            "origClipLength": 123,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 2920535859443623288
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 5128125900180763230
+                },
+                {
+                    "origLen": 41,
+                    "pathId": 3312497972745257623
+                },
+                {
+                    "origLen": 41,
+                    "pathId": -7237718823035592802
+                }
+            ],
             "pathId": 2158739213227050656,
             "blockIdx": 29
         },
@@ -272,6 +741,21 @@
             "jpText": "会長さんはごく普通にランニング続けてるみたいだけど……。",
             "enText": "The chairman seems to keep running very normally. ……",
             "nextBlock": 31,
+            "origClipLength": 139,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -9021816357828254846
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6307365135114735705
+                },
+                {
+                    "origLen": 200,
+                    "pathId": -6344528213611815091
+                }
+            ],
             "pathId": 2626428588813518514,
             "blockIdx": 30
         },
@@ -281,6 +765,25 @@
             "jpText": "おおお、これは世界の機器！\r\nいえ、危機デスね！",
             "enText": "Oh, this is a world device! No, it's a crisis!",
             "nextBlock": 32,
+            "origClipLength": 175,
+            "animData": [
+                {
+                    "origLen": 14,
+                    "pathId": -5793845936406175182
+                },
+                {
+                    "origLen": 11,
+                    "pathId": 972189788247937377
+                },
+                {
+                    "origLen": 212,
+                    "pathId": -9042428438204533636
+                },
+                {
+                    "origLen": 55,
+                    "pathId": -3173442755464883051
+                }
+            ],
             "pathId": -6483350220029049828,
             "blockIdx": 31
         },
@@ -290,6 +793,17 @@
             "jpText": "わかりました！　みんなが困っているならば、\r\nエルが行きます！",
             "enText": "Okay, I'll go! If everyone is in trouble, Elle will go!",
             "nextBlock": 33,
+            "origClipLength": 154,
+            "animData": [
+                {
+                    "origLen": 228,
+                    "pathId": 6726426880586278421
+                },
+                {
+                    "origLen": 27,
+                    "pathId": -1177426439602127672
+                }
+            ],
             "pathId": -7954503234376826378,
             "blockIdx": 32
         },
@@ -299,6 +813,21 @@
             "jpText": "頑丈、頑強、エル最強！　ちょっとやそっとのトラブルでは\r\nビクともしませんから！",
             "enText": "Sturdy, robust, and the strongest of all! It won't be shaken by \nthe slightest trouble!",
             "nextBlock": 34,
+            "origClipLength": 228,
+            "animData": [
+                {
+                    "origLen": 249,
+                    "pathId": -1630691082062521277
+                },
+                {
+                    "origLen": 53,
+                    "pathId": 8908561521497524672
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1413986197717648304
+                }
+            ],
             "pathId": 3833689021451541459,
             "blockIdx": 33
         },
@@ -308,6 +837,17 @@
             "jpText": "でしたら――私も行きます。",
             "enText": "If so - I'll be there.",
             "nextBlock": 35,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": 4610685310544302908
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -4332827606886856716
+                }
+            ],
             "pathId": 748013437591803944,
             "blockIdx": 34
         },
@@ -317,6 +857,21 @@
             "jpText": "機械のトラブルとなると、エルだけでは\r\n手に負えないかもしれません。その時の補佐として。",
             "enText": "When it comes to machine trouble, Elle may not be able to handle \nit alone. As an assistant at that time.",
             "nextBlock": 36,
+            "origClipLength": 236,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -4358769284999448301
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 2320975478604489456
+                },
+                {
+                    "origLen": 274,
+                    "pathId": 7195167711453095669
+                }
+            ],
             "pathId": 569157131176317891,
             "blockIdx": 35
         },
@@ -326,6 +881,29 @@
             "jpText": "うむッ、名コンビッ！\r\nでは気心知れたこの2人に任せるとしよう！",
             "enText": "Well, what a great duo! Then I'll leave it to these two \nwell-meaning people!",
             "nextBlock": 37,
+            "origClipLength": 185,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 6664997719242778434
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -1671152438596136806
+                },
+                {
+                    "origLen": 302,
+                    "pathId": -6911159945083364556
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -4223802876612498545
+                },
+                {
+                    "origLen": 242,
+                    "pathId": 4035878589075040723
+                }
+            ],
             "pathId": -5445013697783252731,
             "blockIdx": 36
         },
@@ -335,6 +913,21 @@
             "jpText": "くれぐれもケガだけはなきようにッ。\r\nいざ出立ッ！",
             "enText": "Please do not get hurt. Let's go!",
             "nextBlock": 38,
+            "origClipLength": 148,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -517558316072443676
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -4234306475872593635
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 5514078351189358506
+                }
+            ],
             "pathId": 7645015507715456853,
             "blockIdx": 37
         },
@@ -344,6 +937,21 @@
             "jpText": "えっと……スタートボタンはこれデスね。\r\nこれを押せば、ランニングモードに……。",
             "enText": "Let's see, the…… start button is this one. If you press this, you \nwill be in running mode. ……",
             "nextBlock": 39,
+            "origClipLength": 207,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": 5766112080947450998
+                },
+                {
+                    "origLen": 42,
+                    "pathId": -8729221680908324044
+                },
+                {
+                    "origLen": 35,
+                    "pathId": -1011660631481804332
+                }
+            ],
             "pathId": 8896014630182642313,
             "blockIdx": 38
         },
@@ -353,6 +961,25 @@
             "jpText": "え、これ、ランニングモードじゃない！？\r\n同セッションって……。え？",
             "enText": "What, this is not a running mode! The same session is…… Huh?",
             "nextBlock": 40,
+            "origClipLength": 264,
+            "animData": [
+                {
+                    "origLen": 311,
+                    "pathId": -4493816688504800163
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 52163505383689387
+                },
+                {
+                    "origLen": 406,
+                    "pathId": 402210475695752542
+                },
+                {
+                    "origLen": 45,
+                    "pathId": 1602866281690335231
+                }
+            ],
             "pathId": -1430089605433764362,
             "blockIdx": 39
         },
@@ -362,6 +989,29 @@
             "jpText": "えええっ！？　グラス、これはどういうことデスか？\r\nこの場所は！？　それに、この衣装は！？",
             "enText": "Yeah, yeah, yeah! Glass, what is the meaning of this? This place! \nAnd what's with the outfit?",
             "nextBlock": 41,
+            "origClipLength": 249,
+            "animData": [
+                {
+                    "origLen": 173,
+                    "pathId": 186287086922779553
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -5291979557028724254
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 3050137878590138467
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -4656646474554879066
+                },
+                {
+                    "origLen": 52,
+                    "pathId": -7093193632812833355
+                }
+            ],
             "pathId": -3316869461570747035,
             "blockIdx": 40
         },
@@ -371,6 +1021,21 @@
             "jpText": "ここは……どうやらファンタジーゲームの世界のようです。\r\n別モードが作動した？",
             "enText": "This is…… apparently a fantasy game world. Another mode activated?",
             "nextBlock": 42,
+            "origClipLength": 315,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -183296215232731081
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7928885621239720958
+                },
+                {
+                    "origLen": 346,
+                    "pathId": -1305543801180702877
+                }
+            ],
             "pathId": 2968446919899657074,
             "blockIdx": 41
         },
@@ -380,6 +1045,21 @@
             "jpText": "ファンタジー……。エルのこの格好は……もしかして\r\n格闘家デスか？",
             "enText": "Fantasy…… Is this outfit of Elle's…… \npossibly a martial artist desu?",
             "nextBlock": 43,
+            "origClipLength": 242,
+            "animData": [
+                {
+                    "origLen": 221,
+                    "pathId": -4152811118279072522
+                },
+                {
+                    "origLen": 42,
+                    "pathId": 999964367779627706
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7758248752511550847
+                }
+            ],
             "pathId": 1922015523760930960,
             "blockIdx": 42
         },
@@ -389,6 +1069,25 @@
             "jpText": "私は治癒士のようですね。\r\nえーと……。",
             "enText": "I seem to be a healer. Let's see, ……",
             "nextBlock": 44,
+            "origClipLength": 188,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": 116309176854772960
+                },
+                {
+                    "origLen": 68,
+                    "pathId": 3351202600538329896
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -1954701394457156191
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -9185064111237878943
+                }
+            ],
             "pathId": -2125149864988723145,
             "blockIdx": 43
         },
@@ -398,6 +1097,25 @@
             "jpText": "ステータスも見られます。\r\nこれは間違いなくファンタジーゲームのモード。",
             "enText": "You can also see the status. This \nis definitely a fantasy game mode.",
             "nextBlock": 45,
+            "origClipLength": 207,
+            "animData": [
+                {
+                    "origLen": 198,
+                    "pathId": 8524587918384468877
+                },
+                {
+                    "origLen": 243,
+                    "pathId": -1126088663918574515
+                },
+                {
+                    "origLen": 280,
+                    "pathId": -444202570110759203
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 6130514356870640393
+                }
+            ],
             "pathId": 3219568622085299920,
             "blockIdx": 44
         },
@@ -407,6 +1125,25 @@
             "jpText": "でも、なぜでしょう？　本来なら1号機と同じ\r\nランニングモードに入るはずなのに……。",
             "enText": "But why? It's supposed to go into the same \nrunning mode as the first unit. ……",
             "nextBlock": 46,
+            "origClipLength": 279,
+            "animData": [
+                {
+                    "origLen": 297,
+                    "pathId": 4788046120766512827
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7654481091021685508
+                },
+                {
+                    "origLen": 390,
+                    "pathId": 5536115236435299565
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 6467169652556765442
+                }
+            ],
             "pathId": 3656696352868604093,
             "blockIdx": 45
         },
@@ -416,6 +1153,17 @@
             "jpText": "きっと何か理由があるデース！　この世界に起きている異常を\r\n解決しなければならないとか！",
             "enText": "There must be a reason! Something that is happening in this world \nthat needs to be solved!",
             "nextBlock": 47,
+            "origClipLength": 258,
+            "animData": [
+                {
+                    "origLen": 246,
+                    "pathId": -3928726577161713378
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 2073570753857154353
+                }
+            ],
             "pathId": -752236633155667760,
             "blockIdx": 46
         },
@@ -425,6 +1173,17 @@
             "jpText": "エール。あなたはただ、この世界を\r\n冒険したいだけなのでは？",
             "enText": "Yale. You just want to explore this world, don't you?",
             "nextBlock": 48,
+            "origClipLength": 199,
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": -2344693470497595279
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 5865699013327361722
+                }
+            ],
             "pathId": 8787248712318174079,
             "blockIdx": 47
         },
@@ -434,6 +1193,21 @@
             "jpText": "でもプログラムでここに運ばれた以上、\r\n近い理由があるのかもしれませんね……。",
             "enText": "But as long as they were brought here by the program, there may \nbe a reason they are close. ……",
             "nextBlock": 49,
+            "origClipLength": 218,
+            "animData": [
+                {
+                    "origLen": 221,
+                    "pathId": -7012546025216016371
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -472743111632650550
+                },
+                {
+                    "origLen": 195,
+                    "pathId": 8826607839019283298
+                }
+            ],
             "pathId": 6378184822047662177,
             "blockIdx": 48
         },
@@ -443,6 +1217,21 @@
             "jpText": "（ざわざわざわ……）",
             "enText": "(Zawazawa Zawazawa ……)",
             "nextBlock": 50,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": 4067701077990281596
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -5281418279084212665
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 6034886707676765566
+                }
+            ],
             "pathId": 5795487904067549651,
             "blockIdx": 49
         },
@@ -452,6 +1241,21 @@
             "jpText": "あっ、誰か集まってきましたよ！\r\nもしかして別のプレイヤーですか？",
             "enText": "Ah, someone has gathered! Could it be another player?",
             "nextBlock": 51,
+            "origClipLength": 176,
+            "animData": [
+                {
+                    "origLen": 302,
+                    "pathId": -6222324664562764617
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 8030902932007075937
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -4417988111230031745
+                }
+            ],
             "pathId": 865258721247107821,
             "blockIdx": 50
         },
@@ -461,6 +1265,25 @@
             "jpText": "おいおい、なんだあの種族は！？\r\n耳が長いけど……エルフか！？　モフモフ尻尾のワーウルフか？",
             "enText": "Hey, hey, what's with that race! Are they long-eared but…… elves! \nA war wolf with a fluffy tail?",
             "nextBlock": 52,
+            "origClipLength": 255,
+            "animData": [
+                {
+                    "origLen": 283,
+                    "pathId": -4507699368904938505
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8894404901256638047
+                },
+                {
+                    "origLen": 289,
+                    "pathId": -2294379669297187884
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7330771744283119881
+                }
+            ],
             "pathId": 2760451259834761007,
             "blockIdx": 51
         },
@@ -470,6 +1293,21 @@
             "jpText": "違いまーす！\r\nアタシたちは、ウマ娘デース！",
             "enText": "No, we are not! We are the Horse Girls!",
             "nextBlock": 53,
+            "origClipLength": 150,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -5884544651376503724
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 6432821525255202606
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 3696774946101781242
+                }
+            ],
             "pathId": 6935517355348781959,
             "blockIdx": 52
         },
@@ -479,6 +1317,21 @@
             "jpText": "なにぃぃぃ！？　ウマ娘って……あのウマ娘！？　現実のウマ娘が\r\nゲーム世界にって……こりゃスゲエことになるぞ！？",
             "enText": "What? Umamusume is…… that Umamusume? The real Uma Musume is in \nthe game world?…… This is going to be great!",
             "nextBlock": 54,
+            "origClipLength": 294,
+            "animData": [
+                {
+                    "origLen": 292,
+                    "pathId": -1130533630613559226
+                },
+                {
+                    "origLen": 360,
+                    "pathId": -774465280202350937
+                },
+                {
+                    "origLen": 310,
+                    "pathId": -8063578788643127153
+                }
+            ],
             "pathId": -6907266582650671163,
             "blockIdx": 53
         },
@@ -488,6 +1341,25 @@
             "jpText": "おおおお、ウマ娘……！　やはり伝説は本当だったか！\r\nこれは天からの救いかもしれん。",
             "enText": "Oh, oh, oh, Uma Musume ……! I knew the legend was true! This may \nbe salvation from the heavens.",
             "nextBlock": 55,
+            "origClipLength": 311,
+            "animData": [
+                {
+                    "origLen": 243,
+                    "pathId": 1340612365829194114
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 305871278115380057
+                },
+                {
+                    "origLen": 269,
+                    "pathId": -2809225422589141660
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -7896278183618106568
+                }
+            ],
             "pathId": 3202413195784280231,
             "blockIdx": 54
         },
@@ -497,6 +1369,21 @@
             "jpText": "あの……おばあさま？　伝説とは……。",
             "enText": "That…… grandmother? What is legendary is ……",
             "nextBlock": 56,
+            "origClipLength": 157,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -8967013707411736156
+                },
+                {
+                    "origLen": 131,
+                    "pathId": -5061687679233574415
+                },
+                {
+                    "origLen": 204,
+                    "pathId": 5555345567435799552
+                }
+            ],
             "pathId": -3113689888539731238,
             "blockIdx": 55
         },
@@ -506,6 +1393,21 @@
             "jpText": "世界が危機に瀕した時――このウマネスト大陸には\r\nこのような言い伝えがあるのじゃ。",
             "enText": "When the world is at stake―there is a saying here on the \ncontinent of Umanesto that goes something like this.",
             "nextBlock": 57,
+            "origClipLength": 251,
+            "animData": [
+                {
+                    "origLen": 263,
+                    "pathId": -8842970846133923185
+                },
+                {
+                    "origLen": 263,
+                    "pathId": -2641555814666195908
+                },
+                {
+                    "origLen": 294,
+                    "pathId": 90115862053248890
+                }
+            ],
             "pathId": 1861673365041970316,
             "blockIdx": 56
         },
@@ -515,6 +1417,21 @@
             "jpText": "『幻の眷属、降り来たり。雲上より下界を見下ろし、\r\n生来の雷にて――魔王に滅びと悦楽を与えん』",
             "enText": "The \"Attendant of the Phantom has descended. \"The demonic \nspirits descend from the clouds to look down on the \nworld below, and with their innate thunderbolt, bring \ndestruction and pleasure to the Demon Lord.\"",
             "nextBlock": 58,
+            "origClipLength": 632,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2099202569704550702
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -7823837263222859570
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 3836307281102969804
+                }
+            ],
             "pathId": -1787670510040759272,
             "blockIdx": 57
         },
@@ -524,6 +1441,7 @@
             "jpText": "幻の眷属……。ウマ娘のことを指しているのでしょうか？\r\nそれより気になるのは……。",
             "enText": "Phantom眷…… Are you referring to Uma \nMusume? I'm more interested in ……",
             "nextBlock": 59,
+            "origClipLength": 278,
             "pathId": -2908002136119191165,
             "blockIdx": 58
         },
@@ -533,6 +1451,17 @@
             "jpText": "魔王！？　この世界には魔王がいるのデスか？",
             "enText": "The Demon King! Is there a Demon King in this world?",
             "nextBlock": 60,
+            "origClipLength": 153,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": 6729650684252588896
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 7213251131715892691
+                }
+            ],
             "pathId": -7547132446398799313,
             "blockIdx": 59
         },
@@ -542,6 +1471,17 @@
             "jpText": "いかにも。つい先日、忽然とこの世界に現れたのじゃ。\r\n魔王により多くの勇者が倒され、まさに危機の最中にある。",
             "enText": "Indeed. Just the other day, she suddenly appeared in this world. \nMany heroes have been defeated by the Demon King, and the world \nis in the midst of a crisis.",
             "nextBlock": 61,
+            "origClipLength": 420,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 4122753691709372094
+                },
+                {
+                    "origLen": 528,
+                    "pathId": -1847948687570115496
+                }
+            ],
             "pathId": -1507294708741922132,
             "blockIdx": 60
         },
@@ -551,6 +1491,21 @@
             "jpText": "ブエノー！　聞きましたか、グラス？\r\nエルたちがここへ来たのは、決して偶然ではありません！",
             "enText": "Bueno! Did you hear that, Glass? It is no accident that Elle and \nher friends came here!",
             "nextBlock": 62,
+            "origClipLength": 240,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": 2705175874651755215
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 2374023969390483974
+                },
+                {
+                    "origLen": 42,
+                    "pathId": 5087735725729117727
+                }
+            ],
             "pathId": 4088611705273992274,
             "blockIdx": 61
         },
@@ -560,6 +1515,17 @@
             "jpText": "その魔王こそトラブルの元凶！　普通の種族では止められなくても、\r\nウマ娘なら止められる！　だから呼ばれたのデース！",
             "enText": "That demon king is the source of all the trouble! \nEven if a normal race can't stop her, an Uma \nMusume can! That's why I've been called!",
             "nextBlock": 63,
+            "origClipLength": 341,
+            "animData": [
+                {
+                    "origLen": 262,
+                    "pathId": -1822439388647148756
+                },
+                {
+                    "origLen": 136,
+                    "pathId": -2791380706095346881
+                }
+            ],
             "pathId": 2341609157917813561,
             "blockIdx": 62
         },
@@ -569,6 +1535,17 @@
             "jpText": "バグの親玉のようなもの、ということですか。伝承があるという\r\nことは……ウマ娘の存在が何かしらのキーになっている？",
             "enText": "Is it a kind of bug mastery? Does the fact that there is lore \nmean that…… Uma Musume is somehow the key?",
             "nextBlock": 64,
+            "origClipLength": 407,
+            "animData": [
+                {
+                    "origLen": 229,
+                    "pathId": -1885864333500753560
+                },
+                {
+                    "origLen": 460,
+                    "pathId": -936606573223608832
+                }
+            ],
             "pathId": -2247704000407382719,
             "blockIdx": 63
         },
@@ -578,6 +1555,21 @@
             "jpText": "そういうことデス！　魔王を倒せば、\r\nきっとトラブルも解決するでしょう！",
             "enText": "That's what I'm talking about! If we defeat the Demon King, I'm \nsure our troubles will be solved!",
             "nextBlock": 65,
+            "origClipLength": 201,
+            "animData": [
+                {
+                    "origLen": 193,
+                    "pathId": -7215199725207797393
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -969177621592604892
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6793062396107307044
+                }
+            ],
             "pathId": -1244126994509732779,
             "blockIdx": 64
         },
@@ -587,9 +1579,24 @@
             "jpText": "よーし、それでは冒険、格闘、そして勝利の旅へ出発ー！\r\n魔王をやっつけて、ついでに世界も救いましょう！",
             "enText": "Okay, let's embark on a journey of adventure, \ncombat, and triumph! Let's defeat the Demon \nKing, and save the world along the way!",
             "nextBlock": -1,
+            "origClipLength": 382,
+            "animData": [
+                {
+                    "origLen": 143,
+                    "pathId": -6018211615811397222
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2378173841754937938
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -8034076837832438677
+                }
+            ],
             "pathId": -5507529407457886345,
             "blockIdx": 65
         }
     ],
-    "modified": 1657213170
+    "modified": 1657285569
 }

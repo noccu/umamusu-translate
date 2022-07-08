@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "F7B7MDXIG25VEHCTKTHD5ETQPIJJWSY4",
     "type": "story",
     "storyId": "400002436",
@@ -11,6 +11,17 @@
             "jpText": "『アオハル杯』の結果は見事優勝！\n目覚ましい奮闘により、樫本理子と\nそのチームメンバーの心は救われた。",
             "enText": "Aoharu Cup\" was won by a landslide! The \nremarkable effort saved the hearts of Riko \nKashimoto and her team members. and her team \nmembers' hearts were saved.",
             "nextBlock": 2,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -4151153576059812599
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 2379087256408502157
+                }
+            ],
             "pathId": 1040400786312585732,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "その功績をたたえ、\n秋川理事長から特別ボーナスとして、\nにんじんBBQいってらっしゃい券が贈呈――",
             "enText": "In honor of this achievement, President \nAkikawa presented a special bonus a special \nbonus ticket to the Carrot BBQ…",
             "nextBlock": 3,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": 4609180721108130997
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -7149914076158877319
+                }
+            ],
             "pathId": 4299772118905244939,
             "blockIdx": 2
         },
@@ -29,6 +51,25 @@
             "jpText": "さらに＜ハレノヒ・ランナーズ＞に\r\nふさわしい副賞も授けられた。",
             "enText": "In addition, the Harenohi Runners received an \nadditional prize that was well deserved.",
             "nextBlock": 4,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": 4011179223231731064
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -1395315509780997196
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -2380161051638149746
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -2374818728688229993
+                }
+            ],
             "pathId": 7309759240506022654,
             "blockIdx": 3
         },
@@ -38,10 +79,21 @@
             "jpText": "『<itemname>』を獲得した！",
             "enText": "I got \"<itemname>\"!",
             "nextBlock": 5,
+            "origClipLength": 68,
             "coloredText": [
                 {
                     "jpText": "itemname",
                     "enText": "itemname"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -7600343979245599349
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -3645313614135288214
                 }
             ],
             "pathId": -2047169891811059332,
@@ -53,6 +105,17 @@
             "jpText": "かくしてお祝いをしていると、樫本理子と\r\n教え子たちに遭遇。同じトレーナーとして\n今後ともよろしくと挨拶を交わした。",
             "enText": "While celebrating, I ran into Riko Kashimoto \nand her students. As the same trainer I \ngreeted them and said hello to them as we \nshare the same trainer.",
             "nextBlock": 6,
+            "origClipLength": 120,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -8869880576738590752
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6374956346851244106
+                }
+            ],
             "pathId": 7167174219664763041,
             "blockIdx": 5
         },
@@ -62,9 +125,10 @@
             "jpText": "まだまだこれからも道は続く。\r\n今後もしっかり頑張っていこうと、\n<chrname>と誓うのだった。",
             "enText": "We still have a ways to go in the future. I \nvowed with <chrname> that I would continue to \ndo my best in the future. <chrname> and vowed \nto do our best in the future.",
             "nextBlock": -1,
+            "origClipLength": 110,
             "pathId": -167215408643369092,
             "blockIdx": 6
         }
     ],
-    "modified": 1657215349
+    "modified": 1657285625
 }

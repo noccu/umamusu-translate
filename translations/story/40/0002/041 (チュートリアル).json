@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "4ANIAZ6I5A5TXR3Q3PAUP7YLKNBQ7CAH",
     "type": "story",
     "storyId": "400002041",
@@ -11,10 +11,21 @@
             "jpText": "お疲れ様です。\r\n現在、希望される方に『アオハル杯』の\n詳しい説明を行っているところなのですが――",
             "enText": "Thanks for your help. We are currently in the \nprocess of providing a detailed explanation \nof the \"Aoharu Hai\" to those who wish to \nparticipate. I am in the process of providing \na detailed explanation of the \"AOHAL Cup\" to \nthose who wish to―",
             "nextBlock": 2,
+            "origClipLength": 108,
             "coloredText": [
                 {
                     "jpText": "アオハル杯",
                     "enText": "AOHAL Cup"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": 8513869281669861349
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 7410664582244587875
                 }
             ],
             "pathId": -5638442095717694432,
@@ -26,6 +37,7 @@
             "jpText": "<username>さんは、\r\n『アオハル杯』について説明を聞かれますか？",
             "enText": "<username> would you like to hear an \nexplanation of the \"AOHAL Cup\"?",
             "nextBlock": 3,
+            "origClipLength": 93,
             "choices": [
                 {
                     "jpText": "説明を聞く",
@@ -38,6 +50,16 @@
                     "nextBlock": 72
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 6674198951422997100
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -5246408600294779814
+                }
+            ],
             "pathId": 9165930096302965875,
             "blockIdx": 2
         },
@@ -47,6 +69,17 @@
             "jpText": "それでは、何をご説明いたしましょう？",
             "enText": "Then, what shall I explain?",
             "nextBlock": 4,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 4667260138990099045
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 5079722701132594607
+                }
+            ],
             "pathId": 40665080879410550,
             "blockIdx": 3
         },
@@ -56,6 +89,7 @@
             "jpText": "『アオハル杯』について、\r\n聞いておきたいことと言えば――",
             "enText": "The only thing I want to ask \nyou about the AOHAL Cup is…",
             "nextBlock": 5,
+            "origClipLength": 82,
             "choices": [
                 {
                     "jpText": "『アオハル杯』について",
@@ -83,6 +117,20 @@
                     "nextBlock": 68
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -2488232630697469567
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -1749618249373427050
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 8070386899248381054
+                }
+            ],
             "pathId": -2487592906130171127,
             "blockIdx": 4
         },
@@ -92,10 +140,25 @@
             "jpText": "『アオハル杯』とは、\r\nトゥインクル・シリーズと並行して行われる、\nトレセン学園主催のチーム対抗戦です！",
             "enText": "The Aoharu Cup is a team competition \nsponsored by Tressen Academy, held in \nconjunction with the Twinkle Series. \nAoharu Cup\" is a team competition hosted \nby Tracen Academy, which is held alongside \nthe Twinkle Series.",
             "nextBlock": 6,
+            "origClipLength": 112,
             "coloredText": [
                 {
                     "jpText": "チームメンバー",
                     "enText": "Team Members"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -326977927387376709
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -123024224146437420
+                },
+                {
+                    "origLen": 148,
+                    "pathId": -8158537532843344889
                 }
             ],
             "pathId": -5008238396657871248,
@@ -107,6 +170,17 @@
             "jpText": "トゥインクル・シリーズでは個人の力が\r\n試されますが、アオハル杯ではチームの力が\n重要になります。",
             "enText": "While the Twinkle Series is a test \nof individual strength, the AOHAL \nCup is a test of team strength. AOHAL \nCup is all about teamwork.",
             "nextBlock": 7,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 117,
+                    "pathId": 5107783872634896120
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -2050811910064316834
+                }
+            ],
             "pathId": -8685672171869132319,
             "blockIdx": 6
         },
@@ -116,6 +190,7 @@
             "jpText": "さて、アオハル杯は、大きく分けて\r\n『プレシーズン』と『本選』に\n分かれています。",
             "enText": "The AOHAL Cup is divided into two major \ncategories: the preseason and the finals.",
             "nextBlock": 8,
+            "origClipLength": 98,
             "coloredText": [
                 {
                     "jpText": "プレシーズン",
@@ -124,6 +199,16 @@
                 {
                     "jpText": "本選",
                     "enText": "final selection"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 1548740127401236603
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -9032379793538701255
                 }
             ],
             "pathId": -62687532753818398,
@@ -135,10 +220,21 @@
             "jpText": "プレシーズンはチーム対抗戦を4回行い、\r\n『チームランキング』を決めます。",
             "enText": "In the preseason, teams will compete against \neach other four times to determine their \n\"team ranking.",
             "nextBlock": 9,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "チームランキング",
                     "enText": "Team Ranking"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 5977743034161354258
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -8601710118531202906
                 }
             ],
             "pathId": -3252909145586701489,
@@ -150,6 +246,7 @@
             "jpText": "チームランキングについては、詳しくは\r\n『チームの情報について』で説明している\nので、ぜひご参照くださいね♪",
             "enText": "For more information about team rankings, \nplease refer to \"About Team Information\". \nPlease refer to \"About Team Information\" for \nmore information.",
             "nextBlock": 10,
+            "origClipLength": 115,
             "coloredText": [
                 {
                     "jpText": "絆ゲージを",
@@ -158,6 +255,16 @@
                 {
                     "jpText": "一定以上",
                     "enText": "above a certain level"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 107,
+                    "pathId": -1159022627770541294
+                },
+                {
+                    "origLen": 157,
+                    "pathId": 1773354171641974100
                 }
             ],
             "pathId": 8340686109828276789,
@@ -169,6 +276,17 @@
             "jpText": "プレシーズンには十分な期間があります。\r\nその間にチームメンバーを育てましょう！",
             "enText": "There is plenty of time for pre-season. In \nthe meantime, let's develop our team members!",
             "nextBlock": 11,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 149,
+                    "pathId": -905692776321139105
+                },
+                {
+                    "origLen": 132,
+                    "pathId": -976856504646294681
+                }
+            ],
             "pathId": 2029756637982392782,
             "blockIdx": 10
         },
@@ -178,10 +296,21 @@
             "jpText": "ちなみに、チームメンバーを育てるには\r\n『アオハル特訓』がオススメです！",
             "enText": "By the way, I recommend \"Aoharu Training\" to \ndevelop your team members!",
             "nextBlock": 12,
+            "origClipLength": 91,
             "coloredText": [
                 {
                     "jpText": "アオハル特訓",
                     "enText": "Aohar Special Training"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 117,
+                    "pathId": -6534206960223070339
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -3711561555078093166
                 }
             ],
             "pathId": -3040908428838192611,
@@ -193,6 +322,17 @@
             "jpText": "アオハル特訓についても、\r\n『チームメンバーとアオハル特訓について』\nで、説明しています。ぜひご参照ください♪",
             "enText": "AOHAL training is also explained \nin \"Team Members and AOHAL Training. \nfor an explanation of AOHAL training. \nPlease refer to it.",
             "nextBlock": 13,
+            "origClipLength": 116,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": 5805317089788525383
+                },
+                {
+                    "origLen": 169,
+                    "pathId": -4125965738303578442
+                }
+            ],
             "pathId": -6909070244045078420,
             "blockIdx": 12
         },
@@ -202,6 +342,21 @@
             "jpText": "プレシーズンを終えたら、いよいよ本選！\r\nアオハル杯の優勝チームを決定します！",
             "enText": "After the preseason, it's time for the \nfinals! We will determine the winning team \nfor the AOHAL Cup!",
             "nextBlock": 14,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 2515588843723352420
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -3463656985776325700
+                },
+                {
+                    "origLen": 135,
+                    "pathId": 4833057627521535358
+                }
+            ],
             "pathId": -7829964056557803571,
             "blockIdx": 13
         },
@@ -211,6 +366,7 @@
             "jpText": "プレシーズンで思うような結果を\r\n残せなくても、本選で勝利すれば\n優勝することもできます。",
             "enText": "Even if you don't achieve the results you \nwant in the preseason, you can still win the \nchampionship if you win in the finals.",
             "nextBlock": 15,
+            "origClipLength": 103,
             "coloredText": [
                 {
                     "jpText": "本選で勝利すれば",
@@ -219,6 +375,16 @@
                 {
                     "jpText": "優勝することもできます",
                     "enText": "You can even win a championship!"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": -2263027974164719796
+                },
+                {
+                    "origLen": 162,
+                    "pathId": -3470692583103165076
                 }
             ],
             "pathId": -1438775402336554066,
@@ -230,6 +396,17 @@
             "jpText": "最後まで諦めずに、\r\n優勝目指してがんばってくださいね！",
             "enText": "Don't give up until the end, and do your best \nto win the championship!",
             "nextBlock": 16,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": -970545325692329711
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -5703859075061817197
+                }
+            ],
             "pathId": 8985356308710607081,
             "blockIdx": 15
         },
@@ -239,6 +416,17 @@
             "jpText": "『アオハル杯』についての説明は\r\n以上となります。\nほかに聞きたいことはありますか？",
             "enText": "That's all I have to say about the AOHAL Cup. \nIs there anything else you would like to ask?",
             "nextBlock": 4,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -1198072855849701543
+                },
+                {
+                    "origLen": 128,
+                    "pathId": 8826034061187775044
+                }
+            ],
             "pathId": -2400661192420563101,
             "blockIdx": 16
         },
@@ -248,6 +436,7 @@
             "jpText": "『アオハル杯』は開催時期である、\r\n6月後半と12月後半のターン終了後に、\n自動的に始まります♪",
             "enText": "The \"AOHAL Cup\" will automatically start \nafter the end of the second half of June and \nDecember, when it is held. The \"AOHAL Cup\" \nstarts automatically after the end of the \nturn in the second half of June and December.",
             "nextBlock": 18,
+            "origClipLength": 107,
             "coloredText": [
                 {
                     "jpText": "6月後半と12月後半のターン終了後",
@@ -256,6 +445,20 @@
                 {
                     "jpText": "自動的に始まります",
                     "enText": "Starts automatically"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 7830907812525411745
+                },
+                {
+                    "origLen": 137,
+                    "pathId": -4076028932521199721
+                },
+                {
+                    "origLen": 126,
+                    "pathId": -5879235340601365093
                 }
             ],
             "pathId": 4869129527819400370,
@@ -267,6 +470,7 @@
             "jpText": "『短距離』『マイル』『中距離』『長距離』\r\n『ダート』の全5レースが開催されます。",
             "enText": "There will be a total of five races: Short \nDistance, Mile, Middle Distance, Long \nDistance, and Dirt.",
             "nextBlock": 19,
+            "origClipLength": 98,
             "coloredText": [
                 {
                     "jpText": "チームメンバーより担当ウマ娘の",
@@ -275,6 +479,16 @@
                 {
                     "jpText": "ほうがステータスが高い",
                     "enText": "has higher status."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": 6990193536421763361
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -2492452573719799181
                 }
             ],
             "pathId": 4263494272629994478,
@@ -286,6 +500,21 @@
             "jpText": "各レース、最低1名、最大3名まで\r\n出走登録が可能です。",
             "enText": "A minimum of one (1) and a maximum of three \n(3) runners may be registered for each race.",
             "nextBlock": 20,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 2573375598918999392
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 5634576233328780212
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 2335028898979535326
+                }
+            ],
             "pathId": 1044732436210772391,
             "blockIdx": 19
         },
@@ -295,6 +524,17 @@
             "jpText": "『アオハル杯』が始まったら、\r\n自動でチームが編成されます。",
             "enText": "When the AOHAL Cup begins, teams are \nautomatically formed.",
             "nextBlock": 21,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 6366659807596634166
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -3461579860548372071
+                }
+            ],
             "pathId": 564344402998570795,
             "blockIdx": 20
         },
@@ -304,6 +544,17 @@
             "jpText": "ですが、トレーナーさんがご自分で\r\nチーム編成をすることもできます。\n必要に応じてご活用くださいね！",
             "enText": "However, trainers can also organize their own \nteams. Please make use of that, if necessary!",
             "nextBlock": 22,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -3862627777281602149
+                },
+                {
+                    "origLen": 149,
+                    "pathId": -4665936323179857530
+                }
+            ],
             "pathId": -924749971625440891,
             "blockIdx": 21
         },
@@ -313,6 +564,17 @@
             "jpText": "チーム編成をしたら、対戦相手を選択します。",
             "enText": "Once you have organized your team, select \nyour opponents.",
             "nextBlock": 23,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 405800644359593303
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -2538921472737578152
+                }
+            ],
             "pathId": 859529185920242588,
             "blockIdx": 22
         },
@@ -322,6 +584,7 @@
             "jpText": "相手チームに勝利すると、\r\n育成ウマ娘が成長するのですが――",
             "enText": "When the opposing team wins, the bred \nhorsegirls grow up.",
             "nextBlock": 24,
+            "origClipLength": 84,
             "coloredText": [
                 {
                     "jpText": "相手チームに勝利",
@@ -330,6 +593,16 @@
                 {
                     "jpText": "育成ウマ娘が成長する",
                     "enText": "Nurturing Uma Musume grows up."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 7168516395411433145
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -1524190875393783234
                 }
             ],
             "pathId": -1791603723548968136,
@@ -341,10 +614,21 @@
             "jpText": "相手の『チームランキング』順位が高いほど、\r\nより育成ウマ娘の成長が期待できます。",
             "enText": "The higher the opponent's \"Team Ranking\" \nposition is, the more growth can be expected \nfrom the Breeding Uma Musume.",
             "nextBlock": 25,
+            "origClipLength": 98,
             "coloredText": [
                 {
                     "jpText": "チームランキング",
                     "enText": "Team Ranking"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 146,
+                    "pathId": -8355397814163491523
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -8092176165757561566
                 }
             ],
             "pathId": 4351440234146804550,
@@ -356,6 +640,17 @@
             "jpText": "また、トレーナーさんのチームの\r\nチームランキングもより大きく上がります！",
             "enText": "And your trainer's team will get a bigger \nboost in the team standings!",
             "nextBlock": 26,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": 7208933267425408438
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -2734990406851298952
+                }
+            ],
             "pathId": 5313793040938914253,
             "blockIdx": 25
         },
@@ -365,6 +660,7 @@
             "jpText": "ただし、アオハル杯で負けてしまうと\r\nランキングは上がらないので、\nがんばって勝利を掴みましょう！",
             "enText": "However, if you lose the AOHAL Cup, you will \nnot be able to improve your ranking. So, \nlet's do our best and get the victory!",
             "nextBlock": 27,
+            "origClipLength": 108,
             "coloredText": [
                 {
                     "jpText": "アオハル杯で負けてしまうと",
@@ -373,6 +669,16 @@
                 {
                     "jpText": "ランキングは上がらない",
                     "enText": "Rankings do not go up."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": 8144654976482141049
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 7058833539692649501
                 }
             ],
             "pathId": 3756545473331535122,
@@ -384,6 +690,17 @@
             "jpText": "レース直前の予想も参考にしながら\r\n対戦相手の選択をしてみてくださいね。",
             "enText": "Please refer to the forecast just before the \nrace as you choose your opponents.",
             "nextBlock": 28,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": 4647462160437665058
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 2611896869053254345
+                }
+            ],
             "pathId": -3492522804744353296,
             "blockIdx": 27
         },
@@ -393,6 +710,17 @@
             "jpText": "対戦相手が決まったら、いよいよ出走。\r\n5レース中、より多く1着を取れば勝利です！",
             "enText": "Once you have decided on your opponents, \nit's time to go to the races. The more \nfirst-place finishes you get out of the \nfive races, the more you win!",
             "nextBlock": 29,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 4792411472501287130
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 5826134259396798933
+                }
+            ],
             "pathId": -7801215098867516691,
             "blockIdx": 28
         },
@@ -402,6 +730,17 @@
             "jpText": "なお、プレシーズンが終わると、\r\n最後には本選が待ち構えています！",
             "enText": "After the pre-season, the \nfinal competition awaits!",
             "nextBlock": 30,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -6711152490744290859
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 7818517241896434429
+                }
+            ],
             "pathId": -5415391590378961450,
             "blockIdx": 29
         },
@@ -411,6 +750,7 @@
             "jpText": "本選を勝ち抜いたチームが、『アオハル杯』\r\n優勝チームということになります。",
             "enText": "The team that wins the final competition will \nbe the winner of the \"AOHAL Cup\".",
             "nextBlock": 31,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "本選を勝ち抜いたチーム",
@@ -425,6 +765,16 @@
                     "enText": "winning team"
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 94,
+                    "pathId": 3265814031095792624
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -135453074559249257
+                }
+            ],
             "pathId": -6084939736254996584,
             "blockIdx": 30
         },
@@ -434,6 +784,17 @@
             "jpText": "優勝に向けて、\r\n最高のチームを作り上げていきましょうね！",
             "enText": "Let's build the best team we \ncan for the championship!",
             "nextBlock": 32,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -252530067111056607
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 6508352557652363944
+                }
+            ],
             "pathId": -1610466416388388052,
             "blockIdx": 31
         },
@@ -443,6 +804,17 @@
             "jpText": "『アオハル杯』のレースについての説明は\r\n以上となります。\nほかに聞きたいことはありますか？",
             "enText": "That's all I have to say about the \n\"AOHAL Cup\" race. Is there anything \nelse you would like to ask?",
             "nextBlock": 4,
+            "origClipLength": 105,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -4437187006018804892
+                },
+                {
+                    "origLen": 155,
+                    "pathId": -5690692320865333334
+                }
+            ],
             "pathId": 6476850463274877677,
             "blockIdx": 32
         },
@@ -452,10 +824,25 @@
             "jpText": "トレーナーさんのチームに所属する\r\nウマ娘を『チームメンバー』と呼びます。",
             "enText": "Uma Musume who belong to the trainer's team \nare called \"team members\".",
             "nextBlock": 34,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "チームメンバー",
                     "enText": "Team Members"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 7675567149670596858
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 2733486613371618069
+                },
+                {
+                    "origLen": 137,
+                    "pathId": 1347771497928423458
                 }
             ],
             "pathId": -1677790317239270111,
@@ -467,6 +854,17 @@
             "jpText": "トレーナーさんのチームメンバーは、今は\r\n育成ウマ娘である<chrname>さんと\nサポートカードのみなさんだけです。",
             "enText": "The trainer's team members are now \n<chrname>, the training Umamusume, \nand and the support cards.",
             "nextBlock": 35,
+            "origClipLength": 121,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -3191079615937321171
+                },
+                {
+                    "origLen": 188,
+                    "pathId": -1138042179142579917
+                }
+            ],
             "pathId": 2276594308445422462,
             "blockIdx": 34
         },
@@ -476,6 +874,17 @@
             "jpText": "ですが、ご安心ください。",
             "enText": "But don't worry.",
             "nextBlock": 36,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": -7198989547133635578
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -862634819157233517
+                }
+            ],
             "pathId": 6709167366394836363,
             "blockIdx": 35
         },
@@ -485,6 +894,7 @@
             "jpText": "きっとプレシーズン期間のアオハル杯へ出走\r\nすれば、評判を聞きつけて集まってくれます！",
             "enText": "If they run in the AOHAL Cup during the \npre-season, I'm sure they'll get the word out!",
             "nextBlock": 37,
+            "origClipLength": 101,
             "coloredText": [
                 {
                     "jpText": "プレシーズン期間のアオハル杯へ出走",
@@ -493,6 +903,16 @@
                 {
                     "jpText": "評判を聞きつけて集まってくれます",
                     "enText": "They gather here because of our reputation."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": -328913417519270419
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -6488054271089385356
                 }
             ],
             "pathId": -676658406574598435,
@@ -504,10 +924,21 @@
             "jpText": "チームメンバーとなったウマ娘には、\r\nアオハル杯に出てもらえたり、\n一緒にトレーニングを行うこともできます。",
             "enText": "The team members can participate in the \nAoharu Cup and train together. They can also \ntrain together.",
             "nextBlock": 38,
+            "origClipLength": 115,
             "coloredText": [
                 {
                     "jpText": "チームランキング",
                     "enText": "Team Ranking"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -5426264072263337900
+                },
+                {
+                    "origLen": 185,
+                    "pathId": 8676503420271493947
                 }
             ],
             "pathId": -6872810199752922927,
@@ -519,6 +950,7 @@
             "jpText": "ただし、編成したサポートカードではない\r\nウマ娘にはちょっとだけ注意が必要です。",
             "enText": "However, a little caution must be \nexercised with the Uma Musume that \nis not an organized support card.",
             "nextBlock": 39,
+            "origClipLength": 97,
             "coloredText": [
                 {
                     "jpText": "編成したサポートカードではない",
@@ -527,6 +959,16 @@
                 {
                     "jpText": "ウマ娘",
                     "enText": "female horse"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -5375989634228623505
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -6311302873855462908
                 }
             ],
             "pathId": -7045805584219223651,
@@ -538,6 +980,7 @@
             "jpText": "彼女たちとは友情トレーニングができず、\r\nヒントイベントも発生しません。\n覚えておいてくださいね。",
             "enText": "You will not be able to do friendship \ntraining with these girls, and no hint events \nwill occur. Please remember.",
             "nextBlock": 40,
+            "origClipLength": 108,
             "coloredText": [
                 {
                     "jpText": "彼女たちとは友情トレーニングができず",
@@ -546,6 +989,16 @@
                 {
                     "jpText": "ヒントイベントも発生しません",
                     "enText": "Hint events do not occur either."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -2947613781727305705
+                },
+                {
+                    "origLen": 153,
+                    "pathId": 9088328757959541264
                 }
             ],
             "pathId": 6939159459908075805,
@@ -557,10 +1010,21 @@
             "jpText": "次に、『アオハル特訓』について\r\n説明させていただきますね！",
             "enText": "Next, I would like to explain \nabout \"Aoharu Training\"!",
             "nextBlock": 41,
+            "origClipLength": 84,
             "coloredText": [
                 {
                     "jpText": "アオハル特訓",
                     "enText": "Aohar Special Training"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 103,
+                    "pathId": -8203682548941590162
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 3548154932295596058
                 }
             ],
             "pathId": -7298853775387182208,
@@ -572,10 +1036,21 @@
             "jpText": "チームメンバーがいる場所で\r\n一緒にトレーニングすることで、\nお互いを高め合うアオハル特訓が発生します。",
             "enText": "By training together, in the presence of team \nmembers, where Aohar special training occurs \nwhere they improve each other.",
             "nextBlock": 42,
+            "origClipLength": 112,
             "coloredText": [
                 {
                     "jpText": "チーム総合力",
                     "enText": "Team Comprehensive Strength"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 4050480157242870734
+                },
+                {
+                    "origLen": 155,
+                    "pathId": 3553431952152024214
                 }
             ],
             "pathId": -1256993461998458453,
@@ -587,6 +1062,17 @@
             "jpText": "アオハル特訓が発生するかは\r\nチームメンバーがトレーニング場所に\n現れた際にランダムで決まります。",
             "enText": "Aohar training will occur at random when a \nteam member shows up at the training \nlocation. Aohar training is determined at \nrandom when a team member shows up at the \ntraining location.",
             "nextBlock": 43,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": 8114826097207145762
+                },
+                {
+                    "origLen": 160,
+                    "pathId": -133764491250868489
+                }
+            ],
             "pathId": -4008011730968112668,
             "blockIdx": 42
         },
@@ -596,6 +1082,17 @@
             "jpText": "アオハル特訓が発生する時は上向きの\r\nアイコンが出るので、見逃さないように\nしましょう。",
             "enText": "When Aohar training occurs, an upward-facing \nicon will appear, so be sure not to miss it.",
             "nextBlock": 44,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 3201766635757808791
+                },
+                {
+                    "origLen": 146,
+                    "pathId": 6869593850807125958
+                }
+            ],
             "pathId": -8176839700160135954,
             "blockIdx": 43
         },
@@ -605,6 +1102,7 @@
             "jpText": "アオハル特訓を行うと、\r\n特訓したチームメンバーの基礎能力が\n上がります。",
             "enText": "Aohar training improves the basic abilities \nof the trained team members.",
             "nextBlock": 45,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "特訓したチームメンバーの基礎能力が",
@@ -613,6 +1111,16 @@
                 {
                     "jpText": "上がります",
                     "enText": "Coming up."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4886456618408805322
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -912607479758284297
                 }
             ],
             "pathId": 1003625710116733420,
@@ -624,6 +1132,7 @@
             "jpText": "さらに、2人以上のチームメンバーと\r\n特訓をすると、育成ウマ娘の\nトレーニングの効果もアップします！",
             "enText": "Furthermore, if you train with two or more \nteam members, the effect of the training will \nalso be increased! training with two or more \nteam members will also increase the \neffectiveness of your training!",
             "nextBlock": 46,
+            "origClipLength": 110,
             "coloredText": [
                 {
                     "jpText": "2人以上のチームメンバーと",
@@ -642,6 +1151,16 @@
                     "enText": "Increased training effectiveness."
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -4449227747289440229
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -8253198206272029832
+                }
+            ],
             "pathId": -2521041544612682244,
             "blockIdx": 45
         },
@@ -651,6 +1170,17 @@
             "jpText": "特訓に参加するチームメンバーが多いほど\r\nトレーニングの効果が高くなるので、\nぜひみんなで特訓をしてみましょう！",
             "enText": "The more team members who participate in the \ntraining, the more effective the training \nwill be. So let's train together!",
             "nextBlock": 47,
+            "origClipLength": 118,
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": -9097547030463807975
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -5892509826135741035
+                }
+            ],
             "pathId": -6998251567828496949,
             "blockIdx": 46
         },
@@ -660,6 +1190,7 @@
             "jpText": "また、アオハル特訓を行った後、\r\nスキルのヒントを得られることもあります！",
             "enText": "Also, after you've done your AOHAL training, \nyou may even get a few tips on your skills!",
             "nextBlock": 48,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "アオハル特訓を行った後",
@@ -668,6 +1199,16 @@
                 {
                     "jpText": "スキルのヒントを得られる",
                     "enText": "Get tips on skills."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -7735945871519939589
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -7990514546224425507
                 }
             ],
             "pathId": 5168001138453831003,
@@ -679,6 +1220,17 @@
             "jpText": "そしてさらに、\r\nアオハル特訓を重ねていくと――",
             "enText": "And then, after more and more aoharu training…",
             "nextBlock": 49,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 615247513076527236
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -6609445180853657671
+                }
+            ],
             "pathId": -8803144690275879444,
             "blockIdx": 48
         },
@@ -688,10 +1240,21 @@
             "jpText": "チームメンバーの気持ちが最高潮になり、\r\nチームに対する熱い想い、すなわち\n『アオハル魂』が爆発することがあります！",
             "enText": "When team members are at their best, \ntheir passion for the team, in other \nwords, their \"AOHAL spirit,\" can explode! \nAoharu Spirit\" explodes!",
             "nextBlock": 50,
+            "origClipLength": 120,
             "coloredText": [
                 {
                     "jpText": "アオハル魂",
                     "enText": "Aoharu Spirit"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -3560601575007884690
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 2446438954522757702
                 }
             ],
             "pathId": -416561338354610555,
@@ -703,6 +1266,7 @@
             "jpText": "これは、チームメンバーの能力が大きく\r\n上がるほか、担当ウマ娘もスキルのヒントを\n獲得できます。",
             "enText": "This will greatly increase the abilities \nof the team members, and the Uma Musume \nin charge of the team will also gain \nskill tips. The team members' abilities \nwill be greatly enhanced.",
             "nextBlock": 51,
+            "origClipLength": 107,
             "coloredText": [
                 {
                     "jpText": "チームメンバーの能力が大きく",
@@ -721,6 +1285,16 @@
                     "enText": "acquisition"
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": 3524108745588528845
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -4585909123131409675
+                }
+            ],
             "pathId": 5421932805852865439,
             "blockIdx": 50
         },
@@ -730,6 +1304,17 @@
             "jpText": "沢山のウマ娘のアオハル魂を爆発させて、\r\nチームみんなでどんどん強くなりましょう！",
             "enText": "Let's make our team stronger and \nstronger by exploding the Aoharu \nspirit of many Uma Musume!",
             "nextBlock": 52,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 3916563112568764507
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 8415467753511741708
+                }
+            ],
             "pathId": -1589253559357355382,
             "blockIdx": 51
         },
@@ -739,6 +1324,17 @@
             "jpText": "『チームメンバー』と『アオハル特訓』に\r\nついての説明は以上となります。\nほかに聞きたいことはありますか？",
             "enText": "That's all I have to say about \"Team Members\" \nand \"AOHAL Training\". Is there anything else \nyou would like to ask?",
             "nextBlock": 4,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": 7903461480076103874
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 8916094406767536986
+                }
+            ],
             "pathId": 4945586058766878806,
             "blockIdx": 52
         },
@@ -748,6 +1344,7 @@
             "jpText": "こちらでは、『チームランキング』\r\n『チーム総合力』『チーム称号』の\n説明をいたします。",
             "enText": "Here are the explanations of \"Team Ranking\", \n\"Total Team Strength\" and \"Team Title\".",
             "nextBlock": 54,
+            "origClipLength": 102,
             "coloredText": [
                 {
                     "jpText": "チームランキング",
@@ -762,6 +1359,20 @@
                     "enText": "Team Title"
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -4464460334739847040
+                },
+                {
+                    "origLen": 148,
+                    "pathId": 1201558828228494435
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 8479232507404024781
+                }
+            ],
             "pathId": 8937287525480127959,
             "blockIdx": 53
         },
@@ -771,6 +1382,17 @@
             "jpText": "まず、チームの情報についてですが、\r\nこちらは育成コマンドを選ぶ画面で\n確認ができます。",
             "enText": "First, team information can be found on the \nscreen where the training command is selected.",
             "nextBlock": 55,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -2538636983312341017
+                },
+                {
+                    "origLen": 138,
+                    "pathId": 8098021859834290764
+                }
+            ],
             "pathId": -3063030541293429131,
             "blockIdx": 54
         },
@@ -780,6 +1402,17 @@
             "jpText": "『チームランキング』とは\r\n『アオハル杯』プレシーズンでの\nチームの順位のことです。",
             "enText": "The \"Team Ranking\" refers to the team's \nposition in the AOHAL Cup preseason.",
             "nextBlock": 56,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -9102566170961388444
+                },
+                {
+                    "origLen": 136,
+                    "pathId": 4530428190388030268
+                }
+            ],
             "pathId": -6638435632570434353,
             "blockIdx": 55
         },
@@ -789,10 +1422,21 @@
             "jpText": "『アオハル杯』のレースに勝利すると\r\nチームランキングが上がっていきます♪",
             "enText": "Winning a race in the \"AOHAL Cup\" raises your \nteam's ranking.",
             "nextBlock": 57,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "チーム編成",
                     "enText": "team organization"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": -3480706270989646742
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -5752079973378814112
                 }
             ],
             "pathId": -4121069844076662102,
@@ -804,6 +1448,7 @@
             "jpText": "チームランキングが上がれば上がるほど、\r\nチームの士気は上がり、アオハル杯で\n実力以上の力を発揮できるようになります。",
             "enText": "The higher the team ranking, the better the \nmorale of the team and the better the team \nwill be at the AOHAL Cup. the AOHAL Cup, the \nhigher the team's morale will rise.",
             "nextBlock": 58,
+            "origClipLength": 121,
             "coloredText": [
                 {
                     "jpText": "チームランキングが上がれば上がるほど",
@@ -818,6 +1463,16 @@
                     "enText": "You can do more than you're capable of doing."
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 2002214102033572823
+                },
+                {
+                    "origLen": 156,
+                    "pathId": -9161753418834250453
+                }
+            ],
             "pathId": -386150324498218349,
             "blockIdx": 57
         },
@@ -827,6 +1482,17 @@
             "jpText": "より高い順位を目指して、\r\nがんばりましょうね！",
             "enText": "Let's aim for a higher ranking \nand do our best!",
             "nextBlock": 59,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": 8710199758952679682
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 6745071875085681442
+                }
+            ],
             "pathId": -2505039274516484469,
             "blockIdx": 58
         },
@@ -836,6 +1502,17 @@
             "jpText": "『チーム総合力』とは、トレーナーさんの\r\nチームの強さのことを指します。",
             "enText": "The \"overall team strength\" refers to the \nstrength of the trainer's team.",
             "nextBlock": 60,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": -7344077975281557775
+                },
+                {
+                    "origLen": 142,
+                    "pathId": -2989705700929770710
+                }
+            ],
             "pathId": 3367145199998775843,
             "blockIdx": 59
         },
@@ -845,6 +1522,21 @@
             "jpText": "これは、アオハル特訓でチームメンバーを\r\n強くすると上がっていきます。",
             "enText": "This will increase as team members become \nstronger through aohar training.",
             "nextBlock": 61,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 5884941586532107522
+                },
+                {
+                    "origLen": 150,
+                    "pathId": 5481205424557528447
+                },
+                {
+                    "origLen": 116,
+                    "pathId": 7562760310349492141
+                }
+            ],
             "pathId": 4871764057687850399,
             "blockIdx": 60
         },
@@ -854,6 +1546,7 @@
             "jpText": "チームの各基礎能力が一定以上上がると、\r\nトレーニングレベルが上がりますので、\nどんどんチームを強くしていきましょう！",
             "enText": "As your team's basic abilities increase \nabove a certain level, your training \nlevel will increase. Let's make your \nteam stronger and stronger!",
             "nextBlock": 62,
+            "origClipLength": 121,
             "coloredText": [
                 {
                     "jpText": "チームの各基礎能力が一定以上上がると",
@@ -862,6 +1555,16 @@
                 {
                     "jpText": "トレーニングレベルが上がります",
                     "enText": "Increases training level."
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": -9037262110032102357
+                },
+                {
+                    "origLen": 154,
+                    "pathId": -3958913743928077760
                 }
             ],
             "pathId": -2700467174763447557,
@@ -873,6 +1576,17 @@
             "jpText": "チームの各基礎能力が上がっていくことで、\r\nチーム総合力も上昇し、一定以上になる度に、\n部室がグレードアップされます。",
             "enText": "As each of the team's basic abilities \nincreases, the team's overall strength also \nincreases, and each time it reaches a certain \nlevel, the team room is upgraded. Each time \nthe team reaches a certain level, the club \nroom will be upgraded.",
             "nextBlock": 63,
+            "origClipLength": 121,
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": 4800564234760511615
+                },
+                {
+                    "origLen": 154,
+                    "pathId": -2839320782382840867
+                }
+            ],
             "pathId": -7332655250163363862,
             "blockIdx": 62
         },
@@ -882,6 +1596,17 @@
             "jpText": "部室がグレードアップすると、\r\nアオハル杯出走後に能力の高いメンバーが\n集まりやすくなるみたいですよ♪",
             "enText": "When the club room is upgraded, it will \nbe easier to gather members of high ability \nafter the Aoharu Cup. It seems to be \neasier to gather members with high ability \nafter the Aoharu Cup.",
             "nextBlock": 64,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": 2485468302234414542
+                },
+                {
+                    "origLen": 156,
+                    "pathId": -3199474185015083565
+                }
+            ],
             "pathId": 7621841772397141043,
             "blockIdx": 63
         },
@@ -891,6 +1616,17 @@
             "jpText": "『チーム称号』とは、プレシーズン中の\r\nチームランキングとチーム総合力を\n合わせたチーム評価のことです。",
             "enText": "The \"Team Title\" is a team rating that \ncombines the team ranking and overall \nteam strength during the preseason. \nteam ranking during the preseason and \nthe team's overall strength.",
             "nextBlock": 65,
+            "origClipLength": 112,
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": -5958213396068778714
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 8225854463385353699
+                }
+            ],
             "pathId": -7509143080707589250,
             "blockIdx": 64
         },
@@ -900,6 +1636,7 @@
             "jpText": "チーム称号が高ければ高いほど、\r\nエンディングでより良い報酬が用意されます。",
             "enText": "The higher the team title, the better the \nreward at the ending.",
             "nextBlock": 66,
+            "origClipLength": 94,
             "coloredText": [
                 {
                     "jpText": "チーム称号が高ければ高いほど",
@@ -908,6 +1645,16 @@
                 {
                     "jpText": "エンディングでより良い報酬",
                     "enText": "Better rewards at the ending"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": -5044756347559119539
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 5761760869136050087
                 }
             ],
             "pathId": -1824733184402158094,
@@ -919,6 +1666,17 @@
             "jpText": "より良いチーム称号を目指して、\r\n『アオハル杯』やトレーニングを\nがんばってくださいね♪",
             "enText": "Please work hard at the Aoharu Cup and \ntraining for a better team title.",
             "nextBlock": 67,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": 1357734272008923902
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 2671013437523358397
+                }
+            ],
             "pathId": -3761623926257818526,
             "blockIdx": 66
         },
@@ -928,6 +1686,17 @@
             "jpText": "チームの情報についての説明は以上と\r\nなります。ほかに聞きたいことはありますか？",
             "enText": "That's it for the team information. Is there \nanything else you would like to ask?",
             "nextBlock": 4,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 6548407952656881743
+                },
+                {
+                    "origLen": 116,
+                    "pathId": -8391154819159521847
+                }
+            ],
             "pathId": -4860809597457026743,
             "blockIdx": 67
         },
@@ -937,6 +1706,7 @@
             "jpText": "本当に大丈夫ですか？",
             "enText": "Are you sure you are okay?",
             "nextBlock": 4,
+            "origClipLength": 60,
             "choices": [
                 {
                     "jpText": "はい",
@@ -949,6 +1719,20 @@
                     "nextBlock": 4
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2053583924760333948
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 2461056785252875863
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 6422259150774739733
+                }
+            ],
             "pathId": 2554326295610556421,
             "blockIdx": 68
         },
@@ -958,6 +1742,17 @@
             "jpText": "わかりました♪　念のためお伝えしますと\r\n簡単にまとめたものがこちらにあります。",
             "enText": "",
             "nextBlock": 70,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 103,
+                    "pathId": 7914254494670007716
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -3058819512973147539
+                }
+            ],
             "pathId": -7026422423448130336,
             "blockIdx": 69
         },
@@ -967,10 +1762,21 @@
             "jpText": "今の説明は、左上の『iボタン』を押せば\r\nいつでも見ることができますよ。",
             "enText": "You can see the current explanation \nanytime by pressing the \"i button\" \nin the upper left corner.",
             "nextBlock": 71,
+            "origClipLength": 91,
             "coloredText": [
                 {
                     "jpText": "iボタン",
                     "enText": "i button"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -2215949721841621898
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -842468984295224018
                 }
             ],
             "pathId": -2338076846687262860,
@@ -982,6 +1788,17 @@
             "jpText": "それでは、がんばってください。\r\n陰ながら応援しています。",
             "enText": "Well then, please do your best. I will be \ncheering for you from the shadows.",
             "nextBlock": -1,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -4217279346897510244
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 6977523517902776834
+                }
+            ],
             "pathId": -928350349164544272,
             "blockIdx": 71
         },
@@ -991,9 +1808,20 @@
             "jpText": "わかりました。それでは、がんばって\r\nくださいね！　陰ながら応援しています。",
             "enText": "I understand. Well then, good luck! I will be \ncheering for you from the shadows.",
             "nextBlock": -1,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -7826531675685577787
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -9116520641048910335
+                }
+            ],
             "pathId": 4383443114807689279,
             "blockIdx": 72
         }
     ],
-    "modified": 1657215150
+    "modified": 1657285617
 }

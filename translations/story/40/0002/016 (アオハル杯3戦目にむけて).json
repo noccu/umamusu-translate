@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "WTIA7U2P3GA77CUEJMOBXYAVSEKYFYEH",
     "type": "story",
     "storyId": "400002016",
@@ -11,6 +11,17 @@
             "jpText": "『アオハル杯』プレシーズン3戦目！\r\n控室にて、ハルウララは自信満々だった。",
             "enText": "The third preseason game of the Aoharu \nHai! In the waiting room, Haru Urara \nwas full of confidence.",
             "nextBlock": 2,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 6352833942028334920
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 5467397559446990298
+                }
+            ],
             "pathId": -7582123746907256889,
             "blockIdx": 1
         },
@@ -20,6 +31,7 @@
             "jpText": "今日は！　勝てる気がする！！",
             "enText": "Today! I feel like we can win!!!!",
             "nextBlock": 3,
+            "origClipLength": 63,
             "choices": [
                 {
                     "jpText": "強気だな",
@@ -32,6 +44,16 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": -5009261850241914096
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -8668732852552908407
+                }
+            ],
             "pathId": 8874130530498096519,
             "blockIdx": 2
         },
@@ -41,6 +63,17 @@
             "jpText": "うん！　だって、みんながんばったし、\nそれにすーっごく仲良しになったんだよ！",
             "enText": "Yes! Because we all worked so hard and became \nsuch good friends!",
             "nextBlock": 4,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -2527086606346944989
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -4015296646099763506
+                }
+            ],
             "pathId": 8920350409677286709,
             "blockIdx": 3
         },
@@ -50,9 +83,24 @@
             "jpText": "だから、なんかね、勝てる気がする！",
             "enText": "So, guess what, I think we can win!",
             "nextBlock": -1,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": -5166741624857684398
+                },
+                {
+                    "origLen": 32,
+                    "pathId": 4121526937054928193
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -3743212177973332788
+                }
+            ],
             "pathId": 163687981062237462,
             "blockIdx": 4
         }
     ],
-    "modified": 1657214694
+    "modified": 1657285606
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "T5TNHI62V3TOBAJVMQYO2E7F5DQDPRH3",
     "type": "story",
     "storyId": "400002023",
@@ -11,6 +11,7 @@
             "jpText": "やった……。\r\nみんなで、勝てたよ……！",
             "enText": "We did it.…… We all did it, we won. ……!",
             "nextBlock": 2,
+            "origClipLength": 71,
             "choices": [
                 {
                     "jpText": "よく頑張った！",
@@ -23,6 +24,16 @@
                     "nextBlock": 2
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": 8636010773228246228
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -4549083670832259877
+                }
+            ],
             "pathId": 8441397056690541719,
             "blockIdx": 1
         },
@@ -32,6 +43,17 @@
             "jpText": "えへへ……。",
             "enText": "Ehehe ……",
             "nextBlock": 3,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -3113074017627928930
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -4294976461171598980
+                }
+            ],
             "pathId": -3072555095578065366,
             "blockIdx": 2
         },
@@ -41,6 +63,17 @@
             "jpText": "がんばって、応援したんだ……。\r\nそしたら、チームの子がね。",
             "enText": "I did my best and cheered them on.…… And then \nthere was this kid on the team.",
             "nextBlock": 4,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -4943284353710626201
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -2602549098285275133
+                }
+            ],
             "pathId": 834752795651166925,
             "blockIdx": 3
         },
@@ -50,6 +83,17 @@
             "jpText": "声聞こえたよ、力が湧いたよって、\r\n言ってくれたんだ。",
             "enText": "She said, \"I heard your voice, I got strength.",
             "nextBlock": 5,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -7001870198078281568
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 1417360057377483222
+                }
+            ],
             "pathId": -8948997443338609891,
             "blockIdx": 4
         },
@@ -59,9 +103,20 @@
             "jpText": "……ライスも、ちょっぴりだけど、\r\nチームの力になれたのかな。",
             "enText": "I hope…… Rice was able to help the team, even \nif only a little.",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": 7989069365902278827
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 7814934897865521189
+                }
+            ],
             "pathId": 2272951615665810162,
             "blockIdx": 5
         }
     ],
-    "modified": 1657214833
+    "modified": 1657285608
 }

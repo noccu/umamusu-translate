@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "ZB3OVWSSTTO5QMG2EOQXR2MXFC3QS5J2",
     "type": "story",
     "storyId": "400002405",
@@ -11,15 +11,26 @@
             "jpText": "『アオハル杯』1戦目。タイキシャトルは、\r\n勝ち進んでチーム＜ファースト＞を\nBANG！　してみせると意気込むのだった。",
             "enText": "The first round of the Aoharu Cup. \nTaikishattle was determined to win and make \nTeam First go \"BANG! BANG!",
             "nextBlock": -1,
+            "origClipLength": 124,
             "coloredText": [
                 {
                     "jpText": "ファースト",
                     "enText": "first"
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 188,
+                    "pathId": -3811180446246647480
+                },
+                {
+                    "origLen": 171,
+                    "pathId": 4509501697985782588
+                }
+            ],
             "pathId": 1483307356899903034,
             "blockIdx": 1
         }
     ],
-    "modified": 1657215288
+    "modified": 1657285622
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "APERISOGAZJ4KPL75VKW4K35Z3FJJZPU",
     "type": "story",
     "storyId": "010000002",
@@ -11,6 +11,17 @@
             "jpText": "素晴らしいレースでしたね……！\n私もとっても胸が熱くなりました！！",
             "enText": "That was a great race…! \nI got really heated up!!",
             "nextBlock": 2,
+            "origClipLength": 183,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -6255187556285061703
+                },
+                {
+                    "origLen": 195,
+                    "pathId": -7926743995324493874
+                }
+            ],
             "pathId": -5110157543580236941,
             "blockIdx": 1
         },
@@ -20,10 +31,21 @@
             "jpText": "さあ、レースが終わりましたら、次は……\n『ウイニングライブ』の時間です！",
             "enText": "Now that the race is over… \nit's time for the Winning Live!",
             "nextBlock": 3,
+            "origClipLength": 191,
             "coloredText": [
                 {
                     "jpText": "ウイニングライブ",
                     "enText": "Winning Live"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 4123715236792627671
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 500011113691155573
                 }
             ],
             "pathId": 8902161062894969625,
@@ -35,6 +57,17 @@
             "jpText": "勝利を手にしたウマ娘と、応援してきた\nファンが喜びを分かち合う場所、\nウイニングライブ――",
             "enText": "The Winning Live… it's a place where \nthe victorious horsegirls and their \ncheering fans can share their joy!",
             "nextBlock": 4,
+            "origClipLength": 236,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": -3602570803486128630
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -7059892909700698515
+                }
+            ],
             "pathId": 4503965703202325760,
             "blockIdx": 3
         },
@@ -44,6 +77,7 @@
             "jpText": "1着の座を手にした子だけが立てる\nセンターは、みんなが目指す目標です。",
             "enText": "The center, where only the first place winner \ncan stand, is the goal everyone strives for.",
             "nextBlock": 5,
+            "origClipLength": 171,
             "pathId": -2447680610876931692,
             "blockIdx": 4
         },
@@ -53,6 +87,7 @@
             "jpText": "特別なレースに勝利したり、\n偉大な功績を残したりしなければ\n歌えない曲だってありますから――",
             "enText": "There are songs that can only be sung \nif you win a special race, or if you \nmake a great achievement.",
             "nextBlock": 6,
+            "origClipLength": 210,
             "pathId": -8592136098596379966,
             "blockIdx": 5
         },
@@ -62,6 +97,7 @@
             "jpText": "見ている私たちの感慨もひとしおです。",
             "enText": "The emotions you see are deeply moving.",
             "nextBlock": 7,
+            "origClipLength": 100,
             "pathId": 1583047192920120979,
             "blockIdx": 6
         },
@@ -71,6 +107,7 @@
             "jpText": "それに、ライブを見てそのウマ娘の\r\nファンになる方も多くいます。",
             "enText": "Plus, there's many people who become \nfans of the horsegirls after watching \ntheir live performances.",
             "nextBlock": 8,
+            "origClipLength": 148,
             "pathId": -6404209122900511410,
             "blockIdx": 7
         },
@@ -80,6 +117,7 @@
             "jpText": "ウマ娘たちにとってウイニングライブは、\r\n欠かすことのできない要素――\nということですね！",
             "enText": "The Winning Live is an indispensable element \nfor the horsegirls!",
             "nextBlock": 9,
+            "origClipLength": 200,
             "pathId": 153293922725610078,
             "blockIdx": 8
         },
@@ -89,9 +127,20 @@
             "jpText": "では、さっそく……今度はステージで輝く\nウマ娘たちを、観に行きましょう！",
             "enText": "Now, then… let's go see the shining horse \ngirls on stage!",
             "nextBlock": -1,
+            "origClipLength": 188,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 1568657409238109397
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -3495580356947359235
+                }
+            ],
             "pathId": 4563789689182122873,
             "blockIdx": 9
         }
     ],
-    "modified": 1657254085
+    "modified": 1657285548
 }

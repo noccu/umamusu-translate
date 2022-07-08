@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "3C65LTVWQHJTMKLAXYX2M4DSPC7ECBCZ",
     "type": "story",
     "storyId": "400002109",
@@ -11,6 +11,17 @@
             "jpText": "お疲れ様です、トレーナーさん。\nみなさん、がんばっていらっしゃいますね。",
             "enText": "Thanks for your hard work, trainer. You are \nall doing a great job.",
             "nextBlock": 2,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 2824118600580900779
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 2552157733304083232
+                }
+            ],
             "pathId": 6665759328462933223,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "ちょっとしたものですが、\nどうぞ受け取ってください♪",
             "enText": "It's just a little something. \nPlease accept it.",
             "nextBlock": 3,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": -345805776321968543
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 3217998690427133205
+                }
+            ],
             "pathId": -2319053688172841964,
             "blockIdx": 2
         },
@@ -29,9 +51,20 @@
             "jpText": "心のこもった差し入れに\nチームは盛り上がり、絆が深まった！",
             "enText": "The team got excited and bonded over the \nthoughtful offerings!",
             "nextBlock": -1,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": 4717534772785443369
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -7699369045563364771
+                }
+            ],
             "pathId": -3032407914414404713,
             "blockIdx": 3
         }
     ],
-    "modified": 1657215157
+    "modified": 1657285618
 }

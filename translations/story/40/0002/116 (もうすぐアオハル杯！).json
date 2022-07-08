@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "DOPLXRDU2ZYXTFC4B3Q7LR4QMXPPJGQ7",
     "type": "story",
     "storyId": "400002116",
@@ -11,6 +11,17 @@
             "jpText": "トレーナーさん、お疲れ様です！",
             "enText": "Great job, trainer!",
             "nextBlock": 2,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -1744033099971583930
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -2050170531547072396
+                }
+            ],
             "pathId": 352076825926906536,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "いよいよ、アオハル杯の開催が\r\n近づいてきましたね……！",
             "enText": "Finally, the AOHAL Cup is coming up. ……!",
             "nextBlock": 3,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -3287443842060197112
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -5182050546329905701
+                }
+            ],
             "pathId": -5985051210712258767,
             "blockIdx": 2
         },
@@ -29,9 +51,20 @@
             "jpText": "チームメンバーとトレーニングを重ね、\r\nしっかり準備をすませていきましょう！",
             "enText": "Let's train with our team members and be \nready for anything!",
             "nextBlock": -1,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": 5806810199279946446
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -1510587104612893854
+                }
+            ],
             "pathId": 9099265455346202394,
             "blockIdx": 3
         }
     ],
-    "modified": 1657215163
+    "modified": 1657285618
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "RE52NXHC2BXSFO2E2A6N4I4AR5XCQTM6",
     "type": "story",
     "storyId": "400001028",
@@ -11,6 +11,17 @@
             "jpText": "休日の昼下がり、オープンカフェの前で\r\n珍しい人物に出会った。",
             "enText": "On a holiday afternoon, I met an unusual \nperson in front of an open cafe.",
             "nextBlock": 2,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 6909158810255226003
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 106114988015531318
+                }
+            ],
             "pathId": 4606399888712145751,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "えっ、<username>トレーナー！？",
             "enText": "What, <username> trainer!",
             "nextBlock": 3,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 3953747133848517284
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6224254582681123619
+                }
+            ],
             "pathId": 9043973970983883464,
             "blockIdx": 2
         },
@@ -29,11 +51,26 @@
             "jpText": "お、お疲れ様です。\r\nまさか、このような場所でお会いするなんて！",
             "enText": "Oh, thank you for your time. Never thought \nI'd see you at one of these places!",
             "nextBlock": 4,
+            "origClipLength": 65,
             "choices": [
                 {
                     "jpText": "入らないんですか？",
                     "enText": "You're not going in?",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -842695843881006102
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -4379758800422093261
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -3821978442428773496
                 }
             ],
             "pathId": 5738643380996018010,
@@ -45,6 +82,21 @@
             "jpText": "それが……私の希望するコースは\r\n2名からしか注文を受けつけていないようで。",
             "enText": "It seems that…… only accepts orders from two \npeople for the course I want.",
             "nextBlock": 5,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 55282909238490908
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -8182155955404807490
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -5096896785746758623
+                }
+            ],
             "pathId": -6601623494151177686,
             "blockIdx": 4
         },
@@ -54,6 +106,7 @@
             "jpText": "桐生院トレーナーの視線の先にある看板には、\r\n『スイーツ＆パン食べ放題！\n恋人や友人とご一緒に』と書かれていた。",
             "enText": "A sign in Kiryuin trainer's line of sight \nread, \"All-you-can-eat sweets and bread! \nBring your girlfriends and friends,\" it read.",
             "nextBlock": 6,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "俺でよければ付き合いましょうか？",
@@ -66,6 +119,20 @@
                     "nextBlock": 6
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 132,
+                    "pathId": 2963362922219716161
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 2149370127442186517
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 5549414384230292773
+                }
+            ],
             "pathId": -3873235480328510956,
             "blockIdx": 5
         },
@@ -75,11 +142,26 @@
             "jpText": "よろしいのですか？　でも、私個人の仕事に\r\n貴方をつき合わせてしまうことに――",
             "enText": "Are you sure? But I'm afraid I'm going to \nhave to put you on the spot for my own \npersonal business.",
             "nextBlock": 7,
+            "origClipLength": 70,
             "choices": [
                 {
                     "jpText": "食べ放題が仕事……？",
                     "enText": "All you can eat is work ……?",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -5311751130001279459
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 2932042685564608262
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 2266548504695244231
                 }
             ],
             "pathId": 8919709896958138434,
@@ -91,6 +173,17 @@
             "jpText": "はい！　以前、ミークから聞いたのです。\r\nこの店のメニューがお気に入りだと。",
             "enText": "Yes!!! Meek told me about this before. She \nsaid she loves the menu at this restaurant.",
             "nextBlock": 8,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": -4055000052714094134
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7185340001701461044
+                }
+            ],
             "pathId": -3419027322835666395,
             "blockIdx": 7
         },
@@ -100,6 +193,17 @@
             "jpText": "ならば、自らの手で作れるようになれば\r\n彼女の更なるモチベーションアップに\n貢献出来ると思いまして！",
             "enText": "Then, if I can make it with my own hands, I \ncan help motivate her even more. I thought I \ncould contribute to her further motivation!",
             "nextBlock": 9,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -9133128873735044632
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -5062453991256116988
+                }
+            ],
             "pathId": 1027364540885619517,
             "blockIdx": 8
         },
@@ -109,6 +213,17 @@
             "jpText": "同じトレーナーとして感銘を受けたので、\r\n彼女の“仕事”を手伝うことにした。",
             "enText": "As a fellow trainer, I was so impressed that \nI decided to help her with her \"work.",
             "nextBlock": 10,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 3683747947016755362
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 7427769925134830813
+                }
+            ],
             "pathId": 6376718057358517091,
             "blockIdx": 9
         },
@@ -118,6 +233,17 @@
             "jpText": "……ふむ。パフェの生クリームは甘さよりも\r\nミルクの濃厚さを優先しているようですね。",
             "enText": "…… Hmmm. Seems like the whipped cream in the \nparfait is more about the richness of the \nmilk than the sweetness.",
             "nextBlock": 11,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": -5129020518017874852
+                },
+                {
+                    "origLen": 94,
+                    "pathId": 3611049134849763667
+                }
+            ],
             "pathId": -9026229539062087326,
             "blockIdx": 10
         },
@@ -127,6 +253,7 @@
             "jpText": "ベリーのソースを合わせることで、\r\n後味は存外、あっさりとしています。",
             "enText": "The berry sauce gives the dish a surprisingly \nlight aftertaste.",
             "nextBlock": 12,
+            "origClipLength": 67,
             "pathId": -7497247493147931097,
             "blockIdx": 11
         },
@@ -136,6 +263,7 @@
             "jpText": "では、こちらのブリュレケーキは……うっ！\r\n……なんて……強烈な……。",
             "enText": "Now, here is a brûlée cake that is…… ugh! \nWhat a…… intense ……",
             "nextBlock": 13,
+            "origClipLength": 67,
             "pathId": 4631672004025116958,
             "blockIdx": 12
         },
@@ -145,6 +273,21 @@
             "jpText": "おかげさまで、目的のメニューは\r\n一通り確認することが出来ました！",
             "enText": "Thanks to your help, I was able to see \neverything on the menu that I wanted!",
             "nextBlock": 14,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -3520296732203175321
+                },
+                {
+                    "origLen": 161,
+                    "pathId": -3741728247358517511
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 3280854518546426576
+                }
+            ],
             "pathId": 1749203757691856300,
             "blockIdx": 13
         },
@@ -154,11 +297,22 @@
             "jpText": "<username>トレーナー、\r\n本当にありがとうございます！",
             "enText": "<username>Thank you so much, trainer!",
             "nextBlock": 15,
+            "origClipLength": 65,
             "choices": [
                 {
                     "jpText": "上手く作れそうですか？",
                     "enText": "Do you think you can make it well?",
                     "nextBlock": 15
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2603280977988901739
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 6350505989760713976
                 }
             ],
             "pathId": 751282151031799260,
@@ -170,6 +324,17 @@
             "jpText": "はいっ！\r\n帰ったら早速、作ってみます。",
             "enText": "Yes!!! I will make it as soon as I get home.",
             "nextBlock": 16,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 8592159895903860989
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 1772732661967647469
+                }
+            ],
             "pathId": -3620640340484902739,
             "blockIdx": 15
         },
@@ -179,6 +344,17 @@
             "jpText": "そして、後日――",
             "enText": "And later―",
             "nextBlock": 17,
+            "origClipLength": 50,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 8219647633503498955
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 8387727865514625941
+                }
+            ],
             "pathId": -1381707068823336397,
             "blockIdx": 16
         },
@@ -188,6 +364,17 @@
             "jpText": "聞いてください！　昨日、ミークが\r\n最速タイムを更新したんです！",
             "enText": "Listen up! Meek beat her \nfastest time yesterday!",
             "nextBlock": 18,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": 2030271333009052847
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 7000532008951477247
+                }
+            ],
             "pathId": -1240256916527359286,
             "blockIdx": 17
         },
@@ -197,6 +384,17 @@
             "jpText": "『トレーナーが作ってくれたスイーツで\r\n元気が出た』って。ふふっ。",
             "enText": "The sweets my trainer made for \nme cheered me up.\" Hmmm.",
             "nextBlock": 19,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": 4361804305206288470
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 6781982311085349415
+                }
+            ],
             "pathId": -1974149495017887739,
             "blockIdx": 18
         },
@@ -206,6 +404,17 @@
             "jpText": "しかし、完成度はまだまだです。\r\nもっと研究して、味を完璧に再現しないと！",
             "enText": "However, it is not yet perfect. I need to do \nmore research and perfect the taste!",
             "nextBlock": 20,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -3823235889844490296
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 940368225539461526
+                }
+            ],
             "pathId": 5902175761265467379,
             "blockIdx": 19
         },
@@ -215,6 +424,17 @@
             "jpText": "ミークにはいつだって、一流のサポートを\r\n提供したいですからね。",
             "enText": "We always want to provide Meek \nwith top-notch support.",
             "nextBlock": 21,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5179645004346823881
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 4039869068502121088
+                }
+            ],
             "pathId": 4947092758500571421,
             "blockIdx": 20
         },
@@ -224,11 +444,22 @@
             "jpText": "そのためなら、どんな努力も惜しみません！",
             "enText": "And we will spare no effort to do so!",
             "nextBlock": 22,
+            "origClipLength": 58,
             "choices": [
                 {
                     "jpText": "また付き合いますよ",
                     "enText": "I'll go out with you again.",
                     "nextBlock": 22
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -5559483981197175003
+                },
+                {
+                    "origLen": 158,
+                    "pathId": -8069369518203249092
                 }
             ],
             "pathId": 8156971142048323241,
@@ -240,6 +471,17 @@
             "jpText": "<username>トレーナー……！\r\nええ、是非ともお願いしますっ。",
             "enText": "<username>Trainer ……! Yes, \nI would love to have you!",
             "nextBlock": 23,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 1778555027479856476
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 2397390228971040341
+                }
+            ],
             "pathId": 7961962905355477709,
             "blockIdx": 22
         },
@@ -249,6 +491,17 @@
             "jpText": "その後、付き合ってくれたお礼にと\r\n桐生院トレーナーが手作りスイーツを\nおすそ分けしてくれ――",
             "enText": "Afterwards, as a thank-you for accompanying \nme, the Kiryuin trainer gave me some of her \nhomemade sweets to share.",
             "nextBlock": 24,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": -5065660834606781337
+                },
+                {
+                    "origLen": 38,
+                    "pathId": 5769251567554271913
+                }
+            ],
             "pathId": 6557467228404356010,
             "blockIdx": 23
         },
@@ -258,9 +511,10 @@
             "jpText": "もらったスイーツを、<chrname>と\r\n一緒に食べたのだった。",
             "enText": "I ate the sweets I received with <chrname>.",
             "nextBlock": 25,
+            "origClipLength": 66,
             "pathId": 6880131242611785967,
             "blockIdx": 24
         }
     ],
-    "modified": 1657214315
+    "modified": 1657285596
 }

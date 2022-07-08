@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "NLT3WO2DK7Q5KOPKDZBRSRJRNJHVQPLY",
     "type": "story",
     "storyId": "400001024",
@@ -11,6 +11,21 @@
             "jpText": "たまたま畑の近くを\r\n通りかかった時のこと――",
             "enText": "I happened to be passing by a field.",
             "nextBlock": 2,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": 7758507006787992870
+                },
+                {
+                    "origLen": 160,
+                    "pathId": 7770279010338658153
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -8542562442821355900
+                }
+            ],
             "pathId": 1490072175291523915,
             "blockIdx": 1
         },
@@ -20,6 +35,21 @@
             "jpText": "天晴ッ！　うぅ～む、\r\n君はいい色ツヤをしている！",
             "enText": "Brilliant! Mmmm, you have a nice luster!",
             "nextBlock": 3,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": -4459676220716959669
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 4253108221632942384
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 7744375271290356842
+                }
+            ],
             "pathId": -5876909410639944392,
             "blockIdx": 2
         },
@@ -29,6 +59,21 @@
             "jpText": "婉美ッ！　君は表面のハリがいい。\r\n育ちの良さが表れているようだ！",
             "enText": "Euphemisms! You have a nice bouncy surface. \nIt seems to show your upbringing!",
             "nextBlock": 4,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": 768843447933762259
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7526381758273688470
+                },
+                {
+                    "origLen": 131,
+                    "pathId": 4383477638740837372
+                }
+            ],
             "pathId": 5014736378690871583,
             "blockIdx": 3
         },
@@ -38,11 +83,30 @@
             "jpText": "――むむっ？　これは奇遇ッ！\r\nよくぞ来た、歓迎するぞトレーナー！",
             "enText": "―Mm-hmm? What a coincidence! \nWelcome aboard, trainer!",
             "nextBlock": 5,
+            "origClipLength": 88,
             "choices": [
                 {
                     "jpText": "あの、ここで何を……？",
                     "enText": "Um, what are you doing here ……?",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 5598363740073229380
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 688615156184856430
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -5563765884038818909
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -7278977952132153339
                 }
             ],
             "pathId": 2883236290848313327,
@@ -54,6 +118,21 @@
             "jpText": "説明ッ！　わたしはここにいる\r\nにんじん諸君を褒め讃えていた。",
             "enText": "Explanation! I was praising the carrots here.",
             "nextBlock": 6,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -1832759941558982407
+                },
+                {
+                    "origLen": 168,
+                    "pathId": -3709280078621334592
+                },
+                {
+                    "origLen": 12,
+                    "pathId": 6880211934423876914
+                }
+            ],
             "pathId": -6128346293562318835,
             "blockIdx": 5
         },
@@ -63,6 +142,21 @@
             "jpText": "切望ッ！　わたしはウマ娘諸君にいい環境を\r\n与えたい。つまりは良質なにんじんが必須。",
             "enText": "I long for it! I want to provide a good \nenvironment for my horsegirls. In other \nwords, good quality carrots are essential.",
             "nextBlock": 7,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 5850377116014598116
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -8078869054029699921
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 5992211826602244388
+                }
+            ],
             "pathId": 7986829102993807596,
             "blockIdx": 6
         },
@@ -72,6 +166,7 @@
             "jpText": "栄養価が高く、おいしいにんじん――\r\n即ち、愛を受けて育ったにんじんが！",
             "enText": "Nutritious, delicious carrots―that is, \ncarrots grown with love!",
             "nextBlock": 8,
+            "origClipLength": 91,
             "choices": [
                 {
                     "jpText": "は、はあ……",
@@ -84,6 +179,16 @@
                     "nextBlock": 8
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": -3838208793194092231
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -2512920954954499861
+                }
+            ],
             "pathId": 2233910822664413925,
             "blockIdx": 7
         },
@@ -93,6 +198,17 @@
             "jpText": "事実ッ！　愛を以って称賛すれば\r\nにんじんはよく育つ。ウマ娘と同じである！",
             "enText": "Fact! Carrots grow well when they are praised \nwith love. Just like Uma Musume!",
             "nextBlock": 9,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 2589656833561656631
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 7621683782156791616
+                }
+            ],
             "pathId": 77904497064394872,
             "blockIdx": 8
         },
@@ -102,6 +218,21 @@
             "jpText": "愛とは尊敬であり覚悟ッ！\r\n対象の本質を知り、敬意を以って接すること。",
             "enText": "Love is respect and determination! Knowing \nthe true nature of the subject and treating \nit with respect.",
             "nextBlock": 10,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 2301886573091334256
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -7759794905064167254
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 6998673871833753450
+                }
+            ],
             "pathId": -56183249660663302,
             "blockIdx": 9
         },
@@ -111,6 +242,21 @@
             "jpText": "何があろうと最後まで見届けること。\r\n称賛し、最大限伸ばし育てること。",
             "enText": "To see things through to the end, \nno matter what. Praise, develop \nand nurture to the fullest.",
             "nextBlock": 11,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": -1426280511872775377
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 3177077520258368834
+                },
+                {
+                    "origLen": 10,
+                    "pathId": 2269179949760367323
+                }
+            ],
             "pathId": -3232330395486199473,
             "blockIdx": 10
         },
@@ -120,6 +266,17 @@
             "jpText": "それこそが愛！　即ち――",
             "enText": "That is love! That is―",
             "nextBlock": 12,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": 6347381759327814359
+                },
+                {
+                    "origLen": 43,
+                    "pathId": 4975121553235938914
+                }
+            ],
             "pathId": 5903577909858661309,
             "blockIdx": 11
         },
@@ -129,6 +286,7 @@
             "jpText": "秋川理事長がしゃがみ込み、\r\n1本のにんじんを引き抜いたかと思うと――",
             "enText": "I thought Chancellor Akikawa had crouched \ndown and pulled a carrot out of the ground.",
             "nextBlock": 13,
+            "origClipLength": 90,
             "pathId": -1160730340617427694,
             "blockIdx": 12
         },
@@ -138,6 +296,7 @@
             "jpText": "（ガリッ！！）",
             "enText": "(Gulp!!!)",
             "nextBlock": 14,
+            "origClipLength": 54,
             "pathId": 3533971694112534808,
             "blockIdx": 13
         },
@@ -147,6 +306,7 @@
             "jpText": "――斯様にッ！",
             "enText": "―Like this!",
             "nextBlock": 15,
+            "origClipLength": 54,
             "pathId": 1266101322224715965,
             "blockIdx": 14
         },
@@ -156,6 +316,7 @@
             "jpText": "うぅ～む、美味ッ！　この味こそ成長の証。\r\n責任をもって育てた甲斐があった！",
             "enText": "Mmmm, delicious! This taste is the \nproof of growth. It was worth the \nresponsibility of raising them!",
             "nextBlock": 16,
+            "origClipLength": 94,
             "choices": [
                 {
                     "jpText": "（た、食べた……！？）",
@@ -168,6 +329,20 @@
                     "nextBlock": 16
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 367247018482013956
+                },
+                {
+                    "origLen": 229,
+                    "pathId": -6934378909383262531
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 4849406041506397810
+                }
+            ],
             "pathId": 5037521806834313864,
             "blockIdx": 15
         },
@@ -177,6 +352,17 @@
             "jpText": "切望ッ！　ウマ娘諸君もいずれはこの\r\nにんじんのように成熟してほしいものだ。",
             "enText": "I long for it! I hope you Uma Musume will \neventually mature like these carrots.",
             "nextBlock": 17,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -609661872100046413
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -3671649480519985000
+                }
+            ],
             "pathId": -8920184370064816915,
             "blockIdx": 16
         },
@@ -186,6 +372,21 @@
             "jpText": "できることならなんでもしよう。\r\n皆が成熟する……その日まで！",
             "enText": "Let's do whatever we can. Until that day when \nwe all mature ……!",
             "nextBlock": 18,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -1477763322657978779
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 4677386056147442239
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 7906008590275885461
+                }
+            ],
             "pathId": 1363024581772864012,
             "blockIdx": 17
         },
@@ -195,6 +396,21 @@
             "jpText": "熱く語る秋川理事長。\r\n内容は、いまひとつ理解できないが……。",
             "enText": "President Akikawa speaks passionately. The \ncontent is not quite understandable at the \nmoment, but you can find it at ……",
             "nextBlock": 19,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -1099432098159873353
+                },
+                {
+                    "origLen": 85,
+                    "pathId": -1408553610378392869
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 4064483971064809269
+                }
+            ],
             "pathId": 7828250855792431621,
             "blockIdx": 18
         },
@@ -204,6 +420,21 @@
             "jpText": "激励ッ！　諸君らももっと育て！\r\n天まで伸びるほど強く逞しく！",
             "enText": "Pep talk! Grow up! Be strong and sturdy \nenough to reach to the sky!",
             "nextBlock": 20,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 3491108486639184706
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -6999253865201542428
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 6830849396023959231
+                }
+            ],
             "pathId": -5076847636379034582,
             "blockIdx": 19
         },
@@ -213,6 +444,21 @@
             "jpText": "いずれはウマ娘諸君の良質な糧となるために！\r\n今が育つ時だぞ、にんじん諸君！",
             "enText": "To eventually become quality sustenance \nfor you, you horsewomen! Now is the \ntime to grow up, carrots!",
             "nextBlock": 21,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 210,
+                    "pathId": -5188000928027090146
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -2663344408363024851
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -2993805361029221281
+                }
+            ],
             "pathId": -2813927898978173456,
             "blockIdx": 20
         },
@@ -222,6 +468,25 @@
             "jpText": "秋川理事長なりに、真剣にウマ娘に\r\n向き合っていることが感じ取れる。",
             "enText": "It is clear that Akikawa is taking Umamusume \nseriously in her own way.",
             "nextBlock": 22,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 210,
+                    "pathId": -4335207162317029161
+                },
+                {
+                    "origLen": 117,
+                    "pathId": 6384035269909059153
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 8745819292087660783
+                },
+                {
+                    "origLen": 149,
+                    "pathId": -3768059527798811622
+                }
+            ],
             "pathId": 4967091823925597073,
             "blockIdx": 21
         },
@@ -231,11 +496,30 @@
             "jpText": "しかも、その志には尊敬すべきものが\r\nあるように思う。ならば――",
             "enText": "Moreover, I think there is something \nrespectable about that aspiration. Then―",
             "nextBlock": 23,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "畑仕事、手伝いましょうか",
                     "enText": "Shall I help you work the fields?",
                     "nextBlock": 23
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 210,
+                    "pathId": -1084837941343031968
+                },
+                {
+                    "origLen": 117,
+                    "pathId": 851537673193854938
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -773559880068379404
+                },
+                {
+                    "origLen": 190,
+                    "pathId": -2035343992664245556
                 }
             ],
             "pathId": 7000775332824884691,
@@ -247,6 +531,25 @@
             "jpText": "驚愕ッ！\r\nしかしながら青天の霹靂……ッ！",
             "enText": "Astonishing! However, out of the blue ……!",
             "nextBlock": 24,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -38377717004583822
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -6826254144995904439
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -2231239824211166723
+                },
+                {
+                    "origLen": 15,
+                    "pathId": -215503223429660772
+                }
+            ],
             "pathId": 4007128519440032633,
             "blockIdx": 23
         },
@@ -256,11 +559,22 @@
             "jpText": "要望ッ！　君さえ良ければ\r\n是非とも手伝ってもらいたい！",
             "enText": "A request! If you're willing, I'd love to \nhave your help!",
             "nextBlock": 25,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "では、畑を耕します",
                     "enText": "Then I'll plow the fields.",
                     "nextBlock": 25
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": -3818532677453069187
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 3169545445349212686
                 }
             ],
             "pathId": -3388893001526257147,
@@ -272,6 +586,21 @@
             "jpText": "感謝ッ！　ウマ娘諸君とにんじん諸君の\r\nためにも、精一杯励んでくれたまえ。",
             "enText": "Thank you! For the sake of Uma Musume and \nCarrots, please work as hard as you can.",
             "nextBlock": 26,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -275980331947498826
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 6270655314204649093
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 142008971105861738
+                }
+            ],
             "pathId": 5815855897575722668,
             "blockIdx": 25
         },
@@ -281,6 +610,7 @@
             "jpText": "<chrname>と日々特訓している\r\nおかげだろうか。パワーがどんどん\n湧いてきて、サクサク畑を耕せた！",
             "enText": "I wonder if it is thanks to the daily \ntraining with <chrname>. The power is coming \nup more and more, and I can plow the fields! \nI was able to plow the fields with ease!",
             "nextBlock": 27,
+            "origClipLength": 114,
             "coloredText": [
                 {
                     "jpText": "パワーがどんどん",
@@ -289,6 +619,20 @@
                 {
                     "jpText": "湧いてきて",
                     "enText": "out of nowhere"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 1964029513917095130
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -4382197303663699203
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -139202608066106130
                 }
             ],
             "pathId": 4430023300192526466,
@@ -300,6 +644,7 @@
             "jpText": "好調ッ！　いいぞ、うぅ～む！\r\nついでにそこも！　こっちも頼む！",
             "enText": "Good! Good, mmmm! And by the way, there too! \nAnd this one too!",
             "nextBlock": 28,
+            "origClipLength": 86,
             "pathId": 5283540456952955759,
             "blockIdx": 27
         },
@@ -309,6 +654,17 @@
             "jpText": "上々ッ！　これだけ耕せば、\r\n新たに種を蒔くことができよう。",
             "enText": "Great! With this much plowing, \nwe can sow new seeds.",
             "nextBlock": 29,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 182,
+                    "pathId": -1383821203257359392
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -4082920564719828015
+                }
+            ],
             "pathId": 791220978414269385,
             "blockIdx": 28
         },
@@ -318,6 +674,7 @@
             "jpText": "ご苦労ッ！　ぜひ、この働きにお礼がしたい！",
             "enText": "Thank you! I'd love to thank \nyou for all your hard work!",
             "nextBlock": 30,
+            "origClipLength": 72,
             "choices": [
                 {
                     "jpText": "では、新しい練習用具をいただけますか？",
@@ -330,6 +687,16 @@
                     "nextBlock": 40
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 429775916831704926
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -2592962178540630882
+                }
+            ],
             "pathId": -8110143694090929224,
             "blockIdx": 29
         },
@@ -339,6 +706,17 @@
             "jpText": "承知ッ！　ならば、\r\nこれを進呈しよう！",
             "enText": "Yes! Then I present you with this!",
             "nextBlock": 31,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -5455962411918864074
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -3212865471630867202
+                }
+            ],
             "pathId": -271618731834572780,
             "blockIdx": 30
         },
@@ -348,6 +726,21 @@
             "jpText": "ウマ娘工学に基づく\r\n最新のトレーニングシューズ――",
             "enText": "The latest training shoes based \non Umamusume engineering.",
             "nextBlock": 32,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 6329730958266278025
+                },
+                {
+                    "origLen": 185,
+                    "pathId": 123721705410867815
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 5449867221517914408
+                }
+            ],
             "pathId": -7149705992297894970,
             "blockIdx": 31
         },
@@ -357,11 +750,22 @@
             "jpText": "命名ッ！　蹄鉄シューズトレセン学園モデル！\r\n企画から監修まで、わたしも携わった！",
             "enText": "Named! Horseshoe Shoes, Tracen Academy Model! \nI was involved from planning to supervision!",
             "nextBlock": 33,
+            "origClipLength": 98,
             "choices": [
                 {
                     "jpText": "ありがとうございます！",
                     "enText": "Thank you!",
                     "nextBlock": 33
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 5213923427231121655
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -8357170703758438899
                 }
             ],
             "pathId": 3484785649165534663,
@@ -373,6 +777,17 @@
             "jpText": "よい成長にはよい道具！\r\n当然のことをしたまでだ！",
             "enText": "Good tools for good growth! \nI did what I had to do!",
             "nextBlock": 34,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": -5450710875209718528
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 8320214478718184012
+                }
+            ],
             "pathId": -8272350510655315749,
             "blockIdx": 33
         },
@@ -382,6 +797,17 @@
             "jpText": "このシューズもまた、ウマ娘諸君を育てる\r\n“にんじん”となるであろう。",
             "enText": "These shoes will also be the \"carrot\" that \nwill nurture your Uma Musume.",
             "nextBlock": 35,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 1053827916773444232
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -4545254521205258779
+                }
+            ],
             "pathId": 7301137424760995206,
             "blockIdx": 34
         },
@@ -391,6 +817,17 @@
             "jpText": "期待ッ！　これからも愛をもって\r\n大切にウマ娘を育ててくれたまえ！",
             "enText": "I'm counting on you! Please continue to raise \nmy horsegirls with love and care!",
             "nextBlock": 36,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 8402931902909488963
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 2141803149642063467
+                }
+            ],
             "pathId": 1629208648402876348,
             "blockIdx": 35
         },
@@ -400,6 +837,17 @@
             "jpText": "秋川理事長の熱意が伝わってくる。\r\nさっそく<chrname>に\nもらったシューズを渡そう。",
             "enText": "I can feel the enthusiasm of President \nAkikawa. Let's give <chrname> the shoes she \ngave us right away.",
             "nextBlock": 37,
+            "origClipLength": 105,
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": -5832012576946515639
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -598669327662071745
+                }
+            ],
             "pathId": 3898401921325593872,
             "blockIdx": 36
         },
@@ -409,10 +857,21 @@
             "jpText": "『<itemname>』\r\nを獲得した",
             "enText": "I got \"<itemname>\".",
             "nextBlock": 38,
+            "origClipLength": 67,
             "coloredText": [
                 {
                     "jpText": "<itemname>",
                     "enText": "<itemname>"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": -437645771979578690
+                },
+                {
+                    "origLen": 145,
+                    "pathId": 5432113651364383393
                 }
             ],
             "pathId": -6672028269633397221,
@@ -424,6 +883,21 @@
             "jpText": "もらったシューズは、構造含め何から何まで\r\n秋川理事長のウマ娘愛で溢れており――",
             "enText": "The shoes we received, including their \nstructure, are filled with Chancellor \nAkikawa's love for the Uma Musume.",
             "nextBlock": 39,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 184,
+                    "pathId": -71213743400243644
+                },
+                {
+                    "origLen": 210,
+                    "pathId": 1482037266573873345
+                },
+                {
+                    "origLen": 223,
+                    "pathId": 2333224317482825988
+                }
+            ],
             "pathId": 2995394997582957666,
             "blockIdx": 38
         },
@@ -433,6 +907,13 @@
             "jpText": "踵を踏むとたまに鳴る『激励ッ！』の\r\nコメントに励まされつつ、\nトレーニングにも力が入ったのだった！",
             "enText": "The occasional \"pep talk!\" that rings out \nwhen I step on my heels I was encouraged by \nthe comments of I was able to train harder!",
             "nextBlock": -1,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 223,
+                    "pathId": 8419973125322637651
+                }
+            ],
             "pathId": 6956245226243502089,
             "blockIdx": 39
         },
@@ -442,11 +923,22 @@
             "jpText": "承知ッ！　では共ににんじん諸君を\r\n褒め讃えようではないか！",
             "enText": "Yes! Then let us together praise the Carrots!",
             "nextBlock": 41,
+            "origClipLength": 84,
             "choices": [
                 {
                     "jpText": "え？",
                     "enText": "Huh?",
                     "nextBlock": 41
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8549458168313642180
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -4882790499209899218
                 }
             ],
             "pathId": -7798588722673171725,
@@ -458,6 +950,17 @@
             "jpText": "そこの君ッ！　なんとも大きく立派だ！\r\nまるで大木のように逞しい！",
             "enText": "You there! How big and magnificent! You're as \nstrong as a big tree!",
             "nextBlock": 42,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -6279839010724590494
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -4907009648449530475
+                }
+            ],
             "pathId": 731737281105656552,
             "blockIdx": 41
         },
@@ -467,6 +970,7 @@
             "jpText": "切望ッ！　是非とも君もにんじん諸君に\r\n言葉をかけてあげてほしい。",
             "enText": "I'm desperate! I would like you to say a few \nwords to the carrots.",
             "nextBlock": 43,
+            "origClipLength": 88,
             "choices": [
                 {
                     "jpText": "君は色が濃い！栄養価が高そうだ！",
@@ -479,6 +983,20 @@
                     "nextBlock": 43
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": -6920343297364360109
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -3262037208581139725
+                },
+                {
+                    "origLen": 221,
+                    "pathId": 2747789924902222576
+                }
+            ],
             "pathId": 6001720056218660829,
             "blockIdx": 42
         },
@@ -488,6 +1006,21 @@
             "jpText": "見事ッ、見事……ッ！\r\nなんとも素晴らしい称賛！",
             "enText": "Brilliant, brilliant ……! What \na wonderful accolade!",
             "nextBlock": 44,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": -7289430584087465174
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 6955433438577073597
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 3680891560829203003
+                }
+            ],
             "pathId": -8997208649877859210,
             "blockIdx": 43
         },
@@ -497,6 +1030,21 @@
             "jpText": "いやはや上々ッ！　さすがはトレセン学園！\r\nトレーナーの質が高い！",
             "enText": "Well, well, well! That's what I'm talking \nabout! The trainers are of high quality!",
             "nextBlock": 45,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": -767449556896388187
+                },
+                {
+                    "origLen": 166,
+                    "pathId": 1821175330294338546
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 3600413954805932197
+                }
+            ],
             "pathId": -542937688568288211,
             "blockIdx": 44
         },
@@ -506,6 +1054,17 @@
             "jpText": "確信ッ！　にんじんたちは\r\nますます美味しくなったことだろう！",
             "enText": "I'm sure! The carrots must \nhave tasted even better!",
             "nextBlock": 46,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -1095765935214764543
+                },
+                {
+                    "origLen": 166,
+                    "pathId": -7042606232808595611
+                }
+            ],
             "pathId": -5846461855882238247,
             "blockIdx": 45
         },
@@ -515,10 +1074,21 @@
             "jpText": "『<itemname>』を獲得した",
             "enText": "I got \"<itemname>\".",
             "nextBlock": 47,
+            "origClipLength": 67,
             "coloredText": [
                 {
                     "jpText": "<itemname>",
                     "enText": "<itemname>"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": -4360168288100819961
+                },
+                {
+                    "origLen": 169,
+                    "pathId": 3795485854113390356
                 }
             ],
             "pathId": 6386655773508458236,
@@ -530,6 +1100,17 @@
             "jpText": "後日、秋川理事長から大量のにんじんが\r\n贈られてきたため――",
             "enText": "Later, because of a large donation of carrots \nfrom President Akikawa, the",
             "nextBlock": 48,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 165,
+                    "pathId": 6418348617456710756
+                },
+                {
+                    "origLen": 165,
+                    "pathId": 8934718334534342166
+                }
+            ],
             "pathId": -956015442363049820,
             "blockIdx": 47
         },
@@ -539,6 +1120,7 @@
             "jpText": "<chrname>と、通りすがりの\r\n友人たちも巻き込んで、\n一大にんじんパーティーを開いたのだった！",
             "enText": "<chrname> and a few friends who were passing \nby. and some friends who were passing by, and \nthey threw a big carrot party!",
             "nextBlock": 49,
+            "origClipLength": 111,
             "pathId": -558777893156628539,
             "blockIdx": 48
         },
@@ -548,9 +1130,16 @@
             "jpText": "美味しいにんじんを心ゆくまで堪能した\r\n<chrname>は、トレーニングにも\n元気に取り組めたのだった！",
             "enText": "After enjoying the delicious carrots \nto her heart's content, <chrname> was \nready for training! was able to tackle \nher training in high spirits!",
             "nextBlock": -1,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 222,
+                    "pathId": -7376418015027753702
+                }
+            ],
             "pathId": -6704627823112072584,
             "blockIdx": 49
         }
     ],
-    "modified": 1657214245
+    "modified": 1657285595
 }

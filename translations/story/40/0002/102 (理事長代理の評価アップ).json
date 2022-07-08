@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "DUNZRP57M6T2LEED4A3OVO64B32G2RBG",
     "type": "story",
     "storyId": "400002102",
@@ -11,6 +11,17 @@
             "jpText": "……あの子、随分成長しましたね。",
             "enText": "…… That boy has grown up a lot.",
             "nextBlock": 2,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -3158295168451167708
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 287674348263875441
+                }
+            ],
             "pathId": 7889562385834557215,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "以前トレーニングで見た時は、\r\nあんなにスタミナはありませんでした。",
             "enText": "When I saw her in training before, she didn't \nhave that kind of stamina.",
             "nextBlock": 3,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 4543660703243571279
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -5496838140278465532
+                }
+            ],
             "pathId": 6517665542149380646,
             "blockIdx": 2
         },
@@ -29,9 +51,20 @@
             "jpText": "案外しっかり、鍛えていらっしゃるんですね。",
             "enText": "I see that you have been working out more \nthan expected.",
             "nextBlock": -1,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 4400056644469037276
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -9158174142972732635
+                }
+            ],
             "pathId": -150484308781534986,
             "blockIdx": 3
         }
     ],
-    "modified": 1657215154
+    "modified": 1657285618
 }

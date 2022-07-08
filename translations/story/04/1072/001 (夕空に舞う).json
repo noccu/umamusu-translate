@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "TURUYOHCILC2I3NUEBGGL47J4CM2EMYZ",
     "type": "story",
     "storyId": "041072001",
@@ -11,6 +11,7 @@
             "jpText": "ある日の夕暮れ。買い出しの帰りに、河川敷を通りかかると――",
             "enText": "One day in the evening. Passing by the river \nbank on the way home from shopping――",
             "nextBlock": 2,
+            "origClipLength": 82,
             "pathId": -6710173456450355018,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "――――破ッ！！",
             "enText": "――――HA！！",
             "nextBlock": 3,
+            "origClipLength": 43,
             "choices": [
                 {
                     "jpText": "！？",
@@ -36,6 +38,7 @@
             "jpText": "さながら研ぎ澄まされた剣先が如く、鋭く響いた気合いの声に\nびくりと足が止まる。思わず、そちらを見やると――",
             "enText": "With an astounding sharpness, a loud voice rang out. \nSurprised, I came to a stop. Without thinking, \nI looked in the direction it came from――",
             "nextBlock": 4,
+            "origClipLength": 114,
             "pathId": 2670526077943737394,
             "blockIdx": 3
         },
@@ -45,11 +48,22 @@
             "jpText": "スゥッ――…………\nフゥー…………。",
             "enText": "Suuu――………… \nFuuー…………。",
             "nextBlock": 5,
+            "origClipLength": 183,
             "choices": [
                 {
                     "jpText": "確か、あの子は……ヤエノムテキ……？",
                     "enText": "If I'm not mistaken, she's…… Yaeno Muteki……？",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 223,
+                    "pathId": -1345586098182611437
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 6138588967811823551
                 }
             ],
             "pathId": 4342061578062329601,
@@ -61,6 +75,13 @@
             "jpText": "――ふッ！　……はァッ！\n……せいッ！　……たぁッ！",
             "enText": "――Fuu! ……Haaa! \n……Seii! ……Taaa!",
             "nextBlock": 6,
+            "origClipLength": 162,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -5321724456924574865
+                }
+            ],
             "pathId": 8734027914031268485,
             "blockIdx": 5
         },
@@ -70,6 +91,13 @@
             "jpText": "夕空の下、裂帛の気合いと共に繰り出される彼女の拳が、\r\n蹴りが、手刀が、空を裂き地を震わせる――",
             "enText": "In the evening air, her fighting spirit cut through \nthe air as each swing of her fist, each kick, and \neach slash, caused the ground to shake――",
             "nextBlock": 7,
+            "origClipLength": 107,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 2140000640172094052
+                }
+            ],
             "pathId": -5679624779822373880,
             "blockIdx": 6
         },
@@ -79,6 +107,17 @@
             "jpText": "フゥ――――ッ…………！！\n――――破ァッ！！",
             "enText": "Fuu――――…………！！ \n――――Haaa!!",
             "nextBlock": 8,
+            "origClipLength": 170,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 3456056349970709345
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8627829580832192021
+                }
+            ],
             "pathId": 6692467505520147859,
             "blockIdx": 7
         },
@@ -88,6 +127,17 @@
             "jpText": "…………フゥッ。",
             "enText": "…………Fuuu.",
             "nextBlock": 9,
+            "origClipLength": 33,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 4064459490002650724
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -1267156311614643130
+                }
+            ],
             "pathId": -8145640253397386667,
             "blockIdx": 8
         },
@@ -97,11 +147,22 @@
             "jpText": "……気づけば、見惚れきっていた。猛々しさと静けさの見事な調和。\r\n弛まぬ鍛錬を感じさせる、体の隅々まで洗練された美しい動き……。",
             "enText": "……before I realized it, I was captivated. She was the epitome of \nfierceness and serenity. Every part of her body moved with a \nrefined grace, the result of diligent training……",
             "nextBlock": 10,
+            "origClipLength": 128,
             "choices": [
                 {
                     "jpText": "（まるで……『舞い』のようだった……）",
                     "enText": "(It's…… almost like a 『Dance』……)",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": 2686456086193061142
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6475952885145892576
                 }
             ],
             "pathId": -5205080423347177677,
@@ -113,11 +174,18 @@
             "jpText": "――失礼。そこな御仁。",
             "enText": "――Excuse me. You over there.",
             "nextBlock": 11,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "っ！？は、はい！！",
                     "enText": "！？ Y―yes！！",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 4550890438656411155
                 }
             ],
             "pathId": -5111580929107652129,
@@ -129,11 +197,22 @@
             "jpText": "その襟のバッジ、学園のトレーナーとお見受けいたします。\r\n私に、何かご用でしょうか。",
             "enText": "Judging by the badge on your collar, I assume you are a trainer from the academy. \nDo you have some business with me?",
             "nextBlock": 12,
+            "origClipLength": 233,
             "choices": [
                 {
                     "jpText": "いや……ごめん、つい見惚れてて……",
                     "enText": "Not really…… sorry, I was just fascinated……",
                     "nextBlock": 12
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 206,
+                    "pathId": -1028691573781575709
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2260729876648516057
                 }
             ],
             "pathId": -1656796740230669868,
@@ -145,6 +224,17 @@
             "jpText": "それは……いえ、未熟な私には身に余るお言葉です。",
             "enText": "That's…… no, someone as inexperienced \nas I is undeserving of such praise.",
             "nextBlock": 13,
+            "origClipLength": 200,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -8387100749165489455
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3810193262798898791
+                }
+            ],
             "pathId": 2059387288572147855,
             "blockIdx": 12
         },
@@ -154,6 +244,17 @@
             "jpText": "今も、こうして『形』を演じ雑念を払わねば、\r\n明日に迫った選抜レースに向け猛る心を抑えきれずにいたところ。",
             "enText": "Even now, I'm performing these 『Kata』 to purge my idle thoughts, \nto calm the uncontrollable emotions coursing through me in \nprepartion for tomorrow's Selection Race.",
             "nextBlock": 14,
+            "origClipLength": 312,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 6307742805691746707
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -333414743148083352
+                }
+            ],
             "pathId": -3279246634221992678,
             "blockIdx": 13
         },
@@ -163,11 +264,22 @@
             "jpText": "ただ、修行不足の身なれど、明日は実力の全てをお見せする所存。\r\n……もし暇あらば、足をお運びいただけると僥倖です。",
             "enText": "However, even if my training has been insufficient, \ntomorrow I intend to use my full power. ……if you have the time, and find \nyourself there, it would be fortuitous.",
             "nextBlock": 15,
+            "origClipLength": 362,
             "choices": [
                 {
                     "jpText": "しょ、承知いたしました……！",
                     "enText": "A-acknowledged……！",
                     "nextBlock": 15
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -7119489545134087397
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 217926255931384997
                 }
             ],
             "pathId": -328773871818400395,
@@ -179,6 +291,13 @@
             "jpText": "どこか、古風な武芸者を思わせるその言動に、\r\n思わずこちらも襟を正してしまう。",
             "enText": "Somehow, she gave off the impression of an old-timey martial \nartist with her speech and conduct, unconciously it caused me to \nstraighten up and respond in kind.",
             "nextBlock": 16,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": 6064121867740460510
+                }
+            ],
             "pathId": 2801479251670119298,
             "blockIdx": 15
         },
@@ -188,6 +307,13 @@
             "jpText": "すると、そこへ――！！",
             "enText": "Thereupon, they appeared――！！",
             "nextBlock": 17,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": 1998934239247118360
+                }
+            ],
             "pathId": -1846905969899919445,
             "blockIdx": 16
         },
@@ -197,6 +323,13 @@
             "jpText": "オイオイオイオイ！　困るッスよ～、トレセン学園のおジョー様ァ！\nここぉ、ウチらの『ナワバリ』なんスけどぉ～！？",
             "enText": "Oi oi oi oi！ Looks like we've got a little bit of a problem here, \nTracen Academy missy！ This here's our 『Turf』, you know～！？",
             "nextBlock": 18,
+            "origClipLength": 344,
+            "animData": [
+                {
+                    "origLen": 364,
+                    "pathId": 4815227971803933592
+                }
+            ],
             "pathId": 2723560803564743421,
             "blockIdx": 17
         },
@@ -206,6 +339,17 @@
             "jpText": "勝手に使いやがったっつーんならぁ、\n『使用料』もらわねーとなァ～！！",
             "enText": "If you wanna pass through, I guess we'll \nhave to extract a 『Toll』 from ya～！！",
             "nextBlock": 19,
+            "origClipLength": 226,
+            "animData": [
+                {
+                    "origLen": 239,
+                    "pathId": 5464990442915423758
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 5688545733711884592
+                }
+            ],
             "pathId": -8487683292896574178,
             "blockIdx": 18
         },
@@ -215,6 +359,17 @@
             "jpText": "突然、なんだかガラの悪そうなウマ娘たちが現れた……！",
             "enText": "Suddenly, what seemed to be some illーtempered \nUma Musume appeared……！",
             "nextBlock": 20,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 59724024121777885
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7817943195170215740
+                }
+            ],
             "pathId": 6931288243395552810,
             "blockIdx": 19
         },
@@ -224,6 +379,17 @@
             "jpText": "……『縄張り』、とは？　私の記憶が正しければ、\r\nこちらは河川敷に作られた公園の一部であったはずですが。",
             "enText": "…… your 『Turf』, you say? If I recall correctly, I believe this \nplace is considered a part of the riverside park, is it not？",
             "nextBlock": 21,
+            "origClipLength": 303,
+            "animData": [
+                {
+                    "origLen": 180,
+                    "pathId": -4458804822265070687
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 8640524136122568367
+                }
+            ],
             "pathId": 8935099630640882289,
             "blockIdx": 20
         },
@@ -233,6 +399,17 @@
             "jpText": "うるせ～～～！　口答えしてんじゃねぇ！！\n姉貴ぃ、コイツ生意気ッスよ！！",
             "enText": "Shut yer trap～～～！ Don't get smart with me！！ \nAneki, this pinhead is gettin' kinda mouthy！！",
             "nextBlock": 22,
+            "origClipLength": 196,
+            "animData": [
+                {
+                    "origLen": 210,
+                    "pathId": -5321276427096281244
+                },
+                {
+                    "origLen": 235,
+                    "pathId": -5283996431232584992
+                }
+            ],
             "pathId": -5192677068928278012,
             "blockIdx": 21
         },
@@ -242,6 +419,17 @@
             "jpText": "……豪気なことだな。けどその威勢、いつまで続くかね？\nケガしたくなきゃ従いな――かけっこ好きのお嬢ちゃん。",
             "enText": "……how brave of you. But that spirit, how long will it last? \nIf you don't wanna get hurt, you should probably \ndo what we say―― run―crazed missy.",
             "nextBlock": 23,
+            "origClipLength": 371,
+            "animData": [
+                {
+                    "origLen": 384,
+                    "pathId": -1028959179330448262
+                },
+                {
+                    "origLen": 396,
+                    "pathId": 7279173506402051139
+                }
+            ],
             "pathId": -3276159333811614604,
             "blockIdx": 22
         },
@@ -251,6 +439,7 @@
             "jpText": "リーダー格と思しき不良ウマ娘が威圧感を放つ！\r\n……さすがに見過ごすわけにはいかない！！",
             "enText": "The delinquent Uma Musume that looked like the leader started \nreleasing an intimidating aura！ ……since it's come this far I \ncan't stand here and do nothing！！",
             "nextBlock": 24,
+            "origClipLength": 102,
             "choices": [
                 {
                     "jpText": "やめるんだ、君たち……！",
@@ -263,6 +452,16 @@
                     "nextBlock": 24
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": 530445354445737627
+                },
+                {
+                    "origLen": 165,
+                    "pathId": 6486535323661175179
+                }
+            ],
             "pathId": -5560545027224614413,
             "blockIdx": 23
         },
@@ -272,6 +471,17 @@
             "jpText": "あァん！？\nなんだテメェ、しゃしゃってんじゃねェよ――！",
             "enText": "Huuuh！？ \nWho the hell are you？ Don't order me around――！",
             "nextBlock": 25,
+            "origClipLength": 125,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -4949580904809089106
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5957648637817893671
+                }
+            ],
             "pathId": 1430446657497907308,
             "blockIdx": 24
         },
@@ -281,6 +491,13 @@
             "jpText": "――――喝ッ！！！！",
             "enText": "――――HAA！！！！",
             "nextBlock": 26,
+            "origClipLength": 41,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": 5731049069652492154
+                }
+            ],
             "pathId": 2736094340868252892,
             "blockIdx": 25
         },
@@ -290,6 +507,13 @@
             "jpText": "ひゃっ……！！\nっ……！！",
             "enText": "Hyaa……！！ \n……！！",
             "nextBlock": 27,
+            "origClipLength": 43,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": -1348426577125923966
+                }
+            ],
             "pathId": 3399597335802787089,
             "blockIdx": 26
         },
@@ -299,6 +523,13 @@
             "jpText": "ヤエノムテキの鋭い一声を浴び、不良のウマ娘たちは\r\n雷に打たれたかのように動きを止めた……！",
             "enText": "With that one sharp voice from Yaeno Muteki, the delinquent Uma \nMusume froze in place as if they were struck by lightning……！",
             "nextBlock": 28,
+            "origClipLength": 105,
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": 6024576301650703654
+                }
+            ],
             "pathId": 9077984524868896022,
             "blockIdx": 27
         },
@@ -308,6 +539,17 @@
             "jpText": "さて。……――続けますか？",
             "enText": "Well then. ……――do you still wish to continue？",
             "nextBlock": 29,
+            "origClipLength": 115,
+            "animData": [
+                {
+                    "origLen": 37,
+                    "pathId": 3892712649343643299
+                },
+                {
+                    "origLen": 52,
+                    "pathId": 9013771590828501923
+                }
+            ],
             "pathId": -4606712980620327214,
             "blockIdx": 28
         },
@@ -317,6 +559,17 @@
             "jpText": "静まり返った水面が如く静穏な――\nだが、底知れぬ何かを秘めた声で彼女が問う。すると……。",
             "enText": "The air fell completely silent, like the tranquil surface of water―― \nhowever, there was something unfathomable \nhidden behind her words. Then……",
             "nextBlock": 30,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 5615343875086312687
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -2827781600313750526
+                }
+            ],
             "pathId": -8259865961997072068,
             "blockIdx": 29
         },
@@ -326,6 +579,17 @@
             "jpText": "……行くよ。相手が悪い。",
             "enText": "……Let's go. She's out of our league.",
             "nextBlock": 31,
+            "origClipLength": 107,
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": -4431863261891090167
+                },
+                {
+                    "origLen": 186,
+                    "pathId": 3502015604263696644
+                }
+            ],
             "pathId": 6599983951731313542,
             "blockIdx": 30
         },
@@ -335,11 +599,22 @@
             "jpText": "え、ちょっ、姉貴！？\nま、待ってくださいよぉ～～～！！",
             "enText": "Eh, huh, Aneki！？ \nW-wait for meee～～～！！",
             "nextBlock": 32,
+            "origClipLength": 151,
             "choices": [
                 {
                     "jpText": "（い、行っちゃった……）",
                     "enText": "(T-they left……)",
                     "nextBlock": 32
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 162,
+                    "pathId": -7539617991853667785
+                },
+                {
+                    "origLen": 186,
+                    "pathId": -6116852667513586348
                 }
             ],
             "pathId": -2508614355630246323,
@@ -351,11 +626,22 @@
             "jpText": "……追い払うためとはいえ、突然声を荒げてしまい、\r\n申し訳ありません。驚かれたでしょう。",
             "enText": "……while it was for the purpose of chasing them off, \nI apologize for suddenly letting out such \na loud voice. I'm sure you were surprised.",
             "nextBlock": 33,
+            "origClipLength": 249,
             "choices": [
                 {
                     "jpText": "いや、むしろ助けてくれて感謝だよ",
                     "enText": "No, I'm grateful for your help",
                     "nextBlock": 33
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": 914511711239777617
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 1870800167176450487
                 }
             ],
             "pathId": -8260128944538327566,
@@ -367,11 +653,22 @@
             "jpText": "それに、不良たちを黙らせるほどの猛々しさを秘めながらも、\r\n眉ひとつ動かさぬ冷静さでもって場を静めた彼女の姿は――",
             "enText": "Besides, while she had enough ferocity to freeze \nthose delinquents in their tracks, seeing her \nso calmy stand there without flinching――",
             "nextBlock": 34,
+            "origClipLength": 119,
             "choices": [
                 {
                     "jpText": "すごくカッコよかった！",
                     "enText": "You were really cool！",
                     "nextBlock": 34
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -9172559576558423288
+                },
+                {
+                    "origLen": 128,
+                    "pathId": -2732525293862170994
                 }
             ],
             "pathId": -900561199309284089,
@@ -383,6 +680,17 @@
             "jpText": "……恐縮です。",
             "enText": "……much obliged.",
             "nextBlock": 35,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 7239357188310899567
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 115044497168114776
+                }
+            ],
             "pathId": 6024593250434459434,
             "blockIdx": 34
         },
@@ -392,6 +700,17 @@
             "jpText": "彼女はいったい、レースではどんな走りを見せてくれるのだろうか？\r\n期待を抱きつつ、その日は別れた。",
             "enText": "Just what kind of run would she show off at the race？ \nWith high expectations in mind, we parted ways.",
             "nextBlock": 36,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 15,
+                    "pathId": -6360958719001214483
+                },
+                {
+                    "origLen": 15,
+                    "pathId": -1400403434608768412
+                }
+            ],
             "pathId": -7797875813400472305,
             "blockIdx": 35
         },
@@ -401,6 +720,7 @@
             "jpText": "そして、翌日。期待に胸を躍らせながら、\r\nヤエノムテキが出ている選抜レースを観に行くと――",
             "enText": "And then, the next day. While carrying those expectations \nin my heart, when I went to see the Selection Race \nYaeno Muteki was entering――",
             "nextBlock": 37,
+            "origClipLength": 103,
             "pathId": -2731195508364701367,
             "blockIdx": 36
         },
@@ -410,6 +730,21 @@
             "jpText": "さっきのスーパークリーク、素晴らしい走りでしたね……！\r\nすでにある種の貫禄を感じます。",
             "enText": "Super Creek's run just now, it was wonderful wasn't it……！？ \nThere already seems to be a certain presence about her.",
             "nextBlock": 38,
+            "origClipLength": 206,
+            "animData": [
+                {
+                    "origLen": 246,
+                    "pathId": 2145915972190378794
+                },
+                {
+                    "origLen": 38,
+                    "pathId": 6749976152824456951
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -635466304849711204
+                }
+            ],
             "pathId": -6754443022619322277,
             "blockIdx": 37
         },
@@ -419,6 +754,21 @@
             "jpText": "オグリキャップも……“怪物”と呼ばれるだけはあるな。\r\nまだ粗削りではあるが、可能性を感じずにはいられない。",
             "enText": "Oguri Cap too…… the title of \"Monster\" certainly \nseems to fit her. She's still a little rough but, \nyou can't say that there's no potential.",
             "nextBlock": 39,
+            "origClipLength": 275,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -2146112817377173886
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -7335402779013974404
+                },
+                {
+                    "origLen": 289,
+                    "pathId": -4704287684322373391
+                }
+            ],
             "pathId": 1001041732835380313,
             "blockIdx": 38
         },
@@ -428,6 +778,37 @@
             "jpText": "他にも、将来有望な子は多い……\nこれは相当、強豪ぞろいの世代になりそうだな。",
             "enText": "There seem to be a lot of girls with very promising futures, too…… \nit seems there will be quite a few \nfuture champions from this generation.",
             "nextBlock": 40,
+            "origClipLength": 206,
+            "animData": [
+                {
+                    "origLen": 10,
+                    "pathId": -7844573444545694473
+                },
+                {
+                    "origLen": 10,
+                    "pathId": -3262338383267984174
+                },
+                {
+                    "origLen": 10,
+                    "pathId": -6933009292488070563
+                },
+                {
+                    "origLen": 117,
+                    "pathId": 5930558611095917821
+                },
+                {
+                    "origLen": 85,
+                    "pathId": 8360210258485314720
+                },
+                {
+                    "origLen": 232,
+                    "pathId": 3595634640409655092
+                },
+                {
+                    "origLen": 66,
+                    "pathId": -2988052421304225946
+                }
+            ],
             "pathId": -7855460224161881021,
             "blockIdx": 39
         },
@@ -437,6 +818,33 @@
             "jpText": "……。私も……今度こそ、果たさねば。\n修行の成果を発揮し、誇りある勝利を、今度こそ……！",
             "enText": "…… Me too…… this time for sure, I must get results. \nI must show the results of my training with a victory \nI can be proud of, this time for sure……！",
             "nextBlock": 41,
+            "origClipLength": 333,
+            "animData": [
+                {
+                    "origLen": 10,
+                    "pathId": -432949937050039036
+                },
+                {
+                    "origLen": 10,
+                    "pathId": -4247543983066854138
+                },
+                {
+                    "origLen": 12,
+                    "pathId": -8355624155078684707
+                },
+                {
+                    "origLen": 10,
+                    "pathId": -1153312963240975970
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 5587476867416854470
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 8525578280648858882
+                }
+            ],
             "pathId": 6248254922786598105,
             "blockIdx": 40
         },
@@ -446,6 +854,17 @@
             "jpText": "はっ、はっ、はっ、はっ……。",
             "enText": "Haa, haa, haa, haa……",
             "nextBlock": 42,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -2678678074328919087
+                },
+                {
+                    "origLen": 11,
+                    "pathId": 4121213657392986635
+                }
+            ],
             "pathId": -2272805419974859965,
             "blockIdx": 41
         },
@@ -455,6 +874,17 @@
             "jpText": "……。\n……よしっ、ここで――はぁあああっ！！",
             "enText": "…… \n……Alright, right here―― Haaaaaaa！！",
             "nextBlock": 43,
+            "origClipLength": 139,
+            "animData": [
+                {
+                    "origLen": 159,
+                    "pathId": 7295410595933708016
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -69826001248354283
+                }
+            ],
             "pathId": -7315806290904503890,
             "blockIdx": 42
         },
@@ -464,6 +894,17 @@
             "jpText": "っ！！　……させる……ものか……！！",
             "enText": "！！ …… I wont…… let you……！！",
             "nextBlock": 44,
+            "origClipLength": 116,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": 6745434237416959306
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4702862797006761151
+                }
+            ],
             "pathId": -1291221111685818540,
             "blockIdx": 43
         },
@@ -473,6 +914,17 @@
             "jpText": "――オォォォォオオオオオオッ！！",
             "enText": "――OooooooooOOOOOo！！",
             "nextBlock": 45,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": 1204499704702331970
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 4902915634615107750
+                }
+            ],
             "pathId": -3217425623469625603,
             "blockIdx": 44
         },
@@ -482,11 +934,22 @@
             "jpText": "ふふっ、やっぱ乗ってきた……！",
             "enText": "Fufuu, she took the bait……！",
             "nextBlock": 46,
+            "origClipLength": 88,
             "choices": [
                 {
                     "jpText": "（あれ……！？）",
                     "enText": "(Huh……！？)",
                     "nextBlock": 46
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 5240098243560925902
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -2533990221671209620
                 }
             ],
             "pathId": 2638975083865350673,
@@ -498,6 +961,17 @@
             "jpText": "ヤエノムテキ……釣られたな。気持ちが前に出過ぎている。\nあれでは、最後まで脚がもたないぞ。",
             "enText": "Yaeno Muteki…… she fell for it, huh. Her emotions are too easy to \nread. Like that, her legs won't last until the end.",
             "nextBlock": 47,
+            "origClipLength": 249,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -4223818646441632063
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 5746507147550262490
+                }
+            ],
             "pathId": 5429799498947164257,
             "blockIdx": 46
         },
@@ -507,6 +981,7 @@
             "jpText": "うーん、『また』ですか……ちょっと注目してたんだけど、\nあのクセが抜けない限りは、厳しいかな……。",
             "enText": "Yeah, 『Again』 it seems…… I had been considering her but, as long \nas she isn't able to fix that habit, it'll be rough……",
             "nextBlock": 48,
+            "origClipLength": 276,
             "pathId": 5660810212034575848,
             "blockIdx": 47
         },
@@ -516,6 +991,7 @@
             "jpText": "……奇妙な光景だった。昨日、自分の目の前で炎のような闘争心を\r\n完璧に理性で抑え、冷静に振舞っていたはずのヤエノムテキは――",
             "enText": "……it was a strange sight. Yesterday she had shown \nme her fierce spirit, calm bearing, and serene \ndemeanor, but today Yaeno Muteki――",
             "nextBlock": 49,
+            "origClipLength": 125,
             "pathId": -8385092395742427661,
             "blockIdx": 48
         },
@@ -525,6 +1001,17 @@
             "jpText": "このまま……押し切って、やるッ……！！\nハァァァァァァッ！！",
             "enText": "Just like this…… I'll push… through……！！ \nHaaaaaaaaa！！",
             "nextBlock": 50,
+            "origClipLength": 162,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -6166046343978681935
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 630920452438458935
+                }
+            ],
             "pathId": -3697641629493374209,
             "blockIdx": 49
         },
@@ -534,6 +1021,17 @@
             "jpText": "……っ、はぁっ、はぁっ……！！",
             "enText": "…… haaa, haaa……！！",
             "nextBlock": 51,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 8464307435549290859
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5160862973404931179
+                }
+            ],
             "pathId": -6604694518322092316,
             "blockIdx": 50
         },
@@ -543,6 +1041,17 @@
             "jpText": "ただ猛々しく、荒々しく、己が内から溢れ出るそれに\n振り回されたままの走りで、敗北を喫していた……。",
             "enText": "It just seemed like she was being flung about by the \nfierce and violent emotions overflowing from within \nas she ran, she was made to suffer defeat……",
             "nextBlock": 52,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": -269075703232508090
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4198155594546288084
+                }
+            ],
             "pathId": -6512603444880434129,
             "blockIdx": 51
         },
@@ -552,6 +1061,21 @@
             "jpText": "はぁっ、はぁっ、はぁっ、はぁっ……！！",
             "enText": "Haaa, haaa, haaa, haaa……！！",
             "nextBlock": 53,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 134,
+                    "pathId": 4269129291917213426
+                },
+                {
+                    "origLen": 130,
+                    "pathId": -3303762046418879359
+                },
+                {
+                    "origLen": 137,
+                    "pathId": 7014201215993746448
+                }
+            ],
             "pathId": 2857413714211081144,
             "blockIdx": 52
         },
@@ -561,6 +1085,17 @@
             "jpText": "くッ……また、私は……またもやッ……！",
             "enText": "Kuu…… again, I…… once again……！",
             "nextBlock": 54,
+            "origClipLength": 162,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -3541205019162611288
+                },
+                {
+                    "origLen": 136,
+                    "pathId": -1382467811237235039
+                }
+            ],
             "pathId": -1459136623953904658,
             "blockIdx": 53
         },
@@ -570,6 +1105,17 @@
             "jpText": "未熟！　あまりにも……未熟すぎる！！\n我が内なる『烈火』を御すためには、もっと……！",
             "enText": "Immature！ Too much so……I'm too immature！！ For the sake of \ncontrolling this 『Ardent Flame』 within me, I need more……！",
             "nextBlock": 55,
+            "origClipLength": 277,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -824239436498242688
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5057583243455328634
+                }
+            ],
             "pathId": -4729320154593868774,
             "blockIdx": 54
         },
@@ -579,9 +1125,10 @@
             "jpText": "その横顔があまりにも悔しそうで……\n立ち去るヤエノムテキを呼び止めることは、できなかった。",
             "enText": "In that profile there was an excessive amount of regret…… \nI was unable to call out and stop Yaeno Muteki as she departed.",
             "nextBlock": -1,
+            "origClipLength": 103,
             "pathId": 553370219148840533,
             "blockIdx": 55
         }
     ],
-    "modified": 1657212932
+    "modified": 1657285563
 }

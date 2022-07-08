@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "PL3R3RGR5RDVLNJ2TS4DR3WBUP66HU2J",
     "type": "story",
     "storyId": "400002301",
@@ -11,6 +11,7 @@
             "jpText": "チームトレーニングのケータリング用に\r\n高タンパク質なおやつを買いに来ていた。",
             "enText": "She was shopping for high-protein snacks to \ncater a team training session.",
             "nextBlock": 2,
+            "origClipLength": 95,
             "pathId": 4179032460004743367,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "しかし――",
             "enText": "But―",
             "nextBlock": 3,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "（ちょうどいいのがない！）",
@@ -36,6 +38,7 @@
             "jpText": "なかなか見つからず、\n頭を抱えていたところ……。",
             "enText": "I was having a hard time finding it, and I \nwas trying to wrap my head around it, when I \ncame across ……",
             "nextBlock": 4,
+            "origClipLength": 76,
             "pathId": -477442995790587796,
             "blockIdx": 3
         },
@@ -45,11 +48,22 @@
             "jpText": "商店街の真ん中で大の大人が立ち尽くして\nどうしました。",
             "enText": "What's wrong with a grown man standing around \nin the middle of a shopping street?",
             "nextBlock": 5,
+            "origClipLength": 80,
             "choices": [
                 {
                     "jpText": "樫本代理！ええっと……",
                     "enText": "Deputy Kashimoto! Yeah… ……",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 184,
+                    "pathId": 4902134159011627970
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 3944254772315825157
                 }
             ],
             "pathId": 7758800008673701048,
@@ -61,6 +75,17 @@
             "jpText": "ためらいつつも、事情を説明すると――",
             "enText": "Hesitantly, I explained the situation.",
             "nextBlock": 6,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 4824873789399131335
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5854272208680897210
+                }
+            ],
             "pathId": 6527182364720122328,
             "blockIdx": 5
         },
@@ -70,6 +95,17 @@
             "jpText": "……値段も手ごろ、手に入りやすく、\r\n小分けで、高タンパク質なおやつ、ですか。",
             "enText": "…… affordable, easy to find, small portions, \nhigh protein snacks?",
             "nextBlock": 7,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 187,
+                    "pathId": 7604001727036368900
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -2339765561544682239
+                }
+            ],
             "pathId": -6504684774915634628,
             "blockIdx": 6
         },
@@ -79,11 +115,22 @@
             "jpText": "では、『きなこ棒』はどうですか？",
             "enText": "Then, how about \"Kinako-bo\"?",
             "nextBlock": 8,
+            "origClipLength": 65,
             "choices": [
                 {
                     "jpText": "なるほど！",
                     "enText": "I see!",
                     "nextBlock": 8
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 4731110029269640234
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 4575768751133601358
                 }
             ],
             "pathId": -3327855143642625066,
@@ -95,6 +142,17 @@
             "jpText": "たしかに、きなこはタンパク質を多く含む。\nサイズ的にもケータリングにぴったりだ。",
             "enText": "Indeed, kinako is high in protein. It is also \nperfect for catering in terms of size.",
             "nextBlock": 9,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 124,
+                    "pathId": -2601180790587667709
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -7978522614178569711
+                }
+            ],
             "pathId": 3129171761130886158,
             "blockIdx": 8
         },
@@ -104,6 +162,17 @@
             "jpText": "少々遠いですが、ここから3つ目の交差点を\n右折したところに個人商店があります。",
             "enText": "It is a little far, but there is \na private store at the third intersection \nto the right from here.",
             "nextBlock": 10,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 177,
+                    "pathId": 609948287817500729
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -1765956291468986067
+                }
+            ],
             "pathId": 4528955811694651013,
             "blockIdx": 9
         },
@@ -113,6 +182,21 @@
             "jpText": "そこに小分けかつ大袋のきなこ棒が\n売っています。値段も手ごろです。",
             "enText": "There, you will find small portions and large \nbags of kinako sticks. They are also \nreasonably priced.",
             "nextBlock": 11,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 7606461657314232568
+                },
+                {
+                    "origLen": 177,
+                    "pathId": -3352704305905361042
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 659066498856931003
+                }
+            ],
             "pathId": 5560846927794819976,
             "blockIdx": 10
         },
@@ -122,6 +206,21 @@
             "jpText": "ただ、きなこは口の水分を吸いますので\n水分の用意も必須です。気を付けてください。",
             "enText": "However, kinako absorbs water from \nyour mouth, so you must also prepare \nwater. Please be careful.",
             "nextBlock": 12,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": 6112806692591498469
+                },
+                {
+                    "origLen": 196,
+                    "pathId": 7576398151371577873
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 7730786551883723124
+                }
+            ],
             "pathId": -1840771845511669010,
             "blockIdx": 11
         },
@@ -131,11 +230,26 @@
             "jpText": "あっという間に解決してしまい、\n思わず感心する。",
             "enText": "It was resolved in a flash, and I was \nimpressed without thinking.",
             "nextBlock": 13,
+            "origClipLength": 76,
             "choices": [
                 {
                     "jpText": "すぐに思いつくなんて、すごいですね",
                     "enText": "It's amazing how quickly you \ncame up with the idea.",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": -2980082932083358374
+                },
+                {
+                    "origLen": 196,
+                    "pathId": -3585755869340773045
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -1748681269251017277
                 }
             ],
             "pathId": -870906046362623576,
@@ -147,11 +261,26 @@
             "jpText": "昔からの癖で、見かけると店や場所を\n覚えてしまうんです。",
             "enText": "It's an old habit of mine to remember stores \nand places when I see them.",
             "nextBlock": 14,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "お好きなんですか？",
                     "enText": "Do you like it?",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -2089396367018887849
+                },
+                {
+                    "origLen": 158,
+                    "pathId": -8097498637557962254
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -9072559032978406185
                 }
             ],
             "pathId": 511182686078997107,
@@ -163,6 +292,21 @@
             "jpText": "そういうと、普段の凛とした表情からは一変、\nどこか陰った表情をみせ――",
             "enText": "When she said this, her usual \ndignified expression changed and \nshe looked somewhat gloomy…",
             "nextBlock": 15,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 7094839144364735365
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 3209372120223296649
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -3515934687858915157
+                }
+            ],
             "pathId": -2392326269414408764,
             "blockIdx": 14
         },
@@ -172,6 +316,21 @@
             "jpText": "……昔担当していたウマ娘の\n好物だったものですから。",
             "enText": "…… was a favorite of the horsegirls I used to \nbe in charge of.",
             "nextBlock": 16,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 2279917628819239886
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 1731145950860414269
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -7797870539219292828
+                }
+            ],
             "pathId": 3001178432822370807,
             "blockIdx": 15
         },
@@ -181,6 +340,21 @@
             "jpText": "…………。",
             "enText": "…………",
             "nextBlock": 17,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 9135975319629996562
+                },
+                {
+                    "origLen": 158,
+                    "pathId": 1327611139611412110
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 8989181454113621077
+                }
+            ],
             "pathId": 1070037500033875420,
             "blockIdx": 16
         },
@@ -190,6 +364,21 @@
             "jpText": "では、私はこれで。",
             "enText": "Well, I'll leave you with this.",
             "nextBlock": 18,
+            "origClipLength": 56,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -3832492717217576295
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 7152592884623488682
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 795642621249292352
+                }
+            ],
             "pathId": -455838007754347005,
             "blockIdx": 17
         },
@@ -199,6 +388,17 @@
             "jpText": "止める間もなく立ち去ってしまった。",
             "enText": "She walked away before I had time to stop her.",
             "nextBlock": 19,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 6397975970225335815
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6977694499637236691
+                }
+            ],
             "pathId": -3176568097266329601,
             "blockIdx": 18
         },
@@ -208,6 +408,7 @@
             "jpText": "立ち去る間際の樫本代理の横顔は、\nしばらく頭から離れなかった。",
             "enText": "I couldn't get the image of Deputy \nKashimoto's profile out of my mind for a \nwhile as she was walking away.",
             "nextBlock": 20,
+            "origClipLength": 85,
             "pathId": 1640862175786476280,
             "blockIdx": 19
         },
@@ -217,9 +418,10 @@
             "jpText": "――ともあれ、きなこ棒は思いのほか\r\n好評で、よい差し入れになったようだった。",
             "enText": "―The kinako (soybean flour) sticks were \nunexpectedly well received, and seemed to \nhave been a good gift.",
             "nextBlock": -1,
+            "origClipLength": 45,
             "pathId": -3178972875811515739,
             "blockIdx": 20
         }
     ],
-    "modified": 1657215228
+    "modified": 1657285621
 }

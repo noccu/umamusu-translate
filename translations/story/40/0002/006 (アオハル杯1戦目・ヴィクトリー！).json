@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "RLG6MVEAWQWVP5RFUPETJAFGXXPDOF5N",
     "type": "story",
     "storyId": "400002006",
@@ -11,6 +11,17 @@
             "jpText": "ヴィクトリ～～～ッ！\r\nチームメイツ、ナイスファイトでした！",
             "enText": "Viktori～! Nice fight, Team Mates!",
             "nextBlock": 2,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -7002084702517848541
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -214877372903661994
+                }
+            ],
             "pathId": -5146675111411142829,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "フレンズと一緒にレースで勝つの、\nとーっても楽しいデスネ！",
             "enText": "It's so much fun to win \na race with my friends!",
             "nextBlock": 3,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": 4371796389978399019
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -8550858478552351186
+                }
+            ],
             "pathId": -5356750107544952132,
             "blockIdx": 2
         },
@@ -29,9 +51,20 @@
             "jpText": "今夜はレッツパーティー！\nさっそくBBQの買い出しへGOデス！",
             "enText": "Let's party tonight! Let's go shopping for \nBBQ right away!",
             "nextBlock": -1,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 5622384186081134373
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -1614848484537731863
+                }
+            ],
             "pathId": -8804965761838838559,
             "blockIdx": 3
         }
     ],
-    "modified": 1657214547
+    "modified": 1657285602
 }

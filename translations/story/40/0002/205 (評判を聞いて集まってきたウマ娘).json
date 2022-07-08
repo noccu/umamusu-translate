@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "K325MTT4C5R2QVSMHWJSXEUGYQTKFXWC",
     "type": "story",
     "storyId": "400002205",
@@ -11,6 +11,25 @@
             "jpText": "チームの評判を聞いて、<support>が\r\nチームに入りたいとやってきた。",
             "enText": "After hearing about the team's \nreputation, <support> came to us \nand asked to join the team.",
             "nextBlock": 2,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": -7802603480886256561
+                },
+                {
+                    "origLen": 172,
+                    "pathId": -4503352414241403753
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -7427101625337179467
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -2541871453370670686
+                }
+            ],
             "pathId": -5826407184138130128,
             "blockIdx": 1
         },
@@ -20,9 +39,28 @@
             "jpText": "<support>が、チームに加わった！",
             "enText": "<support> has joined the team!",
             "nextBlock": -1,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": -79193520362489371
+                },
+                {
+                    "origLen": 132,
+                    "pathId": 1528686813465712118
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -797298107757418078
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -5270825953558114424
+                }
+            ],
             "pathId": 8074461810977035575,
             "blockIdx": 2
         }
     ],
-    "modified": 1657215182
+    "modified": 1657285619
 }

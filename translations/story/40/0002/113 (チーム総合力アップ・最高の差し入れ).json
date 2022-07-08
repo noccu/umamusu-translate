@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "4AXEMMYKTQRHFVFB2IN7QO2F6KIHHVID",
     "type": "story",
     "storyId": "400002113",
@@ -11,6 +11,17 @@
             "jpText": "お疲れ様です、トレーナーさん。\nどこにも負けないチームになりましたね！",
             "enText": "Thanks for all your hard work, trainer. You \nhave a team that is second to none!",
             "nextBlock": 2,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 629773715807452449
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -8186069718116313277
+                }
+            ],
             "pathId": -4863959498921123976,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "今日はそんなチームに、\nちょっぴり奮発した贈り物をご用意しました。",
             "enText": "Today, we have a little gift for this team.",
             "nextBlock": 3,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 4728279316919407478
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -859726015712159294
+                }
+            ],
             "pathId": -3350249428690508565,
             "blockIdx": 2
         },
@@ -29,6 +51,17 @@
             "jpText": "今後のご活躍に期待しています。\nがんばってくださいね♪",
             "enText": "We look forward to your future \nactivities. Good luck♪",
             "nextBlock": 4,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": 5222004995599544897
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 422986887419168390
+                }
+            ],
             "pathId": -5158711042139212661,
             "blockIdx": 3
         },
@@ -38,10 +71,21 @@
             "jpText": "『<itemname>』を獲得した",
             "enText": "I got \"<itemname>\".",
             "nextBlock": 5,
+            "origClipLength": 67,
             "coloredText": [
                 {
                     "jpText": "<itemname>",
                     "enText": "<itemname>"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": 2183342647364665948
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -5436417842183202984
                 }
             ],
             "pathId": -7457799597233895053,
@@ -53,9 +97,20 @@
             "jpText": "たづなさんの特別な差し入れに団結力が増し、\r\n『アオハル杯』への意欲が高まった！",
             "enText": "Tazuna-san's special gift to us strengthened \nour unity and increased our motivation for \nthe \"Aoharu Cup\"!",
             "nextBlock": -1,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -8480282855061293665
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 8645937944815180551
+                }
+            ],
             "pathId": 5065217668469262692,
             "blockIdx": 5
         }
     ],
-    "modified": 1657215162
+    "modified": 1657285618
 }

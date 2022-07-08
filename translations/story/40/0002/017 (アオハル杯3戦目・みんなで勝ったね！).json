@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "JS5PILJFZM2NWDQOZHTVUTEVRDMLPZS2",
     "type": "story",
     "storyId": "400002017",
@@ -11,6 +11,17 @@
             "jpText": "やったぁ～！\nほらほら！　やっぱり勝ったよー！　えへへ！",
             "enText": "Yes! There, there, there! \nI won after all! Hehehe!",
             "nextBlock": 2,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": -4680663242611344159
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -8688803082988344570
+                }
+            ],
             "pathId": 1341268020429624022,
             "blockIdx": 1
         },
@@ -20,11 +31,22 @@
             "jpText": "ねぇねぇトレーナー、\nわたしすっごいこと気づいちゃった！",
             "enText": "Hey, hey trainer, I just realized \nsomething amazing!",
             "nextBlock": 3,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "何？",
                     "enText": "What?",
                     "nextBlock": 3
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": -6706614568296473451
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 8110773745534509945
                 }
             ],
             "pathId": 1698437074686516640,
@@ -36,6 +58,17 @@
             "jpText": "チームメイトがいるとね、\r\nうおおーっ！　メラメラーってなるの！",
             "enText": "When I have teammates, I'm like, \"Whoa! I get \nall mela-mela!",
             "nextBlock": 4,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 5816924214943629742
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -4134915303078406073
+                }
+            ],
             "pathId": 3147181752975859299,
             "blockIdx": 3
         },
@@ -45,9 +78,20 @@
             "jpText": "チームって、すっごいねぇ！",
             "enText": "Teams are awesome!",
             "nextBlock": -1,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 2969617564725643698
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -2818256527628130195
+                }
+            ],
             "pathId": 7253796992232485759,
             "blockIdx": 4
         }
     ],
-    "modified": 1657214697
+    "modified": 1657285606
 }

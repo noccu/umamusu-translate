@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "J6EP76TPXPWSHVIMZ63NTTQ7HZWQ23AN",
     "type": "story",
     "storyId": "400002304",
@@ -11,6 +11,17 @@
             "jpText": "…………ハァッ！！！",
             "enText": "……… huh!",
             "nextBlock": 2,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -3702906021153828005
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 2775701824315489919
+                }
+            ],
             "pathId": -4117564819069521628,
             "blockIdx": 1
         },
@@ -20,6 +31,7 @@
             "jpText": "チームトレーニングへ行くと、\nマチカネフクキタルが固まっていた。",
             "enText": "When I went to the team training, I found \nMachikanefukkitar was frozen in place.",
             "nextBlock": 3,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "どうした？",
@@ -32,6 +44,16 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 7786943775589975372
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 6085068901368931487
+                }
+            ],
             "pathId": -411107577243963312,
             "blockIdx": 2
         },
@@ -41,6 +63,17 @@
             "jpText": "きっ、黄緑色が一面に！？\r\nどうしましょうトレーナーさん！？",
             "enText": "Ki, yellow-green all over! \nWhat should we do, trainer!",
             "nextBlock": 4,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -2628726843468695568
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -4600513531465189093
+                }
+            ],
             "pathId": 8452746050267104663,
             "blockIdx": 3
         },
@@ -50,6 +83,17 @@
             "jpText": "私、今日、走れませーんっ！",
             "enText": "I can't run today!",
             "nextBlock": 5,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": 6200258312568916028
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 2205035334707697245
+                }
+            ],
             "pathId": -3842092100924227808,
             "blockIdx": 4
         },
@@ -59,6 +103,17 @@
             "jpText": "――とりあえず落ち着かせて、\r\nよくよく話を聞いてみると……。",
             "enText": "―for now, let me calm you down and listen \ncarefully to what you have to say: ……",
             "nextBlock": 6,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 172,
+                    "pathId": 1037791929557957386
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 8787419782820882187
+                }
+            ],
             "pathId": -4199084302545272373,
             "blockIdx": 5
         },
@@ -68,6 +123,17 @@
             "jpText": "私の本日のアンラッキーカラーは\r\n『黄緑色』なのです……。",
             "enText": "My unlucky color today is \"yellow-green\". ……",
             "nextBlock": 7,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 172,
+                    "pathId": -5576356164283660829
+                },
+                {
+                    "origLen": 94,
+                    "pathId": 9126999686279039108
+                }
+            ],
             "pathId": -3751381102066271029,
             "blockIdx": 6
         },
@@ -77,6 +143,17 @@
             "jpText": "つまりそう……っ、ここ一面中の\n芝の色がアンラッキーなわけでしてっ！",
             "enText": "So, yes, …… we are unlucky with the color of \nthe turf all over the place!",
             "nextBlock": 8,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": -6222749743096232116
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 834490211537480235
+                }
+            ],
             "pathId": 4551194000528884009,
             "blockIdx": 7
         },
@@ -86,6 +163,17 @@
             "jpText": "コースを走ればたちまち大殺界に！？\nぎゃーっ！　やはり今日は無理ですっ！",
             "enText": "If you run the course, you'll instantly \ngo on a killing spree! Oh no! I knew \nI couldn't do it today!",
             "nextBlock": 9,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 8300912051130308590
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 1617424780894271505
+                }
+            ],
             "pathId": 6030700015739508054,
             "blockIdx": 8
         },
@@ -95,11 +183,22 @@
             "jpText": "というわけで本日のトレーニング、休みます！\r\nよろしくお願いいたしますーっ！",
             "enText": "So today's training, I'm off! Thank you very \nmuch for your cooperation!",
             "nextBlock": 10,
+            "origClipLength": 94,
             "choices": [
                 {
                     "jpText": "ちょ、ちょっと待って！",
                     "enText": "Hey, wait a minute!",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -1930833527872207912
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 6117735055802524647
                 }
             ],
             "pathId": -842330839844051130,
@@ -111,6 +210,17 @@
             "jpText": "彼女の思想を否定したくはないが、\nトレーニングには参加して欲しい。",
             "enText": "I don't want to dismiss her ideology, but I \ndo want her in training.",
             "nextBlock": 11,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 2815358732711799988
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -2446564729440307380
+                }
+            ],
             "pathId": 5280434262293807973,
             "blockIdx": 10
         },
@@ -120,6 +230,17 @@
             "jpText": "なんとか工夫して、黄緑色を気にしない\nようにできないだろうか。そう伝えると――",
             "enText": "I wondered if we could somehow devise a way \nto make the yellowish-green color not bother \nthem. I told her so.",
             "nextBlock": 12,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -7182229163166910990
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -3390137287811791971
+                }
+            ],
             "pathId": 7992129938297209832,
             "blockIdx": 11
         },
@@ -129,6 +250,17 @@
             "jpText": "工夫、ですか。\nむむむ、新しい視点ですねぇー……。",
             "enText": "Ingenuity, huh? Mmmm, that's a new \nperspective. ……",
             "nextBlock": 13,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": 7276630999309263873
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -5087007108540709827
+                }
+            ],
             "pathId": -5421406338521649587,
             "blockIdx": 12
         },
@@ -138,6 +270,17 @@
             "jpText": "とはいえ、黄緑を別の色にすることは\nできませんしー……。",
             "enText": "However, it is not possible to make \nyellow-green a different color, and - ……",
             "nextBlock": 14,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -1208991820127499792
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -5072612209061116142
+                }
+            ],
             "pathId": 7533055507695747620,
             "blockIdx": 13
         },
@@ -147,6 +290,17 @@
             "jpText": "……別の、色……。",
             "enText": "…… another, color ……",
             "nextBlock": 15,
+            "origClipLength": 56,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 4536469737738398017
+                },
+                {
+                    "origLen": 67,
+                    "pathId": -1488527001841105913
+                }
+            ],
             "pathId": 4585795830698325483,
             "blockIdx": 14
         },
@@ -156,6 +310,17 @@
             "jpText": "ほっ！　ひらめきましたぁー！\nしばしお待ちをー！",
             "enText": "Ho! I've got an idea! Just a moment!",
             "nextBlock": 16,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 5821764978848347311
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 8740600506501174990
+                }
+            ],
             "pathId": -9219278590644512701,
             "blockIdx": 15
         },
@@ -165,6 +330,17 @@
             "jpText": "そうして、しばらく待ってみると――\nサングラスを手にした彼女が帰ってきた。",
             "enText": "So I waited for a while - and she came back \nwith sunglasses in her hands.",
             "nextBlock": 17,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -5241083049465462110
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 3961576561049220853
+                }
+            ],
             "pathId": 2143111824702491262,
             "blockIdx": 16
         },
@@ -174,6 +350,7 @@
             "jpText": "これさえかければアラ不思議！\r\n黄緑色も茶色に見えること間違いなし！",
             "enText": "Just put this on and you'll be amazed! Even \nyellow-green will look brown!",
             "nextBlock": 18,
+            "origClipLength": 89,
             "choices": [
                 {
                     "jpText": "（それでいいんだ）",
@@ -190,6 +367,7 @@
             "jpText": "さっそく装着です！",
             "enText": "I'll get it installed right away!",
             "nextBlock": 19,
+            "origClipLength": 56,
             "pathId": 578586298840102809,
             "blockIdx": 18
         },
@@ -199,6 +377,7 @@
             "jpText": "おおー！　なりましたぁ！\n黄緑色が茶色に！　大成功ですっ！",
             "enText": "Oh! It's turned! The yellow-green has turned \nbrown! It's a great success!",
             "nextBlock": 20,
+            "origClipLength": 82,
             "pathId": 1011616323403364111,
             "blockIdx": 19
         },
@@ -208,6 +387,7 @@
             "jpText": "むしろセピアカラーのグラウンドって\nなんだか神秘的でありがたい感じがしますー！",
             "enText": "There's something rather mysterious and \ngratifying about sepia-colored grounds!",
             "nextBlock": 21,
+            "origClipLength": 95,
             "pathId": 2132143720509086994,
             "blockIdx": 20
         },
@@ -217,6 +397,17 @@
             "jpText": "いやぁ、工夫というのもやってみる\nものですねぇ～。",
             "enText": "Well, ingenuity is something \nto be tried, isn't it?",
             "nextBlock": 22,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": -2632868809233937590
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 2606685084193881800
+                }
+            ],
             "pathId": 2150208969561599089,
             "blockIdx": 21
         },
@@ -226,6 +417,17 @@
             "jpText": "これで今日は黄緑色を見ずに済みそうです！\nいやぁ、ありがたや、ありがたや～！",
             "enText": "Now I won't have to see yellow-green today! \nWell, thank you, thank you, thank you!",
             "nextBlock": 23,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": -3598227409397986622
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 6298653451074737304
+                }
+            ],
             "pathId": 1868428398388600440,
             "blockIdx": 22
         },
@@ -235,6 +437,17 @@
             "jpText": "その後、サングラスをかけて元気いっぱいに\r\n駆けるマチカネフクキタルの様子が見られ――",
             "enText": "Then we see Machikanefukkitaru running around \nin her sunglasses, full of energy―",
             "nextBlock": 24,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": -8378870196629647149
+                },
+                {
+                    "origLen": 25,
+                    "pathId": 5570460587563119470
+                }
+            ],
             "pathId": -6369190080487777793,
             "blockIdx": 23
         },
@@ -244,9 +457,10 @@
             "jpText": "そんな彼女に影響されて、明るい雰囲気で、\r\nトレーニングを行うことができたのだった。",
             "enText": "She was a great inspiration to me, and I was \nable to train in a cheerful atmosphere.",
             "nextBlock": -1,
+            "origClipLength": 45,
             "pathId": -2568813810559067928,
             "blockIdx": 24
         }
     ],
-    "modified": 1657215260
+    "modified": 1657285622
 }

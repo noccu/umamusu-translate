@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "MKBJM7QKOWGM6AGVWILSP2OH7LLQD5P4",
     "type": "story",
     "storyId": "400002111",
@@ -11,6 +11,17 @@
             "jpText": "お疲れ様です、トレーナーさん。\nチームとしてとっても成長しましたね。",
             "enText": "Thanks for your hard work, trainer. You have \ngrown very much as a team.",
             "nextBlock": 2,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": 218852808075516375
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -2053576573701837391
+                }
+            ],
             "pathId": -5936672917608738828,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "何かお役に立ちたくて、\n特別にご用意させていただきました。",
             "enText": "I wanted to be of some help, so I made a \nspecial arrangement for you.",
             "nextBlock": 3,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": -8233329519552928202
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -1535509144633541196
+                }
+            ],
             "pathId": 4718598095588269861,
             "blockIdx": 2
         },
@@ -29,9 +51,20 @@
             "jpText": "心のこもった差し入れに\nチームは盛り上がり、絆が深まった！",
             "enText": "The team got excited and bonded over the \nthoughtful offerings!",
             "nextBlock": -1,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -8718552119196294115
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 561940267937412879
+                }
+            ],
             "pathId": -4096478970986815813,
             "blockIdx": 3
         }
     ],
-    "modified": 1657215158
+    "modified": 1657285618
 }

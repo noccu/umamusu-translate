@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "NTCGDSIDRT3Z2A5DAFYC677UCQ2V3EEK",
     "type": "story",
     "storyId": "400002101",
@@ -11,6 +11,17 @@
             "jpText": "……少々拝見させていただきましたが、\n悪くありませんね。",
             "enText": "I had a quick look…… and it's not bad.",
             "nextBlock": 2,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": -2123940860952161019
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -7045247644479622434
+                }
+            ],
             "pathId": -6908932282301041018,
             "blockIdx": 1
         },
@@ -20,6 +31,21 @@
             "jpText": "フォームもみな、美しいです。\n案外、きちんと見ているんですね。",
             "enText": "The forms are all beautiful, too. You are \nlooking at them properly.",
             "nextBlock": 3,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 8265554106757675831
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 4022025673240445012
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 9206495822178979054
+                }
+            ],
             "pathId": 8412834253714532006,
             "blockIdx": 2
         },
@@ -29,9 +55,24 @@
             "jpText": "……今後も気を抜かず、\r\nウマ娘を指導してください。それでは。",
             "enText": "Please keep your eyes on…… and continue to \nguide Uma-Musume. See you soon.",
             "nextBlock": -1,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 5539705627037657258
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -7306388532917580194
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -167160936773413101
+                }
+            ],
             "pathId": 6885120829742235125,
             "blockIdx": 3
         }
     ],
-    "modified": 1657215153
+    "modified": 1657285617
 }

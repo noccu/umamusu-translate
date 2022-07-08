@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "VKOEXXR2CDLVB4ZXEZ6FHEZF2WQRIT33",
     "type": "story",
     "storyId": "400002401",
@@ -11,6 +11,7 @@
             "jpText": "『アオハル杯』は『プレシーズン』と\r\n『本戦』に分かれている。まずは、\n『プレシーズン』で上位を目指してみよう。",
             "enText": "The Aoharu Cup is divided into two parts: the \npreseason and the main competition. First, \nlet's aim for a higher rank in the \n\"Pre-Season\". First, let's aim for a higher \nrank in the \"Pre-Season\".",
             "nextBlock": 2,
+            "origClipLength": 118,
             "coloredText": [
                 {
                     "jpText": "合計10名の",
@@ -19,6 +20,16 @@
                 {
                     "jpText": "ウマ娘をスカウト",
                     "enText": "Scouting for Uma Musume"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -6732109879523748011
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 2390800191010950119
                 }
             ],
             "pathId": -3091300244691321147,
@@ -30,6 +41,17 @@
             "jpText": "また、『アオハル杯』はチーム戦。\r\n当然、チームメンバーを集める必要がある。",
             "enText": "In addition, the \"AOHAL Cup\" is a team \ncompetition. Naturally, it is necessary to \ngather team members.",
             "nextBlock": 3,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": 2676259753333390006
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 5632667722326306237
+                }
+            ],
             "pathId": 2388582036054660845,
             "blockIdx": 2
         },
@@ -39,6 +61,17 @@
             "jpText": "サポートメンバーに声をかけたり、\r\nプレシーズン中のレースで活躍したりで、\nチームに興味を持ってもらおう。",
             "enText": "Get the team interested by reaching out to \nsupport members or by playing in races during \nthe preseason. Get them interested in the \nteam by getting them involved in races during \nthe preseason.",
             "nextBlock": 4,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -232949462484352146
+                },
+                {
+                    "origLen": 227,
+                    "pathId": -6088472027208627819
+                }
+            ],
             "pathId": 8013796136283780922,
             "blockIdx": 3
         },
@@ -48,6 +81,7 @@
             "jpText": "また、チーム名をつける必要もある。\r\nたづなさんからの激励を胸に、\n改めて頑張って行こうと思うのだった。",
             "enText": "We also need to name the team. \nWith the encouragement of Ms. Tazuna \nI will do my best again.",
             "nextBlock": -1,
+            "origClipLength": 112,
             "coloredText": [
                 {
                     "jpText": "良いチーム名を",
@@ -58,9 +92,19 @@
                     "enText": "I want you to put it on."
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 220,
+                    "pathId": -1196532404259765523
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 4685265348192918285
+                }
+            ],
             "pathId": 6005602037747657048,
             "blockIdx": 4
         }
     ],
-    "modified": 1657215280
+    "modified": 1657285622
 }

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 5,
     "bundle": "HQXT2AZ63WAPTQB5QZQ6SHVH4LYXWKWR",
     "type": "story",
     "storyId": "400002303",
@@ -11,6 +11,7 @@
             "jpText": "チームトレーニングの休憩中、\nライスシャワーが悲しそうな顔をしていた。",
             "enText": "During a break in team training, \nRice Shower looked sad.",
             "nextBlock": 2,
+            "origClipLength": 90,
             "choices": [
                 {
                     "jpText": "どうした？",
@@ -23,6 +24,16 @@
                     "nextBlock": 2
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": -2609616442247039337
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 8360392250933204805
+                }
+            ],
             "pathId": -7479838103880424767,
             "blockIdx": 1
         },
@@ -32,6 +43,17 @@
             "jpText": "トレーナーさん……っ。",
             "enText": "Trainer: ……",
             "nextBlock": 3,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 33,
+                    "pathId": 1859777404918686116
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -8352357425763182727
+                }
+            ],
             "pathId": -2562752442250551112,
             "blockIdx": 2
         },
@@ -41,6 +63,17 @@
             "jpText": "ライス……みんなの悲しいお話聞いてたら……\n悲しくなっちゃった……ぐすっ。",
             "enText": "Rice……I was listening to everyone's sad \nstories and it made me…… sad……gosh.",
             "nextBlock": 4,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": 2604567343181275724
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 5235995950443424661
+                }
+            ],
             "pathId": 3715906674828339716,
             "blockIdx": 3
         },
@@ -50,6 +83,17 @@
             "jpText": "よくよく話を聞いてみると、どうやら\nチームメンバーが休憩中に『最近あった\n不幸話』で盛り上がっていたらしく――",
             "enText": "I listened carefully to the conversation, and \nit seems that the team members were having a \n\"recent misfortune story\" during a break. \"a \nrecent misfortune story\" during a break.",
             "nextBlock": 5,
+            "origClipLength": 116,
+            "animData": [
+                {
+                    "origLen": 191,
+                    "pathId": -4652237153994194156
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -2815332952725646832
+                }
+            ],
             "pathId": -865776833286010375,
             "blockIdx": 4
         },
@@ -59,6 +103,17 @@
             "jpText": "ライスシャワーは、その『不幸話』に\r\n影響を受けてしまったようだった。",
             "enText": "Rice Shower seemed to have been affected by \nthat \"unhappy story.",
             "nextBlock": 6,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 155,
+                    "pathId": -7346296580289435049
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -6522425008925190844
+                }
+            ],
             "pathId": -6997786074662478047,
             "blockIdx": 5
         },
@@ -68,6 +123,17 @@
             "jpText": "歩いてたら……\nミゾに落ちちゃった子とか……。",
             "enText": "Like the child who fell into \na…… mizo while walking. ……",
             "nextBlock": 7,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": 6451510984224468375
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 3219019527969283556
+                }
+            ],
             "pathId": 6884796029503656257,
             "blockIdx": 6
         },
@@ -77,6 +143,21 @@
             "jpText": "怪獣に追いかけられる夢……\n見ちゃった子とか……っ。",
             "enText": "Some children dreamed of being chased by a \nmonster…… or ……",
             "nextBlock": 8,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": 5835827571704254611
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 3075951598079785980
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -93590640893505508
+                }
+            ],
             "pathId": 3852432269372860123,
             "blockIdx": 7
         },
@@ -86,6 +167,21 @@
             "jpText": "お料理で……お砂糖とお塩を、\n間違えちゃった子とか……！",
             "enText": "Like the girl who made the…… mistake of \nmixing sugar and salt in her cooking. ……!",
             "nextBlock": 9,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2644007123994507021
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 1670056809084036366
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 9107954477615370426
+                }
+            ],
             "pathId": 3106154749896122942,
             "blockIdx": 8
         },
@@ -95,11 +191,22 @@
             "jpText": "お話、聞いて……\n悲しくなっちゃったの……！",
             "enText": "Listen to me…… I'm sad. ……!",
             "nextBlock": 10,
+            "origClipLength": 73,
             "choices": [
                 {
                     "jpText": "（それで！？）",
                     "enText": "(So?!)",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": -183111648217835244
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 8781365299861945490
                 }
             ],
             "pathId": -1477880487484668528,
@@ -111,6 +218,17 @@
             "jpText": "とはいえ、ものの受け取り方は人それぞれ。\nライスシャワーが心を痛めているのは事実だ。",
             "enText": "However, everyone has their own way of taking \nthings. It is true that Rice Shower is \nheartbreaking.",
             "nextBlock": 11,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": -3235190605543650455
+                },
+                {
+                    "origLen": 110,
+                    "pathId": 1871141688932295646
+                }
+            ],
             "pathId": 1073612976845605215,
             "blockIdx": 10
         },
@@ -120,11 +238,22 @@
             "jpText": "なんとか、今の悲しい気持ちを取り除いて\nあげたい。と、いうわけで――",
             "enText": "Somehow, I want to take away the sadness you \nare feeling right now. And so―",
             "nextBlock": 12,
+            "origClipLength": 89,
             "choices": [
                 {
                     "jpText": "お話の続きを考えようか",
                     "enText": "Let's think about the rest of your story.",
                     "nextBlock": 12
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": 5096996709758107047
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 6268165919134534901
                 }
             ],
             "pathId": -8196782575618591407,
@@ -136,11 +265,22 @@
             "jpText": "お話の……続き……？",
             "enText": "The…… continuation of your story ……?",
             "nextBlock": 13,
+            "origClipLength": 58,
             "choices": [
                 {
                     "jpText": "ミゾに落ちたウマ娘は、そこで――",
                     "enText": "The horsegirls who fell into \nthe mizo were there to―",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 37,
+                    "pathId": 2186450311905099806
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -8978446002633688974
                 }
             ],
             "pathId": -5159861507300673141,
@@ -152,11 +292,22 @@
             "jpText": "う、うん……。",
             "enText": "Umm, yeah. ……",
             "nextBlock": 14,
+            "origClipLength": 54,
             "choices": [
                 {
                     "jpText": "失くしものを見つけることが出来ました",
                     "enText": "I was able to find what I lost.",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 27,
+                    "pathId": -7127237342020559083
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -2733731779719659809
                 }
             ],
             "pathId": 2325242968468404300,
@@ -168,6 +319,17 @@
             "jpText": "……！",
             "enText": "……!",
             "nextBlock": 15,
+            "origClipLength": 48,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": -54749513539428059
+                },
+                {
+                    "origLen": 59,
+                    "pathId": 3162600444000760520
+                }
+            ],
             "pathId": -496911050655430577,
             "blockIdx": 14
         },
@@ -177,6 +339,17 @@
             "jpText": "ふふっ、本当だ……\nお話の続き、だね……っ。",
             "enText": "Phew, it's true…… I guess it's \nthe rest of the story. ……",
             "nextBlock": 16,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 7581069946264487033
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 4273412371973213320
+                }
+            ],
             "pathId": 728708740230074274,
             "blockIdx": 15
         },
@@ -186,6 +359,17 @@
             "jpText": "『怪獣に追いかけられたウマ娘は、\n最後は怪獣とお友だちになれました』",
             "enText": "The monster chased her, but in the end she \nmade friends with it.",
             "nextBlock": 17,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": 1231667471353067468
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 298926203590749881
+                }
+            ],
             "pathId": -2726894111801415716,
             "blockIdx": 16
         },
@@ -195,6 +379,17 @@
             "jpText": "『砂糖と塩を間違えてしまったけど、\nお料理はとっても美味しくできました』",
             "enText": "I used the wrong amount of sugar and salt, \nbut the food turned out delicious.",
             "nextBlock": 18,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -7791785842762940564
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6812189234655880044
+                }
+            ],
             "pathId": 5243868393472642403,
             "blockIdx": 17
         },
@@ -204,6 +399,21 @@
             "jpText": "そう続けていくと、だんだんと\n表情が明るくなっていった。",
             "enText": "As she continued to do so, her expression \ngradually brightened.",
             "nextBlock": 19,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": 7821345811883315146
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 7561652967847523037
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -1222814054487138116
+                }
+            ],
             "pathId": 1290654626554964299,
             "blockIdx": 18
         },
@@ -213,6 +423,21 @@
             "jpText": "そっかぁ……よかったぁ……。\nみんな、最後は幸せだったんだね……。",
             "enText": "I see……… good for you……… Everyone was happy \nin the end. ……",
             "nextBlock": 20,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -3714883907224452320
+                },
+                {
+                    "origLen": 55,
+                    "pathId": -8741540406432808807
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 312631573141987093
+                }
+            ],
             "pathId": -7178099338621532194,
             "blockIdx": 19
         },
@@ -222,6 +447,17 @@
             "jpText": "ふふ……♪",
             "enText": "Hmmm… ……♪",
             "nextBlock": 21,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": -6111158295028677306
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -5482500967527224143
+                }
+            ],
             "pathId": 2126661328912289756,
             "blockIdx": 20
         },
@@ -231,6 +467,17 @@
             "jpText": "ライスシャワーの気持ちは落ち着き、\r\n笑顔でトレーニングに取り組んでいた。",
             "enText": "Rice Showers were feeling calm and smiling as \nthey went about their training.",
             "nextBlock": 22,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": -6001226211047671670
+                },
+                {
+                    "origLen": 25,
+                    "pathId": 3292427425856643766
+                }
+            ],
             "pathId": -8796249468366354383,
             "blockIdx": 21
         },
@@ -240,9 +487,10 @@
             "jpText": "そんな様子に<chrname>も、どこか\r\nほっこりとした気持ちになれたようだった。",
             "enText": "It seemed that <chrname> also felt somewhat \nrelieved to see such a scene.",
             "nextBlock": -1,
+            "origClipLength": 99,
             "pathId": 6198057628737838605,
             "blockIdx": 22
         }
     ],
-    "modified": 1657215249
+    "modified": 1657285621
 }

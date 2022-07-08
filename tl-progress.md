@@ -125,7 +125,7 @@ Curren Chan | Complete | [noccu][]
 name | progress | translator
 --- | --- | ---
 Tutorial (Group 00) | Complete | deepl (contributed by Korgi)
-Tutorial (Group 01) | Complete | Whoever wrote [this](https://docs.google.com/document/d/1qcrxPylG-EbWIvdX-OLX9QDX5S27QOguWu4FF_Z7c1Y/edit) + [noccu] (missing + edits)
+Tutorial (Group 01) | Complete | [ericathyz](https://twitter.com/ericathyz) + [noccu] (missing + edits)
 
 # Lyrics
 name | progress | translator

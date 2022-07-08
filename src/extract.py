@@ -2,13 +2,13 @@ import os
 from pathlib import Path, PurePath
 import sqlite3
 import csv
-from typing import Optional
+from typing import Optional, Union
 
 import UnityPy
 from Levenshtein import ratio as similarity
 
 import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT, currentTimestamp
+from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, currentTimestamp
 import helpers
 
 
@@ -58,20 +58,18 @@ class CheckPatched:
             return False
 
 
-def extractAsset(path, storyId, tlFile=None):
+def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
     env = UnityPy.load(path)
     index = next(iter(env.container.values())).get_obj()
 
     if index.serialized_type.nodes:
         tree = index.read_typetree()
         export = {
-            'version': common.TranslationFile.latestVersion,
             'bundle': env.file.name,
             'type': args.type,
             'storyId': "",
             'title': "",
-            'text': list(),
-            'modified': currentTimestamp()
+            'text': list()
         }
         isPatched = CheckPatched(env.file.name)
         transferExisting = DataTransfer(tlFile)
@@ -146,6 +144,11 @@ def extractAsset(path, storyId, tlFile=None):
                     textData['blockIdx'] = block['BlockIndex']  # to help translators look for specific routes
                     transferExisting(storyId, textData)
                     export['text'].append(textData)
+        
+        export = common.TranslationFile.fromData(export)
+        if transferExisting.file:
+            export.snapshot(copyFrom=transferExisting.file)
+            export.data['modified'] = transferExisting.file.data['modified']
         return export
 
 
@@ -295,11 +298,6 @@ class DataTransfer:
                     group['origLen'] = targetBlock['animData'][i]['origLen']
 
 
-def exportData(data, filepath: str):
-    if args.overwrite or not os.path.exists(filepath):
-        helpers.writeJson(filepath, data)
-
-
 def exportAsset(bundle: Optional[str], path: str, db=None):
     if bundle is None:  # update mode
         assert db is not None
@@ -329,8 +327,8 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
         print(f"AssetBundle {bundle} does not exist in your game data, skipping...")
         return
     try:
-        data = extractAsset(importPath, (group, id, idx), tlFile)
-        if not data:
+        outFile = extractAsset(importPath, (group, id, idx), tlFile)
+        if not outFile:
             return
     except:
         print(f"Failed extracting bundle {bundle}, g {group}, id {id} idx {idx} to {exportDir}")
@@ -339,14 +337,14 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     # Remove invalid path chars (win)
     delSet = {34, 42, 47, 58, 60, 62, 63, 92, 124}
     title = ""
-    for c in data['title']:
+    for c in outFile.data['title']:
         cp = ord(c)
         if cp > 31 and cp not in delSet:
             title += c
     idxString = f"{idx} ({title})" if title else idx
 
-    exportPath = f"{os.path.join(exportDir, idxString)}.json"
-    exportData(data, exportPath)
+    outFile.setFile(f"{os.path.join(exportDir, idxString)}.json")
+    outFile.save()
 
 
 def parseArgs():

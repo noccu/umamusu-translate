@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 from pathlib import Path, PurePath
 import sys
@@ -107,11 +108,10 @@ class TranslationFile:
     latestVersion = 5
     ver_offset_mdb = 100
 
-    def __init__(self, file):
-        self.file = file
-        self.name = PurePath(file).name
-        self.reload()
-        self.escapeNewline = self.type in ("race", "preview", "mdb")
+    def __init__(self, file = None, load=True):
+        if load:
+            self.setFile(file)
+            self.reload()
 
     class TextData:
         def __init__(self, root: 'TranslationFile', data=None) -> None:
@@ -231,13 +231,35 @@ class TranslationFile:
 
     def reload(self):
         self.data = helpers.readJson(self.file)
-        self.version = self._getVersion()
-        self.data['text'] = self.TextData(self)
+        self.init()
 
     def save(self):
+        if self._snapshot == json.dumps(self.data, ensure_ascii=False, default=helpers._to_json): return
+        assert self.file
         if self.version < self.ver_offset_mdb:
             self.data['modified'] = currentTimestamp()
         helpers.writeJson(self.file, self.data)
+
+    def snapshot(self, copyFrom=None):
+        self._snapshot = copyFrom._snapshot if copyFrom else json.dumps(self.data, ensure_ascii=False, default=helpers._to_json)
+
+    def setFile(self, file):
+        self.file = file
+        self.name = PurePath(file).name
+
+    def init(self):
+        self.version = self._getVersion()
+        self.escapeNewline = self.type in ("race", "preview", "mdb")
+        self.data['text'] = self.TextData(self)
+        self.snapshot()
+
+    @classmethod
+    def fromData(cls, data):
+        c = cls(load=False)
+        c.data = {'version': cls.latestVersion, **data}
+        c.init()
+        return c
+
 
 def currentTimestamp():
     return int(datetime.now(timezone.utc).timestamp())

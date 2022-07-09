@@ -223,13 +223,14 @@ class DataTransfer:
     def __call__(self, storyId, textData):
         # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
         # Only continue when forced to.
-        if not args.overwrite:
+        if not args.overwrite or self.file == 0:
             return
         group, id, idx = storyId
 
         if self.file is None:
             file = helpers.findExisting(PurePath(args.dst) / group / id, f"{idx}*.json")
             if file is None:  # Check we actually found a file above
+                self.file = 0
                 return
             else:
                 self.file = common.TranslationFile(file)

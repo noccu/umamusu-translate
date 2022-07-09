@@ -148,7 +148,6 @@ def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
         export = common.TranslationFile.fromData(export)
         if transferExisting.file:
             export.snapshot(copyFrom=transferExisting.file)
-            export.data['modified'] = transferExisting.file.data['modified']
         return export
 
 

@@ -110,8 +110,12 @@ class TranslationFile:
 
     def __init__(self, file = None, load=True):
         if load:
+            if not file: raise RuntimeError("Attempting to load tlfile but no file provided.")
             self.setFile(file)
+            self.fileExists = True # should error if it does not
             self.reload()
+        else:
+            self.fileExists = False
 
     class TextData:
         def __init__(self, root: 'TranslationFile', data=None) -> None:
@@ -234,30 +238,37 @@ class TranslationFile:
         self.init()
 
     def save(self):
-        if self._snapshot == json.dumps(self.data, ensure_ascii=False, default=helpers._to_json): return
+        if self.fileExists and self._snapshot == json.dumps(self.data, ensure_ascii=False, default=helpers._to_json): return
         assert self.file
         if self.version < self.ver_offset_mdb:
             self.data['modified'] = currentTimestamp()
         helpers.writeJson(self.file, self.data)
 
     def snapshot(self, copyFrom=None):
-        self._snapshot = copyFrom._snapshot if copyFrom else json.dumps(self.data, ensure_ascii=False, default=helpers._to_json)
+        if copyFrom:
+            self._snapshot = copyFrom._snapshot
+            self.fileExists = copyFrom.fileExists
+            # Gets written correctly on save anyway but copyFrom means we're trying to "restore" a state (partially):
+            mod = copyFrom.data.get('modified')
+            if mod: self.data['modified'] = mod
+        else:
+            self._snapshot = json.dumps(self.data, ensure_ascii=False, default=helpers._to_json)
 
     def setFile(self, file):
         self.file = file
         self.name = PurePath(file).name
 
-    def init(self):
+    def init(self, snapshot=True):
         self.version = self._getVersion()
         self.escapeNewline = self.type in ("race", "preview", "mdb")
         self.data['text'] = self.TextData(self)
-        self.snapshot()
+        if snapshot: self.snapshot()
 
     @classmethod
-    def fromData(cls, data):
+    def fromData(cls, data, snapshot=False):
         c = cls(load=False)
         c.data = {'version': cls.latestVersion, **data}
-        c.init()
+        c.init(snapshot)
         return c
 
 

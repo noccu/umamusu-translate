@@ -115,7 +115,7 @@ Gold City | Complete | deepl (contributed by CryDuringItAll)
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl
-Mihono Bourbon | In progress | deepl
+Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl

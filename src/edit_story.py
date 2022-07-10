@@ -468,10 +468,10 @@ def main():
     skip_checkbox = tk.Checkbutton(root, text="Skip translated blocks", variable=skip_translated)
     skip_checkbox.grid(row=6, column=2)
 
+    create_text_list_popup()
     chapter_dropdown.current(cur_chapter)
     change_chapter()
     block_dropdown.current(cur_block)
-    create_text_list_popup()
 
     root.bind("<Control-Return>", next_block)
     root.bind("<Control-s>", saveFile)

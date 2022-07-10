@@ -29,17 +29,17 @@ Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
-Tonight at the Ligne Droite | In progress | [ebi]
+Tonight at the Ligne Droite | In progress, Complete | [ebi], deepl
 A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
-The Promised Time: Silks & Three Riddles | In progress/Transferring | [Snep][]
-Seek, Solve, Summer Walk! | Complete | [noccu][] (ep 1-3), deepl
+The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | [Snep][], deepl
+Seek, Solve, Summer Walk! | In Progress, Complete | [noccu][] (ep 1-3), deepl
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 
 # Character stories
 name | progress | translator
 --- | --- | ---
-All not listed here up to 2022/07/08<br>(excl Nishino Flower, Mejiro Palmer, Mejiro Bright)| Complete | deepl (contributed by Korgi)
+All not listed here up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster][]
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
@@ -73,12 +73,12 @@ Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
 Silence Suzuka | Complete | [LotoDS][]
 Smart Falcon | Complete | deepl (contributed by CryDuringItAll)
 Special Week | Complete | Mann
-Sweep Tosho | In Progress | FragmentalSolstice
+Sweep Tosho | In Progress, Complete | FragmentalSolstice, deepl
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]
-Yaeno Muteki | In Progress | [LotoDS][] (ep 1-4)
+Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl
 
 
 # Training story/events

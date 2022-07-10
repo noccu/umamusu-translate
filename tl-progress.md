@@ -133,8 +133,10 @@ Vodka (SSR, Road of Vodka) | Complete | [robflop][]
 # Home Dialogue
 name | progress | translator
 --- | --- | ---
+All not listed here up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Maruzensky | Complete | [noccu][]
 Curren Chan | Complete | [noccu][]
+Gold Ship | Complete | [noccu][] (solo 1-2), deepl
 
 # General
 name | progress | translator

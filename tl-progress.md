@@ -110,7 +110,7 @@ name | progress | translator
 --- | --- | ---
 Agnes Tachyon | Complete | deepl
 Daiwa Scarlet | Complete | deepl (contributed by Korgi)
-Eishin Flash | In progress | deepl
+Eishin Flash | Complete | deepl
 Gold City | Complete | deepl (contributed by CryDuringItAll)
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl

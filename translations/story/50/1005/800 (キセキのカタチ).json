@@ -1,0 +1,790 @@
+{
+    "version": 5,
+    "bundle": "K7ZXJEDK22B3365ZCJLZATOZ2TZ26XUQ",
+    "type": "story",
+    "storyId": "501005800",
+    "title": "キセキのカタチ",
+    "text": [
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "やぁ、トレーナーさん。\r\n突然だけど……明日、時間は空いてるかな？",
+            "enText": "Hey there, trainer. I know this is sudden, \nbut I was wondering if you have any time free \ntomorrow at ……?",
+            "nextBlock": 2,
+            "origClipLength": 88,
+            "choices": [
+                {
+                    "jpText": "空いてるけど、どうかした？",
+                    "enText": "I'm available, what's wrong?",
+                    "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -898127115331944188
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 8649092509421831966
+                }
+            ],
+            "pathId": -7580726906296899349,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "実はね、ボランティア活動の一環で、\r\n病院へ慰問に行くんだ。\nよかったら、トレーナーさんもどうかな。",
+            "enText": "Actually, I'm going to visit a hospital as \npart of my volunteer work. I was wondering if \nyou would like to join me as a trainer.",
+            "nextBlock": 3,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 6319834633409574852
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 1919575063172692355
+                }
+            ],
+            "pathId": 9196886948482186290,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "長期で入院している患者さんも多くてね。\r\nトレーナーさんの優しい笑顔が隣にあれば、\nよりみんなの心を癒してあげられるかなって。",
+            "enText": "I've had many patients who have been in the \nhospital for long periods of time. I thought \nthat having the trainer's kind smile next to \nthem I thought that having the trainer's kind \nsmile next to me would help heal the hearts \nof the patients.",
+            "nextBlock": 4,
+            "origClipLength": 127,
+            "choices": [
+                {
+                    "jpText": "もちろん行くよ！",
+                    "enText": "Of course I'll be there!",
+                    "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": 3000882056052846910
+                },
+                {
+                    "origLen": 138,
+                    "pathId": -1647621298551958386
+                }
+            ],
+            "pathId": -3691174316228064451,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "よかった！\r\nそれじゃ、明日はよろしく。",
+            "enText": "Good! Well then, I'll see you tomorrow.",
+            "nextBlock": 5,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": 6224472920869776203
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 4402318429816445195
+                }
+            ],
+            "pathId": 5423038931301585904,
+            "blockIdx": 4
+        },
+        {
+            "jpName": "子どもの患者",
+            "enName": "",
+            "jpText": "ウマ娘さんだ！\r\nわぁ、きれいなしっぽ！\nねぇねぇ。お姉ちゃんも、走るのはやいの？",
+            "enText": "It's horsegirl! Wow, beautiful tail! Hey, \nhey. Are you a fast runner, too?",
+            "nextBlock": 6,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": 1773381739989008049
+                },
+                {
+                    "origLen": 223,
+                    "pathId": 7571018311225782797
+                }
+            ],
+            "pathId": -8242576913834974301,
+            "blockIdx": 5
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "ああ！　今度、見せてあげるよ。\r\nお姉ちゃんは、車にだって負けないから。",
+            "enText": "Ah! I'll show you next time. You're as good \nas a car, sister.",
+            "nextBlock": 7,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -3403870582730660904
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -617700411283489849
+                }
+            ],
+            "pathId": -6127119444141162198,
+            "blockIdx": 6
+        },
+        {
+            "jpName": "子どもの患者",
+            "enName": "",
+            "jpText": "えー！　うそだぁ……へへっ。",
+            "enText": "Eh! No kidding.…… hehe.",
+            "nextBlock": 8,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 4613962657785242177
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -2327267244288515335
+                }
+            ],
+            "pathId": 6033489397584667855,
+            "blockIdx": 7
+        },
+        {
+            "jpName": "女性の患者",
+            "enName": "",
+            "jpText": "…………。",
+            "enText": "…………",
+            "nextBlock": 9,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -2731760522785338119
+                },
+                {
+                    "origLen": 136,
+                    "pathId": 5444805223037919592
+                }
+            ],
+            "pathId": 5698935070123182829,
+            "blockIdx": 8
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "こんにちは。\r\n日差し、眩しくはないですか？\nカーテンを――",
+            "enText": "Hello. The sun, isn't it glaring? Curtains―",
+            "nextBlock": 10,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 7331478170876528743
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 5223891918603840743
+                }
+            ],
+            "pathId": 6017395465436115804,
+            "blockIdx": 9
+        },
+        {
+            "jpName": "女性の患者",
+            "enName": "",
+            "jpText": "……私のことはいいわ。\r\n私の話し相手なんて、気持ちが滅入るだけよ。\n他の子のところに行ってあげて。",
+            "enText": "…… don't even get me started. Talking to me \nis just depressing. Go to the other girls.",
+            "nextBlock": 11,
+            "origClipLength": 110,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -1784294675242670463
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -8439789748176209276
+                }
+            ],
+            "pathId": -2594745175455205657,
+            "blockIdx": 10
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "…………。",
+            "enText": "…………",
+            "nextBlock": 12,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -8547854200813633870
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 5546118337287398604
+                }
+            ],
+            "pathId": -547253445784834067,
+            "blockIdx": 11
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "笑顔を返してくれる人もいれば、\r\n俯いたまま顔をあげてくれない人もいる。",
+            "enText": "Some people smile back, others remain \ndowncast and don't look up.",
+            "nextBlock": 13,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -1551661962664048977
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -1873412353510132737
+                }
+            ],
+            "pathId": 4696004525799701622,
+            "blockIdx": 12
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "フジキセキは終始、表情を崩すことなく、\r\n穏やかな笑顔を浮かべていた。\nそして、慰問は終わり――",
+            "enText": "Fujikiseki's expression remained unwavering \nthroughout, a gentle smile on her face. And \nthen the consolation was over―",
+            "nextBlock": 14,
+            "origClipLength": 107,
+            "pathId": -6821512826873703415,
+            "blockIdx": 13
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "……本当はね、\r\nみんなを笑顔にして驚かせるような\nサプライズを考えていたんだ。",
+            "enText": "……Truly, I was thinking of a surprise that \nwould make everyone smile and be amazed.",
+            "nextBlock": 15,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": 744109932168140846
+                },
+                {
+                    "origLen": 170,
+                    "pathId": 7026281653854986656
+                }
+            ],
+            "pathId": -2668690378462290838,
+            "blockIdx": 14
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "でも、できなかったよ。\r\nあそこにいる人たちは、\nさまざまな気持ちを抱えている。",
+            "enText": "But I couldn't do it. The people there have \nall kinds of feelings.",
+            "nextBlock": 16,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 5577292228076647524
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 6496847819141181990
+                }
+            ],
+            "pathId": -4738332640666719200,
+            "blockIdx": 15
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "……笑顔すらも、\r\n心に痛みを与えるかもしれないんだ。",
+            "enText": "Even a…… smile can cause pain in the heart.",
+            "nextBlock": 17,
+            "origClipLength": 80,
+            "choices": [
+                {
+                    "jpText": "フジキセキ……",
+                    "enText": "Fujikiseki……",
+                    "nextBlock": 17
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -6785132410080213591
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -4947210130691751421
+                }
+            ],
+            "pathId": -1150968247895824041,
+            "blockIdx": 16
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "元気づける……その行為の重さを\r\n思い知ったよ。まだまだだね、私も。",
+            "enText": "Cheer up…… I'm reminded of the weight of that \nact. I'm not there yet, either.",
+            "nextBlock": 18,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": -4892686105742393142
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 9164385845149691739
+                }
+            ],
+            "pathId": -8044030840233342308,
+            "blockIdx": 17
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "――だけど。",
+            "enText": "― but.",
+            "nextBlock": 19,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -2355161383024689776
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -8157871999810163803
+                }
+            ],
+            "pathId": 2225655535571664968,
+            "blockIdx": 18
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "いいえ、まだここにいますよ。\r\nだって、貴方は私に会ってくれた。\n断ることだって、できたのに。",
+            "enText": "No, I'm still here. Because you met me. You \ncould have said no.",
+            "nextBlock": 20,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 173,
+                    "pathId": -1915727508804820984
+                },
+                {
+                    "origLen": 227,
+                    "pathId": 534478431208796983
+                }
+            ],
+            "pathId": -7659633978902401939,
+            "blockIdx": 19
+        },
+        {
+            "jpName": "女性の患者",
+            "enName": "",
+            "jpText": "…………。\r\n楽しい話もできないのに？",
+            "enText": "………… What's the point of even having a \npleasant conversation?",
+            "nextBlock": 21,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 4465308982805216026
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -3979921164555654592
+                }
+            ],
+            "pathId": -8344101900196337163,
+            "blockIdx": 20
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "話そうとしてくれる……\r\nその気持ちが、どれだけ私に\n幸せをくれるのかわかりますか？",
+            "enText": "Do you know how much happiness that feeling \nof being willing to talk to me…… brings me?",
+            "nextBlock": 22,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": 2155939345673359808
+                },
+                {
+                    "origLen": 110,
+                    "pathId": 1220702840540659115
+                }
+            ],
+            "pathId": -6562590720020054537,
+            "blockIdx": 21
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "ここに来て、貴方に会えてよかったです。",
+            "enText": "I am glad I came here and met you.",
+            "nextBlock": 23,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 3289504532372257922
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 861556728101858324
+                }
+            ],
+            "pathId": -5155168599960306239,
+            "blockIdx": 22
+        },
+        {
+            "jpName": "女性の患者",
+            "enName": "",
+            "jpText": "私を喜ばせるわけじゃなく、\r\nあなたが幸せなの？\n……ふふ、そう。",
+            "enText": "Not to please me, but to make \nyou happy?…… Hmmm, yes.",
+            "nextBlock": 24,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 5173632068084895507
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 4247100397404703939
+                }
+            ],
+            "pathId": -406902110824090062,
+            "blockIdx": 23
+        },
+        {
+            "jpName": "女性の患者",
+            "enName": "",
+            "jpText": "私でも、まだ誰かを\r\n幸せにすることができるのね……。",
+            "enText": "So even I can still make someone happy. ……",
+            "nextBlock": 25,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -365942347879090243
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -8236581756180939484
+                }
+            ],
+            "pathId": 467050390348319467,
+            "blockIdx": 24
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "……あの人は、私のレースを見てくれると\r\n言っていたよ。",
+            "enText": "…… that guy said she would \nwatch my race for me.",
+            "nextBlock": 26,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -1113575720013200503
+                },
+                {
+                    "origLen": 149,
+                    "pathId": -433684485128018037
+                }
+            ],
+            "pathId": -1583676242408337513,
+            "blockIdx": 25
+        },
+        {
+            "jpName": "女性の患者",
+            "enName": "",
+            "jpText": "『私が幸せにしたあなたが勝ってくれる……\r\nそれって、まるで“キセキ”のようだわ』",
+            "enText": "I made you happy and you're going to win.…… \nThat sounds like \"kiseki\" to me.",
+            "nextBlock": 27,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": -3101534351631966702
+                },
+                {
+                    "origLen": 29,
+                    "pathId": 5305156901643289555
+                }
+            ],
+            "pathId": 4854450438208842770,
+            "blockIdx": 26
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "私はいつも、誰かを笑顔にしたいって\r\n思ってる。それは、今も変わっていない。",
+            "enText": "I always want to make someone smile. That \nhasn't changed.",
+            "nextBlock": 28,
+            "origClipLength": 94,
+            "pathId": -895600059852338820,
+            "blockIdx": 27
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "だけどそこには、私が思っている以上に、\r\n色々な形があるんだ。",
+            "enText": "But there are more forms than I thought.",
+            "nextBlock": 29,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 168,
+                    "pathId": 3823687936956963843
+                },
+                {
+                    "origLen": 206,
+                    "pathId": 2356960674247050875
+                }
+            ],
+            "pathId": 4925828983678459363,
+            "blockIdx": 28
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "だから、私は……。",
+            "enText": "So I'm going to go to ……",
+            "nextBlock": 30,
+            "origClipLength": 56,
+            "choices": [
+                {
+                    "jpText": "最高の“キセキ”を見せないと！",
+                    "enText": "We have to show them our best \"kiseki\"!",
+                    "nextBlock": 30
+                },
+                {
+                    "jpText": "プレッシャーを感じる？",
+                    "enText": "Feeling pressure?",
+                    "nextBlock": 34
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": 578784858739446984
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 5278244785887518403
+                }
+            ],
+            "pathId": -5052678203841817949,
+            "blockIdx": 29
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "――ああ、そうだね！",
+            "enText": "―Oh, yes!",
+            "nextBlock": 31,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 6610019283927693904
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -7919542549360363059
+                }
+            ],
+            "pathId": 7247544219832708888,
+            "blockIdx": 30
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "笑顔を、幸せを……\r\n与えるんじゃなく、与えてもらった。\nそして、その先に続く勝利を求められた。",
+            "enText": "Smiles, happiness…… were given, \nnot given. And they were asked \nto win, to continue beyond.",
+            "nextBlock": 32,
+            "origClipLength": 107,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": 8460387269147948286
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 6799980408101645231
+                }
+            ],
+            "pathId": -894151948311586895,
+            "blockIdx": 31
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "だからこそ、私は全力でレースに挑むよ。\r\n期待と、望まれる“キセキ”を\n見せるためにね！",
+            "enText": "That's why I'm going to give it my all in the \nrace. I'm going to give it my all so that I \ncan show you what is expected of me, and what \nI hope will be the \"kiseki\"!",
+            "nextBlock": 33,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": 1939405241463904781
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -835042793264415004
+                }
+            ],
+            "pathId": -3117006220707439718,
+            "blockIdx": 32
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "眩しい空に向かって、\r\n決意を口にするフジキセキ。その横顔は、\n太陽にも負けないくらい輝いていた。",
+            "enText": "Fujikiseki is talking about her determination \nas she faces the dazzling sky. Her profile \nshone as brightly as the sun. shining as \nbright as the sun.",
+            "nextBlock": -1,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": 5425012916496477742
+                },
+                {
+                    "origLen": 33,
+                    "pathId": 5072857427419013035
+                }
+            ],
+            "pathId": 7938264338293148436,
+            "blockIdx": 33
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "……いいや、背中を押された気分だよ！",
+            "enText": "…… no, I feel like I've got your back!",
+            "nextBlock": 35,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": -5813846901022335502
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 2585164894546598686
+                }
+            ],
+            "pathId": 185703646991760383,
+            "blockIdx": 34
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "必ず勝つよ。どんなレースだとしても。\r\n“キセキ”の名を持つ、私がね！",
+            "enText": "I'm going to win. No matter what kind of race \nit is. I, who have the name \"Kiseki,\" will!",
+            "nextBlock": 36,
+            "origClipLength": 90,
+            "choices": [
+                {
+                    "jpText": "必ず勝つのだから――",
+                    "enText": "We will win.",
+                    "nextBlock": 36
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 577193919507614140
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -8747566682358851206
+                }
+            ],
+            "pathId": -1347755014929930343,
+            "blockIdx": 35
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "サプライズにはならないね、と\r\n悪戯っぽく言ってみる。",
+            "enText": "I'm going to be naughty and say, \"That can't \nbe a surprise.",
+            "nextBlock": 37,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": 7236111591486866168
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 3136741732052914974
+                }
+            ],
+            "pathId": -572171601079350871,
+            "blockIdx": 36
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "……ふふっ！　ああ、確かに。\r\nとなると――ただの勝利ではいけない。",
+            "enText": "…… Phew! Oh, indeed. Then \n- you can't just win.",
+            "nextBlock": 38,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 1293745979786518503
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -2649125621394092956
+                }
+            ],
+            "pathId": -6177971727031545852,
+            "blockIdx": 37
+        },
+        {
+            "jpName": "フジキセキ",
+            "enName": "Fuji Kiseki",
+            "jpText": "すべてを魅了するような走りで、\r\n最高の驚きを見せてあげないとね！",
+            "enText": "I'll have to show them the best surprise of \nall with a mesmerizing run!",
+            "nextBlock": -1,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": -3689901870713014202
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -5608888078312315228
+                }
+            ],
+            "pathId": -7621800249839699379,
+            "blockIdx": 38
+        }
+    ],
+    "modified": 1657555054
+}

@@ -1,0 +1,104 @@
+{
+    "version": 5,
+    "bundle": "5YH37FHJWAT2RXEFOLVU7DW4CPDBHN5D",
+    "type": "story",
+    "storyId": "501067729",
+    "title": "クレーンゲーム失敗……",
+    "text": [
+        {
+            "jpName": "サトノダイヤモンド",
+            "enName": "Satono Diamond",
+            "jpText": "――終わって、しまいましたね。",
+            "enText": "- - it's over and done with, isn't it?",
+            "nextBlock": 2,
+            "origClipLength": 64,
+            "choices": [
+                {
+                    "jpText": "面目ない……",
+                    "enText": "No face ……",
+                    "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 6676289904141800940
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -3482594750203113966
+                }
+            ],
+            "pathId": 4753316989603200039,
+            "blockIdx": 1
+        },
+        {
+            "jpName": "サトノダイヤモンド",
+            "enName": "Satono Diamond",
+            "jpText": "だ、大丈夫ですよ！\r\nこのタイプは、アームの操作が\n難しいですから……！",
+            "enText": "No, it's okay! This type of arm is difficult \nto maneuver. ……!",
+            "nextBlock": 3,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -8254936866223512784
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -5388520938249672415
+                }
+            ],
+            "pathId": -7442639340803439015,
+            "blockIdx": 2
+        },
+        {
+            "jpName": "サトノダイヤモンド",
+            "enName": "Satono Diamond",
+            "jpText": "難度が高すぎるようでしたら、\r\n今度よい機会を見つけて、\n会社の人に伝えておきますので。",
+            "enText": "If it is too difficult, I will find a good \nopportunity to tell someone at the company.",
+            "nextBlock": 4,
+            "origClipLength": 102,
+            "choices": [
+                {
+                    "jpText": "い、いや大丈夫！",
+                    "enText": "No, no, I'm fine!",
+                    "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": 1882585902445711692
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 8704895196360888390
+                }
+            ],
+            "pathId": 9032795572665135296,
+            "blockIdx": 3
+        },
+        {
+            "jpName": "モノローグ",
+            "enName": "",
+            "jpText": "残念な結果に終わった……。",
+            "enText": "The disappointing results can be found at ……",
+            "nextBlock": -1,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": 796688222003740954
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -3831298856986927912
+                }
+            ],
+            "pathId": 3221884333660539227,
+            "blockIdx": 4
+        }
+    ],
+    "modified": 1657555063
+}

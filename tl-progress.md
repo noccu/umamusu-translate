@@ -41,8 +41,9 @@ name | progress | translator
 --- | --- | ---
 All not listed here up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
-Air Groove | Complete | [burritoblaster][]
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
+Air Shakur | Complete | deepl (contributed by CryDuringItAll)
+Air Groove | Complete | [burritoblaster][]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Eishin Flash | Complete, In progress | deepl, [noccu] (ep 1-2)
@@ -109,6 +110,7 @@ The rest | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 name | progress | translator
 --- | --- | ---
 Agnes Tachyon | Complete | deepl
+Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
 Gold City | Complete | deepl (contributed by CryDuringItAll)

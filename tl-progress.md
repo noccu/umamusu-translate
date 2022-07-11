@@ -39,7 +39,7 @@ The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 # Character stories
 name | progress | translator
 --- | --- | ---
-All not listed here up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Air Shakur | Complete | deepl (contributed by CryDuringItAll)
@@ -101,15 +101,16 @@ All | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 ## Make a New Track
 id | name (short) | progress | translator
 --- | --- | --- | ---
+All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 249 | Nyan Nyan Island | Complete | [nem]
 259 | A sudden rain | Complete | [Snep]
-The rest | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 
 ## Umas
 name | progress | translator
 --- | --- | ---
-Agnes Tachyon | Complete | deepl
+All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+Agnes Tachyon | Complete, In progress | deepl, [noccu]
 Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
@@ -127,7 +128,7 @@ Sakura Bakushin O | Complete | deepl
 ## Cards
 name | progress | translator
 --- | --- | ---
-All except the below (up to 30/12/2021) | Complete | deepl
+All not listed (Up to 2022/07/08) | Complete | deepl (contributed by redi up to 30/12/2021),<br> (contributed by Korgi up to 2022/07/08)
 Vodka (R, Tracen Academy) | Complete | [robflop][]
 Vodka (SR, Annoying Observer) | Complete | [robflop][]
 Vodka (SSR, Road of Vodka) | Complete | [robflop][]
@@ -135,7 +136,7 @@ Vodka (SSR, Road of Vodka) | Complete | [robflop][]
 # Home Dialogue
 name | progress | translator
 --- | --- | ---
-All not listed here up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Maruzensky | Complete | [noccu][]
 Curren Chan | Complete | [noccu][]
 Gold Ship | Complete | [noccu][] (solo 1-2), deepl

@@ -68,7 +68,7 @@
         },
         {
             "jpName": "医者",
-            "enName": "",
+            "enName": "Doctor",
             "jpText": "――まあ、体に異常はありませんよ。\r\nちょっと疲れてしまっただけみたいですね。",
             "enText": "-Well, there's nothing wrong with my body. I \nguess I just got a little tired.",
             "nextBlock": 8,
@@ -77,7 +77,7 @@
         },
         {
             "jpName": "医者",
-            "enName": "",
+            "enName": "Doctor",
             "jpText": "もうしばらく安静にしていれば、\r\n意識も……おっと、噂をすれば。",
             "enText": "If she rests a while longer, she'll be \nconscious… oops, speak of the devil.",
             "nextBlock": 9,
@@ -88,7 +88,7 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "……アタシ、寝てたの？",
-            "enText": "… Atashi, were you sleeping?",
+            "enText": "… I, were you sleeping?",
             "nextBlock": 10,
             "choices": [
                 {
@@ -111,7 +111,7 @@
         },
         {
             "jpName": "医者",
-            "enName": "",
+            "enName": "Doctor",
             "jpText": "ナリタタイシンさん、体のほうは？\r\nもうふらついたりはしないかな？",
             "enText": "Narita Taishin, how is your body? \nDo you feel any more wobbly?",
             "nextBlock": 12,
@@ -129,7 +129,7 @@
         },
         {
             "jpName": "医者",
-            "enName": "",
+            "enName": "Doctor",
             "jpText": "よしよし、ならよかった。\r\nあまり無理せず、今日は休んでくださいね。",
             "enText": "Good, good, then I'm glad. Please don't take \nit too hard and take the rest of the day off.",
             "nextBlock": 14,
@@ -185,7 +185,7 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うぉおおおおおんっ！！",
-            "enText": "",
+            "enText": "Wooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!",
             "nextBlock": 20,
             "pathId": 4632528954906781639,
             "blockIdx": 19
@@ -413,10 +413,11 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "レースに、勝ち続けてさえいれば。\r\nきっと、アタシだって……。",
-            "enText": "If only I could keep winning races. I'm sure \nthat even Atashi would be a winner…",
+            "enText": "If only I could keep winning races. I'm sure \nthat even I would be a winner…",
             "nextBlock": -1,
             "pathId": 634321579650972450,
             "blockIdx": 43
         }
-    ]
+    ],
+    "modified": 1657554476
 }

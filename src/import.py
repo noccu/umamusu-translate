@@ -1,14 +1,11 @@
 import argparse
 from pathlib import Path
-from os import SEEK_END, PathLike
 from traceback import print_exc
 from sys import stdout
 from functools import reduce
 
-import UnityPy
-from UnityPy.files import ObjectReader
-
 import common
+from common import GameBundle
 
 
 class ConfigError(Exception): pass
@@ -19,8 +16,6 @@ class NoAssetError(PatchError): pass
 
 
 class PatchManager:
-    editMark = b"\x08\x04"
-
     def __init__(self, args: argparse.Namespace) -> None:
         self.errorLog = stdout
         self.config(args)
@@ -82,104 +77,67 @@ class PatchManager:
         except:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
-    def loadBundle(self, bundle: str):
-        bundlePath = Path(common.GAME_ASSET_ROOT, bundle[0:2], bundle)
-        if not bundlePath.exists():
-            raise NoAssetError(f"{bundle} does not exist in your game data.")
-        elif self.args.update:
-            savePath = Path(self.args.dst, bundle[0:2], bundle)
-            isPatched, fileModTime = self.checkFilePatched(savePath)
-            tlModTime = self.tlFile.data.get("modified")
-            if isPatched:
-                if tlModTime and fileModTime != tlModTime:
+    def loadBundle(self, name: str):
+        try:
+            bundle = GameBundle.fromName(name, load=False)
+        except FileNotFoundError:
+            raise NoAssetError(f"{name} does not exist in your game data.")
+
+        if self.args.update:
+            savePath = GameBundle.createPath(self.args.dst, name)
+            bundle.readPatchState(customPath=savePath)
+            if bundle.isPatched:
+                tlModTime = self.tlFile.data.get("modified")
+                if tlModTime and bundle.patchedTime != tlModTime:
                     print("translations modified... ", end="", flush=True)
                 else:
                     raise AlreadyPatchedError(f"{self.tlFile.bundle} already patched.")
 
         try:
-            self.bundle = UnityPy.load(str(bundlePath))
-        except:
-            raise PatchError(f"UnityPy error, skipping {bundle}.")
-        self.rootAsset: ObjectReader = next(iter(self.bundle.container.values())).get_obj()
-        self.assets: list[ObjectReader] = self.rootAsset.assets_file.files
+            return bundle.load()
+        except Exception as e:
+            raise PatchError(f"UnityPy error: {repr(e)}, skipping {name}.")
 
     def patch(self, path: str):
         """Swaps game assets with translation file data, returns modified state."""
         self.loadTranslationFile(path)
-        self.loadBundle(self.tlFile.bundle)
+        bundle = self.loadBundle(self.tlFile.bundle)
 
         if self.tlFile.type in ("story", "home"):
-            patcher = StoryPatcher(self)
+            patcher = StoryPatcher(self, bundle)
         elif self.tlFile.type == "race":
-            patcher = RacePatcher(self)
+            patcher = RacePatcher(self), bundle
         elif self.tlFile.type == "preview":
-            patcher = PreviewPatcher(self)
+            patcher = PreviewPatcher(self, bundle)
         elif self.tlFile.type == "lyrics":
-            patcher = LyricsPatcher(self)
+            patcher = LyricsPatcher(self, bundle)
 
         patcher.patch()
         if patcher.isModified:
-            self.saveAsset()
+            bundle.setPatchState(self.tlFile)
+            bundle.save(dstFolder=self.args.dst)
 
         return patcher.isModified
 
-    def saveAsset(self):
-        # b = self.bundle.file.save() #! packer="original" or any compression doesn't seem to work,
-        # the game will crash or get stuck loading forever
-        # b += b"\x08\x04"
-        b = self.markFilePatched(self.tlFile, self.bundle.file.save())
-        fn = self.bundle.file.name
-        fp = Path(self.args.dst, fn[0:2], fn)
-        fp.parent.mkdir(parents=True, exist_ok=True)
-        with open(fp, "wb") as f:
-            f.write(b)
-
-    @classmethod
-    def markFilePatched(cls, tlFile: common.TranslationFile, data: bytes):
-        m = tlFile.data.get("modified")
-        if m:
-            m = m.to_bytes(5, byteorder='big', signed=False)
-            # Have a nice day and good training if you're reading this in the year 15xxx somewhere :spemini:
-        else:
-            m = b""
-        return data + m + cls.editMark
-
-    @classmethod
-    def checkFilePatched(cls, filePath: PathLike):
-        try:
-            with open(filePath, "rb") as f:
-                f.seek(-7, SEEK_END)
-                modified = f.read(5)
-                mark = f.read(2)
-                if mark == cls.editMark:
-                    try:
-                        modified = int.from_bytes(modified, byteorder='big')
-                    except:
-                        modified = None
-                    return True, modified
-        except FileNotFoundError:
-            pass  # Should normally not occur
-        return False, None
-
 
 class StoryPatcher:
-    def __init__(self, manager: PatchManager) -> None:
+    def __init__(self, manager: PatchManager, bundle: GameBundle) -> None:
         self.manager = manager
         self.skipped = 0
         self.totalBlocks = len(self.manager.tlFile.textBlocks)
+        self.bundle = bundle
+        self.assetData = bundle.rootAsset.read_typetree()
 
     def patch(self):
-        mainTree = self.manager.rootAsset.read_typetree()
-
         for textBlock in self.manager.tlFile.textBlocks:
             blockIdx = textBlock['blockIdx']
             try:
-                self.asset = self.manager.assets[textBlock['pathId']]
+                asset = self.bundle.assets[textBlock['pathId']]
             except KeyError:
-                print(f"{self.manager.tlFile.bundle}: {blockIdx}: Can't find path id, skipping.")
+                print(f"{self.bundle.bundleName}: {blockIdx}: Can't find path id, skipping.")
                 continue
             else:
-                assetData = self.asset.read_typetree()
+                assetData = asset.read_typetree()
 
             if not textBlock['enText'] and not textBlock['enName']:
                 self.skipped += 1
@@ -200,13 +158,13 @@ class StoryPatcher:
                         try:
                             newClipLen = int(textBlock["newClipLength"])
                         except ValueError:
-                            print(f"{self.manager.tlFile.bundle}: {blockIdx}: Invalid clip length defined, falling back to calculated value.")
+                            print(f"{self.bundle.bundleName}: {blockIdx}: Invalid clip length defined, falling back to calculated value.")
                         else:
-                            if newClipLen < textBlock['origClipLength']: print(f"{self.manager.tlFile.bundle}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original.")
+                            if newClipLen < textBlock['origClipLength']: print(f"{self.bundle.bundleName}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original.")
                     if newClipLen > textBlock['origClipLength']:
                         newBlockLen = newClipLen + assetData['StartFrame'] + 1
                         assetData['ClipLength'] = newClipLen
-                        mainTree['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+                        self.assetData['BlockList'][blockIdx]['BlockLength'] = newBlockLen
                         if not self.manager.args.silent:
                             print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
 
@@ -215,7 +173,7 @@ class StoryPatcher:
                                 newAnimLen = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
                                 if newAnimLen > animGroup['origLen']:
                                     try:
-                                        animAsset = self.manager.assets[animGroup['pathId']]
+                                        animAsset = self.bundle.assets[animGroup['pathId']]
                                     except KeyError:
                                         if not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
                                     else:
@@ -244,19 +202,18 @@ class StoryPatcher:
                         for idx, text in enumerate(textBlock['coloredText']):
                             if text['enText']:
                                 jpColored[idx]['Text'] = text['enText']
-            self.assetData = assetData
-            self.save()
+            asset.save_typetree(assetData)
 
         try:
-            mainTree['TypewriteCountPerSecond'] = self.manager.args.fps * 3
-            mainTree['Length'] = reduce(lambda x, b: x + b['BlockLength'], mainTree['BlockList'], 0)
-            self.manager.rootAsset.save_typetree(mainTree)
+            self.assetData['TypewriteCountPerSecond'] = self.manager.args.fps * 3
+            self.assetData['Length'] = reduce(lambda x, b: x + b['BlockLength'], self.assetData['BlockList'], 0)
+            self.save()
         except Exception as e:
-            print(f"Unexpected error in {self.manager.tlFile.bundle}: {type(e).__name__}: {e}")
+            print(f"Unexpected error in {self.bundle.bundleName}: {repr(e)}")
 
     def save(self):
         if self.isModified:
-            self.asset.save_typetree(self.assetData)
+            self.bundle.rootAsset.save_typetree(self.assetData)
 
     @property
     def isModified(self):
@@ -264,11 +221,6 @@ class StoryPatcher:
 
 
 class RacePatcher(StoryPatcher):
-    def __init__(self, manager: PatchManager) -> None:
-        super().__init__(manager)
-        self.asset = self.manager.rootAsset
-        self.assetData = self.asset.read_typetree()
-
     def patch(self):
         for textBlock in self.manager.tlFile.textBlocks:
             blockIdx = textBlock['blockIdx'] - 1  # race keys start at 1
@@ -293,10 +245,9 @@ class PreviewPatcher(RacePatcher):
 
 
 class LyricsPatcher(StoryPatcher):
-    def __init__(self, manager: PatchManager) -> None:
-        super().__init__(manager)
-        self.asset = self.manager.rootAsset
-        self.assetData = self.asset.read()
+    def __init__(self, manager: PatchManager, bundle: GameBundle) -> None:
+        super().__init__(manager, bundle)
+        self.assetData = bundle.rootAsset.read()
         self.assetText = "time,lyrics\n"
 
     def patch(self):

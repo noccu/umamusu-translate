@@ -24,7 +24,7 @@ IF [%1] NEQ [] (
 )
 
 :open
-REM %snek% src\ui.py
+%snek% src\filecopy.py --backup
 ECHO Importing all translatable types that are present in your game files...
 ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
 REM Or manually import parts, see import.py -h

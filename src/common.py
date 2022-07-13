@@ -6,6 +6,10 @@ import sys
 from typing import Generator
 import regex
 from datetime import datetime, timezone
+
+import UnityPy
+from UnityPy.files import ObjectReader
+
 import helpers
 
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
@@ -270,6 +274,78 @@ class TranslationFile:
         c.data = {'version': cls.latestVersion, **data}
         c.init(snapshot)
         return c
+
+class GameBundle:
+    editMark = b"\x08\x04"
+
+    def __init__(self, path, load=True) -> None:
+        self.bundlePath = Path(path)
+        self.bundleName = self.bundlePath.stem
+        self.exists = self.bundlePath.exists()
+        self.isPatched = False
+        self.data = None
+        self.patchData:bytes = b""
+        self._autoloaded = load
+
+        if load:
+            self.load()
+
+    def setPatchState(self, tlFile: TranslationFile):
+        m = tlFile.data.get("modified", b"")
+        if m:
+            m = m.to_bytes(5, byteorder='big', signed=False)
+            # Have a nice day and good training if you're reading this in the year 15xxx somewhere :spemini:
+        self.patchData = m + self.editMark
+
+    def readPatchState(self, customPath=None):
+        try:
+            with open(customPath or self.bundlePath, "rb") as f:
+                f.seek(-7, os.SEEK_END)
+                modified = f.read(5)
+                mark = f.read(2)
+                if mark == self.editMark:
+                    self.isPatched = True
+                    try:
+                        modified = int.from_bytes(modified, byteorder='big')
+                        self.patchedTime = modified
+                    except:
+                        self.patchedTime = None
+        except:
+            pass # defer to defaults
+
+    def load(self):
+        # UnityPy does not error and loads empty files
+        if not self.exists:
+            raise FileNotFoundError
+
+        self.data = UnityPy.load(str(self.bundlePath))
+        if self._autoloaded: self.readPatchState()
+        self.rootAsset: ObjectReader = next(iter(self.data.container.values())).get_obj()
+        self.assets: list[ObjectReader] = self.rootAsset.assets_file.files
+        return self
+
+    def save(self, dstFolder:Path=None, dstName:str=None):
+        if not self.data: return
+
+        b = self.data.file.save() + self.patchData
+        fn = dstName or self.data.file.name
+        fp = (dstFolder or self.bundlePath.parent) / fn[0:2] / fn
+        fp.parent.mkdir(parents=True, exist_ok=True)
+        with open(fp, "wb") as f:
+            f.write(b)
+        self.isPatched = True
+
+
+    @classmethod
+    def fromName(cls, name, load=True):
+        bundlePath = PurePath(GAME_ASSET_ROOT, name[0:2], name)
+        return cls(bundlePath, load)
+    
+    @staticmethod
+    def createPath(dstFolder, dstName):
+        return PurePath(dstFolder, dstName[0:2], dstName)
+
+
 
 
 def currentTimestamp():

@@ -6,6 +6,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
 import textprocess
+from types import SimpleNamespace
 
 TEXTBOX_WIDTH = 54
 
@@ -372,6 +373,11 @@ def cleanText(text: str):
     return " \n".join([line.strip() for line in text.strip().split("\n")])
 
 
+def tlNames():
+    import names
+    names.translate(files[cur_chapter])
+    load_block()
+
 def main():
     global files
     global root
@@ -411,7 +417,7 @@ def main():
 
     root = tk.Tk()
     root.title("Edit Story")
-    # root.geometry("693x250")
+    root.resizable(False, False)
     large_font = Font(root, size=18)
 
     chapter_label = tk.Label(root, text="Chapter")
@@ -422,25 +428,25 @@ def main():
     chapter_dropdown = ttk.Combobox(root)
     chapter_dropdown['values'] = [f.split("\\")[-1] for f in files]
     chapter_dropdown.bind("<<ComboboxSelected>>", change_chapter)
-    chapter_dropdown.grid(row=0, column=1)
+    chapter_dropdown.grid(row=0, column=1, sticky=tk.NSEW)
     block_dropdown = ttk.Combobox(root)
     block_dropdown.bind("<<ComboboxSelected>>", change_block)
-    block_dropdown.grid(row=0, column=3)
+    block_dropdown.grid(row=0, column=3, sticky=tk.NSEW)
 
     speaker_jp_label = tk.Label(root, text="Speaker (JP)")
     speaker_jp_label.grid(row=1, column=0)
-    speaker_jp_entry = tk.Entry(root, width=30)
-    speaker_jp_entry.grid(row=1, column=1)
+    speaker_jp_entry = tk.Entry(root)
+    speaker_jp_entry.grid(row=1, column=1, sticky=tk.NSEW)
 
     speaker_en_label = tk.Label(root, text="Speaker (EN)")
     speaker_en_label.grid(row=1, column=2)
-    speaker_en_entry = tk.Entry(root, width=30)
-    speaker_en_entry.grid(row=1, column=3)
+    speaker_en_entry = tk.Entry(root)
+    speaker_en_entry.grid(row=1, column=3, sticky=tk.NSEW)
 
     block_duration_label = tk.Label(root, text="Text Duration")
     block_duration_label.grid(row=2, column=2)
     block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
-    block_duration_spinbox.grid(row=2, column=3)
+    block_duration_spinbox.grid(row=2, column=3, sticky=tk.W)
 
     text_box_jp = tk.Text(root, width=TEXTBOX_WIDTH, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
@@ -448,16 +454,36 @@ def main():
     text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=5, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
-    btn_choices = tk.Button(root, text="Choices", command=lambda: toggleTextListPopup(target=cur_choices), state='disabled', width=10)
-    btn_choices.grid(row=5, column=0)
-    btn_colored = tk.Button(root, text="Colored", command=lambda: toggleTextListPopup(target=cur_colored), state='disabled', width=10)
-    btn_colored.grid(row=5, column=1)
-    btn_reload = tk.Button(root, text="Reload", command=lambda: load_block(reload=True), width=10)
-    btn_reload.grid(row=5, column=2)
-    btn_save = tk.Button(root, text="Save", command=saveFile, width=10)
-    btn_save.grid(row=5, column=3)
-    btn_next = tk.Button(root, text="Next", command=next_block, width=10)
-    btn_next.grid(row=5, column=4)
+    frm_btns_bot = tk.Frame(root)
+    btn_choices = tk.Button(frm_btns_bot, text="Choices", command=lambda: toggleTextListPopup(target=cur_choices), state='disabled', width=10)
+    btn_choices.grid(row=0, column=0)
+    btn_colored = tk.Button(frm_btns_bot, text="Colored", command=lambda: toggleTextListPopup(target=cur_colored), state='disabled', width=10)
+    btn_colored.grid(row=1, column=0)
+    btn_reload = tk.Button(frm_btns_bot, text="Reload", command=lambda: load_block(reload=True), width=10)
+    btn_reload.grid(row=0, column=1)
+    btn_save = tk.Button(frm_btns_bot, text="Save", command=saveFile, width=10)
+    btn_save.grid(row=0, column=2)
+    btn_prev = tk.Button(frm_btns_bot, text="Prev", command=prev_block, width=10)
+    btn_prev.grid(row=0, column=3)
+    btn_next = tk.Button(frm_btns_bot, text="Next", command=next_block, width=10)
+    btn_next.grid(row=1, column=3)
+    frm_btns_bot.grid(row=5, columnspan=4, sticky=tk.NSEW)
+    for idx in range(frm_btns_bot.grid_size()[0]):
+        frm_btns_bot.columnconfigure(idx, weight=1)
+
+    frm_btns_side = tk.Frame(root)
+    side_buttons = (
+        tk.Button(frm_btns_side, text="Italic", command=lambda: format_text(SimpleNamespace(key=73))),
+        tk.Button(frm_btns_side, text="Bold", command=lambda: format_text(SimpleNamespace(key=66))),
+        tk.Button(frm_btns_side, text="Convert\nunicode codepont", command=char_convert),
+        tk.Button(frm_btns_side, text="Process text", command=lambda: process_text(SimpleNamespace(state=0))),
+        tk.Button(frm_btns_side, text="Process text\n(clean newlines)", command=lambda: process_text(SimpleNamespace(state=1))),
+        tk.Button(frm_btns_side, text="Translate speakers", command=tlNames)
+    )
+    for btn in side_buttons:
+        btn.pack(pady=3, fill=tk.X)
+    frm_btns_side.grid(column=5, row=0, rowspan=5, sticky=tk.NE)
+
 
     save_on_next = tk.IntVar()
     save_on_next.set(0)

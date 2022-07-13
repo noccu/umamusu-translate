@@ -78,9 +78,8 @@ class PatchManager:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
     def loadBundle(self, name: str):
-        try:
-            bundle = GameBundle.fromName(name, load=False)
-        except FileNotFoundError:
+        bundle = GameBundle.fromName(name, load=False)
+        if not bundle.exists:
             raise NoAssetError(f"{name} does not exist in your game data.")
 
         if self.args.update:

@@ -20,11 +20,12 @@ ECHO(
 
 IF [%1] NEQ [] (
     IF [%1] EQU [install] GOTO install
+    IF [%1] EQU [uninstall] GOTO uninstall
     IF [%1] EQU [mdb] GOTO mdb
 )
 
 :open
-%snek% src\filecopy.py --backup
+%snek% src/filecopy.py --backup
 ECHO Importing all translatable types that are present in your game files...
 ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
 REM Or manually import parts, see import.py -h
@@ -47,6 +48,11 @@ GOTO quit
 :mdb
 ECHO Importing mdb text...
 %snek% src/mdb/import.py %2
+GOTO quit
+
+:uninstall
+ECHO Uninstalling patch...
+%snek% src/restore.py --uninstall
 
 :quit
 PAUSE

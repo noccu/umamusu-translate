@@ -38,15 +38,26 @@ def main():
     ap.add_argument("-bdir", "--backup-dir", default=realpath("dump"), help="Local backup dir")
     ap.add_argument("-src", help="Target filename/bundle hash")
     ap.add_argument("-dst", help=SUPPRESS)
+    ap.add_argument("--uninstall", action="store_true", help="Restore all files back to originals (may download)")
     args = ap.parse_args()
 
     if args.src:
         save(args.src, args.backup_dir, args.forcedl)
     else:
-        files = common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
-        for file in files:
-            file = common.TranslationFile(file)
-            save(file.bundle, args.backup_dir, args.forcedl)
+        for type in common.TARGET_TYPES if args.uninstall else (args.type,):
+            files = common.searchFiles(type, args.group, args.id, args.idx, changed = args.changed)
+            for file in files:
+                file = common.TranslationFile(file)
+                save(file.bundle, args.backup_dir, args.forcedl)
+
+    if args.uninstall:
+        from helpers import getUmaInstallDir
+        from pathlib import Path
+        uma = getUmaInstallDir()
+        if uma:
+            (uma / "version.dll").unlink(missing_ok=True)
+            (uma / "uxtheme.dll").unlink(missing_ok=True)
+        Path(common.GAME_ROOT, "master", "master.mdb").unlink(missing_ok=True)
 
 
 if __name__ == '__main__':

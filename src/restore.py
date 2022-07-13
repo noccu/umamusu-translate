@@ -4,6 +4,7 @@ from common import GAME_ASSET_ROOT
 from os.path import join, realpath, isfile
 import shutil
 from argparse import SUPPRESS
+from concurrent.futures import ThreadPoolExecutor
 
 HOSTNAME = 'https://prd-storage-umamusume.akamaized.net/dl/resources'
 ASSETS_ENDPOINT = HOSTNAME + '/Windows/assetbundles/{0:.2}/{0}'
@@ -31,6 +32,10 @@ def save(fileName, backupDir, forceDl=False):
         else:
             print(f"Error downloading file {fileName}")
 
+def restore(file, args):
+    file = common.TranslationFile(file)
+    save(file.bundle, args.backup_dir, args.forcedl)
+
 
 def main():
     ap = common.Args("Restore game files from backup or CDN download")
@@ -44,11 +49,14 @@ def main():
     if args.src:
         save(args.src, args.backup_dir, args.forcedl)
     else:
-        for type in common.TARGET_TYPES if args.uninstall else (args.type,):
-            files = common.searchFiles(type, args.group, args.id, args.idx, changed = args.changed)
-            for file in files:
-                file = common.TranslationFile(file)
-                save(file.bundle, args.backup_dir, args.forcedl)
+        processed = 0
+        with ThreadPoolExecutor() as pool:
+            for type in common.TARGET_TYPES if args.uninstall else (args.type,):
+                files = common.searchFiles(type, args.group, args.id, args.idx, changed = args.changed)
+                processed += len(files)
+                for file in files:
+                    pool.submit(restore, file, args)
+        print(f"Restored {processed} files.")
 
     if args.uninstall:
         from helpers import getUmaInstallDir

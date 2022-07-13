@@ -115,7 +115,7 @@ class PatchManager:
         patcher.patch()
         if patcher.isModified:
             bundle.setPatchState(self.tlFile)
-            bundle.save(dstFolder=self.args.dst)
+            bundle.save(dstFolder=Path(self.args.dst))
 
         return patcher.isModified
 

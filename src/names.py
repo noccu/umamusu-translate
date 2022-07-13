@@ -1,31 +1,20 @@
-from os import path
-import csv
-
 import common
 import helpers
 
 
-def createDict():
-    names = helpers.readJson("translations/mdb/uma-name.json").get("text")
-    names.update(helpers.readJson("translations/mdb/miscellaneous.json"))
-    names.update(helpers.readJson("src/data/names.json"))
-    return names
+NAMES_DICT = helpers.readJson("translations/mdb/uma-name.json").get("text")
+NAMES_DICT.update(helpers.readJson("translations/mdb/miscellaneous.json"))
+NAMES_DICT.update(helpers.readJson("src/data/names.json"))
 
 
-def translate(namesDict, args):
-    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
-
-    for file in files:
-        file = common.TranslationFile(file)
-        for block in file.textBlocks:
-            name = block.get('jpName')
-            if name is not None:
-                if name in common.NAMES_BLACKLIST:
-                    block['enName'] = ""
-                elif name in namesDict:
-                    block['enName'] = namesDict[name]
-        file.save()
-    return len(files)
+def translate(file: common.TranslationFile):
+    for block in file.textBlocks:
+        name = block.get('jpName')
+        if name is not None:
+            if name in common.NAMES_BLACKLIST:
+                block['enName'] = ""
+            elif name in NAMES_DICT:
+                block['enName'] = NAMES_DICT[name]
 
 
 def main():
@@ -37,9 +26,13 @@ def main():
         print("No names in given type.")
         raise SystemExit
 
-    dict = createDict()
-    n = translate(dict, args)
-    print(f"Names translated in {n} files.")
+    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
+    for file in files:
+        file = common.TranslationFile(file)
+        translate(file)
+        file.save()
+    print(f"Names translated in {len(files)} files.")
 
 
-main()
+if __name__ == "__main__":
+    main()

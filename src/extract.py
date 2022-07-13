@@ -4,11 +4,10 @@ import sqlite3
 import csv
 from typing import Optional, Union
 
-import UnityPy
 from Levenshtein import ratio as similarity
 
 import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, currentTimestamp
+from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle
 import helpers
 
 
@@ -42,45 +41,28 @@ def queryDB(db=None, storyId=None):
     return results
 
 
-class CheckPatched:
-    def __init__(self, asset):
-        self.n = 0
-        self.asset = asset
+def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, TranslationFile]:
+    asset.readPatchState()
+    if asset.isPatched: return
 
-    def __call__(self, textData):
-        if args.upgrade: return False
-        if len(textData['jpText']) < 3: return False
-        if not helpers.isJapanese(textData['jpText']): self.n += 1
-        if self.n > 5:
-            print(f"Asset {self.asset} looks patched, skipping...")
-            return True
-        else:
-            return False
+    asset.load()
 
-
-def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
-    env = UnityPy.load(path)
-    index = next(iter(env.container.values())).get_obj()
-
-    if index.serialized_type.nodes:
-        tree = index.read_typetree()
+    if asset.rootAsset.serialized_type.nodes:
+        tree = asset.rootAsset.read_typetree()
         export = {
-            'bundle': env.file.name,
+            'bundle': asset.bundleName,
             'type': args.type,
             'storyId': "",
             'title': "",
             'text': list()
         }
-        isPatched = CheckPatched(env.file.name)
         transferExisting = DataTransfer(tlFile)
-        assetList = index.assets_file.files
 
         if args.type == "race":
             export['storyId'] = tree['m_Name'][-9:]
 
             for block in tree['textData']:
                 textData = extractText("race", block)
-                if isPatched(textData): return
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
         elif args.type == "lyrics":
@@ -95,7 +77,6 @@ def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
             for row in r:
                 if header: header = False; continue
                 textData = extractText("lyrics", row)
-                if isPatched(textData): return
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
 
@@ -103,7 +84,6 @@ def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
             export['storyId'] = tree['m_Name'][-4:]
             for block in tree['DataArray']:
                 textData = extractText("preview", block)
-                if isPatched(textData): return
                 transferExisting(storyId, textData)
                 export['text'].append(textData)
         else:
@@ -113,10 +93,9 @@ def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
             for block in tree['BlockList']:
                 for clip in block['TextTrack']['ClipList']:
                     pathId = clip['m_PathID']
-                    textData = extractText(args.type, index.assets_file.files[pathId])
+                    textData = extractText(args.type, asset.assets[pathId])
                     if not textData:
                         continue
-                    if isPatched(textData): return
 
                     if "origClipLength" in textData:
                         if args.verbose: print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
@@ -128,7 +107,7 @@ def extractAsset(path, storyId, tlFile=None) -> Union[None, TranslationFile]:
                         if clipsToUpdate:
                             textData['animData'] = list()
                             for clipPathId in clipsToUpdate:
-                                animAsset = assetList[clipPathId]
+                                animAsset = asset.assets[clipPathId]
                                 if animAsset:
                                     animData = animAsset.read_typetree()
                                     animGroupData = dict()
@@ -322,12 +301,12 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
             print(f"Skipping existing: {file.name}")
             return
 
-    importPath = os.path.join(GAME_ASSET_ROOT, bundle[0:2], bundle)
-    if not os.path.exists(importPath):
+    asset = GameBundle.fromName(bundle, load=False)
+    if not asset.exists:
         print(f"AssetBundle {bundle} does not exist in your game data, skipping...")
         return
     try:
-        outFile = extractAsset(importPath, (group, id, idx), tlFile)
+        outFile = extractAsset(asset, (group, id, idx), tlFile)
         if not outFile:
             return
     except:

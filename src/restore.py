@@ -39,12 +39,15 @@ def save(bundle:GameBundle, args):
     return 1
 
 def restore(file, args):
-    file = common.TranslationFile(file)
-    bundle = GameBundle.fromName(file.bundle, load=False)
-    bundle.readPatchState()
-    if bundle.exists and not bundle.isPatched:
-        print(f"Bundle {bundle.bundleName} not patched, skipping.")
-        return 0
+    if args.src:
+        bundle = GameBundle.fromName(args.src, load=False)
+    else:
+        file = common.TranslationFile(file)
+        bundle = GameBundle.fromName(file.bundle, load=False)
+        bundle.readPatchState()
+        if bundle.exists and not bundle.isPatched:
+            print(f"Bundle {bundle.bundleName} not patched, skipping.")
+            return 0
 
     if args.verbose: print(f"Saving file to {bundle.bundlePath}")
     return save(bundle, args)
@@ -61,7 +64,7 @@ def main():
     args = ap.parse_args()
 
     if args.src:
-        save(args.src, args.backup_dir, args.forcedl)
+        restore(args.src, args)
     else:
         processed = 0
         def update(f: Future):

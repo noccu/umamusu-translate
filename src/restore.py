@@ -1,6 +1,6 @@
 import requests
 import common
-from common import GAME_ASSET_ROOT
+from common import GAME_ASSET_ROOT, GameBundle
 from os.path import join, realpath, isfile
 import shutil
 from argparse import SUPPRESS
@@ -16,25 +16,29 @@ def download(file):
     return requests.get(url)
 
 
-def save(fileName, backupDir, forceDl=False):
-    dstPath = join(GAME_ASSET_ROOT, fileName[:2], fileName)
-    localFile = join(backupDir, fileName)
+def save(bundle:GameBundle, backupDir, forceDl=False):
+    localFile = join(backupDir, bundle.bundleName)
 
-    print(f"Saving file to {dstPath}")
     if not forceDl and isfile(localFile):
         print(f"Copying file from {localFile}")
-        shutil.copyfile(localFile, dstPath)
+        shutil.copyfile(localFile, bundle.bundlePath)
     else:
-        data = download(fileName)
+        data = download(bundle.bundleName)
         if data.status_code == 200:
-            with open(dstPath, "wb") as f:
+            with open(bundle.bundlePath, "wb") as f:
                 f.write(data.content)
         else:
-            print(f"Error downloading file {fileName}")
+            print(f"Error downloading file {bundle.bundleName}")
 
 def restore(file, args):
     file = common.TranslationFile(file)
-    save(file.bundle, args.backup_dir, args.forcedl)
+    bundle = GameBundle.fromName(file.bundle, load=False)
+    bundle.readPatchState()
+    if bundle.exists and not bundle.isPatched:
+        print(f"Bundle {bundle.bundleName} not patched, skipping.")
+        return
+
+    save(bundle, args.backup_dir, args.forcedl)
 
 
 def main():

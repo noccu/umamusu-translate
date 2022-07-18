@@ -9,6 +9,16 @@ import common
 import helpers
 
 
+def checkPatched(file: Path):
+    with open(file, "rb") as f:
+        f.seek(60)
+        user_ver = f.read(4)
+    return user_ver == b'\x00\x00\x04\x08'
+
+def markPatched(db: sqlite3.Connection):
+    db.execute("PRAGMA user_version = 1032;")
+
+
 def translator(args, entry: dict):
     files = entry['files'].keys() if entry.get("specifier") else [entry['file']]
     ovrList = entry.get("overrides")
@@ -45,6 +55,9 @@ def parseArgs():
 def main():
     args = parseArgs()
     if args.backup:
+        if checkPatched(args.dst):
+            print("master.mdb already patched, backup cancelled.")
+            return
         shutil.copyfile(args.dst, args.dst + ".bak")
         print("master.mdb backed up.")
         return
@@ -66,6 +79,7 @@ def main():
                 stmt = f"UPDATE {entry['table']} SET {entry['field']}=:enText WHERE {entry['field']}=:jpText;"
                 inputGen = translator(args, entry)
                 db.executemany(stmt, inputGen)
+            markPatched(db)
             # COMMIT; handled by with:
     finally:
         db.close()

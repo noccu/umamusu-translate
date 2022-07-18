@@ -2,10 +2,12 @@ import sys
 from os.path import realpath
 import sqlite3
 from pathlib import Path
+from importlib import import_module
 
 sys.path.append(realpath("src"))
 import common
 import helpers
+checkPatched = import_module("import").checkPatched
 
 
 def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
@@ -41,6 +43,9 @@ def parseArgs():
 
 def main():
     args = parseArgs()
+    if checkPatched(args.src):
+        print("master.mdb is patched, aborting extract.")
+        return
     index = helpers.readJson("src/mdb/index.json")
     if not args.no_text:
         print("Extracting standard text...")

@@ -105,7 +105,7 @@ class PatchManager:
         if self.tlFile.type in ("story", "home"):
             patcher = StoryPatcher(self, bundle)
         elif self.tlFile.type == "race":
-            patcher = RacePatcher(self), bundle
+            patcher = RacePatcher(self, bundle)
         elif self.tlFile.type == "preview":
             patcher = PreviewPatcher(self, bundle)
         elif self.tlFile.type == "lyrics":

@@ -288,6 +288,115 @@ def toggleTextListPopup(event=None, allowShow=True, target=None):
         show_text_list()
 
 
+def create_search_popup():
+    global search_window
+    global search_filter
+    global search_chapters
+    global search_orig_state
+
+    # set it here so it exists when window closed without searching
+    search_orig_state = cur_block, cur_chapter, save_on_next.get() 
+    reset_search() # sets cur state
+
+    search_window = tk.Toplevel()
+    search_window.title("Search")
+    search_window.protocol("WM_DELETE_WINDOW", close_search)
+    search_window.bind("<Control-f>", toggleSearchPopup)
+
+    s_var_field = tk.StringVar(search_window, value="enText")
+    s_var_re = tk.StringVar(search_window)
+    lb_field = tk.Label(search_window, text="Field:")
+    lb_re = tk.Label(search_window, text="Search (supports regex):")
+    search_field = tk.Entry(search_window, width=20, font=large_font, textvariable=s_var_field)
+    search_re = tk.Entry(search_window, name="filter", width=40, font=large_font, textvariable=s_var_re)
+    lb_field.grid(column=0, sticky=tk.E)
+    lb_re.grid(column=0, sticky=tk.E)
+    search_field.grid(row=0, column=1, columnspan=2, sticky=tk.W)
+    search_re.grid(row=1, column=1, columnspan=2, sticky=tk.W)
+    search_re.bind("<Return>", search_text)
+
+    search_chapters = tk.IntVar()
+    search_chapters.set(0)
+    chk_search_chapters = tk.Checkbutton(search_window, text="Search all loaded chapters", variable=search_chapters)
+    chk_search_chapters.grid(column=2, pady=5, sticky=tk.E)
+
+    btn_search = tk.Button(search_window, text="Search / Next", name="search",command=search_text)
+    btn_return = tk.Button(search_window, text="Return to original block", command=restore_search_state, padx=5)
+    btn_return.grid(row=2, column=0, padx=5)
+    btn_search.grid(row=2, column=1)
+
+    search_filter = s_var_field, s_var_re
+    for v in (s_var_field, s_var_re, search_chapters):
+        v.trace_add("write", reset_search)
+    search_window.withdraw()
+
+
+def search_text(*_):
+    min_ch = search_cur_state[0]
+    if search_chapters.get():
+        for ch in range(min_ch, len(files)):
+            chapter_dropdown.current(ch)
+            change_chapter()
+            if _search_text_blocks():
+                return
+    else:
+        _search_text_blocks()
+
+
+def _search_text_blocks():
+    global search_cur_state
+
+    start_block = search_cur_state[1]
+    s_field, s_re = (x.get() for x in search_filter)
+
+    # print(f"searching in {cur_file.name}, from {search_cur_state}, on {s_field} = {s_re}")
+    for i in range(start_block, len(cur_file.textBlocks)):
+        block = cur_file.textBlocks[i]
+        if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
+            # print(f"Found {s_re} at {i}")
+            block_dropdown.current(i)
+            change_block()
+            search_cur_state = cur_chapter, i + 1
+            return True
+    search_cur_state = cur_chapter + 1, 0
+    return False
+
+
+def reset_search(event=None, *args):
+    # event = the Var itself
+    global search_cur_state
+    search_cur_state = 0, 0
+
+
+def restore_search_state():
+    ch, b, _ = search_orig_state
+    chapter_dropdown.current(ch)
+    change_chapter()
+    block_dropdown.current(b)
+    change_block()
+
+
+def show_search():
+    global search_orig_state
+    search_orig_state = cur_chapter, cur_block, save_on_next.get()
+    save_on_next.set(0)
+    search_window.deiconify()
+    search_window.nametowidget("filter").focus()
+
+    
+def close_search():
+    save_on_next.set(search_orig_state[2])
+    search_window.withdraw()
+
+
+def toggleSearchPopup(event=None):
+    global cur_text_list
+    if search_window.state() == "normal":
+        close_search()
+    else: 
+        show_search()
+
+
 def char_convert(event=None):
     pos = text_box_en.index(tk.INSERT)
     start = pos + "-6c"
@@ -446,6 +555,8 @@ def main():
     btn_colored.grid(row=1, column=0)
     btn_reload = tk.Button(frm_btns_bot, text="Reload", command=reload_chapter, width=10)
     btn_reload.grid(row=0, column=1)
+    btn_search = tk.Button(frm_btns_bot, text="Search", command=toggleSearchPopup, width=10)
+    btn_search.grid(row=1, column=1)
     btn_save = tk.Button(frm_btns_bot, text="Save", command=saveFile, width=10)
     btn_save.grid(row=0, column=2)
     btn_prev = tk.Button(frm_btns_bot, text="Prev", command=prev_block, width=10)
@@ -480,6 +591,7 @@ def main():
     skip_checkbox.grid(row=6, column=2)
 
     create_text_list_popup()
+    create_search_popup()
     chapter_dropdown.current(cur_chapter)
     change_chapter()
     block_dropdown.current(cur_block)
@@ -504,6 +616,7 @@ def main():
     text_box_en.bind("<Control-b>", format_text)
     text_box_en.bind("<Alt-f>", process_text)
     text_box_en.bind("<Alt-F>", process_text)
+    root.bind("<Control-f>", toggleSearchPopup)
 
     root.mainloop()
 

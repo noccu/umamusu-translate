@@ -14,9 +14,29 @@ TEXTBOX_WIDTH = 54
 def change_chapter(event=None):
     global cur_chapter
     global cur_block
+    global cur_file
+
     cur_chapter = chapter_dropdown.current()
     cur_block = 0
-    load_block(None, True)
+
+    if isinstance(files[cur_chapter], str):
+        files[cur_chapter] = common.TranslationFile(files[cur_chapter])
+    cur_file = files[cur_chapter]
+
+    block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(cur_file.textBlocks)]
+    ll = textprocess.calcLineLen(cur_file, False)
+    # Attempt to calc the relation of line length to text box size
+    ll = int(ll / (0.958 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH
+    text_box_en.config(width=ll)
+    text_box_jp.config(width=ll)
+
+    load_block()
+
+
+def reload_chapter(event=None):
+    cur_file.reload()
+    load_block()
+
 
 def prev_ch(event=None):
     if cur_chapter - 1 > -1:
@@ -43,26 +63,13 @@ def change_block(event=None, dir=1):
     load_block(dir=dir)
 
 
-def load_block(event=None, loadBlocks=False, reload=False, dir=1):
+def load_block(event=None, dir=1):
     global cur_block
     global next_index
     global cur_choices
     global cur_colored
 
-    if isinstance(files[cur_chapter], str):
-        files[cur_chapter] = common.TranslationFile(files[cur_chapter])
-    elif reload:
-        files[cur_chapter].reload()
-    blocks = files[cur_chapter].textBlocks
-
-    if loadBlocks:
-        block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(blocks)]
-        ll = textprocess.calcLineLen(files[cur_chapter], False)
-        # Attempt to calc the relation of line length to text box size
-        ll = int(ll / (0.958 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH
-        text_box_en.config(width=ll)
-        text_box_jp.config(width=ll)
-
+    blocks = cur_file.textBlocks
     cur_block_data =  blocks[cur_block]
 
     if skip_translated.get() == 1:
@@ -138,7 +145,6 @@ def load_block(event=None, loadBlocks=False, reload=False, dir=1):
         
 
 def save_block():
-    cur_file = files[cur_chapter]
     if "enName" in cur_file.textBlocks[cur_block]:
         cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
     cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
@@ -175,14 +181,14 @@ def next_block(event=None):
 
 def copy_block(event=None):
     root.clipboard_clear()
-    root.clipboard_append(files[cur_chapter].textBlocks[cur_block]['jpText'])
+    root.clipboard_append(cur_file.textBlocks[cur_block]['jpText'])
 
 
 def saveFile(event=None):
     if save_on_next.get() == 0:
         print("Saved")
     save_block()
-    files[cur_chapter].save()
+    cur_file.save()
 
 
 def show_text_list():
@@ -324,7 +330,7 @@ def format_text(event):
 
 
 def process_text(event):
-    proc_text = textprocess.processText(files[cur_chapter],
+    proc_text = textprocess.processText(cur_file,
                                         cleanText(text_box_en.get(1.0, tk.END)),
                                         {"redoNewlines": True if event.state & 0x0001 else False,
                                          "replaceMode": "limit",
@@ -336,7 +342,7 @@ def process_text(event):
 
 
 def txt_for_display(text, reverse=False):
-    if files[cur_chapter].escapeNewline:
+    if cur_file.escapeNewline:
         if reverse:
             text = cleanText(text)
             return text.replace("\n", "\\n")
@@ -354,7 +360,7 @@ def cleanText(text: str):
 
 def tlNames():
     import names
-    names.translate(files[cur_chapter])
+    names.translate(cur_file)
     load_block()
 
 def main():
@@ -438,7 +444,7 @@ def main():
     btn_choices.grid(row=0, column=0)
     btn_colored = tk.Button(frm_btns_bot, text="Colored", command=lambda: toggleTextListPopup(target=cur_colored), state='disabled', width=10)
     btn_colored.grid(row=1, column=0)
-    btn_reload = tk.Button(frm_btns_bot, text="Reload", command=lambda: load_block(reload=True), width=10)
+    btn_reload = tk.Button(frm_btns_bot, text="Reload", command=reload_chapter, width=10)
     btn_reload.grid(row=0, column=1)
     btn_save = tk.Button(frm_btns_bot, text="Save", command=saveFile, width=10)
     btn_save.grid(row=0, column=2)

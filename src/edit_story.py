@@ -205,6 +205,7 @@ def show_text_list():
                 enBox.insert(tk.END, cur_text_list[i]['enText'])
                 jpBox['state'] = 'disabled'
         text_list_window.deiconify()
+        text_list_window.firstText.focus()
 
 
 def close_text_list():
@@ -267,11 +268,14 @@ def create_text_list_popup():
     window_frame.bind('<Leave>', toggle_scroll)
 
     for i in range(0, 5):
-        cur_jp_text = tk.Text(window_frame, width=42, height=2, font=large_font)
+        cur_jp_text = tk.Text(window_frame, takefocus=0, width=42, height=2, font=large_font)
         cur_jp_text.pack(anchor="w")
         cur_en_text = tk.Text(window_frame, height=2, width=42, undo=True, font=large_font)
         cur_en_text.pack(anchor="w")
         extra_text_list_textboxes.append((cur_jp_text, cur_en_text))
+        cur_en_text.bind('<Tab>', _switchWidgetFocusForced)
+        if i == 0:
+            text_list_window.firstText = cur_en_text
         if i < 4:
             ttk.Separator(window_frame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
     close_text_list()
@@ -472,6 +476,12 @@ def tlNames():
     names.translate(cur_file)
     load_block()
 
+
+def _switchWidgetFocusForced(e):
+    e.widget.tk_focusNext().focus()
+    return "break"
+
+
 def main():
     global files
     global root
@@ -589,6 +599,14 @@ def main():
     skip_translated.set(0)
     skip_checkbox = tk.Checkbutton(root, text="Skip translated blocks", variable=skip_translated)
     skip_checkbox.grid(row=6, column=2)
+    for f in (root, frm_btns_bot, frm_btns_side):
+        for w in f.children.values():
+            w.configure(takefocus=0)
+    text_box_en.configure(takefocus=1)
+    speaker_en_entry.configure(takefocus=1)
+    text_box_en.bind('<Tab>', _switchWidgetFocusForced)
+    speaker_en_entry.bind('<Tab>', _switchWidgetFocusForced)
+    text_box_en.focus()
 
     create_text_list_popup()
     create_search_popup()

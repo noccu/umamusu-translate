@@ -14,7 +14,6 @@ TEXTBOX_WIDTH = 54
 def change_chapter(event=None):
     global cur_chapter
     global cur_block
-    global chapter_dropdown
     cur_chapter = chapter_dropdown.current()
     cur_block = 0
     load_block(None, True)
@@ -34,11 +33,7 @@ def next_ch(event=None):
 
 
 def change_block(event=None, dir=1):
-    global cur_chapter
     global cur_block
-    global block_dropdown
-    global files
-    global save_on_next
 
     save_block()
     if save_on_next.get() == 1:
@@ -49,25 +44,10 @@ def change_block(event=None, dir=1):
 
 
 def load_block(event=None, loadBlocks=False, reload=False, dir=1):
-    global files
-    global cur_chapter
     global cur_block
-    global chapter_dropdown
-    global block_dropdown
-    global text_box_jp
-    global text_box_en
-    global speaker_jp_entry
-    global speaker_en_entry
-    global block_duration_label
-    global block_duration_spinbox
-    global btn_next
     global next_index
-    global btn_choices
     global cur_choices
     global cur_colored
-    global extra_text_list_textboxes
-
-    # print(cur_chapter, cur_block)
 
     if isinstance(files[cur_chapter], str):
         files[cur_chapter] = common.TranslationFile(files[cur_chapter])
@@ -158,12 +138,6 @@ def load_block(event=None, loadBlocks=False, reload=False, dir=1):
         
 
 def save_block():
-    global files
-    global cur_chapter
-    global speaker_en_entry
-    global text_box_en
-    global block_duration_spinbox
-
     cur_file = files[cur_chapter]
     if "enName" in cur_file.textBlocks[cur_block]:
         cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
@@ -247,9 +221,9 @@ def create_text_list_popup():
     global cur_colored
     global cur_text_list
     global text_list_popup_scrollable
-    text_list_popup_scrollable = False
 
     extra_text_list_textboxes = list()
+    text_list_popup_scrollable = False
     cur_choices = None
     cur_colored = None
     cur_text_list = None

@@ -1,8 +1,9 @@
+import json
+from pathlib import PurePath
+import shutil
+
 import common
 import helpers
-from pathlib import PurePath
-import regex as re
-import shutil
 
 ROOT = PurePath("src")
 LOCAL_DUMP = ROOT / "data" / "static_dump.json"
@@ -74,13 +75,9 @@ def importDump(path: PurePath, args):
         # if it's not a json file then it's definitely external as we only use static_dump.json
         assert isExternal, "Dump file is not json and not external"
 
-        extract = re.compile(r'"(\d+)": "(.+)",?')
         with open(path, "r", encoding="utf8") as f:
-            for line in f:
-                match = extract.search(line)
-                if match is None: continue
-                key, val = map(lambda x: x.encode('latin1', 'backslashreplace').decode('unicode-escape'),
-                               match.group(1, 2))
+            jsonDump = "{" + f.read()[:-2] +"}" # remove trailing newline and comma
+            for key, val in json.loads(jsonDump).items():
                 if key and val:
                     # static range always seems to dump in japanese, which helps
                     # also assuming the problem this fixes only occurs/matters for static text

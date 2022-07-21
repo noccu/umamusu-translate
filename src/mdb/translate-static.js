@@ -298,6 +298,13 @@ function translateSpecific (type, jpText, file) {
                 out += `Challenge ${umaEn} (${diff})`;
             }
         }
+        else if (m = jpText.match(/(.+)に(\d+)回出走しよう/)) {
+            let [, race, n] = m;
+            let raceEn = PFILES.races.text[race]
+            if (raceEn) {
+                out += `Enter ${raceEn} ${n} times`;
+            }
+        }
         else if (m = jpText.match(/カーニバルPtを累計\\n(\d+)Pt獲得しよう/)) {
             let [, pt] = m;
             if (pt) {

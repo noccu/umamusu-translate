@@ -146,7 +146,7 @@ def parseArgs():
     ap.add_argument("-M", "--move", action="store_true", help="Move final json files to game dir.")
     ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath,
                     help="Target dump file for imports. When given without value: auto-detect in game dir")
-    ap.add_argument("-tlg", default=None, const=PurePath(common.GAME_ROOT, "static_dump.json"), nargs="?", type=PurePath,
+    ap.add_argument("-tlg", default=None, const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"), nargs="?", type=PurePath,
                     help="Import TLG-style static dump. Optionally pass a path to the dump, else auto-detects in game dir")
     args = ap.parse_args()
 

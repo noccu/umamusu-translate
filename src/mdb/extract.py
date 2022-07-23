@@ -38,12 +38,13 @@ def parseArgs():
     ap.add_argument("--no-skill-data", action="store_true", help="Skip extracting skill data (requires nodeJS)")
     ap.add_argument("--no-text", action="store_true", help="Skip extracting standard text data")
     ap.add_argument("-f", "--file", help="Extract specific file name (as found in index.json)")
+    ap.add_argument("--forced", action="store_true", help="Ignore mdb patch state")
     return ap.parse_args()
 
 
 def main():
     args = parseArgs()
-    if checkPatched(args.src):
+    if not args.forced and checkPatched(args.src):
         print("master.mdb is patched, aborting extract.")
         return
     index = helpers.readJson("src/mdb/index.json")
@@ -69,8 +70,8 @@ def main():
         print("Extracting skill data...")
         # This is just a QoL thing
         from subprocess import run
-        run(["node", "src/mdb/extract-skill-data.js", args.src], check=True)
-        run(["py", "src/textprocess.py", "-fsize", "-src", "translations/mdb/alt/skill-desc.json"]) # :tmo:
+        run(["node", "src/mdb/scripts/extract-skill-data.js", args.src], check=True)
+        run(["py", "src/textprocess.py", "-fsize", "-tl", "6", "-src", "translations/mdb/alt/skill-desc.json"]) # :tmo:
 
 
 if __name__ == '__main__':

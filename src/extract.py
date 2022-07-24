@@ -217,6 +217,7 @@ class DataTransfer:
         textSearch = False
         targetBlock = None
         textBlocks = self.file.textBlocks
+        txtIdx = 0
         if 'blockIdx' in textData:
             txtIdx = max(textData["blockIdx"] - 1 - self.offset, 0)
             if txtIdx < len(textBlocks):
@@ -229,8 +230,8 @@ class DataTransfer:
                 textSearch = True
         else:
             # TODO: The below code is completely broken
-            self.filePrint(f"No block idx at {txtIdx}")
-            txtIdx = int(txtIdx)
+            # self.filePrint(f"No block idx at {txtIdx}")
+            # txtIdx = int(txtIdx)
             textSearch = True
 
         if textSearch:

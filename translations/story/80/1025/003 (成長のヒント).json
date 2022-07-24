@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "YCTBVUGWQ6RJW5ZQOM2NHKZTFCZ2QM3C",
+    "version": 5,
+    "bundle": "A5IXZGKE3BKXB3TTF4NUH6DSNBH3N6OW",
     "type": "story",
     "storyId": "801025003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nマンハッタンカフェが話していた。",
             "enText": "After training, <chrname> and \nManhattan Cafe were talking.",
             "nextBlock": -1,
-            "pathId": 7348422068798204869,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3395034811921582815
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6235094624083273273
+                }
+            ],
+            "pathId": -2192103407013039545,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674414
 }

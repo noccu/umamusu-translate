@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "W36WTIU2K7RNRJH72MIVDZOH4MYBWROF",
+    "version": 5,
+    "bundle": "AZ62WB2ZYCRIZEZ7GVLHRFEHB3JK75E2",
     "type": "story",
     "storyId": "801052003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nハルウララが話していた。",
             "enText": "After the training session, <chrname> and \nHaluulala were talking.",
             "nextBlock": -1,
-            "pathId": 7542240719626420450,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 7763857882439030703
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 2345761376171064980
+                }
+            ],
+            "pathId": -5822166072307181574,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674418
 }

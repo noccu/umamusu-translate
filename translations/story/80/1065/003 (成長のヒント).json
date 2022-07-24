@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "GDLT6F6A5XRZE2AGSGWITVOVHYWOPS5I",
+    "version": 5,
+    "bundle": "MTGQB2RXT3UFLEUP5P5FPHWWYMZWX6QG",
     "type": "story",
     "storyId": "801065003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nダイタクヘリオスが話していた。",
             "enText": "After training, <chrname> and \nDaitaku Helios were talking.",
             "nextBlock": -1,
-            "pathId": -6862885070926015233,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 6019752920195362449
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 9158680113321850609
+                }
+            ],
+            "pathId": 5500213163235889997,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674421
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "72QKRNAWKX3G4GCGXUNGYZZZW4GIYHQ6",
+    "version": 5,
+    "bundle": "LYABJL3NVZJ57N3CEKJITOY73MBYP4FC",
     "type": "story",
     "storyId": "801055003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nマーベラスサンデーが話していた。",
             "enText": "After training, <chrname> and Marvellous \nSunday were talking.",
             "nextBlock": -1,
-            "pathId": -4829291191962918681,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2815899415228554796
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 972146007175069338
+                }
+            ],
+            "pathId": -8069449704789107157,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674419
 }

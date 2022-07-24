@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "JM4HE6I2OBIJUV6S7DFVW6BGFSIK4NFS",
+    "version": 5,
+    "bundle": "UIJLHCL75IXKMOCOQ6WWMHPAOU3ILJ2E",
     "type": "story",
     "storyId": "801053003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nバンブーメモリーが話していた。",
             "enText": "After training, <chrname> and \nBamboo Memory were talking.",
             "nextBlock": -1,
-            "pathId": -5159181348584304596,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -6688711437366118523
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -4639839270113352592
+                }
+            ],
+            "pathId": 668662882649957746,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674418
 }

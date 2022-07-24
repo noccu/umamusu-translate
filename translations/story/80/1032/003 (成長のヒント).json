@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "FEQ53SFIRUB5HHHUWJXJT3XVSLDJ7GRL",
+    "version": 5,
+    "bundle": "BGCBYCLCWJNNI2HLPGD7MKRM7QV2JA5X",
     "type": "story",
     "storyId": "801032003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nアグネスタキオンが話していた。",
             "enText": "After training, <chrname> and \nAgnes Tachyon were talking.",
             "nextBlock": -1,
-            "pathId": -769339798491770931,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2926783584220162806
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7403194121194611907
+                }
+            ],
+            "pathId": -8258817146862443215,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674415
 }

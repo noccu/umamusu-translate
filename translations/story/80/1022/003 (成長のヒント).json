@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "CGOUF2GGPTNUKSN2KXTFFZVM7C4LV7QS",
+    "version": 5,
+    "bundle": "4EPY37O4VDME3JEEO2QO5K4X6PKZIN3Q",
     "type": "story",
     "storyId": "801022003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nファインモーションが話していた。",
             "enText": "After training, <chrname> and \nFineMotion were talking.",
             "nextBlock": -1,
-            "pathId": -6162388848991025142,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 7573156846643133530
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 3451909928417195679
+                }
+            ],
+            "pathId": -7984125732584432148,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674413
 }

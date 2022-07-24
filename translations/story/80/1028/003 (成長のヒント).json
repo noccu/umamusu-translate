@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "YUYKAGWOSQMC5XDAPNLDK2JMO2TIYGB3",
+    "version": 5,
+    "bundle": "T4NYY66H73VUNWZY2ZV6UAO3K32OGJVV",
     "type": "story",
     "storyId": "801028003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nヒシアケボノが話していた。",
             "enText": "After training, <chrname> and \nHishiakebono were talking.",
             "nextBlock": -1,
-            "pathId": -5654874964525635062,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -705259939992990446
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 3051152700569450389
+                }
+            ],
+            "pathId": -7066248480982100274,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674414
 }

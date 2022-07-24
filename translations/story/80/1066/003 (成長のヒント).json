@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "UTPKFMLZ7OSDMYRPMF5OT3VWXAA6PQGF",
+    "version": 5,
+    "bundle": "JYVAYBMB54WPEDYUXDB5F5WUVT3BSRRX",
     "type": "story",
     "storyId": "801066003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nツインターボが話していた。",
             "enText": "After training, <chrname> and \nTwin Turbo were talking.",
             "nextBlock": -1,
-            "pathId": 8390176775642850376,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": 1281402207564019672
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -8557348462702430766
+                }
+            ],
+            "pathId": 6158579254228293222,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674421
 }

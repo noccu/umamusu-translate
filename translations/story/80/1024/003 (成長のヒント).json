@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "EDI3OEJDC4PKIS7Q4ZBQIMUTC5UDJGL3",
+    "version": 5,
+    "bundle": "ORFNQINKP2ZJJYBY6FW2E3UQGJ244GZL",
     "type": "story",
     "storyId": "801024003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nマヤノトップガンが話していた。",
             "enText": "After training, <chrname> and \nMayano Top Gun were talking.",
             "nextBlock": -1,
-            "pathId": -8382634820525114239,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -7875398574370916729
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8895446241572078655
+                }
+            ],
+            "pathId": -864769631724707955,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674413
 }

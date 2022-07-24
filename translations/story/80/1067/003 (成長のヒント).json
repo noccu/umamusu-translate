@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "F52DMX4EUKGGVL5KEEIOGYXXR7LHPZ6O",
+    "version": 5,
+    "bundle": "OIJ5HXRUXBMKYLGYD3KQLRQJD6D73U2Q",
     "type": "story",
     "storyId": "801067003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nサトノダイヤモンドが話していた。",
             "enText": "After training, <chrname> and \nSatono Diamond were talking.",
             "nextBlock": -1,
-            "pathId": 2403154563762840448,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": 763428579904741413
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -1779719652863540138
+                }
+            ],
+            "pathId": -4390009226197110057,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674421
 }

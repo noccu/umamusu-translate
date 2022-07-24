@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "PIHNKRXO4PXCUM6DCA3NXWYGMR2NYSDR",
+    "version": 5,
+    "bundle": "BGDWYJWNMYIUEZAK7OSN5RC3CSJMYAQW",
     "type": "story",
     "storyId": "801058003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nメイショウドトウが話していた。",
             "enText": "After training, <chrname> and \nMaisho Udoto were talking.",
             "nextBlock": -1,
-            "pathId": 8367712186486593697,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4323844402285405673
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 5873645098622419568
+                }
+            ],
+            "pathId": 4616874201418985153,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674419
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "2KJYKHZDSQJ63I3DLSN4HTKS3BRRLPPG",
+    "version": 5,
+    "bundle": "EZSKVVCGJBM4EPXJYCQCHUJD5OQE3VHG",
     "type": "story",
     "storyId": "801047003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nゼンノロブロイが話していた。",
             "enText": "After training, <chrname> and \nZenno Rob Roy were talking.",
             "nextBlock": -1,
-            "pathId": 248028405369168073,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 163,
+                    "pathId": 3833580660797420052
+                },
+                {
+                    "origLen": 167,
+                    "pathId": -1459302044446091838
+                }
+            ],
+            "pathId": 3565241751026444554,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674418
 }

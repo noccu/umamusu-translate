@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "R4OLMSUWHXUD6CTBFI45PRO6G4WD4U4I",
+    "version": 5,
+    "bundle": "7KKQR7TF76XCKLC4OHTK2J65J4JDZFG2",
     "type": "story",
     "storyId": "801068003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nキタサンブラックが話していた。",
             "enText": "After training, <chrname> and \nKitasan Black were talking.",
             "nextBlock": -1,
-            "pathId": 7865296969753461877,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": -8154193815211075737
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 3751309529279162314
+                }
+            ],
+            "pathId": -2509204298658291693,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674421
 }

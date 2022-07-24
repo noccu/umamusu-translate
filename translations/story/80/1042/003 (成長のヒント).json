@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "DPNWDJN6N4LMCGCDAVQHJVQHLXNNPZ2L",
+    "version": 5,
+    "bundle": "OPCYNUXRSBTMSATBNO2N5VMKTYV4APFV",
     "type": "story",
     "storyId": "801042003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nシーキングザパールが話していた。",
             "enText": "After training, <chrname> and Seeking \nthe Pearl were talking.",
             "nextBlock": -1,
-            "pathId": 715877605933006503,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 167,
+                    "pathId": -3099585581417557158
+                },
+                {
+                    "origLen": 140,
+                    "pathId": 7097441295971203854
+                }
+            ],
+            "pathId": 418813240424398307,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674417
 }

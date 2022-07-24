@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "IPGMPNQU3KMPUWJAGV7B6TAY3NPYNWRW",
+    "version": 5,
+    "bundle": "2WATKDZKPZPNSZEZVV3D7M5GMX5I6KVV",
     "type": "story",
     "storyId": "400000035",
     "title": "乙名史記者の悦楽取材",
@@ -11,6 +11,7 @@
             "jpText": "おめでとうございます！\r\n見事な勝利……感服いたしました。",
             "enText": "Congratulations! A splendid victory.\n… I'm very impressed.",
             "nextBlock": 2,
+            "origClipLength": 63,
             "choices": [
                 {
                     "jpText": "彼女の頑張りがあってこそです",
@@ -18,7 +19,25 @@
                     "nextBlock": 2
                 }
             ],
-            "pathId": -406654640279901745,
+            "animData": [
+                {
+                    "origLen": 157,
+                    "pathId": -3455759882905859442
+                },
+                {
+                    "origLen": 150,
+                    "pathId": -2296916963418450060
+                },
+                {
+                    "origLen": 144,
+                    "pathId": -828496383288295890
+                },
+                {
+                    "origLen": 146,
+                    "pathId": -7485218859464689704
+                }
+            ],
+            "pathId": -6279838361936008877,
             "blockIdx": 1
         },
         {
@@ -27,7 +46,30 @@
             "jpText": "やはり、今号の特大巻頭カラー特集は、\r\nあなた方しかありえませんっ！！",
             "enText": "As I thought, you're the only ones who can\nmake this issue's big cover feature!",
             "nextBlock": 3,
-            "pathId": 1122349095315917059,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -4644298828978317336
+                },
+                {
+                    "origLen": 128,
+                    "pathId": 7051204612776810068
+                },
+                {
+                    "origLen": 114,
+                    "pathId": 8021563745256525348
+                },
+                {
+                    "origLen": 15,
+                    "pathId": -3597472653753638166
+                },
+                {
+                    "origLen": 15,
+                    "pathId": 3510018336934567017
+                }
+            ],
+            "pathId": 3446911274927062525,
             "blockIdx": 2
         },
         {
@@ -36,7 +78,22 @@
             "jpText": "……『月刊トゥインクル』の特集で、\r\n大きな反響が期待できそうだ！",
             "enText": "… A feature in Twinkle Monthly. We can\nexpect a big response!",
             "nextBlock": 4,
-            "pathId": -2331170462317092339,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 165,
+                    "pathId": 342958892872206399
+                },
+                {
+                    "origLen": 161,
+                    "pathId": 8344859101226752728
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -1459299149563950159
+                }
+            ],
+            "pathId": -3774930798586747706,
             "blockIdx": 3
         },
         {
@@ -45,8 +102,28 @@
             "jpText": "勝利した<chrname>を称賛した。",
             "enText": "She praised <chrname> for her victory.",
             "nextBlock": -1,
-            "pathId": -6806888358940697188,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 14,
+                    "pathId": -5577802230976447232
+                },
+                {
+                    "origLen": 15,
+                    "pathId": 478643693304813050
+                },
+                {
+                    "origLen": 15,
+                    "pathId": 7265802921372473644
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -3421375331705706145
+                }
+            ],
+            "pathId": 8849706541082721696,
             "blockIdx": 4
         }
-    ]
+    ],
+    "modified": 1658674067
 }

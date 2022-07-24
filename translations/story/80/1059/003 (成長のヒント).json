@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "FFCMHVHST6KW5GXCW2CQJPNBL2DG4ILH",
+    "version": 5,
+    "bundle": "MDGT42YH5H5UDLN3AOMBLNEA7C2OX4DY",
     "type": "story",
     "storyId": "801059003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nメジロドーベルが話していた。",
             "enText": "After training, <chrname> and \nMejiro Dobel were talking.",
             "nextBlock": -1,
-            "pathId": -601387132544631197,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -7678763792904452475
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 6554121559981395276
+                }
+            ],
+            "pathId": 7874199280891085967,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674419
 }

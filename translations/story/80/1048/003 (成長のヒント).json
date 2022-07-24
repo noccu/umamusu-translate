@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "6ZRBDNQTHOEXQAKXXITF5T5UR2FBUWPA",
+    "version": 5,
+    "bundle": "KOWRCD6JD6FRLXWENH675VGVOGSLKITM",
     "type": "story",
     "storyId": "801048003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nトーセンジョーダンが話していた。",
             "enText": "After training, <chrname> and \nTosen Jordan were talking.",
             "nextBlock": -1,
-            "pathId": -4133504069023577890,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 159,
+                    "pathId": 3884183700219817788
+                },
+                {
+                    "origLen": 154,
+                    "pathId": 9156295736282724910
+                }
+            ],
+            "pathId": -81492899120596605,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674418
 }

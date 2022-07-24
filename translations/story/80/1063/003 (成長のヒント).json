@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "XSRYOVGNJJOTMKZO3WQNZNIIX3Z6A4NX",
+    "version": 5,
+    "bundle": "XTESSZMOECHKWROFKFXU4NUQ5UI4YM32",
     "type": "story",
     "storyId": "801063003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nイクノディクタスが話していた。",
             "enText": "After training, <chrname> and \nIchnodictus were talking.",
             "nextBlock": -1,
-            "pathId": 5948035532667573567,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -2129731445999086649
+                },
+                {
+                    "origLen": 124,
+                    "pathId": -5729575436834978246
+                }
+            ],
+            "pathId": -8183206250570217513,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674420
 }

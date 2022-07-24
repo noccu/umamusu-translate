@@ -1,6 +1,6 @@
 {
-    "version": 3,
-    "bundle": "V3UE2T37SAXTLLSSHC5OGBPTDFS7VORN",
+    "version": 5,
+    "bundle": "WL6PXORGTRFBB5D5DIZNE7CZQI26S3DK",
     "type": "story",
     "storyId": "041046005",
     "title": "イチバンcheer UP↑↑",
@@ -11,6 +11,17 @@
             "jpText": "――トレーナーさん！　聞いて聞いてっ！",
             "enText": "―Ms. Trainer! Listen, listen!",
             "nextBlock": 2,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 7,
+                    "pathId": 4169023162200594585
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -9035237422981261422
+                }
+            ],
             "pathId": -892339865408363618,
             "blockIdx": 1
         },
@@ -20,6 +31,17 @@
             "jpText": "ある日、学園内を歩いていると\r\nスマートファルコンが笑顔でこちらに駆けてきた。",
             "enText": "One day, as I was walking through the school, \nSmart Falcon came running toward me with a \nsmile on her face.",
             "nextBlock": 3,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 6353942619588627736
+                },
+                {
+                    "origLen": 107,
+                    "pathId": -9009471129332334236
+                }
+            ],
             "pathId": 5697240777304717932,
             "blockIdx": 2
         },
@@ -29,11 +51,22 @@
             "jpText": "ファル子ね、\r\n今度、競技大会でチアダンスやることになったんだ☆",
             "enText": "Falko, I'm going to do cheerleading \nat a competition.",
             "nextBlock": 4,
+            "origClipLength": 144,
             "choices": [
                 {
                     "jpText": "競技大会っていうと……",
                     "enText": "When I say competitions, I mean…",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 2,
+                    "pathId": -7073793373710437248
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -1628735678473628968
                 }
             ],
             "pathId": 1797777097808089669,
@@ -45,6 +78,13 @@
             "jpText": "『種目別競技大会』。年2回開催されるトレセン学園内のレースで、\r\n毎回大勢の観客が集まる一大行事となっている。",
             "enText": "The \"Discipline Competition\". This is a race \nheld twice a year in the Tracen Academy, and \nhas become a major event that attracts a \nlarge crowd each time.",
             "nextBlock": 5,
+            "origClipLength": 116,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": -5683995774367696717
+                }
+            ],
             "pathId": 5848552118326463742,
             "blockIdx": 4
         },
@@ -54,6 +94,17 @@
             "jpText": "――そうっ！\r\n学園の外からもたっくさんお客さんが来る、あの競技大会！",
             "enText": "―That's right! That competition \nthat attracts many visitors from \noutside the school!",
             "nextBlock": 6,
+            "origClipLength": 182,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": -4852245581062942449
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4334349263500682937
+                }
+            ],
             "pathId": -2616213228754377003,
             "blockIdx": 5
         },
@@ -63,6 +114,17 @@
             "jpText": "たくさんのお客さんの前で踊ったら、\r\nみんなファル子のファンになってくれるかな～、えへへっ♪",
             "enText": "If I dance in front of a lot of people, I \nwonder if everyone will become a fan of \nFalco… eheheheh♪",
             "nextBlock": 7,
+            "origClipLength": 222,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -7415828599763718725
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 7086754292207585866
+                }
+            ],
             "pathId": -7459915195681402066,
             "blockIdx": 6
         },
@@ -72,6 +134,17 @@
             "jpText": "しかし、夕方になって再び彼女を見つけた時……。",
             "enText": "But when I found her again \nin the evening…",
             "nextBlock": 8,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 14,
+                    "pathId": -1546127880189609280
+                },
+                {
+                    "origLen": 134,
+                    "pathId": 1595275711306154582
+                }
+            ],
             "pathId": 1694654786318776696,
             "blockIdx": 7
         },
@@ -81,6 +154,7 @@
             "jpText": "ごーごー、ふぁいと、おー……。\r\nれっつごー、ふぁいと、おー……。",
             "enText": "Go-Go, Fu-To, Oh… Retsu \nGo, Fuut, Oh…",
             "nextBlock": 9,
+            "origClipLength": 220,
             "choices": [
                 {
                     "jpText": "（何かあったのか……？）",
@@ -93,6 +167,12 @@
                     "nextBlock": 9
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": -9197149908202526689
+                }
+            ],
             "pathId": 1932348249264935812,
             "blockIdx": 8
         },
@@ -102,6 +182,17 @@
             "jpText": "声をかけようとしたが、\r\n彼女が別のウマ娘と話していることに気がついた。",
             "enText": "I was about to call out to her, \nbut then I realized she was talking \nto another horsegirl.",
             "nextBlock": 10,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": -3726116587363043508
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 4789568308236201688
+                }
+            ],
             "pathId": -2678036212173373613,
             "blockIdx": 9
         },
@@ -111,6 +202,17 @@
             "jpText": "はぁ～……チアダンス、踊りたかったね。",
             "enText": "Sigh～… cheerleading, I \nwish I could have danced.",
             "nextBlock": 11,
+            "origClipLength": 153,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 7766531180634443131
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -2654570068832658442
+                }
+            ],
             "pathId": -7428057243340689666,
             "blockIdx": 10
         },
@@ -120,6 +222,17 @@
             "jpText": "はい……まさか、\r\n旗を振る役になっちゃうなんて……。",
             "enText": "Yes… I never thought I would be the \none to wave the flag…",
             "nextBlock": 12,
+            "origClipLength": 160,
+            "animData": [
+                {
+                    "origLen": 171,
+                    "pathId": 622514010541401748
+                },
+                {
+                    "origLen": 171,
+                    "pathId": 2458961707081597372
+                }
+            ],
             "pathId": -5941435373158897022,
             "blockIdx": 11
         },
@@ -129,6 +242,17 @@
             "jpText": "私、ダート適性とか、旗振り適性とか……そんなのばっかり。\r\n注目してもらおうにも、これじゃ……。",
             "enText": "I'm all about dirt aptitude, flag-waving \naptitude… that kind of thing. I'm trying to \nget people to pay attention to me, but this \nis not the way to do it…",
             "nextBlock": 13,
+            "origClipLength": 288,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 7041642833031708783
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 7208727006340894063
+                }
+            ],
             "pathId": -3405792931971844061,
             "blockIdx": 12
         },
@@ -138,11 +262,22 @@
             "jpText": "……どうやら彼女たちは、応援団の中でも\r\nダンサーではなく旗手に選ばれてしまったらしい。",
             "enText": "… Apparently, the girls were chosen to \nbe flag bearers rather than dancers in the \ncheerleading squad.",
             "nextBlock": 14,
+            "origClipLength": 102,
             "choices": [
                 {
                     "jpText": "（なんて声をかけたら……）",
                     "enText": "(What a voice…)",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": -5091576516323072897
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 7991663011979045690
                 }
             ],
             "pathId": -4592740737056480060,
@@ -154,6 +289,17 @@
             "jpText": "励ます言葉を探していた、そんな時――",
             "enText": "I was looking for words of \nencouragement, when―",
             "nextBlock": 15,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -2421946609760399397
+                },
+                {
+                    "origLen": 17,
+                    "pathId": 7931632117980984147
+                }
+            ],
             "pathId": -6151966581014020313,
             "blockIdx": 14
         },
@@ -163,6 +309,17 @@
             "jpText": "……でも、決まっちゃった以上は頑張ってやらなくちゃ。\r\nとりあえず練習してみようよ！",
             "enText": "… but now that it's been decided, \nwe have to do our best. Let's just \npractice for now!",
             "nextBlock": 16,
+            "origClipLength": 205,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": 7706339354102836910
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 117781941551192098
+                }
+            ],
             "pathId": 7077699941845924838,
             "blockIdx": 15
         },
@@ -172,6 +329,13 @@
             "jpText": "これをこうして……こうっ！\r\nそれから……こうして、こうっ！",
             "enText": "Then this, then… like this! Then \n… like this, like this!",
             "nextBlock": 17,
+            "origClipLength": 256,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": 3183397750921749142
+                }
+            ],
             "pathId": -4189547311414214341,
             "blockIdx": 16
         },
@@ -181,6 +345,7 @@
             "jpText": "夕空に旗がなびく。ポールの重さに反してその様は軽やかだ。\r\n彼女たちが旗手に選ばれた理由が、なんとなくわかった気がした。",
             "enText": "The flag flutters in the evening sky. \nContrary to the weight of the pole, \nit was light. I felt that I somehow \nunderstood why the girls were chosen \nto be the flag bearers.",
             "nextBlock": 18,
+            "origClipLength": 123,
             "pathId": -2801816135234051327,
             "blockIdx": 17
         },
@@ -190,6 +355,13 @@
             "jpText": "旗振りの練習が終わり、\r\n彼女が1人になった頃、声をかけることにした。",
             "enText": "When the flag-waving practice was over and \nshe was alone, I decided to call on her.",
             "nextBlock": 19,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 6694920309708796425
+                }
+            ],
             "pathId": -7681886471890560166,
             "blockIdx": 18
         },
@@ -199,6 +371,7 @@
             "jpText": "ふぅ～、結構力いったなぁ……。\r\nもうヘトヘトだよ……。",
             "enText": "Whew, that took a lot of effort. \n… I'm exhausted…",
             "nextBlock": 20,
+            "origClipLength": 237,
             "choices": [
                 {
                     "jpText": "うまく振れてたぞ",
@@ -211,6 +384,16 @@
                     "nextBlock": 20
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -961643719741200124
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -5838268071032582212
+                }
+            ],
             "pathId": -1264382956530468702,
             "blockIdx": 19
         },
@@ -220,6 +403,21 @@
             "jpText": "――わぁっ！　トレーナーさん！？",
             "enText": "―Wow! Trainer!",
             "nextBlock": 21,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": -3482167810212191776
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 8100731010075615215
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 1524769412347207416
+                }
+            ],
             "pathId": -6112077711438006374,
             "blockIdx": 20
         },
@@ -229,11 +427,22 @@
             "jpText": "うぅ～……本当はキラキラキュートなファル子のダンス、\r\n見てもらいたかったんだけどな～……。",
             "enText": "Ugh～… I really wanted you to see the \nsparkling cute Falco dance～…",
             "nextBlock": 22,
+            "origClipLength": 242,
             "choices": [
                 {
                     "jpText": "でも、旗もやりがいがありそう",
                     "enText": "But the flags look challenging too.",
                     "nextBlock": 22
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": -7823828239203561235
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 2368031625045849012
                 }
             ],
             "pathId": -1636491974466506592,
@@ -245,6 +454,17 @@
             "jpText": "……そうかな？\r\n旗でも『素敵だな』って思ってもらえるかな？",
             "enText": "… Do you think so? Do you \nthink a flag would be 'nice'?",
             "nextBlock": 23,
+            "origClipLength": 168,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": -7366047308690613333
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6463075711685600477
+                }
+            ],
             "pathId": 2744760207967652229,
             "blockIdx": 22
         },
@@ -254,6 +474,13 @@
             "jpText": "――少しの不安を抱きつつ、迎えた競技大会当日。",
             "enText": "―The day of the competition arrived \nwith a bit of trepidation.",
             "nextBlock": 24,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 5832696463976022679
+                }
+            ],
             "pathId": 1908594059786716099,
             "blockIdx": 23
         },
@@ -263,6 +490,7 @@
             "jpText": "ゴー、ゴー！　ファイト、オー！\r\nレッツゴー！　ファイト、オーッ！",
             "enText": "Go, go! Fight, O! Let's go! Fight, oh!",
             "nextBlock": 25,
+            "origClipLength": 208,
             "pathId": 8864875879702291003,
             "blockIdx": 24
         },
@@ -272,6 +500,7 @@
             "jpText": "華やかなダンサーたちの横で旗を振るスマートファルコン。\r\n中盤で旗手がセンターの配置になると、彼女はその機会を逃さず――",
             "enText": "Smart Falcon waves her flag next to the \ngorgeous dancers. When the flag bearers were \npositioned in the center at the midpoint, \nshe seized the opportunity―and the",
             "nextBlock": 26,
+            "origClipLength": 123,
             "pathId": -1932160355671801453,
             "blockIdx": 25
         },
@@ -281,6 +510,7 @@
             "jpText": "ゴー、ゴー！！　ファイト、オーーーッ！！！！\r\nレッツゴー！！　ファイト、オーーーーッ！！！！",
             "enText": "Go, go! Fight, Oooooh ！！！！Let's \nGo! Fight, Oooooh ！！！！",
             "nextBlock": 27,
+            "origClipLength": 247,
             "pathId": 5871189280452192057,
             "blockIdx": 26
         },
@@ -290,6 +520,7 @@
             "jpText": "すごい、あの旗の子……！\r\nめちゃくちゃ気合い入ってるよ！",
             "enText": "Wow, that flag girl…! She's \nso freaking enthusiastic!",
             "nextBlock": 28,
+            "origClipLength": 135,
             "pathId": -9064265043512510717,
             "blockIdx": 27
         },
@@ -299,6 +530,7 @@
             "jpText": "ああ、あの旗の力強いなびき方……！\r\nまるで旗と体が一体化してるみたいだ……！",
             "enText": "Oh, the powerful fluttering of that \nflag…! It's as if the flag and your body \nare one…!",
             "nextBlock": 29,
+            "origClipLength": 221,
             "choices": [
                 {
                     "jpText": "（よし、いい感じだぞ……！）",
@@ -320,6 +552,7 @@
             "jpText": "……と、思ったのだが。",
             "enText": "I was thinking of…",
             "nextBlock": 30,
+            "origClipLength": 59,
             "pathId": -1514857179300647029,
             "blockIdx": 29
         },
@@ -329,6 +562,7 @@
             "jpText": "おおーっ！　やっぱダンサーもすげーな！\r\n見ろよ、あんな綺麗なピラミッド、普通できないって！",
             "enText": "Oh! You dancers are amazing! Look at that \nbeautiful pyramid, they can't do that!",
             "nextBlock": 31,
+            "origClipLength": 253,
             "pathId": 510827342878674989,
             "blockIdx": 30
         },
@@ -338,6 +572,7 @@
             "jpText": "わぁっ、ホントだ～！　みんな素敵な笑顔！\r\nかっこいいのに可愛くて、目が離せなくなっちゃう～♪",
             "enText": "Wow, it's true! They all have such beautiful \nsmiles! They're so cool and cute, I can't \ntake my eyes off them!",
             "nextBlock": 32,
+            "origClipLength": 227,
             "pathId": 924194883541742725,
             "blockIdx": 31
         },
@@ -347,6 +582,17 @@
             "jpText": "はぁ～……『旗のなびき方がすごく綺麗で、\r\nダンサーが引き立ってました！』って感想もらっちゃった……。",
             "enText": "I got a comment from… \"The way the flags \nwaved was so beautiful, and the dancers \nreally stood out!\" I got a comment from…",
             "nextBlock": 33,
+            "origClipLength": 270,
+            "animData": [
+                {
+                    "origLen": 126,
+                    "pathId": -4658450474875502858
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -4348450572283974677
+                }
+            ],
             "pathId": -965992379434979641,
             "blockIdx": 32
         },
@@ -356,6 +602,7 @@
             "jpText": "……やっぱり、ダンサーには勝てなかったみたい。",
             "enText": "… I guess I couldn't beat \nthe dancers after all.",
             "nextBlock": 34,
+            "origClipLength": 124,
             "choices": [
                 {
                     "jpText": "頑張ってるのは伝わってきたぞ！",
@@ -368,6 +615,12 @@
                     "nextBlock": 34
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 1616630306891367173
+                }
+            ],
             "pathId": -3013788329004549035,
             "blockIdx": 33
         },
@@ -377,6 +630,17 @@
             "jpText": "でもでも、顔はきっと覚えてもらえてない！\r\n覚えてもらってたとしたら、旗の絵柄くらいだよ～～……！！",
             "enText": "But I bet they don't remember my face! If \nthey did remember me, it would only be the \npicture on the flag～…!",
             "nextBlock": 35,
+            "origClipLength": 249,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 4731882279102904219
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -5847432426269191568
+                }
+            ],
             "pathId": -80315830942859135,
             "blockIdx": 34
         },
@@ -386,8 +650,16 @@
             "jpText": "頑張っても、すぐに結果がついてくるとは限らないようだ。\r\nトップウマドルの座はまだ遠いかもしれない……。",
             "enText": "It seems that even if you work hard, the \nresults don't always follow immediately. The \ntop USDA dollar may still be a long way off…",
             "nextBlock": -1,
+            "origClipLength": 112,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -4514371073434735481
+                }
+            ],
             "pathId": 3548903272062889935,
             "blockIdx": 35
         }
-    ]
+    ],
+    "modified": 1658674052
 }

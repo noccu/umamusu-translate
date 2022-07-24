@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "DTMXHRATV4QRGXDCK2IEOTWUFCPOGT5E",
+    "version": 5,
+    "bundle": "UKJSPRDV3HDY6CQMGSWSH4KSKO4CRLQ2",
     "type": "story",
     "storyId": "801043003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nシンコウウインディが話していた。",
             "enText": "After training, <chrname> and \nShinko Windy were talking.",
             "nextBlock": -1,
-            "pathId": 2130974274174873603,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": -6744175137849809416
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -3105999431519978831
+                }
+            ],
+            "pathId": 2829672140896093224,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674417
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "L25E2NKXMVADMDRPQBAVEHPHDZFVLYRZ",
+    "version": 5,
+    "bundle": "HAXXRGTERH3K5QT2CEO7PI4SA5VRDHXB",
     "type": "story",
     "storyId": "801045003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nスーパークリークが話していた。",
             "enText": "After training, <chrname> and \nSupercreek were talking.",
             "nextBlock": -1,
-            "pathId": -38652785846367187,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 1344798745004316976
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 4010218623406418697
+                }
+            ],
+            "pathId": -7251822228934163559,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674417
 }

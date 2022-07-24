@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "R5GN6LCEZNGV33KARN4FI3WGVDVLHSBS",
+    "version": 5,
+    "bundle": "KWO5QZGDRNWGV6QXI7VMDLLPRQWAWNMW",
     "type": "story",
     "storyId": "801062003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nマチカネタンホイザが話していた。",
             "enText": "After training, <chrname> and Machikane \nTannhäuser were talking.",
             "nextBlock": -1,
-            "pathId": -4651740273762923610,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": -4033855324188356302
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 9158470723895185176
+                }
+            ],
+            "pathId": -7890048235228194610,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674420
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "MDHZDOSMHOZNXA7ELWKVCMJKKCCSPF4O",
+    "version": 5,
+    "bundle": "V77HOV2JN6XPQIHL5YRDW5A5KIX4N6EF",
     "type": "story",
     "storyId": "801021003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nタマモクロスが話していた。",
             "enText": "After training, <chrname> and \nTamamocros were talking.",
             "nextBlock": -1,
-            "pathId": -3007299898590836637,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5654007666518344561
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 2438615651958588821
+                }
+            ],
+            "pathId": 3650978245207594819,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674413
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "V4JUP35MPXND7TRZE4F3VMZ7AQAKYEAT",
+    "version": 5,
+    "bundle": "N6LV5HXOEYLMCQBEDY6G5HZVSD4IDKXL",
     "type": "story",
     "storyId": "801046003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nスマートファルコンが話していた。",
             "enText": "After training, <chrname> and the \nSmart Falcon were talking.",
             "nextBlock": -1,
-            "pathId": -6261478211062612063,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3225701980342499222
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 6169179966686688964
+                }
+            ],
+            "pathId": -1911462307824506612,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674417
 }

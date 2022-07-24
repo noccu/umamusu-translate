@@ -45,7 +45,7 @@ def restore(file, args):
         file = common.TranslationFile(file)
         bundle = GameBundle.fromName(file.bundle, load=False)
         bundle.readPatchState()
-        if bundle.exists and not bundle.isPatched:
+        if not args.force_restore and bundle.exists and not bundle.isPatched:
             print(f"Bundle {bundle.bundleName} not patched, skipping.")
             return 0
 
@@ -55,12 +55,13 @@ def restore(file, args):
 
 def main():
     ap = common.Args("Restore game files from backup or CDN download")
-    ap.add_argument("-F", "--forcedl", action="store_true", help="Force new file dl over copying from local backup")
+    ap.add_argument("--forcedl", action="store_true", help="Force new file dl over copying from local backup")
     ap.add_argument("-bdir", "--backup-dir", default=realpath("dump"), help="Local backup dir")
     ap.add_argument("-src", help="Target filename/bundle hash")
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("--uninstall", action="store_true", help="Restore all files back to originals (may download)")
     ap.add_argument("--verbose", action="store_true", help="Print additional info")
+    ap.add_argument("-F", "--force-restore", action="store_true", help="Ignore checks and always restore files")
     args = ap.parse_args()
 
     if args.src:

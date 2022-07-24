@@ -287,6 +287,12 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
             print(f"File already on latest version, skipping: {path}")
             return
         bundle, _ = queryDB(db, storyId)[0]
+        if bundle == tlFile.bundle:
+            if args.verbose:
+                print(f"Bundle {bundle} not changed, skipping.")
+            return
+        else:
+            print(f"Updating {bundle}")
     else:  # make sure tlFile is set for the call later
         tlFile = None
     group, id, idx = common.parseStoryId(args.type, storyId if args.update else path, not args.update)

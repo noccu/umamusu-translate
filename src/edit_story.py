@@ -5,6 +5,8 @@ from helpers import isEnglish
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
+from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
+
 import textprocess
 from types import SimpleNamespace
 
@@ -26,7 +28,10 @@ def change_chapter(event=None):
     block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(cur_file.textBlocks)]
     ll = textprocess.calcLineLen(cur_file, False)
     # Attempt to calc the relation of line length to text box size
-    ll = int(ll / (0.958 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH
+    # ll = int(ll / (0.958 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH # default font
+    # ll = int(ll / (1.067 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH # game font attempt 1
+    ll = int(ll / (1.135 * ll**0.05) + 1) if ll else TEXTBOX_WIDTH
+
     text_box_en.config(width=ll)
     text_box_jp.config(width=ll)
 
@@ -470,6 +475,32 @@ def txt_for_display(text, reverse=False):
 def cleanText(text: str):
     return " \n".join([line.strip() for line in text.strip().split("\n")])
 
+def loadFont(fontPath):
+    # code modified from https://github.com/ifwe/digsby/blob/f5fe00244744aa131e07f09348d10563f3d8fa99/digsby/src/gui/native/win/winfonts.py#L15
+    # origFontList = list(tk.font.families())
+    # print(origFontList[-1])
+    if isinstance(fontPath, bytes):
+        pathbuf = create_string_buffer(fontPath)
+        AddFontResourceEx = windll.gdi32.AddFontResourceExA
+    elif isinstance(fontPath, str):
+        pathbuf = create_unicode_buffer(fontPath)
+        AddFontResourceEx = windll.gdi32.AddFontResourceExW
+    else:
+        raise TypeError('fontPath must be bytes or str')
+
+    flags = 0x10 | 0x20 # private and not enumerable
+    # flags = 0x10 | 0 # private and enumerable
+
+    numFontsAdded = AddFontResourceEx(byref(pathbuf), flags, 0)
+
+    # print(f"added {numFontsAdded} fonts:", [name for name in tk.font.families() if name not in origFontList])
+    # print(origFontList[-1])
+    # print(tk.font.families()[-1])
+    # print(tk.font.families())
+
+
+    return numFontsAdded
+
 
 def tlNames():
     import names
@@ -522,7 +553,8 @@ def main():
     root = tk.Tk()
     root.title("Edit Story")
     root.resizable(False, False)
-    large_font = Font(root, size=18)
+    fontsadded = loadFont(r"src/data/RodinWanpaku Pro EB.otf")
+    large_font = Font(root, family="FOT-RodinWanpaku Pro EB", size=18, weight="normal")
 
     chapter_label = tk.Label(root, text="Chapter")
     chapter_label.grid(row=0, column=0)

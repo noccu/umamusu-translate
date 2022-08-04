@@ -1,9 +1,12 @@
-import common
+import re
+from enum import Enum, auto
+from datetime import timedelta
+
+from Levenshtein import ratio
 import ass
 import srt
-import re
-from Levenshtein import ratio
-from enum import Enum, auto
+
+import common
 import helpers
 
 class SubFormat(Enum):
@@ -161,7 +164,18 @@ class AssSubProcessor(BasicSubProcessor):
         text = super().cleanLine(text)
         return text
 
+
     def preprocess(self, parsed):
+        lastTimeStamp = zeroDelta = timedelta()
+        def sort(x):
+            nonlocal lastTimeStamp
+            if x.start == zeroDelta:
+                return lastTimeStamp 
+            else:
+                lastTimeStamp = x.start
+                return x.start
+        parsed.events._lines.sort(key=sort)
+
         lastSplit = None
         for line in parsed.events:
             if re.match("skip", line.effect, re.IGNORECASE): continue

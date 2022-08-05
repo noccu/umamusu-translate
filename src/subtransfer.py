@@ -274,13 +274,20 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                 print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
                 errors += 1
             lastChoice[1] = 0
-        
+
         # Add text
         if p.isDuplicateBlock(idx):
             print(f"Found gender dupe at block {p.getBlockIdx(idx)}, duplicating.")
             idx = p.duplicateSub(idx, subLine) + 1
             continue
         else:
+            # Attempt to match untranslated text
+            while re.match(r"^（?(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+）?$", p.getJp(idx)) and not (len(subLine.text) < 15 or re.match(r"(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$", subLine.text, flags=re.IGNORECASE)):
+                print(f"Marking untranslated line at {p.getBlockIdx(idx)}")
+                print("debug:", p.getJp(idx), subLine.text)
+                p.setEn(idx, TextLine("<UNTRANSLATED>"))
+                idx += 1
+
             if len(subLine.text) == 0:
                 print(f"Untranslated line at {p.getBlockIdx(idx)}")
                 errors += 1

@@ -21,7 +21,7 @@ TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
 
 
-def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False) -> list:
+def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False) -> list[str]:
     found = list()
     isJson = lambda f: PurePath(f).suffix == ".json"
     if changed:
@@ -163,7 +163,7 @@ class TranslationFile:
         def find(self, key, val) -> dict:
             return next((x for x in self.data if x.get(key) == val), None)
 
-        def toInterchange(self, data=None):
+        def toInterchange(self, data=None) -> list[dict]:
             data = data or self.data
             if isinstance(data, dict):
                 self.map = dict()

@@ -516,6 +516,12 @@ def tlNames():
     names.translate(cur_file)
     load_block()
 
+def nextMissingName():
+    for idx, block in enumerate(cur_file.textBlocks):
+        if block.get("jpName") not in common.NAMES_BLACKLIST and not block.get("enName"):
+            block_dropdown.current(idx)
+            change_block()
+
 
 def _switchWidgetFocusForced(e):
     e.widget.tk_focusNext().focus()
@@ -625,7 +631,8 @@ def main():
         tk.Button(frm_btns_side, text="Convert\nunicode codepont", command=char_convert),
         tk.Button(frm_btns_side, text="Process text", command=lambda: process_text(SimpleNamespace(state=0))),
         tk.Button(frm_btns_side, text="Process text\n(clean newlines)", command=lambda: process_text(SimpleNamespace(state=1))),
-        tk.Button(frm_btns_side, text="Translate speakers", command=tlNames)
+        tk.Button(frm_btns_side, text="Translate speakers", command=tlNames),
+        tk.Button(frm_btns_side, text="Find missing speakers", command=nextMissingName)
     )
     for btn in side_buttons:
         btn.pack(pady=3, fill=tk.X)

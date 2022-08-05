@@ -1,13 +1,18 @@
 import common
 import helpers
 
+NAMES_DICT = None
 
-NAMES_DICT = helpers.readJson("translations/mdb/uma-name.json").get("text")
-NAMES_DICT.update(helpers.readJson("translations/mdb/miscellaneous.json"))
-NAMES_DICT.update(helpers.readJson("src/data/names.json"))
+def loadDict():
+    global NAMES_DICT
+    NAMES_DICT = helpers.readJson("translations/mdb/uma-name.json").get("text")
+    NAMES_DICT.update(helpers.readJson("translations/mdb/miscellaneous.json"))
+    NAMES_DICT.update(helpers.readJson("src/data/names.json"))
 
 
-def translate(file: common.TranslationFile):
+def translate(file: common.TranslationFile, forceReload=False):
+    if forceReload or not NAMES_DICT: 
+        loadDict()
     for block in file.textBlocks:
         name = block.get('jpName')
         if name is not None:

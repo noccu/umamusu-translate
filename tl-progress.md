@@ -46,6 +46,7 @@ Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][]
 Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster][]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
+Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Eishin Flash | Complete, In progress | deepl, [noccu] (ep 1-2)
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)

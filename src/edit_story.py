@@ -308,7 +308,7 @@ def create_search_popup():
     global search_orig_state
 
     # set it here so it exists when window closed without searching
-    search_orig_state = cur_block, cur_chapter, save_on_next.get() 
+    search_orig_state = cur_block, cur_chapter, save_on_next.get(), skip_translated.get()
     reset_search() # sets cur state
 
     search_window = tk.Toplevel()
@@ -385,7 +385,7 @@ def reset_search(event=None, *args):
 
 
 def restore_search_state():
-    ch, b, _ = search_orig_state
+    ch, b, *_ = search_orig_state
     chapter_dropdown.current(ch)
     change_chapter()
     block_dropdown.current(b)
@@ -394,14 +394,16 @@ def restore_search_state():
 
 def show_search():
     global search_orig_state
-    search_orig_state = cur_chapter, cur_block, save_on_next.get()
+    search_orig_state = cur_chapter, cur_block, save_on_next.get(), skip_translated.get()
     save_on_next.set(0)
+    skip_translated.set(0)
     search_window.deiconify()
     search_window.nametowidget("filter").focus()
 
     
 def close_search():
     save_on_next.set(search_orig_state[2])
+    skip_translated.set(search_orig_state[3])
     search_window.withdraw()
 
 

@@ -93,8 +93,8 @@ class BasicSubProcessor:
     def getBlockIdx(self, idx):
         return self.srcLines[idx]['blockIdx']
 
-    def cleanLine(self, text):
-        return text
+    def cleanLine(self, text: str):
+        return text.strip()
 
     def filter(self, line: TextLine, target):
         filter = self.options.filter

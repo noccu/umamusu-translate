@@ -21,9 +21,9 @@ def change_chapter(event=None):
     cur_chapter = chapter_dropdown.current()
     cur_block = 0
 
-    if isinstance(files[cur_chapter], str):
-        files[cur_chapter] = common.TranslationFile(files[cur_chapter])
+    loadFile()
     cur_file = files[cur_chapter]
+
 
     block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(cur_file.textBlocks)]
     ll = textprocess.calcLineLen(cur_file, False)
@@ -188,6 +188,10 @@ def copy_block(event=None):
     root.clipboard_clear()
     root.clipboard_append(cur_file.textBlocks[cur_block]['jpText'])
 
+def loadFile(chapter=None):
+    ch = chapter or cur_chapter
+    if isinstance(files[ch], str):
+        files[ch] = common.TranslationFile(files[ch])
 
 def saveFile(event=None):
     if save_on_next.get() == 0:
@@ -344,25 +348,28 @@ def search_text(*_):
     min_ch = search_cur_state[0]
     if search_chapters.get():
         for ch in range(min_ch, len(files)):
-            chapter_dropdown.current(ch)
-            change_chapter()
-            if _search_text_blocks():
+            loadFile(ch)
+            if _search_text_blocks(ch):
                 return
     else:
-        _search_text_blocks()
+        _search_text_blocks(cur_chapter)
 
 
-def _search_text_blocks():
+def _search_text_blocks(chapter):
     global search_cur_state
 
     start_block = search_cur_state[1]
     s_field, s_re = (x.get() for x in search_filter)
 
     # print(f"searching in {cur_file.name}, from {search_cur_state}, on {s_field} = {s_re}")
-    for i in range(start_block, len(cur_file.textBlocks)):
-        block = cur_file.textBlocks[i]
+    file = files[chapter]
+    for i in range(start_block, len(file.textBlocks)):
+        block = file.textBlocks[i]
         if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
-            # print(f"Found {s_re} at {i}")
+            # print(f"Found {s_re} at ch{chapter}:b{i}")
+            if chapter != cur_chapter:
+                chapter_dropdown.current(chapter)
+                change_chapter()
             block_dropdown.current(i)
             change_block()
             search_cur_state = cur_chapter, i + 1

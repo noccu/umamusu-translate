@@ -40,6 +40,7 @@ The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+Admire Vega | Complete | [CatNipHoarder][] & [Holo][]
 Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Air Shakur | Complete | deepl (contributed by CryDuringItAll)

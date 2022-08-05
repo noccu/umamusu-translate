@@ -487,7 +487,6 @@ def cleanText(text: str):
 def loadFont(fontPath):
     # code modified from https://github.com/ifwe/digsby/blob/f5fe00244744aa131e07f09348d10563f3d8fa99/digsby/src/gui/native/win/winfonts.py#L15
     # origFontList = list(tk.font.families())
-    # print(origFontList[-1])
     if isinstance(fontPath, bytes):
         pathbuf = create_string_buffer(fontPath)
         AddFontResourceEx = windll.gdi32.AddFontResourceExA
@@ -501,12 +500,8 @@ def loadFont(fontPath):
     # flags = 0x10 | 0 # private and enumerable
 
     numFontsAdded = AddFontResourceEx(byref(pathbuf), flags, 0)
-
     # print(f"added {numFontsAdded} fonts:", [name for name in tk.font.families() if name not in origFontList])
-    # print(origFontList[-1])
-    # print(tk.font.families()[-1])
-    # print(tk.font.families())
-
+    # print(tk.font.families()[-3:])
 
     return numFontsAdded
 
@@ -568,8 +563,8 @@ def main():
     root = tk.Tk()
     root.title("Edit Story")
     root.resizable(False, False)
-    fontsadded = loadFont(r"src/data/RodinWanpaku Pro EB.otf")
-    large_font = Font(root, family="FOT-RodinWanpaku Pro EB", size=18, weight="normal")
+    fontsadded = loadFont(r"src/data/RodinWanpakuPro-B-ex.otf")
+    large_font = Font(root, family="RodinWanpakuPro B", size=18, weight="normal")
 
     chapter_label = tk.Label(root, text="Chapter")
     chapter_label.grid(row=0, column=0)

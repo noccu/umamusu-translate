@@ -1,6 +1,7 @@
 import re
 from enum import Enum, auto
 from datetime import timedelta
+from typing import Union
 
 from Levenshtein import ratio
 import ass
@@ -25,6 +26,7 @@ class SubTransferOptions():
         self.filter = None
         self.choicePrefix = [">"]
         self.strictChoices = True
+        self.noDupeSubs: Union[bool, str] = False
         
     @classmethod
     def fromArgs(cls, args):
@@ -249,6 +251,14 @@ def process(srcFile, subFile, opts: SubTransferOptions):
         # skip title logo on events and dummy text
         if p.getJp(idx).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト|欠番", p.getJp(idx)):
             idx += 1
+        # Skip repeated subs (usually for style)
+        if opts.noDupeSubs:
+            # print(f"checking\n{subLine}\nto\n{p.getEn(idx-1).text}")
+            if (opts.noDupeSubs == "strict" and subLine.text == p.getEn(idx-1).text)\
+                or (opts.noDupeSubs == "loose" and subLine.text in p.getEn(idx-1).text):
+                print(f"Dupe sub skipped at {p.getBlockIdx(idx)}: {subLine.text}")
+                continue
+
         # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
         if storyType == "story":
             if subLine.isChoice():
@@ -277,7 +287,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
 
         # Add text
         if p.isDuplicateBlock(idx):
-            print(f"Found gender dupe at block {p.getBlockIdx(idx)}, duplicating.")
+            print(f"Found dupe source line at block {p.getBlockIdx(idx)}, duplicating.")
             idx = p.duplicateSub(idx, subLine) + 1
             continue
         else:
@@ -323,6 +333,7 @@ def main():
                     \nbrak: sync enclosing brackets with original text")
     ap.add_argument("-cpre", dest="choicePrefix", nargs="+", default=[">"], help="Prefixes that mark choices. Supports regex\nChecks name as a special case if prefix includes ':'")
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
+    ap.add_argument("--skip-dupe-subs", dest="noDupeSubs", nargs="?", default = False, const = "strict", choices=["strict", "loose"], help="Skip subsequent duplicated subtitle lines")
     args = ap.parse_args()
     process(args.src, args.sub, SubTransferOptions.fromArgs(args))
 

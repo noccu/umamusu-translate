@@ -55,6 +55,7 @@ class BasicSubProcessor:
         self.format = SubFormat.NONE
         self.options = options
         self.cpreRe = re.compile("|".join(options.choicePrefix), re.IGNORECASE) # match searches start only
+        # self.idx = 0 #TODO: track idx on class
 
         self.choiceNames = list()
         for cpre in options.choicePrefix:
@@ -128,6 +129,24 @@ class BasicSubProcessor:
                     line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
+    def addSub(self, idx, subLine):
+        if idx > len(self.srcLines) - 1:
+            print("Attempted to add sub beyond last line of file.")
+            return idx
+
+        # Attempt to match untranslated text
+        while len(subLine.text) == 0 or\
+        re.match(r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx)) and\
+        not (len(subLine.text) < 15 or re.match(r"[(<*)].+[>*)]$|^(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$", subLine.text, flags=re.IGNORECASE)):
+            print(f"Marking untranslated line at {self.getBlockIdx(idx)}")
+            # print("debug:", p.getJp(idx), subLine.text)
+            self.setEn(idx, TextLine("<UNTRANSLATED>"))
+            idx += 1
+
+        self.setEn(idx, subLine)
+        idx += 1
+        return idx
+
     def duplicateSub(self, idx: int, line: TextLine = None):
         # duplicate text and choices
         self.setEn(idx, self.getEn(idx-1))
@@ -136,14 +155,7 @@ class BasicSubProcessor:
             for c, choice in enumerate(choices):
                 self.setChoices(idx, c, TextLine(choice['enText']))
 
-        # Add sub text to matching (next) block and return it as new pos
-        if line:
-            if idx < len(self.srcLines) - 1:
-                idx += 1
-                self.setEn(idx, line)
-            else:
-                print("Attempted to duplicate beyond last line of file. Subtitle file does not match?")
-        return idx
+        return idx + 1
 
     def isDuplicateBlock(self, idx: int) -> bool:
         if self.srcFile.type != "story": return False
@@ -289,22 +301,9 @@ def process(srcFile, subFile, opts: SubTransferOptions):
         # Add text
         if p.isDuplicateBlock(idx):
             print(f"Found dupe source line at block {p.getBlockIdx(idx)}, duplicating.")
-            idx = p.duplicateSub(idx, subLine) + 1
-            continue
-        else:
-            # Attempt to match untranslated text
-            while re.match(r"^（?(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+）?$", p.getJp(idx)) and not (len(subLine.text) < 15 or re.match(r"(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$", subLine.text, flags=re.IGNORECASE)):
-                print(f"Marking untranslated line at {p.getBlockIdx(idx)}")
-                print("debug:", p.getJp(idx), subLine.text)
-                p.setEn(idx, TextLine("<UNTRANSLATED>"))
-                idx += 1
+            idx = p.duplicateSub(idx, subLine)
 
-            if len(subLine.text) == 0:
-                print(f"Untranslated line at {p.getBlockIdx(idx)}")
-                errors += 1
-            else:
-                p.setEn(idx, subLine)
-        idx += 1
+        idx = p.addSub(idx, subLine)
     # check niche case of duplicate last line (idx is already increased)
     if idx < srcLen:
         if p.isDuplicateBlock(idx):

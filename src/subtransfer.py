@@ -180,6 +180,7 @@ class AssSubProcessor(BasicSubProcessor):
 
         lastSplit = None
         for line in parsed.events:
+            if not isinstance(line, ass.Dialogue): continue
             if re.match("skip", line.effect, re.IGNORECASE): continue
             if line.name == "Nameplate": continue
             if not re.search("MainText|Default|Button", line.style, re.IGNORECASE): continue

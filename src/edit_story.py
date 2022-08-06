@@ -13,17 +13,17 @@ from types import SimpleNamespace
 TEXTBOX_WIDTH = 54
 
 
-def change_chapter(event=None):
+def change_chapter(event=None, initialLoad=False):
     global cur_chapter
     global cur_block
     global cur_file
 
+    if not initialLoad: save_block()
     cur_chapter = chapter_dropdown.current()
     cur_block = 0
 
     loadFile()
     cur_file = files[cur_chapter]
-
 
     block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(cur_file.textBlocks)]
     ll = textprocess.calcLineLen(cur_file, False)
@@ -654,7 +654,7 @@ def main():
     create_text_list_popup()
     create_search_popup()
     chapter_dropdown.current(cur_chapter)
-    change_chapter()
+    change_chapter(initialLoad=True)
     block_dropdown.current(cur_block)
 
     root.bind("<Control-Return>", next_block)

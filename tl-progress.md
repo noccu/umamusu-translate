@@ -32,7 +32,8 @@ Flapping Run-up | Complete | [Hades of Games][]
 Tonight at the Ligne Droite | In progress, Complete | [ebi], deepl
 A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
 The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | [Snep][], deepl
-Seek, Solve, Summer Walk! | In Progress, Complete | [noccu][] (ep 1-3), deepl
+Seek, Solve, Summer Walk! | In Progress, Complete | [noccu][] (ep 1-6), deepl
+Super Smashing☆Summer Vacation | In Progress | [ebi][]
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 

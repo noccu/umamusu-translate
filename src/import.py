@@ -73,7 +73,7 @@ class PatchManager:
 
     def loadTranslationFile(self, path):
         try:
-            self.tlFile = common.TranslationFile(path)
+            self.tlFile = common.TranslationFile(path, readOnly=True)
         except:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 

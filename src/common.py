@@ -112,7 +112,8 @@ class TranslationFile:
     latestVersion = 5
     ver_offset_mdb = 100
 
-    def __init__(self, file = None, load=True):
+    def __init__(self, file = None, load=True, readOnly = False):
+        self.readOnly = readOnly
         if load:
             if not file: raise RuntimeError("Attempting to load tlfile but no file provided.")
             self.setFile(file)
@@ -249,7 +250,8 @@ class TranslationFile:
         helpers.writeJson(self.file, self.data)
 
     def snapshot(self, copyFrom=None):
-        if copyFrom:
+        if self.readOnly: return
+        elif copyFrom:
             self._snapshot = copyFrom._snapshot
             self.fileExists = copyFrom.fileExists
             # Gets written correctly on save anyway but copyFrom means we're trying to "restore" a state (partially):

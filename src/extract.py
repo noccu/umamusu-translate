@@ -26,8 +26,8 @@ def queryDB(db=None, storyId=None):
     elif args.type == "race":
         pattern = f"race/storyrace/text/storyrace_{group}{id}{idx}%"
     elif args.type == "lyrics":
-        if args.id and not args.idx: idx = args.id
-        pattern = f"live/musicscores/m{idx}/m{idx}_lyrics"
+        if args.idx and not args.id: id = args.idx
+        pattern = f"live/musicscores/m{id}/m{id}_lyrics"
     elif args.type == "preview":
         if args.idx and not args.id: id = args.idx
         pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{id}"

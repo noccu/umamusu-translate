@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$ref": "./global.schema.json",
+    "type": "object",
+    "properties": {
+      "version": {
+        "minimum": 100
+    },
+      "type": {
+        "const": "mdb"
+      },
+      "text": {
+        "$ref": "./kv-map.schema.json"
+      }
+    },
+    "required": [
+      "version",
+      "type",
+      "text"
+    ]
+  }

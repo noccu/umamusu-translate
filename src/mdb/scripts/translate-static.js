@@ -277,7 +277,7 @@ function translateSpecific (type, jpText, file) {
             let [, n] = m;
             out += `Complete training ${n} time${n > 1 ? "s" : ""}`;
         }
-        else if (m = jpText.match(/育成で(.+)に勝利しよう/)) {
+        else if (m = jpText.match(/育成で(.+)に.*勝利しよう/)) {
             let [, r] = m;
             r = PFILES.races.text[r]
             if (r) {

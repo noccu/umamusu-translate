@@ -204,7 +204,7 @@
             "jpName": "樫本理子",
             "enName": "Kashimoto Riko",
             "jpText": "<username>トレーナー。\r\n本日は、お誘いありがとうございました。",
-            "enText": "<username> Trainer. Thank you \nfor your invitation today.",
+            "enText": "Trainer <username>. Thank you \nfor your invitation today.",
             "nextBlock": 20,
             "pathId": 6192969960687335620,
             "blockIdx": 19
@@ -267,7 +267,7 @@
             "jpName": "樫本理子",
             "enName": "Kashimoto Riko",
             "jpText": "ですので、<username>トレーナー。\r\n一緒に選んでもらっても？",
-            "enText": "So, <username> Trainer. Can I ask \nyou to choose one with me?",
+            "enText": "So, trainer <username>. Can I ask \nyou to choose one with me?",
             "nextBlock": 27,
             "choices": [
                 {
@@ -297,5 +297,6 @@
             "pathId": -4129847112605671966,
             "blockIdx": 28
         }
-    ]
+    ],
+    "modified": 1661711800
 }

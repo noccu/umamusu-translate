@@ -18,7 +18,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "あの、<username>トレーナー。",
-            "enText": "Um, <username> trainer.",
+            "enText": "Um, trainer <username>.",
             "nextBlock": 3,
             "pathId": 3619142957314734683,
             "blockIdx": 2
@@ -115,7 +115,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "<username>トレーナー、\r\n華の湯には入りましたか？",
-            "enText": "<username> Trainer, have \nyou been to Hana no Yu?",
+            "enText": "Trainer <username>, have \nyou been to Hana no Yu?",
             "nextBlock": 13,
             "pathId": 6993849010424452503,
             "blockIdx": 12
@@ -167,7 +167,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "……。<username>トレーナー。\r\n私、ミークのこと……。",
-            "enText": "… <username> Trainer. Me, Meek…",
+            "enText": "… Trainer <username>. Me, Meek…",
             "nextBlock": 18,
             "pathId": 2849232008965134574,
             "blockIdx": 17
@@ -337,5 +337,6 @@
             "pathId": -226235030247203704,
             "blockIdx": 33
         }
-    ]
+    ],
+    "modified": 1661711800
 }

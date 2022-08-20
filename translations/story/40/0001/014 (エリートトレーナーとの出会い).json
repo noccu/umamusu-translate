@@ -25,7 +25,7 @@
             "choices": [
                 {
                     "jpText": "<chrname>のいい息抜きになるかな",
-                    "enText": "Would be a nice break from <chrname>.",
+                    "enText": "Would be a nice break for <chrname>.",
                     "nextBlock": 3
                 }
             ],
@@ -388,7 +388,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "やっぱり！\r\n<username>トレーナー！",
-            "enText": "I knew it! <username>Trainer!",
+            "enText": "I knew it! Trainer <username>!",
             "nextBlock": 20,
             "origClipLength": 70,
             "choices": [
@@ -420,7 +420,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "はい！　あ、すみません急に……！\r\nでも私、貴方のことがずっと……！",
-            "enText": "Yes! Oh, I'm sorry, you suddenly went \nto ……! But I've been thinking about \nyou all the way back to ……!",
+            "enText": "Yes! Oh, sorry to so suddenly……! \nBut I've been thinking about \nyou all the way back to ……!",
             "nextBlock": 21,
             "origClipLength": 67,
             "animData": [
@@ -640,7 +640,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "あの……<username>トレーナーは\r\nご存じでないかもしれませんが……。",
-            "enText": "That ……<username> trainer \nyou may not know is ……",
+            "enText": "Um…… trainer <username> \nin case you didn't know……",
             "nextBlock": 28,
             "origClipLength": 70,
             "animData": [
@@ -875,7 +875,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "って……あの、ミーク？\r\nあまりじろじろ見ては失礼ですよ……？",
-            "enText": "What do you mean …… Meek? It's \nrude to stare too much. ……?",
+            "enText": "I mean... um…… Meek? \nIt's rude to stare too much……?",
             "nextBlock": 36,
             "origClipLength": 65,
             "animData": [
@@ -1459,7 +1459,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "……今日はありがとうございました、\r\n<username>トレーナー。",
-            "enText": "……Thank you for your time \ntoday, <username> trainer.",
+            "enText": "……Thank you for your time \ntoday, trainer <username>.",
             "nextBlock": 56,
             "origClipLength": 67,
             "animData": [
@@ -1674,5 +1674,5 @@
             "blockIdx": 64
         }
     ],
-    "modified": 1657285589
+    "modified": 1661711800
 }

@@ -18,7 +18,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "<username>トレーナー！\r\nお疲れ様です。今から帰られるんですか？",
-            "enText": "<username> Trainer! Thank you for your time. \nAre you going home now?",
+            "enText": "Trainer <username>! Thank you for your time. \nAre you going home now?",
             "nextBlock": 3,
             "choices": [
                 {
@@ -57,7 +57,7 @@
             "choices": [
                 {
                     "jpText": "そんなことありません",
-                    "enText": "No, I don't.",
+                    "enText": "No, it isn't.",
                     "nextBlock": 6
                 }
             ],
@@ -68,7 +68,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "<username>トレーナー……\r\nふふ、お優しいんですね。",
-            "enText": "<username> Trainer… Hmm, you're very kind.",
+            "enText": "Trainer <username>… Hmm, you're very kind.",
             "nextBlock": 7,
             "pathId": 2362109690635709809,
             "blockIdx": 6
@@ -86,10 +86,11 @@
             "jpName": "",
             "enName": "",
             "jpText": "その日の夜は、桐生院トレーナーと\r\n道すがら色々と話しながら帰った。",
-            "enText": "That evening I went home with my \ntrainer Kiryuin, talking about \nmany things along the way.",
+            "enText": "That evening I went home with \ntrainer Kiryuin, talking about \nmany things along the way.",
             "nextBlock": -1,
             "pathId": 6260970240242665380,
             "blockIdx": 8
         }
-    ]
+    ],
+    "modified": 1661711800
 }

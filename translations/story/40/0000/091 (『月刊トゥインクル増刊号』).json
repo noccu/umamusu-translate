@@ -18,7 +18,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "失礼いたします。\r\n<username>トレーナーさんは、\nいらっしゃいますか？",
-            "enText": "Excuse me. Is <username> trainer in?",
+            "enText": "Excuse me. Is trainer <username> in?",
             "nextBlock": 3,
             "choices": [
                 {
@@ -214,7 +214,7 @@
             "jpName": "乙名史記者",
             "enName": "Otonashi Etsuko",
             "jpText": "<username>トレーナーを\r\n追っていきます。",
-            "enText": "We will follow you, <username> trainer.",
+            "enText": "We will follow you, trainer <username>.",
             "nextBlock": 21,
             "pathId": -4143576686684717182,
             "blockIdx": 20
@@ -604,5 +604,6 @@
             "pathId": -4512096398935234347,
             "blockIdx": 56
         }
-    ]
+    ],
+    "modified": 1661711800
 }

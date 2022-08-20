@@ -18,7 +18,7 @@
             "jpName": "樫本理子",
             "enName": "Kashimoto Riko",
             "jpText": "こんばんは、\r\n<username>トレーナー。\nこんな時間までお疲れ様です。",
-            "enText": "Good evening, <username> trainer. \nThank you for your time.",
+            "enText": "Good evening, trainer <username>. \nThank you for your time.",
             "nextBlock": 3,
             "choices": [
                 {
@@ -34,7 +34,7 @@
             "jpName": "樫本理子",
             "enName": "Kashimoto Riko",
             "jpText": "こほん。\r\n……<username>トレーナー。\n明日の予定は決まっていますか？",
-            "enText": "Book…<username>Trainer. Do you \nhave any plans for tomorrow?",
+            "enText": "Ahem. \n……Trainer <username>. \nDo you have any plans for tomorrow?",
             "nextBlock": 4,
             "pathId": 3079477074760656217,
             "blockIdx": 3
@@ -332,7 +332,7 @@
             "jpName": "樫本理子",
             "enName": "Kashimoto Riko",
             "jpText": "……行きましょう、\r\n<username>トレーナー。",
-            "enText": "Let's go to… <username> trainer.",
+            "enText": "Let's go to… trainer <username>.",
             "nextBlock": 34,
             "pathId": -5879806032255136400,
             "blockIdx": 33
@@ -346,5 +346,6 @@
             "pathId": 1881755530487098932,
             "blockIdx": 34
         }
-    ]
+    ],
+    "modified": 1661711800
 }

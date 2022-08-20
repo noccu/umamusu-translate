@@ -27,7 +27,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "あっ、<username>トレーナー！\r\nお疲れ様です。",
-            "enText": "Ah, the <username> trainer! \nThank you for your time.",
+            "enText": "Ah, trainer <username>! \nThank you for your time.",
             "nextBlock": 4,
             "choices": [
                 {
@@ -136,7 +136,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "なんと！　<username>トレーナー、\r\n桐生院家の教えに興味が？",
-            "enText": "What a surprise! <username> Trainer, \nare you interested in the teachings \nof the Kiryuin family?",
+            "enText": "What a surprise! Trainer <username>, \nare you interested in the teachings \nof the Kiryuin family?",
             "nextBlock": 14,
             "pathId": -4986945726194931766,
             "blockIdx": 13
@@ -193,5 +193,6 @@
             "pathId": -3829591522095820683,
             "blockIdx": 18
         }
-    ]
+    ],
+    "modified": 1661711800
 }

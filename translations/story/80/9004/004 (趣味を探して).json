@@ -36,7 +36,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "あ、もちろん最初は挨拶だよね。\r\n『<username>トレーナー、\nお疲れ様です』――",
-            "enText": "Of course, the first thing to do \nis to say hello. \"<username> Trainer, \nthank you for your time.\"",
+            "enText": "Of course, the first thing to do \nis to say hello. \"Trainer <username>, \nthank you for your time.\"",
             "nextBlock": 5,
             "choices": [
                 {
@@ -469,7 +469,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "……あの、<username>トレーナー。\r\nもしよければ、なのですが――",
-            "enText": "… Um, <username> Trainer. If you don't mind…",
+            "enText": "… Um, trainer <username>. If you don't mind…",
             "nextBlock": 45,
             "pathId": -3956056240732935240,
             "blockIdx": 44
@@ -571,5 +571,6 @@
             "pathId": 1085728493826684895,
             "blockIdx": 54
         }
-    ]
+    ],
+    "modified": 1661711800
 }

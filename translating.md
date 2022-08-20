@@ -50,7 +50,7 @@ You can also add a `skip` key to any block to have the text processing completel
     - This will take some time. Press ctrl+c in your terminal to force quit. Progress will be saved per file.
 
 # Further processing    
-**Remember to proide targets (likely those you used for extract) or you will process all the files!**
+**Remember to provide targets (likely those you used for extract) or you will process all the files!**
 - `py src\textprocess.py` to apply automatic formatting and edits.
     - This is run by the translation script (if you used that), but you can rerun it with custom settings if you like.
     - This uses the [replacer.json](src/data/replacer.json) file. You can add your own entries here, useful for names in particular.
@@ -73,22 +73,21 @@ Some updates change the hashes, causing the translations to be jumbled.
 1. Open the `config.json` file in your game folder (`DMMgames\Umamusume\config.json`)
 1. Change the following
     > "enableLogger": false,  
-    > "dumpStaticEntries": false,  
-    > "dicts": ["localized_data/static.json"]  
+    > "dumpStaticEntries": false,
     > ⇩⇩⇩  
     > "enableLogger": true,  
-    > "dumpStaticEntries": true,  
-    > "dicts": []
+    > "dumpStaticEntries": true,
 1. Delete `dump.txt` if it exists in the same (game) folder
 1. (re)Start the game
 1. Move through the screens you wish to translate
 1. Open a cmd prompt to run the following
 1. `py src/manage.py -new -add -src`
    - If autodetect fails, point it to the file from step 3 `-src …/dump.txt`
-1. Open the `src/data/static_en.json` file, search for your text, translate it, and save the file:  
+   - This will update `src/data/static_dump.json` with any new hash to JP text mappings, and add those JP text entries to `translations/localify/ui.json`.
+1. Open the `translations/localify/ui.json` file, search for your text, translate it, and save the file:  
    "日本語": "**tl goes here**"
 1. `py src/manage.py -upd`
-1. The UI translation file in the `localify` folder should now be updated and can be copied over to your game folder
+1. The UI translation files in the `localify` folder should now be updated and can be copied over to your game folder
     - Basically follow [the usual step](README.md#basic-usage) or simply run `py src/manage.py -M`
 1. Revert the changes from step 2.
 1. If you wish to contribute (especially through github), run `py src/manage.py -clean both` first

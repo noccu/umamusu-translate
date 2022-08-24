@@ -85,7 +85,7 @@ def main():
             helpers.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
         elif args.reverse:
             nativeJson = False
-            if not csvData:
+            if not isinstance(csvData, dict):
                 nativeJson = csvPath.with_suffix(".json").exists()
                 csvPath = csvPath.with_suffix(".json")
 

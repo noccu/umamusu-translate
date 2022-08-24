@@ -108,6 +108,10 @@ All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 249 | Nyan Nyan Island | Complete | [nem]
 259 | A sudden rain | Complete | [Snep]
 
+## Grand Live
+id | name (short) | progress | translator
+--- | --- | --- | ---
+All not listed | up to 2022/08/24 | Complete | deepl
 
 ## Umas
 name | progress | translator

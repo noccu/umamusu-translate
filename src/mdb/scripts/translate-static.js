@@ -18,7 +18,8 @@ const FILES = {
         spUniqueNames: "translations/mdb/support-effect-unique-name.json",
         misc: "translations/mdb/miscellaneous.json",
         factors: "translations/mdb/factor-desc.json",
-        common: "translations/mdb/common.json"
+        common: "translations/mdb/common.json",
+        shoeSize: "translations/mdb/uma-profile-shoesize.json"
     }
 const PFILES = {};
 const FAN_AMOUNT = {
@@ -150,6 +151,27 @@ function translate() {
     for (let [jpText, enText] of Object.entries(PFILES.races.text)) {
         if (enText) continue; //skip translated entries
         translateSpecific("legvs", jpText, PFILES.races)
+    }
+
+    //*shoe-size.json
+    for (let [jpText, enText] of Object.entries(PFILES.shoeSize.text)) {
+        if (enText) continue;
+        let out = ""
+        let m = jpText.matchAll(/([左右]|左右ともに)：?([\d.]+(?:cm|㎝))(?:\\n|([（\(].+)$)?/mg)
+        for (let p of m) {
+            let [,side, val, rest] = p
+            if (side == "左") {
+                out += "Left: " + val
+            }
+            else if (side == "右"){
+                out += " \\nRight: " + val
+            }
+            else {
+                out += "Both: " + val
+            }
+            if (rest) out += rest
+            PFILES.shoeSize.text[jpText] = out
+        }
     }
 }
 

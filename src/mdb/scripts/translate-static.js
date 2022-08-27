@@ -19,8 +19,13 @@ const FILES = {
         misc: "translations/mdb/miscellaneous.json",
         factors: "translations/mdb/factor-desc.json",
         common: "translations/mdb/common.json",
-        shoeSize: "translations/mdb/uma-profile-shoesize.json"
+        shoeSize: "translations/mdb/uma-profile-shoesize.json",
+        lessonEffects: "translations/mdb/lesson-effects.json"
     }
+const UNCOMMON_FILES = [
+    "shoeSize",
+    "lessonEffects"
+]
 const PFILES = {};
 const FAN_AMOUNT = {
     "1000万": "10 million",
@@ -49,6 +54,7 @@ const CM_RESULT = {
 
 function readFiles() {
     for (let file of Object.keys(FILES)) {
+        if (!UPDATE_UNCOMMON && UNCOMMON_FILES.includes(file)) continue
         PFILES[file] = JSON.parse(fs.readFileSync(FILES[file], "utf8"))
     }
     console.log("Files read.");
@@ -153,6 +159,9 @@ function translate() {
         translateSpecific("legvs", jpText, PFILES.races)
     }
 
+    //! uncommons down here
+    if (!UPDATE_UNCOMMON) return
+
     //*shoe-size.json
     for (let [jpText, enText] of Object.entries(PFILES.shoeSize.text)) {
         if (enText) continue;
@@ -172,6 +181,32 @@ function translate() {
             if (rest) out += rest
             PFILES.shoeSize.text[jpText] = out
         }
+    }
+
+    //* lesson-effects
+    for (let [jpText, enText] of Object.entries(PFILES.lessonEffects.text)) {
+        if (enText) continue;
+        enText = []
+        let matches
+        if (jpText.startsWith("＜")) {
+            matches = jpText.matchAll(/＜(?:作戦・)?(.+?)＞のスキルヒントLv (<color=#[a-z0-9]+>\+[\d～]+<\/color>)(?:\\n)?/img)
+            for (let m of matches) {
+                let [,apt, effect] = m
+                if (PFILES.common.text[apt]) {
+                    enText.push(`${PFILES.common.text[apt]} Skill Hint Lv ${effect}`)
+                }
+            }
+        }
+        else {
+            matches = jpText.matchAll(/(.+?) (<color=#[a-z0-9]+>\+[\d～]+<\/color>)(?:\\n)?/img)
+            for (let m of matches) {
+                let [,stat, effect] = m
+                if (PFILES.common.text[stat]) {
+                    enText.push(`${PFILES.common.text[stat]} ${effect}`)
+                }
+            }
+        }
+        PFILES.lessonEffects.text[jpText] = enText.join("\\n"); //write full name, whichever parts were found
     }
 }
 
@@ -389,10 +424,12 @@ function writeFiles() {
     delete PFILES.misc;
     delete PFILES.common;
     for (let [file, content] of Object.entries(PFILES)) {
+        if (!UPDATE_UNCOMMON && UNCOMMON_FILES.includes(file)) continue
         fs.writeFileSync(FILES[file], JSON.stringify(content, null, 4), "utf-8");
     }
 }
 
+const UPDATE_UNCOMMON = process.argv.includes("-unc")
 console.log("Reading...");
 readFiles();
 console.log("Translating...");

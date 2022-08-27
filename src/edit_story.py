@@ -1,17 +1,20 @@
 from argparse import SUPPRESS
 import re
-import common
-from helpers import isEnglish
 import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
-from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
-
-import textprocess
 from types import SimpleNamespace
 
-TEXTBOX_WIDTH = 54
+import common
+from helpers import isEnglish
+import textprocess
 
+if common.IS_WIN:
+    from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
+
+TEXTBOX_WIDTH = 54
+COLOR_WIN = "systemWindow" if common.IS_WIN else "white"
+COLOR_BTN = "SystemButtonFace" if common.IS_WIN else "gray"
 
 def change_chapter(event=None, initialLoad=False):
     global cur_chapter
@@ -105,7 +108,7 @@ def load_block(event=None, dir=1):
         en_name = cur_block_data.get('enName', "")
         if en_name:
             speaker_en_entry.insert(0, en_name)
-            speaker_en_entry.config(bg='systemWindow')
+            speaker_en_entry.config(bg=COLOR_WIN)
         else:
             speaker_en_entry.config(bg='red')
 
@@ -136,7 +139,7 @@ def load_block(event=None, dir=1):
         toggleTextListPopup(allowShow=False, target=cur_choices)
     else:
         btn_choices['state'] = 'disabled'
-        btn_choices.config(bg='SystemButtonFace')
+        btn_choices.config(bg=COLOR_BTN)
         
     # Update colored button
     cur_colored = cur_block_data.get('coloredText')
@@ -146,7 +149,7 @@ def load_block(event=None, dir=1):
         toggleTextListPopup(allowShow=False, target=cur_colored)
     else:
         btn_colored['state'] = 'disabled'
-        btn_colored.config(bg='SystemButtonFace')
+        btn_colored.config(bg=COLOR_BTN)
         
 
 def save_block():
@@ -563,7 +566,8 @@ def main():
     root = tk.Tk()
     root.title("Edit Story")
     root.resizable(False, False)
-    fontsadded = loadFont(r"src/data/RodinWanpakuPro-B-ex.otf")
+    if common.IS_WIN: loadFont(r"src/data/RodinWanpakuPro-B-ex.otf")
+    else: print("Non-Windows system: To load custom game font install 'src/data/RodinWanpakuPro-B-ex.otf' to system fonts.")
     large_font = Font(root, family="RodinWanpakuPro B", size=18, weight="normal")
 
     chapter_label = tk.Label(root, text="Chapter")

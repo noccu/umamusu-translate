@@ -1,12 +1,12 @@
 from typing import Optional, Union
 import json
 from pathlib import Path
-from os import PathLike, environ
+from os import PathLike, environ, name as osname
 
 import regex
 
 DMM_CONFIG = Path(environ['APPDATA']) / "dmmgameplayer5" / "dmmgame.cnf"
-
+IS_WIN = osname == "nt"
 
 def readJson(file: PathLike) -> Union[dict, list]:
     with open(file, "r", encoding="utf8") as f:
@@ -61,6 +61,7 @@ def getUmaInstallDir() -> Optional[Path]:
             if dmm_um_config is not None:
                 return Path(dmm_um_config['detail']['path'])
     except FileNotFoundError:
+        if not IS_WIN: return None
         # Older DMM installs might not have the DMM config file, if it wasn't found try an old registry check approach
         import winreg
         try:

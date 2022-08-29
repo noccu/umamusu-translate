@@ -10,7 +10,7 @@ LOCAL_DUMP = ROOT / "data" / "static_dump.json"
 HASH_FILE_STATIC = PurePath("localify") / "localized_data" / "static.json"
 HASH_FILE_DYNAMIC = PurePath("localify") / "localized_data" / "dynamic.json"
 TL_FILE = PurePath("translations") / "localify" / "ui.json"
-
+STRING_BLACKLIST = ("現在の予約レース")
 
 def updateTlData(dumpData: dict, tlData: dict):
     for _, text in dumpData.items():
@@ -27,10 +27,13 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
         else:
             data = hashData[0]
             key = text
-        if translatedText:
+
+        inBlacklist = False
+        if translatedText and not (inBlacklist := key in STRING_BLACKLIST):
             # special case for effectively removing text
             data[key] = "" if translatedText == "<empty>" else translatedText
         else:
+            if inBlacklist: print(f"{key} causes issues with the game, skipping...")
             # Remove previously translated hashes that no longer are to prevent garbled text
             if key in data:
                 # print(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")

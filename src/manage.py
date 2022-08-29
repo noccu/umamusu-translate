@@ -203,8 +203,11 @@ def main():
     if args.move:
         installDir = helpers.getUmaInstallDir()
         if installDir:
-            shutil.copyfile(HASH_FILE_STATIC, installDir / PurePath(*HASH_FILE_STATIC.parts[1:]))
-            shutil.copyfile(HASH_FILE_DYNAMIC, installDir / PurePath(*HASH_FILE_DYNAMIC.parts[1:]))
+            try:
+                shutil.copyfile(HASH_FILE_STATIC, installDir / PurePath(*HASH_FILE_STATIC.parts[1:]))
+                shutil.copyfile(HASH_FILE_DYNAMIC, installDir / PurePath(*HASH_FILE_DYNAMIC.parts[1:]))
+            except PermissionError:
+                print(f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself.")
         else:
             print("Couldn't find game path, files not moved.")
 

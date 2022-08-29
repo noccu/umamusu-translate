@@ -104,17 +104,17 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "……<username>トレーナーの\r\nおかげです。\n今日は、そのお礼を申し上げたかったんです。",
-            "enText": "…<username>Thanks to my trainer. \nI just wanted to say thank you \nfor all your help today.",
+            "enText": "……it's thanks to Trainer <username>. \nI just wanted to say thank you \nfor all your help today.",
             "nextBlock": 11,
             "choices": [
                 {
                     "jpText": "俺ですか？",
-                    "enText": "Is it me?",
+                    "enText": "Thanks to me?",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "私ですか？",
-                    "enText": "Is it me?",
+                    "enText": "Thanks to me?",
                     "nextBlock": 11
                 }
             ],
@@ -134,7 +134,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "私、<username>トレーナーと\r\n同期でいられたこと、本当に幸福に思います！\nこれからもぜひ、共に頑張りましょう！",
-            "enText": "I'm so happy to be in the same room \nwith trainer <username>! Let's \nkeep working together!",
+            "enText": "I'm so happy to work together with \ntrainer <username>! \nLet's keep working together!",
             "nextBlock": 13,
             "choices": [
                 {
@@ -168,7 +168,7 @@
             "jpName": "呼び込みの男性",
             "enName": "Male Barker",
             "jpText": "――『新春瓦割り大会』！",
-            "enText": "— \"New Year's Tile-Warping Competition\"!",
+            "enText": "— \"New Year's Tile-Splitting Competition\"!",
             "nextBlock": 16,
             "choices": [
                 {
@@ -189,7 +189,7 @@
             "choices": [
                 {
                     "jpText": "やるんですか！？",
-                    "enText": "Are you going to do it!",
+                    "enText": "Are you going to do it!?",
                     "nextBlock": 17
                 }
             ],
@@ -233,5 +233,5 @@
             "blockIdx": 20
         }
     ],
-    "modified": 1661711800
+    "modified": 1661722222
 }

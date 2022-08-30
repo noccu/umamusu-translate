@@ -86,7 +86,7 @@ def main():
         if uma:
             (uma / "version.dll").unlink(missing_ok=True)
             (uma / "uxtheme.dll").unlink(missing_ok=True)
-        Path(common.GAME_ROOT, "master", "master.mdb").unlink(missing_ok=True)
+        Path(common.GAME_MASTER_FILE).unlink(missing_ok=True)
 
 
 if __name__ == '__main__':

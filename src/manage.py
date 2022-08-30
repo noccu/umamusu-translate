@@ -10,7 +10,7 @@ LOCAL_DUMP = ROOT / "data" / "static_dump.json"
 HASH_FILE_STATIC = PurePath("localify") / "localized_data" / "static.json"
 HASH_FILE_DYNAMIC = PurePath("localify") / "localized_data" / "dynamic.json"
 TL_FILE = PurePath("translations") / "localify" / "ui.json"
-STRING_BLACKLIST = ("現在の予約レース")
+STRING_BLACKLIST = ("現在の予約レース",)
 
 def updateTlData(dumpData: dict, tlData: dict):
     for _, text in dumpData.items():

@@ -45,20 +45,20 @@ class PatchManager:
         print(f"Found {nFiles} files.")
 
         for file in files:
-            print(f"Importing {file}... ", end="", flush=True)
             try:
                 if self.patch(file):
-                    print("done.")
+                    print(f"Imported {file}")
                 else:
                     nFiles -= 1
-                    print("not modified.")
+            except (NoAssetError, AlreadyPatchedError):
+                nFiles -= 1  # Expected behaviour; don't print
             except PatchError as e:
                 nFiles -= 1
-                print(f"skipped: {e}")
+                print(f"Skipped {file}: {e}")
             except:
                 nFiles -= 1
                 nErrors += 1
-                print("error.") # newline
+                print(f"Error importing {file}")
                 if self.args.silent:
                     print(f"Error in {file}", file=self.errorLog)
                     print_exc(chain=True, file=self.errorLog)

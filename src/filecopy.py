@@ -74,7 +74,8 @@ def copy(hash, args):
     asset = common.GameBundle.fromName(hash, load=False)
     dst = path.join(args.dst, hash)
     if not asset.exists:
-        print(f"Couldn't find {asset.bundlePath}, skipping...")
+        if args.verbose:
+            print(f"Couldn't find {asset.bundlePath}, skipping...")
         return 0
     elif args.overwrite or not path.exists(dst):
         asset.readPatchState()
@@ -88,7 +89,8 @@ def copy(hash, args):
                 print(f"Unknown error: {repr(e)}, skipping...")
                 return 0
     else:
-        print(f"Skipping existing: {asset.bundleName}")
+        if args.verbose:
+            print(f"Skipping existing: {asset.bundleName}")
         return 0
 
 

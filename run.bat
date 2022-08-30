@@ -33,6 +33,9 @@ REM Or manually import parts, see import.py -h
 ECHO Copying TLG translation files...
 %snek% src/manage.py --move
 ECHO Imports complete!
+ECHO Removing furigana...
+%snek% src/ruby-remover.py
+ECHO All done!
 GOTO quit
 
 :install

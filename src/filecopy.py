@@ -17,14 +17,19 @@ def buildSqlStmt(args):
         else:
             stmt += f" and {expr}"
 
+    sType = args.type
     if args.type == "lyrics":
-        args.type = "live"
+        args.type = sType = "live"
+    elif args.type == "ruby":
+        sType = "story"
     if not args.group:
         args.group = "__"
     if not args.id:
         args.id = "____"
+    if not args.idx:
+        args.idx = "___"
 
-    add(f"m = '{args.type}'")  # always set
+    add(f"m = '{sType}'")  # always set
     if args.name:
         add(f"n like '%{args.name}%'")
     if args.hash:
@@ -40,6 +45,9 @@ def buildSqlStmt(args):
         add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
     elif args.type == "preview":
         add(f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'")
+    elif args.type == "ruby":
+        storyid = f"{args.group}{args.id}{args.idx}"
+        add(f"n like 'story/data/__/____/ast_ruby_{storyid}'")
 
     return None if firstExpr else stmt
 

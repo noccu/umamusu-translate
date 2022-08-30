@@ -16,8 +16,8 @@ from helpers import IS_WIN
 GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
 GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
 GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
-GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master/master.mdb")
-SUPPORTED_TYPES = ["story", "home", "race", "lyrics", "preview", "mdb"]  # Update indexing on next line
+GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master", "master.mdb")
+SUPPORTED_TYPES = ["story", "home", "race", "lyrics", "preview", "ruby", "mdb"]  # Update indexing on next line
 TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
 
@@ -105,6 +105,7 @@ class Args(argparse.ArgumentParser):
             self.add_argument("--changed", nargs="?", default=False, const=True, help="Limit to changed files (requires git)")
             self.add_argument("-src", default=GAME_ASSET_ROOT)
             self.add_argument("-dst", default=Path("dat/").resolve())
+            self.add_argument("--verbose", action="store_true")
         elif types:
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
 
@@ -332,7 +333,7 @@ class GameBundle:
 
         b = self.data.file.save() + self.patchData
         fn = dstName or self.data.file.name
-        fp = (dstFolder or self.bundlePath.parent) / fn[0:2] / fn
+        fp = ((dstFolder / fn[0:2]) if dstFolder else self.bundlePath.parent) / fn
         fp.parent.mkdir(parents=True, exist_ok=True)
         with open(fp, "wb") as f:
             f.write(b)

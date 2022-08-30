@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "IEWMPCGQCHK7JZBWBIUDMWE7LIDNKSQS",
+    "version": 5,
+    "bundle": "JE2HZPGGBM2WMTWGVB2KA5ZJ4ICBTKT4",
     "type": "story",
     "storyId": "501025513",
     "title": "ズット、ズット、待ッテイタ……",
@@ -11,6 +11,7 @@
             "jpText": "（ガタン……ゴトン……）",
             "enText": "(Gatan… Goton…)",
             "nextBlock": 2,
+            "origClipLength": 60,
             "choices": [
                 {
                     "jpText": "（ここは……？）",
@@ -27,6 +28,7 @@
             "jpText": "確か、さっきまでマンハッタンカフェと\r\nトレーニングをしていたはず――",
             "enText": "I believe she was training with\nManhattan Cafe earlier.",
             "nextBlock": 3,
+            "origClipLength": 90,
             "pathId": 3562019235634870582,
             "blockIdx": 2
         },
@@ -36,6 +38,7 @@
             "jpText": "それが、どうしてこんな場所に……？",
             "enText": "How did it end up in this place…?",
             "nextBlock": 4,
+            "origClipLength": 67,
             "pathId": -1645180408742047538,
             "blockIdx": 3
         },
@@ -45,11 +48,22 @@
             "jpText": "ここは――\r\nおぼろの夢、時のゆらぎ……\n思念がねじれ、交差する場所……。",
             "enText": "This is a place where — dumb dreams, the\nflickering of time… where thoughts\ntwist and cross…",
             "nextBlock": 5,
+            "origClipLength": 93,
             "choices": [
                 {
                     "jpText": "……え？",
                     "enText": "… What?",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 580993140749263956
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 1530135885286178298
                 }
             ],
             "pathId": -7510649123123013971,
@@ -61,6 +75,17 @@
             "jpText": "そして今、『何か』が悲しみに泣いている……\r\nこの電車を走らせるほどに強く、切なく……。",
             "enText": "And now, 'something' is crying out in sorrow\n… strong and sad enough to make this\ntrain run…",
             "nextBlock": 6,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 157,
+                    "pathId": 8771554963572311639
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 9041616496707533329
+                }
+            ],
             "pathId": 4284585233088806491,
             "blockIdx": 5
         },
@@ -70,6 +95,17 @@
             "jpText": "驚いて窓の外を見ると、\r\nどこまでも夜空が広がっている。\n確かに、現実世界ではなさそうだ……。",
             "enText": "When I looked out the window in surprise, I\nsaw the night sky stretching out before me.\nIt certainly doesn't look like the real\nworld…",
             "nextBlock": 7,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -5858427116346683838
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6181901447909504558
+                }
+            ],
             "pathId": -6067105450085538412,
             "blockIdx": 6
         },
@@ -79,6 +115,17 @@
             "jpText": "気づけば、電車の速さが増している……。\r\nどこへ向かっているのだろう……？",
             "enText": "I notice that the train is getting faster\nand faster… Where is it going…?",
             "nextBlock": 8,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 138,
+                    "pathId": 3506457299264681372
+                },
+                {
+                    "origLen": 138,
+                    "pathId": 5899459008870493489
+                }
+            ],
             "pathId": -6031690057628989527,
             "blockIdx": 7
         },
@@ -88,6 +135,17 @@
             "jpText": "『次は、気羅堕橋【けらだばし】――\r\n気羅堕橋【けらだばし】――』",
             "enText": "\"Next, the Kera Dabashi Bridge…\nthe Kera Dabashi Bridge…\"",
             "nextBlock": 9,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 1924101719645145208
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -9117085722279715651
+                }
+            ],
             "pathId": 2978758702734585611,
             "blockIdx": 8
         },
@@ -97,6 +155,17 @@
             "jpText": "馴染みのない地名は、きっと願いの表れ……\r\n『何か』が想い焦がれて、やまないもの……。",
             "enText": "The unfamiliar name of the place is surely a\nsign of a wish… Something \"something\"\nhas been longing for…",
             "nextBlock": 10,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -2674158158625019026
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -276800340590276376
+                }
+            ],
             "pathId": 1624106805324062005,
             "blockIdx": 9
         },
@@ -106,6 +175,17 @@
             "jpText": "よくよく、地名に思いを馳せ……\r\n降りるべきか否か、決めるべきかと……。",
             "enText": "I often thought about the name of the place\n… and wondered if I should get off or\nnot, or decide…",
             "nextBlock": 11,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": 7084328054987115658
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -7991247416192077620
+                }
+            ],
             "pathId": -6441914896210242039,
             "blockIdx": 10
         },
@@ -115,6 +195,17 @@
             "jpText": "そうすれば『何か』も、きっと――",
             "enText": "If you do that, something will come of it.",
             "nextBlock": 12,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": -2962042268302619541
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -6286453800563279317
+                }
+            ],
             "pathId": 8962844744125277571,
             "blockIdx": 11
         },
@@ -124,6 +215,17 @@
             "jpText": "（――ブツッ）",
             "enText": "(—buzzing)",
             "nextBlock": 13,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -4339581386256273664
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 4673975586830120859
+                }
+            ],
             "pathId": 2355277164087239309,
             "blockIdx": 12
         },
@@ -133,11 +235,22 @@
             "jpText": "マンハッタンカフェの言葉が真剣みを\r\n帯びた瞬間、声は途絶え、電車が急停車した。\n窓の外に見えるのは坂路、ダート、そして――",
             "enText": "As soon as Manhattan Cafe's words became\nserious, the voice died and the train came\nto a sudden stop. Outside the window, I\ncould see the slope, the dirt road, and the",
             "nextBlock": 14,
+            "origClipLength": 125,
             "choices": [
                 {
                     "jpText": "（芝……？）",
                     "enText": "(Chi…?)",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 171,
+                    "pathId": -1757660942362819856
+                },
+                {
+                    "origLen": 172,
+                    "pathId": -2335040176375793258
                 }
             ],
             "pathId": -5977801603873753369,
@@ -149,6 +262,7 @@
             "jpText": "『よくよく、地名に思いを馳せ……\r\n降りるべきか否か、決めるべき』と\nマンハッタンカフェは言っていた。ならば――",
             "enText": "Manhattan Cafe said, \"You should think about\nthe name of the place… and decide\nwhether or not you should get off. Then—",
             "nextBlock": 15,
+            "origClipLength": 118,
             "choices": [
                 {
                     "jpText": "降りる",
@@ -170,6 +284,7 @@
             "jpText": "気羅堕橋【けらだばし】という地名は、\r\nもしかしたら……。ある推測をもって、\n降りることにした。",
             "enText": "The name of the place, Kera Dabashi,\nmay be… With a certain guess,\nI decided to get off.",
             "nextBlock": 16,
+            "origClipLength": 107,
             "pathId": -5643789032876610591,
             "blockIdx": 15
         },
@@ -179,6 +294,7 @@
             "jpText": "すると――\r\nさっきまでと違い、地面がしっかりしている。",
             "enText": "Then—unlike before, the ground was solid.",
             "nextBlock": 17,
+            "origClipLength": 81,
             "pathId": 4674499477658578101,
             "blockIdx": 16
         },
@@ -188,6 +304,17 @@
             "jpText": "トレーナーさん……\r\nここにいらしたんですか……。",
             "enText": "Trainer… You're here…",
             "nextBlock": 18,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -5409359523902029573
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 1799541900332455676
+                }
+            ],
             "pathId": -568358368790094256,
             "blockIdx": 17
         },
@@ -197,11 +324,22 @@
             "jpText": "……？\r\nその、白いものは一体……。",
             "enText": "…? What is that white stuff…?",
             "nextBlock": 19,
+            "origClipLength": 68,
             "choices": [
                 {
                     "jpText": "……白いもの？",
                     "enText": "… White stuff?",
                     "nextBlock": 19
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -4012432779594205370
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 1706268855443224376
                 }
             ],
             "pathId": -3481520242490686527,
@@ -213,6 +351,17 @@
             "jpText": "慌てて振り返ると、彼女の言う通り\r\n白いもやのようなものが立ちのぼっていた。",
             "enText": "I hurriedly turned around and saw that she\nwas right, there was a white haze rising up.",
             "nextBlock": 20,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 7834696600703073521
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -4011519224451302794
+                }
+            ],
             "pathId": -1446769939942902138,
             "blockIdx": 19
         },
@@ -222,6 +371,17 @@
             "jpText": "なるほど、気羅堕橋【けらだばし】――\r\n逆から読んで『しばだらけ』。",
             "enText": "I see… Kera Dabashi - read backwards,\nit's \"full of stains\".",
             "nextBlock": 21,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 173,
+                    "pathId": 1146860659305766581
+                },
+                {
+                    "origLen": 196,
+                    "pathId": 1088418471788526293
+                }
+            ],
             "pathId": 6031286076540540502,
             "blockIdx": 20
         },
@@ -231,6 +391,17 @@
             "jpText": "夢の中の『何か』は、誰かと一緒に\r\nもう1度、ここへ来たかったようです。",
             "enText": "The \"something\" in the dream seemed\nto want to come here one more time\nwith someone else.",
             "nextBlock": 22,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": 8354442275465770294
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 428207117037055780
+                }
+            ],
             "pathId": 8826795560244890681,
             "blockIdx": 21
         },
@@ -240,6 +411,17 @@
             "jpText": "そして今、その願いが叶えられました……\r\nさようなら――",
             "enText": "And now, that wish has been\ngranted… Goodbye—",
             "nextBlock": 23,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": 8824346060821733413
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -1631537085158081643
+                }
+            ],
             "pathId": 3573930859417072361,
             "blockIdx": 22
         },
@@ -249,6 +431,17 @@
             "jpText": "白いもやが、きらきらと空に消えていく。\r\n『何か』は想いを遂げ、姿を消したようだ。",
             "enText": "A white blur glittered and disappeared into\nthe sky. The \"something\" seems to have\naccomplished its thoughts and disappeared.",
             "nextBlock": 24,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -1006053058528705823
+                },
+                {
+                    "origLen": 109,
+                    "pathId": 5945169157763656277
+                }
+            ],
             "pathId": -1755227693718887012,
             "blockIdx": 23
         },
@@ -258,6 +451,7 @@
             "jpText": "今日は……改めて、トレーナーさんの\r\n優しさに触れたような気がします……。",
             "enText": "Today… I feel like I was\ntouched by the kindness of the\ntrainer once again…",
             "nextBlock": 25,
+            "origClipLength": 93,
             "choices": [
                 {
                     "jpText": "そうか？",
@@ -270,6 +464,24 @@
                     "nextBlock": 25
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 149,
+                    "pathId": -6649231877797959311
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 3547981837883667003
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -2751431446723181037
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 2291178470940997694
+                }
+            ],
             "pathId": 569339617234501329,
             "blockIdx": 24
         },
@@ -279,6 +491,17 @@
             "jpText": "ええ……アナタは、目に見えないものの\r\n存在を受け入れてくれる……。\nその声に、耳を傾けてくれる……。",
             "enText": "Yes… you can accept the existence of\nthe invisible… You can listen to the\nvoice of the…",
             "nextBlock": 26,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -1978013216515119531
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -8719539471362092176
+                }
+            ],
             "pathId": -5819114062969517294,
             "blockIdx": 25
         },
@@ -288,6 +511,17 @@
             "jpText": "救われているのは、私だけじゃない……。\r\nそれが、はっきりとわかりました……。",
             "enText": "I'm not the only one who is saved…\nThat's what I found out for sure…",
             "nextBlock": 27,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -6402170757716813256
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 294324084970753345
+                }
+            ],
             "pathId": -2214104454915685983,
             "blockIdx": 26
         },
@@ -297,6 +531,17 @@
             "jpText": "不思議なものに寄り添い、\r\n代弁する彼女の行動にこそ、\n優しさを感じた気がした。",
             "enText": "I felt a sense of tenderness in her\nactions as she stood by and spoke\non behalf of the mysterious.",
             "nextBlock": -1,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": -2952707809640450510
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -2297418634139568256
+                }
+            ],
             "pathId": -6505760233686859018,
             "blockIdx": 27
         },
@@ -306,6 +551,7 @@
             "jpText": "まだ降りるべきではない……そう思い、\r\n乗っていることにした。\n再び、電車が動き出す――",
             "enText": "I should not get off the train yet.\n… So I decided to stay on. The\ntrain starts moving again.",
             "nextBlock": 29,
+            "origClipLength": 102,
             "pathId": -8289914595075839504,
             "blockIdx": 28
         },
@@ -315,6 +561,7 @@
             "jpText": "（ガタン……ゴトン……）",
             "enText": "(Gatan… Goton…)",
             "nextBlock": 30,
+            "origClipLength": 60,
             "pathId": 3910744550905567434,
             "blockIdx": 29
         },
@@ -324,6 +571,7 @@
             "jpText": "（――ガタンゴトン、ガタンゴトン）\r\n（――ガタンゴトン、ガタンゴトン）",
             "enText": "(—clatter clatter, clatter clatter)\n(—clatter clatter, clatter clatter)",
             "nextBlock": 31,
+            "origClipLength": 91,
             "pathId": 5711971584626139948,
             "blockIdx": 30
         },
@@ -333,6 +581,7 @@
             "jpText": "気のせいだろうか……\r\n電車がさらに加速している気がする。",
             "enText": "I wonder if it's my imagination… The\ntrain seems to be accelerating even faster.",
             "nextBlock": 32,
+            "origClipLength": 82,
             "pathId": -1064180842877300452,
             "blockIdx": 31
         },
@@ -342,6 +591,7 @@
             "jpText": "（――ガタンゴトン、ガタンゴトン！！）\r\n（――ガタンゴトン、ガタンゴトン！！）\n（――ガタンゴトン、ガタンゴトン！！）",
             "enText": "(Slam, slam, slam! ) (Slam, slam, slam,\nslam! ) (Slam, slam, slam! )",
             "nextBlock": 33,
+            "origClipLength": 123,
             "choices": [
                 {
                     "jpText": "（気のせいじゃない……！！）",
@@ -358,6 +608,7 @@
             "jpText": "まずい、と思った瞬間、\r\nつき飛ばされるような感覚があった。\nそして――",
             "enText": "Just when I thought it was bad, I felt like\nI was being pushed away. And then—",
             "nextBlock": 34,
+            "origClipLength": 91,
             "pathId": 8148616458241527270,
             "blockIdx": 33
         },
@@ -367,6 +618,7 @@
             "jpText": "（タッタッタッタッ――！！）",
             "enText": "(clatter clatter—!)",
             "nextBlock": 35,
+            "origClipLength": 63,
             "pathId": 1841012381117114332,
             "blockIdx": 34
         },
@@ -376,6 +628,7 @@
             "jpText": "気づけば中央広場に転がっていて、\r\n偶然、生徒がこちらに走ってきていた……！\nこのままでは――",
             "enText": "Next thing I know, I'm lying in the central\nplaza, and a student happens to be running\ntowards me…! At this rate—",
             "nextBlock": 36,
+            "origClipLength": 106,
             "pathId": 4983958958810851327,
             "blockIdx": 35
         },
@@ -385,6 +638,7 @@
             "jpText": "トレーナーさん――！",
             "enText": "Trainer—!",
             "nextBlock": 37,
+            "origClipLength": 58,
             "pathId": 6454896375558593135,
             "blockIdx": 36
         },
@@ -394,6 +648,7 @@
             "jpText": "――間一髪。\r\nマンハッタンカフェが駆け寄り、\n助けてくれた……。",
             "enText": "—A hair's breadth away. Manhattan Cafe ran\nover and saved me…",
             "nextBlock": 38,
+            "origClipLength": 88,
             "pathId": -4669543033522613950,
             "blockIdx": 37
         },
@@ -403,6 +658,17 @@
             "jpText": "なるほど、夢の中でそんなことが……\r\n気羅堕橋【けらだばし】――\n逆から読んで『しばだらけ』。",
             "enText": "I see, that's what happened in my\ndream… Kera Dabashi - read\nbackwards, \"often full\".",
             "nextBlock": 39,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": 8968689065014996683
+                },
+                {
+                    "origLen": 167,
+                    "pathId": -4593740904395867956
+                }
+            ],
             "pathId": -7408066641490514965,
             "blockIdx": 38
         },
@@ -412,6 +678,17 @@
             "jpText": "夢の中の『何か』は、誰かと一緒に\r\nもう1度、あの場所へ行きたいようです。\n……行ってみましょう。",
             "enText": "The \"something\" in my dream seems to want to\ngo to that place one more time with someone\nelse. Let's go to…",
             "nextBlock": 40,
+            "origClipLength": 108,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -6503726593958189066
+                },
+                {
+                    "origLen": 119,
+                    "pathId": 1868277701458087257
+                }
+            ],
             "pathId": -844034333034999184,
             "blockIdx": 39
         },
@@ -421,6 +698,17 @@
             "jpText": "……うん、やっぱり、\r\nここへ来たかったんだね……。",
             "enText": "… Yeah, I knew you wanted\nto come here…",
             "nextBlock": 41,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 172,
+                    "pathId": -8297121506051299564
+                },
+                {
+                    "origLen": 138,
+                    "pathId": -6221340919385319591
+                }
+            ],
             "pathId": 3453272238013670008,
             "blockIdx": 40
         },
@@ -430,6 +718,17 @@
             "jpText": "刹那の間でも、アナタに安らぎが\r\nありますように……\nさようなら――",
             "enText": "May you find peace, if only for\na moment… Good-bye—",
             "nextBlock": 42,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8473031983980113200
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -530292344877720576
+                }
+            ],
             "pathId": -6181833549340002439,
             "blockIdx": 41
         },
@@ -439,6 +738,7 @@
             "jpText": "白いもやのようなものがたちのぼり、\r\nきらきらと空に消えていく……。\n『何か』は想いを遂げ、姿を消したようだ。",
             "enText": "A white haze rose up and disappeared into\nthe sky… The \"something\" seems to\nhave accomplished its thoughts and\ndisappeared.",
             "nextBlock": 43,
+            "origClipLength": 116,
             "choices": [
                 {
                     "jpText": "よく願いがわかったな",
@@ -451,6 +751,16 @@
                     "nextBlock": 43
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": 5301298437766995646
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -4342680841791109107
+                }
+            ],
             "pathId": 5151971020889496565,
             "blockIdx": 42
         },
@@ -460,6 +770,17 @@
             "jpText": "彼らは弱いし、すぐに消えてしまうから……。",
             "enText": "They are weak and will soon be gone…",
             "nextBlock": 44,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -560260831485926388
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -8953599271952169631
+                }
+            ],
             "pathId": 6205859114313833236,
             "blockIdx": 43
         },
@@ -469,6 +790,17 @@
             "jpText": "儚く散ってしまうその前に――できる限り、\r\n寄り添いたいと思っています……。",
             "enText": "I want to be there for you as long as I can\nbefore you fall away…",
             "nextBlock": 45,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": -845858668912585238
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -6992221820391122118
+                }
+            ],
             "pathId": -6221053138214427337,
             "blockIdx": 44
         },
@@ -478,8 +810,20 @@
             "jpText": "その言葉からは、不思議なものに\r\n寄り添おうとする彼女の優しさが\n伝わってくるようだった。",
             "enText": "Her words seemed to convey the tenderness\nof her desire to be close to something\nmysterious.",
             "nextBlock": -1,
+            "origClipLength": 103,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 6373973747562311558
+                },
+                {
+                    "origLen": 114,
+                    "pathId": 642714931665966131
+                }
+            ],
             "pathId": 3760825756189458858,
             "blockIdx": 45
         }
-    ]
+    ],
+    "modified": 1661834628
 }

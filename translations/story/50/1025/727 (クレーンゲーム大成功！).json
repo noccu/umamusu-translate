@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "VVUDA26I5UUUASZL3LVOFTQOCPCL35UW",
+    "version": 5,
+    "bundle": "NWCT56SYYC6QYL2QG2WTLU6FS6EOJO55",
     "type": "story",
     "storyId": "501025727",
     "title": "クレーンゲーム大成功！",
@@ -11,11 +11,26 @@
             "jpText": "こんなにたくさん……ありがとうございます。\r\n……あの部屋に……連れて行きます。",
             "enText": "Thank you for so much… I'll…\ntake you to that room.",
             "nextBlock": 2,
+            "origClipLength": 97,
             "choices": [
                 {
                     "jpText": "あの部屋？",
                     "enText": "That room?",
                     "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 6356697368468322516
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 5861097388989636777
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -5711492722235492238
                 }
             ],
             "pathId": 1861626327984741062,
@@ -27,6 +42,21 @@
             "jpText": "タキオンさんとの共有スペースです……。\r\n……実験されないよう、気をつけないと……。",
             "enText": "This is the space I share with Tachyon.\n… We have to be careful not to get\nexperimented on…",
             "nextBlock": 3,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6157109350195184636
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 3086136947331800294
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -7312007501164306791
+                }
+            ],
             "pathId": -5611804474687297706,
             "blockIdx": 2
         },
@@ -36,6 +66,21 @@
             "jpText": "あの……時々、この子たちに\r\n会いにきてください……。",
             "enText": "Um… please come and see these kids\nfrom time to time…",
             "nextBlock": 4,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 1262265883235678505
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -878560155922560712
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -1310425533178276818
+                }
+            ],
             "pathId": 5191208941915641022,
             "blockIdx": 3
         },
@@ -45,6 +90,21 @@
             "jpText": "きっと……トレーナーさんのこと、\r\n“みんな”歓迎してくれます……ふふっ。",
             "enText": "I'm sure… the trainer will welcome you\nwith open arms… Hmmm.",
             "nextBlock": 5,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -6940491939381861532
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 77461145908864349
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -247204221272138675
+                }
+            ],
             "pathId": -805050752873093429,
             "blockIdx": 4
         },
@@ -54,8 +114,24 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 9030025417282798408
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 3705777801411060275
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -4819754174048482232
+                }
+            ],
             "pathId": -3328740085076883177,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1661834630
 }

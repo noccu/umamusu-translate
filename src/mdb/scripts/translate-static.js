@@ -8,6 +8,7 @@ import fs from "fs"
 const FILES = {
         trainerReq: "translations/mdb/trainer-title-requirements.json",
         missions: "translations/mdb/missions.json",
+        storyMissions: "translations/mdb/story-event-missions.json",
         umaNames: "translations/mdb/uma-name.json",
         trTitles: "translations/mdb/trainer-title.json",
         races: "translations/mdb/race-name.json",
@@ -75,6 +76,12 @@ function translate() {
         translateSpecific("friend", jpText, PFILES.missions)
         translateSpecific("genLimMiss", jpText, PFILES.missions)
         translateSpecific("skillMis", jpText, PFILES.missions)
+    }
+    // story-event-missions.json
+    for (let [jpText, enText] of Object.entries(PFILES.storyMissions.text)) {
+        if (enText) continue; //skip translated entries
+        translateSpecific("g1-3", jpText, PFILES.storyMissions)
+        translateSpecific("genLimMiss", jpText, PFILES.storyMissions)
     }
     for (let [jpText, enText] of Object.entries(PFILES.trainerReq.text)) {
         if (enText) {
@@ -341,7 +348,7 @@ function translateSpecific (type, jpText, file) {
                 out += `Win ${r} in training`;
             }
         }
-        else if (m = jpText.match(/育成で(.+)の?(\d)着以内に入ろう/)) {
+        else if (m = jpText.match(/育成で(.+?)の?(\d)着以内に入ろう/)) {
             let [, r, p] = m;
             r = PFILES.races.text[r]
             if (r) {

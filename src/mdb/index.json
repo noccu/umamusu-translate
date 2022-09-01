@@ -72,7 +72,11 @@
             "lesson-names": 209,
             "lesson-talent-bonus": 207,
             "lesson-live-bonus": 208,
-            "seiyuu": 7
+            "seiyuu": 7,
+            "card-stories": {
+                "spec": 88,
+                "sql": "\"index\" NOT LIKE '1%'"
+            }
         },
         "overrides": {
             "skill_data": ["skill-desc", "alt/skill-desc"]

@@ -59,6 +59,8 @@ def main():
                         if isinstance(specval, list):
                             specval = ",".join([str(x) for x in specval])
                             specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"
+                        elif isinstance(specval, dict):
+                            specStmt = f"{stmt} WHERE {entry['specifier']} = {specval['spec']} AND {specval['sql']};"
                         else:
                             specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
                         extract(db, specStmt, args.dst / (entry['table'] if entry.get("subdir") else "") / filename)

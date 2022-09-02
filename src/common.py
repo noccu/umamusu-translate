@@ -59,7 +59,7 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=Fals
 # TODO: This is unpacking a string we packed ourselves, refactoring should eliminate this fn entirely.
 def parseStoryId(text_type, s) -> tuple:
     if text_type in ("lyrics", "preview"):
-        return None, None, s
+        return None, s, s
     else:
         return s[:2], s[2:6], s[6:]
 

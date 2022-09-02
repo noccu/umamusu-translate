@@ -8,14 +8,17 @@ from Levenshtein import ratio as similarity
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle
 
+def queryfyStoryid(group, id, idx):
+    group = group or "__"
+    id = id or "____"
+    idx = idx or "___"
+    return group, id, idx
 
 def queryDB(db=None, storyId=None):
     if storyId:
-        group, id, idx = common.parseStoryId(args.type, storyId)
+        group, id, idx = queryfyStoryid(*common.parseStoryId(args.type, storyId))
     else:
-        group = args.group or "__"
-        id = args.id or "____"
-        idx = args.idx or "___"
+        group, id, idx = queryfyStoryid(args.group, args.id, args.idx)
 
     if args.type == "story":
         pattern = f"{args.type}/data/{group}/{id}/{args.type}timeline%{idx}"

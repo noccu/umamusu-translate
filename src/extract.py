@@ -289,7 +289,11 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
             return
 
         storyId = tlFile.getStoryId()
-        bundle, _ = queryDB(db, storyId)[0]
+        try:
+            bundle, _ = queryDB(db, storyId)[0]
+        except IndexError:
+            print(f"Error looking up {storyId}. Corrupt data or removed asset?")
+            return
         if bundle == tlFile.bundle:
             if args.verbose:
                 print(f"Bundle {bundle} not changed, skipping.")

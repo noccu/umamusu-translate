@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "FA5F6N5VKL6N6JEACJKRUR66OOMY3LDD",
+    "version": 5,
+    "bundle": "L2JGHCTV47PQNBZHI4TJREVJ75Y2Z6KC",
     "type": "story",
     "storyId": "501061727",
     "title": "クレーンゲーム大成功！",
@@ -11,7 +11,18 @@
             "jpText": "やるじゃない、トレーナー。\r\nクレーンゲームでも一流の腕を示したわね。",
             "enText": "Nice work, trainer. You've shown that you're \na top-notch crane player.",
             "nextBlock": 2,
-            "pathId": 7651672227974277872,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -2474944834347038604
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 3028961878176339810
+                }
+            ],
+            "pathId": -3764668587716375815,
             "blockIdx": 1
         },
         {
@@ -20,6 +31,7 @@
             "jpText": "ふふっ。\r\n私の親衛隊がこんなに増えたわ。",
             "enText": "Hmm. My SS has grown so much.",
             "nextBlock": 3,
+            "origClipLength": 72,
             "choices": [
                 {
                     "jpText": "喜んでくれてよかった",
@@ -27,7 +39,21 @@
                     "nextBlock": 3
                 }
             ],
-            "pathId": 5637224104633229856,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": -2665305745191572685
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 3830775766467526275
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -6883593840068534721
+                }
+            ],
+            "pathId": 4201818285855798548,
             "blockIdx": 2
         },
         {
@@ -36,7 +62,22 @@
             "jpText": "ええ。このくらい当然とはいえ、あなたには\r\n私から栄誉を授けられる権利をあげるわ！",
             "enText": "Yes. Even though you deserve this much, you \ndeserve the right to be honored by me!",
             "nextBlock": 4,
-            "pathId": -6381236876604065183,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -8973651818552046721
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -2445414067934586301
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 5693699840225003109
+                }
+            ],
+            "pathId": 4198428015204270896,
             "blockIdx": 3
         },
         {
@@ -45,7 +86,22 @@
             "jpText": "さあ、キングとトレーナーの凱旋よ！\r\nおーっほっほっほっほ！！",
             "enText": "Now for the triumphant return of our \nking and trainer! Oh-ho-ho-ho!",
             "nextBlock": 5,
-            "pathId": 4657885603530518776,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8925037399415216087
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -2233311991367430371
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 1662727826106345318
+                }
+            ],
+            "pathId": 8038579305763599077,
             "blockIdx": 4
         },
         {
@@ -54,8 +110,24 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
-            "pathId": -5670311809267564223,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -1370295752437506379
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -7315052222696485360
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -6851517078388033491
+                }
+            ],
+            "pathId": -3854980518455825537,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1662157742
 }

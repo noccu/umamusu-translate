@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "6L2TG6SNK6U3WK5PXUSAOFEWNGCAIR4B",
+    "version": 5,
+    "bundle": "SOKMHPMPURHI72R445QVZ7F6VDKFPE2Q",
     "type": "story",
     "storyId": "501040731",
     "title": "クレーンゲーム成功！",
@@ -11,6 +11,21 @@
             "jpText": "ふふっ、カワイイ。手触りもいいし、\r\nかなりいい生地、使ってんだね。",
             "enText": "So cute. It has a nice texture. You \nmust use a very good fabric.",
             "nextBlock": 2,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 151,
+                    "pathId": -1672280242108322182
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -7678729192022061501
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -584104979035652900
+                }
+            ],
             "pathId": 5601582678388220528,
             "blockIdx": 1
         },
@@ -20,6 +35,7 @@
             "jpText": "服の縫製もしっかりしてて、\r\nモチーフへのリスペクトもあるじゃん。",
             "enText": "The clothes are well sewn, and you have \nrespect for the motifs.",
             "nextBlock": 3,
+            "origClipLength": 88,
             "choices": [
                 {
                     "jpText": "出来のいいぬいぐるみだよな",
@@ -32,6 +48,20 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 6358377546673014521
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -1702916422788520722
+                },
+                {
+                    "origLen": 129,
+                    "pathId": -2914755607256126548
+                }
+            ],
             "pathId": -6632896506460610453,
             "blockIdx": 2
         },
@@ -41,6 +71,21 @@
             "jpText": "ホント。実際に触ったら、尚更わかるよね。\r\nこれを作ってる人たちの想いっていうか、\n期待っていうかさ……。",
             "enText": "Really. You can understand it even more when \nyou actually touch it. It's not so much the \nthoughts of the people who are making this, \nbut their expectations…",
             "nextBlock": 4,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 7286653152019166421
+                },
+                {
+                    "origLen": 160,
+                    "pathId": -2612601945473967962
+                },
+                {
+                    "origLen": 161,
+                    "pathId": -4366498352881893887
+                }
+            ],
             "pathId": 8026012842879252908,
             "blockIdx": 3
         },
@@ -50,6 +95,21 @@
             "jpText": "……っし、アタシももっと頑張るか。",
             "enText": "… I'll try harder, too.",
             "nextBlock": 5,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -1002019630483815081
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 6494505600721188316
+                },
+                {
+                    "origLen": 109,
+                    "pathId": 5615065880996835030
+                }
+            ],
             "pathId": -1613581469039832415,
             "blockIdx": 4
         },
@@ -59,8 +119,24 @@
             "jpText": "――それなりの結果だった！",
             "enText": "―a reasonable result!",
             "nextBlock": -1,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 135,
+                    "pathId": 1661155284115124290
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -619343211317047158
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 2071711382638373494
+                }
+            ],
             "pathId": -2143656206412683713,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1662157591
 }

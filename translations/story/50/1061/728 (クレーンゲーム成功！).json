@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "SCW5IGPNLWQNA2QKFNSNOYPHNIADOY7U",
+    "version": 5,
+    "bundle": "CPQPD3VKFHO2GTCC4YHQNDNU55UTMUIC",
     "type": "story",
     "storyId": "501061728",
     "title": "クレーンゲーム成功！",
@@ -11,7 +11,18 @@
             "jpText": "ふふん、まあまあね。\r\nこれから日々研鑽して高みを目指すのよ！",
             "enText": "Hmmm… okay. We're going to work \nhard and get better every day!",
             "nextBlock": 2,
-            "pathId": -567776556192268905,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 1034571566509854128
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 72999115470985564
+                }
+            ],
+            "pathId": -6440128956538836731,
             "blockIdx": 1
         },
         {
@@ -20,7 +31,18 @@
             "jpText": "トレーナー室に置いておく権利をあげる。\r\nキングを称えるため、飾っておきなさい。",
             "enText": "I give you the right to keep it \nin the trainer's room. Keep it on \ndisplay to honor King.",
             "nextBlock": 3,
-            "pathId": -9171188979086213947,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 6758910192125882305
+                },
+                {
+                    "origLen": 122,
+                    "pathId": 5418288666262379104
+                }
+            ],
+            "pathId": -658972185915712770,
             "blockIdx": 2
         },
         {
@@ -29,6 +51,7 @@
             "jpText": "この私の親衛隊であるぬいぐるみよ。\r\n大切になさい！　おーっほっほっほ！",
             "enText": "This is my SS plushie. Take good \ncare of it! Ohohoho!",
             "nextBlock": 4,
+            "origClipLength": 91,
             "choices": [
                 {
                     "jpText": "取ったのは俺だけど……",
@@ -41,7 +64,21 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": 4040260137873000802,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 3373097165860003033
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -2718032416404043234
+                },
+                {
+                    "origLen": 122,
+                    "pathId": 28622431971646796
+                }
+            ],
+            "pathId": 4725882441099020439,
             "blockIdx": 3
         },
         {
@@ -50,7 +87,22 @@
             "jpText": "あら、一流のトレーナーは、\r\n細かいことを気にしてはいけないのよ。",
             "enText": "Oh, a good trainer shouldn't \nworry about the details.",
             "nextBlock": 5,
-            "pathId": 7682752486372529675,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -5724941799191665400
+                },
+                {
+                    "origLen": 120,
+                    "pathId": 7202279793239164492
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -4098443591816841937
+                }
+            ],
+            "pathId": -1692537431541069127,
             "blockIdx": 4
         },
         {
@@ -59,8 +111,24 @@
             "jpText": "――それなりの結果だった！",
             "enText": "—that was a fair result!",
             "nextBlock": -1,
-            "pathId": 271539186802299130,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -6907080117579753402
+                },
+                {
+                    "origLen": 120,
+                    "pathId": 3115901853965818518
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -5846856456037961191
+                }
+            ],
+            "pathId": -4323834667970941726,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1662157742
 }

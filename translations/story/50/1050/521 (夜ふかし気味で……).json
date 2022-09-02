@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "Q2SXN4AGVGZKIFT3ZA37TW7K6MCCVUZ2",
+    "version": 5,
+    "bundle": "GVORTFVHMFVUIGVCFLQOYMSGLVJH523Y",
     "type": "story",
     "storyId": "501050521",
     "title": "夜ふかし気味で……",
@@ -11,7 +11,18 @@
             "jpText": "――だからさー、言ってるじゃん？\r\nそんなちっちゃいナリで勝てるわけないって。",
             "enText": "-That's why I'm telling you, right? You can't \nwin with such a tiny nari.",
             "nextBlock": 2,
-            "pathId": -5651863495507355020,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 5064753792894662572
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 6720847810880856817
+                }
+            ],
+            "pathId": 8936218686481308763,
             "blockIdx": 1
         },
         {
@@ -20,7 +31,18 @@
             "jpText": "うるさい……！\r\nうるさい、うるさい、アタシは――！",
             "enText": "Shut up…! Shut up, \nshut up, Atashi is―!",
             "nextBlock": 3,
-            "pathId": -3302644187236109019,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": -4647234472580239110
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6377308495808217523
+                }
+            ],
+            "pathId": -2016157707814849104,
             "blockIdx": 2
         },
         {
@@ -29,7 +51,26 @@
             "jpText": "……またこの夢。",
             "enText": "… this dream again.",
             "nextBlock": 4,
-            "pathId": 838648789797979681,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": -7699363079656454575
+                },
+                {
+                    "origLen": 25,
+                    "pathId": 1033038198791800873
+                },
+                {
+                    "origLen": 175,
+                    "pathId": 7562997296949708291
+                },
+                {
+                    "origLen": 140,
+                    "pathId": 1670355105905762521
+                }
+            ],
+            "pathId": 9193527539611821711,
             "blockIdx": 3
         },
         {
@@ -38,7 +79,18 @@
             "jpText": "寝直すのも……ヤダな……。",
             "enText": "It's… yadda… to go back to sleep.",
             "nextBlock": 5,
-            "pathId": 3989560188530142036,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 124,
+                    "pathId": 1061038201634952783
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 5565594022506520121
+                }
+            ],
+            "pathId": -992355033828280305,
             "blockIdx": 4
         },
         {
@@ -47,8 +99,20 @@
             "jpText": "少し夜ふかし気味になってしまった\r\nナリタタイシンだった……。",
             "enText": "I was a little bit of a night owl. \nIt was Narita Taishin…",
             "nextBlock": -1,
-            "pathId": -7663923822324881820,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": -5301460532273545541
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -1648689110826018420
+                }
+            ],
+            "pathId": -6515050206592033377,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1662157670
 }

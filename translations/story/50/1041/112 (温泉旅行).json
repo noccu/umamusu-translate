@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "VD45RQBDXDSDR6TLS44CWQECOGO7GQCA",
+    "version": 5,
+    "bundle": "W6CQ3YEO2SKQKZVKQG6EV5USWPCIPEPY",
     "type": "story",
     "storyId": "501041112",
     "title": "温泉旅行",
@@ -11,6 +11,7 @@
             "jpText": "サクラバクシンオーとたくさんのレースを\r\n勝ち抜いてきた、ある日のこと。",
             "enText": "One day, after winning many\nraces with Sakura Bakushin O.",
             "nextBlock": 2,
+            "origClipLength": 91,
             "pathId": -8173125644924325479,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "トレーナー室で資料整理をしていると、\r\n福引で当てた『温泉旅行券』が出てきた。\nそういえば――",
             "enText": "When I was in the trainer's office, I found\na \"hot spring trip ticket\" that I won in a\nlucky draw. Speaking of which…",
             "nextBlock": 3,
+            "origClipLength": 106,
             "pathId": 8014150920815891983,
             "blockIdx": 2
         },
@@ -29,6 +31,17 @@
             "jpText": "学級委員長を必要としないほど模範的な\r\n世の中になったら、温泉に行きましょう。",
             "enText": "When the world is so exemplary\nthat it doesn't need a class president,\nlet's go to a spa.",
             "nextBlock": 4,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 4112461459671834059
+                },
+                {
+                    "origLen": 136,
+                    "pathId": 1820028178003782235
+                }
+            ],
             "pathId": 4243626108140127433,
             "blockIdx": 3
         },
@@ -38,6 +51,17 @@
             "jpText": "……あの言葉はよくわからないが、\r\n使用期限が近いのでサクラバクシンオーに\nひとまず渡しに行くことにした。",
             "enText": "… I don't understand that language, but\nsince the expiration date is near, I decided\nto go give it to Sakura Bakushin O for now.",
             "nextBlock": 5,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 5621910039791002310
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 4584860302683641546
+                }
+            ],
             "pathId": -13153473239971676,
             "blockIdx": 4
         },
@@ -47,6 +71,7 @@
             "jpText": "のだが――",
             "enText": "But…",
             "nextBlock": 6,
+            "origClipLength": 51,
             "pathId": 8977974817037916339,
             "blockIdx": 5
         },
@@ -56,6 +81,17 @@
             "jpText": "――なるほど……\r\nついに時が来たのですねッッ！！",
             "enText": "—I see… The time has finally come!",
             "nextBlock": 7,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": -8300135113571238373
+                },
+                {
+                    "origLen": 135,
+                    "pathId": -2471874530556459591
+                }
+            ],
             "pathId": -6029123695737717941,
             "blockIdx": 6
         },
@@ -65,6 +101,17 @@
             "jpText": "確かに最近、模範的な世の中を感じます！\r\nなんというか、とても静かなんですよね～。",
             "enText": "It sure feels like an exemplary world these\ndays! What can I say, it's very quiet!",
             "nextBlock": 8,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -4587883311797164168
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -369315478647793207
+                }
+            ],
             "pathId": -5902664833430906854,
             "blockIdx": 7
         },
@@ -74,11 +121,22 @@
             "jpText": "例えば授業中も、始まりから終わりまで\r\n気づけば無音で過ぎていったりするんです！！",
             "enText": "For example, in class, from the beginning to\nthe end, I find myself going by in silence!",
             "nextBlock": 9,
+            "origClipLength": 98,
             "choices": [
                 {
                     "jpText": "（単に居眠りしているからでは？）",
                     "enText": "（Maybe it's just because I'm napping.)",
                     "nextBlock": 9
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": -5626078773215899599
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -1646373677287868547
                 }
             ],
             "pathId": -7927204858336081093,
@@ -90,6 +148,17 @@
             "jpText": "それでは！！\r\n早速、温泉に向かってバクシンです！！",
             "enText": "Let's go! I'm going to head to\nthe hot springs and bakshin!",
             "nextBlock": 10,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -7614627104843047271
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 6054562469795602474
+                }
+            ],
             "pathId": -3684669286649924360,
             "blockIdx": 9
         },
@@ -99,11 +168,30 @@
             "jpText": "おお～～～～！\r\n立派な温泉旅館じゃないですか！！",
             "enText": "Oh, ～～～～! Isn't that a splendid\nhot spring inn!",
             "nextBlock": 11,
+            "origClipLength": 77,
             "choices": [
                 {
                     "jpText": "！？",
                     "enText": "What?",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": -8036603058187945122
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 621276098125395078
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 5806434822570630348
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -5485913110777773821
                 }
             ],
             "pathId": -2532447858375543215,
@@ -115,6 +203,17 @@
             "jpText": "バクシン的な勢いで、気がつけば\r\n着の身着のまま旅館の前に立っていた……！",
             "enText": "With buxom vigor, I found myself standing\nin front of an inn with nothing but\nmy clothes on…!",
             "nextBlock": 12,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": 7776226282176464392
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -3962152237677681549
+                }
+            ],
             "pathId": -2746718463022432108,
             "blockIdx": 11
         },
@@ -124,6 +223,17 @@
             "jpText": "これぞザ・旅館！　非常に模範的！\r\nなんとも委員長風情が漂ってますね～。",
             "enText": "This is The Ryokan! Very exemplary! It's got\na bit of a chairman's look to it!",
             "nextBlock": 13,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": -393388707123757410
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6928731952035009250
+                }
+            ],
             "pathId": -6757612091436834094,
             "blockIdx": 12
         },
@@ -133,6 +243,17 @@
             "jpText": "それではトレーナーさん、\r\nさっそく温泉へ入りましょう！",
             "enText": "Okay, trainers, let's get\ninto the hot springs!",
             "nextBlock": 14,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": -4865321206454694056
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -6686659642370861492
+                }
+            ],
             "pathId": -6409764250945939511,
             "blockIdx": 13
         },
@@ -142,6 +263,17 @@
             "jpText": "ちゃんとかけ湯で体を温めて、\r\nキレイにしてから入るんですよ！",
             "enText": "You have to take a hot bath to warm up and\nclean yourself before you go in!",
             "nextBlock": 15,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": 4803603724320081519
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -877431185071665982
+                }
+            ],
             "pathId": -6504365545075277311,
             "blockIdx": 14
         },
@@ -151,6 +283,17 @@
             "jpText": "ルールはちゃんと守る！\r\nそれが楽しむコツですから！",
             "enText": "Follow the rules! That's\nthe key to having fun!",
             "nextBlock": 16,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": 9024075239672266809
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 7608311604422768193
+                }
+            ],
             "pathId": 410911418644506781,
             "blockIdx": 15
         },
@@ -160,6 +303,17 @@
             "jpText": "入浴中……。",
             "enText": "Get in the bath at…",
             "nextBlock": 17,
+            "origClipLength": 233,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6492626617363285850
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6569608627964260677
+                }
+            ],
             "pathId": -5738344380712389602,
             "blockIdx": 16
         },
@@ -169,6 +323,17 @@
             "jpText": "――はわ～～……。\r\nとってもイイお湯でした～……。",
             "enText": "—Hawa~~… It was very\nnice hot water~…",
             "nextBlock": 18,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -3131129720111078670
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -508961238094128661
+                }
+            ],
             "pathId": 7936033033796699823,
             "blockIdx": 17
         },
@@ -178,6 +343,7 @@
             "jpText": "なんだかツヤツヤな気分です！　どうです、\r\n以前より磨きがかかっているでしょう！？",
             "enText": "I feel like I'm glowing! How does it look?\nIsn't it more polished than before?",
             "nextBlock": 19,
+            "origClipLength": 98,
             "choices": [
                 {
                     "jpText": "そうだな",
@@ -190,6 +356,16 @@
                     "nextBlock": 19
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -2802360616477201736
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -4569704074897130757
+                }
+            ],
             "pathId": 4840788893481121360,
             "blockIdx": 18
         },
@@ -199,6 +375,17 @@
             "jpText": "ですよねー！　温泉はやっぱり、\r\nお肌をバクシンさせる効果があるみたいです。",
             "enText": "That's right! The hot spring seems to have\nthe effect of making your skin glow.",
             "nextBlock": 20,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": -8859561071370830625
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -5718430930940886906
+                }
+            ],
             "pathId": -6244509497735394593,
             "blockIdx": 19
         },
@@ -208,6 +395,17 @@
             "jpText": "これだけスベスベなら、きっと\r\nスピードもアップしているのでは！？",
             "enText": "If it's so slippery, it must be speeding up!",
             "nextBlock": 21,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 8833168441753791093
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -5251235970733357641
+                }
+            ],
             "pathId": 7110197570261767287,
             "blockIdx": 20
         },
@@ -217,6 +415,17 @@
             "jpText": "コレは確かめる必要がありますね……。\r\nムム、温泉、温泉のスピードといえば――",
             "enText": "You need to check this out… Mmm,\nspeaking of hot springs, hot springs speed—",
             "nextBlock": 22,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 3295807425008770527
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 5345898052446954140
+                }
+            ],
             "pathId": 1798148211122893169,
             "blockIdx": 21
         },
@@ -226,11 +435,22 @@
             "jpText": "卓球しかないですねッッ！\r\nトレーナーさん、いざ勝負です！！",
             "enText": "Table tennis is the only way!\nTrainer, it's time to play!",
             "nextBlock": 23,
+            "origClipLength": 84,
             "choices": [
                 {
                     "jpText": "上がったばっかりなのに！？",
                     "enText": "I just got up there!",
                     "nextBlock": 23
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": -323078122579074034
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 5838311720716815294
                 }
             ],
             "pathId": -894985674694771115,
@@ -242,6 +462,17 @@
             "jpText": "大丈夫です！\r\n何回だって汗を流せばいいんですよッ！",
             "enText": "It's okay! You can sweat it out\nas many times as you want!",
             "nextBlock": 24,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 37,
+                    "pathId": 3210195342807030215
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 6351429204255437346
+                }
+            ],
             "pathId": -6412417721080352080,
             "blockIdx": 23
         },
@@ -251,6 +482,17 @@
             "jpText": "たくさん運動して、\r\nたっぷりお湯に浸かりましょう！",
             "enText": "Get lots of exercise and soak\nin plenty of hot water!",
             "nextBlock": 25,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": 8883337020475305140
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -885632627009031100
+                }
+            ],
             "pathId": -3766692730729341081,
             "blockIdx": 24
         },
@@ -260,6 +502,17 @@
             "jpText": "その言葉通り、旅館内の設備を大いに活用し、\r\nサクラバクシンオーとたくさん遊んだ。\nそして――",
             "enText": "True to her word, she made great use of the\ninn's facilities and had a lot of fun with\nSakura Bakushin O. And—",
             "nextBlock": 26,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 7250688711072459478
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -2639025073239547731
+                }
+            ],
             "pathId": 7188526726909462464,
             "blockIdx": 25
         },
@@ -269,6 +522,17 @@
             "jpText": "ふひょ～～～～……いくらテッペキの\r\n委員長といえど、さすがにヘトヘトです。",
             "enText": "I'm really exhausted, even though I'm the\nchair of the ～～～～… committee.",
             "nextBlock": 27,
+            "origClipLength": 175,
+            "animData": [
+                {
+                    "origLen": 213,
+                    "pathId": -1926133694395791865
+                },
+                {
+                    "origLen": 214,
+                    "pathId": 750898515934964130
+                }
+            ],
             "pathId": 5955263901522696242,
             "blockIdx": 26
         },
@@ -278,6 +542,17 @@
             "jpText": "学級委員長を志してから、こんなに\r\n心ゆくまで遊びぬいたのは久しぶりで……。",
             "enText": "It's been a long time since I've played this\nmuch to my heart's content since I decided\nto become class president…",
             "nextBlock": 28,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": 7912020491587143282
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 4039340600341116253
+                }
+            ],
             "pathId": -5397866095654882507,
             "blockIdx": 27
         },
@@ -287,6 +562,17 @@
             "jpText": "だって旅行系の行事などは、\r\nまさに学級委員長の出番ですし！",
             "enText": "Because when it comes to travel-related\nevents, that's exactly where the class\npresident comes in!",
             "nextBlock": 29,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": -4309390129873238183
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 5056545475752799151
+                }
+            ],
             "pathId": -3074288929954267394,
             "blockIdx": 28
         },
@@ -296,6 +582,7 @@
             "jpText": "更に普段からも委員長として、気を張って\r\n駆け回っている私ですからね……。",
             "enText": "In addition, I'm usually the chairman of the\ncommittee, so I'm always running around with\nmy head held high…",
             "nextBlock": 30,
+            "origClipLength": 93,
             "choices": [
                 {
                     "jpText": "（そうか？）",
@@ -308,6 +595,16 @@
                     "nextBlock": 30
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -4951833751971840114
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -7104192591264522197
+                }
+            ],
             "pathId": -2839268774215819010,
             "blockIdx": 29
         },
@@ -317,6 +614,17 @@
             "jpText": "今日はしっかり、\r\n羽を伸ばすことができました。",
             "enText": "I was able to stretch my wings today.",
             "nextBlock": 31,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": -7342810659869339324
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -5295389928593848146
+                }
+            ],
             "pathId": 1867239891589866248,
             "blockIdx": 30
         },
@@ -326,6 +634,17 @@
             "jpText": "とはいえ、委員長の手を必要としない今は\r\nニッショクのようなもの。",
             "enText": "Nevertheless, it's like Nischok now that she\ndoesn't need the chair's help.",
             "nextBlock": 32,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": 7288497329473722080
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -5800612287810093728
+                }
+            ],
             "pathId": 2593834286440306985,
             "blockIdx": 31
         },
@@ -335,6 +654,17 @@
             "jpText": "太陽すなわち委員長が隠れている間は、\r\nとっても短いものなのです。",
             "enText": "The time when the sun, or the chairman,\nis hiding is very short.",
             "nextBlock": 33,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -4565841620465553611
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -5147497770370142037
+                }
+            ],
             "pathId": -1071638857272266391,
             "blockIdx": 32
         },
@@ -344,6 +674,17 @@
             "jpText": "またすぐに委員長は必要となります。\r\nそのためにも、模範的であり続けなければ！",
             "enText": "Another committee chair will soon be needed.\nFor that, we must remain exemplary!",
             "nextBlock": 34,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 3256424851740645985
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 8238170136463431557
+                }
+            ],
             "pathId": 2495060800597164508,
             "blockIdx": 33
         },
@@ -353,11 +694,22 @@
             "jpText": "温泉からスベスベッと戻って、更に\r\nパワーアップした委員長の姿を見せますよッ！",
             "enText": "I'll show you a more powerful version\nof the chairperson after returning\nfrom the hot spring.",
             "nextBlock": 35,
+            "origClipLength": 95,
             "choices": [
                 {
                     "jpText": "頑張って！",
                     "enText": "Good luck!",
                     "nextBlock": 35
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -6607045772894192263
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -449861288380617245
                 }
             ],
             "pathId": 8564273823291368078,
@@ -369,6 +721,17 @@
             "jpText": "ハイッ！！",
             "enText": "Hi!",
             "nextBlock": 36,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 6977651348425148129
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 7495223220910861353
+                }
+            ],
             "pathId": 8947053306306033566,
             "blockIdx": 35
         },
@@ -378,6 +741,17 @@
             "jpText": "……ですが、その。",
             "enText": "… but that.",
             "nextBlock": 37,
+            "origClipLength": 56,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6664212397684117771
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 3136300038139010804
+                }
+            ],
             "pathId": -9202451404673956090,
             "blockIdx": 36
         },
@@ -387,6 +761,17 @@
             "jpText": "騒ぐクラスメイトの気持ちを理解してこそ、\r\n正しく導けるとも思うので……。",
             "enText": "I also think that understanding the feelings\nof classmates who make a fuss is the only\nway to guide them correctly…",
             "nextBlock": 38,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -4805162366370713210
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 5947535200975785869
+                }
+            ],
             "pathId": 706298017147886891,
             "blockIdx": 37
         },
@@ -396,6 +781,17 @@
             "jpText": "もっとトレーナーさんと遊ぶのが、\r\nここは模範的な行動かなと思うのです。",
             "enText": "I think that playing with the trainer more\nis exemplary behavior here.",
             "nextBlock": 39,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": 9004803224310859966
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -7034296073740128671
+                }
+            ],
             "pathId": 7899032138049657950,
             "blockIdx": 38
         },
@@ -405,6 +801,7 @@
             "jpText": "あ、合ってます……よね？",
             "enText": "Oh, you're right… right?",
             "nextBlock": 40,
+            "origClipLength": 60,
             "choices": [
                 {
                     "jpText": "ああ、まだまだ遊ぼう！",
@@ -417,6 +814,16 @@
                     "nextBlock": 40
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 4611615539458136540
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -6028082454740314386
+                }
+            ],
             "pathId": -449099243958398338,
             "blockIdx": 39
         },
@@ -426,6 +833,17 @@
             "jpText": "――ハイッッ♪",
             "enText": "—Hi.",
             "nextBlock": 41,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": 1578625144759356413
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -712818744852857658
+                }
+            ],
             "pathId": -1432810482331926859,
             "blockIdx": 40
         },
@@ -435,6 +853,17 @@
             "jpText": "その後、大はしゃぎのサクラバクシンオーと\r\n一緒にたっぷりと旅館での時間を楽しんだ。",
             "enText": "After that, I enjoyed a lot of time at the\ninn with a very excited Sakura Bakushin O.",
             "nextBlock": 42,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -4964009719240737139
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 3843920180502468771
+                }
+            ],
             "pathId": 1397770704153026792,
             "blockIdx": 41
         },
@@ -444,8 +873,10 @@
             "jpText": "サクラバクシンオーとの間に、\r\nかけがえのない絆を感じた\nひとときだった……。",
             "enText": "It was a time when I felt an irreplaceable\nbond with Sakura Bakushin O…",
             "nextBlock": -1,
+            "origClipLength": 95,
             "pathId": -70573520776054934,
             "blockIdx": 42
         }
-    ]
+    ],
+    "modified": 1662157597
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "S7UQ42FVICTYDTNDZARMEXNIEYLRBXQL",
+    "version": 5,
+    "bundle": "GGDMV7QABLQY7F6VGWSCZWXYRNCJGLKZ",
     "type": "story",
     "storyId": "501006727",
     "title": "クレーンゲーム大成功！",
@@ -11,6 +11,7 @@
             "jpText": "ありがとう、トレーナー。\r\nとても嬉しい……！",
             "enText": "Thanks, trainer. Very happy…!",
             "nextBlock": 2,
+            "origClipLength": 75,
             "choices": [
                 {
                     "jpText": "これからも頑張ろうな！",
@@ -23,6 +24,16 @@
                     "nextBlock": 2
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 94,
+                    "pathId": -7015111440076399802
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 6576878632511373711
+                }
+            ],
             "pathId": -2286867695862267892,
             "blockIdx": 1
         },
@@ -32,6 +43,21 @@
             "jpText": "ああ、大丈夫。これを見ていると、\r\n体の底から力が湧いてくる気がするんだ。",
             "enText": "Oh, it's okay. When I look at this, \nI feel like I'm getting strength \nfrom the bottom of my body.",
             "nextBlock": 3,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": 343794793566167091
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -3995312360149036052
+                },
+                {
+                    "origLen": 131,
+                    "pathId": -8789147496331263299
+                }
+            ],
             "pathId": -7740452769037270222,
             "blockIdx": 2
         },
@@ -41,6 +67,21 @@
             "jpText": "……そうだ。トレーナーも、\r\nぬいぐるみを1つもらってくれ。",
             "enText": "… That's right. The trainer should also get \none of the stuffed animals.",
             "nextBlock": 4,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": 8498566829583271542
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -7811337331373824433
+                },
+                {
+                    "origLen": 116,
+                    "pathId": -7140663001312701275
+                }
+            ],
             "pathId": -6715512464406864363,
             "blockIdx": 3
         },
@@ -50,6 +91,21 @@
             "jpText": "トレーナーだって、いつも頑張っている。\r\nだから、キミにもこれが必要だと思うんだ。",
             "enText": "Trainers are always working hard. That's why \nI think you need this, too.",
             "nextBlock": 5,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -603618944182115746
+                },
+                {
+                    "origLen": 130,
+                    "pathId": 3168320348282745739
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -2511133481678658295
+                }
+            ],
             "pathId": -8327662840829447426,
             "blockIdx": 4
         },
@@ -59,6 +115,21 @@
             "jpText": "これからもよろしく頼む……！",
             "enText": "Keep up the good work…!",
             "nextBlock": 6,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 4655121683191396525
+                },
+                {
+                    "origLen": 94,
+                    "pathId": -8699451640860897198
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -1418598432889435336
+                }
+            ],
             "pathId": 3101465407816475162,
             "blockIdx": 5
         },
@@ -68,8 +139,24 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": -255693361590952333
+                },
+                {
+                    "origLen": 94,
+                    "pathId": -3350332926072578507
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -5223726105773078546
+                }
+            ],
             "pathId": 1241777771296839271,
             "blockIdx": 6
         }
-    ]
+    ],
+    "modified": 1662157261
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "KJOC3GOFHLR3P7MGT2A552AL2BQTBG6F",
+    "version": 5,
+    "bundle": "Q243HU6UFNA5SJH7NDTUZQ2XMM42EYXV",
     "type": "story",
     "storyId": "501041510",
     "title": "マクラノバクシン！",
@@ -11,6 +11,7 @@
             "jpText": "ある日、サクラバクシンオーの成績について\r\n担任教師から相談を受けた。",
             "enText": "One day, I was consulted by my\nhomeroom teacher about Sakura\nBakushin-o's performance.",
             "nextBlock": 2,
+            "origClipLength": 67,
             "pathId": 8119381964673346836,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "彼女は真面目だがテストの成績は芳しくない。\r\nなんとかしたいということだが――",
             "enText": "She is serious, but her test scores\nare not good. She wants to do something\nabout it, but—",
             "nextBlock": 3,
+            "origClipLength": 70,
             "pathId": -3311902022659948368,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "ふんふんふーん♪\r\n春はあけぼの～♪　夏は夜～♪",
             "enText": "♪ Spring is dawn ♪ ♪ Summer is night ♪",
             "nextBlock": 4,
+            "origClipLength": 72,
             "choices": [
                 {
                     "jpText": "お、ちょうどいいところに",
@@ -41,6 +44,16 @@
                     "nextBlock": 4
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -411231178592643159
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 3540608326721824336
+                }
+            ],
             "pathId": -8559839250479237451,
             "blockIdx": 3
         },
@@ -50,11 +63,22 @@
             "jpText": "これはこれは、\r\nトレーナーさんではないですか！",
             "enText": "Well, well, well. It's your trainer!",
             "nextBlock": 5,
+            "origClipLength": 60,
             "choices": [
                 {
                     "jpText": "さっきのは『枕草子』？",
                     "enText": "Is that \"The Pillow Book\"?",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -590816194531354513
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -724478826126928028
                 }
             ],
             "pathId": 6297078931076526485,
@@ -66,6 +90,17 @@
             "jpText": "よくわかりましたね！\r\n今日の授業で習ったのです。",
             "enText": "You know exactly what I'm talking about! I\nlearned it in class today.",
             "nextBlock": 6,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 15,
+                    "pathId": -1013256061512514682
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 3881336847611404691
+                }
+            ],
             "pathId": 2106333945411358515,
             "blockIdx": 5
         },
@@ -75,6 +110,17 @@
             "jpText": "四季の素晴らしさを綴った一節は\r\n私としても非常に感銘を受けました！",
             "enText": "The passage describing the splendor of the\nfour seasons was very inspiring to me!",
             "nextBlock": 7,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 319816659377247748
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -5183864973886420134
+                }
+            ],
             "pathId": -3765362094773109471,
             "blockIdx": 6
         },
@@ -84,11 +130,22 @@
             "jpText": "あまりの衝撃に、他の内容が\r\n頭から飛んでいってしまったほどですよ！",
             "enText": "I was so shocked that everything else just\nflew right out of my head!",
             "nextBlock": 8,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "な、なるほど……",
                     "enText": "Oh, I see…",
                     "nextBlock": 8
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": 5750649596517802102
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 20529162539658561
                 }
             ],
             "pathId": 7104278049456980835,
@@ -100,6 +157,7 @@
             "jpText": "学んだそばから忘れてしまうのでは、\r\n確かにテストで点を取るのは難しそうだ。\n少しでも改善するには――",
             "enText": "It's hard to get a good score on a\ntest if you forget everything you've\nlearned. How can I improve?",
             "nextBlock": 9,
+            "origClipLength": 78,
             "choices": [
                 {
                     "jpText": "褒めて勉強を促す",
@@ -112,6 +170,16 @@
                     "nextBlock": 26
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8150024835026834599
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 1653095532064304161
+                }
+            ],
             "pathId": -2999635403436566776,
             "blockIdx": 8
         },
@@ -121,6 +189,7 @@
             "jpText": "褒めながら勉強を促せば、\r\n意欲と集中力が増し、\n成績がよくなるかもしれない……。",
             "enText": "If you encourage them to study with praise,\nthey will become more motivated and focused,\nwhich may improve their grades…",
             "nextBlock": 10,
+            "origClipLength": 71,
             "choices": [
                 {
                     "jpText": "きちんと勉強しているんだな！",
@@ -133,6 +202,16 @@
                     "nextBlock": 10
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -55140132052710529
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 6949788927317664082
+                }
+            ],
             "pathId": 8208474694393190078,
             "blockIdx": 9
         },
@@ -142,6 +221,17 @@
             "jpText": "ふっふっふ！\r\nもちろんですよっ！",
             "enText": "Mmm-hmm! Of course!",
             "nextBlock": 11,
+            "origClipLength": 56,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -3566700526611444186
+                },
+                {
+                    "origLen": 67,
+                    "pathId": -8186861070970134922
+                }
+            ],
             "pathId": 5246226060227359268,
             "blockIdx": 10
         },
@@ -151,11 +241,22 @@
             "jpText": "私は委員長ですから、みんなの模範に\r\nなるべくしっかりと授業に取り組んで\nいるのです！",
             "enText": "I'm the chair, so I'm trying to be a good\nrole model for everyone in the class!",
             "nextBlock": 12,
+            "origClipLength": 73,
             "choices": [
                 {
                     "jpText": "えらいえらい！",
                     "enText": "Oh, my God, oh, my God!",
                     "nextBlock": 12
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": -7142627967277329472
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 3986260931168631402
                 }
             ],
             "pathId": -4299254580760040413,
@@ -167,6 +268,17 @@
             "jpText": "むふー！\r\nもっと褒めていただいても構いませんよっ！",
             "enText": "Mwah! You can give me more\ncompliments if you want!",
             "nextBlock": 13,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 37,
+                    "pathId": -287728700891066458
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -5308842643463049721
+                }
+            ],
             "pathId": -1200334698991016299,
             "blockIdx": 12
         },
@@ -176,6 +288,7 @@
             "jpText": "私、褒められれば褒められるほど\r\n伸びるタイプですから！",
             "enText": "I'm the type of person who grows\nthe more I'm praised!",
             "nextBlock": 14,
+            "origClipLength": 63,
             "choices": [
                 {
                     "jpText": "その調子でテスト勉強もしっかりな！",
@@ -188,6 +301,16 @@
                     "nextBlock": 14
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": 7921713015803092585
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -8240820057819195337
+                }
+            ],
             "pathId": -1441274877929136236,
             "blockIdx": 13
         },
@@ -197,6 +320,17 @@
             "jpText": "おお、テスト勉強！！\r\nなんと優等生な響き！！",
             "enText": "Oh, studying for a test! How\nhonorable that sounds!",
             "nextBlock": 15,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": -9064208828181575440
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 2658325074176844581
+                }
+            ],
             "pathId": -9193053715093751930,
             "blockIdx": 14
         },
@@ -206,6 +340,17 @@
             "jpText": "鉄は熱いうちに打てということですね！\r\nさすがはトレーナーさんです！",
             "enText": "You know what they say, strike while the\niron is hot! That's my trainer!",
             "nextBlock": 16,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 8694060441855739985
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 8123392782986276010
+                }
+            ],
             "pathId": -4919892207750157417,
             "blockIdx": 15
         },
@@ -215,6 +360,17 @@
             "jpText": "では早速行ってきます！\r\nテストに向けてバクシンバクシーン！！",
             "enText": "Well, I'll be there as soon as I can!\nBakushin' Bakushin' for the test!",
             "nextBlock": 17,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": 8451266427313243140
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 8094801147634658933
+                }
+            ],
             "pathId": 2726814194408605730,
             "blockIdx": 16
         },
@@ -224,6 +380,17 @@
             "jpText": "意気揚々と去っていくサクラバクシンオー。\r\nその表情は自信に満ち溢れていた。",
             "enText": "Sakura Bakushin O left the race in high\nspirits. His face was full of confidence.",
             "nextBlock": 18,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -8920323748623461096
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -5228467687638822156
+                }
+            ],
             "pathId": -3200545048455293666,
             "blockIdx": 17
         },
@@ -233,6 +400,7 @@
             "jpText": "そして後日――",
             "enText": "And later…",
             "nextBlock": 19,
+            "origClipLength": 49,
             "pathId": -7019991262848402128,
             "blockIdx": 18
         },
@@ -242,6 +410,17 @@
             "jpText": "聞いてくださいトレーナーさん！！",
             "enText": "Listen to me, trainer!",
             "nextBlock": 20,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 8853114966025482106
+                },
+                {
+                    "origLen": 48,
+                    "pathId": -853820136814510625
+                }
+            ],
             "pathId": 1240417412985727455,
             "blockIdx": 19
         },
@@ -251,6 +430,17 @@
             "jpText": "今回のテスト、\r\n点数が2点も上がったんですよ！",
             "enText": "This test, my score went up by two points!",
             "nextBlock": 21,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 5950463741788426624
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -2575631203615019597
+                }
+            ],
             "pathId": 3678991774355245342,
             "blockIdx": 20
         },
@@ -260,6 +450,17 @@
             "jpText": "2点から4点！！\r\nなんと2倍ですよ！　2倍！！",
             "enText": "Two to four points! That's a\nwhopping double! Double it!",
             "nextBlock": 22,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 2130793465445024318
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -5027240725152556547
+                }
+            ],
             "pathId": -4417770160130911123,
             "blockIdx": 21
         },
@@ -269,11 +470,22 @@
             "jpText": "いやぁ～！\r\nやはりテスト勉強は大事ですね！",
             "enText": "Oh no! I knew studying for\nthe test was important!",
             "nextBlock": 23,
+            "origClipLength": 59,
             "choices": [
                 {
                     "jpText": "こ、この調子で頑張ろう！",
                     "enText": "Let's keep up the good work!",
                     "nextBlock": 23
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": 3522373068831494065
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -6045748949367439440
                 }
             ],
             "pathId": 703287027008835469,
@@ -285,6 +497,17 @@
             "jpText": "ハイッ！\r\n優等生街道をバクシンです！！",
             "enText": "Hi! I'm Bakushin on the honor roll!",
             "nextBlock": 24,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": 7405246936433499701
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 5794768604257276648
+                }
+            ],
             "pathId": 3269330874736517881,
             "blockIdx": 23
         },
@@ -294,6 +517,17 @@
             "jpText": "小さな1歩ではあるが、\r\n点数がアップしたことには違いない。",
             "enText": "It's a small step, but it's definitely an\nimprovement in my score.",
             "nextBlock": 25,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -1868445343558882891
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -4202904023624744073
+                }
+            ],
             "pathId": -2549541292446330800,
             "blockIdx": 24
         },
@@ -303,6 +537,17 @@
             "jpText": "サクラバクシンオーと一緒に\r\n彼女の成績が上がったことを喜んだのだった。",
             "enText": "She was pleased that her performance had\nimproved along with Sakura Bakushin O's.",
             "nextBlock": -1,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -4734942304469410028
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -616998484476913248
+                }
+            ],
             "pathId": 5416170646076342213,
             "blockIdx": 25
         },
@@ -312,6 +557,17 @@
             "jpText": "今後もこうして授業について話す機会を\r\n設ければ、いい復習になるだろう。",
             "enText": "It would be a good review if we\nhad more opportunities to talk about\nthe class in this way.",
             "nextBlock": 27,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 8101152923550769652
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 7145154345396907330
+                }
+            ],
             "pathId": -3145408654326470829,
             "blockIdx": 26
         },
@@ -321,11 +577,22 @@
             "jpText": "学んだ内容を忘れないよう、\r\n彼女の興味を引く話題で――",
             "enText": "I'm going to make sure she doesn't\nforget what she's learned.",
             "nextBlock": 28,
+            "origClipLength": 63,
             "choices": [
                 {
                     "jpText": "バクシンオーなら四季をどう表現する？",
                     "enText": "How would Bakushin O describe the four seasons?",
                     "nextBlock": 28
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": -5305237300470617119
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 7331497131159689031
                 }
             ],
             "pathId": -1453050516880042502,
@@ -337,6 +604,17 @@
             "jpText": "おおっ、面白い質問ですね！",
             "enText": "Oh, that's an interesting question!",
             "nextBlock": 29,
+            "origClipLength": 53,
+            "animData": [
+                {
+                    "origLen": 33,
+                    "pathId": 4862757867351123209
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -5334366893948118368
+                }
+            ],
             "pathId": -771926049558345231,
             "blockIdx": 28
         },
@@ -346,6 +624,17 @@
             "jpText": "私ならば――",
             "enText": "I'd—",
             "nextBlock": 30,
+            "origClipLength": 48,
+            "animData": [
+                {
+                    "origLen": 10,
+                    "pathId": 2435471940861671821
+                },
+                {
+                    "origLen": 59,
+                    "pathId": 8217485243631922866
+                }
+            ],
             "pathId": 3152222308612953163,
             "blockIdx": 29
         },
@@ -355,6 +644,17 @@
             "jpText": "春はバクシン！\r\n舞い散る桜と共に並木道を駆け抜ける！",
             "enText": "Spring is Bakushin! We'll run down the\ntree-lined streets with the cherry blossoms\ndancing in the air!",
             "nextBlock": 31,
+            "origClipLength": 62,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -2311190741632948760
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 1522301485062484274
+                }
+            ],
             "pathId": -6186635376659186346,
             "blockIdx": 30
         },
@@ -364,6 +664,7 @@
             "jpText": "夏はバクシン！\r\n照りつける太陽の下で走るのもまたよし！",
             "enText": "Summer is for Bakushin! It's good\nto run in the sunshine, too!",
             "nextBlock": 32,
+            "origClipLength": 63,
             "pathId": 203979283879929633,
             "blockIdx": 31
         },
@@ -373,6 +674,7 @@
             "jpText": "秋はバクシン！\r\n紅葉狩りがてら山に走りに行きましょう！",
             "enText": "Fall is for Bakushin! Let's go for a run in\nthe mountains while the leaves change color!",
             "nextBlock": 33,
+            "origClipLength": 63,
             "pathId": 4373206227376723883,
             "blockIdx": 32
         },
@@ -382,6 +684,7 @@
             "jpText": "冬はバクシン！\r\n犬に負けぬ勢いで雪の中を駆け回るのです！",
             "enText": "Winter is Bakushin'! They run around in the\nsnow as fast as the dogs!",
             "nextBlock": 34,
+            "origClipLength": 63,
             "pathId": 6949899438121226577,
             "blockIdx": 33
         },
@@ -391,11 +694,22 @@
             "jpText": "……というところでしょうか！\r\nいかがでしょう！？",
             "enText": "I think it's called…!\nWhat do you think?",
             "nextBlock": 35,
+            "origClipLength": 61,
             "choices": [
                 {
                     "jpText": "なんというか――",
                     "enText": "What can I say?",
                     "nextBlock": 35
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": -129553075621905814
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 4446496592267995244
                 }
             ],
             "pathId": -4326940127865908269,
@@ -407,11 +721,22 @@
             "jpText": "なんというか！？",
             "enText": "What can I say!",
             "nextBlock": 36,
+            "origClipLength": 50,
             "choices": [
                 {
                     "jpText": "バ、バクシンオーらしいと思う",
                     "enText": "Ba, I think it's very Bakushin-o.",
                     "nextBlock": 36
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -6372498110841132301
+                },
+                {
+                    "origLen": 61,
+                    "pathId": 1954423162467509690
                 }
             ],
             "pathId": 73240707748851222,
@@ -423,6 +748,17 @@
             "jpText": "ふっふっふ！\r\nそうでしょうそうでしょう！！",
             "enText": "Mmm-hmm! I know, I know, I know!",
             "nextBlock": 37,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": -1364499140737240316
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -6365353702473425625
+                }
+            ],
             "pathId": 957633173878137974,
             "blockIdx": 36
         },
@@ -432,6 +768,17 @@
             "jpText": "私がトレセン学園の清少納言と言われる日も\r\nそう遠くないのかもしれませんね！",
             "enText": "It may not be long before I'm known as the\nSeishonagon of the Tracen Academy!",
             "nextBlock": 38,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -8271685842553792560
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -2686144391962130019
+                }
+            ],
             "pathId": -3803822020117527255,
             "blockIdx": 37
         },
@@ -441,11 +788,22 @@
             "jpText": "あまりに有名になってしまい、\r\nきっとどのレースでも引く手あまたに――",
             "enText": "She's become so famous, I'm sure she'll be\nsought after in every race.",
             "nextBlock": 39,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "（それはどうだろう……？）",
                     "enText": "(How about that,…?)",
                     "nextBlock": 39
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 4982412568127086815
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -8516982628059875232
                 }
             ],
             "pathId": 5975493634293787972,
@@ -457,6 +815,17 @@
             "jpText": "とは思ったが、\r\n『枕草子』への興味は薄れていないようだ。",
             "enText": "However, my interest in \"The Pillow\nBook\" has not diminished.",
             "nextBlock": 40,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 7195851476913390864
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6596810286212422732
+                }
+            ],
             "pathId": 3014997329155465453,
             "blockIdx": 39
         },
@@ -466,6 +835,17 @@
             "jpText": "あとはテストに出そうな話題に\r\n移行できれば――",
             "enText": "Now if we can just move on to the topics\nthat will be on the test…",
             "nextBlock": 41,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": -1318805019549291022
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 7950559066925390690
+                }
+            ],
             "pathId": 6178975079726368338,
             "blockIdx": 40
         },
@@ -475,11 +855,22 @@
             "jpText": "ああっ！　その光景を想像したら、\r\nものすごく走りたくなってきました！",
             "enText": "Aah! The thought of that makes\nme want to run so badly!",
             "nextBlock": 42,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "えっ！？",
                     "enText": "What?",
                     "nextBlock": 42
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": 693037042852472099
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -3416551000479460509
                 }
             ],
             "pathId": 6509780024625783715,
@@ -491,6 +882,17 @@
             "jpText": "今日は早めにトレーニングを開始しましょう！\r\nむしろ今からっ！！",
             "enText": "Let's start training early\ntoday! Rather, start now!",
             "nextBlock": 43,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": -4289051129746929573
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 8263057018167390420
+                }
+            ],
             "pathId": -4191394679913370629,
             "blockIdx": 42
         },
@@ -500,6 +902,17 @@
             "jpText": "言うが早いか、サクラバクシンオーは\r\n全速力で走り去ってしまった。",
             "enText": "Before I could say anything, Sakura Bakushin\nO was running away at full speed.",
             "nextBlock": 44,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 702316463201893932
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 910899119848752594
+                }
+            ],
             "pathId": -6882628818410106956,
             "blockIdx": 43
         },
@@ -509,6 +922,7 @@
             "jpText": "うおおおお～～～～～っ！！",
             "enText": "Whoa, whoa, whoa. ～～～～～!",
             "nextBlock": 45,
+            "origClipLength": 53,
             "pathId": 221044982159166020,
             "blockIdx": 44
         },
@@ -518,6 +932,7 @@
             "jpText": "春！　夏！　秋！　冬！\r\nいつでもバクシーン！！！",
             "enText": "Spring! Summer! Fall! Winter!\nAnytime, Baxcene!",
             "nextBlock": 46,
+            "origClipLength": 61,
             "pathId": 6689502222140329701,
             "blockIdx": 45
         },
@@ -527,6 +942,7 @@
             "jpText": "何事にも全力で取り組む姿勢は素晴らしい。\r\nが、持続力と落ち着きのなさは少々問題だ。",
             "enText": "His commitment to everything she does is\nexcellent. However, her persistence and\nrestlessness are a bit of a problem.",
             "nextBlock": 47,
+            "origClipLength": 72,
             "pathId": 5623730609896422601,
             "blockIdx": 46
         },
@@ -536,8 +952,10 @@
             "jpText": "これらを上手くコントロールすることが\r\n彼女の成績アップには不可欠だと\n担任教師に伝えることにした。",
             "enText": "I decided to tell her homeroom teacher that\nit was essential for her to control these\nthings in order to improve her grades.",
             "nextBlock": -1,
+            "origClipLength": 77,
             "pathId": 341230676973387225,
             "blockIdx": 47
         }
-    ]
+    ],
+    "modified": 1662157601
 }

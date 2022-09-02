@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "NDTFZDS6OOQBRKYV2EWZ3F4QIDIEGM6W",
+    "version": 5,
+    "bundle": "PNUF43MZSC5FUVVYZ45OMGKQSVLUHTM4",
     "type": "story",
     "storyId": "501040112",
     "title": "温泉旅行",
@@ -11,6 +11,7 @@
             "jpText": "シニア級に入ったばかりの頃、\r\nゴールドシチーが福引で\n『温泉旅行券』を当てた。",
             "enText": "When she had just entered the senior \nclass, Gold City won a \"hot spring \ntrip ticket\" in a lucky draw.",
             "nextBlock": 2,
+            "origClipLength": 97,
             "pathId": 8182494517389338448,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "あの頃、精神的に余裕のなかった\n彼女は行くことを拒否していたが……\n今なら気持ちも変わっているかもしれない。",
             "enText": "She was not mentally ready back then and \nrefused to go, but… she may have \nchanged her mind now.",
             "nextBlock": 3,
+            "origClipLength": 115,
             "pathId": -4407090448708215025,
             "blockIdx": 2
         },
@@ -29,6 +31,17 @@
             "jpText": "せっかくなので休んできてほしい。\nその想いで、彼女を説得すべく\n呼び出したのだが……。",
             "enText": "I want you to take a break since you've come \nall this way. With that in mind, I called \nher to persuade her to go to…",
             "nextBlock": 4,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 180,
+                    "pathId": 3353354900998940634
+                },
+                {
+                    "origLen": 195,
+                    "pathId": -1491608876874803014
+                }
+            ],
             "pathId": -4213714557650881841,
             "blockIdx": 3
         },
@@ -38,11 +51,26 @@
             "jpText": "いいよ。温泉行きたい。",
             "enText": "All right. I want to go to a hot spring.",
             "nextBlock": 5,
+            "origClipLength": 59,
             "choices": [
                 {
                     "jpText": "（あっさり！？）",
                     "enText": "(Easily!)",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -3654615382935002801
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -5241046467540037119
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -1759198872762269420
                 }
             ],
             "pathId": 3084824089256654928,
@@ -54,6 +82,7 @@
             "jpText": "マネジにオフ確認しとくわ。\nアンタもスケジュール提出しといて。",
             "enText": "I'll check with Manezi to make sure it's off. \nYou should submit your schedule, too.",
             "nextBlock": 6,
+            "origClipLength": 85,
             "choices": [
                 {
                     "jpText": "……ん、俺も？",
@@ -66,6 +95,16 @@
                     "nextBlock": 6
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": 7754566005389411198
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -7953672604857225138
+                }
+            ],
             "pathId": -8667042415735146323,
             "blockIdx": 5
         },
@@ -75,6 +114,17 @@
             "jpText": "は？\r\nアタシ1人で行かせるわけ？",
             "enText": "Huh? You want me to go alone?",
             "nextBlock": 7,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 8679100419945386120
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -4970912840258018598
+                }
+            ],
             "pathId": 2018306680205149865,
             "blockIdx": 6
         },
@@ -84,6 +134,17 @@
             "jpText": "マネジがたぶん許さないし、\nアタシもそれなら行く気ない。",
             "enText": "Manezi probably won't allow it, \nand I don't want to go either.",
             "nextBlock": 8,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": 6339527504712877265
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -5600367743428174559
+                }
+            ],
             "pathId": 3724937198565804531,
             "blockIdx": 7
         },
@@ -93,6 +154,17 @@
             "jpText": "温泉行くならアンタも一緒が条件。\nどうする？",
             "enText": "If we go to the spa, you have to \ncome with us. What do you say?",
             "nextBlock": 9,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 7618541261813768823
+                },
+                {
+                    "origLen": 171,
+                    "pathId": 9096092366959041235
+                }
+            ],
             "pathId": 9010748036661609998,
             "blockIdx": 8
         },
@@ -102,6 +174,17 @@
             "jpText": "……というわけで――",
             "enText": "… is why―",
             "nextBlock": 10,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 126,
+                    "pathId": -4020757212158149829
+                },
+                {
+                    "origLen": 171,
+                    "pathId": 4259931496274030004
+                }
+            ],
             "pathId": -4194786309402876249,
             "blockIdx": 9
         },
@@ -111,6 +194,17 @@
             "jpText": "入浴中……。",
             "enText": "Get in the bath…",
             "nextBlock": 11,
+            "origClipLength": 250,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 6950053734276977632
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -6345755477364862065
+                }
+            ],
             "pathId": -1421842632395433112,
             "blockIdx": 10
         },
@@ -120,6 +214,17 @@
             "jpText": "――はー。最高。\n疲れ溶けた。",
             "enText": "―Ha-ha. Great. Tiredness melted away.",
             "nextBlock": 12,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": 6811349930275087144
+                },
+                {
+                    "origLen": 157,
+                    "pathId": 61455239393151145
+                }
+            ],
             "pathId": 4143654049530453066,
             "blockIdx": 11
         },
@@ -129,6 +234,17 @@
             "jpText": "ここさ、炭酸水素塩泉っていって、\n肌のクレンジング効果期待できるらしくて。",
             "enText": "This place is said to have a bicarbonate of \nsoda spring that is supposed to be effective \nin cleansing the skin.",
             "nextBlock": 13,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 7196618765570725606
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -5225649925286217078
+                }
+            ],
             "pathId": -1214201553314674171,
             "blockIdx": 12
         },
@@ -138,11 +254,22 @@
             "jpText": "めっちゃ肌ピカピカじゃね？\nどう？",
             "enText": "Isn't your skin so shiny? How's it going?",
             "nextBlock": 14,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "いつもピカピカだからわからない……",
                     "enText": "I don't know because it's \nalways shiny…",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": -9110799026073613372
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -1385774813734829999
                 }
             ],
             "pathId": -6643653702376588919,
@@ -154,6 +281,17 @@
             "jpText": "……まぁ、そうなんだけど。\n今のセリフ、マジでアホっぽかったわ。",
             "enText": "… Well, yes. Now that \nline was really stupid.",
             "nextBlock": 15,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -743006203586946092
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 6602859355039261599
+                }
+            ],
             "pathId": -8605177373042440911,
             "blockIdx": 14
         },
@@ -163,6 +301,7 @@
             "jpText": "前から思ってたけど、アンタってさ、\r\nアタシのビジュアルかなり好きっしょ？",
             "enText": "I've always thought that you like \nmy visuals a lot, don't you?",
             "nextBlock": 16,
+            "origClipLength": 93,
             "choices": [
                 {
                     "jpText": "顔だけじゃないぞ！",
@@ -175,6 +314,16 @@
                     "nextBlock": 16
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -4630519721509032577
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 5442090581570004849
+                }
+            ],
             "pathId": -841936583622692684,
             "blockIdx": 15
         },
@@ -184,6 +333,17 @@
             "jpText": "はいはい、わかってるよ。\n別に見た目だけって思ってないから。",
             "enText": "Yes, yes, I know. I don't think \nit's just about looks.",
             "nextBlock": 17,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": -908142484175691808
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 4980067671727511350
+                }
+            ],
             "pathId": -4640537620103458044,
             "blockIdx": 16
         },
@@ -193,6 +353,17 @@
             "jpText": "こういうくだけた話も、\nちゃんとしたことなかったね。",
             "enText": "I've never had this kind of casual \ntalk with you before.",
             "nextBlock": 18,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 9169673104292028997
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 658502250062358622
+                }
+            ],
             "pathId": -5779916323199479513,
             "blockIdx": 17
         },
@@ -202,6 +373,21 @@
             "jpText": "……風、当たりに行く？",
             "enText": "… wind, go for a hit?",
             "nextBlock": 19,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 103,
+                    "pathId": -2328012474994044232
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -1450201279752713644
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 7658315499910669200
+                }
+            ],
             "pathId": -1148477555458709694,
             "blockIdx": 18
         },
@@ -211,6 +397,21 @@
             "jpText": "――急に温泉行く気になった理由。\n気になってるでしょ？",
             "enText": "―the reason why I suddenly felt like going \nto the spa. You're wondering, aren't you?",
             "nextBlock": 20,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 10,
+                    "pathId": 4149182730102614587
+                },
+                {
+                    "origLen": 174,
+                    "pathId": 1922258256540733548
+                },
+                {
+                    "origLen": 151,
+                    "pathId": -4017674319266727345
+                }
+            ],
             "pathId": 6672556674529952080,
             "blockIdx": 19
         },
@@ -220,6 +421,17 @@
             "jpText": "アンタがアタシを、\nどう思ってんのか知りたくて。",
             "enText": "I wanted to know what you thought of me.",
             "nextBlock": 21,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -1143608173400627228
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 2748346564728191383
+                }
+            ],
             "pathId": 7081184723994303253,
             "blockIdx": 20
         },
@@ -229,6 +441,17 @@
             "jpText": "今まで散々ダサいとこばっか見せたし、\nなんか勘違いされてたらムカつくじゃん。",
             "enText": "I've shown you so many lame things, and it \nwould be annoying if people misunderstood me.",
             "nextBlock": 22,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3013827729772873893
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 5358316716079957407
+                }
+            ],
             "pathId": 6894783927109725136,
             "blockIdx": 21
         },
@@ -238,6 +461,17 @@
             "jpText": "余裕ないとか、当たりキツいとか、\r\n口悪いとか……合ってるけど。",
             "enText": "I've been told I can't afford it, that I'm \nhard to hit, that I have a bad mouth, and \nthat I'm… right.",
             "nextBlock": 23,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -1837057695387194234
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -2009996788668691176
+                }
+            ],
             "pathId": 6908076982741621359,
             "blockIdx": 22
         },
@@ -247,6 +481,7 @@
             "jpText": "でも、それはアンタが近すぎだからで。\nもうちょい離れて見れば、\nアタシけっこう決まってる……はず。",
             "enText": "But that's because you're too close. If you \nlook at it from a little further away, \nyou'll see that I'm pretty good…",
             "nextBlock": 24,
+            "origClipLength": 108,
             "choices": [
                 {
                     "jpText": "最初から今まで君の印象は変わってない",
@@ -259,6 +494,16 @@
                     "nextBlock": 24
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": 3928457810605159809
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -328357805855592336
+                }
+            ],
             "pathId": 3322261905588209338,
             "blockIdx": 23
         },
@@ -268,6 +513,7 @@
             "jpText": "……？",
             "enText": "…?",
             "nextBlock": 25,
+            "origClipLength": 48,
             "choices": [
                 {
                     "jpText": "キレイで強くて誇り高い、最高のウマ娘だ",
@@ -280,6 +526,16 @@
                     "nextBlock": 25
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -8225589815564729085
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -7649305984925173768
+                }
+            ],
             "pathId": -3831335647518341211,
             "blockIdx": 24
         },
@@ -289,6 +545,17 @@
             "jpText": "……！",
             "enText": "…!",
             "nextBlock": 26,
+            "origClipLength": 53,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": 3753950973109691288
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -758160220988693490
+                }
+            ],
             "pathId": -1913099695528403722,
             "blockIdx": 25
         },
@@ -298,6 +565,17 @@
             "jpText": "ふはっ、なにそれ、口説いてんの？",
             "enText": "Haha, what's that, are you hitting on me?",
             "nextBlock": 27,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -5869739492909783979
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -996586570157601198
+                }
+            ],
             "pathId": 559797209763377453,
             "blockIdx": 26
         },
@@ -307,6 +585,17 @@
             "jpText": "フツーなら寒いけど……\nでも、アンタはそーゆーのじゃないもんね。",
             "enText": "It's cold if you're a hoot… But you're \nnot like that, are you?",
             "nextBlock": 28,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -471909046026833871
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 7547634353145138508
+                }
+            ],
             "pathId": 6205998150354741450,
             "blockIdx": 27
         },
@@ -316,11 +605,26 @@
             "jpText": "変なの。マネジとも仕事仲間とも違う。\nアンタってアタシの、なんなんだろうね？",
             "enText": "Weird. It's not like Manezi and her \nworkmates. I wonder what you are to me.",
             "nextBlock": 29,
+            "origClipLength": 94,
             "choices": [
                 {
                     "jpText": "ただのトレーナーかな",
                     "enText": "Just a trainer, I guess.",
                     "nextBlock": 29
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 143,
+                    "pathId": -1046790667558045238
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -2647315733474905969
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 2392020581708367106
                 }
             ],
             "pathId": 6792834539995442103,
@@ -332,6 +636,21 @@
             "jpText": "それじゃ肩書きじゃん。",
             "enText": "That's a title then.",
             "nextBlock": 30,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 6823292445081626315
+                },
+                {
+                    "origLen": 51,
+                    "pathId": 5211235037879525572
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -6653402759771868753
+                }
+            ],
             "pathId": -5410212016682735982,
             "blockIdx": 29
         },
@@ -341,6 +660,17 @@
             "jpText": "まー……そっか。\nただのトレーナーって、イイね。",
             "enText": "Mar… I see. Just a trainer is nice.",
             "nextBlock": 31,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": -5203053350871297764
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 838506274697221936
+                }
+            ],
             "pathId": -3643395438097734658,
             "blockIdx": 30
         },
@@ -350,6 +680,17 @@
             "jpText": "アタシの走りを見る人。\r\n……ホントのアタシを、ただ見てる人。",
             "enText": "People who watch Atashi run… The person \nwho just watches the real Atashi.",
             "nextBlock": 32,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": -4417671767889625108
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 6872367144241391058
+                }
+            ],
             "pathId": 5168158399839958737,
             "blockIdx": 31
         },
@@ -359,6 +700,17 @@
             "jpText": "過剰に心酔してきたり、遠巻きに眺めるだけ\nだったり、距離感ムズい誰とも違う。",
             "enText": "They are not like anyone else who is overly \nintoxicated, or who just looks at you from a \ndistance, or who has a sense of distance.",
             "nextBlock": 33,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 3816715164752291447
+                },
+                {
+                    "origLen": 176,
+                    "pathId": -7510214213458187483
+                }
+            ],
             "pathId": 1147106817766237822,
             "blockIdx": 32
         },
@@ -368,6 +720,17 @@
             "jpText": "干渉も決めつけも同情もディスも、\r\nなんにもない。",
             "enText": "There is no interference, no judgment, no \nsympathy, no disrespect, nothing.",
             "nextBlock": 34,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 7801820549047466485
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 6748724463189419132
+                }
+            ],
             "pathId": -5553805082721000521,
             "blockIdx": 33
         },
@@ -377,6 +740,17 @@
             "jpText": "アンタと走ってなかったら……多分、\r\nずっと自分のこと好きじゃなかったと思う。",
             "enText": "If I hadn't run with you… I probably \nwouldn't have liked myself all along.",
             "nextBlock": 35,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 392334220674978351
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -4696984881925423866
+                }
+            ],
             "pathId": 4158349605118331862,
             "blockIdx": 34
         },
@@ -386,6 +760,7 @@
             "jpText": "……やべ、語りフェーズきてるわ。\nだいぶ頭使ってない、今。やばい？",
             "enText": "… Oh man, I'm in a storytelling phase. \nI'm not using my head much, now. Is it bad?",
             "nextBlock": 36,
+            "origClipLength": 88,
             "choices": [
                 {
                     "jpText": "大丈夫じゃないか？",
@@ -398,6 +773,16 @@
                     "nextBlock": 36
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": -4613683813178144199
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -8764452896749422638
+                }
+            ],
             "pathId": 1184490176307432461,
             "blockIdx": 35
         },
@@ -407,6 +792,17 @@
             "jpText": "テキトーすぎっしょ。\n……ふふ。",
             "enText": "Too much textile… Heh.",
             "nextBlock": 37,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": 604132286755661793
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 294465078965992195
+                }
+            ],
             "pathId": 2857272377806218938,
             "blockIdx": 36
         },
@@ -416,6 +812,17 @@
             "jpText": "ただのトレーナー相手だから、\nいっか……。",
             "enText": "Oh well, it's just a trainer, \nso what the heck…",
             "nextBlock": 38,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3045717393649863587
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -7521390248811775461
+                }
+            ],
             "pathId": 8734296776589402151,
             "blockIdx": 37
         },
@@ -425,8 +832,20 @@
             "jpText": "ゴールドシチーとの間に、\nかけがえのない絆を感じた\nひとときだった……。",
             "enText": "It was a time when I felt an irreplaceable \nbond with Gold City…",
             "nextBlock": -1,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -1036350797192894186
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 4734234195019927026
+                }
+            ],
             "pathId": -8924877982924303364,
             "blockIdx": 38
         }
-    ]
+    ],
+    "modified": 1662157584
 }

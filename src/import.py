@@ -50,8 +50,12 @@ class PatchManager:
                     print(f"Imported {file}")
                 else:
                     nFiles -= 1
-            except (NoAssetError, AlreadyPatchedError):
-                nFiles -= 1  # Expected behaviour; don't print
+                    if self.args.verbose:
+                        print(f"{file} not modified.")
+            except (NoAssetError, AlreadyPatchedError) as e:
+                nFiles -= 1
+                if self.args.verbose:
+                    print(e)
             except PatchError as e:
                 nFiles -= 1
                 print(f"Skipped {file}: {e}")

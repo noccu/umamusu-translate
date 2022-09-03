@@ -1,5 +1,5 @@
 import json
-from pathlib import PurePath
+from pathlib import PurePath, Path
 import shutil
 
 import common
@@ -7,8 +7,9 @@ import helpers
 
 ROOT = PurePath("src")
 LOCAL_DUMP = ROOT / "data" / "static_dump.json"
-HASH_FILE_STATIC = PurePath("localify") / "localized_data" / "static.json"
-HASH_FILE_DYNAMIC = PurePath("localify") / "localized_data" / "dynamic.json"
+LOCALIFY_DATA_DIR = Path("localify") / "localized_data"
+HASH_FILE_STATIC = LOCALIFY_DATA_DIR / "static.json"
+HASH_FILE_DYNAMIC = LOCALIFY_DATA_DIR / "dynamic.json"
 TL_FILE = PurePath("translations") / "localify" / "ui.json"
 STRING_BLACKLIST = ("現在の予約レース",)
 
@@ -192,15 +193,28 @@ def main():
             helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
 
     if args.move:
+        print("Copying UI translations")
         installDir = helpers.getUmaInstallDir()
         if installDir:
             try:
-                shutil.copyfile(HASH_FILE_STATIC, installDir / PurePath(*HASH_FILE_STATIC.parts[1:]))
-                shutil.copyfile(HASH_FILE_DYNAMIC, installDir / PurePath(*HASH_FILE_DYNAMIC.parts[1:]))
+                dst = installDir / LOCALIFY_DATA_DIR.name
+                # dst.mkdir(exist_ok=True)  # Disabling this to check TLG status. First install must be manual.
+                # Using rglob for future functionality
+                for f in LOCALIFY_DATA_DIR.rglob("*.json"):
+                    shutil.copyfile(f, dst / f.relative_to(LOCALIFY_DATA_DIR))
             except PermissionError:
                 print(f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself.")
+            except FileNotFoundError:
+                if not installDir.exists():
+                    print(f"Obtained install dir doesn't exist: {str(installDir)}\n"
+                           "Possibly corrupt or double game install. Copy UI files manually.")
+                elif not dst.exists():
+                    print("TLG not installed. See guide if you wish to translate UI elements.")
+                else:
+                    print(f"A patch file with UI translations is missing.\n"
+                           f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}.")
         else:
-            print("Couldn't find game path, files not moved.")
+            print("Couldn't find game install path, files not moved.")
 
 
 if __name__ == '__main__':

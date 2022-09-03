@@ -110,7 +110,7 @@ class Args(argparse.ArgumentParser):
                               help="Limit to changed files (requires git)")
             self.add_argument("-src", default=GAME_ASSET_ROOT)
             self.add_argument("-dst", default=Path("dat/").resolve())
-            self.add_argument("--verbose", action="store_true")
+            self.add_argument("-vb", "--verbose", action="store_true")
         elif types:
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
 

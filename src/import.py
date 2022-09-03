@@ -31,9 +31,9 @@ class PatchManager:
                     raise ConfigError(f"Invalid config arg: {k}: {v}")
         if self.args.overwrite:
             self.args.dst = common.GAME_ASSET_ROOT
-        if self.args.silent and self.errorLog is stdout:
+        if self.args.write_log and self.errorLog is stdout:
             self.errorLog = open("import.log", "w")
-        elif not self.args.silent and self.errorLog is not stdout:
+        elif not self.args.write_log and self.errorLog is not stdout:
             self.errorLog.close()
             self.errorLog = stdout
 
@@ -59,7 +59,7 @@ class PatchManager:
                 nFiles -= 1
                 nErrors += 1
                 print(f"Error importing {file}")
-                if self.args.silent:
+                if self.args.write_log:
                     print(f"Error in {file}", file=self.errorLog)
                     print_exc(chain=True, file=self.errorLog)
                 else:
@@ -164,7 +164,7 @@ class StoryPatcher:
                         newBlockLen = newClipLen + assetData['StartFrame'] + 1
                         assetData['ClipLength'] = newClipLen
                         self.assetData['BlockList'][blockIdx]['BlockLength'] = newBlockLen
-                        if not self.manager.args.silent:
+                        if self.manager.args.verbose:
                             print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
 
                         if "animData" in textBlock:
@@ -174,14 +174,14 @@ class StoryPatcher:
                                     try:
                                         animAsset = self.bundle.assets[animGroup['pathId']]
                                     except KeyError:
-                                        if not self.manager.args.silent: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
+                                        if self.manager.args.verbose: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
                                     else:
                                         animData = animAsset.read_typetree()
                                         animData['ClipLength'] = newAnimLen
                                         animAsset.save_typetree(animData)
-                                        if not self.manager.args.silent:
+                                        if self.manager.args.verbose:
                                             print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}")
-                        elif not self.manager.args.silent:
+                        elif self.manager.args.verbose:
                             print(f"Text length adjusted but no anim data found at {blockIdx}")
 
                 if 'choices' in textBlock:
@@ -272,7 +272,7 @@ def main():
     ap.add_argument("-O", "--overwrite", action="store_true", help="(Over)Write files straight to game directory")
     ap.add_argument("-U", "--update", action="store_true", help="Skip already imported files")
     ap.add_argument("-FI", "--full-import", dest="fullImport", action="store_true", help="Import all available types")
-    ap.add_argument("-S", "--silent", action="store_true",
+    ap.add_argument("-wf", "--write-log", action="store_true",
                     help="Ignore some errors and print debug info to file instead of terminal (stdout)")
     ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
     ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")

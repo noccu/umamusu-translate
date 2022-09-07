@@ -153,7 +153,7 @@ name | progress | translator
 --- | --- | ---
 Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
-Eigao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
+Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Next Frontier | Complete | [LotoDS][]

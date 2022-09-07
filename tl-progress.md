@@ -19,7 +19,8 @@ Main story Act 1 Ch 2 | Complete | [Hades of Games]
 Main story Act 1 Ch 3 | Complete | [Hades of Games]
 Main story Act 1 Ch 4 | Complete | [Hades of Games]
 Main story Act 1 Ch 5 | Complete | [LotoDS][]
-Main story Act 1 Ch 6 (Final) | Complete | [LotoDS][]
+Main story Act 1 Ch 6 Finale Part 1 | Complete | [LotoDS][]
+Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
@@ -160,11 +161,12 @@ name | progress | translator
 --- | --- | ---
 Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
+Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Next Frontier | Complete | [LotoDS][]
 Sasayaka na Inori | Complete | [Eight][]
-transforming | In progress | [noccu][]
+transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
 We are DREAMERS!! | Complete | TR

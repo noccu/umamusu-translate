@@ -30,11 +30,11 @@ Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
-Tonight at the Ligne Droite | In progress, Complete | [ebi], deepl
+Tonight at the Ligne Droite | In progress, Complete | Anonymous Reindeer, deepl
 A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
 The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]
-Super Smashing☆Summer Vacation | In Progress | [ebi][]
+Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
 Wings of Iron: Hazy Tales | In Progress | [noccu]
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
@@ -131,7 +131,7 @@ Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
-Rudolph | In progress | [ebi][]
+Rudolph | In progress | Anonymous Reindeer
 Sakura Bakushin O | Complete | deepl
 
 ## Cards
@@ -167,7 +167,7 @@ Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] 
 Next Frontier | Complete | [LotoDS][]
 Sasayaka na Inori | Complete | [Eight][]
 transforming | Complete | [LotoDS][]
-Umapyoi Densetsu | Complete | [ebi][], [Karimenrider][] (missing parts)
+Umapyoi Densetsu | Complete | Anonymous Reindeer, [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
 We are DREAMERS!! | Complete | TR
 winning the soul | Complete | [Kuun0][]
@@ -186,7 +186,6 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [xct]: https://www.youtube.com/user/ADSRM
 [Hades of Games]: https://www.youtube.com/c/HadesofGames
 [Karimenrider]: https://umamusume.fandom.com/wiki/User:Karimenrider
-[ebi]: https://twitter.com/tamamolife
 [Snep]: https://twitter.com/ProfessorSnep
 [Ben]: https://www.youtube.com/user/sheepawolf
 [Eight]: https://twitter.com/hachikure

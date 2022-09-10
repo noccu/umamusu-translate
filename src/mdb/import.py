@@ -81,8 +81,16 @@ def main():
                 db.executemany(stmt, inputGen)
             markPatched(db)
             # COMMIT; handled by with:
+    except sqlite3.OperationalError:
+        if not Path(args.dst).exists():
+            print(f"The master.mdb file does not exist at {args.dst}.\n\
+                    Start the game and login first to download it. Or direct to nonstandard location with -dst")
+        else:
+            raise
     finally:
-        db.close()
+        # todo? :tmo:
+        if "db" in locals():
+            db.close()
 
 
 if __name__ == '__main__':

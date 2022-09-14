@@ -42,7 +42,7 @@ def isJapanese(text):
 
 
 def isEnglish(text):
-    return regex.fullmatch(r"[^\p{Katakana}\p{Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}。]+", text)
+    return regex.fullmatch(r"[^\p{scx=Katakana}\p{scx=Hiragana}\p{Han}\p{InHalfwidth_and_Fullwidth_Forms}。]+", text)
 
 
 def getUmaInstallDir() -> Optional[Path]:

@@ -124,7 +124,7 @@ def parseArgs():
                     help="Add dump (local or target) entries to static_en.json for translating")
     # ? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to
     # work right but ok. can't say there's no choice at least :^)
-    ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump")
+    ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump on import")
     ap.add_argument("-upd", "--update", action="store_true",
                     help="Create/update the final static.json file used by the dll from static_dump.json and static_en.json")
     ap.add_argument("-clean", "--clean", choices=["dump", "ui", "both"],  nargs='?', const="both", default=False,
@@ -139,7 +139,7 @@ def parseArgs():
     ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath,
                     help="Target dump file for imports. When given without value: auto-detect in game dir")
     ap.add_argument("-tlg", default=None, const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"), nargs="?", type=PurePath,
-                    help="Import TLG-style static dump. Optionally pass a path to the dump, else auto-detects in game dir")
+                    help="Import TLG's static dump too. Optionally pass a path to the dump, else auto-detects in game dir")
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):

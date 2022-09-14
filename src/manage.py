@@ -142,9 +142,6 @@ def parseArgs():
                     help="Import TLG-style static dump. Optionally pass a path to the dump, else auto-detects in game dir")
     args = ap.parse_args()
 
-    if not any([args.populate, args.update, args.clean, args.import_only, args.sort, args.move]):
-        raise SystemExit("1 required argument missing.")
-
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
         args.src = LOCAL_DUMP
         path = helpers.getUmaInstallDir()
@@ -204,15 +201,16 @@ def main():
                     shutil.copyfile(f, dst / f.relative_to(LOCALIFY_DATA_DIR))
             except PermissionError:
                 print(f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself.")
-            except FileNotFoundError:
+            except FileNotFoundError as e:
                 if not installDir.exists():
                     print(f"Obtained install dir doesn't exist: {str(installDir)}\n"
                            "Possibly corrupt or double game install. Copy UI files manually.")
                 elif not dst.exists():
                     print("TLG not installed. See guide if you wish to translate UI elements.")
                 else:
-                    print(f"A patch file with UI translations is missing.\n"
-                           f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}.")
+                    print(f"Error: {e}\n"
+                          f"A patch file with UI translations is missing.\n"
+                          f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}.")
         else:
             print("Couldn't find game install path, files not moved.")
 

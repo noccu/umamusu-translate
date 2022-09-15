@@ -10,6 +10,7 @@ LOCAL_DUMP = ROOT / "data" / "static_dump.json"
 LOCALIFY_DATA_DIR = Path("localify") / "localized_data"
 HASH_FILE_STATIC = LOCALIFY_DATA_DIR / "static.json"
 HASH_FILE_DYNAMIC = LOCALIFY_DATA_DIR / "dynamic.json"
+CONFIG_FILE = Path("localify")  / "config.json"
 TL_FILE = PurePath("translations") / "localify" / "ui.json"
 STRING_BLACKLIST = ("現在の予約レース",)
 
@@ -118,6 +119,50 @@ def order():
         helpers.writeJson(file, data)
 
 
+def convertMdb():
+    """Writes any mdb files marked to do so in the index as TLG format dicts, returns the paths written."""
+    converted = list()
+    for entry in helpers.readJson("src/mdb/index.json"):
+        files = entry['files'].keys() if entry.get('files') else (entry.get('file'),)
+        # files = entry.get('files',((entry.get('file'), None),)).keys() # :golshiheh:
+        for file in files:
+            if not (isinstance(file, dict) and file.get('tlg')) and not entry.get('tlg'):
+                continue
+            subdir = entry['table'] if entry.get("subdir") else ""
+            fn = f"{file}.json"
+            data = helpers.readJson(Path("translations/mdb") / subdir / fn).get('text', dict())
+            data = {getTextHash(k): v.replace("\\n", "\n") for k,v in data.items() if v}
+            if data:
+                path = LOCALIFY_DATA_DIR / subdir / fn
+                helpers.writeJson(path, data)
+                converted.append(path)
+    return converted
+
+def updConfigDicts(cfgPath, dictPaths: list):
+    """Update the dicts key in the cfgPath file with the given dictPaths."""
+    try:
+        data = helpers.readJson(cfgPath)
+    except FileNotFoundError:
+        print("Config file not found")
+        return
+    dicts = ["localized_data\\dynamic.json", *[str(x) for x in dictPaths]]
+    data['dicts'] = dicts
+    helpers.writeJson(cfgPath, data)
+
+def getTextHash(string:str):
+    # Cleaning done by texthashtool. There is a version that cleans \n too, seems unneeded.
+    string = string.translate({ord(c): None for c in ("\r", ",")})
+
+    # Implement vc++ std::hash (FNV1a)
+    # mask = 2 ** 64 - 1 # Mask is used to emulate 64bit mult product
+    o = 14695981039346656037 # FNV_offset_basis
+    for c in string.encode("utf_16_le"):
+        o ^= c
+        o *= 1099511628211 # FNV_prime
+        o &= 18446744073709551615 # Integer form of mask
+    return o
+
+
 def parseArgs():
     ap = common.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument("-new", "--populate", action="store_true",
@@ -140,6 +185,7 @@ def parseArgs():
                     help="Target dump file for imports. When given without value: auto-detect in game dir")
     ap.add_argument("-tlg", default=None, const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"), nargs="?", type=PurePath,
                     help="Import TLG's static dump too. Optionally pass a path to the dump, else auto-detects in game dir")
+    ap.add_argument("-mdb", "--convert-mdb", action="store_true", help="Import some mdb strings for TLG to improve formatting")
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
@@ -164,6 +210,10 @@ def parseArgs():
 
 def main():
     args = parseArgs()
+
+    if args.convert_mdb:
+        mdbDicts = convertMdb()
+        updConfigDicts(CONFIG_FILE, mdbDicts)
 
     if args.clean:
         clean(args.clean)

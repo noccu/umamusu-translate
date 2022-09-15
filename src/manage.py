@@ -247,8 +247,15 @@ def main():
                 dst = installDir / LOCALIFY_DATA_DIR.name
                 # dst.mkdir(exist_ok=True)  # Disabling this to check TLG status. First install must be manual.
                 # Using rglob for future functionality
+                dynFiles = list()
                 for f in LOCALIFY_DATA_DIR.rglob("*.json"):
-                    shutil.copyfile(f, dst / f.relative_to(LOCALIFY_DATA_DIR))
+                    subPath = f.relative_to(LOCALIFY_DATA_DIR)
+                    fn =  dst / subPath
+                    fn.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(f, fn)
+                    if len(subPath.parts) > 1:
+                        dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
+                    updConfigDicts(installDir / "config.json", dynFiles)
             except PermissionError:
                 print(f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself.")
             except FileNotFoundError as e:
@@ -259,7 +266,7 @@ def main():
                     print("TLG not installed. See guide if you wish to translate UI elements.")
                 else:
                     print(f"Error: {e}\n"
-                          f"A patch file with UI translations is missing.\n"
+                          f"A patch file with/for UI translations is missing.\n"
                           f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}.")
         else:
             print("Couldn't find game install path, files not moved.")

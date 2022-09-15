@@ -48,7 +48,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
-Inari One | In progress | [LotoDS][]
+Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]

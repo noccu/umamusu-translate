@@ -20,7 +20,7 @@ def markPatched(db: sqlite3.Connection):
 
 
 def translator(args, entry: dict):
-    files = entry['files'].keys() if entry.get("specifier") else [entry['file']]
+    files = entry['files'].keys() if entry.get("specifier") else (entry['file'],)
     ovrList = entry.get("overrides")
     for file in files:
         # could just make alt/same-name.json a standard and remove the list from index.json

@@ -20,9 +20,16 @@ def markPatched(db: sqlite3.Connection):
 
 
 def translator(args, entry: dict):
-    files = entry['files'].keys() if entry.get("specifier") else [entry['file']]
+    files = entry['files'].items() if entry.get("specifier") else ((entry.get('file'), None),)
     ovrList = entry.get("overrides")
-    for file in files:
+    if entry.get('tlg') and helpers.isUsingTLG():
+        print(f"TLG used: skipping {entry.get('table')}")
+        return
+    for file, info in files:
+        if (isinstance(info, dict) and info.get('tlg')) and helpers.isUsingTLG():
+            print(f"TLG used: skipping {file}")
+            continue
+
         # could just make alt/same-name.json a standard and remove the list from index.json
         if ovrList:
             for argName, data in ovrList.items():
@@ -34,7 +41,7 @@ def translator(args, entry: dict):
         try:
             data = common.TranslationFile(args.src / (entry['table'] if entry.get("subdir") else "") / (file + ".json"))
         except FileNotFoundError:
-            raise StopIteration
+            return
 
         for e in data.textBlocks:
             if e.get('enText'):

@@ -136,6 +136,7 @@ def convertMdb():
                 path = LOCALIFY_DATA_DIR / subdir / fn
                 helpers.writeJson(path, data)
                 converted.append(path)
+    print(f"Converted {len(converted)} files.")
     return converted
 
 def updConfigDicts(cfgPath, dictPaths: list):

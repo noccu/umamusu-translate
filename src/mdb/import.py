@@ -20,13 +20,13 @@ def markPatched(db: sqlite3.Connection):
 
 
 def translator(args, entry: dict):
-    files = entry['files'].keys() if entry.get("specifier") else (entry['file'],)
+    files = entry['files'].items() if entry.get("specifier") else ((entry.get('file'), None),)
     ovrList = entry.get("overrides")
     if entry.get('tlg') and helpers.isUsingTLG():
         print(f"TLG used: skipping {entry.get('table')}")
         return
-    for file in files:
-        if (isinstance(file, dict) and file.get('tlg')) and helpers.isUsingTLG():
+    for file, info in files:
+        if (isinstance(info, dict) and info.get('tlg')) and helpers.isUsingTLG():
             print(f"TLG used: skipping {file}")
             continue
 

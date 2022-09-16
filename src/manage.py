@@ -123,10 +123,9 @@ def convertMdb():
     """Writes any mdb files marked to do so in the index as TLG format dicts, returns the paths written."""
     converted = list()
     for entry in helpers.readJson("src/mdb/index.json"):
-        files = entry['files'].keys() if entry.get('files') else (entry.get('file'),)
-        # files = entry.get('files',((entry.get('file'), None),)).keys() # :golshiheh:
-        for file in files:
-            if not (isinstance(file, dict) and file.get('tlg')) and not entry.get('tlg'):
+        files = entry['files'].items() if entry.get('files') else ((entry.get('file'), None),)
+        for file, info in files:
+            if not (isinstance(info, dict) and info.get('tlg')) and not entry.get('tlg'):
                 continue
             subdir = entry['table'] if entry.get("subdir") else ""
             fn = f"{file}.json"

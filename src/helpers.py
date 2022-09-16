@@ -8,6 +8,7 @@ import regex
 DMM_CONFIG = Path(environ['APPDATA']) / "dmmgameplayer5" / "dmmgame.cnf"
 IS_WIN = osname == "nt"
 __GAME_INSTALL_DIR = False
+__IS_USING_TLG = None
 
 def readJson(file: PathLike) -> Union[dict, list]:
     with open(file, "r", encoding="utf8") as f:
@@ -66,3 +67,10 @@ def getUmaInstallDir() -> Optional[Path]:
             except:
                 pass
     return __GAME_INSTALL_DIR
+
+
+def isUsingTLG() -> bool:
+    global __IS_USING_TLG
+    if __IS_USING_TLG is not None: return __IS_USING_TLG
+    __IS_USING_TLG = (getUmaInstallDir() / "config.json").exists() 
+    return __IS_USING_TLG

@@ -35,7 +35,7 @@ A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][
 The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
-Wings of Iron: Hazy Tales | In Progress | [noccu]
+Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 

@@ -375,8 +375,14 @@ function translateSpecific (type, jpText, file) {
                 out += `Obtain ${pt} total Carnival Pts`;
             }
         }
-        else if (jpText == "限定ミッションをすべてクリアしよう") {
+        else if (jpText.match(/限定ミッションを(?:すべて|全て)クリアしよう/)) {
             out += "Complete all limited missions";
+        }
+        else if (m = jpText.match(/全ての育成目標を達成して(\d+)回育成完了しよう/)) {
+            let [, n] = m;
+            if (n) {
+                out += `Clear all training goals ${n} times`;
+            }
         }
         else {
             found = false

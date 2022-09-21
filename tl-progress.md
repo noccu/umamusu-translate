@@ -124,6 +124,7 @@ Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
 Gold City | Complete | deepl (contributed by CryDuringItAll)
+Haru Urara | In progress, Complete | Nephiro (3/129), deepl
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl

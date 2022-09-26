@@ -28,7 +28,7 @@ def change_chapter(event=None, initialLoad=False):
     loadFile()
     cur_file = files[cur_chapter]
 
-    block_dropdown['values'] = [f"{i+1} - {block['jpText'][:8]}" for i, block in enumerate(cur_file.textBlocks)]
+    block_dropdown['values'] = [f"{i+1} - {block['jpText'][:16]}" for i, block in enumerate(cur_file.textBlocks)]
     ll = textprocess.calcLineLen(cur_file, False)
     # Attempt to calc the relation of line length to text box size
     # ll = int(ll / (0.958 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH # default font
@@ -575,11 +575,11 @@ def main():
     textblock_label = tk.Label(root, text="Block")
     textblock_label.grid(row=0, column=2)
 
-    chapter_dropdown = ttk.Combobox(root)
+    chapter_dropdown = ttk.Combobox(root, width=35)
     chapter_dropdown['values'] = [f.split("\\")[-1] for f in files]
     chapter_dropdown.bind("<<ComboboxSelected>>", change_chapter)
     chapter_dropdown.grid(row=0, column=1, sticky=tk.NSEW)
-    block_dropdown = ttk.Combobox(root)
+    block_dropdown = ttk.Combobox(root, width=35)
     block_dropdown.bind("<<ComboboxSelected>>", change_block)
     block_dropdown.grid(row=0, column=3, sticky=tk.NSEW)
 

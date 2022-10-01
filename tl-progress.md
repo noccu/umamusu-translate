@@ -125,7 +125,7 @@ Daiwa Scarlet | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
 Gold City | Complete | deepl (contributed by CryDuringItAll)
 Gold Ship | Complete | noccu (5/120) (Commissioned by FragmentalSolstice),<br> deepl (contributed by CryDuringItAll)
-Haru Urara | In progress, Complete | Nephiro (3/129), deepl
+Haru Urara | In progress, Complete | [Nephiro] (3/129), deepl
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl
@@ -151,6 +151,17 @@ All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Maruzensky | Complete | [noccu][]
 Curren Chan | Complete | [noccu][]
 Gold Ship | Complete | [noccu][] (solo 1-2), deepl
+
+# System text
+name | progress | translator
+--- | --- | ---
+All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+Eishin Flash | Complete | deepl
+Haru Urara | Complete | deepl
+Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
+Tazuna | In Progress | [Nephiro] (5/78)
+Tokai Teio | In Progress | [noccu] (2/211)
+Twin Turbo | Complete | [noccu]
 
 # General
 name | progress | translator
@@ -195,3 +206,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [XiantheMiguel]: https://twitter.com/XiantheMiguel
 [Mini Fox]: https://github.com/MiniFoxx
 [nem]: https://twitter.com/nemupyoi
+[Nephiro]: https://github.com/Nephiro

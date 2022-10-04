@@ -24,14 +24,14 @@ Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
-The Sounds of Autumn | Complete | deepl (old)
+The Sounds of Autumn | Complete, In Progress | deepl (old), Anonymous Reindeer
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
-Tonight at the Ligne Droite | In progress, Complete | Anonymous Reindeer, deepl
-A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
+Tonight at the Ligne Droite | Transferring, Complete | Anonymous Reindeer, deepl
+A Resounding Cheer, Tracen Academy Cheerleading Squad! | Transferring | [LotoDS][]
 The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer

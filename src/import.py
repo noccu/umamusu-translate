@@ -104,6 +104,11 @@ class PatchManager:
     def patch(self, path: str):
         """Swaps game assets with translation file data, returns modified state."""
         self.loadTranslationFile(path)
+        if self.args.use_tlg and isUsingTLG() and self.tlFile.data.get("tlg"):
+            convertTlFile(self.tlFile)
+            if self.args.verbose:
+                print(f"Writing TLG version: {self.tlFile.name}")
+            return False
         bundle = self.loadBundle(self.tlFile.bundle)
 
         if self.tlFile.type in ("story", "home"):
@@ -280,8 +285,14 @@ def main():
                     help="Ignore some errors and print debug info to file instead of terminal (stdout)")
     ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
     ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")
+    ap.add_argument("-tlg", "--use-tlg", action="store_true", help="Auto-write any TLG versions when detected")
 
     args = ap.parse_args()
+    if args.use_tlg:
+        global isUsingTLG
+        global convertTlFile
+        from helpers import isUsingTLG
+        from manage import convertTlFile
     process(args)
 
 

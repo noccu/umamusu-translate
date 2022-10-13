@@ -232,7 +232,7 @@ class TranslationFile:
         else:
             return "story/home"
 
-    def getStoryId(self):
+    def getStoryId(self) -> str:
         if self.version > 3:
             return self.data['storyId']
         elif self.version > 2 and self.data['storyId'] != "000000000":

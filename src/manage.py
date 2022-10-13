@@ -138,6 +138,17 @@ def convertMdb():
     print(f"Converted {len(converted)} files.")
     return converted
 
+def convertTlFile(file: common.TranslationFile):
+    converted = list()
+    path = LOCALIFY_DATA_DIR / file.type / (file.getStoryId() + ".json")
+    if path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
+        return
+    data = {getTextHash(b['jpText']): b['enText'].replace("\\n", "\n") for b in file.genTextContainers() if b['enText']}
+    helpers.writeJson(path, data)
+    converted.append(path)
+    return converted
+
+
 def updConfigDicts(cfgPath, dictPaths: list):
     """Update the dicts key in the cfgPath file with the given dictPaths."""
     try:
@@ -151,7 +162,7 @@ def updConfigDicts(cfgPath, dictPaths: list):
 
 def getTextHash(string:str):
     # Cleaning done by texthashtool. There is a version that cleans \n too, seems unneeded.
-    string = string.translate({ord(c): None for c in ("\r", ",")})
+    string = string.translate({ord(c): None for c in ("\r", ",")}).replace("\\n", "\n")
 
     # Implement vc++ std::hash (FNV1a)
     # mask = 2 ** 64 - 1 # Mask is used to emulate 64bit mult product
@@ -186,6 +197,7 @@ def parseArgs():
     ap.add_argument("-tlg", default=None, const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"), nargs="?", type=PurePath,
                     help="Import TLG's static dump too. Optionally pass a path to the dump, else auto-detects in game dir")
     ap.add_argument("-mdb", "--convert-mdb", action="store_true", help="Import some mdb strings for TLG to improve formatting")
+    ap.add_argument("-conv", "--convert-asset", nargs='?', const=True, default=False, help="Write TLG versions of [specified] asset files marked as such", metavar="path")
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
@@ -214,6 +226,13 @@ def main():
     if args.convert_mdb:
         mdbDicts = convertMdb()
         updConfigDicts(CONFIG_FILE, mdbDicts)
+    elif args.convert_asset:
+        if args.convert_asset is True:
+            files = common.searchFiles(args.type, args.group, args.id, args.idx)
+            for file in files:
+                convertTlFile(common.TranslationFile(file))
+        else: #str
+            convertTlFile(common.TranslationFile(args.convert_asset))
 
     if args.clean:
         clean(args.clean)

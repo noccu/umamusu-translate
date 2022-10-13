@@ -193,9 +193,9 @@ def parseArgs():
                     help="Purely import target dump to local and exit. Implies -save and -src (auto mode, can be overridden)")
     ap.add_argument("-M", "--move", action="store_true", help="Move final json files to game dir.")
     ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath,
-                    help="Target dump file for imports. When given without value: auto-detect in game dir")
+                    help="Target dump file for imports. Auto-detects in game dir if no path given", metavar="path")
     ap.add_argument("-tlg", default=None, const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"), nargs="?", type=PurePath,
-                    help="Import TLG's static dump too. Optionally pass a path to the dump, else auto-detects in game dir")
+                    help="Import TLG's static dump too. Auto-detects in game dir if no path given", metavar="path")
     ap.add_argument("-mdb", "--convert-mdb", action="store_true", help="Import some mdb strings for TLG to improve formatting")
     ap.add_argument("-conv", "--convert-asset", nargs='?', const=True, default=False, help="Write TLG versions of [specified] asset files marked as such", metavar="path")
     args = ap.parse_args()

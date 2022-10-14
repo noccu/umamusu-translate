@@ -1,15 +1,15 @@
 @ECHO OFF
-REM SET PATH=%PATH%;C:\python3.9;%LOCALAPPDATA%\Programs\Python\Launcher
 SETLOCAL
 ECHO Checking python...
+CALL :venv
 SET snek=py
 WHERE %snek% >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
-    set snek=python
+    SET snek=python
     WHERE %snek% >nul 2>&1
     IF %ERRORLEVEL% NEQ 0 (
         ECHO Can't find python. Likely not added to PATH ^(google it^) or not installed.
-        goto quit
+        GOTO quit
     )
 )
 ECHO Using %snek%
@@ -18,11 +18,7 @@ ECHO Using %snek%
 
 ECHO(
 
-IF [%1] NEQ [] (
-    IF [%1] EQU [install] GOTO install
-    IF [%1] EQU [uninstall] GOTO uninstall
-    IF [%1] EQU [mdb] GOTO mdb
-)
+IF [%1] NEQ [] ( GOTO %1 )
 
 :open
 %snek% src/filecopy.py --backup
@@ -39,6 +35,12 @@ ECHO All done!
 GOTO quit
 
 :install
+IF NOT EXIST ".venv" (
+    ECHO Creating venv
+    %snek% -m venv .venv
+    CALL :venv
+) ELSE ( ECHO Using pre-existing venv )
+
 ECHO Installing required libraries...
 %snek% -m pip install -r src\requirements.txt
 IF %ERRORLEVEL% NEQ 0 (
@@ -60,3 +62,12 @@ ECHO Uninstalling patch...
 :quit
 PAUSE
 EXIT /B
+
+REM FUNCTIONS
+
+:venv
+IF EXIST ".venv" (
+    ECHO Using venv
+    .venv\Scripts\activate.bat
+)
+EXIT /B 0

@@ -10,6 +10,7 @@ LOCAL_DUMP = ROOT / "data" / "static_dump.json"
 LOCALIFY_DATA_DIR = Path("localify") / "localized_data"
 HASH_FILE_STATIC = LOCALIFY_DATA_DIR / "static.json"
 HASH_FILE_DYNAMIC = LOCALIFY_DATA_DIR / "dynamic.json"
+CONFIG_FILE = Path("localify")  / "config.json"
 TL_FILE = PurePath("translations") / "localify" / "ui.json"
 STRING_BLACKLIST = ("現在の予約レース",)
 
@@ -118,13 +119,68 @@ def order():
         helpers.writeJson(file, data)
 
 
+def convertMdb():
+    """Writes any mdb files marked to do so in the index as TLG format dicts, returns the paths written."""
+    converted = list()
+    for entry in helpers.readJson("src/mdb/index.json"):
+        files = entry['files'].items() if entry.get('files') else ((entry.get('file'), None),)
+        for file, info in files:
+            if not (isinstance(info, dict) and info.get('tlg')) and not entry.get('tlg'):
+                continue
+            subdir = entry['table'] if entry.get("subdir") else ""
+            fn = f"{file}.json"
+            data = helpers.readJson(Path("translations/mdb") / subdir / fn).get('text', dict())
+            data = {getTextHash(k): v.replace("\\n", "\n") for k,v in data.items() if v}
+            if data:
+                path = LOCALIFY_DATA_DIR / subdir / fn
+                helpers.writeJson(path, data)
+                converted.append(path)
+    print(f"Converted {len(converted)} files.")
+    return converted
+
+def convertTlFile(file: common.TranslationFile):
+    converted = list()
+    path = LOCALIFY_DATA_DIR / file.type / (file.getStoryId() + ".json")
+    if path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
+        return
+    data = {getTextHash(b['jpText']): b['enText'].replace("\\n", "\n") for b in file.genTextContainers() if b['enText']}
+    helpers.writeJson(path, data)
+    converted.append(path)
+    return converted
+
+
+def updConfigDicts(cfgPath, dictPaths: list):
+    """Update the dicts key in the cfgPath file with the given dictPaths."""
+    try:
+        data = helpers.readJson(cfgPath)
+    except FileNotFoundError:
+        print("Config file not found")
+        return
+    dicts = ["localized_data\\dynamic.json", *[str(x) for x in dictPaths]]
+    data['dicts'] = dicts
+    helpers.writeJson(cfgPath, data)
+
+def getTextHash(string:str):
+    # Cleaning done by texthashtool. There is a version that cleans \n too, seems unneeded.
+    string = string.translate({ord(c): None for c in ("\r", ",")}).replace("\\n", "\n")
+
+    # Implement vc++ std::hash (FNV1a)
+    # mask = 2 ** 64 - 1 # Mask is used to emulate 64bit mult product
+    o = 14695981039346656037 # FNV_offset_basis
+    for c in string.encode("utf_16_le"):
+        o ^= c
+        o *= 1099511628211 # FNV_prime
+        o &= 18446744073709551615 # Integer form of mask
+    return o
+
+
 def parseArgs():
     ap = common.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument("-new", "--populate", action="store_true",
                     help="Add dump (local or target) entries to static_en.json for translating")
     # ? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to
     # work right but ok. can't say there's no choice at least :^)
-    ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump")
+    ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump on import")
     ap.add_argument("-upd", "--update", action="store_true",
                     help="Create/update the final static.json file used by the dll from static_dump.json and static_en.json")
     ap.add_argument("-clean", "--clean", choices=["dump", "ui", "both"],  nargs='?', const="both", default=False,
@@ -137,9 +193,11 @@ def parseArgs():
                     help="Purely import target dump to local and exit. Implies -save and -src (auto mode, can be overridden)")
     ap.add_argument("-M", "--move", action="store_true", help="Move final json files to game dir.")
     ap.add_argument("-src", default=LOCAL_DUMP, const=None, nargs="?", type=PurePath,
-                    help="Target dump file for imports. When given without value: auto-detect in game dir")
+                    help="Target dump file for imports. Auto-detects in game dir if no path given", metavar="path")
     ap.add_argument("-tlg", default=None, const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"), nargs="?", type=PurePath,
-                    help="Import TLG-style static dump. Optionally pass a path to the dump, else auto-detects in game dir")
+                    help="Import TLG's static dump too. Auto-detects in game dir if no path given", metavar="path")
+    ap.add_argument("-mdb", "--convert-mdb", action="store_true", help="Import some mdb strings for TLG to improve formatting")
+    ap.add_argument("-conv", "--convert-asset", nargs='?', const=True, default=False, help="Write TLG versions of [specified] asset files marked as such", metavar="path")
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
@@ -164,6 +222,17 @@ def parseArgs():
 
 def main():
     args = parseArgs()
+
+    if args.convert_mdb:
+        mdbDicts = convertMdb()
+        updConfigDicts(CONFIG_FILE, mdbDicts)
+    elif args.convert_asset:
+        if args.convert_asset is True:
+            files = common.searchFiles(args.type, args.group, args.id, args.idx)
+            for file in files:
+                convertTlFile(common.TranslationFile(file))
+        else: #str
+            convertTlFile(common.TranslationFile(args.convert_asset))
 
     if args.clean:
         clean(args.clean)
@@ -197,8 +266,15 @@ def main():
                 dst = installDir / LOCALIFY_DATA_DIR.name
                 # dst.mkdir(exist_ok=True)  # Disabling this to check TLG status. First install must be manual.
                 # Using rglob for future functionality
+                dynFiles = list()
                 for f in LOCALIFY_DATA_DIR.rglob("*.json"):
-                    shutil.copyfile(f, dst / f.relative_to(LOCALIFY_DATA_DIR))
+                    subPath = f.relative_to(LOCALIFY_DATA_DIR)
+                    fn =  dst / subPath
+                    fn.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copyfile(f, fn)
+                    if len(subPath.parts) > 1:
+                        dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
+                    updConfigDicts(installDir / "config.json", dynFiles)
             except PermissionError:
                 print(f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself.")
             except FileNotFoundError as e:
@@ -209,7 +285,7 @@ def main():
                     print("TLG not installed. See guide if you wish to translate UI elements.")
                 else:
                     print(f"Error: {e}\n"
-                          f"A patch file with UI translations is missing.\n"
+                          f"A patch file with/for UI translations is missing.\n"
                           f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}.")
         else:
             print("Couldn't find game install path, files not moved.")

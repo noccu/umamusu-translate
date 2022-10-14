@@ -24,18 +24,18 @@ Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
-The Sounds of Autumn | Complete | deepl (old)
+The Sounds of Autumn | Complete, In Progress | deepl (old), Anonymous Reindeer
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
-Tonight at the Ligne Droite | In progress, Complete | Anonymous Reindeer, deepl
-A Resounding Cheer, Tracen Academy Cheerleading Squad! | In progress | [LotoDS][]
+Tonight at the Ligne Droite | Transferring, Complete | Anonymous Reindeer, deepl
+A Resounding Cheer, Tracen Academy Cheerleading Squad! | Transferring | [LotoDS][]
 The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
-Wings of Iron: Hazy Tales | In Progress | [noccu]
+Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 
@@ -58,7 +58,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
-Inari One | In progress | [LotoDS][]
+Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
@@ -124,6 +124,8 @@ Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
 Gold City | Complete | deepl (contributed by CryDuringItAll)
+Gold Ship | Complete | noccu (5/120) (Commissioned by FragmentalSolstice),<br> deepl (contributed by CryDuringItAll)
+Haru Urara | In progress, Complete | [Nephiro] (3/129), deepl
 King Halo | Complete | deepl
 Manhattan Cafe | Complete | deepl
 Maruzensky | Complete | deepl
@@ -150,6 +152,17 @@ Maruzensky | Complete | [noccu][]
 Curren Chan | Complete | [noccu][]
 Gold Ship | Complete | [noccu][] (solo 1-2), deepl
 
+# System text
+name | progress | translator
+--- | --- | ---
+All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+Eishin Flash | Complete | deepl
+Haru Urara | Complete | deepl
+Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
+Tazuna | In Progress | [Nephiro] (5/78)
+Tokai Teio | In Progress | [noccu] (2/211)
+Twin Turbo | Complete | [noccu]
+
 # General
 name | progress | translator
 --- | --- | ---
@@ -162,6 +175,7 @@ name | progress | translator
 Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
 Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
+Gaze on Me! | Complete | [noccu]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Next Frontier | Complete | [LotoDS][]
@@ -192,3 +206,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [XiantheMiguel]: https://twitter.com/XiantheMiguel
 [Mini Fox]: https://github.com/MiniFoxx
 [nem]: https://twitter.com/nemupyoi
+[Nephiro]: https://github.com/Nephiro

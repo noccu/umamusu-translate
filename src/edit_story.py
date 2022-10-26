@@ -627,7 +627,7 @@ def main():
     side_buttons = (
         tk.Button(frm_btns_side, text="Italic", command=lambda: format_text(SimpleNamespace(key=73))),
         tk.Button(frm_btns_side, text="Bold", command=lambda: format_text(SimpleNamespace(key=66))),
-        tk.Button(frm_btns_side, text="Convert\nunicode codepont", command=char_convert),
+        tk.Button(frm_btns_side, text="Convert\nunicode codepoint", command=char_convert),
         tk.Button(frm_btns_side, text="Process text", command=lambda: process_text(SimpleNamespace(state=0))),
         tk.Button(frm_btns_side, text="Process text\n(clean newlines)", command=lambda: process_text(SimpleNamespace(state=1))),
         tk.Button(frm_btns_side, text="Translate speakers", command=tlNames),

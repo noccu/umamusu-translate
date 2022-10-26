@@ -76,6 +76,7 @@ function translate() {
         translateSpecific("friend", jpText, PFILES.missions)
         translateSpecific("genLimMiss", jpText, PFILES.missions)
         translateSpecific("skillMis", jpText, PFILES.missions)
+        translateSpecific("affec", jpText, PFILES.missions)
     }
     // story-event-missions.json
     for (let [jpText, enText] of Object.entries(PFILES.storyMissions.text)) {
@@ -335,17 +336,18 @@ function translateSpecific (type, jpText, file) {
             if (race == "デイリー") out = `[Daily] `
             else if (race == "期間限定") out = `[Time-Limited] `
             else if (PFILES.races.text[race]) out = `[${PFILES.races.text[race]}] `
+            else out = `[${race}]`
         }
 
         if (m = jpText.match(/育成を(\d+)回完了しよう/)) {
             let [, n] = m;
             out += `Complete training ${n} time${n > 1 ? "s" : ""}`;
         }
-        else if (m = jpText.match(/育成で(.+)に.*勝利しよう/)) {
-            let [, r] = m;
+        else if (m = jpText.match(/(育成で)?(.+)に.*勝利しよう/)) {
+            let [, t, r] = m;
             r = PFILES.races.text[r]
             if (r) {
-                out += `Win ${r} in training`;
+                out += `Win ${r}${t ? " in training" : ""}`;
             }
         }
         else if (m = jpText.match(/育成で(.+?)の?(\d)着以内に入ろう/)) {
@@ -423,6 +425,16 @@ function translateSpecific (type, jpText, file) {
             let [,umaName] = m, umaNameEn = PFILES.umaNames.text[umaName];
             if (umaNameEn) {
                 data[jpText] = `VS ${umaNameEn}`;
+            }
+        }
+    }
+    else if (type == "affec") {
+        m = jpText.match(/(.+?)の\\n親愛度ランクを(\d+)にしよう/)
+        if (m) {
+            let [,umaName, rank] = m, 
+                umaNameEn = PFILES.umaNames.text[umaName];
+            if (umaNameEn) {
+                data[jpText] = `Raise ${umaNameEn}'s \\naffection to rank ${rank}`;
             }
         }
     }

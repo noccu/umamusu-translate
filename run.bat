@@ -42,7 +42,7 @@ IF NOT EXIST ".venv" (
 ) ELSE ( ECHO Using pre-existing venv )
 
 ECHO Installing required libraries...
-%snek% -m pip install -r src\requirements.txt
+%snek% -m pip install -r src\requirements.txt --find-links=wheels/
 IF %ERRORLEVEL% NEQ 0 (
     ECHO.
     echo [93mSomething went wrong. Please screenshot this window when asking for help. You can hide your username if you want.[0m

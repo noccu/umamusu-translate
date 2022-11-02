@@ -36,6 +36,7 @@ The Promised Time: Silks & Three Riddles | In progress/Transferring, Complete | 
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
 Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
+Days in a Flash | Complete | [Kuwaiden]
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 
@@ -208,3 +209,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Mini Fox]: https://github.com/MiniFoxx
 [nem]: https://twitter.com/nemupyoi
 [Nephiro]: https://github.com/Nephiro
+[Kuwaiden]: https://www.youtube.com/@Kuwaiden

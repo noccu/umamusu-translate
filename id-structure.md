@@ -103,7 +103,9 @@ The structure used is simple: `00 0000 000`
 1075 | Daring Tact
 1076 | Sakura Laurel
 1077 | Narita Top Road
+1078 | Yamanin Zephyr
 1085 | Daiichi Ruby
+1085 | Mejiro Ramonu
 1087 | Aston Machan
 1093 | KS Miracle
 1098 | Copano Rickey

@@ -36,11 +36,10 @@ Make sure you satisfied the *requirements* first, then follow the steps in *usag
 
 ## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
-    - During install, check the `Add to PATH` option.
 1. Pull or download this project
 1. Open the (extracted) folder and double click `install.bat` (This downloads the needed python libs)
-1. (Optional but recommended *for dialogue*) Download all game data [through the game menu](guide_batch_download.jpg)
-    - The patch will only edit files existing in your game data. You can simply rerun the dialogue import below for new content.
+1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)
+    - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import below for new content.
 
 ## Basic Usage
 Each part is separate and can be used independently if so wished.

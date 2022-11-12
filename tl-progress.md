@@ -81,7 +81,7 @@ Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
 Silence Suzuka | Complete | [LotoDS][]
 Smart Falcon | Complete | deepl (contributed by CryDuringItAll)
 Special Week | Complete | Mann
-Super Creek | In Progress, Complete | [DantheBoss] (ep 1), deepl
+Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | In Progress, Complete | FragmentalSolstice, deepl
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]

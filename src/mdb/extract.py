@@ -73,7 +73,9 @@ def main():
         # This is just a QoL thing
         from subprocess import run
         run(["node", "src/mdb/scripts/extract-skill-data.js", args.src], check=True)
-        run(["py", f"-{sys.version_info.major}.{sys.version_info.minor}", "src/textprocess.py", "-fsize", "-tl", "6", "-src", "translations/mdb/alt/skill-desc.json"]) # :tmo:
+        import textprocess
+        from types import SimpleNamespace
+        textprocess.processFiles(SimpleNamespace(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=6, forceResize=True))
 
 
 if __name__ == '__main__':

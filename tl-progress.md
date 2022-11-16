@@ -67,7 +67,7 @@ Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | Complete | [Snep][]
 Maruzensky | Complete | [noccu][]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
-Mejiro Dober | In progress/Transferring | [LotoDS][] (ep 1-4)
+Mejiro Dober | Complete | [LotoDS][]
 Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1EeJrGT5gFchEZTnx68A) (ep 1)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
 Mihono Bourbon | Complete, In progress | deepl, [KevinVG207](https://github.com/KevinVG207)

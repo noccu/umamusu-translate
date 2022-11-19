@@ -88,6 +88,7 @@
         "レース前半で控え、最終コーナー後半に\\n前の方だと長時間加速力をちょっと上げ\\n続ける、2番手なら効果が上がる": "<size=18><color=#e06f0b>Acceleration +0,2m/s² for 8s</color> when: Final corner/straight \\n(2nd half) AND ≤50% from leader AND Position 2 <color=#29b39e>after</color>: \\nAfter 50% distance AND order_rate_out20_continue == 1 \\n<color=#e06f0b>Acceleration +0,1m/s² for 8s</color> when: Final corner/straight \\n(2nd half) AND ≤50% from leader <color=#29b39e>after</color>: After 50% \\ndistance AND order_rate_out20_continue == 1\\n</size>",
         "残り400mを切って前の方で\\n詰め寄られるとファンの心に残る走りで\\n抜け出しやすくなる": "<size=18><color=#e06f0b>Target Speed +0,25m/s, Acceleration +0,3m/s² for 5s</color> \\nwhen: Remaining distance ≤400m AND Position ≤2 AND Is \\novertake target for ≥1s\\n</size>",
         "終盤が迫ったときどこかで速度を少し\\n上げ、さらに能力を引き出すスキルの\\n発動数に応じて速度と加速力を上げる": "<size=18><color=#e06f0b>Target Speed +0,25m/s, Target Speed +0,05m/s, \\nAcceleration +0,05m/s² for 5s</color> when: Middle \\nleg later half (random)\\n</size>",
+        "残り300m地点で前の方にいると速度を\\n少し上げる、ダートレースで先頭の\\nウマ娘と近いとさらに少し前に出る": "<size=18><color=#e06f0b>Target Speed +0,25m/s, Special +0,25 for 5s</color> when: \\nRemaining distance ≥299m AND Remaining distance ≤301m \\nAND In trailing 80% AND In leading 40% AND \\ndistance_diff_top<=5 AND Dirt <color=#e06f0b>Target Speed +0,25m/s for \\n5s</color> when: Remaining distance ≥299m AND Remaining distance \\n≤301m AND In trailing 80% AND In leading 40%\\n</size>",
         "中盤で2回スキルを使うと\\nよりリラックスして持久力が回復する": "<size=18><color=#e06f0b>Current HP +5,5% immediately</color> when: Middle leg AND \\nPosition ≥2 AND In leading 70% AND Use ≥2 skills (mid)\\n</size>",
         "最終コーナー以降に前の方で\\n追いすがっていると最終直線を走行中\\n不屈の闘志で速度がすごく上がる": "<size=18><color=#e06f0b>Target Speed +0,45m/s for 5s</color> when: Final corner/straight \\nAND On straight <color=#29b39e>after</color>: Final corner/straight AND \\nOvertaking AND Position ≤5 AND In leading 50% AND \\novertake_target_no_order_up_time >= 2\\n</size>",
         "スキルで持久力を回復すると\\nレース後半で前のほうにいる時に\\nレッツラゴー！と速度を上げる": "<size=18><color=#e06f0b>Target Speed +0,35m/s for 5s</color> when: After 50% distance \\nAND Recover HP 1+ times AND Position ≤3\\n</size>",
@@ -413,6 +414,7 @@
         "レース終盤に前の方にいると後方の\\n視野がわずかに狭くなる＜作戦・先行＞": "<size=18><color=#e06f0b>Field of View -3° to All behind for 3s</color> when: Leader AND \\nFinal leg (random) AND In leading 50%\\n</size>",
         "直線で速度が少し上がる\\n＜作戦・差し＞": "<size=18><color=#e06f0b>Target Speed +0,25m/s for 3s</color> when: Betweener AND \\nStraight (random)\\n</size>",
         "直線で速度がわずかに上がる\\n＜作戦・差し＞": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 3s</color> when: Betweener AND \\nStraight (random)\\n</size>",
+        "直線で速度が上がる\\n＜作戦・差し＞": "<size=18><color=#e06f0b>Target Speed +0,35m/s for 3s</color> when: Betweener AND \\nStraight (random)\\n</size>",
         "コーナーで速度が少し上がる\\n＜作戦・差し＞": "<size=18><color=#e06f0b>Target Speed +0,25m/s for 3s</color> when: \\nBetweener AND Any corner\\n</size>",
         "コーナーで速度がわずかに上がる\\n＜作戦・差し＞": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 3s</color> when: \\nBetweener AND Any corner\\n</size>",
         "追い抜こうとするときしばらくの間\\n加速力が少し上がる＜作戦・差し＞": "<size=18><color=#e06f0b>Acceleration +0,3m/s² for 4s</color> when: Betweener AND \\nOvertaking AND 5s passed\\n</size>",
@@ -581,6 +583,14 @@
         "レース後半に\\nちょっと呼吸を整え前へ踏み込む\\n育成で重ねた勝利の数だけ効果が高まる": "<size=18><color=#e06f0b>Target Speed +0,05m/s, Acceleration +0,1m/s², Current \\nHP +0,5% for 1.2s</color> when: distance_rate_after_random==50\\n</size>",
         "レース後半に前の方だと速度が上がり\\nさらに加速力がわずかに上がる\\nファンが多いほど効果が高まる": "<size=18><color=#e06f0b>Target Speed +0,35m/s, Acceleration +0,2m/s² for 1.2s</color> \\nwhen: distance_rate_after_random==50 AND In leading 65%\\n</size>",
         "レース後半に前の方だと速度がわずかに\\n上がり、加速力がほんのわずかに上がる\\nファンが多いほど効果が高まる": "<size=18><color=#e06f0b>Target Speed +0,15m/s, Acceleration +0,07m/s² for 1.2s</color> \\nwhen: distance_rate_after_random==50 AND In leading 65%\\n</size>",
+        "ラストスパートで速度が上がる\\n最も優れた基礎能力の高さに応じて\\n効果が高まる": "<size=18><color=#e06f0b>Target Speed +0,35m/s for 2.4s</color> when: Last spurt AND Last \\nSpurt (phase) (random)\\n</size>",
+        "ラストスパートで速度がわずかに上がる\\n最も優れた基礎能力の高さに応じて\\n効果が高まる": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 2.4s</color> when: Last spurt AND Last \\nSpurt (phase) (random)\\n</size>",
+        "レース終盤が迫ったとき\\n速度がわずかに上がる": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 2s</color> when: \\nMiddle leg later half (random)\\n</size>",
+        "ラストスパートで持久力を少し使い\\n速度が少し上がる": "<size=18><color=#e06f0b>Target Speed +0,25m/s, Current HP -2% for 3s</color> when: Last \\nSpurt (phase) (random) AND HP% ≥2 AND Last spurt\\n</size>",
+        "ラストスパートで追い越そうとすると\\nしばらくの間速度がわずかに上がる": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 4s</color> when: \\n3 AND Overtaking AND Last spurt\\n</size>",
+        "追い比べをするとき\\n加速力がわずかに上がる": "<size=18><color=#e06f0b>Acceleration +0,2m/s² for 1.2s</color> when: \\ncompete_fight_count > 0\\n</size>",
+        "レース後半にスキルを2回発動させると\\n速度がわずかに上がる": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 2s</color> when: \\nactivate_count_later_half >= 2\\n</size>",
+        "やる気が好調か絶好調だと\\nスタミナ、根性、賢さが少し上がる": "<size=18><color=#e06f0b>Stamina stat +40, Guts stat +40, Wisdom stat +40 \\nindefinitely</color> when: motivation >= 4\\n</size>",
         "レースへの渇望により\\n能力が少し発揮しやすくなる": "<size=18><color=#e06f0b>Stamina stat +40 indefinitely</color> when: Track 10008\\n</size>",
         "かつての走りとは違うがあの頃と\\n変わらない想いが能力をすごく上げる": "<size=18><color=#e06f0b>Speed stat +80 indefinitely</color> when: Winter\\n</size>",
         "見たい景色を必死に追いかけ\\n能力が少し発揮しやすくなる": "<size=18><color=#e06f0b>Speed stat +40 indefinitely</color> when: Always\\n</size>",
@@ -662,6 +672,7 @@
         "レース前半で控え、最終コーナー後半に\\n前の方だと長時間加速力をほんのちょっ\\nと上げ続ける、2番手なら効果が上がる": "<size=18><color=#e06f0b>Acceleration +0,07m/s² for 4.8s</color> when: Final \\ncorner/straight (2nd half) AND ≤50% from leader AND \\nPosition 2 <color=#29b39e>after</color>: After 50% distance AND \\norder_rate_out20_continue == 1 <color=#e06f0b>Acceleration +0,05m/s² \\nfor 4.8s</color> when: Final corner/straight (2nd half) AND ≤50% \\nfrom leader <color=#29b39e>after</color>: After 50% distance AND \\norder_rate_out20_continue == 1\\n</size>",
         "残り400mを切って\\n前の方で詰め寄られると\\nちょっと抜け出しやすくなる": "<size=18><color=#e06f0b>Target Speed +0,05m/s, Acceleration +0,1m/s² for 3s</color> \\nwhen: Remaining distance ≤400m AND Position ≤2 AND Is \\novertake target for ≥1s\\n</size>",
         "終盤が迫ったときどこかで\\n速度をちょっと上げる": "<size=18><color=#e06f0b>Target Speed +0,05m/s for 3s</color> when: \\nMiddle leg later half (random)\\n</size>",
+        "残り300m地点で前の方にいると速度を\\nちょっと上げる、ダートレースで先頭の\\nウマ娘と近いとさらにちょっと前に出る": "<size=18><color=#e06f0b>Target Speed +0,05m/s, Special +0,05 for 3s</color> when: \\nRemaining distance ≥299m AND Remaining distance ≤301m \\nAND In trailing 80% AND In leading 40% AND \\ndistance_diff_top<=5 AND Dirt <color=#e06f0b>Target Speed +0,05m/s for \\n3s</color> when: Remaining distance ≥299m AND Remaining distance \\n≤301m AND In trailing 80% AND In leading 40%\\n</size>",
         "中盤で2回スキルを使うと\\n持久力がわずかに回復する": "<size=18><color=#e06f0b>Current HP +1,5% immediately</color> when: Middle leg AND \\nPosition ≥2 AND In leading 70% AND Use ≥2 skills (mid)\\n</size>",
         "最終コーナー以降に\\n前の方で追いすがっていると\\n最終直線を走行中速度が少し上がる": "<size=18><color=#e06f0b>Target Speed +0,25m/s for 3s</color> when: Final corner/straight \\nAND On straight <color=#29b39e>after</color>: Final corner/straight AND \\nOvertaking AND Position ≤5 AND In leading 50% AND \\novertake_target_no_order_up_time >= 2\\n</size>",
         "スキルで持久力を回復すると\\nレース後半で前のほうにいる時に\\nわずかに速度を上げる": "<size=18><color=#e06f0b>Target Speed +0,15m/s for 3s</color> when: After 50% distance \\nAND Recover HP 1+ times AND Position ≤3\\n</size>",
@@ -704,6 +715,8 @@
         "スタートがすごく苦手になり出遅れたり\\nスタート時の加速力が低下したりする\\nこのスキルは育成完了後に消滅する": "<size=18><color=#e06f0b>Acceleration -18m/s², Special +0,1 for 2s</color> when: Always\\n</size>",
         "芝・中距離レースが得意になる\\nこのスキルはイベント専用になります": "<size=18><color=#e06f0b>Wisdom stat +60 indefinitely</color> when: Medium AND Grass\\n</size>",
         "芝・長距離レースが得意になる\\nこのスキルはイベント専用になります": "<size=18><color=#e06f0b>Stamina stat +60 indefinitely</color> when: Long AND Grass\\n</size>",
-        "芝・マイルレースが得意になる\\nこのスキルはイベント専用になります": "<size=18><color=#e06f0b>Power stat +60 indefinitely</color> when: Mile AND Grass\\n</size>"
+        "芝・マイルレースが得意になる\\nこのスキルはイベント専用になります": "<size=18><color=#e06f0b>Power stat +60 indefinitely</color> when: Mile AND Grass\\n</size>",
+        "芝・短距離レースが得意になる\\nこのスキルはイベント専用になります": "<size=18><color=#e06f0b>Speed stat +60 indefinitely</color> when: Short AND Grass\\n</size>",
+        "ダート・中距離レースが得意になる\\nこのスキルはイベント専用になります": "<size=18><color=#e06f0b>Guts stat +60 indefinitely</color> when: Medium AND Dirt\\n</size>"
     }
 }

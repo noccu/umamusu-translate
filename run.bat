@@ -21,6 +21,7 @@ ECHO(
 IF [%1] NEQ [] ( GOTO %1 )
 
 :open
+CALL update.bat
 %snek% src/filecopy.py --backup
 ECHO Importing all translatable types that are present in your game files...
 ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
@@ -45,12 +46,13 @@ ECHO Installing required libraries...
 %snek% -m pip install -r src\requirements.txt --find-links=wheels/
 IF %ERRORLEVEL% NEQ 0 (
     ECHO.
-    echo [93mSomething went wrong. Please screenshot this window when asking for help. You can hide your username if you want.[0m
+    echo [93mSomething went wrong. Please screenshot as much as possible or copy this whole window when asking for help. You can hide your username if you want.[0m
     PAUSE
 )
 GOTO quit
 
 :mdb
+CALL update.bat
 ECHO Importing mdb text...
 %snek% src/mdb/import.py %2
 GOTO quit

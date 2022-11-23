@@ -14,30 +14,32 @@ Translates (or *can* translate):
     - Race segments
     - Event prologues
 - Training stories
-- Home screen interactions
+- Home screen lines & interactions (own & lobby characters)
 - Lyrics
+- Most of the UI through [tlg].
+- Skills, names, missions, and other such "dynamic" texts. Same as the older *mdb patch*.
 - Planned: images
 
 Deepl/fairseq integration for automatic machine translation.  
-Provides text strings and related tools for UI translation using [tlg].
 
-Included translations: [tl-progress]  
-Toolset: [scripts](#script-info)
+Included translations & credits: [tl-progress]  
+Toolset info: [scripts](#script-info)
 
 # Disclaimer
 
 This toolset only changes text to translate it and it is *my belief* this is harmless and unlikely to be an issue. [^1]  
 **Nonetheless such edits are of course against cygames/Umamusu TOS so proceed at your own risk!**
 
-[^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. any possible crackdown is also likely to start with announcements and warnings before bans.
+[^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
 
 # Install 
 Make sure you satisfied the *requirements* first, then follow the steps in *usage*.
 
 ## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
-1. Pull or download this project
+1. Clone or download this project
 1. Open the (extracted) folder and double click `install.bat` (This downloads the needed python libs)
+    - If you choose to install MinGit, it will be used to update automatically where needed, and you can update manually by running `update.bat`.
 1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)
     - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import below for new content.
 
@@ -60,10 +62,10 @@ Each part is separate and can be used independently if so wished.
     - You can close this at any time and resume later, or play the game while this runs.
 
 ## Updating
-1. Pull or download the project again and overwrite
+1. Double click `update.bat` if you installed MinGit, else pull or download the project again and overwrite
     - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! You could keep a backup of any edits at the moment you make them, or try picking up git or other version control software. Or best of all, please contribute them so everybody can enjoy them!
 1. Double click `run.bat` and/or `mdb*.bat` as required.
-    - `run.bat` also updates the UI-related files after you've followed the UI step above.
+    - `run.bat` also updates the UI-related files **after** you've followed the UI step above at least once.
 
 ## Advanced Usage
 In general, check out the [scripts](#script-info). You probably also want to `pip install -r src/devreq.txt`
@@ -72,7 +74,8 @@ In general, check out the [scripts](#script-info). You probably also want to `pi
     - To add additional translations through deepl, or contribute your own, see [translating.md](translating.md)
 2. **UI**
     - To update yourself when the translations are jumbled, see [here](translating.md#updating)
-3. **Skills and other variable text**: See the [db-translate project]
+        - Should no longer be needed when using TLG.
+3. **Skills and other variable text**: Check the `-h` help for scripts under `src/mdb/`
 
 # Script info
 

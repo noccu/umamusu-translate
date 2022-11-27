@@ -144,6 +144,7 @@ def convertTlFile(file: common.TranslationFile, overwrite=False):
     if not overwrite and path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
         return
     data = {getTextHash(b['jpText']): b['enText'].replace("\\n", "\n") for b in file.genTextContainers() if b['enText']}
+    data.update({getTextHash(b['jpName']): b['enName'] for b in file.genTextContainers() if b.get('enName')})
     helpers.writeJson(path, data)
     converted.append(path)
     return converted

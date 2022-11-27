@@ -37,6 +37,7 @@ Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
 Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
 Days in a Flash | Complete | [Kuwaiden]
+Illuminate the Heart | In progress/Transferring | [robflop]
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 

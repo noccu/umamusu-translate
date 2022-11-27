@@ -138,10 +138,10 @@ def convertMdb():
     print(f"Converted {len(converted)} files.")
     return converted
 
-def convertTlFile(file: common.TranslationFile):
+def convertTlFile(file: common.TranslationFile, overwrite=False):
     converted = list()
     path = LOCALIFY_DATA_DIR / file.type / (file.getStoryId() + ".json")
-    if path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
+    if not overwrite and path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
         return
     data = {getTextHash(b['jpText']): b['enText'].replace("\\n", "\n") for b in file.genTextContainers() if b['enText']}
     helpers.writeJson(path, data)
@@ -230,9 +230,9 @@ def main():
         if args.convert_asset is True:
             files = common.searchFiles(args.type, args.group, args.id, args.idx)
             for file in files:
-                convertTlFile(common.TranslationFile(file))
+                convertTlFile(common.TranslationFile(file), overwrite=args.overwrite)
         else: #str
-            convertTlFile(common.TranslationFile(args.convert_asset))
+            convertTlFile(common.TranslationFile(args.convert_asset), overwrite=args.overwrite)
 
     if args.clean:
         clean(args.clean)

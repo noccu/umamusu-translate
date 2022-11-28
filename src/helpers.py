@@ -29,6 +29,9 @@ def _to_json(o):
         raise TypeError
 
 
+def mkdir(path, parents=True, exists=True):
+    Path(path).mkdir(parents=parents, exist_ok=exists)
+
 def isParseableInt(x):
     try:
         int(x)

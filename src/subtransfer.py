@@ -27,6 +27,7 @@ class SubTransferOptions():
         self.choicePrefix = [">"]
         self.strictChoices = True
         self.noDupeSubs: Union[bool, str] = False
+        self.writeSubs = False
         
     @classmethod
     def fromArgs(cls, args):
@@ -319,6 +320,35 @@ def process(srcFile, subFile, opts: SubTransferOptions):
     else:
         print("Successfully transferred.")
 
+
+def writeSubs(sType, storyid):
+    files = common.searchFiles(sType, *common.parseStoryId(sType, storyid))
+    for file in files:
+        file = common.TranslationFile(file)
+        title = file.data.get('title', "")
+        if file.version < 5:
+            print(f"File version is too old to create subs, re-extract first: ${file.name}")
+            continue
+        subs = ass.Document()
+        subs.info._fields['Title'] = title
+        subs.info._fields['ScriptType'] = subs.info.VERSION_ASS
+        subs.styles._lines.append(ass.Style())
+        ts = 0
+        for block in file.textBlocks:
+            len = block.get('origClipLength', 7) / 30
+            line = ass.Dialogue(
+                start=timedelta(seconds=ts), 
+                end=timedelta(seconds=ts+len), 
+                name=block.get('enName') or block.get('jpName', ""), 
+                text=block.get('enText') or block.get('jpText', "")
+            )
+            ts += len
+            subs.events._lines.append(line)
+        helpers.mkdir("subs")
+        with open(f"subs/{file.getStoryId()} {title}.ass", "w", encoding='utf_8_sig') as f:
+           subs.dump_file(f)
+
+
 def main():
     ap = common.Args("Imports translations from subtitle files. A few conventions are used.", defaultArgs=False,
                         epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\
@@ -334,8 +364,12 @@ def main():
     ap.add_argument("-cpre", dest="choicePrefix", nargs="+", default=[">"], help="Prefixes that mark choices. Supports regex\nChecks name as a special case if prefix includes ':'")
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     ap.add_argument("--skip-dupe-subs", dest="noDupeSubs", nargs="?", default = False, const = "strict", choices=["strict", "loose"], help="Skip subsequent duplicated subtitle lines")
+    ap.add_argument("-ass --write-subs", dest="writeSubs", action="store_true", help="Write ASS subs from tl files\nsrc = story type, sub = storyid")
     args = ap.parse_args()
-    process(args.src, args.sub, SubTransferOptions.fromArgs(args))
+    if args.writeSubs:
+        writeSubs(args.src, args.sub)
+    else:
+        process(args.src, args.sub, SubTransferOptions.fromArgs(args))
 
 if __name__ == '__main__':
     main()

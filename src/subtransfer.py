@@ -340,7 +340,7 @@ def writeSubs(sType, storyid):
                 start=timedelta(seconds=ts), 
                 end=timedelta(seconds=ts+len), 
                 name=block.get('enName') or block.get('jpName', ""), 
-                text=block.get('enText') or block.get('jpText', "")
+                text=(block.get('enText') or block.get('jpText', "")).replace("\n", "\\N")
             )
             ts += len
             subs.events._lines.append(line)

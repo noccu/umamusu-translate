@@ -389,6 +389,13 @@
     },
     "overtake_target_time": {
       ">=": "Is overtake target for ≥$s"
+    },
+    "straight_front_type": {
+      "lookup": {
+        "1": "start straight",
+        "2": "back straight"
+      },
+      "string": "On $"
     }
   }
 }

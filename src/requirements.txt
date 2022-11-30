@@ -1,5 +1,6 @@
 lz4
-UnityPy >= 1.9.19
+UnityPy >= 1.9.19;python_version<"3.11"
+UnityPy == 1.9.20;python_version=="3.11"
 regex
 Levenshtein
 requests

@@ -348,7 +348,7 @@ def writeSubs(sType, storyid):
             if len == -1: 
                 len = assetData.get('ClipLength')
                 voiced = False
-            len += 1 # blocklen adds this too so I'm compying it here
+            len += 1 # blocklen adds this too so I'm copying it here
             len /= fps
             ts += (assetData.get('StartFrame', 1) - 1) / fps # dunno why but this -1 improves timings
             line = ass.Dialogue(
@@ -357,6 +357,8 @@ def writeSubs(sType, storyid):
                 name=block.get('enName') or block.get('jpName', ""), 
                 text=(block.get('enText') or block.get('jpText', "")).replace("\n", "\\N")
             )
+            if block.get('choices'):
+                line.effect = "choice"
             ts += len + (assetData.get('WaitFrame') / fps if voiced else 0)
             subs.events._lines.append(line)
         helpers.mkdir("subs")

@@ -322,30 +322,45 @@ def process(srcFile, subFile, opts: SubTransferOptions):
 
 
 def writeSubs(sType, storyid):
+    fps = 30
     files = common.searchFiles(sType, *common.parseStoryId(sType, storyid))
-    for file in files:
-        file = common.TranslationFile(file)
-        title = file.data.get('title', "")
-        if file.version < 5:
-            print(f"File version is too old to create subs, re-extract first: ${file.name}")
+    for tlFile in files:
+        tlFile = common.TranslationFile(tlFile)
+        try:
+            asset = common.GameBundle.fromName(tlFile.bundle)
+        except FileNotFoundError:
+            print("File doesn't exist")
             continue
+
+        title = tlFile.data.get('title', "")
+        # if tlFile.version < 5:
+        #     print(f"File version is too old to create subs, re-extract first: ${tlFile.name}")
+        #     continue
         subs = ass.Document()
         subs.info._fields['Title'] = title
         subs.info._fields['ScriptType'] = subs.info.VERSION_ASS
         subs.styles._lines.append(ass.Style())
         ts = 0
-        for block in file.textBlocks:
-            len = block.get('origClipLength', 7) / 30
+        for block in tlFile.textBlocks:
+            assetData = asset.assets[block.get('pathId')].read_typetree()
+            voiced = True
+            len = assetData.get('VoiceLength') 
+            if len == -1: 
+                len = assetData.get('ClipLength')
+                voiced = False
+            len += 1 # blocklen adds this too so I'm compying it here
+            len /= fps
+            ts += (assetData.get('StartFrame', 1) - 1) / fps # dunno why but this -1 improves timings
             line = ass.Dialogue(
                 start=timedelta(seconds=ts), 
                 end=timedelta(seconds=ts+len), 
                 name=block.get('enName') or block.get('jpName', ""), 
                 text=(block.get('enText') or block.get('jpText', "")).replace("\n", "\\N")
             )
-            ts += len
+            ts += len + (assetData.get('WaitFrame') / fps if voiced else 0)
             subs.events._lines.append(line)
         helpers.mkdir("subs")
-        with open(f"subs/{file.getStoryId()} {title}.ass", "w", encoding='utf_8_sig') as f:
+        with open(f"subs/{tlFile.getStoryId()} {title}.ass", "w", encoding='utf_8_sig') as f:
            subs.dump_file(f)
 
 

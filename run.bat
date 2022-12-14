@@ -1,13 +1,13 @@
 @ECHO OFF
-SETLOCAL
+SETLOCAL ENABLEDELAYEDEXPANSION
 ECHO Checking python...
 CALL :venv
 SET snek=py
 WHERE %snek% >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
     SET snek=python
-    WHERE %snek% >nul 2>&1
-    IF %ERRORLEVEL% NEQ 0 (
+    WHERE !snek! >nul 2>&1
+    IF !ERRORLEVEL! NEQ 0 (
         ECHO Can't find python. Likely not added to PATH ^(google it^) or not installed.
         GOTO quit
     )

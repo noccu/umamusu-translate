@@ -53,6 +53,9 @@ GOTO quit
 
 :mdb
 CALL update.bat
+ECHO Attempting mdb backup...
+ECHO Original will be stored at \Users^<name^>\AppData\LocalLow\Cygames\umamusume\master\master.mdb.bak
+%snek% src/mdb/import.py --backup
 ECHO Importing mdb text...
 %snek% src/mdb/import.py %2
 GOTO quit

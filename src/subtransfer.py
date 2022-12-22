@@ -198,20 +198,23 @@ class AssSubProcessor(BasicSubProcessor):
 
         lastSplit = None
         lastName = None
+        mainTextRe = re.compile(self.options.mainStyles, re.IGNORECASE)
+        charaStyleRe = re.compile("Chara", re.IGNORECASE)
+        splitRe = re.compile("split", re.IGNORECASE)
         for line in parsed.events:
             # Custom translator-specific formats
-            if line.name == "Nameplate" or re.search("Chara", line.style, re.IGNORECASE): 
+            if line.name == "Nameplate" or charaStyleRe.search(line.style): 
                 lastName = line.text
                 continue
-            isMainText = re.search(self.options.mainStyles, line.style, re.IGNORECASE)
+            isMainText = mainTextRe.search(line.style)
             if not isinstance(line, ass.Dialogue):
                 if self.options.notlComments and isMainText: line.effect = "notl"
                 elif not line.effect == "notl": continue
-            elif not isMainText or re.match("skip", line.effect, re.IGNORECASE):
+            elif not isMainText or line.effect in ("skip", "Skip"):
                 continue
             
             line.text = self.cleanLine(line.text)
-            if re.match("split", line.effect, re.IGNORECASE):
+            if splitRe.match(line.effect):
                 if lastSplit and line.effect[-2:] == lastSplit:
                     self.subLines[-1].text += f"\n{line.text}"
                     continue

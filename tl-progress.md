@@ -88,6 +88,7 @@ Taiki Shuttle | Complete | [LotoDS][]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]
 Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl
+Zenno Rob Roy | In Progress | [LotoDS][] (ep 1-4)
 
 
 # Training story/events

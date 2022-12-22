@@ -11,7 +11,7 @@ In progress | Translation work is planned, ongoing, or only part is translated (
 Complete | All the relevant content is available in English
 Finished | Content satisfies this project's translation standards and style guide (to come)
 
-# Main/Event Stories
+# Main
 name | progress | translator
 --- | --- | ---
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
@@ -23,6 +23,9 @@ Main story Act 1 Ch 6 Finale Part 1 | Complete | [LotoDS][]
 Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
+1.5th Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
+
+# Event Stories
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
 The Sounds of Autumn | Complete, In Progress | deepl (old), Anonymous Reindeer
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]

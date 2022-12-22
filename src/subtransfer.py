@@ -192,11 +192,17 @@ class AssSubProcessor(BasicSubProcessor):
         parsed.events._lines.sort(key=sort)
 
         lastSplit = None
+        lastName = None
         for line in parsed.events:
-            if not isinstance(line, ass.Dialogue): continue
-            if re.match("skip", line.effect, re.IGNORECASE): continue
-            if line.name == "Nameplate": continue
-            if not re.search("MainText|Default|Button", line.style, re.IGNORECASE): continue
+            # Custom translator-specific formats
+            if line.name == "Nameplate" or re.search("Chara", line.style, re.IGNORECASE): 
+                lastName = line.text
+                continue
+            if not isinstance(line, ass.Dialogue):
+                continue
+            if re.match("skip", line.effect, re.IGNORECASE) or\
+              not re.search("MainText|Default|Button", line.style, re.IGNORECASE):
+                continue
             
             line.text = self.cleanLine(line.text)
             if re.match("split", line.effect, re.IGNORECASE):
@@ -208,7 +214,8 @@ class AssSubProcessor(BasicSubProcessor):
 
             if not line.effect and line.style.endswith("Button") or line.name == "Choice":
                 line.effect = "choice"
-            self.subLines.append(TextLine(line.text, line.name, line.effect))
+            self.subLines.append(TextLine(line.text, line.name or lastName, line.effect))
+            lastName = self.subLines[-1].name
             
 class SrtSubProcessor(BasicSubProcessor):
     def __init__(self, srcFile, subFile, opts) -> None:

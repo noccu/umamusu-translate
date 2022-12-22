@@ -41,6 +41,7 @@ Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
 Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
 Days in a Flash | Complete | [Kuwaiden]
 Illuminate the Heart | In progress/Transferring | [robflop]
+KIRARI MAGIC SHOW | Complete | deepl (intro by [noccu])
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 

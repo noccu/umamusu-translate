@@ -28,6 +28,7 @@ class SubTransferOptions():
         self.strictChoices = True
         self.noDupeSubs: Union[bool, str] = False
         self.writeSubs = False
+        self.mainStyles = "MainText|Default|Button"
         
     @classmethod
     def fromArgs(cls, args):
@@ -198,10 +199,10 @@ class AssSubProcessor(BasicSubProcessor):
             if line.name == "Nameplate" or re.search("Chara", line.style, re.IGNORECASE): 
                 lastName = line.text
                 continue
+            isMainText = re.search(self.options.mainStyles, line.style, re.IGNORECASE)
             if not isinstance(line, ass.Dialogue):
                 continue
-            if re.match("skip", line.effect, re.IGNORECASE) or\
-              not re.search("MainText|Default|Button", line.style, re.IGNORECASE):
+            elif not isMainText or re.match("skip", line.effect, re.IGNORECASE):
                 continue
             
             line.text = self.cleanLine(line.text)
@@ -389,6 +390,7 @@ def main():
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     ap.add_argument("--skip-dupe-subs", dest="noDupeSubs", nargs="?", default = False, const = "strict", choices=["strict", "loose"], help="Skip subsequent duplicated subtitle lines")
     ap.add_argument("-ass --write-subs", dest="writeSubs", action="store_true", help="Write ASS subs from tl files\nsrc = story type, sub = storyid")
+    ap.add_argument("-main --main-styles", dest="mainStyles", default="MainText|Default|Button", help="Filter by these ASS styles. No effect on non-ASS subs.\nA regexp that should match all useful text and choice styles.")
     args = ap.parse_args()
     if args.writeSubs:
         writeSubs(args.src, args.sub)

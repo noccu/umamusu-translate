@@ -28,6 +28,7 @@ class SubTransferOptions():
         self.strictChoices = True
         self.noDupeSubs: Union[bool, str] = False
         self.writeSubs = False
+        self.notlComments = False
         self.mainStyles = "MainText|Default|Button"
         
     @classmethod
@@ -131,19 +132,22 @@ class BasicSubProcessor:
                     line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
-    def addSub(self, idx, subLine):
+    def addSub(self, idx: int, subLine:TextLine):
         if idx > len(self.srcLines) - 1:
             print("Attempted to add sub beyond last line of file.")
             return idx
 
         # Attempt to match untranslated text
-        while len(subLine.text) == 0 or\
-        re.match(r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx)) and\
-        not (len(subLine.text) < 15 or re.match(r"[(<*)].+[>*)]$|^(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$", subLine.text, flags=re.IGNORECASE)):
-            print(f"Marking untranslated line at {self.getBlockIdx(idx)}")
-            # print("debug:", p.getJp(idx), subLine.text)
-            self.setEn(idx, TextLine("<UNTRANSLATED>"))
-            idx += 1
+        if subLine.effect == "notl":
+            subLine.text = "<UNTRANSLATED>"
+        else:
+            while len(subLine.text) == 0 or\
+            re.match(r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx)) and\
+            not (len(subLine.text) < 15 or re.match(r"[(<*)].+[>*)]$|^(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$", subLine.text, flags=re.IGNORECASE)):
+                print(f"Marking untranslated line at {self.getBlockIdx(idx)}")
+                # print("debug:", p.getJp(idx), subLine.text)
+                self.setEn(idx, TextLine("<UNTRANSLATED>"))
+                idx += 1
 
         self.setEn(idx, subLine)
         idx += 1
@@ -201,7 +205,8 @@ class AssSubProcessor(BasicSubProcessor):
                 continue
             isMainText = re.search(self.options.mainStyles, line.style, re.IGNORECASE)
             if not isinstance(line, ass.Dialogue):
-                continue
+                if self.options.notlComments and isMainText: line.effect = "notl"
+                elif not line.effect == "notl": continue
             elif not isMainText or re.match("skip", line.effect, re.IGNORECASE):
                 continue
             
@@ -390,6 +395,7 @@ def main():
     ap.add_argument("--no-strict-choices", dest="strictChoices", action="store_false", help="Use choice sub line as dialogue when no choice in original")
     ap.add_argument("--skip-dupe-subs", dest="noDupeSubs", nargs="?", default = False, const = "strict", choices=["strict", "loose"], help="Skip subsequent duplicated subtitle lines")
     ap.add_argument("-ass --write-subs", dest="writeSubs", action="store_true", help="Write ASS subs from tl files\nsrc = story type, sub = storyid")
+    ap.add_argument("--notl-comments", dest="notlComments", action="store_true", help="Try to find untranslated lines left in comments which match --main-styles.")
     ap.add_argument("-main --main-styles", dest="mainStyles", default="MainText|Default|Button", help="Filter by these ASS styles. No effect on non-ASS subs.\nA regexp that should match all useful text and choice styles.")
     args = ap.parse_args()
     if args.writeSubs:

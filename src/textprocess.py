@@ -38,6 +38,8 @@ def cleannewLines(text: str):
 
 
 def adjustLength(file: TranslationFile, text: str, opts, **overrides):
+    if opts.get("exclusiveNewlines") and re.match("\n|\\n", text):
+        return
     # todo: Find better way to deal with options
     numLines: int = overrides.get("numLines", 0)
     targetLines: int = overrides.get("targetLines", opts.get("targetLines", 3))
@@ -146,8 +148,8 @@ def main():
     # Through overflow (thanks anni update!) up to 4 work for landscape content,
     # and up to 5 for portrait (quite pushing it though)
     ap.add_argument("-ll", dest="lineLength", default=-1, type=int, help="Characters per line. 0: disable, -1: auto")
-    ap.add_argument("-nl", dest="redoNewlines", action="store_true",
-                    help="Remove existing newlines for complete reformatting")
+    ap.add_argument("-nl", dest="redoNewlines", action="store_true", help="Remove existing newlines for complete reformatting")
+    ap.add_argument("-xnl", dest="exclusiveNewlines", action="store_true", help="Only add newlines to text without any yet.")
     ap.add_argument("-rep", dest="replaceMode", choices=["all", "limit", "none"], default="limit",
                     help="Mode/aggressiveness of replacements")
     ap.add_argument("-fsize", "--force-resize", dest="forceResize", action="store_true",
@@ -157,6 +159,10 @@ def main():
     ap.add_argument("-tl", dest="targetLines", default=3, type=int,
                     help="Target lines. Length adjustment skips input obeying -ll and not exceeding -tl")
     args = ap.parse_args()
+
+    if args.exclusiveNewlines and args.redoNewlines:
+        print("Incompatible newline options: force all + exclusive add.")
+        return
 
     processFiles(args)
 

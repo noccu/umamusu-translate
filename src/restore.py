@@ -53,8 +53,7 @@ def restore(file, args):
     if args.verbose: print(f"Saving file to {bundle.bundlePath}")
     return save(bundle, args)
 
-
-def main():
+def parseArgs(src = None):
     ap = common.Args("Restore game files from backup or CDN download")
     ap.add_argument("--forcedl", action="store_true", help="Force new file dl over copying from local backup")
     ap.add_argument("-bdir", "--backup-dir", default=realpath("dump"), help="Local backup dir")
@@ -62,8 +61,11 @@ def main():
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("--uninstall", action="store_true", help="Restore all files back to originals (may download)")
     ap.add_argument("-F", "--force-restore", action="store_true", help="Ignore checks and always restore files")
-    args = ap.parse_args()
+    args = ap.parse_args(src)
+    return args
 
+def main():
+    args = parseArgs()
     if args.src:
         restore(args.src, args)
     else:

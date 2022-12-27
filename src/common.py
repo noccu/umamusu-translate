@@ -113,6 +113,9 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-vb", "--verbose", action="store_true")
         elif types:
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
+    @classmethod
+    def fake(cls, **kwargs):
+        return argparse.Namespace(**kwargs)
 
 
 class TranslationFile:

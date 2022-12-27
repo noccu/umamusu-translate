@@ -355,7 +355,6 @@ def parseArgs():
                     help="Re-extract existing files, optionally limited to given type.\nImplies -O, ignores -dst and -t")
     ap.add_argument("-upg", "--upgrade", action="store_true",
                     help="Attempt tlfile version upgrade with minimal extraction.\nCan be used on patched files. Implies -O")
-    ap.add_argument("-v", "--verbose", action="store_true", help="Print extra info")
     args = ap.parse_args()
 
     if args.dst is None:

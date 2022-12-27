@@ -143,7 +143,6 @@ def main():
     ap = common.Args("Process text for linebreaks (game length limits), common errors, and standardized formatting",
                      types=common.SUPPORTED_TYPES)
     ap.add_argument("-src", help="Target Translation File, overwrites other file options")
-    ap.add_argument("-V", "--verbose", action="store_true", help="Print additional info")
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
     # Through overflow (thanks anni update!) up to 4 work for landscape content,
     # and up to 5 for portrait (quite pushing it though)

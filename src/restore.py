@@ -35,6 +35,7 @@ def save(bundle:GameBundle, args):
                 f.write(data.content)
         else:
             print(f"Error downloading file {bundle.bundleName}")
+            if args.verbose: print(f"Status: {data.status_code}\nContent:{data.text}")
             return 0
     return 1
 
@@ -60,7 +61,6 @@ def main():
     ap.add_argument("-src", help="Target filename/bundle hash")
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("--uninstall", action="store_true", help="Restore all files back to originals (may download)")
-    ap.add_argument("--verbose", action="store_true", help="Print additional info")
     ap.add_argument("-F", "--force-restore", action="store_true", help="Ignore checks and always restore files")
     args = ap.parse_args()
 

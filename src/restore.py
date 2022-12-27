@@ -7,11 +7,19 @@ from argparse import SUPPRESS
 from concurrent.futures import Future, ThreadPoolExecutor
 
 HOSTNAME = 'https://prd-storage-umamusume.akamaized.net/dl/resources'
-ASSETS_ENDPOINT = HOSTNAME + '/Windows/assetbundles/{0:.2}/{0}'
+GENERIC_ENDPOINT = HOSTNAME + "/Generic/{0:.2}/{0}"
+ASSET_ENDPOINT = HOSTNAME + "/Windows/assetbundles/{0:.2}/{0}"
+MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"
 
 
-def download(file, verbose):
-    url = ASSETS_ENDPOINT.format(file)
+def download(file, t:str = "story", verbose = False):
+    if t in ('sound', 'movie', 'font'):
+        endpoint = GENERIC_ENDPOINT
+    elif t.startswith('manifest'):
+        endpoint = MANIFEST_ENDPOINT
+    else:
+        endpoint = ASSET_ENDPOINT
+    url = endpoint.format(file)
     if verbose:
         print(f"Downloading {file} from {url}")
     else:
@@ -29,7 +37,7 @@ def save(bundle:GameBundle, args):
             print(f"Copying {bundle.bundleName}")
         shutil.copyfile(localFile, bundle.bundlePath)
     else:
-        data = download(bundle.bundleName, args.verbose)
+        data = download(bundle.bundleName, bundle.bundleType, args.verbose)
         if data.status_code == 200:
             with open(bundle.bundlePath, "wb") as f:
                 f.write(data.content)
@@ -42,6 +50,7 @@ def save(bundle:GameBundle, args):
 def restore(file, args):
     if args.src:
         bundle = GameBundle.fromName(args.src, load=False)
+        bundle.bundleType = args.srctype
     else:
         file = common.TranslationFile(file)
         bundle = GameBundle.fromName(file.bundle, load=False)
@@ -58,6 +67,7 @@ def parseArgs(src = None):
     ap.add_argument("--forcedl", action="store_true", help="Force new file dl over copying from local backup")
     ap.add_argument("-bdir", "--backup-dir", default=realpath("dump"), help="Local backup dir")
     ap.add_argument("-src", help="Target filename/bundle hash")
+    ap.add_argument("-srctype", default="story", help="Type of src arg. This is the m column in the meta file")
     ap.add_argument("-dst", help=SUPPRESS)
     ap.add_argument("--uninstall", action="store_true", help="Restore all files back to originals (may download)")
     ap.add_argument("-F", "--force-restore", action="store_true", help="Ignore checks and always restore files")

@@ -6,7 +6,7 @@ from common import GAME_META_FILE, GAME_ASSET_ROOT
 
 
 def buildSqlStmt(args):
-    stmt = "select h from a"
+    stmt = "select m, h from a"
     firstExpr = True
 
     def add(expr: str):
@@ -29,25 +29,26 @@ def buildSqlStmt(args):
     if not args.idx:
         args.idx = "___"
 
-    add(f"m = '{sType}'")  # always set
     if args.name:
-        add(f"n like '%{args.name}%'")
+        add(f"n like '%{args.name}%' escape '\\'")
     if args.hash:
         hashes = ",".join([f"'{h}'" for h in args.hash])
         add(f"h in ({hashes})")
-    if args.type == "story":
-        add(f"n like 'story/data/{args.group}/{args.id}/storytimeline%'")
-    elif args.type == "home":
-        add(f"n like 'home/data/00000/{args.group}/hometimeline_00000_{args.group}_{args.id}%'")
-    elif args.type == "race":
-        add(f"n like 'race/storyrace/text/storyrace_{args.group}{args.id}%'")
-    elif args.type == "live":
-        add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
-    elif args.type == "preview":
-        add(f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'")
-    elif args.type == "ruby":
-        storyid = f"{args.group}{args.id}{args.idx}"
-        add(f"n like 'story/data/__/____/ast_ruby_{storyid}'")
+    if not args.custom:
+        add(f"m = '{sType}'") 
+        if args.type == "story":
+            add(f"n like 'story/data/{args.group}/{args.id}/storytimeline%'")
+        elif args.type == "home":
+            add(f"n like 'home/data/00000/{args.group}/hometimeline_00000_{args.group}_{args.id}%'")
+        elif args.type == "race":
+            add(f"n like 'race/storyrace/text/storyrace_{args.group}{args.id}%'")
+        elif args.type == "live":
+            add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
+        elif args.type == "preview":
+            add(f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'")
+        elif args.type == "ruby":
+            storyid = f"{args.group}{args.id}{args.idx}"
+            add(f"n like 'story/data/__/____/ast_ruby_{storyid}'")
 
     return None if firstExpr else stmt
 
@@ -70,11 +71,14 @@ def backup(args):
             copy(file.bundle, args)
 
 
-def copy(hash, args):
-    asset = common.GameBundle.fromName(hash, load=False)
-    dst = path.join(args.dst, hash)
+def copy(fileType, fileHash, args):
+    asset = common.GameBundle.fromName(fileHash, load=False)
+    asset.bundleType = fileType
+    dst = path.join(args.dst, fileHash)
     if not asset.exists:
-        if args.verbose:
+        if args.restore_missing and restore.save(asset, args.restore_args) == 1:
+            return copy(fileType, fileHash, args) # retry
+        elif args.verbose:
             print(f"Couldn't find {asset.bundlePath}, skipping...")
         return 0
     elif args.overwrite or not path.exists(dst):
@@ -97,7 +101,10 @@ def copy(hash, args):
 def main():
     ap = common.Args("Copy files for backup or testing")
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
-    ap.add_argument("-n", "--name", help="Unity filepath wildcard")
+    ap.add_argument("-n", "-p", "--name", "--path", help="Unity filepath wildcard")
+    ap.add_argument("--custom", action="store_true", help="Ignore additional argument processing.\n\
+        Pure SQL queries based on --hash and/or --path")
+    ap.add_argument("-miss", "--restore-missing", action="store_true", help="Download missing files.")
     ap.add_argument("-dst", default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
     ap.add_argument("-B", "--backup", nargs="?", default=False, const=True, help="Backup all assets for which Translation Files exist")
@@ -106,9 +113,13 @@ def main():
     if args.backup:
         backup(args)
     else:
+        if args.restore_missing:
+            global restore
+            import restore
+            args.restore_args = restore.parseArgs([])
         n = 0
-        for hash, in getFiles(args):  # Sneaky one-item iterables unwrapper
-            n += copy(hash, args)
+        for fileType, fileHash in getFiles(args):
+            n += copy(fileType, fileHash, args)
         print(f"Copied {n} files.")
 
 

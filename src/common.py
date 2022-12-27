@@ -294,6 +294,7 @@ class GameBundle:
     def __init__(self, path, load=True) -> None:
         self.bundlePath = Path(path)
         self.bundleName = self.bundlePath.stem
+        self.bundleType = "story"
         self.exists = self.bundlePath.exists()
         self.isPatched = False
         self.data = None

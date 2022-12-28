@@ -2,11 +2,11 @@ import shutil
 import sqlite3
 from os import makedirs, path
 import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT
+from common import GAME_META_FILE
 
 
 def buildSqlStmt(args):
-    stmt = "select m, h from a"
+    stmt = "select m, h, n from a"
     firstExpr = True
 
     def add(expr: str):
@@ -29,8 +29,8 @@ def buildSqlStmt(args):
     if not args.idx:
         args.idx = "___"
 
-    if args.name:
-        add(f"n like '%{args.name}%' escape '\\'")
+    if args.path:
+        add(f"n like '%{args.path}%' escape '\\'")
     if args.hash:
         hashes = ",".join([f"'{h}'" for h in args.hash])
         add(f"h in ({hashes})")
@@ -71,13 +71,17 @@ def backup(args):
             copy(file.bundle, args)
 
 
-def copy(fileType, fileHash, args):
+def copy(data, args):
+    fileType, fileHash, filePath = data
     asset = common.GameBundle.fromName(fileHash, load=False)
     asset.bundleType = fileType
-    dst = path.join(args.dst, fileHash)
+    if args.use_pathname:
+        fn = filePath if args.full_path else filePath[max(filePath.rfind("/"), 0):] 
+    else: fn = fileHash
+    dst = path.join(args.dst, fn)
     if not asset.exists:
         if args.restore_missing and restore.save(asset, args.restore_args) == 1:
-            return copy(fileType, fileHash, args) # retry
+            return copy(data, args) # retry
         elif args.verbose:
             print(f"Couldn't find {asset.bundlePath}, skipping...")
         return 0
@@ -101,10 +105,12 @@ def copy(fileType, fileHash, args):
 def main():
     ap = common.Args("Copy files for backup or testing")
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
-    ap.add_argument("-n", "-p", "--name", "--path", help="Unity filepath wildcard")
+    ap.add_argument("-p", "--path", help="Unity filepath wildcard")
     ap.add_argument("--custom", action="store_true", help="Ignore additional argument processing.\n\
         Pure SQL queries based on --hash and/or --path")
     ap.add_argument("-miss", "--restore-missing", action="store_true", help="Download missing files.")
+    ap.add_argument("-name", "--use-pathname", action="store_true", help="Name file in -dst by path name stem instead of hash, for exports.")
+    ap.add_argument("--full-path", action="store_true", help="Use full unity path in save dest, creating folders. Needs -name")
     ap.add_argument("-dst", default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
     ap.add_argument("-B", "--backup", nargs="?", default=False, const=True, help="Backup all assets for which Translation Files exist")
@@ -118,8 +124,8 @@ def main():
             import restore
             args.restore_args = restore.parseArgs([])
         n = 0
-        for fileType, fileHash in getFiles(args):
-            n += copy(fileType, fileHash, args)
+        for data in getFiles(args):
+            n += copy(data, args)
         print(f"Copied {n} files.")
 
 

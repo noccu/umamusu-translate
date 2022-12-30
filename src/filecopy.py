@@ -76,7 +76,7 @@ def copy(data, args):
     asset = common.GameBundle.fromName(fileHash, load=False)
     asset.bundleType = fileType
     if args.use_pathname:
-        fn = filePath if args.full_path else filePath[max(filePath.rfind("/"), 0):] 
+        fn = filePath if args.full_path else filePath[max(filePath.rfind("/")+1, 0):] 
     else: fn = fileHash
     dst = path.join(args.dst, fn)
     if not asset.exists:

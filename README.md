@@ -37,7 +37,9 @@ Make sure you satisfied the *requirements* first, then follow the steps in *usag
 
 ## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
-1. Clone or download this project
+    - *Either* install the py launcher (recommended) *or* select the "add to path" checkbox.
+    - If the latest version is very recent use the version *before* that. Otherwise dependencies might not have binaries and may require compiling.
+1. Clone or download a zip (green "code" button) of this project
 1. Open the (extracted) folder and double click `install.bat` (This downloads the needed python libs)
     - If you choose to install MinGit, it will be used to update automatically where needed, and you can update manually by running `update.bat`.
 1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)

@@ -119,7 +119,7 @@ class Args(argparse.ArgumentParser):
 
 
 class TranslationFile:
-    latestVersion = 5
+    latestVersion = 6
     ver_offset_mdb = 100
 
     def __init__(self, file=None, load=True, readOnly=False):

@@ -15,6 +15,76 @@ if common.IS_WIN:
 TEXTBOX_WIDTH = 54
 COLOR_WIN = "systemWindow" if common.IS_WIN else "white"
 COLOR_BTN = "SystemButtonFace" if common.IS_WIN else "gray"
+AUDIO_PLAYER = None
+
+class AudioPlayer:
+    curPlaying = (None, 0)
+    subkey = None
+    audioOut = None
+    wavData = None
+    subFiles = None
+    def __init__(self) -> None:
+        global pyaudio, sqlite3, wave, restore, AWB, HCA
+        import pyaudio, sqlite3, wave, restore
+        from PyCriCodecs import AWB, HCA
+        self.pyaud = pyaudio.PyAudio()
+        self._db = sqlite3.connect(common.GAME_META_FILE)
+        self._restoreArgs = restore.parseArgs([])
+    def dealloc(self):
+        self._db.close()
+        if isinstance(self.audioOut, pyaudio.Stream):
+            self.audioOut.close()
+        self.pyaud.terminate()
+    def play(self, storyId, idx):
+        if idx < 0:
+            print("Text block is not voiced.")
+            return
+        if reloaded := self.curPlaying[0] != storyId:
+            h = self._db.execute(f"SELECT h FROM a WHERE n LIKE 'sound%{storyId}.awb'").fetchone()
+            if h is None:
+                print("Couldn't find audio asset.")
+                return
+            asset = common.GameBundle.fromName(h[0], load=False)
+            asset.bundleType = "sound"
+            if not asset.exists:
+                restore.save(asset, self._restoreArgs)
+            self.load(str(asset.bundlePath))
+        if reloaded or self.curPlaying[1] != idx:
+            if idx > len(self.subFiles):
+                print("Index out of range")
+                return
+            self.decodeAudio(self.subFiles[idx])
+        self.curPlaying = (storyId, idx)
+        self.audioOut.write(self.wavData)
+    def load(self, path: str):
+        awbFile = AWB(path)
+        # get by idx method seems to corrupt half the files??
+        self.subFiles = [f for f in awbFile.getfiles()]
+        self.subkey = awbFile.subkey
+        awbFile.stream.close()
+    def decodeAudio(self, hcaFile:bytes):
+        hcaFile:HCA = HCA(hcaFile, key=75923756697503, subkey=self.subkey)
+        channels = hcaFile.hca.get("ChannelCount")
+        rate = hcaFile.hca.get("SampleRate")
+        hcaFile.decode() # leaves a wav ByteIOStream in stream attr
+        with wave.open(hcaFile.stream, "rb") as wavFile:
+            bpc = wavFile.getsampwidth()
+            # read the whole file because it's small anyway
+            self.wavData = wavFile.readframes(wavFile.getnframes())
+        hcaFile.stream.close() # probably not needed (lib sure doesn't) but eh
+        self._createStream(bpc, channels, rate) # ready the stream to play this data
+    def _createStream(self, bpc = 2, channels = 1, rate = 48000):
+        if isinstance(self.audioOut, pyaudio.Stream):
+            if self.audioOut._channels != channels or self.audioOut._rate != rate:
+                self.audioOut.close()
+            else:
+                return
+        self.audioOut = self.pyaud.open(
+            format=self.pyaud.get_format_from_width(width=bpc),
+            channels = channels,
+            rate = rate,
+            output=True
+        )
 
 def change_chapter(event=None, initialLoad=False):
     global cur_chapter
@@ -521,6 +591,18 @@ def nextMissingName():
             change_block()
 
 
+def listen(event=None):
+    global AUDIO_PLAYER
+    if cur_file.version < 6:
+        return
+    storyId = cur_file.data.get("storyId")
+    voiceIdx = cur_file.textBlocks[cur_block].get("voiceIdx")
+    if storyId is not None and voiceIdx is not None:
+        if not AUDIO_PLAYER:
+            AUDIO_PLAYER = AudioPlayer()
+        AUDIO_PLAYER.play(storyId, voiceIdx)
+
+
 def _switchWidgetFocusForced(e):
     e.widget.tk_focusNext().focus()
     return "break"
@@ -609,12 +691,14 @@ def main():
     btn_choices.grid(row=0, column=0)
     btn_colored = tk.Button(frm_btns_bot, text="Colored", command=lambda: toggleTextListPopup(target=cur_colored), state='disabled', width=10)
     btn_colored.grid(row=1, column=0)
-    btn_reload = tk.Button(frm_btns_bot, text="Reload", command=reload_chapter, width=10)
-    btn_reload.grid(row=0, column=1)
+    btn_listen = tk.Button(frm_btns_bot, text="Listen", command=listen, width=10)
+    btn_listen.grid(row=0, column=1)
     btn_search = tk.Button(frm_btns_bot, text="Search", command=toggleSearchPopup, width=10)
     btn_search.grid(row=1, column=1)
+    btn_reload = tk.Button(frm_btns_bot, text="Reload", command=reload_chapter, width=10)
+    btn_reload.grid(row=0, column=2)
     btn_save = tk.Button(frm_btns_bot, text="Save", command=saveFile, width=10)
-    btn_save.grid(row=0, column=2)
+    btn_save.grid(row=1, column=2)
     btn_prev = tk.Button(frm_btns_bot, text="Prev", command=prev_block, width=10)
     btn_prev.grid(row=0, column=3)
     btn_next = tk.Button(frm_btns_bot, text="Next", command=next_block, width=10)
@@ -682,6 +766,7 @@ def main():
     text_box_en.bind("<Alt-f>", process_text)
     text_box_en.bind("<Alt-F>", process_text)
     root.bind("<Control-f>", toggleSearchPopup)
+    root.bind("<Control-h>", listen)
 
     root.mainloop()
 

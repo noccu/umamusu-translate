@@ -170,6 +170,7 @@ def extractText(assetType, obj):
         # home has no auto mode so adjustments aren't needed
         if assetType == "story":
             o['origClipLength'] = tree['ClipLength']
+            o['voiceIdx'] = tree['CueId']
         choices = tree['ChoiceDataList']  # always present
         if choices:
             o['choices'] = list()

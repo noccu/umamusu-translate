@@ -13,7 +13,9 @@
     "11": "Prefer Overtake Inside",
     "12": "Prefer Overtake Outside",
     "13": ["Kakari Time", "s"],
+    "14": ["Delay Start", "s"],
     "21": ["Current Speed", "m/s"],
+    "22": ["Current Speed (natural decel)", "m/s"],
     "27": ["Target Speed", "m/s"],
     "28": ["Lane Movement Speed", "%"],
     "29": "Kakari Chance",
@@ -21,7 +23,9 @@
     "31": ["Acceleration", "m/s²"],
     "35": "Target Lane",
     "37": "Activate Rare Skill",
-    "501": "Event-specific?"
+    "501": "Event-specific",
+    "502": ["Stat Increase", "", "rep {0}%"],
+    "503": ["Peak Mood Chance", "", "rep {1}%"]
   },
   "ability_value_usage": {
     "0": "None",
@@ -39,7 +43,7 @@
     "12": "",
     "13": "",
     "14": "",
-    "15": "* ActivateHealSkillCount",
+    "15": "* # Heals Activated",
     "16": "* FinalCornerEndOrder",
     "17": "* InvTeamMemberCount"
   },
@@ -91,8 +95,8 @@
     },
     "is_basis_distance": {
       "lookup": {
-        "1": "Core Distance",
-        "0": "Non-Core Distance"
+        "1": "Core distance",
+        "0": "Non-core distance"
       },
       "==": "$"
     },
@@ -211,9 +215,9 @@
     "ground_condition": {
       "lookup": {
         "1": "Good",
-        "2": "S. Heavy",
-        "3": "Heavy",
-        "4": "Bad"
+        "2": "Yield",
+        "3": "Soft",
+        "4": "Heavy"
       },
       "string": "Track condition $"
     },

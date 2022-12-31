@@ -33,7 +33,9 @@ This toolset only changes text to translate it and it is *my belief* this is har
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
 
 # Install 
-Make sure you satisfied the *requirements* first, then follow the steps in *usage*.
+Make sure you satisfied the *requirements* below first to use the tools. If you don't want to patch, you can [continue here](#advanced-usage).  
+Otherwise, follow the further steps for each part of the patch you wish to apply, in suggested order.  
+Each of those parts is separate and can be used independently, though some effectiveness may be lost.
 
 ## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
@@ -45,31 +47,35 @@ Make sure you satisfied the *requirements* first, then follow the steps in *usag
 1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)
     - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import below for new content.
 
-## Basic Usage
-Each part is separate and can be used independently if so wished.
+## UI (menus, buttons, ...)
+This should be a one-time procedure. If your UI looks the wrong size afterwards, open the `config.json` you copied and play with the uiScale value (0.8-1.2 usually).
+1. Open the game's *install folder* (where the `Umamusume.exe` is)
+1. Copy the **contents** of this project's `localify` folder to the *install folder*
+1. Download [tlg]'s latest [release zip](https://github.com/MinamiChiwa/Trainers-Legend-G/releases), extract **only the `version.dll`** from it and put that in the game's *install folder*
+    - *0xc000012f* error when starting game: [Install vc++ X64](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) ([alterative link](https://github.com/abbodi1406/vcredist))
+    - If the game *won't start* or the *UI is not translated*, try renaming the `version.dll` file to `uxtheme.dll` (*errors* mean the issue is elsewhere and this will not help)
+1. It should look [like this](guide_localify.jpg).
 
-1. **UI** (menus, buttons, ...): Open the game's *install folder* (where the `Umamusume.exe` is)
-    1. Copy the **contents** of this project's `localify` folder to the *install folder*
-    1. Download [tlg]'s latest [release zip](https://github.com/MinamiChiwa/Trainers-Legend-G/releases), extract **only the `version.dll`** from it and put that in the game's *install folder*
-        - *0xc000012f* error when starting game: [Install vc++ X64](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) ([alterative link](https://github.com/abbodi1406/vcredist))
-        - If the game *won't start* or the *UI is not translated*, try renaming the `version.dll` file to `uxtheme.dll` (*errors* mean the issue is elsewhere and this will not help)
-    1. It should look [like this](guide_localify.jpg).
-1. **Skills and other variable text**: Run either of the `mdb import.bat` files
-    - `(replace skill desc with data).bat` will use [the skill's raw requirements and effects](guide_skilldata.png).
-    - The mdb file that this modifies updates often, you will need to rerun this .bat every time it does. Usually when there is an in-game update.
-    - Requires restarting the game after applying.
-    - There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases.
-1. **Dialogue**: double click `run.bat` 
-    - This can take a long time (few hours) because there are many files.
-    - You can close this at any time and resume later, or play the game while this runs.
+## Skills and other variable text
+Run either of the `mdb import.bat` files.  
+`(replace skill desc with data).bat` will use [the skill's raw requirements and effects](guide_skilldata.png).
+- The mdb file that this modifies updates regularly (with banners usually) and undoes changes, you will need to rerun this .bat.
+- Requires restarting the game after applying.
+- There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases but it it not maintained well anymore.
 
-## Updating
+## Dialogue
+double click `run.bat` 
+- This can take a long time (few hours) because there are many files.
+- You can close this at any time and resume later, or play the game while this runs.
+- Changes apply without restart.
+
+# Updating
 1. Double click `update.bat` if you installed MinGit, else pull or download the project again and overwrite
-    - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! You could keep a backup of any edits at the moment you make them, or try picking up git or other version control software. Or best of all, please contribute them so everybody can enjoy them!
+    - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! Please contribute them here so everybody can enjoy!
 1. Double click `run.bat` and/or `mdb*.bat` as required.
-    - `run.bat` also updates the UI-related files **after** you've followed the UI step above at least once.
+    - `run.bat` also updates the UI-related files **after** you've followed the UI step above.
 
-## Advanced Usage
+# Advanced Usage
 In general, check out the [scripts](#script-info). You probably also want to `pip install -r src/devreq.txt`
 1. **Dialogue**
     - To install specific things, see [id-structure.md](id-structure.md) and use: `py src/import.py -O -g <group> -id <id>`

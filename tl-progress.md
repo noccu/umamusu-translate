@@ -41,10 +41,14 @@ Super Smashing☆Summer Vacation | In Progress | Anonymous Reindeer
 Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
 Days in a Flash | Complete | [Kuwaiden]
 Illuminate the Heart | In progress/Transferring | [robflop]
-KIRARI MAGIC SHOW | Complete | deepl (intro by [noccu])
 Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
+# Collab Events
+KIRARI MAGIC SHOW | Complete | deepl (intro by [noccu])
+
+# Campaigns
+Omikuji | Complete | [noccu]
 
 # Character stories
 name | progress | translator

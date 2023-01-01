@@ -30,6 +30,8 @@ Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1.5th Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 
 # Event Stories
+name | progress | translator
+--- | --- | ---
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slightly edited)
 The Sounds of Autumn | Complete, Stalled | deepl (old), Anonymous Reindeer
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
@@ -49,9 +51,13 @@ Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 # Collab Events
+name | progress | translator
+--- | --- | ---
 KIRARI MAGIC SHOW | Complete | deepl (intro by [noccu])
 
 # Campaigns
+name | progress | translator
+--- | --- | ---
 Omikuji | Complete | [noccu]
 
 # Character stories
@@ -188,7 +194,7 @@ name | progress | translator
 Tutorial (Group 00) | Complete | deepl (contributed by Korgi)
 Tutorial (Group 01) | Complete | [ericathyz](https://twitter.com/ericathyz) + [noccu] (missing + edits)
 
-# Lyrics
+# Lyrics / Songs / Lives
 name | progress | translator
 --- | --- | ---
 Blaze | Complete | [noccu][]
@@ -197,6 +203,7 @@ Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
 Gaze on Me! | Complete | [noccu]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
+Ms. VICTORIA | Complete | [Nine]
 Next Frontier | Complete | [LotoDS][]
 Sasayaka na Inori | Complete | [Eight][]
 transforming | Complete | [LotoDS][]
@@ -228,3 +235,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Nephiro]: https://github.com/Nephiro
 [Kuwaiden]: https://www.youtube.com/@Kuwaiden
 [DantheBoss]: https://www.youtube.com/channel/UCqAtDEmjrzy4twoZnvH-upw
+[Nine]: https://www.youtube.com/@nineumasubs8221

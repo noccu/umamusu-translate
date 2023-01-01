@@ -171,6 +171,8 @@ def extractText(assetType, obj):
         if assetType == "story":
             o['origClipLength'] = tree['ClipLength']
             o['voiceIdx'] = tree['CueId']
+        elif assetType == "home":
+            o['voiceIdx'] = tree['CueId']
         choices = tree['ChoiceDataList']  # always present
         if choices:
             o['choices'] = list()

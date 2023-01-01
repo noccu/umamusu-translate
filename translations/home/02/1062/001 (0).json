@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "OK4LT3BSOL4NV4DA72B33PB3E5LGR3PA",
+    "version": 6,
+    "bundle": "ZIYA6I3R62ZF6KZAU3G4QPPS7SYU6A7X",
     "type": "home",
     "storyId": "021062001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "おマチさん！　アナタ……呪われていますっ！",
             "enText": "Hey, Michi! You are…… cursed!",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -3603844417410194398,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "えぇー！！",
             "enText": "Eee!!!",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -4817498941432622916,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "私、そんな普通じゃない状態だったんですか！\r\nやだやだ、なんの呪いですか～！？",
             "enText": "Was I in such an unusual state! Oh no, what \nkind of curse is this!",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -2651654971763458669,
             "blockIdx": 3
         },
@@ -38,6 +41,7 @@
             "jpText": "はい、シラオキ様のお告げによりますと……\r\nずばり！『【よりによって今】の呪い』です！",
             "enText": "Yes, according to the sign of Lord \nSiraoki…… it is indeed! It is the \ncurse of \"now of all times\"!",
             "nextBlock": 5,
+            "voiceIdx": 3,
             "pathId": 831262004153628833,
             "blockIdx": 4
         },
@@ -47,6 +51,7 @@
             "jpText": "『【よりによって今】の呪い』……！？\r\nそれっていったい……！？\nなんか名前の通りな気もしますが……！",
             "enText": "The Curse of [More Than Now] ……! What in the \nworld is that ……! It's kind of like the name \nof the game. ……!",
             "nextBlock": 6,
+            "voiceIdx": 4,
             "pathId": -6833582064698665509,
             "blockIdx": 5
         },
@@ -56,6 +61,7 @@
             "jpText": "名前の通りですっ！！",
             "enText": "It's just like the name says!",
             "nextBlock": 7,
+            "voiceIdx": 5,
             "pathId": 2968090668903712659,
             "blockIdx": 6
         },
@@ -65,6 +71,7 @@
             "jpText": "あ、やっぱり……でもたしかに、\r\n『今はやめて～！』って思ったこと、\nよく起きてるかもです。",
             "enText": "Oh, I guess it's true that even…… things \nthat make me think, \"Not now! I think that's \nwhat often happens at too.",
             "nextBlock": 8,
+            "voiceIdx": 6,
             "pathId": -2290281614571935191,
             "blockIdx": 7
         },
@@ -74,6 +81,7 @@
             "jpText": "フクちゃん先輩、なんとかならないですか～！\r\n呪いを解いてください……！",
             "enText": "Fuchu senpai, can't you do something about \nit～! Please break the curse ……!",
             "nextBlock": 9,
+            "voiceIdx": 7,
             "pathId": 3487509179915429047,
             "blockIdx": 8
         },
@@ -83,6 +91,7 @@
             "jpText": "ふっふっふ、お任せくださいな！\r\nなぜこの話を切り出したとお思いですか。",
             "enText": "Phew, leave it to me! Why do you think I \nbrought this up?",
             "nextBlock": 10,
+            "voiceIdx": 8,
             "pathId": 5279706368933601644,
             "blockIdx": 9
         },
@@ -92,6 +101,7 @@
             "jpText": "なにを隠そう、シラオキ様秘伝の聖水が\r\nご用意できたからで――",
             "enText": "The reason for this is that we have prepared \nthe secret holy water of Ms. Shiraoki.",
             "nextBlock": 11,
+            "voiceIdx": 9,
             "pathId": -2162904620118053726,
             "blockIdx": 10
         },
@@ -101,6 +111,7 @@
             "jpText": "…………あれ、忘れてる！？",
             "enText": "……… Oh, you forgot!",
             "nextBlock": 12,
+            "voiceIdx": 10,
             "pathId": -626440750497733857,
             "blockIdx": 11
         },
@@ -110,9 +121,10 @@
             "jpText": "よりによって今っ！？",
             "enText": "Now of all times!",
             "nextBlock": -1,
+            "voiceIdx": 11,
             "pathId": -7943392976500491789,
             "blockIdx": 12
         }
     ],
-    "modified": 1667655687
+    "modified": 1672603292
 }

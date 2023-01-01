@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "PJQ3M37YZVRF2B6OHARTXL2XR6TCEZFB",
+    "version": 6,
+    "bundle": "JCDUHCOED7HNINBRMNIFPZNP4FL3JEBX",
     "type": "home",
     "storyId": "030000033",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "ヤエノさんとバンブーさんって、\r\n辛いものが好きだったりしませんか……？",
             "enText": "Yaeno and Bamboo, do you like spicy food ……?",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 3233949840909811076,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "私は得意ですが、どうしてですか？",
             "enText": "I am good at it, why?",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 7702521718482213535,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "実は、間違えて辛口のカレーを\r\n買ってしまって、助けてほしいんです……。\n私、甘口じゃないとだめなのに……。",
             "enText": "Actually, I bought a dry curry by mistake and \nI need your help.…… I need it to be sweet. ……",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -8613985731025111777,
             "blockIdx": 3
         },
@@ -38,6 +41,7 @@
             "jpText": "お安い御用です。\r\nバンブーさんはどうしますか？",
             "enText": "No charge. What would you \nlike to do, Ms. Bamboo?",
             "nextBlock": 5,
+            "voiceIdx": 3,
             "pathId": 5766771844080717022,
             "blockIdx": 4
         },
@@ -47,6 +51,7 @@
             "jpText": "辛いのは苦手だけど好きなので、\r\n挑戦させてもらいたいっス！",
             "enText": "I don't like spicy food, but I love it, so \nI'm willing to give it a shot!",
             "nextBlock": 6,
+            "voiceIdx": 4,
             "pathId": 7446817967253979104,
             "blockIdx": 5
         },
@@ -56,6 +61,7 @@
             "jpText": "苦手だけど好き……？\r\nそれはどういう感情なのですか？",
             "enText": "I'm not good at it, but I like it ……? What \nemotion is that?",
             "nextBlock": 7,
+            "voiceIdx": 5,
             "pathId": 7303699769747003100,
             "blockIdx": 6
         },
@@ -65,6 +71,7 @@
             "jpText": "辛いものを食べると、\r\nなんかアツい感じになれるから好きなんス！",
             "enText": "I like spicy food because \nit makes me feel hot!",
             "nextBlock": 8,
+            "voiceIdx": 6,
             "pathId": -8832985517918460840,
             "blockIdx": 7
         },
@@ -74,6 +81,7 @@
             "jpText": "なるほど！\r\n『艱難にんじんを甘くする』ですね！",
             "enText": "I see! It's \"Sweeten the Tribulation Carrot\"!",
             "nextBlock": 9,
+            "voiceIdx": 7,
             "pathId": -2075221753278449888,
             "blockIdx": 8
         },
@@ -83,6 +91,7 @@
             "jpText": "たぶんそんな感じっス！",
             "enText": "Maybe something like that!",
             "nextBlock": 10,
+            "voiceIdx": 8,
             "pathId": -97255182921319795,
             "blockIdx": 9
         },
@@ -92,9 +101,10 @@
             "jpText": "（アツい感じになる？　にんじんを甘くする？\r\nどうしよう、全然わからない……）",
             "enText": "(Does it make you feel hot? Sweeten the \ncarrots? I have no idea what to do. ……)",
             "nextBlock": -1,
+            "voiceIdx": 9,
             "pathId": -690411832992307191,
             "blockIdx": 10
         }
     ],
-    "modified": 1667831811
+    "modified": 1672603296
 }

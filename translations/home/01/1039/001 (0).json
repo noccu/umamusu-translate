@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "H4ZFVJSZRFTYWEPYKGSVE3FD4MGCJFSK",
+    "version": 6,
+    "bundle": "6VM36T5BQ7JUFNZDIGZNTBAHHSPF3P2B",
     "type": "home",
     "storyId": "011039001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "トレーナーさん。聞いてくださる？\r\n私、明日テストがありますの。",
             "enText": "Trainer. Will you listen to \nme? I have a test tomorrow.",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -4568788108531376082,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "そして本日、テスト範囲を間違えて\r\n勉強していたということに気づきましたわ。",
             "enText": "And today I realized that I've been studying \nfor the wrong test.",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 4769845539184041436,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "ならばこれからどうすべきか、\r\nもうおわかりですわよね？",
             "enText": "Then you already know what to do, don't you?",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": 1657063590076652764,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "そうっ！　ぶっつけ本番に向け心を整える！\r\nそれだけですわぁ～～ッッ！！",
             "enText": "Yes! Prepare your mind for the actual \nperformance! That's all there is to it!",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": -4064418568258784160,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655673
+    "modified": 1672603276
 }

@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "G7EW5G5BRPPMDPZKZYBNAGFWY6WTODU3",
+    "version": 6,
+    "bundle": "YEH7PKYPXRJYHFL2ACEZIY4XVXXTAB2W",
     "type": "home",
     "storyId": "011020001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "ああ、トレーニングのご相談です？\r\n……オッケー、今準備を――",
             "enText": "Oh, you want to discuss training?…… \nOk, now get ready―",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 3843675950047483585,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "はっ！？　ちょっと待って！！",
             "enText": "Ha! Wait a minute!",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -8054153260289302212,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "しっ……静かに！\r\nそれ以上動いちゃダメだよ。",
             "enText": "Shh…… quiet! Don't move any further.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -8636168284711997882,
             "blockIdx": 3
         },
@@ -38,6 +41,7 @@
             "jpText": "ほらほら、目も閉じて！\r\n耳に全神経を集中して～……。",
             "enText": "Come on, come on, close your \neyes too! Concentrate all your \nattention on your ears ～ ……",
             "nextBlock": 5,
+            "voiceIdx": 3,
             "pathId": -7647745378043172625,
             "blockIdx": 4
         },
@@ -47,6 +51,7 @@
             "jpText": "……って、ちゃんと目を\r\nつぶってよー。もー。",
             "enText": "…… close your eyes! Mooo.",
             "nextBlock": 6,
+            "voiceIdx": 4,
             "pathId": -1067143609368976454,
             "blockIdx": 5
         },
@@ -56,9 +61,10 @@
             "jpText": "全然逃げるチャンスが作れないじゃーん。\r\nにゃははっ。",
             "enText": "You can't make a chance to escape \nat all, can you? Nyahaha.",
             "nextBlock": -1,
+            "voiceIdx": 5,
             "pathId": -362395470865146563,
             "blockIdx": 6
         }
     ],
-    "modified": 1667655669
+    "modified": 1672603271
 }

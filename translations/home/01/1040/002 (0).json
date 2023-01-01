@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "M5RPHJQV5MDY36T7DOGBT2RD44BM6JG2",
+    "version": 6,
+    "bundle": "GA3LOYFQLLJSQ2JPZVMRDH32PWLEJUQT",
     "type": "home",
     "storyId": "011040002",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "ちょい、トレーナー。\r\nその服の裾、出してみて。",
             "enText": "Hey, trainer. Let's see if you can get the \nhem of that dress out.",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -6116883481578052978,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "ん、いいじゃん？\r\n似合ってる。",
             "enText": "Hmm, it looks good, doesn't \nit? It looks good on you.",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -8380412706331491382,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "あ。礼とかいいから。\r\n気になったから言っただけだし――",
             "enText": "Ah. Don't thank me or anything. I just said \nit because I was curious.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -3955882492652340755,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "アンタも、やってくれてんじゃん。\r\n練習中に、こーゆーの。",
             "enText": "You're doing it for me, too. You do this \nduring practice.",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": 1197444301202250756,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655673
+    "modified": 1672603276
 }

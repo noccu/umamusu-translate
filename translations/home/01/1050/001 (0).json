@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "632CDVCETI65LCDEALV6XAVQ72KXOQIB",
+    "version": 6,
+    "bundle": "LT76BNKI5BZIFRUCBGAYNIKHRISF5QOX",
     "type": "home",
     "storyId": "011050001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "これ1本で、1食に相当する\r\n栄養が摂れるんだよね。",
             "enText": "One bottle of this provides the nutritional \nequivalent of one meal.",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 1747482075025298743,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "はぐっ！　もぐもぐ、もぐ……。",
             "enText": "Hugs! Mooch, Mooch ……",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 8841143913775996184,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "…………。",
             "enText": "…………",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": 8886323033378770602,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "クチん中、カラッカラだ……。",
             "enText": "My mouth is empty. ……",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": 8234410378179557203,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655675
+    "modified": 1672603277
 }

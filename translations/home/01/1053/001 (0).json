@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "IDAEEZS7VUTR45UZYSGBUZMJK6QQVG7W",
+    "version": 6,
+    "bundle": "34CKCJW2JZG7PJJBRGH26OOQKHAFJS44",
     "type": "home",
     "storyId": "011053001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "むむっ！　トレーナーさん、疲れたからって\nぐでーんとするのはだらしがないっスよ！",
             "enText": "Mumm! Trainer, it's not sloppy to be so tired!",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 5736312460440155369,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "そういう時は体を動かしてスッキリするのが\n1番っス！　そうと決まれば、\nアタシと一緒に走り込みするっスよ！",
             "enText": "In that case, the best thing to do is to move \nyour body and feel refreshed! Once you've \ndecided that… I'll run with you!",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -2880385231891979804,
             "blockIdx": 2
         },
@@ -29,9 +31,10 @@
             "jpText": "あの雲を追いかけて、どこまでもっス……！",
             "enText": "Chasing that cloud, and how far it will go……!",
             "nextBlock": -1,
+            "voiceIdx": 2,
             "pathId": -2773228112882822976,
             "blockIdx": 3
         }
     ],
-    "modified": 1667831681
+    "modified": 1672603278
 }

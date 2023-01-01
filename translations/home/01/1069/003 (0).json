@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "AEGOCREXIDQ4ABH7VYRBGQWQ532XROUO",
+    "version": 6,
+    "bundle": "RFXNOSGSBKUW6UI6HM4FS35HCYRESJFH",
     "type": "home",
     "storyId": "011069003",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "トレーナーさん、聞いてください！\r\n今すごい格言を思いついたんです。\nずばり――",
             "enText": "Trainer, listen up! I just came up with a \ngreat saying. A short phrase―",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -4502644730115521111,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "――『早起きの麗らかな朝日は\r\nにんじんを甘くする』！",
             "enText": "―The early morning sun makes \nthe carrots sweeter!",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -822219059319455853,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "……むむっ、ちょっと回りくどいかな。\r\nもっと端的に、もっと格言らしく……。",
             "enText": "…… Mmmm, that's a bit of a roundabout way of \nputting it. It's more straightforward, more \nproverbial. ……",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": 3967373171437529587,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "――『早起きは、にんじん3本』！\r\nうん、これでバッチリですっ！",
             "enText": "―Three carrots for early risers! \nYeah, that's perfect!",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": 1214465170068967723,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655678
+    "modified": 1672603281
 }

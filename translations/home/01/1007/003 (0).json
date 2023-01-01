@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "FKXQWUDCCX3UE3II7KYIYB34OU6MUQID",
+    "version": 6,
+    "bundle": "HXSTQF5IF4RNXUTFSZVXAQKPMAUYP4DP",
     "type": "home",
     "storyId": "011007003",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "へいらっしゃい！\r\nキンキンに冷えたお湯がオススメだよ～！",
             "enText": "Come on in! I recommend the cold water!",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 4576157731608843803,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "グッツグツに沸騰させたお湯を\r\nガンッガンに冷やしたヤツ――",
             "enText": "You know, the kind where the water is boiled \nto boiling point and then chilled to the bone…",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 6940540686337786316,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "――すなわち、ぬるい水ッ！！",
             "enText": "―That is, tepid water!",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -5225775250585194482,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "常温、適温、低刺激！\r\n体に優しい冷たくもあったかくもねえ水っ！\n今が買いだよ～～っ！",
             "enText": "Room temperature, moderate temperature, \nhypoallergenic! It's not cold or warm water, \nbut it's good for you! Now is the time to buy!",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": 6314068338124372191,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655666
+    "modified": 1672603268
 }

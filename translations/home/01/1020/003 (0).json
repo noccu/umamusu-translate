@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "7GAWELDRX44FTI2M2UM6ODLWDQK6NBPE",
+    "version": 6,
+    "bundle": "PMCUPT2PV43ZRF6CRMDPDXEHT2QEOG2Y",
     "type": "home",
     "storyId": "011020003",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "お、トレーナーさん。\r\n次のレースの開催地って京都でしたっけ？",
             "enText": "Oh, trainer. Was Kyoto the \nvenue for the next race?",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -4242155782004223324,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "ふっふっふ～。私も下準備くらいは\r\nしっかりしていこうと思いまして。",
             "enText": "Phew～. I thought I'd at least do a little \nprep work myself.",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -5711947500005709398,
             "blockIdx": 2
         },
@@ -29,9 +31,10 @@
             "jpText": "――穴場の釣り場は全てチェック済みです！\r\n空き時間の暇つぶしはお任せくださーい♪",
             "enText": "―We've already checked out all the \nhole-in-the-wall fishing spots! Leave it to \nus to pass the time in our spare time!",
             "nextBlock": -1,
+            "voiceIdx": 2,
             "pathId": -3732729368148235306,
             "blockIdx": 3
         }
     ],
-    "modified": 1667655669
+    "modified": 1672603271
 }

@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "PAC2PA6YLXWCV4UVQZZSAP3MXF47LFD4",
+    "version": 6,
+    "bundle": "2SQ53MQ6SAUSBHYKCV3TTUSBMPQ4PDAD",
     "type": "home",
     "storyId": "011026001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "はふはふっ……肉まんから……高温を、探知。\r\nバッドステータス『やけど』を、確認……。",
             "enText": "Hahahahaha…… detected…… high temperature \nfrom the meat bun. Bad status \"Burn\" \nis confirmed ……",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 5396082012581096480,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "しかし、トレーニングで消費したカロリーを\r\n補充するには、肉まん1個の完食が必須。",
             "enText": "However, to replenish the calories consumed \nduring training, a complete meal of a steamed \nmeat bun is necessary.",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -2984771896660848246,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "次のトレーニングまで……残り3分。\r\n食べきるため、『冷却』モードに移行します。",
             "enText": "You have 3 minutes left…… until your next \ntraining session. I'm going into 'cooling' \nmode to eat up.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -5268632019290466674,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "ふー……ふー……ふぅーーーーっ。",
             "enText": "Woo…… woo…… \nwooooooooooooooooooooooooooooooooooooooooooooooooooooooo.",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": -3871346820138862547,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655671
+    "modified": 1672603272
 }

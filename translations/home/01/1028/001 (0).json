@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "BTB4PDZMA67TMFNFF6Y4CK7S2YVAJMAW",
+    "version": 6,
+    "bundle": "AAER4BDASMLRL7JZBRQ3HI4D3REZAGOO",
     "type": "home",
     "storyId": "011028001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "あのね～、トレーナーさん！\r\n今度みんなにお鍋を作ることになったんだ～♪",
             "enText": "You know what, trainer! I'm going to make a \npot for everyone!",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -8873178133085581492,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "でもキムチ鍋か、寄せ鍋かで迷っててね～。\r\n辛いの苦手な子もいるかな～？",
             "enText": "But I'm not sure whether to have kimchi nabe \nor yose-nabe! I wonder if some of the kids \ndon't like spicy food～?",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -8520580816243157346,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "キムチ鍋はエルちゃんが好きだから、\r\n食べてほしかったんだけど～……うむむ～。",
             "enText": "Kimchi nabe is Elle's favorite, so I wanted \nher to try it～…… mmmm～.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": 9151140396218374211,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "そうだ！　どっちも作っちゃおう～！！\r\n2つあれば、2倍ボーノでハッピーだよね♪",
             "enText": "That's right! Let's make both of \nthem～! If we have two, we'll be \nhappy with twice the bonos… ♪",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": -6595630069236541344,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655671
+    "modified": 1672603273
 }

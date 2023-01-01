@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "X7EGQ3FUHWHW2YTWSTYVGBQZXQAUAWSX",
+    "version": 6,
+    "bundle": "6BPNKGAMBZI3VGPJAWWXVI7DIPWJNETB",
     "type": "home",
     "storyId": "011030003",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "あの、もしお鼻がムズムズすることがあったら\r\nライスに言ってほしいな……。",
             "enText": "Um, if your nose ever gets all mushy, I hope \nyou'll tell Rice. ……",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 6874336284463397796,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "……福引すると、\r\nいつもティッシュもらう、から……\nたくさんあって……。",
             "enText": "I always get tissues when I do…… a lucky \ndraw, so…… there are a lot of them. ……",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 6472656341455104584,
             "blockIdx": 2
         },
@@ -29,9 +31,10 @@
             "jpText": "だから、遠慮しないで使ってね？\r\n",
             "enText": "So don't be afraid to use it, okay?",
             "nextBlock": -1,
+            "voiceIdx": 2,
             "pathId": 3926005634482957635,
             "blockIdx": 3
         }
     ],
-    "modified": 1667655671
+    "modified": 1672603273
 }

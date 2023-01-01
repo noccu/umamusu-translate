@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "HIBKM7JLEVLXJ7N57RZSZON275OCL4BP",
+    "version": 6,
+    "bundle": "K7AMT6PXQHZLA47ZTB3I2CQGGUGY46NJ",
     "type": "home",
     "storyId": "011037001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "ファルコンさんにたい焼きを\r\nいただきましたが――",
             "enText": "Ms. Falcon gave me a taiyaki.",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -2384480817667871459,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "間食が取れる本日の休憩時間まで、\r\nまだあと83秒ありますね……。",
             "enText": "You still have 83 seconds left until today's \nbreak time when you can snack. ……",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -9152091714389413552,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "トレーニング後の適度な糖分摂取は、\r\n疲労回復の観点からも好ましいと考えます。",
             "enText": "Moderate sugar intake after training is also \ndesirable from a fatigue recovery perspective.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -1681639026445976581,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "ところで……今日は、なにやら\r\n時間の進みが遅くはありませんか？",
             "enText": "By the way…… isn't the \ntime moving slower today?",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": -1823929219670601513,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655672
+    "modified": 1672603275
 }

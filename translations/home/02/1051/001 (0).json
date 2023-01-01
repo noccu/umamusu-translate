@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "RLRXX2FMR3DRYXETQUQFT4TL2EDPSEDB",
+    "version": 6,
+    "bundle": "OLNRYEVBQYRT3QXZY2KXGJMYNODK5HUE",
     "type": "home",
     "storyId": "021051001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "ハウディ、フラワー！\r\nニホンのことわざ、教えてくだサーイ！",
             "enText": "Howdy, Flower! Tell me a \nJapanese proverb, please!",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 8205445786001241443,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "『トゥデイはモトクロス』って、どういう\r\n意味デスカ？　さっきグラスが言ってマシタ。",
             "enText": "What does \"Today is Motocross\" \nmean? Glass just told me.",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -363455761386046782,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "えぇと、多分……『灯台もと暗し』ですよね？",
             "enText": "Let's see, maybe…… \"Lighthouse \nis dark\", right?",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -3373912615260437545,
             "blockIdx": 3
         },
@@ -38,6 +41,7 @@
             "jpText": "意味は……『身近にあるものは、\r\nかえって見えづらい』ですね。\n足元の影に隠れてしまうので。",
             "enText": "It means…… \"What is close at hand \nis rather difficult to see. It is \nhidden in the shadow of your feet.",
             "nextBlock": 5,
+            "voiceIdx": 3,
             "pathId": 2369187904339887878,
             "blockIdx": 4
         },
@@ -47,6 +51,7 @@
             "jpText": "オゥ、影！　それならワタシ、\r\n似たことわざを知ってマース！",
             "enText": "Oh, shadows! Then I know a similar proverb!",
             "nextBlock": 6,
+            "voiceIdx": 4,
             "pathId": 6148543348410383487,
             "blockIdx": 5
         },
@@ -56,6 +61,7 @@
             "jpText": "『寄らばタイキの陰』！\r\nあれも意味、同じデスカ？",
             "enText": "\"When you are close, you are in the shadow of \nthe tiki.\" Does that mean the same thing?",
             "nextBlock": 7,
+            "voiceIdx": 5,
             "pathId": -9026545963634779735,
             "blockIdx": 6
         },
@@ -65,6 +71,7 @@
             "jpText": "そのことわざは『頼るのなら、強くて大きい\r\nものに頼ろう』という意味ですね。\nなので、ちょっとちがうかも。",
             "enText": "The proverb means, \"If you are going to rely \non something, rely on something strong and \nbig. So, maybe it's not quite right.",
             "nextBlock": 8,
+            "voiceIdx": 6,
             "pathId": -579047734462748584,
             "blockIdx": 7
         },
@@ -74,6 +81,7 @@
             "jpText": "それと読み方はタイキじゃなくて、\r\n大樹【たいじゅ】ですね。",
             "enText": "And, it is not \"tai-ki\" but \"tai-ju\".",
             "nextBlock": 9,
+            "voiceIdx": 7,
             "pathId": -590858488760499362,
             "blockIdx": 8
         },
@@ -83,6 +91,7 @@
             "jpText": "そうデスカ……。\r\n間違えてしまいマシタ……。",
             "enText": "Yes, deska…… I made a mistake. ……",
             "nextBlock": 10,
+            "voiceIdx": 8,
             "pathId": -2712289749725954035,
             "blockIdx": 9
         },
@@ -92,6 +101,7 @@
             "jpText": "ふふ、読み方は間違っていますけれど……。",
             "enText": "Huh, you read it wrong, but \nyou can find it at ……",
             "nextBlock": 11,
+            "voiceIdx": 9,
             "pathId": -7908934066174152916,
             "blockIdx": 10
         },
@@ -101,9 +111,10 @@
             "jpText": "中身はきっと合っています。私、いつも\r\n思ってますから。なにかあったときに\n頼るのなら……タイキ先輩って。",
             "enText": "I am sure that what is inside is correct. \nI always think that. When something \nhappens I always think of…… Taiki-senpai \nif I need to rely on her.",
             "nextBlock": -1,
+            "voiceIdx": 10,
             "pathId": -3561581778320169267,
             "blockIdx": 11
         }
     ],
-    "modified": 1667655686
+    "modified": 1672603291
 }

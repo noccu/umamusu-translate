@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "5E3ZLCXPRLVEWEKTUCAU44AWVPLHUTNB",
+    "version": 6,
+    "bundle": "TESZBTOT5DTNX55ECTPLMULGZCOSMM2C",
     "type": "home",
     "storyId": "011030002",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "はう……授業中、\r\nちょっとだけお腹なっちゃった……。",
             "enText": "Hau…… class, I got a little hungry……",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -4630916360652783580,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "しっかり食べたんだよ？\r\nロールパン5つに、にんじんサラダ……。",
             "enText": "I ate well, okay? Five bread rolls and a \ncarrot salad. ……",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 7988260856655565215,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "にんじんハンバーグ、ベーコンと目玉焼き。\r\nミネストローネと、デザートのゼリーも……。",
             "enText": "Carrot hamburger, bacon and fried egg. \nMinestrone and also Jell O for dessert. ……",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -6165072321145824098,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "……走って全部なくなっちゃったのかな？\r\n購買いってこようかな……。",
             "enText": "Did I run…… and it's all gone? I think I'll \ngo purchase some. ……",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": 6336613817388385025,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655671
+    "modified": 1672603273
 }

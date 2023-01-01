@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "76Q6OOECYWW6P7DBLEH7XV7DJUETX3QO",
+    "version": 6,
+    "bundle": "OZJ5WHROOZLZ6NEK5AXZ245E37XS3SYY",
     "type": "home",
     "storyId": "021032001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "やぁやぁカフェ。\r\nちょっとばかり筋肉増強効果のある\r\nドリンクを作ってみたんだが――",
             "enText": "Hey there, cafe. I made you a little \nmuscle-building drink.",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -2831112393433079965,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "……そうですか。\r\n飲みません……。",
             "enText": "…… I see. I don't drink. ……",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -288303911151008257,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "そう、その通り。決して飲んでは\r\nいけないんだ。どれほど飲みたく\nなろうともね。絶対にだ。",
             "enText": "Yes, that's right. You must never drink, no \nmatter how much you want to. No matter how \nmuch you want to. Never.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -7657496829173611459,
             "blockIdx": 3
         },
@@ -38,6 +41,7 @@
             "jpText": "…………チラッ。",
             "enText": "……… glimpse.",
             "nextBlock": 5,
+            "voiceIdx": 3,
             "pathId": -6481211275662354862,
             "blockIdx": 4
         },
@@ -47,6 +51,7 @@
             "jpText": "なんですか……？\r\n用がないなら、行ってください……。",
             "enText": "What is it ……? If you don't \nneed me, please go to ……",
             "nextBlock": 6,
+            "voiceIdx": 4,
             "pathId": -7056370744321740104,
             "blockIdx": 5
         },
@@ -56,6 +61,7 @@
             "jpText": "……ふむ、駄目だったか。\r\n『カリギュラ効果』と言って、禁止された\nものほど欲しくなる現象があるんだが――",
             "enText": "…… Hmmm, I guess I shouldn't have. It's \ncalled the Caligula effect. The more \nsomething is banned, the more you want it.",
             "nextBlock": 7,
+            "voiceIdx": 5,
             "pathId": -1937549317658066436,
             "blockIdx": 6
         },
@@ -65,6 +71,7 @@
             "jpText": "ドリンクを欲しがらないということは、\r\n君には当てはまらないようだ。\n非常に残念だが、他を当たるとしよう。",
             "enText": "I'm afraid that not wanting a drink \ndoesn't apply to you. I'm very sorry, \nbut I'll find someone else.",
             "nextBlock": 8,
+            "voiceIdx": 6,
             "pathId": 1065518071043883811,
             "blockIdx": 7
         },
@@ -74,6 +81,7 @@
             "jpText": "…………チラッ。",
             "enText": "……… glimpse.",
             "nextBlock": 9,
+            "voiceIdx": 7,
             "pathId": 5783228322892043258,
             "blockIdx": 8
         },
@@ -83,6 +91,7 @@
             "jpText": "他を当たるんでしょう……？\r\nそれとも……まだ何か？",
             "enText": "I guess you'll have to look elsewhere: ……? Or \nis…… still something?",
             "nextBlock": 10,
+            "voiceIdx": 8,
             "pathId": -1526730909420939340,
             "blockIdx": 9
         },
@@ -92,9 +101,10 @@
             "jpText": "うぅ～～ん！！　駄目かーー！！",
             "enText": "Ummmmm!!!! Noooooooo!!!!",
             "nextBlock": -1,
+            "voiceIdx": 9,
             "pathId": 6672104513197163225,
             "blockIdx": 10
         }
     ],
-    "modified": 1667655684
+    "modified": 1672603288
 }

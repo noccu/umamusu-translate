@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "UZLIIB7YHHTCJSF7PIJEVIUXEBKM7QAV",
+    "version": 6,
+    "bundle": "EQZJ6SK6GRBNDAB2JTA5YOSCIQ5RTAR7",
     "type": "home",
     "storyId": "011045002",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "あら、トレーナーさん。\nどちらに行かれるんですか～？",
             "enText": "Hey there, trainer. Where are you going～?",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": 5684845783618215508,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "私はお友だちと待ち合わせを\r\nしているんですが……。",
             "enText": "I'm meeting up with a friend of mine at ……",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -6114848229884116317,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "約束を忘れて寝ていたらしくて。\nふふっ、うっかりさんですよね～。",
             "enText": "It seems I forgot my appointment and fell \nasleep. Phew, she is careless, isn't she!",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -9204376495581333983,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "1時間くらいで来るそうなので、\nのんびり待つことにします～。",
             "enText": "They said they would be here in about an \nhour, so I'll just take it easy and wait.",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": -112392024287966235,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655674
+    "modified": 1672603277
 }

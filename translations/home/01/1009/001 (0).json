@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "BLFG7GR5UKVMTT6ZA7YY6Y54R3BFZ77H",
+    "version": 6,
+    "bundle": "LNUSA5DJ2MN2XUKHXBCN7TEZKABEANF4",
     "type": "home",
     "storyId": "011009001",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "先生のお手伝いが済んだら、\n次はあの子の相談に乗って……。\nそれが終わったら予習しなきゃ。",
             "enText": "When I'm done helping the teacher, I'll go \nto…… to consult with that girl next. After \nthat, I have to prep.",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -4593910754091281870,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "ちょっと時間が厳しいけど、\nま、なんとかなるわよね！",
             "enText": "Time is a little tight, but we'll make it!",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": -1832311933959312464,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "それに、1番に頼ってもらえるのは\n悪い気分じゃないし。",
             "enText": "Besides, it's not a bad feeling to be the \nfirst to depend on them.",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -8240760291726640369,
             "blockIdx": 3
         },
@@ -38,9 +41,10 @@
             "jpText": "……さて、やりますか！",
             "enText": "…… Well, let's do it!",
             "nextBlock": -1,
+            "voiceIdx": 3,
             "pathId": 7393236112089072401,
             "blockIdx": 4
         }
     ],
-    "modified": 1667655667
+    "modified": 1672603268
 }

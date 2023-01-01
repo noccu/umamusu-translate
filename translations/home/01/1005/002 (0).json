@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "VRKVODVX7LUGLF4LN5BUETGNQJLLUYKO",
+    "version": 6,
+    "bundle": "XIRQ3YRJ7URS36VAYFLZ3YOJMHVV2YS4",
     "type": "home",
     "storyId": "011005002",
     "title": "0",
@@ -11,6 +11,7 @@
             "jpText": "おや？\r\nちょっとお疲れかな、トレーナーさん。",
             "enText": "Hmm? A little tired, trainer?",
             "nextBlock": 2,
+            "voiceIdx": 0,
             "pathId": -9146304294052937573,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "そんな顔をしないでほしいな。\r\n私は、君の笑った顔が1番好きなんだ――",
             "enText": "I wish you wouldn't make that face. I like \nyour smiling face the best―",
             "nextBlock": 3,
+            "voiceIdx": 1,
             "pathId": 5752033614698212104,
             "blockIdx": 2
         },
@@ -29,6 +31,7 @@
             "jpText": "……なーんてね♪",
             "enText": "…… Â",
             "nextBlock": 4,
+            "voiceIdx": 2,
             "pathId": -5492326561416706847,
             "blockIdx": 3
         },
@@ -38,6 +41,7 @@
             "jpText": "後輩が夢中になっている少女漫画の台詞だよ。\r\n結構キマっていただろう？",
             "enText": "It's a line from a shoujo manga \nthat my junior is obsessed with. \nIt was pretty neat, wasn't it?",
             "nextBlock": 5,
+            "voiceIdx": 3,
             "pathId": -8262914265837660652,
             "blockIdx": 4
         },
@@ -47,6 +51,7 @@
             "jpText": "驚かせて悪かったね。\r\nでも、さっきの言葉は嘘じゃないよ。",
             "enText": "I'm sorry I startled you. But what I said \nearlier wasn't a lie.",
             "nextBlock": 6,
+            "voiceIdx": 4,
             "pathId": -6401960257627032072,
             "blockIdx": 5
         },
@@ -56,9 +61,10 @@
             "jpText": "トレーナーさんに元気でいてほしいのは、\r\n本当だからさ。",
             "enText": "I really want my trainer to be well.",
             "nextBlock": -1,
+            "voiceIdx": 5,
             "pathId": -5882944371507855632,
             "blockIdx": 6
         }
     ],
-    "modified": 1667655666
+    "modified": 1672603268
 }

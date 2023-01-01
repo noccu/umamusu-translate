@@ -35,16 +35,16 @@ class AudioPlayer:
         if isinstance(self.audioOut, pyaudio.Stream):
             self.audioOut.close()
         self.pyaud.terminate()
-    def play(self, storyId, idx):
+    def play(self, storyId, idx, sType="story"):
         if idx < 0:
             print("Text block is not voiced.")
             return
-        if len(storyId) != 9:
-            # Could support a few other types but isn't useful.
-            print("Unsupported type.")
-            return
         if reloaded := self.curPlaying[0] != storyId:
-            h = self._db.execute(f"SELECT h FROM a WHERE n LIKE 'sound%{storyId}.awb'").fetchone()
+            if sType == "home":
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{storyId[:2]}\_{storyId[2:]}.awb' ESCAPE '\\'"
+            else:
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{storyId}.awb'"
+            h = self._db.execute(stmt).fetchone()
             if h is None:
                 print("Couldn't find audio asset.")
                 return
@@ -598,13 +598,24 @@ def nextMissingName():
 def listen(event=None):
     global AUDIO_PLAYER
     if cur_file.version < 6:
+        print("Old file version, does not have voice info.")
         return
     storyId = cur_file.data.get("storyId")
     voiceIdx = cur_file.textBlocks[cur_block].get("voiceIdx")
-    if storyId is not None and voiceIdx is not None:
+    if len(storyId) != 9:
+        # Could support a few other types but isn't useful.
+        print("Unsupported type.")
+        return
+    elif storyId is None:
+        print("File has an invalid storyid.")
+        return
+    elif voiceIdx is None:
+        print("No voice info found for this block.")
+        return
+    else:
         if not AUDIO_PLAYER:
             AUDIO_PLAYER = AudioPlayer()
-        AUDIO_PLAYER.play(storyId, voiceIdx)
+        AUDIO_PLAYER.play(storyId, voiceIdx, sType=cur_file.type)
 
 
 def _switchWidgetFocusForced(e):

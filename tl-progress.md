@@ -87,7 +87,7 @@ Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1Ee
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
 Mihono Bourbon | Complete, In progress | deepl, [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
-Nice Nature | In progress | [xct][] (ep 1-4)
+Nice Nature | Complete | [xct]
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]

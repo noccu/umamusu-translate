@@ -116,20 +116,23 @@ class BasicSubProcessor:
     def preprocess(self):
         lastName = None
         for line in self.subLines:
-            m = self.npreRe.match(line.text)
-            if m:
-                line.name, line.text = m.group(1,2)
-            if not line.name and lastName:
-                line.name = lastName
-            else:
-                lastName = line.name
+            # Check for choices first
             if not line.effect:
                 m = self.cpreRe.match(line.text)
                 if m:
                     line.effect = "choice"
                     line.text = line.text[len(m.group(0)):]
-                elif line.name in self.choiceNames:
-                    line.effect = "choice"
+                    continue # choices have no name
+            # Check for names
+            if m := self.npreRe.match(line.text):
+                line.name, line.text = m.group(1,2)
+            if not line.name and lastName:
+                line.name = lastName
+            else:
+                lastName = line.name
+            # Check for choices indicated by names
+            if not line.effect and line.name in self.choiceNames:
+                line.effect = "choice"
             line.text = self.cleanLine(line.text)
 
     def addSub(self, idx: int, subLine:TextLine):
@@ -236,6 +239,7 @@ class SrtSubProcessor(BasicSubProcessor):
     def preprocess(self, parsed):
         for line in parsed:
             if len(self.subLines):
+                # Parse line splits from 2+ spaces at line end.
                 m = re.search(r" {2,}$", self.subLines[-1].text)
                 if m:
                     self.subLines[-1].text = self.subLines[-1].text[:m.start()] + f" \n{line.content}"

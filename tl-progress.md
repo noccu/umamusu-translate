@@ -8,6 +8,7 @@ term | meaning
 Not listed | No progress
 Transferring | Translation exists elsewhere and is in the process, or planned to be, imported (progress noted)
 In progress | Translation work is planned, ongoing, or only part is translated (possibly with no work ongoing)
+Stalled | Translation was partial, paused, or cancelled.
 Complete | All the relevant content is available in English
 Finished | Content satisfies this project's translation standards and style guide (to come)
 
@@ -161,9 +162,10 @@ Vodka (SSR, Road of Vodka) | Complete | [robflop][]
 # Home Dialogue
 name | progress | translator
 --- | --- | ---
-All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+All not listed up to 2023/01/01 | Complete | deepl (contributed by Korgi up to 2022/07/08)
 Maruzensky | Complete | [noccu][]
 Curren Chan | Complete | [noccu][]
+Kitasan Black | Stalled | [noccu] (solo 2)
 Gold Ship | Complete | [noccu][] (solo 1-2), deepl
 
 # System text

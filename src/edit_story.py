@@ -39,6 +39,10 @@ class AudioPlayer:
         if idx < 0:
             print("Text block is not voiced.")
             return
+        if len(storyId) != 9:
+            # Could support a few other types but isn't useful.
+            print("Unsupported type.")
+            return
         if reloaded := self.curPlaying[0] != storyId:
             h = self._db.execute(f"SELECT h FROM a WHERE n LIKE 'sound%{storyId}.awb'").fetchone()
             if h is None:
@@ -607,6 +611,10 @@ def _switchWidgetFocusForced(e):
     e.widget.tk_focusNext().focus()
     return "break"
 
+def onClose(event=None):
+    if AUDIO_PLAYER:
+        AUDIO_PLAYER.dealloc()
+    root.quit()
 
 def main():
     global files
@@ -767,6 +775,8 @@ def main():
     text_box_en.bind("<Alt-F>", process_text)
     root.bind("<Control-f>", toggleSearchPopup)
     root.bind("<Control-h>", listen)
+
+    root.protocol("WM_DELETE_WINDOW", onClose)
 
     root.mainloop()
 

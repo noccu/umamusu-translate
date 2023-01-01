@@ -278,7 +278,7 @@ class DataTransfer:
                 textData['skip'] = targetBlock['skip']
             if 'newClipLength' in targetBlock:
                 textData['newClipLength'] = targetBlock['newClipLength']
-            if args.upgrade and self.file.version > 4:
+            if args.upgrade and textData.get('origClipLength'):
                 textData['origClipLength'] = targetBlock['origClipLength']
                 for i, group in enumerate(textData.get("animData", [])):
                     group['origLen'] = targetBlock['animData'][i]['origLen']

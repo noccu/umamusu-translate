@@ -86,7 +86,7 @@ The structure used is simple: `00 0000 000`
 1055 | Marvelous Sunday
 1056 | Matikanefukukitaru
 1057 | Mr. C.B.
-1058 | Meishodoto
+1058 | Meisho Doto
 1059 | Mejiro Dober
 1060 | Nice Nature
 1061 | King Halo
@@ -101,25 +101,31 @@ The structure used is simple: `00 0000 000`
 1070 | Sirius Symboli
 1071 | Mejiro Ardan
 1072 | Yaeno Muteki
+1073 | Tsurumaru Tsuyoshi
 1074 | Mejiro Bright
 1075 | Daring Tact
 1076 | Sakura Laurel
 1077 | Narita Top Road
 1078 | Yamanin Zephyr
+1083 | Symboli Kris S
+1084 | Tanino Gimlet
 1085 | Daiichi Ruby
 1085 | Mejiro Ramonu
 1087 | Aston Machan
-1093 | KS Miracle
+1093 | K.S. Miracle
 1098 | Copano Rickey
 1099 | Hokko Tarumae
 1100 | Wonder Acute
-1077 | Narita Top Road
 2001 | Happy Meek
+2002 | Bitter Glasse
+2003 | Little Cocon
+2004 | Montjeu
 9001 | Hayakawa Tazuna
 9002 | President Akikawa
 9003 | Otonashi Etsuko
 9004 | Kiryuin Aoi
 9005 | Anshinzawa Sasami
+9006 | Kashimoto Riko
 9008 | Light Hello
 
 # Song IDs
@@ -127,6 +133,7 @@ The structure used is simple: `00 0000 000`
 | ID | Name |
 |----|------|
 1001 | Umapyoi Densetsu
+1003 | RUN×RUN！
 1004 | Never Looking Back
 1005 | Irodori Phantasia
 1006 | Make debut!
@@ -135,26 +142,64 @@ The structure used is simple: `00 0000 000`
 1009 | UNLIMITED IMPACT
 1010 | Special Record!
 1012 | Grow Up・Shine!
-1023 | ぼくらのブルーバードデイズ
+1013 | Find My Only Way
+1023 | Our Bluebird Days
+1024 | Treasured Treasurebox
 1025 | Hajimari no Signal
 1026 | Sasayaka na Inori
 1027 | Honnou Speed
 1028 | winning the soul
+1029 | GIRLS' LEGEND U
 1030 | Namida hikatte asu ni nare!
 1031 | BLAZE
 1032 | Yume wo kakeru
+1033 | KIRARI MAGIC SHOW
 1034 | Pyoitto♪Hallelujah!
 1035 | WINnin’ 5 －ウイニング☆ファイヴ－
+1036 | GIRLS' LEGEND U
 1037 | transforming
-1040 | 青春が待ってる
+1040 | Seishun ga Matteru
+1041 | Yumezora
 1042 | Go This Way
-1043 | 木漏れ日のエール
-1044 | 全速！前進！ウマドルパワー☆
+1043 | Komorobi no Yell
+1044 | Zensoku! Zenshin! Idol Power☆
+1046 | Nigekiri! Fallin' Love
+1047 | Ring Ring ダイアリー　
 1048 | BLOW my GALE
 1049 | バクシンバクシンバクシンシン
 1050 | We are DREAMERS!!
+1051 | Treasured Smile -Beyond The Future!-
 1052 | プロムダンスパート
+1053 | Gaze on Me!
+1054 | Ms. VICTORIA
+1055 | ゴルシンゴルシンゴルシンシン
 1056 | メジロ讃歌
+1057 | Tachiichi Zeroban! Juni ha Ichiban!
+1061 | ゆるパカHAPPY DAYS！
+1062 | わたしの印は大本命◎
+1063 | unbreakable
+1064 | SEVEN
+1065 | ふんわりSlowly
+1066 | My Against Fight
+1067 | アウト・オブ・トライアングル
+1068 | 願いのカタチ
+1069 | 硝子のエトワール
+1070 | LIKE THE WIND
+1071 | ときめきスクランブル
+1072 | ユースフルアイズ
+1073 | 笑っちゃお！
+1074 | 忘却にて
+1075 | ゴルシラップ
+1076 | Precious Star Dreamer
+1077 | ミッドナイト・エピローグ
+1078 | Ambitious World
+1079 | winning the soul (PandaBoY Remix)
+8501 | スタホTV
+8502 | 条件戦
+8503 | 怪物誕生
+8504 | 親馬選択
+8505 | 新馬生産
+9051 | 【MCパート】笑顔の宝物 -Beyond The Future!-
 
 # Index IDs
 

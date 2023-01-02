@@ -616,6 +616,7 @@ def listen(event=None):
         if not AUDIO_PLAYER:
             AUDIO_PLAYER = AudioPlayer()
         AUDIO_PLAYER.play(storyId, voiceIdx, sType=cur_file.type)
+    return "break"
 
 
 def _switchWidgetFocusForced(e):
@@ -785,7 +786,7 @@ def main():
     text_box_en.bind("<Alt-f>", process_text)
     text_box_en.bind("<Alt-F>", process_text)
     root.bind("<Control-f>", toggleSearchPopup)
-    root.bind("<Control-h>", listen)
+    text_box_en.bind("<Control-h>", listen)
 
     root.protocol("WM_DELETE_WINDOW", onClose)
 

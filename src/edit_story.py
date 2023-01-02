@@ -21,7 +21,7 @@ class AudioPlayer:
     curPlaying = (None, 0)
     subkey = None
     audioOut = None
-    wavData = None
+    wavFile = None
     subFiles = None
     def __init__(self) -> None:
         global pyaudio, sqlite3, wave, restore, AWB, HCA
@@ -33,9 +33,12 @@ class AudioPlayer:
     def dealloc(self):
         self._db.close()
         if isinstance(self.audioOut, pyaudio.Stream):
+            self.audioOut.stop_stream()
+            self._closeWavStream()
             self.audioOut.close()
         self.pyaud.terminate()
     def play(self, storyId, idx, sType="story"):
+        '''Plays audio for a specific text block'''
         if idx < 0:
             print("Text block is not voiced.")
             return
@@ -59,36 +62,54 @@ class AudioPlayer:
                 return
             self.decodeAudio(self.subFiles[idx])
         self.curPlaying = (storyId, idx)
-        self.audioOut.write(self.wavData)
+        self._playAudio()
     def load(self, path: str):
+        '''Loads the main audio container at path'''
         awbFile = AWB(path)
         # get by idx method seems to corrupt half the files??
         self.subFiles = [f for f in awbFile.getfiles()]
         self.subkey = awbFile.subkey
         awbFile.stream.close()
     def decodeAudio(self, hcaFile:bytes):
+        '''Decodes a new audio stream, called only when such is requested'''
         hcaFile:HCA = HCA(hcaFile, key=75923756697503, subkey=self.subkey)
-        channels = hcaFile.hca.get("ChannelCount")
-        rate = hcaFile.hca.get("SampleRate")
         hcaFile.decode() # leaves a wav ByteIOStream in stream attr
-        with wave.open(hcaFile.stream, "rb") as wavFile:
-            bpc = wavFile.getsampwidth()
-            # read the whole file because it's small anyway
-            self.wavData = wavFile.readframes(wavFile.getnframes())
-        hcaFile.stream.close() # probably not needed (lib sure doesn't) but eh
-        self._createStream(bpc, channels, rate) # ready the stream to play this data
-    def _createStream(self, bpc = 2, channels = 1, rate = 48000):
-        if isinstance(self.audioOut, pyaudio.Stream):
+        # Ready the data to be played
+        if self.wavFile:
+            self._closeWavStream()
+        self.wavFile = wave.open(hcaFile.stream, "rb")
+    def _getAudioData(self, data, frames, time, status):
+        '''Data retrieval method called by async pyAudio play'''
+        data = self.wavFile.readframes(frames)
+        # auto-stop on EOF seems to override Flag and only affects is_active()
+        # stream still needs to be stopped
+        return (data, pyaudio.paContinue)
+    def _playAudio(self):
+        '''Deals with the technical side of playing audio'''
+        if not self.wavFile or self.wavFile.getfp().closed:
+            print("No WAV loaded.")
+            return
+        channels = self.wavFile.getnchannels() or 1
+        rate = self.wavFile.getframerate() or 48000
+        bpc = self.wavFile.getsampwidth() or 2
+        if isinstance(self.audioOut, pyaudio.PyAudio.Stream):
+            self.audioOut.stop_stream() # New play is requested, always stop any current
             if self.audioOut._channels != channels or self.audioOut._rate != rate:
                 self.audioOut.close()
             else:
+                self.wavFile.rewind() # test
+                self.audioOut.start_stream()
                 return
         self.audioOut = self.pyaud.open(
             format=self.pyaud.get_format_from_width(width=bpc),
             channels = channels,
             rate = rate,
-            output=True
+            output=True,
+            stream_callback=self._getAudioData
         )
+    def _closeWavStream(self):
+        self.wavFile.getfp().close()
+        self.wavFile.close()
 
 def change_chapter(event=None, initialLoad=False):
     global cur_chapter

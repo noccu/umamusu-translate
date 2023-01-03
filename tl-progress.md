@@ -39,7 +39,7 @@ Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
-Tonight at the Ligne Droite | Transferring, Complete | Anonymous Reindeer, deepl
+Tonight at the Ligne Droite | Complete | Anonymous Reindeer
 A Resounding Cheer, Tracen Academy Cheerleading Squad! | Transferring | [LotoDS][]
 The Promised Time: Silks & Three Riddles | Transferring/Stalled, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]

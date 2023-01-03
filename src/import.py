@@ -104,6 +104,8 @@ class PatchManager:
     def patch(self, path: str):
         """Swaps game assets with translation file data, returns modified state."""
         self.loadTranslationFile(path)
+        if self.args.skip_mtl and not self.tlFile.data.get("humanTl"):
+            return False
         if self.args.use_tlg and isUsingTLG() and self.tlFile.data.get("tlg"):
             convertTlFile(self.tlFile)
             if self.args.verbose:
@@ -286,6 +288,7 @@ def main():
     ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
     ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")
     ap.add_argument("-tlg", "--use-tlg", action="store_true", help="Auto-write any TLG versions when detected")
+    ap.add_argument("-nomtl", "--skip-mtl", action="store_true", help="Only import human translations")
 
     args = ap.parse_args()
     if args.use_tlg:

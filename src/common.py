@@ -94,13 +94,10 @@ def patchVersion():
 class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTextHelpFormatter): pass
 class Args(argparse.ArgumentParser):
     def __init__(self, desc, defaultArgs=True, types=None, **kwargs) -> None:
-        if len(sys.argv) > 1 and sys.argv[1] in ("-v", "--version"):
-            print(f"Patch version: {patchVersion()}")
-            sys.exit()
         super().__init__(description=desc, conflict_handler='resolve', formatter_class=RawDefaultFormatter, **kwargs)
+        self.add_argument("-v", "--version", action="store_true", help="Show version and exit")
+        self.add_argument("--read-defaults", action="store_true", help="Overwrite args with data from umatl.json config")
         if defaultArgs:
-            self.add_argument("-v", "--version", action="store_true", default=argparse.SUPPRESS,
-                              help="Show version and exit")
             self.add_argument("-t", "--type", choices=types or TARGET_TYPES, default=types[0] if types else TARGET_TYPES[0],
                               help="The type of assets to process.")
             self.add_argument("-g", "--group", help="The group to process")
@@ -113,6 +110,17 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-vb", "--verbose", action="store_true", help="Print additional info")
         elif types:
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
+    def parse_args(self, **kwargs):
+        a = super().parse_args(**kwargs)
+        if a.version:
+            print(f"Patch version: {patchVersion()}")
+            sys.exit()
+        if a.read_defaults and (cfg := helpers.readJson("umatl.json") or createDefaultUmatlConfig()):
+            # Resolve to make sure it works on both abs and rel paths.
+            ctx = str(Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")).replace("\\","/")
+            for k, v in cfg.get(ctx, {}).items():
+                setattr(a, k, v)
+        return a
     @classmethod
     def fake(cls, **kwargs):
         return argparse.Namespace(**kwargs)
@@ -367,3 +375,20 @@ class GameBundle:
 
 def currentTimestamp():
     return int(datetime.now(timezone.utc).timestamp())
+
+def createDefaultUmatlConfig():
+    print("Creating default config file...")
+    data = {
+        "import": {
+            "fullImport": True,
+            "overwrite": True,
+            "update": True,
+            "write_log": True,
+            "skip_mtl": False
+        },
+        "mdb/import": {
+            "skill_data": False
+        }
+    }
+    helpers.writeJson("umatl.json", data, 2)
+    return data

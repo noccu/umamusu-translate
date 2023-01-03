@@ -26,7 +26,7 @@ CALL update.bat
 ECHO Importing all translatable types that are present in your game files...
 ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
 REM Or manually import parts, see import.py -h
-%snek% src/import.py --full-import --overwrite --update --write-log
+%snek% src/import.py --read-defaults
 REM Copying TLG translation files...
 %snek% src/manage.py --move
 ECHO Imports complete!
@@ -54,10 +54,10 @@ GOTO quit
 :mdb
 CALL update.bat
 ECHO Attempting mdb backup...
-ECHO Original will be stored at \Users^<name^>\AppData\LocalLow\Cygames\umamusume\master\master.mdb.bak
+ECHO Original will be stored at \Users\^<name^>\AppData\LocalLow\Cygames\umamusume\master\master.mdb.bak
 %snek% src/mdb/import.py --backup
 ECHO Importing mdb text...
-%snek% src/mdb/import.py %2
+%snek% src/mdb/import.py --read-defaults
 GOTO quit
 
 :uninstall

@@ -26,7 +26,7 @@ CALL update.bat
 ECHO Importing all translatable types that are present in your game files...
 ECHO Update-only mode is default. To forcefully rewrite all files, remove -U in this .bat
 REM Or manually import parts, see import.py -h
-%snek% src/import.py --read-defaults
+%snek% src/import.py --full-import --overwrite --read-defaults
 REM Copying TLG translation files...
 %snek% src/manage.py --move
 ECHO Imports complete!

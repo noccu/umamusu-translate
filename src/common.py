@@ -96,7 +96,7 @@ class Args(argparse.ArgumentParser):
     def __init__(self, desc, defaultArgs=True, types=None, **kwargs) -> None:
         super().__init__(description=desc, conflict_handler='resolve', formatter_class=RawDefaultFormatter, **kwargs)
         self.add_argument("-v", "--version", action="store_true", help="Show version and exit")
-        self.add_argument("--read-defaults", action="store_true", help="Overwrite args with data from umatl.json config")
+        self.add_argument("--read-defaults", "--read-config", action="store_true", help="Overwrite args with data from umatl.json config")
         if defaultArgs:
             self.add_argument("-t", "--type", choices=types or TARGET_TYPES, default=types[0] if types else TARGET_TYPES[0],
                               help="The type of assets to process.")
@@ -377,13 +377,9 @@ def currentTimestamp():
     return int(datetime.now(timezone.utc).timestamp())
 
 def createDefaultUmatlConfig():
-    print("Creating default config file...")
     data = {
         "import": {
-            "fullImport": True,
-            "overwrite": True,
             "update": True,
-            "write_log": True,
             "skip_mtl": False
         },
         "mdb/import": {
@@ -391,4 +387,8 @@ def createDefaultUmatlConfig():
         }
     }
     helpers.writeJson("umatl.json", data, 2)
-    return data
+    print("Uma-tl uses the umatl.json config file for user preferences when requested.\n"
+        "This seems to be your first time running uma-tl this way so a new file was created.\n"
+        "Uma-tl has quit this first time so you can edit the config first. Defaults are:")
+    print(json.dumps(data, indent=2))
+    sys.exit()

@@ -295,6 +295,8 @@ def saveFile(event=None):
     if save_on_next.get() == 0:
         print("Saved")
     save_block()
+    if set_humanTl.get() == 1:
+        cur_file.data["humanTl"] = True
     cur_file.save()
 
 
@@ -667,6 +669,7 @@ def main():
     global btn_colored
     global save_on_next
     global skip_translated
+    global set_humanTl
     global large_font
 
     cur_chapter = 0
@@ -766,11 +769,15 @@ def main():
     save_on_next = tk.IntVar()
     save_on_next.set(0)
     save_checkbox = tk.Checkbutton(root, text="Save chapter on block change", variable=save_on_next)
-    save_checkbox.grid(row=6, column=3)
+    save_checkbox.grid(row=6, column=1)
     skip_translated = tk.IntVar()
     skip_translated.set(0)
     skip_checkbox = tk.Checkbutton(root, text="Skip translated blocks", variable=skip_translated)
-    skip_checkbox.grid(row=6, column=2)
+    skip_checkbox.grid(row=6, column=0)
+    set_humanTl = tk.IntVar()
+    set_humanTl.set(0)
+    set_humanTl_checkbox = tk.Checkbutton(root, text="Mark as human TL", variable=set_humanTl)
+    set_humanTl_checkbox.grid(row=6, column=2)
     for f in (root, frm_btns_bot, frm_btns_side):
         for w in f.children.values():
             w.configure(takefocus=0)

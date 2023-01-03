@@ -30,6 +30,8 @@ class SubTransferOptions():
         self.writeSubs = False
         self.notlComments = False
         self.mainStyles = "MainText|Default|Button"
+        self.timeSync = False
+        self.assetSync = False
         
     @classmethod
     def fromArgs(cls, args):
@@ -40,10 +42,12 @@ class SubTransferOptions():
         return o
 
 class TextLine:
-    def __init__(self, text, name = "", effect = "") -> None:
+    def __init__(self, text, name = "", effect = "", start = None, end = None) -> None:
         self.text: str = text
         self.name: str = name
         self.effect: str = effect.lower()
+        self.start: timedelta = start
+        self.end: timedelta = end
 
     def isChoice(self) -> bool:
         return self.effect == "choice"
@@ -173,12 +177,78 @@ class BasicSubProcessor:
         if not self.options.dupeCheckAll and curName not in common.NAMES_BLACKLIST: return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx-1)) > 0.6
 
+    def timeSync(self):
+        i = 1
+        end = len(self.subLines)
+        while i < end:
+            line = self.subLines[i]
+            lastLine = self.subLines[i-1]
+            if line.start == lastLine.end:
+                lastLine.text += f"\n{line.text}"
+                lastLine.end = line.end
+                del self.subLines[i]
+                end -= 1
+                continue
+            i+=1
+
+    def assetSync(self):
+        '''Attempts to join unmarked split lines based on timings derived from the game asset'''
+        subFromBundle = createSubs(self.srcFile)
+        if subFromBundle:
+            subFromBundle = subFromBundle.events
+        else:
+            return
+        self.shiftTimes(self.subLines, subFromBundle[0].end - self.subLines[0].end)
+        print(f"Subs start at: {self.subLines[0].start}")
+        if self.subLines[0].start.seconds > 1:
+            self.shiftTimes(self.subLines, subFromBundle[0].start - self.subLines[0].start)
+            print(f"Timing auto-adjusted to start at: {self.subLines[0].start}")
+
+        i = 1
+        j = 0
+        while j < len(self.srcFile.textBlocks):
+            subLine = self.subLines[i]
+            bundleLine = subFromBundle[j]
+            lastSub = self.subLines[i-1]
+            if self.getJp(j).startswith("イベントタイトルロゴ表示") or re.match("※*ダミーテキスト|欠番", self.getJp(j)):
+                j += 1
+                bundleLine = subFromBundle[j]
+
+            if subLine.name == lastSub.name and (subLine.start + subLine.end) / 2 < bundleLine.end:
+                lastSub.text += f"\n{subLine.text}"
+                lastSub.end = subLine.end
+                del self.subLines[i]
+                continue
+            i+=1
+            j+=1
+
+    @classmethod
+    def shiftTimes(cls, textLines: list[TextLine], shiftDelta: timedelta):
+        for line in textLines:
+            line.start += shiftDelta
+            line.end += shiftDelta
+
 class AssSubProcessor(BasicSubProcessor):
     def __init__(self, srcFile, subFile, opts) -> None:
         super().__init__(srcFile, opts)
         self.format = SubFormat.ASS
         with open(subFile, encoding='utf_8_sig') as f:
-            self.preprocess(ass.parse(f))
+            parsed = ass.parse(f)
+        lastTimeStamp = zeroDelta = timedelta()
+        def sort(x):
+            nonlocal lastTimeStamp
+            if x.start == zeroDelta:
+                return lastTimeStamp 
+            else:
+                lastTimeStamp = x.start
+                return x.start
+        parsed.events._lines.sort(key=sort)
+        self.preprocess(parsed)
+        if self.options.timeSync:
+            self.timeSync()
+        if self.options.assetSync:
+            self.assetSync()
+
 
     def cleanLine(self, text):
         text = re.sub(r"\{(?:\\([ib])1|(\\[ib])0)\}", r"<\1\2>", text) # transform italic/bold tags
@@ -189,16 +259,6 @@ class AssSubProcessor(BasicSubProcessor):
 
 
     def preprocess(self, parsed):
-        lastTimeStamp = zeroDelta = timedelta()
-        def sort(x):
-            nonlocal lastTimeStamp
-            if x.start == zeroDelta:
-                return lastTimeStamp 
-            else:
-                lastTimeStamp = x.start
-                return x.start
-        parsed.events._lines.sort(key=sort)
-
         lastSplit = None
         lastName = None
         mainTextRe = re.compile(self.options.mainStyles, re.IGNORECASE)
@@ -220,13 +280,14 @@ class AssSubProcessor(BasicSubProcessor):
             if splitRe.match(line.effect):
                 if lastSplit and line.effect[-2:] == lastSplit:
                     self.subLines[-1].text += f"\n{line.text}"
+                    self.subLines[-1].end = line.end
                     continue
                 lastSplit = line.effect[-2:]
             else: lastSplit = None
 
             if not line.effect and line.style.endswith("Button") or line.name == "Choice":
                 line.effect = "choice"
-            self.subLines.append(TextLine(line.text, line.name or lastName, line.effect))
+            self.subLines.append(TextLine(line.text, line.name or lastName, line.effect, line.start, line.end))
             lastName = self.subLines[-1].name
             
 class SrtSubProcessor(BasicSubProcessor):
@@ -235,6 +296,10 @@ class SrtSubProcessor(BasicSubProcessor):
         self.format = SubFormat.SRT
         with open(subFile, encoding='utf_8') as f:
             self.preprocess(srt.parse(f))
+        if self.options.timeSync:
+            self.timeSync()
+        if self.options.assetSync:
+            self.assetSync()
 
     def preprocess(self, parsed):
         for line in parsed:
@@ -244,7 +309,7 @@ class SrtSubProcessor(BasicSubProcessor):
                 if m:
                     self.subLines[-1].text = self.subLines[-1].text[:m.start()] + f" \n{line.content}"
                     continue
-            self.subLines.append(TextLine(line.content))
+            self.subLines.append(TextLine(line.content, start=line.start, end=line.end))
         super().preprocess()
 
 class TxtSubProcessor(BasicSubProcessor):
@@ -340,49 +405,52 @@ def process(srcFile, subFile, opts: SubTransferOptions):
     else:
         print("Successfully transferred.")
 
+def createSubs(tlFile, fps = 30):
+    try:
+        bundle = common.GameBundle.fromName(tlFile.bundle)
+    except FileNotFoundError:
+        print("Bundle doesn't exist.")
+        return None
+    title = tlFile.data.get('title', "")
+    # if tlFile.version < 5:
+    #     print(f"File version is too old to create subs, re-extract first: ${tlFile.name}")
+    #     continue
+    subs = ass.Document()
+    subs.info._fields['Title'] = title
+    subs.info._fields['ScriptType'] = subs.info.VERSION_ASS
+    subs.styles._lines.append(ass.Style())
+    ts = 0
+    for block in tlFile.textBlocks:
+        assetData = bundle.getAssetData(block.get('pathId'))
+        voiced = True
+        len = assetData.get('VoiceLength') 
+        if len == -1: 
+            len = assetData.get('ClipLength')
+            voiced = False
+        len += 1 # blocklen adds this too so I'm copying it here
+        len /= fps
+        ts += (assetData.get('StartFrame', 1) - 1) / fps # dunno why but this -1 improves timings
+        line = ass.Dialogue(
+            start=timedelta(seconds=ts), 
+            end=timedelta(seconds=ts+len), 
+            name=block.get('enName') or block.get('jpName', ""), 
+            text=(block.get('enText') or block.get('jpText', "")).replace("\n", "\\N")
+        )
+        ts += len + (assetData.get('WaitFrame') / fps if voiced else 0)
+        if block.get('choices'):
+            line.effect = "choice"
+        subs.events._lines.append(line)
+    return subs
 
 def writeSubs(sType, storyid):
-    fps = 30
     files = common.searchFiles(sType, *common.parseStoryId(sType, storyid))
     for tlFile in files:
         tlFile = common.TranslationFile(tlFile)
-        try:
-            asset = common.GameBundle.fromName(tlFile.bundle)
-        except FileNotFoundError:
-            print("File doesn't exist")
-            continue
-
-        title = tlFile.data.get('title', "")
-        # if tlFile.version < 5:
-        #     print(f"File version is too old to create subs, re-extract first: ${tlFile.name}")
-        #     continue
-        subs = ass.Document()
-        subs.info._fields['Title'] = title
-        subs.info._fields['ScriptType'] = subs.info.VERSION_ASS
-        subs.styles._lines.append(ass.Style())
-        ts = 0
-        for block in tlFile.textBlocks:
-            assetData = asset.assets[block.get('pathId')].read_typetree()
-            voiced = True
-            len = assetData.get('VoiceLength') 
-            if len == -1: 
-                len = assetData.get('ClipLength')
-                voiced = False
-            len += 1 # blocklen adds this too so I'm copying it here
-            len /= fps
-            ts += (assetData.get('StartFrame', 1) - 1) / fps # dunno why but this -1 improves timings
-            line = ass.Dialogue(
-                start=timedelta(seconds=ts), 
-                end=timedelta(seconds=ts+len), 
-                name=block.get('enName') or block.get('jpName', ""), 
-                text=(block.get('enText') or block.get('jpText', "")).replace("\n", "\\N")
-            )
-            if block.get('choices'):
-                line.effect = "choice"
-            ts += len + (assetData.get('WaitFrame') / fps if voiced else 0)
-            subs.events._lines.append(line)
+        subs = createSubs(tlFile)
+        if not subs: 
+            return
         helpers.mkdir("subs")
-        with open(f"subs/{tlFile.getStoryId()} {title}.ass", "w", encoding='utf_8_sig') as f:
+        with open(f"subs/{tlFile.getStoryId()} {subs.info['Title']}.ass", "w", encoding='utf_8_sig') as f:
            subs.dump_file(f)
 
 
@@ -404,6 +472,8 @@ def main():
     ap.add_argument("-ass --write-subs", dest="writeSubs", action="store_true", help="Write ASS subs from tl files\nsrc = story type, sub = storyid")
     ap.add_argument("--notl-comments", dest="notlComments", action="store_true", help="Try to find untranslated lines left in comments which match --main-styles.")
     ap.add_argument("-main --main-styles", dest="mainStyles", default="MainText|Default|Button", help="Filter by these ASS styles. No effect on non-ASS subs.\nA regexp that should match all useful text and choice styles.")
+    ap.add_argument("--asset-sync", dest="assetSync", action="store_true", help="Auto-unsplit lines based on asset times.")
+    ap.add_argument("--time-sync", dest="timeSync", action="store_true", help="Auto-unsplit lines based on sub times.")
     args = ap.parse_args()
     if args.writeSubs:
         writeSubs(args.src, args.sub)

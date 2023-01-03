@@ -327,6 +327,11 @@ class GameBundle:
         except:
             pass # defer to defaults
 
+    def getAssetData(self, pathId: int):
+        if a := self.assets.get(pathId):
+            return a.read_typetree()
+        else: return None
+
     def load(self):
         # UnityPy does not error and loads empty files
         if not self.exists:
@@ -335,7 +340,7 @@ class GameBundle:
         self.data = UnityPy.load(str(self.bundlePath))
         if self._autoloaded: self.readPatchState()
         self.rootAsset: ObjectReader = next(iter(self.data.container.values())).get_obj()
-        self.assets: list[ObjectReader] = self.rootAsset.assets_file.files
+        self.assets: dict[str, ObjectReader] = self.rootAsset.assets_file.files
         return self
 
     def save(self, dstFolder:Path=None, dstName:str=None):

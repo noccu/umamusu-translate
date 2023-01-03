@@ -155,6 +155,8 @@ class BasicSubProcessor:
                 # print("debug:", p.getJp(idx), subLine.text)
                 self.setEn(idx, TextLine("<UNTRANSLATED>"))
                 idx += 1
+                if idx > len(self.srcLines) - 1:
+                    return idx
 
         self.setEn(idx, subLine)
         idx += 1
@@ -206,7 +208,7 @@ class BasicSubProcessor:
 
         i = 1
         j = 0
-        while j < len(self.srcFile.textBlocks):
+        while j < len(self.srcFile.textBlocks) and i < len(self.subLines):
             subLine = self.subLines[i]
             bundleLine = subFromBundle[j]
             lastSub = self.subLines[i-1]

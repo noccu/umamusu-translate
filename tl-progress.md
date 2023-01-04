@@ -205,7 +205,7 @@ Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Ms. VICTORIA | Complete | [Nine]
 Next Frontier | Complete | [LotoDS][]
-Sasayaka na Inori | Complete | [Eight][]
+Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
 transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | Anonymous Reindeer, [Karimenrider][] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]
@@ -236,3 +236,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Kuwaiden]: https://www.youtube.com/@Kuwaiden
 [DantheBoss]: https://www.youtube.com/channel/UCqAtDEmjrzy4twoZnvH-upw
 [Nine]: https://www.youtube.com/@nineumasubs8221
+[Solo]: https://www.youtube.com/@solotranslation8586

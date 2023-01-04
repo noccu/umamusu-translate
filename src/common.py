@@ -115,7 +115,11 @@ class Args(argparse.ArgumentParser):
         if a.version:
             print(f"Patch version: {patchVersion()}")
             sys.exit()
-        if a.read_defaults and (cfg := helpers.readJson("umatl.json") or createDefaultUmatlConfig()):
+        if a.read_defaults:
+            try:
+                cfg = helpers.readJson("umatl.json")
+            except FileNotFoundError:
+                cfg = createDefaultUmatlConfig()
             # Resolve to make sure it works on both abs and rel paths.
             ctx = str(Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")).replace("\\","/")
             for k, v in cfg.get(ctx, {}).items():

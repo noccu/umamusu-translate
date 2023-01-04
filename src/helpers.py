@@ -11,12 +11,8 @@ __GAME_INSTALL_DIR = False
 __IS_USING_TLG = None
 
 def readJson(file: PathLike) -> Union[dict, list]:
-    try:
-        with open(file, "r", encoding="utf8") as f:
-            return json.load(f)
-    except Exception as e:
-        print (repr(e))
-        return None
+    with open(file, "r", encoding="utf8") as f:
+        return json.load(f)
 
 
 def writeJson(file: PathLike, data, indent=4):

@@ -30,7 +30,7 @@ def buildSqlStmt(args):
         args.idx = "___"
 
     if args.path:
-        add(f"n like '%{args.path}%' escape '\\'")
+        add(f"n like '{args.path if args.custom else f'%{args.path}%'}' escape '\\'")
     if args.hash:
         hashes = ",".join([f"'{h}'" for h in args.hash])
         add(f"h in ({hashes})")

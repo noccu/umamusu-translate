@@ -70,6 +70,21 @@ def backup(args):
             file = common.TranslationFile(file)
             copy(file.bundle, args)
 
+def removeOldFiles(args):
+    from pathlib import PurePath, Path
+    n = 0
+    isHash = args.remove_old == 'hash'
+    files = [Path(p) for p in common.searchFiles(PurePath(args.dst), None, None, jsonOnly=False)]
+    print(f"Found {len(files)} files in {args.dst}")
+    with sqlite3.connect(GAME_META_FILE) as db:
+        for path in files:
+            q = f"h = '{path.name}'" if isHash else f"n like '%{path.name}'"
+            if not db.execute(f"select h from a where {q}").fetchone():
+                Path(path).unlink()
+                if args.verbose:
+                    print(f"Removed {path}")
+                n+=1
+    return n, len(files)
 
 def copy(data, args):
     fileType, fileHash, filePath = data
@@ -114,10 +129,14 @@ def main():
     ap.add_argument("-dst", default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
     ap.add_argument("-B", "--backup", nargs="?", default=False, const=True, help="Backup all assets for which Translation Files exist")
+    ap.add_argument("--remove-old", nargs="?", default=False, const="hash", choices=["hash", "name"], help="Backup all assets for which Translation Files exist")
     args = ap.parse_args()
 
     if args.backup:
         backup(args)
+    elif args.remove_old:
+        rem, total = removeOldFiles(args)
+        print(f"Removed {rem}/{total} old files from {args.dst}")
     else:
         if args.restore_missing:
             global restore

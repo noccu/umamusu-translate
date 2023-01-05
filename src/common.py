@@ -22,9 +22,9 @@ TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
 
 
-def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False) -> list[str]:
+def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False, jsonOnly=True) -> list[str]:
     found = list()
-    isJson = lambda f: PurePath(f).suffix == ".json"
+    isJson = lambda f: PurePath(f).suffix == ".json" if jsonOnly else True
     if changed:
         from subprocess import run, PIPE
         cmd = ["git", "status", "--short", "--porcelain"] if changed is True else ["git", "show", "--pretty=", "--name-status", changed]
@@ -38,7 +38,7 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=Fals
                 if targetId and path.parts[3] != targetId: continue
                 found.append(str(path))
     else:
-        searchDir = targetType if type(targetType) is os.PathLike else os.path.join("translations", targetType)
+        searchDir = targetType if isinstance(targetType, os.PathLike) else os.path.join("translations", targetType)
         for root, dirs, files in os.walk(searchDir):
             depth = len(dirs[0]) if dirs else -1
             if targetGroup and depth == 2:

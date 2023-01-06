@@ -110,8 +110,8 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-vb", "--verbose", action="store_true", help="Print additional info")
         elif types:
             self.add_argument("-t", "--type", choices=types, default=types[0], help="The type of assets to process.")
-    def parse_args(self, **kwargs):
-        a = super().parse_args(**kwargs)
+    def parse_args(self, *args, **kwargs):
+        a = super().parse_args(*args, **kwargs)
         if a.version:
             print(f"Patch version: {patchVersion()}")
             sys.exit()

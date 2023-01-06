@@ -91,9 +91,9 @@ class PatchManager:
             raise NoAssetError(f"{name} does not exist in your game data.")
 
         if self.args.update:
-            if GameBundle(GameBundle.createPath(self.args.dst, name), load=False).isPatched:
+            if (b := GameBundle(GameBundle.createPath(self.args.dst, name), load=False)).isPatched:
                 tlModTime = self.tlFile.data.get("modified")
-                if tlModTime and bundle.patchedTime != tlModTime:
+                if tlModTime and b.patchedTime != tlModTime:
                     print("translations modified... ", end="", flush=True)
                 else:
                     raise AlreadyPatchedError(f"{self.tlFile.bundle} already patched.")

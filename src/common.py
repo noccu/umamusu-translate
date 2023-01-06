@@ -308,36 +308,47 @@ class GameBundle:
         self.bundleName = self.bundlePath.stem
         self.bundleType = "story"
         self.exists = self.bundlePath.exists()
-        self.isPatched = False
         self.data = None
         self.patchData:bytes = b""
         self._autoloaded = load
+        self._patchedState = None
 
         if load:
             self.load()
 
-    def setPatchState(self, tlFile: TranslationFile):
+    def markPatched(self, tlFile: TranslationFile):
         m = tlFile.data.get("modified", b"")
         if m:
             m = m.to_bytes(5, byteorder='big', signed=False)
             # Have a nice day and good training if you're reading this in the year 15xxx somewhere :spemini:
         self.patchData = m + self.editMark
 
+    @property
+    def isPatched(self):
+        return self.readPatchState()
+    @isPatched.setter
+    def isPatched(self, v):
+        self._patchedState = v
+
     def readPatchState(self, customPath=None):
+        if not customPath and self._patchedState is not None: return self._patchedState
         try:
             with open(customPath or self.bundlePath, "rb") as f:
                 f.seek(-7, os.SEEK_END)
                 modified = f.read(5)
                 mark = f.read(2)
                 if mark == self.editMark:
-                    self.isPatched = True
+                    self._patchedState = True
                     try:
                         modified = int.from_bytes(modified, byteorder='big')
                         self.patchedTime = modified
                     except:
                         self.patchedTime = None
+                else:
+                    self._patchedState = False
         except:
-            pass # defer to defaults
+            self._patchedState = False
+        return self._patchedState
 
     def getAssetData(self, pathId: int):
         if a := self.assets.get(pathId):

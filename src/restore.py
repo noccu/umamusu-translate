@@ -54,7 +54,6 @@ def restore(file, args):
     else:
         file = common.TranslationFile(file)
         bundle = GameBundle.fromName(file.bundle, load=False)
-        bundle.readPatchState()
         if not args.force_restore and bundle.exists and not bundle.isPatched:
             print(f"Bundle {bundle.bundleName} not patched, skipping.")
             return 0

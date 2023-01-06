@@ -87,9 +87,7 @@ class PatchManager:
             raise NoAssetError(f"{name} does not exist in your game data.")
 
         if self.args.update:
-            savePath = GameBundle.createPath(self.args.dst, name)
-            bundle.readPatchState(customPath=savePath)
-            if bundle.isPatched:
+            if GameBundle(GameBundle.createPath(self.args.dst, name), load=False).isPatched:
                 tlModTime = self.tlFile.data.get("modified")
                 if tlModTime and bundle.patchedTime != tlModTime:
                     print("translations modified... ", end="", flush=True)
@@ -124,7 +122,7 @@ class PatchManager:
 
         patcher.patch()
         if patcher.isModified:
-            bundle.setPatchState(self.tlFile)
+            bundle.markPatched(self.tlFile)
             bundle.save(dstFolder=Path(self.args.dst))
 
         return patcher.isModified

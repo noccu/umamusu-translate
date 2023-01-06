@@ -9,7 +9,6 @@ def removeRuby(args, db: sqlite3.Connection):
     dummytl = SimpleNamespace(data=dict())
     for bundle, path in q:
         bundle = common.GameBundle.fromName(bundle, load = False)
-        bundle.readPatchState()
         if bundle.isPatched:
             storyId = "".join(common.parseStoryId("story", path))
             if args.verbose: print(f"Skipping {storyId} ({bundle.bundleName}): Already patched")
@@ -18,7 +17,7 @@ def removeRuby(args, db: sqlite3.Connection):
             tree = bundle.rootAsset.read_typetree()
             tree['DataArray'] = []
             bundle.rootAsset.save_typetree(tree)
-            bundle.setPatchState(dummytl)
+            bundle.markPatched(dummytl)
             bundle.save()
             patched += 1
         total += 1

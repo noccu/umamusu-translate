@@ -92,7 +92,6 @@ def copy(data, args):
     asset.bundleType = fileType # only used for restoring
 
     if asset.exists:
-        asset.readPatchState()
         if asset.isPatched:
             if args.verbose: print(f"Skipping patched bundle: {asset.bundleName}")
             return 0

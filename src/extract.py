@@ -45,7 +45,6 @@ def queryDB(db=None, storyId=None):
 
 
 def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, TranslationFile]:
-    asset.readPatchState()
     if asset.isPatched: return
 
     asset.load()

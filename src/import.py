@@ -6,6 +6,7 @@ from functools import reduce
 
 import common
 from common import GameBundle
+import filecopy as backup
 
 
 class ConfigError(Exception): pass
@@ -31,6 +32,9 @@ class PatchManager:
                     raise ConfigError(f"Invalid config arg: {k}: {v}")
         if self.args.overwrite:
             self.args.dst = common.GAME_ASSET_ROOT
+            self.fcArgs = backup.parseArgs([])
+            self.fcArgs.restore_missing = False
+            self.fcArgs.full_path = False
         if self.args.write_log and self.errorLog is stdout:
             self.errorLog = open("import.log", "w")
         elif not self.args.write_log and self.errorLog is not stdout:
@@ -122,6 +126,8 @@ class PatchManager:
 
         patcher.patch()
         if patcher.isModified:
+            if self.args.overwrite and not bundle.isPatched:
+                backup.copy(bundle, self.fcArgs)
             bundle.markPatched(self.tlFile)
             bundle.save(dstFolder=Path(self.args.dst))
 

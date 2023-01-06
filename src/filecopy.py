@@ -87,9 +87,15 @@ def removeOldFiles(args):
     return n, len(files)
 
 def copy(data, args):
-    fileType, fileHash, filePath = data
-    asset = common.GameBundle.fromName(fileHash, load=False)
-    asset.bundleType = fileType # only used for restoring
+    if isinstance(data, common.GameBundle):
+        if args.use_pathname:
+            raise NotImplementedError
+        asset = data
+        fileHash = data.bundleName
+    else:
+        fileType, fileHash, filePath = data
+        asset = common.GameBundle.fromName(fileHash, load=False)
+        asset.bundleType = fileType # only used for restoring
 
     if asset.exists:
         if asset.isPatched:

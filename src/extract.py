@@ -45,7 +45,10 @@ def queryDB(db=None, storyId=None):
 
 
 def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, TranslationFile]:
-    if asset.isPatched: return
+    if asset.isPatched: 
+        if args.verbose:
+            print(f"Skipping patched asset: {asset.bundleName}")
+        return
 
     asset.load()
 

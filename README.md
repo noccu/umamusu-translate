@@ -47,6 +47,10 @@ Each of those parts is separate and can be used independently, though some effec
 1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)
     - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import below for new content.
 
+## Config
+The first time you run any of the `.bat` files mentioned below, an `umatl.json` file will be created in the folder.  
+You can change a few settings there before continuing further if you like, simply run the .bat again.
+
 ## UI (menus, buttons, ...)
 This should be a one-time procedure. If your UI looks the wrong size afterwards, open the `config.json` you copied and play with the uiScale value (0.8-1.2 usually).
 1. Open the game's *install folder* (where the `Umamusume.exe` is)
@@ -57,14 +61,15 @@ This should be a one-time procedure. If your UI looks the wrong size afterwards,
 1. It should look [like this](guide_localify.jpg).
 
 ## Skills and other variable text
-Run either of the `mdb import.bat` files.  
-`(replace skill desc with data).bat` will use [the skill's raw requirements and effects](guide_skilldata.png).
+Change `skill_data` to true in the config if you want to see [the skill's raw requirements and effects](guide_skilldata.png).  
+Run the `mdb import.bat` file.
 - The mdb file that this modifies updates regularly (with banners usually) and undoes changes, you will need to rerun this .bat.
 - Requires restarting the game after applying.
 - There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases but it it not maintained well anymore.
 
 ## Dialogue
-double click `run.bat` 
+<!-- Change `skip_mtl` to true in the config if you'd like to skip importing MTLs.   -->
+Double click `run.bat` 
 - This can take a long time (few hours) because there are many files.
 - You can close this at any time and resume later, or play the game while this runs.
 - Changes apply without restart.

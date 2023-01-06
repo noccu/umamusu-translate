@@ -278,7 +278,7 @@ class LyricsPatcher(StoryPatcher):
             self.assetData.save()
 
 
-def main():
+def parseArgs():
     ap = common.Args("Write Game Assets from Translation Files")
     ap.add_argument("-O", "--overwrite", action="store_true", help="(Over)Write files straight to game directory")
     ap.add_argument("-U", "--update", action="store_true", help="Skip already imported files")
@@ -290,16 +290,15 @@ def main():
     ap.add_argument("-tlg", "--use-tlg", action="store_true", help="Auto-write any TLG versions when detected")
     ap.add_argument("-nomtl", "--skip-mtl", action="store_true", help="Only import human translations")
 
-    args = ap.parse_args()
+    return ap.parse_args()
+
+def main():
+    args = parseArgs()
     if args.use_tlg:
         global isUsingTLG
         global convertTlFile
         from helpers import isUsingTLG
         from manage import convertTlFile
-    process(args)
-
-
-def process(args):
     patcher = PatchManager(args)
     try:
         patcher.start()

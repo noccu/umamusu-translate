@@ -68,7 +68,7 @@ def backup(args):
         files = common.searchFiles(type, args.group, args.id, args.idx, changed = args.changed)
         for file in files:
             file = common.TranslationFile(file)
-            copy(file.bundle, args)
+            copy((file.type, file.bundle, None), args)
 
 def removeOldFiles(args):
     from pathlib import PurePath, Path

@@ -22,7 +22,7 @@ IF [%1] NEQ [] ( GOTO %1 )
 
 :open
 CALL update.bat
-%snek% src/filecopy.py --backup
+@REM %snek% src/filecopy.py --backup
 ECHO Importing all translatable types that are present in your game files...
 ECHO By default, already patched files are skipped. To forcefully rewrite all files, set update to false in the config.
 REM Or manually import parts, see import.py -h

@@ -89,35 +89,40 @@ def removeOldFiles(args):
 def copy(data, args):
     fileType, fileHash, filePath = data
     asset = common.GameBundle.fromName(fileHash, load=False)
-    asset.bundleType = fileType
-    if args.use_pathname:
-        fn = filePath if args.full_path else filePath[max(filePath.rfind("/")+1, 0):] 
-    else: fn = fileHash
-    dst = path.join(args.dst, fn)
-    if not asset.exists:
+    asset.bundleType = fileType # only used for restoring
+
+    if asset.exists:
+        asset.readPatchState()
+        if asset.isPatched:
+            if args.verbose: print(f"Skipping patched bundle: {asset.bundleName}")
+            return 0
+    else:
         if args.restore_missing and restore.save(asset, args.restore_args) == 1:
             return copy(data, args) # retry
         elif args.verbose:
             print(f"Couldn't find {asset.bundlePath}, skipping...")
         return 0
-    elif args.overwrite or not path.exists(dst):
-        asset.readPatchState()
-        if not asset.isPatched:
-            try:
-                makedirs(path.dirname(dst), exist_ok=True)
-                shutil.copyfile(asset.bundlePath, dst)
-                print(f"Copied {asset.bundlePath} to {dst}")
-                return 1
-            except Exception as e:
-                print(f"Unknown error: {repr(e)}, skipping...")
-                return 0
+
+    if args.use_pathname:
+        fn = filePath if args.full_path else filePath[max(filePath.rfind("/")+1, 0):] 
+    else: fn = fileHash
+    dst = path.join(args.dst, fn)
+    if args.overwrite or not path.exists(dst):
+        try:
+            makedirs(path.dirname(dst), exist_ok=True)
+            shutil.copyfile(asset.bundlePath, dst)
+            print(f"Copied {asset.bundlePath} to {dst}")
+            return 1
+        except Exception as e:
+            print(f"Unknown error: {repr(e)}, skipping...")
+            return 0
     else:
         if args.verbose:
             print(f"Skipping existing: {asset.bundleName}")
         return 0
 
 
-def main():
+def parseArgs(src=None):
     ap = common.Args("Copy files for backup or testing")
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-p", "--path", help="Unity filepath wildcard")
@@ -130,8 +135,10 @@ def main():
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
     ap.add_argument("-B", "--backup", nargs="?", default=False, const=True, help="Backup all assets for which Translation Files exist")
     ap.add_argument("--remove-old", nargs="?", default=False, const="hash", choices=["hash", "name"], help="Backup all assets for which Translation Files exist")
-    args = ap.parse_args()
+    return ap.parse_args(src)
 
+def main():
+    args = parseArgs()
     if args.backup:
         backup(args)
     elif args.remove_old:
@@ -148,4 +155,5 @@ def main():
         print(f"Copied {n} files.")
 
 
-main()
+if __name__ == '__main__':
+    main()

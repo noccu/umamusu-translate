@@ -114,18 +114,20 @@ Zenno Rob Roy | Stalled | [LotoDS][] (ep 1-4)
 # Training story/events
 name | progress | translator
 --- | --- | ---
-Campaign intro | Complete | [noccu][]
 Shared events | Complete | [noccu][]
 
 ## URA
 id | name (short) | progress | translator
 --- | --- | --- | ---
-All | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+Campaign intro | Complete | [noccu]
+002 | Complete | [Korgi]
+All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 ## Aoharu
 id | name (short) | progress | translator
 --- | --- | --- | ---
-All | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
+Campaign intro | Complete | [noccu]
+All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 ## Make a New Track
 id | name (short) | progress | translator
@@ -137,6 +139,7 @@ All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 ## Grand Live
 id | name (short) | progress | translator
 --- | --- | --- | ---
+Campaign intro | Complete | deepl
 All not listed | up to 2022/08/24 | Complete | deepl
 
 ## Umas
@@ -157,7 +160,7 @@ Mihono Bourbon | Complete | deepl
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
-Rudolph | In progress | Anonymous Reindeer
+Rudolph | Stalled | Anonymous Reindeer
 Sakura Bakushin O | Complete | deepl
 
 ## Cards

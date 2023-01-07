@@ -68,7 +68,7 @@ Run the `mdb import.bat` file.
 - There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases but it it not maintained well anymore.
 
 ## Dialogue
-<!-- Change `skip_mtl` to true in the config if you'd like to skip importing MTLs.   -->
+Change `skip_mtl` to `true` in the config if you'd like to skip importing Machine Translations.  
 Double click `run.bat` 
 - This can take a long time (few hours) because there are many files.
 - You can close this at any time and resume later, or play the game while this runs.

@@ -21,11 +21,13 @@ const FILES = {
         factors: "translations/mdb/factor-desc.json",
         common: "translations/mdb/common.json",
         shoeSize: "translations/mdb/uma-profile-shoesize.json",
-        lessonEffects: "translations/mdb/lesson-effects.json"
+        lessonEffects: "translations/mdb/lesson-effects.json",
+        items: "translations/mdb/item-desc.json"
     }
 const UNCOMMON_FILES = [
     "shoeSize",
-    "lessonEffects"
+    "lessonEffects",
+    "items"
 ]
 const PFILES = {};
 const FAN_AMOUNT = {
@@ -215,6 +217,17 @@ function translate() {
             }
         }
         PFILES.lessonEffects.text[jpText] = enText.join("\\n"); //write full name, whichever parts were found
+    }
+
+    //* item-desc
+    for (let [jpText, enText] of Object.entries(PFILES.items.text)) {
+        if (enText) continue;
+
+        let [,umaName] = jpText.match(/(.+)の手作りチョコ/)
+        let umaNameEn = PFILES.umaNames[umaName]
+        if (umaNameEn) {
+            PFILES.items.text[jpText] = `<size=22>Handmade by ${umaNameEn}. Restores 30TP upon use.\\n</size>`;
+        }
     }
 }
 

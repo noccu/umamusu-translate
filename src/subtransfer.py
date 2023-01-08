@@ -255,7 +255,7 @@ class AssSubProcessor(BasicSubProcessor):
     def cleanLine(self, text):
         text = re.sub(r"\{(?:\\([ib])1|(\\[ib])0)\}", r"<\1\2>", text) # transform italic/bold tags
         text = re.sub(r"\{.+?\}", "", text) # remove others
-        text = text.replace("\\N", "\n")
+        text = text.replace("\\N", "\n").replace("<\\", "</")
         text = super().cleanLine(text)
         return text
 

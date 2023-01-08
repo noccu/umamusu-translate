@@ -133,6 +133,7 @@ class Args(argparse.ArgumentParser):
 class TranslationFile:
     latestVersion = 6
     ver_offset_mdb = 100
+    textBlacklist = regex.compile(r"^タイトルコール$|イベントタイトルロゴ表示.*|※*ダミーテキスト|^欠番$")
 
     def __init__(self, file=None, load=True, readOnly=False):
         self.readOnly = readOnly
@@ -225,6 +226,7 @@ class TranslationFile:
     def genTextContainers(self) -> Generator[dict, None, None]:
         for block in self.textBlocks:
             if block['jpText']:
+                if self.textBlacklist.match(block['jpText']): continue
                 yield block
             if 'coloredText' in block:
                 for entry in block['coloredText']:

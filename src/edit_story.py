@@ -622,19 +622,19 @@ def listen(event=None):
     global AUDIO_PLAYER
     if cur_file.version < 6:
         print("Old file version, does not have voice info.")
-        return
+        return "break"
     storyId = cur_file.data.get("storyId")
     voiceIdx = cur_file.textBlocks[cur_block].get("voiceIdx")
     if len(storyId) != 9:
         # Could support a few other types but isn't useful.
         print("Unsupported type.")
-        return
+        return "break"
     elif storyId is None:
         print("File has an invalid storyid.")
-        return
+        return "break"
     elif voiceIdx is None:
         print("No voice info found for this block.")
-        return
+        return "break"
     else:
         if not AUDIO_PLAYER:
             AUDIO_PLAYER = AudioPlayer()

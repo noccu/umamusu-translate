@@ -139,7 +139,7 @@ def parseArgs(src=None):
     ap.add_argument("-dst", default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
     ap.add_argument("-B", "--backup", nargs="?", default=False, const=True, help="Backup all assets for which Translation Files exist")
-    ap.add_argument("--remove-old", nargs="?", default=False, const="hash", choices=["hash", "name"], help="Backup all assets for which Translation Files exist")
+    ap.add_argument("--remove-old", nargs="?", default=False, const="hash", choices=["hash", "name"], help="Remove backups for old assets that are no longer used")
     return ap.parse_args(src)
 
 def main():

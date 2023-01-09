@@ -99,7 +99,7 @@ def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, Transla
                     continue
 
                 if "origClipLength" in textData:
-                    if args.verbose: print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
+                    # if args.verbose: print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
                     clipsToUpdate = list()
                     for trackGroup in block['CharacterTrackList']:
                         for key in trackGroup.keys():

@@ -63,7 +63,7 @@ def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, Transla
         'title': "",
         'text': list()
     }
-    transferExisting = DataTransfer(tlFile)
+    transferExisting = DataTransfer(tlFile, export)
 
     if args.type == "race":
         export['storyId'] = tree['m_Name'][-9:]
@@ -197,16 +197,18 @@ def extractText(assetType, obj):
 
 
 class DataTransfer:
-    def __init__(self, file: common.TranslationFile = None):
+    def __init__(self, file: common.TranslationFile = None, newData: dict = None):
         self.file = file
         self.offset = 0
         self.simRatio = 0.9 if args.update and args.type != "lyrics" else 0.99
-        self.printed = False
+        self._printedName = False
+        if (newData and file) and (x := file.data.get('humanTl')):
+            newData['humanTl'] = x
 
-    def filePrint(self, text):
-        if not self.printed:
+    def print(self, text):
+        if not self._printedName:
             print(f"\nIn {self.file.name}:")
-            self.printed = True
+            self._printedName = True
         print(text)
 
     def __call__(self, storyId, textData):
@@ -233,7 +235,7 @@ class DataTransfer:
             if txtIdx < len(textBlocks):
                 targetBlock = textBlocks[txtIdx]
                 if not args.upgrade and similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
-                    self.filePrint(f"jpText does not match at bIdx {textData['blockIdx']}")
+                    self.print(f"jpText does not match at bIdx {textData['blockIdx']}")
                     targetBlock = None
                     textSearch = True
             else:
@@ -245,15 +247,15 @@ class DataTransfer:
             textSearch = True
 
         if textSearch:
-            self.filePrint("Searching by text")
+            self.print("Searching by text")
             for i, block in enumerate(textBlocks):
                 if similarity(block['jpText'], textData['jpText']) > self.simRatio:
-                    self.filePrint(f"Found text at block {i}")
+                    self.print(f"Found text at block {i}")
                     self.offset = txtIdx - i
                     targetBlock = block
                     break
             if not targetBlock:
-                self.filePrint("Text not found")
+                self.print("Text not found")
 
         if targetBlock:
             if args.upgrade:
@@ -270,9 +272,9 @@ class DataTransfer:
                             choice['jpText'] = targetBlock['choices'][txtIdx]['jpText']
                         choice['enText'] = targetBlock['choices'][txtIdx]['enText']
                     except IndexError:
-                        self.filePrint(f"New choice at bIdx {targetBlock['blockIdx']}.")
+                        self.print(f"New choice at bIdx {targetBlock['blockIdx']}.")
                     except KeyError:
-                        self.filePrint(f"Choice mismatch when attempting data transfer at {txtIdx}")
+                        self.print(f"Choice mismatch when attempting data transfer at {txtIdx}")
             if 'coloredText' in targetBlock:
                 for txtIdx, cText in enumerate(textData['coloredText']):
                     if args.upgrade:

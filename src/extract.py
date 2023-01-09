@@ -45,11 +45,6 @@ def queryDB(db=None, storyId=None):
 
 
 def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, TranslationFile]:
-    if asset.isPatched: 
-        if args.verbose:
-            print(f"Skipping patched asset: {asset.bundleName}")
-        return
-
     asset.load()
 
     if not asset.rootAsset.serialized_type.nodes:
@@ -291,7 +286,7 @@ class DataTransfer:
 
 
 def exportAsset(bundle: Optional[str], path: str, db=None):
-    if bundle is None:  # update mode
+    if args.update: # update mode, path = tlfile, bundle = None
         assert db is not None
         tlFile = common.TranslationFile(path)
         if args.upgrade and tlFile.version == common.TranslationFile.latestVersion:
@@ -300,22 +295,18 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
 
         storyId = tlFile.getStoryId()
         try:
-            bundle, _ = queryDB(db, storyId)[0]
+            bundle, _ = queryDB(db, storyId)[0] #get the newest bundle hash/name
         except IndexError:
             print(f"Error looking up {storyId}. Corrupt data or removed asset?")
             return
-        if bundle == tlFile.bundle:
+        if not args.upgrade and bundle == tlFile.bundle:
             if args.verbose:
                 print(f"Bundle {bundle} not changed, skipping.")
             return
-        else:
-            print(f"Updating {bundle}")
-    else:  # make sure tlFile is set for the call later
-        tlFile = None
-
-    if args.update:
+        print(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
         group, id, idx = common.parseStoryId(args.type, storyId)
-    else:
+    else:  # path = unity internal, bundle = newest from SQL lookup
+        tlFile = None
         group, id, idx = common.parseStoryIdFromPath(args.type, path)
 
     exportDir = Path(args.dst) if args.type in ("lyrics", "preview") else Path(args.dst) / group / id
@@ -331,6 +322,10 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     asset = GameBundle.fromName(bundle, load=False)
     if not asset.exists:
         print(f"AssetBundle {bundle} does not exist in your game data, skipping...")
+        return
+    if not args.upgrade and asset.isPatched: 
+        if args.verbose:
+            print(f"Skipping patched asset: {asset.bundleName}")
         return
     try:
         outFile = extractAsset(asset, (group, id, idx), tlFile)
@@ -361,13 +356,15 @@ def parseArgs():
     ap.add_argument("-upd", "--update", nargs="*", choices=common.TARGET_TYPES,
                     help="Re-extract existing files, optionally limited to given type.\nImplies -O, ignores -dst and -t")
     ap.add_argument("-upg", "--upgrade", action="store_true",
-                    help="Attempt tlfile version upgrade with minimal extraction.\nCan be used on patched files. Implies -O")
+                    help="Attempt tlfile version upgrade with minimal extraction.\nCan be used on patched files.\nImplies -O and -upd, uses type from -upd or -t")
     args = ap.parse_args()
 
     if args.dst is None:
         args.dst = PurePath("translations") / args.type
     if args.upgrade or args.update is not None:
         args.overwrite = True
+        args.update = args.update or [args.type] # Doesn't make sense to upgrade non-existent files.
+    # check if upd was given without type spec and use all types if so
     if isinstance(args.update, list) and len(args.update) == 0:
         args.update = common.TARGET_TYPES
 
@@ -375,11 +372,10 @@ def parseArgs():
 def main():
     parseArgs()
     if args.update is not None:
-        print("Updating exports, this could take a while...")
+        print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
         db = sqlite3.connect(GAME_META_FILE)
         try:
-            # check if a type was specifically given and use that if so, otherwise use all
-            for type in args.update or common.TARGET_TYPES:
+            for type in args.update: # set correctly by arg parsing
                 args.dst = PurePath("translations") / type
                 args.type = type
                 files = common.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)

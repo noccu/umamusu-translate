@@ -5,8 +5,8 @@ from os import PathLike, environ, name as osname
 
 import regex
 
-DMM_CONFIG = Path(environ['APPDATA']) / "dmmgameplayer5" / "dmmgame.cnf"
 IS_WIN = osname == "nt"
+DMM_CONFIG = Path(environ['APPDATA']) / "dmmgameplayer5" / "dmmgame.cnf" if IS_WIN else None
 __GAME_INSTALL_DIR = False
 __IS_USING_TLG = None
 

@@ -619,6 +619,9 @@ def nextMissingName():
 
 
 def listen(event=None):
+    if not common.IS_WIN:
+        print("Currently unsupported on non-windows")
+        return
     global AUDIO_PLAYER
     if cur_file.version < 6:
         print("Old file version, does not have voice info.")

@@ -13,10 +13,13 @@ from UnityPy.files import ObjectReader
 import helpers
 from helpers import IS_WIN
 
-GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
-GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
-GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
-GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master", "master.mdb")
+if IS_WIN:
+    GAME_ROOT = os.path.realpath(os.path.join(os.environ['LOCALAPPDATA'], "../LocalLow/Cygames/umamusume/"))
+    GAME_ASSET_ROOT = os.path.join(GAME_ROOT, "dat")
+    GAME_META_FILE = os.path.join(GAME_ROOT, "meta")
+    GAME_MASTER_FILE = os.path.join(GAME_ROOT, "master", "master.mdb")
+else:
+    GAME_ROOT = GAME_ASSET_ROOT = GAME_META_FILE = GAME_MASTER_FILE = None
 SUPPORTED_TYPES = ["story", "home", "race", "lyrics", "preview", "ruby", "mdb"]  # Update indexing on next line
 TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch

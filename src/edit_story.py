@@ -628,7 +628,7 @@ def listen(event=None):
         return "break"
     storyId = cur_file.data.get("storyId")
     voiceIdx = cur_file.textBlocks[cur_block].get("voiceIdx")
-    if len(storyId) != 9:
+    if not storyId or len(storyId) != 9:
         # Could support a few other types but isn't useful.
         print("Unsupported type.")
         return "break"

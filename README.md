@@ -37,6 +37,8 @@ Make sure you satisfied the *requirements* below first to use the tools. If you 
 Otherwise, follow the further steps for each part of the patch you wish to apply, in suggested order.  
 Each of those parts is separate and can be used independently, though some effectiveness may be lost.
 
+[An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)
+
 ## Requirements
 1. Install [Python](https://www.python.org/downloads/) 3.9+
     - *Either* install the py launcher (recommended) *or* select the "add to path" checkbox.

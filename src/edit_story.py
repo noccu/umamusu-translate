@@ -465,6 +465,9 @@ def _search_text_blocks(chapter):
     file = files[chapter]
     for i in range(start_block, len(file.textBlocks)):
         block = file.textBlocks[i]
+        # Ignore blacklisted names when searching for empties
+        if s_field.startswith("enN") and s_re == "^$" and block.get("jpName") in common.NAMES_BLACKLIST:
+            continue
         if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
             # print(f"Found {s_re} at ch{chapter}:b{i}")
             if chapter != cur_chapter:

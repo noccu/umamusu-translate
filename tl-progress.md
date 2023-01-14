@@ -110,6 +110,7 @@ Taiki Shuttle | Complete | [LotoDS][]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]
 Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl
+Yamanin Zephyr | Complete | [Director Kok][]
 Zenno Rob Roy | Stalled | [LotoDS][] (ep 1-4)
 
 
@@ -243,3 +244,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Nine]: https://www.youtube.com/@nineumasubs8221
 [Solo]: https://www.youtube.com/@solotranslation8586
 [Riersa]: https://www.reddit.com/u/Riersa
+[Director Kok]: https://www.twitch.tv/chrissss_pp

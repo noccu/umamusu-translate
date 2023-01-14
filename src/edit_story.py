@@ -616,7 +616,7 @@ def tlNames():
 
 def nextMissingName():
     for idx, block in enumerate(cur_file.textBlocks):
-        if block.get("jpName") not in common.NAMES_BLACKLIST and not block.get("enName"):
+        if not block.get("enName") and block.get("jpName") not in common.NAMES_BLACKLIST:
             block_dropdown.current(idx)
             change_block()
 

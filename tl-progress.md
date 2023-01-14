@@ -81,6 +81,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
+Hokko Tarumae | In progress | [Riersa] (ep 1-4)
 Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
@@ -241,3 +242,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [DantheBoss]: https://www.youtube.com/channel/UCqAtDEmjrzy4twoZnvH-upw
 [Nine]: https://www.youtube.com/@nineumasubs8221
 [Solo]: https://www.youtube.com/@solotranslation8586
+[Riersa]: https://www.reddit.com/u/Riersa

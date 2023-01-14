@@ -303,6 +303,18 @@ class TranslationFile:
         c.data = {'version': cls.latestVersion, **data}
         c.init(snapshot)
         return c
+    @classmethod
+    def rename(cls, tlFile:'TranslationFile', newName:str=None):
+        '''Renames the physical file in the same dir. Dev helper method.'''
+        if not tlFile.fileExists:
+            return
+        if newName is None:
+            idx = parseStoryId(tlFile.getStoryId())[-1]
+            title = tlFile.data.get('title')
+            newName = f"{idx} ({title}).json" if title else f"{idx}.json"
+        newName = Path(tlFile.file).parent.joinpath(helpers.sanitizeFilename(newName))
+        os.rename(tlFile.file, newName)
+        tlFile.setFile(newName)
 
 
 class GameBundle:

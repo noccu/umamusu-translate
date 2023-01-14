@@ -77,3 +77,13 @@ def isUsingTLG() -> bool:
     if __IS_USING_TLG is not None: return __IS_USING_TLG
     __IS_USING_TLG = (getUmaInstallDir() / "config.json").exists() 
     return __IS_USING_TLG
+
+def sanitizeFilename(fn:str):
+    '''Remove invalid path chars (win)'''
+    delSet = {34, 42, 47, 58, 60, 62, 63, 92, 124}
+    sanitizedName = ""
+    for c in fn:
+        cp = ord(c)
+        if cp > 31 and cp not in delSet:
+            sanitizedName += c
+    return sanitizedName

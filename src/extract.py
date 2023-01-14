@@ -7,6 +7,7 @@ from Levenshtein import ratio as similarity
 
 import common
 from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle
+from helpers import sanitizeFilename
 
 def queryfyStoryid(group, id, idx):
     group = group or "__"
@@ -336,12 +337,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
         raise
 
     # Remove invalid path chars (win)
-    delSet = {34, 42, 47, 58, 60, 62, 63, 92, 124}
-    title = ""
-    for c in outFile.data['title']:
-        cp = ord(c)
-        if cp > 31 and cp not in delSet:
-            title += c
+    title = sanitizeFilename(outFile.data.get('title', ''))
     idxString = f"{idx} ({title})" if title else idx
 
     outFile.setFile(str(exportDir / f"{idxString}.json"))

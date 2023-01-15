@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "oneOf": [
+    {"$ref": "#/$defs/objDump"},
+    {
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "string"
+        },
+        "lineLength": {
+          "type": "integer",
+          "maximum": 100
+        },
+        "text": true,
+        "modified": {
+          "type": "integer",
+          "format": "date-time"
+        },
+        "humanTl": {
+          "type": "boolean"
+        }
+      },
+      "oneOf": [
+        {"$ref": "#/$defs/mdb"},
+        {"$ref": "#/$defs/asset"}
+      ],
+      "required": [
+        "version",
+        "type",
+        "text"
+      ],
+      "unevaluatedProperties": false
+    }
+  ],
+  "$defs": {
+    "objDump": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "mdb": {
+      "properties": {
+        "type": {
+          "const": "mdb"
+        },
+        "version": {
+          "minimum": 100,
+          "maximum": 199
+        },
+        "text": {
+          "$ref": "#/$defs/objDump"
+        }
+      }
+    },
+    "asset": {
+      "properties": {
+        "version": {
+          "minimum": 0,
+          "maximum": 99
+        },
+        "type": {
+          "enum": [
+            "story",
+            "home",
+            "race",
+            "lyrics",
+            "preview"
+          ]
+        },
+        "bundle": {
+          "type": "string",
+          "minLength": 32,
+          "maxLength": 32,
+          "pattern": "^[0-9A-Z]{32}$"
+        },
+        "storyId": {
+          "type": "string",
+          "minLength": 4,
+          "maxLength": 9,
+          "pattern": "^[0-9]{4,9}$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 0
+        },
+        "text": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "jpName": {
+                "type": "string"
+              },
+              "enName": {
+                "type": "string"
+              },
+              "jpText": {
+                "type": "string"
+              },
+              "enText": {
+                "type": "string"
+              },
+              "nextBlock": {
+                "type": "integer"
+              },
+              "origClipLength": {
+                "type": "integer"
+              },
+              "pathId": {
+                "type": "integer"
+              },
+              "blockIdx": {
+                "type": "integer"
+              },
+              "time": {
+                "type": "string"
+              },
+              "skip": {
+                "type": "boolean"
+              },
+              "animData": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "origLen": {
+                      "type": "integer"
+                    },
+                    "pathId": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "origLen",
+                    "pathId"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "jpText",
+              "enText"
+            ]
+          }
+        }
+      },
+      "required": [
+        "bundle"
+      ]
+    }
+  }
+}

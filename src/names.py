@@ -5,26 +5,51 @@ NAMES_DICT = None
 
 def loadDict():
     global NAMES_DICT
-    NAMES_DICT = helpers.readJson("translations/mdb/uma-name.json").get("text")
-    NAMES_DICT.update(helpers.readJson("translations/mdb/miscellaneous.json"))
-    NAMES_DICT.update(helpers.readJson("src/data/names.json"))
+    names = helpers.readJson("src/data/names.json")
+    umas = helpers.readJson("translations/mdb/uma-name.json").get("text")
+    misc = helpers.readJson("translations/mdb/miscellaneous.json").get("text")
+    NAMES_DICT = names.copy()
+    NAMES_DICT.update(umas)
+    NAMES_DICT.update(misc)
+    return names, umas, misc
 
 
 def translate(file: common.TranslationFile, forceReload=False):
     if forceReload or not NAMES_DICT: 
         loadDict()
     for block in file.textBlocks:
-        name = block.get('jpName')
-        if name is not None:
+        jpName = block.get('jpName')
+        if jpName is None:
+            continue
+        if jpName in common.NAMES_BLACKLIST:
+            # Force original names for game compat
+            block['enName'] = ""
+        elif tlName := NAMES_DICT.get(jpName):
+            # Prevent overwriting names with empty strings in case a key is missing tl
+            block['enName'] = tlName
+
+
+def extract(files:list):
+    curNames, *_ = loadDict()
+    newNames = 0
+    for file in files:
+        file = common.TranslationFile(file)
+        for block in file.textBlocks:
+            name = block.get("jpName") 
             if name in common.NAMES_BLACKLIST:
-                block['enName'] = ""
-            elif name in NAMES_DICT:
-                block['enName'] = NAMES_DICT[name]
+                continue
+            if name not in NAMES_DICT:
+                curNames[name] = ""
+                NAMES_DICT[name] = ""
+                newNames += 1
+    helpers.writeJson("src/data/names.json", curNames)
+    return newNames
 
 
 def main():
     ap = common.Args("Translate many enName fields in Translation Files by lookup")
     ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
+    ap.add_argument("-e", "--extract", action="store_true", help="Target Translation File(s), overwrites other file options")
     args = ap.parse_args()
 
     if args.type in ("race", "lyrics"):
@@ -32,11 +57,15 @@ def main():
         raise SystemExit
 
     files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
-    for file in files:
-        file = common.TranslationFile(file)
-        translate(file)
-        file.save()
-    print(f"Names translated in {len(files)} files.")
+    if args.extract:
+        n = extract(files)
+        print(f"Extracted {n} new names from {len(files)} files.")
+    else:
+        for file in files:
+            file = common.TranslationFile(file)
+            translate(file)
+            file.save()
+        print(f"Names translated in {len(files)} files.")
 
 
 if __name__ == "__main__":

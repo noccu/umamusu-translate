@@ -159,6 +159,12 @@ def updConfigDicts(cfgPath, dictPaths: list):
         return
     dicts = ["localized_data\\dynamic.json", *[str(x) for x in dictPaths]]
     data['dicts'] = dicts
+    data['static_dict'] = "localized_data\\static.json"
+    data['text_data_dict'] = ""
+    data['character_system_text_dict'] = ""
+    data['race_jikkyo_comment_dict'] = ""
+    data['race_jikkyo_message_dict'] = ""
+    data['stories_path'] = ""
     helpers.writeJson(cfgPath, data)
 
 def getTextHash(string:str):

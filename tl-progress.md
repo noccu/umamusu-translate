@@ -101,7 +101,7 @@ Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
 Silence Suzuka | Complete | [LotoDS][]
-Smart Falcon | Complete | deepl (contributed by CryDuringItAll)
+Smart Falcon | Complete | [LotoDS][]
 Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl

@@ -8,9 +8,9 @@ def loadDict():
     names = helpers.readJson("src/data/names.json")
     umas = helpers.readJson("translations/mdb/uma-name.json").get("text")
     misc = helpers.readJson("translations/mdb/miscellaneous.json").get("text")
-    NAMES_DICT = names.copy()
+    NAMES_DICT = misc.copy()
+    NAMES_DICT.update(names)
     NAMES_DICT.update(umas)
-    NAMES_DICT.update(misc)
     return names, umas, misc
 
 

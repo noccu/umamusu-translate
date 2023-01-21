@@ -76,6 +76,7 @@ class StoryId:
     def __post_init__(self):
         if self.type in ("lyrics", "preview") and self.idx and not self.id:
             self.id = self.idx
+            self.idx = None
     def __str__(self) -> str:
         '''Return the joined numeric parts, as written in tlFiles'''
         return "".join(x for x in astuple(self)[1:] if x is not None)

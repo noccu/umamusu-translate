@@ -688,7 +688,7 @@ def main():
     if args.src:
         files = [args.src]
     else:
-        files = common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
+        files = common.searchFiles(args.type, args.group, args.id, args.idx, targetSet=args.set, changed = args.changed)
         if not files:
             print("No files match given criteria")
             raise SystemExit

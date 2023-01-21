@@ -6,33 +6,22 @@ from typing import Optional, Union
 from Levenshtein import ratio as similarity
 
 import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle
+from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle, StoryId
 from helpers import sanitizeFilename
 
-def queryfyStoryid(group, id, idx):
-    group = group or "__"
-    id = id or "____"
-    idx = idx or "___"
-    return group, id, idx
+def queryDB(db=None, storyId:StoryId=None):
+    storyId = StoryId.queryfy(storyId)
 
-def queryDB(db=None, storyId=None):
-    if storyId:
-        group, id, idx = queryfyStoryid(*common.parseStoryId(args.type, storyId))
-    else:
-        group, id, idx = queryfyStoryid(args.group, args.id, args.idx)
-
-    if args.type == "story":
-        pattern = f"{args.type}/data/{group}/{id}/{args.type}timeline%{idx}"
-    elif args.type == "home":
-        pattern = f"{args.type}/data/00000/{group}/{args.type}timeline_00000_{group}_{id}{idx}%"
-    elif args.type == "race":
-        pattern = f"{args.type}/storyrace/text/storyrace_{group}{id}{idx}%"
-    elif args.type == "lyrics":
-        if args.idx and not args.id: id = args.idx
-        pattern = f"live/musicscores/m{id}/m{id}_lyrics"
-    elif args.type == "preview":
-        if args.idx and not args.id: id = args.idx
-        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{id}"
+    if storyId.type == "story":
+        pattern = f"{storyId.type}/data/{storyId.group}/{storyId.id}/{storyId.type}timeline%{storyId.idx}"
+    elif storyId.type == "home":
+        pattern = f"{storyId.type}/data/{storyId.set}/{storyId.group}/{storyId.type}timeline_{storyId.set}_{storyId.group}_{storyId.id}{storyId.idx}%"
+    elif storyId.type == "race":
+        pattern = f"{storyId.type}/storyrace/text/storyrace_{storyId.group}{storyId.id}{storyId.idx}%"
+    elif storyId.type == "lyrics":
+        pattern = f"live/musicscores/m{storyId.id}/m{storyId.id}_lyrics"
+    elif storyId.type == "preview":
+        pattern = f"outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{storyId.id}"
 
     externalDb = bool(db)
     if not externalDb:
@@ -45,7 +34,7 @@ def queryDB(db=None, storyId=None):
     return results
 
 
-def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, TranslationFile]:
+def extractAsset(asset: GameBundle, storyId:StoryId, tlFile=None) -> Union[None, TranslationFile]:
     asset.load()
 
     if not asset.rootAsset.serialized_type.nodes:
@@ -89,7 +78,7 @@ def extractAsset(asset: GameBundle, storyId, tlFile=None) -> Union[None, Transla
             transferExisting(storyId, textData)
             export['text'].append(textData)
     else:
-        export['storyId'] = "".join(storyId) if args.type == "home" else tree['StoryId']
+        export['storyId'] = str(storyId) if args.type == "home" else tree['StoryId']
         export['title'] = tree['Title']
 
         for block in tree['BlockList']:
@@ -207,15 +196,14 @@ class DataTransfer:
             self._printedName = True
         print(text)
 
-    def __call__(self, storyId, textData):
+    def __call__(self, storyId:StoryId, textData):
         # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
         # Only continue when forced to.
         if not args.overwrite or self.file == 0:
             return
-        group, id, idx = storyId
 
         if self.file is None:
-            file = next((Path(args.dst) / group / id).glob(f"{idx}*.json"), None)
+            file = next((Path(args.dst).joinpath(storyId.asPath())).glob(f"{storyId.idx}*.json"), None)
             if file is None:  # Check we actually found a file above
                 self.file = 0
                 return
@@ -294,7 +282,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
             print(f"File already on latest version, skipping: {path}")
             return
 
-        storyId = tlFile.getStoryId()
+        storyId = StoryId.parse(args.type, tlFile.getStoryId())
         try:
             bundle, _ = queryDB(db, storyId)[0] #get the newest bundle hash/name
         except IndexError:
@@ -305,16 +293,15 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
                 print(f"Bundle {bundle} not changed, skipping.")
             return
         print(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
-        group, id, idx = common.parseStoryId(args.type, storyId)
     else:  # path = unity internal, bundle = newest from SQL lookup
         tlFile = None
-        group, id, idx = common.parseStoryIdFromPath(args.type, path)
+        storyId = StoryId.parseFromPath(args.type, path)
 
-    exportDir = Path(args.dst) if args.type in ("lyrics", "preview") else Path(args.dst) / group / id
+    exportDir = Path(args.dst) if args.type in ("lyrics", "preview") else Path(args.dst).joinpath(storyId.asPath())
 
     # Skip if already exported and we're not overwriting
     if not args.overwrite:
-        file = next(exportDir.glob(f"{idx}*.json"), None)
+        file = next(exportDir.glob(f"{storyId.idx}*.json"), None)
         if file is not None:
             if args.verbose:
                 print(f"Skipping existing: {file.name}")
@@ -329,17 +316,16 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
             print(f"Skipping patched asset: {asset.bundleName}")
         return
     try:
-        outFile = extractAsset(asset, (group, id, idx), tlFile)
+        outFile = extractAsset(asset, storyId, tlFile)
         if not outFile:
             return
     except:
-        print(f"Failed extracting bundle {bundle}, g {group}, id {id} idx {idx} to {exportDir}")
+        print(f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}")
         raise
 
     # Remove invalid path chars (win)
     title = sanitizeFilename(outFile.data.get('title', ''))
-    idxString = f"{idx} ({title})" if title else idx
-
+    idxString = f"{storyId.idx} ({title})" if title else storyId.idx
     outFile.setFile(str(exportDir / f"{idxString}.json"))
     outFile.save()
 
@@ -374,7 +360,7 @@ def main():
             for type in args.update: # set correctly by arg parsing
                 args.dst = PurePath("translations") / type
                 args.type = type
-                files = common.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
+                files = common.searchFiles(type, args.group, args.id, args.idx, set = args.set, changed=args.changed)
                 print(f"Found {len(files)} files for {type}.")
                 for i, file in enumerate(files):
                     try:
@@ -385,9 +371,9 @@ def main():
         finally:
             db.close()
     else:
-        print(f"Extracting group {args.group}, id {args.id}, idx {args.idx} (overwrite: {args.overwrite})\n"
+        print(f"Extracting type {args.type}, set {args.set}, group {args.group}, id {args.id}, idx {args.idx} (overwrite: {args.overwrite})\n"
               f"from {GAME_ASSET_ROOT} to {args.dst}")
-        q = queryDB()
+        q = queryDB(storyId=StoryId(args.type, args.set, args.group, args.id, args.idx))
         print(f"Found {len(q)} files.")
         for bundle, path in q:
             exportAsset(bundle, path)

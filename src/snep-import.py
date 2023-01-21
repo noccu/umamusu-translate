@@ -6,7 +6,7 @@ from os import system as run
 snep = Path("translations/snep").glob("story_*")
 
 for file in snep:
-    g, id, idx = common.parseStoryIdFromPath("story", file.stem)
+    g, id, idx = common.StoryId.parseFromPath("story", file.stem)
 
     extract = common.searchFiles("story", g, id, idx)
     if not extract:

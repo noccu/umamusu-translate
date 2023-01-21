@@ -56,7 +56,7 @@ def main():
         print("No names in given type.")
         raise SystemExit
 
-    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
+    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, targetSet=args.set, changed = args.changed)
     if args.extract:
         n = extract(files)
         print(f"Extracted {n} new names from {len(files)} files.")

@@ -445,7 +445,7 @@ def createSubs(tlFile, fps = 30):
     return subs
 
 def writeSubs(sType, storyid):
-    files = common.searchFiles(sType, *common.parseStoryId(sType, storyid))
+    files = common.searchFiles(sType, *common.StoryId.parse(sType, storyid))
     for tlFile in files:
         tlFile = common.TranslationFile(tlFile)
         subs = createSubs(tlFile)

@@ -170,7 +170,7 @@ def processFiles(args):
     if args.src:
         files = [args.src]
     else:
-        files = common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
+        files = common.searchFiles(args.type, args.group, args.id, args.idx, targetSet=args.set, changed = args.changed)
     print(f"Processing {len(files)} files...")
     if args.lineLength == -1: print(f"Automatically setting line length based on story type/id or file value")
     for file in files:
@@ -191,8 +191,8 @@ def calcLineLen(file: TranslationFile, verbose):
     lineLength = file.data.get('lineLength')
     if lineLength is None:
         if (file.type in ("lyrics", "race")
-            or (file.type == "story"
-                and common.parseStoryId(file.type, file.getStoryId())[0] in ("02", "04", "09"))):
+        or (file.type == "story"
+        and common.StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09"))):
             lineLength = 65
         else:
             lineLength = 45

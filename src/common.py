@@ -6,6 +6,7 @@ import sys
 from typing import Generator
 import regex
 from datetime import datetime, timezone
+from dataclasses import dataclass, astuple, asdict
 
 import UnityPy
 from UnityPy.files import ObjectReader
@@ -25,7 +26,7 @@ TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
 
 
-def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=False, jsonOnly=True) -> list[str]:
+def searchFiles(targetType, targetGroup, targetId, targetIdx=False, targetSet=False, changed=False, jsonOnly=True) -> list[str]:
     found = list()
     isJson = lambda f: PurePath(f).suffix == ".json" if jsonOnly else True
     if changed:
@@ -44,7 +45,9 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=Fals
         searchDir = targetType if isinstance(targetType, os.PathLike) else os.path.join("translations", targetType)
         for root, dirs, files in os.walk(searchDir):
             depth = len(dirs[0]) if dirs else -1
-            if targetGroup and depth == 2:
+            if targetSet and depth == 5:
+                dirs[:] = [d for d in dirs if d == targetSet]
+            elif targetGroup and depth == 2:
                 dirs[:] = [d for d in dirs if d == targetGroup]
             elif targetId:
                 if targetType in ("lyrics", "preview"):
@@ -59,26 +62,66 @@ def searchFiles(targetType, targetGroup, targetId, targetIdx=False, changed=Fals
     return found
 
 
-# TODO: This is unpacking a string we packed ourselves, refactoring should eliminate this fn entirely.
-def parseStoryId(text_type, s) -> tuple:
-    if text_type in ("lyrics", "preview"):
-        return None, s, s
-    else:
-        return s[:2], s[2:6], s[6:]
-
-
-def parseStoryIdFromPath(text_type: str, path: str):
-    """Given a text type (story, lyrics, etc.) and a game data filepath, extract and return the group, id, and index."""
-    if text_type == "home":
-        path = path[-10:]
-        return path[:2], path[3:7], path[7:]
-    elif text_type == "lyrics":
-        return None, None, path[-11:-7]
-    elif text_type == "preview":
-        return None, None, path[-4:]
-    else:  # story and storyrace
-        path = path[-9:]
-        return path[:2], path[2:6], path[6:9]
+@dataclass
+class StoryId:
+    type:str = "story"
+    set:str = None
+    setLen = 5
+    group:str = None
+    groupLen = 2
+    id:str = None
+    idLen = 4
+    idx:str = None
+    idxLen = 3
+    def __post_init__(self):
+        if self.type in ("lyrics", "preview") and self.idx and not self.id:
+            self.id = self.idx
+    def __str__(self) -> str:
+        '''Return the joined numeric parts, as written in tlFiles'''
+        return "".join(x for x in astuple(self)[1:] if x is not None)
+    @classmethod
+    def parse(cls, text_type, s):
+        if text_type in ("lyrics", "preview"):
+            return cls(type=text_type, id=s)
+        elif len(s) > 9 and text_type == "home":
+            return cls(type=text_type, set=s[:5], group=s[5:7], id=s[7:11], idx=s[11:])
+        else:
+            return cls(type=text_type, group=s[:2], id=s[2:6], idx=s[6:])
+    @classmethod
+    def parseFromPath(cls, text_type: str, path: str):
+        """Given a text type (story, lyrics, etc.) and a game data filepath, extract and return the group, id, and index."""
+        if text_type == "home":
+            path = path[-16:]
+            return cls(type=text_type, set=path[:5], group=path[6:8], id=path[9:13], idx=path[13:])
+        elif text_type == "lyrics":
+            return cls(type=text_type, id=path[-11:-7])
+        elif text_type == "preview":
+            return cls(type=text_type, id=path[-4:])
+        else:  # story and storyrace
+            path = path[-9:]
+            return cls(type=text_type, group=path[:2], id=path[2:6], idx=path[6:9])
+    @classmethod
+    def queryfy(cls, storyId:'StoryId'):
+        '''Returns a new StoryId with attributes usable in SQL'''
+        parts = asdict(storyId)
+        for k,v in parts.items():
+            if v is None:
+                parts[k] = "_" * getattr(storyId, f"{k}Len", 0)
+        return cls(*parts.values())
+    @classmethod
+    def fromLegacy(cls, group, id, idx):
+        return cls(group=group, id=id, idx=idx)
+    def asLegacy(self):
+        return self.group, self.id, self.idx
+    def asTuple(self, validOnly=False):
+        if validOnly:
+            # Faster with the list comp for some extra mem cost
+            return tuple([x for x in astuple(self) if x is not None])
+        else:
+            return astuple(self)
+    def asPath(self, includeIdx=False):
+        offset = None if includeIdx else -1
+        return Path().joinpath(*self.asTuple(validOnly=True)[1:offset]) # ignore type for now
 
 
 def patchVersion():
@@ -103,6 +146,7 @@ class Args(argparse.ArgumentParser):
         if defaultArgs:
             self.add_argument("-t", "--type", choices=types or TARGET_TYPES, default=types[0] if types else TARGET_TYPES[0],
                               help="The type of assets to process.")
+            self.add_argument("-s", "--set", help="The set to process")
             self.add_argument("-g", "--group", help="The group to process")
             self.add_argument("-id", help="The id (subgroup) to process")
             self.add_argument("-idx", help="The specific asset index to process")
@@ -309,7 +353,7 @@ class TranslationFile:
         if not tlFile.fileExists:
             return
         if newName is None:
-            idx = parseStoryId(tlFile.getStoryId())[-1]
+            idx = StoryId.parse(tlFile.getStoryId()).idx
             title = tlFile.data.get('title')
             newName = f"{idx} ({title}).json" if title else f"{idx}.json"
         newName = Path(tlFile.file).parent.joinpath(helpers.sanitizeFilename(newName))

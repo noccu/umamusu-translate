@@ -81,8 +81,8 @@
         "storyId": {
           "type": "string",
           "minLength": 4,
-          "maxLength": 9,
-          "pattern": "^[0-9]{4,9}$"
+          "maxLength": 14,
+          "pattern": "^[0-9]{4,14}$"
         },
         "title": {
           "type": "string",

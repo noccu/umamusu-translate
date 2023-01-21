@@ -21,7 +21,7 @@ const FILES = {
         factors: "translations/mdb/factor-desc.json",
         common: "translations/mdb/common.json",
         shoeSize: "translations/mdb/uma-profile-shoesize.json",
-        lessonEffects: "translations/mdb/lesson-effects.json",
+        lessonEffects: "translations/mdb/lesson-talent-bonus.json",
         items: "translations/mdb/item-desc.json"
     }
 const UNCOMMON_FILES = [

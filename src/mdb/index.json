@@ -12,7 +12,7 @@
             "item-desc": 24,
             "skill-name": 47,
             "skill-desc": 48,
-            "race-name": [28, 29, 32, 33, 36, 111],
+            "race-name": {"spec": [28, 29, 32, 33, 36, 111], "sql": "\"index\" not BETWEEN 20000 and 30000"},
             "trainer-title": 65,
             "trainer-title-requirements": 66,
             "missions": 67,

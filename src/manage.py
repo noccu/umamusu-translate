@@ -134,7 +134,7 @@ def convertMdb():
             if data:
                 path = LOCALIFY_DATA_DIR / subdir / fn
                 helpers.writeJson(path, data)
-                converted.append(path)
+                converted.append(path.relative_to(LOCALIFY_DATA_DIR.parent))
     print(f"Converted {len(converted)} files.")
     return converted
 
@@ -281,7 +281,7 @@ def main():
                     shutil.copyfile(f, fn)
                     if len(subPath.parts) > 1:
                         dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
-                    updConfigDicts(installDir / "config.json", dynFiles)
+                updConfigDicts(installDir / "config.json", dynFiles)
             except PermissionError:
                 print(f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself.")
             except FileNotFoundError as e:

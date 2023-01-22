@@ -191,8 +191,10 @@ All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
 Haru Urara | Complete | deepl
 Hokko Tarumae | Complete | [Riersa]
+Mejiro Ardan | Complete | [Riersa]
 Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa]
+Narita Taishin | Complete | [Riersa]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
 Twin Turbo | Complete | [noccu]

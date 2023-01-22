@@ -44,7 +44,7 @@ A Resounding Cheer, Tracen Academy Cheerleading Squad! | Transferring | [LotoDS]
 The Promised Time: Silks & Three Riddles | Transferring/Stalled, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
-Wings of Iron: Hazy Tales | In Progress | [noccu] (ep 1-2)
+Wings of Iron: Hazy Tales | Complete | [noccu]
 Days in a Flash | Complete | [Kuwaiden]
 Illuminate the Heart | Complete | [robflop]
 Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl
@@ -178,10 +178,11 @@ Vodka (SSR, Road of Vodka) | Complete | [robflop][]
 name | progress | translator
 --- | --- | ---
 All not listed up to 2023/01/01 | Complete | deepl (contributed by Korgi up to 2022/07/08)
-Maruzensky | Complete | [noccu][]
-Curren Chan | Complete | [noccu][]
+Maruzensky | Complete | [noccu]
+Curren Chan | Complete | [noccu]
 Kitasan Black | Stalled | [noccu] (solo 2)
-Gold Ship | Complete | [noccu][] (solo 1-2), deepl
+Gold Ship | Complete | [noccu] (solo 1-2), deepl
+Yaeno Muteki | Complete | [noccu] (solo 2), deepl
 
 # System text
 name | progress | translator

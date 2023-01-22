@@ -37,16 +37,19 @@ class AudioPlayer:
             self._closeWavStream()
             self.audioOut.close()
         self.pyaud.terminate()
-    def play(self, storyId, idx, sType="story"):
+    def play(self, storyId:str, idx, sType="story"):
         '''Plays audio for a specific text block'''
+        storyId:common.StoryId = common.StoryId.parse(sType, storyId)
+        qStoryId = common.StoryId.queryfy(storyId)
         if idx < 0:
             print("Text block is not voiced.")
             return
         if reloaded := self.curPlaying[0] != storyId:
             if sType == "home":
-                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{storyId[:2]}\_{storyId[2:]}.awb' ESCAPE '\\'"
+                # sound/c/snd_voi_story_00001_02_1054001.acb
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.awb' ESCAPE '\\'"
             else:
-                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{storyId}.awb'"
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.awb'"
             h = self._db.execute(stmt).fetchone()
             if h is None:
                 print("Couldn't find audio asset.")
@@ -631,7 +634,7 @@ def listen(event=None):
         return "break"
     storyId = cur_file.data.get("storyId")
     voiceIdx = cur_file.textBlocks[cur_block].get("voiceIdx")
-    if not storyId or len(storyId) != 9:
+    if not storyId or len(storyId) < 9:
         # Could support a few other types but isn't useful.
         print("Unsupported type.")
         return "break"

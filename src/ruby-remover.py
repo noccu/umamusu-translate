@@ -3,9 +3,11 @@ import sqlite3
 from types import SimpleNamespace
 
 def removeRuby(args, db: sqlite3.Connection):
-    storyId = common.StoryId(args.type, args.set, args.group, args.id, args.idx)
+    storyId = common.StoryId.queryfy(common.StoryId(args.type, args.set, args.group, args.id, args.idx))
+    del storyId.set
+    del storyId.type
 
-    q = db.execute(f"select h, n from a where n like 'story/data/__/____/ast_ruby_{common.StoryId.queryfy(storyId)}'")
+    q = db.execute(f"select h, n from a where n like 'story/data/__/____/ast_ruby_{storyId}'")
     patched = total = 0
     dummytl = SimpleNamespace(data=dict())
     for bundle, path in q:

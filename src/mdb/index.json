@@ -38,7 +38,7 @@
             "gacha-names": 26,
             "presents-desc": 64,
             "item-uma-pieces": 113,
-            "uma-profile-intro": [163],
+            "uma-profile-intro": 163,
             "uma-profile-tagline": {"spec": 144, "tlg": true},
             "uma-profile-weight": 9,
             "uma-profile-shoesize": 168,
@@ -82,7 +82,8 @@
                 "sql": "\"index\" NOT LIKE '1%'"
             },
             "meek-challenges": 267,
-            "stroll-locations": 268
+            "stroll-locations": 268,
+            "event-titles": [189, 214]
         },
         "overrides": {
             "skill_data": ["skill-desc", "alt/skill-desc"]

@@ -40,15 +40,15 @@ Blossoming New Year's Karuta Contest | Complete, In progress | deepl, [noccu]
 Patisserie Grandeur | Complete | [noccu][]
 Flapping Run-up | Complete | [Hades of Games][]
 Tonight at the Ligne Droite | Complete | Anonymous Reindeer
-A Resounding Cheer, Tracen Academy Cheerleading Squad! | Transferring | [LotoDS][]
+A Resounding Cheer, Tracen Academy Cheerleading Squad! | Complete | [LotoDS]
 The Promised Time: Silks & Three Riddles | Transferring/Stalled, Complete | [Snep][], deepl
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
 Wings of Iron: Hazy Tales | Complete | [noccu]
 Days in a Flash | Complete | [Kuwaiden]
+Intertwined Memories, Galloping Thoughts | Complete | deepl
 Illuminate the Heart | Complete | [robflop]
 Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl
-Intertwined Memories, Galloping Thoughts | Complete | deepl
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 # Collab Events

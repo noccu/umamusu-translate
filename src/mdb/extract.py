@@ -97,8 +97,7 @@ def main():
         from subprocess import run
         run(["node", "src/mdb/scripts/extract-skill-data.js", args.src], check=True)
         import textprocess
-        from types import SimpleNamespace
-        textprocess.processFiles(SimpleNamespace(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=6, forceResize=True))
+        textprocess.processFiles(common.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=6, forceResize=True))
 
 
 if __name__ == '__main__':

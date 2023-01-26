@@ -129,8 +129,14 @@ def convertMdb():
                 continue
             subdir = entry['table'] if entry.get("subdir") else ""
             fn = f"{file}.json"
-            data = helpers.readJson(Path("translations/mdb") / subdir / fn).get('text', dict())
-            data = {getTextHash(k): v.replace("\\n", "\n") for k,v in data.items() if v}
+            tlData = helpers.readJson(Path("translations/mdb") / subdir / fn).get('text', dict())
+            data = dict()
+            for k,v in tlData.items():
+                if not v: continue
+                v = TextHasher.normalize(v)
+                data[TextHasher.hash(k)] = v
+                if entry.get('winBreaks') or (isinstance(info, dict) and info.get('winBreaks')):
+                    data[TextHasher.hash(k, True)] = v
             if data:
                 path = LOCALIFY_DATA_DIR / entry['table'] / fn
                 helpers.writeJson(path, data)
@@ -143,8 +149,12 @@ def convertTlFile(file: common.TranslationFile, overwrite=False):
     path = LOCALIFY_DATA_DIR / file.type / (file.getStoryId() + ".json")
     if not overwrite and path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
         return
-    data = {getTextHash(b['jpText']): b['enText'].replace("\\n", "\n") for b in file.genTextContainers() if b['enText']}
-    data.update({getTextHash(b['jpName']): b['enName'] for b in file.genTextContainers() if b.get('enName')})
+    data = dict()
+    for b in file.genTextContainers():
+        if text := b.get('enText'):
+            data[TextHasher.hash(b['jpText'])] = TextHasher.normalize(text)
+        if name := b.get('enName'):
+            data[TextHasher.hash(b['jpName'])] = TextHasher.normalize(name)
     helpers.writeJson(path, data)
     converted.append(path)
     return converted
@@ -167,18 +177,27 @@ def updConfigDicts(cfgPath, dictPaths: list):
     data['stories_path'] = ""
     helpers.writeJson(cfgPath, data)
 
-def getTextHash(string:str):
-    # Cleaning done by texthashtool. There is a version that cleans \n too, seems unneeded.
-    string = string.translate({ord(c): None for c in ("\r", ",")}).replace("\\n", "\n")
-
-    # Implement vc++ std::hash (FNV1a)
-    # mask = 2 ** 64 - 1 # Mask is used to emulate 64bit mult product
-    o = 14695981039346656037 # FNV_offset_basis
-    for c in string.encode("utf_16_le"):
-        o ^= c
-        o *= 1099511628211 # FNV_prime
-        o &= 18446744073709551615 # Integer form of mask
-    return o
+class TextHasher:
+    mapA = {ord(c): None for c in ("\r", ",")}
+    mapB = {ord(c): None for c in (",")}
+    @classmethod
+    def hash(cls, text:str, winBreak=False):
+        '''Returns a 64bit C hash of text, with full or partial replacements'''
+        # Cleaning done by texthashtool. There is a version that cleans \n too, seems unneeded.
+        text = TextHasher.normalize(text.translate(cls.mapB if winBreak else cls.mapA), winBreak)
+        # Implement vc++ std::hash (FNV1a)
+         # mask = 2 ** 64 - 1 # Mask is used to emulate 64bit mult product
+        o = 14695981039346656037 # FNV_offset_basis
+        for c in text.encode("utf_16_le"):
+            o ^= c
+            o *= 1099511628211 # FNV_prime
+            o &= 18446744073709551615 # Integer form of mask
+        return o
+    @staticmethod
+    def normalize(txt:str, winBreak=False):
+        '''Makes sure the text is correct for use in TLG. 
+           Windows linebreaks are required for some game content.'''
+        return txt.replace("\\n", "\r\n" if winBreak else "\n")
 
 
 def parseArgs():

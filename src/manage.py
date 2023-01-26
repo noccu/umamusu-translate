@@ -132,7 +132,7 @@ def convertMdb():
             data = helpers.readJson(Path("translations/mdb") / subdir / fn).get('text', dict())
             data = {getTextHash(k): v.replace("\\n", "\n") for k,v in data.items() if v}
             if data:
-                path = LOCALIFY_DATA_DIR / subdir / fn
+                path = LOCALIFY_DATA_DIR / entry['table'] / fn
                 helpers.writeJson(path, data)
                 converted.append(path.relative_to(LOCALIFY_DATA_DIR.parent))
     print(f"Converted {len(converted)} files.")

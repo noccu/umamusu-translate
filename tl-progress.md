@@ -136,6 +136,7 @@ All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 ## Make a New Track
 idx | name (short) | progress | translator
 --- | --- | --- | ---
+08/004 | Campaign intro | Complete | [noccu]
 All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 249 | Nyan Nyan Island | Complete | [nem]
 259 | A sudden rain | Complete | [Snep]
@@ -143,7 +144,7 @@ All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 ## Grand Live
 idx | name (short) | progress | translator
 --- | --- | --- | ---
-08/003 | Campaign intro | Complete | deepl
+08/003 | Campaign intro | Complete | [noccu]
 All not listed | up to 2022/08/24 | Complete | deepl
 
 ## Umas

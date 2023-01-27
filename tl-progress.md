@@ -212,7 +212,7 @@ name | progress | translator
 Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
 Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
-Gaze on Me! | Complete | [noccu]
+Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
@@ -252,3 +252,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Solo]: https://www.youtube.com/@solotranslation8586
 [Riersa]: https://www.reddit.com/u/Riersa
 [Director Kok]: https://www.twitch.tv/chrissss_pp
+[COSMET]: https://gyaxa.dreamwidth.org/

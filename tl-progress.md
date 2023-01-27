@@ -190,6 +190,7 @@ name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
+Fine Motion | Complete | [Riersa]
 Haru Urara | Complete | deepl
 Hokko Tarumae | Complete | [Riersa]
 Mejiro Ardan | Complete | [Riersa]

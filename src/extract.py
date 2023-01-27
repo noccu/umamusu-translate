@@ -194,7 +194,7 @@ class DataTransfer:
         if not self._printedName:
             print(f"\nIn {self.file.name}:")
             self._printedName = True
-        print(text)
+        print(f"\t{text}")
 
     def __call__(self, storyId:StoryId, textData):
         # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
@@ -210,7 +210,7 @@ class DataTransfer:
 
             self.file = common.TranslationFile(file)
 
-        textSearch = False
+        textSearch = True
         targetBlock = None
         textBlocks = self.file.textBlocks
         txtIdx = 0
@@ -219,27 +219,20 @@ class DataTransfer:
             if txtIdx < len(textBlocks):
                 targetBlock = textBlocks[txtIdx]
                 if not args.upgrade and similarity(targetBlock['jpText'], textData['jpText']) < self.simRatio:
-                    self.print(f"jpText does not match at bIdx {textData['blockIdx']}")
                     targetBlock = None
-                    textSearch = True
-            else:
-                textSearch = True
-        else:
-            # TODO: The below code is completely broken
-            # self.filePrint(f"No block idx at {txtIdx}")
-            # txtIdx = int(txtIdx)
-            textSearch = True
+                else:
+                    textSearch = False
 
         if textSearch:
-            self.print("Searching by text")
+            if args.verbose: self.print("Searching by text")
             for i, block in enumerate(textBlocks):
                 if similarity(block['jpText'], textData['jpText']) > self.simRatio:
-                    self.print(f"Found text at block {i}")
+                    if args.verbose: self.print(f"Found text at block {i}")
                     self.offset = txtIdx - i
                     targetBlock = block
                     break
             if not targetBlock:
-                self.print("Text not found")
+                self.print(f"At bIdx {textData['blockIdx']}: jpText not found in file.")
 
         if targetBlock:
             if args.upgrade:

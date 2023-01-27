@@ -73,16 +73,20 @@ class StoryId:
     idLen = 4
     idx:str = None
     idxLen = 3
+    idOnlyGroup = ("lyrics", "preview")
     def __post_init__(self):
-        if self.type in ("lyrics", "preview") and self.idx and not self.id:
-            self.id = self.idx
+        if self.type in self.idOnlyGroup:
+            if not self.id and self.idx:
+                self.id = self.idx
             self.idx = None
+            self.group = None
+            self.set = None
     def __str__(self) -> str:
         '''Return the joined numeric parts, as written in tlFiles'''
         return "".join(x for x in astuple(self)[1:] if x is not None)
     @classmethod
     def parse(cls, text_type, s):
-        if text_type in ("lyrics", "preview"):
+        if text_type in cls.idOnlyGroup:
             return cls(type=text_type, id=s)
         elif len(s) > 9 and text_type == "home":
             return cls(type=text_type, set=s[:5], group=s[5:7], id=s[7:11], idx=s[11:])
@@ -116,13 +120,20 @@ class StoryId:
         return self.group, self.id, self.idx
     def asTuple(self, validOnly=False):
         if validOnly:
-            # Faster with the list comp for some extra mem cost
+            # Faster with the list comp for some extra mem cost, apparently
             return tuple([x for x in astuple(self) if x is not None])
         else:
             return astuple(self)
     def asPath(self, includeIdx=False):
         offset = None if includeIdx else -1
         return Path().joinpath(*self.asTuple(validOnly=True)[1:offset]) # ignore type for now
+    def getFilenameIdx(self):
+        if self.type in self.idOnlyGroup:
+            return self.id
+        elif self.idx:
+            return self.idx
+        else:
+            raise AttributeError
 
 
 def patchVersion():
@@ -338,7 +349,7 @@ class TranslationFile:
 
     def init(self, snapshot=True):
         self.version = self._getVersion()
-        self.escapeNewline = self.type in ("race", "preview", "mdb")
+        self.escapeNewline = self.type in ("race", "preview", "mdb", "lyrics")
         self.data['text'] = self.TextData(self)
         if snapshot: self.snapshot()
 

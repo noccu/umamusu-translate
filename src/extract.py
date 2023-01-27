@@ -301,7 +301,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
 
     # Skip if already exported and we're not overwriting
     if not args.overwrite:
-        file = next(exportDir.glob(f"{storyId.idx}*.json"), None)
+        file = next(exportDir.glob(f"{storyId.getFilenameIdx()}*.json"), None)
         if file is not None:
             if args.verbose:
                 print(f"Skipping existing: {file.name}")
@@ -325,7 +325,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
 
     # Remove invalid path chars (win)
     title = sanitizeFilename(outFile.data.get('title', ''))
-    idxString = f"{storyId.idx} ({title})" if title else storyId.idx
+    idxString = f"{storyId.idx} ({title})" if title else storyId.getFilenameIdx()
     outFile.setFile(str(exportDir / f"{idxString}.json"))
     outFile.save()
 

@@ -81,7 +81,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
-Hokko Tarumae | Complete | [Riersa]
+Hokko Tarumae | Complete | [Riersa] (deepl edit)
 Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl
 King Halo | Complete | [burritoblaster][]
@@ -115,35 +115,35 @@ Yamanin Zephyr | Complete | [Director Kok][]
 Zenno Rob Roy | Stalled | [LotoDS][] (ep 1-4)
 
 
-# Training story/events
+# Scenario training events
 name | progress | translator
 --- | --- | ---
 Shared events | Complete | [noccu][]
 
 ## URA
-id | name (short) | progress | translator
+idx | name (short) | progress | translator
 --- | --- | --- | ---
-Campaign intro | Complete | [noccu]
-002 | Complete | [Korgi]
+08/001 | Campaign intro | Complete | [noccu]
+002 | Final start | Complete | Korgi (deepl edit)
 All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 ## Aoharu
-id | name (short) | progress | translator
+idx | name (short) | progress | translator
 --- | --- | --- | ---
-Campaign intro | Complete | [noccu]
+08/002 | Campaign intro | Complete | [noccu]
 All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 ## Make a New Track
-id | name (short) | progress | translator
+idx | name (short) | progress | translator
 --- | --- | --- | ---
 All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 249 | Nyan Nyan Island | Complete | [nem]
 259 | A sudden rain | Complete | [Snep]
 
 ## Grand Live
-id | name (short) | progress | translator
+idx | name (short) | progress | translator
 --- | --- | --- | ---
-Campaign intro | Complete | deepl
+08/003 | Campaign intro | Complete | deepl
 All not listed | up to 2022/08/24 | Complete | deepl
 
 ## Umas
@@ -166,6 +166,7 @@ Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | Stalled | Anonymous Reindeer
 Sakura Bakushin O | Complete | deepl
+Vodka | In progress | [robflop]
 
 ## Cards
 name | progress | translator
@@ -184,23 +185,25 @@ Curren Chan | Complete | [noccu]
 Kitasan Black | Stalled | [noccu] (solo 2)
 Gold Ship | Complete | [noccu] (solo 1-2), deepl
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl
+Vodka | In progress | [robflop]
 
 # System text
 name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
-Fine Motion | Complete | [Riersa]
+Fine Motion | Complete | [Riersa] (deepl edit)
 Haru Urara | Complete | deepl
-Hokko Tarumae | Complete | [Riersa]
-Mejiro Ardan | Complete | [Riersa]
+Hokko Tarumae | Complete | [Riersa] (deepl edit)
+Mejiro Ardan | Complete | [Riersa] (deepl edit)
 Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
-Mejiro Dober | Complete | [Riersa]
-Narita Taishin | Complete | [Riersa]
+Mejiro Dober | Complete | [Riersa] (deepl edit)
+Narita Taishin | Complete | [Riersa] (deepl edit)
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
 Twin Turbo | Complete | [noccu]
-Zenno Rob Roy | Complete | [Riersa]
+Vodka | In progress | [robflop]
+Zenno Rob Roy | Complete | [Riersa] (deepl edit)
 
 # General
 name | progress | translator

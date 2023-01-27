@@ -1,17 +1,18 @@
 {
-    "version": 5,
-    "bundle": "UXVL42YDCFEY6HX4FX5FGDYUKPJUG4SE",
+    "version": 6,
+    "bundle": "D6SYZ7LAKGJ6YCYJX6HWB5EJPKJBJOSF",
     "type": "story",
     "storyId": "501003506",
     "title": "ダンスレッスン",
     "text": [
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "ダンススタジオを覗くとトウカイテイオーが\r\nダンスの自主練習をしていた。",
             "enText": "When I peeked into the dance studio, I saw \nTokai Teio practicing a dance on her own.",
             "nextBlock": 2,
             "origClipLength": 68,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 79,
@@ -32,6 +33,7 @@
             "enText": "All right! \nHere comes \"Teio Step・Improved\"!!",
             "nextBlock": 3,
             "origClipLength": 61,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 72,
@@ -52,6 +54,7 @@
             "enText": "Sping spin spin～～～～～～\n……and, uwaaaa!?",
             "nextBlock": 4,
             "origClipLength": 62,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -66,12 +69,13 @@
             "blockIdx": 3
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "回転の途中でバランスを崩し、\r\nトウカイテイオーは転んでしまった。",
             "enText": "Halfway through the rotation, Tokai Teio lost \nher balance and fell.",
             "nextBlock": 5,
             "origClipLength": 66,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 77,
@@ -88,6 +92,7 @@
             "enText": "Ouch ouch ouch～.",
             "nextBlock": 6,
             "origClipLength": 77,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "大丈夫か？",
@@ -120,6 +125,7 @@
             "enText": "Trainer! You should have called out to me if \nyou were there～!",
             "nextBlock": 7,
             "origClipLength": 63,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "邪魔したくなかったから",
@@ -147,6 +153,7 @@
             "enText": "You're not disturbing me at all! \nI had some stuff I wanted you to see!",
             "nextBlock": 8,
             "origClipLength": 63,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 36,
@@ -167,6 +174,7 @@
             "enText": "Didn't we just go through the whole thing? \n\"Teio Step・Improved\"♪",
             "nextBlock": 9,
             "origClipLength": 64,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 26,
@@ -187,6 +195,7 @@
             "enText": "Lift one leg after each Teio Step, and twirl!",
             "nextBlock": 10,
             "origClipLength": 63,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 54,
@@ -207,6 +216,7 @@
             "enText": "It's cool when it's done well, but it's hard \nto keep going around on the spot, you know?",
             "nextBlock": 11,
             "origClipLength": 69,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "バランス感覚を鍛えよう",
@@ -239,6 +249,7 @@
             "enText": "Mmmm, indeed! I tip over \nhalfway through every time.",
             "nextBlock": 12,
             "origClipLength": 62,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 23,
@@ -255,10 +266,11 @@
         {
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
-            "jpText": "……そうだっ！　マルゼン先輩に\r\nバレエのレッスンつけてもらうとかどうかな！",
+            "jpText": "……そうだっ！　マルゼンに\nバレエのレッスンつけてもらうとかどうかな！",
             "enText": "…… Oh yeah! Maybe we can get Marzen-senpai to \ngive us ballet lessons!",
             "nextBlock": 13,
             "origClipLength": 69,
+            "voiceIdx": 52,
             "animData": [
                 {
                     "origLen": 22,
@@ -279,6 +291,7 @@
             "enText": "Senpai, your father is a ballet dancer, \nright? I'm sure she knows some good exercises!",
             "nextBlock": 14,
             "origClipLength": 70,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "完成、楽しみにしてるよ",
@@ -306,6 +319,7 @@
             "enText": "Hehe～♪ I'm going to stun everyone with \nTeio-sama's best dance moves!",
             "nextBlock": 15,
             "origClipLength": 68,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 36,
@@ -326,6 +340,7 @@
             "enText": "Ughhh～! I've trained my \nsense of balance, but……",
             "nextBlock": 16,
             "origClipLength": 60,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 84,
@@ -342,10 +357,11 @@
         {
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
-            "jpText": "レッスンより、そのあとのマルゼン先輩との\r\nドライブの方が修行になった……かも。",
+            "jpText": "レッスンより、そのあとのマルゼンとの\nドライブの方が修行になった……かも。",
             "enText": "The drive with Marzen Senpai after \nthe lesson was probably more of \na training…… than the lesson.",
             "nextBlock": 17,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 62,
@@ -360,12 +376,13 @@
             "blockIdx": 16
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "予期せぬ修行で疲れてしまったようだが、\r\n成果は上げられたようだ。",
             "enText": "She was tired from the unexpected training, \nbut it seems to have paid off.",
             "nextBlock": -1,
             "origClipLength": 66,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 77,
@@ -386,6 +403,7 @@
             "enText": "I see! Without support, I'd wobble!",
             "nextBlock": 19,
             "origClipLength": 62,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 18,
@@ -406,6 +424,7 @@
             "enText": "I've decided! I'm going to get in shape for \nthe completion of \"Tayo Step Kai\"!",
             "nextBlock": 20,
             "origClipLength": 71,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 54,
@@ -426,6 +445,7 @@
             "enText": "Trainer, do you have a balanced \nmuscle-building menu?",
             "nextBlock": 21,
             "origClipLength": 66,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 39,
@@ -440,12 +460,13 @@
             "blockIdx": 20
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "もちろんと頷き――",
             "enText": "She nodded her head and said, \"Sure.",
             "nextBlock": 22,
             "origClipLength": 50,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 61,
@@ -460,12 +481,13 @@
             "blockIdx": 21
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "その後、トウカイテイオーと2人で\r\n筋力トレーニングに励んだ。",
             "enText": "After that, she and Tokai Teio worked \ntogether on strength training.",
             "nextBlock": -1,
             "origClipLength": 65,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 96,
@@ -480,5 +502,5 @@
             "blockIdx": 22
         }
     ],
-    "modified": 1657555054
+    "modified": 1674832073
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "PK46SGRNAYQ3TI67DXZWJUB2SH3P4L2L",
+    "version": 6,
+    "bundle": "X2SOS3XJAILL6YAV4YNCDTFOIZGN7PP6",
     "type": "story",
     "storyId": "400000104",
     "title": "URAファイナルズ予選の後に",
@@ -11,7 +11,19 @@
             "jpText": "予選通過、おめでとうございます！",
             "enText": "Congratulations on qualifying!",
             "nextBlock": 2,
-            "pathId": 2335258261412290607,
+            "origClipLength": 65,
+            "voiceIdx": 131,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": -2726967803591866195
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -8231825352866045437
+                }
+            ],
+            "pathId": -4748131183964218498,
             "blockIdx": 1
         },
         {
@@ -20,7 +32,19 @@
             "jpText": "予選とは思えないほどに白熱した、\r\n素晴らしいレースでしたね！",
             "enText": "It's hard to believe that this was\njust a qualifying round, but it\nwas a great, heated race!",
             "nextBlock": 3,
-            "pathId": -4368589968624668364,
+            "origClipLength": 85,
+            "voiceIdx": 115,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 3085367531438225168
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 1260106829905180584
+                }
+            ],
+            "pathId": -7109842620972349777,
             "blockIdx": 2
         },
         {
@@ -29,6 +53,8 @@
             "jpText": "次は、予選を勝ち抜いた強豪と戦う準決勝。\nより厳しいレースになるでしょう。",
             "enText": "Next up is the semifinals, where you\nwill face the others powerful enough\nto make it through. It will surely\nbe an even tougher race.",
             "nextBlock": 4,
+            "origClipLength": 93,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "次も必ず勝ってみせます",
@@ -36,7 +62,17 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": -3855721227761958595,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 4551184697458466322
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -6058898663889284661
+                }
+            ],
+            "pathId": -6124167545897018829,
             "blockIdx": 3
         },
         {
@@ -45,10 +81,22 @@
             "jpText": "はい！\nますますのご活躍、期待しています！",
             "enText": "Yes! I'm looking forward to\nyour continued success!",
             "nextBlock": -1,
-            "pathId": -5269478277266509940,
+            "origClipLength": 72,
+            "voiceIdx": 120,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -5909298139060381329
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 6972611346411165570
+                }
+            ],
+            "pathId": -2672621647979047852,
             "blockIdx": 4
         }
     ],
     "humanTl": true,
-    "modified": 1673057060
+    "modified": 1674828210
 }

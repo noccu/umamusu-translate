@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "JCZBBOKKTCISQPUHHHQIY2SWV3EZGOSX",
+    "version": 6,
+    "bundle": "4D4Z3XDEZ6BQUM4G6GEMSJPPQDJNUGKF",
     "type": "story",
     "storyId": "400000106",
     "title": "URAファイナルズ決勝の後に",
@@ -11,7 +11,19 @@
             "jpText": "天晴ッ！　聞きたまえ、この歓声を！\n皆がその勝利を祝福しているぞ！",
             "enText": "Bravo! Listen to the cheers! They're\ncelebrating your victory!",
             "nextBlock": 2,
-            "pathId": -3200275179887685513,
+            "origClipLength": 88,
+            "voiceIdx": 131,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -7629587773015004010
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 1975970516506551185
+                }
+            ],
+            "pathId": -6213266699693567237,
             "blockIdx": 1
         },
         {
@@ -20,7 +32,19 @@
             "jpText": "きっと君たちに憧れ、君たちを超えようと\r\n皆が切磋琢磨していくことだろう。",
             "enText": "I am sure that in admiration, everyone will \nwork hard to surpass you.",
             "nextBlock": 3,
-            "pathId": -4821065898227551812,
+            "origClipLength": 93,
+            "voiceIdx": 74,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 858755689377485703
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 3109424145252387401
+                }
+            ],
+            "pathId": 1066762932559699221,
             "blockIdx": 2
         },
         {
@@ -29,7 +53,19 @@
             "jpText": "ウマ娘界に希望の蹄跡を刻みつけてくれた。\r\nその走りに、感謝を……そして――",
             "enText": "She has left a hoofprint of hope\nin the horse girl world. \nThank you for that ride… and—",
             "nextBlock": 4,
-            "pathId": -5642083351148253200,
+            "origClipLength": 94,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": 4066336392211231905
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 4799122526296299365
+                }
+            ],
+            "pathId": 5673262418417044517,
             "blockIdx": 3
         },
         {
@@ -38,7 +74,19 @@
             "jpText": "優勝、おめでとう！",
             "enText": "Congratulations on your win!",
             "nextBlock": 5,
-            "pathId": -8960320847351547668,
+            "origClipLength": 56,
+            "voiceIdx": 129,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 3497577234901625471
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 1152536128241538135
+                }
+            ],
+            "pathId": 3956094936247451458,
             "blockIdx": 4
         },
         {
@@ -47,10 +95,22 @@
             "jpText": "君たちこそ、頂点。\n最高のトレーナーであり、ウマ娘だ！",
             "enText": "Nothing can top you two. The best trainer\nand the best horse girl!",
             "nextBlock": -1,
-            "pathId": -3386333049802136987,
+            "origClipLength": 80,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": -7610155518840769256
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -7791408202562266542
+                }
+            ],
+            "pathId": -3982694610641865318,
             "blockIdx": 5
         }
     ],
     "humanTl": true,
-    "modified": 1673057060
+    "modified": 1674828210
 }

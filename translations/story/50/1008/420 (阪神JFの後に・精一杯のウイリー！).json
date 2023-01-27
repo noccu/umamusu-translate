@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "U4OIV7EMZLEU3UEERHSYTEQQM4WJBF5H",
+    "version": 6,
+    "bundle": "FKFO5DWFXTIE5Z2N2T6MMNFFQIM6KTZJ",
     "type": "story",
     "storyId": "501008420",
     "title": "阪神JFの後に・精一杯のウイリー！",
@@ -11,7 +11,19 @@
             "jpText": "『阪神JF』……GⅠという高いハードルを、\r\nウオッカは無理やり乗り超えてみせた。",
             "enText": "I'm sure you've heard of it, but \nI'm not sure if you've seen it.",
             "nextBlock": 2,
-            "pathId": -5555723546721415050,
+            "origClipLength": 98,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -2322155987566763431
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -5987441415934996095
+                }
+            ],
+            "pathId": 4864259596061832111,
             "blockIdx": 1
         },
         {
@@ -20,13 +32,33 @@
             "jpText": "レース後、ウオッカと次に向けて話し合う。\r\n『日本ダービー』を目指すなら、\nクラシック三冠路線が常道だが……。",
             "enText": "After the race, Vodka and I talked about what \nto do next. If you want to get to the Japan \nDerby, the Triple Crown is the way to go…",
             "nextBlock": 3,
+            "origClipLength": 116,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "クラシック",
                     "enText": "Classic"
                 }
             ],
-            "pathId": -980446564033294906,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": 7624177158598315739
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -7679369838881729126
+                },
+                {
+                    "origLen": 156,
+                    "pathId": -3776993219792579053
+                },
+                {
+                    "origLen": 156,
+                    "pathId": 2656163171396889333
+                }
+            ],
+            "pathId": -1450799679008615217,
             "blockIdx": 2
         },
         {
@@ -35,14 +67,35 @@
             "jpText": "ダイワスカーレットに挑発されたウオッカは、\r\n売り言葉に買い言葉で……定石を破り、\n『チューリップ賞』を目標に定めるのだった。",
             "enText": "When challenged by Daiwa Scarlet, Vodka \nbroke the… rule of speech and set her \nsights on the Tulip Prize.",
             "nextBlock": -1,
+            "origClipLength": 127,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "チューリップ賞",
                     "enText": "Tulip Award"
                 }
             ],
-            "pathId": -4155540105946462428,
+            "animData": [
+                {
+                    "origLen": 156,
+                    "pathId": -3878158878181264351
+                },
+                {
+                    "origLen": 167,
+                    "pathId": -1950722370744775992
+                },
+                {
+                    "origLen": 191,
+                    "pathId": 8265484507866914680
+                },
+                {
+                    "origLen": 291,
+                    "pathId": 5665469207998366508
+                }
+            ],
+            "pathId": 3219929661195690397,
             "blockIdx": 3
         }
-    ]
+    ],
+    "modified": 1674832103
 }

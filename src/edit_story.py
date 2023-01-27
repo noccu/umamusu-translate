@@ -563,12 +563,17 @@ def format_text(event):
 
 
 def process_text(event):
-    proc_text = textprocess.processText(cur_file,
-                                        cleanText(text_box_en.get(1.0, tk.END)),
-                                        {"redoNewlines": True if event.state & 0x0001 else False,
-                                         "replaceMode": "limit",
-                                         "lineLength": 60,
-                                         "targetLines": 99})
+    opts = {"redoNewlines": False,
+            "replaceMode": "limit",
+            "lineLength": -1,
+            "targetLines": 99}
+    if getattr(event, "all"):
+        for block in cur_file.textBlocks:
+            block['enText'] = textprocess.processText(cur_file, block['enText'], opts)
+        proc_text = cur_file.textBlocks[cur_block].get("enText")
+    else:
+        opts["redoNewlines"] = True if event.state & 0x0001 else False
+        proc_text = textprocess.processText(cur_file, cleanText(text_box_en.get(1.0, tk.END)), opts)
     text_box_en.delete(1.0, tk.END)
     text_box_en.insert(tk.END, proc_text)
     return "break"
@@ -614,7 +619,7 @@ def loadFont(fontPath):
 
 def tlNames():
     import names
-    names.translate(cur_file)
+    names.translate(cur_file, forceReload=True)
     load_block()
 
 def nextMissingName():
@@ -767,6 +772,7 @@ def main():
         tk.Button(frm_btns_side, text="Convert\nunicode codepoint", command=char_convert),
         tk.Button(frm_btns_side, text="Process text", command=lambda: process_text(SimpleNamespace(state=0))),
         tk.Button(frm_btns_side, text="Process text\n(clean newlines)", command=lambda: process_text(SimpleNamespace(state=1))),
+        tk.Button(frm_btns_side, text="Process text\n(whole chapter)", command=lambda: process_text(SimpleNamespace(all=True))),
         tk.Button(frm_btns_side, text="Translate speakers", command=tlNames),
         tk.Button(frm_btns_side, text="Find missing speakers", command=nextMissingName)
     )

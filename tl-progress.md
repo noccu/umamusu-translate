@@ -213,6 +213,7 @@ Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
 Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
 Gaze on Me! | Complete | [noccu]
+Girls Legend U | Complete | [noccu]
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Ms. VICTORIA | Complete | [Nine]

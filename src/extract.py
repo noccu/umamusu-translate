@@ -249,8 +249,8 @@ class DataTransfer:
                 if args.upgrade:
                     textData['jpName'] = targetBlock['jpName']
                 textData['enName'] = targetBlock['enName']
-            if 'choices' in targetBlock:
-                for txtIdx, choice in enumerate(textData['choices']):
+            if 'choices' in targetBlock and (choices := textData.get('choices')):
+                for txtIdx, choice in enumerate(choices):
                     try:
                         if args.upgrade:
                             choice['jpText'] = targetBlock['choices'][txtIdx]['jpText']
@@ -259,8 +259,8 @@ class DataTransfer:
                         self.print(f"New choice at bIdx {targetBlock['blockIdx']}.")
                     except KeyError:
                         self.print(f"Choice mismatch when attempting data transfer at {txtIdx}")
-            if 'coloredText' in targetBlock:
-                for txtIdx, cText in enumerate(textData['coloredText']):
+            if 'coloredText' in targetBlock and (coloredText := textData.get('coloredText')):
+                for txtIdx, cText in enumerate(coloredText):
                     if args.upgrade:
                         cText['jpText'] = targetBlock['coloredText'][txtIdx]['jpText']
                     cText['enText'] = targetBlock['coloredText'][txtIdx]['enText']

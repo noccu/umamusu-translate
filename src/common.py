@@ -365,7 +365,7 @@ class TranslationFile:
         if not tlFile.fileExists:
             return
         if newName is None:
-            idx = StoryId.parse(tlFile.getStoryId()).idx
+            idx = StoryId.parse(tlFile.type, tlFile.getStoryId()).idx
             title = tlFile.data.get('title')
             newName = f"{idx} ({title}).json" if title else f"{idx}.json"
         newName = Path(tlFile.file).parent.joinpath(helpers.sanitizeFilename(newName))

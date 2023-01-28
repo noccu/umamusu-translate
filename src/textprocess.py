@@ -1,5 +1,5 @@
 import common
-from common import TranslationFile
+from common import TranslationFile, StoryId
 import re
 from math import ceil
 import helpers
@@ -174,7 +174,7 @@ def processFiles(args):
     print(f"Processing {len(files)} files...")
     if args.lineLength == -1: print(f"Automatically setting line length based on story type/id or file value")
     for file in files:
-        file = common.TranslationFile(file)
+        file = TranslationFile(file)
 
         for block in file.genTextContainers():
             if "enText" in block and len(block['enText']) != 0 and "skip" not in block:
@@ -190,9 +190,10 @@ def calcLineLen(file: TranslationFile, verbose):
 
     lineLength = file.data.get('lineLength')
     if lineLength is None:
-        if (file.type in ("lyrics", "race")
-        or (file.type == "story"
-        and common.StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09"))):
+        if file.type == "lyrics":
+            lineLength = 80
+        elif (file.type == "race")\
+        or (file.type == "story" and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09")):
             lineLength = 65
         else:
             lineLength = 45

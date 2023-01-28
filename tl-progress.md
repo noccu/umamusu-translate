@@ -225,6 +225,7 @@ Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Ms. VICTORIA | Complete | [Nine]
 Next Frontier | Complete | [LotoDS][]
+Never Looking Back | Complete | [COSMET]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
 transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | Anonymous Reindeer, [Karimenrider][] (missing parts)

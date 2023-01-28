@@ -84,6 +84,7 @@ Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 Hokko Tarumae | Complete | [Riersa] (deepl edit)
 Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl
+Kawakami Princess | Complete | [Director Kok]
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]

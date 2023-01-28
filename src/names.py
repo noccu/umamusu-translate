@@ -39,8 +39,8 @@ def extract(files:list):
             if name in common.NAMES_BLACKLIST:
                 continue
             if name not in NAMES_DICT:
-                curNames[name] = ""
-                NAMES_DICT[name] = ""
+                curNames[name] = block.get("enName", "")
+                NAMES_DICT[name] = block.get("enName", "")
                 newNames += 1
     helpers.writeJson("src/data/names.json", curNames)
     return newNames

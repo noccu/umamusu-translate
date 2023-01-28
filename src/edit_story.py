@@ -260,7 +260,6 @@ def save_block():
     cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
     if cur_file.textBlocks[cur_block]['enText'] != LAST_EN_TEXT:
         LAST_CHANGED[cur_chapter] = common.currentTimestamp()
-        print("Set change", cur_chapter, LAST_CHANGED[cur_chapter])
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()

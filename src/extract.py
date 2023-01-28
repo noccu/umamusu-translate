@@ -338,10 +338,12 @@ def parseArgs():
         args.dst = PurePath("translations") / args.type
     if args.upgrade or args.update is not None:
         args.overwrite = True
-        args.update = args.update or [args.type] # Doesn't make sense to upgrade non-existent files.
-    # check if upd was given without type spec and use all types if so
-    if isinstance(args.update, list) and len(args.update) == 0:
-        args.update = common.TARGET_TYPES
+        # Doesn't make sense to upgrade non-existent files.
+        if args.update is None:
+            args.update = [args.type]
+        # check if upd was given without type spec and use all types if so
+        elif len(args.update) == 0:
+            args.update = common.TARGET_TYPES
 
 
 def main():

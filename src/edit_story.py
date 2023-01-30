@@ -4,6 +4,9 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 from tkinter.font import Font
 from types import SimpleNamespace
+from itertools import zip_longest
+from dataclasses import dataclass, field as datafield
+from functools import partial
 
 import common
 from helpers import isEnglish
@@ -11,6 +14,8 @@ import textprocess
 
 if common.IS_WIN:
     from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
+    import pyaudio, sqlite3, wave, restore
+    from PyCriCodecs import AWB, HCA
 
 TEXTBOX_WIDTH = 54
 COLOR_WIN = "systemWindow" if common.IS_WIN else "white"
@@ -18,38 +23,73 @@ COLOR_BTN = "SystemButtonFace" if common.IS_WIN else "gray"
 AUDIO_PLAYER = None
 
 LAST_EN_TEXT = None
+#TODO: optimize the checks for this
+
+@dataclass
+class PlaySegment:
+    idx: int
+    startTime: int
+    endTime: int
+    timeBased: bool = datafield(init=False, compare=False)
+    def __post_init__(self):
+        self.timeBased = False if self.startTime is None else True
+        self._rateApplied = False
+    def applyRateOnce(self, rate):
+        '''Applies the given rate if time-based, does nothing past first call'''
+        if self._rateApplied or not self.timeBased:
+            return
+        self.startTime *= int(rate/1000)
+        if self.endTime:
+            self.endTime *= int(rate/1000)
+        self._rateApplied = True
+    @classmethod
+    def fromBlock(cls, block):
+        idx = block.get("voiceIdx")
+        start = block.get("time")
+        end = None
+        if start:
+            start = int(start)
+            nextBlock = cur_file.textBlocks[cur_block+1]
+            if nextBlock: end = int(nextBlock.get("time"))
+        elif idx is not None: 
+            idx = int(idx)
+        else:
+            return None
+        return cls(idx, start, end)
 
 class AudioPlayer:
+    # Intended as singleton
     curPlaying = (None, 0)
     subkey = None
-    audioOut = None
-    wavFile = None
+    outStreams:list[pyaudio.PyAudio.Stream] = list()
+    wavFiles:list[wave.Wave_read] = list()
     subFiles = None
     def __init__(self) -> None:
-        global pyaudio, sqlite3, wave, restore, AWB, HCA
-        import pyaudio, sqlite3, wave, restore
-        from PyCriCodecs import AWB, HCA
         self.pyaud = pyaudio.PyAudio()
         self._db = sqlite3.connect(common.GAME_META_FILE)
         self._restoreArgs = restore.parseArgs([])
     def dealloc(self):
         self._db.close()
-        if isinstance(self.audioOut, pyaudio.Stream):
-            self.audioOut.stop_stream()
-            self._closeWavStream()
-            self.audioOut.close()
+        for stream, wavFile in zip(self.outStreams, self.wavFiles):
+            if isinstance(stream, pyaudio.PyAudio.Stream):
+                stream.stop_stream()
+                stream.close()
+            self._closeWavStream(wavFile)
         self.pyaud.terminate()
-    def play(self, storyId:str, idx, sType="story"):
+    def play(self, storyId:str, voice:PlaySegment, sType="story"):
         '''Plays audio for a specific text block'''
         storyId:common.StoryId = common.StoryId.parse(sType, storyId)
         qStoryId = common.StoryId.queryfy(storyId)
-        if idx < 0:
+        if not voice.timeBased and voice.idx < 0:
             print("Text block is not voiced.")
             return
+        # New assets
         if reloaded := self.curPlaying[0] != storyId:
             if sType == "home":
                 # sound/c/snd_voi_story_00001_02_1054001.acb
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.awb' ESCAPE '\\'"
+            elif sType == "lyrics":
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.awb'"
             else:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.awb'"
             h = self._db.execute(stmt).fetchone()
@@ -60,14 +100,23 @@ class AudioPlayer:
             asset.bundleType = "sound"
             if not asset.exists:
                 restore.save(asset, self._restoreArgs)
+            self.wavFiles.clear()
             self.load(str(asset.bundlePath))
-        if reloaded or self.curPlaying[1] != idx:
-            if idx > len(self.subFiles):
+        # New subfile/time
+        if voice.timeBased and reloaded: # lyrics, add all tracks
+            for file in self.subFiles:
+                self.wavFiles.append(self.decodeAudio(file))
+        elif not voice.timeBased and (reloaded or self.curPlaying[1] != voice.idx): # most things, add requested track
+            if voice.idx > len(self.subFiles):
                 print("Index out of range")
                 return
-            self.decodeAudio(self.subFiles[idx])
-        self.curPlaying = (storyId, idx)
-        self._playAudio()
+            audData = self.decodeAudio(self.subFiles[voice.idx])
+            if self.wavFiles:
+                self.wavFiles[0] = audData
+            else:
+                self.wavFiles.append(audData)
+        self.curPlaying = (storyId, voice)
+        self._playAudio(voice)
     def load(self, path: str):
         '''Loads the main audio container at path'''
         awbFile = AWB(path)
@@ -79,42 +128,86 @@ class AudioPlayer:
         '''Decodes a new audio stream, called only when such is requested'''
         hcaFile:HCA = HCA(hcaFile, key=75923756697503, subkey=self.subkey)
         hcaFile.decode() # leaves a wav ByteIOStream in stream attr
-        # Ready the data to be played
-        if self.wavFile:
-            self._closeWavStream()
-        self.wavFile = wave.open(hcaFile.stream, "rb")
-    def _getAudioData(self, data, frames, time, status):
+        return wave.open(hcaFile.stream, "rb")
+    def _getAudioData(self, data, frames, time, status, wavIdx = 0):
         '''Data retrieval method called by async pyAudio play'''
-        data = self.wavFile.readframes(frames)
+        wavFile =  self.wavFiles[wavIdx]
+        voice = self.curPlaying[1]
+        if voice.timeBased and voice.endTime:
+            pos = wavFile.tell()
+            if pos + frames > voice.endTime:
+                frames = voice.endTime - pos
+        data = wavFile.readframes(frames)
         # auto-stop on EOF seems to override Flag and only affects is_active()
         # stream still needs to be stopped
         return (data, pyaudio.paContinue)
-    def _playAudio(self):
+    def _playAudio(self, voice:PlaySegment):
         '''Deals with the technical side of playing audio'''
-        if not self.wavFile or self.wavFile.getfp().closed:
+        if not self.wavFiles: 
             print("No WAV loaded.")
             return
-        channels = self.wavFile.getnchannels() or 1
-        rate = self.wavFile.getframerate() or 48000
-        bpc = self.wavFile.getsampwidth() or 2
-        if isinstance(self.audioOut, pyaudio.PyAudio.Stream):
-            self.audioOut.stop_stream() # New play is requested, always stop any current
-            if self.audioOut._channels != channels or self.audioOut._rate != rate:
-                self.audioOut.close()
-            else:
-                self.wavFile.rewind() # test
-                self.audioOut.start_stream()
+        for i, (stream, wavFile) in enumerate(zip_longest(self.outStreams, self.wavFiles)):
+            if wavFile.getfp().closed:
+                print("WAV unexpectedly closed")
                 return
-        self.audioOut = self.pyaud.open(
-            format=self.pyaud.get_format_from_width(width=bpc),
-            channels = channels,
-            rate = rate,
-            output=True,
-            stream_callback=self._getAudioData
-        )
-    def _closeWavStream(self):
-        self.wavFile.getfp().close()
-        self.wavFile.close()
+            channels = wavFile.getnchannels() or 1
+            rate = wavFile.getframerate() or 48000
+            bpc = wavFile.getsampwidth() or 2
+            voice.applyRateOnce(rate)
+
+            if streamExists := isinstance(stream, pyaudio.PyAudio.Stream):
+                stream.stop_stream() # New play is requested, always stop any current
+            if voice.timeBased:
+                wavFile.setpos(voice.startTime)
+            else:
+                wavFile.rewind()
+                        
+            if streamExists:
+                if stream._channels == channels and stream._rate == rate:
+                    stream.start_stream()
+                    continue
+                else:
+                    stream.close()
+            newStream = self.pyaud.open(
+                format = self.pyaud.get_format_from_width(width=bpc),
+                channels = channels,
+                rate = rate,
+                output = True,
+                stream_callback = partial(self._getAudioData, wavIdx=i)
+            )
+            if len(self.outStreams) > i:
+                self.outStreams[i] = newStream
+            else:
+                self.outStreams.append(newStream)
+    def _closeWavStream(self, wavFile):
+        wavFile.getfp().close()
+        wavFile.close()
+    @staticmethod
+    def listen(event=None):
+        if not common.IS_WIN:
+            print("Audio currently only supported on Windows")
+            return
+        voice = PlaySegment.fromBlock(cur_file.textBlocks[cur_block])
+        if not voice.timeBased and cur_file.version < 6:
+            print("Old file version, does not have voice info.")
+            return "break"
+        storyId = cur_file.data.get("storyId")
+        if not storyId:
+            print("File has an invalid storyid.")
+            return "break"
+        elif len(storyId) < 9 and cur_file.type != "lyrics":
+            # Preview type would work but I don't understand the format/where it gets info unless it's really just awbTracks[15:-1]
+            print("Unsupported type.")
+            return "break"
+        elif voice is None:
+            print("No voice info found for this block.")
+            return "break"
+
+        global AUDIO_PLAYER
+        if not AUDIO_PLAYER:
+            AUDIO_PLAYER = AudioPlayer()
+        AUDIO_PLAYER.play(storyId, voice, sType=cur_file.type)
+        return "break"
 
 def change_chapter(event=None, initialLoad=False):
     global cur_chapter
@@ -635,33 +728,6 @@ def nextMissingName():
             change_block()
 
 
-def listen(event=None):
-    if not common.IS_WIN:
-        print("Currently unsupported on non-windows")
-        return
-    global AUDIO_PLAYER
-    if cur_file.version < 6:
-        print("Old file version, does not have voice info.")
-        return "break"
-    storyId = cur_file.data.get("storyId")
-    voiceIdx = cur_file.textBlocks[cur_block].get("voiceIdx")
-    if not storyId or len(storyId) < 9:
-        # Could support a few other types but isn't useful.
-        print("Unsupported type.")
-        return "break"
-    elif storyId is None:
-        print("File has an invalid storyid.")
-        return "break"
-    elif voiceIdx is None:
-        print("No voice info found for this block.")
-        return "break"
-    else:
-        if not AUDIO_PLAYER:
-            AUDIO_PLAYER = AudioPlayer()
-        AUDIO_PLAYER.play(storyId, voiceIdx, sType=cur_file.type)
-    return "break"
-
-
 def _switchWidgetFocusForced(e):
     e.widget.tk_focusNext().focus()
     return "break"
@@ -767,7 +833,7 @@ def main():
     btn_choices.grid(row=0, column=0)
     btn_colored = tk.Button(frm_btns_bot, text="Colored", command=lambda: toggleTextListPopup(target=cur_colored), state='disabled', width=10)
     btn_colored.grid(row=1, column=0)
-    btn_listen = tk.Button(frm_btns_bot, text="Listen", command=listen, width=10)
+    btn_listen = tk.Button(frm_btns_bot, text="Listen", command=AudioPlayer.listen, width=10)
     btn_listen.grid(row=0, column=1)
     btn_search = tk.Button(frm_btns_bot, text="Search", command=toggleSearchPopup, width=10)
     btn_search.grid(row=1, column=1)
@@ -847,7 +913,7 @@ def main():
     text_box_en.bind("<Alt-f>", process_text)
     text_box_en.bind("<Alt-F>", process_text)
     root.bind("<Control-f>", toggleSearchPopup)
-    text_box_en.bind("<Control-h>", listen)
+    text_box_en.bind("<Control-h>", AudioPlayer.listen)
 
     root.protocol("WM_DELETE_WINDOW", onClose)
 

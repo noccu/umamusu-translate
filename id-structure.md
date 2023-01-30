@@ -130,76 +130,77 @@ The structure used is simple: `00 0000 000`
 
 # Song IDs
 
-| ID | Name |
-|----|------|
-1001 | Umapyoi Densetsu
-1003 | RUN×RUN！
-1004 | Never Looking Back
-1005 | Irodori Phantasia
-1006 | Make debut!
-1007 | ENDLESS DREAM!!
-1008 | NEXT FRONTIER
-1009 | UNLIMITED IMPACT
-1010 | Special Record!
-1012 | Grow Up・Shine!
-1013 | Find My Only Way
-1023 | Our Bluebird Days
-1024 | Treasured Treasurebox
-1025 | Hajimari no Signal
-1026 | Sasayaka na Inori
-1027 | Honnou Speed
-1028 | winning the soul
-1029 | GIRLS' LEGEND U
-1030 | Namida hikatte asu ni nare!
-1031 | BLAZE
-1032 | Yume wo kakeru
-1033 | KIRARI MAGIC SHOW
-1034 | Pyoitto♪Hallelujah!
-1035 | WINnin’ 5 －ウイニング☆ファイヴ－
-1036 | GIRLS' LEGEND U
-1037 | transforming
-1040 | Seishun ga Matteru
-1041 | Yumezora
-1042 | Go This Way
-1043 | Komorobi no Yell
-1044 | Zensoku! Zenshin! Idol Power☆
-1046 | Nigekiri! Fallin' Love
-1047 | Ring Ring ダイアリー　
-1048 | BLOW my GALE
-1049 | バクシンバクシンバクシンシン
-1050 | We are DREAMERS!!
-1051 | Treasured Smile -Beyond The Future!-
-1052 | プロムダンスパート
-1053 | Gaze on Me!
-1054 | Ms. VICTORIA
-1055 | ゴルシンゴルシンゴルシンシン
-1056 | メジロ讃歌
-1057 | Tachiichi Zeroban! Juni ha Ichiban!
-1061 | ゆるパカHAPPY DAYS！
-1062 | わたしの印は大本命◎
-1063 | unbreakable
-1064 | SEVEN
-1065 | ふんわりSlowly
-1066 | My Against Fight
-1067 | アウト・オブ・トライアングル
-1068 | 願いのカタチ
-1069 | 硝子のエトワール
-1070 | LIKE THE WIND
-1071 | ときめきスクランブル
-1072 | ユースフルアイズ
-1073 | 笑っちゃお！
-1074 | 忘却にて
-1075 | ゴルシラップ
-1076 | Precious Star Dreamer
-1077 | ミッドナイト・エピローグ
-1078 | Ambitious World
-1079 | winning the soul (PandaBoY Remix)
-8501 | スタホTV
-8502 | 条件戦
-8503 | 怪物誕生
-8504 | 親馬選択
-8505 | 新馬生産
-9051 | 【MCパート】笑顔の宝物 -Beyond The Future!-
+| ID | Japanese | English |
+|----|------|---|
+1001 | うまぴょい伝説 | Umapyoi Densetsu
+1003 | RUN×RUN！ | RUN×RUN！
+1004 | Never Looking Back | Never Looking Back
+1005 | 彩 Phantasia | Irodori Phantasia
+1006 | Make debut! | Make debut!
+1007 | ENDLESS DREAM!! | ENDLESS DREAM!!
+1008 | NEXT FRONTIER | NEXT FRONTIER
+1009 | UNLIMITED IMPACT | UNLIMITED IMPACT
+1010 | Special Record! | Special Record!
+1012 | グロウアップ・シャイン！ | Grow Up・Shine!
+1013 | Find My Only Way | Find My Only Way
+1023 | ぼくらのブルーバードデイズ | Our Bluebird Days
+1024 | 大好きのタカラバコ | Treasured Treasurebox
+1025 | はじまりのSignal | Hajimari no Signal
+1026 | ささやかな祈り | Sasayaka na Inori
+1027 | 本能スピード | Honnou Speed
+1028 | winning the soul | winning the soul
+1029 | GIRLS' LEGEND U | GIRLS' LEGEND U
+1030 | 涙ひかって明日になれ！ | Namida hikatte asu ni nare!
+1031 | BLAZE | BLAZE
+1032 | ユメヲカケル！ | Yume wo kakeru
+1033 | KIRARI MAGIC SHOW | KIRARI MAGIC SHOW
+1034 | ぴょいっと♪はれるや！ | Pyoitto♪Hallelujah!
+1035 | WINnin’ 5 －ウイニング☆ファイヴ－ | WINnin’ 5 －ウイニング☆ファイヴ－
+1036 | GIRLS' LEGEND U | GIRLS' LEGEND U
+1037 | transforming | transforming
+1040 | 青春が待ってる | Seishun ga Matteru
+1041 | ユメゾラ | Yumezora
+1042 | Go This Way | Go This Way
+1043 | 木漏れ日のエール | Komorobi no Yell
+1044 | 全速！前進！ウマドルパワー☆ | Zensoku! Zenshin! Idol Power☆
+1046 | 逃げ切りっ！Fallin' Love | Nigekiri! Fallin' Love
+1047 | Ring Ring ダイアリー　 | Ring Ring ダイアリー　
+1048 | BLOW my GALE | BLOW my GALE
+1049 | バクシンバクシンバクシンシン | Bakushinbakushinbakushinshin
+1050 | We are DREAMERS!! | We are DREAMERS!!
+1051 | 笑顔の宝物 -Beyond The Future!- | Treasured Smile -Beyond The Future!-
+1052 | プロムダンスパート | Prom Dance Part
+1053 | Gaze on Me! | Gaze on Me!
+1054 | Ms. VICTORIA | Ms. VICTORIA
+1055 | ゴルシンゴルシンゴルシンシン | Golshingolshingolshinshin
+1056 | メジロ讃歌 | Mejiro Hymn
+1057 | 立ち位置ゼロ番！順位は一番！ | Tachiichi Zeroban! Juni ha Ichiban!
+1059 | Overrunner! | 
+1061 | ゆるパカHAPPY DAYS！ | YuruPaka HAPPY DAYS！
+1062 | わたしの印は大本命◎ | わたしの印は大本命◎
+1063 | unbreakable | 
+1064 | SEVEN | 
+1065 | ふんわりSlowly | Fluffy&Slowly
+1066 | My Against Fight | 
+1067 | アウト・オブ・トライアングル | Out of Training
+1068 | 願いのカタチ | The Shape of a Wish
+1069 | 硝子のエトワール | Glass Étoile
+1070 | LIKE THE WIND | 
+1071 | ときめきスクランブル | Heartthrob Scramble
+1072 | ユースフルアイズ | Youthful Sign
+1073 | 笑っちゃお！ | Live&Laugh!
+1074 | 忘却にて | Being Forgotten
+1075 | ゴルシラップ | Golshi Rap
+1076 | Precious Star Dreamer | 
+1077 | ミッドナイト・エピローグ | Midnight Epilogue
+1078 | Ambitious World | 
+1079 | winning the soul (PandaBoY Remix) | 
+8501 | スタホTV | 
+8502 | 条件戦 | 
+8503 | 怪物誕生 | 
+8504 | 親馬選択 | 
+8505 | 新馬生産 | 
+9051 | 【MCパート】笑顔の宝物 -Beyond The Future!- | 
 
 # Index IDs
 

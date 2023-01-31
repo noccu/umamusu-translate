@@ -14,7 +14,7 @@ IF %ERRORLEVEL% NEQ 0 (
 )
 ECHO Using %snek%
 %snek% --version
-%snek% -m pip show unitypy
+%snek% -m pip show unitypy  | findstr /B "Version Location"
 
 ECHO(
 

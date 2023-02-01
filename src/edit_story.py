@@ -22,9 +22,6 @@ COLOR_WIN = "systemWindow" if common.IS_WIN else "white"
 COLOR_BTN = "SystemButtonFace" if common.IS_WIN else "gray"
 AUDIO_PLAYER = None
 
-LAST_EN_TEXT = None
-#TODO: optimize the checks for this
-
 @dataclass
 class PlaySegment:
     idx: int
@@ -209,6 +206,22 @@ class AudioPlayer:
         AUDIO_PLAYER.play(storyId, voice, sType=cur_file.type)
         return "break"
 
+class SaveState:
+    lastEnText: str
+    _unsavedChanges = set()
+    def markBlockLoaded(self, chapter:int, block:dict):
+        self.lastEnText = block.get('enText')
+    def markBlockSaved(self, chapter:int, block:dict):
+        text = block.get('enText')
+        # short the str comp when changes already known
+        if not chapter in self._unsavedChanges and text != self.lastEnText:
+            self._unsavedChanges.add(chapter)
+    def markChapterSaved(self, chapter: int):
+        self._unsavedChanges.remove(chapter)
+    def unsavedChanges(self):
+        return self._unsavedChanges
+
+
 def change_chapter(event=None, initialLoad=False):
     global cur_chapter
     global cur_block
@@ -269,7 +282,6 @@ def load_block(event=None, dir=1):
     global next_index
     global cur_choices
     global cur_colored
-    global LAST_EN_TEXT
 
     blocks = cur_file.textBlocks
     cur_block_data =  blocks[cur_block]
@@ -324,7 +336,6 @@ def load_block(event=None, dir=1):
     text_box_jp.configure(state='disabled')
     text_box_en.delete(1.0, tk.END)
     text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
-    LAST_EN_TEXT = cur_block_data['enText']
 
     # Update choices button
     cur_choices = cur_block_data.get('choices')
@@ -345,14 +356,13 @@ def load_block(event=None, dir=1):
     else:
         btn_colored['state'] = 'disabled'
         btn_colored.config(bg=COLOR_BTN)
+    SAVE_STATE.markBlockLoaded(cur_chapter, cur_block_data)
         
 
 def save_block():
     if "enName" in cur_file.textBlocks[cur_block]:
         cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
     cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
-    if cur_file.textBlocks[cur_block]['enText'] != LAST_EN_TEXT:
-        LAST_CHANGED[cur_chapter] = common.currentTimestamp()
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -369,6 +379,7 @@ def save_block():
                 block_duration_spinbox.insert(0, "-1")
     elif new_clip_length != "-1":
         cur_file.textBlocks[cur_block].pop('newClipLength', None)
+    SAVE_STATE.markBlockSaved(cur_chapter, cur_file.textBlocks[cur_block])
 
 
 def prev_block(event=None):
@@ -394,12 +405,13 @@ def loadFile(chapter=None):
         files[ch] = common.TranslationFile(files[ch])
 
 def saveFile(event=None):
-    if save_on_next.get() == 0:
-        print("Saved")
     save_block()
     if set_humanTl.get() == 1:
         cur_file.data["humanTl"] = True
     cur_file.save()
+    if save_on_next.get() == 0:
+        print("Saved")
+    SAVE_STATE.markChapterSaved(cur_chapter)
 
 
 def show_text_list():
@@ -733,13 +745,8 @@ def _switchWidgetFocusForced(e):
     return "break"
 
 def onClose(event=None):
-    hasChanges = list()
-    for ch, file in enumerate(files):
-        if isinstance(file, str): continue
-        if LAST_CHANGED[ch] > file.data.get("modified") + 1: # allow some breathing room
-            hasChanges.append(str(ch+1))
-    if hasChanges:
-        answer = messagebox.askyesno(title="Quit", message=f"Unsaved chapters: {', '.join(hasChanges)}\nDo you want to quit without saving?")
+    if unsavedChapters := SAVE_STATE.unsavedChanges():
+        answer = messagebox.askyesno(title="Quit", message=f"Unsaved chapters: {', '.join(str(x+1) for x in unsavedChapters)}\nDo you want to quit without saving?")
         if not answer:
             return
 
@@ -767,7 +774,7 @@ def main():
     global skip_translated
     global set_humanTl
     global large_font
-    global LAST_CHANGED
+    global SAVE_STATE
 
     cur_chapter = 0
     cur_block = 0
@@ -785,7 +792,8 @@ def main():
             raise SystemExit
 
     files.sort()
-    LAST_CHANGED = [0] * len(files)
+
+    SAVE_STATE = SaveState()
 
     root = tk.Tk()
     root.title("Edit Story")

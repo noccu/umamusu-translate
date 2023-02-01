@@ -79,6 +79,8 @@ function translate() {
         translateSpecific("genLimMiss", jpText, PFILES.missions)
         translateSpecific("skillMis", jpText, PFILES.missions)
         translateSpecific("affec", jpText, PFILES.missions)
+        translateSpecific("stratTrain", jpText, PFILES.missions)
+        translateSpecific("mainRace", jpText, PFILES.missions)
     }
     // story-event-missions.json
     for (let [jpText, enText] of Object.entries(PFILES.storyMissions.text)) {
@@ -448,6 +450,25 @@ function translateSpecific (type, jpText, file) {
                 umaNameEn = PFILES.umaNames.text[umaName];
             if (umaNameEn) {
                 data[jpText] = `Raise ${umaNameEn}'s \\naffection to rank ${rank}`;
+            }
+        }
+    }
+    else if (type == "stratTrain") {
+        m = jpText.match(/(.+?)の(?:脚質|距離|バ場)適性\[([A-Z+]{1,3})\]のウマ娘を\\n(\d+)回育成しよう/)
+        if (m) {
+            let [,strat, rank, num] = m, 
+                stratEn = PFILES.common.text[strat];
+            if (stratEn) {
+                data[jpText] = `Train ${num} horsegirls with \\n${rank} rank ${stratEn} aptitude`;
+            }
+        }
+    }
+    else if (type == "mainRace") {
+        m = jpText.match(/メインストーリー第(\d)部(\d)章(\d.?)で\\nレースに勝利しよう/)
+        if (m) {
+            let [,act, chapter, race] = m;
+            if (act && chapter && race) {
+                data[jpText] = `Win the ${race} race in \\nMain Story Act ${act}, chapter ${chapter}`;
             }
         }
     }

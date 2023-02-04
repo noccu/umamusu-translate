@@ -18,6 +18,8 @@ class NoAssetError(PatchError): pass
 
 
 class PatchManager:
+    totalFilesProcessed = 0
+    totalFilesImported = 0
     def __init__(self, args: argparse.Namespace) -> None:
         self.errorLog = stdout
         self.config(args)
@@ -53,6 +55,7 @@ class PatchManager:
         print(f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}")
         files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx, changed = self.args.changed)
         nFiles = len(files)
+        self.totalFilesProcessed += nFiles
         nErrors = 0
         print(f"Found {nFiles} files.")
 
@@ -68,6 +71,7 @@ class PatchManager:
                     nFiles -= 1
                     if self.args.write_log:
                         print_exc(chain=True, file=self.errorLog)
+        self.totalFilesImported += nFiles
         print(f"Imported {nFiles} files in {deltaTime(startTime)} seconds.")
         if nErrors > 0:
             print(f"There were {nErrors} errors. Check import.log for details.")
@@ -325,6 +329,7 @@ def main():
         global convertTlFile
         from helpers import isUsingTLG
         from manage import convertTlFile
+    startTime = now()
     patcher = PatchManager(args)
     try:
         patcher.start()
@@ -332,6 +337,7 @@ def main():
             for type in common.TARGET_TYPES[1:]:
                 patcher.config(type=type)
                 patcher.start()
+            print(f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}")
     finally:
         patcher.finish()
 

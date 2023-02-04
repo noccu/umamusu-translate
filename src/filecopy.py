@@ -128,7 +128,7 @@ def copy(data, args):
 
 
 def parseArgs(src=None):
-    ap = common.Args("Copy files for backup or testing")
+    ap = common.Args("Copy files for backup or testing", types=[*common.TARGET_TYPES, "ruby"])
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-p", "--path", help="Unity filepath wildcard")
     ap.add_argument("--custom", action="store_true", help="Ignore additional argument processing.\n\

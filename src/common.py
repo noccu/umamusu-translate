@@ -22,7 +22,7 @@ if IS_WIN:
 else:
     GAME_ROOT = GAME_ASSET_ROOT = GAME_META_FILE = GAME_MASTER_FILE = None
 SUPPORTED_TYPES = ["story", "home", "race", "lyrics", "preview", "ruby", "mdb"]  # Update indexing on next line
-TARGET_TYPES = SUPPORTED_TYPES[:-1]  # Omit mdb
+TARGET_TYPES = SUPPORTED_TYPES[:-2]  # Classic asset types we want to read/write.
 NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
 
 

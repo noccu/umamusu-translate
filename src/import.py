@@ -1,7 +1,7 @@
 import argparse
 from pathlib import Path
 from traceback import print_exc
-from sys import stdout
+# from sys import stdout
 from functools import reduce
 from time import time as now
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
@@ -21,7 +21,7 @@ class PatchManager:
     totalFilesProcessed = 0
     totalFilesImported = 0
     def __init__(self, args: argparse.Namespace) -> None:
-        self.errorLog = stdout
+        # self.errorLog = stdout
         self.config(args)
 
     def config(self, args=None, **kwargs):
@@ -45,10 +45,10 @@ class PatchManager:
         #     self.errorLog = stdout
 
     # TODO: replace with logger module probably
-    def __getstate__(self):
-        data = self.__dict__.copy()
-        del data['errorLog']
-        return data
+    # def __getstate__(self):
+    #     data = self.__dict__.copy()
+    #     del data['errorLog']
+    #     return data
 
     def start(self):
         startTime = now()
@@ -69,8 +69,8 @@ class PatchManager:
                 except:
                     nErrors += 1
                     nFiles -= 1
-                    if self.args.write_log:
-                        print_exc(chain=True, file=self.errorLog)
+                    if self.args.verbose:
+                        print_exc(chain=True)
         self.totalFilesImported += nFiles
         print(f"Imported {nFiles} files in {deltaTime(startTime)} seconds.")
         if nErrors > 0:
@@ -96,7 +96,8 @@ class PatchManager:
         return isModified
 
     def finish(self):
-        if self.errorLog is not stdout: self.errorLog.close()
+        pass
+        # if self.errorLog is not stdout: self.errorLog.close()
 
     def loadTranslationFile(self, path):
         try:

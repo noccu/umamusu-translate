@@ -4,7 +4,7 @@ from traceback import print_exc
 # from sys import stdout
 from functools import reduce
 from time import time as now
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 import common
 from common import GameBundle
@@ -61,16 +61,13 @@ class PatchManager:
 
         # Not sure if threads are useful but multi-process takes too long upfront for low counts.
         with (ProcessPoolExecutor() if nFiles > 25 else ThreadPoolExecutor()) as pool:
-            for completed in as_completed((pool.submit(self.patchFile, file) for file in files)):
-                try:
-                    result = completed.result()
-                    if not result:
-                        nFiles -= 1
-                except:
+            # map seems to be a tiny bit faster maybe? chunksize seems to affect nothing, haven't tested >100 files tho
+            for result in pool.map(self.patchFile, files):
+                if result is None:
                     nErrors += 1
                     nFiles -= 1
-                    if self.args.verbose:
-                        print_exc(chain=True)
+                elif result is False:
+                    nFiles -= 1
         self.totalFilesImported += nFiles
         print(f"Imported {nFiles} files in {deltaTime(startTime)} seconds.")
         if nErrors > 0:
@@ -92,7 +89,9 @@ class PatchManager:
             print(f"Skipped {file}: {e}")
         except:
             print(f"Error importing {file}")
-            raise
+            if self.args.verbose:
+                print_exc(chain=True)
+                isModified = None
         return isModified
 
     def finish(self):

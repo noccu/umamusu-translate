@@ -376,10 +376,10 @@ class TranslationFile:
 class GameBundle:
     editMark = b"\x08\x04"
 
-    def __init__(self, path, load=True) -> None:
+    def __init__(self, path, load=True, bType="story") -> None:
         self.bundlePath = Path(path)
         self.bundleName = self.bundlePath.stem
-        self.bundleType = "story"
+        self.bundleType = bType
         self.exists = self.bundlePath.exists()
         self.data = None
         self.patchData:bytes = b""
@@ -452,9 +452,10 @@ class GameBundle:
 
 
     @classmethod
-    def fromName(cls, name, load=True):
+    def fromName(cls, name, **kwargs):
+        '''Create a bundle by hash/name from the default game dir. kwargs passed to constructor'''
         bundlePath = PurePath(GAME_ASSET_ROOT, name[0:2], name)
-        return cls(bundlePath, load)
+        return cls(bundlePath, **kwargs)
 
     @staticmethod
     def createPath(dstFolder, dstName):

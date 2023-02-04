@@ -14,12 +14,11 @@ MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"
 
 def download(file, t:str = "story", verbose = False):
     if t in ('sound', 'movie', 'font'):
-        endpoint = GENERIC_ENDPOINT
+        url = GENERIC_ENDPOINT.format(file)
     elif t.startswith('manifest'):
-        endpoint = MANIFEST_ENDPOINT
+        url = MANIFEST_ENDPOINT.format(file)
     else:
-        endpoint = ASSET_ENDPOINT
-    url = endpoint.format(file)
+        url = ASSET_ENDPOINT.format(file)
     if verbose:
         print(f"Downloading {file} from {url}")
     else:
@@ -47,19 +46,19 @@ def save(bundle:GameBundle, args):
             return 0
     return 1
 
+
 def restore(file, args):
     if args.src:
-        bundle = GameBundle.fromName(args.src, load=False)
-        bundle.bundleType = args.srctype
+        bundle = GameBundle.fromName(args.src, load=False, bType=args.srctype)
     else:
-        file = common.TranslationFile(file)
-        bundle = GameBundle.fromName(file.bundle, load=False)
-        if not args.force_restore and bundle.exists and not bundle.isPatched:
-            print(f"Bundle {bundle.bundleName} not patched, skipping.")
-            return 0
-
+        file = common.TranslationFile(file, readOnly=True)
+        bundle = GameBundle.fromName(file.bundle, load=False, bType=file.type)
+    if not args.force_restore and bundle.exists and not bundle.isPatched:
+        print(f"Bundle {bundle.bundleName} not patched, skipping.")
+        return 0
     if args.verbose: print(f"Saving file to {bundle.bundlePath}")
     return save(bundle, args)
+
 
 def parseArgs(src = None):
     ap = common.Args("Restore game files from backup or CDN download")

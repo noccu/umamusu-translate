@@ -79,7 +79,7 @@ Double click `run.bat`
 # Updating
 1. Double click `update.bat` if you installed MinGit, else pull or download the project again and overwrite
     - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! Please contribute them here so everybody can enjoy!
-1. Double click `run.bat` and/or `mdb*.bat` as required.
+1. Double click `run.bat` and/or `mdb import.bat` as required.
     - `run.bat` also updates the UI-related files **after** you've followed the UI step above.
 
 # Advanced Usage

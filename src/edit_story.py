@@ -361,8 +361,8 @@ def load_block(event=None, dir=1):
 
 def save_block():
     if "enName" in cur_file.textBlocks[cur_block]:
-        cur_file.textBlocks[cur_block]['enName'] = cleanText(speaker_en_entry.get())
-    cur_file.textBlocks[cur_block]['enText'] = txt_for_display(text_box_en.get(1.0, tk.END), reverse=True)
+        cur_file.textBlocks[cur_block]['enName'] = normalizeEditorText(speaker_en_entry.get())
+    cur_file.textBlocks[cur_block]['enText'] = txt_for_storage(text_box_en.get(1.0, tk.END))
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -397,7 +397,7 @@ def next_block(event=None):
 
 def copy_block(event=None):
     root.clipboard_clear()
-    root.clipboard_append(cur_file.textBlocks[cur_block]['jpText'])
+    root.clipboard_append(txt_for_display(cur_file.textBlocks[cur_block]['jpText']))
 
 def loadFile(chapter=None):
     ch = chapter or cur_chapter
@@ -435,7 +435,7 @@ def close_text_list():
     for i, t in enumerate(extra_text_list_textboxes):
         jpBox, enBox = t
         if cur_text_list and i < len(cur_text_list):
-            cur_text_list[i]['enText'] = cleanText(enBox.get(1.0, tk.END))  # choice don't really need special handling
+            cur_text_list[i]['enText'] = normalizeEditorText(enBox.get(1.0, tk.END))  # choice don't really need special handling
         jpBox['state'] = 'normal'  # enable deletion...
         jpBox.delete(1.0, tk.END)
         enBox.delete(1.0, tk.END)
@@ -684,27 +684,22 @@ def process_text(event):
         proc_text = cur_file.textBlocks[cur_block].get("enText")
     else:
         opts["redoNewlines"] = True if event.state & 0x0001 else False
-        proc_text = textprocess.processText(cur_file, cleanText(text_box_en.get(1.0, tk.END)), opts)
+        proc_text = textprocess.processText(cur_file, normalizeEditorText(text_box_en.get(1.0, tk.END)), opts)
     text_box_en.delete(1.0, tk.END)
     text_box_en.insert(tk.END, proc_text)
     return "break"
 
 
-def txt_for_display(text, reverse=False):
+def txt_for_display(text):
     if cur_file.escapeNewline:
-        if reverse:
-            text = cleanText(text)
-            return text.replace("\n", "\\n")
-        else:
-            return text.replace("\\n", "\n")
+        return re.sub(r"(?:\\[rn])+", "\n", text)
     else:
-        if reverse:
-            text = cleanText(text)
-        return text
+        return text.replace("\r", "")
+def txt_for_storage(text):
+    return normalizeEditorText(text, "\\n" if cur_file.escapeNewline else "\n")
 
-
-def cleanText(text: str):
-    return " \n".join([line.strip() for line in text.strip().split("\n")])
+def normalizeEditorText(text: str, newline:str="\n"):
+    return f" {newline}".join([line.strip() for line in text.strip().split("\n")])
 
 def loadFont(fontPath):
     # code modified from https://github.com/ifwe/digsby/blob/f5fe00244744aa131e07f09348d10563f3d8fa99/digsby/src/gui/native/win/winfonts.py#L15

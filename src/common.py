@@ -199,7 +199,6 @@ class TranslationFile:
         if load:
             if not file: raise RuntimeError("Attempting to load tlfile but no file provided.")
             self.setFile(file)
-            self.fileExists = True  # should error if it does not
             self.reload()
         else:
             self.fileExists = False
@@ -323,6 +322,7 @@ class TranslationFile:
 
     def reload(self):
         self.data = helpers.readJson(self.file)
+        self.fileExists = True  # should error if it does not
         self.init()
 
     def save(self):
@@ -350,6 +350,8 @@ class TranslationFile:
     def init(self, snapshot=True):
         self.version = self._getVersion()
         self.escapeNewline = self.type in ("race", "preview", "mdb", "lyrics")
+        if self.type == "mdb" and "system_text" in self.file:
+            self.escapeNewline = False
         self.data['text'] = self.TextData(self)
         if snapshot: self.snapshot()
 

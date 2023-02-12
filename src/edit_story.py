@@ -217,7 +217,7 @@ class SaveState:
         if not chapter in self._unsavedChanges and text != self.lastEnText:
             self._unsavedChanges.add(chapter)
     def markChapterSaved(self, chapter: int):
-        self._unsavedChanges.remove(chapter)
+        self._unsavedChanges.discard(chapter)
     def unsavedChanges(self):
         return self._unsavedChanges
 
@@ -678,7 +678,7 @@ def process_text(event):
             "replaceMode": "limit",
             "lineLength": -1,
             "targetLines": 99}
-    if getattr(event, "all"):
+    if getattr(event, "all", None):
         for block in cur_file.textBlocks:
             block['enText'] = textprocess.processText(cur_file, block['enText'], opts)
         proc_text = cur_file.textBlocks[cur_block].get("enText")

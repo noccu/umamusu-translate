@@ -741,7 +741,8 @@ def _switchWidgetFocusForced(e):
 
 def onClose(event=None):
     if unsavedChapters := SAVE_STATE.unsavedChanges():
-        answer = messagebox.askyesno(title="Quit", message=f"Unsaved chapters: {', '.join(str(x+1) for x in unsavedChapters)}\nDo you want to quit without saving?")
+        unsavedFiles = "\n".join(files[x].name for x in unsavedChapters)
+        answer = messagebox.askyesno(title="Quit", message=f"Unsaved files:\n{unsavedFiles}\nDo you want to quit without saving?")
         if not answer:
             return
 

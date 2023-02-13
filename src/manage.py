@@ -144,13 +144,13 @@ def convertMdb():
     print(f"Converted {len(converted)} files.")
     return converted
 
-def convertTlFile(file: common.TranslationFile, overwrite=False):
+def convertTlFile(tlFile: common.TranslationFile, overwrite=False):
     converted = list()
-    path = LOCALIFY_DATA_DIR / file.type / (file.getStoryId() + ".json")
-    if not overwrite and path.exists() and path.stat().st_mtime >= Path(file.file).stat().st_mtime:
+    path = LOCALIFY_DATA_DIR / tlFile.type / (tlFile.getStoryId() + ".json")
+    if not overwrite and path.exists() and path.stat().st_mtime >= tlFile.file.stat().st_mtime:
         return
     data = dict()
-    for b in file.genTextContainers():
+    for b in tlFile.genTextContainers():
         if text := b.get('enText'):
             data[TextHasher.hash(b['jpText'])] = TextHasher.normalize(text)
         if name := b.get('enName'):

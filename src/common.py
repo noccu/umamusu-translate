@@ -3,7 +3,7 @@ import json
 import os
 from pathlib import Path, PurePath
 import sys
-from typing import Generator
+from typing import Generator, Union
 import regex
 from datetime import datetime, timezone
 from dataclasses import dataclass, astuple, asdict
@@ -194,7 +194,7 @@ class TranslationFile:
     ver_offset_mdb = 100
     textBlacklist = regex.compile(r"^タイトルコール$|イベントタイトルロゴ表示.*|※*ダミーテキスト|^欠番$")
 
-    def __init__(self, file=None, load=True, readOnly=False):
+    def __init__(self, file:Union[str, Path]=None, load=True, readOnly=False):
         self.readOnly = readOnly
         if load:
             if not file: raise RuntimeError("Attempting to load tlfile but no file provided.")
@@ -314,7 +314,7 @@ class TranslationFile:
             return self.data['storyId']
         else:
             isN = regex.compile(r"\d+")
-            g, id, idx = PurePath(self.file).parts[-3:]  # project structure provides at least 3 levels, luckily
+            g, id, idx = self.file.parts[-3:]  # project structure provides at least 3 levels, luckily
             if not isN.match(g): g = ""
             if not isN.match(id): id = ""
             idx = isN.match(idx)[0]
@@ -343,14 +343,14 @@ class TranslationFile:
         else:
             self._snapshot = json.dumps(self.data, ensure_ascii=False, default=helpers._to_json)
 
-    def setFile(self, file):
-        self.file = file
-        self.name = PurePath(file).name
+    def setFile(self, file:Union[str, Path]):
+        self.file = Path(file)
+        self.name = self.file.name
 
     def init(self, snapshot=True):
         self.version = self._getVersion()
         self.escapeNewline = self.type in ("race", "preview", "mdb", "lyrics")
-        if self.type == "mdb" and "system_text" in self.file:
+        if self.type == "mdb" and self.file.parent.name == "character_system_text":
             self.escapeNewline = False
         self.data['text'] = self.TextData(self)
         if snapshot: self.snapshot()
@@ -370,8 +370,8 @@ class TranslationFile:
             idx = StoryId.parse(tlFile.type, tlFile.getStoryId()).idx
             title = tlFile.data.get('title')
             newName = f"{idx} ({title}).json" if title else f"{idx}.json"
-        newName = Path(tlFile.file).parent.joinpath(helpers.sanitizeFilename(newName))
-        os.rename(tlFile.file, newName)
+        newName = tlFile.file.parent.joinpath(helpers.sanitizeFilename(newName))
+        tlFile.file.rename(newName)
         tlFile.setFile(newName)
 
 

@@ -77,6 +77,7 @@ Aston Machan | Complete | [Snep]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
+Daitaku Helios | Complete | [LotoDS][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Daiichi Ruby | In progress | [Riersa] (1-4)
 Eishin Flash | Complete, Stalled, In progress | deepl, [noccu] (ep 1-2), Admiy

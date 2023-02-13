@@ -406,12 +406,20 @@ def loadFile(chapter=None):
 
 def saveFile(event=None):
     save_block()
-    if set_humanTl.get() == 1:
-        cur_file.data["humanTl"] = True
-    cur_file.save()
-    if save_on_next.get() == 0:
-        print("Saved")
-    SAVE_STATE.markChapterSaved(cur_chapter)
+    saveAll = event and (event.state & 0x0001)
+    targets = files if saveAll else (cur_file,)
+
+    for ch, file in enumerate(targets):
+        if saveAll and isinstance(file, str):
+            continue
+        if set_humanTl.get() == 1:
+            file.data["humanTl"] = True
+        file.save()
+        if save_on_next.get() == 0 and not saveAll:
+            print(f"Saved")
+        SAVE_STATE.markChapterSaved(ch if saveAll else cur_chapter)
+    if saveAll:
+        print("Saved all files")
 
 
 def show_text_list():
@@ -898,6 +906,7 @@ def main():
 
     root.bind("<Control-Return>", next_block)
     root.bind("<Control-s>", saveFile)
+    root.bind("<Control-S>", saveFile)
     root.bind("<Alt-Up>", prev_block)
     root.bind("<Alt-Down>", next_block)
     root.bind("<Control-Alt-Up>", prev_ch)

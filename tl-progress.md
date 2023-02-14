@@ -195,6 +195,7 @@ Vodka | In progress | [robflop]
 name | translator
 --- | ---
 Manhattan Cafe | [Kuwaiden]
+Ines Fujin | [noccu]
 
 # System text
 name | progress | translator

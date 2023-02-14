@@ -167,7 +167,7 @@ Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | Stalled | Anonymous Reindeer
-Sakura Bakushin O | Complete | deepl
+Sakura Bakushin O | Complete, In progress | deepl, [Kasey]
 Vodka | In progress | [robflop]
 
 ## Cards
@@ -186,6 +186,7 @@ Maruzensky | Complete | [noccu]
 Curren Chan | Complete | [noccu]
 Kitasan Black | Stalled | [noccu] (solo 2)
 Gold Ship | Complete | [noccu] (solo 1-2), deepl
+Sakura Bakushin O | In progress | [Kasey]
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl
 Vodka | In progress | [robflop]
 
@@ -194,8 +195,9 @@ Vodka | In progress | [robflop]
 ## Valentine
 name | translator
 --- | ---
-Manhattan Cafe | [Kuwaiden]
 Ines Fujin | [noccu]
+Manhattan Cafe | [Kuwaiden]
+Sakura Bakushin O | [Kasey]
 
 # System text
 name | progress | translator
@@ -209,6 +211,7 @@ Mejiro Ardan | Complete | [Riersa] (deepl edit)
 Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa] (deepl edit)
 Narita Taishin | Complete | [Riersa] (deepl edit)
+Sakura Bakushin O | In progress | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
 Twin Turbo | Complete | [noccu]
@@ -269,3 +272,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Riersa]: https://www.reddit.com/u/Riersa
 [Director Kok]: https://www.twitch.tv/chrissss_pp
 [COSMET]: https://gyaxa.dreamwidth.org/
+[Kasey]: https://diabolicalbaker.carrd.co/

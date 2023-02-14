@@ -22,12 +22,14 @@ const FILES = {
         common: "translations/mdb/common.json",
         shoeSize: "translations/mdb/uma-profile-shoesize.json",
         lessonEffects: "translations/mdb/lesson-talent-bonus.json",
-        items: "translations/mdb/item-desc.json"
+        itemsName: "translations/mdb/item-name.json",
+        itemsDesc: "translations/mdb/item-desc.json"
     }
 const UNCOMMON_FILES = [
     "shoeSize",
     "lessonEffects",
-    "items"
+    "itemsName",
+    "itemsDesc"
 ]
 const PFILES = {};
 const FAN_AMOUNT = {
@@ -221,14 +223,39 @@ function translate() {
         PFILES.lessonEffects.text[jpText] = enText.join("\\n"); //write full name, whichever parts were found
     }
 
-    //* item-desc
-    for (let [jpText, enText] of Object.entries(PFILES.items.text)) {
+    //* item-name
+    for (let [jpText, enText] of Object.entries(PFILES.itemsName.text)) {
         if (enText) continue;
 
-        let [,umaName] = jpText.match(/(.+)の手作りチョコ/)
-        let umaNameEn = PFILES.umaNames[umaName]
+        let m = jpText.match(/(.+)の手作りチョコ|(.+)の特別チョコ/)
+        if (!m) continue
+        let [,umaName, umaNameSpec] = m
+        let umaNameEn = PFILES.umaNames.text[umaName || umaNameSpec]
         if (umaNameEn) {
-            PFILES.items.text[jpText] = `<size=22>Handmade by ${umaNameEn}. Restores 30TP upon use.\\n</size>`;
+            if (umaNameSpec) {
+                PFILES.itemsName.text[jpText] = `${umaNameEn}'s Special Chocolates`;
+            }
+            else {
+                PFILES.itemsName.text[jpText] = `${umaNameEn}'s Handmade Chocolates`;
+            }
+        }
+    }
+
+    //* item-desc
+    for (let [jpText, enText] of Object.entries(PFILES.itemsDesc.text)) {
+        if (enText) continue;
+
+        let m = jpText.match(/(.+)の手作りチョコ|(.+)の特別チョコ/)
+        if (!m) continue
+        let [,umaName, umaNameSpec] = m
+        let umaNameEn = PFILES.umaNames.text[umaName || umaNameSpec]
+        if (umaNameEn) {
+            if (umaNameSpec) {
+                PFILES.itemsDesc.text[jpText] = `<size=22>Specially made by ${umaNameEn}. Restores 30TP upon use.\\n</size>`;
+            }
+            else{
+                PFILES.itemsDesc.text[jpText] = `<size=22>Handmade by ${umaNameEn}. Restores 30TP upon use.\\n</size>`;
+            }
         }
     }
 }

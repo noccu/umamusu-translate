@@ -15,7 +15,7 @@ Stalled | Translation was partial, paused, or cancelled.
 Complete | All the relevant content is available in English.
 Finished | Content satisfies this project's translation standards and style guide (to come).
 
-# Main
+# Main Story
 name | progress | translator
 --- | --- | ---
 Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
@@ -188,6 +188,13 @@ Kitasan Black | Stalled | [noccu] (solo 2)
 Gold Ship | Complete | [noccu] (solo 1-2), deepl
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl
 Vodka | In progress | [robflop]
+
+# Special Events
+
+## Valentine
+name | translator
+--- | ---
+Manhattan Cafe | [Kuwaiden]
 
 # System text
 name | progress | translator

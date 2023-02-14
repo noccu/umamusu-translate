@@ -17,6 +17,7 @@ The structure used is simple: `00 0000 000`
  08 | Story mode prologues/intro | `0000`: URA (001), Aoharu (002)
  09 | Event stories (story mode)
  10 | Anniversary stories
+ 11 | Uma-specific campaign dialogues? (Valentines, …)
  12 | Campaign popups? (Omikuji, …)
  13 | Special/Collab stories (KIRARI MAGIC SHOW, …)
  40 | Scenario story events |  `0000`: shared (clock usage, training equipment level up, …) `0001`: URA `0002`: Aoharu `0004`: MNT

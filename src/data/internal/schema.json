@@ -15,6 +15,10 @@
           "type": "integer",
           "maximum": 100
         },
+        "textSize": {
+          "type": "integer",
+          "maximum": 100
+        },
         "text": true,
         "modified": {
           "type": "integer",

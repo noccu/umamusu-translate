@@ -837,7 +837,7 @@ def main():
     text_box_jp = tk.Text(root, width=TEXTBOX_WIDTH, height=4, state='disabled', font=large_font)
     text_box_jp.grid(row=3, column=0, columnspan=4)
 
-    text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=5, undo=True, font=large_font)
+    text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=6, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
 
     frm_btns_bot = tk.Frame(root)

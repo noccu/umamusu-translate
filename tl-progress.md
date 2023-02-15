@@ -183,10 +183,13 @@ name | progress | translator
 --- | --- | ---
 All not listed up to 2023/01/01 | Complete | deepl (contributed by Korgi up to 2022/07/08)
 Maruzensky | Complete | [noccu]
+Mihono Bourbon | In progress | [noccu] (solo 1)
 Curren Chan | Complete | [noccu]
 Kitasan Black | Stalled | [noccu] (solo 2)
 Gold Ship | Complete | [noccu] (solo 1-2), deepl
+Hishi Amazon | Stalled | [noccu] (duo 2)
 Sakura Bakushin O | In progress | [Kasey]
+Shinko Windy | Stalled | [noccu] (solo 3)
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl
 Vodka | In progress | [robflop]
 

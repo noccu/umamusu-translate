@@ -209,7 +209,7 @@ class AudioPlayer:
 class SaveState:
     lastEnText: str
     _unsavedChanges = set()
-    def markBlockLoaded(self, chapter:int, block:dict):
+    def markBlockLoaded(self, block:dict):
         self.lastEnText = block.get('enText')
     def markBlockSaved(self, chapter:int, block:dict):
         text = block.get('enText')
@@ -217,6 +217,10 @@ class SaveState:
         if not chapter in self._unsavedChanges and text != self.lastEnText:
             self._unsavedChanges.add(chapter)
     def markChapterSaved(self, chapter: int):
+        # Little hack to prevent false unsaved files on chapter change without block change
+        # Essentially pretend the block was reloaded. Could be done in markBlockSaved but 
+        # would usually be useless and immediately replaced by the actual block load
+        self.markBlockLoaded(cur_file.textBlocks[cur_block])
         self._unsavedChanges.discard(chapter)
     def unsavedChanges(self):
         return self._unsavedChanges
@@ -356,7 +360,7 @@ def load_block(event=None, dir=1):
     else:
         btn_colored['state'] = 'disabled'
         btn_colored.config(bg=COLOR_BTN)
-    SAVE_STATE.markBlockLoaded(cur_chapter, cur_block_data)
+    SAVE_STATE.markBlockLoaded(cur_block_data)
         
 
 def save_block():

@@ -198,6 +198,8 @@ Vodka | In progress | [robflop]
 ## Valentine
 name | translator
 --- | ---
+Agnes Tachyon | [noccu]
+Grass Wonder | [noccu]
 Ines Fujin | [noccu]
 Manhattan Cafe | [Kuwaiden]
 Sakura Bakushin O | [Kasey]

@@ -185,7 +185,7 @@ class AudioPlayer:
             print("Audio currently only supported on Windows")
             return
         voice = PlaySegment.fromBlock(cur_file.textBlocks[cur_block])
-        if not voice.timeBased and cur_file.version < 6:
+        if not voice:
             print("Old file version, does not have voice info.")
             return "break"
         storyId = cur_file.data.get("storyId")

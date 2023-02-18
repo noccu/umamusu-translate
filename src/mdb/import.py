@@ -78,7 +78,7 @@ def main():
         return
 
     try:
-        with sqlite3.connect(args.dst, isolation_level=None) as db:
+        with sqlite3.connect(f"file:{args.dst}?mode=rw", isolation_level=None, uri=True) as db:
             index = helpers.readJson("src/mdb/index.json")
             db.execute("PRAGMA journal_mode = MEMORY;")
             db.execute("BEGIN;")

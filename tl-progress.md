@@ -202,7 +202,9 @@ Agnes Tachyon | [noccu]
 Grass Wonder | [noccu]
 Ines Fujin | [noccu]
 Manhattan Cafe | [Kuwaiden]
+Maruzensky | [noccu]
 Mihono Bourbon | [noccu]
+Nice Nature | [noccu]
 Sakura Bakushin O | [Kasey]
 
 # System text

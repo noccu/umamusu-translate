@@ -198,6 +198,7 @@ Vodka | In progress | [robflop]
 ## Valentine
 name | translator
 --- | ---
+Air Groove | [noccu]
 Agnes Tachyon | [noccu]
 Grass Wonder | [noccu]
 Ines Fujin | [noccu]

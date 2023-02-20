@@ -155,6 +155,7 @@ class Args(argparse.ArgumentParser):
         super().__init__(description=desc, conflict_handler='resolve', formatter_class=RawDefaultFormatter, **kwargs)
         self.add_argument("-v", "--version", action="store_true", help="Show version and exit")
         self.add_argument("--read-defaults", "--read-config", action="store_true", help="Overwrite args with data from umatl.json config")
+        self.hasDefault = defaultArgs
         if defaultArgs:
             self.add_argument("-t", "--type", choices=types or TARGET_TYPES, default=types[0] if types else TARGET_TYPES[0],
                               help="The type of assets to process.")
@@ -162,6 +163,7 @@ class Args(argparse.ArgumentParser):
             self.add_argument("-g", "--group", help="The group to process")
             self.add_argument("-id", help="The id (subgroup) to process")
             self.add_argument("-idx", help="The specific asset index to process")
+            self.add_argument("-sid", "-story", "--story", help="The storyid to process, can be partial")
             self.add_argument("--changed", nargs="?", default=False, const=True,
                               help="Limit to changed files (requires git)")
             self.add_argument("-src", default=GAME_ASSET_ROOT)
@@ -183,6 +185,12 @@ class Args(argparse.ArgumentParser):
             ctx = str(Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")).replace("\\","/")
             for k, v in cfg.get(ctx, {}).items():
                 setattr(a, k, v)
+        if self.hasDefault and a.story:
+            a.story = StoryId.parse(a.type, a.story)
+            a.set = a.set or a.story.set
+            a.group = a.group or a.story.group
+            a.id = a.id or a.story.id
+            a.idx = a.idx or a.story.idx
         return a
     @classmethod
     def fake(cls, **kwargs):

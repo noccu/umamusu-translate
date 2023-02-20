@@ -189,14 +189,16 @@ def calcLineLen(file: TranslationFile, verbose):
         return LL_CACHE[1]
 
     lineLength = file.data.get('lineLength')
-    if lineLength is None:
+    if lineLength in (None, -1, 0):
         if file.type == "lyrics":
-            lineLength = 80
+            lineLength = 57
         elif (file.type == "race")\
         or (file.type == "story" and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")):
-            lineLength = 65
+            lineLength = 48
+        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
+            lineLength = 30
         else:
-            lineLength = 45
+            lineLength = 34
     LL_CACHE = file, lineLength
     if verbose:
         print(f"Line length set to {lineLength} for {file.name}")

@@ -239,12 +239,7 @@ def change_chapter(event=None, initialLoad=False):
     cur_file = files[cur_chapter]
 
     block_dropdown['values'] = [f"{i+1} - {block['jpText'][:16]}" for i, block in enumerate(cur_file.textBlocks)]
-    ll = textprocess.calcLineLen(cur_file, False)
-    # Attempt to calc the relation of line length to text box size
-    # ll = int(ll / (0.958 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH # default font
-    # ll = int(ll / (1.067 * ll**0.057) + 1) if ll else TEXTBOX_WIDTH # game font attempt 1
-    ll = int(ll / (1.135 * ll**0.05) + 1) if ll else TEXTBOX_WIDTH
-
+    ll = textprocess.calcLineLen(cur_file, False) or TEXTBOX_WIDTH
     text_box_en.config(width=ll)
     text_box_jp.config(width=ll)
 

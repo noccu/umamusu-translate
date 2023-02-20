@@ -214,8 +214,10 @@ name | progress | translator
 All not listed up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 Eishin Flash | Complete | deepl
 Fine Motion | Complete | [Riersa] (deepl edit)
+Grass Wonder | In progress | [noccu] (67/220)
 Haru Urara | Complete | deepl
 Hokko Tarumae | Complete | [Riersa] (deepl edit)
+Ines Fujin | In progress | [noccu]
 Mejiro Ardan | Complete | [Riersa] (deepl edit)
 Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa] (deepl edit)

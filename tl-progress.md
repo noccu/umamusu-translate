@@ -201,6 +201,7 @@ name | translator
 Air Groove | [noccu]
 Agnes Tachyon | [noccu]
 Grass Wonder | [noccu]
+Inari One | [noccu]
 Ines Fujin | [noccu]
 Manhattan Cafe | [Kuwaiden]
 Maruzensky | [noccu]

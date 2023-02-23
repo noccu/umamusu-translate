@@ -45,10 +45,12 @@ The Promised Time: Silks & Three Riddles | Transferring/Stalled, Complete | [Sne
 Seek, Solve, Summer Walk! | Complete | [noccu][]
 Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
 Wings of Iron: Hazy Tales | Complete | [noccu]
-Days in a Flash | Complete | [Kuwaiden]
-Intertwined Memories, Galloping Thoughts | Complete | deepl
+Days in a Flash | Complete | [Kuwaiden], [noccu] (preview)
+Intertwined Memories, Galloping Thoughts | Complete | deepl, [noccu] (preview)
 Illuminate the Heart | Complete | [robflop]
-Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl
+Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl, [noccu] (preview)
+Sweet Memory Teatime | In progress | [noccu]
+Leap into a New World! | Stalled | [noccu] (preview)
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
 # Collab Events

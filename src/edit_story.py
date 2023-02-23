@@ -686,6 +686,7 @@ def process_text(event):
             "lineLength": -1,
             "targetLines": 99}
     if getattr(event, "all", None):
+        opts["lineLength"] = 0
         for block in cur_file.textBlocks:
             block['enText'] = textprocess.processText(cur_file, block['enText'], opts)
         proc_text = cur_file.textBlocks[cur_block].get("enText")

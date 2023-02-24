@@ -51,7 +51,7 @@ function translateData(id, sqlData) {
         type3, strength3, strengthMod3, targetType3, targetValue3,
         ...skill2] = sqlData;
 
-    let outString = "<color=#e06f0b>" + translateEffect(id, type, strength, strengthMod);
+    let outString = "<b>" + translateEffect(id, type, strength, strengthMod);
     if (targetType > 1) outString += translateTarget(targetType, targetValue);
 
     if (type2) outString += `, ${translateEffect(id, type2, strength2, strengthMod2)}`;
@@ -63,7 +63,7 @@ function translateData(id, sqlData) {
     if (duration == -1) { duration = "indefinitely"; }
     else if (duration == 0) { duration = "immediately"; }
     else { duration = "for " + parseInt(duration) / 10000 + "s"; }
-    outString += ` ${duration}</color>`;
+    outString += ` ${duration}</b>`;
 
     cooldown /= 10000 // in seconds, then limit to potentially usable range
     if (cooldown > 0 && cooldown < 90) {

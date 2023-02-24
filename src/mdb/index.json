@@ -56,7 +56,7 @@
             "tazuna-tips": {"spec": 69, "tlg": true, "sql": "\"index\" BETWEEN 8000 AND 8999"},
             "uma-secrets": {"spec": 69, "tlg": true, "sql": "\"index\" > 8999"},
             "support-effect-unique-name": 150,
-            "support-effect-name": 151,
+            "support-effect-name": [151, 294],
             "support-effect-desc": 154,
             "support-full-name": 75,
             "tutorial-text": 3,
@@ -85,7 +85,11 @@
             "stroll-locations": 268,
             "event-titles": [189, 214],
             "valentine-gift-names": 273,
-            "valentine-gift-notes": [271, 272]
+            "valentine-gift-notes": [271, 272],
+            "knowledge-effects": [296],
+            "knowledge-buffs": [298],
+            "skill-evolve-cond": [290],
+            "scenario-names": [119]
         },
         "overrides": {
             "skill_data": ["skill-desc", "alt/skill-desc"]

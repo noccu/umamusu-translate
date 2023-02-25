@@ -165,7 +165,7 @@ The structure used is simple: `00 0000 000`
 1043 | 木漏れ日のエール | Komorobi no Yell
 1044 | 全速！前進！ウマドルパワー☆ | Zensoku! Zenshin! Idol Power☆
 1046 | 逃げ切りっ！Fallin' Love | Nigekiri! Fallin' Love
-1047 | Ring Ring ダイアリー　 | Ring Ring ダイアリー　
+1047 | Ring Ring ダイアリー　 | Ring Ring Diary
 1048 | BLOW my GALE | BLOW my GALE
 1049 | バクシンバクシンバクシンシン | Bakushinbakushinbakushinshin
 1050 | We are DREAMERS!! | We are DREAMERS!!
@@ -177,7 +177,7 @@ The structure used is simple: `00 0000 000`
 1056 | メジロ讃歌 | Mejiro Hymn
 1057 | 立ち位置ゼロ番！順位は一番！ | Tachiichi Zeroban! Juni ha Ichiban!
 1059 | Overrunner! | 
-1061 | ゆるパカHAPPY DAYS！ | YuruPaka HAPPY DAYS！
+1061 | ゆるパカHAPPY DAYS！ | YuruPaka HAPPY DAYS!
 1062 | わたしの印は大本命◎ | わたしの印は大本命◎
 1063 | unbreakable | 
 1064 | SEVEN | 

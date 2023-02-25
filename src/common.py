@@ -239,6 +239,9 @@ class TranslationFile:
             else:
                 raise LookupError(f"No index provided for list-format file {self.root.name}")
 
+        def items(self, key="jpText", val="enText"):
+            for entry in self.data:
+                yield (entry.get(key), entry.get(val))
         def __getitem__(self, itm):
             return self.get(itm)
         def __setitem__(self, itm, val):
@@ -255,6 +258,7 @@ class TranslationFile:
 
         def toInterchange(self, data=None) -> list[dict]:
             data = data or self.data
+            self._nativeData = data #todo: change the whole system
             if isinstance(data, dict):
                 self.map = dict()
                 o = list()

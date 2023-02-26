@@ -182,12 +182,18 @@
       "==": "Last straight (random)"
     },
     "is_finalcorner": {
-      "==": "Final corner/straight",
-      "!=": "Not final corner/straight"
+      "lookup": {
+        "0": "Not final corner/straight",
+        "1": "Final corner/straight"
+      },
+      "==": "$"
     },
     "is_finalcorner_laterhalf": {
-      "==": "Final corner/straight (2nd half)",
-      "!=": "Not final corner/straight (2nd half)"
+      "lookup": {
+        "0": "Not final corner/straight (2nd half)",
+        "1": "Final corner/straight (2nd half)"
+      },
+      "==": "$"
     },
     "is_lastspurt": {
       "==": "Last spurt",

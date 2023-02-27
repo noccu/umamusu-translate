@@ -232,7 +232,7 @@ class DataTransfer:
                     targetBlock = block
                     break
             if not targetBlock:
-                self.print(f"At bIdx {textData['blockIdx']}: jpText not found in file.")
+                self.print(f"At bIdx/time {textData.get('blockIdx', textData.get('time', 'no_idx'))}: jpText not found in file.")
 
         if targetBlock:
             if args.upgrade:

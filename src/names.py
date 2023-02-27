@@ -6,7 +6,7 @@ NAMES_DICT = None
 def loadDict():
     global NAMES_DICT
     names = helpers.readJson("src/data/names.json")
-    umas = helpers.readJson("translations/mdb/uma-name.json").get("text")
+    umas = helpers.readJson("translations/mdb/char-name.json").get("text")
     misc = helpers.readJson("translations/mdb/miscellaneous.json").get("text")
     NAMES_DICT = misc.copy()
     NAMES_DICT.update(names)

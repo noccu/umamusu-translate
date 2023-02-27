@@ -225,7 +225,7 @@ Mejiro Ardan | Complete | [Riersa] (deepl edit)
 Meisho Doto | Complete, In Progress | deepl, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa] (deepl edit)
 Narita Taishin | Complete | [Riersa] (deepl edit)
-Sakura Bakushin O | In progress | [Kasey]
+Sakura Bakushin O | Complete | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
 Twin Turbo | Complete | [noccu]

@@ -111,6 +111,7 @@ Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
+Twin Turbo | In progress | [Riersa] (1-4)
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]
 Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl
@@ -118,25 +119,27 @@ Yamanin Zephyr | Complete | [Director Kok][]
 Zenno Rob Roy | Stalled | [LotoDS][] (ep 1-4)
 
 
-# Scenario training events
+# Training events
+
+## Scenarios
 name | progress | translator
 --- | --- | ---
 Shared events | Complete | [noccu][]
 
-## URA
+### URA
 idx | name (short) | progress | translator
 --- | --- | --- | ---
 08/001 | Campaign intro | Complete | [noccu]
 002 | Final start | Complete | Korgi (deepl edit)
 All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
-## Aoharu
+### Aoharu
 idx | name (short) | progress | translator
 --- | --- | --- | ---
 08/002 | Campaign intro | Complete | [noccu]
 All others | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
-## Make a New Track
+### Make a New Track
 idx | name (short) | progress | translator
 --- | --- | --- | ---
 08/004 | Campaign intro | Complete | [noccu]
@@ -144,7 +147,7 @@ All not listed | up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 249 | Nyan Nyan Island | Complete | [nem]
 259 | A sudden rain | Complete | [Snep]
 
-## Grand Live
+### Grand Live
 idx | name (short) | progress | translator
 --- | --- | --- | ---
 08/003 | Campaign intro | Complete | [noccu]

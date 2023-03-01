@@ -333,8 +333,9 @@ def load_block(event=None, dir=1):
     text_box_jp.delete(1.0, tk.END)
     text_box_jp.insert(tk.END, txt_for_display(cur_block_data['jpText']))
     text_box_jp.configure(state='disabled')
-    text_box_en.delete(1.0, tk.END)
-    text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
+    insertTaggedTextFromMarkup(text_box_en, txt_for_display(cur_block_data['enText']))
+    # text_box_en.delete(1.0, tk.END)
+    # text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
 
     # Update choices button
     cur_choices = cur_block_data.get('choices')
@@ -361,7 +362,7 @@ def load_block(event=None, dir=1):
 def save_block():
     if "enName" in cur_file.textBlocks[cur_block]:
         cur_file.textBlocks[cur_block]['enName'] = normalizeEditorText(speaker_en_entry.get())
-    cur_file.textBlocks[cur_block]['enText'] = txt_for_storage(text_box_en.get(1.0, tk.END))
+    cur_file.textBlocks[cur_block]['enText'] = txt_for_storage(tagsToMarkup(text_box_en))
 
     # Get the new clip length from spinbox
     new_clip_length = block_duration_spinbox.get()
@@ -666,19 +667,56 @@ def format_text(event):
     if not text_box_en.tag_ranges("sel"):
         print("No selection to format.")
         return
+    currentTags = text_box_en.tag_names(tk.SEL_FIRST)
     if event.keycode == 73:
-        open = "<i>"
-        close = "</i>"
+        if "i" in currentTags:
+            text_box_en.tag_remove("i", tk.SEL_FIRST, tk.SEL_LAST)
+        else:
+            text_box_en.tag_add("i", tk.SEL_FIRST, tk.SEL_LAST)
     elif event.keycode == 66:
-        open = "<b>"
-        close = "</b>"
+        if "b" in currentTags:
+            text_box_en.tag_remove("b", tk.SEL_FIRST, tk.SEL_LAST)
+        else:
+            text_box_en.tag_add("b", tk.SEL_FIRST, tk.SEL_LAST)
     else:
         return
-
-    text_box_en.insert(tk.SEL_FIRST, open)
-    text_box_en.insert(tk.SEL_LAST, close)
     return "break"  # prevent control char entry
 
+def tagsToMarkup(widget:tk.Text):
+    text = list(widget.get(1.0, tk.END))
+    offset = 0
+    tagList = list()
+    for tag in ("b", "i"):
+        ranges = widget.tag_ranges(tag)
+        tagList.extend((widget.count("1.0", x, "chars")[0], f"<{tag}>") for x in ranges[0::2])
+        tagList.extend((widget.count("1.0", x, "chars")[0], f"</{tag}>") for x in ranges[1::2])
+    tagList.sort(key=lambda x: x[0])
+    for idx, tag in tagList:
+        text.insert(idx+offset, tag)
+        offset+=1
+    return "".join(text)
+
+def insertTaggedTextFromMarkup(widget:tk.Text, text:str=None):
+    '''Apply unity RT markup in text. This writes the text to the given widget itself for efficiency.'''
+    if text is None:
+        text = widget.get(1.0, tk.END)
+    tagList = list()
+    offset = 0
+    openedTags = dict()
+    for m in re.finditer(r"<(/?)([a-z])>", text):
+        isClose, tag = m.groups()
+        if isClose:
+            openedTags[tag]['end'] = m.start() - offset
+        else:
+            tagList.append({'name': tag, 'start': m.start() - offset})
+            openedTags[tag] = tagList[-1]
+        offset += len(m[0])
+    # Add the cleaned text
+    widget.delete(1.0, tk.END)
+    widget.insert(tk.END, re.sub(r"<(/?[a-z])>", "", text))
+    # Apply tags
+    for toTag in tagList:
+        widget.tag_add(toTag['name'], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
 
 def process_text(event):
     opts = {"redoNewlines": False,
@@ -802,9 +840,13 @@ def main():
     root = tk.Tk()
     root.title("Edit Story")
     root.resizable(False, False)
-    if common.IS_WIN: loadFont(r"src/data/RodinWanpakuPro-B-ex.otf")
+    if common.IS_WIN: loadFont(r"src/data/RodinWanpakuPro-UmaTl.otf")
     else: print("Non-Windows system: To load custom game font install 'src/data/RodinWanpakuPro-B-ex.otf' to system fonts.")
-    large_font = Font(root, family="RodinWanpakuPro B", size=18, weight="normal")
+    large_font = Font(root, family="RodinWanpakuPro UmaTl B", size=18, weight="normal")
+    boldFont = large_font.copy()
+    boldFont.config(weight="bold")
+    italicFont = large_font.copy()
+    italicFont.config(slant="italic")
 
     chapter_label = tk.Label(root, text="Chapter")
     chapter_label.grid(row=0, column=0)
@@ -839,6 +881,8 @@ def main():
 
     text_box_en = tk.Text(root, width=TEXTBOX_WIDTH, height=6, undo=True, font=large_font)
     text_box_en.grid(row=4, column=0, columnspan=4)
+    text_box_en.tag_config("b", font=boldFont)
+    text_box_en.tag_config("i", font=italicFont)
 
     frm_btns_bot = tk.Frame(root)
     btn_choices = tk.Button(frm_btns_bot, text="Choices", command=lambda: toggleTextListPopup(target=cur_choices), state='disabled', width=10)

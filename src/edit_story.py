@@ -1,7 +1,7 @@
 from argparse import SUPPRESS
 import re
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import ttk, messagebox, colorchooser
 from tkinter.font import Font
 from types import SimpleNamespace
 from itertools import zip_longest
@@ -21,6 +21,7 @@ TEXTBOX_WIDTH = 54
 COLOR_WIN = "systemWindow" if common.IS_WIN else "white"
 COLOR_BTN = "SystemButtonFace" if common.IS_WIN else "gray"
 AUDIO_PLAYER = None
+LAST_COLOR = None
 
 @dataclass
 class PlaySegment:
@@ -662,22 +663,36 @@ def del_word(event):
     elif event.keycode == 46:
         text_box_en.delete(pos, f"{pos} {end}")
 
+def pickColor(useLast=True):
+    global LAST_COLOR
+    if not useLast or not LAST_COLOR:
+        LAST_COLOR = colorchooser.askcolor()[1] #0 = rgb tuple, 1=hex str
+        text_box_en.tag_config(f"color={LAST_COLOR}", foreground=LAST_COLOR)
+    return LAST_COLOR
 
 def format_text(event):
     if not text_box_en.tag_ranges("sel"):
         print("No selection to format.")
         return
     currentTags = text_box_en.tag_names(tk.SEL_FIRST)
-    if event.keycode == 73:
+    if event.keysym == "i":
         if "i" in currentTags:
             text_box_en.tag_remove("i", tk.SEL_FIRST, tk.SEL_LAST)
         else:
             text_box_en.tag_add("i", tk.SEL_FIRST, tk.SEL_LAST)
-    elif event.keycode == 66:
+    elif event.keysym == "b":
         if "b" in currentTags:
             text_box_en.tag_remove("b", tk.SEL_FIRST, tk.SEL_LAST)
         else:
             text_box_en.tag_add("b", tk.SEL_FIRST, tk.SEL_LAST)
+    elif event.keysym == "C":
+        color = f"color={pickColor(not (event.state & 131072))}" # alt
+        if color is None:
+            return
+        if color in currentTags:
+            text_box_en.tag_remove(color, tk.SEL_FIRST, tk.SEL_LAST)
+        else:
+            text_box_en.tag_add(color, tk.SEL_FIRST, tk.SEL_LAST)
     else:
         return
     return "break"  # prevent control char entry
@@ -689,10 +704,12 @@ def tagsToMarkup(widget:tk.Text):
     text = list(widget.get(1.0, tk.END))
     offset = 0
     tagList = list()
-    for tag in ("b", "i"):
+    for tag in widget.tag_names():
+        if tag == "sel":
+            continue
         ranges = widget.tag_ranges(tag)
         tagList.extend((text_count(widget, "1.0", x, "-chars"), f"<{tag}>") for x in ranges[0::2])
-        tagList.extend((text_count(widget, "1.0", x, "-chars"), f"</{tag}>") for x in ranges[1::2])
+        tagList.extend((text_count(widget, "1.0", x, "-chars"), f"</{tag.split('=')[0]}>") for x in ranges[1::2])
     tagList.sort(key=lambda x: x[0])
     for idx, tag in tagList:
         text.insert(idx+offset, tag)
@@ -706,20 +723,22 @@ def insertTaggedTextFromMarkup(widget:tk.Text, text:str=None):
     tagList = list()
     offset = 0
     openedTags = dict()
-    for m in re.finditer(r"<(/?)([a-z])>", text):
+    tagRe = r"<(/?)([a-z=#\d]+)>"
+    for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
         isClose, tag = m.groups()
         if isClose:
             openedTags[tag]['end'] = m.start() - offset
         else:
             tagList.append({'name': tag, 'start': m.start() - offset})
-            openedTags[tag] = tagList[-1]
+            openedTags[tag.split('=')[0]] = tagList[-1]
         offset += len(m[0])
     # Add the cleaned text
     widget.delete(1.0, tk.END)
-    widget.insert(tk.END, re.sub(r"<(/?[a-z])>", "", text))
+    widget.insert(tk.END, re.sub(tagRe, "", text))
     # Apply tags
     for toTag in tagList:
         widget.tag_add(toTag['name'], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
+
 
 def process_text(event):
     opts = {"redoNewlines": False,
@@ -970,6 +989,7 @@ def main():
     root.bind("<Control-Shift-Delete>", del_word)
     text_box_en.bind("<Control-i>", format_text)
     text_box_en.bind("<Control-b>", format_text)
+    text_box_en.bind("<Control-C>", format_text)
     text_box_en.bind("<Alt-f>", process_text)
     text_box_en.bind("<Alt-F>", process_text)
     root.bind("<Control-f>", toggleSearchPopup)

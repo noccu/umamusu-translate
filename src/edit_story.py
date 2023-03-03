@@ -682,14 +682,17 @@ def format_text(event):
         return
     return "break"  # prevent control char entry
 
+# https://github.com/python/cpython/issues/97928
+def text_count(widget, index1, index2, *options):
+    return widget.tk.call((widget._w, 'count') + options + (index1, index2))
 def tagsToMarkup(widget:tk.Text):
     text = list(widget.get(1.0, tk.END))
     offset = 0
     tagList = list()
     for tag in ("b", "i"):
         ranges = widget.tag_ranges(tag)
-        tagList.extend((widget.count("1.0", x, "chars")[0], f"<{tag}>") for x in ranges[0::2])
-        tagList.extend((widget.count("1.0", x, "chars")[0], f"</{tag}>") for x in ranges[1::2])
+        tagList.extend((text_count(widget, "1.0", x, "-chars"), f"<{tag}>") for x in ranges[0::2])
+        tagList.extend((text_count(widget, "1.0", x, "-chars"), f"</{tag}>") for x in ranges[1::2])
     tagList.sort(key=lambda x: x[0])
     for idx, tag in tagList:
         text.insert(idx+offset, tag)

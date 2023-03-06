@@ -116,9 +116,9 @@
     },
     "order_rate": {
       ">=": ["In trailing $%", "100-"],
-      ">": ["In trailing \\<$%", "100-"],
+      ">": ["In trailing ﹤$%", "100-"],
       "<=": "In leading $%",
-      "<": "In leading \\<$%"
+      "<": "In leading ﹤$%"
     },
     "change_order_onetime": {
       "<": "Overtook",

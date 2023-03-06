@@ -3,7 +3,7 @@
     "bundle": "O6DILS5FS2WCZ6FFRBNSJ6Q6K2ZKFZSJ",
     "type": "story",
     "storyId": "041026004",
-    "title": "スパルタの風",
+    "title": "Spartan Wind",
     "text": [
         {
             "jpName": "ミホノブルボン",
@@ -166,7 +166,7 @@
             ],
             "pathId": -5309164967333944024,
             "blockIdx": 10,
-            "newClipLength": 115
+            "newClipLength": 200
         },
         {
             "jpName": "ミホノブルボン",
@@ -288,7 +288,7 @@
             "choices": [
                 {
                     "jpText": "結果を残して、皆に示そう！",
-                    "enText": "<size=40>Let's show everyone what you're capable of!</size>",
+                    "enText": "<size=36>Let's show everyone what you're capable of!</size>",
                     "nextBlock": 19
                 }
             ],
@@ -432,7 +432,7 @@
             "voiceIdx": -1,
             "pathId": 8802302362244294637,
             "blockIdx": 25,
-            "newClipLength": 113
+            "newClipLength": 140
         },
         {
             "jpName": "",
@@ -444,7 +444,7 @@
             "voiceIdx": -1,
             "pathId": -4777256665763565306,
             "blockIdx": 26,
-            "newClipLength": 130
+            "newClipLength": 160
         },
         {
             "jpName": "新人トレーナー",
@@ -484,7 +484,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "なかば祈るように、ゲートを睨みつけた。",
-            "enText": "Still, part of me was praying as I focused at the gate.",
+            "enText": "Still, part of me was praying as I focused on the gate.",
             "nextBlock": 30,
             "origClipLength": 69,
             "voiceIdx": -1,
@@ -665,7 +665,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "（――前方1名、後方より2名接近。スタミナ残量残り僅か。\n肺に刺すような痛み、集中力低下、しかし、私は――）",
-            "enText": "(One ahead, two approaching from behind. Little stamina left. \nStabbing pain in my lungs and I can't concentrate... \nBut I... I must...)",
+            "enText": "(One ahead, two approaching from behind. \nLittle stamina left. A stabbing pain in my lungs and \nI can't concentrate... But I... I must...)",
             "nextBlock": 40,
             "origClipLength": 308,
             "voiceIdx": 25,
@@ -817,7 +817,7 @@
             "jpName": "ベテラントレーナー",
             "enName": "Veteran Trainer",
             "jpText": "スタミナのない君が、2000mを1着で、か……。\nそうか、そうか。",
-            "enText": "You managed first on the 2000 meters \neven with your lack of stamina... I see...",
+            "enText": "You managed first on the 2000 meters, \neven with your lack of stamina... I see...",
             "nextBlock": 50,
             "origClipLength": 245,
             "voiceIdx": 32,
@@ -918,7 +918,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "努力で才能は越えられる。一見きれいごとのように\n見えるそれを、はっきりと証明してみせたことを。",
-            "enText": "Hard work is what surpasses talent. It once again \ngoes to show that you shouldn't judge a book by its cover.",
+            "enText": "Hard work is what surpasses talent. It once again goes \nto show that you shouldn't judge a book by its cover.",
             "nextBlock": 55,
             "origClipLength": 106,
             "voiceIdx": -1,
@@ -949,12 +949,12 @@
             "choices": [
                 {
                     "jpText": "君の走る姿には、勇気を与える力がある",
-                    "enText": "<size=42>Your running has the power to give courage.</size>",
+                    "enText": "<size=38>Your running has the power to give courage.</size>",
                     "nextBlock": 56
                 },
                 {
                     "jpText": "貴方の走る姿には、勇気を与える力がある",
-                    "enText": "<size=42>Your running has the power to give courage.</size>",
+                    "enText": "<size=38>Your running has the power to give courage.</size>",
                     "nextBlock": 56
                 }
             ],
@@ -1114,6 +1114,6 @@
             "blockIdx": 62
         }
     ],
-    "modified": 1678014963,
+    "modified": 1678110887,
     "humanTl": true
 }

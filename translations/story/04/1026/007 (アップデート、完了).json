@@ -20,13 +20,14 @@
                 }
             ],
             "pathId": 1743900900668141901,
-            "blockIdx": 1
+            "blockIdx": 1,
+            "newClipLength": 100
         },
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "夏合宿も半ばに差し掛かった、ある日の昼下がり。\r\nやや緊張した面持ちで、ミホノブルボンにそう誘われた。",
-            "enText": "It was early afternoon in the middle of our summer \ntraining camp, when Mihono Bourbon came up to me \nand asked me that question.",
+            "enText": "It was early afternoon in the middle of our summer \ntraining camp, when Mihono Bourbon came up to me \nand asked that question.",
             "nextBlock": 3,
             "origClipLength": 111,
             "voiceIdx": -1,
@@ -50,7 +51,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "自発的になにか提案することは滅多にない。\r\n二つ返事で誘いに応じ、その日の夜、花火大会へと足を運んだ。",
-            "enText": "I was surprised by her sudden request. That's a first! \nI immediately took her up on her offer without a second \nthought. And that's how I ended up here at the festival.",
+            "enText": "I was surprised by her sudden request. That's a first! \nI immediately took her up on her offer without a second \nthought. And so...",
             "nextBlock": 4,
             "origClipLength": 111,
             "voiceIdx": -1,
@@ -71,7 +72,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "事前情報によると、来場客は平均7万人、露店数は約90店舗。\r\nうち、遊戯の種類は9パターンです。",
-            "enText": "According to my research, there are usually around \n70.000 attendees. There are around 90 different stalls, \namong which there are 9 types of games to play.",
+            "enText": "According to my research, there are usually around \n70,000 attendees. There are around 90 different stalls, \namong which are 9 types of games to play.",
             "nextBlock": 5,
             "origClipLength": 298,
             "voiceIdx": 1,
@@ -117,7 +118,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "誘ってきたことといい、事前の下調べといい、今の提案といい……\r\n受け身のミホノブルボンにしては驚くほどやる気に満ち溢れている。",
-            "enText": "Inviting me out and doing so much research \nbeforehand... The usually introverted Mihono Bourbon \nis exploding with enthusiasm today.",
+            "enText": "Inviting me out and doing so much research \nbeforehand... The usually reserved Mihono Bourbon \nis exploding with enthusiasm today.",
             "nextBlock": 7,
             "origClipLength": 127,
             "voiceIdx": -1,
@@ -434,13 +435,14 @@
                 }
             ],
             "pathId": 6302641872690916662,
-            "blockIdx": 19
+            "blockIdx": 19,
+            "newClipLength": 130
         },
         {
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "銃口、5度下へ下げてください。\r\n通り過ぎました、もう少し上――そこです。",
-            "enText": "Rotate the muzzle 5 degrees downwards. \nToo far, move it slightly upwards.",
+            "enText": "Rotate the muzzle 5 degrees downwards. \nToo far, move it slightly upwards. That's it.",
             "nextBlock": 21,
             "origClipLength": 233,
             "voiceIdx": 12,
@@ -606,7 +608,7 @@
             "jpName": "素直なウマ娘",
             "enName": "Honest Horsegirl",
             "jpText": "あれ、ブルボンさん！？",
-            "enText": "Hey, Bourbon?",
+            "enText": "Oh, Bourbon?",
             "nextBlock": 29,
             "origClipLength": 65,
             "voiceIdx": 18,
@@ -669,7 +671,7 @@
             "jpName": "素直なウマ娘",
             "enName": "Honest Horsegirl",
             "jpText": "ごめん、大した意味なんかなくて、ただ話してみたくて……！\r\nせっかくの休憩中にお邪魔しちゃってごめんね！　それじゃ！",
-            "enText": "<i>Sorry, I didn't have a particular reason, \nI just wanted to chat for a bit... \nI guess I interrupted you after all, so I'll be going! \n</i>",
+            "enText": "<i>Sorry, I didn't have a particular reason, \nI just wanted to chat for a bit... \nI guess I interrupted you after all, so I'll be going! </i>",
             "nextBlock": 32,
             "origClipLength": 303,
             "voiceIdx": 20,
@@ -728,7 +730,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "この花火大会は、三尺玉が目玉の花火になっています。\r\n私は、それを『楽しみ』にしています。",
-            "enText": "The center piece of this fireworks display \nis a shell 90 centimeters in diameter. \nI am looking forward to it.",
+            "enText": "The centerpiece of this fireworks display \nis a shell 90 centimeters in diameter. \nI am looking forward to it.",
             "nextBlock": 35,
             "origClipLength": 235,
             "voiceIdx": 23,
@@ -1029,7 +1031,7 @@
             "jpName": "素直なウマ娘",
             "enName": "Honest Horsegirl",
             "jpText": "……だから、って言ったら言い訳だけど、時々距離感を間違えて\r\n突撃しちゃったりするの。……ごめんね、ブルボンさん。",
-            "enText": "I know this sounds as an excuse, Bourbon, but I'm bad \nat sensing the distance between people...",
+            "enText": "I know this sounds as an excuse for what I did back then, \nbut I'm bad at sensing the distance between people...",
             "nextBlock": 50,
             "origClipLength": 292,
             "voiceIdx": 34,
@@ -1241,6 +1243,6 @@
             "blockIdx": 59
         }
     ],
-    "modified": 1678104757,
+    "modified": 1678113239,
     "humanTl": true
 }

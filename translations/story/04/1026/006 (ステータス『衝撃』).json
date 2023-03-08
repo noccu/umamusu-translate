@@ -145,7 +145,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "……つまりゲーム機を壊してしまいそうで怖いということだろうか。\r\nそれなら――",
-            "enText": "So she's afraid of breaking the machines.. \nIn that case...",
+            "enText": "So she's afraid of breaking the machines. \nIn that case...",
             "nextBlock": 8,
             "origClipLength": 95,
             "voiceIdx": -1,
@@ -203,7 +203,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "オーダーを受理しました。『今日は楽しむ』を開始します。",
-            "enText": "Order accepted. Starting <b>enjoy ourselves</b> procedure.",
+            "enText": "Order accepted. Starting 'enjoy ourselves' procedure.",
             "nextBlock": 11,
             "origClipLength": 148,
             "voiceIdx": 4,
@@ -342,7 +342,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "マスターのパンチ力は1万6000点と確認。\r\nデータログに残します。なお、単位は不明。",
-            "enText": "Detecting Master's punching strength as 16,000. \nI am trying to log the value, but what unit of \nmeasurement is this?",
+            "enText": "Determining Master's punching strength as 16,000. \nI am trying to log the value, but what unit of \nmeasurement is this?",
             "nextBlock": 18,
             "origClipLength": 237,
             "voiceIdx": 10,
@@ -363,7 +363,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "少しズレてはいるが、ミホノブルボンなりにゲームセンターを\r\n満喫しているようだった。",
-            "enText": "Even though she was still a bit disconnected, \nshe was still be satisfied at the end of the day.",
+            "enText": "Even though she was still a bit disconnected, \nshe was still satisfied at the end of the day.",
             "nextBlock": 19,
             "origClipLength": 99,
             "voiceIdx": -1,
@@ -480,7 +480,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "そんなわけで、500円3回プレイのコースを選択し\r\n手ごろな位置にあったうさぎの人形を狙うことにした。",
-            "enText": "With that, I chose to play 3 times for 500 yen. \nMy target is a bunny plush that seems easy to get.",
+            "enText": "With that, I chose to play 3 times for 500 yen. \nMy target is a small bunny plush that seems easy to get.",
             "nextBlock": 24,
             "origClipLength": 111,
             "voiceIdx": -1,
@@ -766,7 +766,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……ただ、もう1度チャレンジすれば、\r\n70％の確率で成功するかと。",
-            "enText": "But I'm certain that there is a 70% chance \nof success on the next attempt...",
+            "enText": "But I'm certain that there is a 70% chance \nof success, were we to try again...",
             "nextBlock": 38,
             "origClipLength": 173,
             "voiceIdx": 20,
@@ -1057,7 +1057,7 @@
             "choices": [
                 {
                     "jpText": "それは、あの『非生産的な行動』の――",
-                    "enText": "<size=38>You call it counterproductive...</size>",
+                    "enText": "<size=40>You call it counterproductive...</size>",
                     "nextBlock": 52
                 }
             ],
@@ -1085,7 +1085,7 @@
             "choices": [
                 {
                     "jpText": "目的そのものが、『楽しむこと』だったから",
-                    "enText": "The goal of using the machine is to have fun.",
+                    "enText": "<size=36>The goal of using the machine is to have fun.</size>",
                     "nextBlock": 53
                 }
             ],
@@ -1158,6 +1158,6 @@
             "blockIdx": 55
         }
     ],
-    "modified": 1678111776,
+    "modified": 1678119984,
     "humanTl": true
 }

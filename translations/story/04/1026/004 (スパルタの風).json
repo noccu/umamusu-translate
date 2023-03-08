@@ -55,7 +55,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "無骨な父が、珍しく笑顔になって喜んでくれたことを、\nよく覚えています。",
-            "enText": "I still remember this moment like it was yesterday. \nMy usually grumpy father actually smiled and looked happy.",
+            "enText": "<i>I still remember this moment like it was yesterday. \nMy usually grumpy father actually smiled and looked happy.</i>",
             "nextBlock": 6,
             "origClipLength": 188,
             "voiceIdx": 4,
@@ -67,7 +67,7 @@
             "jpName": "ブルボンの父親",
             "enName": "Bourbon's Father",
             "jpText": "それなら、頑張って目指そう。三冠ウマ娘を。",
-            "enText": "Then give it your all. Aim for that Triple Crown.",
+            "enText": "<i>Then give it your all. Aim for that Triple Crown.</i>",
             "nextBlock": 7,
             "origClipLength": 161,
             "voiceIdx": 5,
@@ -99,7 +99,7 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "――以上が、マスターには共有すべき事項と判断した、\n現在の私の根幹にあたるデータログです。",
-            "enText": "That's the all of the data log I wanted to share with you, \nas my Master. Because it explains the foundation \nof my current self.",
+            "enText": "That's all of the data log I wanted to share with you, \nas my Master. Because it explains the foundation \nof my current self.",
             "nextBlock": 9,
             "origClipLength": 217,
             "voiceIdx": 7,
@@ -322,7 +322,8 @@
                 }
             ],
             "pathId": 1646573871021096368,
-            "blockIdx": 19
+            "blockIdx": 19,
+            "newClipLength": 100
         },
         {
             "jpName": "",
@@ -428,7 +429,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "そして、『種目別競技大会』当日。\n学園内外から、たくさんの人々が詰めかける中――",
-            "enText": "And thus, the day of the event arrived. \nCrowds of people showed up. It weren't just students. \nMany people came to visit.",
+            "enText": "And thus, the day of the event arrived. \nCrowds of people showed up, not just students. \nMany people came to visit.",
             "nextBlock": 26,
             "origClipLength": 97,
             "voiceIdx": -1,
@@ -440,13 +441,13 @@
             "jpName": "",
             "enName": "",
             "jpText": "短距離路線のホープ、ミホノブルボンが中距離路線に変更し、\n芝2000mに出走することは少し話題になっていた。",
-            "enText": "Of course, Mihono Bourbon, <b>the Hope of the Short Distance</b>, \nbecame the talk of the town because of her switch \nto the medium distance event.",
+            "enText": "Of course, Mihono Bourbon, 'the Hope of the Short Distance', \nbecame the talk of the town because of her switch \nto the medium distance event.",
             "nextBlock": 27,
             "origClipLength": 115,
             "voiceIdx": -1,
             "pathId": -4777256665763565306,
             "blockIdx": 26,
-            "newClipLength": 160
+            "newClipLength": 190
         },
         {
             "jpName": "新人トレーナー",
@@ -508,7 +509,7 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "中距離芝2000mのレースが始まりました！\nさぁ、勝利はどのウマ娘がつかみ取るのでしょうか――！",
-            "enText": "<i>And they're off for the 2000 meter turf race! \nWhich horse girl is going to grab the gold?</i>",
+            "enText": "<i>And they're off for the 2000 meter turf race! \nWhich horse girl is going to grab gold?</i>",
             "nextBlock": 32,
             "origClipLength": 195,
             "voiceIdx": 17,
@@ -606,7 +607,7 @@
         },
         {
             "jpName": "ウマ娘",
-            "enName": "Horsegirl",
+            "enName": "Horse Girl",
             "jpText": "ここだぁ……ッ！！",
             "enText": "This is it!",
             "nextBlock": 37,
@@ -764,7 +765,7 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "勝利を手にしたのは――ミホノブルボン！！\nミホノブルボンです！！",
-            "enText": "<i>But Mihono Bourbon crosses the line first! \nMihono Bourbon wins!</i>",
+            "enText": "<i>But Mihono Bourbon crosses the goal first! \nMihono Bourbon wins!</i>",
             "nextBlock": 45,
             "origClipLength": 175,
             "voiceIdx": 29,
@@ -808,7 +809,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "その日確かに、『短距離のホープ』は、\n『クラシック三冠を狙うウマ娘』へと変化した――",
-            "enText": "It was this day that <b>the Hope of the Short Distance</b> \nturned into <b>the Challenger of the Classic Triple Crown</b>!",
+            "enText": "It was this day that 'the Hope of the Short Distance' \nturned into 'the Challenger of the Triple Crown!'",
             "nextBlock": 49,
             "origClipLength": 99,
             "voiceIdx": -1,
@@ -1116,6 +1117,6 @@
             "blockIdx": 62
         }
     ],
-    "modified": 1678110887,
+    "modified": 1678225996,
     "humanTl": true
 }

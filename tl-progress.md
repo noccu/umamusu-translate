@@ -72,6 +72,7 @@ Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster][]
+Aston Machan | Complete | [Snep]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]

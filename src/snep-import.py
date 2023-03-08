@@ -6,9 +6,9 @@ from os import system as run
 snep = Path("translations/snep").glob("story_*")
 
 for file in snep:
-    g, id, idx = common.StoryId.parseFromPath("story", file.stem)
+    sid = common.StoryId.parseFromPath("story", file.stem)
 
-    extract = common.searchFiles("story", g, id, idx)
+    extract = common.searchFiles("story", sid.group, sid.id, sid.idx)
     if not extract:
         print("Can't find own file")
         raise SystemExit

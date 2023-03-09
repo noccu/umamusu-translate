@@ -72,6 +72,7 @@ Agnes Digital | Complete | deepl (contributed by CryDuringItAll)
 Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
 Air Shakur | Complete | deepl (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster][]
+Aston Machan | Complete | [Snep]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
@@ -187,12 +188,14 @@ Vodka (SSR, Road of Vodka) | Complete | [robflop][]
 name | progress | translator
 --- | --- | ---
 All not listed up to 2023/01/01 | Complete | deepl (contributed by Korgi up to 2022/07/08)
+Aston Machan | Stalled | [Snep] (bday duo 1, bday triplet 1)
 Maruzensky | Complete | [noccu]
 Mihono Bourbon | In progress | [noccu] (solo 1)
 Curren Chan | Complete | [noccu]
 Kitasan Black | Stalled | [noccu] (solo 2)
 Gold Ship | Complete | [noccu] (solo 1-2), deepl
 Hishi Amazon | Stalled | [noccu] (duo 2)
+Rice Shower | Stalled | [Snep] (bday duo 1-2)
 Sakura Bakushin O | In progress | [Kasey]
 Shinko Windy | Stalled | [noccu] (solo 3)
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl

@@ -1,14 +1,19 @@
 import common
 import helpers
 from pathlib import Path
-from os import system as run
 
 snep = Path("translations/snep").glob("story_*")
 
 for file in snep:
-    g, id, idx = common.StoryId.parseFromPath("story", file.stem)
+    if "_H" == file.stem[5:7]:
+        storyType = "home"
+        storyId = f"{file.stem[:7]}{file.stem[7].zfill(5)}_{file.stem[9].zfill(2)}{file.stem[10:]}"
+        sid = common.StoryId.parseFromPath(storyType, storyId)
+    else:
+        storyType = "story"
+        sid = common.StoryId.parseFromPath(storyType, file.stem)
 
-    extract = common.searchFiles("story", g, id, idx)
+    extract = common.searchFiles(storyType, sid.group, sid.id, sid.idx, sid.set)
     if not extract:
         print("Can't find own file")
         raise SystemExit

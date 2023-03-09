@@ -2,12 +2,22 @@
 
 File are extracted and organized following the game's format.  
 The structure used is simple: `00 0000 000`
-- 2 digit *Group type*
+- 2 digit *Group*
 - 4 digit *ID*
 - 3 digit *Index*
 
+Home type has an extra prefix (`00000 00 0000 000`):
+- 5 digit *Set*
+# Set IDs
+ ID | Desc | Notes
+----|--- | ---
+ 00000 | Normal | The usual home chats
+ 00001 | Birthdays 
+ 00002 | Magazine | Special features?
+
 # Group IDs
 
+## Story
  ID | Desc | Notes
 ----|--- | ---
  00 | Short episodes | Small intro stories on specific screens?
@@ -25,6 +35,13 @@ The structure used is simple: `00 0000 000`
  80 | R Support card events
  82 | SR Support card events
  83 | SSR Support card events
+
+ ## Home
+ ID | Desc | Notes
+----|--- | ---
+ 01 | Solo | Characters alone/talking to trainer
+ 02 | Duo | Two characters talking
+ 03 | Triplets | Three characters interacting, most are in "common" id `0000`
 
 # Uma IDs
 

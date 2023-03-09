@@ -94,8 +94,8 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
 
         nLines = len(lines)
         if numLines < 1 and nLines > 1 and pureLen[-1] < lineLen / 3.25:
-            linesStr = '\n\t'.join(lines)
             if opts.get("verbose"):
+                linesStr = '\n\t'.join(lines)
                 print(f"Last line is short, balancing on line number:\n\t{linesStr}")
             return adjustLength(file, text, opts, numLines = nLines, lineLen = -2)
 

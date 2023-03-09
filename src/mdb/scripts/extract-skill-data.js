@@ -106,10 +106,16 @@ function translateEffect(id, type, strength, strengthMod) {
 
 function transformValue(val, transforms) {
     let t = transforms.split(" ")
+    val = parseFloat(val)
     for (let i = 0; i < t.length; i++) {
-        let action = t[i]
-        let m = action.match(/(\d+)-/)
-        if (m) val = m[1] - val
+        let action = t[i],
+            m
+        if (m = action.match(/(\d+)-/)) {
+            val = m[1] - val
+        }
+        else if (m = action.match(/(-?\d+)/)) {
+            val += parseInt(m[1])
+        }
         else if (action == "inv") val *= -1
         else if (action == "%") val /= 100
         else if (action == "rep") {

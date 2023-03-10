@@ -1,30 +1,49 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "Z27LGGLGKIPL5U2C4WBGSUBRFWJJ4AUK",
     "type": "story",
     "storyId": "041026007",
-    "title": "アップデート、完了",
+    "title": "Update Complete",
+    "translator": "KevinVG207",
+    "tlVersion": "1.0",
     "text": [
         {
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "今夜、花火大会に行きませんか？",
-            "enText": "Would you like to go to the \nfireworks display tonight?",
+            "enText": "Would you like to go to tonight's \nfireworks festival with me?",
             "nextBlock": 2,
+            "origClipLength": 87,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": -9146551419531601529
+                }
+            ],
             "pathId": 1743900900668141901,
-            "blockIdx": 1
+            "blockIdx": 1,
+            "newClipLength": 100
         },
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "夏合宿も半ばに差し掛かった、ある日の昼下がり。\r\nやや緊張した面持ちで、ミホノブルボンにそう誘われた。",
-            "enText": "It was late afternoon one day, halfway through \nthe summer training camp. A somewhat nervous looking \nMihono Bourbon asked me to join her.",
+            "enText": "It was early afternoon in the middle of our summer \ntraining camp, when Mihono Bourbon came up to me \nand asked that question.",
             "nextBlock": 3,
+            "origClipLength": 111,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "も、もちろん！",
-                    "enText": "Of course!",
+                    "enText": "O-Of course!",
                     "nextBlock": 3
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 3787422850336200431
                 }
             ],
             "pathId": 8392492924632112466,
@@ -34,8 +53,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "自発的になにか提案することは滅多にない。\r\n二つ返事で誘いに応じ、その日の夜、花火大会へと足を運んだ。",
-            "enText": "It is not often that she voluntarily proposes something. I \naccepted the invitation without a second thought, and that \nnight, I made my way to the fireworks display.",
+            "enText": "I was surprised by her sudden request. That's a first! \nI immediately took her up on her offer without a second \nthought. And so...",
             "nextBlock": 4,
+            "origClipLength": 111,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -1493223919582706615
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -8475441986334428755
+                }
+            ],
             "pathId": -3480184003465911375,
             "blockIdx": 3
         },
@@ -43,8 +74,24 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "事前情報によると、来場客は平均7万人、露店数は約90店舗。\r\nうち、遊戯の種類は9パターンです。",
-            "enText": "According to preliminary information, the average number of \nvisitors is 70,000 and the number of stalls is about 90. Among \nthem, there are 9 patterns of games.",
+            "enText": "According to my research, there are usually around \n70,000 attendees. There are around 90 different stalls, \namong which are 9 types of games to play.",
             "nextBlock": 5,
+            "origClipLength": 298,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 546217713595019739
+                },
+                {
+                    "origLen": 393,
+                    "pathId": 8536876608611237048
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8282864075252617862
+                }
+            ],
             "pathId": 2247406671872859033,
             "blockIdx": 4
         },
@@ -52,8 +99,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "射的、かたぬき、金魚すくい、ヨーヨー釣り、輪投げ、くじ引き、\r\n千本つり、パンチボックス、すいか割り、どれにしますか？",
-            "enText": "Target shooting, katanuki, goldfish scooping, yo-yo fishing, \nring toss, raffle, senbon-zuri, punch box, watermelon splitting, \nwhich one do you want?",
+            "enText": "What would you like to do? There is shooting, die cutting, \ngoldfish scooping, yo-yo fishing, ring tossing, a lottery, \nstring pulling, box punching and melon splitting.",
             "nextBlock": 6,
+            "origClipLength": 351,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -4467115914633147789
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -8975459318124031028
+                }
+            ],
             "pathId": -2880247710655290901,
             "blockIdx": 5
         },
@@ -61,18 +120,26 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "誘ってきたことといい、事前の下調べといい、今の提案といい……\r\n受け身のミホノブルボンにしては驚くほどやる気に満ち溢れている。",
-            "enText": "The invitation, the preliminary research, and \nnow the proposal… are all surprisingly \nmotivating for the passive Michonobourbon.",
+            "enText": "Inviting me out and doing so much research \nbeforehand... The usually reserved Mihono Bourbon \nis exploding with enthusiasm today.",
             "nextBlock": 7,
+            "origClipLength": 127,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "お祭り、好きなんだな",
-                    "enText": "You like festivals, don't you?",
+                    "enText": "You sure love festivals.",
                     "nextBlock": 7
                 },
                 {
                     "jpText": "お祭り、好きなんだね",
-                    "enText": "You like festivals, don't you?",
+                    "enText": "You sure love festivals.",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 138,
+                    "pathId": -3738932533582299914
                 }
             ],
             "pathId": 949127172850324230,
@@ -82,13 +149,25 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "いえ、『好き』ではありません。\r\n『嫌い』でもありませんが、あえて言うなら『普通』です。",
-            "enText": "No, I don't \"like\" it. No, I don't \n\"like\" it, I don't \"hate\" it, but \nI dare say it's \"normal\".",
+            "enText": "Incorrect. 'Love' is not it. Neither is 'hate.' My feelings \ntoward festivals can be quantified as 'normal.'",
             "nextBlock": 8,
+            "origClipLength": 212,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "じゃあ、今日はどうして？",
-                    "enText": "Then why today?",
+                    "enText": "Why are you so enthusiastic, then?",
                     "nextBlock": 8
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -7264097414789294315
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 8424193311641678069
                 }
             ],
             "pathId": -1017676011739671723,
@@ -98,13 +177,25 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "…………。\r\n『マスターと一緒に楽しい時間を過ごし、交流を深めるため』です。",
-            "enText": "… The purpose is to have \na good time with the Master and to \ndeepen our relationship.",
+            "enText": "...... \nI am merely increasing the time interacting with you \nby spending 'a fun time' with you, Master.",
             "nextBlock": 9,
+            "origClipLength": 266,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "……？",
-                    "enText": "…?",
+                    "enText": "Huh?",
                     "nextBlock": 9
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 185,
+                    "pathId": -3148883966761219927
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 219461942474160104
                 }
             ],
             "pathId": 3958797410076985969,
@@ -114,8 +205,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "その…………、\r\n私は今まで大抵の交流を『無意味』と認識していました。",
-            "enText": "Its… and I've always perceived \nmost interactions as 'pointless'.",
+            "enText": "I just... I have always understood social interactions \nto be 'meaningless.'",
             "nextBlock": 10,
+            "origClipLength": 207,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 218,
+                    "pathId": -6383407398040427741
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -9158309157643953822
+                }
+            ],
             "pathId": -8874690265385128689,
             "blockIdx": 9
         },
@@ -123,8 +226,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "しかし……その認識は誤り、かもしれません。",
-            "enText": "However… may be wrong \nin its perception.",
+            "enText": "But... Perhaps my understanding was wrong.",
             "nextBlock": 11,
+            "origClipLength": 152,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 187,
+                    "pathId": 3982430088417481453
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -7944245728352600098
+                }
+            ],
             "pathId": 653989455860105011,
             "blockIdx": 10
         },
@@ -132,13 +247,25 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "珍しく、どこかフワフワした物言いで話すミホノブルボン。\r\nおもむろに、ポケットに入った小さな人形の頭をちらっと見せた。",
-            "enText": "Mihono Bourbon spoke in a rare, somewhat \nfluffy manner. She glanced at the small doll's \nhead in her pocket.",
+            "enText": "I'm surprised to hear her speak less formal. \nFrom the corner of my eye, I spotted the head of \na bunny plush sticking out of her pocket.",
             "nextBlock": 12,
+            "origClipLength": 121,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "それって……",
-                    "enText": "That's…",
+                    "enText": "Hey, is that...",
                     "nextBlock": 12
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": 5154209933887098572
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 6143987448251892635
                 }
             ],
             "pathId": 5533108431935841226,
@@ -148,8 +275,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "先日、ゲームセンターで獲得したうさぎの人形だった。",
-            "enText": "It was a rabbit doll that I won at \na game center the other day.",
+            "enText": "It was the bunny we won at the arcade the other day.",
             "nextBlock": 13,
+            "origClipLength": 77,
+            "voiceIdx": -1,
             "pathId": 3227082360422211633,
             "blockIdx": 12
         },
@@ -157,8 +286,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "『楽しい』――これはその感覚を想起させます。",
-            "enText": "Fun\" - that's what it reminds me of.",
+            "enText": "It helps me remember the feeling of 'fun.'",
             "nextBlock": 14,
+            "origClipLength": 139,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 163,
+                    "pathId": 4654823861655804120
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 5303708893951588641
+                }
+            ],
             "pathId": -1898621882791614602,
             "blockIdx": 13
         },
@@ -166,8 +307,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "トレーニング中、勉学中、意欲が上昇しました。\r\n思わぬ効果がこの人形にはあり――",
-            "enText": "Motivation increased during training \nand study. There are unexpected \neffects of this doll—",
+            "enText": "It helps my motivation stay up during training and \nstudying. I never expected it to have such an effect...",
             "nextBlock": 15,
+            "origClipLength": 255,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 225,
+                    "pathId": -7447757880102486228
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8773055030874523863
+                }
+            ],
             "pathId": -7800829320359089907,
             "blockIdx": 14
         },
@@ -175,13 +328,25 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "――ですから交流を経て生まれた『楽しい』には\r\n確かに『意味』が……あるのかと。",
-            "enText": "— so I thought that the \"fun\" that came \nabout through the interaction would certainly \nhave a \"meaning\"…",
+            "enText": "So I was thinking... That maybe the 'fun' you helped \nme experience back then really <i>does</i> have meaning...",
             "nextBlock": 16,
+            "origClipLength": 215,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "……！",
-                    "enText": "…!",
+                    "enText": "...!",
                     "nextBlock": 16
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 242,
+                    "pathId": 7792040886074281350
+                },
+                {
+                    "origLen": 126,
+                    "pathId": -3810674805929169546
                 }
             ],
             "pathId": -3393789134506831998,
@@ -191,8 +356,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……つまり、両親が私にオーダーしたことは――",
-            "enText": "… So, what my parents \nordered me to do was—",
+            "enText": "Maybe my parents' order to improve my social skills...",
             "nextBlock": 17,
+            "origClipLength": 115,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 126,
+                    "pathId": -4744785276004385894
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 1420351781253368627
+                }
+            ],
             "pathId": 2970792380735887082,
             "blockIdx": 16
         },
@@ -200,8 +377,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "『社会性の向上』ではなく、恐らくもう少し、\r\n……その……柔らかなもの、なのです。",
-            "enText": "It's not \"socialization,\" but perhaps \nsomething a little more… soft.",
+            "enText": "Were perhaps supposed to be... \nInterpreted a little... softer than that.",
             "nextBlock": 18,
+            "origClipLength": 312,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 190,
+                    "pathId": -68769268876748186
+                },
+                {
+                    "origLen": 143,
+                    "pathId": 2658350530423322315
+                }
+            ],
             "pathId": -9201200524928489881,
             "blockIdx": 17
         },
@@ -209,13 +398,25 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "たどたどしくはあるが、経験をパズルのように組み立て、\r\n自力で理解してみせた。圧巻の成長ぶりに言葉が詰まる。",
-            "enText": "Although she was not very good at it, she was able to put the \nexperience together like a puzzle and understand it on her own. \nI am at a loss for words to describe her amazing growth.",
+            "enText": "I'm speechless at her personal growth. She combined her \nexperiences like a puzzle to reach the conclusion on her \nown, even if things didn't always work out right away.",
             "nextBlock": 19,
+            "origClipLength": 115,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "……今日は、たくさん遊ぼう！",
-                    "enText": "… Let's have lots of fun today!",
+                    "enText": "Let's make today unforgettable!",
                     "nextBlock": 19
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 1014190656436451557
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 445412243832346065
                 }
             ],
             "pathId": 1938264810530362946,
@@ -225,17 +426,38 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今の自分にできることをひねり出し、\r\n戸惑うミホノブルボンを連れて、賑わう大通りへと向かった。",
-            "enText": "I thought of what I could do, and with a \nbewildered Mihono Bourbon in tow, I headed \nfor the busy main street.",
+            "enText": "I pulled myself together and take the flustered \nMihono Bourbon towards the crowded festival.",
             "nextBlock": 20,
+            "origClipLength": 106,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -1304086831430118170
+                }
+            ],
             "pathId": 6302641872690916662,
-            "blockIdx": 19
+            "blockIdx": 19,
+            "newClipLength": 180
         },
         {
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "銃口、5度下へ下げてください。\r\n通り過ぎました、もう少し上――そこです。",
-            "enText": "Muzzle down five degrees. I'm past \nit, just a little higher— there.",
+            "enText": "Rotate the muzzle 5 degrees downwards. \nToo far, move it slightly upwards. That's it.",
             "nextBlock": 21,
+            "origClipLength": 233,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -7915669221464450912
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -672826863275529267
+                }
+            ],
             "pathId": -856243035419495718,
             "blockIdx": 20
         },
@@ -243,22 +465,38 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（パンッ）",
-            "enText": "(PANTING)",
+            "enText": "*bang*",
             "nextBlock": 22,
+            "origClipLength": 51,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": -4372584261173352418
+                }
+            ],
             "pathId": -3977371288420625447,
             "blockIdx": 21
         },
         {
             "jpName": "射的屋",
-            "enName": "Shooting Gallery",
+            "enName": "Shooting Gallery Attendant",
             "jpText": "おお～、大当たり！\r\n上手いねぇ、お兄さん！",
-            "enText": "Oh, you hit the jackpot! You're \ngood, big brother!",
+            "enText": "Wow, you got it! \nYou're a natural, my man!",
             "nextBlock": 23,
+            "origClipLength": 145,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "指示が的確なんです",
-                    "enText": "Her instructions are precise.",
+                    "enText": "Only thanks to her instructions.",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 183,
+                    "pathId": 3794160231870091587
                 }
             ],
             "pathId": -5694497313936591168,
@@ -266,15 +504,23 @@
         },
         {
             "jpName": "射的屋",
-            "enName": "Shooting Gallery",
+            "enName": "Shooting Gallery Attendant",
             "jpText": "おお～、大当たり！\r\n上手いねぇ、お姉さん！",
-            "enText": "Oh, you hit the jackpot! You're good, sister!",
+            "enText": "Wow, you got it! \nYou're a natural, m'lady!",
             "nextBlock": 24,
+            "origClipLength": 151,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "指示が的確なんです",
-                    "enText": "Her instructions are precise.",
+                    "enText": "Only thanks to her instructions.",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 162,
+                    "pathId": -2177712979988431117
                 }
             ],
             "pathId": 5022530538646734956,
@@ -282,10 +528,22 @@
         },
         {
             "jpName": "射的屋",
-            "enName": "Shooting Gallery",
+            "enName": "Shooting Gallery Attendant",
             "jpText": "はっはっはっは！　そうかい！　いいコンビじゃないか！\r\nほら、ウマ娘のお姉ちゃん景品だ、持って帰りな！",
-            "enText": "Ha-ha-ha-ha! Yeah! You guys make \na great team! Here's your sister's \nprize, take it home!",
+            "enText": "Hahaha! I see, you two make a perfect pair! \nHere's the prize, you lovely horse girl. Don't lose it!",
             "nextBlock": 25,
+            "origClipLength": 285,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 341,
+                    "pathId": 8222563920803757504
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4371298218642144746
+                }
+            ],
             "pathId": 1950027943213718287,
             "blockIdx": 24
         },
@@ -293,8 +551,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……。\r\nありがとうございます。",
-            "enText": "… Thank you.",
+            "enText": "...... \nThank you very much.",
             "nextBlock": 26,
+            "origClipLength": 119,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 8238367445318727667
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -2155172940348223474
+                }
+            ],
             "pathId": -6863443130318409487,
             "blockIdx": 25
         },
@@ -302,8 +572,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "夜は短い。かたぬき、輪投げ、くじ引きと、存分に祭りを\r\n楽むうち、あっという間に夜は更け――",
-            "enText": "The night was short. As I enjoyed the festival to \nthe fullest, with katakanauki, ring toss, and raffle, \nthe night passed in the blink of an eye.",
+            "enText": "We enjoyed the festival to our heart's content and the \nevening whizzed by in a flash. We went die cutting, \nring throwing and drew in the lottery.",
             "nextBlock": 27,
+            "origClipLength": 105,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -1489985375714586023
+                }
+            ],
             "pathId": 2736268421280171802,
             "blockIdx": 26
         },
@@ -311,17 +589,41 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "そろそろ花火大会が始まります。\r\n花火の見える位置へ移動するべきかと。",
-            "enText": "The fireworks display is about to start. I \nthought we should move to a position where we \ncan see the fireworks.",
+            "enText": "The fireworks are about to start. We should move \ntowards a good vantage point.",
             "nextBlock": 28,
+            "origClipLength": 168,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 279,
+                    "pathId": -4487383062243549260
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 7325041208163622992
+                }
+            ],
             "pathId": -2899965329042637356,
             "blockIdx": 27
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "あれ、ブルボンさん！？",
-            "enText": "Oh, hey, Ms. Bourbon!",
+            "enText": "Oh, Bourbon?",
             "nextBlock": 29,
+            "origClipLength": 65,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": -4119656688758876333
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3649094122582981199
+                }
+            ],
             "pathId": 3174863887996542494,
             "blockIdx": 28
         },
@@ -329,8 +631,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "以前、グラウンドでミホノブルボンに話しかけていた\r\nウマ娘と鉢合わせた。",
-            "enText": "I ran into Uma Musume, who had been talking \nto Mihonobourbon on the ground earlier.",
+            "enText": "We ran into the horse girl that came up to Bourbon \nsome time ago.",
             "nextBlock": 30,
+            "origClipLength": 91,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4651068827816707311
+                }
+            ],
             "pathId": -3830550897832987360,
             "blockIdx": 29
         },
@@ -338,26 +648,62 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "トレーニングの休憩中に、そのような声かけをしたということは、\r\nなにか意味があるのではと推測します。",
-            "enText": "The fact that she called out to her during a \nbreak in training suggests that she meant \nsomething by it.",
+            "enText": "<i>I concluded that you must have some sort of reason \nto reach out to me during my break.</i>",
             "nextBlock": 31,
+            "origClipLength": 210,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -6914820230641476402
+                },
+                {
+                    "origLen": 154,
+                    "pathId": 8256346153005294952
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -5121378334422261612
+                }
+            ],
             "pathId": -8294592393068589914,
             "blockIdx": 30
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "ごめん、大した意味なんかなくて、ただ話してみたくて……！\r\nせっかくの休憩中にお邪魔しちゃってごめんね！　それじゃ！",
-            "enText": "Sorry, I didn't mean much, I just wanted to \ntalk to you…! Sorry to bother you \nduring your break! Bye!",
+            "enText": "<i>Sorry, I didn't have a particular reason, \nI just wanted to chat for a bit... \nI guess I interrupted you after all, so I'll be going! </i>",
             "nextBlock": 32,
+            "origClipLength": 303,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 322,
+                    "pathId": -7075498119356014176
+                }
+            ],
             "pathId": -4322616121485581154,
             "blockIdx": 31
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "わあ、ブルボンさんもお祭りとか来るんだ……じゃなくて！\r\nリリ、リフレッシュ中に、ごめんなさい！　びっくりしちゃって。",
-            "enText": "Wow, Ms. Bourbon comes to festivals and stuff \ntoo, not…! Lili, I'm sorry to bother you while \nyou were freshening up! You startled me.",
+            "enText": "I didn't know you went to festivals, Bourbon... Oh wait, \nI-I'm sorry for interrupting your free time! I got a little \ntoo excited...",
             "nextBlock": 33,
+            "origClipLength": 269,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 325,
+                    "pathId": 5441374317368549956
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 6963374619428078435
+                }
+            ],
             "pathId": 4165796758532264234,
             "blockIdx": 32
         },
@@ -365,8 +711,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "いえ、問題ありません。\r\n……あなたも、花火を見に来たんですか？",
-            "enText": "No, no problem… Are you here \nto see the fireworks, too?",
+            "enText": "Don't feel sorry, it's no problem. \nYou are here to see the fireworks, too?",
             "nextBlock": 34,
+            "origClipLength": 192,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 2514862593434121288
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -9093642999396242885
+                }
+            ],
             "pathId": -5816262175580585248,
             "blockIdx": 33
         },
@@ -374,17 +732,37 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "この花火大会は、三尺玉が目玉の花火になっています。\r\n私は、それを『楽しみ』にしています。",
-            "enText": "This fireworks display features a three-foot \ndrop as the main feature of the fireworks. \nI'm looking forward to it.",
+            "enText": "The centerpiece of this fireworks display \nis a shell 90 centimeters in diameter. \nI am looking forward to it.",
             "nextBlock": 35,
+            "origClipLength": 235,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 184,
+                    "pathId": -159964650823767633
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1607473074764183523
+                }
+            ],
             "pathId": -9047060465800049975,
             "blockIdx": 34
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "えっと、それってどういう……意味……？",
-            "enText": "Well, what does that… mean…?",
+            "enText": "So, do you have a reason for that?",
             "nextBlock": 36,
+            "origClipLength": 107,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": -5813853483993810935
+                }
+            ],
             "pathId": -6937034149024145434,
             "blockIdx": 35
         },
@@ -392,17 +770,37 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……意味は、特にありません。",
-            "enText": "There is no specific… meaning.",
+            "enText": "No, not in particular.",
             "nextBlock": 37,
+            "origClipLength": 91,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": -8525983327806618374
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -3845556227420020386
+                }
+            ],
             "pathId": -5956345886330782607,
             "blockIdx": 36
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "――へ？",
-            "enText": "—to?",
+            "enText": "Huh?",
             "nextBlock": 38,
+            "origClipLength": 26,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 5388069644934524811
+                }
+            ],
             "pathId": 6500352877454356704,
             "blockIdx": 37
         },
@@ -410,8 +808,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "突然飛び出たミホノブルボンの言葉に、\r\n彼女は目を白黒させた。よほど意外だったのだろう。",
-            "enText": "The sudden outburst of Mihono Bourbon's words \ncaused her eyes to go black. It must have \nbeen quite a surprise.",
+            "enText": "The little horse girl seemed in shock after \nhearing those words come from Bourbon.",
             "nextBlock": 39,
+            "origClipLength": 102,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": -5321079660562331475
+                }
+            ],
             "pathId": -3496069988935881270,
             "blockIdx": 38
         },
@@ -419,13 +825,21 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "とはいえ以前と比べて、ミホノブルボンは確かに成長している。\r\n他者と『楽しい』時間を過ごそうとしている。それならば――",
-            "enText": "However, compared to before, Mihono Bourbon is \ncertainly growing up. She's trying to have a 'good' \ntime with others. If that's the case—",
+            "enText": "Mihono Bourbon has come a long way. She finally \nunderstands what it's like to 'have fun' with others. \n...Wait a minute.",
             "nextBlock": 40,
+            "origClipLength": 121,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "一緒に遊んでおいで",
-                    "enText": "Come play with me.",
+                    "enText": "Go play with her.",
                     "nextBlock": 40
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 132,
+                    "pathId": -1928934550850553698
                 }
             ],
             "pathId": 6914151960133438457,
@@ -435,13 +849,21 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……しかし――",
-            "enText": "… but—",
+            "enText": "But...",
             "nextBlock": 41,
+            "origClipLength": 36,
+            "voiceIdx": 27,
             "choices": [
                 {
                     "jpText": "きっと『楽しい』から",
-                    "enText": "Because it's fun.",
+                    "enText": "I'm sure it'll be 'fun!'",
                     "nextBlock": 41
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 33,
+                    "pathId": -2878780267105221091
                 }
             ],
             "pathId": -6620340808500809471,
@@ -451,8 +873,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……命令を受理しました。",
-            "enText": "… order has been accepted.",
+            "enText": "Order accepted.",
             "nextBlock": 42,
+            "origClipLength": 60,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 5192090549045373891
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 5060805022727915472
+                }
+            ],
             "pathId": -4849360696200775386,
             "blockIdx": 41
         },
@@ -460,8 +894,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ミホノブルボンは、まっすぐに彼女を見た。",
-            "enText": "Mihono Bourbon looked straight at her.",
+            "enText": "She turned her gaze to the younger horse girl.",
             "nextBlock": 43,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -6215207467548743151
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7022194981684273517
+                }
+            ],
             "pathId": -3981396040110055425,
             "blockIdx": 42
         },
@@ -469,8 +915,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "もしよろしければ……私と一緒に花火を見ませんか？",
-            "enText": "If you'd like to join me… you can \nwatch the fireworks with me.",
+            "enText": "Would you like to... Watch the fireworks with me?",
             "nextBlock": 44,
+            "origClipLength": 149,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 203,
+                    "pathId": 4884290616612919351
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1303034753076058112
+                }
+            ],
             "pathId": -5185071335651342519,
             "blockIdx": 43
         },
@@ -478,26 +936,58 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ヒュルル……ドーン）",
-            "enText": "(hurrah… dawn)",
+            "enText": "*fweet* ... *boom*",
             "nextBlock": 45,
+            "origClipLength": 59,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": -2188864352113118396
+                }
+            ],
             "pathId": 8397271179793330432,
             "blockIdx": 44
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "はぁ～！　やっぱり花火って、すごいなぁ～！\r\n1人でも、勇気出して見に来てよかったなぁ。",
-            "enText": "Huh! Fireworks are amazing after all! I'm \nglad I had the courage to come and see them, \neven if I was alone.",
+            "enText": "Wow, the fireworks really are amazing! \nI'm glad I worked up the courage to go here alone.",
             "nextBlock": 46,
+            "origClipLength": 218,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 317,
+                    "pathId": 8892679883762282817
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 8094608572773562947
+                }
+            ],
             "pathId": 2202834340525452061,
             "blockIdx": 45
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "ブルボンさんにも会えちゃったし、一緒に花火も――\r\nってごめん、またどうでもいい事ばっかり。えーっと～……。",
-            "enText": "I got to meet Bourbon, and we got to watch \nfireworks together… sorry, more unimportant \nstuff. Let's see…",
+            "enText": "I'm so glad I met you here, to see the fireworks together... \nOh, I'm sorry. I started speaking my thoughts again...",
             "nextBlock": 47,
+            "origClipLength": 274,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 211,
+                    "pathId": 4412247653377177085
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 5165255667059131154
+                }
+            ],
             "pathId": -5971056417311892133,
             "blockIdx": 46
         },
@@ -505,26 +995,54 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……あなたは、花火が、好きなんですか？",
-            "enText": "… Do you like fireworks?",
+            "enText": "Do you like fireworks?",
             "nextBlock": 48,
+            "origClipLength": 110,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 211,
+                    "pathId": 4008629591620572763
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -8860553193488162080
+                }
+            ],
             "pathId": -5380306920861260903,
             "blockIdx": 47
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "うん、好き！　大きくて、キラキラしてて、勇気をくれるから！\r\n花火でも何でも、自分にないものを持ってるのはみんな大好き！",
-            "enText": "Yeah, I like it! Because they're big, they sparkle, and they \ngive me courage! I love everyone who has something that I don't, \nbe it fireworks or whatever!",
+            "enText": "Yes, I do! I like how they sparkle so wide in the sky. \nThey inspire me! Everyone longs for something that \nthey don't have. Be it fireworks or something else.",
             "nextBlock": 49,
+            "origClipLength": 311,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 406,
+                    "pathId": 374756249476451457
+                }
+            ],
             "pathId": 4223683864855118820,
             "blockIdx": 48
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "……だから、って言ったら言い訳だけど、時々距離感を間違えて\r\n突撃しちゃったりするの。……ごめんね、ブルボンさん。",
-            "enText": "I know it's an excuse to say that I'm a… but sometimes I get \nthe distance wrong and charge in. I'm… sorry, Bourbon.",
+            "enText": "I know this sounds as an excuse for what I did back then, \nbut I'm bad at sensing the distance between people...",
             "nextBlock": 50,
+            "origClipLength": 292,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 275,
+                    "pathId": -6518772909570090609
+                }
+            ],
             "pathId": 2566950610588250616,
             "blockIdx": 49
         },
@@ -532,8 +1050,16 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "なるほど、理解しました。\r\n距離感の把握が苦手ということですね？　私は得意です。",
-            "enText": "I see. I understand. So you're not good at \nunderstanding distance? I'm good at it.",
+            "enText": "Understood. So you have trouble measuring distances? \nI'm actually an expert at this subject.",
             "nextBlock": 51,
+            "origClipLength": 230,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 180,
+                    "pathId": -6225260372582108650
+                }
+            ],
             "pathId": -3316340968937546506,
             "blockIdx": 50
         },
@@ -541,17 +1067,37 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "例を挙げると、あなたと私の間には34cmの距離があります。\r\n後方4時の方角にあるかき氷屋からは、8m24cm離れています。",
-            "enText": "To give you an example, there is a distance \nof 34 cm between you and me. The shaved ice \nshop at 4 o'clock behind you is 8m 24cm away.",
+            "enText": "For example: The two of us are 34 centimeters apart. \nThe shaved ice stand behind us at 4 o'clock is 8 meters \nand 24 centimeters away from you.",
             "nextBlock": 52,
+            "origClipLength": 343,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 294,
+                    "pathId": 6276886471001016384
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1585428794647444614
+                }
+            ],
             "pathId": 2183607759400150059,
             "blockIdx": 51
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "……もしかして、ブルボンさんって天然なの？",
-            "enText": "… Could it be that Ms. \nBourbon is a natural?",
+            "enText": "Um, Bourbon. Are you a bit of an airhead, actually?",
             "nextBlock": 53,
+            "origClipLength": 116,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 272,
+                    "pathId": 663284724377794170
+                }
+            ],
             "pathId": 6032486489359253252,
             "blockIdx": 52
         },
@@ -559,17 +1105,37 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "体にメカニックな要素はなく、全て自然由来ですが。",
-            "enText": "There are no mechanical elements in the body, \nthough, and everything is of natural origin.",
+            "enText": "My head is filled with gray matter only, not air.",
             "nextBlock": 54,
+            "origClipLength": 128,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5132641971622913789
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2601852343284515007
+                }
+            ],
             "pathId": 1408034774874081145,
             "blockIdx": 53
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Horse Girl",
             "jpText": "わあ～！　天然だ～！",
-            "enText": "Wow! You're a natural!",
+            "enText": "Yep! An airhead!",
             "nextBlock": 55,
+            "origClipLength": 72,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 6995621145969677669
+                }
+            ],
             "pathId": 2407511753114649514,
             "blockIdx": 54
         },
@@ -577,8 +1143,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――花火の下でのおしゃべりは、しばらく止まることはなかった。",
-            "enText": "—The chatter under the fireworks \ndidn't stop for a while.",
+            "enText": "...They continued chatting for a while, \nunder the twinkling lights of the fireworks.",
             "nextBlock": 56,
+            "origClipLength": 84,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -8784934940325559920
+                }
+            ],
             "pathId": -7845657766577302643,
             "blockIdx": 55
         },
@@ -586,8 +1160,24 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――翌日。",
-            "enText": "—The next day.",
+            "enText": "The next day.",
             "nextBlock": 57,
+            "origClipLength": 51,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 7599346658257557807
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -660813011243665822
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 941929298058989360
+                }
+            ],
             "pathId": 864891670930271386,
             "blockIdx": 56
         },
@@ -595,8 +1185,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "もしもし、お父さんですか？　ミホノブルボンです。\r\n今日はオーダー完了の報告のため、電話を――",
-            "enText": "Hello. Is this your father? This is Mihono \nBourbon. I'm calling to report an order \ncompleted today—",
+            "enText": "Hi Father. It's me, Mihono Bourbon. I'm calling \nto report on the completion of your orde—",
             "nextBlock": 58,
+            "origClipLength": 241,
+            "voiceIdx": 40,
+            "animData": [
+                {
+                    "origLen": 252,
+                    "pathId": -3469432684641360381
+                },
+                {
+                    "origLen": 252,
+                    "pathId": -5173686742564726426
+                }
+            ],
             "pathId": 6829756049796562811,
             "blockIdx": 57
         },
@@ -604,8 +1206,20 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "いえ、間違えました。これは近況報告です。",
-            "enText": "No, I made a mistake. This \nis a status report.",
+            "enText": "No, sorry. This is a status report.",
             "nextBlock": 59,
+            "origClipLength": 161,
+            "voiceIdx": 41,
+            "animData": [
+                {
+                    "origLen": 172,
+                    "pathId": -3487901863607920834
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 386642556287968790
+                }
+            ],
             "pathId": 6942524991850244035,
             "blockIdx": 58
         },
@@ -613,10 +1227,24 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……私に、友人が出来ました。",
-            "enText": "… I have made a friend.",
+            "enText": "I managed to make a friend.",
             "nextBlock": -1,
+            "origClipLength": 135,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 170,
+                    "pathId": -6621409221696404411
+                },
+                {
+                    "origLen": 148,
+                    "pathId": 2629149799614360727
+                }
+            ],
             "pathId": -1222494978675720204,
             "blockIdx": 59
         }
-    ]
+    ],
+    "modified": 1678113595,
+    "humanTl": true
 }

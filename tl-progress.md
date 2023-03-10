@@ -98,7 +98,7 @@ Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS][]
 Mejiro McQueen | Transferring | [ZarCuZ](https://www.youtube.com/channel/UCMP1EeJrGT5gFchEZTnx68A) (ep 1)
 Mejiro Ryan | Complete | deepl (contributed by CryDuringItAll)
-Mihono Bourbon | Complete, In progress | deepl, [KevinVG207](https://github.com/KevinVG207)
+Mihono Bourbon | Complete | [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Nice Nature | Complete | [xct]
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl

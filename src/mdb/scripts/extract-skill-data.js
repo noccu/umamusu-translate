@@ -129,6 +129,12 @@ function transformValue(val, transforms) {
 function translateTarget(type, value) {
     if (type == 0 || type == 1) return "";
     type = DATA_TL.target_type[type];
+    let ignoreVal = false
+    if (Array.isArray(type)) {
+        ignoreVal = type[1]
+        type = type[0]
+    }
+    if (ignoreVal) return ` to ${type}`
     let val = DATA_TL.target_value[value];
     return ` to ${val || `${value} closest`} ${type}`;
 }

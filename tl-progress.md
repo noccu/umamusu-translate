@@ -112,7 +112,7 @@ Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
-Twin Turbo | In progress | [Riersa] (1-4)
+Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]
 Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl

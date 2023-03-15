@@ -492,6 +492,6 @@ def createDefaultUmatlConfig():
     helpers.writeJson("umatl.json", data, 2)
     print("Uma-tl uses the umatl.json config file for user preferences when requested.\n"
         "This seems to be your first time running uma-tl this way so a new file was created.\n"
-        "Uma-tl has quit this first time so you can edit the config first. Defaults are:")
+        "Uma-tl has quit without doing anything this first time so you can edit the config before running it again. Defaults are:")
     print(json.dumps(data, indent=2))
     sys.exit()

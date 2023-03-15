@@ -723,14 +723,16 @@ def insertTaggedTextFromMarkup(widget:tk.Text, text:str=None):
     tagList = list()
     offset = 0
     openedTags = dict()
-    tagRe = r"<(/?)([a-z=#\d]+)>"
+    tagRe = r"<(/?)(([a-z])|[=#\d]+)>"
     for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
-        isClose, tag = m.groups()
+        isClose, fullTag, tagName = m.groups()
+        if tagName not in ("color", "b", "i", "size"):
+            continue
         if isClose:
-            openedTags[tag]['end'] = m.start() - offset
+            openedTags[fullTag]['end'] = m.start() - offset
         else:
-            tagList.append({'name': tag, 'start': m.start() - offset})
-            openedTags[tag.split('=')[0]] = tagList[-1]
+            tagList.append({'name': fullTag, 'start': m.start() - offset})
+            openedTags[tagName] = tagList[-1]
         offset += len(m[0])
     # Add the cleaned text
     widget.delete(1.0, tk.END)

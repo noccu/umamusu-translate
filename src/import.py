@@ -255,10 +255,10 @@ class StoryPatcher:
 
 class RacePatcher(StoryPatcher):
     def patch(self):
-        for textBlock in self.bundle.linkedTlFile.textBlocks:
-            blockIdx = textBlock['blockIdx'] - 1  # race keys start at 1
+        for i, textBlock in enumerate(self.bundle.linkedTlFile.textBlocks):
+            # blockIdx = textBlock['blockIdx'] - 1  # race keys start at 1
             if textBlock['enText']:
-                self.assetData['textData'][blockIdx]['text'] = textBlock['enText']
+                self.assetData['textData'][i]['text'] = textBlock['enText']
             else:
                 self.skipped += 1
                 continue

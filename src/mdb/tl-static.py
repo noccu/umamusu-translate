@@ -8,7 +8,8 @@ from common import TranslationFile, searchFiles
 import helpers
 
 TL_FILES = {
-    "skillEvo": TranslationFile("translations/mdb/skill-evolve-cond.json")
+    "skillEvo": TranslationFile("translations/mdb/skill-evolve-cond.json"),
+    "missions": TranslationFile("translations/mdb/missions.json")
 }
 LOOKUP_FILES = {
     "common": TranslationFile("translations/mdb/common.json"),
@@ -59,26 +60,31 @@ def main():
     translate(
         TL_FILES["skillEvo"],
         [
-            (r"基礎能力\[(?P<stat>.+?)\]が(?P<n>\d+)以上になる", r"Reach ≥$n $stat", {"stat": LOOKUP_FILES["stats"]}),
-            (r"＜?(?P<stat>[^＜＞]+?)＞?の?スキルを(?P<n>\d+)個以上所持する", r"Learn $n $stat skills", {"stat": (LOOKUP_FILES["stats"], LOOKUP_FILES["common"])}),
-            (r"(?P<type>.+?)で(?P<pos>\d+)着以内を(?P<n>\d+)回以上とる", r"Finish top $pos in $n $type races", {"type": None}),
-            (r"(?P<race>.+?)で(?P<pos>\d+)着以内になる", r"Finish top $pos in $race", {"race": LOOKUP_FILES["races"]}),
-            (r"作戦「(?P<strat>.+?)」かつ(?P<fav>\d+)番人気で(?P<type>.+?)を(?P<n>\d+)勝以上する", r"Win $n $type races as $strat, being favorite #$fav", {"strat": LOOKUP_FILES["common"], "type": LOOKUP_FILES["common"]}),
-            (r"作戦「(?P<strat>.+?)」で(?P<type>.+?)を(?P<n>\d+)勝以上する", r"Win $n $type races as $strat", {"strat": LOOKUP_FILES["common"]}),
-            (r"(?P<type>[^「]+?)の(?P<grade>.+?)を(?P<n>\d+)勝以上する", r"Win $n $type $grade races", {"type": LOOKUP_FILES["common"]}),
-            (r"(?P<grade>G[Ⅰ123]+)を(?P<n>\d+)勝以上する", r"Win $n $grade races", None),
-            (r"(?P<race>.+?)を二連覇する", r"Win $race twice consecutively", {"race": LOOKUP_FILES["races"]}),
-            (r"(?P<type>.+?)(?:レース)?を(?P<n>\d+)勝以上する", r"Win $n $type races", {"type": LOOKUP_FILES["common"]}),
-            (r"(?P<type>.+?)レースを勝利する", r"Win a $type race", {"type": LOOKUP_FILES["common"]}),
-            (r"(?P<race>.+?)を勝利する", r"Win $race", {"race": LOOKUP_FILES["races"]}),
-            (r"(?P<race>.+?)に出走する", r"Race in $race", {"race": LOOKUP_FILES["races"]}),
-            (r"ファン数が(?P<n>\d+)人以上になる", r"Gain $n fans", None),
-            (r"スキル「(?P<skill>.+?)」を所持する", r"Learn the skill '$skill'", {"skill": LOOKUP_FILES["skills"]}),
-            (r"育成イベント「(?P<event>.+)」を発生させる", r"Trigger the '$event' event", None),
-            (r"育成イベント「(?P<event>.+)」を(?P<mood>.+)以上の状態で発生させる", r"Trigger the '$event' event with ≥$mood motivation", None),
-            (r"育成中に1回以上「(?P<condition>.+?)」になる", r"Become '$condition' once", {"condition": LOOKUP_FILES["conditions"]}),
-            (r"(?P<loc>.+?レース場)で(?P<n>\d+)勝以上する", r"Win $n races at $loc", {"loc": LOOKUP_FILES["misc"]}),
-            (r"「(?P<cond>.+?[〇○]?)」を持つ状態で育成を完了する", r"Finish training with the $cond condition", {"cond": LOOKUP_FILES["conditions"]})
+            (r"基礎能力\[(?P<stat>.+?)\]が(?P<n>\d+)以上になる", "Reach ≥$n $stat", {"stat": LOOKUP_FILES["stats"]}),
+            (r"＜?(?P<stat>[^＜＞]+?)＞?の?スキルを(?P<n>\d+)個以上所持する", "Learn $n $stat skills", {"stat": (LOOKUP_FILES["stats"], LOOKUP_FILES["common"])}),
+            (r"(?P<type>.+?)で(?P<pos>\d+)着以内を(?P<n>\d+)回以上とる", "Finish top $pos in $n $type races", {"type": None}),
+            (r"(?P<race>.+?)で(?P<pos>\d+)着以内になる", "Finish top $pos in $race", {"race": LOOKUP_FILES["races"]}),
+            (r"作戦「(?P<strat>.+?)」かつ(?P<fav>\d+)番人気で(?P<type>.+?)を(?P<n>\d+)勝以上する", "Win $n $type races as $strat, being favorite #$fav", {"strat": LOOKUP_FILES["common"], "type": LOOKUP_FILES["common"]}),
+            (r"作戦「(?P<strat>.+?)」で(?P<type>.+?)を(?P<n>\d+)勝以上する", "Win $n $type races as $strat", {"strat": LOOKUP_FILES["common"]}),
+            (r"(?P<type>[^「]+?)の(?P<grade>.+?)を(?P<n>\d+)勝以上する", "Win $n $type $grade races", {"type": LOOKUP_FILES["common"]}),
+            (r"(?P<grade>G[Ⅰ123]+)を(?P<n>\d+)勝以上する", "Win $n $grade races", None),
+            (r"(?P<race>.+?)を二連覇する", "Win $race twice consecutively", {"race": LOOKUP_FILES["races"]}),
+            (r"(?P<type>.+?)(?:レース)?を(?P<n>\d+)勝以上する", "Win $n $type races", {"type": LOOKUP_FILES["common"]}),
+            (r"(?P<type>.+?)レースを勝利する", "Win a $type race", {"type": LOOKUP_FILES["common"]}),
+            (r"(?P<race>.+?)を勝利する", "Win $race", {"race": LOOKUP_FILES["races"]}),
+            (r"(?P<race>.+?)に出走する", "Race in $race", {"race": LOOKUP_FILES["races"]}),
+            (r"ファン数が(?P<n>\d+)人以上になる", "Gain $n fans", None),
+            (r"スキル「(?P<skill>.+?)」を所持する", "Learn the skill '$skill'", {"skill": LOOKUP_FILES["skills"]}),
+            (r"育成イベント「(?P<event>.+)」を発生させる", "Trigger the '$event' event", None),
+            (r"育成イベント「(?P<event>.+)」を(?P<mood>.+)以上の状態で発生させる", "Trigger the '$event' event with ≥$mood motivation", None),
+            (r"育成中に1回以上「(?P<condition>.+?)」になる", "Become '$condition' once", {"condition": LOOKUP_FILES["conditions"]}),
+            (r"(?P<loc>.+?レース場)で(?P<n>\d+)勝以上する", "Win $n races at $loc", {"loc": LOOKUP_FILES["misc"]}),
+            (r"「(?P<cond>.+?[〇○]?)」を持つ状態で育成を完了する", "Finish training with the $cond condition", {"cond": LOOKUP_FILES["conditions"]})
+        ]
+    )
+    translate(TL_FILES["missions"],
+        [
+            (r"チーム競技場で(?P<dist>.{3,3})代表に(?P<n>\d+)回勝利しよう", "Win the $dist race in stadium $n times", {"dist": LOOKUP_FILES["common"]})
         ]
     )
 

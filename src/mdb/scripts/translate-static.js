@@ -9,7 +9,7 @@ const FILES = {
         trainerReq: "translations/mdb/trainer-title-requirements.json",
         missions: "translations/mdb/missions.json",
         storyMissions: "translations/mdb/story-event-missions.json",
-        umaNames: "translations/mdb/uma-name.json",
+        umaNames: "translations/mdb/char-name.json",
         trTitles: "translations/mdb/trainer-title.json",
         races: "translations/mdb/race-name.json",
         pieces: "translations/mdb/item-uma-pieces.json",

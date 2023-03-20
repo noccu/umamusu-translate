@@ -193,6 +193,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1055 | ゴルシンゴルシンゴルシンシン | Golshingolshingolshinshin
 1056 | メジロ讃歌 | Mejiro Hymn
 1057 | 立ち位置ゼロ番！順位は一番！ | Tachiichi Zeroban! Juni ha Ichiban!
+1058 | Everlasting BEATS
 1059 | Overrunner! | 
 1061 | ゆるパカHAPPY DAYS！ | YuruPaka HAPPY DAYS!
 1062 | わたしの印は大本命◎ | わたしの印は大本命◎

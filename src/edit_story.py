@@ -667,8 +667,11 @@ def pickColor(useLast=True):
     global LAST_COLOR
     if not useLast or not LAST_COLOR:
         LAST_COLOR = colorchooser.askcolor()[1] #0 = rgb tuple, 1=hex str
-        text_box_en.tag_config(f"color={LAST_COLOR}", foreground=LAST_COLOR)
+        defineColor(LAST_COLOR)
     return LAST_COLOR
+
+def defineColor(color:str):
+    text_box_en.tag_config(f"color={color}", foreground=color)
 
 def format_text(event):
     if not text_box_en.tag_ranges("sel"):
@@ -723,20 +726,22 @@ def insertTaggedTextFromMarkup(widget:tk.Text, text:str=None):
     tagList = list()
     offset = 0
     openedTags = dict()
-    tagRe = r"<(/?)(([a-z])|[=#\d]+)>"
+    tagRe = r"<(/?)(([a-z]+)(?:[=#a-z\d]+)?)>"
     for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
         isClose, fullTag, tagName = m.groups()
         if tagName not in ("color", "b", "i", "size"):
             continue
         if isClose:
-            openedTags[fullTag]['end'] = m.start() - offset
+            openedTags[tagName]['end'] = m.start() - offset
         else:
             tagList.append({'name': fullTag, 'start': m.start() - offset})
             openedTags[tagName] = tagList[-1]
+            if tagName == "color":
+                defineColor(fullTag.split("=")[-1])
         offset += len(m[0])
     # Add the cleaned text
     widget.delete(1.0, tk.END)
-    widget.insert(tk.END, re.sub(tagRe, "", text))
+    widget.insert(tk.END, re.sub(tagRe, "", text, flags=re.IGNORECASE))
     # Apply tags
     for toTag in tagList:
         widget.tag_add(toTag['name'], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")

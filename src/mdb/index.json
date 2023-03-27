@@ -7,12 +7,13 @@
             "common": null,
             "miscellaneous": null,
             "uma-title": 5,
-            "char-name": [6, 77, 78],
+            "char-name": [6, 77, 78, 170, 182],
             "item-name": 23,
             "item-desc": 24,
             "skill-name": [47, {"spec": 147, "sql":"\"index\" BETWEEN 2000100 and 3000100"}],
             "skill-desc": 48,
             "race-name": {"spec": [28, 29, 32, 33, 36, 111, 218], "sql": "\"index\" not BETWEEN 20000 and 30000"},
+            "race-tracks": [31, 35],
             "trainer-title": 65,
             "trainer-title-requirements": 66,
             "missions": 67,
@@ -95,11 +96,14 @@
             "cashshop-desc": {"spec": 96, "sql": "\"index\" < 101"},
             "outfits": 14,
             "live-names": 16,
-            "training-actions": 55,
             "loadscreen-titles": 68,
             "uma-rank": 121,
             "training-comments": 139,
-            "poster-detail": 196
+            "poster-detail": 196,
+            "error-desc": 1,
+            "error-name": 2,
+            "training-names": [55, 138],
+            "hall-posters": 196
         },
         "overrides": {
             "skill_data": ["skill-desc", "alt/skill-desc"]

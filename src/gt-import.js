@@ -2,7 +2,7 @@ import fs from "fs"
 import https from "https"
 import {parse as htmlParse} from 'node-html-parser';
 
-let nameSource = "translations/mdb/uma-name.json"
+let nameSource = "translations/mdb/char-name.json"
 let baseUrl = "https://gametora.com/umamusume/characters/"
 
 function readFile(path) {
@@ -85,28 +85,31 @@ for (let enName of Object.values(nameData.text)) {
         gtData = parseData(gtData)
 
         let prof = gtData.props.pageProps.profileData
-        for (let [k, file] of Object.entries(dataFiles)) {
-            let text = file.data.text
-            if (k == "secrets") {
-                let i = 0
-                for (let jpText of prof.ja[k]) {
-                    jpText = file.map[jpText]
-                    if (!jpText) continue
-                    if (text.hasOwnProperty(jpText) && text[jpText] == "") {
-                        text[jpText] = prof.en[k][i]
+        if (prof && prof.ja && prof.en) { 
+            for (let [k, file] of Object.entries(dataFiles)) {
+                let text = file.data.text
+                if (k == "secrets") {
+                    let i = 0
+                    for (let jpText of prof.ja[k]) {
+                        jpText = file.map[jpText]
+                        if (!jpText) continue
+                        if (text.hasOwnProperty(jpText) && text[jpText] == "") {
+                            text[jpText] = prof.en[k][i] || ""
+                        }
+                        i++
                     }
-                    i++
+                }
+                else {
+                    let jpText = file.map[prof.ja[k]]
+                    let enText = prof.en[k]
+                    if (!jpText || !enText) continue
+                    if (text.hasOwnProperty(jpText) && text[jpText] == "") {
+                        text[jpText] = enText
+                        console.log(`wrote: ${jpText} = ${enText}`)
+                    }
                 }
             }
-            else {
-                let jpText = file.map[prof.ja[k]]
-                if (!jpText) continue
-                if (text.hasOwnProperty(jpText) && text[jpText] == "") {
-                    text[jpText] = prof.en[k]
-                    console.log(`wrote: ${jpText} = ${prof.en[k]}`)
-                }
-            }
-        }
+         }
 
         let va = gtData.props.pageProps.charData
         let data = vaData.data.text

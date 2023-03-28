@@ -252,6 +252,7 @@ Blaze | Complete | [noccu][]
 BLOW my GALE | Complete | [noccu][]
 DRAMATIC JOURNEY | Complete | [Kasey]
 Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
+Everlasting BEATS | Complete | [noccu]
 Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu] (Edited slightly based on tl by [COSMET])
 Honnou Speed | Complete | [Eight][]

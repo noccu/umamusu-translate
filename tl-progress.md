@@ -260,6 +260,7 @@ Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] 
 Ms. VICTORIA | Complete | [Nine]
 Next Frontier | Complete | [LotoDS][]
 Never Looking Back | Complete | [COSMET]
+Pyoitto♪Hallelujah! | Complete | [Kasey]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
 transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | Anonymous Reindeer, [Karimenrider][] (missing parts)

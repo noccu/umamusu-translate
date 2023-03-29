@@ -19,7 +19,7 @@ LOOKUP_FILES = {
     "races": TranslationFile("translations/mdb/race-name.json"),
     "skills": TranslationFile("translations/mdb/skill-name.json"),
     "conditions": TranslationFile("translations/mdb/conditions-name.json"),
-    "nicknames": TranslationFile("translations/mdb/uma-nickname.json"),
+    "epithets": TranslationFile("translations/mdb/uma-epithet.json"),
     "training": TranslationFile("translations/mdb/training-actions.json"),
 }
 COMMON_LOOKUPS = helpers.readJson("src/data/mdb_static_tl.json")
@@ -113,7 +113,7 @@ def main():
             partialTl(r"・<color=#(?P<color>[A-Z0-9]+)>(?P<type>重賞|G[ⅠⅡⅢ])</color>を<color=#FF911C>(?P<n>\d+)勝</color>する", "・Won <color=#$color>$n $type</color> races", None),
             partialTl(r"・ ?<color=#(?P<color>[A-Z0-9]+)>(?P<type>重賞|G[ⅠⅡⅢ])</color>を勝利する", "・Won a <color=#$color>$type</color> race", None),
             partialTl(r"・<color=#(?P<color>[A-Z0-9]+)>(?P<races>.+?)</color>を勝利する", "・Won <color=#$color>$races</color>", {"races": LOOKUP_FILES["races"]}),
-            partialTl(r"（二つ名<color=#(?P<color>[A-Z0-9]+)>「(?P<nick>.+?)」</color>所持）", "(Has nickname <color=#$color>$nick</color>)", {"nick": LOOKUP_FILES["nicknames"]}),
+            partialTl(r"（二つ名<color=#(?P<color>[A-Z0-9]+)>「(?P<nick>.+?)」</color>所持）", "(Has epithet <color=#$color>$nick</color>)", {"nick": LOOKUP_FILES["epithets"]}),
         ], multi=True
     )
 

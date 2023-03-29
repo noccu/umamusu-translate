@@ -1,0 +1,6 @@
+python.exe .\src\extract.py -g 09
+sct tl_uma <script>
+python.exe .\src\textprocess.py
+python.exe .\src\import.py -O -g 09 -id 0019
+python.exe .\src\names.py
+python.exe .\src\names.py -n "C:\Users\blase\js\umamusume-db-translate\src\data\uma-name.csv"

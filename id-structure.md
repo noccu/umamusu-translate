@@ -128,7 +128,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1083 | Symboli Kris S
 1084 | Tanino Gimlet
 1085 | Daiichi Ruby
-1085 | Mejiro Ramonu
+1086 | Mejiro Ramonu
 1087 | Aston Machan
 1093 | K.S. Miracle
 1098 | Copano Rickey

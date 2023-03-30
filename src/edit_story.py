@@ -233,7 +233,10 @@ def change_chapter(event=None, initialLoad=False):
     global cur_file
 
     if not initialLoad: save_block()
-    cur_chapter = chapter_dropdown.current()
+    if chapter_dropdown.search:
+        cur_chapter = chapter_dropdown.search[chapter_dropdown.current()]
+    else:
+        cur_chapter = chapter_dropdown.current()
     cur_block = 0
 
     loadFile()
@@ -641,6 +644,18 @@ def toggleSearchPopup(event=None):
         show_search()
 
 
+def searchChapters(event=None):
+    if event.keysym in ("Up", "Down", "Left", "Right", "Return"): return
+    search = chapter_dropdown.get()
+    if search == '':
+        chapter_dropdown['values'] = chapter_dropdown.formattedList
+        chapter_dropdown.search = None
+    else:
+        searchList = {item: i for i, item in enumerate(chapter_dropdown.formattedList) if search in item}
+        chapter_dropdown['values'] = list(searchList.keys())
+        chapter_dropdown.search = list(searchList.values())
+
+
 def char_convert(event=None):
     pos = text_box_en.index(tk.INSERT)
     start = pos + "-6c"
@@ -883,8 +898,11 @@ def main():
     textblock_label.grid(row=0, column=2)
 
     chapter_dropdown = ttk.Combobox(root, width=35)
-    chapter_dropdown['values'] = [f.split("\\")[-1] for f in files]
+    chapter_dropdown.formattedList = [f.split("\\")[-1] for f in files]
+    chapter_dropdown['values'] = chapter_dropdown.formattedList
     chapter_dropdown.bind("<<ComboboxSelected>>", change_chapter)
+    chapter_dropdown.bind("<KeyRelease>", searchChapters)
+    chapter_dropdown.search = None
     chapter_dropdown.grid(row=0, column=1, sticky=tk.NSEW)
     block_dropdown = ttk.Combobox(root, width=35)
     block_dropdown.bind("<<ComboboxSelected>>", change_block)

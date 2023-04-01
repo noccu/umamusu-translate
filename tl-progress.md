@@ -218,6 +218,12 @@ Mihono Bourbon | [noccu]
 Nice Nature | [noccu]
 Sakura Bakushin O | [Kasey]
 
+## Sakura Front (April Fools (?) 2023)
+name | progress | translator
+--- | --- | ---
+Opening & Ending | In progress (1/2) | [noccu]
+Short Stories | In progress (1/24) | [noccu] (010)
+
 # System text
 name | progress | translator
 --- | --- | ---

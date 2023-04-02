@@ -26,7 +26,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
  04 | Uma stories (story mode)
  08 | Story mode prologues/intro | `0000`: URA (001), Aoharu (002)
  09 | Event stories (story mode)
- 10 | Anniversary stories
+ 10 | Anniversary stories (and april fools?)
  11 | Uma-specific campaign dialogues? (Valentines, …)
  12 | Campaign popups? (Omikuji, …)
  13 | Special/Collab stories (KIRARI MAGIC SHOW, …)

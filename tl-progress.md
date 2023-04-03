@@ -222,7 +222,7 @@ Sakura Bakushin O | [Kasey]
 name | progress | translator
 --- | --- | ---
 Opening & Ending | In progress (1/2) | [noccu]
-Short Stories | In progress (8/24) | [noccu] (010), [Director Kok] (001-009, 011-013)
+Short Stories | In progress (8/24) | [noccu] (010, 014-015, 018), [Director Kok] (001-009, 011-013)
 
 # System text
 name | progress | translator

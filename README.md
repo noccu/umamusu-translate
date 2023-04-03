@@ -1,86 +1,115 @@
-This project is a toolset to translate *Uma Musume Pretty Derby* to English. Includes a patch function using these tools.  
+This project is a toolset to translate *Uma Musume Pretty Derby* to English. Includes a few scripts to patch the game using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
-Translation progress and credits can be checked in [tl-progress]. Guides can be found below.  
+Translation progress and credits are in [tl-progress]. Guides can be found below.  
 For troubleshooting, please open an issue or ask in the [Umamusume Translation Discord][].
 
 This is based on the DMM version of the game and *should* work on linux too.  
-Please consider [supporting the project](https://ko-fi.com/noccyu) and its contributors.
+Please consider [supporting the project](https://patreon.com/noccu).
 
 # Features
 Translates (or *can* translate):
+- Tutorials
 - Character stories
 - Main & Event stories
     - Race segments
     - Event prologues
+- Special events
 - Training stories
 - Home screen lines & interactions (own & lobby characters)
 - Lyrics
 - Most of the UI through [tlg].
-- Skills, names, missions, and other such "dynamic" texts. Same as the older *mdb patch*.
+- Skills, names, missions, and other such "dynamic" texts. (Same as the old *mdb patch*)
 - Planned: images
 
-Deepl/fairseq integration for automatic machine translation.  
+Other:
+- Deepl/fairseq integration for automatic machine translation.  
+- Story editor for easy translating with audio support (or simply reading along without patching).
+- Support for syncing with arbitrary framerates 
+- Adjustable reading speed.
+- Basic file/asset management tools (wip)
+- Auto-updating
 
 Included translations & credits: [tl-progress]  
 Toolset info: [scripts](#script-info)
 
 # Disclaimer
-
 This toolset only changes text to translate it and it is *my belief* this is harmless and unlikely to be an issue. [^1]  
 **Nonetheless such edits are of course against cygames/Umamusu TOS so proceed at your own risk!**
 
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
 
-# Install 
-Make sure you satisfied the *requirements* below first to use the tools. If you don't want to patch, you can [continue here](#advanced-usage).  
-Otherwise, follow the further steps for each part of the patch you wish to apply, in suggested order.  
-Each of those parts is separate and can be used independently, though some effectiveness may be lost.
-
+# Setting up / Getting started
 [An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)
 
-## Requirements
+## Requirements (get these first!)
 1. Install [Python](https://www.python.org/downloads/) 3.9+
-    - *Either* install the py launcher (recommended) *or* select the "add to path" checkbox.
+    - Install the py launcher (recommended) *do not* select "add to path".
     - If the latest version is very recent use the version *before* that. Otherwise dependencies might not have binaries and may require compiling.
-1. Clone or download a zip (green "code" button) of this project
+1. Clone or download a zip (green "code" button) of this project and extract it.
+1. Make sure you opened and logged in to the game at least once before.
+
+## Install (do this once)
 1. Open the (extracted) folder and double click `install.bat` (This downloads the needed python libs)
-    - If you choose to install MinGit, it will be used to update automatically where needed, and you can update manually by running `update.bat`.
+    - If you choose to install MinGit, it will be used to update automatically where needed.
 1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)
-    - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import below for new content.
+    - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import step below for new content.
 
 ## Config
-The first time you run any of the `.bat` files mentioned below, an `umatl.json` file will be created in the folder.  
-You can change a few settings there before continuing further if you like, simply run the .bat again.
+The **first time** you run any of the `.bat` files mentioned in the Patching section below, an `umatl.json` file will be created in the folder **and the script will exit without doing anything else**.  
+You can change any settings in this config file as you like, and if this is your first time, simply run the same .bat again to have it start patching.
+
+The format of this file is `relative script path (no ext) -> argument -> value`.  
+For a list of arguments, run the scripts with -h or check near the bottom of the relevant .py files.  
+Some changes only apply to new files. To forcefully update all files, (temporarily) set update to false.
+
+# Patching
+Each of the following parts is separate and can be used independently, though some effectiveness may be lost.
 
 ## UI (menus, buttons, ...)
-This should be a one-time procedure. If your UI looks the wrong size afterwards, open the `config.json` you copied and play with the uiScale value (0.8-1.2 usually).
 1. Open the game's *install folder* (where the `Umamusume.exe` is)
 1. Copy the **contents** of this project's `localify` folder to the *install folder*
 1. Download [tlg]'s latest [release zip](https://github.com/MinamiChiwa/Trainers-Legend-G/releases), extract **only the `version.dll`** from it and put that in the game's *install folder*
-    - *0xc000012f* error when starting game: [Install vc++ X64](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) ([alterative link](https://github.com/abbodi1406/vcredist))
-    - If the game *won't start* or the *UI is not translated*, try renaming the `version.dll` file to `uxtheme.dll` (*errors* mean the issue is elsewhere and this will not help)
 1. It should look [like this](guide_localify.jpg).
+
+This is a one-time procedure. To update TLG itself simply overwrite the `version.dll` with the new one.
+
+### Troubleshooting
+- If you get **errors** when starting game: 
+    - Make sure your `version.dll` is not 0kb (it should be ~2MB).
+    - [Install vc++ X64](https://learn.microsoft.com/en-US/cpp/windows/latest-supported-vc-redist?view=msvc-170) ([alterative link](https://github.com/abbodi1406/vcredist)) (you might need the X86 version as well)
+- If the game *UI is not translated*:
+    - Double check everything is in the right place.
+    - Rename the `version.dll` file to `uxtheme.dll`
+- If your UI looks the wrong size afterwards:
+    - Open the `config.json` you copied and play with the uiScale value (0.8-1.2 usually).
 
 ## Skills and other variable text
 Change `skill_data` to true in the config if you want to see [the skill's raw requirements and effects](guide_skilldata.png).  
-Run the `mdb import.bat` file.
+Double click the `mdb import.bat` file.
 - The mdb file that this modifies updates regularly (with banners usually) and undoes changes, you will need to rerun this .bat.
 - Requires restarting the game after applying.
 - There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases but it it not maintained well anymore.
 
 ## Dialogue
-Change `skip_mtl` to `true` in the config if you'd like to skip importing Machine Translations.  
+Change `skip_mtl` to `true` in the config if you'd like to skip importing machine translations.  
+If you use tlg to change fps, add a comma to the above and `"fps": 60` or whatever your fps is under it.
 Double click `run.bat` 
-- This can take a long time (few hours) because there are many files.
+- This can take a few minutes because there are many files.
 - You can close this at any time and resume later, or play the game while this runs.
 - Changes apply without restart.
 
 # Updating
-1. Double click `update.bat` if you installed MinGit, else pull or download the project again and overwrite
-    - Any files you've added yourself through the deepl integration should stay intact, or at worst be overridden with the same (deepl) or better (manual translation) versions. If you've made your own edits to anything though, those would be lost! Please contribute them here so everybody can enjoy!
-1. Double click `run.bat` and/or `mdb import.bat` as required.
+- If you did **not** install MinGit, first download the project again and overwrite. **Skip this otherwise**. 
+- Double click `run.bat` and/or `mdb import.bat` as required.  
     - `run.bat` also updates the UI-related files **after** you've followed the UI step above.
+
+If you want to update only the patch itself and not actually apply it, you can use the `update.bat` if you installed MinGit. This should not usually be needed.
+
+### Troubleshooting
+- If you see [commit/merge errors](guide_git_update.png):
+    - Open a cmdline in the folder and paste `.mingit\mingw64\bin\git.exe reset --hard`, enter.
+    - This will happen if you (or something on your PC) edited any non-config file, including if you're using a test/bugfix file someone sent you. Or if you update by overwriting your install from a new ZIP while using MinGit.
 
 # Advanced Usage
 In general, check out the [scripts](#script-info). You probably also want to `pip install -r src/devreq.txt`
@@ -117,9 +146,9 @@ common/helpers | Not scripts. Hold shared functions and data for other scripts.
 
 # Contribute
 
-To contribute translations, see [translating.md](translating.md) (deepl dumps are accepted!)  
+To contribute translations, see [translating.md](translating.md)  
 For dev contributions, open a PR or Issue.  
-**Both are extremely welcome!**
+You can support the project on [Patreon](https://patreon.com/noccu), [Ko-fi](https://ko-fi.com/noccyu), or by sending me DMM points (find me in the [Umamusume Translation Discord][]).
 
 # Thanks to
 

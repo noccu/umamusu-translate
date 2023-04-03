@@ -1,6 +1,6 @@
 @ECHO OFF
 SETLOCAL
-SET /P usemingit=Download MinGit (~20MB) to enable use of update.bat for easy updating? Enter first letter [y]es, [n]o: 
+SET /P usemingit=Download MinGit (~20MB) to enable auto-updating? Enter first letter [y]es, [n]o: 
 IF /I %usemingit% EQU y ( CALL :mingit ) ELSE ( ECHO Skipping MinGit. )
 
 CALL run.bat install

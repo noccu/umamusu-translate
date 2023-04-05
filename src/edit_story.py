@@ -235,6 +235,7 @@ def change_chapter(event=None, initialLoad=False):
     if not initialLoad: save_block()
     if chapter_dropdown.search:
         cur_chapter = chapter_dropdown.search[chapter_dropdown.current()]
+        resetChapterSearch()
     else:
         cur_chapter = chapter_dropdown.current()
     cur_block = 0
@@ -652,8 +653,12 @@ def searchChapters(event=None):
         chapter_dropdown.search = None
     else:
         searchList = {item: i for i, item in enumerate(chapter_dropdown.formattedList) if search in item}
-        chapter_dropdown['values'] = list(searchList.keys())
-        chapter_dropdown.search = list(searchList.values())
+        chapter_dropdown['values'] = list(searchList.keys()) if searchList else ["No matches found"]
+        chapter_dropdown.search = list(searchList.values()) if searchList else None
+
+def resetChapterSearch():
+    chapter_dropdown['values'] = chapter_dropdown.formattedList
+    chapter_dropdown.search = None
 
 
 def char_convert(event=None):

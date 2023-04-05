@@ -221,7 +221,7 @@ Sakura Bakushin O | [Kasey]
 ## Sakura Front (April Fools (?) 2023)
 name | progress | translator
 --- | --- | ---
-Opening & Ending | In progress (1/2) | [noccu]
+Opening & Ending | Complete | [noccu]
 Short Stories | In progress (8/24) | [noccu] (010, 014-015, 018), [Director Kok] (001-009, 011-013)
 
 # System text

@@ -489,7 +489,11 @@ def createDefaultUmatlConfig():
             "skill_data": False
         }
     }
-    helpers.writeJson("umatl.json", data, 2)
+    try:
+        helpers.writeJson("umatl.json", data, 2)
+    except PermissionError:
+        print("Error: Lacking permissions to create the config file in this location. \nEdit the patch folder's permissions or move it to a different location.")
+        sys.exit()
     print("Uma-tl uses the umatl.json config file for user preferences when requested.\n"
         "This seems to be your first time running uma-tl this way so a new file was created.\n"
         "Uma-tl has quit without doing anything this first time so you can edit the config before running it again. Defaults are:")

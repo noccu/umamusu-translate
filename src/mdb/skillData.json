@@ -31,7 +31,7 @@
   "ability_value_usage": {
     "0": "None",
     "1": "Direct",
-    "2": "* SkillNum",
+    "2": "* # Skills",
     "3": "* Team Speed",
     "4": "* Team Stamina",
     "5": "* Team Power",
@@ -39,14 +39,15 @@
     "7": "* Team Wis",
     "8": "* Random",
     "9": "* Random2",
-    "10": "",
+    "10": "* Races Won",
     "11": "",
     "12": "",
-    "13": "",
-    "14": "",
+    "13": "* Max Stat",
+    "14": "* # Green Skills",
     "15": "* # Heals Activated",
     "16": "* FinalCornerEndOrder",
-    "17": "* InvTeamMemberCount"
+    "17": "* InvTeamMemberCount",
+    "19": "+0.1 if ≥20m from lead"
   },
   "target_type": {
     "comment": "0 == n/a, 1 == self",

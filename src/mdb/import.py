@@ -80,7 +80,8 @@ def main():
     try:
         with sqlite3.connect(f"file:{args.dst}?mode=rw", isolation_level=None, uri=True) as db:
             index = helpers.readJson("src/mdb/index.json")
-            db.execute("PRAGMA journal_mode = MEMORY;")
+            db.execute("PRAGMA journal_mode = OFF;")
+            db.execute("PRAGMA synchronous = OFF;")
             db.execute("BEGIN;")
             for entry in index:
                 stmt = f"UPDATE {entry['table']} SET {entry['field']}=:enText WHERE {entry['field']}=:jpText;"

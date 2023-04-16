@@ -28,6 +28,7 @@ Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1.5th Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
+2nd Anniversary Story | Complete | [CatNipHoarder] & [Holo]
 
 # Event Stories
 name | progress | translator

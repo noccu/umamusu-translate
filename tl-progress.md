@@ -49,7 +49,7 @@ Days in a Flash | Complete | [Kuwaiden], [noccu] (preview)
 Intertwined Memories, Galloping Thoughts | Complete | deepl, [noccu] (preview)
 Illuminate the Heart | Complete | [robflop]
 Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl, [noccu] (preview)
-Sweet Memory Teatime | In progress | [noccu]
+Sweet Memories Teatime | In progress | [noccu]
 Leap into a New World! | Stalled | [noccu] (preview)
 The rest up to 2022/07/08 | Complete | deepl (contributed by Korgi)
 
@@ -114,6 +114,7 @@ Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
+Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [robflop][]

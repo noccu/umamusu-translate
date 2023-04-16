@@ -106,7 +106,7 @@ Nice Nature | Complete | [xct]
 Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
-Seiun Sky | In progress | [CatNipHoarder][] & [Holo][] (ep 1-4)
+Seiun Sky | Complete | [CatNipHoarder] & [Holo]
 Silence Suzuka | Complete | [LotoDS][]
 Smart Falcon | Complete | [LotoDS][]
 Special Week | Complete | Mann

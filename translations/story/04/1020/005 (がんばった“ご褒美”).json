@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "SH2T7NUY7PDYMPZXTNSO52LVAEAXKWVY",
     "type": "story",
     "storyId": "041020005",
@@ -9,9 +9,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トレーニングを始めるため、\r\nセイウンスカイを待っていたのだが……。",
-            "enText": "I was waiting for Seiun Sky to start training. ……",
+            "enText": "I waited for Seiun Sky \nprior to the start of training, but…",
             "nextBlock": 2,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "pathId": 1043196559540009251,
             "blockIdx": 1
         },
@@ -19,9 +20,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ワイワイ……ガヤガヤ……）",
-            "enText": "(Wai Wai…… Gaya Gaya ……)",
+            "enText": "",
             "nextBlock": 3,
             "origClipLength": 63,
+            "voiceIdx": -1,
             "pathId": 571168857902423961,
             "blockIdx": 2
         },
@@ -29,9 +31,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トレセン学園の一大イベントである競技大会が近いためか、\r\nコースは走り込みをするウマ娘たちで混み合っている。",
-            "enText": "The course is crowded with Uma Musume who are running \nin, probably because the competition, the major \nevent of the Tracen Academy, is near.",
+            "enText": "Since there was a huge racing event coming to Tracen Academy soon, the racetrack was filled with Uma Musume wanting to train.",
             "nextBlock": 4,
             "origClipLength": 115,
+            "voiceIdx": -1,
             "pathId": -4382523175504786844,
             "blockIdx": 3
         },
@@ -39,19 +42,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "この状況なら『思いっきり走れないなら意味がない』\r\nなどと言って、セイウンスカイはサボりそうだが――",
-            "enText": "Under the circumstances, I'm sure that Seiunsky would say things \nlike, \"If I can't run as hard as I can, then what's the point?",
+            "enText": "With how crowded it is she's probably thinking \n\"if I can't give it my all, what's the point?\" \nAnd because of that she'll probably ditch",
             "nextBlock": 5,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "pathId": 5563745341755944344,
             "blockIdx": 4
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "――トレーナーさん、はろーっ！！",
-            "enText": "―Trainer, hahaha!",
+            "enText": "Trainer-san, hello!!",
             "nextBlock": 6,
             "origClipLength": 76,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 39,
@@ -67,20 +72,21 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "トレーニング日和のいい天気だねー！\r\n今にも走りたくてウズウズしちゃうよ～！",
-            "enText": "It's a beautiful day for a workout! \nI'm itching to run any minute now～!",
+            "enText": "Today's a great day for training, doncha think!? \nI'm really itching to race right now!",
             "nextBlock": 7,
             "origClipLength": 206,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "……何か悪いものでも食べたか？",
-                    "enText": "…… something bad you ate?",
+                    "enText": "Did you eat something bad?",
                     "nextBlock": 7
                 },
                 {
                     "jpText": "……何か悪いものでも食べた？",
-                    "enText": "…… something bad you ate?",
+                    "enText": "Did you eat something bad?",
                     "nextBlock": 7
                 }
             ],
@@ -95,15 +101,16 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "おおっと、せっかく担当ウマ娘が来たというのにその反応？\r\n悲しいな、もっと喜んでほしいなー。",
-            "enText": "Oh, that's the reaction to the arrival of your horse girl? That's \nsad, I wish I could be more pleased.",
+            "enText": "Woah, that's how you react when the Uma Musume \nyou're training arrives? How depressing. I \nthought you'd be glad to see me.",
             "nextBlock": 8,
             "origClipLength": 295,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "てっきりサボると思ってたから",
-                    "enText": "I was sure you were going to skip it.",
+                    "enText": "I just figured you'd ditch.",
                     "nextBlock": 8
                 }
             ],
@@ -118,11 +125,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "いやいや、さすがに次のレースも近づいてるこの時期に\r\nサボったりしないって。",
-            "enText": "No, no, no, I wouldn't skip it at this time of the year when the \nnext race is coming up.",
+            "enText": "No no, my next race is coming up soon, \nso I wouldn't dream of skipping out on training.",
             "nextBlock": 9,
             "origClipLength": 197,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 141,
@@ -134,11 +142,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "むしろ今日は絶好調！\r\n走りたくて、いてもたってもいられない！",
-            "enText": "Rather, I'm on a roll today! Can't stay put, just want to run!",
+            "enText": "Plus I'm feeling great today! \nI can't just sit around, I just wanna run!",
             "nextBlock": 10,
             "origClipLength": 172,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 94,
@@ -150,11 +159,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ってわけで、早速行ってきまーす！\r\nあ、ちなみに――",
-            "enText": "So, I'm off and running! Oh, by the way―",
+            "enText": "So I'm gonna do just that! \nOh, by the way…",
             "nextBlock": 11,
             "origClipLength": 171,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 183,
@@ -170,11 +180,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "トレーナーさんも、ちゃ～んと見ててよね？\r\n……がんばった分のご褒美、期待してますから。",
-            "enText": "Trainers are watching you too, right? I'm expecting a reward for \nyour hard work at ……",
+            "enText": "Trainer-san, you'll be keeping a close eye on \nme, won't you? I'm looking forward to being \nrewarded for all of my hard work after this…",
             "nextBlock": 12,
             "origClipLength": 257,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 334,
@@ -196,9 +207,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "絶好調だという言葉通り、セイウンスカイは\r\n積極的にコースへと駆けていった。そして――",
-            "enText": "True to her word, Seiunsky ran aggressively \nto the course. And then…",
+            "enText": "Just like she said, Seiun Sky ran with \ngreat form in an aggressive manner. Then…",
             "nextBlock": 13,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 58,
@@ -210,11 +222,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ねえねえ、ちょっといい？",
-            "enText": "Hey, hey, hey, can I talk to you for a second?",
+            "enText": "Hey hey, got a minute?",
             "nextBlock": 14,
             "origClipLength": 77,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 38,
@@ -226,11 +239,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "今日のコース、走れる場所なくってさー。\r\nよかったら一緒に走らせてもらってもいいかな？",
-            "enText": "There's no place to run today's course. I wonder if I can run \nwith you if you want?",
+            "enText": "The course is packed today, and there's not much room to run, so would you mind if I ran alongside you?",
             "nextBlock": 15,
             "origClipLength": 236,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 254,
@@ -248,9 +262,10 @@
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "うん、いいよ。\r\n今日は場所確保するだけでも大変だもんね。",
-            "enText": "Yeah, that's fine. It's a lot of work just to get a place today.",
+            "enText": "Yes, that's fine. Securing a spot \non the track today's really tough, huh?",
             "nextBlock": 16,
             "origClipLength": 133,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 176,
@@ -266,11 +281,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "えっと、次は――おっ。",
-            "enText": "Let's see, next time - whoa.",
+            "enText": "Hmm, who should I train with next… Oh!",
             "nextBlock": 17,
             "origClipLength": 130,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 312,
@@ -282,11 +298,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ちょっと失礼ー。\r\n他の場所が空くまで、一緒に走らせてもらえる？",
-            "enText": "Excuse me. Can I run with you until another spot opens up?",
+            "enText": "Excuse me. Until a separate spot opens up, \nwould you mind if I ran with you?",
             "nextBlock": 18,
             "origClipLength": 179,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 147,
@@ -300,9 +317,10 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "しょうがないなあ。\r\nそれじゃ、一緒に走ろっか。",
-            "enText": "I can't help it. Then, let's run together.",
+            "enText": "Guess that's fine. \nLet's go for a run then.",
             "nextBlock": 19,
             "origClipLength": 111,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 185,
@@ -320,9 +338,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "手の内を明かしたがらないセイウンスカイにしては珍しく、\r\n自ら他のウマ娘に声をかけては、併走トレーニングに励んでいる。",
-            "enText": "Unusually for Seiunskaya, who does not like to \nreveal her skills, she has been calling out to \nother horsegirls and training with them.",
+            "enText": "It's rare for Seiun Sky to show off her \nabilities, so seeing her call out and train with \nothers was stunning.",
             "nextBlock": 20,
             "origClipLength": 121,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 58,
@@ -336,9 +355,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "しかもよく見ると、声をかけているのはみな、\r\n次のレースで当たりそうな子ばかりだ。",
-            "enText": "Moreover, if you look closely, you will see that \nall the children you are talking to are the ones \nwho are likely to win in the next race.",
+            "enText": "Looking closely, all the girls she raced with \nwere favored to win in the upcoming race.",
             "nextBlock": 21,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "pathId": -5748724017623352279,
             "blockIdx": 20
         },
@@ -346,18 +366,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "だとすると……この併走は\r\n対戦相手の情報収集だろうか？　それならば――",
-            "enText": "If so, is…… this parallel run to gather \ninformation on your opponent? If so―",
+            "enText": "Then that means… she's doing this to gather information on her rivals? If so…",
             "nextBlock": 22,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "俺がやるべきことは――！",
-                    "enText": "All I have to do is―!",
+                    "enText": "I know what I have to do!",
                     "nextBlock": 22
                 },
                 {
                     "jpText": "私がやるべきことは――！",
-                    "enText": "All I have to do is―!",
+                    "enText": "I know what I have to do!",
                     "nextBlock": 22
                 }
             ],
@@ -368,19 +389,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "セイウンスカイの頑張りに報いるべく、\r\nこちらも相応の努力をすることにした。",
-            "enText": "In order to reward Seiunsky's efforts, we decided to make a \nreasonable effort as well.",
+            "enText": "Since Seiun Sky's been putting in so much \neffort, I should give it my all as well.",
             "nextBlock": 23,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "pathId": 6296802886366905109,
             "blockIdx": 22
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ふぅ～……どうです、今日のトレーニング。\r\nこんな激混みの中、よくがんばったと思わない？",
-            "enText": "Whew～…… what do you think, today's training. Don't you think you \ndid a great job in such a very crowded place?",
+            "enText": "Haa… How was today's training? Don't you think I \ndid a great job despite how crowded it was?",
             "nextBlock": 24,
             "origClipLength": 243,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 128,
@@ -396,20 +419,21 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "できれば、このがんばりに見合うご褒美がほしいな～、\r\nなんて思う今日この頃なんですけどー。",
-            "enText": "If possible, I would like to receive a reward for my hard work.",
+            "enText": "Don't you think I deserve a \nreward for my hard work today?",
             "nextBlock": 25,
             "origClipLength": 264,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "よく頑張ったな。これがご褒美だ",
-                    "enText": "You've done well. Here's your reward.",
+                    "enText": "You did amazing, here's your reward.",
                     "nextBlock": 25
                 },
                 {
                     "jpText": "よく頑張ったね。これがご褒美だよ",
-                    "enText": "You did a great job. Here's your reward.",
+                    "enText": "You did amazing, here's your reward.",
                     "nextBlock": 25
                 }
             ],
@@ -428,11 +452,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "おっ、なにこのデータ？　ええっと……。",
-            "enText": "Whoa, what's this data? Let's see, ……",
+            "enText": "Oh, what's this data? Hmm…",
             "nextBlock": 26,
             "origClipLength": 141,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 125,
@@ -448,11 +473,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "最初に併走したあの子は熱くなりやすく、\r\n前に出たがる癖がある……。",
-            "enText": "That first girl I ran with is prone to getting hot and has a \nhabit of wanting to step forward. ……",
+            "enText": "The first girl that I raced against has a habit of \ngetting overzealous and pushing too hard to get ahead…",
             "nextBlock": 27,
             "origClipLength": 196,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 211,
@@ -464,11 +490,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "次に併走したあの子は後ろに付かれると\r\nちょっと走りにくそうにしている、と……。",
-            "enText": "That girl who ran alongside her next looks a little uncomfortable \nrunning when she follows behind her, ……",
+            "enText": "The second girl I raced against seemed to \nstruggle when she was directly behind me…",
             "nextBlock": 28,
             "origClipLength": 239,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 319,
@@ -480,15 +507,16 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ほー……なるほどなるほど。私が走ってる間、\r\nちゃーんと“ご褒美”を用意してくれてたんだね。",
-            "enText": "I see… I see… I see… I see… I see… I see. I see that you have \nbeen preparing a \"treat\" for me while I've been running.",
+            "enText": "Oh… I get it now. You were preparing \nthis \"reward\" for me while I was training.",
             "nextBlock": 29,
             "origClipLength": 281,
+            "voiceIdx": 18,
             "choices": [
                 {
                     "jpText": "喜んでもらえた？",
-                    "enText": "Were you pleased?",
+                    "enText": "Are you happy with it?",
                     "nextBlock": 29
                 }
             ],
@@ -503,11 +531,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "うん、バッチリ。\r\nやっぱりトレーナーさんは私のことよくわかってるねー。",
-            "enText": "Yeah, perfect. I knew my trainer knew me well.",
+            "enText": "Yup, this is perfect. \nI knew it, you know me so well.",
             "nextBlock": 30,
             "origClipLength": 193,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 153,
@@ -527,11 +556,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "素敵な“ご褒美”のおかげで、セイちゃんの好感度が\r\n1アップしました。ぴろりろり～ん♪",
-            "enText": "Thanks to the wonderful \"reward,\" Sei-chan's favorability rating \nhas increased by one. Piloririr～～!",
+            "enText": "Thanks to this wonderful \"reward\", Sei-chan's bond level has increased by one. Pirorirori～n♪",
             "nextBlock": 31,
             "origClipLength": 220,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 60,
@@ -547,11 +577,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "この感じなら、次のレースでも大物が釣れちゃうかも。\r\n……なーんて。",
-            "enText": "If this is the way I feel, maybe I'll \ncatch a big fish in the next race. ……",
+            "enText": "If things stay like this, we might just catch \nsomething big in the upcoming race… Just kidding.",
             "nextBlock": 32,
             "origClipLength": 180,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 176,
@@ -569,9 +600,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "どうやら喜んでもらえたらしく、\r\nセイウンスカイは何度も渡したデータを見返していた。",
-            "enText": "Apparently pleased with the results, Seiunsky repeatedly looked \nback at the data she had given her.",
+            "enText": "She seems happy with the data I gave her. After \nall, she looked back at it multiple times.",
             "nextBlock": -1,
             "origClipLength": 99,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 60,
@@ -586,5 +618,6 @@
             "blockIdx": 32
         }
     ],
-    "modified": 1657208848
+    "modified": 1681655449,
+    "humanTl": true
 }

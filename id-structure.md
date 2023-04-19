@@ -134,6 +134,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1098 | Copano Rickey
 1099 | Hokko Tarumae
 1100 | Wonder Acute
+1106 | Hishi Miracle
 2001 | Happy Meek
 2002 | Bitter Glasse
 2003 | Little Cocon

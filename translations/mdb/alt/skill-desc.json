@@ -99,6 +99,7 @@
         "終盤が迫ったときどこかで速度を少し\\n上げ、さらに能力を引き出すスキルの\\n発動数に応じて速度と加速力を上げる": "<size=18><b>Target Speed +0,25m/s, Target Speed +0,05m/s * # Green \\nSkills, Acceleration +0,05m/s² * # Green Skills for 5s</b> \\nwhen: Middle leg later half (random)\\n</size>",
         "ダートレース中盤コーナーで競り合うと\\nラストスパート時好位置で加速力がわず\\nかに上がる、余力十分なら効果が増える": "<size=18><b>Acceleration +0,4m/s² for 4s</b> when: Last spurt AND In \\nleading 40% AND In trailing 70% AND Dirt AND lastspurt \\n== 2 <color=#29b39e>after</color>: Middle leg AND Blocked (side) for ≥2s AND \\nIn corner <b>Acceleration +0,2m/s² for 4s</b> when: Last spurt \\nAND In leading 40% AND In trailing 70% AND Dirt <color=#29b39e>after</color>: \\nMiddle leg AND Blocked (side) for ≥2s AND In corner\\n</size>",
         "残り300m地点で前の方にいると速度を\\n少し上げる、ダートレースで先頭の\\nウマ娘と近いとさらに少し前に出る": "<size=18><b>Target Speed +0,25m/s, Current Speed (natural decel) \\n+0,25m/s for 5s</b> when: Remaining distance ≥299m AND \\nRemaining distance ≤301m AND In trailing 80% AND \\nIn leading 40% AND distance_diff_top<=5 AND Dirt \\n<b>Target Speed +0,25m/s for 5s</b> when: Remaining distance \\n≥299m AND Remaining distance ≤301m AND In trailing \\n80% AND In leading 40%\\n</size>",
+        "レース中間付近で中団にいると\\n速度が上がる、中距離レースで7回以上\\nスキルを使っているとすごく上がる": "<size=18><b>Target Speed +0,45m/s for 5s</b> when: After 50% distance \\nAND Before 55% distance AND In trailing 60% AND In \\nleading 80% AND Medium AND Use ≥7 skills <b>Target Speed \\n+0,35m/s for 5s</b> when: After 50% distance AND Before 55% \\ndistance AND In trailing 60% AND In leading 80%\\n</size>",
         "中盤で2回スキルを使うと\\nよりリラックスして持久力が回復する": "<size=18><b>Current HP +5,5% immediately</b> when: Middle leg AND \\nPosition ≥2 AND In leading 70% AND Use ≥2 skills (mid)\\n</size>",
         "最終コーナー以降に前の方で\\n追いすがっていると最終直線を走行中\\n不屈の闘志で速度がすごく上がる": "<size=18><b>Target Speed +0,45m/s for 5s</b> when: Final corner/straight \\nAND On straight <color=#29b39e>after</color>: Final corner/straight AND \\nOvertaking AND Position ≤5 AND In leading 50% AND \\novertake_target_no_order_up_time >= 2\\n</size>",
         "スキルで持久力を回復すると\\nレース後半で前のほうにいる時に\\nレッツラゴー！と速度を上げる": "<size=18><b>Target Speed +0,35m/s for 5s</b> when: After 50% distance \\nAND Recover HP 1+ times AND Position ≤3\\n</size>",
@@ -619,6 +620,8 @@
         "レース中盤に持久力を\\nわずかに回復しさらに速度が\\nちょっと上がる＜長距離＞": "<size=18><b>Current HP +1,5%, Target Speed +0,05m/s for 2.4s</b> when: \\nLong AND Middle leg (random)\\n</size>",
         "レース終盤始めの方で\\n余力十分なら前に出る\\n＜差し・長距離＞": "<size=18><b>Current Speed (natural decel) +0,35m/s for \\n3s</b> when: Long AND Betweener AND Final leg \\nfirst half (random) AND lastspurt == 2\\n</size>",
         "レース終盤始めの方で\\n余力十分ならわずかに前に出る\\n＜差し・長距離＞": "<size=18><b>Current Speed (natural decel) +0,15m/s for \\n3s</b> when: Long AND Betweener AND Final leg \\nfirst half (random) AND lastspurt == 2\\n</size>",
+        "レース中にスキルを13回発動すると\\n前に出る＜中距離＞": "<size=18><b>Current Speed (natural decel) +0,35m/s for 2.4s</b> when: \\nMedium AND Use ≥13 skills\\n</size>",
+        "レース中にスキルを13回発動すると\\nわずかに前に出る＜中距離＞": "<size=18><b>Current Speed (natural decel) +0,15m/s for 2.4s</b> when: \\nMedium AND Use ≥13 skills\\n</size>",
         "レース中盤にアオハル魂が燃え\\nレース中のチームメンバーの\\nスピード合計が高いほど速度が上がる": "<size=18><b>Target Speed +0,35m/s * Team Speed \\nfor 1.8s</b> when: Middle leg (random)\\n</size>",
         "レース中盤にアオハル魂が燃え\\nレース中のチームメンバーのスピード\\n合計が高いほど速度がわずかに上がる": "<size=18><b>Target Speed +0,15m/s * Team Speed \\nfor 1.8s</b> when: Middle leg (random)\\n</size>",
         "レース中盤にアオハル魂が燃え\\nレース中のチームメンバーのスタミナ\\n合計が高いほど持久力が回復する": "<size=18><b>Current HP +5,5% * Team Stamina immediately</b> \\nwhen: Middle leg (random)\\n</size>",
@@ -738,6 +741,7 @@
         "終盤が迫ったときどこかで\\n速度をちょっと上げる": "<size=18><b>Target Speed +0,05m/s for 3s</b> when: \\nMiddle leg later half (random)\\n</size>",
         "ダートレース中盤コーナーで競り合うと\\nラストスパート時好位置で加速力が\\nほんのわずかに上がる": "<size=18><b>Acceleration +0,07m/s² for 2.4s</b> when: Last spurt AND In \\nleading 40% AND In trailing 70% AND Dirt <color=#29b39e>after</color>: Middle \\nleg AND Blocked (side) for ≥2s AND In corner\\n</size>",
         "残り300m地点で前の方にいると速度を\\nちょっと上げる、ダートレースで先頭の\\nウマ娘と近いとさらにちょっと前に出る": "<size=18><b>Target Speed +0,05m/s, Current Speed (natural decel) \\n+0,05m/s for 3s</b> when: Remaining distance ≥299m AND \\nRemaining distance ≤301m AND In trailing 80% AND \\nIn leading 40% AND distance_diff_top<=5 AND Dirt \\n<b>Target Speed +0,05m/s for 3s</b> when: Remaining distance \\n≥299m AND Remaining distance ≤301m AND In trailing \\n80% AND In leading 40%\\n</size>",
+        "レース中間付近で中団にいると速度が\\nわずかに上がる、中距離レースで7回\\n以上スキルを使っていると少し上がる": "<size=18><b>Target Speed +0,25m/s for 3s</b> when: After 50% distance \\nAND Before 55% distance AND In trailing 60% AND In \\nleading 80% AND Medium AND Use ≥7 skills <b>Target Speed \\n+0,15m/s for 3s</b> when: After 50% distance AND Before 55% \\ndistance AND In trailing 60% AND In leading 80%\\n</size>",
         "中盤で2回スキルを使うと\\n持久力がわずかに回復する": "<size=18><b>Current HP +1,5% immediately</b> when: Middle leg AND \\nPosition ≥2 AND In leading 70% AND Use ≥2 skills (mid)\\n</size>",
         "最終コーナー以降に\\n前の方で追いすがっていると\\n最終直線を走行中速度が少し上がる": "<size=18><b>Target Speed +0,25m/s for 3s</b> when: Final corner/straight \\nAND On straight <color=#29b39e>after</color>: Final corner/straight AND \\nOvertaking AND Position ≤5 AND In leading 50% AND \\novertake_target_no_order_up_time >= 2\\n</size>",
         "スキルで持久力を回復すると\\nレース後半で前のほうにいる時に\\nわずかに速度を上げる": "<size=18><b>Target Speed +0,15m/s for 3s</b> when: After 50% distance \\nAND Recover HP 1+ times AND Position ≤3\\n</size>",
@@ -980,6 +984,7 @@
         "レース終盤が迫ったとき前方にいると\\n速度がすごく上がる＜ダート＞": "<size=18><b>Target Speed +0,45m/s for 2.4s</b> when: Dirt AND Middle leg \\nlater half (random) AND In leading 50%\\n</size>",
         "パワーが十分に強いとスピードがすごく\\n上がりパワーが十二分に仕上がっている\\n場合はものすごく上がる＜ダート＞": "<size=18><b>Speed stat +100 indefinitely</b> when: Dirt AND base_power >\\n= 1200 <b>Speed stat +80 indefinitely</b> when: Dirt AND \\nbase_power >= 1000 AND base_power < 1200\\n</size>",
         "レース中盤に競り合うと\\n速度がすごく上がる＜ダート＞": "<size=18><b>Target Speed +0,45m/s for 2.4s</b> when: Dirt AND Middle leg \\nAND Blocked (side) for ≥2s\\n</size>",
-        "前のウマ娘のすぐ後ろに付けると\\nしばらくの間速度が上がる＜ダート＞": "<size=18><b>Target Speed +0,35m/s for 4s</b> when: Dirt AND 5s passed \\nAND Behind an uma for 3s\\n</size>"
+        "前のウマ娘のすぐ後ろに付けると\\nしばらくの間速度が上がる＜ダート＞": "<size=18><b>Target Speed +0,35m/s for 4s</b> when: Dirt AND 5s passed \\nAND Behind an uma for 3s\\n</size>",
+        "レース中にスキルを13回発動すると\\nしばらくの間前に出る＜中距離＞": "<size=18><b>Current Speed (natural decel) +0,35m/s for 4s</b> when: \\nMedium AND Use ≥13 skills\\n</size>"
     }
 }

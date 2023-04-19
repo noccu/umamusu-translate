@@ -52,7 +52,7 @@ This toolset only changes text to translate it and it is *my belief* this is har
 ## Install (do this once)
 1. Open the (extracted) folder and double click `install.bat` (This downloads the needed python libs)
     - If you choose to install MinGit, it will be used to update automatically where needed.
-1. (Optional, for dialogue) Download all game data [through the game menu](guide_batch_download.jpg)
+1. (Optional, for dialogue) Download all game data [through the game menu](docs/guide_batch_download.jpg)
     - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import step below for new content.
 
 ## Config
@@ -70,7 +70,7 @@ Each of the following parts is separate and can be used independently, though so
 1. Open the game's *install folder* (where the `Umamusume.exe` is)
 1. Copy the **contents** of this project's `localify` folder to the *install folder*
 1. Download [tlg]'s latest [release zip](https://github.com/MinamiChiwa/Trainers-Legend-G/releases), extract **only the `version.dll`** from it and put that in the game's *install folder*
-1. It should look [like this](guide_localify.jpg).
+1. It should look [like this](docs/guide_localify.jpg).
 
 This is a one-time procedure. To update TLG itself simply overwrite the `version.dll` with the new one.
 
@@ -85,7 +85,7 @@ This is a one-time procedure. To update TLG itself simply overwrite the `version
     - Open the `config.json` you copied and play with the uiScale value (0.8-1.2 usually).
 
 ## Skills and other variable text
-Change `skill_data` to true in the config if you want to see [the skill's raw requirements and effects](guide_skilldata.png).  
+Change `skill_data` to true in the config if you want to see [the skill's raw requirements and effects](docs/guide_skilldata.png).  
 Double click the `mdb import.bat` file.
 - The mdb file that this modifies updates regularly (with banners usually) and undoes changes, you will need to rerun this .bat.
 - Requires restarting the game after applying.
@@ -107,27 +107,27 @@ Double click `run.bat`
 If you want to update only the patch itself and not actually apply it, you can use the `update.bat` if you installed MinGit. This should not usually be needed.
 
 ### Troubleshooting
-- If you see [commit/merge errors](guide_git_update.png):
+- If you see [commit/merge errors](docs/guide_git_update.png):
     - Open a cmdline in the folder and paste `.mingit\mingw64\bin\git.exe reset --hard`, enter.
     - This will happen if you (or something on your PC) edited any non-config file, including if you're using a test/bugfix file someone sent you. Or if you update by overwriting your install from a new ZIP while using MinGit.
 
 # Advanced Usage
 In general, check out the [scripts](#script-info). You probably also want to `pip install -r src/devreq.txt`
 1. **Dialogue**
-    - To install specific things, see [id-structure.md](id-structure.md) and use: `py src/import.py -O -g <group> -id <id>`
-    - To add additional translations through deepl, or contribute your own, see [translating.md](translating.md)
+    - To install specific things, see [id-structure] and use: `py src/import.py -O -g <group> -id <id>`
+    - To add additional translations through deepl, or contribute your own, see [translating]
 2. **UI**
-    - To update yourself when the translations are jumbled, see [here](translating.md#updating)
+    - To update yourself when the translations are jumbled, see [here](docs/translating.md#updating)
         - Should no longer be needed when using TLG.
 3. **Skills and other variable text**: Check the `-h` help for scripts under `src/mdb/`
 
 # Script info
 
-See [data-layout.md](data-layout.md) for an overview of the game's data files and how this repo maps translation files to them.
+See [data-layout.md](docs/data-layout.md) for an overview of the game's data files and how this repo maps translation files to them.
 
 All scripts are made to be run from the root dir, i.e: `py src/script.py -arg val`  
 Arguments can be given to all and it is recommended you do so, processing the smallest amount of files you're comfortable with at a time.  
-For detailed info and args, run a script with the `-h` arg. See also [id-structure.md](id-structure.md) for `g`, `id`, and `idx`.
+For detailed info and args, run a script with the `-h` arg. See also [id-structure] for `g`, `id`, and `idx`.
 
 script | desc
 ---|---
@@ -135,7 +135,7 @@ filecopy | Simply copies files from the game dir to the project dir for backup.
 restore | Restores original game files from earlier backup or cygames servers.
 extract | Reads game files and writes relevant data to a local folder, ready to be translated. Creates *Translation Files*.
 import | The reverse; loads *Translation Files* and writes them back to game assets for importing into the game.
-machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Translation Files* with deepl or fairseq-compatible trained neural net models. See [details](translating.md#mtl-using-deepl).
+machinetl + deepl-translator.user.js | In tandem, provide a way to translate *Translation Files* with deepl or fairseq-compatible trained neural net models. See [details](docs/translating.md#mtl-using-deepl).
 names | Translates name fields in *Translation Files* using data from the [db-translate project][].
 textprocess | Processes dialogue text in *Translation Files* in various ways. Main use is adjusting lengths of lines for game display.
 subtransfer | Imports ASS, SRT or TXT subtitle files into *Translation Files*. A few conventions must be followed, see -h.
@@ -146,7 +146,7 @@ common/helpers | Not scripts. Hold shared functions and data for other scripts.
 
 # Contribute
 
-To contribute translations, see [translating.md](translating.md)  
+To contribute translations, see [translating]  
 For dev contributions, open a PR or Issue.  
 You can support the project on [Patreon](https://patreon.com/noccu), [Ko-fi](https://ko-fi.com/noccyu), or by sending me DMM points (find me in the [Umamusume Translation Discord][]).
 
@@ -166,4 +166,6 @@ You can support the project on [Patreon](https://patreon.com/noccu), [Ko-fi](htt
 [db-translate project]: https://github.com/noccu/umamusume-db-translate
 [Umamusume Translation Discord]: https://discord.gg/HpMRFNvsMv
 
-[tl-progress]: tl-progress.md
+[tl-progress]: docs/tl-progress.md
+[translating]: docs/translating.md
+[id-structure]: docs/id-structure.md

@@ -5,7 +5,7 @@ For [existing content](translations/) you only wish to translate, TLC, or edit, 
 I also suggest you look over all of the process before starting.
 
 # Prerequisites
-- If you haven't read the main [readme](readme.md), please check and follow that first.
+- If you haven't read the main [readme](../README.md), please check and follow that first.
 - Open a shell in the project root (the 'base' `umamusu-translate` folder)
     - tip: type cmd in explorer's address bar on windows when in said folder
 - Install additional  dependencies: `py -m pip install -r src\devreq.txt`
@@ -16,7 +16,7 @@ I also suggest you look over all of the process before starting.
 
 # Extracting text
 - Run `py src/extract.py -g <group> etc…` with your targets.
-- Files will be created in the [translations folder](translations/)
+- Files will be created in the [translations folder](../translations/)
 
 # Translating
 ## Manual
@@ -88,7 +88,7 @@ Some updates change the hashes, causing the translations to be jumbled.
    "日本語": "**tl goes here**"
 1. `py src/manage.py -upd`
 1. The UI translation files in the `localify` folder should now be updated and can be copied over to your game folder
-    - Basically follow [the usual step](README.md#basic-usage) or simply run `py src/manage.py -M`
+    - Basically follow [the usual step](../README.md#basic-usage) or simply run `py src/manage.py -M`
 1. Revert the changes from step 2.
 1. If you wish to contribute (especially through github), run `py src/manage.py -clean both` first
 

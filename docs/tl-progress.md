@@ -77,6 +77,7 @@ Aston Machan | Complete | [Snep]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
+Daitaku Helios | Complete | [LotoDS][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Daiichi Ruby | In progress | [Riersa] (1-4)
 Eishin Flash | Complete, Stalled, In progress | deepl, [noccu] (ep 1-2), Admiy
@@ -84,7 +85,7 @@ El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
-Grass Wonder | Complete | deepl
+Grass Wonder | Complete | [LotoDS][]
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 Hokko Tarumae | Complete | [Riersa] (deepl edit)
 Inari One | Complete | [LotoDS][]
@@ -108,11 +109,13 @@ Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
+Shinko Windy | Complete | [LotoDS][]
 Silence Suzuka | Complete | [LotoDS][]
 Smart Falcon | Complete | [LotoDS][]
 Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl
+Symboli Kris S | Complete | [LotoDS][]
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "4NZ6WPBIBOKIX37RUKX4QUQ3XYSAHJSR",
     "type": "story",
     "storyId": "041011005",
@@ -9,8 +9,16 @@
             "jpName": "",
             "enName": "",
             "jpText": "ある日のトレーニング後のこと――",
-            "enText": "One day after training—",
+            "enText": "One day after training――",
             "nextBlock": 2,
+            "origClipLength": 65,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": -6818273950765615679
+                }
+            ],
             "pathId": 8551438485040473211,
             "blockIdx": 1
         },
@@ -18,8 +26,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "お疲れ様でした、トレーナーさん。\n美味しいお茶を見つけたので、今淹れますね。",
-            "enText": "Thank you for your hard work, trainer. I found\nsome delicious tea, I'll brew it now.",
+            "enText": "Good work, Trainer-san. I found a \ndelicious tea, so I'll prepare it now.",
             "nextBlock": 3,
+            "origClipLength": 219,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": 299748254777564344
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -906232809861394441
+                }
+            ],
             "pathId": 438420865385145579,
             "blockIdx": 2
         },
@@ -27,8 +47,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "それにしてもレースの疲れを癒すためとはいえ、\nトレーニングが軽めになるのは少し物足りませんね～。",
-            "enText": "Even though I was trying to recover from the race, I was still\na little underwhelmed by the light training.",
+            "enText": "Even if it was to recover fatigue from the previous race, \nthe training felt so light that it was a little unsatisfying～.",
             "nextBlock": 4,
+            "origClipLength": 286,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 9161745560169895543
+                },
+                {
+                    "origLen": 28,
+                    "pathId": 1286285542644369617
+                }
+            ],
             "pathId": 1955633188017945278,
             "blockIdx": 3
         },
@@ -36,18 +68,26 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "今日も日が傾く前に終わってしまいましたし……。",
-            "enText": "It was over before the sun went down again today…",
+            "enText": "Today, again, it ended before the sun had set……",
             "nextBlock": 5,
+            "origClipLength": 131,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "今は体を休めることを優先しよう",
-                    "enText": "Let's just prioritize resting our bodies for now.",
+                    "enText": "Let's prioritize rest for now",
                     "nextBlock": 5
                 },
                 {
                     "jpText": "今は体を休めることを優先しましょう",
-                    "enText": "Let's just prioritize resting our bodies for now.",
+                    "enText": "Let's prioritize rest for now",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -7126546695685585989
                 }
             ],
             "pathId": 2865629614965775242,
@@ -57,8 +97,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "ふふっ、もちろんわかっています。\n次のレースも勝つために、しっかり休息を……ですね。",
-            "enText": "Phew, of course I know. I'll be sure to rest\nup… to win the next race as well.",
+            "enText": "Fufuu, of course, I understand. So that I can \nwin the next race, I need to properly rest…… right?",
             "nextBlock": 6,
+            "origClipLength": 284,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": -1650157354818686645
+                },
+                {
+                    "origLen": 37,
+                    "pathId": 2909282692965018061
+                }
+            ],
             "pathId": -7656291838694112290,
             "blockIdx": 5
         },
@@ -66,8 +118,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "『過ぎたるは猶及ばざるが如し』――\nトレーナーさんの気遣いには、いつも感謝しています♪",
-            "enText": "I'm always grateful to my trainer for her concern.",
+            "enText": "『It'll be too late once something happens』―― \nTrainer-san, I'm always grateful for your consideration♪",
             "nextBlock": 7,
+            "origClipLength": 248,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 259,
+                    "pathId": 6292945638520062623
+                },
+                {
+                    "origLen": 28,
+                    "pathId": 4958970315849265416
+                }
+            ],
             "pathId": 670356040839908255,
             "blockIdx": 6
         },
@@ -75,17 +139,41 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ピンポンパンポン……）",
-            "enText": "(Ping-pong-pong…)",
+            "enText": "(Ding dong ding……)",
             "nextBlock": 8,
+            "origClipLength": 68,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 4122658136142274306
+                },
+                {
+                    "origLen": 53,
+                    "pathId": -506536799016412466
+                }
+            ],
             "pathId": 1287577496701970710,
             "blockIdx": 7
         },
         {
             "jpName": "校内放送",
-            "enName": "",
+            "enName": "School Broadcast",
             "jpText": "『グラスワンダーさん、生徒会長がお呼びです。\n生徒会室までお越しください』",
-            "enText": "\"Ms. Glass Wonder, the student body president would like to see\nyou. Please come to the student council room.",
+            "enText": "『Grass Wonder-san, the Student Council President is calling you. \nPlease make your way to the student council room』",
             "nextBlock": 9,
+            "origClipLength": 198,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 212,
+                    "pathId": -6671170888458397333
+                },
+                {
+                    "origLen": 210,
+                    "pathId": 963339990204669875
+                }
+            ],
             "pathId": -8336603687480336596,
             "blockIdx": 8
         },
@@ -93,8 +181,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "あら、いったいなんでしょう……。",
-            "enText": "Oh, what in the world is…?",
+            "enText": "Oh, what could that possibly be about……?",
             "nextBlock": 10,
+            "origClipLength": 115,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": 1372220117690894860
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2115202601028676188
+                }
+            ],
             "pathId": 7615118768594546322,
             "blockIdx": 9
         },
@@ -102,18 +202,26 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "トレーナーさん、ただいま戻りました～。",
-            "enText": "Trainer, I'm back~.",
+            "enText": "Trainer-san, I have returned～.",
             "nextBlock": 11,
+            "origClipLength": 107,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "なんの呼び出しだったんだ？",
-                    "enText": "What was that call about?",
+                    "enText": "Why did they call you?",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "なんの呼び出しだったの？",
-                    "enText": "What was that call about?",
+                    "enText": "Why did they call you?",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 5256607225968101184
                 }
             ],
             "pathId": 987200046513027644,
@@ -123,8 +231,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "なんでも学園のオリエンテーションで行われる模擬レースに\n出てほしいと頼まれまして。",
-            "enText": "I was asked to participate in a mock\nrace at the school's orientation.",
+            "enText": "It seems that they wanted to request that I participate in the \nmock race they're holding at the school's orientation.",
             "nextBlock": 12,
+            "origClipLength": 213,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -7074016215821158739
+                },
+                {
+                    "origLen": 33,
+                    "pathId": -3666911790858248173
+                }
+            ],
             "pathId": -1239260982477186712,
             "blockIdx": 11
         },
@@ -132,8 +252,24 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "トゥインクル・シリーズを夢見る子どもたちに\r\n私がレースを見せるだなんて、とても光栄です♪",
-            "enText": "I'm so honored that I'm going to be the one to show the\nchildren who dream of racing the Twinkle Series.",
+            "enText": "For all those girls who dream of the Twinkle Series, \nto think they'd be watching me race, it's quite the honor♪",
             "nextBlock": 13,
+            "origClipLength": 222,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 6108562111023523660
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8217396259651770380
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 7049084065635306193
+                }
+            ],
             "pathId": 1031914182339248257,
             "blockIdx": 12
         },
@@ -141,18 +277,34 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "さっそくトレーニングに励んで……っと、\nトレーナーさん、じっと私を見つめてどうかしましたか？",
-            "enText": "I've been working out for a while now… and my trainer is\nstaring at me like, what's wrong?",
+            "enText": "Then we should get to training…… Oh, Trainer-san, \nyou've been staring at me for a while, is something wrong?",
             "nextBlock": 14,
+            "origClipLength": 322,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "あまり無理をするなよ？",
-                    "enText": "Don't take too long, okay?",
+                    "enText": "Don't push yourself too hard, ok?",
                     "nextBlock": 14
                 },
                 {
                     "jpText": "あまり無理しないでね？",
-                    "enText": "Don't take too long, okay?",
+                    "enText": "Don't push yourself too hard, ok?",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": -380143194171109601
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 6326862016835761730
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -6266221142610504907
                 }
             ],
             "pathId": -5872636706187881687,
@@ -162,8 +314,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "まあ、そうでした。\n選出していただいた嬉しさで、つい。",
-            "enText": "Well, I was. I was so happy to have been selected.",
+            "enText": "Oh, that's right. \nI was so happy to be selected, that I couldn't help it.",
             "nextBlock": 15,
+            "origClipLength": 169,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -150731053398256591
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 1769185972523920617
+                }
+            ],
             "pathId": -4490713290621209809,
             "blockIdx": 14
         },
@@ -171,8 +335,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "では、調整程度に少しだけ走りこんでおきますね。",
-            "enText": "So, I'll do a little bit of running around just to adjust.",
+            "enText": "Well then, I'll adjust my running, a little bit, accordingly.",
             "nextBlock": 16,
+            "origClipLength": 136,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -5310058092881474883
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 127083738869188168
+                }
+            ],
             "pathId": 7302119087719667664,
             "blockIdx": 15
         },
@@ -180,8 +356,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "トレーナーさんは先に上がっていてください。\n調整なら私1人でも問題ありませんから～。",
-            "enText": "Trainers, please go up first. If you want to make adjustments,\nthere's no problem with me alone~.",
+            "enText": "Trainer-san, it's fine if you head home first. \nThere's no issue if I do the adjustments on my own～",
             "nextBlock": 17,
+            "origClipLength": 213,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -7619901266029886229
+                },
+                {
+                    "origLen": 66,
+                    "pathId": -3915728669218125784
+                }
+            ],
             "pathId": -5382539080943247972,
             "blockIdx": 16
         },
@@ -189,8 +377,20 @@
             "jpName": "",
             "enName": "",
             "jpText": "『少しだけ』というグラスワンダーだったが、\n自身が納得するまでトレーナーのスカウトを断り続けた性格だ。",
-            "enText": "Although Glass Wonder said, \"Just a little,\"\nshe continued to refuse scouts from trainers until\nshe was satisfied with her character.",
+            "enText": "『A little bit』 is what Grass Wonder said but, she had originally \nrefused scouts until she was satisfied with her own results.",
             "nextBlock": 18,
+            "origClipLength": 111,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 5869670988150543163
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -7890832509807093171
+                }
+            ],
             "pathId": 4999034032826694558,
             "blockIdx": 17
         },
@@ -198,8 +398,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "たとえ模擬レースであっても、彼女自身が勝とうと思ったのなら\n全力で挑むはず……そう思って様子を見に行くと――",
-            "enText": "Even if it's just a mock race, if she wanted to win, she'd give\nit her all… So I went to check on her.",
+            "enText": "Even if it was just a mock race, if she herself \nwanted to win, then she'd probably go too far…… \nthinking that, I went to check on her――",
             "nextBlock": 19,
+            "origClipLength": 115,
+            "voiceIdx": -1,
             "pathId": 8793787763146666303,
             "blockIdx": 18
         },
@@ -207,8 +409,20 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "はっ……はっ……はっ……はっ……はっ……。",
-            "enText": "Haha… haha… haha… haha… haha.",
+            "enText": "Haa…… Haa…… Haa…… Haa…… Haa……",
             "nextBlock": 20,
+            "origClipLength": 143,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": 9042375869155599876
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 9055122249960886441
+                }
+            ],
             "pathId": 1718389810007346038,
             "blockIdx": 19
         },
@@ -216,8 +430,24 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "ふぅ……あと3周……。\n今よりも速いタイムで……っ！",
-            "enText": "Phew… 3 more laps… With\na faster time than now…!",
+            "enText": "Huu…… 3 more laps…… \nBut with a faster time……!",
             "nextBlock": 21,
+            "origClipLength": 237,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -6577849453831619772
+                },
+                {
+                    "origLen": 85,
+                    "pathId": 8854530804630466550
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 2407474638612318167
+                }
+            ],
             "pathId": -8013190905218228023,
             "blockIdx": 20
         },
@@ -225,8 +455,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "案の定、レース前と変わらないほどのトレーニングを\n行っていた。",
-            "enText": "As expected, I was training as hard as I had before the race.",
+            "enText": "As I predicted, she was doing the same amount of \ntraining she would normally do before a race.",
             "nextBlock": 22,
+            "origClipLength": 85,
+            "voiceIdx": -1,
             "pathId": 690018080547614174,
             "blockIdx": 21
         },
@@ -234,26 +466,32 @@
             "jpName": "",
             "enName": "",
             "jpText": "彼女の勝利に対する思いは知っている。\nならばせめて無茶をしないか見守ることにした。そして――",
-            "enText": "I know her desire to win. So I decided to at least watch her to\nmake sure she didn't do anything rash. And—",
+            "enText": "I know how strong her desire for victory is. At the very least, \nI would make sure she didn't push herself too hard. And then――",
             "nextBlock": 23,
+            "origClipLength": 105,
+            "voiceIdx": -1,
             "pathId": 4351955991559178602,
             "blockIdx": 22
         },
         {
             "jpName": "実況のウマ娘",
-            "enName": "",
+            "enName": "Announcer Uma Musume",
             "jpText": "速い速いっ！！\nグラスワンダー、直線一気の末脚っ！！",
-            "enText": "Fast, fast, fast! Glass Wonder is going to go for it!",
+            "enText": "So fast!! \nGrass Wonder drives in on the straight!!",
             "nextBlock": 24,
+            "origClipLength": 135,
+            "voiceIdx": 16,
             "pathId": 4915347554393731289,
             "blockIdx": 23
         },
         {
             "jpName": "実況のウマ娘",
-            "enName": "",
+            "enName": "Announcer Uma Musume",
             "jpText": "そのまま先頭でゴールインっ！\n1着はグラスワンダーですっ！",
-            "enText": "She finished in the lead! First place goes to Glass Wonder!",
+            "enText": "And just like that she stays in front! \nFirst place is Grass Wonder!",
             "nextBlock": 25,
+            "origClipLength": 165,
+            "voiceIdx": 17,
             "pathId": 5202300513181927487,
             "blockIdx": 24
         },
@@ -261,26 +499,58 @@
             "jpName": "",
             "enName": "",
             "jpText": "圧勝を遂げたグラスワンダー。\nすると、彼女のまわりに子どもたちが集まり始めた。",
-            "enText": "Glass Wonder, who had achieved an overwhelming victory. Then,\nchildren began to gather around her.",
+            "enText": "It was an overwhelming victory for Grass Wonder. \nAnd after that, the younger girls started gathering around her.",
             "nextBlock": 26,
+            "origClipLength": 95,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": 2816677361601885646
+                }
+            ],
             "pathId": -4281494713132213241,
             "blockIdx": 25
         },
         {
             "jpName": "ウマ娘の女の子A",
-            "enName": "",
+            "enName": "Uma Musume Girl A",
             "jpText": "おね～ちゃん、あっと～てき～！",
-            "enText": "Hey, girl!",
+            "enText": "Onee～chan, you're so strooo～ng!",
             "nextBlock": 27,
+            "origClipLength": 93,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -4976348957405327384
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -6328071714243864023
+                }
+            ],
             "pathId": -3880519462290176117,
             "blockIdx": 26
         },
         {
             "jpName": "ウマ娘の女の子B",
-            "enName": "",
+            "enName": "Uma Musume Girl B",
             "jpText": "やさしそうなおね～ちゃんなのに、\nまるで“かいぶつ”だぁ～！　すごいすごぉ～いっ！",
-            "enText": "You look like a nice lady, but you're a monster! Wow, wow, wow!",
+            "enText": "Onee～chan looks so kind, \nbut she's almost like a \"monster\"～! Amaaaaazing～!",
             "nextBlock": 28,
+            "origClipLength": 169,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 180,
+                    "pathId": 6238237947236937747
+                },
+                {
+                    "origLen": 28,
+                    "pathId": -1508634133586249539
+                }
+            ],
             "pathId": 9188770544946464620,
             "blockIdx": 27
         },
@@ -288,13 +558,25 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "ふふっ、“怪物”だなんて光栄です♪",
-            "enText": "I'm honored to be called a monster.",
+            "enText": "Fufuu, a \"monster\", is it? I'm honored♪",
             "nextBlock": 29,
+            "origClipLength": 147,
+            "voiceIdx": 20,
             "choices": [
                 {
                     "jpText": "（怪物かぁ……）",
-                    "enText": "(Monsters…)",
+                    "enText": "(Monster, huh……)",
                     "nextBlock": 29
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4926453980208385947
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 3086752648411142656
                 }
             ],
             "pathId": 8624190348875326820,
@@ -304,17 +586,41 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "あら、トレーナーさん。\r\n私の顔に何かついていますか？",
-            "enText": "Oh, hey, trainer. Do I have something on my face?",
+            "enText": "Oh, Trainer-san. \nIs there something on my face?",
             "nextBlock": 30,
+            "origClipLength": 181,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 124,
+                    "pathId": -3620385139158666834
+                },
+                {
+                    "origLen": 156,
+                    "pathId": 59689037476564996
+                }
+            ],
             "pathId": 8368550165707381510,
             "blockIdx": 29
         },
         {
             "jpName": "ウマ娘の女の子A",
-            "enName": "",
+            "enName": "Uma Musume Girl A",
             "jpText": "トゥインクル・シリーズでも応援するから勝ってね！\nかいぶつのおね～ちゃん！",
-            "enText": "I'll be rooting for you in the Twinkle Series, so you better\nwin! I'll be rooting for you in the Twinkle Series!",
+            "enText": "I'll cheer for you in the Twinkle Series too, so win! \nMonster Onee～chan!",
             "nextBlock": 31,
+            "origClipLength": 167,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 179,
+                    "pathId": -6095123031486470470
+                },
+                {
+                    "origLen": 28,
+                    "pathId": -9090922533085491807
+                }
+            ],
             "pathId": 2263082073408367554,
             "blockIdx": 30
         },
@@ -322,8 +628,24 @@
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
             "jpText": "はい、必ず勝ってみせますね～。\r\nみんなも大きくなったら、お姉ちゃんと一緒に走りましょう。",
-            "enText": "Yes, I'm sure I'll win! When you grow up,\nlet's run together with your sister.",
+            "enText": "Yeah, I'll definitely win～. \nOnce you grow up, you can run together with Onee-chan too.",
             "nextBlock": 32,
+            "origClipLength": 266,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -429812807963838724
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -5257840008950370354
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -6459286443826956269
+                }
+            ],
             "pathId": 5612430388132466976,
             "blockIdx": 31
         },
@@ -331,10 +653,23 @@
             "jpName": "",
             "enName": "",
             "jpText": "勝利への思いがひと一倍大きいグラスワンダー。\nそれをしっかり支えなければと思った模擬レースだった。",
-            "enText": "Glass Wonder's desire to win is even greater than mine. It was\na mock race that made me realize that I had to support her.",
+            "enText": "Grass Wonder's desire to win was unfathomable. \nIt was a mock race that reaffirmed how I needed to support her.",
             "nextBlock": -1,
+            "origClipLength": 108,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": -8609316733610901112
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -8225854970211208924
+                }
+            ],
             "pathId": 8106429327133810269,
             "blockIdx": 32
         }
-    ]
+    ],
+    "modified": 1681800923
 }

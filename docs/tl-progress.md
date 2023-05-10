@@ -181,7 +181,7 @@ Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | Stalled | Anonymous Reindeer
-Sakura Bakushin O | Complete, In progress | deepl, [Kasey]
+Sakura Bakushin O | Complete, Stalled, In progress | deepl, [Kasey] (100-306, 511-900)(88/133), [noccu]
 Vodka | In progress | [robflop]
 
 ## Cards

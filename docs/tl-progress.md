@@ -83,6 +83,7 @@ Daiichi Ruby | In progress | [Riersa] (1-4)
 Eishin Flash | Complete, Stalled, In progress | deepl, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
+Fuji Kiseki | Complete | [Kasey]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | [LotoDS][]

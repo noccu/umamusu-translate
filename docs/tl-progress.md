@@ -79,10 +79,11 @@ Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
 Daitaku Helios | Complete | [LotoDS][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
-Daiichi Ruby | In progress | [Riersa] (1-4)
+Daiichi Ruby | Complete | [Riersa]
 Eishin Flash | Complete, Stalled, In progress | deepl, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
+Fuji Kiseki | Complete | [Kasey]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | [LotoDS][]
@@ -180,7 +181,7 @@ Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | Stalled | Anonymous Reindeer
-Sakura Bakushin O | Complete, In progress | deepl, [Kasey]
+Sakura Bakushin O | Complete, Stalled, In progress | deepl, [Kasey] (100-306, 511-900)(88/133), [noccu]
 Vodka | In progress | [robflop]
 
 ## Cards

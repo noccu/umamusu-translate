@@ -101,6 +101,7 @@ function translate() {
         translateSpecific("g1-3", jpText, PFILES.trainerReq)
         translateSpecific("e4s", jpText, PFILES.trainerReq)
         translateSpecific("fan", jpText, PFILES.trainerReq)
+        translateSpecific("LOHreq", jpText, PFILES.trainerReq)
     }
     for (let [jpText, enText] of Object.entries(PFILES.trTitles.text)) {
         if (enText) {
@@ -110,6 +111,7 @@ function translate() {
             continue
         }; //skip header and translated entries
         translateSpecific("trTitle", jpText, PFILES.trTitles)
+        translateSpecific("LOH", jpText, PFILES.trTitles)
     }
     for (let [jpText, enText] of Object.entries(PFILES.pieces.text)) {
         if (enText) {
@@ -367,6 +369,24 @@ function translateSpecific (type, jpText, file) {
             i = i ? `${i}x ` : ""
             if (res && enText) {
                 data[jpText] = `Achieve ${i}${CM_RESULT[res]} results in the ${enText}`;
+            }
+        }
+    }
+    else if (type == "LOH") {
+        m = jpText.match(/(.+?)英雄譚/)
+        if (m) {
+            let [,umaName] = m, umaNameEn = PFILES.umaNames.text[umaName];
+            if (umaNameEn) {
+                data[jpText] = `${umaNameEn}'s tale`;
+            }
+        }
+    }
+    else if (type == "LOHreq") {
+        m = jpText.match(/リーグ オブ ヒーローズで誰もが(.+?)を\\n英雄と認める活躍をしよう/)
+        if (m) {
+            let [,umaName] = m, umaNameEn = PFILES.umaNames.text[umaName];
+            if (umaNameEn) {
+                data[jpText] = `Leave ${umaNameEn}'s undeniable \\nmark on the League of Heroes`;
             }
         }
     }

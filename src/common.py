@@ -151,7 +151,7 @@ def patchVersion():
 
 class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTextHelpFormatter): pass
 class Args(argparse.ArgumentParser):
-    def __init__(self, desc, defaultArgs=True, types=None, **kwargs) -> None:
+    def __init__(self, desc, defaultArgs=True, types:tuple=None, **kwargs) -> None:
         super().__init__(description=desc, conflict_handler='resolve', formatter_class=RawDefaultFormatter, **kwargs)
         self.add_argument("-v", "--version", action="store_true", help="Show version and exit")
         self.add_argument("--read-defaults", "--read-config", action="store_true", help="Overwrite args with data from umatl.json config")
@@ -209,6 +209,7 @@ class TranslationFile:
             self.setFile(file)
             self.reload()
         else:
+            if file: self.setFile(file)
             self.fileExists = False
 
     class TextData:
@@ -239,7 +240,7 @@ class TranslationFile:
             else:
                 raise LookupError(f"No index provided for list-format file {self.root.name}")
 
-        def items(self, key="jpText", val="enText"):
+        def items(self, key="jpText", val="enText") -> dict[str, str]:
             for entry in self.data:
                 yield (entry.get(key), entry.get(val))
         def __getitem__(self, itm):

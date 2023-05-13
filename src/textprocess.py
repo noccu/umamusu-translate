@@ -16,7 +16,7 @@ def processText(file: TranslationFile, text: str, opts: dict):
         text = cleannewLines(text)
     if opts.get("replaceMode"):
         text = replace(text, opts["replaceMode"])
-    if opts.get("lineLength") != 0:
+    if opts.get("lineLength") != None and opts.get("lineLength") != 0:
         text = adjustLength(file, text, opts)
 
     text = resizeText(file, text, force = opts.get("forceResize"))

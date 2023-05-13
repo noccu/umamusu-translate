@@ -13,8 +13,8 @@
 'use strict'
 
 class Translator {
-    input = document.querySelector("textarea.lmt__source_textarea")
-    output = document.querySelector("textarea.lmt__target_textarea")
+    input = document.querySelector(".lmt__source_textarea")
+    output = document.querySelector(".lmt__target_textarea")
     obs = new MutationObserver(this.rcvText.bind(this))
     clearText = false // DeepL seems to be affected by previous text sometimes. This might good for sequential text like stories (?), perhaps not for random text. Idk
     timeout = 3000
@@ -24,7 +24,11 @@ class Translator {
         this.obs.observe(document.querySelector("#target-dummydiv"), { childList: true })
         if (clear) this.clearText = clear
     }
-    sendText(txt) {
+    async sendText(txt) {
+        while (this.tl || this.output.value) {
+            await new Promise(r => setTimeout(r, 500));
+        }
+
         this.tl = true
         this.input.value = txt
         this.input.dispatchEvent(new InputEvent("input"))

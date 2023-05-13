@@ -5,7 +5,7 @@ uiFile = "translations/localify/ui.json"
 diffFile = "dump-diff.json"
 
 def parseArgs():
-    args = Args("Diff UI files")
+    args = Args("Diff UI files", defaultArgs=False)
     args.add_argument("-tl", action="store_true", help="Also check translations file as old values")
     args.add_argument("-r", "--reverse", action="store_true", help="Import translated values from diff into ui.json")
     return args.parse_args()
@@ -29,12 +29,15 @@ def diffUi(args):
 def addNew():
     diffData = helpers.readJson(diffFile)
     uiData = helpers.readJson(uiFile)
+    i = 0
     for k, v in list(diffData.items()):
         if v != "" and k not in uiData:
             uiData[k] = v
             del diffData[k]
+            i += 1
     helpers.writeJson(uiFile, uiData)
     helpers.writeJson(diffFile, diffData)
+    print(f"Imported {i} new entries")
 
 
 def main():

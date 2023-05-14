@@ -271,7 +271,7 @@ class TranslationFile:
 
         def toNative(self, data=None):
             data = data or self.data
-            if self.root.version > self.root.ver_offset_mdb and isinstance(data, list):
+            if (self.root.version == -2 or self.root.version > self.root.ver_offset_mdb) and isinstance(data, list):
                 o = dict()
                 for e in data:
                     o[e.get("jpText")] = e.get("enText", "")
@@ -279,18 +279,25 @@ class TranslationFile:
             return data
 
     def _getVersion(self) -> int:
-        return self.data['version'] if 'version' in self.data else 1
+        ver = self.data.get('version', 1)
+        if ver == 1 and not isinstance(next(iter(self.data.values())), list):
+            ver = -2 
+        return ver
 
     @property
     def textBlocks(self) -> TextData:
         if self.version > 1:
             return self.data['text']
+        elif self.version == -2:
+            return self.data
         else:
             return list(self.data.values())[0]
     @textBlocks.setter
     def textBlocks(self, val):
         if self.version > 1:
             self.data['text'] = self.TextData(self, val)
+        elif self.version == -2:
+            self.data = self.TextData(self, val)
         else:
             raise NotImplementedError
 
@@ -310,6 +317,8 @@ class TranslationFile:
     def bundle(self):
         if self.version > 1:
             return self.data['bundle']
+        elif self.version == -2:
+            return
         else:
             return list(self.data.keys())[0]
 
@@ -317,6 +326,8 @@ class TranslationFile:
     def type(self):
         if self.version > 2:
             return self.data['type']
+        elif self.version == -2:
+            return "dict"
         else:
             return "story/home"
 
@@ -325,6 +336,8 @@ class TranslationFile:
             return self.data['storyId']
         elif self.version > 2 and self.data['storyId'] != "000000000":
             return self.data['storyId']
+        elif self.version == -2:
+            return
         else:
             isN = regex.compile(r"\d+")
             g, id, idx = self.file.parts[-3:]  # project structure provides at least 3 levels, luckily
@@ -341,7 +354,7 @@ class TranslationFile:
     def save(self):
         if self.fileExists and self._snapshot == json.dumps(self.data, ensure_ascii=False, default=helpers._to_json): return
         assert self.file
-        if self.version < self.ver_offset_mdb:
+        if 3 < self.version < self.ver_offset_mdb:
             self.data['modified'] = currentTimestamp()
         helpers.writeJson(self.file, self.data)
 
@@ -365,7 +378,10 @@ class TranslationFile:
         self.escapeNewline = self.type in ("race", "preview", "mdb", "lyrics")
         if self.type == "mdb" and self.file.parent.name == "character_system_text":
             self.escapeNewline = False
-        self.data['text'] = self.TextData(self)
+        if self.type == "dict":
+            self.data = self.TextData(self)
+        else:
+            self.data['text'] = self.TextData(self)
         if snapshot: self.snapshot()
 
     @classmethod

@@ -338,7 +338,8 @@ def load_block(event=None, dir=1):
     text_box_jp.delete(1.0, tk.END)
     text_box_jp.insert(tk.END, txt_for_display(cur_block_data['jpText']))
     text_box_jp.configure(state='disabled')
-    insertTaggedTextFromMarkup(text_box_en, txt_for_display(cur_block_data['enText']))
+    displayText = txt_for_display(cur_block_data['enText'])
+    insertTaggedTextFromMarkup(text_box_en, displayText)
     # text_box_en.delete(1.0, tk.END)
     # text_box_en.insert(tk.END, txt_for_display(cur_block_data['enText']))
 
@@ -362,7 +363,8 @@ def load_block(event=None, dir=1):
         btn_colored['state'] = 'disabled'
         btn_colored.config(bg=COLOR_BTN)
     SAVE_STATE.markBlockLoaded(cur_block_data)
-        
+    previewText.config(text=displayText)
+
 
 def save_block():
     if "enName" in cur_file.textBlocks[cur_block]:
@@ -659,6 +661,45 @@ def searchChapters(event=None):
 def resetChapterSearch():
     chapter_dropdown['values'] = chapter_dropdown.formattedList
     chapter_dropdown.search = None
+
+def createPreviewWindow():
+    global previewWindow
+    global previewText
+
+    previewWindow = tk.Toplevel()
+    previewWindow.title("Preview")
+    previewWindow.resizable(True, True)
+    previewWindow.attributes('-alpha', 0.7, '-topmost', True)
+    # previewWindow.overrideredirect(True)
+    previewWindow.protocol("WM_DELETE_WINDOW", previewWindow.withdraw)
+    previewWindow.bind("<Control-p>", togglePreview)
+
+    fontSize = tk.IntVar(value=16) # common UI size
+    fontSizeCfg = ttk.Spinbox(previewWindow, from_=2, to=75, increment=1, textvariable=fontSize)
+    previewFont = large_font.copy()
+    previewFont.config(size=fontSize.get())
+    fontSizeCfg.pack(expand=True, fill="x")
+    def changeFontSize(*args):
+        try:
+            newsize = fontSize.get()
+        except: #throws errors when typing first number for reasons
+            return
+        previewFont.config(size=newsize)
+    fontSize.trace("w", changeFontSize)
+    # def moveWindow(event):
+    #     previewWindow.geometry(f'+{event.x_root}+{event.y_root}')
+    # previewWindow.bind('<B1-Motion>',moveWindow)
+
+    previewText = tk.Label(previewWindow, font=previewFont, justify="left")
+    previewText.pack(expand=True, fill='both')
+    previewWindow.withdraw()
+
+
+def togglePreview(event=None):
+    if previewWindow.state() == "normal":
+        previewWindow.withdraw()
+    else: 
+        previewWindow.deiconify()
 
 
 def char_convert(event=None):
@@ -996,6 +1037,7 @@ def main():
 
     create_text_list_popup()
     create_search_popup()
+    createPreviewWindow()
     chapter_dropdown.current(cur_chapter)
     change_chapter(initialLoad=True)
     block_dropdown.current(cur_block)
@@ -1024,6 +1066,7 @@ def main():
     text_box_en.bind("<Alt-F>", process_text)
     root.bind("<Control-f>", toggleSearchPopup)
     text_box_en.bind("<Control-h>", AudioPlayer.listen)
+    root.bind("<Control-p>", togglePreview)
 
     root.protocol("WM_DELETE_WINDOW", onClose)
 

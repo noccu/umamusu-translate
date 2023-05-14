@@ -110,6 +110,14 @@ def clean(mode):
         helpers.writeJson(file=DUMP_FILE,
                           data={ui_hash: jp for ui_hash, jp in helpers.readJson(DUMP_FILE).items()
                                 if len(ui_hash) <= 5 or jp in translations})  # Keep static hashes even if untranslated
+    
+    if mode == "dyn":
+        staticVals = helpers.readJson(HASH_FILE_STATIC).values()
+        dynamicData = helpers.readJson(HASH_FILE_DYNAMIC)
+        for hash, en in list(dynamicData.items()):
+            if en != "" and en in staticVals:
+                del dynamicData[hash]
+        helpers.writeJson(HASH_FILE_DYNAMIC, dynamicData)
 
 
 def order():
@@ -209,7 +217,7 @@ def parseArgs():
     ap.add_argument("-save", "-add", action="store_true", help="Save target dump entries to local dump on import")
     ap.add_argument("-upd", "--update", action="store_true",
                     help="Create/update the final static.json file used by the dll from static_dump.json and static_en.json")
-    ap.add_argument("-clean", "--clean", choices=["dump", "ui", "both"],  nargs='?', const="both", default=False,
+    ap.add_argument("-clean", "--clean", choices=["dump", "ui", "both", "dyn"],  nargs='?', const="both", default=False,
                     help="Remove untranslated entries from tl file and local dump."
                          'Pass "ui" or "dump" to clean only one or the other file; default "both".')
     ap.add_argument("-sort", "-order", action="store_true", help="Sort keys in local dump and final file")

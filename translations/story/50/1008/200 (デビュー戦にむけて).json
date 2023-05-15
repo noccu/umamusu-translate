@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "7NEAH5LZFJNCBSBEZV2TU6QZ44EIQIJZ",
+    "version": 6,
+    "bundle": "YPP52QEMDCYK6RUOEUW52BZDUVIDLW3L",
     "type": "story",
     "storyId": "501008200",
     "title": "デビュー戦にむけて",
@@ -11,13 +11,25 @@
             "jpText": "メイクデビュー！\r\nヤベぇ、響きだけで最高にかっけえ……！",
             "enText": "debut! Yikes, just the sound of it is \nthe coolest thing ever…!",
             "nextBlock": 2,
+            "origClipLength": 82,
+            "voiceIdx": 62,
             "coloredText": [
                 {
                     "jpText": "メイクデビュー",
                     "enText": "debut"
                 }
             ],
-            "pathId": 5595701990769919014,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": 2902555849519836761
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 3144481874225003164
+                }
+            ],
+            "pathId": 834263340614663334,
             "blockIdx": 1
         },
         {
@@ -26,6 +38,8 @@
             "jpText": "トレーナー、本当に来たんだよな？　外に\r\n飛び出せば、そこはパドックなんだよな？",
             "enText": "Trainer, you're really here, aren't you? If I \nrun out there, I'm in the paddock, right?",
             "nextBlock": 3,
+            "origClipLength": 97,
+            "voiceIdx": 53,
             "choices": [
                 {
                     "jpText": "ああ、もちろん！",
@@ -38,7 +52,17 @@
                     "nextBlock": 3
                 }
             ],
-            "pathId": 5786946372175135424,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 813244542298959691
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -1982761411527452418
+                }
+            ],
+            "pathId": 5037967533743246210,
             "blockIdx": 2
         },
         {
@@ -47,7 +71,19 @@
             "jpText": "うおおおおっ、模擬レースとは違うぜ！\r\n――命がけの真剣勝負！",
             "enText": "Whoa whoa, this isn't a mock race! —This is \na serious race for your life!",
             "nextBlock": 4,
-            "pathId": 6997462844715879192,
+            "origClipLength": 85,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": -8864194676203380394
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -4218885524278090149
+                }
+            ],
+            "pathId": -7144883541101284260,
             "blockIdx": 3
         },
         {
@@ -56,7 +92,19 @@
             "jpText": "――行くぜ！！",
             "enText": "—Let's go!",
             "nextBlock": 5,
-            "pathId": -2787530400354356753,
+            "origClipLength": 54,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 12,
+                    "pathId": 6177239860562416913
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 7305248961381294349
+                }
+            ],
+            "pathId": 423125517848541624,
             "blockIdx": 4
         },
         {
@@ -65,7 +113,23 @@
             "jpText": "雄々しく踏み出したウオッカは\r\nパドックを見回す。そして――",
             "enText": "Vodka steps out majestically and \nlooks around the paddock. And—",
             "nextBlock": 6,
-            "pathId": 7701609432768467174,
+            "origClipLength": 84,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 4459210962411069521
+                },
+                {
+                    "origLen": 132,
+                    "pathId": -8657296334510153085
+                },
+                {
+                    "origLen": 145,
+                    "pathId": -362016151901582007
+                }
+            ],
+            "pathId": -5858711354338577494,
             "blockIdx": 5
         },
         {
@@ -74,7 +138,23 @@
             "jpText": "……違う。",
             "enText": "… different.",
             "nextBlock": 7,
-            "pathId": 2038798771801698712,
+            "origClipLength": 59,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -4773351780303252790
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2306702420283478078
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 7490497067096824282
+                }
+            ],
+            "pathId": -4540034500294464931,
             "blockIdx": 6
         },
         {
@@ -83,6 +163,8 @@
             "jpText": "なんか違う……。なんかがっ！",
             "enText": "There's something different about \n… Something is wrong!",
             "nextBlock": 8,
+            "origClipLength": 63,
+            "voiceIdx": 36,
             "choices": [
                 {
                     "jpText": "どうした？",
@@ -95,7 +177,17 @@
                     "nextBlock": 8
                 }
             ],
-            "pathId": 7372918279736602705,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": 3489158823553383951
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -4628339084799417182
+                }
+            ],
+            "pathId": -1333798229739896870,
             "blockIdx": 7
         },
         {
@@ -104,7 +196,19 @@
             "jpText": "見てくれよ、周りのヤツら……。",
             "enText": "Look at all the guys around me…",
             "nextBlock": 9,
-            "pathId": 1773959590769319837,
+            "origClipLength": 64,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": -1599240395549794397
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 1010663173055836657
+                }
+            ],
+            "pathId": 7975892907238607712,
             "blockIdx": 8
         },
         {
@@ -113,7 +217,19 @@
             "jpText": "よぉし、がんばるぞー！\r\nぱんぱんっ。",
             "enText": "Alright, I'll do my best! Pang pang.",
             "nextBlock": 10,
-            "pathId": -1922377223754285215,
+            "origClipLength": 69,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 1499684909452981296
+                },
+                {
+                    "origLen": 45,
+                    "pathId": 7057769312475872068
+                }
+            ],
+            "pathId": -7983431576264707958,
             "blockIdx": 9
         },
         {
@@ -122,7 +238,9 @@
             "jpText": "初戦は……練習みたいなもんだよね。\r\n気楽に気楽に♪",
             "enText": "The first game is like a… practice. \nTake it easy, take it easy. ♪",
             "nextBlock": 11,
-            "pathId": 1545670625689286493,
+            "origClipLength": 78,
+            "voiceIdx": -1,
+            "pathId": 842925775842826798,
             "blockIdx": 10
         },
         {
@@ -131,7 +249,19 @@
             "jpText": "こうじゃねえだろー！　メイクデビューって、\r\nもっとギラギラしてるモンだろうがっ！",
             "enText": "It's not like this! When you make your makeup \ndebut, you're supposed to be more glamorous!",
             "nextBlock": 12,
-            "pathId": 6665315705152993913,
+            "origClipLength": 98,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": 5112582160314968865
+                },
+                {
+                    "origLen": 128,
+                    "pathId": 3378365427437052516
+                }
+            ],
+            "pathId": -296489820437948206,
             "blockIdx": 11
         },
         {
@@ -140,7 +270,19 @@
             "jpText": "あー、腹立つ！　どいつもこいつも\r\nハンパな覚悟で来やがって！",
             "enText": "Oh, I'm so angry! I'm so pissed off! Every \nsingle one of them came here unprepared!",
             "nextBlock": 13,
-            "pathId": -4396940469551962200,
+            "origClipLength": 85,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": -2057875069826333312
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -9128879682528951874
+                }
+            ],
+            "pathId": 7134659413835150568,
             "blockIdx": 12
         },
         {
@@ -149,6 +291,8 @@
             "jpText": "よーし見てろ。俺が\r\nホンモノの意気込みってヤツを教えてやるぜ！",
             "enText": "All right, watch this. I'll show you what \nreal enthusiasm looks like!",
             "nextBlock": 14,
+            "origClipLength": 86,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "よし、その意気だ！",
@@ -161,7 +305,17 @@
                     "nextBlock": 14
                 }
             ],
-            "pathId": -5666848581047151289,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": -1962709102181886845
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 8483880299996333834
+                }
+            ],
+            "pathId": 4637883792740850566,
             "blockIdx": 13
         },
         {
@@ -170,7 +324,19 @@
             "jpText": "おう、ぶっちぎってやっから\r\n目かっぴらいて見てろよな！",
             "enText": "Hey, I'm gonna beat you to it, \nso keep your eyes peeled!",
             "nextBlock": 15,
-            "pathId": -3290705708477500949,
+            "origClipLength": 81,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -970087539341223198
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 4716877486026844205
+                }
+            ],
+            "pathId": 2295078083681118799,
             "blockIdx": 14
         },
         {
@@ -179,7 +345,23 @@
             "jpText": "おおっ、なんかやけに\r\n強気のウマ娘がいるぞ！",
             "enText": "Oh, there's a very strong horse girl here!",
             "nextBlock": 16,
-            "pathId": 667520189871016201,
+            "origClipLength": 75,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": 6611134669692700746
+                },
+                {
+                    "origLen": 43,
+                    "pathId": 690687709853464980
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -1451194504512442400
+                }
+            ],
+            "pathId": -7016886927863320656,
             "blockIdx": 15
         },
         {
@@ -188,7 +370,23 @@
             "jpText": "まさか口だけじゃないだろーな？\r\nあの言いようで惨敗したら……。ぷぷっ。",
             "enText": "You're not just talking, are you? \nIf She loses miserably with that \nkind of talk… Pfft.",
             "nextBlock": 17,
-            "pathId": -835975615828782631,
+            "origClipLength": 91,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -1211211447935942595
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6608243822284956043
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 7985677075274968031
+                }
+            ],
+            "pathId": -3421154429846006393,
             "blockIdx": 16
         },
         {
@@ -197,7 +395,19 @@
             "jpText": "…………。\r\nなあトレーナー、ちと聞くけど……。",
             "enText": "… Hey trainer, I \nhave a question…",
             "nextBlock": 18,
-            "pathId": -7534266210470801648,
+            "origClipLength": 76,
+            "voiceIdx": 57,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": 4044856200102269882
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -7960479022026803557
+                }
+            ],
+            "pathId": 7265974990873672918,
             "blockIdx": 17
         },
         {
@@ -206,6 +416,8 @@
             "jpText": "もし、これでボロ負けしたら、\r\n俺、甘ちゃんどもに負けた、\n最弱ウマ娘ってことにならねぇか？",
             "enText": "If I lose this one, won't I be the \nweakest horse girl ever to lose to \na bunch of spoiled brats?",
             "nextBlock": 19,
+            "origClipLength": 105,
+            "voiceIdx": 22,
             "choices": [
                 {
                     "jpText": "……なるな",
@@ -218,7 +430,17 @@
                     "nextBlock": 19
                 }
             ],
-            "pathId": -6559755888792809843,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": 940476604324325891
+                },
+                {
+                    "origLen": 116,
+                    "pathId": 6601144331500599460
+                }
+            ],
+            "pathId": 4092838015283563862,
             "blockIdx": 18
         },
         {
@@ -227,7 +449,19 @@
             "jpText": "うおおおおおっ、マジか！？\r\nカッコ悪ぃ……。最悪にカッコ悪いぜ～！！",
             "enText": "Whoa whoa whoa, seriously? That's so uncool \n… That's the worst kind of uncool~!",
             "nextBlock": 20,
-            "pathId": 8483610521776055463,
+            "origClipLength": 90,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 1496024666078228024
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 2196058961305991361
+                }
+            ],
+            "pathId": 8055800426482899233,
             "blockIdx": 19
         },
         {
@@ -236,6 +470,8 @@
             "jpText": "んなことになってたまるかぁぁぁっ！\r\n俺はやる、やってやるぞ、トレーナー！！",
             "enText": "I'm not gonna let that happen! I'll \ndo it, I'll do it, trainer!",
             "nextBlock": 21,
+            "origClipLength": 94,
+            "voiceIdx": 71,
             "choices": [
                 {
                     "jpText": "ああ、頑張れ！",
@@ -248,7 +484,17 @@
                     "nextBlock": 21
                 }
             ],
-            "pathId": 7970059434699756894,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 6416327606638820830
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 3137627655646023960
+                }
+            ],
+            "pathId": 3566029259036918814,
             "blockIdx": 20
         },
         {
@@ -257,8 +503,25 @@
             "jpText": "全力エールで送り出す。このテンションの\r\n高さが、空回りしないことを信じて……！",
             "enText": "I'll send you off with a full-on shout out. I \ntrust that this tension will not spin out of \ncontrol…!",
             "nextBlock": -1,
-            "pathId": -8907479088955039759,
+            "origClipLength": 97,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": -7522769750362892173
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -890377708730935664
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 3754365051800805647
+                }
+            ],
+            "pathId": 5950567624055456920,
             "blockIdx": 21
         }
-    ]
+    ],
+    "modified": 1674832100
 }

@@ -1,24 +1,11 @@
 vscode format
 
+"json.validate.enable": true,
 "json.schemas": [
-        {
-            "fileMatch": [
-                "/translations/localify/ui.json"
-            ],
-            "url": "./src/data/internal/basic.schema.json"
-        },
-        {
-            "fileMatch": [
-                "/translations/mdb/*.json"
-            ],
-            "url": "./src/data/internal/mdb.schema.json"
-        },
-        {
-            "fileMatch": [
-                "/translations/**/*.json",
-                "!mdb/*",
-                "!localify/*"
-            ],
-            "url": "./src/data/internal/global.schema.json"
-        }
-    ]
+    {
+        "fileMatch": [
+            "/translations/**/*.json"
+        ],
+        "url": "./src/data/internal/schema.json"
+    }
+]

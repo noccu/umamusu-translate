@@ -9,7 +9,7 @@ const FILES = {
         trainerReq: "translations/mdb/trainer-title-requirements.json",
         missions: "translations/mdb/missions.json",
         storyMissions: "translations/mdb/story-event-missions.json",
-        umaNames: "translations/mdb/uma-name.json",
+        umaNames: "translations/mdb/char-name.json",
         trTitles: "translations/mdb/trainer-title.json",
         races: "translations/mdb/race-name.json",
         pieces: "translations/mdb/item-uma-pieces.json",
@@ -21,11 +21,15 @@ const FILES = {
         factors: "translations/mdb/factor-desc.json",
         common: "translations/mdb/common.json",
         shoeSize: "translations/mdb/uma-profile-shoesize.json",
-        lessonEffects: "translations/mdb/lesson-effects.json"
+        lessonEffects: "translations/mdb/lesson-talent-bonus.json",
+        itemsName: "translations/mdb/item-name.json",
+        itemsDesc: "translations/mdb/item-desc.json"
     }
 const UNCOMMON_FILES = [
     "shoeSize",
-    "lessonEffects"
+    "lessonEffects",
+    "itemsName",
+    "itemsDesc"
 ]
 const PFILES = {};
 const FAN_AMOUNT = {
@@ -77,6 +81,8 @@ function translate() {
         translateSpecific("genLimMiss", jpText, PFILES.missions)
         translateSpecific("skillMis", jpText, PFILES.missions)
         translateSpecific("affec", jpText, PFILES.missions)
+        translateSpecific("stratTrain", jpText, PFILES.missions)
+        translateSpecific("mainRace", jpText, PFILES.missions)
     }
     // story-event-missions.json
     for (let [jpText, enText] of Object.entries(PFILES.storyMissions.text)) {
@@ -215,6 +221,42 @@ function translate() {
             }
         }
         PFILES.lessonEffects.text[jpText] = enText.join("\\n"); //write full name, whichever parts were found
+    }
+
+    //* item-name
+    for (let [jpText, enText] of Object.entries(PFILES.itemsName.text)) {
+        if (enText) continue;
+
+        let m = jpText.match(/(.+)の手作りチョコ|(.+)の特別チョコ/)
+        if (!m) continue
+        let [,umaName, umaNameSpec] = m
+        let umaNameEn = PFILES.umaNames.text[umaName || umaNameSpec]
+        if (umaNameEn) {
+            if (umaNameSpec) {
+                PFILES.itemsName.text[jpText] = `${umaNameEn}'s Special Chocolates`;
+            }
+            else {
+                PFILES.itemsName.text[jpText] = `${umaNameEn}'s Handmade Chocolates`;
+            }
+        }
+    }
+
+    //* item-desc
+    for (let [jpText, enText] of Object.entries(PFILES.itemsDesc.text)) {
+        if (enText) continue;
+
+        let m = jpText.match(/(.+)の手作りチョコ|(.+)の特別チョコ/)
+        if (!m) continue
+        let [,umaName, umaNameSpec] = m
+        let umaNameEn = PFILES.umaNames.text[umaName || umaNameSpec]
+        if (umaNameEn) {
+            if (umaNameSpec) {
+                PFILES.itemsDesc.text[jpText] = `<size=22>Specially made by ${umaNameEn}. Restores 30TP upon use.\\n</size>`;
+            }
+            else{
+                PFILES.itemsDesc.text[jpText] = `<size=22>Handmade by ${umaNameEn}. Restores 30TP upon use.\\n</size>`;
+            }
+        }
     }
 }
 
@@ -435,6 +477,25 @@ function translateSpecific (type, jpText, file) {
                 umaNameEn = PFILES.umaNames.text[umaName];
             if (umaNameEn) {
                 data[jpText] = `Raise ${umaNameEn}'s \\naffection to rank ${rank}`;
+            }
+        }
+    }
+    else if (type == "stratTrain") {
+        m = jpText.match(/(.+?)の(?:脚質|距離|バ場)適性\[([A-Z+]{1,3})\]のウマ娘を\\n(\d+)回育成しよう/)
+        if (m) {
+            let [,strat, rank, num] = m, 
+                stratEn = PFILES.common.text[strat];
+            if (stratEn) {
+                data[jpText] = `Train ${num} horsegirls with \\n${rank} rank ${stratEn} aptitude`;
+            }
+        }
+    }
+    else if (type == "mainRace") {
+        m = jpText.match(/メインストーリー第(\d)部(\d)章(\d.?)で\\nレースに勝利しよう/)
+        if (m) {
+            let [,act, chapter, race] = m;
+            if (act && chapter && race) {
+                data[jpText] = `Win the ${race} race in \\nMain Story Act ${act}, chapter ${chapter}`;
             }
         }
     }

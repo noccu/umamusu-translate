@@ -1,7 +1,7 @@
 import sys
 from os.path import realpath
 import sqlite3
-from pathlib import Path
+from pathlib import Path, PurePath
 from importlib import import_module
 
 sys.path.append(realpath("src"))
@@ -41,32 +41,55 @@ def parseArgs():
     ap.add_argument("--forced", action="store_true", help="Ignore mdb patch state")
     return ap.parse_args()
 
+class MdbIndex:
+    def __init__(self, idxPath: str):
+        self.idx = helpers.readJson(idxPath)
+    def parseListSQL(self, l: list):
+        base = list()
+        complex = list()
+        for x in l:
+            if isinstance(x, int):
+                base.append(str(x))
+            else:
+                complex.append(self.parseValueSQL(x))
+        complex = f" OR {' OR '.join(complex)}" if complex else ""
+        return f"{self.spec} IN ({','.join(base)}){complex}"
+    def parseDictSQL(self, d: dict):
+        sqlText = d.get('sql')
+        val = self.parseValueSQL(d['spec'])
+        return f"({val} AND {sqlText})" if sqlText else val
+    def parseValueSQL(self, val):
+        if isinstance(val, list):
+            return self.parseListSQL(val)
+        elif isinstance(val, dict):
+            return self.parseDictSQL(val)
+        else:
+            return f"{self.spec} = {val}"
+    def parseSQL(self, fnFilter = None):
+        '''Translates index file to programmatic extraction info.'''
+        for entry in self.idx:
+            stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"
+            outPathRel = entry['table'] if entry.get("subdir") else ""
+            self.spec = entry.get("specifier")
+            if self.spec:
+                for filename, val in entry['files'].items():
+                    if val is None or (fnFilter and filename != fnFilter): continue
+                    yield stmt + f" WHERE {self.parseValueSQL(val)};", PurePath(outPathRel, filename)
+            else:
+                if fnFilter and entry['file'] != fnFilter: continue
+                yield stmt+";", PurePath(outPathRel, entry['file'])
+
 
 def main():
     args = parseArgs()
     if not args.forced and checkPatched(args.src):
         print("master.mdb is patched, aborting extract.")
         return
-    index = helpers.readJson("src/mdb/index.json")
     if not args.no_text:
         print("Extracting standard text...")
         with sqlite3.connect(args.src) as db:
-            for entry in index:
-                stmt = f"SELECT DISTINCT {entry['field']} FROM {entry['table']}"
-                if entry.get("specifier"):
-                    for filename, specval in entry['files'].items():
-                        if not specval or args.file and filename != args.file: continue
-                        if isinstance(specval, list):
-                            specval = ",".join([str(x) for x in specval])
-                            specStmt = f"{stmt} WHERE {entry['specifier']} IN ({specval});"
-                        elif isinstance(specval, dict):
-                            specStmt = f"{stmt} WHERE {entry['specifier']} = {specval['spec']} AND {specval.get('sql', 'true')};"
-                        else:
-                            specStmt = f"{stmt} WHERE {entry['specifier']} = {specval};"
-                        extract(db, specStmt, args.dst / (entry['table'] if entry.get("subdir") else "") / filename)
-                else:
-                    if args.file and entry['file'] != args.file: continue
-                    extract(db, stmt, args.dst / entry['file'])
+            for stmt, outPathRel in MdbIndex("src/mdb/index.json").parseSQL(args.file):
+                extract(db, stmt, args.dst / outPathRel)
         db.close()
     if not args.no_skill_data:
         print("Extracting skill data...")
@@ -74,8 +97,7 @@ def main():
         from subprocess import run
         run(["node", "src/mdb/scripts/extract-skill-data.js", args.src], check=True)
         import textprocess
-        from types import SimpleNamespace
-        textprocess.processFiles(SimpleNamespace(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=6, forceResize=True))
+        textprocess.processFiles(common.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=99, forceResize=True))
 
 
 if __name__ == '__main__':

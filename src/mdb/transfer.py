@@ -13,7 +13,7 @@ CSV_FILES_MANUAL_NEWLINE = ("uma-profile-tagline.json", "tutorial-text.json", "s
                             "special-transfer-thanks.json", "special-transfer-desc.json", "advice.json",
                             "conditions-desc.json", "item-acquisition-methods-shop.json", "load-screens.json",
                             "presents-desc.json", "item-desc.json")
-CSV_FILES_PASSTHROUGH = ("uma-nickname-requirements.json", "special-transfer-requirements.json", "miscellaneous.json",
+CSV_FILES_PASSTHROUGH = ("uma-epithet-requirements.json", "special-transfer-requirements.json", "miscellaneous.json",
                          "mission-groups.json", "predictions.json")
 
 

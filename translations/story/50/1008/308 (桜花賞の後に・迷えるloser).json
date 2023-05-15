@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "SVMQYCMKYG7WFNO4HLDHROCKBQTBSOUY",
+    "version": 6,
+    "bundle": "IXVKNPKX6XKI3YWRBBYCFAJRZVJAD4W7",
     "type": "story",
     "storyId": "501008308",
     "title": "桜花賞の後に・迷えるloser",
@@ -11,7 +11,9 @@
             "jpText": "あああああああっ、ダッセぇぇぇっ！！",
             "enText": "Ohhhhhh, duh!",
             "nextBlock": 2,
-            "pathId": -1103645467120307738,
+            "origClipLength": 68,
+            "voiceIdx": 36,
+            "pathId": 8865869031291740961,
             "blockIdx": 1
         },
         {
@@ -20,7 +22,9 @@
             "jpText": "『桜花賞』決着。ダイワスカーレットに\r\n勝てなかった無念の叫びが、青空に響く。",
             "enText": "It was the end of Sakurahana-sho. The cries \nof regret for not being able to beat Daiwa \nScarlet echoed in the blue sky.",
             "nextBlock": 3,
-            "pathId": -2133328889269860691,
+            "origClipLength": 95,
+            "voiceIdx": -1,
+            "pathId": -7678302359759177638,
             "blockIdx": 2
         },
         {
@@ -29,6 +33,8 @@
             "jpText": "ダセえっ、ダセえっ、マジでダっセえ！",
             "enText": "Dumb, dumb, dumb, really dumb!",
             "nextBlock": 4,
+            "origClipLength": 68,
+            "voiceIdx": 63,
             "choices": [
                 {
                     "jpText": "勝てなかったのが？",
@@ -36,7 +42,17 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": -4872896706413230727,
+            "animData": [
+                {
+                    "origLen": 172,
+                    "pathId": 1813358615064888332
+                },
+                {
+                    "origLen": 183,
+                    "pathId": -470578394898461906
+                }
+            ],
+            "pathId": -3287942138421352067,
             "blockIdx": 3
         },
         {
@@ -45,7 +61,19 @@
             "jpText": "トレーナー……。\r\n勝てなかったのもダセぇけど……。",
             "enText": "Trainer… It's also dumb \nthat I didn't win…",
             "nextBlock": 5,
-            "pathId": 2847670454952435673,
+            "origClipLength": 78,
+            "voiceIdx": 57,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -5433629120594968208
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6350679899821282733
+                }
+            ],
+            "pathId": -57851901869325031,
             "blockIdx": 4
         },
         {
@@ -54,7 +82,19 @@
             "jpText": "なのに、そこそこスッキリしちまってる\r\n自分が、何よりダセぇ……。",
             "enText": "And yet, I'm feeling a little refreshed, \nwhich is more than a little lame…",
             "nextBlock": 6,
-            "pathId": 1329040081900511687,
+            "origClipLength": 88,
+            "voiceIdx": 66,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": -6596405966424296952
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 6420935354361803756
+                }
+            ],
+            "pathId": 7627148940890910235,
             "blockIdx": 5
         },
         {
@@ -63,7 +103,19 @@
             "jpText": "ヤベぇな、クラシック……。\r\n走り終わった後の、この胸にクる感じ……。",
             "enText": "It's a classic… This is the feeling \nyou get in your chest after running…",
             "nextBlock": 7,
-            "pathId": -3059664039046941140,
+            "origClipLength": 90,
+            "voiceIdx": 60,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 5093588203550045077
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -2499858669127716437
+                }
+            ],
+            "pathId": -2537963045102930525,
             "blockIdx": 6
         },
         {
@@ -72,7 +124,19 @@
             "jpText": "初めてのクラシック。ウオッカなりに\r\n感極まっているようだった。",
             "enText": "Her first classic. In her own way, Vodka \nseemed to be overwhelmed with emotion.",
             "nextBlock": 8,
-            "pathId": -6278395708073937864,
+            "origClipLength": 86,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 13922781030815072
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5843787575512948673
+                }
+            ],
+            "pathId": 549742270340650857,
             "blockIdx": 7
         },
         {
@@ -81,7 +145,31 @@
             "jpText": "ウオッカ、お疲れー。\r\nどう、思い知った？　アタシの実力。",
             "enText": "Good work, Vodka. What do \nyou think? I'm good.",
             "nextBlock": 9,
-            "pathId": -9088790316621259868,
+            "origClipLength": 82,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 213,
+                    "pathId": -2517324629427058127
+                },
+                {
+                    "origLen": 231,
+                    "pathId": 8518478588219944337
+                },
+                {
+                    "origLen": 194,
+                    "pathId": 6525611420822765089
+                },
+                {
+                    "origLen": 159,
+                    "pathId": 8887398606437435042
+                },
+                {
+                    "origLen": 170,
+                    "pathId": 5021632349434133687
+                }
+            ],
+            "pathId": -3139803610190094897,
             "blockIdx": 8
         },
         {
@@ -90,7 +178,31 @@
             "jpText": "でもアンタも強くなったじゃない。\r\nまあ『2番以下』だけど。",
             "enText": "But you're getting stronger, too. \nWell, less than number two.",
             "nextBlock": 10,
-            "pathId": -3901862904637227181,
+            "origClipLength": 84,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 6395023534745956795
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 7633368988289045098
+                },
+                {
+                    "origLen": 116,
+                    "pathId": 2987501790613700266
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 2617124200014583760
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -1084625356816223285
+                }
+            ],
+            "pathId": -6181456680523901518,
             "blockIdx": 9
         },
         {
@@ -99,7 +211,35 @@
             "jpText": "くっそ～、調子に乗りやがって。",
             "enText": "Damn it, you're getting carried away.",
             "nextBlock": 11,
-            "pathId": 9122844676572181588,
+            "origClipLength": 64,
+            "voiceIdx": 64,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 2178740604543401889
+                },
+                {
+                    "origLen": 54,
+                    "pathId": 1786895099782114541
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 2103659093905620462
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9128457641731764487
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -3599328432923154037
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 1220862173038665000
+                }
+            ],
+            "pathId": 3248868715988671844,
             "blockIdx": 10
         },
         {
@@ -108,7 +248,31 @@
             "jpText": "けど忘れんな！\r\nクラシックは、まだ始まったばっかだ！",
             "enText": "But don't forget! The Classic \nhas only just begun!",
             "nextBlock": 12,
-            "pathId": -8041844585844949371,
+            "origClipLength": 80,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -8859154865148182110
+                },
+                {
+                    "origLen": 38,
+                    "pathId": -524571590691916948
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 2063109703772957633
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -1281113818747725547
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -376110363988418644
+                }
+            ],
+            "pathId": -4398988561822452774,
             "blockIdx": 11
         },
         {
@@ -117,7 +281,27 @@
             "jpText": "次だ！　次を見てやがれ！\r\n次こそお前をチギってみせる！",
             "enText": "Next! Watch the next one! Next time, \nI'm gonna kick your ass!",
             "nextBlock": 13,
-            "pathId": -7047399773660146222,
+            "origClipLength": 81,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 5740285728196240823
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -7159003108095163888
+                },
+                {
+                    "origLen": 56,
+                    "pathId": 884790975290355451
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 4518938989409224346
+                }
+            ],
+            "pathId": 6987003322529254152,
             "blockIdx": 12
         },
         {
@@ -126,7 +310,27 @@
             "jpText": "あら、楽しみ♪",
             "enText": "Oh, I'm so excited.",
             "nextBlock": 14,
-            "pathId": 8213406911115464859,
+            "origClipLength": 54,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -2728748250969446265
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 6282564218841450864
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -8676660521673223848
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -1555030868083507818
+                }
+            ],
+            "pathId": 7591423053091661850,
             "blockIdx": 13
         },
         {
@@ -135,7 +339,27 @@
             "jpText": "そうね、アンタが追いすがってくるからこそ、\r\nアタシの輝きは余計引き立つわ。",
             "enText": "Yes, my brilliance is enhanced by the fact \nthat you're chasing after me.",
             "nextBlock": 15,
-            "pathId": -4124755150327270014,
+            "origClipLength": 94,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -7704285447348652528
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 3031600901906458497
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -6675277860600907963
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -2854865413527216544
+                }
+            ],
+            "pathId": -3785425278090599936,
             "blockIdx": 14
         },
         {
@@ -144,7 +368,27 @@
             "jpText": "次も楽しみにしてるわ。\r\n『オークス』もね。",
             "enText": "I'm looking forward to the \nnext one. And \"Oaks\".",
             "nextBlock": 16,
-            "pathId": 1386577261106528713,
+            "origClipLength": 73,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 6034871705534294349
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 2970320046554096149
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -6396302316964383269
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 8820264582081271017
+                }
+            ],
+            "pathId": 4606948399001342036,
             "blockIdx": 15
         },
         {
@@ -153,7 +397,19 @@
             "jpText": "おう！　ぜってー逃げんなよ！",
             "enText": "Hey! Don't you dare run away from me!",
             "nextBlock": 17,
-            "pathId": -8270606236941448126,
+            "origClipLength": 63,
+            "voiceIdx": 48,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": -5855375541785495161
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -4643447413112747652
+                }
+            ],
+            "pathId": 4237732367303739137,
             "blockIdx": 16
         },
         {
@@ -162,6 +418,8 @@
             "jpText": "悪ぃ、トレーナー。勝てなくて。\r\nそれから、つい熱くなっちまって。",
             "enText": "Sorry, trainer. I couldn't win. Then \nI got all hot and bothered.",
             "nextBlock": 18,
+            "origClipLength": 88,
+            "voiceIdx": 65,
             "choices": [
                 {
                     "jpText": "ダービーはどうする？",
@@ -169,7 +427,17 @@
                     "nextBlock": 18
                 }
             ],
-            "pathId": -5474596882151132772,
+            "animData": [
+                {
+                    "origLen": 231,
+                    "pathId": 4719447022712623521
+                },
+                {
+                    "origLen": 170,
+                    "pathId": -544202848966492143
+                }
+            ],
+            "pathId": 8472632166187945376,
             "blockIdx": 17
         },
         {
@@ -178,7 +446,19 @@
             "jpText": "ダービー……？",
             "enText": "Darby…?",
             "nextBlock": 19,
-            "pathId": 8716426071032986115,
+            "origClipLength": 54,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 788074877419966749
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 8921903290744821137
+                }
+            ],
+            "pathId": 6396003446060438559,
             "blockIdx": 18
         },
         {
@@ -187,7 +467,19 @@
             "jpText": "あっ――！",
             "enText": "Ah—!",
             "nextBlock": 20,
-            "pathId": 4306546095855448704,
+            "origClipLength": 51,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 7106808735322001470
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 2506972628054499264
+                }
+            ],
+            "pathId": 3435734351207810418,
             "blockIdx": 19
         },
         {
@@ -196,7 +488,19 @@
             "jpText": "過熱するライバルとの戦い。でも、それも\r\n無条件で続けられるわけじゃない……。",
             "enText": "The battle against overheated rivals. But \nthat doesn't mean you can continue \nunconditionally, either…",
             "nextBlock": 21,
-            "pathId": -1054670257229066980,
+            "origClipLength": 95,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": -360679866955681947
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -3919232781182147483
+                }
+            ],
+            "pathId": 6066734172265300619,
             "blockIdx": 20
         },
         {
@@ -205,7 +509,27 @@
             "jpText": "トレーナー、俺、どうすりゃいいんだろうな。",
             "enText": "Trainer, I don't know what I'm going to do.",
             "nextBlock": 22,
-            "pathId": 6434168324530830250,
+            "origClipLength": 72,
+            "voiceIdx": 57,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 6568955799196671754
+                },
+                {
+                    "origLen": 23,
+                    "pathId": -902033285608789622
+                },
+                {
+                    "origLen": 157,
+                    "pathId": -1449062629360550385
+                },
+                {
+                    "origLen": 222,
+                    "pathId": 6764637330316193374
+                }
+            ],
+            "pathId": 5429584760666931221,
             "blockIdx": 21
         },
         {
@@ -214,7 +538,19 @@
             "jpText": "アイツにヤラれたまま、勝負を投げ出したく\r\nねえ。いやリベンジしたいってのもあるけど。",
             "enText": "I don't want to give up the game while She's \nstill screwing me. No, I want revenge, too.",
             "nextBlock": 23,
-            "pathId": 652811170205393662,
+            "origClipLength": 101,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": 1296223015204010461
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 8738601152569263987
+                }
+            ],
+            "pathId": -8446185210785325104,
             "blockIdx": 22
         },
         {
@@ -223,7 +559,19 @@
             "jpText": "それ以上に、アイツとまた走りてえ！\r\n今日、アイツはそれだけのもんを\n見せてくれたから。",
             "enText": "But more than that, I want to run \nwith her again! Because that's \nwhat She showed me today.",
             "nextBlock": 24,
-            "pathId": -5036935926415638288,
+            "origClipLength": 102,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 3037558607215327893
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 4513222706884534882
+                }
+            ],
+            "pathId": -2681058831249586682,
             "blockIdx": 23
         },
         {
@@ -232,7 +580,23 @@
             "jpText": "でも……譲れねえ別の夢もあるし。",
             "enText": "But I also have another dream \nthat I can't give up…",
             "nextBlock": 25,
-            "pathId": 2003908340354995550,
+            "origClipLength": 65,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 5483062091810874649
+                },
+                {
+                    "origLen": 56,
+                    "pathId": -4704997011657280221
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -5892914279081233459
+                }
+            ],
+            "pathId": -5051710754599336119,
             "blockIdx": 24
         },
         {
@@ -241,7 +605,23 @@
             "jpText": "『桜花賞』を経て、ダイワスカーレットとの\r\n勝負は、より重みを増している。",
             "enText": "After the Sakurahana Shoots, the race against \nDaiwa Scarlet has become even more important.",
             "nextBlock": 26,
-            "pathId": -1858664819093317968,
+            "origClipLength": 93,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 8108848537211010183
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -1978226106627268964
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 333453007542168199
+                }
+            ],
+            "pathId": 3317335231428183355,
             "blockIdx": 25
         },
         {
@@ -250,6 +630,8 @@
             "jpText": "ダービーか、ライバルとの勝負か。\r\n今度こそ両方を選ぶわけにはいかない。",
             "enText": "A derby or a match against a rival? This \ntime, I can't choose both.",
             "nextBlock": 27,
+            "origClipLength": 91,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "次のレース……とりあえず、どうする？",
@@ -257,7 +639,17 @@
                     "nextBlock": 27
                 }
             ],
-            "pathId": 2305598532707906125,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -6204355312730718065
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 250440065921463239
+                }
+            ],
+            "pathId": 3350126132225628585,
             "blockIdx": 26
         },
         {
@@ -266,7 +658,19 @@
             "jpText": "とりあえずか……。じゃあダービーのままに\r\nしといてくれ。でも……。",
             "enText": "For now, or… So leave \nit at Darby. But…",
             "nextBlock": 28,
-            "pathId": 2966936802396129899,
+            "origClipLength": 89,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 8741394195131735777
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -6275478090299685292
+                }
+            ],
+            "pathId": -927678797624611019,
             "blockIdx": 27
         },
         {
@@ -275,7 +679,19 @@
             "jpText": "しばらく考えさせてくれ。\r\nいや、一緒に考えてくれねーか。",
             "enText": "Let me think about it for a while. No, I want \nyou to think about it with me.",
             "nextBlock": 29,
-            "pathId": -1905261707569831094,
+            "origClipLength": 82,
+            "voiceIdx": 54,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 1768592535959590050
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 8108516680210356650
+                }
+            ],
+            "pathId": -712565582005153335,
             "blockIdx": 28
         },
         {
@@ -284,8 +700,21 @@
             "jpText": "ウオッカの表情は重く、暗かった。",
             "enText": "Vodka's expression was heavy and dark.",
             "nextBlock": -1,
-            "pathId": -2100308404950819439,
+            "origClipLength": 65,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": -6155772358069458452
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 179341180645007193
+                }
+            ],
+            "pathId": 1604252002085994144,
             "blockIdx": 29
         }
-    ]
+    ],
+    "modified": 1674832101
 }

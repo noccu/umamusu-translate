@@ -13,20 +13,25 @@
     "11": "Prefer Overtake Inside",
     "12": "Prefer Overtake Outside",
     "13": ["Kakari Time", "s"],
+    "14": ["Delay Start", "s"],
     "21": ["Current Speed", "m/s"],
+    "22": ["Current Speed (natural decel)", "m/s"],
     "27": ["Target Speed", "m/s"],
     "28": ["Lane Movement Speed", "%"],
     "29": "Kakari Chance",
     "30": "Push Chance",
     "31": ["Acceleration", "m/s²"],
+    "32": "All stats",
     "35": "Target Lane",
     "37": "Activate Rare Skill",
-    "501": "Event-specific?"
+    "501": "Event-specific",
+    "502": ["Stat Increase", "", "rep {0}%"],
+    "503": ["Peak Mood Chance", "", "rep {1}%"]
   },
   "ability_value_usage": {
     "0": "None",
     "1": "Direct",
-    "2": "* SkillNum",
+    "2": "* # Skills",
     "3": "* Team Speed",
     "4": "* Team Stamina",
     "5": "* Team Power",
@@ -34,18 +39,20 @@
     "7": "* Team Wis",
     "8": "* Random",
     "9": "* Random2",
-    "10": "",
+    "10": "* Races Won",
     "11": "",
     "12": "",
-    "13": "",
-    "14": "",
-    "15": "* ActivateHealSkillCount",
+    "13": "* Max Stat",
+    "14": "* # Green Skills",
+    "15": "* # Heals Activated",
     "16": "* FinalCornerEndOrder",
-    "17": "* InvTeamMemberCount"
+    "17": "* InvTeamMemberCount",
+    "19": "+0.1 if ≥20m from lead"
   },
   "target_type": {
     "comment": "0 == n/a, 1 == self",
     "4": "in FOV",
+    "7": ["leading 4", true],
     "9": "ahead",
     "10": "behind",
     "18": "(all)",
@@ -91,8 +98,8 @@
     },
     "is_basis_distance": {
       "lookup": {
-        "1": "Core Distance",
-        "0": "Non-Core Distance"
+        "1": "Core distance",
+        "0": "Non-core distance"
       },
       "==": "$"
     },
@@ -112,9 +119,9 @@
     },
     "order_rate": {
       ">=": ["In trailing $%", "100-"],
-      ">": ["In trailing <$%", "100-"],
+      ">": ["In trailing ﹤$%", "100-"],
       "<=": "In leading $%",
-      "<": "In leading <$%"
+      "<": "In leading ﹤$%"
     },
     "change_order_onetime": {
       "<": "Overtook",
@@ -127,7 +134,8 @@
       "lookup": {
         "0": "Opening leg",
         "1": "Middle leg",
-        "2": "Final leg"
+        "2": "Final leg",
+        "3": "Last Spurt (phase)"
       },
       "==": "$",
       ">=": "$ or later",
@@ -156,7 +164,8 @@
       "lookup": {
         "0": "Opening leg",
         "1": "Middle leg",
-        "2": "Final leg"
+        "2": "Final leg",
+        "3": "Last Spurt (phase)"
       },
       "==": "$ first half (random)"
     },
@@ -177,12 +186,18 @@
       "==": "Last straight (random)"
     },
     "is_finalcorner": {
-      "==": "Final corner/straight",
-      "!=": "Not final corner/straight"
+      "lookup": {
+        "0": "Not final corner/straight",
+        "1": "Final corner/straight"
+      },
+      "==": "$"
     },
     "is_finalcorner_laterhalf": {
-      "==": "Final corner/straight (2nd half)",
-      "!=": "Not final corner/straight (2nd half)"
+      "lookup": {
+        "0": "Not final corner/straight (2nd half)",
+        "1": "Final corner/straight (2nd half)"
+      },
+      "==": "$"
     },
     "is_lastspurt": {
       "==": "Last spurt",
@@ -203,7 +218,7 @@
     },
     "ground_type": {
       "lookup": {
-        "1": "Grass",
+        "1": "Turf",
         "2": "Dirt"
       },
       "string": "$"
@@ -211,14 +226,30 @@
     "ground_condition": {
       "lookup": {
         "1": "Good",
-        "2": "S. Heavy",
-        "3": "Heavy",
-        "4": "Bad"
+        "2": "Yield",
+        "3": "Soft",
+        "4": "Heavy"
       },
       "string": "Track condition $"
     },
     "track_id": {
-      "string": "Track $"
+      "lookup": {
+        "10001": "Sapporo",
+        "10002": "Hakodate",
+        "10003": "Niigata",
+        "10004": "Fukushima",
+        "10005": "Nakayama",
+        "10006": "Tokyo",
+        "10007": "Chukyo",
+        "10008": "Kyoto",
+        "10009": "Hanshin",
+        "10010": "Kokura",
+        "10101": "Ooi",
+        "10103": "Kawasaki",
+        "10104": "Funabashi",
+        "10105": "Morioka"
+      },
+      "string": "At $"
     },
     "rotation": {
       "lookup": {
@@ -389,6 +420,13 @@
     },
     "overtake_target_time": {
       ">=": "Is overtake target for ≥$s"
+    },
+    "straight_front_type": {
+      "lookup": {
+        "1": "start straight",
+        "2": "back straight"
+      },
+      "string": "On $"
     }
   }
 }

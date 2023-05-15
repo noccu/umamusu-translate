@@ -1,12 +1,14 @@
 import argparse
 from pathlib import Path
 from traceback import print_exc
-from sys import stdout
+# from sys import stdout
 from functools import reduce
+from time import time as now
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 import common
 from common import GameBundle
-
+import filecopy as backup
 
 class ConfigError(Exception): pass
 class PatchError(Exception): pass
@@ -16,8 +18,10 @@ class NoAssetError(PatchError): pass
 
 
 class PatchManager:
+    totalFilesProcessed = 0
+    totalFilesImported = 0
     def __init__(self, args: argparse.Namespace) -> None:
-        self.errorLog = stdout
+        # self.errorLog = stdout
         self.config(args)
 
     def config(self, args=None, **kwargs):
@@ -31,113 +35,134 @@ class PatchManager:
                     raise ConfigError(f"Invalid config arg: {k}: {v}")
         if self.args.overwrite:
             self.args.dst = common.GAME_ASSET_ROOT
-        if self.args.write_log and self.errorLog is stdout:
-            self.errorLog = open("import.log", "w")
-        elif not self.args.write_log and self.errorLog is not stdout:
-            self.errorLog.close()
-            self.errorLog = stdout
+            self.fcArgs = backup.parseArgs([])
+            self.fcArgs.restore_missing = False
+            self.fcArgs.full_path = False
+        # if self.args.write_log and self.errorLog is stdout:
+        #     self.errorLog = open("import.log", "w")
+        # elif not self.args.write_log and self.errorLog is not stdout:
+        #     self.errorLog.close()
+        #     self.errorLog = stdout
+
+    # TODO: replace with logger module probably
+    # def __getstate__(self):
+    #     data = self.__dict__.copy()
+    #     del data['errorLog']
+    #     return data
 
     def start(self):
+        startTime = now()
         print(f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}")
         files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx, changed = self.args.changed)
         nFiles = len(files)
+        self.totalFilesProcessed += nFiles
         nErrors = 0
         print(f"Found {nFiles} files.")
 
-        for file in files:
-            try:
-                if self.patch(file):
-                    print(f"Imported {file}")
-                else:
+        # Not sure if threads are useful but multi-process takes too long upfront for low counts.
+        with (ProcessPoolExecutor() if nFiles > 25 else ThreadPoolExecutor()) as pool:
+            # map seems to be a tiny bit faster maybe? chunksize seems to affect nothing, haven't tested >100 files tho
+            for result in pool.map(self.patchFile, files):
+                if result is None:
+                    nErrors += 1
                     nFiles -= 1
-                    if self.args.verbose:
-                        print(f"{file} not modified.")
-            except (NoAssetError, AlreadyPatchedError) as e:
-                nFiles -= 1
-                if self.args.verbose:
-                    print(e)
-            except PatchError as e:
-                nFiles -= 1
-                print(f"Skipped {file}: {e}")
-            except:
-                nFiles -= 1
-                nErrors += 1
-                print(f"Error importing {file}")
-                if self.args.write_log:
-                    print(f"Error in {file}", file=self.errorLog)
-                    print_exc(chain=True, file=self.errorLog)
-                else:
-                    raise
-        print(f"Imported {nFiles} files.")
+                elif result is False:
+                    nFiles -= 1
+        self.totalFilesImported += nFiles
+        print(f"Imported {nFiles} files in {deltaTime(startTime)} seconds.")
         if nErrors > 0:
             print(f"There were {nErrors} errors. Check import.log for details.")
 
+    def patchFile(self, file:str) -> bool:
+        isModified = False
+        try:
+            isModified, reason = self.patch(file)
+            if isModified:
+                print(f"Imported {file}{f' ({reason})' if reason else ''}")
+            else:
+                if self.args.verbose:
+                    print(f"{file} not modified.")
+        except (NoAssetError, AlreadyPatchedError) as e:
+            if self.args.verbose:
+                print(e)
+        except PatchError as e:
+            print(f"Skipped {file}: {e}")
+        except:
+            print(f"Error importing {file}")
+            if self.args.verbose:
+                print_exc(chain=True)
+                isModified = None
+        return isModified
+
     def finish(self):
-        if self.errorLog is not stdout: self.errorLog.close()
+        pass
+        # if self.errorLog is not stdout: self.errorLog.close()
 
     def loadTranslationFile(self, path):
         try:
-            self.tlFile = common.TranslationFile(path, readOnly=True)
+            return common.TranslationFile(path, readOnly=True)
         except:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
-    def loadBundle(self, name: str):
-        bundle = GameBundle.fromName(name, load=False)
+    def loadBundle(self, tlFile: common.TranslationFile):
+        bundle = GameBundle.fromName(tlFile.bundle, load=False)
         if not bundle.exists:
-            raise NoAssetError(f"{name} does not exist in your game data.")
-
+            raise NoAssetError(f"{tlFile.bundle} does not exist in your game data.")
         if self.args.update:
-            savePath = GameBundle.createPath(self.args.dst, name)
-            bundle.readPatchState(customPath=savePath)
-            if bundle.isPatched:
-                tlModTime = self.tlFile.data.get("modified")
-                if tlModTime and bundle.patchedTime != tlModTime:
-                    print("translations modified... ", end="", flush=True)
+            if (b := GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)).isPatched:
+                tlModTime = tlFile.data.get("modified")
+                if tlModTime and b.patchedTime != tlModTime:
+                    bundle.importState = "translations modified"
                 else:
-                    raise AlreadyPatchedError(f"{self.tlFile.bundle} already patched.")
-
+                    raise AlreadyPatchedError(f"{tlFile.bundle} already patched.")
         try:
-            return bundle.load()
+            bundle.load()
+            bundle.linkedTlFile = tlFile
+            return bundle
         except Exception as e:
-            raise PatchError(f"UnityPy error: {repr(e)}, skipping {name}.")
+            raise PatchError(f"UnityPy error: {repr(e)}, skipping {tlFile.bundle}.")
 
     def patch(self, path: str):
         """Swaps game assets with translation file data, returns modified state."""
-        self.loadTranslationFile(path)
-        if self.args.use_tlg and isUsingTLG() and self.tlFile.data.get("tlg"):
-            convertTlFile(self.tlFile)
+        tlFile = self.loadTranslationFile(path)
+        if self.args.skip_mtl and not tlFile.data.get("humanTl"):
+            return False, None
+        if self.args.use_tlg and isUsingTLG() and tlFile.data.get("tlg"):
+            convertTlFile(tlFile)
             if self.args.verbose:
-                print(f"Writing TLG version: {self.tlFile.name}")
-            return False
-        bundle = self.loadBundle(self.tlFile.bundle)
+                print(f"Writing TLG version: {tlFile.name}")
+            return False, None
+        bundle = self.loadBundle(tlFile)
 
-        if self.tlFile.type in ("story", "home"):
+        if tlFile.type in ("story", "home"):
             patcher = StoryPatcher(self, bundle)
-        elif self.tlFile.type == "race":
+        elif tlFile.type == "race":
             patcher = RacePatcher(self, bundle)
-        elif self.tlFile.type == "preview":
+        elif tlFile.type == "preview":
             patcher = PreviewPatcher(self, bundle)
-        elif self.tlFile.type == "lyrics":
+        elif tlFile.type == "lyrics":
             patcher = LyricsPatcher(self, bundle)
 
         patcher.patch()
         if patcher.isModified:
-            bundle.setPatchState(self.tlFile)
+            if self.args.overwrite and not bundle.isPatched:
+                backup.copy(bundle, self.fcArgs)
+            bundle.markPatched(tlFile)
             bundle.save(dstFolder=Path(self.args.dst))
 
-        return patcher.isModified
+        return patcher.isModified, getattr(bundle, "importState", None)
 
 
 class StoryPatcher:
     def __init__(self, manager: PatchManager, bundle: GameBundle) -> None:
         self.manager = manager
         self.skipped = 0
-        self.totalBlocks = len(self.manager.tlFile.textBlocks)
+        self.totalBlocks = len(bundle.linkedTlFile.textBlocks)
         self.bundle = bundle
         self.assetData = bundle.rootAsset.read_typetree()
 
     def patch(self):
-        for textBlock in self.manager.tlFile.textBlocks:
+        for textBlock in self.bundle.linkedTlFile.textBlocks:
             blockIdx = textBlock['blockIdx']
             try:
                 asset = self.bundle.assets[textBlock['pathId']]
@@ -230,10 +255,10 @@ class StoryPatcher:
 
 class RacePatcher(StoryPatcher):
     def patch(self):
-        for textBlock in self.manager.tlFile.textBlocks:
-            blockIdx = textBlock['blockIdx'] - 1  # race keys start at 1
+        for i, textBlock in enumerate(self.bundle.linkedTlFile.textBlocks):
+            # blockIdx = textBlock['blockIdx'] - 1  # race keys start at 1
             if textBlock['enText']:
-                self.assetData['textData'][blockIdx]['text'] = textBlock['enText']
+                self.assetData['textData'][i]['text'] = textBlock['enText']
             else:
                 self.skipped += 1
                 continue
@@ -242,7 +267,7 @@ class RacePatcher(StoryPatcher):
 
 class PreviewPatcher(RacePatcher):
     def patch(self):
-        for blockIdx, textBlock in enumerate(self.manager.tlFile.textBlocks):
+        for blockIdx, textBlock in enumerate(self.bundle.linkedTlFile.textBlocks):
             if not textBlock['enText'] and not textBlock['enName']:
                 self.skipped += 1
                 continue
@@ -259,7 +284,7 @@ class LyricsPatcher(StoryPatcher):
         self.assetText = "time,lyrics\n"
 
     def patch(self):
-        for textBlock in self.manager.tlFile.textBlocks:
+        for textBlock in self.bundle.linkedTlFile.textBlocks:
             # Format the CSV text. Their parser uses quotes, no escape chars. For novelty: \t = space; \v and \f = ,; \r = \n
             text = textBlock['enText']
             if not text:
@@ -275,8 +300,12 @@ class LyricsPatcher(StoryPatcher):
             self.assetData.script = bytes(self.assetText, "utf8")
             self.assetData.save()
 
+def deltaTime(startTime:float):
+    delta = now() - startTime
+    m, s = divmod(delta, 60)
+    return f"{m:.0f}m {s:.3f}s"
 
-def main():
+def parseArgs():
     ap = common.Args("Write Game Assets from Translation Files")
     ap.add_argument("-O", "--overwrite", action="store_true", help="(Over)Write files straight to game directory")
     ap.add_argument("-U", "--update", action="store_true", help="Skip already imported files")
@@ -286,17 +315,21 @@ def main():
     ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
     ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")
     ap.add_argument("-tlg", "--use-tlg", action="store_true", help="Auto-write any TLG versions when detected")
+    ap.add_argument("-nomtl", "--skip-mtl", action="store_true", help="Only import human translations")
 
-    args = ap.parse_args()
+    return ap.parse_args()
+
+def main():
+    args = parseArgs()
+    if args.write_log:
+        print("Error logs temporarily not supported, output will be in console.")
+
     if args.use_tlg:
         global isUsingTLG
         global convertTlFile
         from helpers import isUsingTLG
         from manage import convertTlFile
-    process(args)
-
-
-def process(args):
+    startTime = now()
     patcher = PatchManager(args)
     try:
         patcher.start()
@@ -304,6 +337,7 @@ def process(args):
             for type in common.TARGET_TYPES[1:]:
                 patcher.config(type=type)
                 patcher.start()
+            print(f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}")
     finally:
         patcher.finish()
 

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "HSD2QCNI4TRGB2JTVOOMVLDZXV4DCDEB",
+    "version": 6,
+    "bundle": "45SILN7L6CW64GUU4J3A6TNAADRXQKB2",
     "type": "story",
     "storyId": "801001001",
     "title": "曲がり角には、気をつけます！",
@@ -11,7 +11,15 @@
             "jpText": "ある日、曲がり角から突然――",
             "enText": "One day, from around the bend, suddenly—",
             "nextBlock": 2,
-            "pathId": 6362877362741261160,
+            "origClipLength": 80,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 5630740570120605182
+                }
+            ],
+            "pathId": -5269999621476115501,
             "blockIdx": 1
         },
         {
@@ -20,7 +28,9 @@
             "jpText": "あわわわわっ、あ、危ない～！！",
             "enText": "Aww, aww, look out!",
             "nextBlock": 3,
-            "pathId": -1601376990477915495,
+            "origClipLength": 54,
+            "voiceIdx": 25,
+            "pathId": 8252691070738450252,
             "blockIdx": 2
         },
         {
@@ -29,7 +39,19 @@
             "jpText": "（ドーンッ！！）",
             "enText": "(Boom!)",
             "nextBlock": 4,
-            "pathId": 8660713119774021305,
+            "origClipLength": 50,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 1838128500243402487
+                },
+                {
+                    "origLen": 42,
+                    "pathId": 2633128690699763364
+                }
+            ],
+            "pathId": -8074717307313980398,
             "blockIdx": 3
         },
         {
@@ -38,7 +60,19 @@
             "jpText": "本当にごめんなさい！\r\nとっても急いでたもので――",
             "enText": "I'm so sorry! I was in such a hurry…",
             "nextBlock": 5,
-            "pathId": 296075186032238513,
+            "origClipLength": 61,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -8354110720278175203
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -7443673425084898261
+                }
+            ],
+            "pathId": -4138905018760139802,
             "blockIdx": 4
         },
         {
@@ -47,6 +81,8 @@
             "jpText": "ああっ！　そうだ、約束……！",
             "enText": "Ah! Yes, I promise…!",
             "nextBlock": 6,
+            "origClipLength": 54,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "約束？",
@@ -54,7 +90,17 @@
                     "nextBlock": 6
                 }
             ],
-            "pathId": 7580799430682298616,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": 4059946773921869136
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -1053086126305738593
+                }
+            ],
+            "pathId": 8402832650086538627,
             "blockIdx": 5
         },
         {
@@ -63,7 +109,19 @@
             "jpText": "はい、そうなんです……！",
             "enText": "Yes, that's right…!",
             "nextBlock": 7,
-            "pathId": 5728031497229452613,
+            "origClipLength": 52,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -9164312775974259240
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 5012239574051148313
+                }
+            ],
+            "pathId": 6393204168200270530,
             "blockIdx": 6
         },
         {
@@ -72,6 +130,8 @@
             "jpText": "友だちとレースの約束してたのを\r\nすっかり忘れちゃってて……！",
             "enText": "I totally forgot that I was supposed \nto race with a friend…!",
             "nextBlock": 8,
+            "origClipLength": 65,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "ここで全力を出さない方がいいぞ",
@@ -89,7 +149,17 @@
                     "nextBlock": 13
                 }
             ],
-            "pathId": -4733165563151195300,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": 8102145968651817974
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 5910161111001813828
+                }
+            ],
+            "pathId": -7124641600201731107,
             "blockIdx": 7
         },
         {
@@ -98,6 +168,8 @@
             "jpText": "友だちとレースの約束してたのを\r\nすっかり忘れちゃってて……！",
             "enText": "I totally forgot that I was supposed \nto race with a friend…!",
             "nextBlock": 9,
+            "origClipLength": 65,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "ここで全力を出さない方がいいぞ",
@@ -115,7 +187,17 @@
                     "nextBlock": 13
                 }
             ],
-            "pathId": -1093618491816451542,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": -4175225643008607666
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 4783176796763140201
+                }
+            ],
+            "pathId": -5187100904595542952,
             "blockIdx": 8
         },
         {
@@ -124,7 +206,19 @@
             "jpText": "たしかに……そうかもしれませんね！",
             "enText": "Yes… might be right!",
             "nextBlock": 10,
-            "pathId": 8944334491161439060,
+            "origClipLength": 56,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": -6612885753824365888
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 7879256672608141416
+                }
+            ],
+            "pathId": -7618246184148461529,
             "blockIdx": 9
         },
         {
@@ -133,7 +227,19 @@
             "jpText": "ここで全力を出しちゃったら、\r\n本番でスタミナ切れしちゃうかも……！",
             "enText": "If you give it your all here, you might run \nout of stamina for the show…!",
             "nextBlock": 11,
-            "pathId": 6393743254910094365,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": 1205883668193702036
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 4778921632229489138
+                }
+            ],
+            "pathId": 7479259911206626111,
             "blockIdx": 10
         },
         {
@@ -142,7 +248,23 @@
             "jpText": "よーし、じゃあ廊下では、ゆっくり走って、\r\nスタミナの回復に使うことにします！",
             "enText": "Okay, so I'm going to run slowly in the \ncorridor to regain my stamina!",
             "nextBlock": 12,
-            "pathId": -5526098838528985333,
+            "origClipLength": 70,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -4183934314537078029
+                },
+                {
+                    "origLen": 54,
+                    "pathId": 3140931389431945482
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -7420787953882755700
+                }
+            ],
+            "pathId": -4688899028113300529,
             "blockIdx": 11
         },
         {
@@ -151,7 +273,23 @@
             "jpText": "アドバイスありがとうございましたー！",
             "enText": "Thanks for the advice!",
             "nextBlock": -1,
-            "pathId": -4439267024681674131,
+            "origClipLength": 56,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": 2975703810949183959
+                },
+                {
+                    "origLen": 48,
+                    "pathId": 2991174577249386185
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 407613645220702666
+                }
+            ],
+            "pathId": -3505451088899855147,
             "blockIdx": 12
         },
         {
@@ -160,7 +298,19 @@
             "jpText": "は、はい！　ありがとうございます！\r\nぶつかっちゃってすみませんでした！　では！",
             "enText": "Ha, yes! Thank you so much! I'm \nsorry I bumped into you! Bye!",
             "nextBlock": 14,
-            "pathId": -501399626764982271,
+            "origClipLength": 71,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": -3688163780130028238
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 9213645173879856259
+                }
+            ],
+            "pathId": 4564067059257778221,
             "blockIdx": 13
         },
         {
@@ -169,7 +319,19 @@
             "jpText": "スペシャルウィークは、\r\n慌てた様子で再び走りだしたのだが――",
             "enText": "Special Week looked flustered \nand started to run again…",
             "nextBlock": 15,
-            "pathId": 3983836031824698154,
+            "origClipLength": 65,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 1451185108230449493
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -5267902570010771232
+                }
+            ],
+            "pathId": 6957776163641187811,
             "blockIdx": 14
         },
         {
@@ -178,7 +340,9 @@
             "jpText": "あわわわっ！？　避けてくださーーいっ！",
             "enText": "Aaaaah! Please avoid!",
             "nextBlock": 16,
-            "pathId": 3833698791600142409,
+            "origClipLength": 57,
+            "voiceIdx": 31,
+            "pathId": -8189919671768325359,
             "blockIdx": 15
         },
         {
@@ -187,8 +351,11 @@
             "jpText": "（ドーンッ！！）",
             "enText": "(Boom!)",
             "nextBlock": -1,
-            "pathId": 431072957198604133,
+            "origClipLength": 50,
+            "voiceIdx": -1,
+            "pathId": -6063238291842607119,
             "blockIdx": 16
         }
-    ]
+    ],
+    "modified": 1674832466
 }

@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "HA35SMENFBHDDDOUQMB2PPEC4ZRWEHMY",
     "type": "story",
     "storyId": "090017002",
@@ -9,9 +9,10 @@
             "jpName": "ゲームNPC",
             "enName": "Game NPC",
             "jpText": "もっもっ……カレーうま……カレー、ごきゅごきゅ……ぷはぁっ！\n……ふう～～～！　ごちそうさまでした！",
-            "enText": "Mnmomn… curry… shg- good… monchnomch… pfaaah! \n… Hoowee～～～! That was delicious!",
+            "enText": "<i>Mnmomn</i>… curry… shg- good… <i>monchnomch… pfaaah</i>! \n… Hoowee～～～! That was delicious!",
             "nextBlock": 2,
             "origClipLength": 407,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 446,
@@ -48,6 +49,7 @@
             "enText": "Sorry about this! \nBut thanks to you I feel alive again!",
             "nextBlock": 3,
             "origClipLength": 196,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 446,
@@ -80,6 +82,7 @@
             "enText": "I'm glad you are feeling better. But… just how \ndid you come to collapse from hunger like that?",
             "nextBlock": 4,
             "origClipLength": 268,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 71,
@@ -120,6 +123,7 @@
             "enText": "Uuuhh… I was so engrossed in my research, \nI just kinda forgot to eat. Ahahaha!",
             "nextBlock": 5,
             "origClipLength": 263,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 50,
@@ -156,6 +160,7 @@
             "enText": "Research? What kind!?",
             "nextBlock": 6,
             "origClipLength": 90,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 121,
@@ -196,6 +201,7 @@
             "enText": "Hehehe, I'm so glad you asked! You see—",
             "nextBlock": 7,
             "origClipLength": 147,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 232,
@@ -236,6 +242,7 @@
             "enText": "―I'm working on a new airplane!",
             "nextBlock": 8,
             "origClipLength": 149,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 232,
@@ -265,9 +272,10 @@
             "jpName": "ツインターボ",
             "enName": "Twin Turbo",
             "jpText": "新型飛行機！？　飛行機つくってるのか！？\nすごいすごい！　ターボ見てみたい！！",
-            "enText": "New airplane!? You're making airplanes!? \nThat's awesome! Let Turbo see!!",
+            "enText": "New airplane!? You're making airplanes!? \nThat's awesome! Show Turbo!!",
             "nextBlock": 9,
             "origClipLength": 237,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 20,
@@ -324,6 +332,7 @@
             "enText": "Hey but… I have airplane piloting skills… \nSo that means airplanes already exist, right?",
             "nextBlock": 10,
             "origClipLength": 306,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 89,
@@ -368,6 +377,7 @@
             "enText": "Mmm, we saw some on the way here. Their wooden wings \nmade them look like toys. I take it those are the old ones?",
             "nextBlock": 11,
             "origClipLength": 277,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 340,
@@ -436,6 +446,7 @@
             "enText": "That's right. Those only fly a short distance. \nI'm developing airplanes that can fly much \nhigher, and further! Made of iron!",
             "nextBlock": 12,
             "origClipLength": 323,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 402,
@@ -468,6 +479,7 @@
             "enText": "Iron… Can that actually fly? Everything here works on \nsteam engines doesn't it? The engine alone would weigh—",
             "nextBlock": 13,
             "origClipLength": 260,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 159,
@@ -501,9 +513,10 @@
             "jpName": "飛行機の研究者",
             "enName": "Airplane Researcher",
             "jpText": "飛べますよ！！　私、飛んでいるのを見ましたから！",
-            "enText": "Of course it can!! I've seen them fly!",
+            "enText": "Of course it can!! I've seen one fly!",
             "nextBlock": 14,
             "origClipLength": 141,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 60,
@@ -533,9 +546,10 @@
             "jpName": "飛行機の研究者",
             "enName": "Airplane Researcher",
             "jpText": "鉄の飛行機が山を越えそうだったんです！　街を囲む険しい山を！\n越えるのかなーって目が離せなくなって！",
-            "enText": "Planes of iron were heading towards the mountains! \nThose enormous mountains around the city! \nI couldn't stop watching, to see if they could fly over them!",
+            "enText": "A plane of iron was heading towards the mountains! \nThose enormous mountains around the city! \nI couldn't stop watching, to see if it could fly over them!",
             "nextBlock": 15,
             "origClipLength": 284,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 20,
@@ -565,9 +579,10 @@
             "jpName": "飛行機の研究者",
             "enName": "Airplane Researcher",
             "jpText": "走って飛行機を追いかけました！\nで、着陸した師匠に弟子入りさせてくださいって頼んだんです！",
-            "enText": "I ran after them as fast as I could! And I asked to be \nmaster's apprentice when they landed!",
+            "enText": "I ran after it as fast as I could! And I asked to be \nmaster's apprentice when he landed!",
             "nextBlock": 16,
             "origClipLength": 242,
+            "voiceIdx": 14,
             "pathId": -7165759830315232301,
             "blockIdx": 15
         },
@@ -578,6 +593,7 @@
             "enText": "It dawned on me then… staring at those planes. That I didn't \nknow anything about the world beyond those mountains.",
             "nextBlock": 17,
             "origClipLength": 262,
+            "voiceIdx": 15,
             "pathId": -5837588076951040,
             "blockIdx": 16
         },
@@ -588,6 +604,7 @@
             "enText": "We have cars and locomotives, so travel and distribution \nisn't an issue. But there are no roads or railways leading \nbeyond the mountains.",
             "nextBlock": 18,
             "origClipLength": 314,
+            "voiceIdx": 16,
             "pathId": 3014839746268469897,
             "blockIdx": 17
         },
@@ -595,9 +612,10 @@
             "jpName": "飛行機の研究者",
             "enName": "Airplane Researcher",
             "jpText": "山の向こうに何があるのか、誰も知らない……\n私はその景色を見てみたい！",
-            "enText": "Nobody knows what lies further than those peaks… \nAnd I want to see what is there!",
+            "enText": "Nobody knows what lies further than those peaks… \nAnd I want to see what it is!",
             "nextBlock": 19,
             "origClipLength": 218,
+            "voiceIdx": 17,
             "pathId": -3292959395306787286,
             "blockIdx": 18
         },
@@ -608,6 +626,7 @@
             "enText": "And I want to tell everyone about it! I want to inspire them! \nThat's why I wanna cross the mountains with a plane of iron!",
             "nextBlock": 20,
             "origClipLength": 316,
+            "voiceIdx": 18,
             "pathId": -1961462905882872319,
             "blockIdx": 19
         },
@@ -615,9 +634,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "う……うぉおおおーーーん！！\nわかるぅぅーー！　わかるよその気持ち～～ッ！！",
-            "enText": "Uo… Uuooooooohh!! \nI get youuuu! I so get how you feeeel～～!!",
+            "enText": "<i>Uo… Uuooooaaahh</i>!! \nI get youuuu! I so get how you feeeel～～!!",
             "nextBlock": 21,
             "origClipLength": 327,
+            "voiceIdx": 19,
             "pathId": 2192119210065045289,
             "blockIdx": 20
         },
@@ -628,6 +648,7 @@
             "enText": "To follow your ambitions! And inspire everyone \nto do the same! We have the same dream!!",
             "nextBlock": 22,
             "origClipLength": 243,
+            "voiceIdx": 20,
             "pathId": -5175776828797718973,
             "blockIdx": 21
         },
@@ -638,6 +659,7 @@
             "enText": "To think you were so invested you collapsed from hunger… \nThat's so amaszuiiiing～～! I'm so toouuwcheeedd～～!!",
             "nextBlock": 23,
             "origClipLength": 430,
+            "voiceIdx": 21,
             "pathId": -1911192726252824850,
             "blockIdx": 22
         },
@@ -648,6 +670,7 @@
             "enText": "You really absolutely have to make that dream \ncome true for real!! We'll help out too!",
             "nextBlock": 24,
             "origClipLength": 230,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 289,
@@ -689,9 +712,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "……言うと思った。",
-            "enText": "… I figured.",
+            "enText": "… Figures.",
             "nextBlock": 25,
             "origClipLength": 103,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 425,
@@ -736,6 +760,7 @@
             "enText": "'Cause!! Can't you see how hard she's trying!? \nDon't you wanna cheer her on!!?",
             "nextBlock": 26,
             "origClipLength": 202,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 440,
@@ -780,6 +805,7 @@
             "enText": "Doubtless, until she collapses in the street. \nI think she could use someone to support her.",
             "nextBlock": 27,
             "origClipLength": 198,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 184,
@@ -824,6 +850,7 @@
             "enText": "…… You know, we're playing a game he―",
             "nextBlock": 28,
             "origClipLength": 146,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 50,
@@ -868,6 +895,7 @@
             "enText": "Sure, but you know! This is probably a mission, right? So even \nin game teeerms… It's our way forward, don't you think?",
             "nextBlock": 29,
             "origClipLength": 334,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 20,
@@ -917,9 +945,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "……コイツに協力すること、って言いたいわけ？\nはぁ……ああ、もうっ。",
-            "enText": "… You saying we should cooperate with this woman? \nHaa… aaah, whatever.",
+            "enText": "… You saying we should cooperate with this woman? \n<i>Haa… agh</i>, whatever.",
             "nextBlock": 30,
             "origClipLength": 220,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 253,
@@ -960,6 +989,7 @@
             "enText": "Turbo's here for it! Turbo will help too!! \nI wanna build a plane! And brrrrrr over the mountains!!",
             "nextBlock": 31,
             "origClipLength": 272,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 50,
@@ -1001,9 +1031,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "決まりだな。手伝いが5人も増えれば、\n君もしっかり食事と睡眠をとりつつ研究できるだろう。",
-            "enText": "That does it then. With 5 new aides I'm sure you'll be able \nto do your research with proper meals and sleep.",
+            "enText": "That does it then. With 5 new aides I am sure you will be able \nto do your research with proper meals and sleep.",
             "nextBlock": 32,
             "origClipLength": 231,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 120,
@@ -1056,6 +1087,7 @@
             "enText": "Fo- For real…? You'll all help me out…?",
             "nextBlock": 33,
             "origClipLength": 156,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 148,
@@ -1088,6 +1120,7 @@
             "enText": "Yeah!! I want to support your dream! \nLet us help you build your plane!",
             "nextBlock": 34,
             "origClipLength": 200,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 389,
@@ -1121,9 +1154,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "……あ、ミッションの項目が埋まった。\n『研究者の夢を叶えよう』……予想通りか。",
-            "enText": "…… Ah, we have a new mission. \n\"Help the researcher fulfil her dreams\"… you were right.",
+            "enText": "…… Ah, we have a new mission. \n\"Help the researcher fulfil her dreams\"… You were right.",
             "nextBlock": 35,
             "origClipLength": 303,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 69,
@@ -1168,6 +1202,7 @@
             "enText": "Whoaa! So this is your workshop!",
             "nextBlock": 36,
             "origClipLength": 158,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 20,
@@ -1217,9 +1252,10 @@
             "jpName": "ツインターボ",
             "enName": "Twin Turbo",
             "jpText": "おおお～っ！　これがつくりかけの飛行機か！\nシートがない！　中は機械がむきだしだーっ！　へえぇ～～～っ！",
-            "enText": "Wooaaooaaoh! Here's the plane being built! There's no seat! \nAnd all the machiney bits are visible inside! Heeee～～!",
+            "enText": "Wooaaooaaoh! Here's the plane being built! There's no seat! \nAnd all the machiney bits are visible inside! <i>Heeee</i>～～!",
             "nextBlock": 37,
             "origClipLength": 413,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 255,
@@ -1253,9 +1289,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "タ、ターボ君！　乱暴に触れては……ああっ！\n……あ、危なかった……。",
-            "enText": "T-Turbo! Don't carelessly too- ouuucch! \n… That was… close……",
+            "enText": "T-Turbo! Don't carelessly too——ouuucch! \n… That was… close……",
             "nextBlock": 38,
             "origClipLength": 224,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 60,
@@ -1292,6 +1329,7 @@
             "enText": "… Hmm? There's no one else here? \nWhere's that \"master\" person?",
             "nextBlock": 39,
             "origClipLength": 184,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 96,
@@ -1325,9 +1363,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "キミ、飛行機を追いかけてその製作者に\n弟子入りしたって言ってなかったっけ。",
-            "enText": "Didn't you say you asked to be that airplane creator's \napprentice after you chased those planes?",
+            "enText": "Didn't you say you asked to be that airplane creator's \napprentice after you chased his plane?",
             "nextBlock": 40,
             "origClipLength": 183,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 230,
@@ -1352,6 +1391,7 @@
             "enText": "Ah, master… has retired… I'm the only one here now.",
             "nextBlock": 41,
             "origClipLength": 205,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 230,
@@ -1376,6 +1416,7 @@
             "enText": "You're doing all this by yourself!? \nNo wonder you're falling over!",
             "nextBlock": 42,
             "origClipLength": 186,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 247,
@@ -1408,6 +1449,7 @@
             "enText": "…… Actually, I've not really touched most of this… \nI can't find time to raise funds and my research is just \nbarely getting done… eheheh.",
             "nextBlock": 43,
             "origClipLength": 359,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 91,
@@ -1436,6 +1478,7 @@
             "enText": "Uuooooo～～n! Don't force yourself to do it all alone! \nWe're here to help you nooowwww!",
             "nextBlock": 44,
             "origClipLength": 353,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 144,
@@ -1468,6 +1511,7 @@
             "enText": "We'll do whatever it takes to finish that plaaneeee…!",
             "nextBlock": 45,
             "origClipLength": 192,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 129,
@@ -1504,6 +1548,7 @@
             "enText": "For the time being, you need funds most? It will be \ntroublesome to even buy parts without money after all.",
             "nextBlock": 46,
             "origClipLength": 214,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 150,
@@ -1540,6 +1585,7 @@
             "enText": "Then let's help raise some funds! …I'm pretty sure you \nget paid for doing requests for townspeople, so let's do that!",
             "nextBlock": 47,
             "origClipLength": 276,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 62,
@@ -1576,6 +1622,7 @@
             "enText": "…… Alright, I can likely handle any repair requests.",
             "nextBlock": 48,
             "origClipLength": 131,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 50,
@@ -1609,9 +1656,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "アタシは配達っ！！　じゃんじゃん届けまくって稼いでくるよ！\nでもって、お届け物で街のみんなもハッピーにしてあげるんだ！",
-            "enText": "I'll do deliveries!! We'll have money in no time with \nall the packages I'm about to drop! And it'll \nmake the townfolk happy to boot!",
+            "enText": "I'll do deliveries!! We'll have money in no time with \nall the packages I'm about to move! And it'll \nmake the townfolk happy to boot!",
             "nextBlock": 49,
             "origClipLength": 307,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 56,
@@ -1648,6 +1696,7 @@
             "enText": "Hey hey Hayahide, what else is there? \nWhat's Turbo doing?",
             "nextBlock": 50,
             "origClipLength": 129,
+            "voiceIdx": 48,
             "animData": [
                 {
                     "origLen": 233,
@@ -1696,6 +1745,7 @@
             "enText": "Hmmm…… We have no jobs, so I presume we should take \nadvantage of our inherent skills? Alright, let's make a plan.",
             "nextBlock": -1,
             "origClipLength": 269,
+            "voiceIdx": 49,
             "animData": [
                 {
                     "origLen": 120,
@@ -1718,5 +1768,6 @@
             "blockIdx": 50
         }
     ],
-    "modified": 1663544149
+    "humanTl": true,
+    "modified": 1676136106
 }

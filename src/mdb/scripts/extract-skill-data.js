@@ -51,7 +51,7 @@ function translateData(id, sqlData) {
         type3, strength3, strengthMod3, targetType3, targetValue3,
         ...skill2] = sqlData;
 
-    let outString = "<color=#e06f0b>" + translateEffect(id, type, strength, strengthMod);
+    let outString = "<b>" + translateEffect(id, type, strength, strengthMod);
     if (targetType > 1) outString += translateTarget(targetType, targetValue);
 
     if (type2) outString += `, ${translateEffect(id, type2, strength2, strengthMod2)}`;
@@ -63,7 +63,7 @@ function translateData(id, sqlData) {
     if (duration == -1) { duration = "indefinitely"; }
     else if (duration == 0) { duration = "immediately"; }
     else { duration = "for " + parseInt(duration) / 10000 + "s"; }
-    outString += ` ${duration}</color>`;
+    outString += ` ${duration}</b>`;
 
     cooldown /= 10000 // in seconds, then limit to potentially usable range
     if (cooldown > 0 && cooldown < 90) {
@@ -105,18 +105,36 @@ function translateEffect(id, type, strength, strengthMod) {
 }
 
 function transformValue(val, transforms) {
-    transforms.split(" ").forEach(f => {
-        let m = f.match(/(\d+)-/)
-        if (m) val = m[1] - val
-        else if (f == "inv") val *= -1
-        else if (f == "%") val /= 100
-    })
+    let t = transforms.split(" ")
+    val = parseFloat(val)
+    for (let i = 0; i < t.length; i++) {
+        let action = t[i],
+            m
+        if (m = action.match(/(\d+)-/)) {
+            val = m[1] - val
+        }
+        else if (m = action.match(/(-?\d+)/)) {
+            val += parseInt(m[1])
+        }
+        else if (action == "inv") val *= -1
+        else if (action == "%") val /= 100
+        else if (action == "rep") {
+            val = t[++i]
+            i++
+        }
+    }
     return val
 }
 
 function translateTarget(type, value) {
     if (type == 0 || type == 1) return "";
     type = DATA_TL.target_type[type];
+    let ignoreVal = false
+    if (Array.isArray(type)) {
+        ignoreVal = type[1]
+        type = type[0]
+    }
+    if (ignoreVal) return ` to ${type}`
     let val = DATA_TL.target_value[value];
     return ` to ${val || `${value} closest`} ${type}`;
 }

@@ -208,6 +208,84 @@ class TextHasher:
         return txt.replace("\\n", "\r\n" if winBreak else "\n")
 
 
+# Based on code from http://timgolden.me.uk/python/win32_how_do_i/watch_directory_for_changes.html
+class FileWatcher:
+    FILE_LIST_DIRECTORY = 0x0001
+
+    def __init__(self) -> None:
+        global requests
+        import requests
+        cfg = helpers.readJson(helpers.getUmaInstallDir() / "config.json")
+        self.port = cfg["httpServerPort"] # we want to ride the KeyError if it happens
+        print(f"Communicating with TLG on port {self.port}")
+
+    def watch(self, path):
+        import win32con
+        import win32file
+        self.openHandle = win32file.CreateFile(
+            str(path),
+            self.FILE_LIST_DIRECTORY,
+            win32con.FILE_SHARE_READ | win32con.FILE_SHARE_WRITE | win32con.FILE_SHARE_DELETE,
+            None,
+            win32con.OPEN_EXISTING,
+            win32con.FILE_FLAG_BACKUP_SEMANTICS,
+            None
+        )
+        print(f"Watching {path}...\nExit with CTRL+C")
+        while True:
+            try:
+                results = win32file.ReadDirectoryChangesW(
+                    self.openHandle,
+                    512,
+                    False,
+                    win32con.FILE_NOTIFY_CHANGE_LAST_WRITE,
+                    None,
+                    None
+                )
+            except win32file.error as e:
+                if e.winerror == 995: # operation cancelled
+                    return
+                else:
+                    raise
+            if not results:
+                print("Error watching file")
+                return
+            for action, file in results:
+                if len(results) > 2 or "cache" in results[-1][1]: 
+                    break #ignore change cascade (?)
+                if file in ("static.json", "dynamic.json"):
+                    self._reloadTlg()
+                    break
+
+    def close(self):
+        if not self.openHandle: return
+        import ctypes
+        from ctypes import wintypes
+        def _errcheck(value, func, args):
+            if not value:
+                raise ctypes.WinError()
+            return args
+        CancelIoEx = ctypes.WinDLL("kernel32").CancelIoEx
+        CancelIoEx.restype = wintypes.BOOL
+        CancelIoEx.errcheck = _errcheck
+        CancelIoEx.argtypes = (
+            wintypes.HANDLE, 
+            ctypes.c_void_p, # ignoring this
+        )
+        CancelIoEx(wintypes.HANDLE(self.openHandle.handle), None)
+        self.openHandle.Close()
+        # todo maybe: rewrite this whole thing as proper win32 async/overlapped IO
+        
+    def _reloadTlg(self):
+        print("Reloading TLG files...")
+        try:
+            resp = requests.post(f"http://127.0.0.1:{self.port}/sets", json={"type": "reload_all"}, headers={"Content-Type": "application/json"})
+        except requests.ConnectionError:
+            print("Communication error.")
+            return
+        print(resp.status_code, resp.text)
+
+
 def parseArgs():
     ap = common.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument("-new", "--populate", action="store_true",
@@ -232,6 +310,7 @@ def parseArgs():
                     help="Import TLG's static dump too. Auto-detects in game dir if no path given", metavar="path")
     ap.add_argument("-mdb", "--convert-mdb", action="store_true", help="Import some mdb strings for TLG to improve formatting")
     ap.add_argument("-conv", "--convert-asset", nargs='?', const=True, default=False, help="Write TLG versions of [specified] asset files marked as such", metavar="path")
+    ap.add_argument("-w", "-watch", "--watch", action="store_true", help="Watch TLG UI files for changes and auto-reload (requires game open with TLG)")
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
@@ -323,6 +402,29 @@ def main():
                           f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}.")
         else:
             print("Couldn't find game install path, files not moved.")
+
+    if args.watch:
+        import threading
+        import time
+
+        watcher = FileWatcher()
+        try:
+            t = threading.Thread(target=watcher.watch, args=(helpers.getUmaInstallDir() / "localized_data",), daemon=True)
+            t.start()
+            time.sleep(9999) # wait for exit
+        except KeyboardInterrupt:
+            print("Stop requested...")
+            watcher.close()
+        finally:
+            t.join(15)
+            print("Exiting")
+        # Manual form
+        # while True:
+        #     x = input("Action (r,q): ")
+        #     if x == "r":
+        #         watcher._reloadTlg()
+        #     else:
+        #         return
 
 
 if __name__ == '__main__':

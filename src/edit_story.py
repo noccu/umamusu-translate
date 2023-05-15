@@ -690,7 +690,7 @@ def createPreviewWindow():
     #     previewWindow.geometry(f'+{event.x_root}+{event.y_root}')
     # previewWindow.bind('<B1-Motion>',moveWindow)
 
-    previewText = tk.Label(previewWindow, font=previewFont, justify="left")
+    previewText = tk.Label(previewWindow, font=previewFont, justify="left", anchor="w")
     previewText.pack(expand=True, fill='both')
     previewWindow.withdraw()
 

@@ -48,7 +48,7 @@ Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
 Wings of Iron: Hazy Tales | Complete | [noccu]
 Days in a Flash | Complete | [Kuwaiden], [noccu] (preview)
 Intertwined Memories, Galloping Thoughts | Complete | deepl, [noccu] (preview)
-Illuminate the Heart | Complete | [robflop]
+Illuminate the Heart | Complete | [Sugoi MTL]
 Happy new future ～Bonds dyed in the sunrise～ | Complete | deepl, [noccu] (preview)
 Sweet Memories Teatime | In progress | [noccu]
 Leap into a New World! | Stalled | [noccu] (preview)
@@ -77,16 +77,14 @@ Aston Machan | Complete | [Snep]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
-Daitaku Helios | Complete | [LotoDS][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
-Daiichi Ruby | Complete | [Riersa]
+Daiichi Ruby | In progress | [Riersa] (1-4)
 Eishin Flash | Complete, Stalled, In progress | deepl, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
-Fuji Kiseki | Complete | [Kasey]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
-Grass Wonder | Complete | [LotoDS][]
+Grass Wonder | Complete | deepl
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 Hokko Tarumae | Complete | [Riersa] (deepl edit)
 Inari One | Complete | [LotoDS][]
@@ -110,19 +108,17 @@ Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
-Shinko Windy | Complete | [LotoDS][]
 Silence Suzuka | Complete | [LotoDS][]
 Smart Falcon | Complete | [LotoDS][]
 Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl
-Symboli Kris S | Complete | [LotoDS][]
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
-Vodka | Complete | [robflop][]
+Vodka | Complete | [Sugoi MTL][]
 Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl
 Yamanin Zephyr | Complete | [Director Kok][]
 Zenno Rob Roy | Stalled | [LotoDS][] (ep 1-4)
@@ -181,16 +177,16 @@ Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | Stalled | Anonymous Reindeer
-Sakura Bakushin O | Complete, Stalled, In progress | deepl, [Kasey] (100-306, 511-900)(88/133), [noccu]
-Vodka | In progress | [robflop]
+Sakura Bakushin O | Complete, In progress | deepl, [Kasey]
+Vodka | Complete | [Sugoi MTL]
 
 ## Cards
 name | progress | translator
 --- | --- | ---
 All not listed (Up to 2022/07/08) | Complete | deepl (contributed by redi up to 30/12/2021),<br> (contributed by Korgi up to 2022/07/08)
-Vodka (R, Tracen Academy) | Complete | [robflop][]
-Vodka (SR, Annoying Observer) | Complete | [robflop][]
-Vodka (SSR, Road of Vodka) | Complete | [robflop][]
+Vodka (R, Tracen Academy) | Complete | [Sugoi MTL][]
+Vodka (SR, Annoying Observer) | Complete | [Sugoi MTL][]
+Vodka (SSR, Road of Vodka) | Complete | [Sugoi MTL][]
 
 # Home Dialogue
 name | progress | translator
@@ -208,7 +204,7 @@ Rice Shower | Stalled | [Snep] (bday duo 1-2)
 Sakura Bakushin O | In progress | [Kasey]
 Shinko Windy | Stalled | [noccu] (solo 3)
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl
-Vodka | In progress | [robflop]
+Vodka | In progress | [Sugoi MTL]
 
 # Special Events
 
@@ -250,7 +246,7 @@ Sakura Bakushin O | Complete | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
 Twin Turbo | Complete | [noccu]
-Vodka | In progress | [robflop]
+Vodka | In progress | [Sugoi MTL]
 Zenno Rob Roy | Complete | [Riersa] (deepl edit)
 
 # General
@@ -291,7 +287,6 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Vacxy]: https://ko-fi.com/mobagetranslations
 [burritoblaster]: https://twitter.com/burritoblaster
 [LotoDS]: https://www.youtube.com/user/LotoDS
-[robflop]: https://misskey.io/@robflop
 [Kuun0]: https://www.reddit.com/user/Kuun0/
 [xct]: https://www.youtube.com/user/ADSRM
 [Hades of Games]: https://www.youtube.com/c/HadesofGames

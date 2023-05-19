@@ -77,14 +77,16 @@ Aston Machan | Complete | [Snep]
 Biwa Hayahide | Complete | deepl (contributed by CryDuringItAll)
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
+Daitaku Helios | Complete | [LotoDS][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
-Daiichi Ruby | In progress | [Riersa] (1-4)
+Daiichi Ruby | Complete | [Riersa]
 Eishin Flash | Complete, Stalled, In progress | deepl, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | deepl (contributed by CryDuringItAll)
 Fine Motion | Complete | [LotoDS][]
+Fuji Kiseki | Complete | [Kasey]
 Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
-Grass Wonder | Complete | deepl
+Grass Wonder | Complete | [LotoDS][]
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
 Hokko Tarumae | Complete | [Riersa] (deepl edit)
 Inari One | Complete | [LotoDS][]
@@ -108,11 +110,13 @@ Rice Shower  | Complete | [Ben][] (ep 1-4), deepl
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
+Shinko Windy | Complete | [LotoDS][]
 Silence Suzuka | Complete | [LotoDS][]
 Smart Falcon | Complete | [LotoDS][]
 Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), deepl
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, deepl
+Symboli Kris S | Complete | [LotoDS][]
 Symboli Rudolf | Complete | deepl
 Taiki Shuttle | Complete | [LotoDS][]
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
@@ -177,7 +181,7 @@ Narita Taishin | Complete | deepl (contributed by CryDuringItAll)
 Oguri Cap | Complete | deepl
 Rice Shower | Complete | deepl
 Rudolph | Stalled | Anonymous Reindeer
-Sakura Bakushin O | Complete, In progress | deepl, [Kasey]
+Sakura Bakushin O | Complete, Stalled, In progress | deepl, [Kasey] (100-306, 511-900)(88/133), [noccu]
 Vodka | Complete | [Sugoi MTL]
 
 ## Cards
@@ -204,7 +208,7 @@ Rice Shower | Stalled | [Snep] (bday duo 1-2)
 Sakura Bakushin O | In progress | [Kasey]
 Shinko Windy | Stalled | [noccu] (solo 3)
 Yaeno Muteki | Complete | [noccu] (solo 2), deepl
-Vodka | In progress | [Sugoi MTL]
+Vodka | Complete | [Sugoi MTL]
 
 # Special Events
 
@@ -246,7 +250,7 @@ Sakura Bakushin O | Complete | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
 Twin Turbo | Complete | [noccu]
-Vodka | In progress | [Sugoi MTL]
+Vodka | Complete | [Sugoi MTL]
 Zenno Rob Roy | Complete | [Riersa] (deepl edit)
 
 # General

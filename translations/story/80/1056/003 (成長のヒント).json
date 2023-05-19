@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "MKRC5DB3A2HK7QNJTK6WLFKZLA7G3MXJ",
+    "version": 5,
+    "bundle": "YL7BOLJQLOWSJT3BNRLKXRWVHTOPTCLV",
     "type": "story",
     "storyId": "801056003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nマチカネフクキタルが話していた。",
             "enText": "After training, <chrname> and Machikane \nFukkitar were talking.",
             "nextBlock": -1,
-            "pathId": 8974437004406565971,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 618027982029028926
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -4308402454238188940
+                }
+            ],
+            "pathId": -7707632670146744450,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674419
 }

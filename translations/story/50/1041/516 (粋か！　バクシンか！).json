@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "LWMOBGNJTZQWU6QV3XNRO5OYDTB6RIXM",
+    "version": 5,
+    "bundle": "YILTAXBZK2EK5QM7FTUR2JXATDX7JFJT",
     "type": "story",
     "storyId": "501041516",
     "title": "粋か！　バクシンか！",
@@ -9,8 +9,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "公園で散歩していると……近くの甘味処から、\r\n聞き覚えのある声が聞こえてきた。",
-            "enText": "While I was taking a walk in the park, I\nheard a familiar voice coming from a sweet\nshop near…",
+            "enText": "While I was taking a walk in the park, I \nheard a familiar voice coming from a candy \nstore nearby…",
             "nextBlock": 2,
+            "origClipLength": 95,
             "pathId": 8388244695056799706,
             "blockIdx": 1
         },
@@ -18,8 +19,9 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "――菓子と言えども！\r\nバクバクと、バクシンすべきです！",
-            "enText": "—Even if it is candy! You should be\nbuzzing, buzzing, buzzing!",
+            "enText": "――Even if it is candy! \nYou must BakuBaku, and Bakushin!",
             "nextBlock": 3,
+            "origClipLength": 81,
             "pathId": -3108978350297660733,
             "blockIdx": 2
         },
@@ -27,8 +29,9 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "いやいや、\r\n粋に食ってこその『和』だろぃ？",
-            "enText": "No, no, no, no, no, no, no, no, no,\nno, no, no, no, no, no, no.",
+            "enText": "No, no, eating with sophistication is what \n\"harmony\" is all about, ain't it?",
             "nextBlock": 4,
+            "origClipLength": 73,
             "choices": [
                 {
                     "jpText": "どうしたんだ？",
@@ -41,6 +44,24 @@
                     "nextBlock": 4
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": 7085065948875289966
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 5589110239218968235
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 4027451995647818807
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 4659587379970311697
+                }
+            ],
             "pathId": -5243767057878726610,
             "blockIdx": 3
         },
@@ -48,8 +69,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ややっ！　ちょーどいいところに！\r\nここはトレーナーさんにお聞きしましょう！",
-            "enText": "Oh, my God! This is a great place! Let's ask\nthe trainer about this!",
+            "enText": "Oh, ho! You've come at an excellent time! \nLet's ask Trainer about this!",
             "nextBlock": 5,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 4374600967850665362
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 684278457576428781
+                },
+                {
+                    "origLen": 53,
+                    "pathId": -4922032268045931948
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 8098563407479804682
+                }
+            ],
             "pathId": 4573527711498923612,
             "blockIdx": 4
         },
@@ -57,8 +97,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "実はイナリさんと甘味処で行き合ったので、\r\n一緒にお茶をと話していたのですが……。",
-            "enText": "Actually, Inari and I ran into each other at\na sweet shop, and we were talking about\nhaving tea together…",
+            "enText": "Actually, Ms. Inari and I ran into each other \nat a candy shop, and we were talking about \nhaving tea together, but…",
             "nextBlock": 6,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 1201193442492520533
+                },
+                {
+                    "origLen": 109,
+                    "pathId": 1093223453618990008
+                },
+                {
+                    "origLen": 109,
+                    "pathId": -1332943566930424176
+                },
+                {
+                    "origLen": 109,
+                    "pathId": 7346687641304777113
+                }
+            ],
             "pathId": 7211266177930851713,
             "blockIdx": 5
         },
@@ -66,8 +125,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "お互い和菓子好きってんで日替わり茶菓子を\r\nどう食べるべきか……盛り上がっちまってさ。",
-            "enText": "We both like Japanese sweets, so we got\nexcited about how we should eat the daily\ntea cakes…",
+            "enText": "We both like Japanese sweets a whole lot, \nso we got excited about how we should eat \nthe daily special tea cakes, y'see…",
             "nextBlock": 7,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -9083885801469360561
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 3141925285070146328
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 919268886710767607
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 2195390414950904190
+                }
+            ],
             "pathId": -1567956889873783816,
             "blockIdx": 6
         },
@@ -75,8 +153,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "どんな和菓子でもバクシンあるのみ！\r\nバクバクと、お腹いっぱい食べるべきです！",
-            "enText": "No matter what kind of Japanese sweets you\neat, you must have bakshin! You should eat\nyour fill, and eat fast!",
+            "enText": "No matter what kind of Japanese sweets \nyou eat, you must have Bakushin! \nYou should eat your fill, and eat Baku-fast!",
             "nextBlock": 8,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -7801902103671387886
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -8354535332842180294
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -2260622611885230653
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 8374527698884450238
+                }
+            ],
             "pathId": 1451258606437883148,
             "blockIdx": 7
         },
@@ -84,8 +181,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "ややっ！　あの茶菓子は熱ぅ～い茶に合う。\r\nじっくり味わうのが、粋ってもんだ！",
-            "enText": "Oh, no! Those tea cakes go well\nwith hot tea. Savoring it slowly\nis the best way to be chic!",
+            "enText": "Waitaminute! Those tea cakes go suuper \nwell with hot tea. Savoring them slowly is \nthe best way to be chic!",
             "nextBlock": 9,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -7165184975158348044
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 2291927873144348865
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 1818755133699363698
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -1788079790036421725
+                }
+            ],
             "pathId": -2875327270706763447,
             "blockIdx": 8
         },
@@ -93,8 +209,9 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "粋かバクシンか！　もちろん、\r\nトレーナーさんはバクシン派ですよね！？",
-            "enText": "Chic or Bakushin! Of course, your trainer is\nin the Bakushin camp, isn't she!",
+            "enText": "Chic or Bakushin! Of course, Trainer is on \nTeam Bakushin, are you not!?",
             "nextBlock": 10,
+            "origClipLength": 90,
             "choices": [
                 {
                     "jpText": "1つをじっくり味わう、粋派",
@@ -103,8 +220,26 @@
                 },
                 {
                     "jpText": "たくさん食べる、バクシン派！",
-                    "enText": "Eat a lot, baxxers!",
+                    "enText": "Eat a bunch, Team Bakushin!",
                     "nextBlock": 17
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -3285462448239286338
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -8678057793494650305
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -6277434072861280569
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 3991756245728945282
                 }
             ],
             "pathId": -8134886296062932699,
@@ -114,13 +249,32 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そ、そんな……！？\r\n私にバクシンするな、と！？",
-            "enText": "Oh, no…! Don't Bakushin' on me!",
+            "enText": "Th, that's…!? \nYou won't Bakushin with me, you say!?",
             "nextBlock": 11,
+            "origClipLength": 76,
             "choices": [
                 {
                     "jpText": "1つに全力でバクシンする、とか",
-                    "enText": "I'm going to put all my energy\ninto one of them.",
+                    "enText": "Rather, put all your Bakushin into one of them, or \nsomething.",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": 4387367581291933975
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -6358211216169825909
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -4921084601499276091
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 1323461630126926038
                 }
             ],
             "pathId": -1743233979400337208,
@@ -130,8 +284,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "な　る　ほ　ど　！！",
-            "enText": "So much!",
+            "enText": "<i>I! see!!</i>",
             "nextBlock": 12,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": -4202889144285249455
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -4024675354663342045
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 5576590004609886904
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 5363551849735238585
+                }
+            ],
             "pathId": -3473123936045279015,
             "blockIdx": 11
         },
@@ -139,8 +312,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "いいねいいね、全力で味わう。\r\nそいつも粋ってもんだ！",
-            "enText": "Good, good, good, good. Savor it to the\nfullest. That's what I'm talking about!",
+            "enText": "Yeah, yeah, savor it to the fullest. \nThat's what I'm talking about!",
             "nextBlock": 13,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": 3448441209189342954
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -705577272738212938
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 8548262760088885363
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -4113748612707483672
+                }
+            ],
             "pathId": 3404290254766582140,
             "blockIdx": 12
         },
@@ -148,8 +340,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ええ、ええっ！　粋なバクシンというやつ、\r\n味わってみせましょうとも！",
-            "enText": "Yeah, yeah! I'll give you a taste\nof what I call chic bakshin!",
+            "enText": "Indeed, indeed! I'll give you a taste of what \nI like to call Bakushin Chic!",
             "nextBlock": 14,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": -7686939598172821874
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -6473113298192593506
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -8251336401357066633
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -3533903497244411769
+                }
+            ],
             "pathId": -1497501190941636309,
             "blockIdx": 13
         },
@@ -157,8 +368,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "バクッ……もぐっ……シン……バクッ\r\n……もぐもぐ……シンッ！",
-            "enText": "Bakku… Mogu… Shin… Bakku\n… Mogu… Shin!",
+            "enText": "Baku… Chew… shin… Baku \n… Munch, munch… shin!",
             "nextBlock": 15,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -3383472156566511506
+                },
+                {
+                    "origLen": 23,
+                    "pathId": -8984028578011963498
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -8601661092943852267
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -3705009162532636999
+                }
+            ],
             "pathId": 835611034238095781,
             "blockIdx": 14
         },
@@ -166,8 +396,9 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "むむっ！　粋なバクシンの味が……\r\n……する気がします！！",
-            "enText": "Mmm! I think I can…\ntaste the chic Bakushin!",
+            "enText": "Hmhm! I think I can… \n…taste the Bakushin Chic!",
             "nextBlock": 16,
+            "origClipLength": 82,
             "pathId": 6775978906042069132,
             "blockIdx": 15
         },
@@ -175,8 +406,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして、じっくりと1つの菓子を堪能した\r\nサクラバクシンオーなのであった。",
-            "enText": "In this way, Sakura Bakushin O was able to\nenjoy one of the sweets at her leisure.",
+            "enText": "This is how Sakura Bakushin O was able to \nenjoy one of the sweets at her leisure.",
             "nextBlock": -1,
+            "origClipLength": 94,
             "pathId": 6849461822364876738,
             "blockIdx": 16
         },
@@ -184,8 +416,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ですよねー！！　せっかくのお菓子、\r\n心ゆくまで楽しむべきです！",
-            "enText": "I know, right? You should enjoy the sweets\nto your heart's content!",
+            "enText": "I thought so―!! You should enjoy sweets \nto your heart's content!",
             "nextBlock": 18,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": 3965734500137767695
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 7289456800948063357
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -9213236364783128309
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 3631001441878922528
+                }
+            ],
             "pathId": 998580126513617637,
             "blockIdx": 17
         },
@@ -193,8 +444,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "心ゆくまで、楽しむ……。",
-            "enText": "Enjoy to your heart's content at…",
+            "enText": "Enjoy to your heart's content…",
             "nextBlock": 19,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 6813043558375247161
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 8980202025950010857
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 6507063421762273473
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -3299368166965016532
+                }
+            ],
             "pathId": -4737648937202831712,
             "blockIdx": 18
         },
@@ -202,8 +472,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "うっし！　器のでけぇ食い方ってのも、\r\nいなせでいいさね！",
-            "enText": "Whoo! It's nice to eat out of a big bowl!",
+            "enText": "Whoo! Eating out of a bowl this massive is \npretty swanky!",
             "nextBlock": 20,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": -4227241424100408508
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 8913244350684786686
+                },
+                {
+                    "origLen": 41,
+                    "pathId": 2203076490183892571
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -306301156201344529
+                }
+            ],
             "pathId": -3071330924141058533,
             "blockIdx": 19
         },
@@ -211,8 +500,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "器の大きい……！　そう、そうなのです！\r\nバクシンはすごいのです！！",
-            "enText": "Big vessel…! Yes, that's\nright! Bakushin is amazing!",
+            "enText": "Big bowl…! Yes, yes, that's right! \nBakushin is amazing!!",
             "nextBlock": 21,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 5014383919762028835
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 6982998355190313287
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -5902455337684928388
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -444789549700012261
+                }
+            ],
             "pathId": 6294255480443548273,
             "blockIdx": 20
         },
@@ -220,13 +528,32 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "イナリさん、トレーナーさん！\r\n共に、バクシンを楽しみましょう！",
-            "enText": "Inari, your trainer! Together,\nlet's enjoy Bakushin!",
+            "enText": "Ms. Inari, Trainer! \nLet us enjoy Bakushin together!",
             "nextBlock": 22,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "……え、共に？",
                     "enText": "… Eh, together?",
                     "nextBlock": 22
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -1549961906832607840
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -7864511279466051659
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -792472924626135754
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -7326318138102807903
                 }
             ],
             "pathId": 5297706800876229219,
@@ -236,8 +563,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "おうとも！\r\nあんたらの器のでかさ、見せてもらうよ！",
-            "enText": "Of course! Let's see how big you are!",
+            "enText": "Of course! \nLet's see just how huge this bowl is!",
             "nextBlock": 23,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8316654242404353326
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -399230311930716002
+                },
+                {
+                    "origLen": 56,
+                    "pathId": 1002045078739181642
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6539552732984062223
+                }
+            ],
             "pathId": -5125162969368485718,
             "blockIdx": 22
         },
@@ -245,8 +591,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "バクバク、バクシン！　バクバク、バクシン！",
-            "enText": "Baku baku, bakcin! Baku baku, bakcin!",
+            "enText": "Bakubaku, Bakushin! Bakubaku, Bakushin!",
             "nextBlock": 24,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 3444960260789256930
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 8912554036266621947
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -2019127865403960463
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -4928788237825448957
+                }
+            ],
             "pathId": -5493930567972369485,
             "blockIdx": 23
         },
@@ -254,8 +619,9 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "バ……バクバク、バクシン？\r\n……バクバク、バクシン……バクバ……うっ！",
-            "enText": "Ba… bak bak, bak sin?… Bakubaku,\nBakushin… Bakuba… Ugh!",
+            "enText": "Ba… Bakubaku, Bakushin? \n…Bakubaku, Bakushin… Bakuba… Uuugh!",
             "nextBlock": 25,
+            "origClipLength": 91,
             "pathId": 6477728374791305452,
             "blockIdx": 24
         },
@@ -263,8 +629,27 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "うっぷ……い、いかがです……\r\nこの、食べっぷり……。",
-            "enText": "Uppu… Yes, how about…\nthis, eat up…",
+            "enText": "Uuuf… H, how's this… \nThis, much food…",
             "nextBlock": 26,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 5002998516770274626
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -3032667523513541710
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -721131839322647729
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -7894882557820031305
+                }
+            ],
             "pathId": -2633998275787923363,
             "blockIdx": 25
         },
@@ -272,8 +657,27 @@
             "jpName": "イナリワン",
             "enName": "Inari One",
             "jpText": "あ、ああ……気概、気骨……\r\n天晴な、器のでかさ、だよ……うっ。",
-            "enText": "Oh, oh… spirit, spirit… is a\nwonderful, large vessel… ugh.",
+            "enText": "A, aah… guts, grit… \nThis bowl's hugeness is, admirable… Uuugh.",
             "nextBlock": 27,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -4810519092459556696
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 3302084389740474354
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 6618251353159973721
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 4601595558179172876
+                }
+            ],
             "pathId": -686197532359675775,
             "blockIdx": 26
         },
@@ -281,10 +685,31 @@
             "jpName": "",
             "enName": "",
             "jpText": "……器の大きいバクシンができ、\r\n満足そうなサクラバクシンオーなのであった。",
-            "enText": "I'm sure you'll be pleased to know that I've\nbeen able to create a… large-volume\nbakusinessperson.",
+            "enText": "…Sakura Bakushin O seemed very \nsatisfied with the huge Bakushin Bowl.",
             "nextBlock": -1,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -9197719125745169665
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -5442485754923696473
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 4929580107305663617
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -8106692675050905835
+                }
+            ],
             "pathId": -6250092917123958003,
             "blockIdx": 27
         }
-    ]
+    ],
+    "modified": 1683732695,
+    "humanTl": true
 }

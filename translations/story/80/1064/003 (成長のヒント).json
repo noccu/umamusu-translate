@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "V2R3MREKPFW7NSBNGRJTMXG25AJMRU4K",
+    "version": 5,
+    "bundle": "LDDN44JMX7AQQNBSNV3U5LGDHEZ5YJBJ",
     "type": "story",
     "storyId": "801064003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nメジロパーマーが話していた。",
             "enText": "After training, <chrname> and white-haired \nPalmer were talking.",
             "nextBlock": -1,
-            "pathId": -5633090117827771486,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": 4641535155169605336
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 5046844265342802841
+                }
+            ],
+            "pathId": -8454614877139610895,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674420
 }

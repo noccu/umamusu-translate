@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "DOISHT4X7NVO6NO6WEPKVPBVNCT73GK3",
+    "version": 5,
+    "bundle": "BIA4HSPGNTBTMB5M62YC33RIDJFY3QWS",
     "type": "story",
     "storyId": "801035003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nウイニングチケットが話していた。",
             "enText": "After training, <chrname> and \nWinning Ticket were talking.",
             "nextBlock": -1,
-            "pathId": 7408606823654202950,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3190754234410476592
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -154896715724171769
+                }
+            ],
+            "pathId": 3923889278224493020,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674415
 }

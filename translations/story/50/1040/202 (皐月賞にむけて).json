@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "A7XS335PUMQTQCI4IL5MQJXECWUHNQ7G",
+    "version": 5,
+    "bundle": "U3MQKOFV6NMAT5O7IDKBDG4K3TOGG5DL",
     "type": "story",
     "storyId": "501040202",
     "title": "皐月賞にむけて",
@@ -11,7 +11,22 @@
             "jpText": "ふー……。",
             "enText": "Whew…",
             "nextBlock": 2,
-            "pathId": -655421040119552033,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 1726606140039263568
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 271177580739212371
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -4487317580247399975
+                }
+            ],
+            "pathId": 4694885394429112321,
             "blockIdx": 1
         },
         {
@@ -20,7 +35,22 @@
             "jpText": "……三冠レースで結果を出したら、\nさすがに実力を無視できないっしょ。",
             "enText": "If she wins the… Triple Crown race, you \ncan't ignore her ability, can you?",
             "nextBlock": 3,
-            "pathId": -3139988840173693351,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -1324412203026978745
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 1744614782420777423
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 7764148774782921449
+                }
+            ],
+            "pathId": -443847617477956961,
             "blockIdx": 2
         },
         {
@@ -29,7 +59,18 @@
             "jpText": "キレイって言葉はもういらない。\r\n強いウマ娘なんだって、言わせてみせる。",
             "enText": "I don't need the word \"beautiful\" \nanymore. I will make you say that \nshe is a strong horse girl.",
             "nextBlock": 4,
-            "pathId": 5383070257741038754,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": 1312320561863318695
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 6301874924819590344
+                }
+            ],
+            "pathId": -3945064335667427162,
             "blockIdx": 3
         },
         {
@@ -38,6 +79,7 @@
             "jpText": "まずは『皐月賞』、絶対獲る！",
             "enText": "First of all, \"Satsuki-sho\", \nI will definitely win it!",
             "nextBlock": 5,
+            "origClipLength": 63,
             "choices": [
                 {
                     "jpText": "実力を見せよう！",
@@ -45,7 +87,17 @@
                     "nextBlock": 5
                 }
             ],
-            "pathId": 2284953754762584578,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -5328236204334517004
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -7252136901835239341
+                }
+            ],
+            "pathId": 3440530042347820662,
             "blockIdx": 4
         },
         {
@@ -54,8 +106,24 @@
             "jpText": "うん……！",
             "enText": "Yeah…!",
             "nextBlock": -1,
-            "pathId": -2209178400713934052,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -128233891803776349
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -3588262780858470312
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -7883246074196393375
+                }
+            ],
+            "pathId": -7981200293176894385,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1658674275
 }

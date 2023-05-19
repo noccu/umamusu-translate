@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "FPD5LO7PCLWKBBUVSXC6V27LSJU5GHBC",
+    "version": 5,
+    "bundle": "6LU64PBXM3TETAQHRD5S7WKDETJEIHUL",
     "type": "story",
     "storyId": "501040102",
     "title": "初詣",
@@ -11,6 +11,7 @@
             "jpText": "お正月のある朝。ゴールドシチーの\n気分転換になればと思い、\n初詣へとやってきたのだが……。",
             "enText": "One New Year's morning. I came to Hatsumode \n(New Year's visit to the shrine) hoping for \na change of pace for Gold City…",
             "nextBlock": 2,
+            "origClipLength": 103,
             "pathId": -1686668852625082190,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "……やっぱアタシ、帰る。",
             "enText": "…Yeah, Atashi, I'm going home.",
             "nextBlock": 3,
+            "origClipLength": 72,
             "choices": [
                 {
                     "jpText": "お願いごとはしないのか？",
@@ -32,6 +34,16 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 4102930720074944083
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -9198652344137473306
+                }
+            ],
             "pathId": 546011539579670560,
             "blockIdx": 2
         },
@@ -41,6 +53,17 @@
             "jpText": "……ないから。\r\n願うことなんか、なにも。",
             "enText": "Because there is no… \nNothing to wish for.",
             "nextBlock": 4,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": -7626498450669051952
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 3603820006037040614
+                }
+            ],
             "pathId": -1307718986595736550,
             "blockIdx": 3
         },
@@ -50,6 +73,21 @@
             "jpText": "それに……この脚で届かなかったのに、\n願っただけで叶うわけない。",
             "enText": "And… I couldn't reach it with this leg, \nso there's no way it's going to happen just \nby wishing for it.",
             "nextBlock": 5,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 666707929289213001
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -4512449407657324940
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 7973845128291266797
+                }
+            ],
             "pathId": -1621086579245298512,
             "blockIdx": 4
         },
@@ -59,6 +97,21 @@
             "jpText": "アンタもさ、\r\n余計な気ィ回さなくていいから。",
             "enText": "You don't have to worry about \nanything else either.",
             "nextBlock": 6,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 8819796185171423265
+                },
+                {
+                    "origLen": 56,
+                    "pathId": -8776438652369271289
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -6615578980146071620
+                }
+            ],
             "pathId": 437018051946559079,
             "blockIdx": 5
         },
@@ -68,6 +121,17 @@
             "jpText": "……こんなことしたって、\r\n気持ち、上がるわけないじゃん。",
             "enText": "… will not make me feel any better.",
             "nextBlock": 7,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": -3597404917900143757
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -5897869579637939524
+                }
+            ],
             "pathId": 7558574044022720434,
             "blockIdx": 6
         },
@@ -77,10 +141,25 @@
             "jpText": "このままだと『大阪杯』、しょーもない\n結果になりそうだって焦ってんでしょ。",
             "enText": "You must be getting anxious that the \"Osaka \nCup\" is going to turn out to be a shambles \nif things continue as they are.",
             "nextBlock": 8,
+            "origClipLength": 93,
             "coloredText": [
                 {
                     "jpText": "大阪杯",
                     "enText": "Osaka Cup"
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": -6348382795628523507
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -8770113993819040702
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -6447831661419681129
                 }
             ],
             "pathId": 3496281393090795293,
@@ -92,6 +171,7 @@
             "jpText": "……やっぱ走らせんの、やめれば――",
             "enText": "… I guess we should stop running them…",
             "nextBlock": 9,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "『大阪杯』には絶対出てもらう",
@@ -104,6 +184,20 @@
                     "nextBlock": 9
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2267394635119135212
+                },
+                {
+                    "origLen": 43,
+                    "pathId": 8170971918851198907
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 3885299662580484011
+                }
+            ],
             "pathId": 7780090730714150247,
             "blockIdx": 8
         },
@@ -113,11 +207,22 @@
             "jpText": "……。\n意味わかんない。",
             "enText": "… I don't understand.",
             "nextBlock": 10,
+            "origClipLength": 60,
             "choices": [
                 {
                     "jpText": "とりあえず今日は走る以外のことをしよう！",
                     "enText": "In the meantime, let's do something \nother than run today!",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -5233326861239873588
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -1984218761228575930
                 }
             ],
             "pathId": 8127933610220354391,
@@ -129,6 +234,17 @@
             "jpText": "1度走りを忘れることで、気持ちを\n切り替えられるかもしれない。\nそう考えたのだが……。",
             "enText": "Forgetting to run once might help you switch \nyour mind. That's what I thought…",
             "nextBlock": 11,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -7229929811889526516
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -4263795149486991071
+                }
+            ],
             "pathId": -526992647726583504,
             "blockIdx": 10
         },
@@ -138,6 +254,17 @@
             "jpText": "走る以外……。",
             "enText": "Other than running…",
             "nextBlock": 12,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": -3125582965664759635
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -2676792338217333186
+                }
+            ],
             "pathId": 6238805973389862460,
             "blockIdx": 11
         },
@@ -147,11 +274,22 @@
             "jpText": "……。",
             "enText": "…",
             "nextBlock": 13,
+            "origClipLength": 48,
             "choices": [
                 {
                     "jpText": "シチー？",
                     "enText": "Siti?",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": 1088443885746267381
+                },
+                {
+                    "origLen": 59,
+                    "pathId": 8098063461011426394
                 }
             ],
             "pathId": -1709863626583460129,
@@ -163,6 +301,21 @@
             "jpText": "……なんも、思いつかない。",
             "enText": "… nothing, I can't think of anything.",
             "nextBlock": 14,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": -6326527151307021956
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -439980953165906560
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -3572569877711554040
+                }
+            ],
             "pathId": -8876488408280053947,
             "blockIdx": 13
         },
@@ -172,6 +325,21 @@
             "jpText": "そういえばアタシって、\n別に趣味もないな……。",
             "enText": "Come to think of it, I don't even \nhave any hobbies…",
             "nextBlock": 15,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -7582433007916372755
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -2897463840429787936
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 8713998784176686833
+                }
+            ],
             "pathId": -8145672132888475856,
             "blockIdx": 14
         },
@@ -181,6 +349,21 @@
             "jpText": "……。",
             "enText": "…",
             "nextBlock": 16,
+            "origClipLength": 48,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -2136140134770776486
+                },
+                {
+                    "origLen": 26,
+                    "pathId": -1738558445239845413
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -7445551504413381934
+                }
+            ],
             "pathId": -2784556244023893906,
             "blockIdx": 15
         },
@@ -190,6 +373,7 @@
             "jpText": "ゴールドシチーは黙り込んでしまった。\nなので代わりに――",
             "enText": "Gold City fell silent. So instead―",
             "nextBlock": 17,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "公園の芝生で横になる！",
@@ -207,6 +391,20 @@
                     "nextBlock": 39
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": -5732116090507705089
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 5381694998411374119
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 2404115001697158863
+                }
+            ],
             "pathId": 9203874125275500299,
             "blockIdx": 16
         },
@@ -216,11 +414,26 @@
             "jpText": "なにそれ。",
             "enText": "What's that?",
             "nextBlock": 18,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "ゆっくりしたいと思って",
                     "enText": "I just wanted to take my time.",
                     "nextBlock": 18
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -5153885465730815385
+                },
+                {
+                    "origLen": 17,
+                    "pathId": -3478247730873129995
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 3730493673364024816
                 }
             ],
             "pathId": 3872022336863285620,
@@ -232,6 +445,17 @@
             "jpText": "……いいよ。\r\nどーせ、やりたいこともないし。",
             "enText": "… is fine. There's nothing \nI want to do anyway.",
             "nextBlock": 19,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2720571543755733333
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 3954181264072119608
+                }
+            ],
             "pathId": -3994682441495068695,
             "blockIdx": 18
         },
@@ -241,6 +465,7 @@
             "jpText": "……あ。",
             "enText": "… Oh.",
             "nextBlock": 20,
+            "origClipLength": 50,
             "choices": [
                 {
                     "jpText": "どうした？",
@@ -253,6 +478,16 @@
                     "nextBlock": 20
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 5963314260177650875
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 4056454358777173417
+                }
+            ],
             "pathId": -2205203238986688822,
             "blockIdx": 19
         },
@@ -262,6 +497,17 @@
             "jpText": "日差し、イイ感じだなと思って。\r\n芝生で休むの、よさそう……。",
             "enText": "I thought it was nice, the sunshine. It looks \nnice to rest on the lawn…",
             "nextBlock": 21,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": -3071316413724802155
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 1426918211099752310
+                }
+            ],
             "pathId": 8133673789782477607,
             "blockIdx": 20
         },
@@ -271,6 +517,17 @@
             "jpText": "そう言って、恐る恐る腰を下ろした\nゴールドシチー。するとそのまま――",
             "enText": "Saying this, Goldschy sat down fearfully. \nAnd then, just like that―",
             "nextBlock": 22,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -2880996931577433621
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -8819200544937040325
+                }
+            ],
             "pathId": -5205326046951773258,
             "blockIdx": 21
         },
@@ -280,6 +537,7 @@
             "jpText": "――すぅ……すぅ……。",
             "enText": "―Su… Su…",
             "nextBlock": 23,
+            "origClipLength": 125,
             "pathId": -5169784351165640987,
             "blockIdx": 22
         },
@@ -289,11 +547,22 @@
             "jpText": "……。",
             "enText": "…",
             "nextBlock": 24,
+            "origClipLength": 72,
             "choices": [
                 {
                     "jpText": "おはよう",
                     "enText": "Good morning.",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 8944779923916003660
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -1172242111145127291
                 }
             ],
             "pathId": -4766152743873429779,
@@ -305,6 +574,21 @@
             "jpText": "…………。",
             "enText": "…",
             "nextBlock": 25,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -6069864245933250112
+                },
+                {
+                    "origLen": 37,
+                    "pathId": -2781536258947477633
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -1079456152894424648
+                }
+            ],
             "pathId": 8642986376150397109,
             "blockIdx": 24
         },
@@ -314,11 +598,26 @@
             "jpText": "夢見た…………。",
             "enText": "Dreamed up…",
             "nextBlock": 26,
+            "origClipLength": 55,
             "choices": [
                 {
                     "jpText": "どんな？",
                     "enText": "What kind?",
                     "nextBlock": 26
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -5920330082733390068
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 2122406887616401929
+                },
+                {
+                    "origLen": 66,
+                    "pathId": -7604779008100916113
                 }
             ],
             "pathId": 8465212827972278766,
@@ -330,6 +629,17 @@
             "jpText": "なんもない草原で、\n走ってる……。",
             "enText": "In an empty meadow, running…",
             "nextBlock": 27,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5922507254475040991
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -8596590187564901117
+                }
+            ],
             "pathId": 374347642514343683,
             "blockIdx": 26
         },
@@ -339,6 +649,17 @@
             "jpText": "……続き、見なきゃ……。",
             "enText": "… continued, I have to see it…",
             "nextBlock": 28,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -2076785302777420361
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -7120434586984033005
+                }
+            ],
             "pathId": -6783962503085838151,
             "blockIdx": 27
         },
@@ -348,6 +669,7 @@
             "jpText": "その後もしばらく、\nゴールドシチーは眠っていた……。",
             "enText": "For some time after that, \nGold City slept…",
             "nextBlock": 57,
+            "origClipLength": 78,
             "pathId": -8734467308543188587,
             "blockIdx": 28
         },
@@ -357,6 +679,21 @@
             "jpText": "……例えば？",
             "enText": "… For example?",
             "nextBlock": 30,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -8404676281879211557
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -5682714137504268967
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 1733520148136288550
+                }
+            ],
             "pathId": -607749229388191159,
             "blockIdx": 29
         },
@@ -366,6 +703,17 @@
             "jpText": "――音ゲー、レーシング、対戦……。\n色々あるんだね。",
             "enText": "―Sound Games, Racing, and Competitive \n… There's a lot going on.",
             "nextBlock": 31,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 2359280747731804193
+                },
+                {
+                    "origLen": 128,
+                    "pathId": -3097658416021403126
+                }
+            ],
             "pathId": 1323476252353451039,
             "blockIdx": 30
         },
@@ -375,11 +723,22 @@
             "jpText": "こーゆーのあんまり縁ないし、\n趣味にしてみんのもアリなのかも。",
             "enText": "I don't have much experience with \nthis kind of thing, so maybe it's \npossible to make it a hobby.",
             "nextBlock": 32,
+            "origClipLength": 85,
             "choices": [
                 {
                     "jpText": "何が気になる？",
                     "enText": "What's on your mind?",
                     "nextBlock": 32
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": -4481424378905912111
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -7422243681759599226
                 }
             ],
             "pathId": 8864133927319497897,
@@ -391,6 +750,17 @@
             "jpText": "んー……あ。",
             "enText": "Hmmm… Oh.",
             "nextBlock": 33,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 27,
+                    "pathId": -6838955519260803957
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 4253584307214848317
+                }
+            ],
             "pathId": -8782668772029183580,
             "blockIdx": 32
         },
@@ -400,6 +770,17 @@
             "jpText": "ダンスゲームとかいいんじゃない？\n全身使えるし、走りに活かせるかも。",
             "enText": "Maybe a dance game would be nice. You can use \nyour whole body and may be able to make use \nof it for running.",
             "nextBlock": 34,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -23382174842409014
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -2385710219613355980
+                }
+            ],
             "pathId": -7986246127541564905,
             "blockIdx": 33
         },
@@ -409,6 +790,17 @@
             "jpText": "筋トレにちょうどいいよ。\nガチでやればけっこう鍛えられる――",
             "enText": "It's just right for muscle training. \nIf you're hard at it, you can get \na pretty good workout…",
             "nextBlock": 35,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 3315429452298183550
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 7962112989908378665
+                }
+            ],
             "pathId": -8859906482580109244,
             "blockIdx": 34
         },
@@ -418,11 +810,22 @@
             "jpText": "……あ。",
             "enText": "… Oh.",
             "nextBlock": 36,
+            "origClipLength": 50,
             "choices": [
                 {
                     "jpText": "一応、走る以外だから……",
                     "enText": "In case you're wondering, \nit's not running…",
                     "nextBlock": 36
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": 3328316608146039788
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -8995726686471274399
                 }
             ],
             "pathId": -2808176079858222267,
@@ -434,6 +837,21 @@
             "jpText": "……っ。",
             "enText": "…",
             "nextBlock": 37,
+            "origClipLength": 50,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -1942183869993450325
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 1430050817133369901
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -7736097389908659665
+                }
+            ],
             "pathId": 7058747800279552874,
             "blockIdx": 36
         },
@@ -443,6 +861,21 @@
             "jpText": "やっぱ、レーシングゲームやってみる！\n対戦するから、アンタも来て。",
             "enText": "I knew it! I'm going to try the racing game! \nI'll play against you, you come too.",
             "nextBlock": 38,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 3216509139391976653
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 8959139066050600662
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 8027145890781847067
+                }
+            ],
             "pathId": 3191940911946937130,
             "blockIdx": 37
         },
@@ -452,6 +885,17 @@
             "jpText": "その後、ゴールドシチーと\nダンスゲーム以外を楽しんだ。",
             "enText": "After that, I enjoyed nothing but \ndancing games with Gold City.",
             "nextBlock": 57,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -657210858156418247
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 8058144852974449332
+                }
+            ],
             "pathId": 5054730957611723173,
             "blockIdx": 38
         },
@@ -461,11 +905,26 @@
             "jpText": "……アンタを撮るってこと？",
             "enText": "… you mean taking pictures of Anta?",
             "nextBlock": 40,
+            "origClipLength": 61,
             "choices": [
                 {
                     "jpText": "え！？いや、景色とか",
                     "enText": "What? No, like the view.",
                     "nextBlock": 40
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -8144320996706286436
+                },
+                {
+                    "origLen": 28,
+                    "pathId": -1751808629072657554
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 4491024328993132131
                 }
             ],
             "pathId": -4557564792898079829,
@@ -477,6 +936,21 @@
             "jpText": "だよね。\nでもそっか、撮る側か……。",
             "enText": "I know, right? But I see, you're \non the taking side…",
             "nextBlock": 41,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -5654513503641540587
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 2926436671750002266
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 3096040384263934222
+                }
+            ],
             "pathId": -177668639787433637,
             "blockIdx": 40
         },
@@ -486,6 +960,21 @@
             "jpText": "……じゃ、適当にブラつく？",
             "enText": "So… you want to hang \nout at the right place?",
             "nextBlock": 42,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 4678497493442188305
+                },
+                {
+                    "origLen": 51,
+                    "pathId": 5162260146375718698
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -510445141174187272
+                }
+            ],
             "pathId": -1760779519965858447,
             "blockIdx": 41
         },
@@ -495,6 +984,17 @@
             "jpText": "そうして、ゴールドシチーと\nスマホを片手にブラブラ歩いていたところ――",
             "enText": "And so, Gold City and I were just hanging out \nwith our phones in hand―",
             "nextBlock": 43,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": 388735811591074803
+                },
+                {
+                    "origLen": 142,
+                    "pathId": 7044501842428265799
+                }
+            ],
             "pathId": 2384556555170523024,
             "blockIdx": 42
         },
@@ -504,6 +1004,21 @@
             "jpText": "きゃあっ、つかまっちゃうー！\nあはははっ……！",
             "enText": "Oh no, I'm stuck! Hahahaha…!",
             "nextBlock": 44,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -8691491638399699555
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 2516235094117375810
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -6975091151888998897
+                }
+            ],
             "pathId": -4607375961567120152,
             "blockIdx": 43
         },
@@ -513,11 +1028,26 @@
             "jpText": "……。",
             "enText": "…",
             "nextBlock": 45,
+            "origClipLength": 48,
             "choices": [
                 {
                     "jpText": "追いかけっこかな？",
                     "enText": "Is it a chase?",
                     "nextBlock": 45
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6869288378342591897
+                },
+                {
+                    "origLen": 56,
+                    "pathId": -35998906831140101
+                },
+                {
+                    "origLen": 59,
+                    "pathId": 8725328519561587241
                 }
             ],
             "pathId": 2860777607307226012,
@@ -529,11 +1059,22 @@
             "jpText": "じゃない？\n……楽しそー。",
             "enText": "Isn't it?… sounds like fun!",
             "nextBlock": 46,
+            "origClipLength": 61,
             "choices": [
                 {
                     "jpText": "混ざってくる？",
                     "enText": "Will they mix?",
                     "nextBlock": 46
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": -3918622283099319497
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -3197145509077039447
                 }
             ],
             "pathId": 3774954985453074452,
@@ -545,6 +1086,17 @@
             "jpText": "は！？\n行くわけないじゃん。",
             "enText": "Ha! There's no way I'm going.",
             "nextBlock": 47,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -196278649853941606
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 7672486986602766615
+                }
+            ],
             "pathId": -662217406124248597,
             "blockIdx": 46
         },
@@ -554,6 +1106,17 @@
             "jpText": "わー、キレイなお姉ちゃん……！",
             "enText": "Wow, beautiful sister…!",
             "nextBlock": 48,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -6287548020887676727
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 1856548751123167996
+                }
+            ],
             "pathId": 2458829141638278708,
             "blockIdx": 47
         },
@@ -563,6 +1126,17 @@
             "jpText": "！？　いつの間に……！",
             "enText": "! When did you get to…!",
             "nextBlock": 49,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": 5085450583083905505
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -1864876905388775377
+                }
+            ],
             "pathId": 5854964678007439573,
             "blockIdx": 48
         },
@@ -572,6 +1146,17 @@
             "jpText": "お姉ちゃんもいっしょに遊びたいの？\nいいよー！",
             "enText": "Do you want to play together \nwith your sister? Okay!",
             "nextBlock": 50,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": -3193447219295322839
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -7141190924156724693
+                }
+            ],
             "pathId": -6341012539648508553,
             "blockIdx": 49
         },
@@ -581,6 +1166,17 @@
             "jpText": "っ！？\nちょ――",
             "enText": "What? Hey―",
             "nextBlock": 51,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 6293815270308975778
+                },
+                {
+                    "origLen": 66,
+                    "pathId": -7834604635478163567
+                }
+            ],
             "pathId": -844001097192621001,
             "blockIdx": 50
         },
@@ -590,6 +1186,17 @@
             "jpText": "お姉ちゃんが逃げるほうね！\nおれたちぜんぶ鬼！　いくぞー！",
             "enText": "You're the one who's gonna get away! \nWe're all demons! Let's go!",
             "nextBlock": 52,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": 8114597909154384930
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 331597849962900810
+                }
+            ],
             "pathId": 2679564986824229362,
             "blockIdx": 51
         },
@@ -599,6 +1206,21 @@
             "jpText": "は、なにそのルール！？\nちょっ、ヤダってば……！",
             "enText": "What is that rule? Hey, \ndon't do that!…!",
             "nextBlock": 53,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -2939791316989974761
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -6893090319399111620
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -4188960281596735635
+                }
+            ],
             "pathId": 558104304638799140,
             "blockIdx": 52
         },
@@ -608,6 +1230,21 @@
             "jpText": "うおおお、はえー！\nいけいけお前ら、つかまえろー！",
             "enText": "Whoa, ha! Go, go, you guys, grab it!",
             "nextBlock": 54,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 7311788362055722578
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 810993578777481856
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 8072179217271520735
+                }
+            ],
             "pathId": -1824019786222599308,
             "blockIdx": 53
         },
@@ -617,6 +1254,7 @@
             "jpText": "追ってこないでくれる……！？\n……っも～！",
             "enText": "Can you not come after me \n…!… damn it!",
             "nextBlock": 55,
+            "origClipLength": 77,
             "pathId": -7682151682631818353,
             "blockIdx": 54
         },
@@ -626,6 +1264,7 @@
             "jpText": "（カシャッ……）",
             "enText": "(Kashyuck…)",
             "nextBlock": 56,
+            "origClipLength": 55,
             "pathId": 2911893597419069916,
             "blockIdx": 55
         },
@@ -635,6 +1274,7 @@
             "jpText": "こうして、最後に素敵な写真を\r\n撮ることができたのだった。",
             "enText": "Thus, I was able to take a \nnice picture at the end.",
             "nextBlock": 57,
+            "origClipLength": 82,
             "pathId": 9096806765016950836,
             "blockIdx": 56
         },
@@ -644,11 +1284,22 @@
             "jpText": "――じゃあ……。\n送ってくれてありがと。",
             "enText": "―Then please contact us… \nThanks for sending it to me.",
             "nextBlock": 58,
+            "origClipLength": 71,
             "choices": [
                 {
                     "jpText": "気分転換になった？",
                     "enText": "Did you have a change of pace?",
                     "nextBlock": 58
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": -7659468109391598997
+                },
+                {
+                    "origLen": 117,
+                    "pathId": 8006525457141570365
                 }
             ],
             "pathId": -7326940494746414588,
@@ -660,6 +1311,21 @@
             "jpText": "多少は。それで、\nなにが変わるってわけでもないけど……。",
             "enText": "Somewhat. Not that it will \nchange anything…",
             "nextBlock": 59,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 3471264271053604423
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -1974141339964573306
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 4061613361637532667
+                }
+            ],
             "pathId": 5684366658126657222,
             "blockIdx": 58
         },
@@ -669,6 +1335,21 @@
             "jpText": "……でも。",
             "enText": "Also…",
             "nextBlock": 60,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -9081616307102569083
+                },
+                {
+                    "origLen": 33,
+                    "pathId": -3313310458817261451
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -1638777652952085783
+                }
+            ],
             "pathId": 7010205240703164981,
             "blockIdx": 59
         },
@@ -678,11 +1359,26 @@
             "jpText": "どうせなんも変わんないなら、\n『大阪杯』……出ても、いいかもね。",
             "enText": "If nothing will change anyway, it might be a \ngood idea to enter the \"Osaka Cup\"…",
             "nextBlock": 61,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "……！",
                     "enText": "…!",
                     "nextBlock": 61
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -4265556196121185146
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 6902882940891656557
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 4727292264711460432
                 }
             ],
             "pathId": -2342845249995344290,
@@ -694,6 +1390,17 @@
             "jpText": "アンタはどーしても、\n出したいらしいし。",
             "enText": "You seem to want to get \nit out no matter what.",
             "nextBlock": 62,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 4149187617902882978
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -6400172943280387960
+                }
+            ],
             "pathId": -2154406908781162717,
             "blockIdx": 61
         },
@@ -703,6 +1410,17 @@
             "jpText": "アタシもみんなの前で走るなら……\r\n変なこと、したくない。",
             "enText": "If I'm going to run in front of everyone, I \ndon't want to do anything… weird.",
             "nextBlock": 63,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 6934697501878199576
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -284598113379460157
+                }
+            ],
             "pathId": 6519772695868309865,
             "blockIdx": 62
         },
@@ -712,11 +1430,26 @@
             "jpText": "だから……。",
             "enText": "So go to…",
             "nextBlock": 64,
+            "origClipLength": 52,
             "choices": [
                 {
                     "jpText": "今年もトレーニング、頑張ろう！",
                     "enText": "Let's keep up the good work \nthis year, training!",
                     "nextBlock": 64
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 5698255033396236169
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -6485986258704030851
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -5520438153157933126
                 }
             ],
             "pathId": -6037167541562449902,
@@ -728,6 +1461,21 @@
             "jpText": "……そのテンションは、\nマジダルいからやめて。",
             "enText": "… Stop that tension, it's really dull.",
             "nextBlock": 65,
+            "origClipLength": 75,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 4109623872298495950
+                },
+                {
+                    "origLen": 52,
+                    "pathId": 3908215062480803973
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 487344151993133812
+                }
+            ],
             "pathId": -2671847284809385806,
             "blockIdx": 64
         },
@@ -737,6 +1485,17 @@
             "jpText": "でも、今日は……。",
             "enText": "But today, you can visit…",
             "nextBlock": 66,
+            "origClipLength": 56,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": -7396436957497014844
+                },
+                {
+                    "origLen": 67,
+                    "pathId": -3017785727577884791
+                }
+            ],
             "pathId": 6841074668766461539,
             "blockIdx": 65
         },
@@ -746,8 +1505,20 @@
             "jpText": "……やっぱなんでもない。",
             "enText": "… I knew it was nothing.",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -1028581089760059865
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 2601943137058657778
+                }
+            ],
             "pathId": -1312657367297295432,
             "blockIdx": 66
         }
-    ]
+    ],
+    "modified": 1662157582
 }

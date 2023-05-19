@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "JWIUEKD7PYT2ZI4EFAFSAFB3NLLBAQ3M",
+    "version": 5,
+    "bundle": "7KSZ7C3EHR7YWGBDAM23NFCEVXIOJFTF",
     "type": "story",
     "storyId": "501050511",
     "title": "Unknown music",
@@ -11,6 +11,21 @@
             "jpText": "広場を歩いていると……ベンチ脇で\r\n音楽を聴いているナリタタイシンを見かけた。",
             "enText": "Walking around the plaza, I saw Narita Taishin \nlistening to music by the… bench.",
             "nextBlock": 2,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 1489069120353003383
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 1728384653409351187
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -193442449735680121
+                }
+            ],
             "pathId": -4598194137462770706,
             "blockIdx": 1
         },
@@ -20,6 +35,21 @@
             "jpText": "あれ？　こんな曲、ランキングに\r\n入ってたっけ？　――新曲？",
             "enText": "Huh? I don't remember this song being in the \nrankings. ―Is it a new song?",
             "nextBlock": 3,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -5283519382603891609
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -4951436312130703660
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 5211792308377740547
+                }
+            ],
             "pathId": -2247827077513403722,
             "blockIdx": 2
         },
@@ -29,6 +59,21 @@
             "jpText": "ふーん、今はこんなの来てんだ……。",
             "enText": "Hmmm, now here it comes…",
             "nextBlock": 4,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": 378007058323972769
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -8636747204888947898
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -8629871401256047641
+                }
+            ],
             "pathId": -8361931663004170030,
             "blockIdx": 3
         },
@@ -38,6 +83,7 @@
             "jpText": "ん……アンタか。\r\n……何か用？",
             "enText": "Hmm… Anta. What can \nI do for you…?",
             "nextBlock": 5,
+            "origClipLength": 65,
             "choices": [
                 {
                     "jpText": "どんなジャンル聴くんだ？",
@@ -50,6 +96,20 @@
                     "nextBlock": 5
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -5031804716832814063
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -7441333512152011861
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -5470303901805459819
+                }
+            ],
             "pathId": -277716780068733429,
             "blockIdx": 4
         },
@@ -59,6 +119,7 @@
             "jpText": "……テキトー。\r\n流行ってるの、垂れ流してるだけ。",
             "enText": "… Tex. It's trendy, just hanging out.",
             "nextBlock": 6,
+            "origClipLength": 77,
             "choices": [
                 {
                     "jpText": "どんなのが好きなんだ？",
@@ -71,6 +132,16 @@
                     "nextBlock": 6
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 9168335076704739217
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -6557289236907162462
+                }
+            ],
             "pathId": -2326118054102274041,
             "blockIdx": 5
         },
@@ -80,6 +151,17 @@
             "jpText": "……好きなのなんてないし。",
             "enText": "I don't even like…",
             "nextBlock": 7,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 6221876264743700075
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 5268010726432535080
+                }
+            ],
             "pathId": -888936972867241108,
             "blockIdx": 6
         },
@@ -89,6 +171,17 @@
             "jpText": "曲なんて何だって同じでしょ。\r\nただ流れてればいい。",
             "enText": "A song is the same as anything \nelse. It just has to flow.",
             "nextBlock": 8,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": 4946235304996464272
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -174146616670534650
+                }
+            ],
             "pathId": 8156047176719992310,
             "blockIdx": 7
         },
@@ -98,11 +191,22 @@
             "jpText": "違うジャンルのが入れ替わりで。\r\n同じだと飽きるから。",
             "enText": "Different genres are interchangeable. I get \nbored if it's the same.",
             "nextBlock": 9,
+            "origClipLength": 80,
             "choices": [
                 {
                     "jpText": "音楽なんて、なくても構わない？",
                     "enText": "What's wrong with not having music?",
                     "nextBlock": 9
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": -8583102459558836886
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -5092372719780010102
                 }
             ],
             "pathId": 6170512468940245041,
@@ -114,6 +218,17 @@
             "jpText": "それは……違う。\r\n何かは流れてる方がいい。でも……。",
             "enText": "That's… different. Something \nbetter be flowing. But…",
             "nextBlock": 10,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": 7790070891821709191
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 4502849713948734494
+                }
+            ],
             "pathId": -6643591885445200412,
             "blockIdx": 9
         },
@@ -123,6 +238,21 @@
             "jpText": "その何かは、なんでもいい……。",
             "enText": "That something can be anything…",
             "nextBlock": 11,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": 8721700470264485132
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -8643500326285960084
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 889807379391833783
+                }
+            ],
             "pathId": -5385503815196162138,
             "blockIdx": 10
         },
@@ -132,6 +262,21 @@
             "jpText": "――その後、歩きながら\r\nしばらく音楽について話した。",
             "enText": "―Afterwards, we walked around and talked \nabout music for a while.",
             "nextBlock": 12,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": 3181681080531457061
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -5154328260261755657
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 6017385818978865744
+                }
+            ],
             "pathId": -9031969933819290111,
             "blockIdx": 11
         },
@@ -141,6 +286,17 @@
             "jpText": "だから音楽なんて、ただのオトだって。\r\nただのヒマつぶし。",
             "enText": "So music is just a neat thing. \nIt's just killing time.",
             "nextBlock": 13,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -1094980551599382723
+                },
+                {
+                    "origLen": 110,
+                    "pathId": 3037572925306424123
+                }
+            ],
             "pathId": 2997176929239620936,
             "blockIdx": 12
         },
@@ -150,11 +306,22 @@
             "jpText": "別にこんなので気持ち揺れたりしないし。\r\nガキじゃないんだから。",
             "enText": "I don't get swayed by this kind \nof thing. I'm not a kid.",
             "nextBlock": 14,
+            "origClipLength": 86,
             "choices": [
                 {
                     "jpText": "意外に感動することもあるかも？",
                     "enText": "You may be surprised and impressed.",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": -7335355561764994088
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -6071602916288540052
                 }
             ],
             "pathId": -6321962820035051526,
@@ -166,6 +333,17 @@
             "jpText": "は？　夢見すぎでしょ。\r\nそんなことあるわけ……。",
             "enText": "Huh? You're dreaming too much. \nHow is that possible?…",
             "nextBlock": 15,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 1908147851672829516
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -8800223435395594219
+                }
+            ],
             "pathId": -6203538860227569979,
             "blockIdx": 14
         },
@@ -175,6 +353,17 @@
             "jpText": "本当にアタシが感動できるのあるなら\r\n聴かせてよ。たとえば、どんなの？",
             "enText": "If you have something that really moves me, \nlet me hear it. For example, what kind?",
             "nextBlock": 16,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 3803436867502033656
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -8818393471976311321
+                }
+            ],
             "pathId": -5261324025974563626,
             "blockIdx": 15
         },
@@ -184,6 +373,7 @@
             "jpText": "気難しいナリタタイシンの心に\r\n響きそうな音楽といえば……。",
             "enText": "Speaking of music that might resonate \nwith the dour Narita Taishin, you \ncan find it…",
             "nextBlock": 17,
+            "origClipLength": 84,
             "choices": [
                 {
                     "jpText": "生演奏のR&B",
@@ -196,6 +386,16 @@
                     "nextBlock": 41
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 6435062002298423422
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -3234193537754059733
+                }
+            ],
             "pathId": -7815608515972890287,
             "blockIdx": 16
         },
@@ -205,6 +405,17 @@
             "jpText": "生演奏のR&Bって……ライブハウスでって\r\nこと？　そんなの聴いたことないけど……。",
             "enText": "By live R&B, you mean… \nlive music clubs? I've never heard \nof such a thing…",
             "nextBlock": 18,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": -94343604063022319
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -3650601645828707027
+                }
+            ],
             "pathId": 4902296850525394302,
             "blockIdx": 17
         },
@@ -214,6 +425,7 @@
             "jpText": "ライブハウスって人多くない？\r\n人ゴミとかヤなんだけど。",
             "enText": "Aren't there a lot of people at live music \nclubs? I don't want to be in a crowd.",
             "nextBlock": 19,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "静かなところもあるよ",
@@ -226,6 +438,16 @@
                     "nextBlock": 19
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -4287995520983599626
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -2905918927180341073
+                }
+            ],
             "pathId": 8969808671970283083,
             "blockIdx": 18
         },
@@ -235,6 +457,17 @@
             "jpText": "ふーん、じゃあ連れていってよ。\r\n言っとくけど、合わなかったら帰るから。",
             "enText": "Hmmm… take me with you then. I'll tell you \nwhat, if it doesn't fit, I'll leave.",
             "nextBlock": 20,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 3764303362101525113
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 5661690656350456000
+                }
+            ],
             "pathId": 3171175260267023060,
             "blockIdx": 19
         },
@@ -244,6 +477,17 @@
             "jpText": "――こうして、最新のR&Bを流す\r\nライブハウスにやってきた。",
             "enText": "―And so we come to a live music club that \nplays the latest R&B music.",
             "nextBlock": 21,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 115,
+                    "pathId": -7597668617300507712
+                },
+                {
+                    "origLen": 135,
+                    "pathId": 8272558078663890101
+                }
+            ],
             "pathId": -3497688655385852203,
             "blockIdx": 20
         },
@@ -253,6 +497,21 @@
             "jpText": "こ、これは……。",
             "enText": "This is…",
             "nextBlock": 22,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -7161236980984122131
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 5641813444787794351
+                },
+                {
+                    "origLen": 66,
+                    "pathId": -4096887255393497874
+                }
+            ],
             "pathId": 8865323960077630824,
             "blockIdx": 21
         },
@@ -262,6 +521,21 @@
             "jpText": "激しくも優しい耳慣れないUKビートに\r\nナリタタイシンは体を揺らしていた。",
             "enText": "Narita Taishin's body shook to the intense \nyet gentle, unfamiliar UK beat.",
             "nextBlock": 23,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -1129654558441656956
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -1987592460516540944
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -6226941758795347968
+                }
+            ],
             "pathId": -7354669262704611110,
             "blockIdx": 22
         },
@@ -271,11 +545,26 @@
             "jpText": "…………。",
             "enText": "…",
             "nextBlock": 24,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "どうだった？",
                     "enText": "How did it go?",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 12,
+                    "pathId": 2001300969867219535
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -8107864926470150394
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 618434220320746129
                 }
             ],
             "pathId": -1446930203514239369,
@@ -287,6 +576,17 @@
             "jpText": "おかしな感じ……。\r\nうるさいのに耳障りじゃなくて……。",
             "enText": "Funny feeling… It's loud \nand not grating…",
             "nextBlock": 25,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -2459378331658488808
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -5225633959290732134
+                }
+            ],
             "pathId": 7093706019437007500,
             "blockIdx": 24
         },
@@ -296,6 +596,17 @@
             "jpText": "あるんだね。アタシの知らない音楽。",
             "enText": "There are some, aren't there? \nMusic that I don't know.",
             "nextBlock": 26,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 28,
+                    "pathId": -5954167667547455068
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -431081878713651719
+                }
+            ],
             "pathId": 6488931471978622843,
             "blockIdx": 25
         },
@@ -305,6 +616,17 @@
             "jpText": "1つ1つの音がボヤッとしてて、\r\n脚の底から突き上げられるみたいな。",
             "enText": "Each sound is blurred, like being pushed up \nfrom the bottom of the leg.",
             "nextBlock": 27,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": 2575679542409388219
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -3694681227201387241
+                }
+            ],
             "pathId": -6496249919569877085,
             "blockIdx": 26
         },
@@ -314,6 +636,17 @@
             "jpText": "おぉぉぉぉぉい！！！！！\r\nタイシィーーーーン！！！",
             "enText": "Oh, hey. \n！！！！！Taishiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin!",
             "nextBlock": 28,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -1970937279838985213
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8547671756053442018
+                }
+            ],
             "pathId": -3210847750219010825,
             "blockIdx": 27
         },
@@ -323,6 +656,17 @@
             "jpText": "げっ……！",
             "enText": "Geez…!",
             "nextBlock": 29,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": -6283086986013968209
+                },
+                {
+                    "origLen": 66,
+                    "pathId": -8136180216658442730
+                }
+            ],
             "pathId": 8683309613376745716,
             "blockIdx": 28
         },
@@ -332,6 +676,25 @@
             "jpText": "タイシン！　タイシンも来てたのーーッ！？\r\n今のライブぅぅぅぅ！！！！！！",
             "enText": "Taishin! Taishin was there too! \nNow live ahhhhh ！！！！！！",
             "nextBlock": 30,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 4691131992714206220
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -6941423191343254781
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -5518566893646582039
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -6832712400838330679
+                }
+            ],
             "pathId": -2909577727468003296,
             "blockIdx": 29
         },
@@ -341,6 +704,25 @@
             "jpText": "アタシも誘われてさ！！！！！\r\nけど全然わかんなくてさ！！！！！",
             "enText": "I was invited to join ！！！！！But \nI had no idea. ！！！！！",
             "nextBlock": 31,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 862876678838082925
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -6289306507867746109
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6020432038909687040
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 7789886775115890236
+                }
+            ],
             "pathId": 4386451905365133150,
             "blockIdx": 30
         },
@@ -350,6 +732,25 @@
             "jpText": "まあ、わかんないでしょ。\r\nアンタには。",
             "enText": "Well, you never know. You have no idea.",
             "nextBlock": 32,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": 8705120543110762417
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -8763896888740032260
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 7180726267694898475
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 856123517305574113
+                }
+            ],
             "pathId": 2216155273243153196,
             "blockIdx": 31
         },
@@ -359,6 +760,25 @@
             "jpText": "でもさー！！　なんかいいよねー！！\r\nドンツクドンツク、ほぁんほぁんってー！！",
             "enText": "But hey! It's kind of nice! \nDon'tk-don'tk-don'tk-don'tk-don'tk-don'tk-don'tk-don'tk-don'tk!",
             "nextBlock": 33,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 749093043694426804
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -6703097802464108343
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 8305003871964037143
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -2492049546708407620
+                }
+            ],
             "pathId": 5793258360958896663,
             "blockIdx": 32
         },
@@ -368,6 +788,25 @@
             "jpText": "この、うぉぉぉおおおおお！？って感じ、\r\nタイシンにもわかるだろぉぉぉぉ！！？",
             "enText": "This, oh, oh, oh, oh, oh! You know what I'm \ntalking about, Taishin!",
             "nextBlock": 34,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -7646280940587829186
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 9174673811146682425
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 6558679771782985004
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 1512630129099150223
+                }
+            ],
             "pathId": 8996662813993502510,
             "blockIdx": 33
         },
@@ -377,6 +816,25 @@
             "jpText": "うっさい。アタシにはわかる。\r\nでもアンタはわかってない。",
             "enText": "Noooooooo. I understand. But you don't.",
             "nextBlock": 35,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 7960558911430299661
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 4116426063327518039
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 1592908388598961027
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -3095551227026905881
+                }
+            ],
             "pathId": -4800346872555039589,
             "blockIdx": 34
         },
@@ -386,6 +844,29 @@
             "jpText": "――じゃあトレーナー、\r\nアタシ帰るから。",
             "enText": "―Okay, trainer, I'm leaving.",
             "nextBlock": 36,
+            "origClipLength": 72,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -7173447550497003157
+                },
+                {
+                    "origLen": 41,
+                    "pathId": -3281529341061417040
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 7180640663023898584
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -704544280856009400
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 1913698008011926475
+                }
+            ],
             "pathId": 3447850043213633985,
             "blockIdx": 35
         },
@@ -395,6 +876,29 @@
             "jpText": "今日は……来てよかったかも。",
             "enText": "Maybe it's a good thing I \ncame to… today.",
             "nextBlock": 37,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 6904608846252702373
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -3360261403397216676
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 4466244745156579340
+                },
+                {
+                    "origLen": 47,
+                    "pathId": -9092665502439801622
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 7879138169453794898
+                }
+            ],
             "pathId": -1727373735721777799,
             "blockIdx": 36
         },
@@ -404,6 +908,25 @@
             "jpText": "じゃ。",
             "enText": "Well, then.",
             "nextBlock": 38,
+            "origClipLength": 48,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 7385757185170729193
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 8888724092583613285
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -9533312844460109
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -9167292356217550082
+                }
+            ],
             "pathId": -2430623690852092349,
             "blockIdx": 37
         },
@@ -413,6 +936,17 @@
             "jpText": "待って～～～、タイシン！\r\n音楽について熱く語り合おおおおおっ！！",
             "enText": "Wait～, Taishin! Let's talk passionately \nabout music ohhhh!",
             "nextBlock": 39,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 6042351738650964402
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -1858384815378147946
+                }
+            ],
             "pathId": -1239003604079577450,
             "blockIdx": 38
         },
@@ -422,6 +956,17 @@
             "jpText": "うっさい、うっさい！　アンタの声は、\r\nただおっきい！　さっきの音楽と違って。",
             "enText": "Shut up, shut up! Your voice is just \nloud! Unlike the music earlier.",
             "nextBlock": 40,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 7205574155770573299
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -7397753470487189575
+                }
+            ],
             "pathId": -7720993832370791864,
             "blockIdx": 39
         },
@@ -431,6 +976,7 @@
             "jpText": "ナリタタイシンは足早に去っていく。\r\n未知のビートに少し活力をもらったようだ。",
             "enText": "Narita Taishin leaves at a quick \npace. The unknown beat seems to \nhave energized her a bit.",
             "nextBlock": -1,
+            "origClipLength": 95,
             "pathId": 5541278971464849083,
             "blockIdx": 40
         },
@@ -440,6 +986,17 @@
             "jpText": "何それ？　サブカル的なヤツ？\r\nよくわかんないんだけど。",
             "enText": "What's that? The subcultural kind? \nI don't really understand.",
             "nextBlock": 42,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -3330583587504779559
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -6975926484673413271
+                }
+            ],
             "pathId": 4836273173733698330,
             "blockIdx": 41
         },
@@ -449,6 +1006,17 @@
             "jpText": "あ、そういえば今プラネタリウムで\r\nなんか、それ系のイベントやってたよね？",
             "enText": "Oh, by the way, isn't there some \nkind of event like that going on \nat the planetarium right now?",
             "nextBlock": 43,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -4335234524995808855
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 4610287406523772978
+                }
+            ],
             "pathId": -4438667226110490586,
             "blockIdx": 42
         },
@@ -458,11 +1026,22 @@
             "jpText": "『ウチュウからチキュウを見ながら、\r\nポップスを聴こう』みたいなの。",
             "enText": "It's like, \"Let's listen to pop music while \nwatching Chikyuu from Uchu.",
             "nextBlock": 44,
+            "origClipLength": 89,
             "choices": [
                 {
                     "jpText": "行ってみる？",
                     "enText": "Want to go?",
                     "nextBlock": 44
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -707815664789513131
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 8225218468863697956
                 }
             ],
             "pathId": 5829807397985273740,
@@ -474,6 +1053,17 @@
             "jpText": "まあ、のぞいてみてもいいけど。",
             "enText": "Well, you can take a peek.",
             "nextBlock": 45,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": 6117841891473601812
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -8096066259865767527
+                }
+            ],
             "pathId": 330854553092867872,
             "blockIdx": 44
         },
@@ -483,6 +1073,17 @@
             "jpText": "……というわけで、2人で\r\nプラネタリウムにやってきた。",
             "enText": "… So the two of us came \nto the planetarium.",
             "nextBlock": 46,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": -8730594947340212425
+                },
+                {
+                    "origLen": 132,
+                    "pathId": -1212676447610239725
+                }
+            ],
             "pathId": -8672070845995871563,
             "blockIdx": 45
         },
@@ -492,6 +1093,17 @@
             "jpText": "なんか……不思議な歌詞だね。\r\nウタカタ、タマユラ、チリとチエ……。",
             "enText": "It's kind of a… strange lyric. Utakata, \nTamayura, Chiri and Chie…",
             "nextBlock": 47,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -3900950017227853103
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 6096001050305498914
+                }
+            ],
             "pathId": 145889079407622708,
             "blockIdx": 46
         },
@@ -501,6 +1113,7 @@
             "jpText": "悩みも迷いも全てサザナミ……。\r\nそんなもんなのかな、アタシたち……。",
             "enText": "All of our worries and hesitations \nare in Sazanami… That's how \nit is with us, ata…",
             "nextBlock": 48,
+            "origClipLength": 90,
             "pathId": -8026411985829049491,
             "blockIdx": 47
         },
@@ -510,6 +1123,7 @@
             "jpText": "こうしてセカイ系の\r\nミュージック天体ショーは終わった。",
             "enText": "Thus ended the music celestial \nshow of the Sekai System.",
             "nextBlock": 49,
+            "origClipLength": 81,
             "pathId": -4534920465865512566,
             "blockIdx": 48
         },
@@ -519,6 +1133,17 @@
             "jpText": "んー、うまく言えないんだけど、\r\nなんていうか……。",
             "enText": "Well, I don't know how to put it… I don't \nknow what to say…",
             "nextBlock": 50,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 3897941905762845148
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -4143950123946569567
+                }
+            ],
             "pathId": 8415711777893392211,
             "blockIdx": 49
         },
@@ -528,6 +1153,29 @@
             "jpText": "なんだ、君も来ていたのか、タイシン。",
             "enText": "What, you're here too, Taishin.",
             "nextBlock": 51,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 868499610598779077
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 5687081997287173725
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -2121643897912820442
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 8072391664090304925
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 4656336518031779408
+                }
+            ],
             "pathId": -6960530346861886218,
             "blockIdx": 50
         },
@@ -537,6 +1185,29 @@
             "jpText": "ハヤヒデ？　ハヤヒデって\r\nこういうの趣味だっけ？",
             "enText": "Hayahide? Is this Hayahide's hobby?",
             "nextBlock": 52,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": 8808009128756791449
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 853863439302638630
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -8190317622353803733
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -6536173645885600481
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -4515839036287579937
+                }
+            ],
             "pathId": -2915942156568852684,
             "blockIdx": 51
         },
@@ -546,6 +1217,29 @@
             "jpText": "いや、天体研究の一環で来てみたら、\r\nたまたまイベントと重なっただけだ。",
             "enText": "No, I came here as part of my astronomical \nresearch and it just happened to coincide \nwith an event.",
             "nextBlock": 53,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 7489849167320416576
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 5451569121289114983
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 5637290807687539846
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -4870079503973916927
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6911971794105190788
+                }
+            ],
             "pathId": -7788542716274238978,
             "blockIdx": 52
         },
@@ -555,6 +1249,29 @@
             "jpText": "しかし、あの歌詞は論法として、\r\n少しつじつまの合わないところがあったな。",
             "enText": "But the lyrics were a bit \ntangled as an argument.",
             "nextBlock": 54,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": 4057871278870272909
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -9144534681888131439
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8231349442973688589
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 288282628800810819
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 1491118904060295403
+                }
+            ],
             "pathId": -4214967862225848453,
             "blockIdx": 53
         },
@@ -564,6 +1281,25 @@
             "jpText": "宇宙最大の恒星。そこから地球までの距離を\r\n考えると、一瞬でオモイが届くわけが……。",
             "enText": "The largest star in the universe. Considering \nthe distance from there to the Earth, there \nis no way Omoi can reach us in an instant…",
             "nextBlock": 55,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": 5452543232915166457
+                },
+                {
+                    "origLen": 110,
+                    "pathId": 849860406757994821
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -1626853780055442221
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -6817110137638008895
+                }
+            ],
             "pathId": -5042004951389230732,
             "blockIdx": 54
         },
@@ -573,6 +1309,25 @@
             "jpText": "ハヤヒデさ。もう少し\r\nふわっと考えてもよくない？",
             "enText": "Hayahide. Can't you think \na little more loosely?",
             "nextBlock": 56,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": 773307864318021909
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -2344141442616095829
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 6402065815734496676
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -8878124957729063466
+                }
+            ],
             "pathId": -901316383799320999,
             "blockIdx": 55
         },
@@ -582,6 +1337,25 @@
             "jpText": "そんなの感じ方次第だから。アタシたちの\r\n意識が間違ってるのかもしれないし。",
             "enText": "It depends on how you feel. It may be that \nour consciousness is wrong.",
             "nextBlock": 57,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 5063528822666784420
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 3355694509622546557
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 7927692832253596509
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -8659380324886401702
+                }
+            ],
             "pathId": -3423558475742057402,
             "blockIdx": 56
         },
@@ -591,6 +1365,29 @@
             "jpText": "タイシン……。今日はらしくないな。\r\nセンシティヴな君が、ふわっとなんて。",
             "enText": "Taishin… Not like today. \nYou're so sensitiv, so fluffy.",
             "nextBlock": 58,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -5873223128130760891
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -6879301961559697238
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -2447517642079957531
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -8713693643278560305
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -5741237861901880073
+                }
+            ],
             "pathId": 8199144212865603247,
             "blockIdx": 57
         },
@@ -600,6 +1397,29 @@
             "jpText": "信条でも変えたのか？",
             "enText": "Did you change your creed?",
             "nextBlock": 59,
+            "origClipLength": 58,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": 7870699179407924046
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -6379419497884003633
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 4163919434145292725
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -2409820761024976342
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -5030475987777476198
+                }
+            ],
             "pathId": -6029707275799972100,
             "blockIdx": 58
         },
@@ -609,6 +1429,29 @@
             "jpText": "そうでもないけど。\r\nそうだね、これは……多分……。",
             "enText": "Not really. Yes, this is… maybe…",
             "nextBlock": 60,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": -597970651808410479
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -1778733589900476853
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7235058207672862824
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -3145009785977184845
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 681149065433371020
+                }
+            ],
             "pathId": 7930133102537673034,
             "blockIdx": 59
         },
@@ -618,6 +1461,29 @@
             "jpText": "――気分。\r\nただの気分だから。",
             "enText": "―Mood. It's just a mood.",
             "nextBlock": 61,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": 4125258986881405900
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -9180344428142799031
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 2143929788906895856
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 4479039293616991779
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 8116169524175962785
+                }
+            ],
             "pathId": -35233167174866611,
             "blockIdx": 60
         },
@@ -627,8 +1493,32 @@
             "jpText": "最新ポップスの世界観に浸り、\r\nナリタタイシンは、新たなセカイの見方を\n学んだようだ。",
             "enText": "Immersed in the world of the latest pop \nmusic, Narita Taishin seems to have learned \na new way of looking at the world.",
             "nextBlock": -1,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -1613045497517008822
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -6332071209519988677
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -6413319250781013001
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -2833311015532349551
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -4336729923542303771
+                }
+            ],
             "pathId": 5293287643282523815,
             "blockIdx": 61
         }
-    ]
+    ],
+    "modified": 1662157668
 }

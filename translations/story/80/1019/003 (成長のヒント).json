@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "QIVR2HNHZUYHK36KTNGFCRFXXEZUSE6Y",
+    "version": 5,
+    "bundle": "7UM4KSVVBU7GEUWIBMMTQYAC4RYPYBKN",
     "type": "story",
     "storyId": "801019003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nアグネスデジタルが話していた。",
             "enText": "After training, <chrname> and \nAgnes Digital were talking.",
             "nextBlock": -1,
-            "pathId": -2559947880232687181,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 5115812422116584609
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 5105265145174421317
+                }
+            ],
+            "pathId": -2019911339552166954,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674413
 }

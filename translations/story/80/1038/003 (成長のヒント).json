@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "M4QTIOFORMNX4W6CGYUCDKOKGH76ZCAT",
+    "version": 5,
+    "bundle": "5DNQBI5TPNAEPCISQFJSO7GMJD3NTW6I",
     "type": "story",
     "storyId": "801038003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nカレンチャンが話していた。",
             "enText": "After training, <chrname> and \nKaren Chan were talking.",
             "nextBlock": -1,
-            "pathId": -6702491014141112227,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 8057460346732882488
+                },
+                {
+                    "origLen": 125,
+                    "pathId": 8802597393521750459
+                }
+            ],
+            "pathId": -5543000862946065208,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674416
 }

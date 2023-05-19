@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "P72ALRNM5CKN4WKITZ5ZCZVS4JPABFS5",
     "type": "story",
     "storyId": "041020007",
@@ -9,9 +9,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "――明日から夏合宿が始まる。",
-            "enText": "―The summer camp starts tomorrow.",
+            "enText": "The summer training camp begins tomorrow.",
             "nextBlock": 2,
             "origClipLength": 63,
+            "voiceIdx": -1,
             "pathId": 1293794457745488131,
             "blockIdx": 1
         },
@@ -19,19 +20,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "泊まり込みでのトレーニングは、\r\nウマ娘にとって実力を伸ばす絶好のチャンスなのだが……。",
-            "enText": "Overnight training is a great opportunity for Uma Musume to \ndevelop her skills. ……",
+            "enText": "Usually, overnight training presents a great opportunity \nfor Uma Musume to develop their skills, however…",
             "nextBlock": 3,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "pathId": -2358282840401198764,
             "blockIdx": 2
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "海辺で合宿かあ……いいねえ～。",
-            "enText": "A training camp at the beach……… sounds great!",
+            "enText": "The training camp's gonna be by the sea…? \nThat sounds so nice.",
             "nextBlock": 4,
             "origClipLength": 135,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 237,
@@ -43,11 +46,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "磯の匂いに包まれながら海釣りをし、\r\n波音を聞きながらお昼寝をする、と……。",
-            "enText": "You can fish in the ocean, surrounded by the \nsmell of the seashore, and take a nap while \nlistening to the sound of the waves. ……",
+            "enText": "Fishing on the seashore, breathing in the scent of the ocean… \nFalling asleep to the sounds of the waves hitting the shore…",
             "nextBlock": 5,
             "origClipLength": 240,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 279,
@@ -63,11 +67,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "うんうん、これはめいっぱい遊べそうですなあ～♪",
-            "enText": "I'm sure I'll have lots of fun with this!",
+            "enText": "Yup, this is gonna be so much fun ♪",
             "nextBlock": 6,
             "origClipLength": 141,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 141,
@@ -85,9 +90,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "サボる気満々のセイウンスカイが\r\nどうすればトレーニングをしてくれるか、考えに考え――",
-            "enText": "I've been thinking about how to get Seiunsky, who's always ready \nto slack off, to do some training.",
+            "enText": "I've been struggling to figure out how to get that slacker, \nSeiun Sky, to train while we're at the training camp…",
             "nextBlock": 7,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 26,
@@ -101,19 +107,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "……気がついたら、朝になっていた。",
-            "enText": "…… I found myself in the morning.",
+            "enText": "Before I noticed, it was already morning…",
             "nextBlock": 8,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "pathId": -2706508221443667,
             "blockIdx": 7
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "おお～、青い空に青い海！",
-            "enText": "Oh, blue sky and blue sea!",
+            "enText": "Woah, the blue sky and the blue sea!",
             "nextBlock": 9,
             "origClipLength": 136,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 172,
@@ -129,20 +137,21 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "素晴らしい釣り日和ですなー！\r\nこれは、海釣りといくしか――",
-            "enText": "It's a beautiful day for fishing! This \nis the only way to go ocean fishing―",
+            "enText": "It's a wonderful day to go fishing! \nWelp, guess I have no choice but to…",
             "nextBlock": 10,
             "origClipLength": 174,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "今日のトレーニングメニューを見てくれ！",
-                    "enText": "Look at today's training menu!",
+                    "enText": "At least look at the training regimen!",
                     "nextBlock": 10
                 },
                 {
                     "jpText": "今日のトレーニングメニューを見て！",
-                    "enText": "Look at today's training menu!",
+                    "enText": "At least look at the training regimen!",
                     "nextBlock": 10
                 }
             ],
@@ -161,11 +170,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "おっと……やっぱトレーニングしなきゃダメな感じです？",
-            "enText": "Oops……… I guess I need to train?",
+            "enText": "Whoops… Guess we have to \ntrain while we're here, huh?",
             "nextBlock": 11,
             "origClipLength": 181,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 167,
@@ -181,11 +191,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "しょうがないなあもー。\r\n……って、あれ？　もしかしてこれ、特別メニュー？",
-            "enText": "I can't help it. What is ……? Is this a special menu?",
+            "enText": "Welp, guess there's no getting around it… \nHuh? Is this a special training regimen?",
             "nextBlock": 12,
             "origClipLength": 282,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 317,
@@ -201,11 +212,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "なになに……『与えられたヒントを元に、\r\nビーチに隠されたお宝を掘り起こせ』……。",
-            "enText": "What's…… \"Dig up the treasure hidden on \nthe beach based on the clues given.\" ……",
+            "enText": "What is this…? \"Use the clues you are given \nto uncover the treasure hidden in the beach.\"",
             "nextBlock": 13,
             "origClipLength": 260,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 317,
@@ -221,11 +233,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "『制限時間内に全てのお宝を見つけることができれば、\r\n今日から毎日、海の家で好きなもの食べ放題』……？",
-            "enText": "'If you can find all the treasures within the time limit, you can \neat all you want at the beach house every day starting today.' ……?",
+            "enText": "\"If you are able to find all of the treasures \nwithin the specified time limit, you'll be \nallowed to eat as much food as you like from \ntoday until the end of this training camp?”",
             "nextBlock": 14,
             "origClipLength": 296,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 317,
@@ -237,11 +250,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ほほう！　冒険心をくすぐる内容でありながら、\r\nいかに速く走って移動するかが問われるルール！",
-            "enText": "Hohoho! Rules that require you to run and move as fast as you \ncan, despite the adventurous nature of the game!",
+            "enText": "Ohoho! A task filled with adventure, yet the rules \nallow for a test of speed and proper movement!",
             "nextBlock": 15,
             "origClipLength": 234,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 48,
@@ -253,11 +267,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "まさに遊び心とトレーニングの両方を考えてくれている、\r\n素敵なメニューというわけですね。",
-            "enText": "It's a great menu that is both fun and training-oriented.",
+            "enText": "A regimen combining fun and training! \nThis is amazing.",
             "nextBlock": 16,
             "origClipLength": 228,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 255,
@@ -269,11 +284,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "うんうん、これならいいでしょう！\r\nぜひともこちらのトレーニングをやらせていただきます！",
-            "enText": "Yeah yeah yeah, this would be great! I'll \ndefinitely let you do the training here!",
+            "enText": "Yup, I love this! I'm definitely going to \nget some training done while we're here!",
             "nextBlock": 17,
             "origClipLength": 206,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 60,
@@ -291,9 +307,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "入念に準備した甲斐があってか、セイウンスカイは\r\n積極的にトレーニングに取り組んでくれた。ただ――",
-            "enText": "Perhaps the careful preparation was worth it, as Seiunsky \nactively engaged in training. It was just that―",
+            "enText": "The training regimen was well-organized and Seiun Sky seemed to react positively towards it. However…",
             "nextBlock": 18,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -307,9 +324,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "寝不足の体に、真夏の日差しは少し辛い……。\r\n自分が倒れないよう、しっかりしなければ……。",
-            "enText": "The midsummer sun is a little hard on a body that has not been \nsleeping well.…… I have to make sure I don't fall down. ……",
+            "enText": "The midsummer heat was pretty taxing on my \nsleep-deprived body… It took everything in my \npower not to collapse…",
             "nextBlock": 19,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 37,
@@ -321,20 +339,21 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "……おーい、トレーナーさん。\r\nなんかぼんやりしてるけど、大丈夫？",
-            "enText": "…… Hey, trainer. I'm feeling a little fuzzy, are you okay?",
+            "enText": "Oi, Trainer-san… \nYou seem a little out of it, are you okay?",
             "nextBlock": 20,
             "origClipLength": 190,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "大丈夫、トレーニングを続けよう",
-                    "enText": "Don't worry, we'll keep training.",
+                    "enText": "I'm fine, continue with your training.",
                     "nextBlock": 20
                 },
                 {
                     "jpText": "大丈夫、トレーニングを続けて",
-                    "enText": "Don't worry, keep training.",
+                    "enText": "I'm fine, continue with your training.",
                     "nextBlock": 20
                 }
             ],
@@ -351,9 +370,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "次のヒントを伝えると、セイウンスカイが\r\n再びビーチへと駆け出した。それを見ているうち、やがて――",
-            "enText": "I gave her the next clue, and the Sailing Sky ran out onto the \nbeach again. As we watched, it soon became―",
+            "enText": "Seiun Sky ran off as soon as I gave her \nthe next clue. As I watched her run off…",
             "nextBlock": 21,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 58,
@@ -365,21 +385,23 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "えええっ、トレーナーさん……！？",
-            "enText": "Yeah, yeah, trainer, ……!",
+            "enText": "Eh, Trainer-san…!?",
             "nextBlock": 22,
             "origClipLength": 73,
+            "voiceIdx": 13,
             "pathId": 5549627844392729219,
             "blockIdx": 21
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ちょっとちょっと……大丈夫！？",
-            "enText": "Hey hey hey…… okay!",
+            "enText": "Hey… what's the matter!?",
             "nextBlock": 23,
             "origClipLength": 74,
+            "voiceIdx": 14,
             "pathId": 2896052777699023364,
             "blockIdx": 22
         },
@@ -387,9 +409,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "ビーチへ倒れ込み、そのまま意識を失ってしまった……。",
-            "enText": "She collapsed onto the beach and lost \nconsciousness as she fell. ……",
+            "enText": "I fainted on the beach…",
             "nextBlock": 24,
             "origClipLength": 78,
+            "voiceIdx": -1,
             "pathId": -3418086740614879068,
             "blockIdx": 23
         },
@@ -397,9 +420,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "――目が覚めると、\r\n合宿所のソファに寝かされていた。",
-            "enText": "―When I woke up, I was lying on a couch in the camp.",
+            "enText": "When I came to, I found myself \nlying on a sofa in the camp site.",
             "nextBlock": 25,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "pathId": 4812124837496256456,
             "blockIdx": 24
         },
@@ -407,9 +431,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "確か、ビーチでセイウンスカイと\r\nトレーニングをしていたはずだが……。",
-            "enText": "As I recall, she was training with the Sioux Sky on the beach. ……",
+            "enText": "I remember training with Seiun Sky on \nthe beach, but what happened after that…",
             "nextBlock": 26,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "pathId": -7951561303336324568,
             "blockIdx": 25
         },
@@ -417,9 +442,10 @@
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "……ねえねえ、もうすぐ晩ごはんの時間だけど、\r\nセイちゃんまだ帰ってきてないよね？　どこ行ったのかな？",
-            "enText": "…… Hey, hey, it's almost time for dinner, but Say hasn't come \nhome yet, has she? Where did she go?",
+            "enText": "Hey… It's almost time for dinner, but Sei-chan \nstill hasn't returned yet, has she? Where did she go?",
             "nextBlock": 27,
             "origClipLength": 230,
+            "voiceIdx": 15,
             "pathId": -7771453991822957701,
             "blockIdx": 26
         },
@@ -427,9 +453,10 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "えっと、確か『ちょっと浜辺まで釣りに行ってくる～♪』\r\nって出かけていったけど……。",
-            "enText": "Well, as I recall, she said, \"I'm going \nto the beach for a little fishing…\" ……",
+            "enText": "Uhh, I think I heard her say \n\"I'm going to the beach to go fishing ♪\"",
             "nextBlock": 28,
             "origClipLength": 195,
+            "voiceIdx": 16,
             "pathId": -3091848571893537415,
             "blockIdx": 27
         },
@@ -437,9 +464,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "どうやらセイウンスカイはまだ外にいるらしい。\r\n起き上がり、彼女を探しに行くことにした。",
-            "enText": "Apparently, Seiunsky is still out there. \nI got up and decided to go look for her.",
+            "enText": "It seems like Seiun Sky was still out \nso I got up and went to go look for her.",
             "nextBlock": 29,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "pathId": -5369975501942477086,
             "blockIdx": 28
         },
@@ -447,9 +475,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "すると、夜のビーチには1人で走るウマ娘の影があり――",
-            "enText": "Then, there was the shadow of a horse girl \nrunning alone on the beach at night―",
+            "enText": "As I stepped onto the beach, I saw the shadow \nof a lone Uma Musume running on the sand.",
             "nextBlock": 30,
             "origClipLength": 78,
+            "voiceIdx": -1,
             "pathId": -3871857989718608800,
             "blockIdx": 29
         },
@@ -457,9 +486,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ザッザッザッザッ……）",
-            "enText": "(zzzzzzzzzzzz ……)",
+            "enText": "",
             "nextBlock": 31,
             "origClipLength": 60,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 90,
@@ -471,11 +501,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ふぅ～……。\r\n私にしては結構がんばったんじゃないかな。",
-            "enText": "Whew -…… I guess I did pretty well for me.",
+            "enText": "Phew… For me, this is pretty good.",
             "nextBlock": 32,
             "origClipLength": 171,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 221,
@@ -487,11 +518,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "念のため、あと2、3往復くらい――",
-            "enText": "Just to be sure, a couple more round trips or so―",
+            "enText": "But just in case, \nI should do a couple more laps…",
             "nextBlock": 33,
             "origClipLength": 121,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 197,
@@ -507,11 +539,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "――って、うわぁっ……！　トレーナーさん！？",
-            "enText": "― which means, wow, ……! Trainers!",
+            "enText": "Wait, uwah…! \nTrainer-san!?",
             "nextBlock": 34,
             "origClipLength": 80,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 91,
@@ -531,11 +564,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "あー、えっと～……よかったね、目が覚めて。\r\nあのままずーっと寝てたらどうしようかと思ったよ。",
-            "enText": "Oh, um～…… I'm glad you woke up. I don't know what I would have \ndone if I had slept through that whole thing.",
+            "enText": "Ah, umm… Well I'm glad you're awake. I don't \nknow what I would've done if you slept through \nthe whole training session.",
             "nextBlock": 35,
             "origClipLength": 306,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 161,
@@ -547,11 +581,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "まあ、トレーナーさんが休んでくれればその分私も休めるから、\r\nそれはそれでラッキーなんだけど。",
-            "enText": "Well, if the trainer takes a day off, I can take that day off, so \nthat's lucky for me.",
+            "enText": "Well, I guess if you were resting that means I \ncould rest too, so it would've been lucky for me I guess.",
             "nextBlock": 36,
             "origClipLength": 234,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 251,
@@ -563,11 +598,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "今日もあれから、ずいぶんと遊ばせてもらいましたし――",
-            "enText": "I've had a lot of fun since then, and \nI've had a lot of fun since then.",
+            "enText": "I've been enjoying \nmyself while you were asleep.",
             "nextBlock": 37,
             "origClipLength": 135,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 158,
@@ -581,9 +617,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "しかし、そう語るセイウンスカイのジャージには\r\nあちこち砂が付いている。",
-            "enText": "However, as she said so, Seiunsky's \njersey had sand here and there.",
+            "enText": "Yet, as she said this I noticed \nthat her jersey was caked in sand.",
             "nextBlock": 38,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 158,
@@ -595,11 +632,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "――とか言っても、やっぱバレバレだったりします？",
-            "enText": "―Do you think it's still obvious?",
+            "enText": "But I guess even if I say that, \nit's pretty obvious, huh?",
             "nextBlock": 39,
             "origClipLength": 138,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 158,
@@ -615,11 +653,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "まあサボるのが好きなのは事実なんですけども、\r\nそれは時と場合にもよりましてー。",
-            "enText": "Well, it is true that I like to skip \nwork, but it depends on the occasion.",
+            "enText": "While I do prefer slacking off, \nit really depends on the situation.",
             "nextBlock": 40,
             "origClipLength": 219,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 269,
@@ -635,11 +674,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "倒れるまでがんばっちゃうトレーナーさんの気持ちには\r\nさすがに報いたい思いがあるといいますか、なんといいますかー。",
-            "enText": "I am very grateful to the trainer who \nworks hard until she collapses.",
+            "enText": "After all, you worked so hard on my behalf to \nthe point where you collapsed, so I figured you \ndeserved a reward of some sort.",
             "nextBlock": 41,
             "origClipLength": 283,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "ありがとう",
@@ -658,11 +698,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "……おおっ？",
-            "enText": "…… Oh?",
+            "enText": "Oh…?",
             "nextBlock": 42,
             "origClipLength": 29,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 366,
@@ -674,11 +715,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "もしかして、ひょっとするとなんですけど……\r\n今……上がっちゃいました？",
-            "enText": "Maybe, just maybe…… just went up ……?",
+            "enText": "Oh, what's this…? \nCould it be… has it risen once again?",
             "nextBlock": 43,
             "origClipLength": 205,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 233,
@@ -690,11 +732,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "――ぴろりろりろり～～ん♪",
-            "enText": "―Pilooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!",
+            "enText": "Pirorirorirorin ♪",
             "nextBlock": 44,
             "origClipLength": 57,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 48,
@@ -706,11 +749,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "ほら、やっぱり！\r\nトレーナーさんからセイちゃんへの好感度！",
-            "enText": "See, I knew it! The trainer likes you, Sei!",
+            "enText": "Yup, it sure has! Sei-chan's bond rank \nwith her trainer has increased once again!",
             "nextBlock": 45,
             "origClipLength": 149,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 144,
@@ -722,11 +766,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "1人でも真面目にトレーニングしちゃうセイちゃんに対して、\r\n『偉い！』『がんばった！』って思ったでしょ？",
-            "enText": "Sei-chan, who trains diligently even by herself, \nwas told, \"Great job! You must have thought, \n\"Wow! You must have thought, \"Great job!",
+            "enText": "You must be thinking \"wow, to train so \ndiligently while alone, she's so mature and \nworking so hard,\" aren't you?",
             "nextBlock": 46,
             "origClipLength": 224,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 90,
@@ -738,20 +783,21 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "あっ、だとしたら倒れたのももしかして、\r\n私に自主的にトレーニングさせるための策略だったとか……！？",
-            "enText": "Oh, so maybe the collapse was a ploy \nto get me to train voluntarily. ……?",
+            "enText": "Or wait, did you purposefully collapse so that \nyou'd get me to train on my own, voluntarily…!?",
             "nextBlock": 47,
             "origClipLength": 250,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "実はそうかもな？",
-                    "enText": "Actually, maybe you're right?",
+                    "enText": "And if that were the case?",
                     "nextBlock": 47
                 },
                 {
                     "jpText": "実はそうかも？",
-                    "enText": "Actually, maybe it is?",
+                    "enText": "And if that were the case?",
                     "nextBlock": 47
                 }
             ],
@@ -766,11 +812,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "うわぁ～、怖い！\r\n涼しい顔して油断ならないなー、もう！",
-            "enText": "Wow, that's scary! I can't keep my \ncool and be on my guard… Oh my God!",
+            "enText": "Uwah, you're so scary! Despite your calm composure, \nI can't believe I have to be careful around you!",
             "nextBlock": 48,
             "origClipLength": 186,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 191,
@@ -782,20 +829,21 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "……まあ、油断ならないっていう点では、\r\n私たち似た者同士かもしれないけどねー。",
-            "enText": "…… Well, we may be similar in that we are both on our guard!",
+            "enText": "Well maybe that's what connects us… \nThat we can't be too careful around one another.",
             "nextBlock": 49,
             "origClipLength": 212,
+            "voiceIdx": 33,
             "choices": [
                 {
                     "jpText": "そうだな",
-                    "enText": "Right.",
+                    "enText": "I guess you're right.",
                     "nextBlock": 49
                 },
                 {
                     "jpText": "そうだね",
-                    "enText": "Yes, it is.",
+                    "enText": "I guess you're right.",
                     "nextBlock": 49
                 }
             ],
@@ -810,11 +858,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "あははっ、そこ認めちゃう？",
-            "enText": "Haha, you're going to admit that part?",
+            "enText": "Ahaha, so you're admitting \nyou've gotta be careful around me?",
             "nextBlock": 50,
             "origClipLength": 92,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 120,
@@ -830,11 +879,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "それじゃ、これからもトレーナーさんの悪知恵には\r\n期待させてもらわないと。",
-            "enText": "Well, then, we'll have to continue \nto count on your trainer's wiles.",
+            "enText": "Well I'll be waiting for your \nnext cunning trick then, Trainer-san.",
             "nextBlock": 51,
             "origClipLength": 181,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 175,
@@ -846,11 +896,12 @@
         },
         {
             "jpName": "セイウンスカイ",
-            "enName": "",
+            "enName": "Seiun Sky",
             "jpText": "例えば、すごい策略でトゥインクル・シリーズに\r\n波乱を起こしちゃうとか。……な～んてね！",
-            "enText": "For example, you could cause a stir in the Twinkle Series with \nyour amazing scheming. I'll be at ……!",
+            "enText": "Like one that'll cause a stir in the \nTwinkle Series, or something… Just kidding.",
             "nextBlock": 52,
             "origClipLength": 259,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 90,
@@ -864,9 +915,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "冗談めかして言いつつも、\r\nセイウンスカイの瞳には真剣な思いが込められていた。",
-            "enText": "While joking, Seiunsky's eyes were filled with serious thoughts.",
+            "enText": "She said she was joking, but there \nwas a glint of seriousness in her eyes.",
             "nextBlock": -1,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 152,
@@ -877,5 +929,6 @@
             "blockIdx": 52
         }
     ],
-    "modified": 1657208933
+    "modified": 1681655449,
+    "humanTl": true
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "GVGRWCWUKLHQ455G6JPKEBYU54YR3NBI",
+    "version": 5,
+    "bundle": "44QUSBTPPFL24ECG4LLE5OX6AIVHEUA3",
     "type": "story",
     "storyId": "501025730",
     "title": "クレーンゲーム大成功！",
@@ -11,11 +11,26 @@
             "jpText": "こんなにたくさん……ありがとうございます。\r\n……あの部屋に……連れて行きます。",
             "enText": "Thank you for so much… I'll…\ntake you to that room.",
             "nextBlock": 2,
+            "origClipLength": 97,
             "choices": [
                 {
                     "jpText": "あの部屋？",
                     "enText": "That room?",
                     "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 4716916818540661645
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -6750748941528661797
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -1539280877792340766
                 }
             ],
             "pathId": -3302978485944637935,
@@ -27,6 +42,21 @@
             "jpText": "タキオンさんとの共有スペースです……。\r\n……実験されないよう、気をつけないと……。",
             "enText": "This is the space I share with Tachyon.\n… We have to be careful not to get\nexperimented on…",
             "nextBlock": 3,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -4333234123013212831
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -300094173201431594
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -552568340892427806
+                }
+            ],
             "pathId": -3595640416091216691,
             "blockIdx": 2
         },
@@ -36,6 +66,21 @@
             "jpText": "あの……時々、この子たちに\r\n会いにきてください……。",
             "enText": "Um… please come and see these kids\nfrom time to time…",
             "nextBlock": 4,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -6246838292211921629
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 1149827692819543397
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -1129947538734921804
+                }
+            ],
             "pathId": -142907178271581497,
             "blockIdx": 3
         },
@@ -45,6 +90,21 @@
             "jpText": "きっと……トレーナーさんのこと、\r\n“みんな”歓迎してくれます……ふふっ。",
             "enText": "I'm sure… the trainer will welcome you\nwith open arms… Hmmm.",
             "nextBlock": 5,
+            "origClipLength": 93,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 110175063515695155
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -6853374400481320668
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 3053724384341138209
+                }
+            ],
             "pathId": -838835988154785432,
             "blockIdx": 4
         },
@@ -54,8 +114,24 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": -8495196853299202502
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -508292399866057113
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -6959579551515603552
+                }
+            ],
             "pathId": -7583033682781930718,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1661834630
 }

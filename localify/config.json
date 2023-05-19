@@ -3,31 +3,104 @@
     "enableLogger": false,
     "dumpStaticEntries": false,
     "maxFps": -1,
-    "unlockSize": true,
+    "highQuality": false,
+    "enableVSync": false,
+    "unlockSize": false,
     "uiScale": 1.0,
     "extraAssetBundlePath": "localized_data/includes",
     "replaceFont": true,
-    "customFontPath": "assets/UMAMUSUMERodinWanpakuPro-EB-edit.otf",
+    "customFontPath": "assets/RodinWanpakuPro-B-ex.otf",
     "customFontSizeOffset": -3,
     "customFontStyle": 0,
-    "customFontLinespacing": 0.65,
+    "customFontLinespacing": 0.55,
     "replaceAssets": false,
     "assetLoadLog": false,
-    "autoFullscreen": false,
-    "LineBreakHotKey": "u",
     "autoChangeLineBreakMode": true,
-    "resolution_start": [-1, -1],
-    "aspect_ratio": [16.0, 9.0],
-    "dicts": ["localized_data/dynamic.json"],
-    "static_dict": "localized_data/static.json",
+    "LineBreakHotKey": "u",
+    "autoFullscreen": false,
+    "resolution_start": [
+        -1,
+        -1
+    ],
+    "aspect_ratio_new": {
+        "w": 16.0,
+        "h": 9.0
+    },
+    "dicts": [
+        "localized_data\\dynamic.json",
+        "localized_data\\text_data\\uma-profile-tagline.json",
+        "localized_data\\text_data\\4koma-titles.json",
+        "localized_data\\text_data\\tazuna-tips.json",
+        "localized_data\\text_data\\uma-secrets.json",
+        "localized_data\\character_system_text\\tokai_teio.json",
+        "localized_data\\character_system_text\\turbo.json",
+        "localized_data\\character_system_text\\urara.json",
+        "localized_data\\character_system_text\\eishin.json",
+        "localized_data\\character_system_text\\tazuna.json",
+        "localized_data\\character_system_text\\doto.json",
+        "localized_data\\character_system_text\\Rob Roy.json",
+        "localized_data\\character_system_text\\Dober.json",
+        "localized_data\\character_system_text\\Tarumae.json",
+        "localized_data\\character_system_text\\Taishin.json",
+        "localized_data\\character_system_text\\Ardan.json",
+        "localized_data\\character_system_text\\Fine.json",
+        "localized_data\\character_system_text\\grass.json",
+        "localized_data\\character_system_text\\bakushin.json"
+    ],
+    "static_dict": "localized_data\\static.json",
     "no_static_dict_cache": true,
     "text_data_dict": "",
     "character_system_text_dict": "",
     "race_jikkyo_comment_dict": "",
     "race_jikkyo_message_dict": "",
     "stories_path": "",
+    "live": {
+        "free_camera": false,
+        "mouseSpeed": 100.0,
+        "force_changeVisibility_false": false,
+        "moveStep": 0.1,
+        "close_all_blur": false,
+        "setLiveFovAsGlobal": false
+    },
+    "homeSettings": {
+        "free_camera": false
+    },
+    "race_camera": {
+        "free_camera": false,
+        "moveStep": 5,
+        "defaultFOV": 40,
+        "freecam_lookat_target": false,
+        "freecam_follow_target": false,
+        "follow_offset": {
+            "distance": 4,
+            "x": 0,
+            "y": 1,
+            "z": 0
+        }
+    },
+    "replaceHomeStandChar": {
+        "enable": false,
+        "data": [
+            {
+                "origCharId": 1046,
+                "newChrId": 2001,
+                "newClothId": 9
+            }
+        ]
+    },
+    "replaceGlobalChar": {
+        "enable": false,
+        "data": []
+    },
+    "loadDll": [],
+    "raceInfoTab": {
+        "enableRaceInfoTab": false,
+        "raceInfoTabAttachToGame": false
+    },
+    "enableBuiltinAutoUpdate": false,
     "autoUpdate": {
         "source": "",
         "path": ""
-    }
+    },
+    "readRequestPack": false
 }

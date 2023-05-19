@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "JRWZM3VOGXLA3EMRRB67S2DRNZ2D2IGD",
+    "version": 5,
+    "bundle": "PKOWOOV6T5IWGT3WCJDDJZP4KKUCFENF",
     "type": "story",
     "storyId": "801036003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nエアシャカールが話していた。",
             "enText": "After training, <chrname> and \nAir Shakur were talking.",
             "nextBlock": -1,
-            "pathId": -3717608511619171057,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4329787645219664546
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 6667126038225954417
+                }
+            ],
+            "pathId": 507792285227340270,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674415
 }

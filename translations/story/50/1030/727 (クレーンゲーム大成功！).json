@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "RHLBV2362XGQVDXTPUEXWVJRSHHGBN4Z",
+    "version": 5,
+    "bundle": "EE7DJKRILV5YDCFR3JB7W4CSIB6DUMIJ",
     "type": "story",
     "storyId": "501030727",
     "title": "クレーンゲーム大成功！",
@@ -11,6 +11,21 @@
             "jpText": "わぁぁ、こんなにたくさん……！\r\nすごい……っ！",
             "enText": "Wow, so many…! Amazing…!",
             "nextBlock": 2,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 1301124446349862117
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 1802337941865760892
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7541367102456146911
+                }
+            ],
             "pathId": 8976335782668830291,
             "blockIdx": 1
         },
@@ -20,6 +35,21 @@
             "jpText": "ありがとう……。\r\nずっとずっと大事にするからね……！",
             "enText": "Thank you… I'll treasure \nit forever and ever…!",
             "nextBlock": 3,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": -7927734356512932335
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -6967491143512803922
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 8495867847763484973
+                }
+            ],
             "pathId": 4956800592301619012,
             "blockIdx": 2
         },
@@ -29,11 +59,26 @@
             "jpText": "……あ、あのね、お兄さまのおかげで\r\nライス、いますっごく幸せな気持ちだよ。",
             "enText": "… Oh, you know, thanks to you, \nRice feels very happy now.",
             "nextBlock": 4,
+            "origClipLength": 94,
             "choices": [
                 {
                     "jpText": "よかった……！",
                     "enText": "Good…!",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 2105558048598237888
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 2861710538421915815
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 1681297922001107718
                 }
             ],
             "pathId": 6910818750281800299,
@@ -45,11 +90,26 @@
             "jpText": "……あ、あのね、お姉さまのおかげで\r\nライス、いますっごく幸せな気持ちだよ。",
             "enText": "… Oh, you know, thanks to sister, \nRice feels very happy now.",
             "nextBlock": 5,
+            "origClipLength": 94,
             "choices": [
                 {
                     "jpText": "よかった……！",
                     "enText": "Good…!",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -2453316299053164564
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -9217558867742435860
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -1807634442048021342
                 }
             ],
             "pathId": -4828042954405907548,
@@ -61,6 +121,21 @@
             "jpText": "うん！　ライスもいつか同じ気持ちを、\r\nお兄さまに返せたらいいなぁ……えへへ。",
             "enText": "Yeah! I hope Rice can return the same feeling \nto her brother one day…",
             "nextBlock": 6,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": -6285788025400983337
+                },
+                {
+                    "origLen": 107,
+                    "pathId": -5953054202841732709
+                },
+                {
+                    "origLen": 107,
+                    "pathId": -1408388441469165817
+                }
+            ],
             "pathId": -8340255170528073808,
             "blockIdx": 5
         },
@@ -70,6 +145,21 @@
             "jpText": "うん！　ライスもいつか同じ気持ちを、\r\nお姉さまに返せたらいいなぁ……えへへ。",
             "enText": "Yeah! I hope Rice can return the same \nfeeling to her sister one day…",
             "nextBlock": 7,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": 8963301928311824138
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 5612381527541575379
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 161233969807507876
+                }
+            ],
             "pathId": 8043340158488658367,
             "blockIdx": 6
         },
@@ -79,8 +169,20 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": 2261495458746395812
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 6676396562245312688
+                }
+            ],
             "pathId": -1078445105748593374,
             "blockIdx": 7
         }
-    ]
+    ],
+    "modified": 1662157488
 }

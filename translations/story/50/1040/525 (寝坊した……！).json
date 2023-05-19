@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "TQ4E5CM2SGCT3TMVWJ2ZGX2UXKIKWINK",
+    "version": 5,
+    "bundle": "JVFLY2P3FKDK53ZMLUUJUIIKS7DRNQGD",
     "type": "story",
     "storyId": "501040525",
     "title": "寝坊した……！",
@@ -11,6 +11,7 @@
             "jpText": "先日、ゴールドシチーのマネージャーと\r\n予定のすり合わせを行っていたのだが――",
             "enText": "The other day, I was meeting with Gold City's \nmanager to go over our schedule.",
             "nextBlock": 2,
+            "origClipLength": 95,
             "pathId": -2692337341180267103,
             "blockIdx": 1
         },
@@ -20,6 +21,7 @@
             "jpText": "最近のゴールドシチーは、\r\n分単位どころのスケジュールではない。\n恐らく彼女自身の体も……。",
             "enText": "Gold City's schedule these days is \nanything but minute-by-minute. Perhaps \nher own body is too…",
             "nextBlock": 3,
+            "origClipLength": 105,
             "pathId": 2142612342011487705,
             "blockIdx": 2
         },
@@ -29,11 +31,22 @@
             "jpText": "ごめん！　トレーナー、寝坊した！！\r\nマシンの予約時間過ぎたけど、いけるかな！？",
             "enText": "Sorry! Trainer, I overslept! It's \npast my machine appointment time, \nbut I hope I can make it!",
             "nextBlock": 4,
+            "origClipLength": 97,
             "choices": [
                 {
                     "jpText": "とりあえず急ごう！",
                     "enText": "Let's just hurry!",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 3547948485821490493
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -6496604275594049899
                 }
             ],
             "pathId": -5029847051380167457,
@@ -45,6 +58,21 @@
             "jpText": "うん……！",
             "enText": "Yeah…!",
             "nextBlock": 5,
+            "origClipLength": 51,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": 8376714202417958415
+                },
+                {
+                    "origLen": 26,
+                    "pathId": 6514644881852346875
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 8454298211814629167
+                }
+            ],
             "pathId": 4522236565072743127,
             "blockIdx": 4
         },
@@ -54,6 +82,17 @@
             "jpText": "――間に合わなかった、か。\r\n予定表も全部埋まってっし。",
             "enText": "―I didn't make it, huh? The \nschedule is all filled up.",
             "nextBlock": 6,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": -5249841978491345907
+                },
+                {
+                    "origLen": 157,
+                    "pathId": 6142678292381224499
+                }
+            ],
             "pathId": 609713212356186684,
             "blockIdx": 5
         },
@@ -63,11 +102,22 @@
             "jpText": "……ごめん。アタシのせいで\r\nアンタの時間もムダにした。",
             "enText": "… sorry. I'm sorry I \nwasted your time too.",
             "nextBlock": 7,
+            "origClipLength": 81,
             "choices": [
                 {
                     "jpText": "きっと疲れが溜まってたんだよ",
                     "enText": "I'm sure she was just tired.",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -2252049279562883339
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -8669603241676705069
                 }
             ],
             "pathId": 3013912117098332828,
@@ -79,6 +129,17 @@
             "jpText": "でも、できなかったのはアタシでしょ。\r\n仕事も走りも両立させるって決めたのは\nアタシ。",
             "enText": "But it was you who couldn't do it, \nwasn't it? I was the one who decided \nto balance work and running.",
             "nextBlock": 8,
+            "origClipLength": 101,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": -6118632026245298722
+                },
+                {
+                    "origLen": 150,
+                    "pathId": -5807081670409949615
+                }
+            ],
             "pathId": 2042405446814784876,
             "blockIdx": 7
         },
@@ -88,11 +149,26 @@
             "jpText": "なら体調管理できないでどうすんの。\r\n疲れくらいなんとかしろよ、アタシ……！",
             "enText": "Then what if you can't take care of yourself? \nYou should at least do something about your \nfatigue, ata…!",
             "nextBlock": 9,
+            "origClipLength": 94,
             "choices": [
                 {
                     "jpText": "そうやって自分を責めると、尚更疲れるよ",
                     "enText": "Blaming yourself like that \nis even more exhausting.",
                     "nextBlock": 9
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 6140833572572191087
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 3798592058764563162
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -6945159921390109507
                 }
             ],
             "pathId": -1920916717192278817,
@@ -104,11 +180,26 @@
             "jpText": "！　……。",
             "enText": "Oh my god!!! …",
             "nextBlock": 10,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "それに朝休めた分、練習で力を出せる！",
                     "enText": "Plus, the more rest I get in the morning, the \nmore I can push myself in practice!",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -5321566955650016082
+                },
+                {
+                    "origLen": 31,
+                    "pathId": 6391179778270997058
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -6885665139816368625
                 }
             ],
             "pathId": -8940454639635184211,
@@ -120,6 +211,17 @@
             "jpText": "……そうだね。今は後悔してる\r\n時間のほうがもったいないや。",
             "enText": "… I agree. Now I regret it. \nI don't want to waste my time.",
             "nextBlock": 11,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 1957707192202843649
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -6757887126201201528
+                }
+            ],
             "pathId": -207922772028033463,
             "blockIdx": 10
         },
@@ -129,6 +231,17 @@
             "jpText": "っし、切り替えた。トレーナー。\r\n今からできるメニュー、探そ！",
             "enText": "I've switched. Trainer. Let's \nfind a menu we can do now!",
             "nextBlock": 12,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": 5399428856691400453
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -9037235192138507252
+                }
+            ],
             "pathId": 6150384254926924858,
             "blockIdx": 11
         },
@@ -138,8 +251,20 @@
             "jpText": "その後、空いているトレーニング施設を探し、\r\nなんとか1つ確保することができたのだった。",
             "enText": "We then searched for an available training \nfacility and managed to secure one.",
             "nextBlock": -1,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 4264471443377157494
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 5178676350380582630
+                }
+            ],
             "pathId": 7739901038704085347,
             "blockIdx": 12
         }
-    ]
+    ],
+    "modified": 1662157589
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "WU4X25SARRO67BWRSQKJ4KDJBTYOJNTZ",
+    "version": 5,
+    "bundle": "HV2V32FR77QTOCS2YTZJWTVY4IBAKIRT",
     "type": "story",
     "storyId": "501050731",
     "title": "クレーンゲーム成功！",
@@ -11,7 +11,18 @@
             "jpText": "ふーん、ホントに取れるとは\r\n思わなかった。",
             "enText": "Hmmm, I didn't think I could really get it.",
             "nextBlock": 2,
-            "pathId": -6113875919848123920,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": -3015270693690602510
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 7839391213230127465
+                }
+            ],
+            "pathId": 5335335001486624790,
             "blockIdx": 1
         },
         {
@@ -20,7 +31,22 @@
             "jpText": "つか、いらないって言ってんのに、\r\n押しつけてくるし。",
             "enText": "I told them I didn't want it, but \nthey kept pushing it on me.",
             "nextBlock": 3,
-            "pathId": 3524351126429226278,
+            "origClipLength": 80,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -8534226509971117142
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 8883281410133154792
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 3344015830879296771
+                }
+            ],
+            "pathId": 7259308147823883617,
             "blockIdx": 2
         },
         {
@@ -29,7 +55,22 @@
             "jpText": "……言っとくけど、バッグにはつけないから。\r\nそれでもいいなら、もらっとく。",
             "enText": "… I'll tell you, I won't wear it on my \nbag. If you still want it, I'll take it.",
             "nextBlock": 4,
-            "pathId": -9147174176832194960,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 198,
+                    "pathId": 1152101708580473779
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -4427338801499982417
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -9026987627185158467
+                }
+            ],
+            "pathId": -5931036076175508945,
             "blockIdx": 3
         },
         {
@@ -38,8 +79,24 @@
             "jpText": "――それなりの結果だった！",
             "enText": "―a reasonable result!",
             "nextBlock": -1,
-            "pathId": -1899089914434917282,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -2301338223292943906
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -8495108768414866586
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 7250526492254622724
+                }
+            ],
+            "pathId": -7625773999382756829,
             "blockIdx": 4
         }
-    ]
+    ],
+    "modified": 1662157673
 }

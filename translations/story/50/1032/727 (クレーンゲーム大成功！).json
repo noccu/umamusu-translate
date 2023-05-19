@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "H3TS7BA2R6OWP3CLDPQOSNCLDZPRT2LJ",
+    "version": 5,
+    "bundle": "OV6VFHUEZSD3HSFLWLKDWET4H2UGTYPG",
     "type": "story",
     "storyId": "501032727",
     "title": "クレーンゲーム大成功！",
@@ -11,6 +11,17 @@
             "jpText": "予想を遥かに超える成果じゃないか！\r\nしかもこの数のぬいぐるみ、\n実験材料としても使えそうだ！",
             "enText": "This is far more than I expected!\nAnd this many stuffed animals could\nbe used for experiments!",
             "nextBlock": 2,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": -5248557630310852456
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -5583325817372831448
+                }
+            ],
             "pathId": -8359065723600695968,
             "blockIdx": 1
         },
@@ -20,11 +31,26 @@
             "jpText": "例えば各ウマ娘の特性を備えたAIをのせて\r\n駆動機関を組み込み、卓上で模擬レースを\n行えば本番のシミュレーションになりうる。",
             "enText": "For example, an AI with the\ncharacteristics of each Uma Musume could\nbe installed and driven, and a simulated\nrace could be run on a tabletop to\nsimulate the real thing.",
             "nextBlock": 3,
+            "origClipLength": 125,
             "choices": [
                 {
                     "jpText": "かわいそうに……",
                     "enText": "Poor thing…",
                     "nextBlock": 3
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -5095596840898299997
+                },
+                {
+                    "origLen": 140,
+                    "pathId": 5395537713956924435
+                },
+                {
+                    "origLen": 141,
+                    "pathId": 2116853563038699941
                 }
             ],
             "pathId": -9197495587505863966,
@@ -36,6 +62,21 @@
             "jpText": "トレーナー君は無機物に同情しているのかい！\r\nやっぱり君は興味深いモルモットだよ！",
             "enText": "Trainer, you have sympathy for\ninorganic matter! You're still\nan interesting guinea pig!",
             "nextBlock": 4,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -4983024053200634112
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 6870451645983750705
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 5143687828937712936
+                }
+            ],
             "pathId": 285042441894257477,
             "blockIdx": 3
         },
@@ -45,6 +86,17 @@
             "jpText": "ぬいぐるみは飾っておこう！　その代わり、\r\n君の感情の揺れをとことん研究させてくれ！",
             "enText": "I'll keep the stuffed animals on\ndisplay! Instead, let me study your\nemotional turmoil from the inside out!",
             "nextBlock": 5,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": -5486143563253529687
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -4751220244445448558
+                }
+            ],
             "pathId": -7655774343123755388,
             "blockIdx": 4
         },
@@ -54,8 +106,20 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": -7544205560025328734
+                },
+                {
+                    "origLen": 126,
+                    "pathId": -6718261089351414684
+                }
+            ],
             "pathId": 5941208143565977818,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1662157501
 }

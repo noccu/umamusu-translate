@@ -1,18 +1,19 @@
 {
-    "version": 5,
-    "bundle": "7GAR2S7L6QELNBXEZJNLH4DKIQI3P4GK",
+    "version": 6,
+    "bundle": "7UXF7PRS5RIXBD42RMZOBVXRCL6FRMAU",
     "type": "story",
     "storyId": "041031005",
     "title": "ばたばた！お部屋掃除",
     "text": [
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "季節は初夏となり、\r\nアイネスフウジンとの二人三脚にも少しずつ慣れてきた。",
             "enText": "It is now early summer, and I am gradually getting used to the \ntripod with Aines Foujin.",
             "nextBlock": 2,
             "origClipLength": 93,
-            "pathId": -800763632547517375,
+            "voiceIdx": -1,
+            "pathId": 4390521650005858974,
             "blockIdx": 1
         },
         {
@@ -21,7 +22,8 @@
             "jpText": "はあああああっ！！",
             "enText": "Haaaaah!",
             "nextBlock": 3,
-            "origClipLength": 98,
+            "origClipLength": 69,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "いいぞ！その調子！",
@@ -36,11 +38,11 @@
             ],
             "animData": [
                 {
-                    "origLen": 151,
-                    "pathId": -2014255137672643937
+                    "origLen": 152,
+                    "pathId": 6017727289451257746
                 }
             ],
-            "pathId": -8046873046621185371,
+            "pathId": -6831973138243200677,
             "blockIdx": 2
         },
         {
@@ -49,18 +51,19 @@
             "jpText": "まだまだ！\r\nお姉ちゃんの底力、見せてあげるのっ！！",
             "enText": "Not yet! I'll show you my sister's bottom line!",
             "nextBlock": 4,
-            "origClipLength": 140,
+            "origClipLength": 142,
+            "voiceIdx": 1,
             "animData": [
                 {
-                    "origLen": 45,
-                    "pathId": 600634379915120616
+                    "origLen": 75,
+                    "pathId": 117391290788201068
                 },
                 {
                     "origLen": 20,
-                    "pathId": -4821970533931506248
+                    "pathId": -6211369528727203461
                 }
             ],
-            "pathId": -1287630390455552252,
+            "pathId": -3232030463540762265,
             "blockIdx": 3
         },
         {
@@ -69,7 +72,8 @@
             "jpText": "タイムは変わらずかぁ……。\r\n仕掛けるタイミング、ちょっと遅かったかも。",
             "enText": "I guess the time didn't change. ...... Maybe \nI was a little late in setting up.",
             "nextBlock": 5,
-            "origClipLength": 184,
+            "origClipLength": 198,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "もう1回走ってみるか？",
@@ -84,11 +88,11 @@
             ],
             "animData": [
                 {
-                    "origLen": 97,
-                    "pathId": -2449850339119701887
+                    "origLen": 116,
+                    "pathId": -5117602654756760510
                 }
             ],
-            "pathId": 4051367332377745017,
+            "pathId": -3468560775961482357,
             "blockIdx": 4
         },
         {
@@ -97,18 +101,19 @@
             "jpText": "いいのっ！？",
             "enText": "It's okay!",
             "nextBlock": 6,
-            "origClipLength": 42,
+            "origClipLength": 46,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 60,
-                    "pathId": -2561160662187758058
+                    "pathId": 2049387290931328095
                 },
                 {
                     "origLen": 61,
-                    "pathId": -4166628788972129089
+                    "pathId": 1609718795866919484
                 }
             ],
-            "pathId": -1362945603512716845,
+            "pathId": 5698786855650828573,
             "blockIdx": 5
         },
         {
@@ -117,18 +122,19 @@
             "jpText": "あ、けど……うーん、やっぱやめとくの。",
             "enText": "Oh, but ...... hmmm, I'm not going to do it.",
             "nextBlock": 7,
-            "origClipLength": 186,
+            "origClipLength": 164,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 101,
-                    "pathId": 8270004113211508441
+                    "pathId": 1356598218850876302
                 },
                 {
                     "origLen": 20,
-                    "pathId": -2946071424095981576
+                    "pathId": -5841362863304075603
                 }
             ],
-            "pathId": -8979779566630296972,
+            "pathId": -9177659966478164004,
             "blockIdx": 6
         },
         {
@@ -137,18 +143,19 @@
             "jpText": "そろそろ終了時間だし、やることもあるし……\r\nうん！　また明日がんばればいいの！",
             "enText": "It's almost time to finish and I have some work to do: ...... \nYeah!　I'll try again tomorrow!",
             "nextBlock": 8,
-            "origClipLength": 222,
+            "origClipLength": 255,
+            "voiceIdx": 5,
             "animData": [
                 {
-                    "origLen": 75,
-                    "pathId": -8921475720370805314
+                    "origLen": 90,
+                    "pathId": 2354854249744805037
                 },
                 {
                     "origLen": 19,
-                    "pathId": -5561058296711559726
+                    "pathId": -5062492007688782742
                 }
             ],
-            "pathId": 223063858263374494,
+            "pathId": -7010384800880677627,
             "blockIdx": 7
         },
         {
@@ -157,40 +164,43 @@
             "jpText": "それじゃ、器具の片づけしておくね～。\r\nお疲れ様、トレーナー！",
             "enText": "I'll put away the equipment then! Good job, trainer!",
             "nextBlock": 9,
-            "origClipLength": 145,
+            "origClipLength": 157,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 89,
-                    "pathId": 2676143046629588228
+                    "pathId": 2130687589940178031
                 }
             ],
-            "pathId": -5554132636157818405,
+            "pathId": 3564730788786956375,
             "blockIdx": 8
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "……と、爽やかに送り出されたが、\r\nトレーニングを続けなくて本当によかったのだろうか？",
             "enText": "Sent off briskly to ......, was it really a good thing I didn't \ncontinue my training?",
             "nextBlock": 10,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 14,
-                    "pathId": -6769359243229349250
+                    "pathId": -7196234760412162072
                 }
             ],
-            "pathId": -8367310007413713286,
+            "pathId": 4396709529863375408,
             "blockIdx": 9
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "気のせいでなければ、彼女はまだ走りたそうに見えた。\r\nそれよりも優先しなければならないこととは一体――",
             "enText": "If it wasn't my imagination, she still looked like she wanted to \nrun. What could possibly be a higher priority than that--",
             "nextBlock": 11,
             "origClipLength": 111,
-            "pathId": 7766976259721282694,
+            "voiceIdx": -1,
+            "pathId": -1436738016885115440,
             "blockIdx": 10
         },
         {
@@ -199,7 +209,8 @@
             "jpText": "あれっ？\r\nもう帰ってるかと思ってたの。",
             "enText": "Huh? I thought you'd be home by now.",
             "nextBlock": 12,
-            "origClipLength": 122,
+            "origClipLength": 104,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "ちょっと仕事をしていこうかと思って",
@@ -210,14 +221,14 @@
             "animData": [
                 {
                     "origLen": 150,
-                    "pathId": 6589030081868930468
+                    "pathId": 5723482619415111413
                 },
                 {
                     "origLen": 20,
-                    "pathId": -6923895076605758450
+                    "pathId": 4223986002383733411
                 }
             ],
-            "pathId": -3473011249191968390,
+            "pathId": -1253670234400374875,
             "blockIdx": 11
         },
         {
@@ -226,38 +237,40 @@
             "jpText": "そっか、じゃあ机周りは後でお片づけするとして～……。",
             "enText": "I see, well, I'll clean up around the desk later - .......",
             "nextBlock": 13,
-            "origClipLength": 181,
+            "origClipLength": 175,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 108,
-                    "pathId": -2657407452049495429
+                    "pathId": 5436923521839070312
                 },
                 {
                     "origLen": 20,
-                    "pathId": -8307392200519760787
+                    "pathId": 4314396228531499980
                 }
             ],
-            "pathId": 7608516652276544417,
+            "pathId": -958539460721807012,
             "blockIdx": 12
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "言うが早いか、アイネスフウジンは慣れた手つきで\r\nトレーナー室の掃除を始めた。",
             "enText": "Aines Foujin began to clean the trainer's \nroom with a familiar hand.",
             "nextBlock": 14,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 102,
-                    "pathId": 2118794931232498842
+                    "pathId": -2314766125712683119
                 },
                 {
                     "origLen": 20,
-                    "pathId": -555353363497681682
+                    "pathId": -8520638877804938007
                 }
             ],
-            "pathId": -1861235967141605567,
+            "pathId": -3466607386009788419,
             "blockIdx": 13
         },
         {
@@ -267,7 +280,8 @@
             "enText": "Oh, I'm about to run out of copy paper! I'll have to stop by the \nclerk's office on my way home.",
             "nextBlock": 15,
             "origClipLength": 269,
-            "pathId": 1721109170026446099,
+            "voiceIdx": 9,
+            "pathId": 7084078034160039035,
             "blockIdx": 14
         },
         {
@@ -276,27 +290,29 @@
             "jpText": "あらら、もうホコリ溜まっちゃってるの～。\r\nフキフキっと♪",
             "enText": "Oh my, it's already gathering dust! Blow, blow, blow...",
             "nextBlock": 16,
-            "origClipLength": 152,
+            "origClipLength": 166,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 102,
-                    "pathId": -7448403287306077719
+                    "pathId": 6748849510973866366
                 },
                 {
                     "origLen": 20,
-                    "pathId": 721314887259264030
+                    "pathId": -7313508994484583336
                 }
             ],
-            "pathId": 1836638830237352980,
+            "pathId": -1179612195183750232,
             "blockIdx": 15
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "振り返ってみれば、トレーナー室はいつも綺麗で、\r\n消耗品にも困らなかった。",
             "enText": "In retrospect, the trainer's room was always clean, and we never \nhad to worry about consumables.",
             "nextBlock": 17,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "君がいつも手入れしてくれてたのか！？",
@@ -312,10 +328,10 @@
             "animData": [
                 {
                     "origLen": 60,
-                    "pathId": 4695194689115358795
+                    "pathId": 1796034611532798538
                 }
             ],
-            "pathId": 8655956129555698910,
+            "pathId": -2983861373866656449,
             "blockIdx": 16
         },
         {
@@ -324,27 +340,29 @@
             "jpText": "だって～散らかってると気になっちゃうんだもん！\r\n共用スペースは綺麗にしてたいでしょ？",
             "enText": "Because - clutter bothers me! You want to \nkeep the common space clean, don't you?",
             "nextBlock": 18,
-            "origClipLength": 182,
+            "origClipLength": 201,
+            "voiceIdx": 11,
             "animData": [
                 {
-                    "origLen": 60,
-                    "pathId": -7038340688366986961
+                    "origLen": 103,
+                    "pathId": -549353317327577482
                 },
                 {
-                    "origLen": 135,
-                    "pathId": -6798423077025036515
+                    "origLen": 112,
+                    "pathId": -7183195612749776618
                 }
             ],
-            "pathId": -7903236765045553492,
+            "pathId": 4940923409137354086,
             "blockIdx": 17
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "彼女の厚意はありがたいが、トレーナーとしては\r\n部屋の手入れよりもトレーニングを優先してほしい。",
             "enText": "I appreciate her graciousness, but as a trainer, I would prefer \nher to prioritize training over room maintenance.",
             "nextBlock": 19,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "ごめん、これからは俺がやるよ！",
@@ -360,14 +378,14 @@
             "animData": [
                 {
                     "origLen": 159,
-                    "pathId": -1508975222508106088
+                    "pathId": -1080052417321878872
                 },
                 {
                     "origLen": 20,
-                    "pathId": 1372798389458650996
+                    "pathId": 362846628400003376
                 }
             ],
-            "pathId": -3150531606365151594,
+            "pathId": -3582420204468360308,
             "blockIdx": 18
         },
         {
@@ -376,7 +394,8 @@
             "jpText": "俺がって……トレーナーが1人で？\r\n手伝わなくても大丈夫？？",
             "enText": "I mean, ...... trainer by himself? Without help?",
             "nextBlock": 20,
-            "origClipLength": 190,
+            "origClipLength": 231,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "ああ、君の走れる時間を増やしたいから",
@@ -391,11 +410,11 @@
             ],
             "animData": [
                 {
-                    "origLen": 50,
-                    "pathId": -3267847250611781276
+                    "origLen": 83,
+                    "pathId": 1482547693451221238
                 }
             ],
-            "pathId": 3417689909130473644,
+            "pathId": -1287610351066171190,
             "blockIdx": 19
         },
         {
@@ -404,7 +423,8 @@
             "jpText": "私がって……トレーナーが1人で？\r\n手伝わなくても大丈夫？？",
             "enText": "I mean, ...... trainer by himself? Can I do this without help?",
             "nextBlock": 21,
-            "origClipLength": 190,
+            "origClipLength": 244,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "ああ、君の走れる時間を増やしたいから",
@@ -419,11 +439,11 @@
             ],
             "animData": [
                 {
-                    "origLen": 50,
-                    "pathId": 5153467666170391704
+                    "origLen": 87,
+                    "pathId": 560840939364770380
                 }
             ],
-            "pathId": -4598996613754341184,
+            "pathId": -2063531046220446625,
             "blockIdx": 20
         },
         {
@@ -432,30 +452,32 @@
             "jpText": "そう？\r\nじゃあ、お手並み拝見なの♪",
             "enText": "Really? Well, let's see how you do.",
             "nextBlock": 22,
-            "origClipLength": 134,
+            "origClipLength": 145,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 90,
-                    "pathId": 6488440281218525932
+                    "pathId": -3307802952194553059
                 }
             ],
-            "pathId": 5994850939883787336,
+            "pathId": 7134179245109280112,
             "blockIdx": 21
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "そして、気合いを入れて掃除に取り組もうとしたものの――",
             "enText": "And while I was fired up and ready to tackle the cleaning--",
             "nextBlock": 23,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
-                    "origLen": 168,
-                    "pathId": -5968281756461789794
+                    "origLen": 205,
+                    "pathId": -9125511074591839133
                 }
             ],
-            "pathId": 5050395371987563638,
+            "pathId": 8480725455640469962,
             "blockIdx": 22
         },
         {
@@ -464,18 +486,19 @@
             "jpText": "あ、雑巾はあっちだよ！\r\n箒とちりとりは向こう。部屋の隅に立てかけてあるの！",
             "enText": "Oh, the dustpan is over there! The broom and dustpan are over \nthere. They're propped up in the corner of the room!",
             "nextBlock": 24,
-            "origClipLength": 192,
+            "origClipLength": 206,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 48,
-                    "pathId": -6415873774792169400
+                    "pathId": -8975438543698575318
                 },
                 {
                     "origLen": 20,
-                    "pathId": -2760907042178637601
+                    "pathId": 1447088772960006055
                 }
             ],
-            "pathId": -3241707574469447348,
+            "pathId": -4776372249137148411,
             "blockIdx": 23
         },
         {
@@ -484,18 +507,19 @@
             "jpText": "それはこっちの棚！\r\nバラバラにしたらまずいからまとめてね～。",
             "enText": "That's the shelf over here! It's not good to \ntake them apart, so put them together!",
             "nextBlock": 25,
-            "origClipLength": 138,
+            "origClipLength": 142,
+            "voiceIdx": 15,
             "animData": [
                 {
-                    "origLen": 50,
-                    "pathId": 8899360288028745559
+                    "origLen": 67,
+                    "pathId": -3148218103681257287
                 },
                 {
                     "origLen": 20,
-                    "pathId": 5751284344722890493
+                    "pathId": -5124642505956232926
                 }
             ],
-            "pathId": 676777459907029825,
+            "pathId": 7659997488991920853,
             "blockIdx": 24
         },
         {
@@ -504,7 +528,8 @@
             "jpText": "その備品なら、向こうに予備がおいてあるの。\r\nなくなったら事務員さんに言えばオッケーなの！",
             "enText": "There is a spare set of that equipment over there. If you run \nout, just ask the clerk and you're all set!",
             "nextBlock": 26,
-            "origClipLength": 194,
+            "origClipLength": 204,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "お、思ったより大変だ……！",
@@ -519,11 +544,15 @@
             ],
             "animData": [
                 {
-                    "origLen": 64,
-                    "pathId": 4197514203388002204
+                    "origLen": 127,
+                    "pathId": 7200027565944576725
+                },
+                {
+                    "origLen": 27,
+                    "pathId": -1028188193602935949
                 }
             ],
-            "pathId": -2906871363649321695,
+            "pathId": -142841921774556760,
             "blockIdx": 25
         },
         {
@@ -532,27 +561,29 @@
             "jpText": "ふふっ、がんばれがんばれ～♪",
             "enText": "Phew, go for it, go for it~♪",
             "nextBlock": 27,
-            "origClipLength": 103,
+            "origClipLength": 84,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 79,
-                    "pathId": 9021476428315495074
+                    "pathId": -3806600515963809461
                 },
                 {
                     "origLen": 122,
-                    "pathId": 6797008620114346677
+                    "pathId": 3823173842753206286
                 }
             ],
-            "pathId": 1700979999085469521,
+            "pathId": -702675936074003142,
             "blockIdx": 26
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "こうして、アイネスフウジンの助言を受けつつ、\r\nひと通りの作業を終えたのだが――",
             "enText": "Thus, with the advice of Aines Fuzin, \nI completed the entire process.",
             "nextBlock": 28,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "結局ほぼアイネスに頼ってしまった……！！",
@@ -563,14 +594,14 @@
             "animData": [
                 {
                     "origLen": 132,
-                    "pathId": 3730772895211938632
+                    "pathId": 6789820221528865786
                 },
                 {
                     "origLen": 16,
-                    "pathId": -5430550907240366835
+                    "pathId": -2104257669084342458
                 }
             ],
-            "pathId": -6682601803117141070,
+            "pathId": 5988182180296913284,
             "blockIdx": 27
         },
         {
@@ -579,23 +610,25 @@
             "jpText": "ふっふっふ、恐れ入ったか♪\r\nこれが家で鍛えたお姉ちゃんパワーなの！",
             "enText": "Pfft, you're afraid of me... This is the \npower of a house-trained big sister!",
             "nextBlock": 29,
-            "origClipLength": 201,
+            "origClipLength": 251,
+            "voiceIdx": 18,
             "animData": [
                 {
-                    "origLen": 50,
-                    "pathId": 6372181876463895149
+                    "origLen": 103,
+                    "pathId": -5369465327074064578
                 }
             ],
-            "pathId": -5867956790273690770,
+            "pathId": 4894834545050479232,
             "blockIdx": 28
         },
         {
             "jpName": "アイネスフウジン",
             "enName": "",
-            "jpText": "っていうか、任せっぱなしはやっぱ悪いし、2人でやろうよ？\r\nここ、キミとあたしの共同スペースなんだし。",
+            "jpText": "っていうか、任せっぱなしはやっぱ悪いし、2人でやろうよ？\r\nここ、キミとあたしの共用スペースなんだし。",
             "enText": "I mean, it's not right to leave it to me, so why don't we do it \ntogether? This is a shared space between you and me.",
             "nextBlock": 30,
-            "origClipLength": 264,
+            "origClipLength": 273,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "はい……",
@@ -605,11 +638,15 @@
             ],
             "animData": [
                 {
-                    "origLen": 168,
-                    "pathId": -9163379980982227613
+                    "origLen": 223,
+                    "pathId": -3068825879568056742
+                },
+                {
+                    "origLen": 141,
+                    "pathId": -21964724133509369
                 }
             ],
-            "pathId": 8406309242874631530,
+            "pathId": -17737331035567374,
             "blockIdx": 29
         },
         {
@@ -618,47 +655,55 @@
             "jpText": "もー、しょげないの！\r\nお茶淹れといたから一緒に飲も？",
             "enText": "Oh, my God, don't be so sad! I made you some tea.",
             "nextBlock": 31,
-            "origClipLength": 141,
+            "origClipLength": 171,
+            "voiceIdx": 20,
             "animData": [
                 {
-                    "origLen": 63,
-                    "pathId": -1246478582508298911
+                    "origLen": 73,
+                    "pathId": -6364089383559734943
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4444200862512123179
                 }
             ],
-            "pathId": 2509078148856359831,
+            "pathId": 8340524535243347800,
             "blockIdx": 30
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "アイネスフウジンを助けるつもりが、\r\n結局、姉に助けられる弟のような状況になってしまったのだった。",
             "enText": "He had intended to help Ainess Foujin, but ended \nup in a situation where he was like a younger brother \nbeing rescued by his older sister.",
-            "nextBlock": -1,
+            "nextBlock": 32,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 22,
-                    "pathId": -1625641167096110754
+                    "pathId": 7366635808722004856
                 }
             ],
-            "pathId": 1410479635047344346,
+            "pathId": -2092135725101939718,
             "blockIdx": 31
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "アイネスフウジンを助けるつもりが、\r\n結局、姉に助けられる妹のような状況になってしまったのだった。",
             "enText": "She had intended to help Ainezhujin, but ended up being like a \nlittle sister being saved by a big sister.",
             "nextBlock": -1,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 22,
-                    "pathId": 2408813156459007388
+                    "pathId": -1326674645116132684
                 }
             ],
-            "pathId": -1232015828662845592,
+            "pathId": -6117628457058989233,
             "blockIdx": 32
         }
-    ]
+    ],
+    "modified": 1673332983
 }

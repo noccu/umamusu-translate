@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "F5TWCIGB2VDSEM4VOXEXAU23ZLCACNVK",
+    "version": 6,
+    "bundle": "ZFHEMMLXGY2W7DJKH6O22NE7TRX3ND4N",
     "type": "story",
     "storyId": "041059001",
     "title": "きらり、パーティクル",
@@ -9,9 +9,11 @@
             "jpName": "",
             "enName": "",
             "jpText": "新人トレーナーとしてトレセン学園の門を叩いてからしばらく。\r\n今日からいよいよ、新しい日々が始まる……！",
-            "enText": "It's been a bit since I came knocking on the gates of Tracen \nAcademy. Today, finally, my new lifestyle begins…!",
+            "enText": "It's been a bit since I came knocking on the gates of Tracen \nAcademy. Today, finally, my new lifestyle begins……!",
             "nextBlock": 2,
-            "pathId": 8306527844430217697,
+            "origClipLength": 112,
+            "voiceIdx": -1,
+            "pathId": 6438712936084431560,
             "blockIdx": 1
         },
         {
@@ -20,15 +22,19 @@
             "jpText": "初めまして、<username>トレーナーさん。\r\n私が、貴方の今日から所属するチームの、チーフトレーナーです。",
             "enText": "Nice to meet you, Trainer <username>. \nI'm the Chief Trainer of the team that you've joined.",
             "nextBlock": 3,
-            "pathId": -3465853110088764929,
+            "origClipLength": 269,
+            "voiceIdx": 0,
+            "pathId": -7734945199637200139,
             "blockIdx": 2
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "見ての通り私はもうずいぶん年寄りだし、教えてあげられる期間は\r\n短いかもしれないけれど……サブトレーナーとして、よろしくね。",
-            "enText": "As you can see, I've gotten quite old. The time I'll have to \nspend teaching you might be short but… sub-trainer, I look \nforward to working with you.",
+            "enText": "As you can see, I've gotten quite old. The time I'll have to \nspend teaching you might be short but…… sub-trainer, I look \nforward to working with you.",
             "nextBlock": 4,
+            "origClipLength": 362,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "はい、よろしくお願いします！",
@@ -36,7 +42,7 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": 4829287167897019568,
+            "pathId": 2780601380041975090,
             "blockIdx": 3
         },
         {
@@ -45,16 +51,20 @@
             "jpText": "ふふふ、いいお返事。期待しているから、頑張ってね？\r\n私、実は結構、貴方のことちゃ～んと見て選んだつもりだから。",
             "enText": "Fufufu, good answer. I have high hopes for you, so \nwork hard, okay? After all, I did spend quite a bit \nof time observing you before I chose you.",
             "nextBlock": 5,
-            "pathId": -7002396546244939013,
+            "origClipLength": 387,
+            "voiceIdx": 2,
+            "pathId": -2674719809038223754,
             "blockIdx": 4
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "それじゃあさっそく――\r\n私たちの大事なウマ娘に、会いに行きましょうか。",
-            "enText": "Alright, let's get to it- \nshall we go meet those all-important Uma Musume?",
+            "enText": "Alright, let's get to it―― \nshall we go meet those all-important Uma Musume?",
             "nextBlock": 6,
-            "pathId": -5391422185911608429,
+            "origClipLength": 202,
+            "voiceIdx": 3,
+            "pathId": -4326388691987492571,
             "blockIdx": 5
         },
         {
@@ -63,79 +73,167 @@
             "jpText": "学園所属の新人は、サブトレーナーとしてベテランの率いる\r\nチームを手伝い、独り立ちできるまで経験を積むこともある。",
             "enText": "Newcomers to the academy will often become a sub-trainer \nunderneath a veteran, helping their team, until they've gained \nenough experience to lead their own.",
             "nextBlock": 7,
-            "pathId": 5951495639547109048,
+            "origClipLength": 119,
+            "voiceIdx": -1,
+            "pathId": 4216181369893446125,
             "blockIdx": 6
         },
         {
             "jpName": "",
             "enName": "",
             "jpText": "今回、自分をサブとして迎え入れてくれたのは\r\n大ベテランのチーフトレーナー。担当ウマ娘は――",
-            "enText": "This time, I was the sub to a true veteran, Chief Trainer. \nThe Uma Musume we're responsible for is-",
+            "enText": "This time, I was the sub to a true veteran, Chief Trainer. \nThe Uma Musume we're responsible for is――",
             "nextBlock": 8,
-            "pathId": -2235101062743523439,
+            "origClipLength": 105,
+            "voiceIdx": -1,
+            "pathId": 3982347548240201567,
             "blockIdx": 7
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はっ、はっ……メニュー終わりました、トレーナー。\r\n次のご指示をお願いします！",
-            "enText": "Haa, haa… I've finished the menu, Trainer. \nI'm ready for the next assignment, please.",
+            "enText": "Haa, haa…… I've finished the menu, Trainer. \nI'm ready for the next assignment, please.",
             "nextBlock": 9,
-            "pathId": -2341601430890218672,
+            "origClipLength": 187,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -1758801950451953125
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -6654863984853593550
+                }
+            ],
+            "pathId": 5916515431281306878,
             "blockIdx": 8
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "お疲れ様、ベルちゃん。次は併走だけれど……始める前に少しいい？\r\n――彼が、先日話していたサブトレーナーよ。",
-            "enText": "Good work, Bell-chan. Next up is parallel running but… do you \nhave a moment before we start? -He's the one we talked about \nbefore, the sub-trainer.",
+            "enText": "Good work, Bell-chan. Next up is parallel running but…… do you \nhave a moment before we start? ――He's the one we talked about \nbefore, the sub-trainer.",
             "nextBlock": 10,
-            "pathId": -6732270531232201621,
+            "origClipLength": 391,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 358,
+                    "pathId": -166940143618644274
+                },
+                {
+                    "origLen": 194,
+                    "pathId": 4232398472198130373
+                }
+            ],
+            "pathId": 7112590415529120085,
             "blockIdx": 9
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "お疲れ様、ベルちゃん。次は併走だけれど……始める前に少しいい？\r\n――彼女が、先日話していたサブトレーナーよ。",
-            "enText": "Good work, Bell-chan. Next up is parallel running but… do you \nhave a moment before we start? -He's the one we talked about \nbefore, the sub-trainer.",
+            "enText": "Good work, Bell-chan. Next up is parallel running but…… do you \nhave a moment before we start? ――She's the one we talked about \nbefore, the sub-trainer.",
             "nextBlock": 11,
-            "pathId": 2340043183080113948,
+            "origClipLength": 391,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 358,
+                    "pathId": -1101713075276482521
+                },
+                {
+                    "origLen": 194,
+                    "pathId": -1324168914787132054
+                }
+            ],
+            "pathId": 7887304704878262957,
             "blockIdx": 10
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "……どうも。",
-            "enText": "…Hello.",
+            "enText": "……Hello.",
             "nextBlock": 12,
-            "pathId": -1813536179491605166,
+            "origClipLength": 40,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 3615230336547526782
+                },
+                {
+                    "origLen": 66,
+                    "pathId": 2943418517337264898
+                }
+            ],
+            "pathId": -8209850613150686750,
             "blockIdx": 11
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "あ……はい。えっと、よろしくお願いします。",
-            "enText": "Ah… right. Umm, pleased to meet you.",
+            "enText": "Ah…… right. Umm, pleased to meet you.",
             "nextBlock": 13,
-            "pathId": 3713355940495095183,
+            "origClipLength": 181,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -5505810360634852476
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -8737476798568593869
+                }
+            ],
+            "pathId": 1196065279594260578,
             "blockIdx": 12
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "サブトレーナー、改めてになるけれど、彼女がベルちゃん……\r\nメジロドーベルよ。私のチームの、大事な大事なウマ娘。",
-            "enText": "Sub-trainer, once again, her name is Bell-chan… Mejiro Dober. \nAn important, precious Uma Musume of my team.",
+            "enText": "Sub-trainer, once again, her name is Bell-chan…… Mejiro Dober. \nAn important, precious Uma Musume of my team.",
             "nextBlock": 14,
-            "pathId": 1961154897874270106,
+            "origClipLength": 396,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 268,
+                    "pathId": -2372900757015680918
+                },
+                {
+                    "origLen": 230,
+                    "pathId": -7108924013590756134
+                }
+            ],
+            "pathId": -5127554779390965895,
             "blockIdx": 13
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "サブトレーナー、改めてになるけれど、彼女がベルちゃん……\r\nメジロドーベルよ。私のチームの、大事な大事なウマ娘。",
-            "enText": "Sub-trainer, once again, her name is Bell-chan… Mejiro Dober. \nAn important, precious Uma Musume of my team.",
+            "enText": "Sub-trainer, once again, her name is Bell-chan…… Mejiro Dober. \nAn important, precious Uma Musume of my team.",
             "nextBlock": 15,
-            "pathId": 2765912070379462995,
+            "origClipLength": 396,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 417,
+                    "pathId": -924421683452881360
+                },
+                {
+                    "origLen": 230,
+                    "pathId": -9009892447910311676
+                }
+            ],
+            "pathId": -6905771839383232255,
             "blockIdx": 14
         },
         {
@@ -144,16 +242,40 @@
             "jpText": "私にとっては、たぶん最後の担当ウマ娘になるかしら。\r\n見ての通り、ずいぶんおばあちゃんになってしまったものね、私も。",
             "enText": "For me, she'll probably be the last Uma Musume that I train. \nAs you can see, I've become quite the old lady.",
             "nextBlock": 16,
-            "pathId": -5014526230236906416,
+            "origClipLength": 380,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 429,
+                    "pathId": 4876928740292571186
+                },
+                {
+                    "origLen": 398,
+                    "pathId": 6115945078231285747
+                }
+            ],
+            "pathId": 1635720900393628335,
             "blockIdx": 15
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "トレーナー……。",
-            "enText": "Trainer…",
+            "enText": "Trainer……",
             "nextBlock": 17,
-            "pathId": -5593082964266730306,
+            "origClipLength": 44,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3499033373795671980
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8462993933488793438
+                }
+            ],
+            "pathId": -5144558758205101023,
             "blockIdx": 16
         },
         {
@@ -162,16 +284,44 @@
             "jpText": "あらごめんなさい、大丈夫よベルちゃん！\r\nまだまだ元気なつもりだから、そんなさみしそうな顔しないで。",
             "enText": "Oh, I'm sorry, it's fine Bell-chan! \nI'm still quite healthy, so don't make such a lonely face.",
             "nextBlock": 18,
-            "pathId": -2799972961592586389,
+            "origClipLength": 279,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 305,
+                    "pathId": 3518610594466698740
+                }
+            ],
+            "pathId": 7389054367899525788,
             "blockIdx": 17
         },
         {
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "――失礼します。\r\n併走相手に参りましたが、始められそうでしょうか？",
-            "enText": "-Excuse me. I've come to help with parallel running training, \nare we ready to start?",
+            "enText": "――Excuse me. I've come to help with parallel running training, \nare we ready to start?",
             "nextBlock": 19,
-            "pathId": -7756355313935197589,
+            "origClipLength": 160,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -6614686798223856001
+                },
+                {
+                    "origLen": 188,
+                    "pathId": -5838779583304283465
+                },
+                {
+                    "origLen": 157,
+                    "pathId": -1919552188487426466
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7973287734671570668
+                }
+            ],
+            "pathId": -7506624404383034635,
             "blockIdx": 18
         },
         {
@@ -180,16 +330,52 @@
             "jpText": "ええ、もちろん！　来てくれてありがとう、エアグルーヴさん。\r\nベルちゃん、準備はいいかしら？",
             "enText": "Yes, of course! Thanks for coming, Air Groove-san. \nBell-chan, are you ready?",
             "nextBlock": 20,
-            "pathId": 6086086259326258775,
+            "origClipLength": 255,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 330,
+                    "pathId": -6670548233380817528
+                },
+                {
+                    "origLen": 27,
+                    "pathId": -6406055968048300003
+                },
+                {
+                    "origLen": 387,
+                    "pathId": 1378343714748814725
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 681970933517678465
+                }
+            ],
+            "pathId": 5222699962908517763,
             "blockIdx": 19
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はいっ……！\r\n先輩、よろしくお願いします！",
-            "enText": "Yes…! Senpai, I look forward \nto running with you!",
+            "enText": "Yes……! Senpai, I look forward \nto running with you!",
             "nextBlock": 21,
-            "pathId": 7717448328085680555,
+            "origClipLength": 109,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -5168066208336880681
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 3785083767221881906
+                },
+                {
+                    "origLen": 200,
+                    "pathId": -2830552711992566946
+                }
+            ],
+            "pathId": -7598393115468641770,
             "blockIdx": 20
         },
         {
@@ -198,134 +384,326 @@
             "jpText": "こうして、メジロドーベルとエアグルーヴ、\r\n2人の併走が始まった！",
             "enText": "And so, parallel training for Mejiro Dober \nand Air Groove began.",
             "nextBlock": 22,
-            "pathId": -9142423119512400559,
+            "origClipLength": 88,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": 1311321051022651094
+                },
+                {
+                    "origLen": 35,
+                    "pathId": -8184908026477318395
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7648529395613064136
+                }
+            ],
+            "pathId": -7239622532476466152,
             "blockIdx": 21
         },
         {
             "jpName": "",
             "enName": "",
             "jpText": "併走相手は“女帝”の呼び声が高いエアグルーヴ。\r\nGⅠ『オークス』の母娘二代制覇も果たした実力者だ。",
-            "enText": "Her training parter had earned the nickname \"Empress\". Someone \nwho, like her mother, had the strength to win the G1 [Oaks].",
+            "enText": "Her training partner had earned the nickname \"Empress\". Someone \nwho, like her mother, had the strength to win the G1 『Oaks』.",
             "nextBlock": 23,
-            "pathId": -5262479950005514035,
+            "origClipLength": 110,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 225,
+                    "pathId": 8791527564117913051
+                },
+                {
+                    "origLen": 163,
+                    "pathId": 2556602689854912188
+                }
+            ],
+            "pathId": 7659073791243305748,
             "blockIdx": 22
         },
         {
             "jpName": "",
             "enName": "",
             "jpText": "かたやメジロドーベルはデビュー前。\r\nついて行くのがやっとか、と思いきや――！",
-            "enText": "Mejiro Dober on the other hand, was someone who hadn't debuted \nyet. But it seemed like she was able to keep up-!",
+            "enText": "Mejiro Dober on the other hand, was someone who hadn't debuted \nyet. But it seemed like she was able to keep up――!",
             "nextBlock": 24,
-            "pathId": 2245049280133103032,
+            "origClipLength": 95,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 5622695864742013148
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -2786061678766523407
+                }
+            ],
+            "pathId": -4326313431455225880,
             "blockIdx": 23
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はっ、はっ、はっ……はぁああああああっ！！",
-            "enText": "Haa, haa, haa… Haaaaaaaaaa!!",
+            "enText": "Haa, haa, haa…… Haaaaaaaaaa!!",
             "nextBlock": 25,
-            "pathId": -5070534805776214942,
+            "origClipLength": 119,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 771436977318667146
+                },
+                {
+                    "origLen": 161,
+                    "pathId": -8262876482370448703
+                }
+            ],
+            "pathId": -974012689681453728,
             "blockIdx": 24
         },
         {
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "……！　ふ、やるな……！！",
-            "enText": "…! Fu, not bad…!!",
+            "enText": "……! Fu, not bad……!!",
             "nextBlock": 26,
+            "origClipLength": 94,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "（今の加速は……！）",
-                    "enText": "(That acceleration just now…!)",
+                    "enText": "(That acceleration just now……!)",
                     "nextBlock": 26
                 }
             ],
-            "pathId": 2476546809009184585,
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": -7992170863392357087
+                },
+                {
+                    "origLen": 126,
+                    "pathId": 5878223190211937781
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -8211847512660808245
+                }
+            ],
+            "pathId": 1577240058306039470,
             "blockIdx": 25
         },
         {
             "jpName": "",
             "enName": "",
             "jpText": "美しく躍動する全身が作り出す、素晴らしいスピード。\r\n天性の才能を感じさせる走りだった。だが、それだけではなく――",
-            "enText": "Using her whole body, built up from physical training, she was \nable to show such wonderful speed. I could feel the innate \ntalent. However, that's not all-",
+            "enText": "Using her whole body, built up from physical training, she was \nable to show such wonderful speed. I could feel the innate \ntalent. However, that's not all――",
             "nextBlock": 27,
-            "pathId": 3768212383375517795,
+            "origClipLength": 119,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 151,
+                    "pathId": -8590703854537587624
+                },
+                {
+                    "origLen": 181,
+                    "pathId": 3852597815475762739
+                }
+            ],
+            "pathId": -3686096903052571001,
             "blockIdx": 26
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "まだ、まだぁああっ！！\r\n――ぁあああああっ！！",
-            "enText": "Not yet, not yeeeeet!! \n-Aaaaaaaaaaah!!",
+            "enText": "Not yet, not yeeeeet!! \n――Aaaaaaaaaaah!!",
             "nextBlock": 28,
-            "pathId": 4775665278747166230,
+            "origClipLength": 160,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -5897091248012821086
+                },
+                {
+                    "origLen": 26,
+                    "pathId": -4147847700329236674
+                }
+            ],
+            "pathId": -7483221592914653665,
             "blockIdx": 27
         },
         {
             "jpName": "",
             "enName": "",
             "jpText": "最後まで決して諦めずに、前へ前へと進み続ける勝負根性。\r\nその意志の輝きが、強く印象に残った……！",
-            "enText": "To the end, never giving up, pushing further and \nfurther forward with the determination to win. That \nstrong will left a striking impression…!",
+            "enText": "To the end, never giving up, pushing further and \nfurther forward with the determination to win. That \nstrong will left a striking impression……!",
             "nextBlock": 29,
+            "origClipLength": 108,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（メジロドーベル……すごい子だ……！）",
-                    "enText": "(Mejiro Dober… is amazing…!)",
+                    "enText": "(Mejiro Dober…… is amazing……!)",
                     "nextBlock": 29
                 },
                 {
                     "jpText": "（メジロドーベル……すごい子……！）",
-                    "enText": "(Mejiro Dober… is amazing…!)",
+                    "enText": "(Mejiro Dober…… is amazing……!)",
                     "nextBlock": 29
                 }
             ],
-            "pathId": 2385974913777216226,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": -8320344492471308944
+                }
+            ],
+            "pathId": -357485388325491345,
             "blockIdx": 28
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はぁっ、はぁっ、はぁっ……ありがとう、ございました……！",
-            "enText": "Haaa, Haaa, Haaa… thank you… very much…!",
+            "enText": "Haaa, Haaa, Haaa…… thank you…… very much……!",
             "nextBlock": 30,
-            "pathId": -4908374232161836187,
+            "origClipLength": 225,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 187,
+                    "pathId": 1772636160270646284
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6329733955042891423
+                },
+                {
+                    "origLen": 209,
+                    "pathId": 2729576671416075647
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -8404484790373455037
+                }
+            ],
+            "pathId": -4474498813639319951,
             "blockIdx": 29
         },
         {
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "構わん。にしても……実力をつけたな、ドーベル。\r\n素晴らしいスピードだった。",
-            "enText": "No problem. Looks like… you've gotten stronger, Dober. \nThat was some magnificent speed.",
+            "enText": "No problem. Looks like…… you've gotten stronger, Dober. \nThat was some magnificent speed.",
             "nextBlock": 31,
-            "pathId": 5714671351039415453,
+            "origClipLength": 226,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -3234226601442527061
+                },
+                {
+                    "origLen": 45,
+                    "pathId": -7239174199275579813
+                },
+                {
+                    "origLen": 107,
+                    "pathId": -491541952770796575
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6641621638190267493
+                }
+            ],
+            "pathId": 5326842054634746296,
             "blockIdx": 30
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "いえ、そんな……位置取りとか仕掛けのタイミングとか、\r\nまだまだです。結局、1回も先輩の前に出られませんでしたし……。",
-            "enText": "No, that's not true… my position taking and drive \ntiming, are still lacking. In the end, I wasn't \nable to pull ahead of senpai even once…",
+            "enText": "No, that's not true…… my position taking and drive \ntiming, are still lacking. In the end, I wasn't \nable to pull ahead of senpai even once…",
             "nextBlock": 32,
-            "pathId": 5545419990392755895,
+            "origClipLength": 312,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 211,
+                    "pathId": 377986524076707075
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 947582814807563032
+                },
+                {
+                    "origLen": 176,
+                    "pathId": -6422587010382468791
+                }
+            ],
+            "pathId": 276943876821793473,
             "blockIdx": 31
         },
         {
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "はは、そう簡単には譲らんさ。だが確かに背後へ迫られているのを\r\n感じたぞ。……いいトレーナーがついたのだな。",
-            "enText": "Haha, I won't let you pull ahead that easily. But, I could \ndefinitely feel you pulling up behind me… You've got yourself \na good trainer, don't you?",
+            "enText": "Haha, I won't let you pull ahead that easily. But, I could \ndefinitely feel you pulling up behind me…… You've got yourself \na good trainer, don't you?",
             "nextBlock": 33,
-            "pathId": 1851821622109995182,
+            "origClipLength": 314,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 263,
+                    "pathId": 4550992352932920709
+                },
+                {
+                    "origLen": 28,
+                    "pathId": -591629795352530063
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -5833829010318213902
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6478706157679051537
+                }
+            ],
+            "pathId": 4351710631810057120,
             "blockIdx": 32
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はいっ……！",
-            "enText": "Yes…!",
+            "enText": "Yes……!",
             "nextBlock": 34,
-            "pathId": -1155254745678964707,
+            "origClipLength": 27,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 263,
+                    "pathId": -6495121301372645423
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -4725718182613537393
+                },
+                {
+                    "origLen": 306,
+                    "pathId": 2344889398916429267
+                }
+            ],
+            "pathId": -2654778734927006981,
             "blockIdx": 33
         },
         {
@@ -334,7 +712,23 @@
             "jpText": "アタシはまだ全然、弱いままで……だけどちょっとでも\r\n強く見えたのなら、それは全部、トレーナーのおかげです。",
             "enText": "I'm still far, far too weak… but if it looks like I've gotten \neven a little bit stronger, that's all because of Trainer.",
             "nextBlock": 35,
-            "pathId": 5356995016545330483,
+            "origClipLength": 268,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 702262428070458503
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9080267765565257431
+                },
+                {
+                    "origLen": 178,
+                    "pathId": -1846842136282613077
+                }
+            ],
+            "pathId": 1011572395344108665,
             "blockIdx": 34
         },
         {
@@ -343,41 +737,59 @@
             "jpText": "うんうん！　ベルちゃん、とってもいい走りだったわね。",
             "enText": "Yes, yes! Bell-can, that was a really good run, wasn't it?",
             "nextBlock": 36,
+            "origClipLength": 146,
+            "voiceIdx": 23,
             "choices": [
                 {
                     "jpText": "ですね……！！",
-                    "enText": "It was…!!",
+                    "enText": "It was……!!",
                     "nextBlock": 36
                 }
             ],
-            "pathId": 6221898763963696974,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": 4000267514521118865
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 522382668446654300
+                }
+            ],
+            "pathId": -6722588787749329787,
             "blockIdx": 35
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "あらま！　ふふ、貴方、おめめがキラキラ。\r\n……うん、そんな目をしてくれるトレーナーだと思っていたのよね。",
-            "enText": "Oh my! Fufu, your eyes are sparkling. …That's right, I knew \nyou were the kind of trainer that would look that way.",
+            "enText": "Oh my! Fufu, your eyes are sparkling. ……That's right, I knew \nyou were the kind of trainer that would look that way.",
             "nextBlock": 37,
-            "pathId": 2974262431343765432,
+            "origClipLength": 344,
+            "voiceIdx": 24,
+            "pathId": -3317939733871476161,
             "blockIdx": 36
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "……すごいでしょう、ベルちゃんは。\r\n心も体も、可能性に満ち溢れているの。",
-            "enText": "…She's amazing isn't she? Bell-chan. \nHer mind and body, both are overflowing with possibilities.",
+            "enText": "……She's amazing isn't she? Bell-chan. \nHer mind and body, both are overflowing with possibilities.",
             "nextBlock": 38,
-            "pathId": 8105082774699296319,
+            "origClipLength": 232,
+            "voiceIdx": 25,
+            "pathId": -2534696802516085262,
             "blockIdx": 37
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "あの子の素晴らしい未来を、私もずっと見守っていたいけれど――",
-            "enText": "That girl's wonderful future, I want \nto keep watching over her but-",
+            "enText": "That girl's wonderful future, I want \nto keep watching over her but――",
             "nextBlock": 39,
-            "pathId": -3547298057884382031,
+            "origClipLength": 200,
+            "voiceIdx": 26,
+            "pathId": -6665247194913733318,
             "blockIdx": 38
         },
         {
@@ -386,7 +798,19 @@
             "jpText": "あの、トレーナー！　まだ体力あるので、\r\nダウンの前に先輩と外を走ってきてもいいですか？",
             "enText": "Um, Trainer! I'm not tired yet so, before cooldown, \ncan I run a bit more with senpai outside the school?",
             "nextBlock": 40,
-            "pathId": 8643788616184728238,
+            "origClipLength": 221,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 206,
+                    "pathId": 2982593491143333345
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5688873945484105520
+                }
+            ],
+            "pathId": 3515246877763765511,
             "blockIdx": 39
         },
         {
@@ -395,7 +819,15 @@
             "jpText": "まあまあ、ベルちゃんたら、最近特にやる気満々ね！\r\nそうね、1周だけならいいでしょう。ゆっくりめのペースでね？",
             "enText": "Well well, Bell-chan, lately you've been really \nfired up! Let's see, if it's just one lap that \nshould be fine. Go at a light pace, okay?",
             "nextBlock": 41,
-            "pathId": 1240553153734295782,
+            "origClipLength": 327,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 365,
+                    "pathId": -3992161557517485844
+                }
+            ],
+            "pathId": 3875718208157448873,
             "blockIdx": 40
         },
         {
@@ -404,15 +836,25 @@
             "jpText": "はい、ありがとうございます。行ってきます！",
             "enText": "Okay, thank you very much. I'll be off!",
             "nextBlock": 42,
-            "pathId": -652326916024162911,
+            "origClipLength": 140,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 9106114376816222743
+                }
+            ],
+            "pathId": 1808360755935710857,
             "blockIdx": 41
         },
         {
             "jpName": "チーフトレーナー",
             "enName": "Chief Trainer",
             "jpText": "……さてと、私たちは後片づけでも進めておきましょうか。",
-            "enText": "…alright, shall we get to the clean up work then?",
+            "enText": "……alright, shall we get to the clean up work then?",
             "nextBlock": 43,
+            "origClipLength": 192,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "はい",
@@ -420,34 +862,72 @@
                     "nextBlock": 43
                 }
             ],
-            "pathId": 3871713739708248597,
+            "pathId": -1947486482203809013,
             "blockIdx": 42
         },
         {
             "jpName": "",
             "enName": "",
             "jpText": "その日はメジロドーベルの素晴らしい走りを何度も反すうしながら、\r\nチーフトレーナーを手伝ったのだった……。",
-            "enText": "That day, I couldn't stop thinking about Mejiro Dober's \namazing running while I was helping Chief Trainer…",
+            "enText": "That day, I couldn't stop thinking about Mejiro Dober's \namazing running while I was helping Chief Trainer……",
             "nextBlock": 44,
-            "pathId": -1036012967375146748,
+            "origClipLength": 114,
+            "voiceIdx": -1,
+            "pathId": -7365178350410859698,
             "blockIdx": 43
         },
         {
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "む……待て、ドーベル。",
-            "enText": "Hm… wait, Dober.",
+            "enText": "Hm…… wait, Dober.",
             "nextBlock": 45,
-            "pathId": 1254386383345926496,
+            "origClipLength": 91,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 7688171937159697424
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -1456176317686473336
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -8902686510036750324
+                }
+            ],
+            "pathId": 2996223447182494808,
             "blockIdx": 44
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はい……？\r\nあ――",
-            "enText": "Huh…? \nOh-",
+            "enText": "Huh……? \nOh――",
             "nextBlock": 46,
-            "pathId": -2553636224830990609,
+            "origClipLength": 64,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -1879400843064800335
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 2714344262859797152
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -200285851563981410
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4503469371092711592
+                }
+            ],
+            "pathId": -909151616621478935,
             "blockIdx": 45
         },
         {
@@ -456,7 +936,35 @@
             "jpText": "ライアンさん！　ライアンさん！\r\nメジロライアンさん、目線くださ～い！",
             "enText": "Ryan-san! Ryan-san! \nMejiro Ryan-san, please look this way!",
             "nextBlock": 47,
-            "pathId": -5913635079158717948,
+            "origClipLength": 90,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 11,
+                    "pathId": 5800705022079303492
+                },
+                {
+                    "origLen": 12,
+                    "pathId": -1523005267404696996
+                },
+                {
+                    "origLen": 11,
+                    "pathId": -7731921055166150304
+                },
+                {
+                    "origLen": 286,
+                    "pathId": 3403197674583836660
+                },
+                {
+                    "origLen": 135,
+                    "pathId": 3501314754010066404
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 7473778292277807461
+                }
+            ],
+            "pathId": -8537967831863102381,
             "blockIdx": 46
         },
         {
@@ -465,44 +973,166 @@
             "jpText": "先日も素晴らしいご活躍でしたね、メジロライアンさん！\r\n大勢のファンが次走にも期待を寄せていますが、お気持ちは？",
             "enText": "The other day, you had a particularly splendid performance, \nMejiro Ryan-san! A large number of fans have high expectations \nfor next time, what are your thoughts?",
             "nextBlock": 48,
-            "pathId": 7493415145905515745,
+            "origClipLength": 264,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": 2349846634331920972
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 8478904519868966243
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 6120920103849734110
+                },
+                {
+                    "origLen": 98,
+                    "pathId": -4558137875803593693
+                },
+                {
+                    "origLen": 283,
+                    "pathId": 5801548141621370608
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2328984540585128271
+                }
+            ],
+            "pathId": -1153467013138160415,
             "blockIdx": 47
         },
         {
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "えっと……！　応援、すごく嬉しいです！\r\n期待にお応えできるように、またモリモリ鍛えていきますねっ！",
-            "enText": "Um…! I'm really happy they're rooting for me! In order to \nmeet their expectations, I'll be training vigorously again!",
+            "enText": "Um……! I'm really happy they're rooting for me! In order to \nmeet their expectations, I'll be training vigorously again!",
             "nextBlock": 49,
-            "pathId": 2953881447890857734,
+            "origClipLength": 268,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 3069881161205202101
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 7307566303760267307
+                },
+                {
+                    "origLen": 47,
+                    "pathId": -879908549530301450
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -4740933888463987485
+                }
+            ],
+            "pathId": 3766273598307099698,
             "blockIdx": 48
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "…………っ。",
-            "enText": "…",
+            "enText": "…………",
             "nextBlock": 50,
-            "pathId": 1809735983429386460,
+            "origClipLength": 40,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -3725192126636758560
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8590934493452857364
+                },
+                {
+                    "origLen": 90,
+                    "pathId": 4075052355441233944
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 6806299560727965213
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 190931033928728748
+                },
+                {
+                    "origLen": 15,
+                    "pathId": 2745796320326911560
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 4745703481794113182
+                }
+            ],
+            "pathId": -7773249254417458747,
             "blockIdx": 49
         },
         {
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "――裏に回ろう。来い、ドーベル。",
-            "enText": "-Let's circle around back. Come on, Dober.",
+            "enText": "――Let's circle around back. Come on, Dober.",
             "nextBlock": 51,
-            "pathId": -8530224528789125709,
+            "origClipLength": 91,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 7590983205993398932
+                },
+                {
+                    "origLen": 42,
+                    "pathId": 2292247709085392994
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -1105838026664706150
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6977469187142567893
+                },
+                {
+                    "origLen": 141,
+                    "pathId": 1419611242644503064
+                }
+            ],
+            "pathId": 8799334858262184157,
             "blockIdx": 50
         },
         {
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "はい……先輩。",
-            "enText": "Okay… senpai.",
+            "enText": "Okay…… senpai.",
             "nextBlock": -1,
-            "pathId": 7806982909947675423,
+            "origClipLength": 154,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": -3466434490233058671
+                },
+                {
+                    "origLen": 25,
+                    "pathId": 8932538525630931297
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 3334868120768943398
+                }
+            ],
+            "pathId": 4551654674917567877,
             "blockIdx": 51
         }
-    ]
+    ],
+    "humanTl": true,
+    "modified": 1674158139
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "6WNKF5RJXWOVLPFNKWI57UCXLXO2ON2L",
+    "version": 5,
+    "bundle": "GYXZNZZWHICHLK6NWQPZKK3MKMHCU63F",
     "type": "story",
     "storyId": "801054003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nビコーペガサスが話していた。",
             "enText": "After training, <chrname> and \nBicorpegasus were talking.",
             "nextBlock": -1,
-            "pathId": 3347437444555854852,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -6209713952873232103
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8824172599640597151
+                }
+            ],
+            "pathId": -555545197355849030,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674419
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "IUESVHQWXHAWBFIUZAOI4OO34JCCAKAG",
+    "version": 5,
+    "bundle": "BEOJOL6XBAKBOKG6EYSWMERELQBDMLYV",
     "type": "story",
     "storyId": "801027003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nメジロライアンが話していた。",
             "enText": "After training, <chrname> and \nMejiro Ryan were talking.",
             "nextBlock": -1,
-            "pathId": -7933862509338984200,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -3017139863306625747
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7934060229573821221
+                }
+            ],
+            "pathId": 6798230415914509722,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674414
 }

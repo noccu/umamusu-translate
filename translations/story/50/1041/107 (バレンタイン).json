@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "HHVQ754NI5UBKMJL5DM767UDRR5U3CL5",
+    "version": 5,
+    "bundle": "DVBPBYALGDFN6DWVENYXNKZFVO4M4NVL",
     "type": "story",
     "storyId": "501041107",
     "title": "バレンタイン",
@@ -9,8 +9,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "2月のある日、\r\nいつものように仕事をしていると――",
-            "enText": "One day in February, I was working as usual.",
+            "enText": "One day in February, \nI was working as usual when――",
             "nextBlock": 2,
+            "origClipLength": 62,
             "pathId": -2205080336225071640,
             "blockIdx": 1
         },
@@ -18,8 +19,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "コンコンッ！\r\n失礼します！",
-            "enText": "Knock, knock! Excuse me!",
+            "enText": "Knock, knock! \nExcuse me!",
             "nextBlock": 3,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -2671657727388085762
+                },
+                {
+                    "origLen": 55,
+                    "pathId": -4093321853132863124
+                }
+            ],
             "pathId": -342514756871844735,
             "blockIdx": 2
         },
@@ -27,8 +39,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そして失礼します！",
-            "enText": "And excuse me!",
+            "enText": "And once again, excuse me!",
             "nextBlock": 4,
+            "origClipLength": 50,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 8844433853989473956
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 4620070825601541075
+                }
+            ],
             "pathId": -2648270379766183472,
             "blockIdx": 3
         },
@@ -36,8 +59,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "……。\r\nなんだったんだろう。",
-            "enText": "… I wonder what it was.",
+            "enText": "…… \nI wonder what that was.",
             "nextBlock": 5,
+            "origClipLength": 54,
             "pathId": -4468022198177609632,
             "blockIdx": 4
         },
@@ -45,8 +69,9 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ダダダダダダダッ！）",
-            "enText": "(da-da-da-da-da-da-da! )",
+            "enText": "(knocknocknocknocknock!)",
             "nextBlock": 6,
+            "origClipLength": 74,
             "pathId": 6402232924878994391,
             "blockIdx": 5
         },
@@ -54,13 +79,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "トレーナーさんッ！？\r\nなんでついてこないんですか！？",
-            "enText": "Trainer! Why aren't you following me?",
+            "enText": "Trainer-san!? \nWhy aren't you following me!?",
             "nextBlock": 7,
+            "origClipLength": 62,
             "choices": [
                 {
                     "jpText": "え？",
-                    "enText": "What?",
+                    "enText": "Huh?",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 27,
+                    "pathId": -731457106947434628
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -5776637660543951643
                 }
             ],
             "pathId": 202252055807561312,
@@ -72,6 +108,17 @@
             "jpText": "ほら、行きますよ！",
             "enText": "Come on, let's go!",
             "nextBlock": 8,
+            "origClipLength": 50,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 8227159101812998778
+                },
+                {
+                    "origLen": 61,
+                    "pathId": 5446686417766742964
+                }
+            ],
             "pathId": 5871506191836628997,
             "blockIdx": 7
         },
@@ -79,8 +126,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "バクシンバクシーーンッ！！",
-            "enText": "Bakushinbakshiin!",
+            "enText": "Bakushinbakushiiiin!!",
             "nextBlock": 9,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 1541558487565528817
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 2267828470457292026
+                }
+            ],
             "pathId": 6324609206820238933,
             "blockIdx": 8
         },
@@ -88,8 +146,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "わけもわからないまま、\r\n公園までついてくると……。",
-            "enText": "I followed her to the park, not knowing what\nto expect, and found…",
+            "enText": "Not knowing what to expect, I followed \nher to the park, and found……",
             "nextBlock": 10,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": 8844720370950311220
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 8011540633032447793
+                }
+            ],
             "pathId": -1473459352124413219,
             "blockIdx": 9
         },
@@ -99,11 +168,22 @@
             "jpText": "では、どうぞこちら、\r\n受け取ってください！",
             "enText": "Now, please, take this!",
             "nextBlock": 11,
+            "origClipLength": 59,
             "choices": [
                 {
                     "jpText": "ありがとう……？",
                     "enText": "Thanks…?",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -9175775747253558919
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -7257312074817020177
                 }
             ],
             "pathId": 280523719316130141,
@@ -113,8 +193,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "可愛らしい包みを渡された。\r\nこれは一体……？",
-            "enText": "She handed me a pretty package.\nWhat the heck is this…?",
+            "enText": "She handed me a pretty package. \nWhat on earth is this…?",
             "nextBlock": 12,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2137291671227858868
+                },
+                {
+                    "origLen": 103,
+                    "pathId": 4839220666592790412
+                }
+            ],
             "pathId": 2076936482800959372,
             "blockIdx": 11
         },
@@ -122,13 +213,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "トレーナーさん、\r\nハッピーバレンタインです！",
-            "enText": "Happy Valentine's Day, Trainer!",
+            "enText": "Happy Valentine's Day, Trainer-san!",
             "nextBlock": 13,
+            "origClipLength": 60,
             "choices": [
                 {
                     "jpText": "えっ！？",
-                    "enText": "What?",
+                    "enText": "Huuuh?!",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -3043357562263227109
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -5080318822653184171
                 }
             ],
             "pathId": 6675302581579019117,
@@ -138,13 +240,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "なぜ驚くんですか！？",
-            "enText": "Why are you surprised!",
+            "enText": "Why are you surprised!?",
             "nextBlock": 14,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "バレンタインって知ってる？",
-                    "enText": "Do you know what Valentine's Day is?",
+                    "enText": "Do you even know what Valentine's Day is?",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 10,
+                    "pathId": -4021113552790956720
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -3219182211139464181
                 }
             ],
             "pathId": -7228674884367951267,
@@ -154,8 +267,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "当然です！　お世話になった人に、\r\nチョコレートを渡す日ですよ！",
-            "enText": "Of course! It's the day to give chocolates\nto those who have been good to us!",
+            "enText": "Naturally! It's the day to give chocolate \nto those who have been good to us!",
             "nextBlock": 15,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 3833056504485821779
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 941328553016136216
+                }
+            ],
             "pathId": 2157081231523640796,
             "blockIdx": 14
         },
@@ -163,8 +287,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "毎年、クラスメイトたちが色々なお菓子を\r\n持ち寄って、ワイワイしています！",
-            "enText": "Every year, my classmates bring in a variety\nof sweets and we have a blast!",
+            "enText": "Every year, my classmates bring in a variety \nof sweets and we have a blast!",
             "nextBlock": 16,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": -112463745195985741
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 6554585053086321254
+                }
+            ],
             "pathId": -9195803698817006759,
             "blockIdx": 15
         },
@@ -172,13 +307,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "かくいう私も、たくさんもらいました！\r\nまあ人望というものですね！",
-            "enText": "I've gotten a lot of those, too!\nIt's called popularity!",
+            "enText": "Similarly, I've received a lot of sweets, too! \nI'm quite popular, aren't I!",
             "nextBlock": 17,
+            "origClipLength": 66,
             "choices": [
                 {
                     "jpText": "まあ、そうかも",
                     "enText": "Well, maybe so.",
                     "nextBlock": 17
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 3424563007833067803
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 4947300420318127261
                 }
             ],
             "pathId": -5502448123076313106,
@@ -188,8 +334,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "かも！？",
-            "enText": "Maybe!",
+            "enText": "Maybe!?",
             "nextBlock": 18,
+            "origClipLength": 47,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 8723772361365407305
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 5815141717944868792
+                }
+            ],
             "pathId": 1200614142094611697,
             "blockIdx": 17
         },
@@ -197,8 +354,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "コホン、\r\nまあいいです！",
-            "enText": "Okay, okay, okay!",
+            "enText": "Ahem! \nWell, that's all well and good!",
             "nextBlock": 19,
+            "origClipLength": 53,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": -18662492948821939
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 6280725386487877279
+                }
+            ],
             "pathId": 8155871520069212312,
             "blockIdx": 18
         },
@@ -206,8 +374,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "とはいえ私、委員長ですから！\r\n学内で率先してお菓子を渡すのはNG！",
-            "enText": "However, I'm the chair of the committee!\nI don't take the initiative to hand\nout candy on campus!",
+            "enText": "However, I'm the class president! \nIt's a no-go to take the initiative to hand \nout candy on campus!",
             "nextBlock": 20,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": -3109256566719187169
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 5717626850187706949
+                }
+            ],
             "pathId": -7348290492050560368,
             "blockIdx": 19
         },
@@ -215,8 +394,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そこで私、優秀なこの頭を使って！\r\n学外であればOKという判断をしました！",
-            "enText": "So I, using my brilliant mind! I've decided\nthat as long as it's off campus, it's OK!",
+            "enText": "So I, using my brilliant mind, have decided \nthat as long as it's off campus, it's OK!",
             "nextBlock": 21,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 654509394855068185
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -6096136004825356325
+                }
+            ],
             "pathId": -8844204862898138375,
             "blockIdx": 20
         },
@@ -224,18 +414,29 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そこでサックリと、\r\nチョコレートを作ってみたわけです！",
-            "enText": "So I made some chocolates!",
+            "enText": "So, I tried my hand at making some \nchocolates!",
             "nextBlock": 22,
+            "origClipLength": 63,
             "choices": [
                 {
                     "jpText": "自分で作ったのか？",
-                    "enText": "Did you make this yourself?",
+                    "enText": "You made these yourself?",
                     "nextBlock": 22
                 },
                 {
                     "jpText": "自分で作ったの？",
-                    "enText": "Did you make it yourself?",
+                    "enText": "You made these yourself?",
                     "nextBlock": 22
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": -589933343642317940
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6480650224124489557
                 }
             ],
             "pathId": 1556636258637767599,
@@ -245,8 +446,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "もちろんです！\r\nこういうのは、手作りが模範的ですよね？",
-            "enText": "Of course! Homemade is exemplary\nfor these things, right?",
+            "enText": "Of course! \nHomemade is exemplary for these kinds of \nthings, right?",
             "nextBlock": 23,
+            "origClipLength": 63,
+            "animData": [
+                {
+                    "origLen": 37,
+                    "pathId": -7888444508956920390
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 8123767072718742558
+                }
+            ],
             "pathId": 5993196381157607632,
             "blockIdx": 22
         },
@@ -254,8 +466,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "家庭科の先生に『単位はあげるから、\r\nもう何もしないで』と言わせた実力を\n発揮しました！",
-            "enText": "I showed my ability to make my home\neconomics teacher say, 'I'll give you\ncredit, but don't do anything else!",
+            "enText": "I demonstrated such superior cooking ability \nto my home economics teacher that she \nsaid,\"I'll give you credit for the class, just \ndon't do anything else!\"",
             "nextBlock": 24,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": -8934512997347627013
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -7606738600837432637
+                }
+            ],
             "pathId": 2382171436569533064,
             "blockIdx": 23
         },
@@ -263,18 +486,29 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "まぁ、なんとか破片は取り除いて\r\n塊はブッ叩いたので、食べられますよ！",
-            "enText": "Well, I managed to get the pieces out and\nbuzzed the chunks, so you can eat them!",
+            "enText": "Well, in the end I managed to remove the \ndebris and beat out the chunks of chocolate, \nso you can eat it!",
             "nextBlock": 25,
+            "origClipLength": 67,
             "choices": [
                 {
                     "jpText": "（それはチョコレートなのか？）",
-                    "enText": "（Is that chocolate?)",
+                    "enText": "(Is that really chocolate?)",
                     "nextBlock": 25
                 },
                 {
                     "jpText": "（それはチョコレートなのかな？）",
-                    "enText": "（Is that chocolate?)",
+                    "enText": "(Is that really chocolate?)",
                     "nextBlock": 25
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": 5845458544280129731
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 4577170535067324673
                 }
             ],
             "pathId": 3750332529642237174,
@@ -284,8 +518,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "バレンタインなど慣れませんが……\r\nどーーーーしてもお渡ししたくて！",
-            "enText": "I'm not used to Valentine's Day, but…\nI just wanted to give it to you!",
+            "enText": "I'm not exactly used to Valentine's Day, \nbut…… \nI reaaaaally wanted to give this to you!",
             "nextBlock": 26,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": -8043077326182259940
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -7215845551120980837
+                }
+            ],
             "pathId": 2059495304466216520,
             "blockIdx": 25
         },
@@ -293,13 +538,28 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "だってトレーナーさんは、\r\n私の夢に寄り添ってくれた方ですから。",
-            "enText": "Because my trainer is the one who\nhelped me achieve my dream.",
+            "enText": "Because Trainer-san is the one who \nhelped me achieve my dream.",
             "nextBlock": 27,
+            "origClipLength": 65,
             "choices": [
                 {
                     "jpText": "え……",
-                    "enText": "E…",
+                    "enText": "Huh……",
                     "nextBlock": 27
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 2405854473623362027
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -4790772623987165789
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 7066744060319839283
                 }
             ],
             "pathId": 5584161359859992986,
@@ -309,8 +569,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "私、これでも理解しています。\r\n自分の掲げている夢の大きさを。",
-            "enText": "I still understand this. I\nknow how big my dream is.",
+            "enText": "I still understand this much. \nI know how big my dream is.",
             "nextBlock": 28,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 1448254773085819779
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -8508086697056378916
+                }
+            ],
             "pathId": -608443696491343432,
             "blockIdx": 27
         },
@@ -318,8 +589,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "けれど優秀な私のスピードがあれば、\r\n叶わないわけがないことも事実。",
-            "enText": "But it's true that with my superior speed,\nthere's no way I can't make it happen.",
+            "enText": "But I also know that with my superior speed, \nthere's no way I can't make it come true.",
             "nextBlock": 29,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 28,
+                    "pathId": 3347382318331792785
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -6137642560809113370
+                }
+            ],
             "pathId": 5219315066526588185,
             "blockIdx": 28
         },
@@ -327,13 +609,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ですが実際、理解してくれたのは\r\n家族以外ですと貴方だけでした。",
-            "enText": "But in reality, you were the only person\noutside of my family who understood.",
+            "enText": "But truthfully, you were the only person \noutside of my family who understood.",
             "nextBlock": 30,
+            "origClipLength": 65,
             "choices": [
                 {
                     "jpText": "バクシンオー……",
                     "enText": "Bakushin O…",
                     "nextBlock": 30
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 5933454836790406593
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -4444586319426315060
                 }
             ],
             "pathId": 8701478112610476748,
@@ -343,8 +636,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "なーんて！　フフッ、\r\nトレーナーさんはもうわかっていますよね！",
-            "enText": "Hmmm! You already know the\ntrainer, don't you?",
+            "enText": "What am I saying! \nFufu, you already understand, don't you, \nTrainer-san!",
             "nextBlock": 31,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -1455555926009020046
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -7944922172310503884
+                }
+            ],
             "pathId": -4684659246129513448,
             "blockIdx": 30
         },
@@ -352,8 +656,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "というわけで私の感謝の気持ち、\r\nぜひご賞味ください！",
-            "enText": "So, as a token of my gratitude,\nI hope you enjoy it!",
+            "enText": "Anyways, please enjoy this token of my \ngratitude!",
             "nextBlock": 32,
+            "origClipLength": 62,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -3439142328812804231
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -5764507527387424657
+                }
+            ],
             "pathId": -978579019072949206,
             "blockIdx": 31
         },
@@ -361,18 +676,29 @@
             "jpName": "",
             "enName": "",
             "jpText": "サクラバクシンオーの想いはとても\r\n有難いのだが、改めて信頼をぶつけられると\nなんだかいたたまれず……。",
-            "enText": "I really appreciate her sentiment, but I\ncan't help but feel a little embarrassed\nwhen I have to reiterate my trust in her…",
+            "enText": "I really appreciate her sentiment, but I \ncan't help but feel a little embarrassed \nwhen I have to reiterate my trust in her…",
             "nextBlock": 33,
+            "origClipLength": 78,
             "choices": [
                 {
                     "jpText": "……チョコ、好きか？",
-                    "enText": "… chocolate, do you like it?",
+                    "enText": "…Do you like chocolate?",
                     "nextBlock": 33
                 },
                 {
                     "jpText": "……チョコ、好き？",
-                    "enText": "… Do you like chocolate?",
+                    "enText": "…Do you like chocolate?",
                     "nextBlock": 33
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 2979998085793836227
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -1883562586316362356
                 }
             ],
             "pathId": 6632735526652431933,
@@ -382,18 +708,29 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ハイ、好きです！",
-            "enText": "Hi, I love it!",
+            "enText": "Indubitably, I do!",
             "nextBlock": 34,
+            "origClipLength": 50,
             "choices": [
                 {
                     "jpText": "チョコフォンデュに行こう！",
-                    "enText": "Let's go choco-fondue!",
+                    "enText": "Let's go get chocolate fondue!",
                     "nextBlock": 34
                 },
                 {
                     "jpText": "チョコフォンデュに行きましょう！",
-                    "enText": "Let's go for chocolate fondue!",
+                    "enText": "Let's go get chocolate fondue!",
                     "nextBlock": 34
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": 800992066296707638
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -8727382648378998222
                 }
             ],
             "pathId": -8672630396384302457,
@@ -403,8 +740,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "いいんですかッ！？",
-            "enText": "Are you sure?",
+            "enText": "Are you sure!?",
             "nextBlock": 35,
+            "origClipLength": 50,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": 2141482253089984862
+                },
+                {
+                    "origLen": 61,
+                    "pathId": 9179097610273388650
+                }
+            ],
             "pathId": 7031831078736001290,
             "blockIdx": 34
         },
@@ -412,8 +760,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "なるほど、逆バレンタインですね！\r\nではバクシン的に行きたいです！！",
-            "enText": "I see, a reverse Valentine's Day! Then I'd\nlike to go for the bakshin style!",
+            "enText": "I see, a reverse Valentine's Day! \nThen, I'd love to go, Bakushin-style!!",
             "nextBlock": 36,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 1274397906473465787
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 5058017058033204583
+                }
+            ],
             "pathId": 3738877743769921867,
             "blockIdx": 35
         },
@@ -421,8 +780,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "その後、チョコフォンデュをやっている\r\nお店へ彼女を連れて行き、\n満足気な様子にホッとしたのだった。",
-            "enText": "Afterwards, I took her to a restaurant that\nserved chocolate fondue, and was relieved to\nsee her satisfied.",
+            "enText": "Afterwards, I took her to a restaurant that \nserved chocolate fondue, and was \nrelieved to see her looking quite satisfied.",
             "nextBlock": -1,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": 7376887101929889041
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -1983764043202074523
+                }
+            ],
             "pathId": -9032714973107212963,
             "blockIdx": 36
         },
@@ -432,11 +802,22 @@
             "jpText": "さぁさぁ、今ここで！",
             "enText": "Come on, come on, right here, right now!",
             "nextBlock": 38,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "ここで！？",
-                    "enText": "Here!",
+                    "enText": "Here?!",
                     "nextBlock": 38
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 5014108534509958671
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 6417584210147613419
                 }
             ],
             "pathId": 4689743876001626272,
@@ -446,8 +827,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ハイッ！　パクッと召し上がって、\r\n『美味しい』の一言を聞かせてください！",
-            "enText": "Hi! Take a bite and let me hear\nthe word \"delicious\"!",
+            "enText": "Of course! Take a bite and let me hear \nyou say \"Mmm, that's delicious\"!",
             "nextBlock": 39,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": 6691429930062655808
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 2722158412603580897
+                }
+            ],
             "pathId": 1357380211098441723,
             "blockIdx": 38
         },
@@ -455,13 +847,24 @@
             "jpName": "",
             "enName": "",
             "jpText": "……期待されている……。\r\nここは……！",
-            "enText": "… is an expected…\nThis place is…!",
+            "enText": "…As expected…. \nI'll have to eat it right here, right now….!",
             "nextBlock": 40,
+            "origClipLength": 58,
             "choices": [
                 {
                     "jpText": "――いただきます！！",
-                    "enText": "—I'll take it!",
+                    "enText": "―Here I go!!",
                     "nextBlock": 40
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -1359845003589242987
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 7495420067966475022
                 }
             ],
             "pathId": -7663225434607717287,
@@ -471,8 +874,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "（パクッ……バキッ、ゴリッ）",
-            "enText": "(Crunch… crunch, crunch)",
+            "enText": "(Crunch….munch, crunch)",
             "nextBlock": 41,
+            "origClipLength": 54,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 987660092057028511
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 1545362420050231491
+                }
+            ],
             "pathId": 9125574083797904133,
             "blockIdx": 40
         },
@@ -480,8 +894,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "オオ！　歯ごたえはバッチリですね！\r\n味の方はどうでしょう？",
-            "enText": "Oh! It's got the perfect crunch!\nHow about the taste?",
+            "enText": "Ohh! It's got the perfect crunch! How about \nthe taste?",
             "nextBlock": 42,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -2426039259883278189
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -5112146033460073064
+                }
+            ],
             "pathId": 6860474471195843558,
             "blockIdx": 41
         },
@@ -489,13 +914,24 @@
             "jpName": "",
             "enName": "",
             "jpText": "……タイヤ？　タイヤ、泥、かろうじて草？\r\nとにかく、チョコレートとはいえないような\nなんとも個性的な味わいがする……。",
-            "enText": "… Tires? Tires, mud, barely any grass?\nAnyway, it has a very unique taste that\ncan't be called chocolate…",
+            "enText": "… Tires? Tires, dirt, a hint of grass? \nAt any rate, it has a very unique taste that \ncan't be called chocolate…",
             "nextBlock": 43,
+            "origClipLength": 84,
             "choices": [
                 {
                     "jpText": "……ナチュラルな味わいで美味しい！",
-                    "enText": "… Natural tasting and delicious!",
+                    "enText": "…Natural-tasting and delicious!",
                     "nextBlock": 43
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 1576393585860772187
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 5572368319515612770
                 }
             ],
             "pathId": 2735703351409373150,
@@ -505,8 +941,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そうですかッッ！",
-            "enText": "Oh, yeah!",
+            "enText": "Is that so!",
             "nextBlock": 44,
+            "origClipLength": 50,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 2853959272650706979
+                },
+                {
+                    "origLen": 61,
+                    "pathId": 8693898624568208564
+                }
+            ],
             "pathId": -5991732121604781348,
             "blockIdx": 43
         },
@@ -514,8 +961,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "当然、私が作るので美味しいとは\r\n思っていましたが、実は少し不安でした。",
-            "enText": "Naturally, I knew it would be delicious\nsince I was making it, but I was actually a\nlittle worried.",
+            "enText": "Naturally, I knew it would be delicious \nsince I was the one making it, but truthfully, \nI was a little worried.",
             "nextBlock": 45,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": -6565297297782718434
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -2670222121019398150
+                }
+            ],
             "pathId": -1597887783015547021,
             "blockIdx": 44
         },
@@ -523,8 +981,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "料理は、走りほど得意ではないので。\r\nですが、美味しいですか。そうですか……。",
-            "enText": "I'm not as good at cooking as I am at\nrunning. But is it delicious? Well…",
+            "enText": "I'm not as good at cooking as I am at \nrunning, but it still turned out delicious. \nIs that so…",
             "nextBlock": 46,
+            "origClipLength": 70,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": 792749295858166069
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -7280276876109211351
+                }
+            ],
             "pathId": -3565001127630491000,
             "blockIdx": 45
         },
@@ -532,8 +1001,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "えへへっ、よかったです！",
-            "enText": "Ehehe, I'm glad!",
+            "enText": "Ehehe, I'm so glad!",
             "nextBlock": 47,
+            "origClipLength": 52,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -303697520606344719
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 4329183559077760718
+                }
+            ],
             "pathId": 6338143502379858721,
             "blockIdx": 46
         },
@@ -541,10 +1021,23 @@
             "jpName": "",
             "enName": "",
             "jpText": "この笑顔を見ることができた。それだけで、\r\n素晴らしいバレンタインになった……。\nそう……思おう。",
-            "enText": "I was able to see this smile. That alone\nmade for a great Valentine's Day…\nLet's think so…",
+            "enText": "I was able to see that smile. That alone \nmade for a great Valentine's Day…… \nI… think.",
             "nextBlock": -1,
+            "origClipLength": 76,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": 5914608019583717359
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -7698743569100607529
+                }
+            ],
             "pathId": 1089347949250404659,
             "blockIdx": 47
         }
-    ]
+    ],
+    "modified": 1683732695,
+    "humanTl": true
 }

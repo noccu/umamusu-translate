@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "6CEKJ2DRD74RRHUEQ4ZRXFS5UUSRVJ6R",
+    "version": 5,
+    "bundle": "YB2UZXIC3QGCL7DPSG7GWY6RN5VXZQEG",
     "type": "story",
     "storyId": "801029003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nユキノビジンが話していた。",
             "enText": "After training, <chrname> and \nYukinovijn were talking.",
             "nextBlock": -1,
-            "pathId": 4111191466436793454,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 6817885089153065663
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -2972170514650967368
+                }
+            ],
+            "pathId": -3159569605411247317,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674414
 }

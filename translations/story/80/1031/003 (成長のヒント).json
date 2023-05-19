@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "4E7BDPEDT7SGBQUYZQ3LQBT5YEJNEXTQ",
+    "version": 5,
+    "bundle": "7UNF7YJLGDDSBMGCJUMGOI2HB3XZJJEN",
     "type": "story",
     "storyId": "801031003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nアイネスフウジンが話していた。",
             "enText": "After training, <chrname> and \nAinez Fujin were talking.",
             "nextBlock": -1,
-            "pathId": -1322575138731091322,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -414400035337665141
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 4020177933888954144
+                }
+            ],
+            "pathId": -7371038767344725068,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674415
 }

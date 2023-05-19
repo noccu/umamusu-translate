@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "URHDREYI4YNWC2DH7W2ICPLWKZJ2C22J",
+    "version": 5,
+    "bundle": "K3M6PSDPGB52V3FBAEVBNTI3OWN2YS57",
     "type": "story",
     "storyId": "801023003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nビワハヤヒデが話していた。",
             "enText": "After training, <chrname> and \nBiwa Hayahide were talking.",
             "nextBlock": -1,
-            "pathId": -818592794574986574,
+            "origClipLength": 66,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 8768760210051965388
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 1856958999353399740
+                }
+            ],
+            "pathId": 4700701752227956026,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674413
 }

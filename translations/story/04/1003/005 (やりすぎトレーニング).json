@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "54HW5EJXJFTNMV6CRN36ZCJ34AORUSXS",
     "type": "story",
     "storyId": "041003005",
@@ -9,9 +9,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "とある日の午後。スポーツジムの中から、\r\n妙なつぶやきが聞こえてくる……。",
-            "enText": "One afternoon. From inside the gym, \na strange murmur can be heard: ……",
+            "enText": "One day, while I was at the \ngym, I heard strange murmuring…",
             "nextBlock": 2,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 105,
@@ -23,11 +24,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "でっどりふと……。デッド……。\r\nなんか怖そ～な名前だよね。でも……。",
-            "enText": "Deidorifu…… Dead…… It's kind of a scary \nname, isn't it? But it's also ……",
+            "enText": "Deadlifting… Dead… \nWhy does it have such a scary name…?",
             "nextBlock": 3,
             "origClipLength": 291,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 80,
@@ -39,15 +41,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "カイチョーはちゃんとやってたんだし、ボクも負けないぞ！\r\nよぉし、じゃあまずは200kgから。",
-            "enText": "Kaicho did it right, and I'm not going to be outdone! All right, \nlet's start with 200 kg.",
+            "enText": "Well it doesn't matter! Since Prez can do it, \nI can too! Welp, guess I'll start with 200kg!",
             "nextBlock": 4,
             "origClipLength": 274,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "ストップストップ！",
-                    "enText": "Stop, stop, stop!",
+                    "enText": "Hold on, stop!",
                     "nextBlock": 4
                 }
             ],
@@ -62,15 +65,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うわあああぁ～っ！　と、トレーナー？　おどかさないでよぉ。\r\nせっかく、これからデッドろうとしてたのに。",
-            "enText": "Ohhhhhh! And the trainer? You scared \nme. I was just about to go dead.",
+            "enText": "Uwaaah! T-Trainer?! Don't surprise me like \nthat! I was just about to do some deading.",
             "nextBlock": 5,
             "origClipLength": 243,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "『デッドる』……？",
-                    "enText": "Deadl,\" ……?",
+                    "enText": "\"Deading\"?",
                     "nextBlock": 5
                 }
             ],
@@ -93,11 +97,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "そっ！　今やろうとしてたのは、筋トレメニューの1つ。\r\n『デッドリフト』っていうんだ。",
-            "enText": "That's right!!! What I was going to do now is one of the strength \ntraining menus. It's called \"Deadlift.",
+            "enText": "Yup! It's one of the things on my muscle \nbuilding regimen! It's called \"deadlifting\".",
             "nextBlock": 6,
             "origClipLength": 188,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 50,
@@ -113,11 +118,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "地面に置いたバーベルを両手で握って\r\n『えいやっ！』って腰の位置まで持ち上げるんだよ。",
-            "enText": "You grip the barbell on the ground with both hands and lift it up \nto your waist. and lift it up to your waist.",
+            "enText": "You grab the barbell with both hands. \nThen you scream while you raise it above your waist.",
             "nextBlock": 7,
             "origClipLength": 183,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 76,
@@ -133,11 +139,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "で、カイチョーが、これの200kgをやってたんだ。\r\nだからボクも挑戦しようと思って！",
-            "enText": "And Kaicho was doing 200kg of this. So I decided to give it a try!",
+            "enText": "But I heard that Prez could \nlift 200kg, so I figured I'd try it too!",
             "nextBlock": 8,
             "origClipLength": 194,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 80,
@@ -151,9 +158,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "会長シンボリルドルフと同じ重量をやるのは無理がある。\r\nせめて、同じ効果のある別トレーニングを勧めたが……。",
-            "enText": "It is impossible to do the same weight as Chairman \nSymbol Rudolph. At least, I recommended a different \ntraining with the same effect. ……",
+            "enText": "It would be impossible for her to \nlift that much weight from the start. \nI recommended her a similarly effective training, but…",
             "nextBlock": 9,
             "origClipLength": 115,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 127,
@@ -165,11 +173,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "う～……でも同じのがやりたいんだよ～。カイチョーがこれを\r\n選んだんなら、そこにはきっと意味がある。",
-            "enText": "U～ I want to do the same thing…… If Kaicho chose to do this, \nthere must be a point to it.",
+            "enText": "Nngh… But I wanna do the same weight as her! \nThere has to be a reason why she chose that weight!",
             "nextBlock": 10,
             "origClipLength": 270,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 87,
@@ -185,11 +194,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "まったく同じことを同じようにやらなきゃ\r\n追いつけない気がするんだ。だからボク――やってみる！",
-            "enText": "I feel like I have to do the exact same thing in the exact same \nway to catch up. So I'm going to try!",
+            "enText": "If I don't do the same things as her, I won't be \nable to catch up to her. That's why I have to do it!",
             "nextBlock": 11,
             "origClipLength": 231,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 80,
@@ -205,11 +215,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "それじゃっ、いくよー！",
-            "enText": "Well then, here I go!",
+            "enText": "Anyways, here I go!",
             "nextBlock": 12,
             "origClipLength": 81,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 32,
@@ -221,11 +232,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ふんぎ～～～っ！",
-            "enText": "Hmmm～!",
+            "enText": "",
             "nextBlock": 13,
             "origClipLength": 91,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 104,
@@ -237,15 +249,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "や、やったぁ！　どう、トレーナー見てくれた？\r\nボクにもカイチョーと同じ重さ、あげられたよっ！",
-            "enText": "Yes! Did you see my trainer? I can lift the same weight as Kaicho!",
+            "enText": "Y-Yay, I did it! Trainer, were you watching? I \nwas able to lift the same weight as Prez did!",
             "nextBlock": 14,
             "origClipLength": 254,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "すごい……",
-                    "enText": "Awesome ……",
+                    "enText": "Holy cow…",
                     "nextBlock": 14
                 }
             ],
@@ -268,11 +281,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "でしょでしょ？　この調子でガンガンやっちゃおー！\r\nで、カイチョーを追い越すんだっ！",
-            "enText": "Right? Keep up the good work! And overtake Kai Cho!",
+            "enText": "Right? I just need to keep up this pace and I'll \nbe able to pass up Prez!",
             "nextBlock": 15,
             "origClipLength": 204,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 50,
@@ -288,11 +302,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "んっしょ、んっしょっと♪",
-            "enText": "Choo-choo, choo-choo… ♪",
+            "enText": "",
             "nextBlock": 16,
             "origClipLength": 189,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 80,
@@ -304,11 +319,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "いける……！　いけるよ、ボクっ！　これならカイチョーが\r\nやってた他のメニューも全制覇できるかも！",
-            "enText": "I can do it. ……! I can do it, I can do it! Maybe I can get all \nthe other dishes that Kaycho had on the menu!",
+            "enText": "I can do this…! I can really do this! I think I \ncan take on all of Prez's training regimens now!",
             "nextBlock": 17,
             "origClipLength": 214,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 60,
@@ -320,15 +336,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "よぉし、この調子でつぎも！　それぇー！",
-            "enText": "All right, keep it up! That's it!",
+            "enText": "Alrighty then, I'll move onto the next training!",
             "nextBlock": 18,
             "origClipLength": 133,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "少しはペースを考えた方が……！",
-                    "enText": "You might want to pace yourself a little ……!",
+                    "enText": "You should take it easy…",
                     "nextBlock": 18
                 }
             ],
@@ -345,9 +362,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トウカイテイオーは夢中になるあまり、助言には耳も貸さず\r\nひたすら筋トレに打ち込んだ。",
-            "enText": "Tokai Teio was so absorbed in her work that she did not heed \nadvice and devoted herself to muscle training.",
+            "enText": "Without heeding any of my warnings, Tokai Teio \nmeticulously continued her strength training",
             "nextBlock": 19,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 39,
@@ -369,28 +387,30 @@
             "jpName": "",
             "enName": "",
             "jpText": "――翌日。",
-            "enText": "― The next day.",
+            "enText": "The Next Day.",
             "nextBlock": 20,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "pathId": -2090099697747514381,
             "blockIdx": 19
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "とれぇぇぇなぁぁぁ……。とれ……がくしっ。",
-            "enText": "Torre hey hey hey hey…… Torre…… gakush.",
+            "enText": "Traaiineer… Trai– Gah!",
             "nextBlock": 21,
             "origClipLength": 164,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "テイオー、大丈夫か……？",
-                    "enText": "Tayo, are you okay ……?",
+                    "enText": "Teio, are you okay…?",
                     "nextBlock": 21
                 },
                 {
                     "jpText": "テイオー、大丈夫……？",
-                    "enText": "Tayo, are you okay ……?",
+                    "enText": "Teio, are you okay…?",
                     "nextBlock": 21
                 }
             ],
@@ -413,11 +433,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "よいっ……しょっ。もう体中ガッキガキだよ。\r\nひどい筋肉痛……。",
-            "enText": "Yo…… I'm already sore all over. My muscles ache terribly. ……",
+            "enText": "Ugh… my whole body is sore… \nand all my muscles hurt…",
             "nextBlock": 22,
             "origClipLength": 287,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 89,
@@ -433,11 +454,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "でも、これって成長のあかしだよね！　痛いぶん、きっと筋肉は\r\n育ってるんだ。じゃあトレーニングコースへ……。",
-            "enText": "But this is a sign of growth! The more it hurts, the more your \nmuscles are growing. Then go to the training course: ……",
+            "enText": "But it's a sign that it's working, right?! The \nmore it hurts, the more your muscles grow! Guess \nI should head to the racetrack…",
             "nextBlock": 23,
             "origClipLength": 288,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 89,
@@ -453,20 +475,21 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ぎごごごぉぉぉっ……痛すぎ～～～！\r\nこれじゃあ、いつものトレーニングができないよ～。",
-            "enText": "Giggooooooooooo…… too painful～! I can't \ndo my usual training with this～!",
+            "enText": "Agahgahgah… It hurts too much! I don't think I \ncan train like this!",
             "nextBlock": 24,
             "origClipLength": 290,
+            "voiceIdx": 18,
             "choices": [
                 {
                     "jpText": "無理はするな",
-                    "enText": "Take it easy.",
+                    "enText": "Don't push yourself so hard.",
                     "nextBlock": 24
                 },
                 {
                     "jpText": "無理はしないで",
-                    "enText": "Take it easy.",
+                    "enText": "Don't push yourself so hard.",
                     "nextBlock": 24
                 }
             ],
@@ -481,15 +504,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うん……。やっぱりボクには無理だったのかな。\r\nカイチョーとおんなじメニューやるなんて……。",
-            "enText": "Yeah…… I guess I couldn't do it after all. I can't believe I'm \ndoing the same menu as Kaicho. ……",
+            "enText": "Nngh… Maybe I did go a bit overboard. But I just \nfollowed Prez's training regimen…",
             "nextBlock": 25,
             "origClipLength": 228,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "ペースを考えずにやったから……",
-                    "enText": "I did it without thinking about the pace. ……",
+                    "enText": "It's because you didn't pace yourself…",
                     "nextBlock": 25
                 }
             ],
@@ -508,11 +532,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "へ？　あ、そっち？",
-            "enText": "Huh? Oh, that way?",
+            "enText": "Huh? Oh, maybe you're right.",
             "nextBlock": 26,
             "origClipLength": 69,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 28,
@@ -536,11 +561,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "そっか、ついつい夢中になっちゃって……。\r\nもう少しトレーナーと話しながら進めればよかったね。",
-            "enText": "I see, I got carried away and went to…… I should have talked to \nthe trainer a little more as I went along.",
+            "enText": "Yeah, I might have gotten a little too carried \naway. I should have talked to you about it, huh?",
             "nextBlock": 27,
             "origClipLength": 216,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 28,
@@ -560,11 +586,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ごめん。ねぇねぇ、反省してるからさー、\r\nこの痛み、どうにかなんない？",
-            "enText": "Sorry. Hey, hey, I'm sorry, but can't \nyou do something about this pain?",
+            "enText": "I'm really sorry about this, so is there \nanything you can do about this pain?",
             "nextBlock": 28,
             "origClipLength": 220,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 65,
@@ -584,11 +611,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "これじゃ1日中なんにもできないよ。\r\nお願い！　お願～い！！",
-            "enText": "I can't do anything all day long with this. Please! Please!",
+            "enText": "I don't want to be out of commission for a whole \nday, so please do something! Please!?",
             "nextBlock": 29,
             "origClipLength": 188,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 64,
@@ -614,9 +642,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トウカイテイオーの願いを聞き入れ、軽くストレッチさせたり、\r\n筋肉を温めたりした。すると……。",
-            "enText": "Heeding Tokai Teio's wishes, she gave her some light stretching \nand warmed up her muscles. Then she went to ……",
+            "enText": "After listening to her pleas, I decided to have \nher stretch and warm her muscles a bit. Then…",
             "nextBlock": 30,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 115,
@@ -628,15 +657,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "わわっ、何これ！？　すっごい楽になった！\r\nトレーナーって天才？　なんでこんなに効くの？",
-            "enText": "Wow, what's this? It's so much easier! Are trainers geniuses? Why \ndoes it work so well?",
+            "enText": "Woah, what the heck?! That was so \neasy! Trainer, are you some kinda \ngenius? Why was that so effective?",
             "nextBlock": 31,
             "origClipLength": 219,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "筋肉がやわらかいから",
-                    "enText": "Because the muscles are soft.",
+                    "enText": "It was thanks to your own flexibility.",
                     "nextBlock": 31
                 }
             ],
@@ -655,11 +685,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ボクの？　そーなんだ。カイチョーほど丈夫じゃないけど、\r\nかわりに治りが早いのかな。えへへ……♪",
-            "enText": "Is it mine? That's right. It's not as strong as Kaicho's, but I \nguess it heals faster instead. Heh heh heh ……",
+            "enText": "Mine? Really? My muscles may not be as strong \nand stiff as Prez's, but maybe that means they \nalso heal faster. Ehehe♪",
             "nextBlock": 32,
             "origClipLength": 272,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 169,
@@ -675,15 +706,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "よぉし、これならいける！\r\nトレーニング再開だぁ！　って、いててててぇっ！",
-            "enText": "Okay, I can do this! Let's get back to \ntraining! Oh, no, no, no, no, no, no!",
+            "enText": "Alrighty then, now I can get \nback to training! Agaaaaaah!",
             "nextBlock": 33,
             "origClipLength": 248,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "……今日は無理だから",
-                    "enText": "…… because I can't make it today.",
+                    "enText": "You need to rest today…",
                     "nextBlock": 33
                 }
             ],
@@ -706,11 +738,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "そんなぁ～。さすがのボクでも、いきなりはダメかぁ。\r\nしゅーん……。",
-            "enText": "Oh, no. Even I can't do that out of the blue. Shhhh… ……",
+            "enText": "Aww, really? I guess even for me, going straight \nback to training is impossible. Dangit…",
             "nextBlock": 34,
             "origClipLength": 227,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 100,
@@ -726,11 +759,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "じゃあ、しょうがないから今日はお休み……。\r\nごめんトレーナー。",
-            "enText": "Well, I can't help it, so I'm taking the \nrest of the day off.…… Sorry trainer.",
+            "enText": "Okay fine, I guess I'll take today off… I'm \nsorry for all of this, Trainer…",
             "nextBlock": 35,
             "origClipLength": 159,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 138,
@@ -746,11 +780,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "でも見てて。いつか筋肉痛でダウンしたりしないよう、\r\n強くなってみせるからっ！",
-            "enText": "But watch me. I'll get stronger so that one \nday I won't go down with muscle pain!",
+            "enText": "But just you wait, I'm not going to stay so \nweak! I'm going to get stronger!",
             "nextBlock": -1,
             "origClipLength": 162,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 79,
@@ -765,5 +800,6 @@
             "blockIdx": 35
         }
     ],
-    "modified": 1657206800
+    "modified": 1681654927,
+    "humanTl": true
 }

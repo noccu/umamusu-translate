@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "QWWWUQ73HXF7QPWW6GJY7IYJWYWP5TW5",
+    "version": 5,
+    "bundle": "KB2GBOI4CZTVTKY4QYNU7FWUOGDWSLFB",
     "type": "story",
     "storyId": "501041514",
     "title": "委員長のいない日",
@@ -9,8 +9,9 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "サクラバクシンオーが腹痛で欠席したらしい。\r\nすぐに治ると言っていたが、大丈夫だろうか？",
-            "enText": "I heard that Sakura Bakushin O was absent\ndue to stomachache. She said she would\nrecover soon, but would she be okay?",
+            "enText": "I heard that Sakura Bakushin O was absent \ndue to a stomachache. She said she would \nrecover soon, is she really okay?",
             "nextBlock": 2,
+            "origClipLength": 102,
             "pathId": 3434500999939436042,
             "blockIdx": 1
         },
@@ -18,8 +19,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そんなことを考えていたためか、\r\n目の前にサクラバクシンオーの姿が\n見える気がする……。",
-            "enText": "Perhaps it was because I was thinking about\nthis that I could see Sakura Bakushin-o in\nfront of me…",
+            "enText": "Perhaps it was because I was thinking about \nthis that I could see Sakura Bakushin O \ndirectly in front of me…",
             "nextBlock": 3,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -5580182464647532139
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -6360693887923328017
+                }
+            ],
             "pathId": -8135978613653031779,
             "blockIdx": 2
         },
@@ -27,18 +39,29 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "おや、トレーナーさん！",
-            "enText": "Oh, trainer!",
+            "enText": "Oya, Trainer!",
             "nextBlock": 4,
+            "origClipLength": 59,
             "choices": [
                 {
                     "jpText": "って、何してるんだバクシンオー！",
-                    "enText": "What are you doing, Bakushin-O?",
+                    "enText": "Hold on, what are you doing, Bakushin O!?",
                     "nextBlock": 4
                 },
                 {
                     "jpText": "って、何してるのバクシンオー！",
-                    "enText": "What are you doing, Bakushin-O?",
+                    "enText": "Hold on, what are you doing, Bakushin O!?",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -6487563512812800753
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -233223475446069638
                 }
             ],
             "pathId": -7261856864451691506,
@@ -48,8 +71,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "何って、決まってるじゃありませんか！\r\n腹痛が治まったので登校してきたのです！！",
-            "enText": "What? It's obvious! My stomachache went\naway, so I came to school!",
+            "enText": "What, you say? Is it not obvious! \nMy stomachache went away, so I came to \nschool!!",
             "nextBlock": 5,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 678088206325633932
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 5237380497334541367
+                }
+            ],
             "pathId": 2772912040585332555,
             "blockIdx": 4
         },
@@ -57,13 +91,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "やはりクラスには委員長である私が\r\nいなければ……いたた。",
-            "enText": "After all, without me as the chairperson of\nthe class, there would be no…",
+            "enText": "After all, without me as president of the \nclass, there would be no… ow, ow, ow.",
             "nextBlock": 6,
+            "origClipLength": 82,
             "choices": [
                 {
                     "jpText": "やっぱり治ってないんじゃ",
-                    "enText": "Maybe it's not healed after all.",
+                    "enText": "Maybe it's not gone away after all.",
                     "nextBlock": 6
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": -6793157944976809206
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -1238206371013149505
                 }
             ],
             "pathId": -4407592452350339763,
@@ -73,8 +118,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "いえ、今のはお腹が空いただけです！\r\n決して腹痛ではありませんとも！！",
-            "enText": "No, that was just hunger! I\ndon't have a stomachache!",
+            "enText": "No, no, that was just hunger! \nI don't have a stomachache one bit!!",
             "nextBlock": 7,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -3007619633243275808
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 4488031366869498833
+                }
+            ],
             "pathId": -5845093634116005884,
             "blockIdx": 6
         },
@@ -82,8 +138,9 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……どう見ても本調子ではなさそうだ。\r\nここは――",
-            "enText": "… doesn't seem to be in the best of\nshape by any means. This place is—",
+            "enText": "…She doesn't seem to be in the best of \nshape by any means. \nFor her to be here is――",
             "nextBlock": 8,
+            "origClipLength": 77,
             "choices": [
                 {
                     "jpText": "寮に帰らないとダメだ",
@@ -97,13 +154,23 @@
                 },
                 {
                     "jpText": "みんなを心配させてもいいのか？",
-                    "enText": "Do you want me to worry everyone?",
+                    "enText": "Are you sure you want to worry everyone?",
                     "nextBlock": 34
                 },
                 {
                     "jpText": "みんなを心配させてもいいの？",
                     "enText": "Are you sure you want to worry everyone?",
                     "nextBlock": 34
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": -7388806343391038564
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 1803795190740858121
                 }
             ],
             "pathId": 214301936576265792,
@@ -113,8 +180,9 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……どう見ても本調子ではなさそうだ。\r\nここは――",
-            "enText": "… doesn't seem to be in the best of\nshape by any means. This place is—",
+            "enText": "…She doesn't seem to be in the best of \nshape by any means. \nFor her to be here is――",
             "nextBlock": 9,
+            "origClipLength": 77,
             "choices": [
                 {
                     "jpText": "寮に帰らないとダメだ",
@@ -128,13 +196,23 @@
                 },
                 {
                     "jpText": "みんなを心配させてもいいのか？",
-                    "enText": "Do you want me to worry everyone?",
+                    "enText": "Are you sure you want to worry everyone?",
                     "nextBlock": 34
                 },
                 {
                     "jpText": "みんなを心配させてもいいの？",
                     "enText": "Are you sure you want to worry everyone?",
                     "nextBlock": 34
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": 6093234437400011624
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -1763900677268756239
                 }
             ],
             "pathId": -4829708365822734150,
@@ -144,8 +222,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今は安静にしているようにと諭したが――",
-            "enText": "I admonished her to rest easy for now, but—",
+            "enText": "I admonished her to rest easy for now, \nbut――",
             "nextBlock": 10,
+            "origClipLength": 69,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -295529248220059306
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -5112305814685817976
+                }
+            ],
             "pathId": -1932278288208943678,
             "blockIdx": 9
         },
@@ -153,8 +242,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "お断りします！\r\nクラスのみなさんが私を待っているのです！！",
-            "enText": "I refuse! The whole class is waiting for me!",
+            "enText": "I refuse! \nThe whole class is waiting for me!!",
             "nextBlock": 11,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 8056259469368100360
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -7185615522342072490
+                }
+            ],
             "pathId": 5435359150183636645,
             "blockIdx": 10
         },
@@ -162,8 +262,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "トレーナーさんがなんと言おうと\r\n私は教室へ向かいます！",
-            "enText": "No matter what the trainer says,\nI'm heading to class!",
+            "enText": "No matter what Trainer says, I'm heading \nto class!",
             "nextBlock": 12,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -519897997032046738
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -5787008684054244552
+                }
+            ],
             "pathId": 6875594569548042200,
             "blockIdx": 11
         },
@@ -171,8 +282,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "バク、シーン！！\r\nいたた……。",
-            "enText": "Baku, scene! There it is…",
+            "enText": "Baku, shi―n!! \nOw, owww…",
             "nextBlock": 13,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 2437974641304865788
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -5516853423587232424
+                }
+            ],
             "pathId": 8572402961882403402,
             "blockIdx": 12
         },
@@ -180,8 +302,9 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "横腹を押さえつつ、サクラバクシンオーは\r\n自分の教室へと駆けて行ってしまった。",
-            "enText": "Holding her side, Sakura Bakushin O\nran off to her classroom.",
+            "enText": "Holding her side, Sakura Bakushin O \ndashed off to her classroom.",
             "nextBlock": 14,
+            "origClipLength": 95,
             "pathId": -3811965137946124834,
             "blockIdx": 13
         },
@@ -189,18 +312,29 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ようやくの思いで\r\nサクラバクシンオーに追いついた時、\n彼女は教室の扉に手をかけようとしていた。",
-            "enText": "When she finally caught up with Sakura\nBakushin-o, she was about to put her hand on\nthe door of the classroom.",
+            "enText": "When I finally caught up with Sakura \nBakushin O, she was about to put her \nhand on the door handle to the classroom.",
             "nextBlock": 15,
+            "origClipLength": 107,
             "choices": [
                 {
                     "jpText": "ストップ！寮に帰るぞ！",
-                    "enText": "Stop! Stop! We're going back to the dorms!",
+                    "enText": "Stop right there! We're going back to the dorms!",
                     "nextBlock": 15
                 },
                 {
                     "jpText": "ストップ！寮に帰るよ！",
-                    "enText": "Stop! Stop! I'm going back to the dorm!",
+                    "enText": "Stop right there! We're going back to the dorms!",
                     "nextBlock": 15
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 6407888940375186138
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6332930202937787169
                 }
             ],
             "pathId": -2447008897319316399,
@@ -210,8 +344,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "お断りしますっ！\r\n私はこれから委員長の仕事を――",
-            "enText": "I refuse! I'm going to do my\njob as committee chair…",
+            "enText": "I refuse! \nI'm going to do my job as president――",
             "nextBlock": 16,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": -7816437566014832476
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -5268268020647266663
+                }
+            ],
             "pathId": 7133695305850351372,
             "blockIdx": 15
         },
@@ -219,8 +364,19 @@
             "jpName": "クラスメイトＡ",
             "enName": "Classmate A",
             "jpText": "お疲れさま～。\r\n委員長代理、サマになってたじゃん！",
-            "enText": "Good work! Acting chairperson,\nyou were looking good!",
+            "enText": "Nice work today～. \nActing president, you were looking good!",
             "nextBlock": 17,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 4271814597142223981
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -8800553688414714494
+                }
+            ],
             "pathId": -3437483647410520856,
             "blockIdx": 16
         },
@@ -228,8 +384,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "と、教室から漏れてきた声を聞き、\r\nサクラバクシンオーの動きが止まった。",
-            "enText": "Sakura Bakushin O stopped moving when she\nheard a voice leaking from the classroom.",
+            "enText": "Sakura Bakushin O stopped moving when \nshe heard a voice coming from the \nclassroom.",
             "nextBlock": 18,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": 4378205024981378455
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 834573135829295458
+                }
+            ],
             "pathId": 788189197007716421,
             "blockIdx": 17
         },
@@ -237,8 +404,19 @@
             "jpName": "クラスメイトＢ",
             "enName": "Classmate B",
             "jpText": "そ、そうかな～？",
-            "enText": "I don't know…",
+            "enText": "I, is that so～?",
             "nextBlock": 19,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -5728790712812724132
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -6726435263533472382
+                }
+            ],
             "pathId": -8435117291466476483,
             "blockIdx": 18
         },
@@ -246,8 +424,9 @@
             "jpName": "クラスメイトC",
             "enName": "Classmate C",
             "jpText": "ホントホント！\r\n完璧な委員長って感じだったよ！",
-            "enText": "Really, really, really! She was\nlike the perfect chairman!",
+            "enText": "Really, really! \nYou were like the perfect president!",
             "nextBlock": 20,
+            "origClipLength": 76,
             "pathId": -55294861816624616,
             "blockIdx": 19
         },
@@ -255,8 +434,9 @@
             "jpName": "クラスメイトＢ",
             "enName": "Classmate B",
             "jpText": "もー、おだて過ぎだって～！",
-            "enText": "I've been flattered too much!",
+            "enText": "Come on, now, you're flattering me too \nmuch～!",
             "nextBlock": 21,
+            "origClipLength": 61,
             "pathId": -6919251619632769081,
             "blockIdx": 20
         },
@@ -264,8 +444,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "……な、なんということでしょう。",
-            "enText": "… Hey, what a surprise.",
+            "enText": "…Wh, what do you mean?",
             "nextBlock": 22,
+            "origClipLength": 65,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -7364759534182216707
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -6395652766502059501
+                }
+            ],
             "pathId": 3314709360945499640,
             "blockIdx": 21
         },
@@ -273,8 +464,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "完璧な委員長……それでは私はもう、\r\nお役御免なのでしょうか！？",
-            "enText": "The Perfect Chair… So I\nguess I'm out of a job then!",
+            "enText": "The Perfect President… Then, does this \nmean I'm out of a job!?",
             "nextBlock": 23,
+            "origClipLength": 86,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -4882189191523319841
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 5137165681239911241
+                }
+            ],
             "pathId": -7631664721746264285,
             "blockIdx": 22
         },
@@ -282,8 +484,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "体調不良のせいか、気弱な発言をする\r\nサクラバクシンオー。\n今の話は泣きっ面に蜂だったのだろう。",
-            "enText": "Sakura Bakushin O is making feeble remarks,\nprobably due to her poor health. What she\njust said must have been a crying shame.",
+            "enText": "Sakura Bakushin O is making such feeble \nremarks, probably because she's not \nfeeling well. \nWhat she just heard must have made \nmatters even worse.",
             "nextBlock": 24,
+            "origClipLength": 107,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 1650356176617758832
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -8837379826742508666
+                }
+            ],
             "pathId": -7060834619369116259,
             "blockIdx": 23
         },
@@ -291,18 +504,29 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "しかし――",
-            "enText": "But—",
+            "enText": "But――",
             "nextBlock": 25,
+            "origClipLength": 51,
             "choices": [
                 {
                     "jpText": "そんなことない、見てみなよ",
-                    "enText": "No, it's not. Look at that.",
+                    "enText": "That's not true, take a look.",
                     "nextBlock": 25
                 },
                 {
                     "jpText": "そんなことない、見てみて",
-                    "enText": "No, it's not. Look at that.",
+                    "enText": "That's not true, take a look.",
                     "nextBlock": 25
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": 714224428874696150
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -7901098838275739472
                 }
             ],
             "pathId": -2645770212638906932,
@@ -312,8 +536,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "えっ？",
-            "enText": "What?",
+            "enText": "Huh?",
             "nextBlock": 26,
+            "origClipLength": 48,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 6959845486057605020
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -1171847319639512392
+                }
+            ],
             "pathId": 3963514179867440573,
             "blockIdx": 25
         },
@@ -321,8 +556,19 @@
             "jpName": "クラスメイトＡ",
             "enName": "Classmate A",
             "jpText": "……けどさー、\r\nやっぱバクちゃんがいないと寂しいよね。",
-            "enText": "… but I'm going to\nmiss you, Baku-chan.",
+            "enText": "…But, y'know, I'm going to miss \nBaku-chan.",
             "nextBlock": 27,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 6601581851185331931
+                },
+                {
+                    "origLen": 18,
+                    "pathId": 1059402355874086622
+                }
+            ],
             "pathId": 4906785389643527052,
             "blockIdx": 26
         },
@@ -330,8 +576,9 @@
             "jpName": "クラスメイトC",
             "enName": "Classmate C",
             "jpText": "うんうん！\r\nやっぱあの『バクシン！』って声がないと。",
-            "enText": "Yeah, yeah! I knew I had to have that\n\"Bakushin! I need to hear that voice.",
+            "enText": "Yeah, yeah! \nIt just doesn't feel right without hearing \nthat good old \"Bakushin!\" after all.",
             "nextBlock": 28,
+            "origClipLength": 80,
             "pathId": 1486259229455795173,
             "blockIdx": 27
         },
@@ -339,8 +586,9 @@
             "jpName": "クラスメイトB",
             "enName": "Classmate B",
             "jpText": "委員長の仕事、すっごくキツかった。\r\n毎日やってるバクちゃんってすごいなぁ……。",
-            "enText": "My job as a committee chairman was very\nhard. It's amazing that Baku-chan does it\nevery day…",
+            "enText": "My job as class president was real tough. \nIt's amazing how Baku-chan does it every \nday…",
             "nextBlock": 29,
+            "origClipLength": 97,
             "pathId": -5060902069958346585,
             "blockIdx": 28
         },
@@ -348,8 +596,9 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "み、みなさん……！！",
-            "enText": "Hey, everyone…!",
+            "enText": "E, everyone…!!",
             "nextBlock": 30,
+            "origClipLength": 58,
             "choices": [
                 {
                     "jpText": "ほら言っただろ？",
@@ -362,6 +611,16 @@
                     "nextBlock": 30
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": 8241977436065442195
+                },
+                {
+                    "origLen": 98,
+                    "pathId": -3528594123616587072
+                }
+            ],
             "pathId": 394233300105013330,
             "blockIdx": 29
         },
@@ -369,8 +628,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "はい、トレーナーさん！\r\n私は委員長でいていいんですね！",
-            "enText": "Yes, Ms. Trainer! I'm allowed\nto be the chairman!",
+            "enText": "Yes, Trainer! \nIt's OK for me to be class president!",
             "nextBlock": 31,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 521160592944755853
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -4163608245924252841
+                }
+            ],
             "pathId": 1667887342039142473,
             "blockIdx": 30
         },
@@ -378,8 +648,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "クラスのみなさん……、\r\nこれからも私は学級委員長を続けます！",
-            "enText": "To my class… I will continue\nto be the class president!",
+            "enText": "For everyone in my class… \nI will continue to be the class president!",
             "nextBlock": 32,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 8685130803925254057
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -8993596106557244451
+                }
+            ],
             "pathId": 5591448323054555743,
             "blockIdx": 31
         },
@@ -387,8 +668,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "感極まってそのまま教室に突進しようとする\r\nサクラバクシンオーを慌てて止め、\n寮へと送っていったのだった。",
-            "enText": "She hurriedly stopped Sakura Bakushin-o,\nwho was about to rush into the classroom\nin a fit of emotion, and took her back\nto the dormitory.",
+            "enText": "I hurriedly stopped Sakura Bakushin O, \nwho was about to rush into the classroom \nin a fit of emotion, and took her back to \nthe dormitory.",
             "nextBlock": 33,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": 1561738169215732624
+                },
+                {
+                    "origLen": 125,
+                    "pathId": 4364002940671273029
+                }
+            ],
             "pathId": 3787896290280953936,
             "blockIdx": 32
         },
@@ -396,8 +688,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そして数日後、トレセン学園には\r\n元気いっぱいに学級委員長の仕事をこなす\nサクラバクシンオーの姿があった。",
-            "enText": "A few days later, Sakura Bakushin-o was at\nthe Tresen Academy, energetically carrying\nout her duties as class president.",
+            "enText": "A few days later, Sakura Bakushin O was at \nthe Academy, energetically carrying out \nher duties as class president.",
             "nextBlock": -1,
+            "origClipLength": 114,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": -6734537320720652879
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 3355328927653144362
+                }
+            ],
             "pathId": 2110074657660791039,
             "blockIdx": 33
         },
@@ -405,8 +708,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そ、それは……。",
-            "enText": "Yes, that's…",
+            "enText": "Th, that's…",
             "nextBlock": 35,
+            "origClipLength": 55,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 8558062614542312933
+                },
+                {
+                    "origLen": 66,
+                    "pathId": 8764649482230380971
+                }
+            ],
             "pathId": -3419868594096068525,
             "blockIdx": 34
         },
@@ -414,8 +728,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ここで無理をすると\r\n症状が悪化するかもしれない。",
-            "enText": "If I push myself too hard here,\nmy symptoms might get worse.",
+            "enText": "If she pushes myself too hard here, her \nsymptoms could get worse.",
             "nextBlock": 36,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": -3379499986726783683
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -3026875303673870919
+                }
+            ],
             "pathId": -1652994410504806090,
             "blockIdx": 35
         },
@@ -423,8 +748,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "委員長としてみんなに心配をかけるのは\r\nよくないだろうと諭したところ――",
-            "enText": "I told her that as chair of the committee,\nit wouldn't be good for her to worry\nabout everyone.",
+            "enText": "I told her that as class president, it \nwouldn't be good for her to worry \neveryone――",
             "nextBlock": 37,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 6757173292176329171
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 5107810686438990226
+                }
+            ],
             "pathId": -4374255041651503479,
             "blockIdx": 36
         },
@@ -432,8 +768,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "むむむ、それは確かにっ！！",
-            "enText": "Mmmm, that's for sure!",
+            "enText": "Hmhmhm, that is certain!!",
             "nextBlock": 38,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 27,
+                    "pathId": -4243734703135084145
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -7016904501508897381
+                }
+            ],
             "pathId": -7177051384417842746,
             "blockIdx": 37
         },
@@ -441,8 +788,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "模範となるべき学級委員長として、\r\n今回の行動は軽率でした！",
-            "enText": "As the class president who should be setting\na good example, this action was rash!",
+            "enText": "As the class president who should be \nsetting a good example, this action was \nfar too rash!",
             "nextBlock": 39,
+            "origClipLength": 84,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 6665177825271856339
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 4934316450042034860
+                }
+            ],
             "pathId": 447073269447199836,
             "blockIdx": 38
         },
@@ -450,13 +808,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "今日のところは寮に帰って……ううっ！！",
-            "enText": "I'm going back to my dorm\nfor the day… Ugh!",
+            "enText": "I'm going back to my dorm for the \nday… Uuuuugh!!",
             "nextBlock": 40,
+            "origClipLength": 69,
             "choices": [
                 {
                     "jpText": "一旦、保健室で休もう",
-                    "enText": "Let's go to the infirmary\nand rest for a while.",
+                    "enText": "Let's go to the infirmary and rest for a while.",
                     "nextBlock": 40
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": 6744537421026179385
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -2541135422537236554
                 }
             ],
             "pathId": -1821895483916539873,
@@ -466,8 +835,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "は、はい。\r\nすみません……。",
-            "enText": "Yes, yes. Sorry…",
+            "enText": "Y, yes. \nSorry…",
             "nextBlock": 41,
+            "origClipLength": 64,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 1652556278170802603
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 7523532204207050488
+                }
+            ],
             "pathId": -4526678762948471857,
             "blockIdx": 40
         },
@@ -475,8 +855,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "症状が再発したサクラバクシンオーを\r\n保健室まで連れて行った。",
-            "enText": "I took Sakura Bakushin O to the infirmary\nafter her symptoms returned.",
+            "enText": "I took Sakura Bakushin O to the infirmary \nafter her symptoms returned.",
             "nextBlock": 42,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 3617220276848221377
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -3806850460662799645
+                }
+            ],
             "pathId": 8554904774923312237,
             "blockIdx": 41
         },
@@ -484,8 +875,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "はぁ……。\r\nクラスのみなさんは大丈夫でしょうか？",
-            "enText": "Huh… Is everyone in the class okay?",
+            "enText": "Haa… \nIs everyone in class okay?",
             "nextBlock": 43,
+            "origClipLength": 77,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": -3525449871900039042
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -5919049661592588531
+                }
+            ],
             "pathId": -7381821972791672813,
             "blockIdx": 42
         },
@@ -493,13 +895,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "もし私がいないことで問題など起きていたら、\r\n悔やんでも悔やみきれません……。",
-            "enText": "If my absence had caused any problems, I\nwould not be able to regret it…",
+            "enText": "If my absence had caused any problems, I \nwould forever live to regret it…",
             "nextBlock": 44,
+            "origClipLength": 95,
             "choices": [
                 {
                     "jpText": "まずは体を治すことに専念しよう",
-                    "enText": "Let's just focus on healing the body first.",
+                    "enText": "Let's just focus on healing your body first.",
                     "nextBlock": 44
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": -2132170196406264547
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 3017382209974132993
                 }
             ],
             "pathId": 3527682187613392901,
@@ -509,8 +922,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ですが、委員長としてクラスの様子を\r\n気にせずにはいられないのです。",
-            "enText": "However, as the chairperson of\nthe committee, she couldn't help\nbut be concerned about what was\ngoing on in the class.",
+            "enText": "However, as class president, she couldn't \nhelp but be concerned about what was \ngoing on in her class.",
             "nextBlock": 45,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": -2718612923242707208
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -6900280150759727034
+                }
+            ],
             "pathId": -6928280608343067055,
             "blockIdx": 44
         },
@@ -518,8 +942,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "私が……いなければ――",
-            "enText": "If I hadn't been at…",
+            "enText": "If I'm… not there――",
             "nextBlock": 46,
+            "origClipLength": 59,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -3723575735515452441
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 2804657699034410126
+                }
+            ],
             "pathId": 4708416255401015232,
             "blockIdx": 45
         },
@@ -527,18 +962,29 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ベッドに入ったサクラバクシンオーは\r\nやがて眠りについたが、\n寝る直前まで自分のクラスを心配していた。",
-            "enText": "Sakura Bakushin O went to bed and eventually\nfell asleep, but she was worried about her\nclass until just before she fell asleep.",
+            "enText": "Sakura Bakushin O climbed into the bed and \neventually fell asleep, but she was worried \nabout her class until just before she \npassed out.",
             "nextBlock": 47,
+            "origClipLength": 111,
             "choices": [
                 {
                     "jpText": "……代わりにクラスの様子を見てくるか",
-                    "enText": "I'll go check on the class\ninstead of…",
+                    "enText": "…I guess I'll go check on the class in her place.",
                     "nextBlock": 47
                 },
                 {
                     "jpText": "……代わりにクラスの様子を見てこようか",
-                    "enText": "Let's go check on the class\ninstead of…",
+                    "enText": "…I guess I'll go check on the class in her place.",
                     "nextBlock": 47
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": -1715825046906545392
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -2908382630558538613
                 }
             ],
             "pathId": -6972920889973730328,
@@ -548,8 +994,9 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "サクラバクシンオーを起こさないよう\r\n物音に気をつけ、保健室から立ち去った。",
-            "enText": "I walked away from the infirmary, careful\nnot to make any noise so as not to wake\nSakura Bakushin O.",
+            "enText": "I walked away from the infirmary, careful \nnot to make any noise so as not to wake \nSakura Bakushin O.",
             "nextBlock": 48,
+            "origClipLength": 94,
             "pathId": 5081949491452485906,
             "blockIdx": 47
         },
@@ -557,8 +1004,9 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "う……。",
-            "enText": "U…",
+            "enText": "Uu…",
             "nextBlock": 49,
+            "origClipLength": 50,
             "pathId": -4899225552003923814,
             "blockIdx": 48
         },
@@ -566,8 +1014,9 @@
             "jpName": "クラスメイトＡ",
             "enName": "Classmate A",
             "jpText": "あ、バクちゃん起きた？",
-            "enText": "Oh, Baku, are you awake?",
+            "enText": "Oh, Baku-chan, are you awake?",
             "nextBlock": 50,
+            "origClipLength": 59,
             "pathId": 4533511355391313683,
             "blockIdx": 49
         },
@@ -575,8 +1024,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "えっ？\r\nみなさん、どうしてここに！？",
-            "enText": "What? What are you all doing here?",
+            "enText": "Eh? \nEveryone, what are you all doing here!?",
             "nextBlock": 51,
+            "origClipLength": 102,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -970153912761370231
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -3480463940167487378
+                }
+            ],
             "pathId": 2152455115149356054,
             "blockIdx": 50
         },
@@ -584,8 +1044,19 @@
             "jpName": "クラスメイトＢ",
             "enName": "Classmate B",
             "jpText": "トレーナーさんが教えてくれたんだ。\r\nバクちゃんが学校に来てるって。",
-            "enText": "The trainer told me. Baku-chan\nis here at school.",
+            "enText": "Your Trainer told me. \nBaku-chan came to school, I heard.",
             "nextBlock": 52,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 100,
+                    "pathId": 4204793891084710862
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -1545535052791605679
+                }
+            ],
             "pathId": 4425483518848196367,
             "blockIdx": 51
         },
@@ -593,8 +1064,19 @@
             "jpName": "クラスメイトＣ",
             "enName": "Classmate C",
             "jpText": "はい、これお見舞いのお茶！\r\n早く治しなよ？",
-            "enText": "Here's some tea for you!\nGet well soon, okay?",
+            "enText": "Here's some tea for you! \nGet well soon, okay?",
             "nextBlock": 53,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": -5538813722075133600
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 7997324480626351610
+                }
+            ],
             "pathId": -2743127166691900538,
             "blockIdx": 52
         },
@@ -602,8 +1084,19 @@
             "jpName": "クラスメイトＤ",
             "enName": "Classmate D",
             "jpText": "バクちゃんいないとつまんないし、\r\nやっぱ委員長がいないとね！",
-            "enText": "It's boring without you, Baku,\nand without the chairperson!",
+            "enText": "It's boring without you, Baku-chan, and \nwithout the class president, too!",
             "nextBlock": 54,
+            "origClipLength": 85,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": -1058699149484083294
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 1983913431081527568
+                }
+            ],
             "pathId": 8653259271092220556,
             "blockIdx": 53
         },
@@ -611,8 +1104,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "あ、ありがとうございます！\r\nこれは、一刻も早く腹痛を治さなければ……！",
-            "enText": "Oh, thank you so much! This should cure my\nstomachache as soon as possible…!",
+            "enText": "Th, thank you so much! \nThis should cure my stomachache in an \ninstant…!",
             "nextBlock": 55,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 6470275668369957233
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -8960566593900620920
+                }
+            ],
             "pathId": 8519190220727124965,
             "blockIdx": 54
         },
@@ -620,13 +1124,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "よし、行きましょうトレーナーさん！\r\nトレーニングで腹痛を吹き飛ばすのです！！",
-            "enText": "Okay, let's go, trainer! Let's blow this\nbellyache away with some training!",
+            "enText": "Right, let's go, Trainer! \nLet's blow this stomachache away with \nsome good old training!!",
             "nextBlock": 56,
+            "origClipLength": 95,
             "choices": [
                 {
                     "jpText": "はい！？",
-                    "enText": "Yes?",
+                    "enText": "Okay!?",
                     "nextBlock": 56
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": 3104467314399063425
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -3950109854721034066
                 }
             ],
             "pathId": -759170103874776551,
@@ -636,13 +1151,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "激しいトレーニングをぶつければ、\r\n激しい痛みを相殺できる――でしょう？",
-            "enText": "You can offset the intense pain by hitting\nthe intense training, right?",
+            "enText": "You can offset intense pain by getting in \nsome intense training――right?",
             "nextBlock": 57,
+            "origClipLength": 91,
             "choices": [
                 {
                     "jpText": "全然違う……！",
                     "enText": "Not at all…!",
                     "nextBlock": 57
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -8487114339102552517
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 2471522213072523142
                 }
             ],
             "pathId": -3261235265806379129,
@@ -652,10 +1178,23 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その後、暴走するサクラバクシンオーを\r\n彼女のクラスメイトと共に止めたのだった。",
-            "enText": "Later, she and her classmates stopped the\nrunaway Sakura Bakushin-o.",
+            "enText": "Later, her classmates and I stopped the \nrunaway Sakura Bakushin O.",
             "nextBlock": -1,
+            "origClipLength": 97,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 8520533462148701747
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -5299759036645901545
+                }
+            ],
             "pathId": 4123525876785922530,
             "blockIdx": 57
         }
-    ]
+    ],
+    "modified": 1683732695,
+    "humanTl": true
 }

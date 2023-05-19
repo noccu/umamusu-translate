@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "DMNHRS56AB3JAM4T2LYEF5U7PFCV4ZOS",
+    "version": 5,
+    "bundle": "EGQP6QASLZVMZQMUNRRY5YBMVMTTQO3S",
     "type": "story",
     "storyId": "801020003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nセイウンスカイが話していた。",
             "enText": "After training, <chrname> and \nSeiun Sky were talking.",
             "nextBlock": -1,
-            "pathId": 4504842505223756396,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8681353055748837681
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -8408676649162922835
+                }
+            ],
+            "pathId": -4113020307310603262,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674413
 }

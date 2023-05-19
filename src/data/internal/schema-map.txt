@@ -1,0 +1,11 @@
+vscode format
+
+"json.validate.enable": true,
+"json.schemas": [
+    {
+        "fileMatch": [
+            "/translations/**/*.json"
+        ],
+        "url": "./src/data/internal/schema.json"
+    }
+]

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "MJGDHIWUIZPITPKHBX73EDBJU5X5H7F3",
+    "version": 5,
+    "bundle": "GYOFMV6KOSRYV6ALBRQQ5YCHKO23LA7Q",
     "type": "story",
     "storyId": "501032730",
     "title": "クレーンゲーム大成功！",
@@ -11,6 +11,21 @@
             "jpText": "予想を遥かに超える成果じゃないか！\r\nしかもこの数のぬいぐるみ、\n実験材料としても使えそうだ！",
             "enText": "This is far more than I expected!\nAnd this many stuffed animals could\nbe used for experiments!",
             "nextBlock": 2,
+            "origClipLength": 106,
+            "animData": [
+                {
+                    "origLen": 135,
+                    "pathId": -7128526994421293281
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 1385416765343927959
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 4997710503050974039
+                }
+            ],
             "pathId": 6095766010900339793,
             "blockIdx": 1
         },
@@ -20,11 +35,26 @@
             "jpText": "例えば各ウマ娘の特性を備えたAIをのせて\r\n駆動機関を組み込み、卓上で模擬レースを\n行えば本番のシミュレーションになりうる。",
             "enText": "For example, an AI with the\ncharacteristics of each Uma Musume could\nbe installed and driven, and a simulated\nrace could be run on a tabletop to\nsimulate the real thing.",
             "nextBlock": 3,
+            "origClipLength": 125,
             "choices": [
                 {
                     "jpText": "かわいそうに……",
                     "enText": "Poor thing…",
                     "nextBlock": 3
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": 4672114845845582468
+                },
+                {
+                    "origLen": 140,
+                    "pathId": 3462615810299468664
+                },
+                {
+                    "origLen": 141,
+                    "pathId": 6330506976288698767
                 }
             ],
             "pathId": 48029529354596091,
@@ -36,6 +66,21 @@
             "jpText": "トレーナー君は無機物に同情しているのかい！\r\nやっぱり君は興味深いモルモットだよ！",
             "enText": "Trainer, you have sympathy for\ninorganic matter! You're still\nan interesting guinea pig!",
             "nextBlock": 4,
+            "origClipLength": 98,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 4334465117158415051
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 6837103696118433082
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -6671452044036265568
+                }
+            ],
             "pathId": -9013259816036996916,
             "blockIdx": 3
         },
@@ -45,6 +90,21 @@
             "jpText": "ぬいぐるみは飾っておこう！　その代わり、\r\n君の感情の揺れをとことん研究させてくれ！",
             "enText": "I'll keep the stuffed animals on\ndisplay! Instead, let me study your\nemotional turmoil from the inside out!",
             "nextBlock": 5,
+            "origClipLength": 99,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -5560571668988918703
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -6428551244195110519
+                },
+                {
+                    "origLen": 118,
+                    "pathId": -2812096507467054692
+                }
+            ],
             "pathId": 903858922270871070,
             "blockIdx": 4
         },
@@ -54,8 +114,24 @@
             "jpText": "――大満足の結果だった！",
             "enText": "—That was very satisfying!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -1412896263414956337
+                },
+                {
+                    "origLen": 123,
+                    "pathId": -1142668686649492661
+                },
+                {
+                    "origLen": 126,
+                    "pathId": -7412240603450505206
+                }
+            ],
             "pathId": 6999467185889449383,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1662157501
 }

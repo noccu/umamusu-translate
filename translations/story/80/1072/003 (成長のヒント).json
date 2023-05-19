@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "IR7JVEDM7WQ3HZ55SFNGKAYNQFU2FRAC",
+    "version": 5,
+    "bundle": "KFGLUF7P27TLKABIJ5TCENAA44WA5SDF",
     "type": "story",
     "storyId": "801072003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nヤエノムテキが話していた。",
             "enText": "After training, <chrname> and \nJaenomuteki were talking.",
             "nextBlock": -1,
-            "pathId": 2401497684079331773,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": 8068967239576628812
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -2805484955986211167
+                }
+            ],
+            "pathId": -2767634668162917499,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674422
 }

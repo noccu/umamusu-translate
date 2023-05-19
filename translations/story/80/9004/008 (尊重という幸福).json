@@ -115,7 +115,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "あ、<username>トレーナー。\r\nこんにちは、お疲れ様です。",
-            "enText": "Oh, <username> trainer. Hello, \nthank you for your time.",
+            "enText": "Oh, trainer <username>. Hello, \nthank you for your time.",
             "nextBlock": 13,
             "choices": [
                 {
@@ -262,7 +262,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "<username>トレーナーも？",
-            "enText": "<username> Trainers too?",
+            "enText": "Trainer <username> too?",
             "nextBlock": 27,
             "pathId": 4203110175956758956,
             "blockIdx": 26
@@ -305,7 +305,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "……<username>トレーナー。\r\nこれからも同期として、ライバルとして。",
-            "enText": "…<username>Trainer. We will continue to work \ntogether as colleagues and rivals.",
+            "enText": "…Trainer <username>. We will continue to work \ntogether as colleagues and rivals.",
             "nextBlock": 31,
             "pathId": 8889134758689664270,
             "blockIdx": 30
@@ -319,5 +319,6 @@
             "pathId": -7403256227097584144,
             "blockIdx": 31
         }
-    ]
+    ],
+    "modified": 1661711800
 }

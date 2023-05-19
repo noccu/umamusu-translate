@@ -1,25 +1,27 @@
 {
-    "version": 4,
-    "bundle": "A5UPAXFZBWHTOIZHAFX23YWMRVLY5IXF",
+    "version": 5,
+    "bundle": "N7ATXJKJERIOMCWYL4LSXHNVODJUGIOG",
     "type": "story",
     "storyId": "041072002",
     "title": "烈火に問う",
     "text": [
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "選抜レースから数日。頭の中は、1つの問いでいっぱいだった。\r\n……だからだろうか、足は、自然とこの河川敷に向いていた。",
             "enText": "Several days after the Selection Race. There was a question that \nhad been on my mind the whole time. ……maybe that's why I found \nmyself heading to that river bank again.",
             "nextBlock": 2,
-            "pathId": 1557309418978217508,
+            "origClipLength": 121,
+            "pathId": -3842700927254678456,
             "blockIdx": 1
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "レース前日にここで見たヤエノムテキと、\r\nレース本番で見たヤエノムテキ――",
             "enText": "I saw Yaeno Muteki here the day before the race, but the Yaeno \nMuteki I saw the day of the race――",
             "nextBlock": 3,
+            "origClipLength": 93,
             "choices": [
                 {
                     "jpText": "（なぜああも違っていたんだろう……？）",
@@ -27,7 +29,7 @@
                     "nextBlock": 3
                 }
             ],
-            "pathId": -8081480589892523693,
+            "pathId": 2229886923658475110,
             "blockIdx": 2
         },
         {
@@ -36,7 +38,8 @@
             "jpText": "――――破ッ！！",
             "enText": "――――Haa!!",
             "nextBlock": 4,
-            "pathId": -7823188735831163341,
+            "origClipLength": 22,
+            "pathId": 3549447434929130992,
             "blockIdx": 3
         },
         {
@@ -45,7 +48,18 @@
             "jpText": "……！　貴方は――",
             "enText": "……！ You are――",
             "nextBlock": 5,
-            "pathId": -3438766857549671036,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4094853674195514626
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6764814243392680239
+                }
+            ],
+            "pathId": -8224351847566135710,
             "blockIdx": 4
         },
         {
@@ -54,7 +68,18 @@
             "jpText": "……選抜レースの観客席にて、そのお姿、拝見しておりました。\r\n遅ればせながら、ご足労感謝いたします。",
             "enText": "……in the spectator seats at the Selection Race, I saw that you \nhappened to be there. While it's a bit late, thank you for taking \nthe trouble to attend.",
             "nextBlock": 6,
-            "pathId": 4254819372550523888,
+            "origClipLength": 328,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 5058181516837588390
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1301329905502407354
+                }
+            ],
+            "pathId": 3485369005564039792,
             "blockIdx": 5
         },
         {
@@ -63,6 +88,7 @@
             "jpText": "しかし……わざわざご覧になっていただけたのに、あのような\r\n不甲斐ない走りをお見せしてしまい……慙愧に堪えません……。",
             "enText": "However…… even though you took the trouble to come see me, \nI showed you such a disappointing run…… I am ashamed……",
             "nextBlock": 7,
+            "origClipLength": 288,
             "choices": [
                 {
                     "jpText": "……レースの時の君は、今とは別人だった",
@@ -75,7 +101,17 @@
                     "nextBlock": 7
                 }
             ],
-            "pathId": 6860297209866801815,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 5226584475531726670
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 4167170094377894341
+                }
+            ],
+            "pathId": -4643829431450818683,
             "blockIdx": 6
         },
         {
@@ -84,6 +120,7 @@
             "jpText": "……！",
             "enText": "……！",
             "nextBlock": 8,
+            "origClipLength": 30,
             "choices": [
                 {
                     "jpText": "どちらが、本当の君なんだ？",
@@ -96,7 +133,17 @@
                     "nextBlock": 8
                 }
             ],
-            "pathId": 8367053434383651758,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 7876390212299480642
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7739364872468257620
+                }
+            ],
+            "pathId": 3423128330658419257,
             "blockIdx": 7
         },
         {
@@ -105,7 +152,14 @@
             "jpText": "…………慧眼をお持ちなのですね。",
             "enText": "…………you have a very discerning eye, it seems.",
             "nextBlock": 9,
-            "pathId": 3754236356434588399,
+            "origClipLength": 96,
+            "animData": [
+                {
+                    "origLen": 465,
+                    "pathId": 5925174764269633925
+                }
+            ],
+            "pathId": -7580589263312820482,
             "blockIdx": 8
         },
         {
@@ -114,7 +168,18 @@
             "jpText": "その問いにお答えするとすれば、本当の私とは――\r\nレースで貴方が見た姿を指すのでしょう。",
             "enText": "If I had to answer that question, then the real me―― \nwas most likely the one you saw during the race.",
             "nextBlock": 10,
-            "pathId": 8788395555140578993,
+            "origClipLength": 241,
+            "animData": [
+                {
+                    "origLen": 247,
+                    "pathId": -533862047253833685
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4291014500399211114
+                }
+            ],
+            "pathId": -1331286217111661729,
             "blockIdx": 9
         },
         {
@@ -123,7 +188,18 @@
             "jpText": "内なる『烈火』を御せず、猛りのままに走る……\r\nあの未熟な姿こそが、私の根源なのです。",
             "enText": "Unable to control that 『Ardent Flame』 within myself, letting it \nrage while running…… that immaturity, is my foundation.",
             "nextBlock": 11,
-            "pathId": -2373092905158933418,
+            "origClipLength": 270,
+            "animData": [
+                {
+                    "origLen": 107,
+                    "pathId": 7135872264068656051
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 5211356919877053470
+                }
+            ],
+            "pathId": -588709925801536472,
             "blockIdx": 10
         },
         {
@@ -132,7 +208,14 @@
             "jpText": "うるさいうるさいっ！　だって……だってイライラするんだ！！\r\nむかむかする！！　かぁって、目の前が赤くなるんだよ……！！",
             "enText": "Shut up, shut up！ Because…… because it pisses me off！！ \nIt makes me sick！！ Just like that, my vision turns red……！！",
             "nextBlock": 12,
-            "pathId": -945493541704922498,
+            "origClipLength": 349,
+            "animData": [
+                {
+                    "origLen": 11,
+                    "pathId": -7826917573458682965
+                }
+            ],
+            "pathId": -511808817837999962,
             "blockIdx": 11
         },
         {
@@ -141,7 +224,8 @@
             "jpText": "……幼い頃の私は、感情と欲望のまま暴力を振るう獣。\r\n気に入らないことを全て力で従わせようとする、無法者でした。",
             "enText": "……when I was young, I often behaved violently, letting my \nemotions and desires run wild like a beast. Solving everything I \ndidn't like using power, like some kind of brigand.",
             "nextBlock": 13,
-            "pathId": 8988923221656919106,
+            "origClipLength": 368,
+            "pathId": -9156170557513423930,
             "blockIdx": 12
         },
         {
@@ -150,7 +234,8 @@
             "jpText": "どうすればよいかもわからぬまま、内なる暴に振り回され、\r\n他を傷つけ、他に疎まれ……。",
             "enText": "Without knowing what I should do, being controlled by my inner \nfuror, injuring those around me, ignoring others……",
             "nextBlock": 14,
-            "pathId": 8762993472729950541,
+            "origClipLength": 259,
+            "pathId": 4188902336962150626,
             "blockIdx": 13
         },
         {
@@ -159,7 +244,8 @@
             "jpText": "いいもん、みんなやっつけてやる！！　弱っちいやつらなんか\r\nみんなみんなやっつけて、それで……っ、ひとりで……。",
             "enText": "It's fine, I'll just beat everyone！！ All those weaklings, \nbeating all of them, and then…… alone by myself……",
             "nextBlock": 15,
-            "pathId": 5798321760375940221,
+            "origClipLength": 354,
+            "pathId": -178259928701142656,
             "blockIdx": 14
         },
         {
@@ -168,7 +254,8 @@
             "jpText": "『弱っちいやつら』か。ふむ。\r\n……であれば、このワシがいる限りは、独りになどなれまいな。",
             "enText": "『Weaklings』 is it? Hmmm. \n……if that is the case, then as long as I am here, you shall never be alone.",
             "nextBlock": 16,
-            "pathId": 445978335695016823,
+            "origClipLength": 310,
+            "pathId": -8222710586569190417,
             "blockIdx": 15
         },
         {
@@ -177,7 +264,8 @@
             "jpText": "ぁ……じ、……じいちゃん……。",
             "enText": "Ah…… G-…… Grandpa……",
             "nextBlock": 17,
-            "pathId": 2817257354471222792,
+            "origClipLength": 119,
+            "pathId": -6919629702237016371,
             "blockIdx": 16
         },
         {
@@ -186,7 +274,8 @@
             "jpText": "さあ、道場へ来る時間は過ぎているぞ、ヤエノ。\r\n……じいちゃんと、稽古だ。",
             "enText": "Come along, it's long past time you came to the dojo, Yaeno. \n……it's time to train with Grandpa.",
             "nextBlock": 18,
-            "pathId": -6127655466890421593,
+            "origClipLength": 271,
+            "pathId": -5165040654727128561,
             "blockIdx": 17
         },
         {
@@ -195,7 +284,8 @@
             "jpText": "そんな未熟極まる私に、粘り強く寄り添ってくださったのが――\r\n徒手武道『金剛八重垣流』当主たる、祖父だったのです。",
             "enText": "For that exceedingly immature me, the one who persistently \nimparted upon me―― was the head of the 『Kongou \nYaegaki Ryuu』, my grandfather.",
             "nextBlock": 19,
-            "pathId": -413331593199753227,
+            "origClipLength": 312,
+            "pathId": -4290199484193316347,
             "blockIdx": 18
         },
         {
@@ -204,7 +294,18 @@
             "jpText": "祖父は言いました。内なる激情――『烈火』のままに\r\n力を振るう限り、私は自らの暴威に苦しみ続けることになると。",
             "enText": "My grandfather said this. That inner fury―― if you continue to \nallow this 『Ardent Flame』 to rage, you will naturally continue to \nsuffer the consequences.",
             "nextBlock": 20,
-            "pathId": -434986274842255096,
+            "origClipLength": 319,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 5892795281077823800
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9069282624003086889
+                }
+            ],
+            "pathId": -1562916584618527032,
             "blockIdx": 19
         },
         {
@@ -213,6 +314,7 @@
             "jpText": "金剛八重垣流の『形』に力を乗せ、その荒々しき流れを正せ。\r\nさすれば自ずと、『止水』の境地に達するであろう――と。",
             "enText": "Channel this in to the Kongou Yaegaki Ryuu 『Kata』, in order to \ntemper that wild tendency. By doing this, you may eventually \nreach the state of 『Tranquil Water』.",
             "nextBlock": 21,
+            "origClipLength": 327,
             "choices": [
                 {
                     "jpText": "それで君は、落ち着きを手にできたのか",
@@ -225,7 +327,17 @@
                     "nextBlock": 21
                 }
             ],
-            "pathId": 1327208410307242698,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 7852759737458903983
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7808948008774121364
+                }
+            ],
+            "pathId": -5814441909347862376,
             "blockIdx": 20
         },
         {
@@ -234,7 +346,18 @@
             "jpText": "ええ。師たる祖父との修行の日々のおかげで、私は多少なりとも\r\n己が暴を抑える術を学び、他との融和も手にしました。",
             "enText": "Yes. Due to the days of training with my exemplary grandfather, \neven if just a little, I've learned to keep myself in check, and \nobtained some measure of harmony.",
             "nextBlock": 22,
-            "pathId": 7139814053252059641,
+            "origClipLength": 314,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8599186047749282097
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2731115879132664155
+                }
+            ],
+            "pathId": 4066976009411303757,
             "blockIdx": 21
         },
         {
@@ -243,16 +366,38 @@
             "jpText": "ですが『止水』をもってしてなお、\r\n我が内なる『烈火』の焔は猛々しく……。",
             "enText": "However, even this 『Tranquil Water』, \nwas unable to quell the 『Ardent Flame』 within me……",
             "nextBlock": 23,
-            "pathId": -1382989711600722931,
+            "origClipLength": 188,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": 7009611539157664526
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 196426648294518968
+                }
+            ],
+            "pathId": -1683757673415243575,
             "blockIdx": 22
         },
         {
             "jpName": "ヤエノムテキ",
             "enName": "Yaeno Muteki",
-            "jpText": "再び暴れ狂い、他を傷つける恐怖に怯える私に対して、\r\nある日、祖父は問いました。",
+            "jpText": "再び荒れ狂い、他を傷つける恐怖に怯える私に対して、\nある日、祖父は問いました。",
             "enText": "Perhaps fearing I would once again fall in to madness and injure \nanother, one day, my grandfather inquired of me―",
             "nextBlock": 24,
-            "pathId": -2845835191684069103,
+            "origClipLength": 234,
+            "animData": [
+                {
+                    "origLen": 198,
+                    "pathId": -4989410132077041390
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -3833011698357965387
+                }
+            ],
+            "pathId": 972882024416778699,
             "blockIdx": 23
         },
         {
@@ -261,7 +406,14 @@
             "jpText": "その道は、他を制して傷つけず、他と争い共に楽しむ。\r\nその道では、暴なる焔は彩たる光と成る。――これ如何に？",
             "enText": "On that path, without bringing harm to others, rather reveling \njointly in contention. On that path, this fury becomes a ray of \nlight. ――What would that path be？",
             "nextBlock": 25,
-            "pathId": -8645474014523964701,
+            "origClipLength": 508,
+            "animData": [
+                {
+                    "origLen": 11,
+                    "pathId": 6192925687090048106
+                }
+            ],
+            "pathId": -4433824814438080765,
             "blockIdx": 24
         },
         {
@@ -270,15 +422,27 @@
             "jpText": "……貴方にも、お尋ねしましょう。\r\n祖父の出した問いの答え、おわかりでしょうか？",
             "enText": "……I shall ask this of you as well. The answer to my grandfather's \nquestion, would you happen to know？",
             "nextBlock": 26,
-            "pathId": 1742207189274035182,
+            "origClipLength": 245,
+            "animData": [
+                {
+                    "origLen": 142,
+                    "pathId": -7564289848516991407
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 4034083665088287483
+                }
+            ],
+            "pathId": -3440372904437206423,
             "blockIdx": 25
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "……思い当たるものはあった。傷つけることを目的とせずに、\r\n争うことを楽しむもの。それは――",
             "enText": "……there was one thing that came to mind. Something where the goal \nis not to injure, but to compete and enjoy oneself. That's――",
             "nextBlock": 27,
+            "origClipLength": 105,
             "choices": [
                 {
                     "jpText": "『レース』か……！",
@@ -291,7 +455,13 @@
                     "nextBlock": 27
                 }
             ],
-            "pathId": -6738566090065854494,
+            "animData": [
+                {
+                    "origLen": 465,
+                    "pathId": 283975831151513311
+                }
+            ],
+            "pathId": 5615798377147819498,
             "blockIdx": 26
         },
         {
@@ -300,7 +470,18 @@
             "jpText": "――やはり、慧眼であられる。",
             "enText": "――As I thought, you're quite discerning.",
             "nextBlock": 28,
-            "pathId": -1021872677307582685,
+            "origClipLength": 95,
+            "animData": [
+                {
+                    "origLen": 107,
+                    "pathId": -8510286784644547222
+                },
+                {
+                    "origLen": 130,
+                    "pathId": -2399566657774964733
+                }
+            ],
+            "pathId": 4740740931283863552,
             "blockIdx": 27
         },
         {
@@ -309,7 +490,26 @@
             "jpText": "レースと出会い、我が道を得たりと私は歓喜しました。",
             "enText": "Coming to know of races, granted me some measure of contentment \nas I had found my path.",
             "nextBlock": 29,
-            "pathId": -7050318928059546665,
+            "origClipLength": 150,
+            "animData": [
+                {
+                    "origLen": 11,
+                    "pathId": -8747957084409421340
+                },
+                {
+                    "origLen": 130,
+                    "pathId": -1122919001501352537
+                },
+                {
+                    "origLen": 264,
+                    "pathId": -7846566822588976398
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6322746322349957628
+                }
+            ],
+            "pathId": 6933883992415764831,
             "blockIdx": 28
         },
         {
@@ -318,7 +518,18 @@
             "jpText": "武道によって暴を抑え、レースによって暴を生かす。\r\n内なる激情は行き場を失くさず、昇華される――",
             "enText": "Using martial arts to temper this fury, harnessing this fury \nduring races. These violent emotions within me now had an outlet, \nthey could be channeled――",
             "nextBlock": 30,
-            "pathId": -3036730310922303922,
+            "origClipLength": 265,
+            "animData": [
+                {
+                    "origLen": 264,
+                    "pathId": -3794510735329912025
+                },
+                {
+                    "origLen": 290,
+                    "pathId": -4366290757357562973
+                }
+            ],
+            "pathId": -5992390990804251000,
             "blockIdx": 29
         },
         {
@@ -327,7 +538,18 @@
             "jpText": "そして……思ったのです。この道で見事に成果を挙げ、\r\n誇りを手にすることで……恩返しができると。",
             "enText": "And thus…… I realized. On this path, if I could obtain splendid \nresults, I could take pride in myself…… and properly repay him.",
             "nextBlock": 31,
-            "pathId": 8360078977561237607,
+            "origClipLength": 308,
+            "animData": [
+                {
+                    "origLen": 346,
+                    "pathId": 8163648648422054037
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -8164874576469348854
+                }
+            ],
+            "pathId": -1349175464871062877,
             "blockIdx": 30
         },
         {
@@ -336,7 +558,18 @@
             "jpText": "未熟で……迷惑ばかり、心配ばかりかけてきたじいちゃんに。\r\n胸を張って見せられる自分に、なれるはずだと……。",
             "enText": "Even if I'm immature…… even though I've done nothing but cause my \ngrandfather trouble, and worry. That I could still show him that \nI can hold my chest out in pride……",
             "nextBlock": 32,
-            "pathId": -5417775656786762367,
+            "origClipLength": 343,
+            "animData": [
+                {
+                    "origLen": 362,
+                    "pathId": -6592443903951824426
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 293367809584383892
+                }
+            ],
+            "pathId": 6516525498996346049,
             "blockIdx": 31
         },
         {
@@ -345,7 +578,18 @@
             "jpText": "しかし……――ッ！",
             "enText": "However……――！",
             "nextBlock": 33,
-            "pathId": -6561990722792162721,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -5232495934541541758
+                },
+                {
+                    "origLen": 11,
+                    "pathId": -6545094173766439971
+                }
+            ],
+            "pathId": -740131696649706692,
             "blockIdx": 32
         },
         {
@@ -354,6 +598,7 @@
             "jpText": "この道でさえも！　レースにおいてさえも、\r\n私は、己が暴に振り回される愚劣さを晒してしまった……ッ！！",
             "enText": "Even on this path！ Even in the race, I've been made aware that I \ncan still be overcome by these emotions……！！",
             "nextBlock": 34,
+            "origClipLength": 317,
             "choices": [
                 {
                     "jpText": "ヤエノムテキ……",
@@ -361,7 +606,17 @@
                     "nextBlock": 34
                 }
             ],
-            "pathId": -9167034537806685759,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": -5975475064058290162
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -395733530107161018
+                }
+            ],
+            "pathId": 7479647416306731797,
             "blockIdx": 33
         },
         {
@@ -370,7 +625,18 @@
             "jpText": "私は叩き直さねばならないのです！\r\n溢るる暴に、内なる『烈火』に惑う己の未熟さを！",
             "enText": "I need to be straightened out！ These overflowing emotions, \ncontinue to disturb the immature 『Ardent Flame』 within me！",
             "nextBlock": 35,
-            "pathId": -866112688659470958,
+            "origClipLength": 292,
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": 2240102931641148194
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -2607365166572243707
+                }
+            ],
+            "pathId": -4729996500228453475,
             "blockIdx": 34
         },
         {
@@ -379,7 +645,18 @@
             "jpText": "そうで、なければっ……こんなにも未熟なままでは、\r\nいつまで経っても……恩返しなど……！！",
             "enText": "If I… can't handle at least that much…… if I continue \nstaying this immature, no matter how long passes…… \nI won't be able to repay him……！！",
             "nextBlock": 36,
-            "pathId": 6091604704415749681,
+            "origClipLength": 293,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 5781822474251111457
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6915025240693668286
+                }
+            ],
+            "pathId": -953743432334661604,
             "blockIdx": 35
         },
         {
@@ -388,24 +665,43 @@
             "jpText": "私には、修行が……\r\n修行が、足りぬのです……。",
             "enText": "I need to continue training…… \nMy training, was insufficient……",
             "nextBlock": 37,
-            "pathId": -5296248805018282699,
+            "origClipLength": 208,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 3553830273793451324
+                },
+                {
+                    "origLen": 41,
+                    "pathId": -7262515286025418143
+                }
+            ],
+            "pathId": 7609453607335392646,
             "blockIdx": 36
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "自分を制御できないことに、苦しみもがきながら――\r\nそれでもなお、懸命に壁を乗り越えようとするヤエノムテキ。",
             "enText": "Being unable to control herself, while carrying \nthat anguish―― Even with that, Yaeno Muteki was \nearnestly trying to overcome this hurdle.",
             "nextBlock": 38,
-            "pathId": -3926031546334965840,
+            "origClipLength": 115,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -342474219646098905
+                }
+            ],
+            "pathId": -8546331144371699986,
             "blockIdx": 37
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "その姿を目の前にしていたら、自然と言葉が出てきた。",
             "enText": "While standing there in front of her, \nthese words naturally came out―",
             "nextBlock": 39,
+            "origClipLength": 77,
             "choices": [
                 {
                     "jpText": "俺にも手伝わせてもらえないか？",
@@ -418,7 +714,13 @@
                     "nextBlock": 39
                 }
             ],
-            "pathId": 5087473988483527276,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": 1343345732059230351
+                }
+            ],
+            "pathId": -7295616835956062528,
             "blockIdx": 38
         },
         {
@@ -427,7 +729,18 @@
             "jpText": "えっ――",
             "enText": "Eh――",
             "nextBlock": 40,
-            "pathId": 6502863202255835585,
+            "origClipLength": 17,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": -7283222364259094384
+                },
+                {
+                    "origLen": 35,
+                    "pathId": -572148679654161718
+                }
+            ],
+            "pathId": 2512614836688067388,
             "blockIdx": 39
         },
         {
@@ -436,6 +749,7 @@
             "jpText": "…………何故、ですか。トレーナーという立場から見れば、\r\n現状の私はただ気性の悪い、関わるに利のなきウマ娘のはず。",
             "enText": "…………for what reason？ From the perspective of a trainer, \nmy current self is nothing but an illーtempered Uma Musume, there is \nno merit in being concerned with me.",
             "nextBlock": 41,
+            "origClipLength": 374,
             "choices": [
                 {
                     "jpText": "利、とかじゃなくて",
@@ -443,15 +757,26 @@
                     "nextBlock": 41
                 }
             ],
-            "pathId": -92332633531555964,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": 9028777636079355157
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1563416881201356784
+                }
+            ],
+            "pathId": -3889282429753525945,
             "blockIdx": 40
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "そうではなくて――と、なるべく真っ直ぐに、\r\n彼女の目を見て続ける。",
             "enText": "To show her that that was not the reason―― \nI continued to look straight in to her eyes.",
             "nextBlock": 42,
+            "origClipLength": 89,
             "choices": [
                 {
                     "jpText": "君を、応援したいと思ったんだ",
@@ -464,7 +789,13 @@
                     "nextBlock": 42
                 }
             ],
-            "pathId": 100249915354527404,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -2070826028054907576
+                }
+            ],
+            "pathId": 3184060544463204122,
             "blockIdx": 41
         },
         {
@@ -473,7 +804,14 @@
             "jpText": "っ……――",
             "enText": "……――",
             "nextBlock": 43,
-            "pathId": 7039451396884538951,
+            "origClipLength": 35,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -7979050930803943866
+                }
+            ],
+            "pathId": 2305240433570450384,
             "blockIdx": 42
         },
         {
@@ -482,7 +820,14 @@
             "jpText": "…………誠心、なのですね。言葉も、その瞳も……\r\n見間違えることさえできぬほど、貴方は真っ直ぐだ。",
             "enText": "…………you're quite sincere, aren't you? Your words, \nand those eyes…… so straight-forward, as if \nyou believe you can't be mistaken.",
             "nextBlock": 44,
-            "pathId": -4094115823277150664,
+            "origClipLength": 355,
+            "animData": [
+                {
+                    "origLen": 342,
+                    "pathId": -1309756349254383570
+                }
+            ],
+            "pathId": 6262232953279816006,
             "blockIdx": 43
         },
         {
@@ -491,7 +836,18 @@
             "jpText": "……正直なところ、五里霧中であることを自覚していました。\r\nですから……私からも、お願いいたします。",
             "enText": "……truthfully, I'm fully aware that I'm at a complete loss. \nThat's why…… I would also like to request your help.",
             "nextBlock": 45,
-            "pathId": 313751820890642462,
+            "origClipLength": 359,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": -5035137317208531724
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -1500606514101328433
+                }
+            ],
+            "pathId": -6168326992676875171,
             "blockIdx": 44
         },
         {
@@ -500,6 +856,7 @@
             "jpText": "この『烈火』を御す方法を見つけるべく……\r\nどうか、お力添えをいただけないでしょうか。",
             "enText": "In order to help me find a way to control this 『Ardent Flame』…… \nwould I be able to request your assistance?",
             "nextBlock": 46,
+            "origClipLength": 204,
             "choices": [
                 {
                     "jpText": "もちろん！",
@@ -507,7 +864,17 @@
                     "nextBlock": 46
                 }
             ],
-            "pathId": 7987324412056755377,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 7506841060127570504
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3304815608267645639
+                }
+            ],
+            "pathId": -4763560957058572901,
             "blockIdx": 45
         },
         {
@@ -516,17 +883,33 @@
             "jpText": "……感謝いたします。",
             "enText": "……you have my gratitude.",
             "nextBlock": 47,
-            "pathId": 1792903310376270719,
+            "origClipLength": 71,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4090993431720637732
+                }
+            ],
+            "pathId": -2531372980306783414,
             "blockIdx": 46
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "ヤエノムテキの前に立ちはだかる大きな壁。\r\nいかにして乗り越えるか……これから彼女と共に考えていこう！",
             "enText": "Yaeno Muteki has a large hurdle in front of \nher. A way to overcome it…… from now on, together \nwith her, we'd try to find a way!",
             "nextBlock": -1,
-            "pathId": 2487272055698206693,
+            "origClipLength": 111,
+            "animData": [
+                {
+                    "origLen": 11,
+                    "pathId": 284872982650964410
+                }
+            ],
+            "pathId": -1228428517998709237,
             "blockIdx": 47
         }
-    ]
+    ],
+    "modified": 1673054095,
+    "humanTl": true
 }

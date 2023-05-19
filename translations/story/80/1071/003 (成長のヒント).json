@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "4NY7XCWTQ2ZC6UY4NR4PP3SFUTZ3ZVSR",
+    "version": 5,
+    "bundle": "NOLXQADKIAY2CSNJGBTFENXYBRWRZ5BU",
     "type": "story",
     "storyId": "801071003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\nメジロアルダンが話していた。",
             "enText": "After training, <chrname> and \nMejiro Ardan were talking.",
             "nextBlock": -1,
-            "pathId": -1061305519987183463,
+            "origClipLength": 88,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": -1633942800889980121
+                },
+                {
+                    "origLen": 139,
+                    "pathId": -132167658168621130
+                }
+            ],
+            "pathId": -2506770087359039069,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674422
 }

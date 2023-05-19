@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "JPR23XARLE36YYTTVGB66XWCSAB7TYJ2",
     "type": "story",
     "storyId": "041003002",
@@ -7,21 +7,23 @@
     "text": [
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "あっ、いたいた！　おーいっ！！",
-            "enText": "Oh, there it is! Hey!",
+            "enText": "Ah, there you are! Oi!!",
             "nextBlock": 2,
             "origClipLength": 98,
+            "voiceIdx": 0,
             "pathId": -2123792873036023602,
             "blockIdx": 1
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ねえキミ、選抜レースの後で\r\nボクに声をかけてくれたトレーナーだよね？　そうだよねっ！",
-            "enText": "Hey, you're the trainer who approached \nme after the race, right? That's right!",
+            "enText": "Hey you, you're one of the trainers that talked to \nme after my Selection Race, right? I'm right, aren't I!?",
             "nextBlock": 3,
             "origClipLength": 193,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 50,
@@ -33,20 +35,21 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "それじゃ、テストするからついてきてー！",
-            "enText": "Well then, follow me as I do the test!",
+            "enText": "Well I'm holding a test right now, so come with me!",
             "nextBlock": 4,
             "origClipLength": 92,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "テスト！？いきなりどういうことだ！？",
-                    "enText": "A test! What do you mean all of a sudden!",
+                    "enText": "A test!? What's this all of a sudden!?",
                     "nextBlock": 4
                 },
                 {
                     "jpText": "テスト！？いきなりどういうこと！？",
-                    "enText": "A test! What do you mean all of a sudden!",
+                    "enText": "A test!? What's this all of a sudden!?",
                     "nextBlock": 4
                 }
             ],
@@ -61,11 +64,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "それがねー、あの後カイチョーから、\r\n『信頼出来るトレーナーを熟考の上で選べ』って言われちゃってさ。",
-            "enText": "After that, Kaicho told me to choose a reliable trainer after \ncareful consideration.",
+            "enText": "Well, after the race, Prez said to \"find a trainer that I could \nrely on, and to only choose one after careful consideration\".",
             "nextBlock": 5,
             "origClipLength": 229,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 55,
@@ -81,11 +85,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "それなら、1回トレーニング受けてみるのが手っ取り早いでしょ？\r\nだから今日はテスト！　キミのトレーナー力をボクに見せてよ♪",
-            "enText": "Then, the quickest way is to take one training, right? So today's \nthe test! Let me see how good of a trainer you are!",
+            "enText": "If that's the case, the quickest way to decide \nis to do a training session with them, doncha \nthink? So I'm holding the test today! Show me \nhow good of a trainer you really are♪",
             "nextBlock": 6,
             "origClipLength": 307,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 35,
@@ -103,9 +108,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……ということで、トウカイテイオーに1日だけトレーニングを\r\nつけることになり、さっそく始めてみたのだが――",
-            "enText": "I decided to give Tokai Tio one day of training \nat …… and I started right away…",
+            "enText": "And just like that my one day of \ntraining Tokai Teio had suddenly begun…",
             "nextBlock": 7,
             "origClipLength": 115,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 126,
@@ -117,11 +123,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "へー、『ホッピング』？　コース上に置かれたミニハードルを、\r\n片足で飛び越えるトレーニングかぁ……。",
-            "enText": "Oh, \"hopping\"? I guess it's training to jump over mini hurdles \nplaced on the course with one foot. ……",
+            "enText": "Hmm, \"hopping\"? So you want me to hop over each \nof these hurdles, all while staying on one leg…?",
             "nextBlock": 8,
             "origClipLength": 237,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 137,
@@ -137,11 +144,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "なんか面白そーだね！　目標タイムは？",
-            "enText": "Sounds like fun! What's your target time?",
+            "enText": "This seems super fun! What time should I aim for?",
             "nextBlock": 9,
             "origClipLength": 115,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 35,
@@ -159,9 +167,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "トウカイテイオーに目標タイムを見せた。\r\n一般的なウマ娘よりもややレベルを高く設定してあるが……。",
-            "enText": "I showed the target time to Tokai Teio. The level is set a little \nhigher than the average Uma Musume, but ……",
+            "enText": "I showed her the time I recommended. \nI set this time to be shorter than \nfor the average Uma Musume…",
             "nextBlock": 10,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 136,
@@ -173,11 +182,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "なーんだ、このくらい？\r\nラクショーラクショー！　いってきまーすっ！",
-            "enText": "What the heck, this much? Rakusho rakusho! I'm off!",
+            "enText": "Hmm, I have that long? This'll be a piece of \ncake! Here I go!",
             "nextBlock": 11,
             "origClipLength": 189,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 49,
@@ -199,9 +209,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "跳ねるように駆けていったかと思うと、トウカイテイオーは\r\n目標タイムからさらに数ランク上の結果を軽々と叩き出してみせた！",
-            "enText": "Just when you think she's bouncing along, Tokai Teio easily \nsurpasses her target time by a few more notches!",
+            "enText": "Even though she looked like she was merrily \njumping around, Tokai Teio came in much faster \nthan the target time!",
             "nextBlock": 12,
             "origClipLength": 123,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 40,
@@ -213,11 +224,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ふぅっ。……ねー、これだけ？\r\nボク、まだまだいけるよ！",
-            "enText": "Phew.…… - that's it? I'm not done yet!",
+            "enText": "Phew… Hey, is that all you've got for me? I can \nstill go for much more!",
             "nextBlock": 13,
             "origClipLength": 158,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 61,
@@ -235,9 +247,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "それからも様々なメニューを指示したが、その全てにおいて、\r\nトウカイテイオーは想定を大幅に上回る結果を出してみせた……！",
-            "enText": "From then on, we gave her a variety of menu instructions, and in \nevery one of them, Tokai Teio far exceeded our expectations. ……!",
+            "enText": "Afterwards, I coached Tokai Teio through various \ndifferent regimens, but she greatly exceeded \nexpectations in every single one of them!",
             "nextBlock": 14,
             "origClipLength": 123,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 29,
@@ -249,15 +262,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "――おーしまいっ！！\r\nどうどう？　ボクの記録が1番すごいでしょ？",
-            "enText": "―Oh, my gosh! What do you think? My record is the best, right?",
+            "enText": "And finished!! How was that? I bet I put \nup better times than anyone else, right?",
             "nextBlock": 15,
             "origClipLength": 161,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "本当にすごい……！",
-                    "enText": "Really awesome ……!",
+                    "enText": "You're truly amazing…!",
                     "nextBlock": 15
                 }
             ],
@@ -276,15 +290,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "でっしょぉーーー！！　えへへー、無敵のテイオー様を\r\nもっともーっと褒め称えるといいぞよ～！",
-            "enText": "Shooooooooo! Hehehe, you can praise \nthe invincible Teio-sama even more～!",
+            "enText": "I am, aren't I? Ehehe, feel free to praise \nthe unbeaten Teio-sama more and more!",
             "nextBlock": 16,
             "origClipLength": 223,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "『無敵のテイオー様』？",
-                    "enText": "The \"Invincible Teio-sama\"?",
+                    "enText": "\"Unbeaten Teio-sama?\"",
                     "nextBlock": 16
                 }
             ],
@@ -303,11 +318,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "そっ。ボク今まで誰かに負けたことってないんだー。どのレースも\r\nぜーんぶ勝って、いつもみーんなに褒められてたんだよ！",
-            "enText": "That's right. I've never lost to anyone before. I won every \nsingle race, and everyone always praised me!",
+            "enText": "Yup. No one's ever beaten me at anything \never. Regardless of the type of race, \nI've won them all, and every time I won \nI was praised by everyone!",
             "nextBlock": 17,
             "origClipLength": 267,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 82,
@@ -323,11 +339,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "褒められるってやっぱり気持ちいいよね♪　褒めてくれるって\r\nことは、ボクのこと『すごい！』って思ったってことだもん。",
-            "enText": "It feels good to be praised, doesn't it? \nIt's a great feeling to be praised.",
+            "enText": "Being praised feels so good, don't you think? \nThey praise me because they think I'm amazing!♪",
             "nextBlock": 18,
             "origClipLength": 253,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 147,
@@ -347,11 +364,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "初めてレースに出た時もさ、1着だったボクに、\r\nみんながいーっぱい『すごかったぞー！』って言ってくれたんだ！",
-            "enText": "The first time I raced, I came in first and everyone said to me, \n\"That was awesome! I was so proud of myself!",
+            "enText": "For example, when I won my first \nrace everyone told me that I did amazing!",
             "nextBlock": 19,
             "origClipLength": 268,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 59,
@@ -363,11 +381,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "それが、ホントにホントに気持ちよくてさー！",
-            "enText": "And it felt really, really good!",
+            "enText": "And it felt so, so good!",
             "nextBlock": 20,
             "origClipLength": 116,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 63,
@@ -383,15 +402,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "けどトゥインクル・シリーズに出たら、もっともーっと\r\nたくさんのヒトたちに『ボクってすごいんだぞ！』って示せるよね？",
-            "enText": "But if I do the Twinkle Series, I'll be able to show a lot more \npeople that I'm awesome! to a lot of people, right?",
+            "enText": "If I'm able to enter the Twinkle Series, \nmore and more people will think that I'm great!",
             "nextBlock": 21,
             "origClipLength": 256,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "それでトレセン学園に来たんだ",
-                    "enText": "That's how I ended up at Tressen Academy.",
+                    "enText": "And that's why you \njoined Tracen Academy?",
                     "nextBlock": 21
                 }
             ],
@@ -410,11 +430,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ピンポンピンポーン！！\r\nそのとーりっ♪",
-            "enText": "Ding-dong, ding-dong, ding-dong! That's right.",
+            "enText": "Ding ding ding!! You're absolutely correct♪",
             "nextBlock": 22,
             "origClipLength": 110,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 60,
@@ -426,11 +447,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うぅ～、楽しみだな～～！！　早くGⅠとかに出たい出たーい！！\r\nボクが1番すごいウマ娘だって言われたーい！",
-            "enText": "Ugh, I'm so excited! I can't wait to compete \nin a G1 or something! I want to be told that \nI'm the most amazing horse girl ever!",
+            "enText": "Nngh! I'm so excited!! I wanna enter a GI race \nas soon as possible!! I want to be called the \nnumber one Uma Musume!",
             "nextBlock": 23,
             "origClipLength": 316,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 18,
@@ -448,9 +470,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "うずうずしているトウカイテイオーは、\r\n敗北することなど一切考えていないようだ。",
-            "enText": "The itching Tokai Teio doesn't seem \nto be thinking about defeat at all.",
+            "enText": "In her eagerness, Tokai Teio doesn't \neven consider the possibility of losing.",
             "nextBlock": 24,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 111,
@@ -464,9 +487,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "しかし、実際彼女の実力を目の当たりにすると、本当にこのまま\r\n勝ってしまうのではないかと思えるところが恐ろしい……。",
-            "enText": "However, when you actually see what she is capable of, it is \nfrightening to think that she might really win as it is. ……",
+            "enText": "However, after seeing just how amazing she really is, \nit's hard to find myself thinking that she'd actually lose.",
             "nextBlock": 25,
             "origClipLength": 119,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 156,
@@ -478,11 +502,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "あっ、今はテスト中なんだったっけ。ねーねー、\r\nキミのメニューはこれでおしまい？　もうクールダウンする？",
-            "enText": "Oh, I'm in the middle of a test right now. Hey, hey, is that it \nfor your menu? You want to cool down now?",
+            "enText": "Oh wait, we were in the middle of the test, \nright? Hey! Is that all you had planned for \ntoday's regimen? Is it time to cool down?",
             "nextBlock": 26,
             "origClipLength": 246,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 40,
@@ -500,13 +525,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "最後にもう1度、トウカイテイオーの実力を\r\nしっかりわかっておきたいところだ。そこで――",
-            "enText": "I would like to know one last time just \nhow good Tokai Teio is. So here it is…",
+            "enText": "In order to fully understand \nTokai Teio's abilities, I had one thing left…",
             "nextBlock": 27,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "仕上げに2500mのタイムを計ろうか",
-                    "enText": "I can time you for the 2500m to finish up.",
+                    "enText": "To finish up, I would like to \ntime you on a 2500 meter race.",
                     "nextBlock": 27
                 }
             ],
@@ -521,11 +547,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "2500m？　ボクが得意なやつじゃん！\r\n適性距離で実力確かめよーってとこかな？",
-            "enText": "2500m? That's the distance I'm good at! I guess I'll just have to \ntest my ability at a distance I'm suited for, huh?",
+            "enText": "2500 meters? That's where I'm best! Ah, so you \nwanna see how well I do when I'm most comfortable?",
             "nextBlock": 28,
             "origClipLength": 248,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 87,
@@ -541,11 +568,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "オッケー！\r\nじゃ、行ってきまーす♪",
-            "enText": "Ok! Okay, I'm off!",
+            "enText": "Okay! I'll be back in a flash♪",
             "nextBlock": 29,
             "origClipLength": 150,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 59,
@@ -557,15 +585,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "はっ、はっ……はぁーっ！\r\nタイム、どうだった？",
-            "enText": "Ha, ha…… ha! Time, how did you do?",
+            "enText": "How was my time?",
             "nextBlock": 30,
             "origClipLength": 153,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "2分34秒……速い……！",
-                    "enText": "2 minutes 34 seconds…… fast ……!",
+                    "enText": "2 minutes and 34 seconds… so fast!",
                     "nextBlock": 30
                 }
             ],
@@ -584,11 +613,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "おっ、自己ベスト更新！\r\nやったね♪",
-            "enText": "Whoa, a new personal best! Yay!",
+            "enText": "Oh, a new personal best! Yay♪",
             "nextBlock": 31,
             "origClipLength": 104,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 60,
@@ -604,11 +634,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "――2500mか。\r\nGⅠレースでいえば、『有馬記念』だな。",
-            "enText": "―It's 2500m. In terms of a G1 race, it's \"Arima Kinen.",
+            "enText": "2500 meters, huh? Just like the Arima Kinen GI race.",
             "nextBlock": 32,
             "origClipLength": 164,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 99,
@@ -620,11 +651,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "わっ、カイチョー！？",
-            "enText": "Wow, kai cho!",
+            "enText": "Huh, Prez!?",
             "nextBlock": 33,
             "origClipLength": 63,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 59,
@@ -640,11 +672,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "なになにどうしたの？\r\nボクに会いに来てくれたのっ！？",
-            "enText": "What's going on? You came to see me?",
+            "enText": "Why're you here? Did you come to see me!?",
             "nextBlock": 34,
             "origClipLength": 123,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 55,
@@ -660,11 +693,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "まあ、そんな所だ。",
-            "enText": "Well, that's about it.",
+            "enText": "Well, sort of.",
             "nextBlock": 35,
             "origClipLength": 62,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 74,
@@ -680,11 +714,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "それよりも……ふむ。トレーナー君、急な頼みで済まないが\r\n私のタイムも測ってはもらえないだろうか？",
-            "enText": "More importantly…… hmm. Trainer, sorry to ask on such short \nnotice, but would you be willing to measure my time as well?",
+            "enText": "More importantly… hmm… \nTrainer-kun, I apologize for the sudden \nrequest, but could you time me as well?",
             "nextBlock": 36,
             "origClipLength": 310,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 316,
@@ -704,11 +739,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "先程のテイオーと同じ、2500mだ。",
-            "enText": "It's the same as the Teio I mentioned earlier, 2,500 meters.",
+            "enText": "Make it the same as Teio's, 2500 meters.",
             "nextBlock": 37,
             "origClipLength": 127,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 125,
@@ -728,15 +764,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "えっ、カイチョーも走ってくれるの！？\r\nやったやったー！！　もちろんいいよね、トレーナー！？",
-            "enText": "What, will Kaicho run too! Yay yay! \nOf course it's good, right, trainer!",
+            "enText": "Eh? You're gonna go for a run too, Prez!? \nYaay!! You'll do it, right, Trainer!?",
             "nextBlock": 38,
             "origClipLength": 208,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "わかった、測るよ",
-                    "enText": "Okay, I'll measure.",
+                    "enText": "Got it, I'll time you.",
                     "nextBlock": 38
                 }
             ],
@@ -759,11 +796,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "感謝する。\r\nでは、行こうか。",
-            "enText": "I appreciate it. Well, let's go.",
+            "enText": "Thanks. I'll start now.",
             "nextBlock": 39,
             "origClipLength": 102,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 132,
@@ -783,15 +821,16 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "ふぅっ……。\r\nトレーナー君、タイムは？",
-            "enText": "Phew.…… What's your time, trainer?",
+            "enText": "Phew… Trainer-kun, what was my time?",
             "nextBlock": 40,
             "origClipLength": 125,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "に、2分32秒……！",
-                    "enText": "to, 2 minutes and 32 seconds ……!",
+                    "enText": "2 minutes and 32 s-seconds!",
                     "nextBlock": 40
                 }
             ],
@@ -814,11 +853,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "カイチョー……ボクより2秒も速い……！",
-            "enText": "Kaicho…… is 2 seconds faster than me ……!",
+            "enText": "Prez… You were 2 seconds faster than me…!",
             "nextBlock": 41,
             "origClipLength": 109,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 89,
@@ -838,11 +878,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "そうだな。\r\n……君の敗北だ、テイオー。",
-            "enText": "Yes, you're right.…… you lose, Teo.",
+            "enText": "Correct, it seems like you've lost this time, Teio.",
             "nextBlock": 42,
             "origClipLength": 126,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 146,
@@ -858,11 +899,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うんっ、負けちゃった！　やっぱりカイチョーはすごいな～！！\r\nさっすが、最強のウマ娘だねっ！！",
-            "enText": "Yeah, I lost! I knew it! Kaicho is amazing! You're the strongest \nhorse girl I've ever seen!",
+            "enText": "Yup, guess I lost! You're amazing, Prez!! \nYou really are the strongest Uma Musume, huh!?",
             "nextBlock": 43,
             "origClipLength": 227,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 69,
@@ -882,11 +924,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "他にはないのか？",
-            "enText": "Is there anything else?",
+            "enText": "Is that it?",
             "nextBlock": 44,
             "origClipLength": 46,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 58,
@@ -902,11 +945,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "えっ、ほか？",
-            "enText": "What, others?",
+            "enText": "Eh? Huh?",
             "nextBlock": 45,
             "origClipLength": 57,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 89,
@@ -926,11 +970,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "ああ。……もう1度言うが、テイオー。\r\n君は今、私に敗北したんだぞ？",
-            "enText": "Oh.…… I'll say it one more time, Teo. \nYou just defeated me, remember?",
+            "enText": "Yeah… I'll say it once again, Teio. \nYou lost to me, did you not?",
             "nextBlock": 46,
             "origClipLength": 227,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 116,
@@ -950,11 +995,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "えっ、えっ？　えーっと、うん。\r\nだから、カイチョーはすごいなーって……え？",
-            "enText": "Eh, huh? Um, yeah. So, I thought Kai Cho was great.…… Eh?",
+            "enText": "Eh, err? Umm, yes I did. \nAnd that's why I said you're amazing… eh?",
             "nextBlock": 47,
             "origClipLength": 277,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 89,
@@ -974,11 +1020,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "そうか……。\r\nいや、急に済まなかったな。",
-            "enText": "Well…… No, sorry for the urgency.",
+            "enText": "I see… Well, don't worry about it. \nSorry for being so sudden.",
             "nextBlock": 48,
             "origClipLength": 145,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 99,
@@ -1002,11 +1049,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "テイオー、トレーニングは以上かな？\r\nそれならクールダウン代わりに、少し外を走って来てはどうだ。",
-            "enText": "Teo, is that all the training you have done? Then why don't you \ngo for a short run outside as a cool down?",
+            "enText": "Teio, are you finished with your training? \nThen instead of cooling down, why \ndon't you go for a jog outside of campus?",
             "nextBlock": 49,
             "origClipLength": 226,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 191,
@@ -1026,11 +1074,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "あ、うん！　そうするー！\r\nトレーナー、後でね～！！",
-            "enText": "Oh, yeah! I will! See you later, trainer!",
+            "enText": "Ah, sure! Trainer, I'll see you later!!",
             "nextBlock": 50,
             "origClipLength": 174,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 59,
@@ -1054,11 +1103,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "さて……。\r\n突然だが1つ聞かせてくれ、トレーナー君。",
-            "enText": "Now…… Let me ask you one thing out of the blue, trainer.",
+            "enText": "Now then, I know it's sudden, but \nI've got something to ask you, Trainer-kun.",
             "nextBlock": 51,
             "origClipLength": 153,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 173,
@@ -1074,11 +1124,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "君は、先程のテイオーの様子をどう思った？",
-            "enText": "What did you think of Teo's appearance earlier?",
+            "enText": "What did you think of Teio's demeanor?",
             "nextBlock": 52,
             "origClipLength": 134,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 170,
@@ -1096,9 +1147,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "静かな迫力に気圧されつつも、今一度考えを巡らせてみる。",
-            "enText": "I am pressured by the quiet power, \nbut I try to think about it again.",
+            "enText": "Her soft-spoken manner with which \nshe asked her question was daunting.",
             "nextBlock": 53,
             "origClipLength": 82,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 120,
@@ -1116,13 +1168,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "圧倒的な能力と野心を持ちながらも、憧れの対象を\r\n絶対の強者として認め、悔しさすら抱かない、というのは――",
-            "enText": "To have overwhelming ability and ambition, yet to recognize the \nobject of one's admiration as an absolute powerhouse, and not \neven feel a twinge of regret…",
+            "enText": "Tokai Teio has overwhelming power and unending \nambition, however, she thinks of her idol as the \ninevitable winner in any match, and as such she \nholds no regret at losing. Which means…",
             "nextBlock": 54,
             "origClipLength": 114,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "今のままだと、もったいない……",
-                    "enText": "It's a waste of time as it is. ……",
+                    "enText": "If she continues like this, it'll be a waste…",
                     "nextBlock": 54
                 }
             ],
@@ -1141,11 +1194,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "……！　なるほど、『もったいない』か。\r\n流石は学園専属トレーナー、慧眼だな。",
-            "enText": "……! I see… \"What a waste\". That's a good point. You're the \nexclusive trainer of the school.",
+            "enText": "Ah, I see. A \"waste\", huh? As expected \nof an academy trainer, you have a keen eye.",
             "nextBlock": 55,
             "origClipLength": 318,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 120,
@@ -1161,11 +1215,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "その通りだ。……今のままだとテイオーは、自らの可能性を\r\n狭めてしまう。頂きを目指すウマ娘として、あまりに不幸だ。",
-            "enText": "You're right. If…… continues as it is now, Teio \nwill be limiting her own potential. It's too unfortunate \nas a horse girl aiming for the top.",
+            "enText": "But you're right. If she continues like \nthis, Teio will limit her own abilities. \nAs an Uma Musume aiming to be the best, \nthat would be unfortunate.",
             "nextBlock": 56,
             "origClipLength": 333,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 353,
@@ -1181,11 +1236,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "よし……。\r\n実は、君に折り入って頼みたい事がある。",
-            "enText": "Okay…… Actually, I have a favor to ask you.",
+            "enText": "Alright, I've decided. I've got a favor to ask of you.",
             "nextBlock": 57,
             "origClipLength": 172,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 195,
@@ -1197,11 +1253,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "近々私は、テイオーとレースをするつもりなのだが――",
-            "enText": "Soon I am going to race with Teo―and I am going to race with Teo.",
+            "enText": "I plan to race with Teio soon, and when that time comes…",
             "nextBlock": -1,
             "origClipLength": 118,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 65,
@@ -1212,5 +1269,6 @@
             "blockIdx": 57
         }
     ],
-    "modified": 1657206689
+    "modified": 1681654881,
+    "humanTl": true
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "JKEDMGQJV53AYEOAKEJ262K5CHB3TOC4",
+    "version": 6,
+    "bundle": "YHZFYHFYY5LME54G3EFU3JTKL34DNWKZ",
     "type": "story",
     "storyId": "400000103",
     "title": "URAファイナルズ決勝にむけて",
@@ -9,9 +9,21 @@
             "jpName": "秋川理事長",
             "enName": "Chairwoman Akikawa",
             "jpText": "はーっはっはっは！　待っていたぞ、\r\n<username>トレーナー！",
-            "enText": "Haahahahaha! I've been waiting\nfor you, <username> trainer!",
+            "enText": "Haahahahaha! I've been waiting\nfor you, trainer <username>!",
             "nextBlock": 2,
-            "pathId": -8705806710274778643,
+            "origClipLength": 90,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 5790487518319841306
+                },
+                {
+                    "origLen": 129,
+                    "pathId": -6046419838079913309
+                }
+            ],
+            "pathId": -7710467762605923166,
             "blockIdx": 1
         },
         {
@@ -20,7 +32,23 @@
             "jpText": "決勝に挑むその顔つき……\nウムッ！　気合いは充分と見える。",
             "enText": "The look on her face as she takes\non the final… Mmm! She's practically\nglowing with motivation.",
             "nextBlock": 3,
-            "pathId": -5502399228407709606,
+            "origClipLength": 82,
+            "voiceIdx": 80,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -1554008527273761668
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -657385730478650473
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 5416370493373363815
+                }
+            ],
+            "pathId": -3186104767864392138,
             "blockIdx": 2
         },
         {
@@ -29,7 +57,19 @@
             "jpText": "上々ッ！　ならばわたしから伝えるのは、\nただこの一言だ。",
             "enText": "Excellent! Then I have but one thing to say.",
             "nextBlock": 4,
-            "pathId": 6611855651176272773,
+            "origClipLength": 81,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 899465355070707237
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 3947788410851297403
+                }
+            ],
+            "pathId": -5072375428024547959,
             "blockIdx": 3
         },
         {
@@ -38,6 +78,8 @@
             "jpText": "担当ウマ娘の力を信じ、共に勝利を掴め！",
             "enText": "Believe in the strength of your horse girl,\nand grasp victory together!",
             "nextBlock": 5,
+            "origClipLength": 69,
+            "voiceIdx": 121,
             "choices": [
                 {
                     "jpText": "はい……！",
@@ -45,7 +87,17 @@
                     "nextBlock": 5
                 }
             ],
-            "pathId": 4948364676746956977,
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": -7861837446139085522
+                },
+                {
+                    "origLen": 129,
+                    "pathId": -4754686683912016364
+                }
+            ],
+            "pathId": 3139142666085544912,
             "blockIdx": 4
         },
         {
@@ -54,8 +106,22 @@
             "jpText": "『URAファイナルズ』――\n決勝のゲートが、ついに開く！",
             "enText": "The gate to the finals of the\nURA Finals is finally open!",
             "nextBlock": -1,
-            "pathId": -8941924723149066109,
+            "origClipLength": 81,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": -5145173419834371454
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 7925971041470696164
+                }
+            ],
+            "pathId": 2950394333521821410,
             "blockIdx": 5
         }
-    ]
+    ],
+    "humanTl": true,
+    "modified": 1674828210
 }

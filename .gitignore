@@ -1,9 +1,14 @@
 .vscode/
 node_modules/
 __pycache__/
-info/
 dump/
 dat/
 src/data/sugoi-model/*
 !sugoi-readme.txt
 *.log
+.venv/
+.mingit/
+umatl.json
+token.txt
+dump-diff.json
+src/data/static_dump_old.json

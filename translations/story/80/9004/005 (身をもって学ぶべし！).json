@@ -9,7 +9,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "<username>トレーナー！　本日は\r\nお誘いいただき、ありがとうございます。",
-            "enText": "<username> Trainer! Thank you \nfor inviting me here today.",
+            "enText": "Trainer <username>! Thank you \nfor inviting me here today.",
             "nextBlock": 2,
             "pathId": -5723472661315864665,
             "blockIdx": 1
@@ -113,7 +113,7 @@
             "jpName": "桐生院トレーナー",
             "enName": "Kiryuin Aoi",
             "jpText": "本当にありがとうございます、\r\n<username>トレーナー！",
-            "enText": "Thank you so much, <username> trainer!",
+            "enText": "Thank you so much, trainer <username>!",
             "nextBlock": 12,
             "choices": [
                 {
@@ -353,5 +353,6 @@
             "pathId": -1901126491025204249,
             "blockIdx": 34
         }
-    ]
+    ],
+    "modified": 1661711800
 }

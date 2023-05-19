@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "UGHNSKE6PQ3OCAX7RVP2RINABIFZMAIN",
+    "version": 5,
+    "bundle": "PSGJ5JIVXOM7GGI2YT6TL4XZ2RJWYHWT",
     "type": "story",
     "storyId": "501006728",
     "title": "クレーンゲーム成功！",
@@ -11,6 +11,21 @@
             "jpText": "こうしてぬいぐるみをもらう感じ……。",
             "enText": "This is how it feels to get a stuffed animal…",
             "nextBlock": 2,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -1294181475106905059
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 7625003161428414070
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 4046071975432422926
+                }
+            ],
             "pathId": 2873246589614856521,
             "blockIdx": 1
         },
@@ -20,6 +35,21 @@
             "jpText": "懐かしいな……。\nなんだか、胸が温かくなる。",
             "enText": "I miss… It kind of warms my heart.",
             "nextBlock": 3,
+            "origClipLength": 73,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -7834500073461574497
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -7271243613617510122
+                },
+                {
+                    "origLen": 94,
+                    "pathId": -4179414402163207352
+                }
+            ],
             "pathId": 987017927956991834,
             "blockIdx": 2
         },
@@ -29,6 +59,17 @@
             "jpText": "ありがとう、トレーナー。\nこれからも期待に応えよう。",
             "enText": "Thank you, trainer. I will continue to live \nup to your expectations.",
             "nextBlock": 4,
+            "origClipLength": 78,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -2667954446169321078
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 2748441200207279323
+                }
+            ],
             "pathId": -6912671982554765480,
             "blockIdx": 3
         },
@@ -38,8 +79,20 @@
             "jpText": "――それなりの結果だった！",
             "enText": "—that was a fair result!",
             "nextBlock": -1,
+            "origClipLength": 61,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -5503802147643940103
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -4642689954980843513
+                }
+            ],
             "pathId": 582498356177313090,
             "blockIdx": 4
         }
-    ]
+    ],
+    "modified": 1662157261
 }

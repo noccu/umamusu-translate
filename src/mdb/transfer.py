@@ -13,7 +13,7 @@ CSV_FILES_MANUAL_NEWLINE = ("uma-profile-tagline.json", "tutorial-text.json", "s
                             "special-transfer-thanks.json", "special-transfer-desc.json", "advice.json",
                             "conditions-desc.json", "item-acquisition-methods-shop.json", "load-screens.json",
                             "presents-desc.json", "item-desc.json")
-CSV_FILES_PASSTHROUGH = ("uma-nickname-requirements.json", "special-transfer-requirements.json", "miscellaneous.json",
+CSV_FILES_PASSTHROUGH = ("uma-epithet-requirements.json", "special-transfer-requirements.json", "miscellaneous.json",
                          "mission-groups.json", "predictions.json")
 
 
@@ -47,12 +47,7 @@ def readCsv(path: Path):
 
 
 def writeCsv(path, data):
-    try:
-        file = open(path, "w", newline='', encoding="utf8")
-    except FileNotFoundError:
-        print("Not found:", path)
-        return
-    with file:
+    with open(path, "w", newline='', encoding="utf8") as file:
         file.write("\"text\", \"translation\"\n")
         w = csv.writer(file, quoting=csv.QUOTE_ALL, escapechar="\\", doublequote=False, lineterminator="\n")
         for k, v in data.items():
@@ -85,9 +80,14 @@ def main():
             helpers.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
         elif args.reverse:
             nativeJson = False
-            if not csvData:
+            if not isinstance(csvData, dict): # file no existo
                 nativeJson = csvPath.with_suffix(".json").exists()
-                csvPath = csvPath.with_suffix(".json")
+                if nativeJson:
+                    csvPath = csvPath.with_suffix(".json")
+                elif len(csvPath.parts) == 8: # allow to create new file if not in subdir
+                    csvData = dict()
+                    print(f"Creating {csvPath.name}")
+                else: continue
 
             data = tlFile.textBlocks.toNative()
             ll = tlFile.data.get("lineLength")

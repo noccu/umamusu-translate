@@ -43,17 +43,24 @@
         "limit": true
     },
     {
-        "re": "horse girl|umamusu|uma ?musume",
+        "re": "horse girl|uma ?musu(?:me)",
         "repl": "horsegirl",
         "limit": true
     },
     {
-        "re": "(?:To?re?sc?ent?|Trespass(?:ing|er)|Tradesmen(?:'s)?) (?:Academy|Gakuen)",
-        "repl": "Tracen Academy"
+        "re": "(?:To?re?s+c?ent?|Trespass(?:ing|er)|Tradesmen(?:'s)?)",
+        "repl": "Tracen",
+        "limit": true
+    },
+    {
+        "re": "(?:Gakuen|School)",
+        "repl": "Academy",
+        "limit": true
     },
     {
         "re": "Aohar Cup",
-        "repl": "Aoharu Hai"
+        "repl": "Aoharu Hai",
+        "limit": true
     },
     {
         "re": "select(?:ion|ive) race",
@@ -69,11 +76,16 @@
     },
     {
         "re": "Emperor's prize",
-        "repl": "Tennou Sho"
+        "repl": "Tennou Sho",
+        "limit": true
     },
     {
-        "re": "Simbolildorf",
+        "re": "Simboli? ?[lrtn]u?do[rl](?:ph|f)",
         "repl": "Symboli Rudolf"
+    },
+    {
+        "re": "Si?mboli?",
+        "repl": "Symboli"
     },
     {
         "re": "Chayahide",
@@ -88,11 +100,7 @@
         "repl": "Bakushin"
     },
     {
-        "re": "Reis[sc]h(?:ow|au)er",
-        "repl": "Rice Shower"
-    },
-    {
-        "re": "The Rice Showers?",
+        "re": "(?:The )?Re?is?[sche ]+(?:ow|au)ers?",
         "repl": "Rice Shower"
     },
     {
@@ -109,7 +117,7 @@
         "limit": true
     },
     {
-        "re": "[CS]h?(?:i|ee)ch?(?:i|ee)",
+        "re": "[CS]h?[iye]+ch?(?:[iye]+)",
         "repl": "City",
         "limit": true
     },
@@ -144,7 +152,7 @@
         "repl": "Eishin Flash"
     },
     {
-        "re": "Ma(?:ch|t)ikane Fuku(?:ki)?ta(?:r|l)u?",
+        "re": "Ma(?:ch|t)ikane ?Fuku?(?:ki)?ta(?:r|l)u?",
         "repl": "Matikanefukukitaru"
     },
     {
@@ -156,11 +164,7 @@
         "repl": "Shinko Windy"
     },
     {
-        "re": "Smboli",
-        "repl": "Symboli"
-    },
-    {
-        "re": "Haluurara",
+        "re": "Haluurara|Haru+[rah]+",
         "repl": "Haru Urara"
     },
     {
@@ -168,7 +172,7 @@
         "repl": "Urara"
     },
     {
-        "re": "Gorsh?in?",
+        "re": "Gorsh?[iy]n?",
         "repl": "Golshi",
         "limit": true
     },
@@ -218,8 +222,8 @@
         "limit": true
     },
     {
-        "re": "the horse girl in charge",
-        "repl": "your horse girl",
+        "re": "the horse ?girl in charge",
+        "repl": "your horsegirl",
         "limit": true
     },
     {
@@ -230,6 +234,26 @@
     {
         "re": "Siraoqui-sama",
         "repl": "Shiraoki-sama"
+    },
+    {
+        "re": "Supercreek",
+        "repl": "Super Creek"
+    },
+    {
+        "re": "Dobe[rl]+",
+        "repl": "Dober"
+    },
+    {
+        "re": "Mayanotop ?u?e?g[ua]n",
+        "repl": "Mayano Top Gun"
+    },
+    {
+        "re": "Mayanotop",
+        "repl": "Mayano Top"
+    },
+    {
+        "re": "Naritab[ueh]? ?B?Ryan|NARITABU[RIA]+N?(?: Bryan|RIAN)?",
+        "repl": "Narita Brian"
     },
     {
         "re": "(?: ?\\.){2,4}(?= )|(?:\\.){2,4}|(?<=\\.{3,3})\\.",
@@ -248,7 +272,7 @@
         "repl": "―"
     },
     {
-        "re": "(?<=[a-zA-Z]{4})- (?!$|\\n)",
+        "re": "(?<=[a-zA-Z]{4})- (?=[a-zA-Z])",
         "repl": " — "
     },
     {
@@ -274,11 +298,19 @@
         "repl": "\\1… \\2"
     },
     {
+        "re": "[\\.,] ?(…+)(?= ?(?:$|[?!—\\n]))",
+        "repl": "\\1"
+    },
+    {
         "re": " *(?<!>)\\n *",
         "repl": " \\n"
     },
     {
         "re": "^[\\s\\n]*|[\\s\\n]*$",
         "repl": ""
+    },
+    {
+        "re": "\\\\n +",
+        "repl": " \\\\n"
     }
 ]

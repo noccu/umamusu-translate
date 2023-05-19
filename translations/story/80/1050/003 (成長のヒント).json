@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "ZQMAHULBKP4TMF3B6YWOZFNMDJQZ3N3Q",
+    "version": 5,
+    "bundle": "XWU456EIP6NHIVI6V3KHQHYMRTPC6L6J",
     "type": "story",
     "storyId": "801050003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nナリタタイシンが話していた。",
             "enText": "After training, <chrname> and \nNarita Tysyn were talking.",
             "nextBlock": -1,
-            "pathId": -4210121326568140170,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -6856304596469107651
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -9085873871890780535
+                }
+            ],
+            "pathId": -7643141644144172250,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674418
 }

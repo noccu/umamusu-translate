@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "LY42RV6KLMNWJYH6YS22UPJ3Z5AINV4Z",
+    "version": 6,
+    "bundle": "CXMHU5VB7LELVEH5NFGJUT5PJSPV4BPY",
     "type": "story",
     "storyId": "041017002",
     "title": "水清無魚",
@@ -11,7 +11,9 @@
             "jpText": "トレーナー君。\r\n3日後に、私は再び同じ事を君たちに問う。",
             "enText": "Trainer. In three days, I will ask you the same question again.",
             "nextBlock": 2,
-            "pathId": 4838344986103130782,
+            "origClipLength": 202,
+            "voiceIdx": 0,
+            "pathId": 7873810935061544834,
             "blockIdx": 1
         },
         {
@@ -20,7 +22,9 @@
             "jpText": "その時は君の答えを、\r\n何らかの形にして私の前に示して欲しい。",
             "enText": "When you do, I want you to present\nyour answer to me in some form.",
             "nextBlock": 3,
-            "pathId": 2736111637698801123,
+            "origClipLength": 215,
+            "voiceIdx": 1,
+            "pathId": 8845307412164807531,
             "blockIdx": 2
         },
         {
@@ -29,7 +33,9 @@
             "jpText": "シンボリルドルフからそんな課題を出された、翌日のこと。\r\nどうしたものかと考え込んでいると――",
             "enText": "It was the next day when I was given such a task by\nSymboli Rudolf. I was pondering what to do.",
             "nextBlock": 4,
-            "pathId": -5145177077294026136,
+            "origClipLength": 106,
+            "voiceIdx": -1,
+            "pathId": 6557368146275232229,
             "blockIdx": 3
         },
         {
@@ -38,6 +44,8 @@
             "jpText": "おや、君は……奇遇だね。\n向かいの席は、空いているかな？",
             "enText": "Oh, you're… odd, aren't you? Is\nthe seat across from you available?",
             "nextBlock": 5,
+            "origClipLength": 204,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "どうぞ",
@@ -45,7 +53,17 @@
                     "nextBlock": 5
                 }
             ],
-            "pathId": 7237048886356208613,
+            "animData": [
+                {
+                    "origLen": 236,
+                    "pathId": 8364698220829406751
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -4452922496932757262
+                }
+            ],
+            "pathId": 3055599113470278055,
             "blockIdx": 4
         },
         {
@@ -54,7 +72,19 @@
             "jpText": "ありがとう。そろそろ混雑し始める時間帯だからね、\r\n他の子たちのために一席でも空けておきたい。",
             "enText": "Thank you. It's about to start getting crowded,\nso I'd like to save a seat for the other kids.",
             "nextBlock": 6,
-            "pathId": -7489339196424309092,
+            "origClipLength": 307,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 290,
+                    "pathId": 8152954818834908185
+                },
+                {
+                    "origLen": 141,
+                    "pathId": -1362871254991485160
+                }
+            ],
+            "pathId": -7238963761888230496,
             "blockIdx": 5
         },
         {
@@ -63,6 +93,8 @@
             "jpText": "ところで……\n何やら難しい顔をしていたようだが？",
             "enText": "By the way… what was that difficult look on your face?",
             "nextBlock": 7,
+            "origClipLength": 155,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "君に言われたことを考えていて……",
@@ -75,7 +107,17 @@
                     "nextBlock": 7
                 }
             ],
-            "pathId": 7890024371973405610,
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": 4511042174288402857
+                },
+                {
+                    "origLen": 14,
+                    "pathId": -5190462259146042503
+                }
+            ],
+            "pathId": 4153464183890631537,
             "blockIdx": 6
         },
         {
@@ -84,7 +126,15 @@
             "jpText": "ああ、やはりその話か。\n悩みの種を与えてしまって、済まないね。",
             "enText": "Oh, so that's what you're talking about. I'm\nsorry for giving you so much trouble.",
             "nextBlock": 8,
-            "pathId": -3747697969679822735,
+            "origClipLength": 239,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 251,
+                    "pathId": -6292004451415372148
+                }
+            ],
+            "pathId": 5142847038669292802,
             "blockIdx": 7
         },
         {
@@ -93,7 +143,19 @@
             "jpText": "私が言う事でもないかも知れないが、あまり根を詰めすぎるのも\r\n良くないよ。頭を休めるのも、時には大切だ。",
             "enText": "I don't know if it's my place to say this, but\nit's not good to put too much stock in things.\nSometimes it's important to rest your head.",
             "nextBlock": 9,
-            "pathId": -1242303345527878752,
+            "origClipLength": 305,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 317,
+                    "pathId": -6392583022659882534
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -8137864872886014180
+                }
+            ],
+            "pathId": 1398057223922262657,
             "blockIdx": 8
         },
         {
@@ -102,7 +164,19 @@
             "jpText": "そうだな、丁度カフェテリアに居るのだし、\r\n甘味のひとつでも摂取してはどうだ？",
             "enText": "Well, now that we're in the cafeteria, why\ndon't you take one of those sweet things?",
             "nextBlock": 10,
-            "pathId": 2524420496343266070,
+            "origClipLength": 208,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 180,
+                    "pathId": -6789512447710838721
+                },
+                {
+                    "origLen": 26,
+                    "pathId": -2414828409141372796
+                }
+            ],
+            "pathId": 8893454730604006422,
             "blockIdx": 9
         },
         {
@@ -111,7 +185,15 @@
             "jpText": "糖質は脳へ活力を与える。特に果物や野菜、全粒穀物などは\r\n精神的な集中を促す効果が高い。",
             "enText": "Carbohydrates give energy to the brain. Fruits,\nvegetables, and whole grains are especially\neffective in promoting mental focus.",
             "nextBlock": 11,
-            "pathId": -729943581211525059,
+            "origClipLength": 297,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 171,
+                    "pathId": -712682626520918908
+                }
+            ],
+            "pathId": 5222396603425480241,
             "blockIdx": 10
         },
         {
@@ -120,6 +202,8 @@
             "jpText": "本日のメニューから選ぶのであれば……\n季節のフルーツサラダがお勧めだな。",
             "enText": "If you're going to choose from today's menu, I'd\nrecommend the… seasonal fruit salad.",
             "nextBlock": 12,
+            "origClipLength": 192,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "詳しいな……！",
@@ -132,7 +216,17 @@
                     "nextBlock": 12
                 }
             ],
-            "pathId": 6062432997614133833,
+            "animData": [
+                {
+                    "origLen": 176,
+                    "pathId": -8884051975442004569
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3537499560355718838
+                }
+            ],
+            "pathId": -8044079981939643654,
             "blockIdx": 11
         },
         {
@@ -141,7 +235,15 @@
             "jpText": "おっと……プロのトレーナー相手には、\n釈迦に説法というやつだったかな。",
             "enText": "Oops… I guess that was a bit of\na cop-out for a professional trainer.",
             "nextBlock": 13,
-            "pathId": -2432121842980295526,
+            "origClipLength": 195,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 250,
+                    "pathId": -5666575268519092353
+                }
+            ],
+            "pathId": -965918817094300243,
             "blockIdx": 12
         },
         {
@@ -150,6 +252,8 @@
             "jpText": "こういった事は、常に頭の中を巡っているものでね……。\r\nつい長々と語ってしまった。",
             "enText": "These things are always going through my mind.\n… I've rambled on for too long.",
             "nextBlock": 14,
+            "origClipLength": 219,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "いつもそんなに気を配っているのか？",
@@ -162,7 +266,13 @@
                     "nextBlock": 14
                 }
             ],
-            "pathId": -2281546127910691390,
+            "animData": [
+                {
+                    "origLen": 265,
+                    "pathId": 104883538448611886
+                }
+            ],
+            "pathId": 2136671461207636975,
             "blockIdx": 13
         },
         {
@@ -171,7 +281,19 @@
             "jpText": "ああ。体を作り、心を満たす……。ウマ娘にとって食事は、\r\n非常に大きな意味を持つものだからね。",
             "enText": "Oh. Build your body and fill your mind with… Food is a\nvery important part of a Uma girl's life.",
             "nextBlock": 15,
-            "pathId": -5152298312837859878,
+            "origClipLength": 307,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 319,
+                    "pathId": -8971780310243685999
+                },
+                {
+                    "origLen": 244,
+                    "pathId": -5971137078912174455
+                }
+            ],
+            "pathId": 8475639725792245931,
             "blockIdx": 14
         },
         {
@@ -180,7 +302,19 @@
             "jpText": "『現在の自分にとって、最適な食事とは』\n……考え出すときりが無い、重要なテーマだ。",
             "enText": "What is the best diet for me today?\"…\nis an important topic to think about.",
             "nextBlock": 16,
-            "pathId": 1676332345210170280,
+            "origClipLength": 279,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 268,
+                    "pathId": -6881434713817012322
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6075114298545639892
+                }
+            ],
+            "pathId": -8056333489955664559,
             "blockIdx": 15
         },
         {
@@ -189,7 +323,15 @@
             "jpText": "無論、食事だけでなく、日々のあらゆる場面において、\r\n意味を追求する事を心がけているよ。",
             "enText": "Of course, I try to seek meaning not only in\nfood, but in all aspects of my daily life.",
             "nextBlock": 17,
-            "pathId": 7073536391742297823,
+            "origClipLength": 227,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 218,
+                    "pathId": -5622354463837699375
+                }
+            ],
+            "pathId": 7748714729830032973,
             "blockIdx": 16
         },
         {
@@ -198,6 +340,8 @@
             "jpText": "常に大局的な視点を持ち、万事万端を己が糧とする。\r\n高みに至るには、必要不可欠な姿勢だ。",
             "enText": "Always keep the big picture in mind and use all\nthings as food for thought. This is an attitude\nthat is essential for reaching great heights.",
             "nextBlock": 18,
+            "origClipLength": 290,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "すごいな……",
@@ -210,7 +354,13 @@
                     "nextBlock": 18
                 }
             ],
-            "pathId": 6734615842707952967,
+            "animData": [
+                {
+                    "origLen": 332,
+                    "pathId": 8001091487270688401
+                }
+            ],
+            "pathId": -4400350358209721225,
             "blockIdx": 17
         },
         {
@@ -219,7 +369,15 @@
             "jpText": "はは、そう真っ向から感心されると、\n少しむず痒いな。",
             "enText": "Haha, it's a little itchy when you're so downright impressed.",
             "nextBlock": 19,
-            "pathId": 2962496968501307042,
+            "origClipLength": 199,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 332,
+                    "pathId": 2678603896886680316
+                }
+            ],
+            "pathId": 5280154203076986009,
             "blockIdx": 18
         },
         {
@@ -228,7 +386,19 @@
             "jpText": "私にとっては、幼少期から当然の如く染み付かせてきた\r\n思考様式だからね……。最早、治らぬ癖のようなものなんだ。",
             "enText": "For me, it's a way of thinking that has been ingrained in me as\na matter of course since I was a child… It's like a\nhabit that can't be broken.",
             "nextBlock": 20,
-            "pathId": 6168452592905752655,
+            "origClipLength": 316,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 332,
+                    "pathId": -5997873979369748372
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6418783492107592011
+                }
+            ],
+            "pathId": 5741003006125390853,
             "blockIdx": 19
         },
         {
@@ -237,7 +407,19 @@
             "jpText": "……ただ、まあ。\n治らぬ、というのも中々問題でね。",
             "enText": "… But, well. The fact that it\ncan't be cured is also a problem.",
             "nextBlock": 21,
-            "pathId": -1779844214321789655,
+            "origClipLength": 223,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 332,
+                    "pathId": -4467953756001098289
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 284941257215646819
+                }
+            ],
+            "pathId": 4360466520158631583,
             "blockIdx": 20
         },
         {
@@ -246,7 +428,15 @@
             "jpText": "そう言ってふと目を上げたシンボリルドルフに合わせ、\r\n周囲を見渡してみると――",
             "enText": "Then she looked up and saw Symboli Rudolf, and looked around.",
             "nextBlock": 22,
-            "pathId": -7434389998178097021,
+            "origClipLength": 95,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": 1391584949584055171
+                }
+            ],
+            "pathId": -4646495079273595918,
             "blockIdx": 21
         },
         {
@@ -255,7 +445,15 @@
             "jpText": "わわ……か、会長、\nトレーナーとなんか難しそうな話してる……。",
             "enText": "Wow… Ms. Chairman, you're talking about something\ndifficult with your trainer…",
             "nextBlock": 23,
-            "pathId": -8211921209423520278,
+            "origClipLength": 166,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": -5597287039406451962
+                }
+            ],
+            "pathId": 7442843724125507478,
             "blockIdx": 22
         },
         {
@@ -264,7 +462,9 @@
             "jpText": "私たちがうるさくして、邪魔なんかしたら申し訳ないし……\r\n向こうで食べよっか……！",
             "enText": "I'm sorry if we're making too much noise and disturbing you.\n… Let's eat over there…!",
             "nextBlock": 24,
-            "pathId": 3783436269289390540,
+            "origClipLength": 176,
+            "voiceIdx": 20,
+            "pathId": 1215963406609497598,
             "blockIdx": 23
         },
         {
@@ -273,7 +473,15 @@
             "jpText": "……見ての通りだ。折角、君に断ってまで詰めて座ったつもりが、\r\n周囲に空席を作るばかりになってしまった。",
             "enText": "As you can see at… It's a good thing that I'm not the\nonly one who has a problem with this.",
             "nextBlock": 25,
-            "pathId": -2092351896712481402,
+            "origClipLength": 304,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 266,
+                    "pathId": -8609473995046741225
+                }
+            ],
+            "pathId": -3658016347932512532,
             "blockIdx": 24
         },
         {
@@ -282,7 +490,19 @@
             "jpText": "生徒が気軽に相談出来てこそ、会長として相応しい。\r\nひいては、皆を導くに相応しいウマ娘となれるはずなのだが……。",
             "enText": "I'm not sure what to say, but I'm going to say it. It's a good\nidea to have a good idea of what you're going to be doing.",
             "nextBlock": 26,
-            "pathId": -1057980816744332840,
+            "origClipLength": 323,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": 261032881110266737
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2644460624338015908
+                }
+            ],
+            "pathId": 6070017500390425035,
             "blockIdx": 25
         },
         {
@@ -291,7 +511,19 @@
             "jpText": "どうにも私は、威圧感が有るというか、\n四角四面な印象ばかりを与えているようでね。",
             "enText": "I seem to be giving the impression that\nI am intimidating or square-shaped.",
             "nextBlock": 27,
-            "pathId": 5161243391799706965,
+            "origClipLength": 240,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 252,
+                    "pathId": 2986514979684663707
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -7871677080142171888
+                }
+            ],
+            "pathId": 209813174329754134,
             "blockIdx": 26
         },
         {
@@ -300,6 +532,8 @@
             "jpText": "皆を楽しませられる、軽妙洒脱な会話のひとつでも\r\n浮かぶようであれば良かったのだが――",
             "enText": "It would have been nice if I could have come up\nwith some witty banter to entertain everyone.",
             "nextBlock": 28,
+            "origClipLength": 237,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "そういう会話の練習、してみるか？",
@@ -312,7 +546,17 @@
                     "nextBlock": 28
                 }
             ],
-            "pathId": 1340402945158928185,
+            "animData": [
+                {
+                    "origLen": 341,
+                    "pathId": -8073432222189239074
+                },
+                {
+                    "origLen": 244,
+                    "pathId": 8591006616546652688
+                }
+            ],
+            "pathId": -2999817185379593657,
             "blockIdx": 27
         },
         {
@@ -321,7 +565,19 @@
             "jpText": "えっ？　……君と、か？",
             "enText": "What? With… you, huh?",
             "nextBlock": 29,
-            "pathId": -3532799659855678985,
+            "origClipLength": 106,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 341,
+                    "pathId": 5367960292081941545
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3707307053530289402
+                }
+            ],
+            "pathId": 3734007605684313795,
             "blockIdx": 28
         },
         {
@@ -330,7 +586,19 @@
             "jpText": "――はははっ！",
             "enText": "—hahaha!",
             "nextBlock": 30,
-            "pathId": -1905979652540187509,
+            "origClipLength": 72,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 2703802719031182831
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 7318934200091593393
+                }
+            ],
+            "pathId": 6070699058838091067,
             "blockIdx": 29
         },
         {
@@ -339,7 +607,19 @@
             "jpText": "あ、いや、悪い。君、何というか……付き合いがいいんだな。\r\nまさかそんな提案が来るとは、意外だった。",
             "enText": "Oh, no, I'm sorry. You're kind of… good at socializing,\naren't you? I didn't expect such a suggestion to come.",
             "nextBlock": 31,
-            "pathId": 2846825023478232653,
+            "origClipLength": 324,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 304,
+                    "pathId": -354948462880844824
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 789294517186026937
+                }
+            ],
+            "pathId": -5728309567070144234,
             "blockIdx": 30
         },
         {
@@ -348,7 +628,19 @@
             "jpText": "よし、ものは試しだ！　やってみるとしよう。",
             "enText": "Okay, let's give it a try! Let's give it a try.",
             "nextBlock": 32,
-            "pathId": -5275810873526246130,
+            "origClipLength": 145,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 286,
+                    "pathId": -695006370247479637
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -1825136397438434024
+                }
+            ],
+            "pathId": -3444988127337771644,
             "blockIdx": 31
         },
         {
@@ -357,6 +649,8 @@
             "jpText": "良ければ、話題を提示してもらえないか？\r\n何でもいい。君が肩肘張らずに居られるものを振ってみてくれ。",
             "enText": "If you don't mind, could you suggest a topic? Anything.\nAnything you can think of that will keep you grounded.",
             "nextBlock": 33,
+            "origClipLength": 255,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "走ること以外で何か趣味はあるか？",
@@ -369,7 +663,13 @@
                     "nextBlock": 33
                 }
             ],
-            "pathId": -5242858741170440459,
+            "animData": [
+                {
+                    "origLen": 286,
+                    "pathId": 303802314041310422
+                }
+            ],
+            "pathId": 6075086963715961900,
             "blockIdx": 32
         },
         {
@@ -378,7 +678,15 @@
             "jpText": "趣味か！　うん、いい切り口だな。\r\nこれなら気軽に話せそうだ。",
             "enText": "A hobby! Yeah, that's a good way to start.\nI think I can talk about it easily.",
             "nextBlock": 34,
-            "pathId": -4841699689351223809,
+            "origClipLength": 189,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 201,
+                    "pathId": 1533335795464058225
+                }
+            ],
+            "pathId": 341297298715854236,
             "blockIdx": 33
         },
         {
@@ -387,7 +695,15 @@
             "jpText": "特に好んでいるのは、チェスだな。自ら卓を囲むのは勿論、\r\nスコア……棋譜を読むのも楽しいものだよ。",
             "enText": "I especially like to play chess. It's fun to sit around the\ntable by myself, and also to read the scores on…",
             "nextBlock": 35,
-            "pathId": -9024891334688687365,
+            "origClipLength": 313,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 242,
+                    "pathId": 4556900924667181165
+                }
+            ],
+            "pathId": -3822598893456222999,
             "blockIdx": 34
         },
         {
@@ -396,7 +712,15 @@
             "jpText": "常に戦局を見つつ、相手の思考を読み、来たるべき未来に向け\r\n一手一手を積み重ねる。それは正しく、人生の縮図とも言える――",
             "enText": "Always keeping an eye on the battlefield, reading the thoughts\nof your opponent, and making one move at a time toward the\nfuture. It is, indeed, the epitome of life.",
             "nextBlock": 36,
-            "pathId": 8182942224669610854,
+            "origClipLength": 363,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 385,
+                    "pathId": -2620325670654108051
+                }
+            ],
+            "pathId": -4645439672501809168,
             "blockIdx": 35
         },
         {
@@ -405,6 +729,8 @@
             "jpText": "……いや、待ってくれ。\nもしや、またしても固い話になっていないか？",
             "enText": "… No, wait. If I'm not mistaken, we're talking about\nsomething hard again, aren't we?",
             "nextBlock": 37,
+            "origClipLength": 193,
+            "voiceIdx": 33,
             "choices": [
                 {
                     "jpText": "そうかも……",
@@ -412,7 +738,13 @@
                     "nextBlock": 37
                 }
             ],
-            "pathId": 7512685007068638064,
+            "animData": [
+                {
+                    "origLen": 196,
+                    "pathId": -1831887512766876543
+                }
+            ],
+            "pathId": -7050123355891983760,
             "blockIdx": 36
         },
         {
@@ -421,7 +753,15 @@
             "jpText": "うーん、やはり一朝一夕にはいかないな。\n難しいものだ……。",
             "enText": "Hmmm, I guess it doesn't happen overnight.\nIt's a difficult one…",
             "nextBlock": 38,
-            "pathId": -5927384316085351410,
+            "origClipLength": 232,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 251,
+                    "pathId": 1801432278161915974
+                }
+            ],
+            "pathId": 3797132099822997415,
             "blockIdx": 37
         },
         {
@@ -430,7 +770,19 @@
             "jpText": "……あ、そうだ！　実は、気軽な雑談の一助になればと、\r\nかねてより研究しているものがあるんだ！",
             "enText": "… Oh, yeah! I've been working on something that I hope\nwill help with casual chit-chat!",
             "nextBlock": 39,
-            "pathId": 7424035279308073520,
+            "origClipLength": 257,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 275,
+                    "pathId": -2619346002491935968
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1319142024011205958
+                }
+            ],
+            "pathId": 2238324034458757698,
             "blockIdx": 38
         },
         {
@@ -439,6 +791,8 @@
             "jpText": "即ち――ジョークだよ。\n固い空気を打ち壊す、粋な冗談というやつだ！",
             "enText": "It's a joke. The kind of chic joke that breaks the hard air!",
             "nextBlock": 40,
+            "origClipLength": 218,
+            "voiceIdx": 36,
             "choices": [
                 {
                     "jpText": "なるほど！ぜひ聞かせてほしい",
@@ -451,7 +805,13 @@
                     "nextBlock": 40
                 }
             ],
-            "pathId": 6637271564297768245,
+            "animData": [
+                {
+                    "origLen": 198,
+                    "pathId": -6639612045514926148
+                }
+            ],
+            "pathId": 765586099382194324,
             "blockIdx": 39
         },
         {
@@ -460,7 +820,15 @@
             "jpText": "よし、では早速！",
             "enText": "All right, well, get on with it!",
             "nextBlock": 41,
-            "pathId": -4310812052485895323,
+            "origClipLength": 85,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -6018034010838006057
+                }
+            ],
+            "pathId": -916145901320559247,
             "blockIdx": 40
         },
         {
@@ -469,7 +837,19 @@
             "jpText": "先日、通りを歩いていたら犬を見かけてね。あまりに見事な\r\n毛並みだったために、私は思わずこう呟いてしまったんだ……。",
             "enText": "The other day, I was walking down the street and saw a dog. I\ncouldn't help muttering to myself, \"It's so beautiful…",
             "nextBlock": 42,
-            "pathId": -2817209500965325580,
+            "origClipLength": 336,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 350,
+                    "pathId": 7715334267889931651
+                },
+                {
+                    "origLen": 203,
+                    "pathId": 1755755337709716585
+                }
+            ],
+            "pathId": 5372241138728831882,
             "blockIdx": 41
         },
         {
@@ -478,7 +858,19 @@
             "jpText": "『わんだふる！』",
             "enText": "\"Wandafuru!",
             "nextBlock": 43,
-            "pathId": 6912237204014081297,
+            "origClipLength": 99,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -3341995537793430532
+                },
+                {
+                    "origLen": 128,
+                    "pathId": -5995457305385673274
+                }
+            ],
+            "pathId": -3322284819188861004,
             "blockIdx": 42
         },
         {
@@ -487,6 +879,8 @@
             "jpText": "――どうだ、トレーナー君！？",
             "enText": "—How's it going, Ms. Trainer!",
             "nextBlock": 44,
+            "origClipLength": 63,
+            "voiceIdx": 40,
             "choices": [
                 {
                     "jpText": "…………",
@@ -494,7 +888,17 @@
                     "nextBlock": 44
                 }
             ],
-            "pathId": 4902251581817468819,
+            "animData": [
+                {
+                    "origLen": 207,
+                    "pathId": 5095002041352028504
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7592845156110956004
+                }
+            ],
+            "pathId": -7325135667943676658,
             "blockIdx": 43
         },
         {
@@ -503,7 +907,15 @@
             "jpText": "だいぶ意外な一面を見つけてしまったが……\r\nシンボリルドルフのことが、少しだけわかったような気がした。",
             "enText": "I found a much more unexpected side of her… I felt like\nI understood a little bit more about Simborildorf.",
             "nextBlock": 45,
-            "pathId": -8287991315168432608,
+            "origClipLength": 111,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": -5326620233553416140
+                }
+            ],
+            "pathId": 1224631217548984709,
             "blockIdx": 44
         },
         {
@@ -512,8 +924,17 @@
             "jpText": "うーん、『わんだふる』……。\n自信作だったのだが……。",
             "enText": "Hmmm, \"Wandering\"… I was confident in my work…",
             "nextBlock": -1,
-            "pathId": -191036320937846908,
+            "origClipLength": 206,
+            "voiceIdx": 41,
+            "animData": [
+                {
+                    "origLen": 234,
+                    "pathId": 8683132674488562678
+                }
+            ],
+            "pathId": -3207282910863474871,
             "blockIdx": 45
         }
-    ]
+    ],
+    "modified": 1674158127
 }

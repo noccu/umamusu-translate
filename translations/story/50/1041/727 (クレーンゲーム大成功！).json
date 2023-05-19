@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "XK2HI6ZTVVHBPMKMBVVSVYAK5MH25XR5",
+    "version": 5,
+    "bundle": "E7NAYCLFHNGQ327YIMVDJW3VCNVUFATT",
     "type": "story",
     "storyId": "501041727",
     "title": "クレーンゲーム大成功！",
@@ -9,8 +9,19 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "すごいです、トレーナーさん！\r\n感謝してもしきれません！",
-            "enText": "You're amazing, trainer! I\ncan't thank you enough!",
+            "enText": "You're amazing, Trainer! \nI could never thank you enough!",
             "nextBlock": 2,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": -6556654327610102444
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -4401207929639726424
+                }
+            ],
             "pathId": -1984309906984312071,
             "blockIdx": 1
         },
@@ -18,13 +29,28 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "いただいたこのぬいぐるみたちとは誠心誠意、\r\n真剣にお付き合いさせていただきますね！",
-            "enText": "I will take these stuffed animals\nthat you have given me very seriously\nand with all my heart!",
+            "enText": "I will take these stuffed animals that you \nhave bestowed unto me and, with my whole \nentire heart, take them very seriously!",
             "nextBlock": 3,
+            "origClipLength": 99,
             "choices": [
                 {
                     "jpText": "そこまでしなくても……",
                     "enText": "You don't have to go that far…",
                     "nextBlock": 3
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -1141095074898370532
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 7068657436929536662
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 2564553088020606135
                 }
             ],
             "pathId": -1319037146517092778,
@@ -34,8 +60,23 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "そうはいきません！\r\n寝食を共にし、トレーニングの時も\n肌身離さず大切にすることを誓います！",
-            "enText": "Not so fast! I pledge to eat,\nsleep, and train with you, and\nkeep you close to my body!",
+            "enText": "But I must! \nI pledge to eat, sleep, and train with you, \nand keep you close to me at all times!",
             "nextBlock": 4,
+            "origClipLength": 105,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 5738987410047092720
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -7709317788351704496
+                },
+                {
+                    "origLen": 117,
+                    "pathId": -3581126666723005019
+                }
+            ],
             "pathId": 6167547593971571308,
             "blockIdx": 3
         },
@@ -43,8 +84,23 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "なにせ、トレーナーさんからいただいた、\r\n大切な子たちなのですからっ！",
-            "enText": "After all, they are the precious children\ngiven to me by my trainer!",
+            "enText": "After all, you are the precious children \ngiven to me by my Trainer!",
             "nextBlock": 5,
+            "origClipLength": 90,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 8524369011686015667
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6246909697493872930
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 3076270272897678145
+                }
+            ],
             "pathId": 6784690167276783558,
             "blockIdx": 4
         },
@@ -52,10 +108,23 @@
             "jpName": "",
             "enName": "",
             "jpText": "――大満足の結果だった！",
-            "enText": "—That was very satisfying!",
+            "enText": "――That was a fantastic result!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": 2058720931842393921
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 2893372007182432131
+                }
+            ],
             "pathId": 3723524136453594823,
             "blockIdx": 5
         }
-    ]
+    ],
+    "modified": 1683732695,
+    "humanTl": true
 }

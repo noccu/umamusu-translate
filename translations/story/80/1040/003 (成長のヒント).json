@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "EOIT646KUKM255WYKHJ66G6VEHHZWQYF",
+    "version": 5,
+    "bundle": "2OPX4QLWF7U44TGEU5C2OM4EG4DT3HO7",
     "type": "story",
     "storyId": "801040003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nゴールドシチーが話していた。",
             "enText": "After training, <chrname> and \nGold City were talking.",
             "nextBlock": -1,
-            "pathId": -6363073769897919646,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -7916945709279615198
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -2702424882564264481
+                }
+            ],
+            "pathId": 207378644819728187,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674416
 }

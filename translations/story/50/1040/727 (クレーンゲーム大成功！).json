@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "Z53TLTVOALWIXIF5XSABVEBMEIF4L7PQ",
+    "version": 5,
+    "bundle": "BP45KFXL6GUZDQQCB6V52HEBBYFWZZHS",
     "type": "story",
     "storyId": "501040727",
     "title": "クレーンゲーム大成功！",
@@ -11,11 +11,26 @@
             "jpText": "すご……っ！？\r\nアンタどれだけ取ってんの！？",
             "enText": "Amazing…! How much are you taking!",
             "nextBlock": 2,
+            "origClipLength": 75,
             "choices": [
                 {
                     "jpText": "ぱかプチを実際に触ってみてどう？",
                     "enText": "How do you feel when you actually \ntouch Pacapuchi?",
                     "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 158,
+                    "pathId": 5881022665941877810
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -7702767558269816685
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 1015976589144937408
                 }
             ],
             "pathId": -8454281073637230699,
@@ -27,6 +42,21 @@
             "jpText": "やっぱカワイイよね。\r\n表情も特徴を捉えてるっていうか。",
             "enText": "I knew it was cute. The expressions on their \nfaces capture their features.",
             "nextBlock": 3,
+            "origClipLength": 81,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -2506058391058198008
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -7434492281247184739
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -7766397529924326262
+                }
+            ],
             "pathId": -392236258416802582,
             "blockIdx": 2
         },
@@ -36,6 +66,17 @@
             "jpText": "ま、けど今日1番の収穫はアンタが\r\n相当ゲームが上手いってわかったことかな。",
             "enText": "Well, I guess the best thing that came out of \ntoday was that I found out that you are \nreally good at games.",
             "nextBlock": 4,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 1420411430996665987
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 6700244069780509800
+                }
+            ],
             "pathId": -7814369935751727124,
             "blockIdx": 3
         },
@@ -45,6 +86,21 @@
             "jpText": "だからこれは“もし”の話なんだけど。",
             "enText": "So this is a \"what if\" story.",
             "nextBlock": 5,
+            "origClipLength": 68,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -3049492459345816402
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 6227593107290820108
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -7749160954268796424
+                }
+            ],
             "pathId": -4204353063338107880,
             "blockIdx": 4
         },
@@ -54,6 +110,21 @@
             "jpText": "今度来た時……もしアタシの新しい\r\nバージョンが出てたら。アンタが取ってよ。",
             "enText": "Next time you come to… if there is a \nnew version of Atashi. You take it.",
             "nextBlock": 6,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2799574304813630075
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 2010148052768948946
+                },
+                {
+                    "origLen": 105,
+                    "pathId": -807065893166282774
+                }
+            ],
             "pathId": 7199514734533902972,
             "blockIdx": 5
         },
@@ -63,6 +134,17 @@
             "jpText": "……新しいぱかプチが出るくらい、\r\n活躍してみせるからさ。",
             "enText": "… I'll be so active that there \nwill be a new Pacaputi.",
             "nextBlock": 7,
+            "origClipLength": 82,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": -2465181811575534232
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 1420716404944083591
+                }
+            ],
             "pathId": -7261603669151402242,
             "blockIdx": 6
         },
@@ -72,8 +154,20 @@
             "jpText": "――大満足の結果だった！",
             "enText": "―I was very pleased with the results!",
             "nextBlock": -1,
+            "origClipLength": 60,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": -6564922681519508236
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 3532062654283286855
+                }
+            ],
             "pathId": -5413063882381269568,
             "blockIdx": 7
         }
-    ]
+    ],
+    "modified": 1662157591
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "BL7L5AC3QA3UFD7BT4MST6REERIQBNAU",
+    "version": 6,
+    "bundle": "6SSWSCVLKDXFOZFJZT7J2JWFGAAOQK2U",
     "type": "story",
     "storyId": "400000105",
     "title": "URAファイナルズ準決勝の後に",
@@ -11,7 +11,19 @@
             "jpText": "1着、おめでとうございます！",
             "enText": "First place, congratulations!",
             "nextBlock": 2,
-            "pathId": 6454386700808238349,
+            "origClipLength": 63,
+            "voiceIdx": 131,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 12646279372805099
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -488351439156345465
+                }
+            ],
+            "pathId": 3273176248832121175,
             "blockIdx": 1
         },
         {
@@ -20,7 +32,19 @@
             "jpText": "見事な走りでした。\r\n応援しているこちらまで、熱くなるほどに！",
             "enText": "It was a splendid run. I felt so impassioned\njust cheering you on!",
             "nextBlock": 3,
-            "pathId": 6008854183178022502,
+            "origClipLength": 85,
+            "voiceIdx": 115,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": 779777217947476089
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -5970955632393816007
+                }
+            ],
+            "pathId": -6899404677508162000,
             "blockIdx": 2
         },
         {
@@ -29,6 +53,8 @@
             "jpText": "そして次は、ついに――",
             "enText": "And next up is, finally—",
             "nextBlock": 4,
+            "origClipLength": 59,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "決勝戦、ですね",
@@ -36,7 +62,17 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": -5131782180875439027,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -5992677262607417398
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 1849535144277644163
+                }
+            ],
+            "pathId": -7029848617840158146,
             "blockIdx": 3
         },
         {
@@ -45,7 +81,19 @@
             "jpText": "はい！　ファンの期待を力にして駆け……\r\n頂点を決める、大舞台。",
             "enText": "Yes! The fans' expectations are the power to\nrun…  on the big stage, to the top.",
             "nextBlock": 5,
-            "pathId": -7984545373575172206,
+            "origClipLength": 86,
+            "voiceIdx": 73,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": -6931495512386315103
+                },
+                {
+                    "origLen": 114,
+                    "pathId": 327505914853581105
+                }
+            ],
+            "pathId": -7903939723761213536,
             "blockIdx": 4
         },
         {
@@ -54,8 +102,22 @@
             "jpText": "きっと栄光を、掴んでくださいね！",
             "enText": "I'm sure you will find glory!",
             "nextBlock": -1,
-            "pathId": -710345063469435939,
+            "origClipLength": 65,
+            "voiceIdx": 120,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -2652638250547439255
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 5740433738482357002
+                }
+            ],
+            "pathId": 8553798445881304453,
             "blockIdx": 5
         }
-    ]
+    ],
+    "humanTl": true,
+    "modified": 1674828210
 }

@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "X3MEBO7H23VEUVMVJQ4W5UGFRXEW57PU",
+    "version": 5,
+    "bundle": "2NEICBABOMB55S5YAZACAFNI7ZKMAQJT",
     "type": "story",
     "storyId": "801030003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nライスシャワーが話していた。",
             "enText": "After training, <chrname> and \nRice Shower were talking.",
             "nextBlock": -1,
-            "pathId": 704555372021412035,
+            "origClipLength": 67,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 8643271465503165034
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 7437266136225682525
+                }
+            ],
+            "pathId": -4878511983463326904,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674414
 }

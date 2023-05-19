@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "P554H3WJCPH5QTOL7XLOE3D7LXOSKF25",
+    "version": 5,
+    "bundle": "4HOQJI3UUKOOLYLI34JJBMLBSDG7RVUH",
     "type": "story",
     "storyId": "801026003",
     "title": "成長のヒント",
@@ -11,8 +11,20 @@
             "jpText": "トレーニング後、<chrname>と\r\nミホノブルボンが話していた。",
             "enText": "After training, <chrname> and \nMichonobourbon were talking.",
             "nextBlock": -1,
-            "pathId": -773970008740007208,
+            "origClipLength": 89,
+            "animData": [
+                {
+                    "origLen": 162,
+                    "pathId": 5321080581019111024
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 634572260615156249
+                }
+            ],
+            "pathId": 3020422568004769046,
             "blockIdx": 1
         }
-    ]
+    ],
+    "modified": 1658674414
 }

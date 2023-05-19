@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "SBKCEAPXIH7HNL575LET2LPVPNY4OFNQ",
+    "version": 5,
+    "bundle": "LE2IPOEMAZASG724IKVVEXIDTYLKB3XV",
     "type": "story",
     "storyId": "501061410",
     "title": "皐月賞にむけて",
@@ -11,7 +11,18 @@
             "jpText": "ついに開幕したクラシック三冠路線の初戦、\r\n『皐月賞』に臨むキングヘイロー。",
             "enText": "King Halo is going to compete in Satsuki-sho, \nthe first race of the Triple Crown Classic, \nwhich has finally begun.",
             "nextBlock": 2,
-            "pathId": 2355815306413449990,
+            "origClipLength": 94,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -5979119784715430277
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 6243969268816853331
+                }
+            ],
+            "pathId": -2629851663130115975,
             "blockIdx": 1
         },
         {
@@ -20,13 +31,32 @@
             "jpText": "パドックに登場したキングヘイローは、\r\n同じくこのレースに出走する\nセイウンスカイと言葉を交わす。",
             "enText": "King Halo appears in the paddock and \nexchanges words with Seiun Sky, who is also \nrunning in this race.",
             "nextBlock": 3,
+            "origClipLength": 108,
             "coloredText": [
                 {
                     "jpText": "セイウンスカイ",
                     "enText": "beechwood extract popular as a herbal \ntreatment for diarrhoea (diarrhea), etc."
                 }
             ],
-            "pathId": -7437259924594151562,
+            "animData": [
+                {
+                    "origLen": 142,
+                    "pathId": -1924469575238995483
+                },
+                {
+                    "origLen": 150,
+                    "pathId": 467188941709969320
+                },
+                {
+                    "origLen": 140,
+                    "pathId": 1608615494919721496
+                },
+                {
+                    "origLen": 139,
+                    "pathId": 4699375056974897120
+                }
+            ],
+            "pathId": -3513742192464141345,
             "blockIdx": 2
         },
         {
@@ -35,7 +65,26 @@
             "jpText": "のらりくらりとしているものの、\r\nセイウンスカイのコンディションは完璧。\nその事実をキングヘイローは理解していた。",
             "enText": "Despite her complacency, Seiun Sky \nwas in perfect condition. King Halo \nunderstood this fact.",
             "nextBlock": 4,
-            "pathId": 4481363173369512469,
+            "origClipLength": 119,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": 3111896114699827148
+                },
+                {
+                    "origLen": 130,
+                    "pathId": 1228371342386802220
+                },
+                {
+                    "origLen": 137,
+                    "pathId": 3115730349497990220
+                },
+                {
+                    "origLen": 137,
+                    "pathId": 6259487155044473977
+                }
+            ],
+            "pathId": 2489709559420714867,
             "blockIdx": 3
         },
         {
@@ -44,8 +93,28 @@
             "jpText": "その上で自分には結果が必要なのだと、\r\n勝利への執念を滲ませるのだった。",
             "enText": "She also said that she needed a result and that \nshe was determined to win.",
             "nextBlock": -1,
-            "pathId": -5213160787968037464,
+            "origClipLength": 91,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -3800613984262188488
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 7796639255333101154
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6644790394152296268
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 3611199183849370028
+                }
+            ],
+            "pathId": 5933728156873942001,
             "blockIdx": 4
         }
-    ]
+    ],
+    "modified": 1658674358
 }

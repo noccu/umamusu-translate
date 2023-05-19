@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "I4ZJN7CJ3HKM6ZO2AUWGHJPMCOJS2LIH",
     "type": "story",
     "storyId": "041003003",
@@ -7,11 +7,12 @@
     "text": [
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "近々私は、テイオーとレースをするつもりなのだが――",
-            "enText": "Soon I am going to race with Teo―and I am going to race with Teo.",
+            "enText": "I plan to race with Teio soon, \nand when that time comes…",
             "nextBlock": 2,
             "origClipLength": 118,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 65,
@@ -23,11 +24,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "君には是非とも、見届けに来てほしい。……そして出来る事ならば、\r\nその後もテイオーを見守ってやってくれ。",
-            "enText": "I hope you will be there to witness it. Please come to…… and, if \nyou can, keep an eye on Teio afterwards.",
+            "enText": "I would like you to come and see for \nyourself… Moreover, I would like you \nto watch over her afterwards.",
             "nextBlock": 3,
             "origClipLength": 301,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 376,
@@ -41,9 +43,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "数日後、聞いていた通りシンボリルドルフとトウカイテイオーの\r\nレースが行われることとなった……。",
-            "enText": "A few days later, as I had heard, the race between Symbol Rudolf \nand Tokai Teio was to take place. ……",
+            "enText": "Just as she had said, a few days later the race \nbetween Symboli Rudolf and Tokai Teio began…",
             "nextBlock": 4,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 376,
@@ -57,19 +60,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "話題の中心になることの多いウマ娘2人の一騎打ちとあって、\r\nコースは早くから観客たちでごった返し、大騒ぎになっていた。",
-            "enText": "The course was crowded with spectators from early on, and the \ncrowd was in an uproar, as the two horsewomen, who are often at \nthe center of the news, were competing against each other.",
+            "enText": "The stands were filled to the brim, the \nentire crowd in an uproar. Both of them \nare amazing in their own right, so seeing \nthem race against one another…",
             "nextBlock": 5,
             "origClipLength": 121,
+            "voiceIdx": -1,
             "pathId": 4165265142180014179,
             "blockIdx": 4
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うわ、すっごいヒトの数。まるでトゥインクル・シリーズじゃん！！\r\nあははっ、大盛り上がりだ～！！",
-            "enText": "Wow, that's a lot of people. It's like a twinkle \nseries! Hahaha, it's a big party～!",
+            "enText": "Woah! There's so many people here. \nIt's almost like the Twinkle Series!! \nAhaha, everyone's so excited!!",
             "nextBlock": 6,
             "origClipLength": 242,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 50,
@@ -89,20 +94,21 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "って、あ！\r\nやっほ～、キミも来てくれたんだね！",
-            "enText": "Oh! Hey, you're here too!",
+            "enText": "Wait! Hey, so you actually came!",
             "nextBlock": 7,
             "origClipLength": 127,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "調子はどうだ？",
-                    "enText": "How's it going?",
+                    "enText": "How're you feeling?",
                     "nextBlock": 7
                 },
                 {
                     "jpText": "調子はどう？",
-                    "enText": "How are you doing?",
+                    "enText": "How're you feeling?",
                     "nextBlock": 7
                 }
             ],
@@ -121,11 +127,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ちっちっち～、ワガハイはテイオー様だぞよ？　そんなの絶好調に\r\n決まってるじゃーん！　トーゼン大勝利して、歓声はボクのもの――",
-            "enText": "Tsk tsk tsk～, Wagahai is Teio-sama, remember? Of course she's on \na roll! Tozen wins big and the cheers are mine…",
+            "enText": "Tsk tsk tsk. You do know that I am \nthe Great Teio, right? So of course \nI feel great! I'll easily win this \nand have all the praise to myself!",
             "nextBlock": 8,
             "origClipLength": 318,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 50,
@@ -137,11 +144,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "って、あ～……いやいや、今日はカイチョーが相手なんだもんね。\r\nカイチョーが…………。",
-            "enText": "I mean, oh…… no, no, no, no, no, no, you're dealing with Kai Cho \ntoday. Kaicho is the …………",
+            "enText": "Wait… Today I'm against Prez… and I'm…",
             "nextBlock": 9,
             "origClipLength": 196,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 134,
@@ -157,20 +165,21 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "――――カイチョーが相手、かぁ。",
-            "enText": "―― Kai Cho is the other party, huh?",
+            "enText": "I'm against her…",
             "nextBlock": 10,
             "origClipLength": 93,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "どうしたんだ？",
-                    "enText": "What's going on?",
+                    "enText": "Is something the matter?",
                     "nextBlock": 10
                 },
                 {
                     "jpText": "どうしたの？",
-                    "enText": "What's wrong?",
+                    "enText": "Is something the matter?",
                     "nextBlock": 10
                 }
             ],
@@ -189,11 +198,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "へっ！？\r\nあ、えっと……ううん！",
-            "enText": "Heh! Oh, uh…… Nope!",
+            "enText": "Huh?! Ah, umm… Nope!",
             "nextBlock": 11,
             "origClipLength": 115,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 89,
@@ -209,11 +219,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ボク……えっと……。\r\nボク、もう出走準備しなきゃ！　じゃあね！",
-            "enText": "I'm …… uh…… I have to get ready to run now! Bye!",
+            "enText": "A-Anyways… I have to get ready! See you later!",
             "nextBlock": 12,
             "origClipLength": 203,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 80,
@@ -231,19 +242,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "そして、大歓声の中ゲートは開き――",
-            "enText": "Then the gates opened to loud cheers―",
+            "enText": "And so, as the crowds roars echoed throughout \nthe stadium, the race began.",
             "nextBlock": 13,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "pathId": -4512293334534354713,
             "blockIdx": 12
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ふっ、ふっ、ふっ……。\r\nよーし、早めに仕掛けちゃうぞっ！！",
-            "enText": "Phew, phew, phew.…… Alright, I'm gonna set it up early!",
+            "enText": "Alright, I'll overtake you super quick!!",
             "nextBlock": 14,
             "origClipLength": 140,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 164,
@@ -261,9 +274,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "レース中盤、前を走るシンボリルドルフに\r\nトウカイテイオーが仕掛けに行ったが――",
-            "enText": "Midway through the race, the Tokai Teio went to set up Symbol \nRudolph, who was running in front of her.",
+            "enText": "Halfway through the race, Tokai Teio attempted \nto overtake Symboli Rudolf. However…",
             "nextBlock": 15,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 144,
@@ -287,11 +301,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "譲らんぞ……！",
-            "enText": "I won't give it away. ……!",
+            "enText": "I won't let you…!",
             "nextBlock": 16,
             "origClipLength": 56,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 144,
@@ -311,11 +326,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うっ！？\r\nウソっ、逆に離されるなんて……！",
-            "enText": "Ugh! No way, I can't believe they let you go the other way. ……!",
+            "enText": "Huh?! The distance between us is growing!",
             "nextBlock": 17,
             "origClipLength": 120,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 144,
@@ -335,11 +351,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "はぁっ、はぁっ……！\r\nくぅっ、最後の直線……！　でも……まだまだっ！！",
-            "enText": "Huh, huh ……! Darn, the last straight \n……! But…… not quite there yet!",
+            "enText": "Nngh! We're already on the final stretch! But… I \ncan still fight!!",
             "nextBlock": 18,
             "origClipLength": 228,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 54,
@@ -359,11 +376,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "譲らんと言ったはずだ！！",
-            "enText": "I told you I would not give in!!!!!!!!!!!!!!!!!!!!!",
+            "enText": "I said I wouldn't let you, didn't I?!",
             "nextBlock": 19,
             "origClipLength": 66,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 240,
@@ -383,11 +401,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うわぁっ――！？",
-            "enText": "Wow―!",
+            "enText": "Uwaah!!",
             "nextBlock": 20,
             "origClipLength": 31,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 240,
@@ -409,19 +428,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "……結局、最後までシンボリルドルフがレースを支配し続け、\r\nトウカイテイオーは圧倒的な差をつけられての2着に終わった。",
-            "enText": "In the end, Symbol Rudolph continued to dominate the race until \nthe end, and Tokai Teio finished in second place by a huge margin.",
+            "enText": "Symboli Rudolf dominated the race from start to \nfinish, beating Tokai Teio with a huge amount of \ndistance to spare.",
             "nextBlock": 21,
             "origClipLength": 121,
+            "voiceIdx": -1,
             "pathId": -2675793961720462929,
             "blockIdx": 20
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "はぁっ、はぁっ……はぁ～～～！！\r\n負けちゃった～～～！！",
-            "enText": "Hahaha, hahaha…… hahaha～! I lost～～!",
+            "enText": "I lost!!",
             "nextBlock": 22,
             "origClipLength": 179,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 80,
@@ -441,11 +462,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "でもやっぱり、カイチョーはすご――",
-            "enText": "But still, the kaicho is amazing―",
+            "enText": "But as I thought, Prez is amazi—",
             "nextBlock": 23,
             "origClipLength": 88,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 55,
@@ -459,9 +481,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ワァアアアアアアアッ！！）",
-            "enText": "(Waaaaahhhh!!!)",
+            "enText": "Whooo!!",
             "nextBlock": 24,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 117,
@@ -473,11 +496,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うひゃあ！？",
-            "enText": "Whaaaat!",
+            "enText": "Eek!",
             "nextBlock": 25,
             "origClipLength": 30,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 40,
@@ -491,9 +515,10 @@
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "ルドルフ会長、すごかったです……。\r\nさすがです……！！",
-            "enText": "Chairman Rudolph, that was awesome.…… \nThat's what I'm talking about. ……!",
+            "enText": "President Rudolf, you were amazing… \nAbsolutely spectacular!!",
             "nextBlock": 26,
             "origClipLength": 126,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 9,
@@ -515,9 +540,10 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "テイオーもすごく速い子なのに、あんなに差をつけて\r\n勝ってしまうなんて……まさに『最強』の名に相応しいですね！！",
-            "enText": "Te'o is a very fast girl too, but to win by such a margin…… is \ntruly worthy of the name \"Strongest\"!",
+            "enText": "Teio was known as such an amazing racer, yet you \nbeat her in such a clean manner. You really are \nthe strongest ever!!",
             "nextBlock": 27,
             "origClipLength": 232,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 384,
@@ -535,9 +561,10 @@
             "jpName": "ウマ娘たち",
             "enName": "Horsegirls",
             "jpText": "会長！　会長！　会長！！",
-            "enText": "Ms. Chairman! Ms. Chairman! Ms. Chairman!",
+            "enText": "President! President! President!!",
             "nextBlock": 28,
             "origClipLength": 107,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 146,
@@ -553,11 +580,12 @@
         },
         {
             "jpName": "シンボリルドルフ",
-            "enName": "",
+            "enName": "Symboli Rudolf",
             "jpText": "皆、声援感謝する。",
-            "enText": "Thank you all for your support.",
+            "enText": "I appreciate everyone's support.",
             "nextBlock": 29,
             "origClipLength": 82,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 40,
@@ -573,11 +601,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "す、すごい歓声……。\r\nみんなカイチョーのこと見てる……。",
-            "enText": "Soooo many cheers.…… Everyone is looking at Kaicho. ……",
+            "enText": "They're cheering so hard for her… They're all \nstaring at her…",
             "nextBlock": 30,
             "origClipLength": 165,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 247,
@@ -593,15 +622,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "みんな、カイチョーだけを……。\r\n……………………………………。",
-            "enText": "Everyone, only the kaicho can be found…… …………………… …………",
+            "enText": "They're… only looking at her…",
             "nextBlock": 31,
             "origClipLength": 153,
+            "voiceIdx": 23,
             "choices": [
                 {
                     "jpText": "……大丈夫？",
-                    "enText": "…… great husband?",
+                    "enText": "Are you okay?",
                     "nextBlock": 31
                 }
             ],
@@ -620,11 +650,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "えっ？　あ……。",
-            "enText": "Eh? Oh, ……",
+            "enText": "Huh? Oh…",
             "nextBlock": 32,
             "origClipLength": 53,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 89,
@@ -640,11 +671,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ううん、なんでもない。\r\nなんでも、ないよ……。",
-            "enText": "Nah, it's nothing. Nothing, nothing. ……",
+            "enText": "Of course I am! Don't… worry about it…",
             "nextBlock": 33,
             "origClipLength": 143,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 132,
@@ -662,9 +694,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トウカイテイオーは大歓声に背を向け、\r\nその場から立ち去っていった。",
-            "enText": "Tokai Teio turned her back to the cheers and walked away.",
+            "enText": "With the cheers behind her, Tokai \nTeio ran from the stadium.",
             "nextBlock": 34,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 58,
@@ -682,28 +715,30 @@
             "jpName": "",
             "enName": "",
             "jpText": "彼女を再び見かけることとなったのは――\r\nその日の夜更け、学園近辺の公園でだった。",
-            "enText": "I saw her again - later that day in a park near the school.",
+            "enText": "I wouldn't see her again until later that night. \nIt was at a park near the academy.",
             "nextBlock": 35,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "pathId": 8647092292721397313,
             "blockIdx": 34
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "はぁっ、はぁっ……！\r\nはぁ……っ。",
-            "enText": "Hah, hah ……! Ha ha ……!",
+            "enText": "",
             "nextBlock": 36,
             "origClipLength": 143,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "こんな時間にどうしたんだ？",
-                    "enText": "What's going on at this hour?",
+                    "enText": "What're you doing out so late?",
                     "nextBlock": 36
                 },
                 {
                     "jpText": "こんな時間にどうしたの？",
-                    "enText": "What's wrong with you at this hour?",
+                    "enText": "What're you doing out so late?",
                     "nextBlock": 36
                 }
             ],
@@ -718,11 +753,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "あ、キミ……。\r\nんー、今おしゃべりしたい気分じゃないんだ。",
-            "enText": "Oh, you're…… Uh, I'm not really in the mood for a chat.",
+            "enText": "Oh, it's you… well I don't really feel like \ntalking right now.",
             "nextBlock": 37,
             "origClipLength": 188,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 286,
@@ -738,20 +774,21 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "じゃあね。\r\n……っ！？",
-            "enText": "Then. ……!",
+            "enText": "Later! Nngh?!",
             "nextBlock": 38,
             "origClipLength": 49,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "大丈夫か！？",
-                    "enText": "Are you okay!",
+                    "enText": "Are you okay?",
                     "nextBlock": 38
                 },
                 {
                     "jpText": "大丈夫！？",
-                    "enText": "Great man!",
+                    "enText": "Are you okay?",
                     "nextBlock": 38
                 }
             ],
@@ -768,28 +805,30 @@
             "jpName": "",
             "enName": "",
             "jpText": "慌てて駆け寄ると、トウカイテイオーの脚は軽く\r\n震えはじめてしまっていた。明らかに無理をしすぎている……！",
-            "enText": "As I rushed over to her, I saw that Tokai Teio's legs had begun \nto tremble lightly. She's obviously pushing herself too hard. ……!",
+            "enText": "As I rushed over, I noticed that her legs were \nshaking violently. She's definitely pushing \nherself too hard.",
             "nextBlock": 39,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "pathId": -8108583024163886029,
             "blockIdx": 38
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ふんっ……こんなのたいしたことないよ。\r\nボクはランニングに戻るから、あっち行って！",
-            "enText": "Hmph…… this is no big deal. I'm going back to running, go away!",
+            "enText": "Hmph… It's nothing, okay? I'm going to continue \ntraining, so go away!",
             "nextBlock": 40,
             "origClipLength": 191,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "これ以上無理したらダメだ！",
-                    "enText": "Don't push it any further!",
+                    "enText": "I can't allow you to push yourself any further!",
                     "nextBlock": 40
                 },
                 {
                     "jpText": "これ以上無理したらダメ！",
-                    "enText": "Don't push it any further!",
+                    "enText": "I can't allow you to push yourself any further!",
                     "nextBlock": 40
                 }
             ],
@@ -808,11 +847,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "――うるさいなぁ、偉そーに！",
-            "enText": "―You're so loud, you're so bossy!",
+            "enText": "Shut up, stop acting like you know it all!",
             "nextBlock": 41,
             "origClipLength": 68,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 55,
@@ -828,15 +868,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "どいてよ！！\r\nまだボクのトレーナーでもなんでもないくせにっ！！",
-            "enText": "Get out of my way! You're not even my trainer yet!",
+            "enText": "Go away! You're not even my trainer, \nso don't lecture me!!",
             "nextBlock": 42,
             "origClipLength": 125,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "どかないっ！！",
-                    "enText": "I can't get out of the way!",
+                    "enText": "I refuse!!",
                     "nextBlock": 42
                 }
             ],
@@ -855,11 +896,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "う……な、なんだよ。",
-            "enText": "U…… what the hell?",
+            "enText": "Nngh… Wh-What's with you?",
             "nextBlock": 43,
             "origClipLength": 101,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 103,
@@ -871,11 +913,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ぐすっ……なんだよぉ……。\r\n怖い顔しないでよぉ……！",
-            "enText": "Gosh …… you're so…… Don't look so scared. ……",
+            "enText": "Sniffle… What's with you… You're scaring me…!",
             "nextBlock": 44,
             "origClipLength": 165,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 57,
@@ -893,9 +936,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "泣き出してしまったトウカイテイオーを、\r\n傍でしばらくなだめてあげた……。",
-            "enText": "I soothed Toukai Teio, who had started \nto cry, for a while by her side. ……",
+            "enText": "I sat by Tokai Teio's side, trying \nto soothe her as she cried…",
             "nextBlock": 45,
             "origClipLength": 83,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 57,
@@ -907,20 +951,21 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ぐすっ……。",
-            "enText": "Gush. ……",
+            "enText": "",
             "nextBlock": 46,
             "origClipLength": 88,
+            "voiceIdx": 34,
             "choices": [
                 {
                     "jpText": "落ち着いたか？",
-                    "enText": "You settling in?",
+                    "enText": "Are you feeling a little better?",
                     "nextBlock": 46
                 },
                 {
                     "jpText": "落ち着いた？",
-                    "enText": "Settling down?",
+                    "enText": "Are you feeling a little better?",
                     "nextBlock": 46
                 }
             ],
@@ -935,15 +980,16 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "うん……。\r\nでも……まだ、わかんないまんまだ。",
-            "enText": "Yeah…… But I'm still not sure about ……",
+            "enText": "Yeah… But… I still don't get it.",
             "nextBlock": 47,
             "origClipLength": 155,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "わからない？",
-                    "enText": "Don't you see?",
+                    "enText": "What don't you get?",
                     "nextBlock": 47
                 }
             ],
@@ -958,11 +1004,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "胸の、内側のとこがね。\r\nレースの後からずっと、イガイガしてるんだ。",
-            "enText": "It's on the inside of my chest. It's \nbeen irritated ever since the race.",
+            "enText": "My chest… It's been hurting ever since I lost \nthe race today.",
             "nextBlock": 48,
             "origClipLength": 254,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 283,
@@ -978,11 +1025,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "カイチョーがいっぱい声援を浴びてるのを見た時から、ずっと……。",
-            "enText": "Ever since I saw Kaicho getting lots \nof cheers, I've been going to ……",
+            "enText": "Seeing Prez have all the limelight and cheers…",
             "nextBlock": 49,
             "origClipLength": 157,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 283,
@@ -998,11 +1046,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "ボク、変なんだ。\r\nだってカイチョーは、ボクの憧れなんだよ？",
-            "enText": "I'm weird. I mean, I've always had a crush on Kaicho, you know?",
+            "enText": "I'm strange, aren't I? You know, \nI've always idolized Prez.",
             "nextBlock": 50,
             "origClipLength": 184,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 89,
@@ -1018,11 +1067,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "1番強くて、1番速くて、1番すごい。\r\n1番みんなに褒め称えられてる。",
-            "enText": "The strongest, the fastest, the most amazing. \nThe most admired by everyone.",
+            "enText": "She's the strongest, the fastest, and the most \namazing Uma Musume. And because of that, she's \nalways praised by everyone.",
             "nextBlock": 51,
             "origClipLength": 198,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 69,
@@ -1038,11 +1088,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "カイチョーはボクが目指す姿そのものなんだ。",
-            "enText": "Kaicho is exactly what I am aiming for.",
+            "enText": "She's exactly what I want to become.",
             "nextBlock": 52,
             "origClipLength": 125,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 128,
@@ -1058,11 +1109,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "見に行ったレースは全部1着でさ。大歓声を浴びて微笑んでる\r\nカイチョーは、ホントにホンットにカッコよくてさ！！",
-            "enText": "She came in first in all the races I went to see. Kaicho was \nreally cool, smiling as the crowd cheered for her!",
+            "enText": "She wins every race. She meets the crowd's \ncheers with a smile. She's just so cool!!",
             "nextBlock": 53,
             "origClipLength": 268,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 58,
@@ -1078,11 +1130,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "なのに……どうしてだろ。",
-            "enText": "And yet I wonder why ……",
+            "enText": "So… why…",
             "nextBlock": 54,
             "origClipLength": 95,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 78,
@@ -1094,11 +1147,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "今日だって、ボクがいつも憧れていたのと\r\n同じものを見たはずなのに――",
-            "enText": "Today, I saw the same thing I've always wanted to see.",
+            "enText": "I've seen her being cheered on so many times \nbefore, so why was today any different…",
             "nextBlock": 55,
             "origClipLength": 153,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 205,
@@ -1110,11 +1164,12 @@
         },
         {
             "jpName": "トウカイテイオー",
-            "enName": "",
+            "enName": "Tokai Teio",
             "jpText": "どうしてボク……めちゃくちゃに走らなきゃ\r\n気が済まないくらい、胸がイガイガするの……？",
-            "enText": "Why is my chest so irritated that I have \nto run…… crazy to feel better ……?",
+            "enText": "Why am I like this… Why do I only feel better if \nI run like a maniac…?",
             "nextBlock": 56,
             "origClipLength": 203,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 280,
@@ -1132,9 +1187,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "……きっとトウカイテイオーは\r\n大切なことに気づこうとしている。",
-            "enText": "…… I am sure that Toukai Teio is trying \nto realize something important.",
+            "enText": "It seems like Tokai Teio realized something \nimportant on that day.",
             "nextBlock": 57,
             "origClipLength": 88,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 280,
@@ -1152,12 +1208,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "その予感をおぼえながら、彼女を寮まで送った……。",
-            "enText": "Dreading this premonition, I drove her to her dormitory. ……",
+            "enText": "With that in mind, I took \nher back to her dormitory.",
             "nextBlock": -1,
             "origClipLength": 78,
+            "voiceIdx": -1,
             "pathId": 2878004487004274927,
             "blockIdx": 57
         }
     ],
-    "modified": 1657206738
+    "modified": 1681654927,
+    "humanTl": true
 }

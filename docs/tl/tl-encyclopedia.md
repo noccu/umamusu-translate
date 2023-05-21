@@ -17,6 +17,19 @@ Lv強化 (強化) | strengthening/upgrade (leveling up cards)
 才能開花 (開花) | developing/blooming (uma uncap)
 上限解放 (解放) | uncapping (cards)
 
+## Skills
+Not fully set yet.
+
+Term | Translation
+---|---
+ものすごく | greatly
+すごく | a lot
+少し | lightly, somewhat
+わずかに | slightly
+ちょっと | a little
+ほんのわずかに | very slightly
+ほんのちょっと | a tiny bit?
+
 # Horsegirls
 
 ## Daitaku Helios

@@ -95,7 +95,7 @@ def main():
         print("Extracting skill data...")
         # This is just a QoL thing
         from subprocess import run
-        run(["node", "src/mdb/scripts/extract-skill-data.js", args.src], check=True)
+        run(["node", "src/scripts/extract-skill-data.js", args.src], check=True)
         import textprocess
         textprocess.processFiles(common.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=99, forceResize=True))
 

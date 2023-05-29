@@ -72,7 +72,6 @@ def importDump(path: PurePath, args):
                         for k, _ in animationCheck:
                             del data[k]
                     animationCheck.clear()
-
         if args.save:
             helpers.writeJson(path, data)
         return data
@@ -311,6 +310,7 @@ def parseArgs():
     ap.add_argument("-mdb", "--convert-mdb", action="store_true", help="Import some mdb strings for TLG to improve formatting")
     ap.add_argument("-conv", "--convert-asset", nargs='?', const=True, default=False, help="Write TLG versions of [specified] asset files marked as such", metavar="path")
     ap.add_argument("-w", "-watch", "--watch", action="store_true", help="Watch TLG UI files for changes and auto-reload (requires game open with TLG)")
+    ap.add_argument("-so", "-bd", "--backup-dump", "--save-old", action="store_true", help="Backup the old dump file (for diffing)")
     args = ap.parse_args()
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
@@ -355,6 +355,9 @@ def main():
         return
 
     if args.populate or args.update or args.import_only:
+        if args.backup_dump:
+            print("Backing up dump file...")
+            shutil.copyfile(LOCAL_DUMP, LOCAL_DUMP.with_stem("static_dump_old"))
         dumpData = importDump(DUMP_FILE, args)
         if args.import_only:
             return

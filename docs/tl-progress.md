@@ -125,7 +125,7 @@ Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | [Sugoi MTL][]
 Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), deepl
 Yamanin Zephyr | Complete | [Director Kok][]
-Zenno Rob Roy | Stalled | [LotoDS][] (ep 1-4)
+Zenno Rob Roy | Complete | [LotoDS][]
 
 
 # Training events

@@ -8,6 +8,8 @@ from itertools import zip_longest
 from dataclasses import dataclass, field as datafield
 from functools import partial
 
+import symspellpy
+
 import common
 from helpers import isEnglish
 import textprocess
@@ -225,6 +227,68 @@ class SaveState:
         self._unsavedChanges.discard(chapter)
     def unsavedChanges(self):
         return self._unsavedChanges
+
+
+class SpellCheck:
+    dictPath = "src/data/frequency_dictionary_en_82_765.txt"
+    dictionary: symspellpy.SymSpell = None
+    def __init__(self, widget: tk.Text) -> None:
+        widget.tag_config("spellError", underline=True, underlinefg='red')
+        widget.tag_bind("spellError", "<Button-3>", self.show_suggestions)
+        widget.bind("<KeyRelease>", self.check_spelling)
+        # widget.word_suggestions = {}
+        self.menu = tk.Menu(widget, tearoff=0)
+        self.widget = widget
+        if not SpellCheck.dictionary:
+            SpellCheck.dictionary = symspellpy.SymSpell()
+            SpellCheck.dictionary.load_dictionary(SpellCheck.dictPath, 0, 1)
+
+    def check_spelling(self, event):
+        if event.keysym not in ("space", "BackSpace", "Delete"):
+            return
+        text = self.widget.get("1.0", tk.END)
+        words = re.split(r"[^A-Za-z\-']", text)
+        # Reset state
+        self.widget.tag_remove("spellError", "1.0", tk.END)
+        self.widget.word_suggestions = {}
+
+        # Iterate over each word and check for spelling errors
+        searchIdx = 0
+        for word in words:
+            if word == "" or word.lower() in SpellCheck.dictionary.words:
+                searchIdx += len(word)
+                continue
+            # print(f"Looking up {word}")
+            suggestions = SpellCheck.dictionary.lookup(word, symspellpy.Verbosity.CLOSEST, transfer_casing=True)
+            startIdx = text.index(word, searchIdx)
+            endIdx = startIdx + len(word)
+            searchIdx += len(word)
+            self.widget.tag_add("spellError", f"1.0+{startIdx}c", f"1.0+{endIdx}c")
+            self.widget.word_suggestions[word] = suggestions
+
+    def show_suggestions(self, event):
+        currentSpellFix = self.widget.tag_prevrange("spellError", tk.CURRENT) or self.widget.tag_nextrange("spellError", tk.CURRENT)
+        clicked_word = self.widget.get(*currentSpellFix)
+        # print(f"Clicked {clicked_word}")
+        suggestions = self.widget.word_suggestions.get(clicked_word)
+        # Set up context menu handling
+        self.menu.delete(0, tk.END)
+        for suggestion in suggestions:
+            self.menu.add_command(label=suggestion.term, command=partial(self.replace_word, currentSpellFix, clicked_word, suggestion.term))
+        self._popup(event)
+
+    def replace_word(self, fixRange, oldWord, replacement):
+        del self.widget.word_suggestions[oldWord]
+        self.widget.tag_remove(*fixRange)
+        self.widget.delete(*fixRange)
+        self.widget.insert(fixRange[0], replacement)
+        # print(f"Replaced {oldWord} with {replacement}")
+
+    def _popup(self, event):
+        try:
+            self.menu.tk_popup(event.x_root, event.y_root)
+        finally:
+            self.menu.grab_release()
 
 
 def change_chapter(event=None, initialLoad=False):
@@ -976,6 +1040,7 @@ def main():
     text_box_en.grid(row=4, column=0, columnspan=4)
     text_box_en.tag_config("b", font=boldFont)
     text_box_en.tag_config("i", font=italicFont)
+    sc = SpellCheck(text_box_en)
 
     frm_btns_bot = tk.Frame(root)
     btn_choices = tk.Button(frm_btns_bot, text="Choices", command=lambda: toggleTextListPopup(target=cur_choices), state='disabled', width=10)

@@ -242,12 +242,13 @@ class SpellCheck:
         # widget.word_suggestions = {}
         self.menu = tk.Menu(widget, tearoff=0)
         self.widget = widget
+        self.newDict = list()
         if not SpellCheck.dictionary:
             SpellCheck.dictionary = symspellpy.SymSpell()
             SpellCheck.dictionary.load_dictionary(SpellCheck.dictPath, 0, 1)
             if not SpellCheck.dictionary.create_dictionary(self.customDictPath, "utf8"):
                 print("No custom dict loaded.")
-        self.newDict = list()
+            self._loadNames()
 
     def add_word(self, word:str, fixRange:tuple, isName = False):
         lcword = word.lower()
@@ -259,6 +260,15 @@ class SpellCheck:
         # Remove UI marking
         del self.widget.word_suggestions[word]
         self.widget.tag_remove("spellError", *fixRange)
+
+    def _loadNames(self):
+        namesFile = common.TranslationFile("translations/mdb/char-name.json")
+        for entry in namesFile.textBlocks:
+            name = entry.get("enText").lower().split()
+            for n in name:
+                if len(n) < 3:
+                    continue
+                self.dictionary.create_dictionary_entry(n, SpellCheck.nameFreq)
 
     def check_spelling(self, event=None):
         if event and event.keysym not in ("space", "BackSpace", "Delete"):

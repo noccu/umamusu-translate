@@ -251,11 +251,10 @@ class SpellCheck:
         # Reset state
         self.widget.tag_remove("spellError", "1.0", tk.END)
         self.widget.word_suggestions = {}
-
         # Iterate over each word and check for spelling errors
         searchIdx = 0
         for word in words:
-            if word == "" or word.lower() in SpellCheck.dictionary.words:
+            if word == "" or len(word) == 1 or word.lower() in SpellCheck.dictionary.words:
                 searchIdx += len(word)
                 continue
             # print(f"Looking up {word}")

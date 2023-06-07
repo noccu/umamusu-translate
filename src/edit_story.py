@@ -278,7 +278,7 @@ class SpellCheck:
 
     def replace_word(self, fixRange, oldWord, replacement):
         del self.widget.word_suggestions[oldWord]
-        self.widget.tag_remove(*fixRange)
+        self.widget.tag_remove("spellError", *fixRange)
         self.widget.delete(*fixRange)
         self.widget.insert(fixRange[0], replacement)
         # print(f"Replaced {oldWord} with {replacement}")

@@ -231,7 +231,10 @@ class SaveState:
 
 class SpellCheck:
     dictPath = "src/data/frequency_dictionary_en_82_765.txt"
+    customDictPath = "src/data/umatl_spell_dict.txt"
     dictionary: symspellpy.SymSpell = None
+    nameFreq = 30000000000
+    defaultFreq = 30000
     def __init__(self, widget: tk.Text) -> None:
         widget.tag_config("spellError", underline=True, underlinefg='red')
         widget.tag_bind("spellError", "<Button-3>", self.show_suggestions)
@@ -242,6 +245,20 @@ class SpellCheck:
         if not SpellCheck.dictionary:
             SpellCheck.dictionary = symspellpy.SymSpell()
             SpellCheck.dictionary.load_dictionary(SpellCheck.dictPath, 0, 1)
+            if not SpellCheck.dictionary.create_dictionary(self.customDictPath, "utf8"):
+                print("No custom dict loaded.")
+        self.newDict = list()
+
+    def add_word(self, word:str, fixRange:tuple, isName = False):
+        lcword = word.lower()
+        # Max importance of names
+        # freq = 30000000000 if word[0].isupper() else 30000
+        freq = SpellCheck.nameFreq if isName else SpellCheck.defaultFreq
+        self.newDict.append(f"{lcword} {freq}\n")
+        SpellCheck.dictionary.create_dictionary_entry(lcword, freq)
+        # Remove UI marking
+        del self.widget.word_suggestions[word]
+        self.widget.tag_remove("spellError", *fixRange)
 
     def check_spelling(self, event=None):
         if event and event.keysym not in ("space", "BackSpace", "Delete"):
@@ -274,6 +291,10 @@ class SpellCheck:
         self.menu.delete(0, tk.END)
         for suggestion in suggestions:
             self.menu.add_command(label=suggestion.term, command=partial(self.replace_word, currentSpellFix, clicked_word, suggestion.term))
+        self.menu.add_separator()
+        self.menu.add_command(label="Add to dictionary", command=lambda: self.add_word(clicked_word, currentSpellFix))
+        self.menu.add_command(label="Add as name", command=lambda: self.add_word(clicked_word, currentSpellFix, True))
+
         self._popup(event)
 
     def replace_word(self, fixRange, oldWord, replacement):
@@ -289,6 +310,12 @@ class SpellCheck:
         finally:
             self.menu.grab_release()
 
+    def saveNewDict(self):
+        if len(self.newDict) == 0:
+            return
+        with open(self.customDictPath, "a", encoding="utf8", newline="\n") as f:
+            f.writelines(self.newDict)
+        print("New words added to umatl dict.")
 
 def change_chapter(event=None, initialLoad=False):
     global cur_chapter
@@ -948,6 +975,8 @@ def onClose(event=None):
 
     if AUDIO_PLAYER:
         AUDIO_PLAYER.dealloc()
+
+    root.spell_checker.saveNewDict()
     root.quit()
 
 def main():

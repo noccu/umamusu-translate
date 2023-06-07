@@ -243,8 +243,8 @@ class SpellCheck:
             SpellCheck.dictionary = symspellpy.SymSpell()
             SpellCheck.dictionary.load_dictionary(SpellCheck.dictPath, 0, 1)
 
-    def check_spelling(self, event):
-        if event.keysym not in ("space", "BackSpace", "Delete"):
+    def check_spelling(self, event=None):
+        if event and event.keysym not in ("space", "BackSpace", "Delete"):
             return
         text = self.widget.get("1.0", tk.END)
         words = re.split(r"[^A-Za-z\-']", text)
@@ -427,6 +427,7 @@ def load_block(event=None, dir=1):
         btn_colored['state'] = 'disabled'
         btn_colored.config(bg=COLOR_BTN)
     SAVE_STATE.markBlockLoaded(cur_block_data)
+    root.spell_checker.check_spelling()
     previewText.config(text=displayText)
 
 
@@ -1040,7 +1041,7 @@ def main():
     text_box_en.grid(row=4, column=0, columnspan=4)
     text_box_en.tag_config("b", font=boldFont)
     text_box_en.tag_config("i", font=italicFont)
-    sc = SpellCheck(text_box_en)
+    root.spell_checker = SpellCheck(text_box_en)
 
     frm_btns_bot = tk.Frame(root)
     btn_choices = tk.Button(frm_btns_bot, text="Choices", command=lambda: toggleTextListPopup(target=cur_choices), state='disabled', width=10)

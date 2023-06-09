@@ -870,11 +870,12 @@ def tagsToMarkup(widget:tk.Text):
     offset = 0
     tagList = list()
     for tag in widget.tag_names():
-        if tag == "sel":
+        tagBaseName = tag.split('=')[0]
+        if tagBaseName not in ("i", "b", "color", "size"):
             continue
         ranges = widget.tag_ranges(tag)
         tagList.extend((text_count(widget, "1.0", x, "-chars"), f"<{tag}>") for x in ranges[0::2])
-        tagList.extend((text_count(widget, "1.0", x, "-chars"), f"</{tag.split('=')[0]}>") for x in ranges[1::2])
+        tagList.extend((text_count(widget, "1.0", x, "-chars"), f"</{tagBaseName}>") for x in ranges[1::2])
     tagList.sort(key=lambda x: x[0])
     for idx, tag in tagList:
         text.insert(idx+offset, tag)

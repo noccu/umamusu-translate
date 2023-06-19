@@ -88,6 +88,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete | deepl
 Grass Wonder | Complete | [LotoDS][]
 Haru Urara | Complete | [Vacxy][] (ep 1), deepl
+Hishi Miracle | Complete | [LotoDS][]
 Hokko Tarumae | Complete | [Riersa] (deepl edit)
 Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), deepl

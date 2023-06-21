@@ -270,6 +270,7 @@ Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
 Everlasting BEATS | Complete | [noccu]
 Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu] (Edited slightly based on tl by [COSMET])
+Glorious Moment! | Complete | TR
 Honnou Speed | Complete | [Eight][]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 Ms. VICTORIA | Complete | [Nine]

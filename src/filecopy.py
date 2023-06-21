@@ -148,7 +148,7 @@ def main():
         backup(args)
     elif args.remove_old:
         rem, total = removeOldFiles(args)
-        print(f"Removed {rem}/{total} old files from {args.dst}")
+        print(f"Removed {rem} old files out of {total} total files from {args.dst}")
     else:
         if args.restore_missing:
             global restore

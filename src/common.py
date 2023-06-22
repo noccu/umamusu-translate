@@ -476,7 +476,6 @@ class GameBundle:
             f.write(b)
         self.isPatched = True
 
-
     @classmethod
     def fromName(cls, name, **kwargs):
         '''Create a bundle by hash/name from the default game dir. kwargs passed to constructor'''
@@ -490,6 +489,8 @@ class GameBundle:
 
 def currentTimestamp():
     return int(datetime.now(timezone.utc).timestamp())
+def timestampToDate(ts):
+    return datetime.fromtimestamp(ts)
 
 class UmaTlConfig():
     cfg = None
@@ -504,8 +505,15 @@ class UmaTlConfig():
                 UmaTlConfig.core = UmaTlConfig.cfg.get("core", UmaTlConfig.empty)
             except FileNotFoundError:
                 self.createDefault()
+        self.ensureCore()
         self.script = UmaTlConfig.cfg.get(ctx, UmaTlConfig.empty)
 
+    def save(self):
+        helpers.writeJson("umatl.json", UmaTlConfig.cfg, 2)
+    def ensureCore(self):
+        if not "core" in UmaTlConfig.cfg:
+            UmaTlConfig.cfg["core"] = {}
+            self.save()
     def createDefault(self):
         data = {
             "core":{},
@@ -518,7 +526,8 @@ class UmaTlConfig():
             }
         }
         try:
-            helpers.writeJson("umatl.json", data, 2)
+            UmaTlConfig.cfg = data
+            self.save()
         except PermissionError:
             print("Error: Lacking permissions to create the config file in this location. \nEdit the patch folder's permissions or move it to a different location.")
             sys.exit()

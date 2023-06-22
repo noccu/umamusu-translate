@@ -71,6 +71,13 @@ def backup(args):
             copy((file.type, file.bundle, None), args)
 
 def removeOldFiles(args):
+    cfg = common.UmaTlConfig()
+    ts = common.currentTimestamp()
+    lastrun = cfg.core.get("lastBackupPrune", 0)
+    # Run every ~6 months
+    if not args.overwrite and lastrun + 15778476 > ts:
+        print(f"Skipping backup pruning as it was last done on {common.timestampToDate(lastrun)}.")
+        return 0, 0
     from pathlib import PurePath, Path
     n = 0
     isHash = args.remove_old == 'hash'
@@ -84,6 +91,8 @@ def removeOldFiles(args):
                 if args.verbose:
                     print(f"Removed {path}")
                 n+=1
+    cfg.core["lastBackupPrune"] = ts
+    cfg.save()
     return n, len(files)
 
 def copy(data, args):

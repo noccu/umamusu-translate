@@ -177,8 +177,8 @@ class Args(argparse.ArgumentParser):
             print(f"Patch version: {patchVersion()}")
             sys.exit()
         if a.read_defaults:
-            cfg = ScriptConfig()
-            for k, v in cfg.items():
+            cfg = UmaTlConfig()
+            for k, v in cfg.script.items():
                 setattr(a, k, v)
         if self.hasDefault and a.story:
             a.story = StoryId.parse(a.type, a.story)
@@ -491,20 +491,24 @@ class GameBundle:
 def currentTimestamp():
     return int(datetime.now(timezone.utc).timestamp())
 
-class ScriptConfig(dict):
+class UmaTlConfig():
     cfg = None
+    core = None
     empty = {}
     def __init__(self) -> None:
         # Resolve to make sure it works on both abs and rel paths.
         ctx = str(Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")).replace("\\","/")
-        if not ScriptConfig.cfg:
+        if not UmaTlConfig.cfg:
             try:
-                ScriptConfig.cfg = helpers.readJson("umatl.json")
+                UmaTlConfig.cfg = helpers.readJson("umatl.json")
+                UmaTlConfig.core = UmaTlConfig.cfg.get("core", UmaTlConfig.empty)
             except FileNotFoundError:
                 self.createDefault()
-        super().__init__(ScriptConfig.cfg.get(ctx, ScriptConfig.empty))
+        self.script = UmaTlConfig.cfg.get(ctx, UmaTlConfig.empty)
+
     def createDefault(self):
         data = {
+            "core":{},
             "import": {
                 "update": True,
                 "skip_mtl": False
@@ -521,5 +525,6 @@ class ScriptConfig(dict):
         print("Uma-tl uses the umatl.json config file for user preferences when requested.\n"
             "This seems to be your first time running uma-tl this way so a new file was created.\n"
             "Uma-tl has quit without doing anything this first time so you can edit the config before running it again. Defaults are:")
+        del data["core"]
         print(json.dumps(data, indent=2))
         sys.exit()

@@ -211,22 +211,20 @@ class AudioPlayer:
 
 class SaveState:
     lastEnText: str
-    _unsavedChanges = set()
+    unsavedChanges = set()
     def markBlockLoaded(self, block:dict):
         self.lastEnText = block.get('enText')
     def markBlockSaved(self, chapter:int, block:dict):
         text = block.get('enText')
         # short the str comp when changes already known
-        if not chapter in self._unsavedChanges and text != self.lastEnText:
-            self._unsavedChanges.add(chapter)
+        if not chapter in self.unsavedChanges and text != self.lastEnText:
+            self.unsavedChanges.add(chapter)
     def markChapterSaved(self, chapter: int):
         # Little hack to prevent false unsaved files on chapter change without block change
         # Essentially pretend the block was reloaded. Could be done in markBlockSaved but 
         # would usually be useless and immediately replaced by the actual block load
         self.markBlockLoaded(cur_file.textBlocks[cur_block])
-        self._unsavedChanges.discard(chapter)
-    def unsavedChanges(self):
-        return self._unsavedChanges
+        self.unsavedChanges.discard(chapter)
 
 class PopupMenu(tk.Menu):
     def clear(self):
@@ -980,15 +978,13 @@ def _switchWidgetFocusForced(e):
     return "break"
 
 def onClose(event=None):
-    if unsavedChapters := SAVE_STATE.unsavedChanges():
-        unsavedFiles = "\n".join(files[x].name for x in unsavedChapters)
+    if SAVE_STATE.unsavedChanges:
+        unsavedFiles = "\n".join(files[x].name for x in SAVE_STATE.unsavedChanges)
         answer = messagebox.askyesno(title="Quit", message=f"Unsaved files:\n{unsavedFiles}\nDo you want to quit without saving?")
         if not answer:
             return
-
     if AUDIO_PLAYER:
         AUDIO_PLAYER.dealloc()
-
     root.spell_checker.saveNewDict()
     root.quit()
 

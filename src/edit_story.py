@@ -228,6 +228,15 @@ class SaveState:
     def unsavedChanges(self):
         return self._unsavedChanges
 
+class PopupMenu(tk.Menu):
+    def clear(self):
+        self.delete(0, tk.END)
+
+    def show(self, event):
+        try:
+            self.tk_popup(event.x_root, event.y_root)
+        finally:
+            self.grab_release()
 
 class SpellCheck:
     dictPath = "src/data/frequency_dictionary_en_82_765.txt"
@@ -240,7 +249,7 @@ class SpellCheck:
         widget.tag_bind("spellError", "<Button-3>", self.show_suggestions)
         widget.bind("<KeyRelease>", self.check_spelling)
         # widget.word_suggestions = {}
-        self.menu = tk.Menu(widget, tearoff=0)
+        self.menu = PopupMenu(widget, tearoff=0)
         self.widget = widget
         self.newDict = list()
         if not SpellCheck.dictionary:
@@ -298,14 +307,13 @@ class SpellCheck:
         # print(f"Clicked {clicked_word}")
         suggestions = self.widget.word_suggestions.get(clicked_word)
         # Set up context menu handling
-        self.menu.delete(0, tk.END)
+        self.menu.clear()
         for suggestion in suggestions:
             self.menu.add_command(label=suggestion.term, command=partial(self.replace_word, currentSpellFix, clicked_word, suggestion.term))
         self.menu.add_separator()
         self.menu.add_command(label="Add to dictionary", command=lambda: self.add_word(clicked_word, currentSpellFix))
         self.menu.add_command(label="Add as name", command=lambda: self.add_word(clicked_word, currentSpellFix, True))
-
-        self._popup(event)
+        self.menu.show(event)
 
     def replace_word(self, fixRange, oldWord, replacement):
         del self.widget.word_suggestions[oldWord]
@@ -313,12 +321,6 @@ class SpellCheck:
         self.widget.delete(*fixRange)
         self.widget.insert(fixRange[0], replacement)
         # print(f"Replaced {oldWord} with {replacement}")
-
-    def _popup(self, event):
-        try:
-            self.menu.tk_popup(event.x_root, event.y_root)
-        finally:
-            self.menu.grab_release()
 
     def saveNewDict(self):
         if len(self.newDict) == 0:

@@ -230,9 +230,16 @@ class PopupMenu(tk.Menu):
     def clear(self):
         self.delete(0, tk.END)
 
-    def show(self, event):
+    def show(self, event: tk.Event, atInsert=False):
+        if atInsert:
+            x1, y1 = event.widget.bbox(tk.INSERT)[:2]
+            x = event.widget.winfo_rootx() + x1
+            y = event.widget.winfo_rooty() + y1
+        else:
+            x = event.x_root
+            y = event.y_root
         try:
-            self.tk_popup(event.x_root, event.y_root)
+            self.tk_popup(x, y)
         finally:
             self.grab_release()
 
@@ -242,10 +249,12 @@ class SpellCheck:
     dictionary: symspellpy.SymSpell = None
     nameFreq = 30000000000
     defaultFreq = 30000
+
     def __init__(self, widget: tk.Text) -> None:
         widget.tag_config("spellError", underline=True, underlinefg='red')
         widget.tag_bind("spellError", "<Button-3>", self.show_suggestions)
         widget.bind("<KeyRelease>", self.check_spelling)
+        widget.bind("<Control-space>", self.autocomplete)
         # widget.word_suggestions = {}
         self.menu = PopupMenu(widget, tearoff=0)
         self.widget = widget
@@ -298,6 +307,37 @@ class SpellCheck:
             searchIdx += len(word)
             self.widget.tag_add("spellError", f"1.0+{startIdx}c", f"1.0+{endIdx}c")
             self.widget.word_suggestions[word] = suggestions
+
+    def autocomplete(self, event:tk.Event=None):
+        # \M = word boundary (end only) -> TCL, reverse search
+        wordstart = self.widget.search(r"\M", index=tk.INSERT, backwards=True, regexp=True, nocase=True)
+        # The index returned from the 0-length match is 1 too early.
+        # Special-case first word on first line because \M matches possible $ and not ^
+        if not wordstart:
+            wordstart = "1.0"
+        else:
+            wordstart += "+1c"
+        # Remove extraneous newlines that happen with empty lines for some reason.
+        partialWord, n = re.subn(r"\n", "", self.widget.get(wordstart, tk.INSERT))
+        wordstart += f"+{n}c"  # And adjust the index accordingly.
+        # Keep capitalization
+        isCapitalized = partialWord[0].isupper()
+        partialWord = partialWord.lower()
+        self.menu.clear()
+        suggestions = 0
+        for word in self.dictionary.words:
+            if word.startswith(partialWord):
+                if isCapitalized:
+                    word = word.title()
+                self.menu.add_command(label=word, command=partial(self.autoReplace, wordstart, word))
+                suggestions += 1
+            if suggestions == 25:
+                break
+        self.menu.show(event, atInsert=True)
+
+    def autoReplace(self, wordstart, word):
+        self.widget.delete(wordstart, tk.INSERT)
+        self.widget.insert(wordstart, word)
 
     def show_suggestions(self, event):
         currentSpellFix = self.widget.tag_prevrange("spellError", tk.CURRENT) or self.widget.tag_nextrange("spellError", tk.CURRENT)

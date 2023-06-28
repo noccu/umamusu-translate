@@ -26,7 +26,7 @@ def writeJson(file: PathLike, data, indent=4):
 def _to_json(o):
     try:
         return o.__json__()
-    except:
+    except Exception:
         raise TypeError
 
 
@@ -83,7 +83,7 @@ def getUmaInstallDir() -> Optional[Path]:
                     r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume",
                 ) as k:
                     __GAME_INSTALL_DIR = Path(winreg.QueryValueEx(k, "Path")[0])
-            except:
+            except OSError:
                 pass
     return __GAME_INSTALL_DIR
 

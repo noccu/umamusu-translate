@@ -69,7 +69,7 @@ class PatchManager:
     def start(self):
         startTime = now()
         print(
-            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}"
+            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations/{self.args.type} to {self.args.dst}"
         )
         files = common.searchFiles(
             self.args.type, self.args.group, self.args.id, self.args.idx, changed=self.args.changed
@@ -81,7 +81,8 @@ class PatchManager:
 
         # Not sure if threads are useful but multi-process takes too long upfront for low counts.
         with ProcessPoolExecutor() if nFiles > 25 else ThreadPoolExecutor() as pool:
-            # map seems to be a tiny bit faster maybe? chunksize seems to affect nothing, haven't tested >100 files tho
+            # map seems to be a tiny bit faster maybe?
+            # chunksize seems to affect nothing, haven't tested >100 files tho
             for result in pool.map(self.patchFile, files):
                 if result is None:
                     nErrors += 1
@@ -107,7 +108,7 @@ class PatchManager:
                 print(e)
         except PatchError as e:
             print(f"Skipped {file}: {e}")
-        except:
+        except Exception:
             print(f"Error importing {file}")
             if self.args.verbose:
                 print_exc(chain=True)
@@ -121,7 +122,7 @@ class PatchManager:
     def loadTranslationFile(self, path):
         try:
             return common.TranslationFile(path, readOnly=True)
-        except:
+        except Exception:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
     def loadBundle(self, tlFile: common.TranslationFile):
@@ -329,7 +330,8 @@ class LyricsPatcher(StoryPatcher):
 
     def patch(self):
         for textBlock in self.bundle.linkedTlFile.textBlocks:
-            # Format the CSV text. Their parser uses quotes, no escape chars. For novelty: \t = space; \v and \f = ,; \r = \n
+            # Format the CSV text. Their parser uses quotes, no escape chars.
+            # For novelty: \t = space; \v and \f = ,; \r = \n
             text = textBlock["enText"]
             if not text:
                 text = textBlock["jpText"]

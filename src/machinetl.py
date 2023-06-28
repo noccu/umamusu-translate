@@ -51,9 +51,7 @@ class Translator:
             self.loop = asyncio.get_running_loop()
         elif args.model == "sugoi":
             try:
-                self.model = getattr(
-                    import_module("fairseq.models.transformer"), "TransformerModel"
-                )
+                self.model = import_module("fairseq.models.transformer").TransformerModel
             except ModuleNotFoundError:
                 print("Error importing fairseq. See sugoi-readme.txt.")
                 raise SystemExit

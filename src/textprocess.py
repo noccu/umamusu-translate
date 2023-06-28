@@ -18,7 +18,7 @@ def processText(file: TranslationFile, text: str, opts: dict):
         text = cleannewLines(text)
     if opts.get("replaceMode"):
         text = replace(text, opts["replaceMode"])
-    if opts.get("lineLength") != None and opts.get("lineLength") != 0:
+    if opts.get("lineLength") is not None and opts.get("lineLength") != 0:
         text = adjustLength(file, text, opts)
 
     text = resizeText(file, text, force=opts.get("forceResize"))
@@ -199,7 +199,8 @@ def main():
         action="store_true",
         help="Re-resize text when input already had size tags. (Still requires size key in tlfile)",
     )
-    # 3 is old max and visually ideal as intended by the game. Through overflow (thanks anni update!) up to 4 work for
+    # 3 is old max and visually ideal as intended by the game.
+    # Through overflow (thanks anni update!) up to 4 work for
     # landscape content, and up to 5 for portrait (quite pushing it though)
     ap.add_argument(
         "-tl",
@@ -226,7 +227,7 @@ def processFiles(args):
         )
     print(f"Processing {len(files)} files...")
     if args.lineLength == -1:
-        print(f"Automatically setting line length based on story type/id or file value")
+        print("Automatically setting line length based on story type/id or file value")
     for file in files:
         file = TranslationFile(file)
 

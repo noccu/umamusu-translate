@@ -60,12 +60,12 @@ class TextLine:
 class BasicSubProcessor:
     npreRe = re.compile(r"\[?([^\]:]{2,40})\]?: (.+)", flags=re.DOTALL)
 
-    def __init__(self, srcFile, options=SubTransferOptions()):
+    def __init__(self, srcFile, options: SubTransferOptions = None):
         self.srcFile = common.TranslationFile(srcFile)
         self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
-        self.options = options
+        self.options = options or SubTransferOptions()
         self.cpreRe = re.compile(
             "|".join(options.choicePrefix), re.IGNORECASE
         )  # match searches start only
@@ -98,13 +98,13 @@ class BasicSubProcessor:
                 self.srcLines[idx]["enName"] = line.name
 
     def getChoices(self, idx):
-        if not "choices" in self.srcLines[idx]:
+        if "choices" not in self.srcLines[idx]:
             return None
         else:
             return self.srcLines[idx]["choices"]
 
     def setChoices(self, idx, cIdx, line: TextLine):
-        if not "choices" in self.srcLines[idx]:
+        if "choices" not in self.srcLines[idx]:
             return None
         else:
             if cIdx:
@@ -365,7 +365,9 @@ class TxtSubProcessor(BasicSubProcessor):
 
     def preprocess(self, raw):
         self.subLines = [
-            TextLine(l) for l in raw if helpers.isEnglish(l) and not re.match(r"\n+\s*", l)
+            TextLine(line)
+            for line in raw
+            if helpers.isEnglish(line) and not re.match(r"\n+\s*", line)
         ]
 
 
@@ -404,7 +406,8 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                 print(f"Dupe sub skipped at {p.getBlockIdx(idx)}: {subLine.text}")
                 continue
 
-        # races can have "choices" but their format is different because there is always only 1 and can be treated as normal text
+        # Races can have "choices" but their format is different because
+        # there is always only 1 and can be treated as normal text
         if storyType == "story":
             if subLine.isChoice():
                 skipLine = True
@@ -516,9 +519,9 @@ def main():
     ap = common.Args(
         "Imports translations from subtitle files. A few conventions are used.",
         defaultArgs=False,
-        epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\
-                        \nASS: Actor field for names, Effect field for 'choice', 'skip', 'split' (all lines)\
-                        \nSRT: Prefix name 'Name: Dialogue', '>' for choices, 2+ spaces for splits (all except last line)",
+        epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\n"
+        "ASS: Actor field for names, Effect field for 'choice', 'skip', 'split' (all lines)\n"
+        "SRT: Prefix name 'Name: Dialogue', '>' for choices, 2+ spaces for splits (all except last line)",
     )
     ap.add_argument("src", help="Target Translation File, overwrites other file options")
     ap.add_argument("sub", help="Target subtitle file. Supports ASS, SRT, TXT")
@@ -546,7 +549,8 @@ def main():
         dest="choicePrefix",
         nargs="+",
         default=[">"],
-        help="Prefixes that mark choices. Supports regex\nChecks name as a special case if prefix includes ':'",
+        help="Prefixes that mark choices. Supports regex\n"
+        "Checks name as a special case if prefix includes ':'",
     )
     ap.add_argument(
         "--no-strict-choices",
@@ -579,7 +583,8 @@ def main():
         "-main --main-styles",
         dest="mainStyles",
         default="MainText|Default|Button",
-        help="Filter by these ASS styles. No effect on non-ASS subs.\nA regexp that should match all useful text and choice styles.",
+        help="Filter by these ASS styles. No effect on non-ASS subs.\n"
+        "A regexp that should match all useful text and choice styles.",
     )
     ap.add_argument(
         "--asset-sync",

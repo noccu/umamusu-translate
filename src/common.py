@@ -46,7 +46,7 @@ def searchFiles(
     jsonOnly=True,
 ) -> list[str]:
     def isJson(f: str):
-        PurePath(f).suffix == ".json" if jsonOnly else True
+        return PurePath(f).suffix == ".json" if jsonOnly else True
 
     found = list()
     if changed:
@@ -210,10 +210,9 @@ def patchVersion():
     except FileNotFoundError:
         v = os.path.getmtime("tl-progress.md")
         v = datetime.fromtimestamp(v, tz=timezone.utc).isoformat()
-    except:
+    except Exception:
         v = "unknown"
-    finally:
-        return v
+    return v
 
 
 class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTextHelpFormatter):
@@ -567,14 +566,13 @@ class GameBundle:
                 mark = f.read(2)
                 if mark == self.editMark:
                     self._patchedState = True
-                    try:
-                        modified = int.from_bytes(modified, byteorder='big')
-                        self.patchedTime = modified
-                    except:
-                        self.patchedTime = None
+                    # Exception handling removed as I don't see how it would except
+                    # The actual issue is it could not be a timestamp... todo?
+                    modified = int.from_bytes(modified, byteorder="big")
+                    self.patchedTime = modified
                 else:
                     self._patchedState = False
-        except:
+        except Exception:
             self._patchedState = False
         return self._patchedState
 

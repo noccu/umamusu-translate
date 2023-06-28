@@ -31,6 +31,7 @@ subs = [
 mtl = ["websockets"]
 dev = [
     "black",
+    "flake8",
 ]
 
 [project.urls]

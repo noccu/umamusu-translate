@@ -16,7 +16,7 @@ import textprocess
 
 if common.IS_WIN:
     from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
-    import pyaudio, sqlite3, wave, restore
+    import pyaudio, sqlite3, wave, restore  # noqa: E401
     from PyCriCodecs import AWB, HCA
 
 TEXTBOX_WIDTH = 54
@@ -96,7 +96,7 @@ class AudioPlayer:
         if reloaded := self.curPlaying[0] != storyId:
             if sType == "home":
                 # sound/c/snd_voi_story_00001_02_1054001.acb
-                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.awb' ESCAPE '\\'"
+                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.awb' ESCAPE '\'"
             elif sType == "lyrics":
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.awb'"
             else:
@@ -213,7 +213,8 @@ class AudioPlayer:
             print("File has an invalid storyid.")
             return "break"
         elif len(storyId) < 9 and cur_file.type != "lyrics":
-            # Preview type would work but I don't understand the format/where it gets info unless it's really just awbTracks[15:-1]
+            # Preview type would work but I don't understand
+            # the format/where it gets info unless it's really just awbTracks[15:-1]
             print("Unsupported type.")
             return "break"
         elif voice is None:
@@ -237,7 +238,7 @@ class SaveState:
     def markBlockSaved(self, chapter: int, block: dict):
         text = block.get("enText")
         # short the str comp when changes already known
-        if not chapter in self.unsavedChanges and text != self.lastEnText:
+        if chapter not in self.unsavedChanges and text != self.lastEnText:
             self.unsavedChanges.add(chapter)
 
     def markChapterSaved(self, chapter: int):
@@ -569,11 +570,12 @@ def save_block():
             cur_file.textBlocks[cur_block]["newClipLength"] = new_clip_length
         else:
             cur_file.textBlocks[cur_block].pop("newClipLength", None)
-            if not "origClipLength" in cur_file.textBlocks[cur_block]:
+            if "origClipLength" not in cur_file.textBlocks[cur_block]:
                 messagebox.showwarning(
                     master=block_duration_spinbox,
                     title="Cannot save clip length",
-                    message="This text block does not have an original clip length defined and thus cannot save a custom clip length. Resetting to -1.",
+                    message="This text block does not have an original clip length defined"
+                    " and thus cannot save a custom clip length. Resetting to -1.",
                 )
                 block_duration_spinbox.delete(0, tk.END)
                 block_duration_spinbox.insert(0, "-1")
@@ -619,7 +621,7 @@ def saveFile(event=None):
             file.data["humanTl"] = True
         file.save()
         if save_on_next.get() == 0 and not saveAll:
-            print(f"Saved")
+            print("Saved")
         SAVE_STATE.markChapterSaved(ch if saveAll else cur_chapter)
     if saveAll:
         print("Saved all files")
@@ -896,10 +898,11 @@ def createPreviewWindow():
     previewFont.config(size=fontSize.get())
     fontSizeCfg.pack(expand=True, fill="x")
 
-    def changeFontSize(*args):
+    def changeFontSize(*_args):  # Name, ???, action
+        # Excepts on del or first number because it triggers on emptied input first
         try:
             newsize = fontSize.get()
-        except:  # throws errors when typing first number for reasons
+        except tk.TclError:
             return
         previewFont.config(size=newsize)
 
@@ -928,7 +931,7 @@ def char_convert(event=None):
     if m:
         try:
             res = chr(int(m.group(0), 16))
-        except:
+        except ValueError:
             return
         text_box_en.replace(f"{start}+{str(m.start())}c", pos, res)
 
@@ -1084,7 +1087,10 @@ def loadFont(fontPath):
     # flags = 0x10 | 0 # private and enumerable
 
     numFontsAdded = AddFontResourceEx(byref(pathbuf), flags, 0)
-    # print(f"added {numFontsAdded} fonts:", [name for name in tk.font.families() if name not in origFontList])
+    # print(
+    #   f"added {numFontsAdded} fonts:",
+    #   [name for name in tk.font.families() if name not in origFontList]
+    # )
     # print(tk.font.families()[-3:])
 
     return numFontsAdded

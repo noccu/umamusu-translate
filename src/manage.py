@@ -106,7 +106,8 @@ def importTlgStatic(dumpPath, tlData):
 
 
 def clean(mode):
-    """Clean ui.json and/or static_dump.json of empty translations. Keep the dump's static hashes regardless."""
+    """Clean ui.json and/or static_dump.json of empty translations.
+    Keep the dump's static hashes regardless."""
     translations = {
         jp: en for jp, en in helpers.readJson(TL_FILE).items() if en
     }  # Remove empty translations
@@ -265,7 +266,7 @@ class FileWatcher:
             if not results:
                 print("Error watching file")
                 return
-            for action, file in results:
+            for _action, file in results:
                 if len(results) > 2 or "cache" in results[-1][1]:
                     break  # ignore change cascade (?)
                 if file in ("static.json", "dynamic.json"):
@@ -316,8 +317,9 @@ def parseArgs():
         action="store_true",
         help="Add dump (local or target) entries to static_en.json for translating",
     )
-    # ? in hindsight I don't think it's useful to not import as we need both dump and tl file for the whole thing to
-    # work right but ok. can't say there's no choice at least :^)
+    # ? in hindsight I don't think it's useful to not import as
+    # ? we need both dump and tl file for the whole thing to
+    # ? work right but ok. can't say there's no choice at least :^)
     ap.add_argument(
         "-save",
         "-add",
@@ -353,7 +355,8 @@ def parseArgs():
         "-I",
         "--import-only",
         action="store_true",
-        help="Purely import target dump to local and exit. Implies -save and -src (auto mode, can be overridden)",
+        help="Purely import target dump to local and exit."
+        "Implies -save and -src (auto mode, can be overridden)",
     )
     ap.add_argument("-M", "--move", action="store_true", help="Move final json files to game dir.")
     ap.add_argument(
@@ -473,7 +476,8 @@ def main():
         if installDir:
             try:
                 dst = installDir / LOCALIFY_DATA_DIR.name
-                # dst.mkdir(exist_ok=True)  # Disabling this to check TLG status. First install must be manual.
+                # Following disabled to check TLG status. First install must be manual.
+                # dst.mkdir(exist_ok=True)
                 # Using rglob for future functionality
                 dynFiles = list()
                 for f in LOCALIFY_DATA_DIR.rglob("*.json"):
@@ -486,7 +490,8 @@ def main():
                 updConfigDicts(installDir / "config.json", dynFiles)
             except PermissionError:
                 print(
-                    f"No permission to write to {installDir}.\nUpdate perms, run as admin, or copy files yourself."
+                    f"No permission to write to {installDir}.\n"
+                    "Update perms, run as admin, or copy files yourself."
                 )
             except FileNotFoundError as e:
                 if not installDir.exists():

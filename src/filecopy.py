@@ -88,12 +88,12 @@ def removeOldFiles(args):
     files = [Path(p) for p in common.searchFiles(PurePath(args.dst), None, None, jsonOnly=False)]
     print(f"Found {len(files)} files in {args.dst}")
     with sqlite3.connect(GAME_META_FILE) as db:
-        for path in files:
-            q = f"h = '{path.name}'" if isHash else f"n like '%{path.name}'"
+        for fPath in files:
+            q = f"h = '{fPath.name}'" if isHash else f"n like '%{fPath.name}'"
             if not db.execute(f"select h from a where {q}").fetchone():
-                Path(path).unlink()
+                Path(fPath).unlink()
                 if args.verbose:
-                    print(f"Removed {path}")
+                    print(f"Removed {fPath}")
                 n += 1
     cfg.core["lastBackupPrune"] = ts
     cfg.save()

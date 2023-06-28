@@ -196,7 +196,8 @@ class DataTransfer:
         print(f"\t{text}")
 
     def __call__(self, storyId: StoryId, textData):
-        # Existing files are skipped before reaching here so there's no point in checking when we know the result already.
+        # Existing files are skipped before reaching here
+        # so there's no point in checking when we know the result already.
         # Only continue when forced to.
         if not args.overwrite or self.file == 0:
             return
@@ -325,7 +326,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
         outFile = extractAsset(asset, storyId, tlFile)
         if not outFile:
             return
-    except:
+    except Exception:
         print(
             f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}"
         )
@@ -403,7 +404,7 @@ def main():
                 for i, file in enumerate(files):
                     try:
                         exportAsset(None, file, db)
-                    except:
+                    except Exception:
                         print(f"Failed in file {i} of {type}: {file}")
                         raise  # TODO consider continuing
         finally:

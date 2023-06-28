@@ -44,58 +44,44 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
                 del data[key]
 
 
-def importDump(path: PurePath, args):
+def importDump(path: PurePath, args) -> dict:
     isExternal = path != LOCAL_DUMP
     # load local dump to update if using an external file
     localDumpData = helpers.readJson(LOCAL_DUMP) if isExternal else None
 
-    if path.suffix == ".json":
-        data = helpers.readJson(path)
-        animationCheck = list()
-        if isExternal:
-            data = {**localDumpData, **data} if args.overwrite else {**data, **localDumpData}
-            # now that we've already read the external file in path, we no longer need it
-            # so we can swap it to local updating
-            path = LOCAL_DUMP
-        # copy to list so we don't run into issues deleting keys in our loop obj
-        for key, val in list(data.items()):
-            # remove non-japanese data (excluding static)
-            if len(key) > 5 and helpers.isEnglish(val):
-                del data[key]
-            # remove animated text
-            else:
-                if len(animationCheck) == 0 or (
-                    val.startswith(animationCheck[-1][1])
-                    and len(val) - len(animationCheck[-1][1]) < 2
-                ):
-                    animationCheck.append((key, val))
-                else:
-                    if len(animationCheck) > 4:
-                        # and remove it
-                        # print(f"Removing animated text: {animationCheck}")
-                        for k, _ in animationCheck:
-                            del data[k]
-                    animationCheck.clear()
-        if args.save:
-            helpers.writeJson(path, data)
-        return data
-    else:
+    if path.suffix != ".json":
         # if it's not a json file then it's definitely external as we only use static_dump.json
         assert isExternal, "Dump file is not json and not external"
 
         with open(path, "r", encoding="utf8") as f:
-            jsonDump = "{" + f.read()[:-2] + "}"  # remove trailing newline and comma
-            for key, val in json.loads(jsonDump).items():
-                if key and val:
-                    # static range always seems to dump in japanese, which helps
-                    # also assuming the problem this fixes only occurs/matters for static text
-                    if (args.overwrite or key not in localDumpData) and (
-                        len(key) < 5 or not helpers.isEnglish(val)
-                    ):
-                        localDumpData[key] = val
-        if args.save or args.import_only:
-            helpers.writeJson(LOCAL_DUMP, localDumpData)
-        return localDumpData
+            data = "{" + f.read()[:-2] + "}"  # remove trailing newline and comma
+            data = json.loads(data)
+    else:
+        data = helpers.readJson(path)
+
+    if isExternal:
+        data = {**localDumpData, **data} if args.overwrite else {**data, **localDumpData}
+    animationCheck = list()
+    # copy to list so we don't run into issues deleting keys in our loop obj
+    for key, val in list(data.items()):
+        # remove non-japanese data (excluding static)
+        if len(key) > 5 and helpers.isEnglish(val):
+            del data[key]
+            continue
+        # remove animated text
+        if len(animationCheck) == 0 or (
+            val.startswith(animationCheck[-1][1])
+            and len(val) - len(animationCheck[-1][1]) < 2
+        ):
+            animationCheck.append((key, val))
+        else:
+            if len(animationCheck) > 4:
+                for k, _ in animationCheck:
+                    del data[k]
+            animationCheck.clear()
+    if args.save or args.import_only:
+        helpers.writeJson(LOCAL_DUMP, data)
+    return data
 
 
 def importTlgStatic(dumpPath, tlData):

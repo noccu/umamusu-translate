@@ -29,7 +29,13 @@ subs = [
   "srt",
 ]
 mtl = ["websockets"]
+dev = [
+    "black",
+]
 
 [project.urls]
 Homepage = "https://github.com/noccu/umamusu-translate"
 Repository = "https://github.com/noccu/umamusu-translate.git"
+
+[tool.black]
+line-length = 100

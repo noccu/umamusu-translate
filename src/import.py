@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 from traceback import print_exc
+
 # from sys import stdout
 from functools import reduce
 from time import time as now
@@ -10,16 +11,31 @@ import common
 from common import GameBundle
 import filecopy as backup
 
-class ConfigError(Exception): pass
-class PatchError(Exception): pass
-class AlreadyPatchedError(PatchError): pass
-class TranslationFileError(PatchError): pass
-class NoAssetError(PatchError): pass
+
+class ConfigError(Exception):
+    pass
+
+
+class PatchError(Exception):
+    pass
+
+
+class AlreadyPatchedError(PatchError):
+    pass
+
+
+class TranslationFileError(PatchError):
+    pass
+
+
+class NoAssetError(PatchError):
+    pass
 
 
 class PatchManager:
     totalFilesProcessed = 0
     totalFilesImported = 0
+
     def __init__(self, args: argparse.Namespace) -> None:
         # self.errorLog = stdout
         self.config(args)
@@ -52,15 +68,19 @@ class PatchManager:
 
     def start(self):
         startTime = now()
-        print(f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}")
-        files = common.searchFiles(self.args.type, self.args.group, self.args.id, self.args.idx, changed = self.args.changed)
+        print(
+            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations\{self.args.type} to {self.args.dst}"
+        )
+        files = common.searchFiles(
+            self.args.type, self.args.group, self.args.id, self.args.idx, changed=self.args.changed
+        )
         nFiles = len(files)
         self.totalFilesProcessed += nFiles
         nErrors = 0
         print(f"Found {nFiles} files.")
 
         # Not sure if threads are useful but multi-process takes too long upfront for low counts.
-        with (ProcessPoolExecutor() if nFiles > 25 else ThreadPoolExecutor()) as pool:
+        with ProcessPoolExecutor() if nFiles > 25 else ThreadPoolExecutor() as pool:
             # map seems to be a tiny bit faster maybe? chunksize seems to affect nothing, haven't tested >100 files tho
             for result in pool.map(self.patchFile, files):
                 if result is None:
@@ -73,7 +93,7 @@ class PatchManager:
         if nErrors > 0:
             print(f"There were {nErrors} errors. Check import.log for details.")
 
-    def patchFile(self, file:str) -> bool:
+    def patchFile(self, file: str) -> bool:
         isModified = False
         try:
             isModified, reason = self.patch(file)
@@ -109,7 +129,9 @@ class PatchManager:
         if not bundle.exists:
             raise NoAssetError(f"{tlFile.bundle} does not exist in your game data.")
         if self.args.update:
-            if (b := GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)).isPatched:
+            if (
+                b := GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)
+            ).isPatched:
                 tlModTime = tlFile.data.get("modified")
                 if tlModTime and b.patchedTime != tlModTime:
                     bundle.importState = "translations modified"
@@ -163,83 +185,103 @@ class StoryPatcher:
 
     def patch(self):
         for textBlock in self.bundle.linkedTlFile.textBlocks:
-            blockIdx = textBlock['blockIdx']
+            blockIdx = textBlock["blockIdx"]
             try:
-                asset = self.bundle.assets[textBlock['pathId']]
+                asset = self.bundle.assets[textBlock["pathId"]]
             except KeyError:
                 print(f"{self.bundle.bundleName}: {blockIdx}: Can't find path id, skipping.")
                 continue
             else:
                 assetData = asset.read_typetree()
 
-            if not textBlock['enText'] and not textBlock['enName']:
+            if not textBlock["enText"] and not textBlock["enName"]:
                 self.skipped += 1
                 continue
             else:
-                assetData['Text'] = textBlock['enText'] or assetData['Text']
-                assetData['Name'] = textBlock['enName'] or assetData['Name']
+                assetData["Text"] = textBlock["enText"] or assetData["Text"]
+                assetData["Name"] = textBlock["enName"] or assetData["Name"]
 
                 # Calculate length
                 # index length = sum(blocklenghts)
                 # blocklength = cliplength + startframe + 1
                 # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
                 # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
-                if "origClipLength" in textBlock and textBlock['enText']:
-                    newTxtLen = len(textBlock['enText']) / self.manager.args.cps * self.manager.args.fps
-                    newClipLen = int(assetData['WaitFrame'] + max(newTxtLen, assetData['VoiceLength']))
-                    if textBlock.get("newClipLength"): # manual length override
+                if "origClipLength" in textBlock and textBlock["enText"]:
+                    newTxtLen = (
+                        len(textBlock["enText"]) / self.manager.args.cps * self.manager.args.fps
+                    )
+                    newClipLen = int(
+                        assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"])
+                    )
+                    if textBlock.get("newClipLength"):  # manual length override
                         try:
                             newClipLen = int(textBlock["newClipLength"])
                         except ValueError:
-                            print(f"{self.bundle.bundleName}: {blockIdx}: Invalid clip length defined, falling back to calculated value.")
+                            print(
+                                f"{self.bundle.bundleName}: {blockIdx}: Invalid clip length defined, falling back to calculated value."
+                            )
                         else:
-                            if newClipLen < textBlock['origClipLength']: print(f"{self.bundle.bundleName}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original.")
-                    if newClipLen > textBlock['origClipLength']:
-                        newBlockLen = newClipLen + assetData['StartFrame'] + 1
-                        assetData['ClipLength'] = newClipLen
-                        self.assetData['BlockList'][blockIdx]['BlockLength'] = newBlockLen
+                            if newClipLen < textBlock["origClipLength"]:
+                                print(
+                                    f"{self.bundle.bundleName}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original."
+                                )
+                    if newClipLen > textBlock["origClipLength"]:
+                        newBlockLen = newClipLen + assetData["StartFrame"] + 1
+                        assetData["ClipLength"] = newClipLen
+                        self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
                         if self.manager.args.verbose:
-                            print(f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}")
+                            print(
+                                f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}"
+                            )
 
                         if "animData" in textBlock:
-                            for animGroup in textBlock['animData']:
-                                newAnimLen = animGroup['origLen'] + newClipLen - textBlock['origClipLength']
-                                if newAnimLen > animGroup['origLen']:
+                            for animGroup in textBlock["animData"]:
+                                newAnimLen = (
+                                    animGroup["origLen"] + newClipLen - textBlock["origClipLength"]
+                                )
+                                if newAnimLen > animGroup["origLen"]:
                                     try:
-                                        animAsset = self.bundle.assets[animGroup['pathId']]
+                                        animAsset = self.bundle.assets[animGroup["pathId"]]
                                     except KeyError:
-                                        if self.manager.args.verbose: print(f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}")
+                                        if self.manager.args.verbose:
+                                            print(
+                                                f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}"
+                                            )
                                     else:
                                         animData = animAsset.read_typetree()
-                                        animData['ClipLength'] = newAnimLen
+                                        animData["ClipLength"] = newAnimLen
                                         animAsset.save_typetree(animData)
                                         if self.manager.args.verbose:
-                                            print(f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}")
+                                            print(
+                                                f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}"
+                                            )
                         elif self.manager.args.verbose:
                             print(f"Text length adjusted but no anim data found at {blockIdx}")
 
-                if 'choices' in textBlock:
-                    jpChoices, enChoices = assetData['ChoiceDataList'], textBlock['choices']
+                if "choices" in textBlock:
+                    jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]
                     if len(jpChoices) != len(enChoices):
                         print("Choice lengths do not match, skipping choice block.")
                     else:
-                        for idx, choice in enumerate(textBlock['choices']):
-                            if choice['enText']:
-                                jpChoices[idx]['Text'] = choice['enText']
+                        for idx, choice in enumerate(textBlock["choices"]):
+                            if choice["enText"]:
+                                jpChoices[idx]["Text"] = choice["enText"]
 
-                if 'coloredText' in textBlock:
-                    jpColored, enColored = assetData['ColorTextInfoList'], textBlock['coloredText']
+                if "coloredText" in textBlock:
+                    jpColored, enColored = assetData["ColorTextInfoList"], textBlock["coloredText"]
                     if len(jpColored) != len(enColored):
                         print("Colored text lengths do not match, skipping color block...")
                     else:
-                        for idx, text in enumerate(textBlock['coloredText']):
-                            if text['enText']:
-                                jpColored[idx]['Text'] = text['enText']
+                        for idx, text in enumerate(textBlock["coloredText"]):
+                            if text["enText"]:
+                                jpColored[idx]["Text"] = text["enText"]
             asset.save_typetree(assetData)
 
         try:
-            self.assetData['TypewriteCountPerSecond'] = self.manager.args.fps * 3
-            self.assetData['Length'] = reduce(lambda x, b: x + b['BlockLength'], self.assetData['BlockList'], 0)
+            self.assetData["TypewriteCountPerSecond"] = self.manager.args.fps * 3
+            self.assetData["Length"] = reduce(
+                lambda x, b: x + b["BlockLength"], self.assetData["BlockList"], 0
+            )
             self.save()
         except Exception as e:
             print(f"Unexpected error in {self.bundle.bundleName}: {repr(e)}")
@@ -257,8 +299,8 @@ class RacePatcher(StoryPatcher):
     def patch(self):
         for i, textBlock in enumerate(self.bundle.linkedTlFile.textBlocks):
             # blockIdx = textBlock['blockIdx'] - 1  # race keys start at 1
-            if textBlock['enText']:
-                self.assetData['textData'][i]['text'] = textBlock['enText']
+            if textBlock["enText"]:
+                self.assetData["textData"][i]["text"] = textBlock["enText"]
             else:
                 self.skipped += 1
                 continue
@@ -268,12 +310,14 @@ class RacePatcher(StoryPatcher):
 class PreviewPatcher(RacePatcher):
     def patch(self):
         for blockIdx, textBlock in enumerate(self.bundle.linkedTlFile.textBlocks):
-            if not textBlock['enText'] and not textBlock['enName']:
+            if not textBlock["enText"] and not textBlock["enName"]:
                 self.skipped += 1
                 continue
 
-            if textBlock['enName']: self.assetData['DataArray'][blockIdx]['Name'] = textBlock['enName']
-            if textBlock['enText']: self.assetData['DataArray'][blockIdx]['Text'] = textBlock['enText']
+            if textBlock["enName"]:
+                self.assetData["DataArray"][blockIdx]["Name"] = textBlock["enName"]
+            if textBlock["enText"]:
+                self.assetData["DataArray"][blockIdx]["Text"] = textBlock["enText"]
         self.save()
 
 
@@ -286,9 +330,9 @@ class LyricsPatcher(StoryPatcher):
     def patch(self):
         for textBlock in self.bundle.linkedTlFile.textBlocks:
             # Format the CSV text. Their parser uses quotes, no escape chars. For novelty: \t = space; \v and \f = ,; \r = \n
-            text = textBlock['enText']
+            text = textBlock["enText"]
             if not text:
-                text = textBlock['jpText']
+                text = textBlock["jpText"]
                 self.skipped += 1
             elif "," in text or '"' in text:
                 text = '"' + text.replace('"', '""') + '"'
@@ -300,24 +344,53 @@ class LyricsPatcher(StoryPatcher):
             self.assetData.script = bytes(self.assetText, "utf8")
             self.assetData.save()
 
-def deltaTime(startTime:float):
+
+def deltaTime(startTime: float):
     delta = now() - startTime
     m, s = divmod(delta, 60)
     return f"{m:.0f}m {s:.3f}s"
 
+
 def parseArgs():
     ap = common.Args("Write Game Assets from Translation Files")
-    ap.add_argument("-O", "--overwrite", action="store_true", help="(Over)Write files straight to game directory")
+    ap.add_argument(
+        "-O",
+        "--overwrite",
+        action="store_true",
+        help="(Over)Write files straight to game directory",
+    )
     ap.add_argument("-U", "--update", action="store_true", help="Skip already imported files")
-    ap.add_argument("-FI", "--full-import", dest="fullImport", action="store_true", help="Import all available types")
-    ap.add_argument("-wf", "--write-log", action="store_true",
-                    help="Ignore some errors and print debug info to file instead of terminal (stdout)")
-    ap.add_argument("-cps", default=28, type=int, help="Characters per second, for unvoiced lines (excludes choices)")
-    ap.add_argument("-fps", default=30, type=int, help="Framerate, for calculating the right text speed")
-    ap.add_argument("-tlg", "--use-tlg", action="store_true", help="Auto-write any TLG versions when detected")
-    ap.add_argument("-nomtl", "--skip-mtl", action="store_true", help="Only import human translations")
+    ap.add_argument(
+        "-FI",
+        "--full-import",
+        dest="fullImport",
+        action="store_true",
+        help="Import all available types",
+    )
+    ap.add_argument(
+        "-wf",
+        "--write-log",
+        action="store_true",
+        help="Ignore some errors and print debug info to file instead of terminal (stdout)",
+    )
+    ap.add_argument(
+        "-cps",
+        default=28,
+        type=int,
+        help="Characters per second, for unvoiced lines (excludes choices)",
+    )
+    ap.add_argument(
+        "-fps", default=30, type=int, help="Framerate, for calculating the right text speed"
+    )
+    ap.add_argument(
+        "-tlg", "--use-tlg", action="store_true", help="Auto-write any TLG versions when detected"
+    )
+    ap.add_argument(
+        "-nomtl", "--skip-mtl", action="store_true", help="Only import human translations"
+    )
 
     return ap.parse_args()
+
 
 def main():
     args = parseArgs()
@@ -337,10 +410,12 @@ def main():
             for type in common.TARGET_TYPES[1:]:
                 patcher.config(type=type)
                 patcher.start()
-            print(f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}")
+            print(
+                f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}"
+            )
     finally:
         patcher.finish()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

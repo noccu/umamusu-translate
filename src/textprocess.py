@@ -194,6 +194,8 @@ def calcLineLen(file: TranslationFile, verbose):
     if lineLength in (None, -1, 0):
         if file.type == "lyrics":
             lineLength = 57
+        if file.type == "preview":
+            lineLength = 41
         elif (file.type == "race")\
         or (file.type == "story" and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")):
             lineLength = 48

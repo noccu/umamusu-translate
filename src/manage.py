@@ -121,8 +121,9 @@ def clean(mode):
 
 def order():
     for file in [LOCAL_DUMP, HASH_FILE_STATIC, HASH_FILE_DYNAMIC]:
+        stringKey = file == HASH_FILE_STATIC
         data = helpers.readJson(file)
-        data = dict(sorted(data.items(), key=lambda x: int(x[0])))
+        data = dict(sorted(data.items(), key=lambda x: x[0] if stringKey else int(x[0])))
         helpers.writeJson(file, data)
 
 

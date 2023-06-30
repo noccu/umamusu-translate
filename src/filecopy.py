@@ -1,8 +1,10 @@
 import shutil
 import sqlite3
 from os import makedirs, path
-import common
-from common import GAME_META_FILE
+
+from common import patch, utils
+from common.constants import GAME_META_FILE, TARGET_TYPES
+from common.files import GameBundle, TranslationFile
 
 
 def buildSqlStmt(args):
@@ -66,26 +68,26 @@ def getFiles(args):
 
 def backup(args):
     print("Backing up non-patched & extracted files...")
-    for type in common.TARGET_TYPES if args.backup is True else [args.backup]:
-        files = common.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
+    for type in TARGET_TYPES if args.backup is True else [args.backup]:
+        files = patch.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
         for file in files:
-            file = common.TranslationFile(file)
+            file = TranslationFile(file)
             copy((file.type, file.bundle, None), args)
 
 
 def removeOldFiles(args):
-    cfg = common.UmaTlConfig()
-    ts = common.currentTimestamp()
+    cfg = patch.UmaTlConfig()
+    ts = utils.currentTimestamp()
     lastrun = cfg.core.get("lastBackupPrune", 0)
     # Run every ~6 months
     if not args.overwrite and lastrun + 15778476 > ts:
-        print(f"Skipping backup pruning as it was last done on {common.timestampToDate(lastrun)}.")
+        print(f"Skipping backup pruning as it was last done on {utils.timestampToDate(lastrun)}.")
         return 0, 0
-    from pathlib import PurePath, Path
+    from pathlib import Path, PurePath
 
     n = 0
     isHash = args.remove_old == "hash"
-    files = [Path(p) for p in common.searchFiles(PurePath(args.dst), None, None, jsonOnly=False)]
+    files = [Path(p) for p in patch.searchFiles(PurePath(args.dst), None, None, jsonOnly=False)]
     print(f"Found {len(files)} files in {args.dst}")
     with sqlite3.connect(GAME_META_FILE) as db:
         for fPath in files:
@@ -101,14 +103,14 @@ def removeOldFiles(args):
 
 
 def copy(data, args):
-    if isinstance(data, common.GameBundle):
+    if isinstance(data, GameBundle):
         if args.use_pathname:
             raise NotImplementedError
         asset = data
         fileHash = data.bundleName
     else:
         fileType, fileHash, filePath = data
-        asset = common.GameBundle.fromName(fileHash, load=False)
+        asset = GameBundle.fromName(fileHash, load=False)
         asset.bundleType = fileType  # only used for restoring
 
     if asset.exists:
@@ -144,7 +146,7 @@ def copy(data, args):
 
 
 def parseArgs(src=None):
-    ap = common.Args("Copy files for backup or testing", types=[*common.TARGET_TYPES, "ruby"])
+    ap = patch.Args("Copy files for backup or testing", types=[*TARGET_TYPES, "ruby"])
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-p", "--path", help="Unity filepath wildcard")
     ap.add_argument(

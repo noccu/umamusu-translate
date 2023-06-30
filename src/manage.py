@@ -2,8 +2,8 @@ import json
 from pathlib import PurePath, Path
 import shutil
 
-import common
-import helpers
+from common import utils, patch
+from common.files import fileops, TranslationFile
 
 ROOT = PurePath("src")
 LOCAL_DUMP = ROOT / "data" / "static_dump.json"
@@ -47,7 +47,7 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
 def importDump(path: PurePath, args) -> dict:
     isExternal = path != LOCAL_DUMP
     # load local dump to update if using an external file
-    localDumpData = helpers.readJson(LOCAL_DUMP) if isExternal else None
+    localDumpData = fileops.readJson(LOCAL_DUMP) if isExternal else None
 
     if path.suffix != ".json":
         # if it's not a json file then it's definitely external as we only use static_dump.json
@@ -57,7 +57,7 @@ def importDump(path: PurePath, args) -> dict:
             data = "{" + f.read()[:-2] + "}"  # remove trailing newline and comma
             data = json.loads(data)
     else:
-        data = helpers.readJson(path)
+        data = fileops.readJson(path)
 
     if isExternal:
         data = {**localDumpData, **data} if args.overwrite else {**data, **localDumpData}
@@ -65,7 +65,7 @@ def importDump(path: PurePath, args) -> dict:
     # copy to list so we don't run into issues deleting keys in our loop obj
     for key, val in list(data.items()):
         # remove non-japanese data (excluding static)
-        if len(key) > 5 and helpers.isEnglish(val):
+        if len(key) > 5 and utils.isEnglish(val):
             del data[key]
             continue
         # remove animated text
@@ -79,12 +79,12 @@ def importDump(path: PurePath, args) -> dict:
                     del data[k]
             animationCheck.clear()
     if args.save or args.import_only:
-        helpers.writeJson(LOCAL_DUMP, data)
+        fileops.writeJson(LOCAL_DUMP, data)
     return data
 
 
 def importTlgStatic(dumpPath, tlData):
-    data = helpers.readJson(dumpPath)
+    data = fileops.readJson(dumpPath)
     for k in data.keys():
         if k not in tlData:
             tlData[k] = ""
@@ -94,49 +94,49 @@ def clean(mode):
     """Clean ui.json and/or static_dump.json of empty translations.
     Keep the dump's static hashes regardless."""
     translations = {
-        jp: en for jp, en in helpers.readJson(TL_FILE).items() if en
+        jp: en for jp, en in fileops.readJson(TL_FILE).items() if en
     }  # Remove empty translations
     if mode in ("both", "ui"):
-        helpers.writeJson(file=TL_FILE, data=translations)
+        fileops.writeJson(file=TL_FILE, data=translations)
 
     if mode in ("both", "dump"):
-        helpers.writeJson(
+        fileops.writeJson(
             file=DUMP_FILE,
             data={
                 ui_hash: jp
-                for ui_hash, jp in helpers.readJson(DUMP_FILE).items()
+                for ui_hash, jp in fileops.readJson(DUMP_FILE).items()
                 if len(ui_hash) <= 5 or jp in translations
             },
         )  # Keep static hashes even if untranslated
 
     if mode == "dyn":
-        staticVals = helpers.readJson(HASH_FILE_STATIC).values()
-        dynamicData = helpers.readJson(HASH_FILE_DYNAMIC)
+        staticVals = fileops.readJson(HASH_FILE_STATIC).values()
+        dynamicData = fileops.readJson(HASH_FILE_DYNAMIC)
         for hash, en in list(dynamicData.items()):
             if en != "" and en in staticVals:
                 del dynamicData[hash]
-        helpers.writeJson(HASH_FILE_DYNAMIC, dynamicData)
+        fileops.writeJson(HASH_FILE_DYNAMIC, dynamicData)
 
 
 def order():
     for file in [LOCAL_DUMP, HASH_FILE_STATIC, HASH_FILE_DYNAMIC]:
         stringKey = file == HASH_FILE_STATIC
-        data = helpers.readJson(file)
+        data = fileops.readJson(file)
         data = dict(sorted(data.items(), key=lambda x: x[0] if stringKey else int(x[0])))
-        helpers.writeJson(file, data)
+        fileops.writeJson(file, data)
 
 
 def convertMdb():
     """Writes any mdb files marked to do so in the index as TLG format dicts, returns the paths written."""
     converted = list()
-    for entry in helpers.readJson("src/mdb/index.json"):
+    for entry in fileops.readJson("src/mdb/index.json"):
         files = entry["files"].items() if entry.get("files") else ((entry.get("file"), None),)
         for file, info in files:
             if not (isinstance(info, dict) and info.get("tlg")) and not entry.get("tlg"):
                 continue
             subdir = entry["table"] if entry.get("subdir") else ""
             fn = f"{file}.json"
-            tlData = helpers.readJson(Path("translations/mdb") / subdir / fn).get("text", dict())
+            tlData = fileops.readJson(Path("translations/mdb") / subdir / fn).get("text", dict())
             data = dict()
             for k, v in tlData.items():
                 if not v:
@@ -147,13 +147,13 @@ def convertMdb():
                     data[TextHasher.hash(k, True)] = v
             if data:
                 path = LOCALIFY_DATA_DIR / entry["table"] / fn
-                helpers.writeJson(path, data)
+                fileops.writeJson(path, data)
                 converted.append(path.relative_to(LOCALIFY_DATA_DIR.parent))
     print(f"Converted {len(converted)} files.")
     return converted
 
 
-def convertTlFile(tlFile: common.TranslationFile, overwrite=False):
+def convertTlFile(tlFile: TranslationFile, overwrite=False):
     converted = list()
     path = LOCALIFY_DATA_DIR / tlFile.type / (tlFile.getStoryId() + ".json")
     if not overwrite and path.exists() and path.stat().st_mtime >= tlFile.file.stat().st_mtime:
@@ -164,7 +164,7 @@ def convertTlFile(tlFile: common.TranslationFile, overwrite=False):
             data[TextHasher.hash(b["jpText"])] = TextHasher.normalize(text)
         if name := b.get("enName"):
             data[TextHasher.hash(b["jpName"])] = TextHasher.normalize(name)
-    helpers.writeJson(path, data)
+    fileops.writeJson(path, data)
     converted.append(path)
     return converted
 
@@ -172,7 +172,7 @@ def convertTlFile(tlFile: common.TranslationFile, overwrite=False):
 def updConfigDicts(cfgPath, dictPaths: list):
     """Update the dicts key in the cfgPath file with the given dictPaths."""
     try:
-        data = helpers.readJson(cfgPath)
+        data = fileops.readJson(cfgPath)
     except FileNotFoundError:
         print("Config file not found")
         return
@@ -184,7 +184,7 @@ def updConfigDicts(cfgPath, dictPaths: list):
     data["race_jikkyo_comment_dict"] = ""
     data["race_jikkyo_message_dict"] = ""
     data["stories_path"] = ""
-    helpers.writeJson(cfgPath, data)
+    fileops.writeJson(cfgPath, data)
 
 
 class TextHasher:
@@ -220,7 +220,7 @@ class FileWatcher:
         global requests
         import requests
 
-        cfg = helpers.readJson(helpers.getUmaInstallDir() / "config.json")
+        cfg = fileops.readJson(patch.getUmaInstallDir() / "config.json")
         self.port = cfg["httpServerPort"]  # we want to ride the KeyError if it happens
         print(f"Communicating with TLG on port {self.port}")
 
@@ -302,7 +302,7 @@ def watch():
     try:
         t = threading.Thread(
             target=watcher.watch,
-            args=(helpers.getUmaInstallDir() / "localized_data",),
+            args=(patch.getUmaInstallDir() / "localized_data",),
             daemon=True,
         )
         t.start()
@@ -324,7 +324,7 @@ def watch():
 
 def move():
     print("Copying UI translations")
-    installDir = helpers.getUmaInstallDir()
+    installDir = patch.getUmaInstallDir()
     if installDir:
         try:
             dst = installDir / LOCALIFY_DATA_DIR.name
@@ -364,7 +364,7 @@ def move():
 
 
 def parseArgs():
-    ap = common.Args("Manages localify data files for UI translations", defaultArgs=False)
+    ap = patch.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument(
         "-new",
         "--populate",
@@ -424,7 +424,7 @@ def parseArgs():
     ap.add_argument(
         "-tlg",
         default=None,
-        const=PurePath(helpers.getUmaInstallDir(), "static_dump.json"),
+        const=PurePath(patch.getUmaInstallDir(), "static_dump.json"),
         nargs="?",
         type=PurePath,
         help="Import TLG's static dump too. Auto-detects in game dir if no path given",
@@ -464,7 +464,7 @@ def parseArgs():
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
         args.src = LOCAL_DUMP
-        path = helpers.getUmaInstallDir()
+        path = patch.getUmaInstallDir()
         if path:
             path = path / "dump.txt"
             if path.exists():
@@ -492,11 +492,11 @@ def main():
     if args.convert_asset is True:
         # We currently don't use the needed default args
         raise NotImplementedError("Provide a direct path.")
-        files = common.searchFiles(args.type, args.group, args.id, args.idx)
+        files = patch.searchFiles(args.type, args.group, args.id, args.idx)
         for file in files:
-            convertTlFile(common.TranslationFile(file), overwrite=args.overwrite)
+            convertTlFile(TranslationFile(file), overwrite=args.overwrite)
     elif isinstance(args.convert_asset, str):
-        convertTlFile(common.TranslationFile(args.convert_asset), overwrite=args.overwrite)
+        convertTlFile(TranslationFile(args.convert_asset), overwrite=args.overwrite)
 
     if args.backup_dump:
         print("Backing up dump file...")
@@ -505,17 +505,17 @@ def main():
         dumpData = importDump(DUMP_FILE, args)
         if args.import_only:
             return
-        tlData = helpers.readJson(TL_FILE)
+        tlData = fileops.readJson(TL_FILE)
         if args.populate:
             updateTlData(dumpData, tlData)
             if args.tlg:
                 importTlgStatic(args.tlg, tlData)
-            helpers.writeJson(TL_FILE, tlData)
+            fileops.writeJson(TL_FILE, tlData)
         elif args.update:
-            hashData = helpers.readJson(HASH_FILE_STATIC), helpers.readJson(HASH_FILE_DYNAMIC)
+            hashData = fileops.readJson(HASH_FILE_STATIC), fileops.readJson(HASH_FILE_DYNAMIC)
             updateHashData(dumpData, tlData, hashData)
-            helpers.writeJson(HASH_FILE_STATIC, hashData[0])
-            helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
+            fileops.writeJson(HASH_FILE_STATIC, hashData[0])
+            fileops.writeJson(HASH_FILE_DYNAMIC, hashData[1])
 
     if args.clean:
         clean(args.clean)

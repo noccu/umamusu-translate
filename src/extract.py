@@ -1,13 +1,13 @@
-from pathlib import Path, PurePath
-import sqlite3
 import csv
+import sqlite3
+from pathlib import Path, PurePath
 from typing import Optional, Union
 
 from Levenshtein import ratio as similarity
 
-import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle, StoryId
-from helpers import sanitizeFilename
+from common import StoryId, patch
+from common.constants import GAME_ASSET_ROOT, GAME_META_FILE, TARGET_TYPES
+from common.files import GameBundle, TranslationFile, sanitizeFilename
 
 
 def queryDB(db=None, storyId: StoryId = None):
@@ -128,7 +128,7 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
 
     if not export["text"]:
         return  # skip empty text assets
-    export = common.TranslationFile.fromData(export)
+    export = TranslationFile.fromData(export)
     if transferExisting.file:
         export.snapshot(copyFrom=transferExisting.file)
     return export
@@ -181,7 +181,7 @@ def extractText(assetType, obj):
 
 
 class DataTransfer:
-    def __init__(self, file: common.TranslationFile = None, newData: dict = None):
+    def __init__(self, file: TranslationFile = None, newData: dict = None):
         self.file = file
         self.offset = 0
         self.simRatio = 0.9 if args.update and args.type != "lyrics" else 0.99
@@ -211,7 +211,7 @@ class DataTransfer:
                 self.file = 0
                 return
 
-            self.file = common.TranslationFile(file)
+            self.file = TranslationFile(file)
 
         textSearch = True
         targetBlock = None
@@ -280,8 +280,8 @@ class DataTransfer:
 def exportAsset(bundle: Optional[str], path: str, db=None):
     if args.update:  # update mode, path = tlfile, bundle = None
         assert db is not None
-        tlFile = common.TranslationFile(path)
-        if args.upgrade and tlFile.version == common.TranslationFile.latestVersion:
+        tlFile = TranslationFile(path)
+        if args.upgrade and tlFile.version == TranslationFile.latestVersion:
             print(f"File already on latest version, skipping: {path}")
             return
 
@@ -341,7 +341,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
 
 def parseArgs():
     global args
-    ap = common.Args("Extract Game Assets to Translation Files")
+    ap = patch.Args("Extract Game Assets to Translation Files")
     ap.add_argument("-dst")
     ap.add_argument(
         "-O",
@@ -353,7 +353,7 @@ def parseArgs():
         "-upd",
         "--update",
         nargs="*",
-        choices=common.TARGET_TYPES,
+        choices=TARGET_TYPES,
         help=(
             "Re-extract existing files, optionally limited to given type.\n"
             "Implies -O, ignores -dst and -t"
@@ -380,7 +380,7 @@ def parseArgs():
             args.update = [args.type]
         # check if upd was given without type spec and use all types if so
         elif len(args.update) == 0:
-            args.update = common.TARGET_TYPES
+            args.update = TARGET_TYPES
 
 
 def main():
@@ -392,7 +392,7 @@ def main():
             for type in args.update:  # set correctly by arg parsing
                 args.dst = PurePath("translations") / type
                 args.type = type
-                files = common.searchFiles(
+                files = patch.searchFiles(
                     type,
                     args.group,
                     args.id,

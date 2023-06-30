@@ -5,8 +5,8 @@ import re
 import csv
 
 sys.path.append(realpath("src"))
-import common
-import helpers
+from common.files import fileops, TranslationFile
+from common import patch
 import textprocess
 
 CSV_FILES_MANUAL_NEWLINE = ("uma-profile-tagline.json", "tutorial-text.json", "support-bonus.json",
@@ -18,7 +18,7 @@ CSV_FILES_PASSTHROUGH = ("uma-epithet-requirements.json", "special-transfer-requ
 
 
 def parseArgs():
-    ap = common.Args("Transfers missing data from mdb patch files to Translation Files", defaultArgs=False)
+    ap = patch.Args("Transfers missing data from mdb patch files to Translation Files", defaultArgs=False)
     ap.add_argument("-src", type=Path, default=Path("../umamusume-db-translate/src/data").resolve(),
                     help="mdb patch data dir")
     ap.add_argument("-f", "--file", type=Path,
@@ -73,11 +73,11 @@ def main():
                 continue
         else:
             csvPath = Path(args.src, file.relative_to("translations/mdb").with_suffix(".csv"))
-            tlFile = common.TranslationFile(file)
+            tlFile = TranslationFile(file)
 
         csvData = readCsv(csvPath)
         if args.convert:
-            helpers.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
+            fileops.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
         elif args.reverse:
             nativeJson = False
             if not isinstance(csvData, dict): # file no existo
@@ -102,7 +102,7 @@ def main():
                     v = textprocess.cleannewLines(v)
                     data[k] = textprocess.resizeText(tlFile, v, True)
             if nativeJson:
-                helpers.writeJson(csvPath, data)
+                fileops.writeJson(csvPath, data)
             else:
                 writeCsv(csvPath, data)
         else:

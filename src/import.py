@@ -1,15 +1,15 @@
 import argparse
-from pathlib import Path
-from traceback import print_exc
-
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 # from sys import stdout
 from functools import reduce
+from pathlib import Path
 from time import time as now
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+from traceback import print_exc
 
-import common
-from common import GameBundle
+import common.constants as const
 import filecopy as backup
+from common import patch
+from common.files import GameBundle, TranslationFile
 
 
 class ConfigError(Exception):
@@ -50,7 +50,7 @@ class PatchManager:
                 else:
                     raise ConfigError(f"Invalid config arg: {k}: {v}")
         if self.args.overwrite:
-            self.args.dst = common.GAME_ASSET_ROOT
+            self.args.dst = const.GAME_ASSET_ROOT
             self.fcArgs = backup.parseArgs([])
             self.fcArgs.restore_missing = False
             self.fcArgs.full_path = False
@@ -71,7 +71,7 @@ class PatchManager:
         print(
             f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations/{self.args.type} to {self.args.dst}"
         )
-        files = common.searchFiles(
+        files = patch.searchFiles(
             self.args.type, self.args.group, self.args.id, self.args.idx, changed=self.args.changed
         )
         nFiles = len(files)
@@ -121,11 +121,11 @@ class PatchManager:
 
     def loadTranslationFile(self, path):
         try:
-            return common.TranslationFile(path, readOnly=True)
+            return TranslationFile(path, readOnly=True)
         except Exception:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
-    def loadBundle(self, tlFile: common.TranslationFile):
+    def loadBundle(self, tlFile: TranslationFile):
         bundle = GameBundle.fromName(tlFile.bundle, load=False)
         if not bundle.exists:
             raise NoAssetError(f"{tlFile.bundle} does not exist in your game data.")
@@ -354,7 +354,7 @@ def deltaTime(startTime: float):
 
 
 def parseArgs():
-    ap = common.Args("Write Game Assets from Translation Files")
+    ap = patch.Args("Write Game Assets from Translation Files")
     ap.add_argument(
         "-O",
         "--overwrite",
@@ -402,14 +402,14 @@ def main():
     if args.use_tlg:
         global isUsingTLG
         global convertTlFile
-        from helpers import isUsingTLG
+        from common.utils import isUsingTLG
         from manage import convertTlFile
     startTime = now()
     patcher = PatchManager(args)
     try:
         patcher.start()
         if args.fullImport:
-            for type in common.TARGET_TYPES[1:]:
+            for type in const.TARGET_TYPES[1:]:
                 patcher.config(type=type)
                 patcher.start()
             print(

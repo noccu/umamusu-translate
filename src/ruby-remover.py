@@ -1,11 +1,15 @@
-import common
 import sqlite3
 from types import SimpleNamespace
 
+from common import patch
+from common.constants import GAME_META_FILE
+from common.files import GameBundle
+from common.StoryId import StoryId
+
 
 def removeRuby(args, db: sqlite3.Connection):
-    storyId = common.StoryId.queryfy(
-        common.StoryId(args.type, args.set, args.group, args.id, args.idx)
+    storyId = StoryId.queryfy(
+        StoryId(args.type, args.set, args.group, args.id, args.idx)
     )
     del storyId.set
     del storyId.type
@@ -14,11 +18,11 @@ def removeRuby(args, db: sqlite3.Connection):
     patched = total = 0
     dummytl = SimpleNamespace(data=dict())
     for bundle, path in q:
-        bundle = common.GameBundle.fromName(bundle, load=False)
+        bundle = GameBundle.fromName(bundle, load=False)
         if bundle.isPatched:
             if args.verbose:
                 print(
-                    f"Skipping {common.StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched"
+                    f"Skipping {StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched"
                 )
         else:
             bundle.load()
@@ -33,8 +37,8 @@ def removeRuby(args, db: sqlite3.Connection):
 
 
 def main():
-    ap = common.Args("Removes ruby data from assets")
-    ap.add_argument("-dst", default=common.GAME_META_FILE, help="Path to master.mdb file")
+    ap = patch.Args("Removes ruby data from assets")
+    ap.add_argument("-dst", default=GAME_META_FILE, help="Path to master.mdb file")
     args = ap.parse_args()
     args.type = "story"
     try:

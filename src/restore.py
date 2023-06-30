@@ -1,10 +1,13 @@
-import requests
-import common
-from common import GameBundle
-from os.path import join, realpath, isfile
 import shutil
 from argparse import SUPPRESS
 from concurrent.futures import Future, ThreadPoolExecutor
+from os.path import isfile, join, realpath
+
+import requests
+
+import common.constants as const
+from common import patch
+from common.files import GameBundle, TranslationFile
 
 HOSTNAME = "https://prd-storage-umamusume.akamaized.net/dl/resources"
 GENERIC_ENDPOINT = HOSTNAME + "/Generic/{0:.2}/{0}"
@@ -52,7 +55,7 @@ def restore(file, args):
     if args.src:
         bundle = GameBundle.fromName(args.src, load=False, bType=args.srctype)
     else:
-        file = common.TranslationFile(file, readOnly=True)
+        file = TranslationFile(file, readOnly=True)
         bundle = GameBundle.fromName(file.bundle, load=False, bType=file.type)
     if not args.force_restore and bundle.exists and not bundle.isPatched:
         print(f"Bundle {bundle.bundleName} not patched, skipping.")
@@ -63,7 +66,7 @@ def restore(file, args):
 
 
 def parseArgs(src=None):
-    ap = common.Args("Restore game files from backup or CDN download")
+    ap = patch.Args("Restore game files from backup or CDN download")
     ap.add_argument(
         "--forcedl", action="store_true", help="Force new file dl over copying from local backup"
     )
@@ -97,23 +100,22 @@ def main():
             processed += f.result()
 
         with ThreadPoolExecutor() as pool:
-            for type in common.TARGET_TYPES if args.uninstall else (args.type,):
-                files = common.searchFiles(
-                    type, args.group, args.id, args.idx, changed=args.changed
-                )
+            for type in const.TARGET_TYPES if args.uninstall else (args.type,):
+                files = patch.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
                 for file in files:
                     pool.submit(restore, file, args).add_done_callback(update)
         print(f"Restored {processed} files.")
 
     if args.uninstall:
-        from helpers import getUmaInstallDir
         from pathlib import Path
+
+        from common.patch import getUmaInstallDir
 
         uma = getUmaInstallDir()
         if uma:
             (uma / "version.dll").unlink(missing_ok=True)
             (uma / "uxtheme.dll").unlink(missing_ok=True)
-        Path(common.GAME_MASTER_FILE).unlink(missing_ok=True)
+        Path(const.GAME_MASTER_FILE).unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

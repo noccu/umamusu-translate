@@ -1,12 +1,13 @@
+import shutil
+import sqlite3
 import sys
 from os.path import realpath
-import sqlite3
 from pathlib import Path
-import shutil
 
 sys.path.append(realpath("src"))
-import common
-import helpers
+from common import patch
+from common.constants import GAME_MASTER_FILE
+from common.files import TranslationFile, fileops
 
 
 def checkPatched(file: Path):
@@ -22,11 +23,11 @@ def markPatched(db: sqlite3.Connection):
 def translator(args, entry: dict):
     files = entry['files'].items() if entry.get("specifier") else ((entry.get('file'), None),)
     ovrList = entry.get("overrides")
-    if entry.get('tlg') and helpers.isUsingTLG():
+    if entry.get('tlg') and patch.isUsingTLG():
         print(f"TLG used: skipping {entry.get('table')}")
         return
     for file, info in files:
-        if (isinstance(info, dict) and info.get('tlg')) and helpers.isUsingTLG():
+        if (isinstance(info, dict) and info.get('tlg')) and patch.isUsingTLG():
             print(f"TLG used: skipping {file}")
             continue
 
@@ -39,7 +40,7 @@ def translator(args, entry: dict):
 
         print(f"Importing {file}...")
         try:
-            data = common.TranslationFile(args.src / (entry['table'] if entry.get("subdir") else "") / (file + ".json"))
+            data = TranslationFile(args.src / (entry['table'] if entry.get("subdir") else "") / (file + ".json"))
         except FileNotFoundError:
             return
 
@@ -49,9 +50,9 @@ def translator(args, entry: dict):
 
 
 def parseArgs():
-    ap = common.Args("Imports translations to master.mdb", defaultArgs=False)
+    ap = patch.Args("Imports translations to master.mdb", defaultArgs=False)
     ap.add_argument("-src", default="translations/mdb", type=Path, help="Import path")
-    ap.add_argument("-dst", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
+    ap.add_argument("-dst", default=GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-B", "--backup", action="store_true", help="Backup the master.mdb file")
     ap.add_argument("-R", "--restore", action="store_true", help="Restore the master.mdb file from backup")
     ap.add_argument("-sd", "--skill-data", action="store_true",
@@ -79,7 +80,7 @@ def main():
 
     try:
         with sqlite3.connect(f"file:{args.dst}?mode=rw", isolation_level=None, uri=True) as db:
-            index = helpers.readJson("src/mdb/index.json")
+            index = fileops.readJson("src/mdb/index.json")
             db.execute("PRAGMA journal_mode = OFF;")
             db.execute("PRAGMA synchronous = OFF;")
             db.execute("BEGIN;")

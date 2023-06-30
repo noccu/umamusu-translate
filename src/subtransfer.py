@@ -1,14 +1,16 @@
 import re
-from enum import Enum, auto
 from datetime import timedelta
+from enum import Enum, auto
 from typing import Union
 
-from Levenshtein import ratio
 import ass
 import srt
+from Levenshtein import ratio
 
-import common
-import helpers
+from common import patch, utils
+from common.constants import NAMES_BLACKLIST
+from common.files import GameBundle, TranslationFile
+from common.StoryId import StoryId
 
 
 class SubFormat(Enum):
@@ -61,7 +63,7 @@ class BasicSubProcessor:
     npreRe = re.compile(r"\[?([^\]:]{2,40})\]?: (.+)", flags=re.DOTALL)
 
     def __init__(self, srcFile, options: SubTransferOptions = None):
-        self.srcFile = common.TranslationFile(srcFile)
+        self.srcFile = TranslationFile(srcFile)
         self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
@@ -90,7 +92,7 @@ class BasicSubProcessor:
     def setEn(self, idx, line: TextLine):
         self.srcLines[idx]["enText"] = self.filter(line, self.srcLines[idx])
         if "jpName" in self.srcLines[idx]:
-            if self.srcLines[idx]["jpName"] in common.NAMES_BLACKLIST:
+            if self.srcLines[idx]["jpName"] in NAMES_BLACKLIST:
                 self.srcLines[idx][
                     "enName"
                 ] = ""  # forcefully clear names that should not be translated
@@ -205,7 +207,7 @@ class BasicSubProcessor:
             return False
         prevName = self.srcLines[idx - 1]["jpName"]
         curName = self.srcLines[idx]["jpName"]
-        if not self.options.dupeCheckAll and curName not in common.NAMES_BLACKLIST:
+        if not self.options.dupeCheckAll and curName not in NAMES_BLACKLIST:
             return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx - 1)) > 0.6
 
@@ -367,7 +369,7 @@ class TxtSubProcessor(BasicSubProcessor):
         self.subLines = [
             TextLine(line)
             for line in raw
-            if helpers.isEnglish(line) and not re.match(r"\n+\s*", line)
+            if utils.isEnglish(line) and not re.match(r"\n+\s*", line)
         ]
 
 
@@ -464,7 +466,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
 
 def createSubs(tlFile, fps=30):
     try:
-        bundle = common.GameBundle.fromName(tlFile.bundle)
+        bundle = GameBundle.fromName(tlFile.bundle)
     except FileNotFoundError:
         print("Bundle doesn't exist.")
         return None
@@ -501,14 +503,14 @@ def createSubs(tlFile, fps=30):
 
 
 def writeSubs(sType, storyid):
-    sid = common.StoryId.parse(sType, storyid)
-    files = common.searchFiles(sType, sid.group, sid.id, sid.idx, sid.set)
+    sid = StoryId.parse(sType, storyid)
+    files = patch.searchFiles(sType, sid.group, sid.id, sid.idx, sid.set)
     for tlFile in files:
-        tlFile = common.TranslationFile(tlFile)
+        tlFile = TranslationFile(tlFile)
         subs = createSubs(tlFile)
         if not subs:
             return
-        helpers.mkdir("subs")
+        utils.mkdir("subs")
         with open(
             f"subs/{tlFile.getStoryId()} {subs.info['Title']}.ass", "w", encoding="utf_8_sig"
         ) as f:
@@ -516,7 +518,7 @@ def writeSubs(sType, storyid):
 
 
 def main():
-    ap = common.Args(
+    ap = patch.Args(
         "Imports translations from subtitle files. A few conventions are used.",
         defaultArgs=False,
         epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\n"

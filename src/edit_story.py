@@ -10,18 +10,20 @@ from functools import partial
 
 import symspellpy
 
-import common
-from helpers import isEnglish
+from common import patch
+from common.constants import IS_WIN, GAME_META_FILE, NAMES_BLACKLIST, SUPPORTED_TYPES
+from common.utils import isEnglish
+from common.files import GameBundle, TranslationFile
 import textprocess
 
-if common.IS_WIN:
+if IS_WIN:
     from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
     import pyaudio, sqlite3, wave, restore  # noqa: E401
     from PyCriCodecs import AWB, HCA
 
 TEXTBOX_WIDTH = 54
-COLOR_WIN = "systemWindow" if common.IS_WIN else "white"
-COLOR_BTN = "SystemButtonFace" if common.IS_WIN else "gray"
+COLOR_WIN = "systemWindow" if IS_WIN else "white"
+COLOR_BTN = "SystemButtonFace" if IS_WIN else "gray"
 AUDIO_PLAYER = None
 LAST_COLOR = None
 
@@ -73,7 +75,7 @@ class AudioPlayer:
 
     def __init__(self) -> None:
         self.pyaud = pyaudio.PyAudio()
-        self._db = sqlite3.connect(common.GAME_META_FILE)
+        self._db = sqlite3.connect(GAME_META_FILE)
         self._restoreArgs = restore.parseArgs([])
 
     def dealloc(self):
@@ -87,8 +89,8 @@ class AudioPlayer:
 
     def play(self, storyId: str, voice: PlaySegment, sType="story"):
         """Plays audio for a specific text block"""
-        storyId: common.StoryId = common.StoryId.parse(sType, storyId)
-        qStoryId = common.StoryId.queryfy(storyId)
+        storyId: patch.StoryId = patch.StoryId.parse(sType, storyId)
+        qStoryId = patch.StoryId.queryfy(storyId)
         if not voice.timeBased and voice.idx < 0:
             print("Text block is not voiced.")
             return
@@ -105,7 +107,7 @@ class AudioPlayer:
             if h is None:
                 print("Couldn't find audio asset.")
                 return
-            asset = common.GameBundle.fromName(h[0], load=False)
+            asset = GameBundle.fromName(h[0], load=False)
             asset.bundleType = "sound"
             if not asset.exists:
                 restore.save(asset, self._restoreArgs)
@@ -201,7 +203,7 @@ class AudioPlayer:
 
     @staticmethod
     def listen(event=None):
-        if not common.IS_WIN:
+        if not IS_WIN:
             print("Audio currently only supported on Windows")
             return
         voice = PlaySegment.fromBlock(cur_file.textBlocks[cur_block])
@@ -302,7 +304,7 @@ class SpellCheck:
         self.widget.tag_remove("spellError", *fixRange)
 
     def _loadNames(self):
-        namesFile = common.TranslationFile("translations/mdb/char-name.json")
+        namesFile = TranslationFile("translations/mdb/char-name.json")
         for entry in namesFile.textBlocks:
             name = entry.get("enText").lower().split()
             for n in name:
@@ -496,7 +498,7 @@ def load_block(event=None, dir=1):
     # Fill in the text boxes
     speaker_jp_entry.delete(0, tk.END)
     speaker_jp_entry.insert(0, cur_block_data.get("jpName", ""))
-    if cur_block_data.get("jpName") in common.NAMES_BLACKLIST:
+    if cur_block_data.get("jpName") in NAMES_BLACKLIST:
         speaker_en_entry.delete(0, tk.END)
         speaker_en_entry["state"] = "disabled"
     else:
@@ -606,7 +608,7 @@ def copy_block(event=None):
 def loadFile(chapter=None):
     ch = chapter or cur_chapter
     if isinstance(files[ch], str):
-        files[ch] = common.TranslationFile(files[ch])
+        files[ch] = TranslationFile(files[ch])
 
 
 def saveFile(event=None):
@@ -807,7 +809,7 @@ def _search_text_blocks(chapter):
         if (
             s_field.startswith("enN")
             and s_re == "^$"
-            and block.get("jpName") in common.NAMES_BLACKLIST
+            and block.get("jpName") in NAMES_BLACKLIST
         ):
             continue
         if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
@@ -1105,7 +1107,7 @@ def tlNames():
 
 def nextMissingName():
     for idx, block in enumerate(cur_file.textBlocks):
-        if not block.get("enName") and block.get("jpName") not in common.NAMES_BLACKLIST:
+        if not block.get("enName") and block.get("jpName") not in NAMES_BLACKLIST:
             block_dropdown.current(idx)
             change_block()
 
@@ -1155,14 +1157,14 @@ def main():
     cur_chapter = 0
     cur_block = 0
 
-    ap = common.Args("Story editor", types=common.SUPPORTED_TYPES)
+    ap = patch.Args("Story editor", types=SUPPORTED_TYPES)
     ap.add_argument("-src")
     ap.add_argument("-dst", help=SUPPRESS)
     args = ap.parse_args()
     if args.src:
         files = [args.src]
     else:
-        files = common.searchFiles(
+        files = patch.searchFiles(
             args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
         )
         if not files:
@@ -1176,7 +1178,7 @@ def main():
     root = tk.Tk()
     root.title("Edit Story")
     root.resizable(False, False)
-    if common.IS_WIN:
+    if IS_WIN:
         loadFont(r"src/data/RodinWanpakuPro-UmaTl.otf")
     else:
         print(

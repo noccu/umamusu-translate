@@ -1,6 +1,5 @@
 import asyncio
 import json
-import common
 import textprocess
 from importlib import import_module
 from pathlib import Path
@@ -8,6 +7,10 @@ from argparse import SUPPRESS
 
 import websockets
 from websockets import server
+
+from common import patch
+from common.files import TranslationFile
+from common.constants import SUPPORTED_TYPES
 
 SUGOI_ROOT = "src/data/sugoi-model"
 
@@ -39,7 +42,7 @@ class Translator:
         self.files = (
             [args.src]
             if args.src
-            else common.searchFiles(
+            else patch.searchFiles(
                 args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
             )
         )
@@ -72,7 +75,7 @@ class Translator:
     def _fileGenerator(self):
         for file in self.files:
             print(f"Translating {file}...")
-            yield common.TranslationFile(file)
+            yield TranslationFile(file)
 
     async def translate(self):
         for file in self._fileGenerator():
@@ -131,9 +134,9 @@ async def sugoiTranslate():
 
 def main():
     global args
-    ap = common.Args(
+    ap = patch.Args(
         "Machine translate files. Requires sugoi model or deepl userscript",
-        types=common.SUPPORTED_TYPES,
+        types=SUPPORTED_TYPES,
     )
     ap.add_argument("-src", help="Target Translation File")
     ap.add_argument("-dst", help=SUPPRESS)

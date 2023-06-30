@@ -1,8 +1,10 @@
-import common
-from common import TranslationFile, StoryId
 import re
 from math import ceil
-import helpers
+
+from common import patch
+from common.constants import SUPPORTED_TYPES
+from common.files import TranslationFile, fileops
+from common.StoryId import StoryId
 
 REPLACEMENT_DATA = None
 LL_CACHE = None, None
@@ -145,7 +147,7 @@ def replace(text: str, mode):
 
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
-        REPLACEMENT_DATA = helpers.readJson("src/data/replacer.json")
+        REPLACEMENT_DATA = fileops.readJson("src/data/replacer.json")
         for rep in REPLACEMENT_DATA:
             rep["re"] = re.compile(rep["re"], flags=re.IGNORECASE)
     for rep in REPLACEMENT_DATA:
@@ -158,9 +160,9 @@ def replace(text: str, mode):
 
 
 def main():
-    ap = common.Args(
+    ap = patch.Args(
         "Process text for linebreaks (game length limits), common errors, and standardized formatting",
-        types=common.SUPPORTED_TYPES,
+        types=SUPPORTED_TYPES,
     )
     ap.add_argument("-src", help="Target Translation File, overwrites other file options")
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
@@ -222,7 +224,7 @@ def processFiles(args):
     if args.src:
         files = [args.src]
     else:
-        files = common.searchFiles(
+        files = patch.searchFiles(
             args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
         )
     print(f"Processing {len(files)} files...")

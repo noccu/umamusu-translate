@@ -158,7 +158,33 @@ def replace(text: str, mode):
     return text
 
 
-def main():
+def calcLineLen(file: TranslationFile, verbose):
+    global LL_CACHE
+    if LL_CACHE[0] is file:  # should be same as id() -> fast
+        return LL_CACHE[1]
+
+    lineLength = file.data.get("lineLength")
+    if lineLength in (None, -1, 0):
+        if file.type == "lyrics":
+            lineLength = 57
+        if file.type == "preview":
+            lineLength = 41
+        elif (file.type == "race") or (
+            file.type == "story"
+            and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")
+        ):
+            lineLength = 48
+        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
+            lineLength = 30
+        else:
+            lineLength = 34
+    LL_CACHE = file, lineLength
+    if verbose:
+        print(f"Line length set to {lineLength} for {file.name}")
+    return lineLength
+
+
+def parseArgs(args=None):
     ap = patch.Args(
         "Process text for linebreaks (game length limits), common errors, and standardized formatting",
         types=SUPPORTED_TYPES,
@@ -210,16 +236,17 @@ def main():
         type=int,
         help="Target lines. Length adjustment skips input obeying -ll and not exceeding -tl",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
 
     if args.exclusiveNewlines and args.redoNewlines:
         print("Incompatible newline options: force all + exclusive add.")
         return
 
-    processFiles(args)
+    return args
 
 
-def processFiles(args):
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.src:
         files = [args.src]
     else:
@@ -237,32 +264,6 @@ def processFiles(args):
                 block["enText"] = processText(file, block["enText"], vars(args))
         file.save()
     print("Files processed.")
-
-
-def calcLineLen(file: TranslationFile, verbose):
-    global LL_CACHE
-    if LL_CACHE[0] is file:  # should be same as id() -> fast
-        return LL_CACHE[1]
-
-    lineLength = file.data.get("lineLength")
-    if lineLength in (None, -1, 0):
-        if file.type == "lyrics":
-            lineLength = 57
-        if file.type == "preview":
-            lineLength = 41
-        elif (file.type == "race") or (
-            file.type == "story"
-            and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")
-        ):
-            lineLength = 48
-        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
-            lineLength = 30
-        else:
-            lineLength = 34
-    LL_CACHE = file, lineLength
-    if verbose:
-        print(f"Line length set to {lineLength} for {file.name}")
-    return lineLength
 
 
 if __name__ == "__main__":

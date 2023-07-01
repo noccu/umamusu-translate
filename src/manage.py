@@ -363,7 +363,7 @@ def move():
         print("Couldn't find game install path, files not moved.")
 
 
-def parseArgs():
+def parseArgs(args=None):
     ap = patch.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument(
         "-new",
@@ -460,7 +460,7 @@ def parseArgs():
         action="store_true",
         help="Backup the old dump file (for diffing)",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
 
     if args.src is None or (args.import_only and args.src == LOCAL_DUMP):
         args.src = LOCAL_DUMP
@@ -482,8 +482,8 @@ def parseArgs():
     return args
 
 
-def main():
-    args = parseArgs()
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
 
     if args.convert_mdb:
         mdbDicts = convertMdb()

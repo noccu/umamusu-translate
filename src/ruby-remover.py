@@ -33,11 +33,16 @@ def removeRuby(args, db: sqlite3.Connection):
     return patched, total
 
 
-def main():
+def parseArgs(args=None):
     ap = patch.Args("Removes ruby data from assets")
     ap.add_argument("-dst", default=GAME_META_FILE, help="Path to master.mdb file")
-    args = ap.parse_args()
+    args = ap.parse_args(args)
     args.type = "story"
+    return args
+
+
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     try:
         with sqlite3.connect(args.dst, isolation_level=None) as db:
             db.execute("PRAGMA journal_mode = MEMORY;")

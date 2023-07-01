@@ -516,7 +516,7 @@ def writeSubs(sType, storyid):
             subs.dump_file(f)
 
 
-def main():
+def parseArgs(args=None):
     ap = patch.Args(
         "Imports translations from subtitle files. A few conventions are used.",
         defaultArgs=False,
@@ -599,7 +599,12 @@ def main():
         action="store_true",
         help="Auto-unsplit lines based on sub times.",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
+    return args
+
+
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.writeSubs:
         writeSubs(args.src, args.sub)
     else:

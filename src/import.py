@@ -354,7 +354,7 @@ def deltaTime(startTime: float):
     return f"{m:.0f}m {s:.3f}s"
 
 
-def parseArgs():
+def parseArgs(args=None):
     ap = patch.Args("Write Game Assets from Translation Files")
     ap.add_argument(
         "-O",
@@ -391,12 +391,11 @@ def parseArgs():
     ap.add_argument(
         "-nomtl", "--skip-mtl", action="store_true", help="Only import human translations"
     )
+    return ap.parse_args(args)
 
-    return ap.parse_args()
 
-
-def main():
-    args = parseArgs()
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.write_log:
         print("Error logs temporarily not supported, output will be in console.")
 

@@ -65,7 +65,7 @@ def restore(file, args):
     return save(bundle, args)
 
 
-def parseArgs(src=None):
+def parseArgs(args=None):
     ap = patch.Args("Restore game files from backup or CDN download")
     ap.add_argument(
         "--forcedl", action="store_true", help="Force new file dl over copying from local backup"
@@ -84,12 +84,12 @@ def parseArgs(src=None):
     ap.add_argument(
         "-F", "--force-restore", action="store_true", help="Ignore checks and always restore files"
     )
-    args = ap.parse_args(src)
+    args = ap.parse_args(args)
     return args
 
 
-def main():
-    args = parseArgs()
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.src:
         restore(args.src, args)
     else:

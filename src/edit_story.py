@@ -1136,7 +1136,15 @@ def onClose(event=None):
     root.quit()
 
 
-def main():
+def parseArgs(args=None):
+    ap = patch.Args("Story editor", types=const.SUPPORTED_TYPES)
+    ap.add_argument("-src")
+    ap.add_argument("-dst", help=SUPPRESS)
+    args = ap.parse_args(args)
+    return args
+
+
+def main(args: patch.Args = None):
     global files
     global root
     global cur_chapter
@@ -1161,10 +1169,7 @@ def main():
     cur_chapter = 0
     cur_block = 0
 
-    ap = patch.Args("Story editor", types=const.SUPPORTED_TYPES)
-    ap.add_argument("-src")
-    ap.add_argument("-dst", help=SUPPRESS)
-    args = ap.parse_args()
+    args = args or parseArgs(args)
     if args.src:
         files = [args.src]
     else:
@@ -1174,7 +1179,6 @@ def main():
         if not files:
             print("No files match given criteria")
             raise SystemExit
-
     files.sort()
 
     SAVE_STATE = SaveState()

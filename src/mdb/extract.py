@@ -99,7 +99,7 @@ def main():
         from subprocess import run
         run(["node", "src/scripts/extract-skill-data.js", args.src], check=True)
         import textprocess
-        textprocess.processFiles(patch.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=99, forceResize=True))
+        textprocess.main(patch.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=99, forceResize=True))
 
 
 if __name__ == '__main__':

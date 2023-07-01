@@ -340,8 +340,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     outFile.save()
 
 
-def parseArgs():
-    global args
+def parseArgs(args=None):
     ap = patch.Args("Extract Game Assets to Translation Files")
     ap.add_argument("-dst")
     ap.add_argument(
@@ -382,10 +381,12 @@ def parseArgs():
         # check if upd was given without type spec and use all types if so
         elif len(args.update) == 0:
             args.update = TARGET_TYPES
+    return args
 
 
-def main():
-    parseArgs()
+def main(_args: patch.Args = None):
+    global args
+    args = args or parseArgs(_args)
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
         db = sqlite3.connect(GAME_META_FILE)

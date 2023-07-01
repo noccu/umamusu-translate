@@ -145,7 +145,7 @@ def copy(data, args):
         return 0
 
 
-def parseArgs(src=None):
+def parseArgs(args=None):
     ap = patch.Args("Copy files for backup or testing", types=[*TARGET_TYPES, "ruby"])
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-p", "--path", help="Unity filepath wildcard")
@@ -187,11 +187,11 @@ def parseArgs(src=None):
         choices=["hash", "name"],
         help="Remove backups for old assets that are no longer used",
     )
-    return ap.parse_args(src)
+    return ap.parse_args(args)
 
 
-def main():
-    args = parseArgs()
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.backup:
         backup(args)
     elif args.remove_old:

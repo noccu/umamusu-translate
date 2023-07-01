@@ -48,7 +48,7 @@ def extract(files: list):
     return newNames
 
 
-def main():
+def parseArgs(args=None):
     ap = patch.Args("Translate many enName fields in Translation Files by lookup")
     ap.add_argument(
         "-src", nargs="*", help="Target Translation File(s), overwrites other file options"
@@ -59,11 +59,16 @@ def main():
         action="store_true",
         help="Target Translation File(s), overwrites other file options",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
 
     if args.type in ("race", "lyrics"):
         print("No names in given type.")
         raise SystemExit
+    return args
+
+
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
 
     files = args.src or patch.searchFiles(
         args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed

@@ -132,8 +132,7 @@ async def sugoiTranslate():
     await tl.translate()
 
 
-def main():
-    global args
+def parseArgs(args=None):
     ap = patch.Args(
         "Machine translate files. Requires sugoi model or deepl userscript",
         types=SUPPORTED_TYPES,
@@ -151,10 +150,16 @@ def main():
         help="Line length for wrapping/newlines. 0: disable, -1: auto. Default auto.",
     )
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite existing tl")
-    args = ap.parse_args()
+    args = ap.parse_args(args)
     args.replaceMode = "all"
+    return args
 
+
+# Todo: Remove global args usage
+def main(_args=None):
     global USING_SERVER
+    global args
+    args = parseArgs(_args)
     if args.model == "deepl":
         USING_SERVER = True
         asyncio.run(startServer())

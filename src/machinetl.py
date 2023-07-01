@@ -9,7 +9,7 @@ import websockets
 from websockets import server
 
 from common import patch
-from common.files import TranslationFile
+from common.types import TranslationFile
 from common.constants import SUPPORTED_TYPES
 
 SUGOI_ROOT = "src/data/sugoi-model"

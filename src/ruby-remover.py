@@ -3,14 +3,11 @@ from types import SimpleNamespace
 
 from common import patch
 from common.constants import GAME_META_FILE
-from common.files import GameBundle
-from common.StoryId import StoryId
+from common.types import StoryId, GameBundle
 
 
 def removeRuby(args, db: sqlite3.Connection):
-    storyId = StoryId.queryfy(
-        StoryId(args.type, args.set, args.group, args.id, args.idx)
-    )
+    storyId = StoryId.queryfy(StoryId(args.type, args.set, args.group, args.id, args.idx))
     del storyId.set
     del storyId.type
 

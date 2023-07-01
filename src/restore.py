@@ -7,7 +7,7 @@ import requests
 
 import common.constants as const
 from common import patch
-from common.files import GameBundle, TranslationFile
+from common.types import TranslationFile, GameBundle
 
 HOSTNAME = "https://prd-storage-umamusume.akamaized.net/dl/resources"
 GENERIC_ENDPOINT = HOSTNAME + "/Generic/{0:.2}/{0}"

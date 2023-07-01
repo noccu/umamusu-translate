@@ -5,9 +5,9 @@ from os.path import realpath
 from pathlib import Path
 
 sys.path.append(realpath("src"))
-from common import patch
+from common import patch, utils
 from common.constants import GAME_MASTER_FILE
-from common.files import TranslationFile, fileops
+from common.types import TranslationFile
 
 
 def checkPatched(file: Path):
@@ -80,7 +80,7 @@ def main():
 
     try:
         with sqlite3.connect(f"file:{args.dst}?mode=rw", isolation_level=None, uri=True) as db:
-            index = fileops.readJson("src/mdb/index.json")
+            index = utils.readJson("src/mdb/index.json")
             db.execute("PRAGMA journal_mode = OFF;")
             db.execute("PRAGMA synchronous = OFF;")
             db.execute("BEGIN;")

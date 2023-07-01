@@ -5,9 +5,10 @@ from typing import Optional, Union
 
 from Levenshtein import ratio as similarity
 
-from common import StoryId, patch
+from common import patch
 from common.constants import GAME_ASSET_ROOT, GAME_META_FILE, TARGET_TYPES
-from common.files import GameBundle, TranslationFile, sanitizeFilename
+from common.utils import sanitizeFilename
+from common.types import StoryId, GameBundle, TranslationFile
 
 
 def queryDB(db=None, storyId: StoryId = None):

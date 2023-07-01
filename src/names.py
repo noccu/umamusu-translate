@@ -1,15 +1,15 @@
-from common import patch
+from common import utils, patch
 from common.constants import NAMES_BLACKLIST
-from common.files import TranslationFile, fileops
+from common.types import TranslationFile
 
 NAMES_DICT = None
 
 
 def loadDict():
     global NAMES_DICT
-    names = fileops.readJson("src/data/names.json")
-    umas = fileops.readJson("translations/mdb/char-name.json").get("text")
-    misc = fileops.readJson("translations/mdb/miscellaneous.json").get("text")
+    names = utils.readJson("src/data/names.json")
+    umas = utils.readJson("translations/mdb/char-name.json").get("text")
+    misc = utils.readJson("translations/mdb/miscellaneous.json").get("text")
     NAMES_DICT = misc.copy()
     NAMES_DICT.update(names)
     NAMES_DICT.update(umas)
@@ -44,7 +44,7 @@ def extract(files: list):
                 curNames[name] = block.get("enName", "")
                 NAMES_DICT[name] = block.get("enName", "")
                 newNames += 1
-    fileops.writeJson("src/data/names.json", curNames)
+    utils.writeJson("src/data/names.json", curNames)
     return newNames
 
 

@@ -1,10 +1,9 @@
 import re
 from math import ceil
 
-from common import patch
+from common import utils, patch
 from common.constants import SUPPORTED_TYPES
-from common.files import TranslationFile, fileops
-from common.StoryId import StoryId
+from common.types import StoryId, TranslationFile
 
 REPLACEMENT_DATA = None
 LL_CACHE = None, None
@@ -147,7 +146,7 @@ def replace(text: str, mode):
 
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
-        REPLACEMENT_DATA = fileops.readJson("src/data/replacer.json")
+        REPLACEMENT_DATA = utils.readJson("src/data/replacer.json")
         for rep in REPLACEMENT_DATA:
             rep["re"] = re.compile(rep["re"], flags=re.IGNORECASE)
     for rep in REPLACEMENT_DATA:

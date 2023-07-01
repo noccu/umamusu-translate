@@ -5,9 +5,9 @@ from os.path import realpath
 from pathlib import Path, PurePath
 
 sys.path.append(realpath("src"))
-from common import patch
+from common import patch, utils
 from common.constants import GAME_MASTER_FILE
-from common.files import TranslationFile, fileops
+from common.types import TranslationFile
 
 checkPatched = import_module("import").checkPatched
 
@@ -30,7 +30,7 @@ def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
         oldData.save()
     else:
         o = {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': newData}
-        fileops.writeJson(savePath, o)
+        utils.writeJson(savePath, o)
 
 
 def parseArgs():
@@ -45,7 +45,7 @@ def parseArgs():
 
 class MdbIndex:
     def __init__(self, idxPath: str):
-        self.idx = fileops.readJson(idxPath)
+        self.idx = utils.readJson(idxPath)
     def parseListSQL(self, l: list):
         base = list()
         complex = list()

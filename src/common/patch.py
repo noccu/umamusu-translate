@@ -1,17 +1,16 @@
 import argparse
 import json
 import os
-from pathlib import Path, PurePath
 import sys
-from typing import Optional
-import regex
 from datetime import datetime, timezone
+from pathlib import Path, PurePath
 
-from .files import fileops
-from .constants import GAME_ASSET_ROOT, TARGET_TYPES, IS_WIN, DMM_CONFIG
-from .StoryId import StoryId
+import regex
 
-__GAME_INSTALL_DIR = None
+from . import utils
+from .constants import GAME_ASSET_ROOT, TARGET_TYPES
+from .types import StoryId
+
 __IS_USING_TLG = None
 
 
@@ -29,7 +28,7 @@ def searchFiles(
 
     found = list()
     if changed:
-        from subprocess import run, PIPE
+        from subprocess import PIPE, run
 
         cmd = (
             ["git", "status", "--short", "--porcelain"]
@@ -182,42 +181,11 @@ class Args(argparse.ArgumentParser):
         return argparse.Namespace(**kwargs)
 
 
-def getUmaInstallDir() -> Optional[Path]:
-    """Return the path to the directory umamusume.exe was installed in, or None if it can't be found."""
-    global __GAME_INSTALL_DIR
-    if __GAME_INSTALL_DIR is not False:
-        return __GAME_INSTALL_DIR
-    __GAME_INSTALL_DIR = None
-    try:
-        with open(DMM_CONFIG, encoding="utf-8") as f:
-            dmm_um_config = next(
-                (game for game in json.load(f)["contents"] if game["productId"] == "umamusume"),
-                None,
-            )
-            if dmm_um_config is not None:
-                __GAME_INSTALL_DIR = Path(dmm_um_config["detail"]["path"])
-    except FileNotFoundError:
-        # Older DMM installs might not have the DMM config file,
-        # if it wasn't found try an old registry check approach
-        if IS_WIN:
-            import winreg
-
-            try:
-                with winreg.OpenKey(
-                    winreg.HKEY_LOCAL_MACHINE,
-                    r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume",
-                ) as k:
-                    __GAME_INSTALL_DIR = Path(winreg.QueryValueEx(k, "Path")[0])
-            except OSError:
-                pass
-    return __GAME_INSTALL_DIR
-
-
 def isUsingTLG() -> bool:
     global __IS_USING_TLG
     if __IS_USING_TLG is not None:
         return __IS_USING_TLG
-    __IS_USING_TLG = (getUmaInstallDir() / "config.json").exists()
+    __IS_USING_TLG = (utils.getUmaInstallDir() / "config.json").exists()
     return __IS_USING_TLG
 
 
@@ -233,7 +201,7 @@ class UmaTlConfig:
         ).replace("\\", "/")
         if not UmaTlConfig.cfg:
             try:
-                UmaTlConfig.cfg = fileops.readJson("umatl.json")
+                UmaTlConfig.cfg = utils.readJson("umatl.json")
                 UmaTlConfig.core = UmaTlConfig.cfg.get("core", UmaTlConfig.empty)
             except FileNotFoundError:
                 self.createDefault()
@@ -241,7 +209,7 @@ class UmaTlConfig:
         self.script = UmaTlConfig.cfg.get(ctx, UmaTlConfig.empty)
 
     def save(self):
-        fileops.writeJson("umatl.json", UmaTlConfig.cfg, 2)
+        utils.writeJson("umatl.json", UmaTlConfig.cfg, 2)
 
     def ensureCore(self):
         if "core" not in UmaTlConfig.cfg:
@@ -271,3 +239,5 @@ class UmaTlConfig:
         del data["core"]
         print(json.dumps(data, indent=2))
         sys.exit()
+
+

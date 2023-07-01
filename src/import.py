@@ -1,5 +1,6 @@
 import argparse
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+
 # from sys import stdout
 from functools import reduce
 from pathlib import Path
@@ -9,7 +10,7 @@ from traceback import print_exc
 import common.constants as const
 import filecopy as backup
 from common import patch
-from common.files import GameBundle, TranslationFile
+from common.types import GameBundle, TranslationFile
 
 
 class ConfigError(Exception):

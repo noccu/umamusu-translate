@@ -1,13 +1,13 @@
+import csv
+import re
 import sys
 from os.path import realpath
 from pathlib import Path
-import re
-import csv
 
 sys.path.append(realpath("src"))
-from common.files import fileops, TranslationFile
-from common import patch
 import textprocess
+from common import patch, utils
+from common.types import TranslationFile
 
 CSV_FILES_MANUAL_NEWLINE = ("uma-profile-tagline.json", "tutorial-text.json", "support-bonus.json",
                             "special-transfer-thanks.json", "special-transfer-desc.json", "advice.json",
@@ -77,7 +77,7 @@ def main():
 
         csvData = readCsv(csvPath)
         if args.convert:
-            fileops.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
+            utils.writeJson(tlFile, {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': csvData})
         elif args.reverse:
             nativeJson = False
             if not isinstance(csvData, dict): # file no existo
@@ -102,7 +102,7 @@ def main():
                     v = textprocess.cleannewLines(v)
                     data[k] = textprocess.resizeText(tlFile, v, True)
             if nativeJson:
-                fileops.writeJson(csvPath, data)
+                utils.writeJson(csvPath, data)
             else:
                 writeCsv(csvPath, data)
         else:

@@ -4,7 +4,7 @@ from os import makedirs, path
 
 from common import patch, utils
 from common.constants import GAME_META_FILE, TARGET_TYPES
-from common.files import GameBundle, TranslationFile
+from common.types import GameBundle, TranslationFile
 
 
 def buildSqlStmt(args):

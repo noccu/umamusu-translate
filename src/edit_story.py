@@ -1,29 +1,33 @@
-from argparse import SUPPRESS
 import re
 import tkinter as tk
-from tkinter import ttk, messagebox, colorchooser
-from tkinter.font import Font
-from types import SimpleNamespace
-from itertools import zip_longest
+from argparse import SUPPRESS
 from dataclasses import dataclass, field as datafield
 from functools import partial
+from itertools import zip_longest
+from tkinter import colorchooser, messagebox, ttk
+from tkinter.font import Font
+from types import SimpleNamespace
 
 import symspellpy
 
-from common import patch
-from common.constants import IS_WIN, GAME_META_FILE, NAMES_BLACKLIST, SUPPORTED_TYPES
-from common.utils import isEnglish
-from common.files import GameBundle, TranslationFile
 import textprocess
+from common import patch, constants as const
+from common.types import TranslationFile, GameBundle
+from common.utils import isEnglish
 
-if IS_WIN:
-    from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
-    import pyaudio, sqlite3, wave, restore  # noqa: E401
+if const.IS_WIN:
+    import sqlite3
+    import wave
+    from ctypes import byref, create_string_buffer, create_unicode_buffer, windll
+
+    import pyaudio
     from PyCriCodecs import AWB, HCA
 
+    import restore
+
 TEXTBOX_WIDTH = 54
-COLOR_WIN = "systemWindow" if IS_WIN else "white"
-COLOR_BTN = "SystemButtonFace" if IS_WIN else "gray"
+COLOR_WIN = "systemWindow" if const.IS_WIN else "white"
+COLOR_BTN = "SystemButtonFace" if const.IS_WIN else "gray"
 AUDIO_PLAYER = None
 LAST_COLOR = None
 
@@ -75,7 +79,7 @@ class AudioPlayer:
 
     def __init__(self) -> None:
         self.pyaud = pyaudio.PyAudio()
-        self._db = sqlite3.connect(GAME_META_FILE)
+        self._db = sqlite3.connect(const.GAME_META_FILE)
         self._restoreArgs = restore.parseArgs([])
 
     def dealloc(self):
@@ -203,7 +207,7 @@ class AudioPlayer:
 
     @staticmethod
     def listen(event=None):
-        if not IS_WIN:
+        if not const.IS_WIN:
             print("Audio currently only supported on Windows")
             return
         voice = PlaySegment.fromBlock(cur_file.textBlocks[cur_block])
@@ -498,7 +502,7 @@ def load_block(event=None, dir=1):
     # Fill in the text boxes
     speaker_jp_entry.delete(0, tk.END)
     speaker_jp_entry.insert(0, cur_block_data.get("jpName", ""))
-    if cur_block_data.get("jpName") in NAMES_BLACKLIST:
+    if cur_block_data.get("jpName") in const.NAMES_BLACKLIST:
         speaker_en_entry.delete(0, tk.END)
         speaker_en_entry["state"] = "disabled"
     else:
@@ -809,7 +813,7 @@ def _search_text_blocks(chapter):
         if (
             s_field.startswith("enN")
             and s_re == "^$"
-            and block.get("jpName") in NAMES_BLACKLIST
+            and block.get("jpName") in const.NAMES_BLACKLIST
         ):
             continue
         if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
@@ -1107,7 +1111,7 @@ def tlNames():
 
 def nextMissingName():
     for idx, block in enumerate(cur_file.textBlocks):
-        if not block.get("enName") and block.get("jpName") not in NAMES_BLACKLIST:
+        if not block.get("enName") and block.get("jpName") not in const.NAMES_BLACKLIST:
             block_dropdown.current(idx)
             change_block()
 
@@ -1157,7 +1161,7 @@ def main():
     cur_chapter = 0
     cur_block = 0
 
-    ap = patch.Args("Story editor", types=SUPPORTED_TYPES)
+    ap = patch.Args("Story editor", types=const.SUPPORTED_TYPES)
     ap.add_argument("-src")
     ap.add_argument("-dst", help=SUPPRESS)
     args = ap.parse_args()
@@ -1178,7 +1182,7 @@ def main():
     root = tk.Tk()
     root.title("Edit Story")
     root.resizable(False, False)
-    if IS_WIN:
+    if const.IS_WIN:
         loadFont(r"src/data/RodinWanpakuPro-UmaTl.otf")
     else:
         print(

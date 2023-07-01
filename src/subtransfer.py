@@ -9,8 +9,7 @@ from Levenshtein import ratio
 
 from common import patch, utils
 from common.constants import NAMES_BLACKLIST
-from common.files import GameBundle, TranslationFile
-from common.StoryId import StoryId
+from common.types import StoryId, GameBundle, TranslationFile
 
 
 class SubFormat(Enum):

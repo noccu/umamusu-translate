@@ -51,7 +51,10 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     if lineLen == 0:
         return text  # auto mode can return 0
     # Calculate an estimation of raw characters from size-based length
-    lineLen = int(lineLen * (1.135 * lineLen**0.05) + 1)
+    # Adjusted by font size
+    fontsize = file.data.get("textSize", 24)
+    sizeMod = 1.07 * (fontsize / 24)**0.6
+    lineLen = int((lineLen * (1.135 * lineLen**0.05) + 1) * sizeMod)
     pureText = RE_TAGS.sub("", text)
 
     if len(pureText) < lineLen:

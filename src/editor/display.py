@@ -115,7 +115,3 @@ def _switchWidgetFocusForced(e):
 
 def setActive(widget: tk.Widget, active: bool):
     widget["state"] = "normal" if active else "disabled"
-
-
-def setText(widget: tk.Widget, text: str):
-    widget["text"] = text

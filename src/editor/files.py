@@ -95,7 +95,7 @@ class FileManager:
         # Fill in the text boxes
         text.setText(self.master.speakerJp, data.get("jpName", ""))
         if data.get("jpName") in NAMES_BLACKLIST:
-            text.clear(self.master.speakerEn)
+            text.clearText(self.master.speakerEn)
             display.setActive(self.master.speakerEn, False)
         else:
             display.setActive(self.master.speakerEn, True)
@@ -107,16 +107,16 @@ class FileManager:
                 self.master.speakerEn.config(bg="red")
 
         # Spinbox for text block duration
-        text.clear(self.master.blockDuration)
+        text.clearText(self.master.blockDuration)
         if "origClipLength" in data:
-            self.master.blockDurationLabel.config(text=f"Text Duration ({data['origClipLength']})")
+            text.setText(self.master.blockDurationLabel, f"Text Duration ({data['origClipLength']})")
         if "newClipLength" in data:
-            self.master.blockDuration.insert(0, data["newClipLength"])
+            text.setText(self.master.blockDuration, data["newClipLength"])
         else:
             if "origClipLength" in data:
-                self.master.blockDuration.insert(0, data["origClipLength"])
+                text.setText(self.master.blockDuration, data["origClipLength"])
             else:
-                self.master.blockDuration.insert(0, "-1")
+                text.setText(self.master.blockDuration, "-1")
 
         display.setActive(self.master.textBoxJp, True)
         text.setText(self.master.textBoxJp, text.for_display(file, data["jpText"]))

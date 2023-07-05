@@ -6,7 +6,7 @@ from typing import Union
 
 import textprocess
 
-TkTextBox = Union[tk.Text, tk.Entry]
+TkDisplaysText = Union[tk.Text, tk.Entry, tk.Label]
 
 
 class ColorManager:
@@ -121,8 +121,7 @@ class TextEditBox(tk.Text):
                     self.color.define(fullTag.split("=")[-1])
             offset += len(m[0])
         # Add the cleaned text
-        self.delete(1.0, tk.END)
-        self.insert(tk.END, re.sub(tagRe, "", text, flags=re.IGNORECASE))
+        setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE))
         # Apply tags
         for toTag in tagList:
             self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
@@ -181,10 +180,27 @@ def normalize(text: str, newline: str = "\n"):
     return f" {newline}".join([line.strip() for line in text.strip().split("\n")])
 
 
-def setText(widget: TkTextBox, text: str):
-    clear(widget)
-    widget.insert(0 if isinstance(widget, tk.Entry) else 1.0, text)
+def setText(widget: TkDisplaysText, text: str):
+    """Sets full text of supported widgets."""
+    if isinstance(widget, tk.Label):
+        widget.config(text=text)
+    else:
+        clearText(widget)
+        if isinstance(widget, tk.Entry):
+            widget.insert(0, text)
+        elif isinstance(widget, tk.Text):
+            widget.insert(1.0, text)
+        else:
+            raise ValueError
 
 
-def clear(widget: TkTextBox):
-    widget.delete(0 if isinstance(widget, tk.Entry) else 1.0, tk.END)
+def clearText(widget: TkDisplaysText):
+    """Clears all text from widget"""
+    if isinstance(widget, tk.Label):
+        widget.config(text="")
+    elif isinstance(widget, tk.Entry):
+        widget.delete(0, tk.END)
+    elif isinstance(widget, tk.Text):
+        widget.delete(1.0, tk.END)
+    else:
+        raise ValueError

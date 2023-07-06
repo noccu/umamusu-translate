@@ -180,6 +180,16 @@ def normalize(text: str, newline: str = "\n"):
     return f" {newline}".join([line.strip() for line in text.strip().split("\n")])
 
 
+def getText(widget: TkDisplaysText):
+    """Return the full text of supported widgets."""
+    if isinstance(widget, tk.Label):
+        return widget.cget("text")
+    elif isinstance(widget, tk.Entry):
+        return widget.get(0, tk.END)
+    elif isinstance(widget, tk.Text):
+        return widget.get(1.0, tk.END)
+
+
 def setText(widget: TkDisplaysText, text: str):
     """Sets full text of supported widgets."""
     if isinstance(widget, tk.Label):

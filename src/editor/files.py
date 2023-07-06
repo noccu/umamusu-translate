@@ -89,17 +89,18 @@ class FileManager:
         if saveAll:
             print("Saved all files")
 
-    def load_block(self, file: TranslationFile, block: int):
-        data = file.textBlocks[block]
+    def load_block(self, file: TranslationFile, idx: int):
+        """Loads a block by index. Note block data may not be available before this."""
+        block = file.textBlocks[idx]
 
         # Fill in the text boxes
-        text.setText(self.master.speakerJp, data.get("jpName", ""))
-        if data.get("jpName") in NAMES_BLACKLIST:
+        text.setText(self.master.speakerJp, block.get("jpName", ""))
+        if block.get("jpName") in NAMES_BLACKLIST:
             text.clearText(self.master.speakerEn)
             display.setActive(self.master.speakerEn, False)
         else:
             display.setActive(self.master.speakerEn, True)
-            en_name = data.get("enName", "")
+            en_name = block.get("enName", "")
             text.setText(self.master.speakerEn, en_name)
             if en_name:
                 self.master.speakerEn.config(bg=self.master.COLOR_WIN)
@@ -108,24 +109,24 @@ class FileManager:
 
         # Spinbox for text block duration
         text.clearText(self.master.blockDuration)
-        if "origClipLength" in data:
-            text.setText(self.master.blockDurationLabel, f"Text Duration ({data['origClipLength']})")
-        if "newClipLength" in data:
-            text.setText(self.master.blockDuration, data["newClipLength"])
+        if "origClipLength" in block:
+            text.setText(self.master.blockDurationLabel, f"Text Duration ({block['origClipLength']})")
+        if "newClipLength" in block:
+            text.setText(self.master.blockDuration, block["newClipLength"])
         else:
-            if "origClipLength" in data:
-                text.setText(self.master.blockDuration, data["origClipLength"])
+            if "origClipLength" in block:
+                text.setText(self.master.blockDuration, block["origClipLength"])
             else:
                 text.setText(self.master.blockDuration, "-1")
 
         display.setActive(self.master.textBoxJp, True)
-        text.setText(self.master.textBoxJp, text.for_display(file, data["jpText"]))
+        text.setText(self.master.textBoxJp, text.for_display(file, block["jpText"]))
         display.setActive(self.master.textBoxJp, False)
-        displayText = text.for_display(file, data["enText"])
+        displayText = text.for_display(file, block["enText"])
         self.master.textBoxEn.loadRichText(displayText)
 
         # Update choices button
-        cur_choices = data.get("choices")
+        cur_choices = block.get("choices")
         if cur_choices:
             self.master.extraText.cur_choices = cur_choices
             display.setActive(self.master.btnChoices, True)
@@ -136,7 +137,7 @@ class FileManager:
             self.master.btnChoices.config(bg=self.master.COLOR_BTN)
 
         # Update colored button
-        cur_colored = data.get("coloredText")
+        cur_colored = block.get("coloredText")
         if cur_colored:
             self.master.extraText.cur_colored = cur_colored
             display.setActive(self.master.btnColored, True)
@@ -145,10 +146,10 @@ class FileManager:
         else:
             display.setActive(self.master.btnColored, False)
             self.master.btnColored.config(bg=self.master.COLOR_BTN)
-        self.saveState.markBlockLoaded(data)
+        self.saveState.markBlockLoaded(block)
         self.master.spell_checker.check_spelling()
         self.master.preview.setText(displayText)
-        return data
+        return block
 
     def save_block(self, nav: "Navigator"):
         cur_file = nav.cur_file

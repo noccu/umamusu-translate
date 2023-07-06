@@ -136,17 +136,17 @@ class Editor:
             tk.Button(
                 frm_btns_side,
                 text="Process text",
-                command=lambda: self.textBoxEn.process_text(SimpleNamespace(state=0)),
+                command=self._evProcessText,
             ),
             tk.Button(
                 frm_btns_side,
                 text="Process text\n(clean newlines)",
-                command=lambda: self.textBoxEn.process_text(SimpleNamespace(state=1)),
+                command=lambda: self._evProcessText(redoNewlines=True),
             ),
             tk.Button(
                 frm_btns_side,
                 text="Process text\n(whole chapter)",
-                command=lambda: self.textBoxEn.process_text(SimpleNamespace(all=True)),
+                command=lambda: self._evProcessText(wholeFile=True),
             ),
             tk.Button(frm_btns_side, text="Translate speakers", command=self.tlNames),
             tk.Button(
@@ -205,8 +205,8 @@ class Editor:
         text_box_en.bind("<Control-i>", text_box_en.format_text)
         text_box_en.bind("<Control-b>", text_box_en.format_text)
         text_box_en.bind("<Control-C>", text_box_en.format_text)
-        text_box_en.bind("<Alt-f>", self.textBoxEn.process_text)
-        text_box_en.bind("<Alt-F>", self.textBoxEn.process_text)
+        text_box_en.bind("<Alt-f>", self._evProcessText)
+        text_box_en.bind("<Alt-F>", lambda e: self._evProcessText(e, redoNewlines=True))
         root.bind("<Control-f>", self.search.toggle)
         # text_box_en.bind("<Control-h>", AudioPlayer.listen)
         root.bind("<Control-p>", self.preview.toggle)
@@ -235,6 +235,19 @@ class Editor:
         #     AUDIO_PLAYER.dealloc()
         self.spell_checker.saveNewDict()
         self.root.quit()
+
+    def _evProcessText(self, event=None, wholeFile=False, redoNewlines=False):
+        """Event handler for external text process calls."""
+        if wholeFile:
+            self.fileMan.save_block(self.nav)
+            text.process_text(self.nav.cur_file, redoNewlines=False)
+            self.fileMan.load_block(self.nav.cur_file, self.nav.cur_block)
+        else:
+            txt = text.getText(self.textBoxEn)
+            txt = text.process_text(self.nav.cur_file, text.normalize(txt), redoNewlines=redoNewlines)
+            self.textBoxEn.loadRichText(txt)
+        return "break"
+
 
     def copy_block(self, event=None):
         self.root.clipboard_clear()

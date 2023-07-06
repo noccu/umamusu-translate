@@ -2,9 +2,10 @@ import re
 import tkinter as tk
 from tkinter import colorchooser
 from tkinter.font import Font
-from typing import Union
+from typing import Union, TYPE_CHECKING
 
-import textprocess
+if TYPE_CHECKING:
+    from common.types import TranslationFile
 
 TkDisplaysText = Union[tk.Text, tk.Entry, tk.Label]
 
@@ -146,18 +147,21 @@ class TextEditBox(tk.Text):
             offset += 1
         return "".join(text)
 
-    def process_text(self, file, block, event):
-        opts = {"redoNewlines": False, "replaceMode": "limit", "lineLength": -1, "targetLines": 99}
-        if getattr(event, "all", None):
-            opts["lineLength"] = 0
-            for block in file.textBlocks:
-                block["enText"] = textprocess.processText(file, block["enText"], opts)
-            proc_text = file.textBlocks[block].get("enText")
-        else:
-            opts["redoNewlines"] = True if event.state & 0x0001 else False
-            proc_text = textprocess.processText(file, normalize(self.get(1.0, tk.END)), opts)
-        setText(self, proc_text)
-        return "break"
+
+def process_text(file: "TranslationFile", text: str = None, redoNewlines: bool = False):
+    """Process given text or whole file (like module main) when no text given.
+    When whole file, assumes line lengths are correct and skips adjustment."""
+    import textprocess
+
+    opts = {"redoNewlines": redoNewlines, "replaceMode": "limit", "lineLength": -1, "targetLines": 99}
+    if text:
+        return textprocess.processText(file, text, opts)
+    else:
+        opts["lineLength"] = 0
+        for block in file.genTextContainers():
+            if len(block["enText"]) == 0 or "skip" in block:
+                continue
+            block["enText"] = textprocess.processText(file, block["enText"], opts)
 
 
 # https://github.com/python/cpython/issues/97928

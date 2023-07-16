@@ -36,7 +36,7 @@ async def startServer():
 
 class Translator:
     def __init__(self, client: server.WebSocketServerProtocol = None):
-        self.files = [args.src] if args.src else common.searchFiles(args.type, args.group, args.id, args.idx, changed = args.changed)
+        self.files = [args.src] if args.src else common.searchFiles(args.type, args.group, args.id, args.idx, targetSet=args.set, changed = args.changed)
 
         if USING_SERVER:
             self.client = client
@@ -77,12 +77,11 @@ class Translator:
                         text = textprocess.processText(file, entry['jpText'], {"redoNewlines": True})
                         entry['enText'] = textprocess.processText(file, await self.requestTl(text), {"lineLength": args.lineLength, "replaceMode": "all"})
             elif args.model == "sugoi":
-                entries = list(file.genTextContainers())
-                textArray = [textprocess.processText(file, entry['jpText'], {"redoNewlines": True}) for entry in entries]
-                resultArray = self.sugoi.translate(textArray)
-                for idx, entry in enumerate(entries):
+                for entry in file.genTextContainers():
                     if args.overwrite or not entry['enText']:
-                        entry['enText'] = textprocess.processText(file, resultArray[idx], {"lineLength": args.lineLength, "replaceMode": "all"})
+                        text = textprocess.processText(file, entry['jpText'], {"redoNewlines": True})
+                        result = self.sugoi.translate(text)
+                        entry['enText'] = textprocess.processText(file, result, {"lineLength": args.lineLength, "replaceMode": "all"})
             file.save()
         if USING_SERVER:
             await self.client.close()

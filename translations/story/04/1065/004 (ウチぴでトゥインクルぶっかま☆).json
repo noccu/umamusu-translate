@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "HP2VJP7ZOLOV624ZRSSOTSLTZ7BHJ3VN",
     "type": "story",
     "storyId": "041065004",
@@ -7,15 +7,16 @@
     "text": [
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――やぁ～、まぁじごめんね？　ウチすぐこくんよ～、\nあ、調子な？　でどう、限界突破の筋肉痛？",
-            "enText": "",
+            "enText": "――Oh man～, I'm really sorry okay? It's got me really \ndown too～, ah, how you feelin'? Thoughts on the \nmuscle soreness after that Limit Break?",
             "nextBlock": 2,
             "origClipLength": 268,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "よくなってきたよ",
-                    "enText": "",
+                    "enText": "I'm feeling better now",
                     "nextBlock": 2
                 }
             ],
@@ -36,18 +37,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "結局、あの後ダイタクヘリオスと併走（？）することになり……\n全身が大変なことになったため、少しの間仕事を休んでいた。",
-            "enText": "",
+            "enText": "After that I ended up trying to use Parallel Running(?) \nwith Daitaku Helios…… and it didn't end well for \nme, so I had to take a few days off.",
             "nextBlock": 3,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "おかげで君の資料も色々見られたし",
-                    "enText": "",
+                    "enText": "I looked over your track record",
                     "nextBlock": 3
                 },
                 {
                     "jpText": "おかげで貴方の資料も色々見られたし",
-                    "enText": "",
+                    "enText": "I looked over your track record",
                     "nextBlock": 3
                 }
             ],
@@ -66,20 +68,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "え！　なんそれ！？　照れんだが～！\nアレっしょ？　ウマトックでプチバズッた落とし穴のやつ！？",
-            "enText": "",
+            "enText": "Eh! What's that!? Sounds kinda embarrassing～! Is it that? They \ncreated a bit of a buzz on UmaTok before, those black disks that \ncan play music, right?",
             "nextBlock": 4,
             "origClipLength": 237,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "いや、模擬レースの映像な",
-                    "enText": "",
+                    "enText": "No, like results of your mock race",
                     "nextBlock": 4
                 },
                 {
                     "jpText": "いや、模擬レースの映像ね",
-                    "enText": "",
+                    "enText": "No, like results of your mock race",
                     "nextBlock": 4
                 }
             ],
@@ -100,13 +103,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "そこでわかったのは……彼女は決して弱くない。むしろ\n素晴らしいスピードを持つ実力派――勝てる子だということだ。",
-            "enText": "",
+            "enText": "That was where I recognized it…… that she wasn't \nweak. Rather, she had magnificent speed and potential―― \nshe was someone who could win.",
             "nextBlock": 5,
             "origClipLength": 116,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（彼女を、レースで勝たせたい）",
-                    "enText": "",
+                    "enText": "(I want her to win races)",
                     "nextBlock": 5
                 }
             ],
@@ -121,20 +125,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "ソレどこにあがってんの？　ウマスタ？　ウマッター？\nウチも見たい～つか見るよりやっか、模擬レース！　集めっか～。",
-            "enText": "",
+            "enText": "Where'd they upload that? Umasta? Umatter? I want \nto see it too～ actually, I'd rather run it again, \na mock race! Should we send some invites～?",
             "nextBlock": 6,
             "origClipLength": 277,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "……むしろ選抜レースに出ないか？",
-                    "enText": "",
+                    "enText": "……How about a Selection Race?",
                     "nextBlock": 6
                 },
                 {
                     "jpText": "……むしろ選抜レースに出ない？",
-                    "enText": "",
+                    "enText": "……How about a Selection Race?",
                     "nextBlock": 6
                 }
             ],
@@ -153,15 +158,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "おけまる水産！！",
-            "enText": "",
+            "enText": "'kay-check-roger!!",
             "nextBlock": 7,
             "origClipLength": 50,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "即答！？",
-                    "enText": "",
+                    "enText": "So quick!",
                     "nextBlock": 7
                 }
             ],
@@ -176,11 +182,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "楽しそーだし！　てかよく考えたらウチ遊びすぎな☆\nトレーナーおらんとデビュれんの忘れるとかウケ！",
-            "enText": "",
+            "enText": "Sounds fun! Actually, when I think about it, I've been playing \ntoo much☆ Forgot I needed a trainer to debut, hilarious!",
             "nextBlock": 8,
             "origClipLength": 245,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 22,
@@ -196,15 +203,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "……え、てか待って？　ウチヤバイこと気づいた！？\nトレぴって……トレーナーの略じゃね？　トレーナーじゃね！？",
-            "enText": "",
+            "enText": "……Eh, wait a sec? I think I just noticed something crazy!? \nTrai-pi…… is short for trainer, right? Aren't you a trainer!?",
             "nextBlock": 9,
             "origClipLength": 307,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "そうだよ！？！？",
-                    "enText": "",
+                    "enText": "You just noticed!?",
                     "nextBlock": 9
                 }
             ],
@@ -223,20 +231,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "なんだ～。じゃあウチ、トレぴの担当なるでいーじゃん☆\nもーマブだし♪　ウチのこと嫌いじゃないっしょぉ～？",
-            "enText": "",
+            "enText": "Whaddaya know～. Then Trai-pi just needs to be my trainer☆ We're \nalready best buds♪ And it's not like you hate me, right～?",
             "nextBlock": 10,
             "origClipLength": 260,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "でもまだ君に選ばれてない",
-                    "enText": "",
+                    "enText": "But you haven't chosen me yet",
                     "nextBlock": 10
                 },
                 {
                     "jpText": "でもまだ貴方に選ばれてない",
-                    "enText": "",
+                    "enText": "But you haven't chosen me yet",
                     "nextBlock": 10
                 }
             ],
@@ -251,20 +260,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "へ？",
-            "enText": "",
+            "enText": "Eh?",
             "nextBlock": 11,
             "origClipLength": 24,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "俺は、君の“トレーナー”になりたいんだ",
-                    "enText": "",
+                    "enText": "I'm aiming to be your \"trainer\"",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "私は、貴方の“トレーナー”になりたいの",
-                    "enText": "",
+                    "enText": "I'm aiming to be your \"trainer\"",
                     "nextBlock": 11
                 }
             ],
@@ -279,11 +289,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "……！",
-            "enText": "",
+            "enText": "……！",
             "nextBlock": 12,
             "origClipLength": 53,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 33,
@@ -295,20 +306,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "ごめ、どゆこと？　なに？？　マジなに？\n契約すりゃなれね？　マインド的なこと？？",
-            "enText": "",
+            "enText": "Sorry, what's that mean? Huh?? Da heck? \nIt needs more than a contract? Is it a state of mind??",
             "nextBlock": 13,
             "origClipLength": 197,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "そう。もし君を今より楽しくできたら……",
-                    "enText": "",
+                    "enText": "Right. If I can make it more fun……",
                     "nextBlock": 13
                 },
                 {
                     "jpText": "そう。もし貴方を今より楽しくできたら……",
-                    "enText": "",
+                    "enText": "Right. If I can make it more fun……",
                     "nextBlock": 13
                 }
             ],
@@ -329,18 +341,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "夢を叶えるその道を、一緒に走るに値する存在になれるはずだ。\n彼女が目指す“生涯フェス”、その景色を見せられたら――",
-            "enText": "",
+            "enText": "I need to show her that running with me is the \nway to fulfill her dream. If I can show her that \nit'll be a \"never-ending festival\" then――",
             "nextBlock": 14,
             "origClipLength": 119,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "俺をトレーナーにしてくれ",
-                    "enText": "",
+                    "enText": "Make me your trainer",
                     "nextBlock": 14
                 },
                 {
                     "jpText": "私をトレーナーにして",
-                    "enText": "",
+                    "enText": "Make me your trainer",
                     "nextBlock": 14
                 }
             ],
@@ -355,11 +368,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "……ん、わかった。あーいやわかってねーケド？\n楽しければウチはなんでもいーし！　じゃ、よろで～☆",
-            "enText": "",
+            "enText": "……Hmm, got it. Orrrr, maybe I don't? As long as it's fun, \nI don't mind either way! Right, lookin' forward to it～☆",
             "nextBlock": 15,
             "origClipLength": 279,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 17,
@@ -377,9 +391,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして、次の選抜レースに向けてダイタクヘリオスの\nトレーニングを見ることになった。そして――",
-            "enText": "",
+            "enText": "And so, in preparation for the next Selection Race, \nI watched over Daitaku Helios' training. And then――",
             "nextBlock": 16,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 25,
@@ -391,11 +406,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――おお～っ！　盛り上がってんねー☆\nみんなメラってるし！　ヤバ楽しそー！",
-            "enText": "",
+            "enText": "――Oooooh～! Things are startin' to heat up―☆! \nEveryone's on fire! Crazy awesome!",
             "nextBlock": 17,
             "origClipLength": 213,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 60,
@@ -411,11 +427,12 @@
         },
         {
             "jpName": "中堅トレーナーA",
-            "enName": "",
+            "enName": "Mid-rank Trainer A",
             "jpText": "ダイタクヘリオスにも、指導者がついたみたいね。\nけどあのトレーナー……彼女をコントロールできるのかしら？",
-            "enText": "",
+            "enText": "Looks like Daitaku Helios has an instructor now. \nBut that trainer…… can they properly keep her under control?",
             "nextBlock": 18,
             "origClipLength": 287,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 12,
@@ -431,20 +448,21 @@
         },
         {
             "jpName": "新人トレーナーA",
-            "enName": "",
+            "enName": "Rookie Trainer A",
             "jpText": "きっと暴走して終わりだよ。あの子はどうしても、その時楽しい\nほうに流されてしまう……まともにレースできるわけがない。",
-            "enText": "",
+            "enText": "It's over as soon as she goes wild. That girl \nwill just end up doing whatever is fun at the \ntime…… I don't think she can race seriously.",
             "nextBlock": 19,
             "origClipLength": 264,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "……ヘリオス。教えたこと、いけそうか？",
-                    "enText": "",
+                    "enText": "……Helios, remember what I told you?",
                     "nextBlock": 19
                 },
                 {
                     "jpText": "……ヘリオス。教えたこと、いけそう？",
-                    "enText": "",
+                    "enText": "……Helios, remember what I told you?",
                     "nextBlock": 19
                 }
             ],
@@ -459,20 +477,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "うぇいよー！\n“DJヘリオスぽぽぽぽーん”ね☆",
-            "enText": "",
+            "enText": "Wei, yeah! \n\"DJ Helios goes Boom boom boom!\" right☆?",
             "nextBlock": 20,
             "origClipLength": 132,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "“場の空気を読む”な！？",
-                    "enText": "",
+                    "enText": "\"Read the mood\", right!?",
                     "nextBlock": 20
                 },
                 {
                     "jpText": "“場の空気を読む”ね！？",
-                    "enText": "",
+                    "enText": "\"Read the mood\", right!?",
                     "nextBlock": 20
                 }
             ],
@@ -487,11 +506,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――ピークまで笑わんってどゆこと～～！？",
-            "enText": "",
+            "enText": "―Don't laugh until you're at the peak!? \nWhat does that even mean～～!?",
             "nextBlock": 21,
             "origClipLength": 112,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 25,
@@ -509,18 +529,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "これまで彼女は、その時その時の楽しさを最優先し、ただただ\n突っ走ってきた。これでは“レース”をしているとは言えない。",
-            "enText": "",
+            "enText": "Until now, she's run while only focused on the fun in the moment. \nYou can't really call that a \"Race\".",
             "nextBlock": 22,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "1番楽しい場面まで我慢するんだ",
-                    "enText": "",
+                    "enText": "You need to hold back until then",
                     "nextBlock": 22
                 },
                 {
                     "jpText": "1番楽しい場面まで我慢するの",
-                    "enText": "",
+                    "enText": "You need to hold back until then",
                     "nextBlock": 22
                 }
             ],
@@ -535,15 +556,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "ムリめ！　だって全部めっちゃ楽しいし！\n我慢とかナシよりのトゲナシトゲトゲっしょ！？",
-            "enText": "",
+            "enText": "Impossible! 'Cuz it's all super fun! \nLet's not do the whole holding back thing, no way no way no way!",
             "nextBlock": 23,
             "origClipLength": 206,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "けど、クラブではどうだった？",
-                    "enText": "",
+                    "enText": "What about in the club?",
                     "nextBlock": 23
                 }
             ],
@@ -562,11 +584,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "んえ？",
-            "enText": "",
+            "enText": "Eh?",
             "nextBlock": 24,
             "origClipLength": 30,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 50,
@@ -582,11 +605,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "『お！　きたきた～っっっ！！\nウチこの曲めっちゃ好きー！！　踊ろっ！』",
-            "enText": "",
+            "enText": "『Oh! It's here, it's here～～!! \nI really like this song!! Let's dance!』",
             "nextBlock": 25,
             "origClipLength": 151,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 49,
@@ -620,9 +644,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "DJはフロアのテンションをよく見ている。徐々にテンポを上げ、\n客がノッてきたところで最大の盛り上がりを演出する――",
-            "enText": "",
+            "enText": "The DJ was gauging the mood on the floor. They \nwould gradually increase the tempo in reaction \nto the crowd's excitement to maximize it――",
             "nextBlock": 26,
             "origClipLength": 129,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 67,
@@ -636,9 +661,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "――“波”を作っているのだ。一本調子よりも、抑揚のあるほうが\nテンションの幅が大きく、“楽しさ”の爆発力も高くなる。",
-            "enText": "",
+            "enText": "――Almost like they were creating a \"wave\". Rather than using only \none tone, they chose to fuse and mix several, creating a swirl \nand surge. That kind of \"fun\".",
             "nextBlock": 27,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 141,
@@ -652,13 +678,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "レースでも同じだ。彼女がいい走りをすれば、競走相手も\nノッてくる。その相乗効果は、レース自体を更に盛り上げるだろう。",
-            "enText": "",
+            "enText": "Races were the same. If she runs well, her opponents will follow \nsuit. That, in itself, should make the race more exciting for her.",
             "nextBlock": 28,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "ピーク……1番いい波にのろう！",
-                    "enText": "",
+                    "enText": "The Peak…… catch the biggest wave!",
                     "nextBlock": 28
                 }
             ],
@@ -677,11 +704,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "……！！！！\nいい波……のってんね！？！？",
-            "enText": "",
+            "enText": "……!!!! \nA big wave…… count me in!!!!",
             "nextBlock": 29,
             "origClipLength": 176,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 39,
@@ -697,11 +725,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "……！　のりてーーっ！\nウチやる！　マジ笑わん！！",
-            "enText": "",
+            "enText": "……! Catch a wave! I'll do it! \nSeriously, I won't laugh!!",
             "nextBlock": 30,
             "origClipLength": 137,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 48,
@@ -717,15 +746,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――フロア見てテンポ合わす、んで空気も読む！\nもっと楽しくなるために！！",
-            "enText": "",
+            "enText": "――Scope out the floor, match the tempo, and read the mood! \nSo I can make it more fun!!",
             "nextBlock": 31,
             "origClipLength": 171,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "その通り！",
-                    "enText": "",
+                    "enText": "That's it!",
                     "nextBlock": 31
                 }
             ],
@@ -748,11 +778,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "っしゃあ、まんじ上等！！\nぶっかま隊長ヘリオス、いってきま！！",
-            "enText": "",
+            "enText": "Alright, then for that first-class thrill! \nBlitz Captain Helios, sallies forth!!",
             "nextBlock": 32,
             "origClipLength": 175,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 73,
@@ -768,11 +799,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――うらあああああああ！！",
-            "enText": "",
+            "enText": "――Uraaaaaaaaaaah!!",
             "nextBlock": 33,
             "origClipLength": 113,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 52,
@@ -784,11 +816,12 @@
         },
         {
             "jpName": "ウマ娘A",
-            "enName": "",
+            "enName": "Uma Musume A",
             "jpText": "うわーきたきた、ヘリオス！\nこの子がいるとレースが荒れるんだよね！",
-            "enText": "",
+            "enText": "Uwah, there goes Helios! \nIf that girl is here, then this race is gonna be wild!",
             "nextBlock": 34,
             "origClipLength": 158,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 170,
@@ -800,11 +833,12 @@
         },
         {
             "jpName": "ウマ娘B",
-            "enName": "",
+            "enName": "Uma Musume B",
             "jpText": "どうせすぐバテるし放っておくか。\n他に要注意なのは――",
-            "enText": "",
+            "enText": "She'll just wear herself out eventually. \nSo the ones I need to worry about are――",
             "nextBlock": 35,
             "origClipLength": 180,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 192,
@@ -816,15 +850,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "（あー、萎えてんな？\nなるなる、ここはカマさんでスローね、りょ！）",
-            "enText": "",
+            "enText": "(Ahー, they're falling back? \nI see, I see, so the beat is slow, huh? Got it!)",
             "nextBlock": 36,
             "origClipLength": 219,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "（……よし、コントロールできてる！）",
-                    "enText": "",
+                    "enText": "(……Alright, she's controlling herself!)",
                     "nextBlock": 36
                 }
             ],
@@ -845,13 +880,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "ダイタクヘリオスは集中できている。しかも周囲は、\n彼女が“レースをしている”ことにまだ気づいていない……。",
-            "enText": "",
+            "enText": "Daitaku Helios was focused. And the others don't seem \nto have realized that \"she's racing\" yet……",
             "nextBlock": 37,
             "origClipLength": 114,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（ヘリオス……かませ！！）",
-                    "enText": "",
+                    "enText": "(Helios…… go for it!!)",
                     "nextBlock": 37
                 }
             ],
@@ -866,11 +902,12 @@
         },
         {
             "jpName": "ウマ娘A",
-            "enName": "",
+            "enName": "Uma Musume A",
             "jpText": "よーし、そろそろ仕掛けて……！\nって、ちょ、ちょっと待って！？",
-            "enText": "",
+            "enText": "Alright, it's about time I make a move……! \nHuh, wha-what's going on!?",
             "nextBlock": 38,
             "origClipLength": 160,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 165,
@@ -882,11 +919,12 @@
         },
         {
             "jpName": "ウマ娘B",
-            "enName": "",
+            "enName": "Uma Musume B",
             "jpText": "ヘリオス、全然ペースが落ちない！？\n……え、ちょ、ちょ、え、嘘でしょ……！？",
-            "enText": "",
+            "enText": "Helios' pace isn't dropping at all!? \n……Eh, wait, wait, eh, no way……!?",
             "nextBlock": 39,
             "origClipLength": 205,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 217,
@@ -902,11 +940,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "（きたきたきたきたあっ！！　ここだ！\nいい波きたーーーー！　したら……！）",
-            "enText": "",
+            "enText": "(It's here, it's here, it's here!! \nThis is it! The big waveーーーー! Then……!)",
             "nextBlock": 40,
             "origClipLength": 227,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 239,
@@ -922,11 +961,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "ウケるしか～～～～！\nうわはははははっっ！！",
-            "enText": "",
+            "enText": "I just need to catch it～～～～! \nUwahahahahahaaaa!!",
             "nextBlock": 41,
             "origClipLength": 178,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 121,
@@ -938,11 +978,12 @@
         },
         {
             "jpName": "みんな",
-            "enName": "",
+            "enName": "Everyone",
             "jpText": "えええええええ～～～～！？",
-            "enText": "",
+            "enText": "Eeeeeeeeh～～～～!?",
             "nextBlock": 42,
             "origClipLength": 103,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 115,
@@ -954,11 +995,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "（ヤバ、ウチ超ビッグウェーブ起こしてね！？\nくあ～～～～っ、ヤバ、MAXたのぴ～～～～！！）",
-            "enText": "",
+            "enText": "(Wild, I made a super huge wave!? \nKuuuu～～～～, crazy, fun to the MAX～～～～!!)",
             "nextBlock": 43,
             "origClipLength": 259,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 271,
@@ -972,9 +1014,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "『もし君を今より楽しくできたら……\n俺をトレーナーにしてくれ』",
-            "enText": "",
+            "enText": "『If I can make it more fun…… \nthen make me your trainer』",
             "nextBlock": 44,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 98,
@@ -988,9 +1031,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "『もし貴方を今より楽しくできたら……\n私をトレーナーにして』",
-            "enText": "",
+            "enText": "『If I can make it more fun…… \nthen make me your trainer』",
             "nextBlock": 45,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 97,
@@ -1002,11 +1046,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "（ははっ……こゆこと！　りょ、りょりょりょ！\nてかウチの未来……トレぴがアゲまくったら最強じゃね！？）",
-            "enText": "",
+            "enText": "(Hahaa…… this is what they meant, huh! Yeah, yeah yeah yeah! \nWait, if this is what's on deck…… then wouldn't hangin' with \nTrai-pi be the best!?)",
             "nextBlock": 46,
             "origClipLength": 292,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 305,
@@ -1018,11 +1063,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――んで……生涯フェスるしかっしょお！！\nうるあああああああああ！！！！！",
-            "enText": "",
+            "enText": "――And then…… it really would be a never-ending festival!! \nUraaaaaaaaaaaa!!!!!",
             "nextBlock": 47,
             "origClipLength": 241,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 253,
@@ -1038,15 +1084,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――1着～～～っ！！　っしゃあ☆\n最高！　アゲ！　マジまんじ！　トレぴうぇ～い！！",
-            "enText": "",
+            "enText": "――First place～～～!! Hell yeah☆ \nAwesome! Crazy! Seriously lit! Trai-pi we～i!!",
             "nextBlock": 48,
             "origClipLength": 234,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "うぇ～い、おめでとう！",
-                    "enText": "",
+                    "enText": "We～i, congrats!",
                     "nextBlock": 48
                 }
             ],
@@ -1065,15 +1112,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "あざまる☆　てかもうさ、ウチとトレぴでさ！\nトゥインクル・シリーズいち騒ぐしかねーな！？",
-            "enText": "",
+            "enText": "Got that right☆ Then, up next for me and Trai-pi! \nCan't be anything but the Twinkle Series, right!?",
             "nextBlock": 49,
             "origClipLength": 207,
+            "voiceIdx": 36,
             "choices": [
                 {
                     "jpText": "それって……！",
-                    "enText": "",
+                    "enText": "That means……!",
                     "nextBlock": 49
                 }
             ],
@@ -1092,11 +1140,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "ウチのことガチよろでオナシャス、トレーナー☆\nあ、ハンコいるっけ？　写真加工おけ？",
-            "enText": "",
+            "enText": "Seriously, lookin' forward to it, Trainer☆ \nAh, still need my seal? Photo ID, okay?",
             "nextBlock": 50,
             "origClipLength": 201,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 39,
@@ -1114,9 +1163,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして……明るく、騒がしく、何より楽しい――パリピウマ娘\nダイタクヘリオスと、トレーナー契約を結んだのだった。",
-            "enText": "",
+            "enText": "And so…… I formed a trainer contract with Daitaku Helios, \na bright, lively, fun―loving―― party Uma Musume.",
             "nextBlock": 51,
             "origClipLength": 118,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 94,
@@ -1128,20 +1178,21 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――じゃ、今日もトレーニングしゃ～す☆\nしゃす☆　しゃしゃしゃ～す☆",
-            "enText": "",
+            "enText": "――Right, on to today's training, let's move it☆ \nMove it☆ Move it move it☆",
             "nextBlock": 52,
             "origClipLength": 157,
+            "voiceIdx": 38,
             "choices": [
                 {
                     "jpText": "併走相手を紹介するぞ",
-                    "enText": "",
+                    "enText": "I'll introduce your training partner",
                     "nextBlock": 52
                 },
                 {
                     "jpText": "併走相手を紹介するね",
-                    "enText": "",
+                    "enText": "I'll introduce your training partner",
                     "nextBlock": 52
                 }
             ],
@@ -1160,11 +1211,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "うぇ～い！　今日は誰ちゃん？　陰キャ？　陽キャ？　ウェイ？\nやりらふぃー？　なんでもカモ――",
-            "enText": "",
+            "enText": "We～i! Who's it today? A shadow? A local? Wei? \nA rough-houser? Whoever it is, come on――",
             "nextBlock": 53,
             "origClipLength": 179,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 50,
@@ -1180,11 +1232,12 @@
         },
         {
             "jpName": "ダイイチルビー",
-            "enName": "",
+            "enName": "Daiichi Ruby",
             "jpText": "――……初めまして、ダイイチルビーです。\n本日はよろしくお願いいたします。",
-            "enText": "",
+            "enText": "――……Nice to meet you, my name is Daiichi Ruby. \nI look forward to working with you today.",
             "nextBlock": 54,
             "origClipLength": 226,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 177,
@@ -1208,11 +1261,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "――……！！！！！！",
-            "enText": "",
+            "enText": "――……！！！！！！",
             "nextBlock": 55,
             "origClipLength": 130,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 141,
@@ -1240,15 +1294,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "ムリ。",
-            "enText": "",
+            "enText": "I can't.",
             "nextBlock": 56,
             "origClipLength": 53,
+            "voiceIdx": 42,
             "choices": [
                 {
                     "jpText": "ヘリオス！？",
-                    "enText": "",
+                    "enText": "Helios!?",
                     "nextBlock": 56
                 }
             ],
@@ -1275,11 +1330,12 @@
         },
         {
             "jpName": "ダイイチルビー",
-            "enName": "",
+            "enName": "Daiichi Ruby",
             "jpText": "……あの？",
-            "enText": "",
+            "enText": "……excuse me?",
             "nextBlock": 57,
             "origClipLength": 104,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 116,
@@ -1303,15 +1359,16 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "しゅき。",
-            "enText": "",
+            "enText": "Luv.",
             "nextBlock": 58,
             "origClipLength": 44,
+            "voiceIdx": 44,
             "choices": [
                 {
                     "jpText": "……………………んっ！？",
-                    "enText": "",
+                    "enText": "……………………hm!?",
                     "nextBlock": 58
                 }
             ],
@@ -1338,11 +1395,12 @@
         },
         {
             "jpName": "ダイタクヘリオス",
-            "enName": "",
+            "enName": "Daitaku Helios",
             "jpText": "好きっ！　惚れた！　めぇ～～っちゃタイプ！！\nウチのしゅきぴになってください！！",
-            "enText": "",
+            "enText": "Love! Je t'aime! Toooo～～tally my type!! \nWould you be my number one main squeeze!?",
             "nextBlock": 59,
             "origClipLength": 207,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 219,
@@ -1366,11 +1424,12 @@
         },
         {
             "jpName": "ウマ娘たち",
-            "enName": "",
+            "enName": "Uma Musume",
             "jpText": "えええええええええええええええええ！！",
-            "enText": "",
+            "enText": "Eeeeeeeeeeeeeeeeeeeeeeeeeeeh!?",
             "nextBlock": -1,
             "origClipLength": 107,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 119,
@@ -1389,5 +1448,5 @@
             "blockIdx": 59
         }
     ],
-    "modified": 1678928443
+    "modified": 1674633157
 }

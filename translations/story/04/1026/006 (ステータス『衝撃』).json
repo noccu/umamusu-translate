@@ -1,17 +1,20 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "K4BDJ5UH5LPYY64TLIE42THCQIE3N6N5",
     "type": "story",
     "storyId": "041026006",
-    "title": "ステータス『衝撃』",
+    "title": "Status: \"Shock\"",
+    "translator": "KevinVG207",
+    "tlVersion": "1.0",
     "text": [
         {
             "jpName": "",
             "enName": "",
             "jpText": "休日。日用品の買い出しのため、\r\nショッピングモールを歩いていると――",
-            "enText": "It was a holiday. I was walking through a \nshopping mall to buy some daily necessities.",
+            "enText": "Today is a day off, the perfect time to head to the local \nshopping mall for some grocery shopping. Except...",
             "nextBlock": 2,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 101,
@@ -29,9 +32,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……………………。",
-            "enText": "…",
+            "enText": "......",
             "nextBlock": 3,
             "origClipLength": 49,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 60,
@@ -49,18 +53,19 @@
             "jpName": "",
             "enName": "",
             "jpText": "ショッピングモールにあるゲームセンターの前で、\r\n立ち尽くしているミホノブルボンを見かけた。",
-            "enText": "I saw Mihono Bourbon standing in front of a \ngame center in a shopping mall.",
+            "enText": "I found Mihono Bourbon standing motionless \nin front of the arcade inside the mall.",
             "nextBlock": 4,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "……ブルボン？どうした？",
-                    "enText": "… Bourbon? What's up?",
+                    "enText": "What are you up to, Bourbon?",
                     "nextBlock": 4
                 },
                 {
                     "jpText": "……ブルボン？どうしたの？",
-                    "enText": "… Bourbon? What's up with that?",
+                    "enText": "What are you up to, Bourbon?",
                     "nextBlock": 4
                 }
             ],
@@ -81,9 +86,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……『社会性の向上』のため、ゲームセンターへ\r\n見学に訪れたのですが、入店を『躊躇』しています。",
-            "enText": "… I visited a video game arcade to \n\"improve my social skills,\" but I'm \n\"hesitant\" to enter.",
+            "enText": "I went to investigate the arcade in an attempt to \nimprove my social skills. But I'm hesitant to enter...",
             "nextBlock": 5,
             "origClipLength": 222,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 217,
@@ -101,9 +107,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "詳しく話を聞いてみると、どうやら『世間話』を体得するため、\r\nクラスで流行りのゲームセンターを訪れたらしい。しかし――",
-            "enText": "When I asked her about it in detail, she told me that she \nvisited a popular game center in her class in order to learn how \nto make small talk. But…",
+            "enText": "I asked her for more details, and she explained that she \nwanted to master a social skill known as 'small talk' at \nthis arcade, which is popular among her classmates.",
             "nextBlock": 6,
             "origClipLength": 121,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 70,
@@ -117,9 +124,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "――私は機械に触れると高い確率で、破壊してしまうのです。\r\n店内を視認し、機械の大きさにリスクマネジメントが発動しました。",
-            "enText": "—I have a high probability of touching a machine and destroying \nit. Visually inspecting the store, my risk management was \ntriggered by the size of the machine.",
+            "enText": "Seeing the size of those arcade machines triggered my \nrisk management system. There is a high risk of the \nmachines breaking if I were to touch them.",
             "nextBlock": 7,
             "origClipLength": 310,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 176,
@@ -137,9 +145,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "……つまりゲーム機を壊してしまいそうで怖いということだろうか。\r\nそれなら――",
-            "enText": "… Does that mean you're afraid you're \ngoing to break the game console? Then—",
+            "enText": "So she's afraid of breaking the machines. \nIn that case...",
             "nextBlock": 8,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 106,
@@ -153,9 +162,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "私的な社会見学にご協力いただき、感謝します。",
-            "enText": "Thank you for your cooperation \nwith my personal social tour.",
+            "enText": "I appreciate your help with my observation.",
             "nextBlock": 9,
             "origClipLength": 122,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 45,
@@ -169,13 +179,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "ミホノブルボンの代わりに、ゲーム機の操作を買って出て、\r\n見学に付き添うことにした。",
-            "enText": "In place of Mihono Bourbon, I decided to take \nover the operation of the game console and \naccompany her on the tour.",
+            "enText": "I decided to help her out by playing the games for her, \nso she could observe in peace.",
             "nextBlock": 10,
             "origClipLength": 99,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "せっかくだから、今日は楽しもう！",
-                    "enText": "Since we're here, let's have some fun today!",
+                    "enText": "Let's just enjoy ourselves today!",
                     "nextBlock": 10
                 }
             ],
@@ -192,9 +203,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "オーダーを受理しました。『今日は楽しむ』を開始します。",
-            "enText": "Order accepted. You may now \nbegin \"Enjoy Today\".",
+            "enText": "Order accepted. Starting 'enjoy ourselves' procedure.",
             "nextBlock": 11,
             "origClipLength": 148,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 77,
@@ -212,9 +224,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "こんな調子でミホノブルボンの社会見学は始まり――",
-            "enText": "This is how Mihono Bourbon's \nfield trip began.",
+            "enText": "And thus started her observation.",
             "nextBlock": 12,
             "origClipLength": 76,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 87,
@@ -226,11 +239,12 @@
         },
         {
             "jpName": "じゃんけんマシーン",
-            "enName": "RPS Machine",
+            "enName": "Rock Paper Scissors Machine",
             "jpText": "じゃんけんぽんっ♪　負けだ～！",
-            "enText": "Rock, paper, scissors. You lose!",
+            "enText": "Rock, paper, scissors! \nYou lose!",
             "nextBlock": 13,
             "origClipLength": 127,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 198,
@@ -244,9 +258,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "1勝9敗、マスターの幸福度が急激に低下していることを確認。\r\n甘味にはリラックス効果があります。アイスクリームを食べますか？",
-            "enText": "One win and nine losses, confirming that the master's happiness \nlevel is rapidly declining. Sweet taste has a relaxing effect. \nWould you like some ice cream?",
+            "enText": "1 win, 9 losses. I detect a sudden negative change in your \nmood, Master. Sweet foods have a relaxing effect. \nHow about getting some ice cream?",
             "nextBlock": 14,
             "origClipLength": 328,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 120,
@@ -262,11 +277,12 @@
         },
         {
             "jpName": "スロットゲーム",
-            "enName": "Slot Game",
+            "enName": "Slot Machine",
             "jpText": "チャラララララ……大成功～！",
-            "enText": "Challah challah… Great success~!",
+            "enText": "Ding-ding-ding! You win the jackpot!",
             "nextBlock": 15,
             "origClipLength": 171,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 195,
@@ -284,9 +300,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "コインの大量排出を確認。\r\n……エラーでしょうか？",
-            "enText": "Confirmed large amount of coins \nejected. Is it a… error?",
+            "enText": "I detect a huge output of coins from the machine. \nDid it break?",
             "nextBlock": 16,
             "origClipLength": 134,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 145,
@@ -302,11 +319,12 @@
         },
         {
             "jpName": "パンチングマシーン",
-            "enName": "Punching Machine",
+            "enName": "Boxing Machine",
             "jpText": "1万6000点！　ヤッター、怪獣をぶっ飛ばしたわ！",
-            "enText": "Sixteen thousand points! Yatter, \nI blew the Kaiju away!",
+            "enText": "16,000 points! Hooray, you sent the monster flying!",
             "nextBlock": 17,
             "origClipLength": 149,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 184,
@@ -324,9 +342,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "マスターのパンチ力は1万6000点と確認。\r\nデータログに残します。なお、単位は不明。",
-            "enText": "Master's punching power is confirmed as \n16,000 points. Leave it in the data log. Note \nthat the unit is unknown.",
+            "enText": "Determining Master's punching strength as 16,000. \nI am trying to log the value, but what unit of \nmeasurement is this?",
             "nextBlock": 18,
             "origClipLength": 237,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 261,
@@ -344,9 +363,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "少しズレてはいるが、ミホノブルボンなりにゲームセンターを\r\n満喫しているようだった。",
-            "enText": "She was a little off, but she seemed to be \nenjoying the arcade in her own way.",
+            "enText": "Even though she was still a bit disconnected, \nshe was still satisfied at the end of the day.",
             "nextBlock": 19,
             "origClipLength": 99,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 110,
@@ -364,9 +384,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "せっかくなので1つくらい遊んでみてほしい。\r\nそう思い、彼女にもできそうなゲームを探したところ――",
-            "enText": "I wanted her to try playing at least \none of these games. So I looked for \na game that she could play.",
+            "enText": "Yet, I couldn't call it a day without having <i>her</i> \ntry at least one game.",
             "nextBlock": 20,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 119,
@@ -384,18 +405,19 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "クレーンゲームを一緒にプレイ、ですか。しかし、やはり壊れる\r\n可能性があります。私は触れることができません。",
-            "enText": "Playing crane games together, huh? \nBut there is still the possibility \nof breakage. I can't touch it.",
+            "enText": "You want me to use the claw machine with you? \nSadly, I will not touch it. It might break if I do.",
             "nextBlock": 21,
             "origClipLength": 306,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "操作は俺がやるよ",
-                    "enText": "I'll take the controls.",
+                    "enText": "<i>I</i> will use the buttons.",
                     "nextBlock": 21
                 },
                 {
                     "jpText": "操作は私がやるよ",
-                    "enText": "I'll take the controls.",
+                    "enText": "<i>I</i> will use the buttons.",
                     "nextBlock": 21
                 }
             ],
@@ -416,9 +438,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "横からアームの位置を見て、指示を出して欲しい。\r\nそう続けると、納得したように頷いた。",
-            "enText": "I want you to look at the position of the arm \nfrom the side and give me instructions. When \nI continued, she nodded her head in agreement.",
+            "enText": "I told her to look at the claw from the side of the \nmachine and give me instructions. She gave me \nan understanding nod.",
             "nextBlock": 22,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 332,
@@ -436,9 +459,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "オーダーを受理しました。\r\n正確な測定を行い、マスターをフォローします。",
-            "enText": "Order accepted. Follow up with the master \nwith accurate measurements.",
+            "enText": "Order accepted. I will help you \nwith accurate measurements.",
             "nextBlock": 23,
             "origClipLength": 177,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 117,
@@ -456,9 +480,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "そんなわけで、500円3回プレイのコースを選択し\r\n手ごろな位置にあったうさぎの人形を狙うことにした。",
-            "enText": "That's why I chose the 500 yen three-player \ncourse and decided to aim for the rabbit doll \nthat was in a handy position.",
+            "enText": "With that, I chose to play 3 times for 500 yen. \nMy target is a small bunny plush that seems easy to get.",
             "nextBlock": 24,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 124,
@@ -472,9 +497,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "――22cm、そこでアームを停止してください。\r\n私の測定では、その位置でしたら98％人形が獲得できると――",
-            "enText": "—22cm, and stop the arm there. According to \nmy measurements, 98% of the dolls will be \nacquired in that position.",
+            "enText": "Please move the claw 22 centimeters across. \nAccording to my calculations, there should be \na 98% chance of success.",
             "nextBlock": 25,
             "origClipLength": 306,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 166,
@@ -492,9 +518,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "降りたアームは、計算通り人形の首周りを掴むが……。",
-            "enText": "The arm that came down grabbed the doll \naround the neck as calculated, but…",
+            "enText": "Just as planned, the claw lowered and gripped \nthe bunny around its neck. But then...",
             "nextBlock": 26,
             "origClipLength": 77,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 88,
@@ -512,9 +539,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ボトッ……）",
-            "enText": "(BOTTLES…)",
+            "enText": "*thump*",
             "nextBlock": 27,
             "origClipLength": 54,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 65,
@@ -532,9 +560,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "持ち上げられた拍子にアームをすり抜け、あっさり落ちてしまった。",
-            "enText": "As she was lifted, she slipped through \nthe arm and fell easily.",
+            "enText": "As the claw raised up, the bunny slipped through \nits grasp and fell right back down.",
             "nextBlock": 28,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 96,
@@ -552,9 +581,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……アームの脆弱性を確認。\r\n再計算します。",
-            "enText": "Check the vulnerability of the \n… arm. Recalculate.",
+            "enText": "Observed the claw's lack of strength. Recalculating...",
             "nextBlock": 29,
             "origClipLength": 126,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 137,
@@ -572,9 +602,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "プラン『押し出し』に変更しました。\r\nこれであれば、91％の可能性で人形は獲得――",
-            "enText": "I changed my plan to \"Pushing Out\". With \nthis, there is a 91% chance that the doll \nwill be acquired—",
+            "enText": "Switching to strategy 'push the bunny'. \nWith this strategy, the winning chance is 91%.",
             "nextBlock": 30,
             "origClipLength": 219,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 256,
@@ -592,9 +623,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ズッ……）",
-            "enText": "(Zzz…)",
+            "enText": "*bump*",
             "nextBlock": 31,
             "origClipLength": 52,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 63,
@@ -608,9 +640,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "…………アームの押し出し能力を過信していました。\r\n再計算します。",
-            "enText": "I overestimated the extrusion capacity of the \n… arm. I will recalculate.",
+            "enText": "I overestimated the claw's ability to push. \nRecalculating...",
             "nextBlock": 32,
             "origClipLength": 145,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 62,
@@ -628,9 +661,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "――これであれば75％の可能性で――",
-            "enText": "—there's a 75% chance that this is it.",
+            "enText": "According to my new strategy, the chance is 75%...",
             "nextBlock": 33,
             "origClipLength": 99,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 129,
@@ -648,9 +682,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ズッ……）",
-            "enText": "(Zzz…)",
+            "enText": "*slip*",
             "nextBlock": 34,
             "origClipLength": 52,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 63,
@@ -668,9 +703,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "………………。\r\n非常に困難なミッションであることを認識。",
-            "enText": "… Recognize that this is a \nvery difficult mission.",
+            "enText": "...... \nDetermined that this is a near-impossible mission...",
             "nextBlock": 35,
             "origClipLength": 189,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 200,
@@ -688,9 +724,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "あの手この手で奮闘したが、\r\n残念ながら人形を取ることはできなかった……。",
-            "enText": "I struggled to get the doll, but \nunfortunately I couldn't get it…",
+            "enText": "We tried many things but in the end, \nwe could not get the bunny out...",
             "nextBlock": 36,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 52,
@@ -708,9 +745,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "申し訳ありません、マスター。\r\nアームの強度を把握していなかったことが失敗原因です。",
-            "enText": "I apologize, Master. The reason for \nmy failure was that I did not know \nthe strength of the arm.",
+            "enText": "My apologies, Master. My calculations were off because \nI could not fully understand the claw's strength.",
             "nextBlock": 37,
             "origClipLength": 194,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 206,
@@ -728,9 +766,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……ただ、もう1度チャレンジすれば、\r\n70％の確率で成功するかと。",
-            "enText": "… But if I try again, I'll \nhave a 70% chance of success.",
+            "enText": "But I'm certain that there is a 70% chance \nof success, were we to try again...",
             "nextBlock": 38,
             "origClipLength": 173,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 88,
@@ -744,13 +783,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "珍しく『提案』をしてくるミホノブルボン。\r\n思いのほかハマっているのだろうか。ならば――",
-            "enText": "Mihono Bourbon makes a rare 'suggestion' to \nme. I wonder if she's more into it than I \nthought. If so—",
+            "enText": "I'm surprised she wants to keep going. \nMaybe she's more into it than I thought.",
             "nextBlock": 39,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "もう1度チャレンジしよう！",
-                    "enText": "Let's try again!",
+                    "enText": "Sure, let's try one more time!",
                     "nextBlock": 39
                 }
             ],
@@ -767,9 +807,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "命令を受理。\r\n人形獲得に最善を尽くします。",
-            "enText": "Orders accepted. We will do our \nbest to acquire the doll.",
+            "enText": "Order accepted. I will make sure we get that bunny \nwith all that I have.",
             "nextBlock": 40,
             "origClipLength": 134,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 44,
@@ -787,9 +828,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "――停止してください。14cm前進してください。\r\nアームで縁まで押出し、景品落とし口へ落とします。",
-            "enText": "—Stop the machine and move forward 14cm. \nPush it to the edge with the arm and drop it \ninto the prize drop.",
+            "enText": "Stop now. Move 14 centimeters forward. \nUse the arm to push the bunny towards the chute.",
             "nextBlock": 41,
             "origClipLength": 255,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 285,
@@ -807,9 +849,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "アームは計算通り人形を縁まで押出した。\r\n縁に引っかかった人形は、自重で徐々に落とし口へ傾き始める。",
-            "enText": "The arm pushed the doll to the edge as calculated. \nThe doll, which was caught on the edge, began to \ntilt toward the drop by its own weight.",
+            "enText": "I do as she says and the bunny is pushed towards the \nedge of the chute. It slowly tilts over, towards the chute...",
             "nextBlock": 42,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 45,
@@ -823,9 +866,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "息を詰めて見守っていると――\r\n横にいるミホノブルボンもまた息を詰めていることに気づいた。",
-            "enText": "As I watched, I noticed that Mihono Bourbon \nbeside me was also gasping for air.",
+            "enText": "I watch it tilt with my breath held... \nActually, Mihono Bourbon is holding her breath as well.",
             "nextBlock": 43,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 114,
@@ -839,9 +883,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "…………！！",
-            "enText": "…!!!",
+            "enText": "...!!",
             "nextBlock": 44,
             "origClipLength": 47,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 58,
@@ -855,9 +900,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……ファイト……！！",
-            "enText": "… Fight…!!!",
+            "enText": "Go!",
             "nextBlock": 45,
             "origClipLength": 36,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 47,
@@ -875,9 +921,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "人形はきれいに落とし口へと滑り落ちていった。",
-            "enText": "The doll slid neatly down into the pit.",
+            "enText": "The bunny falls over into the chute.",
             "nextBlock": 46,
             "origClipLength": 73,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 45,
@@ -891,9 +938,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "本日はありがとうございました。ゲームセンターを\r\n実際に体験したことで生じた感覚もあり、理解が深まりました。",
-            "enText": "Thank you very much for your time today. I was able to gain a \nbetter understanding of some of the sensations that came from \nactually experiencing a game center.",
+            "enText": "Thank you for your help today. Experiencing the arcade \nfirst-hand has taught me a lot and resulted in some \nvaluable insights.",
             "nextBlock": 47,
             "origClipLength": 250,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 98,
@@ -911,13 +959,14 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "胸の奥がくすぐられているような、表情筋が自然と緩む感覚。\r\n経験にこれらの感覚も加え、『世間話』としてインプットします。",
-            "enText": "The feeling of being tickled in the chest and the natural \nrelaxation of facial muscles. I add these sensations to my \nexperience and input them as \"small talk\".",
+            "enText": "The feeling of excitement in my chest, and how my \nfacial muscles relaxed on their own... I added these \nsensations to the topic of 'small talk' in my database.",
             "nextBlock": 48,
             "origClipLength": 324,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "楽しめたのならよかった",
-                    "enText": "I'm glad you enjoyed it.",
+                    "enText": "I'm glad you enjoyed yourself.",
                     "nextBlock": 48
                 }
             ],
@@ -938,9 +987,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……『楽しめた』ですか？",
-            "enText": "… 'Enjoyed' it?",
+            "enText": "\"Enjoyed myself?\"",
             "nextBlock": 49,
             "origClipLength": 73,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 84,
@@ -958,9 +1008,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "不思議そうな顔をするミホノブルボンに、\r\nその感覚は『楽しい』ということだろう、と説明する。",
-            "enText": "She explained to a curious-looking \nMihono Bourbon that the feeling \nwas probably just 'fun.",
+            "enText": "I explained to her that the sensations she felt are called \n'fun' and how that caused her to enjoy herself.",
             "nextBlock": 50,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 28,
@@ -978,9 +1029,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "なるほど……あれが。",
-            "enText": "I see… That's it.",
+            "enText": "That's what 'fun' is...",
             "nextBlock": 51,
             "origClipLength": 81,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 116,
@@ -998,13 +1050,14 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "しかし、2人がかりで人形を取るという非生産的な行動に、\r\nなぜ『楽しい』という感情が生まれたのでしょう。",
-            "enText": "But why did the unproductive act \nof two people picking up a doll generate \nthe feeling of \"fun\"?",
+            "enText": "I do not understand how using the claw machine \ncaused these feelings of 'fun' when it was \nvery counterproductive.",
             "nextBlock": 52,
             "origClipLength": 257,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "それは、あの『非生産的な行動』の――",
-                    "enText": "It's that 'unproductive behavior' of—",
+                    "enText": "<size=40>You call it counterproductive...</size>",
                     "nextBlock": 52
                 }
             ],
@@ -1025,13 +1078,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "ミホノブルボンにもわかりやすいように、\r\n慎重に言葉を選んで説明する。",
-            "enText": "I choose my words carefully, so that Mihono \nBourbon can understand them.",
+            "enText": "I had to choose my words in such a way \nthat she would understand.",
             "nextBlock": 53,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "目的そのものが、『楽しむこと』だったから",
-                    "enText": "Because the purpose itself was to have fun.",
+                    "enText": "<size=36>The goal of using the machine is to have fun.</size>",
                     "nextBlock": 53
                 }
             ],
@@ -1048,9 +1102,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "…………。\r\nなるほど、ステータス『衝撃』を確認。",
-            "enText": "… I see. Status \n'shock' confirmed.",
+            "enText": "...... \nI see. Status changed to 'shocked.'",
             "nextBlock": 54,
             "origClipLength": 227,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 120,
@@ -1064,9 +1119,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "新たな価値観をインプットしました。\r\n『一見無意味に思える交流にも、そうでない場合がある』",
-            "enText": "I inputted a new sense of value. \"There are \ntimes when seemingly meaningless interactions \nare not so meaningless.",
+            "enText": "New values inserted. <i>Even if something seems useless \nat first glance, it may not be the case in the end.</i>",
             "nextBlock": 55,
             "origClipLength": 226,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 223,
@@ -1084,9 +1140,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "ミホノブルボンはそう呟くと、\r\n2人で取った人形を、優しく撫でたのだった。",
-            "enText": "Mihono Bourbon muttered, and gently stroked \nthe doll they had taken together.",
+            "enText": "As she speaks, she lightly strokes \nthe bunny plush we won today.",
             "nextBlock": -1,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 17,
@@ -1101,5 +1158,6 @@
             "blockIdx": 55
         }
     ],
-    "modified": 1658674045
+    "modified": 1678119984,
+    "humanTl": true
 }

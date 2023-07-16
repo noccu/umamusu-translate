@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "I2HCOP6M2UPEIVJYHUOLXYJF6PCZK6NZ",
+    "version": 6,
+    "bundle": "IBWB6HSDZ4OWJBO5KTN4Z66OYMQGATEW",
     "type": "story",
     "storyId": "501008109",
     "title": "クリスマス",
@@ -11,7 +11,9 @@
             "jpText": "――早くも年の瀬。クリスマスの時期が\r\nやってきた。トレーナー室に向かっていると。",
             "enText": "—The end of the year is fast approaching. \nChristmas time has come. I was on my way to \nthe trainer's office.",
             "nextBlock": 2,
-            "pathId": 8535443668470178898,
+            "origClipLength": 98,
+            "voiceIdx": -1,
+            "pathId": -5575682808281148104,
             "blockIdx": 1
         },
         {
@@ -20,6 +22,8 @@
             "jpText": "よお、迎えに来たぜ、トレーナー。\r\n恐れ知らずのサンタがな。",
             "enText": "Hey, I'm here for you, trainer. \nThe fearless Santa Claus.",
             "nextBlock": 3,
+            "origClipLength": 84,
+            "voiceIdx": 55,
             "choices": [
                 {
                     "jpText": "ウオッカ、どうした？",
@@ -32,7 +36,17 @@
                     "nextBlock": 3
                 }
             ],
-            "pathId": 7423362037223970857,
+            "animData": [
+                {
+                    "origLen": 176,
+                    "pathId": 8893650282397561790
+                },
+                {
+                    "origLen": 191,
+                    "pathId": -7755273233671726892
+                }
+            ],
+            "pathId": -2019308241649499053,
             "blockIdx": 2
         },
         {
@@ -41,7 +55,19 @@
             "jpText": "なあに、アンタにちょっとしたプレゼントを\r\nお見舞いしてやろうと思ってな。",
             "enText": "Hey, I thought I'd give you a little present.",
             "nextBlock": 4,
-            "pathId": -7635636909798221098,
+            "origClipLength": 93,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": 8060890704007416102
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -6487454956645136000
+                }
+            ],
+            "pathId": 5197916149440969179,
             "blockIdx": 3
         },
         {
@@ -50,7 +76,19 @@
             "jpText": "黙って、ついてこいよ。",
             "enText": "Shut up and follow me.",
             "nextBlock": 5,
-            "pathId": -5805104826095180036,
+            "origClipLength": 59,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": 392725590665987504
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -7215026687152871164
+                }
+            ],
+            "pathId": 3173635245195018441,
             "blockIdx": 4
         },
         {
@@ -59,7 +97,19 @@
             "jpText": "体育館裏に連れていかれる……と思ったけど、\r\n普通にトレーナー室まで戻ってきた。",
             "enText": "I thought they were going to take me to the \nback of the gym… but they came back to \nthe trainer's room as usual.",
             "nextBlock": 6,
-            "pathId": -7406870808995062738,
+            "origClipLength": 97,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 824642502315299757
+                },
+                {
+                    "origLen": 45,
+                    "pathId": -4016619332677419525
+                }
+            ],
+            "pathId": -7920587207550405258,
             "blockIdx": 5
         },
         {
@@ -68,7 +118,9 @@
             "jpText": "その扉を開けると――",
             "enText": "When you open that door…",
             "nextBlock": 7,
-            "pathId": 7116627617378201715,
+            "origClipLength": 58,
+            "voiceIdx": -1,
+            "pathId": -6410569734893011345,
             "blockIdx": 6
         },
         {
@@ -77,7 +129,19 @@
             "jpText": "いつも素っ気ない部屋は……\r\nクリスマス風に飾り付けられていた。",
             "enText": "The always plain room was… \ndecorated in a Christmas style.",
             "nextBlock": 8,
-            "pathId": 88296736555222047,
+            "origClipLength": 86,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": -4701298101309498274
+                },
+                {
+                    "origLen": 173,
+                    "pathId": -6002860323891654219
+                }
+            ],
+            "pathId": 5963352902381758492,
             "blockIdx": 7
         },
         {
@@ -86,7 +150,19 @@
             "jpText": "受け取りな。\r\n俺からのささやかな贈り物さ。",
             "enText": "Take it. It's a little gift from me.",
             "nextBlock": 9,
-            "pathId": 4572191172943144440,
+            "origClipLength": 73,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": -8893534905997128918
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -9104396792826178641
+                }
+            ],
+            "pathId": 6866704625011230829,
             "blockIdx": 8
         },
         {
@@ -95,7 +171,19 @@
             "jpText": "そして何より目を引いたのは、\r\nサイドテーブルに並べられた豪華な料理。",
             "enText": "What caught my attention the most was the \ngorgeous food on the side table.",
             "nextBlock": 10,
-            "pathId": 8274007405583165720,
+            "origClipLength": 90,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": -1975310054511384992
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -2979650242860603333
+                }
+            ],
+            "pathId": -600403043277432262,
             "blockIdx": 9
         },
         {
@@ -104,7 +192,19 @@
             "jpText": "照焼き風ローストに、クリスマスリース風\r\nサラダ。それと苺のホールケーキ……。",
             "enText": "Teriyaki-style roast and a Christmas \nwreath-style salad. And a strawberry \nwhole cake…",
             "nextBlock": 11,
-            "pathId": -8216743954222689353,
+            "origClipLength": 95,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -256938744445011821
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 5260911556796333585
+                }
+            ],
+            "pathId": 114583531727909524,
             "blockIdx": 10
         },
         {
@@ -113,6 +213,8 @@
             "jpText": "ま、こんなもんだろ。\r\n腹いっぱい食ってくれよ。",
             "enText": "Well, that's about it. I \nhope you eat your fill.",
             "nextBlock": 12,
+            "origClipLength": 76,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "この料理は？",
@@ -120,7 +222,17 @@
                     "nextBlock": 12
                 }
             ],
-            "pathId": -7792090589998095606,
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": 3205640484138072887
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 5439943185709823347
+                }
+            ],
+            "pathId": 6381065130815415632,
             "blockIdx": 11
         },
         {
@@ -129,6 +241,8 @@
             "jpText": "……作ったんだよ、俺が。",
             "enText": "I made… I did.",
             "nextBlock": 13,
+            "origClipLength": 60,
+            "voiceIdx": 49,
             "choices": [
                 {
                     "jpText": "ウオッカが！？",
@@ -136,7 +250,17 @@
                     "nextBlock": 13
                 }
             ],
-            "pathId": -2607963158030359063,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6889241831669122975
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -9062627480188920961
+                }
+            ],
+            "pathId": 7434449483915242011,
             "blockIdx": 12
         },
         {
@@ -145,7 +269,19 @@
             "jpText": "そ、そんなに驚くこたぁねーだろ……。",
             "enText": "Well, you shouldn't be so surprised…",
             "nextBlock": 14,
-            "pathId": 8798203145915411065,
+            "origClipLength": 68,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": 5946461820431591349
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 3710267953334353309
+                }
+            ],
+            "pathId": 7402575122217543492,
             "blockIdx": 13
         },
         {
@@ -154,7 +290,19 @@
             "jpText": "これでも料理は、母ちゃんに\r\nみっちり仕込まれたんだよ。",
             "enText": "I've been trained in cooking by my mother.",
             "nextBlock": 15,
-            "pathId": 2488383972880170909,
+            "origClipLength": 81,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": -5327946910607926440
+                },
+                {
+                    "origLen": 92,
+                    "pathId": -5537147063042643641
+                }
+            ],
+            "pathId": 3923575855596476253,
             "blockIdx": 14
         },
         {
@@ -163,7 +311,19 @@
             "jpText": "『自分で食べるものも作れないヤツは\r\n半人前よ』……って言われてな。",
             "enText": "She said, \"If you can't make your \nown food, you're not half the man \nyou should be.\"…",
             "nextBlock": 16,
-            "pathId": 1134904046018829299,
+            "origClipLength": 89,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 2565787383139749679
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -273673337737167192
+                }
+            ],
+            "pathId": -6496412137533630427,
             "blockIdx": 15
         },
         {
@@ -172,7 +332,19 @@
             "jpText": "その言葉から人柄がうかがい知れる。\r\nきっとしっかりしたヒトなんだろう。",
             "enText": "Her words reveal her personality. \nShe must be a very strong person.",
             "nextBlock": 17,
-            "pathId": -4689704420072752254,
+            "origClipLength": 91,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -7553842250430039680
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 8705286351348129907
+                }
+            ],
+            "pathId": 1310780795857388190,
             "blockIdx": 16
         },
         {
@@ -181,6 +353,8 @@
             "jpText": "だけど……。\r\nだ、ダセえな……。",
             "enText": "But… Dude, that's lame…",
             "nextBlock": 18,
+            "origClipLength": 67,
+            "voiceIdx": 63,
             "choices": [
                 {
                     "jpText": "何が？",
@@ -188,7 +362,17 @@
                     "nextBlock": 18
                 }
             ],
-            "pathId": -5171087534981803445,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": -6569612560531037277
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -2227755733905280990
+                }
+            ],
+            "pathId": -7046297899648944861,
             "blockIdx": 17
         },
         {
@@ -197,7 +381,19 @@
             "jpText": "あ、いや……その……。",
             "enText": "Oh, no… its…",
             "nextBlock": 19,
-            "pathId": 6398650459589264993,
+            "origClipLength": 78,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": 3667068536017423812
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -554074704264085246
+                }
+            ],
+            "pathId": -5507157580251376841,
             "blockIdx": 18
         },
         {
@@ -206,7 +402,19 @@
             "jpText": "家事がしっかりできることは\r\n恥じることじゃない。そう伝えると――",
             "enText": "There's no shame in being a good housekeeper. \nWhen I tell you that…",
             "nextBlock": 20,
-            "pathId": -7567942069336304339,
+            "origClipLength": 88,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -1503211228585740009
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -7601763514970183516
+                }
+            ],
+            "pathId": -6931650304416623481,
             "blockIdx": 19
         },
         {
@@ -215,7 +423,23 @@
             "jpText": "いや、そうじゃねえんだ。\r\n確かに照れくさいけど、それより……。",
             "enText": "No, I'm not. I'm embarrassed, sure, \nbut more importantly…",
             "nextBlock": 21,
-            "pathId": -9049047064051348580,
+            "origClipLength": 86,
+            "voiceIdx": 50,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -6282815901297296246
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -5417504162000937232
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -8278211250546345926
+                }
+            ],
+            "pathId": -3430309596089077167,
             "blockIdx": 20
         },
         {
@@ -224,7 +448,23 @@
             "jpText": "料理できるクセに、今までアンタに\r\n振る舞ってやれなかった自分がダセえ。",
             "enText": "I can cook, but I don't like the fact that I \ncouldn't serve you before.",
             "nextBlock": 22,
-            "pathId": 8704620091720476674,
+            "origClipLength": 91,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 215,
+                    "pathId": -4291328674823474098
+                },
+                {
+                    "origLen": 66,
+                    "pathId": 1975881704546260350
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6336172155259857747
+                }
+            ],
+            "pathId": 6501991360477360036,
             "blockIdx": 21
         },
         {
@@ -233,7 +473,23 @@
             "jpText": "やっぱ恥ずくてさ……。アウトローなのに\r\n家庭的って思われるのが……。",
             "enText": "It's embarrassing… People think I'm \nhomely even though I'm an outlaw…",
             "nextBlock": 23,
-            "pathId": -8180352344792580489,
+            "origClipLength": 90,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2718683241988711734
+                },
+                {
+                    "origLen": 52,
+                    "pathId": -3916592510107970224
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -5635337168730483493
+                }
+            ],
+            "pathId": 8910565385730066724,
             "blockIdx": 22
         },
         {
@@ -242,7 +498,19 @@
             "jpText": "そんなことで、アンタが蔑まないのは\r\nわかってた。なのに……。",
             "enText": "I knew you wouldn't despise me \nfor that. And yet…",
             "nextBlock": 24,
-            "pathId": -626869976135540723,
+            "origClipLength": 85,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 66,
+                    "pathId": 2019480944669660390
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -5031806040643236426
+                }
+            ],
+            "pathId": 8773925701697012599,
             "blockIdx": 23
         },
         {
@@ -251,7 +519,19 @@
             "jpText": "自分をさらけ出せなかったのは\r\nダセえなって。",
             "enText": "I thought it was lame that \nI couldn't expose myself.",
             "nextBlock": 25,
-            "pathId": 1687622955779241621,
+            "origClipLength": 75,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": -704986343823061991
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 4257977358532988313
+                }
+            ],
+            "pathId": -2563170377738261019,
             "blockIdx": 24
         },
         {
@@ -260,7 +540,19 @@
             "jpText": "心づくしの料理を披露するのは、\r\nウオッカなりの挑戦だったのだろう。",
             "enText": "It must have been a challenge for Vodka to \npresent such a thoughtful dish.",
             "nextBlock": 26,
-            "pathId": -9166285332280136485,
+            "origClipLength": 89,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8489115694205112112
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -4014238096456508148
+                }
+            ],
+            "pathId": 2575937812682348142,
             "blockIdx": 25
         },
         {
@@ -269,6 +561,8 @@
             "jpText": "く、口に合うかはわからねーぜ？\r\n作り直しはナシだからな。",
             "enText": "I don't know if it's good for your taste \nbuds. I'm not going to remake it.",
             "nextBlock": 27,
+            "origClipLength": 82,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "美味しいに決まってる",
@@ -281,7 +575,17 @@
                     "nextBlock": 27
                 }
             ],
-            "pathId": 1726991732534799460,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": 9203102670020699551
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -6817162969854911310
+                }
+            ],
+            "pathId": 2192855144008163004,
             "blockIdx": 26
         },
         {
@@ -290,7 +594,19 @@
             "jpText": "な、なんでわかんだよ？",
             "enText": "What? How do you know?",
             "nextBlock": 28,
-            "pathId": -7866231783965047897,
+            "origClipLength": 59,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": -1850044991730687922
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 9222261471227002376
+                }
+            ],
+            "pathId": 7579949526663351239,
             "blockIdx": 27
         },
         {
@@ -299,6 +615,8 @@
             "jpText": "大体アンタは俺のこと、\r\n信じすぎなんだよ……。",
             "enText": "You've got too much faith \nin me, you know…",
             "nextBlock": 29,
+            "origClipLength": 76,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "お互い様だろ？",
@@ -311,7 +629,17 @@
                     "nextBlock": 29
                 }
             ],
-            "pathId": -3666125696688274965,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -7277280123437356191
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 5072205499044730118
+                }
+            ],
+            "pathId": -5279693575531999426,
             "blockIdx": 28
         },
         {
@@ -320,7 +648,19 @@
             "jpText": "……まあな。今さら\r\n探り合いする俺たちでもねーか。",
             "enText": "… Well, you know. It's not like we're \ngoing to start probing each other now.",
             "nextBlock": 30,
-            "pathId": -7312430982671526806,
+            "origClipLength": 78,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 37,
+                    "pathId": -1551353248106007078
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7842431136105007447
+                }
+            ],
+            "pathId": -8639315103940917726,
             "blockIdx": 29
         },
         {
@@ -329,7 +669,19 @@
             "jpText": "さ、普段ドタバタしてる分、\r\n今日はノンビリ楽しもうぜ。",
             "enText": "Well, since we're usually so busy, \nlet's take it easy today.",
             "nextBlock": 31,
-            "pathId": 1883010467791103923,
+            "origClipLength": 81,
+            "voiceIdx": 90,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 4625881552876851339
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 1092166328693503269
+                }
+            ],
+            "pathId": -3454744416625822484,
             "blockIdx": 30
         },
         {
@@ -338,7 +690,19 @@
             "jpText": "メリーな、トレーナー。\r\nそれからいつも、サンキューな……。",
             "enText": "Merry, trainer. And always, \nthank you…",
             "nextBlock": -1,
-            "pathId": -8800788847453734093,
+            "origClipLength": 84,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 8770537935274039384
+                },
+                {
+                    "origLen": 45,
+                    "pathId": 2335551808747715051
+                }
+            ],
+            "pathId": -4461231794770310152,
             "blockIdx": 31
         },
         {
@@ -347,7 +711,19 @@
             "jpText": "さ、まずは楽しもうぜ、\r\nクリスマスディナーを。",
             "enText": "Well, let's enjoy Christmas dinner first.",
             "nextBlock": 33,
-            "pathId": -3716033787973558702,
+            "origClipLength": 76,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -3650328287258173851
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 2206558968886182391
+                }
+            ],
+            "pathId": 1740772106971324071,
             "blockIdx": 32
         },
         {
@@ -356,7 +732,19 @@
             "jpText": "――ひとしきり食べた後。",
             "enText": "—after a quick bite.",
             "nextBlock": 34,
-            "pathId": -6817800523758292603,
+            "origClipLength": 60,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -4528664454770090339
+                },
+                {
+                    "origLen": 126,
+                    "pathId": 779786960538358550
+                }
+            ],
+            "pathId": -1567084872730756272,
             "blockIdx": 33
         },
         {
@@ -365,7 +753,19 @@
             "jpText": "さてデビュー前だったら、\r\nこれで終わりでよかったけど……。",
             "enText": "Now, if it had been before my debut, I would \nhave been happy to end it with this…",
             "nextBlock": 35,
-            "pathId": -956799941687910825,
+            "origClipLength": 84,
+            "voiceIdx": 59,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": -8318143642395492492
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -1801137572877815806
+                }
+            ],
+            "pathId": 818313091807998802,
             "blockIdx": 34
         },
         {
@@ -374,6 +774,8 @@
             "jpText": "今はそうも行かねえか。\r\nなあ、街へ繰り出そうぜ、トレーナー。",
             "enText": "Well, that's not going to happen now, is it? \nHey, let's go out on the town, trainer.",
             "nextBlock": 36,
+            "origClipLength": 85,
+            "voiceIdx": 52,
             "choices": [
                 {
                     "jpText": "何をしに？",
@@ -381,7 +783,17 @@
                     "nextBlock": 36
                 }
             ],
-            "pathId": 7027104316748075590,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 7824787529601121533
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -4602443437168178985
+                }
+            ],
+            "pathId": -6377034476650859368,
             "blockIdx": 35
         },
         {
@@ -390,7 +802,19 @@
             "jpText": "決まってんだろ。俺のファンに\r\nプレゼントをバラ撒きにさ。",
             "enText": "Of course I'm going. I'm going to give away \nsome presents to my fans.",
             "nextBlock": 37,
-            "pathId": -2762599974790938227,
+            "origClipLength": 82,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": 6905959651019277470
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 3739008901799068829
+                }
+            ],
+            "pathId": -707298449269333768,
             "blockIdx": 36
         },
         {
@@ -399,7 +823,19 @@
             "jpText": "え、ウオッカ！？　ほら、あそこ！\r\nウオッカだ！",
             "enText": "What? Vodka! Look, there it is! Vodka!",
             "nextBlock": 38,
-            "pathId": -1494576448747799418,
+            "origClipLength": 76,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": 5933434848665445872
+                },
+                {
+                    "origLen": 177,
+                    "pathId": -5490988742973210332
+                }
+            ],
+            "pathId": 1044260871907968385,
             "blockIdx": 37
         },
         {
@@ -408,7 +844,23 @@
             "jpText": "ウオッカー！！　メリクリー！！\r\n愛をちょうだーい！",
             "enText": "Wooker! Mericlee! Give me some love!",
             "nextBlock": 39,
-            "pathId": -3082931548719698681,
+            "origClipLength": 78,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 7225770603518086189
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 7533132953073449191
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -5837898960571044418
+                }
+            ],
+            "pathId": 6119045887058493298,
             "blockIdx": 38
         },
         {
@@ -417,7 +869,23 @@
             "jpText": "おう。ウインクでも投げキッスでも\r\n好きなだけ持っていきな！",
             "enText": "Ooh. Take all the winks and kisses you want!",
             "nextBlock": 40,
-            "pathId": -8761873910973766406,
+            "origClipLength": 84,
+            "voiceIdx": 47,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": -4386418323030450050
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -7966638114905095310
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -4707177037255604370
+                }
+            ],
+            "pathId": 184733986628547371,
             "blockIdx": 39
         },
         {
@@ -426,7 +894,23 @@
             "jpText": "今日は大盤振る舞いさ。そのために\r\n繰り出しにきたんだからな。",
             "enText": "It's a big deal today. That's why we're here.",
             "nextBlock": 41,
-            "pathId": -455099168188904111,
+            "origClipLength": 85,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -7999070703046401563
+                },
+                {
+                    "origLen": 46,
+                    "pathId": 1519419789129499061
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 1925844625254679155
+                }
+            ],
+            "pathId": -2562429708542945601,
             "blockIdx": 40
         },
         {
@@ -435,7 +919,19 @@
             "jpText": "きゃーっ！！",
             "enText": "Yikes!",
             "nextBlock": 42,
-            "pathId": -1793248446904958878,
+            "origClipLength": 52,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 61687392253445922
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -5234376290157712079
+                }
+            ],
+            "pathId": -7105323606625107161,
             "blockIdx": 41
         },
         {
@@ -444,7 +940,19 @@
             "jpText": "黄色い歓声が上がる中を、ウオッカは\r\nクールに進む。その様は絵になっていて……。",
             "enText": "Vodka coolly moves through the yellow \ncheers of the crowd. The scene is \npicturesque…",
             "nextBlock": 43,
-            "pathId": 1793675938395992614,
+            "origClipLength": 97,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 9044414859435679623
+                },
+                {
+                    "origLen": 45,
+                    "pathId": -2550252674351021700
+                }
+            ],
+            "pathId": -1981686384189520843,
             "blockIdx": 42
         },
         {
@@ -453,7 +961,9 @@
             "jpText": "ウオッカは、できる限りのファンサービスを\r\nしながら街を歩いた。",
             "enText": "Vodka walked around the city, giving as much \nfan service as She could.",
             "nextBlock": 44,
-            "pathId": -4173559198303485147,
+            "origClipLength": 86,
+            "voiceIdx": -1,
+            "pathId": 7792209950628787352,
             "blockIdx": 43
         },
         {
@@ -462,7 +972,19 @@
             "jpText": "トレーナー、いいか？\r\nさっきの料理の話はぜってー内緒だぞ。",
             "enText": "Trainer, okay? Don't tell anyone \nabout the food you just cooked.",
             "nextBlock": 45,
-            "pathId": -1294107189074665372,
+            "origClipLength": 84,
+            "voiceIdx": 52,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 1983381489991930751
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -4602736703532131648
+                }
+            ],
+            "pathId": -6715755931350228707,
             "blockIdx": 44
         },
         {
@@ -471,8 +993,21 @@
             "jpText": "バカっ、恥ずいからじゃねー！\r\n夢を守るのもサンタの仕事だからだっつーの！",
             "enText": "It's not because I'm embarrassed, \nyou idiot! It's because it's Santa's \njob to protect your dreams!",
             "nextBlock": -1,
-            "pathId": 7233526158086087746,
+            "origClipLength": 93,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": -3865702446076532258
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -1203350724362237409
+                }
+            ],
+            "pathId": 5677963439788421052,
             "blockIdx": 45
         }
-    ]
+    ],
+    "modified": 1674832100
 }

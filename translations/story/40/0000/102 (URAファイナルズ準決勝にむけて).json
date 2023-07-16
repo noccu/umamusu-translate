@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "4UTY6BTFVG2YPFGCRNOTUWS5PTSVZXDC",
+    "version": 6,
+    "bundle": "H4IMPJI2WNBCAM2RYA2ZHUIDY7EUTTP6",
     "type": "story",
     "storyId": "400000102",
     "title": "URAファイナルズ準決勝にむけて",
@@ -11,7 +11,19 @@
             "jpText": "さあ、準決勝が始まりますね！\nみなさんの気迫がここまで伝わってきます。",
             "enText": "The semifinals are about to begin! \nI can feel everyone's drive from here.",
             "nextBlock": 2,
-            "pathId": 1723777869723120145,
+            "origClipLength": 90,
+            "voiceIdx": 74,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -6438187249833625409
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -1093650290982132695
+                }
+            ],
+            "pathId": -7099430624363567123,
             "blockIdx": 1
         },
         {
@@ -20,6 +32,8 @@
             "jpText": "トレーナーさん……\n心の準備は、よろしいですか？",
             "enText": "Trainer… are you ready?",
             "nextBlock": 3,
+            "origClipLength": 76,
+            "voiceIdx": 55,
             "choices": [
                 {
                     "jpText": "勝ってくれると、信じています",
@@ -27,7 +41,17 @@
                     "nextBlock": 3
                 }
             ],
-            "pathId": -1994479227583855681,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 5617898397189125895
+                },
+                {
+                    "origLen": 87,
+                    "pathId": 1895963439857080469
+                }
+            ],
+            "pathId": 5606120506393316626,
             "blockIdx": 2
         },
         {
@@ -36,7 +60,19 @@
             "jpText": "はい！\n勝利に向けて、いってらっしゃいませ！",
             "enText": "Yes! I'll see you at the Live!",
             "nextBlock": 4,
-            "pathId": -7649663886950456978,
+            "origClipLength": 73,
+            "voiceIdx": 120,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": -7877254140194130425
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 2535667613436171333
+                }
+            ],
+            "pathId": -1201628382155503290,
             "blockIdx": 3
         },
         {
@@ -45,8 +81,22 @@
             "jpText": "『URAファイナルズ』――\n準決勝のゲートが、ついに開く！",
             "enText": "The gates to the semifinals of the URA\nFinals are finally open!",
             "nextBlock": -1,
-            "pathId": -3037798427805588352,
+            "origClipLength": 82,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": 5793123963312983967
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -4184977704757181807
+                }
+            ],
+            "pathId": 413744588791265262,
             "blockIdx": 4
         }
-    ]
+    ],
+    "humanTl": true,
+    "modified": 1674828210
 }

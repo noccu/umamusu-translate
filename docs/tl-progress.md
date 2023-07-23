@@ -95,6 +95,7 @@ Hishi Miracle | Complete | [LotoDS][]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
 Inari One | Complete | [LotoDS][]
 Ines Fujin | Complete | [noccu] (ep 1-4), MTL
+Katsuragi Ace | Complete | [LotoDS][]
 Kawakami Princess | Complete | [Director Kok]
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]

@@ -102,7 +102,7 @@ Kitasan Black | Complete | [LotoDS][]
 Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | Complete | [Snep][]
 Maruzensky | Complete | [noccu][]
-Marvelous Sunday | In progress | [LotoDS]
+Marvelous Sunday | Complete | [LotoDS][]
 Mayano Top Gun | Complete | [Director Kok]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS][]

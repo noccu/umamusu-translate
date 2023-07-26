@@ -46,6 +46,11 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     lineLen: int = overrides.get("lineLength", opts.get("lineLength", -1))
     if lineLen == -1: lineLen = calcLineLen(file, opts.get('verbose'))
     if lineLen == 0: return text  # auto mode can return 0
+    # Calculate an estimation of raw characters from size-based length
+    # Adjusted by font size
+    fontsize = file.data.get("textSize", 24)
+    sizeMod = 1.07 * (fontsize / 24)**0.6
+    lineLen = int((lineLen * (1.135 * lineLen**0.05) + 1) * sizeMod)
     pureText = RE_TAGS.sub("", text)
 
     if len(pureText) < lineLen:

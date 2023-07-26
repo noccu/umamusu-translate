@@ -177,13 +177,8 @@ class Args(argparse.ArgumentParser):
             print(f"Patch version: {patchVersion()}")
             sys.exit()
         if a.read_defaults:
-            try:
-                cfg = helpers.readJson("umatl.json")
-            except FileNotFoundError:
-                cfg = createDefaultUmatlConfig()
-            # Resolve to make sure it works on both abs and rel paths.
-            ctx = str(Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")).replace("\\","/")
-            for k, v in cfg.get(ctx, {}).items():
+            cfg = ScriptConfig()
+            for k, v in cfg.items():
                 setattr(a, k, v)
         if self.hasDefault and a.story:
             a.story = StoryId.parse(a.type, a.story)
@@ -495,23 +490,35 @@ class GameBundle:
 def currentTimestamp():
     return int(datetime.now(timezone.utc).timestamp())
 
-def createDefaultUmatlConfig():
-    data = {
-        "import": {
-            "update": True,
-            "skip_mtl": False
-        },
-        "mdb/import": {
-            "skill_data": False
+class ScriptConfig(dict):
+    cfg = None
+    empty = {}
+    def __init__(self) -> None:
+        # Resolve to make sure it works on both abs and rel paths.
+        ctx = str(Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")).replace("\\","/")
+        if not ScriptConfig.cfg:
+            try:
+                ScriptConfig.cfg = helpers.readJson("umatl.json")
+            except FileNotFoundError:
+                self.createDefault()
+        super().__init__(ScriptConfig.cfg.get(ctx, ScriptConfig.empty))
+    def createDefault(self):
+        data = {
+            "import": {
+                "update": True,
+                "skip_mtl": False
+            },
+            "mdb/import": {
+                "skill_data": False
+            }
         }
-    }
-    try:
-        helpers.writeJson("umatl.json", data, 2)
-    except PermissionError:
-        print("Error: Lacking permissions to create the config file in this location. \nEdit the patch folder's permissions or move it to a different location.")
+        try:
+            helpers.writeJson("umatl.json", data, 2)
+        except PermissionError:
+            print("Error: Lacking permissions to create the config file in this location. \nEdit the patch folder's permissions or move it to a different location.")
+            sys.exit()
+        print("Uma-tl uses the umatl.json config file for user preferences when requested.\n"
+            "This seems to be your first time running uma-tl this way so a new file was created.\n"
+            "Uma-tl has quit without doing anything this first time so you can edit the config before running it again. Defaults are:")
+        print(json.dumps(data, indent=2))
         sys.exit()
-    print("Uma-tl uses the umatl.json config file for user preferences when requested.\n"
-        "This seems to be your first time running uma-tl this way so a new file was created.\n"
-        "Uma-tl has quit without doing anything this first time so you can edit the config before running it again. Defaults are:")
-    print(json.dumps(data, indent=2))
-    sys.exit()

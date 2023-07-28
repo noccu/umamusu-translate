@@ -13,8 +13,8 @@ Then install sentencepiece:
 
 py -m pip install sentencepiece
 
-Download the model files from https://drive.google.com/file/d/1KgAsQzI-A0D8vmNIekwIRKlflGw9xz3i/view
-And extract the archive in the sugoi-model folder
+Download the model files from the most recent model or https://drive.google.com/file/d/1KgAsQzI-A0D8vmNIekwIRKlflGw9xz3i/view
+Extract the archive in the sugoi-model folder
 You should end up with src/data/sugoi-model/japaneseModel etc.
 
 Then run the usual machinetl.py with the extra arg: -model sugoi

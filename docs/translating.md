@@ -20,11 +20,18 @@ I also suggest you look over all of the process before starting.
 
 # Translating
 ## Manual
-Run `py src/names.py <targets>` to translate many `enName` fields automatically. (see [text processing](#further-processing))  
-Run `py src/story_editor.py <targets>` to start the GUI story editor. The textbox is sized close to the game's useful text display area, so you can use it for reference.
+Run `py src/names.py <targets>` to translate many `enName` fields automatically. (see [text processing](#further-processing)) You can also do this from the editor per file.  
+Run `py src/story_editor.py <targets>` to start the GUI story editor. The textbox is sized close to the game's useful text display area (adjusting per file), so you can use it for reference.  
+If you find an issue with the box size on multiple/types of files, let me know. If it's only 1 file, you can edit the file as such:
+> ...**,**  
+> **"lineLength": \<number of '0' characters which fill a line\>,**
+
 Text duration is automatically adjusted and doesn't usually need to be changed, but you can edit the base value if desired.
-Some files with complex choices can have multiple paths and groups of text, make sure to check the block list.
+Some files with complex choices can have multiple paths and groups of text, make sure to check the block list.  
 [Unity Rich Text](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html) is supported but don't use it for global markup like making all the text smaller, but sparingly where needed.
+If you do need to apply size to an entire file, add it like so and use the `-fsize` flag when [text processing](#further-processing):
+> ...**,**  
+> **"textSize": \<number\>,**
 
 You can also open the files in a text editor or edit existing ones on github and write the translations in the provided `enText` or `enName` fields.
 If you don't want to care about line breaks, [see below](#further-processing) for a script which automatically line breaks text to fit a given length.  
@@ -36,10 +43,12 @@ If you don't want to care about line breaks, [see below](#further-processing) fo
 If you want to add line breaks yourself, leave a space before the `\n` so it won't concatenate words together in the log view, which breaks differently and automatically.
 Without the `-nl` flag, [text processing](#further-processing) will not touch line breaks present as long as all lines fit the length constraints.
 You can also add a `skip` key to any block to have the text processing completely ignore it, for the very occasional special case:  
-> "enText": "\<**tl goes here**\>",  
-> "skip": true,
+> "enText": "tl goes here"**,**  
+> **"skip": true,**
 
 ## MTL using DeepL
+**UmaTL no longer accepts pure MTL submissions!**  
+You can use this for yourself or to edit/TLC, although it is much preferred for contributions to be translated properly.
 - Install the [deepl-translator.user.js](https://cdn.jsdelivr.net/gh/noccu/umamusu-translate@master/src/deepl-translator.user.js) script in your browser
     - This requires a userscript manager with menu support, like [Violentmonkey](https://violentmonkey.github.io/)
 - Run `py src\machinetl.py` with any options you want (refer to main readme)
@@ -49,50 +58,58 @@ You can also add a `skip` key to any block to have the text processing completel
 - If all is well translation will automatically start and the python script will exit when done
     - This will take some time. Press ctrl+c in your terminal to force quit. Progress will be saved per file.
 
+## MTL using Sugoi
+Check the [Sugoi readme](../src/data/sugoi-model/sugoi-readme.txt).
+
 # Further processing    
 **Remember to provide targets (likely those you used for extract) or you will process all the files!**
 - `py src\textprocess.py` to apply automatic formatting and edits.
     - This is run by the translation script (if you used that), but you can rerun it with custom settings if you like.
     - This uses the [replacer.json](src/data/replacer.json) file. You can add your own entries here, useful for names in particular.
         - If you're doing machine translation, add `-rep all` to make a bit more aggressive edits.
-- `py src\names.py -n <path/to/db-translate/data/uma-name.csv>` to translate many names automatically
-    - The csv file is from the db-translate project. Download it [here](https://github.com/noccu/umamusume-db-translate/blob/playtest/src/data/uma-name.csv) if you don't have it and point the `-n` argument to its location.
-        - The file will be auto-detected if `db-translate` is in the same parent directory as `umamusu-translate`.
-    - You can add other possibly reoccurring names to the `names.json` file.
-    - Translates the namecards, not the names in dialogue!
+- `py src\names.py` to translate many names automatically
+    - You can add possibly reoccurring non-horsegirl names to the `names.json` file.
+    - Translates the namecards above dialogue, not the names in dialogue text!
 
 # Finishing up
 Use the `import.py` script to get your translations in the game. See the main readme or the scripts themselves for details.
 
 # Translating UI
-The UI translations work by mapping hashes to text strings.
-Some updates change the hashes, causing the translations to be jumbled.
-[Here](#updating)'s how to fix this yourself if you don't want to wait on an update.
+The UI translations work by mapping hashes to text strings.  
+~~Some updates change the hashes, causing the translations to be jumbled.
+[Here](#updating)'s how to fix this yourself if you don't want to wait on an update.~~
 
-## Translating
+## Translating static entries
 1. Open the `config.json` file in your game folder (`DMMgames\Umamusume\config.json`)
 1. Change the following
     > "enableLogger": false,  
-    > "dumpStaticEntries": false,
+    > "dumpStaticEntries": false,  
     > ⇩⇩⇩  
     > "enableLogger": true,  
     > "dumpStaticEntries": true,
-1. Delete `dump.txt` if it exists in the same (game) folder
 1. (re)Start the game
-1. Move through the screens you wish to translate
 1. Open a cmd prompt to run the following
-1. `py src/manage.py -new -add -src`
-   - If autodetect fails, point it to the file from step 3 `-src …/dump.txt`
-   - This will update `src/data/static_dump.json` with any new hash to JP text mappings, and add those JP text entries to `translations/localify/ui.json`.
+    - `py src/manage.py -new -add -src -tlg -O`
+    - If autodetect fails, point it to the file from step 3 `-src …/dump.txt`
 1. Open the `translations/localify/ui.json` file, search for your text, translate it, and save the file:  
-   "日本語": "**tl goes here**"
+    "日本語": "**tl goes here**"
 1. `py src/manage.py -upd`
-1. The UI translation files in the `localify` folder should now be updated and can be copied over to your game folder
-    - Basically follow [the usual step](../README.md#basic-usage) or simply run `py src/manage.py -M`
-1. Revert the changes from step 2.
+    - The UI translation files in the `localify` folder should now be updated and can be copied over to your game folder
+        - Basically follow [the usual step](../README.md#basic-usage) or simply run `py src/manage.py -M`
+1. (Optional) Revert the changes from step 2 if you don't intend on translating more soon.
+    - Or leave it on to get a huge dump file with all text as you play...
 1. If you wish to contribute (especially through github), run `py src/manage.py -clean both` first
 
+## Translating dynamic entries
+1. (Optional, Preferred) Delete `dump.txt` if it exists in the same (game) folder
+1. Follow the same steps as for static above but:
+    - dumpStaticEntries can remain false, it doesn't matter
+        > "dumpStaticEntries": false,
+    1. Move through the screens you wish to translate once the game is open
+    1. `py src/manage.py -new -add -src` should do, but again it doesn't matter
+
 ## Updating
+**This should no longer be needed**
 1. Follow [translating](#translating) steps 1-4 above
 1. Navigate through a few screens, especially those that cause loading or had jumbled text (the more the better)  
    Useful rotation is circle -> uma list -> race/practice -> training if one is open
@@ -102,4 +119,5 @@ Some updates change the hashes, causing the translations to be jumbled.
 
 # Sharing
 If you used git; commit your changes (in organized chunks) and make a Pull Request once all done.  
+Remember to update the `tl-progress.md` file with your work.  
 If not; upload your new files somewhere and open an Issue. ~~Or DM me on discord.~~

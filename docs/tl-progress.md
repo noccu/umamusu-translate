@@ -55,6 +55,7 @@ Leap into a New World! | Stalled | [noccu] (preview)
 Wherefore I adore you | Stalled | [noccu] (preview)
 Ingenious!? Spring Festival! Dodgeball Fury! | Stalled | [noccu] (preview)
 An Oath to My Dear Challengers | Stalled | [noccu] (preview)
+#summer #besties | Complete | [BlunterMonk](https://github.com/BlunterMonk) (MTL edit)
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events

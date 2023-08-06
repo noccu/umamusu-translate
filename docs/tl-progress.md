@@ -50,7 +50,7 @@ Days in a Flash | Complete | [Kuwaiden] + [noccu] (preview)
 Intertwined Memories, Galloping Thoughts | Complete, In progress | MTL + [noccu] (preview), [noccu]☆
 Illuminate the Heart | Complete | MTL
 Happy new future ～Bonds dyed in the sunrise～ | Complete | MTL, [noccu] (preview)
-Sweet Memories ♥ Teatime | In progress | [noccu]☆
+Sweet Memory ♥ Teatime | Complete | [noccu]☆
 Leap into a New World! | Stalled | [noccu] (preview)
 Wherefore I adore you | Stalled | [noccu] (preview)
 Ingenious!? Spring Festival! Dodgeball Fury! | Stalled | [noccu] (preview)

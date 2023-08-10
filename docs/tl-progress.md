@@ -51,7 +51,7 @@ Intertwined Memories, Galloping Thoughts | Complete, In progress | MTL + [noccu]
 Illuminate the Heart | Complete | MTL
 Happy new future ～Bonds dyed in the sunrise～ | Complete | MTL, [noccu] (preview)
 Sweet Memory ♥ Teatime | Complete | [noccu]☆
-Leap into a New World! | Stalled | [noccu] (preview)
+Leap into a New World! | Complete | [yumeimi](https://www.reddit.com/user/yumeimi/), [noccu] (preview)
 Wherefore I adore you | Stalled | [noccu] (preview)
 Ingenious!? Spring Festival! Dodgeball Fury! | Stalled | [noccu] (preview)
 An Oath to My Dear Challengers | Stalled | [noccu] (preview)

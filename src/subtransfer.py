@@ -180,11 +180,12 @@ class BasicSubProcessor:
                 )
             ):
                 print(f"Marking untranslated line at {self.getBlockIdx(idx)}")
-                # print("debug:", p.getJp(idx), subLine.text)
+                # print("debug:", self.getJp(idx), "||", subLine.text)
                 self.setEn(idx, TextLine("<UNTRANSLATED>"))
                 idx += 1
                 if idx > len(self.srcLines) - 1:
                     return idx
+                subLine = self.subLines[idx]
 
         self.setEn(idx, subLine)
         idx += 1
@@ -369,7 +370,7 @@ class TxtSubProcessor(BasicSubProcessor):
             for line in raw
             if helpers.isEnglish(line) and not re.match(r"\n+\s*", line)
         ]
-
+        super().preprocess()
 
 def process(srcFile, subFile, opts: SubTransferOptions):
     format = subFile[-3:]

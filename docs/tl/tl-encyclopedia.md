@@ -29,6 +29,7 @@ Term | Translation
 ちょっと | a little
 ほんのわずかに | very slightly
 ほんのちょっと | a tiny bit?
+上げ続ける | Gradually (in/decrease)
 
 # Horsegirls
 

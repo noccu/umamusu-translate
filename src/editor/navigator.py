@@ -130,7 +130,6 @@ class Navigator:
     def searchChapters(self, event=None):
         if event.keysym in ("Up", "Down", "Left", "Right", "Return"):
             return
-        self.chapterPicker = 5  #! ???
         search = self.chapterPicker.get()
         if search == "":
             self.chapterPicker["values"] = self.master.fileMan.formattedFiles

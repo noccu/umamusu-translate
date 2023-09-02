@@ -7,7 +7,7 @@ from types import SimpleNamespace
 from common import constants as const, patch
 from common.constants import NAMES_BLACKLIST
 
-from . import display, files, navigator, text, types
+from . import display, files, navigator, text, types, fonts
 
 
 class Options:
@@ -26,12 +26,12 @@ class Editor:
         root.title("File Editor")
         root.resizable(False, False)
         self.root = root
+        fonts.init(root)
 
         self.cur_chapter = 0
         self.cur_block = 0
         # Managers
         self.options = Options()
-        self.fonts = display.FontManager(self)
         self.fileMan = files.FileManager(self)
         self.nav = navigator.Navigator(self)
         # Windows
@@ -58,10 +58,10 @@ class Editor:
         self.blockDuration = block_duration_spinbox
         self.blockDurationLabel = block_duration_label
 
-        self.textBoxJp = text.TextBox(root, size=(None,5), font=self.fonts.FONT_LARGE)
+        self.textBoxJp = text.TextBox(root, size=(None,5))
         self.textBoxJp.grid(row=3, column=0, columnspan=4)
 
-        self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6), font=self.fonts.FONT_LARGE)
+        self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
         text_box_en.grid(row=4, column=0, columnspan=4)
         self.spell_checker = types.SpellCheck(text_box_en)
 
@@ -274,9 +274,9 @@ class AdditionalTextWindow:
 
         scrollFrame = display.ScrollableFrame(root)
         for i in range(0, 5):
-            cur_jp_text = text.TextBox(scrollFrame.content, size=(42,2), font=master.fonts.FONT_LARGE, takefocus=0)
+            cur_jp_text = text.TextBox(scrollFrame.content, size=(42,2), takefocus=0)
             cur_jp_text.pack(anchor="w")
-            cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(42, 2), font=master.fonts.FONT_LARGE)
+            cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(42, 2))
             cur_en_text.pack(anchor="w")
             self.textBoxes.append((cur_jp_text, cur_en_text))
             cur_en_text.bind("<Tab>", display._switchWidgetFocusForced)
@@ -335,12 +335,8 @@ class SearchWindow:
         s_var_re = tk.StringVar(root)
         lb_field = tk.Label(root, text="Field:")
         lb_re = tk.Label(root, text="Search (supports regex):")
-        search_field = tk.Entry(
-            root, width=20, font=master.fonts.FONT_LARGE, textvariable=s_var_field
-        )
-        search_re = tk.Entry(
-            root, name="filter", width=40, font=master.fonts.FONT_LARGE, textvariable=s_var_re
-        )
+        search_field = tk.Entry(root, width=20, textvariable=s_var_field)
+        search_re = tk.Entry(root, name="filter", width=40, textvariable=s_var_re)
         lb_field.grid(column=0, sticky=tk.E)
         lb_re.grid(column=0, sticky=tk.E)
         search_field.grid(row=0, column=1, columnspan=2, sticky=tk.W)
@@ -470,8 +466,7 @@ class PreviewWindow:
         fontSize.trace("w", self._evChangeFontSize)
         fontSizeCfg = ttk.Spinbox(root, from_=2, to=75, increment=1, textvariable=fontSize)
         fontSizeCfg.pack(expand=True, fill="x")
-        previewFont = master.fonts.FONT_LARGE.copy()
-        previewFont.config(size=fontSize.get())
+        previewFont = fonts.create(root, id="preview", size=fontSize.get())
         previewText = tk.Label(root, font=previewFont, justify="left", anchor="w")
         previewText.pack(expand=True, fill="both")
 

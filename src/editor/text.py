@@ -1,9 +1,9 @@
 import re
 import tkinter as tk
 from tkinter import colorchooser
-from tkinter.font import Font
 from typing import Union, TYPE_CHECKING
-from display import FontManager
+
+from . import fonts
 
 if TYPE_CHECKING:
     from common.types import TranslationFile
@@ -35,16 +35,16 @@ class TextBox(tk.Text):
     DEFAULT_HEIGHT = 4
 
     # todo: maybe move color to post_init and pass through init itself to tk
-    def __init__(self, parent, size: tuple[int] = (None, None), font: Font = None) -> None:
+    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None) -> None:
         super().__init__(
             parent,
             width=size[0] or TextBox.DEFAULT_WIDTH,
             height=size[1] or TextBox.DEFAULT_HEIGHT,
-            font=font,
+            font=font or fonts.DEFAULT,
             state="disabled",
         )
-        self.tag_config("b", font=FontManager.FONT_BOLD)
-        self.tag_config("i", font=FontManager.FONT_ITALIC)
+        self.tag_config("b", font=fonts.BOLD)
+        self.tag_config("i", font=fonts.ITALIC)
         self.color = ColorManager(self)
 
     def loadRichText(self, text: str = None):
@@ -95,7 +95,7 @@ class TextBox(tk.Text):
 
 
 class TextBoxEditable(TextBox):
-    def __init__(self, parent, size: tuple[int] = (None, None), font: Font = None) -> None:
+    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None) -> None:
         super().__init__(parent, size, font)
         self.config(state="normal", undo=True)
 

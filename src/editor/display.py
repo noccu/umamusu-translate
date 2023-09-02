@@ -1,59 +1,5 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter.font import Font
-
-from common import constants as const
-
-if const.IS_WIN:
-    from ctypes import byref, create_string_buffer, create_unicode_buffer, windll
-
-
-class FontManager:
-    fontLoaded = False
-
-    def __init__(self, master) -> None:
-        if not FontManager.fontLoaded:
-            self.loadFont(r"src/data/RodinWanpakuPro-UmaTl.otf")
-        FontManager.fontLoaded = True
-
-        # Todo: consider adding general functions and defining these externally through them
-        self.FONT_LARGE = FONT_LARGE = Font(
-            master.root, family="RodinWanpakuPro UmaTl B", size=18, weight="normal"
-        )
-        self.FONT_BOLD = FONT_LARGE.copy()
-        self.FONT_BOLD.config(weight="bold")
-        self.FONT_ITALIC = FONT_LARGE.copy()
-        self.FONT_ITALIC.config(slant="italic")
-
-    def loadFont(self, fontPath):
-        # code modified from https://github.com/ifwe/digsby/blob/f5fe00244744aa131e07f09348d10563f3d8fa99/digsby/src/gui/native/win/winfonts.py#L15
-        if not const.IS_WIN:
-            print(
-                "Non-Windows system: Fonts, lengths, and previews won't match game.\n"
-                "To load custom game font install 'src/data/RodinWanpakuPro-B-ex.otf' to system fonts."
-            )
-            return
-        # origFontList = list(tk.font.families())
-        if isinstance(fontPath, bytes):
-            pathbuf = create_string_buffer(fontPath)
-            AddFontResourceEx = windll.gdi32.AddFontResourceExA
-        elif isinstance(fontPath, str):
-            pathbuf = create_unicode_buffer(fontPath)
-            AddFontResourceEx = windll.gdi32.AddFontResourceExW
-        else:
-            raise TypeError("fontPath must be bytes or str")
-
-        flags = 0x10 | 0x20  # private and not enumerable
-        # flags = 0x10 | 0 # private and enumerable
-
-        numFontsAdded = AddFontResourceEx(byref(pathbuf), flags, 0)
-        # print(
-        #   f"added {numFontsAdded} fonts:",
-        #   [name for name in tk.font.families() if name not in origFontList]
-        # )
-        # print(tk.font.families()[-3:])
-
-        return numFontsAdded
 
 
 class PopupMenu(tk.Menu):

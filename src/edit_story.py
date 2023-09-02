@@ -1,3 +1,3 @@
-import editor.main as editor
+import editor.app as editor
 
 editor.main()

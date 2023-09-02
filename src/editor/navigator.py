@@ -9,7 +9,7 @@ from common.utils import isEnglish
 if TYPE_CHECKING:
     from common.types import TranslationFile
 
-    from .main import Editor
+    from .app import Editor
 
 
 class Navigator:

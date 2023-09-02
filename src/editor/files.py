@@ -8,7 +8,7 @@ from common.types import StoryId, TranslationFile
 from . import display, text
 
 if TYPE_CHECKING:
-    from .main import Editor
+    from .app import Editor
     from .navigator import Navigator
 
 

@@ -311,7 +311,7 @@ class AdditionalTextWindow:
                     enBox.insert(tk.END, self.cur_text_list[i]["enText"])
                     jpBox["state"] = "disabled"
             self.root.deiconify()
-            self.root.firstText.focus()
+            self.firstText.focus()
 
     def toggle(self, event=None, allowShow=True, target=None):
         if self.root.state() == "normal":

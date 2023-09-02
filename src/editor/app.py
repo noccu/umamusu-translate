@@ -58,21 +58,11 @@ class Editor:
         self.blockDuration = block_duration_spinbox
         self.blockDurationLabel = block_duration_label
 
-        text_box_jp = tk.Text(
-            root,
-            width=text.TextEditBox.DEFAULT_WIDTH,
-            height=4,
-            state="disabled",
-            font=self.fonts.FONT_LARGE,
-        )
-        text_box_jp.grid(row=3, column=0, columnspan=4)
-        self.textBoxJp = text_box_jp
+        self.textBoxJp = text.TextBox(root, size=(None,5), font=self.fonts.FONT_LARGE)
+        self.textBoxJp.grid(row=3, column=0, columnspan=4)
 
-        text_box_en = text.TextEditBox(root, size=(None, 6), font=self.fonts.FONT_LARGE)
+        self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6), font=self.fonts.FONT_LARGE)
         text_box_en.grid(row=4, column=0, columnspan=4)
-        text_box_en.tag_config("b", font=self.fonts.FONT_BOLD)
-        text_box_en.tag_config("i", font=self.fonts.FONT_ITALIC)
-        self.textBoxEn = text_box_en
         self.spell_checker = types.SpellCheck(text_box_en)
 
         frm_btns_bot = tk.Frame(root)
@@ -284,13 +274,9 @@ class AdditionalTextWindow:
 
         scrollFrame = display.ScrollableFrame(root)
         for i in range(0, 5):
-            cur_jp_text = tk.Text(
-                scrollFrame.content, takefocus=0, width=42, height=2, font=master.fonts.FONT_LARGE
-            )
+            cur_jp_text = text.TextBox(scrollFrame.content, size=(42,2), font=master.fonts.FONT_LARGE, takefocus=0)
             cur_jp_text.pack(anchor="w")
-            cur_en_text = tk.Text(
-                scrollFrame.content, height=2, width=42, undo=True, font=master.fonts.FONT_LARGE
-            )
+            cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(42, 2), font=master.fonts.FONT_LARGE)
             cur_en_text.pack(anchor="w")
             self.textBoxes.append((cur_jp_text, cur_en_text))
             cur_en_text.bind("<Tab>", display._switchWidgetFocusForced)

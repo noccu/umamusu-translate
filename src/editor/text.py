@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import colorchooser
 from tkinter.font import Font
 from typing import Union, TYPE_CHECKING
+from display import FontManager
 
 if TYPE_CHECKING:
     from common.types import TranslationFile
@@ -27,29 +28,76 @@ class ColorManager:
         tk.Text.tag_config(self.master, f"color={color}", foreground=color)
 
 
-class TextEditBox(tk.Text):
-    """A tk Text widget with extra features for editing"""
+class TextBox(tk.Text):
+    """A tk Text widget with extra features"""
 
     DEFAULT_WIDTH = 54
     DEFAULT_HEIGHT = 4
 
     # todo: maybe move color to post_init and pass through init itself to tk
-    def __init__(
-        self, parent, size: tuple[int] = None, editable: bool = True, font: Font = None
-    ) -> None:
-        if not size:
-            size = None, None
-        w = size[0] or TextEditBox.DEFAULT_WIDTH
-        h = size[1] or TextEditBox.DEFAULT_HEIGHT
+    def __init__(self, parent, size: tuple[int] = (None, None), font: Font = None) -> None:
         super().__init__(
             parent,
-            width=w,
-            height=h,
-            undo=True,
+            width=size[0] or TextBox.DEFAULT_WIDTH,
+            height=size[1] or TextBox.DEFAULT_HEIGHT,
             font=font,
-            state="normal" if editable else "disabled",
+            state="disabled",
         )
+        self.tag_config("b", font=FontManager.FONT_BOLD)
+        self.tag_config("i", font=FontManager.FONT_ITALIC)
         self.color = ColorManager(self)
+
+    def loadRichText(self, text: str = None):
+        """Load text into widget, converting unity RT markup to tk tags.
+        If no text is given it converts all existing text"""
+        if text is None:
+            text = self.get(1.0, tk.END)
+        tagList = list()
+        offset = 0
+        openedTags = dict()
+        tagRe = r"<(/?)(([a-z]+)(?:[=#a-z\d]+)?)>"
+        for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
+            isClose, fullTag, tagName = m.groups()
+            if tagName not in ("color", "b", "i", "size"):
+                continue
+            if isClose:
+                openedTags[tagName]["end"] = m.start() - offset
+            else:
+                tagList.append({"name": fullTag, "start": m.start() - offset})
+                openedTags[tagName] = tagList[-1]
+                if tagName == "color":
+                    self.color.define(fullTag.split("=")[-1])
+            offset += len(m[0])
+        # Add the cleaned text
+        setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE))
+        # Apply tags
+        for toTag in tagList:
+            self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
+
+    def toRichText(self):
+        text = list(self.get(1.0, tk.END))
+        offset = 0
+        tagList = list()
+        for tag in self.tag_names():
+            tagBaseName = tag.split("=")[0]
+            if tagBaseName not in ("i", "b", "color", "size"):
+                continue
+            ranges = self.tag_ranges(tag)
+            tagList.extend((text_count(self, "1.0", x, "-chars"), f"<{tag}>") for x in ranges[0::2])
+            tagList.extend(
+                (text_count(self, "1.0", x, "-chars"), f"</{tagBaseName}>") for x in ranges[1::2]
+            )
+        tagList.sort(key=lambda x: x[0])
+        for idx, tag in tagList:
+            text.insert(idx + offset, tag)
+            offset += 1
+        return "".join(text)
+
+
+class TextBoxEditable(TextBox):
+    def __init__(self, parent, size: tuple[int] = (None, None), font: Font = None) -> None:
+        super().__init__(parent, size, font)
+        self.config(state="normal", undo=True)
 
     def format_text(self, event):
         if not self.tag_ranges("sel"):
@@ -99,57 +147,9 @@ class TextEditBox(tk.Text):
                 return
             self.replace(f"{start}+{str(m.start())}c", pos, res)
 
-    # todo: was insertTaggedTextFromMarkup
-    def loadRichText(self, text: str = None):
-        """Load text into widget, converting unity RT markup to tk tags.
-        If no text is given it converts all existing text"""
-        if text is None:
-            text = self.get(1.0, tk.END)
-        tagList = list()
-        offset = 0
-        openedTags = dict()
-        tagRe = r"<(/?)(([a-z]+)(?:[=#a-z\d]+)?)>"
-        for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
-            isClose, fullTag, tagName = m.groups()
-            if tagName not in ("color", "b", "i", "size"):
-                continue
-            if isClose:
-                openedTags[tagName]["end"] = m.start() - offset
-            else:
-                tagList.append({"name": fullTag, "start": m.start() - offset})
-                openedTags[tagName] = tagList[-1]
-                if tagName == "color":
-                    self.color.define(fullTag.split("=")[-1])
-            offset += len(m[0])
-        # Add the cleaned text
-        setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE))
-        # Apply tags
-        for toTag in tagList:
-            self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
-
-    # todo: was tagsToMarkup
-    def toRichText(self):
-        text = list(self.get(1.0, tk.END))
-        offset = 0
-        tagList = list()
-        for tag in self.tag_names():
-            tagBaseName = tag.split("=")[0]
-            if tagBaseName not in ("i", "b", "color", "size"):
-                continue
-            ranges = self.tag_ranges(tag)
-            tagList.extend((text_count(self, "1.0", x, "-chars"), f"<{tag}>") for x in ranges[0::2])
-            tagList.extend(
-                (text_count(self, "1.0", x, "-chars"), f"</{tagBaseName}>") for x in ranges[1::2]
-            )
-        tagList.sort(key=lambda x: x[0])
-        for idx, tag in tagList:
-            text.insert(idx + offset, tag)
-            offset += 1
-        return "".join(text)
-
 
 def process_text(file: "TranslationFile", text: str = None, redoNewlines: bool = False):
-    """Process given text or whole file (like module main) when no text given.
+    """Process given text or whole file when no text given.
     When whole file, assumes line lengths are correct and skips adjustment."""
     import textprocess
 

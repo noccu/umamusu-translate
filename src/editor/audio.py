@@ -1,16 +1,24 @@
-import re
-import tkinter as tk
 from functools import partial
-from tkinter.font import Font
+from dataclasses import dataclass, field as datafield
+from itertools import zip_longest
+from typing import TYPE_CHECKING
 
-import symspellpy
+from common import patch, constants as const
+from common.types import GameBundle
 
-from common.types import TranslationFile
+if const.IS_WIN:
+    import sqlite3
+    import wave
 
-from .display import PopupMenu
+    import pyaudio
+    from PyCriCodecs import AWB, HCA
 
-'''
-#! DEV DISABLE
+    import restore
+
+if TYPE_CHECKING:
+    from .app import Editor
+
+
 @dataclass
 class PlaySegment:
     idx: int
@@ -19,7 +27,7 @@ class PlaySegment:
     timeBased: bool = datafield(init=False, compare=False)
 
     def __post_init__(self):
-        self.timeBased = False if self.startTime is None else True
+        self.timeBased = self.startTime is not None
         self._rateApplied = False
 
     def applyRateOnce(self, rate):
@@ -32,13 +40,12 @@ class PlaySegment:
         self._rateApplied = True
 
     @classmethod
-    def fromBlock(cls, block):
+    def fromBlock(cls, block: dict, nextBlock: dict):
         idx = block.get("voiceIdx")
         start = block.get("time")
         end = None
-        if start:
+        if start:  # Time-based (lyrics)
             start = int(start)
-            nextBlock = cur_file.textBlocks[cur_block + 1]
             if nextBlock:
                 end = int(nextBlock.get("time"))
         elif idx is not None:
@@ -56,10 +63,11 @@ class AudioPlayer:
     wavFiles: list[wave.Wave_read] = list()
     subFiles = None
 
-    def __init__(self) -> None:
+    def __init__(self, master: "Editor") -> None:
         self.pyaud = pyaudio.PyAudio()
         self._db = sqlite3.connect(const.GAME_META_FILE)
         self._restoreArgs = restore.parseArgs([])
+        self.master = master
 
     def dealloc(self):
         self._db.close()
@@ -184,20 +192,21 @@ class AudioPlayer:
         wavFile.getfp().close()
         wavFile.close()
 
-    @staticmethod
-    def listen(event=None):
+    def listen(self, event=None):
+        file = self.master.nav.cur_file
+        block = self.master.nav.cur_block
         if not const.IS_WIN:
             print("Audio currently only supported on Windows")
             return
-        voice = PlaySegment.fromBlock(cur_file.textBlocks[cur_block])
+        voice = PlaySegment.fromBlock(file.textBlocks[block], file.textBlocks[block + 1])
         if not voice:
             print("Old file version, does not have voice info.")
             return "break"
-        storyId = cur_file.data.get("storyId")
+        storyId = file.data.get("storyId")
         if not storyId:
             print("File has an invalid storyid.")
             return "break"
-        elif len(storyId) < 9 and cur_file.type != "lyrics":
+        elif len(storyId) < 9 and file.type != "lyrics":
             # Preview type would work but I don't understand
             # the format/where it gets info unless it's really just awbTracks[15:-1]
             print("Unsupported type.")
@@ -206,12 +215,5 @@ class AudioPlayer:
             print("No voice info found for this block.")
             return "break"
 
-        global AUDIO_PLAYER
-        if not AUDIO_PLAYER:
-            AUDIO_PLAYER = AudioPlayer()
-        AUDIO_PLAYER.play(storyId, voice, sType=cur_file.type)
+        self.play(storyId, voice, sType=file.type)
         return "break"
-
-'''
-
-

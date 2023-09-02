@@ -8,6 +8,7 @@ from common.constants import NAMES_BLACKLIST
 
 from . import display, files, navigator, text, fonts
 from .spellcheck import SpellCheck
+from .audio import AudioPlayer
 
 
 class Options:
@@ -34,6 +35,7 @@ class Editor:
         self.options = Options()
         self.fileMan = files.FileManager(self)
         self.nav = navigator.Navigator(self)
+        self.audio = AudioPlayer(self)
         # Windows
         self.extraText = AdditionalTextWindow(self)
         self.search = SearchWindow(self)
@@ -82,10 +84,10 @@ class Editor:
             width=10,
         )
         btn_colored.grid(row=1, column=0)
-        # btn_listen = tk.Button(
-        #     frm_btns_bot, text="Listen", command=types.AudioPlayer.listen, width=10
-        # )
-        # btn_listen.grid(row=0, column=1)
+        btn_listen = tk.Button(
+            frm_btns_bot, text="Listen", command=self.audio.listen, width=10
+        )
+        btn_listen.grid(row=0, column=1)
         btn_search = tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10)
         btn_search.grid(row=1, column=1)
         btn_reload = tk.Button(
@@ -198,7 +200,7 @@ class Editor:
         text_box_en.bind("<Alt-f>", self._evProcessText)
         text_box_en.bind("<Alt-F>", lambda e: self._evProcessText(e, redoNewlines=True))
         root.bind("<Control-f>", self.search.toggle)
-        # text_box_en.bind("<Control-h>", AudioPlayer.listen)
+        text_box_en.bind("<Control-h>", self.audio.listen)
         root.bind("<Control-p>", self.preview.toggle)
 
         root.protocol("WM_DELETE_WINDOW", self.onClose)
@@ -220,9 +222,8 @@ class Editor:
             )
             if not answer:
                 return
-        #! dev disable
-        # if AUDIO_PLAYER:
-        #     AUDIO_PLAYER.dealloc()
+        if self.audio:
+            self.audio.dealloc()
         self.spell_checker.saveNewDict()
         self.root.quit()
 

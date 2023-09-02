@@ -1,10 +1,9 @@
 import re
 import tkinter as tk
-from argparse import SUPPRESS
 from tkinter import messagebox, ttk
 from types import SimpleNamespace
 
-from common import constants as const, patch
+from common import constants as const
 from common.constants import NAMES_BLACKLIST
 
 from . import display, files, navigator, text, types, fonts
@@ -237,7 +236,6 @@ class Editor:
             txt = text.process_text(self.nav.cur_file, text.normalize(txt), redoNewlines=redoNewlines)
             self.textBoxEn.loadRichText(txt)
         return "break"
-
 
     def copy_block(self, event=None):
         self.root.clipboard_clear()
@@ -497,30 +495,3 @@ class PreviewWindow:
             self.root.withdraw()
         else:
             self.root.deiconify()
-
-
-def parseArgs(args=None):
-    ap = patch.Args("Story editor", types=const.SUPPORTED_TYPES)
-    ap.add_argument("-src")
-    ap.add_argument("-dst", help=SUPPRESS)
-    args = ap.parse_args(args)
-    return args
-
-
-def main(args=None):
-    args = args or parseArgs(args)
-    # todo: checking files here is faster than constructing an editor first...
-    files = args.src or patch.searchFiles(
-        args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
-    )
-    if not files:
-        print(("No files match given criteria"))
-        raise SystemExit
-
-    editor = Editor()
-    editor.fileMan.importFiles(files)
-    editor.start()
-
-
-if __name__ == "__main__":
-    main()

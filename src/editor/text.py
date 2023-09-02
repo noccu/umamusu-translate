@@ -35,13 +35,14 @@ class TextBox(tk.Text):
     DEFAULT_HEIGHT = 4
 
     # todo: maybe move color to post_init and pass through init itself to tk
-    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None) -> None:
+    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
         super().__init__(
             parent,
             width=size[0] or TextBox.DEFAULT_WIDTH,
             height=size[1] or TextBox.DEFAULT_HEIGHT,
             font=font or fonts.DEFAULT,
             state="disabled",
+            **kwargs
         )
         self.tag_config("b", font=fonts.BOLD)
         self.tag_config("i", font=fonts.ITALIC)
@@ -95,8 +96,8 @@ class TextBox(tk.Text):
 
 
 class TextBoxEditable(TextBox):
-    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None) -> None:
-        super().__init__(parent, size, font)
+    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
+        super().__init__(parent, size, font, **kwargs)
         self.config(state="normal", undo=True)
 
     def format_text(self, event):

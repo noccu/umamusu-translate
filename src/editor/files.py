@@ -120,7 +120,7 @@ class FileManager:
                 text.setText(self.master.blockDuration, "-1")
 
         display.setActive(self.master.textBoxJp, True)
-        text.setText(self.master.textBoxJp, text.for_display(file, block["jpText"]))
+        self.master.textBoxJp.loadRichText(text.for_display(file, block["jpText"]))
         display.setActive(self.master.textBoxJp, False)
         displayText = text.for_display(file, block["enText"])
         self.master.textBoxEn.loadRichText(displayText)

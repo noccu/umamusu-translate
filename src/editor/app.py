@@ -6,7 +6,8 @@ from types import SimpleNamespace
 from common import constants as const
 from common.constants import NAMES_BLACKLIST
 
-from . import display, files, navigator, text, types, fonts
+from . import display, files, navigator, text, fonts
+from .spellcheck import SpellCheck
 
 
 class Options:
@@ -62,7 +63,7 @@ class Editor:
 
         self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
         text_box_en.grid(row=4, column=0, columnspan=4)
-        self.spell_checker = types.SpellCheck(text_box_en)
+        self.spell_checker = SpellCheck(text_box_en)
 
         frm_btns_bot = tk.Frame(root)
         btn_choices = tk.Button(

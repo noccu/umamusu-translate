@@ -8,7 +8,6 @@ from common.utils import isEnglish
 
 if TYPE_CHECKING:
     from common.types import TranslationFile
-
     from .app import Editor
 
 
@@ -40,17 +39,18 @@ class Navigator:
         self.chapterPicker = chapter_dropdown
         self.blockPicker = block_dropdown
         self.master = master
+        self.fileMan = master.fileMan
 
     def change_chapter(self, event=None):
         if self.cur_file:
-            self.master.fileMan.save_block(self)
+            self.fileMan.save_block(self)
         if self.chapterPicker.search:
             cur_chapter = self.chapterPicker.search[self.chapterPicker.current()]
             self.resetChapterSearch()
         else:
             cur_chapter = self.chapterPicker.current()
 
-        cur_file = self.master.fileMan.loadFile(cur_chapter)
+        cur_file = self.fileMan.loadFile(cur_chapter)
         self.cur_file = cur_file
         self.cur_chapter = cur_chapter
         self.cur_block = 0
@@ -58,7 +58,7 @@ class Navigator:
             f"{i+1} - {block['jpText'][:16]}" for i, block in enumerate(cur_file.textBlocks)
         ]
         self.blockPicker.current(0)
-        self.cur_data = self.master.fileMan.load_block(self.cur_file, self.cur_block)
+        self.cur_data = self.fileMan.load_block(self.cur_file, self.cur_block)
 
         ll = textprocess.calcLineLen(cur_file, False) or self.master.textBoxEn.DEFAULT_WIDTH
         self.master.textBoxEn.config(width=ll)
@@ -66,7 +66,7 @@ class Navigator:
 
     def reload_chapter(self, event=None):
         self.cur_file.reload()
-        self.cur_data = self.master.fileMan.load_block(self.cur_file, self.cur_block)
+        self.cur_data = self.fileMan.load_block(self.cur_file, self.cur_block)
 
     def prev_ch(self, event=None):
         if self.cur_chapter - 1 > -1:
@@ -77,14 +77,14 @@ class Navigator:
 
     def next_ch(self, event=None):
         #! ugh
-        if self.cur_chapter + 1 < len(self.master.fileMan.files):
+        if self.cur_chapter + 1 < len(self.fileMan.files):
             self.chapterPicker.current(self.cur_chapter + 1)
             self.change_chapter()
         else:
             print("Reached last chapter")
 
     def change_block(self, event=None, dir=1):
-        self.master.fileMan.save_block(self)
+        self.fileMan.save_block(self)
 
         # ? Hope this doesn't loop but it didn't before so...?
         if self.master.options.skip_translated.get():
@@ -100,10 +100,10 @@ class Navigator:
             self.blockPicker.current(targetBlock)
 
         if self.master.options.saveOnBlockChange.get():
-            self.master.fileMan.saveFile()
+            self.fileMan.saveFile()
 
         self.cur_block = self.blockPicker.current()
-        self.cur_data = self.master.fileMan.load_block(self.cur_file, self.cur_block)
+        self.cur_data = self.fileMan.load_block(self.cur_file, self.cur_block)
 
     def prev_block(self, event=None):
         if self.cur_block - 1 > -1:
@@ -132,12 +132,12 @@ class Navigator:
             return
         search = self.chapterPicker.get()
         if search == "":
-            self.chapterPicker["values"] = self.master.fileMan.formattedFiles
+            self.chapterPicker["values"] = self.fileMan.formattedFiles
             self.chapterPicker.search = None
         else:
             searchList = {
                 item: i
-                for i, item in enumerate(self.master.fileMan.formattedFiles)
+                for i, item in enumerate(self.fileMan.formattedFiles)
                 if search in item
             }
             self.chapterPicker["values"] = (
@@ -146,7 +146,7 @@ class Navigator:
             self.chapterPicker.search = list(searchList.values()) if searchList else None
 
     def resetChapterSearch(self):
-        self.chapterPicker["values"] = self.master.fileMan.formattedFiles
+        self.chapterPicker["values"] = self.fileMan.formattedFiles
         self.chapterPicker.search = None
 
     def nextMissingName(self):

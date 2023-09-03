@@ -432,8 +432,7 @@ class SearchWindow:
                 if chapter != self.master.nav.cur_chapter:
                     self.master.nav.chapterPicker.current(chapter)
                     self.master.nav.change_chapter()
-                self.master.nav.blockPicker.current(i)
-                self.master.nav.change_block()
+                self.master.nav.change_block(i)
                 self.search_cur_state = self.master.nav.cur_chapter, i + 1
                 return True
         self.search_cur_state = self.master.nav.cur_chapter + 1, 0
@@ -447,8 +446,7 @@ class SearchWindow:
         ch, b, *_ = self.stateOnOpen
         self.master.nav.chapterPicker.current(ch)
         self.master.nav.change_chapter()
-        self.master.nav.blockPicker.current(b)
-        self.master.nav.change_block()
+        self.master.nav.change_block(b)
 
 
 class PreviewWindow:

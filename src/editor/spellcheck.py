@@ -63,13 +63,28 @@ class SpellCheck:
         # Iterate over each word and check for spelling errors
         searchIdx = 0
         for word in words:
-            if word == "" or len(word) == 1 or word.lower() in SpellCheck.dictionary.words:
+            if len(word) < 2:
                 searchIdx += len(word)
                 continue
-            # print(f"Looking up {word}")
+            if word[-2:] == "s'":
+                isPos = True
+                lWord = word[:-1]
+            elif word[-2:] == "'s":
+                isPos = True
+                lWord = word[:-2]
+            else:
+                isPos = False
+                lWord = word
+            if lWord.lower() in SpellCheck.dictionary.words:
+                searchIdx += len(word)
+                continue
+            # print(f"Looking up {lWord}")
             suggestions = SpellCheck.dictionary.lookup(
-                word, symspellpy.Verbosity.CLOSEST, transfer_casing=True
+                lWord, symspellpy.Verbosity.CLOSEST, transfer_casing=True
             )
+            if isPos:
+                for s in suggestions:
+                    s.term += "'" if s.term[-1] == "s" else "'s"
             startIdx = text.index(word, searchIdx)
             endIdx = startIdx + len(word)
             searchIdx += len(word)

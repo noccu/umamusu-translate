@@ -43,7 +43,7 @@ class Editor:
 
         speaker_jp_label = tk.Label(root, text="Speaker (JP)")
         speaker_jp_label.grid(row=1, column=0)
-        speaker_jp_entry = tk.Entry(root)
+        speaker_jp_entry = tk.Entry(root, state="readonly")
         speaker_jp_entry.grid(row=1, column=1, sticky=tk.NSEW)
         self.speakerJp = speaker_jp_entry
 

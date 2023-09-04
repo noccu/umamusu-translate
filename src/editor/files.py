@@ -94,7 +94,9 @@ class FileManager:
         block = file.textBlocks[idx]
 
         # Fill in the text boxes
+        display.setActive(self.master.speakerJp, True)
         text.setText(self.master.speakerJp, block.get("jpName", ""))
+        self.master.speakerJp.config(state="readonly")
         if block.get("jpName") in NAMES_BLACKLIST:
             text.clearText(self.master.speakerEn)
             display.setActive(self.master.speakerEn, False)

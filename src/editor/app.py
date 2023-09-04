@@ -71,7 +71,7 @@ class Editor:
         btn_choices = tk.Button(
             frm_btns_bot,
             text="Choices",
-            command=lambda: self.extraText(target=self.extraText.cur_choices),
+            command=lambda: self.extraText.toggle(target=self.extraText.cur_choices),
             state="disabled",
             width=10,
         )
@@ -79,7 +79,7 @@ class Editor:
         btn_colored = tk.Button(
             frm_btns_bot,
             text="Colored",
-            command=lambda: self.extraText(target=self.extraText.cur_colored),
+            command=lambda: self.extraText.toggle(target=self.extraText.cur_colored),
             state="disabled",
             width=10,
         )

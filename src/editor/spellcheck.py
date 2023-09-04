@@ -77,19 +77,13 @@ class SpellCheck:
             self.widget.word_suggestions[word] = suggestions
 
     def autocomplete(self, event: tk.Event = None):
-        # \M = word boundary (end only) -> TCL, reverse search
+        # TCL regex  = weird, also reverse search = everything reverse?
+        # \M = word boundary (end only), \Z = end of string, \A = start
+        # Both \A and \Z seem to work bu only \M worked before, I think?
         wordstart = self.widget.search(
-            r"\M", index=tk.INSERT, backwards=True, regexp=True, nocase=True
+            r"[^ ]+(?=\Z|[\n ])", index=tk.INSERT, backwards=True, regexp=True, nocase=True
         )
-        # The index returned from the 0-length match is 1 too early.
-        # Special-case first word on first line because \M matches possible $ and not ^
-        if not wordstart:
-            wordstart = "1.0"
-        else:
-            wordstart += "+1c"
-        # Remove extraneous newlines that happen with empty lines for some reason.
-        partialWord, n = re.subn(r"\n", "", self.widget.get(wordstart, tk.INSERT))
-        wordstart += f"+{n}c"  # And adjust the index accordingly.
+        partialWord = self.widget.get(wordstart, tk.INSERT)
         # Keep capitalization
         isCapitalized = partialWord[0].isupper()
         partialWord = partialWord.lower()

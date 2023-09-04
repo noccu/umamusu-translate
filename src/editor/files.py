@@ -149,7 +149,6 @@ class FileManager:
             display.setActive(self.master.btnColored, False)
             self.master.btnColored.config(bg=self.master.COLOR_BTN)
         self.saveState.markBlockLoaded(block)
-        self.master.spell_checker.check_spelling()
         self.master.preview.setText(displayText)
         return block
 

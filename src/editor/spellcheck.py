@@ -15,6 +15,7 @@ class SpellCheck:
     dictionary: symspellpy.SymSpell = None
     nameFreq = 30000000000
     defaultFreq = 30000
+    newDict = list()
 
     def __init__(self, widget: tk.Text) -> None:
         widget.tag_config("spellError", underline=True, underlinefg="red")
@@ -24,8 +25,7 @@ class SpellCheck:
         # widget.word_suggestions = {}
         self.menu = PopupMenu(widget, tearoff=0)
         self.widget = widget
-        self.newDict = list()
-        if not SpellCheck.dictionary:
+        if SpellCheck.dictionary is None:
             SpellCheck.dictionary = symspellpy.SymSpell()
             SpellCheck.dictionary.load_dictionary(SpellCheck.dictPath, 0, 1)
             if not SpellCheck.dictionary.create_dictionary(self.customDictPath, "utf8"):
@@ -37,7 +37,7 @@ class SpellCheck:
         # Max importance of names
         # freq = 30000000000 if word[0].isupper() else 30000
         freq = SpellCheck.nameFreq if isName else SpellCheck.defaultFreq
-        self.newDict.append(f"{lcword} {freq}\n")
+        SpellCheck.newDict.append(f"{lcword} {freq}\n")
         SpellCheck.dictionary.create_dictionary_entry(lcword, freq)
         # Remove UI marking
         del self.widget.word_suggestions[word]
@@ -50,7 +50,7 @@ class SpellCheck:
             for n in name:
                 if len(n) < 3:
                     continue
-                self.dictionary.create_dictionary_entry(n, SpellCheck.nameFreq)
+                SpellCheck.dictionary.create_dictionary_entry(n, SpellCheck.nameFreq)
 
     def check_spelling(self, event=None):
         if event and event.keysym not in ("space", "BackSpace", "Delete"):
@@ -95,7 +95,7 @@ class SpellCheck:
         partialWord = partialWord.lower()
         self.menu.clear()
         suggestions = 0
-        for word in self.dictionary.words:
+        for word in SpellCheck.dictionary.words:
             if word.startswith(partialWord):
                 if isCapitalized:
                     word = word.title()
@@ -141,9 +141,10 @@ class SpellCheck:
         self.widget.insert(fixRange[0], replacement)
         # print(f"Replaced {oldWord} with {replacement}")
 
-    def saveNewDict(self):
-        if len(self.newDict) == 0:
+    @classmethod
+    def saveNewDict(cls):
+        if len(cls.newDict) == 0:
             return
-        with open(self.customDictPath, "a", encoding="utf8", newline="\n") as f:
-            f.writelines(self.newDict)
+        with open(cls.customDictPath, "a", encoding="utf8", newline="\n") as f:
+            f.writelines(cls.newDict)
         print("New words added to umatl dict.")

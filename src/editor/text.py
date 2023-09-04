@@ -4,6 +4,7 @@ from tkinter import colorchooser
 from typing import Union, TYPE_CHECKING
 
 from . import fonts
+from .spellcheck import SpellCheck
 
 if TYPE_CHECKING:
     from common.types import TranslationFile
@@ -100,6 +101,8 @@ class TextBoxEditable(TextBox):
         super().__init__(parent, size, font, **kwargs)
         self.config(state="normal", undo=True)
 
+        self.spellChecker = SpellCheck(self)
+
         # Keybinds
         self.bind("<Alt-x>", self.char_convert)
         self.bind("<Control-BackSpace>", self.del_word)
@@ -109,6 +112,10 @@ class TextBoxEditable(TextBox):
         self.bind("<Control-i>", self.format_text)
         self.bind("<Control-b>", self.format_text)
         self.bind("<Control-C>", self.format_text)
+
+    def loadRichText(self, text: str = None):
+        super().loadRichText(text)
+        self.spellChecker.check_spelling()
 
     def format_text(self, event):
         if not self.tag_ranges("sel"):

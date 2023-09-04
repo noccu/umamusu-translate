@@ -65,7 +65,6 @@ class Editor:
 
         self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
         text_box_en.grid(row=4, column=0, columnspan=4)
-        self.spell_checker = SpellCheck(text_box_en)
 
         frm_btns_bot = tk.Frame(root)
         btn_choices = tk.Button(
@@ -216,7 +215,7 @@ class Editor:
                 return
         if self.audio:
             self.audio.dealloc()
-        self.spell_checker.saveNewDict()
+        SpellCheck.saveNewDict()
         self.root.quit()
 
     def _evProcessText(self, event=None, wholeFile=False, redoNewlines=False):

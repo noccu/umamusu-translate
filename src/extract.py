@@ -386,7 +386,7 @@ def parseArgs(args=None):
 
 def main(_args: patch.Args = None):
     global args
-    args = args or parseArgs(_args)
+    args = _args or parseArgs(_args)
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
         db = sqlite3.connect(GAME_META_FILE)

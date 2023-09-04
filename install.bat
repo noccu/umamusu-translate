@@ -21,6 +21,8 @@ EXIT /B 0
 
 :initgit
 IF NOT EXIST ".git" (
+    REM Make sure the CA certs are found. This sets mingit's default config to use its own certs (why is that not a thing?)
+    .mingit\mingw64\bin\git.exe config --system http.sslcainfo .mingit\mingw64\ssl\certs\ca-bundle.crt
     ECHO Initializing git repo...
     .mingit\mingw64\bin\git.exe clone --no-checkout https://github.com/noccu/umamusu-translate.git gittmp
     REM cmdline mv wont deal with .files so we still require powershell

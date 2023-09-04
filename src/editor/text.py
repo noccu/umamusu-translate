@@ -100,6 +100,16 @@ class TextBoxEditable(TextBox):
         super().__init__(parent, size, font, **kwargs)
         self.config(state="normal", undo=True)
 
+        # Keybinds
+        self.bind("<Alt-x>", self.char_convert)
+        self.bind("<Control-BackSpace>", self.del_word)
+        self.bind("<Control-Shift-BackSpace>", self.del_word)
+        self.bind("<Control-Delete>", self.del_word)
+        self.bind("<Control-Shift-Delete>", self.del_word)
+        self.bind("<Control-i>", self.format_text)
+        self.bind("<Control-b>", self.format_text)
+        self.bind("<Control-C>", self.format_text)
+
     def format_text(self, event):
         if not self.tag_ranges("sel"):
             print("No selection to format.")

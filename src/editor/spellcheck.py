@@ -1,4 +1,4 @@
-import re
+import regex as re
 import tkinter as tk
 from functools import partial
 
@@ -56,7 +56,7 @@ class SpellCheck:
         if event and event.keysym not in ("space", "BackSpace", "Delete"):
             return
         text = self.widget.get("1.0", tk.END)
-        words = re.split(r"[^A-Za-z\-']", text)
+        words = re.split(r"[^\p{L}\-']+", text)
         # Reset state
         self.widget.tag_remove("spellError", "1.0", tk.END)
         self.widget.word_suggestions = {}

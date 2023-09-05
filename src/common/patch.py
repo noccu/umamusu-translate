@@ -247,5 +247,3 @@ class UmaTlConfig:
         del data["core"]
         print(json.dumps(data, indent=2))
         sys.exit()
-
-

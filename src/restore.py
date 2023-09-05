@@ -30,7 +30,11 @@ def save(bundle: GameBundle, args):
     localFile = join(args.backup_dir, bundle.bundleName)
 
     if not args.forcedl and isfile(localFile):
-        logger.conditionalDetail(f"Copying {bundle.bundleName}", f"Copying {bundle.bundleName} from {localFile}", logger.INFO)
+        logger.conditionalDetail(
+            f"Copying {bundle.bundleName}",
+            f"Copying {bundle.bundleName} from {localFile}",
+            logger.INFO,
+        )
         shutil.copyfile(localFile, bundle.bundlePath)
     else:
         data = download(bundle.bundleName, bundle.bundleType)

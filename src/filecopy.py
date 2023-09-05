@@ -47,9 +47,7 @@ def buildSqlStmt(args):
         elif args.type == "live":
             add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
         elif args.type == "preview":
-            add(
-                f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'"
-            )
+            add(f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'")
         elif args.type == "ruby":
             storyid = f"{args.group}{args.id}{args.idx}"
             add(f"n like 'story/data/__/____/ast_ruby_{storyid}'")
@@ -152,9 +150,7 @@ def parseArgs(args=None):
         help="Ignore additional argument processing.\n\
         Pure SQL queries based on --hash and/or --path",
     )
-    ap.add_argument(
-        "-miss", "--restore-missing", action="store_true", help="Download missing files."
-    )
+    ap.add_argument("-miss", "--restore-missing", action="store_true", help="Download missing files.")
     ap.add_argument(
         "-name",
         "--use-pathname",

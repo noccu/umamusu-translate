@@ -61,7 +61,8 @@ class PatchManager:
     def start(self):
         startTime = now()
         print(
-            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations/{self.args.type} to {self.args.dst}"
+            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} " 
+            f"from translations/{self.args.type} to {self.args.dst}"
         )
         files = patch.searchFiles(
             self.args.type, self.args.group, self.args.id, self.args.idx, changed=self.args.changed
@@ -83,7 +84,10 @@ class PatchManager:
                 else:
                     nSuccess += 1
         self.totalFilesImported += nFiles
-        print(f"Imported {nSuccess} files in {deltaTime(startTime)} seconds. Skipped: {nSkipped}, Errors: {nErrors} (Check import.log for details)")
+        print(
+            f"Imported {nSuccess} files in {deltaTime(startTime)} seconds. "
+            f"Skipped: {nSkipped}, Errors: {nErrors} (Check import.log for details)"
+        )
 
     def patchFile(self, file: str) -> bool:
         isModified = False
@@ -191,12 +195,8 @@ class StoryPatcher:
                 # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
                 # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
                 if "origClipLength" in textBlock and textBlock["enText"]:
-                    newTxtLen = (
-                        len(textBlock["enText"]) / self.manager.args.cps * self.manager.args.fps
-                    )
-                    newClipLen = int(
-                        assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"])
-                    )
+                    newTxtLen = len(textBlock["enText"]) / self.manager.args.cps * self.manager.args.fps
+                    newClipLen = int(assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"]))
                     if textBlock.get("newClipLength"):  # manual length override
                         try:
                             newClipLen = int(textBlock["newClipLength"])
@@ -390,9 +390,7 @@ def main(args: patch.Args = None):
             for type in const.TARGET_TYPES[1:]:
                 patcher.config(type=type)
                 patcher.start()
-            print(
-                f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}"
-            )
+            print(f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}")
     finally:
         logger.closeFile()
 

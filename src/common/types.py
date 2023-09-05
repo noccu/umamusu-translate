@@ -2,7 +2,7 @@ import json
 import os
 from dataclasses import asdict, astuple, dataclass
 from pathlib import Path, PurePath
-from typing import TYPE_CHECKING, Generator, Union
+from typing import TYPE_CHECKING, Generator, Union, Optional
 
 import regex
 import UnityPy
@@ -234,7 +234,7 @@ class TranslationFile:
                     yield entry
 
     @property
-    def bundle(self):
+    def bundle(self) -> Optional[str]:
         if self.version > 1:
             return self.data["bundle"]
         elif self.version == -2:
@@ -421,7 +421,7 @@ class GameBundle:
     @classmethod
     def fromName(cls, name, **kwargs):
         """Create a bundle by hash/name from the default game dir. kwargs passed to constructor"""
-        bundlePath = PurePath(GAME_ASSET_ROOT, name[0:2], name)
+        bundlePath = GameBundle.createPath(GAME_ASSET_ROOT, name)
         return cls(bundlePath, **kwargs)
 
     @staticmethod

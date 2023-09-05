@@ -9,9 +9,7 @@ REPLACEMENT_DATA = None
 LL_CACHE = None, None
 SUPPORTED_TAGS = ["i", "b", "color", "size"]
 RE_TAGS = re.compile(r"(?<!\\)</?" + f"(?:{'|'.join(SUPPORTED_TAGS)})" + r"(?:=[^>]+)?(?<!\\)>")
-RE_BREAK_WORDS = re.compile(
-    r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}"
-)  # yes we want to allow null matches
+RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}")  # allow null matches
 
 
 def processText(file: TranslationFile, text: str, opts: dict):
@@ -81,9 +79,8 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             if numLines > 0:  # allow one-word "overflow" in line split mode
                 lineFits = pureLen[-1] < lineLen
             else:
-                lineFits = (
-                    pureLen[-1] + len(m.group(0)) - 2 < lineLen
-                )  # -2 = -1 for spaces (common), -1 for <= comparison
+                # -2 = -1 for spaces (common), -1 for <= comparison
+                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen  
             if isTag or lineFits or len(m[0]) < 2 or len(lines[-1]) == 0:
                 lines[-1] += m.group(0)
             else:
@@ -104,7 +101,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
 
         nLines = len(lines)
         if numLines < 1 and nLines > 1 and pureLen[-1] < lineLen / 3.25:
-            logger.info(f"Last line is short, balancing on line number:\n\t" + '\n\t'.join(lines))
+            logger.info(f"Last line is short, balancing on line number:\n\t" + "\n\t".join(lines))
             return adjustLength(file, text, opts, numLines=nLines, lineLen=-2)
 
     if 0 < targetLines < len(lines):

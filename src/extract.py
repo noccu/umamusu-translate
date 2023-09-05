@@ -15,15 +15,11 @@ def queryDB(db=None, storyId: StoryId = None):
     storyId = StoryId.queryfy(storyId)
 
     if storyId.type == "story":
-        pattern = (
-            f"{storyId.type}/data/{storyId.group}/{storyId.id}/{storyId.type}timeline%{storyId.idx}"
-        )
+        pattern = f"{storyId.type}/data/{storyId.group}/{storyId.id}/{storyId.type}timeline%{storyId.idx}"
     elif storyId.type == "home":
         pattern = f"{storyId.type}/data/{storyId.set}/{storyId.group}/{storyId.type}timeline_{storyId.set}_{storyId.group}_{storyId.id}{storyId.idx}%"
     elif storyId.type == "race":
-        pattern = (
-            f"{storyId.type}/storyrace/text/storyrace_{storyId.group}{storyId.id}{storyId.idx}%"
-        )
+        pattern = f"{storyId.type}/storyrace/text/storyrace_{storyId.group}{storyId.id}{storyId.idx}%"
     elif storyId.type == "lyrics":
         pattern = f"live/musicscores/m{storyId.id}/m{storyId.id}_lyrics"
     elif storyId.type == "preview":
@@ -114,16 +110,12 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
                                 animGroupData["pathId"] = clipPathId
                                 textData["animData"].append(animGroupData)
                             else:
-                                logger.debug(
-                                    f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}"
-                                )
+                                logger.debug(f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}")
                     else:
                         logger.debug(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
 
                 textData["pathId"] = pathId  # important for re-importing
-                textData["blockIdx"] = block[
-                    "BlockIndex"
-                ]  # to help translators look for specific routes
+                textData["blockIdx"] = block["BlockIndex"]  # to help translators look for specific routes
                 transferExisting(storyId, textData)
                 export["text"].append(textData)
 
@@ -169,9 +161,7 @@ def extractText(assetType, obj):
         if choices:
             o["choices"] = list()
             for c in choices:
-                o["choices"].append(
-                    {"jpText": c["Text"], "enText": "", "nextBlock": c["NextBlock"]}
-                )
+                o["choices"].append({"jpText": c["Text"], "enText": "", "nextBlock": c["NextBlock"]})
 
         textColor = tree["ColorTextInfoList"]  # always present
         if textColor:

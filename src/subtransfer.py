@@ -67,9 +67,7 @@ class BasicSubProcessor:
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         self.options = options or SubTransferOptions()
-        self.cpreRe = re.compile(
-            "|".join(options.choicePrefix), re.IGNORECASE
-        )  # match searches start only
+        self.cpreRe = re.compile("|".join(options.choicePrefix), re.IGNORECASE)  # match searches start only
         # self.idx = 0 #TODO: track idx on class
 
         self.choiceNames = list()
@@ -92,9 +90,7 @@ class BasicSubProcessor:
         self.srcLines[idx]["enText"] = self.filter(line, self.srcLines[idx])
         if "jpName" in self.srcLines[idx]:
             if self.srcLines[idx]["jpName"] in NAMES_BLACKLIST:
-                self.srcLines[idx][
-                    "enName"
-                ] = ""  # forcefully clear names that should not be translated
+                self.srcLines[idx]["enName"] = ""  # forcefully clear names that should not be translated
             elif line.name and (not self.srcLines[idx]["enName"] or self.options.overrideNames):
                 self.srcLines[idx]["enName"] = line.name
 
@@ -168,9 +164,7 @@ class BasicSubProcessor:
         else:
             while (
                 len(subLine.text) == 0
-                or re.match(
-                    r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx)
-                )
+                or re.match(r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx))
                 and not (
                     len(subLine.text) < 15
                     or re.match(
@@ -419,9 +413,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                         except IndexError:
                             # can give false positives
                             skipLine = opts.strictChoices
-                            logger.error(
-                                f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}"
-                            )
+                            logger.error(f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}")
                             if skipLine:
                                 errors += 1
                     else:  # Copy text to all choices
@@ -510,9 +502,7 @@ def writeSubs(sType, storyid):
         if not subs:
             return
         utils.mkdir("subs")
-        with open(
-            f"subs/{tlFile.getStoryId()} {subs.info['Title']}.ass", "w", encoding="utf_8_sig"
-        ) as f:
+        with open(f"subs/{tlFile.getStoryId()} {subs.info['Title']}.ass", "w", encoding="utf_8_sig") as f:
             subs.dump_file(f)
 
 

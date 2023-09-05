@@ -93,9 +93,12 @@ def importTlgStatic(dumpPath, tlData):
 def clean(mode):
     """Clean ui.json and/or static_dump.json of empty translations.
     Keep the dump's static hashes regardless."""
+    # Remove empty translations
     translations = {
-        jp: en for jp, en in utils.readJson(TL_FILE).items() if en
-    }  # Remove empty translations
+        jp: en 
+        for jp, en in utils.readJson(TL_FILE).items() 
+        if en
+    }
     if mode in ("both", "ui"):
         utils.writeJson(file=TL_FILE, data=translations)
 

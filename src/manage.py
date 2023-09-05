@@ -220,7 +220,7 @@ class FileWatcher:
         global requests
         import requests
 
-        cfg = utils.readJson(patch.getUmaInstallDir() / "config.json")
+        cfg = utils.readJson(utils.getUmaInstallDir() / "config.json")
         self.port = cfg["httpServerPort"]  # we want to ride the KeyError if it happens
         print(f"Communicating with TLG on port {self.port}")
 
@@ -302,7 +302,7 @@ def watch():
     try:
         t = threading.Thread(
             target=watcher.watch,
-            args=(patch.getUmaInstallDir() / "localized_data",),
+            args=(utils.getUmaInstallDir() / "localized_data",),
             daemon=True,
         )
         t.start()
@@ -324,7 +324,7 @@ def watch():
 
 def move():
     print("Copying UI translations")
-    installDir = patch.getUmaInstallDir()
+    installDir = utils.getUmaInstallDir()
     if installDir:
         try:
             dst = installDir / LOCALIFY_DATA_DIR.name
@@ -424,7 +424,7 @@ def parseArgs(args=None):
     ap.add_argument(
         "-tlg",
         default=None,
-        const=PurePath(patch.getUmaInstallDir(), "static_dump.json"),
+        const=PurePath(utils.getUmaInstallDir(), "static_dump.json"),
         nargs="?",
         type=PurePath,
         help="Import TLG's static dump too. Auto-detects in game dir if no path given",

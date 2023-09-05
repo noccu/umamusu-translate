@@ -37,7 +37,7 @@ def setFile(filename: str = "umatl.log", level = logging.INFO):
     logDir.mkdir(exist_ok=True)
     _FILE_LOGGER = logging.FileHandler(logDir.joinpath(filename), encoding="utf8")
     _FILE_LOGGER.setFormatter(_FORMATTER)
-    _FILE_LOGGER.setLevel(level)
+    _FILE_LOGGER.setLevel(min(level, _LOGGER.level))  # todo: generalize
     _LOGGER.addHandler(_FILE_LOGGER)
     date = datetime.now(timezone.utc).isoformat(" ", "seconds")  
     if _FILE_LOGGER.stream.tell() > 1:

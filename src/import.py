@@ -37,7 +37,6 @@ class PatchManager:
     totalFilesImported = 0
 
     def __init__(self, args: argparse.Namespace) -> None:
-        # self.errorLog = stdout
         self.config(args)
 
     def config(self, args=None, **kwargs):
@@ -54,17 +53,6 @@ class PatchManager:
             self.fcArgs = backup.parseArgs([])
             self.fcArgs.restore_missing = False
             self.fcArgs.full_path = False
-        # if self.args.write_log and self.errorLog is stdout:
-        #     self.errorLog = open("import.log", "w")
-        # elif not self.args.write_log and self.errorLog is not stdout:
-        #     self.errorLog.close()
-        #     self.errorLog = stdout
-
-    # TODO: replace with logger module probably
-    # def __getstate__(self):
-    #     data = self.__dict__.copy()
-    #     del data['errorLog']
-    #     return data
 
     def start(self):
         startTime = now()
@@ -113,7 +101,6 @@ class PatchManager:
 
     def finish(self):
         pass
-        # if self.errorLog is not stdout: self.errorLog.close()
 
     def loadTranslationFile(self, path):
         try:
@@ -365,7 +352,7 @@ def parseArgs(args=None):
         "-wf",
         "--write-log",
         action="store_true",
-        help="Ignore some errors and print debug info to file instead of terminal (stdout)",
+        help="Print more detailed info to file",
     )
     ap.add_argument(
         "-cps",
@@ -388,7 +375,7 @@ def parseArgs(args=None):
 def main(args: patch.Args = None):
     args = args or parseArgs(args)
     if args.write_log:
-        print("Error logs temporarily not supported, output will be in console.")
+        logger.setFile("import.log")
 
     if args.use_tlg:
         global isUsingTLG
@@ -408,6 +395,7 @@ def main(args: patch.Args = None):
             )
     finally:
         patcher.finish()
+        logger.closeFile()
 
 
 if __name__ == "__main__":

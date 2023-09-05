@@ -107,6 +107,7 @@ class RawDefaultFormatter(argparse.ArgumentDefaultsHelpFormatter, argparse.RawTe
 
 
 class Args(argparse.ArgumentParser):
+    loggerLevelSet = False
     def __init__(self, desc, defaultArgs=True, types: tuple = None, **kwargs) -> None:
         super().__init__(
             description=desc,
@@ -177,7 +178,10 @@ class Args(argparse.ArgumentParser):
             a.idx = a.idx or a.story.idx
         if a.debug:
             a.verbose = False
-        logger.levelFromArgs(a)
+        # Set level only for main script (prevent sub-calls from overwriting).
+        if not Args.loggerLevelSet:
+            logger.levelFromArgs(a)
+            Args.loggerLevelSet = True
         return a
 
     @classmethod

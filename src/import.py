@@ -20,16 +20,20 @@ class PatchError(Exception):
     pass
 
 
-class AlreadyPatchedError(PatchError):
-    pass
-
-
 class TranslationFileError(PatchError):
     pass
 
 
+class AlreadyPatchedError(PatchError):
+    def __init__(self, bundle: str):
+        super().__init__(f"{bundle} is already patched")
+        self.bundle = bundle
+
+
 class NoAssetError(PatchError):
-    pass
+    def __init__(self, bundle: str):
+        super().__init__(f"{bundle} does not exist in your game data")
+        self.bundle = bundle
 
 
 class PatchManager:
@@ -64,7 +68,7 @@ class PatchManager:
         )
         nFiles = len(files)
         self.totalFilesProcessed += nFiles
-        nErrors = 0
+        nSuccess = nSkipped = nErrors = 0
         print(f"Found {nFiles} files.")
 
         # Not sure if threads are useful but multi-process takes too long upfront for low counts.
@@ -74,28 +78,24 @@ class PatchManager:
             for result in pool.map(self.patchFile, files):
                 if result is None:
                     nErrors += 1
-                    nFiles -= 1
                 elif result is False:
-                    nFiles -= 1
+                    nSkipped += 1
+                else:
+                    nSuccess += 1
         self.totalFilesImported += nFiles
-        print(f"Imported {nFiles} files in {deltaTime(startTime)} seconds.")
-        if nErrors > 0:
-            print(f"There were {nErrors} errors. Check import.log for details.")
+        print(f"Imported {nSuccess} files in {deltaTime(startTime)} seconds. Skipped: {nSkipped}, Errors: {nErrors} (Check import.log for details)")
 
     def patchFile(self, file: str) -> bool:
         isModified = False
         try:
             isModified, reason = self.patch(file)
             if isModified:
-                print(f"Imported {file}{f' ({reason})' if reason else ''}")
+                print(f"Imported {file} ({reason})")
             else:
-                logger.info(f"{file} not modified.")
-        except (NoAssetError, AlreadyPatchedError) as e:
-            logger.info(e)
-        except PatchError as e:
-            logger.warning(f"Skipped {file}: {e}")
+                logger.info(f"Skipped {file} ({reason})")
         except Exception:
             logger.error(f"Error importing {file}", exc_info=True)
+            # raise PatchError(f"UnityPy error: {repr(e)}, skipping {tlFile.bundle}.")
             isModified = None
         return isModified
 
@@ -108,33 +108,37 @@ class PatchManager:
     def loadBundle(self, tlFile: TranslationFile):
         bundle = GameBundle.fromName(tlFile.bundle, load=False)
         if not bundle.exists:
-            raise NoAssetError(f"{tlFile.bundle} does not exist in your game data.")
+            raise NoAssetError(tlFile.bundle)
         if self.args.update:
-            if (
-                b := GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)
-            ).isPatched:
+            # Find the right output file as it may not be in game dir!
+            b = GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)
+            if b.isPatched:
                 tlModTime = tlFile.data.get("modified")
                 if tlModTime and b.patchedTime != tlModTime:
                     bundle.importState = "translations modified"
                 else:
-                    raise AlreadyPatchedError(f"{tlFile.bundle} already patched.")
-        try:
-            bundle.load()
-            bundle.linkedTlFile = tlFile
-            return bundle
-        except Exception as e:
-            raise PatchError(f"UnityPy error: {repr(e)}, skipping {tlFile.bundle}.")
+                    raise AlreadyPatchedError(tlFile.bundle)
+            else:
+                bundle.importState = "new"
+        else:
+            bundle.importState = "overwrite"
+        bundle.load()
+        bundle.linkedTlFile = tlFile
+        return bundle
 
     def patch(self, path: str):
         """Swaps game assets with translation file data, returns modified state."""
         tlFile = self.loadTranslationFile(path)
         if self.args.skip_mtl and not tlFile.data.get("humanTl"):
-            return False, None
+            return False, "Skip MTL requested"
         if self.args.use_tlg and isUsingTLG() and tlFile.data.get("tlg"):
             convertTlFile(tlFile)
             logger.info(f"Writing TLG version: {tlFile.name}")
-            return False, None
-        bundle = self.loadBundle(tlFile)
+            return False, "Prefer TLG version requested"
+        try:
+            bundle = self.loadBundle(tlFile)
+        except PatchError as reason:
+            return False, reason
 
         if tlFile.type in ("story", "home"):
             patcher = StoryPatcher(self, bundle)
@@ -152,7 +156,7 @@ class PatchManager:
             bundle.markPatched(tlFile)
             bundle.save(dstFolder=Path(self.args.dst))
 
-        return patcher.isModified, getattr(bundle, "importState", None)
+        return patcher.isModified, bundle.importState
 
 
 class StoryPatcher:

@@ -17,6 +17,8 @@ def levelFromArgs(args):
         _LOGGER.setLevel(INFO)
     elif getattr(args, "debug", None):
         _LOGGER.setLevel(DEBUG)
+    else:
+        _LOGGER.setLevel(WARNING)
 
 def getLevel():
     return _LOGGER.level

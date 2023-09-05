@@ -99,9 +99,6 @@ class PatchManager:
             isModified = None
         return isModified
 
-    def finish(self):
-        pass
-
     def loadTranslationFile(self, path):
         try:
             return TranslationFile(path, readOnly=True)
@@ -393,7 +390,6 @@ def main(args: patch.Args = None):
                 f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}"
             )
     finally:
-        patcher.finish()
         logger.closeFile()
 
 

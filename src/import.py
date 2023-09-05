@@ -378,9 +378,8 @@ def main(args: patch.Args = None):
         logger.setFile("import.log")
 
     if args.use_tlg:
-        global isUsingTLG
-        global convertTlFile
-        from common.utils import isUsingTLG
+        global isUsingTLG, convertTlFile
+        from common.patch import isUsingTLG
         from manage import convertTlFile
     startTime = now()
     patcher = PatchManager(args)

@@ -121,6 +121,8 @@ class Args(argparse.ArgumentParser):
             action="store_true",
             help="Overwrite args with data from umatl.json config",
         )
+        self.add_argument("-vb", "--verbose", action="store_true", help="Print more detailed info")
+        self.add_argument("-dbg", "--debug", action="store_true", help="Print debug info")
         self.hasDefault = defaultArgs
         if defaultArgs:
             self.add_argument(
@@ -149,7 +151,6 @@ class Args(argparse.ArgumentParser):
             )
             self.add_argument("-src", default=GAME_ASSET_ROOT)
             self.add_argument("-dst", default=Path("dat/").resolve())
-            self.add_argument("-vb", "--verbose", action="store_true", help="Print additional info")
         elif types:
             self.add_argument(
                 "-t",
@@ -174,6 +175,8 @@ class Args(argparse.ArgumentParser):
             a.group = a.group or a.story.group
             a.id = a.id or a.story.id
             a.idx = a.idx or a.story.idx
+        if a.debug:
+            a.verbose = False
         return a
 
     @classmethod

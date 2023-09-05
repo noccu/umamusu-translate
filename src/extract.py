@@ -278,22 +278,25 @@ class DataTransfer:
 
 
 def exportAsset(bundle: Optional[str], path: str, db=None):
+    '''Exports an AssetBundle.
+       :param path: internal Unity path
+       :return: number of files changed'''
     if args.update:  # update mode, path = tlfile, bundle = None
         assert db is not None
         tlFile = TranslationFile(path)
         if args.upgrade and tlFile.version == TranslationFile.latestVersion:
             logger.info(f"File already on latest version, skipping: {path}")
-            return
+            return 0
 
         storyId = StoryId.parse(args.type, tlFile.getStoryId())
         try:
             bundle, _ = queryDB(db, storyId)[0]  # get the newest bundle hash/name
         except IndexError:
             logger.error(f"Error looking up {storyId}. Corrupt data or removed asset?")
-            return
+            return 0
         if not args.upgrade and bundle == tlFile.bundle:
             logger.info(f"Bundle {bundle} not changed, skipping.")
-            return
+            return 0
         logger.info(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
     else:  # path = unity internal, bundle = newest from SQL lookup
         tlFile = None
@@ -310,22 +313,23 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
         file = next(exportDir.glob(f"{storyId.getFilenameIdx()}*.json"), None)
         if file is not None:
             logger.info(f"Skipping existing: {file.name}")
-            return
+            return 0
 
     asset = GameBundle.fromName(bundle, load=False)
     if not asset.exists:
         logger.info(f"AssetBundle {bundle} does not exist in your game data, skipping...")
-        return
+        return 0
     if not args.upgrade and asset.isPatched:
         logger.info(f"Skipping patched asset: {asset.bundleName}")
-        return
+        return 0
     try:
         outFile = extractAsset(asset, storyId, tlFile)
         if not outFile:
-            return
+            return 0
     except Exception:
         logger.error(
-            f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}"
+            f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}",
+            exc_info=True
         )
         raise
 
@@ -334,6 +338,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     idxString = f"{storyId.idx} ({title})" if title else storyId.getFilenameIdx()
     outFile.setFile(str(exportDir / f"{idxString}.json"))
     outFile.save()
+    return 1
 
 
 def parseArgs(args=None):
@@ -383,9 +388,11 @@ def parseArgs(args=None):
 def main(_args: patch.Args = None):
     global args
     args = _args or parseArgs(_args)
+    nTotal = nSuccess = nFailed = 0
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
         db = sqlite3.connect(GAME_META_FILE)
+        logger.setFile("extract.log")
         try:
             for type in args.update:  # set correctly by arg parsing
                 args.dst = PurePath("translations") / type
@@ -398,25 +405,32 @@ def main(_args: patch.Args = None):
                     targetSet=args.set,
                     changed=args.changed,
                 )
-                print(f"Found {len(files)} files for {type}.")
+                nTotal = len(files)
+                print(f"Found {nTotal} files for {type}.")
                 for i, file in enumerate(files):
                     try:
-                        exportAsset(None, file, db)
+                        nSuccess += exportAsset(None, file, db)
                     except Exception:
-                        logger.critical(f"Failed in file {i} of {type}: {file}")
-                        raise  # TODO consider continuing
+                        nFailed += 1
+                        logger.error(f"Failed in file {i} of {type}: {file}")
         finally:
             db.close()
+            logger.closeFile()
     else:
         print(
             f"Extracting type {args.type}, set {args.set}, group {args.group}, id {args.id}, idx {args.idx} (overwrite: {args.overwrite})\n"
             f"from {GAME_ASSET_ROOT} to {args.dst}"
         )
         q = queryDB(storyId=StoryId(args.type, args.set, args.group, args.id, args.idx))
-        print(f"Found {len(q)} files.")
+        nTotal = len(q)
+        print(f"Found {nTotal} files.")
         for bundle, path in q:
-            exportAsset(bundle, path)
-    print("Processing finished successfully.")
+            try:
+                nSuccess += exportAsset(bundle, path)
+            except Exception:
+                nFailed += 1
+    nSkipped = nTotal - nSuccess - nFailed
+    print(f"Processing finished. Extracted: {nSuccess}, Skipped: {nSkipped}, Errors: {nFailed}")
 
 
 if __name__ == "__main__":

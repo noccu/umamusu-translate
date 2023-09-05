@@ -7,7 +7,7 @@ import ass
 import srt
 from Levenshtein import ratio
 
-from common import patch, utils
+from common import patch, utils, logger
 from common.constants import NAMES_BLACKLIST
 from common.types import StoryId, GameBundle, TranslationFile
 
@@ -159,7 +159,7 @@ class BasicSubProcessor:
 
     def addSub(self, idx: int, subLine: TextLine):
         if idx > len(self.srcLines) - 1:
-            print("Attempted to add sub beyond last line of file.")
+            logger.warning("Attempted to add sub beyond last line of file.")
             return idx
 
         # Attempt to match untranslated text
@@ -180,8 +180,8 @@ class BasicSubProcessor:
                     )
                 )
             ):
-                print(f"Marking untranslated line at {self.getBlockIdx(idx)}")
-                # print("debug:", p.getJp(idx), subLine.text)
+                logger.warning(f"Marking untranslated line at {self.getBlockIdx(idx)}")
+                logger.debug(self.getJp(idx), subLine.text)
                 self.setEn(idx, TextLine("<UNTRANSLATED>"))
                 idx += 1
                 if idx > len(self.srcLines) - 1:
@@ -381,7 +381,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
     elif format == "txt":
         p = TxtSubProcessor(srcFile, subFile, opts)
     else:
-        print("Unsupported subtitle format.")
+        logger.critical("Unsupported subtitle format.")
         raise NotImplementedError
 
     storyType = p.srcFile.type
@@ -400,11 +400,11 @@ def process(srcFile, subFile, opts: SubTransferOptions):
             idx += 1
         # Skip repeated subs (usually for style)
         if opts.noDupeSubs:
-            # print(f"checking\n{subLine}\nto\n{p.getEn(idx-1).text}")
+            logger.debug(f"checking\n{subLine}\nto\n{p.getEn(idx-1).text}")
             if (opts.noDupeSubs == "strict" and subLine.text == p.getEn(idx - 1).text) or (
                 opts.noDupeSubs == "loose" and subLine.text in p.getEn(idx - 1).text
             ):
-                print(f"Dupe sub skipped at {p.getBlockIdx(idx)}: {subLine.text}")
+                logger.info(f"Dupe sub skipped at {p.getBlockIdx(idx)}: {subLine.text}")
                 continue
 
         # Races can have "choices" but their format is different because
@@ -419,7 +419,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                         except IndexError:
                             # can give false positives
                             skipLine = opts.strictChoices
-                            print(
+                            logger.error(
                                 f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}"
                             )
                             if skipLine:
@@ -431,29 +431,29 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                     if skipLine:
                         continue  # don't increment idx
                 elif opts.strictChoices:
-                    print(
+                    logger.warning(
                         f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping..."
                     )
                     errors += 1
                     continue
             elif idx > 0 and p.getChoices(idx - 1) and idx - lastChoice[0] > 0:
-                print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
+                logger.warning(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
                 errors += 1
             lastChoice[1] = 0
 
         # Add text
         if p.isDuplicateBlock(idx):
-            print(f"Found dupe source line at block {p.getBlockIdx(idx)}, duplicating.")
+            logger.info(f"Found dupe source line at block {p.getBlockIdx(idx)}, duplicating.")
             idx = p.duplicateSub(idx, subLine)
 
         idx = p.addSub(idx, subLine)
     # check niche case of duplicate last line (idx is already increased)
     if idx < srcLen:
         if p.isDuplicateBlock(idx):
-            print("Last line is duplicate! (check correctness)")
+            logger.warning("Last line is duplicate! (check correctness)")
             p.duplicateSub(idx)
         else:
-            print(f"Lacking {srcLen - idx} subtitle(s).")
+            logger.warning(f"Lacking {srcLen - idx} subtitle(s).")
             errors += 1
 
     p.saveSrc()
@@ -467,7 +467,7 @@ def createSubs(tlFile, fps=30):
     try:
         bundle = GameBundle.fromName(tlFile.bundle)
     except FileNotFoundError:
-        print("Bundle doesn't exist.")
+        logger.critical("Bundle doesn't exist.")
         return None
     title = tlFile.data.get("title", "")
     # if tlFile.version < 5:

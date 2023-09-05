@@ -1,7 +1,7 @@
 import re
 from math import ceil
 
-from common import utils, patch
+from common import utils, patch, logger
 from common.constants import SUPPORTED_TYPES
 from common.types import StoryId, TranslationFile
 
@@ -56,8 +56,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     pureText = RE_TAGS.sub("", text)
 
     if len(pureText) < lineLen:
-        if opts.get("verbose"):
-            print("Short text line, skipping: ", text)
+        logger.info("Short text line, skipping: ", text)
         return text
 
     if numLines > 0:
@@ -67,8 +66,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         lines = re.split(r"\r?\n|\\n", pureText)
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
-            if opts.get("verbose"):
-                print("Text passes length check, skipping: ", text)
+            logger.info("Text passes length check, skipping: ", text)
             return (
                 text.replace("\n", "\\n") if file.escapeNewline else text
             )  # I guess this ensures it's correct but should really be skipped
@@ -106,9 +104,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
 
         nLines = len(lines)
         if numLines < 1 and nLines > 1 and pureLen[-1] < lineLen / 3.25:
-            if opts.get("verbose"):
-                linesStr = "\n\t".join(lines)
-                print(f"Last line is short, balancing on line number:\n\t{linesStr}")
+            logger.info(f"Last line is short, balancing on line number:\n\t" + '\n\t'.join(lines))
             return adjustLength(file, text, opts, numLines=nLines, lineLen=-2)
 
     if 0 < targetLines < len(lines):
@@ -179,8 +175,7 @@ def calcLineLen(file: TranslationFile, verbose):
         else:
             lineLength = 34
     LL_CACHE = file, lineLength
-    if verbose:
-        print(f"Line length set to {lineLength} for {file.name}")
+    logger.info(f"Line length set to {lineLength} for {file.name}")
     return lineLength
 
 
@@ -239,8 +234,8 @@ def parseArgs(args=None):
     args = ap.parse_args(args)
 
     if args.exclusiveNewlines and args.redoNewlines:
-        print("Incompatible newline options: force all + exclusive add.")
-        return
+        logger.critical("Incompatible newline options: force all + exclusive add.")
+        raise SystemExit
 
     return args
 
@@ -255,7 +250,7 @@ def main(args: patch.Args = None):
         )
     print(f"Processing {len(files)} files...")
     if args.lineLength == -1:
-        print("Automatically setting line length based on story type/id or file value")
+        logger.info("Automatically setting line length based on story type/id or file value")
     for file in files:
         file = TranslationFile(file)
 

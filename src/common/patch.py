@@ -7,7 +7,7 @@ from pathlib import Path, PurePath
 
 import regex
 
-from . import utils
+from . import utils, logger
 from .constants import GAME_ASSET_ROOT, TARGET_TYPES
 from .types import StoryId
 
@@ -177,6 +177,7 @@ class Args(argparse.ArgumentParser):
             a.idx = a.idx or a.story.idx
         if a.debug:
             a.verbose = False
+        logger.levelFromArgs(a)
         return a
 
     @classmethod

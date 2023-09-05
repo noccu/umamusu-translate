@@ -5,7 +5,7 @@ from typing import Optional, Union
 
 from Levenshtein import ratio as similarity
 
-from common import patch
+from common import logger, patch
 from common.constants import GAME_ASSET_ROOT, GAME_META_FILE, TARGET_TYPES
 from common.utils import sanitizeFilename
 from common.types import StoryId, GameBundle, TranslationFile
@@ -113,12 +113,12 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
                                 animGroupData["origLen"] = animData["ClipLength"]
                                 animGroupData["pathId"] = clipPathId
                                 textData["animData"].append(animGroupData)
-                            elif args.verbose:
-                                print(
+                            else:
+                                logger.debug(
                                     f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}"
                                 )
-                    elif args.verbose:
-                        print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
+                    else:
+                        logger.debug(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
 
                 textData["pathId"] = pathId  # important for re-importing
                 textData["blockIdx"] = block[
@@ -190,11 +190,11 @@ class DataTransfer:
         if (newData and file) and (x := file.data.get("humanTl")):
             newData["humanTl"] = x
 
-    def print(self, text):
+    def print(self, text, level):
         if not self._printedName:
-            print(f"\nIn {self.file.name}:")
+            logger.log(level, f"\nIn {self.file.name}:")
             self._printedName = True
-        print(f"\t{text}")
+        logger.log(level, f"\t{text}")
 
     def __call__(self, storyId: StoryId, textData):
         # Existing files are skipped before reaching here
@@ -231,18 +231,17 @@ class DataTransfer:
                     textSearch = False
 
         if textSearch:
-            if args.verbose:
-                self.print("Searching by text")
+            self.print("Searching by text", logger.DEBUG)
             for i, block in enumerate(textBlocks):
                 if similarity(block["jpText"], textData["jpText"]) > self.simRatio:
-                    if args.verbose:
-                        self.print(f"Found text at block {i}")
+                    self.print(f"Found text at block {i}", logger.DEBUG)
                     self.offset = txtIdx - i
                     targetBlock = block
                     break
             if not targetBlock:
                 self.print(
-                    f"At bIdx/time {textData.get('blockIdx', textData.get('time', 'no_idx'))}: jpText not found in file."
+                    f"At bIdx/time {textData.get('blockIdx', textData.get('time', 'no_idx'))}: jpText not found in file.",
+                    logger.INFO
                 )
 
         if targetBlock:
@@ -260,9 +259,9 @@ class DataTransfer:
                             choice["jpText"] = targetBlock["choices"][txtIdx]["jpText"]
                         choice["enText"] = targetBlock["choices"][txtIdx]["enText"]
                     except IndexError:
-                        self.print(f"New choice at bIdx {targetBlock['blockIdx']}.")
+                        self.print(f"New choice at bIdx {targetBlock['blockIdx']}.", logger.WARNING)
                     except KeyError:
-                        self.print(f"Choice mismatch when attempting data transfer at {txtIdx}")
+                        self.print(f"Choice mismatch when attempting data transfer at {txtIdx}", logger.WARNING)
             if "coloredText" in targetBlock and (coloredText := textData.get("coloredText")):
                 for txtIdx, cText in enumerate(coloredText):
                     if args.upgrade:
@@ -283,20 +282,19 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
         assert db is not None
         tlFile = TranslationFile(path)
         if args.upgrade and tlFile.version == TranslationFile.latestVersion:
-            print(f"File already on latest version, skipping: {path}")
+            logger.info(f"File already on latest version, skipping: {path}")
             return
 
         storyId = StoryId.parse(args.type, tlFile.getStoryId())
         try:
             bundle, _ = queryDB(db, storyId)[0]  # get the newest bundle hash/name
         except IndexError:
-            print(f"Error looking up {storyId}. Corrupt data or removed asset?")
+            logger.error(f"Error looking up {storyId}. Corrupt data or removed asset?")
             return
         if not args.upgrade and bundle == tlFile.bundle:
-            if args.verbose:
-                print(f"Bundle {bundle} not changed, skipping.")
+            logger.info(f"Bundle {bundle} not changed, skipping.")
             return
-        print(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
+        logger.info(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
     else:  # path = unity internal, bundle = newest from SQL lookup
         tlFile = None
         storyId = StoryId.parseFromPath(args.type, path)
@@ -311,24 +309,22 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     if not args.overwrite:
         file = next(exportDir.glob(f"{storyId.getFilenameIdx()}*.json"), None)
         if file is not None:
-            if args.verbose:
-                print(f"Skipping existing: {file.name}")
+            logger.info(f"Skipping existing: {file.name}")
             return
 
     asset = GameBundle.fromName(bundle, load=False)
     if not asset.exists:
-        print(f"AssetBundle {bundle} does not exist in your game data, skipping...")
+        logger.info(f"AssetBundle {bundle} does not exist in your game data, skipping...")
         return
     if not args.upgrade and asset.isPatched:
-        if args.verbose:
-            print(f"Skipping patched asset: {asset.bundleName}")
+        logger.info(f"Skipping patched asset: {asset.bundleName}")
         return
     try:
         outFile = extractAsset(asset, storyId, tlFile)
         if not outFile:
             return
     except Exception:
-        print(
+        logger.error(
             f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}"
         )
         raise
@@ -407,7 +403,7 @@ def main(_args: patch.Args = None):
                     try:
                         exportAsset(None, file, db)
                     except Exception:
-                        print(f"Failed in file {i} of {type}: {file}")
+                        logger.critical(f"Failed in file {i} of {type}: {file}")
                         raise  # TODO consider continuing
         finally:
             db.close()

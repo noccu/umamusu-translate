@@ -6,7 +6,7 @@ from os.path import isfile, join, realpath
 import requests
 
 import common.constants as const
-from common import patch
+from common import patch, logger
 from common.types import TranslationFile, GameBundle
 
 HOSTNAME = "https://prd-storage-umamusume.akamaized.net/dl/resources"
@@ -15,17 +15,14 @@ ASSET_ENDPOINT = HOSTNAME + "/Windows/assetbundles/{0:.2}/{0}"
 MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"
 
 
-def download(file, t: str = "story", verbose=False):
+def download(file, t: str = "story"):
     if t in ("sound", "movie", "font"):
         url = GENERIC_ENDPOINT.format(file)
     elif t.startswith("manifest"):
         url = MANIFEST_ENDPOINT.format(file)
     else:
         url = ASSET_ENDPOINT.format(file)
-    if verbose:
-        print(f"Downloading {file} from {url}")
-    else:
-        print(f"Downloading {file}")
+    logger.conditionalDetail(f"Downloading {file}", f"Downloading {file} from {url}", logger.INFO)
     return requests.get(url)
 
 
@@ -33,20 +30,16 @@ def save(bundle: GameBundle, args):
     localFile = join(args.backup_dir, bundle.bundleName)
 
     if not args.forcedl and isfile(localFile):
-        if args.verbose:
-            print(f"Copying file from {localFile}")
-        else:
-            print(f"Copying {bundle.bundleName}")
+        logger.conditionalDetail(f"Copying {bundle.bundleName}", f"Copying {bundle.bundleName} from {localFile}", logger.INFO)
         shutil.copyfile(localFile, bundle.bundlePath)
     else:
-        data = download(bundle.bundleName, bundle.bundleType, args.verbose)
+        data = download(bundle.bundleName, bundle.bundleType)
         if data.status_code == 200:
             with open(bundle.bundlePath, "wb") as f:
                 f.write(data.content)
         else:
-            print(f"Error downloading file {bundle.bundleName}")
-            if args.verbose:
-                print(f"Status: {data.status_code}\nContent:{data.text}")
+            logger.error(f"Error downloading file {bundle.bundleName}")
+            logger.debug(f"Status: {data.status_code}\nContent:{data.text}")
             return 0
     return 1
 
@@ -58,10 +51,9 @@ def restore(file, args):
         file = TranslationFile(file, readOnly=True)
         bundle = GameBundle.fromName(file.bundle, load=False, bType=file.type)
     if not args.force_restore and bundle.exists and not bundle.isPatched:
-        print(f"Bundle {bundle.bundleName} not patched, skipping.")
+        logger.info(f"Bundle {bundle.bundleName} not patched, skipping.")
         return 0
-    if args.verbose:
-        print(f"Saving file to {bundle.bundlePath}")
+    logger.debug(f"Saving file to {bundle.bundlePath}")
     return save(bundle, args)
 
 

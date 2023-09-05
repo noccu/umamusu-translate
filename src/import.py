@@ -5,11 +5,10 @@ from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from functools import reduce
 from pathlib import Path
 from time import time as now
-from traceback import print_exc
 
 import common.constants as const
 import filecopy as backup
-from common import patch
+from common import patch, logger
 from common.types import GameBundle, TranslationFile
 
 
@@ -102,18 +101,14 @@ class PatchManager:
             if isModified:
                 print(f"Imported {file}{f' ({reason})' if reason else ''}")
             else:
-                if self.args.verbose:
-                    print(f"{file} not modified.")
+                logger.info(f"{file} not modified.")
         except (NoAssetError, AlreadyPatchedError) as e:
-            if self.args.verbose:
-                print(e)
+            logger.info(e)
         except PatchError as e:
-            print(f"Skipped {file}: {e}")
+            logger.warning(f"Skipped {file}: {e}")
         except Exception:
-            print(f"Error importing {file}")
-            if self.args.verbose:
-                print_exc(chain=True)
-                isModified = None
+            logger.error(f"Error importing {file}", exc_info=True)
+            isModified = None
         return isModified
 
     def finish(self):
@@ -153,8 +148,7 @@ class PatchManager:
             return False, None
         if self.args.use_tlg and isUsingTLG() and tlFile.data.get("tlg"):
             convertTlFile(tlFile)
-            if self.args.verbose:
-                print(f"Writing TLG version: {tlFile.name}")
+            logger.info(f"Writing TLG version: {tlFile.name}")
             return False, None
         bundle = self.loadBundle(tlFile)
 
@@ -191,7 +185,7 @@ class StoryPatcher:
             try:
                 asset = self.bundle.assets[textBlock["pathId"]]
             except KeyError:
-                print(f"{self.bundle.bundleName}: {blockIdx}: Can't find path id, skipping.")
+                logger.warning(f"{self.bundle.bundleName}: {blockIdx}: Can't find path id, skipping.")
                 continue
             else:
                 assetData = asset.read_typetree()
@@ -219,22 +213,21 @@ class StoryPatcher:
                         try:
                             newClipLen = int(textBlock["newClipLength"])
                         except ValueError:
-                            print(
+                            logger.warning(
                                 f"{self.bundle.bundleName}: {blockIdx}: Invalid clip length defined, falling back to calculated value."
                             )
                         else:
                             if newClipLen < textBlock["origClipLength"]:
-                                print(
+                                logger.warning(
                                     f"{self.bundle.bundleName}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original."
                                 )
                     if newClipLen > textBlock["origClipLength"]:
                         newBlockLen = newClipLen + assetData["StartFrame"] + 1
                         assetData["ClipLength"] = newClipLen
                         self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
-                        if self.manager.args.verbose:
-                            print(
-                                f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}"
-                            )
+                        logger.debug(
+                            f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}"
+                        )
 
                         if "animData" in textBlock:
                             for animGroup in textBlock["animData"]:
@@ -245,25 +238,23 @@ class StoryPatcher:
                                     try:
                                         animAsset = self.bundle.assets[animGroup["pathId"]]
                                     except KeyError:
-                                        if self.manager.args.verbose:
-                                            print(
-                                                f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}"
-                                            )
+                                        logger.debug(
+                                            f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}"
+                                        )
                                     else:
                                         animData = animAsset.read_typetree()
                                         animData["ClipLength"] = newAnimLen
                                         animAsset.save_typetree(animData)
-                                        if self.manager.args.verbose:
-                                            print(
-                                                f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}"
-                                            )
-                        elif self.manager.args.verbose:
-                            print(f"Text length adjusted but no anim data found at {blockIdx}")
+                                        logger.debug(
+                                            f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}"
+                                        )
+                        else:
+                            logger.debug(f"Text length adjusted but no anim data found at {blockIdx}")
 
                 if "choices" in textBlock:
                     jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]
                     if len(jpChoices) != len(enChoices):
-                        print("Choice lengths do not match, skipping choice block.")
+                        logger.warning("Choice lengths do not match, skipping choice block.")
                     else:
                         for idx, choice in enumerate(textBlock["choices"]):
                             if choice["enText"]:
@@ -272,7 +263,7 @@ class StoryPatcher:
                 if "coloredText" in textBlock:
                     jpColored, enColored = assetData["ColorTextInfoList"], textBlock["coloredText"]
                     if len(jpColored) != len(enColored):
-                        print("Colored text lengths do not match, skipping color block...")
+                        logger.warning("Colored text lengths do not match, skipping color block...")
                     else:
                         for idx, text in enumerate(textBlock["coloredText"]):
                             if text["enText"]:
@@ -286,7 +277,7 @@ class StoryPatcher:
             )
             self.save()
         except Exception as e:
-            print(f"Unexpected error in {self.bundle.bundleName}: {repr(e)}")
+            logger.error(f"Unexpected error in {self.bundle.bundleName}: {repr(e)}")
 
     def save(self):
         if self.isModified:

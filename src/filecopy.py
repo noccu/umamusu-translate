@@ -2,7 +2,7 @@ import shutil
 import sqlite3
 from os import makedirs, path
 
-from common import patch, utils
+from common import patch, utils, logger
 from common.constants import GAME_META_FILE, TARGET_TYPES
 from common.types import GameBundle, TranslationFile
 
@@ -94,8 +94,7 @@ def removeOldFiles(args):
             q = f"h = '{fPath.name}'" if isHash else f"n like '%{fPath.name}'"
             if not db.execute(f"select h from a where {q}").fetchone():
                 Path(fPath).unlink()
-                if args.verbose:
-                    print(f"Removed {fPath}")
+                logger.debug(f"Removed {fPath}")
                 n += 1
     cfg.core["lastBackupPrune"] = ts
     cfg.save()
@@ -115,14 +114,13 @@ def copy(data, args):
 
     if asset.exists:
         if asset.isPatched:
-            if args.verbose:
-                print(f"Skipping patched bundle: {asset.bundleName}")
+            logger.info(f"Skipping patched bundle: {asset.bundleName}")
             return 0
     else:
         if args.restore_missing and restore.save(asset, args.restore_args) == 1:
             return copy(data, args)  # retry
-        elif args.verbose:
-            print(f"Couldn't find {asset.bundlePath}, skipping...")
+        else:
+            logger.info(f"Couldn't find {asset.bundlePath}, skipping...")
         return 0
 
     if args.use_pathname:
@@ -137,11 +135,10 @@ def copy(data, args):
             print(f"Copied {asset.bundlePath} to {dst}")
             return 1
         except Exception as e:
-            print(f"Unknown error: {repr(e)}, skipping...")
+            logger.error(f"{repr(e)}, skipping...")
             return 0
     else:
-        if args.verbose:
-            print(f"Skipping existing: {asset.bundleName}")
+        logger.info(f"Skipping existing: {asset.bundleName}")
         return 0
 
 

@@ -1,7 +1,7 @@
 import sqlite3
 from types import SimpleNamespace
 
-from common import patch
+from common import patch, logger
 from common.constants import GAME_META_FILE
 from common.types import StoryId, GameBundle
 
@@ -17,10 +17,7 @@ def removeRuby(args, db: sqlite3.Connection):
     for bundle, path in q:
         bundle = GameBundle.fromName(bundle, load=False)
         if bundle.isPatched:
-            if args.verbose:
-                print(
-                    f"Skipping {StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched"
-                )
+            logger.info(f"Skipping {StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched")
         else:
             bundle.load()
             tree = bundle.rootAsset.read_typetree()

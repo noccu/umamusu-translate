@@ -17,6 +17,14 @@ def levelFromArgs(args):
     elif getattr(args, "debug", None):
         _LOGGER.setLevel(DEBUG)
 
+def getLevel():
+    return _LOGGER.level
+
+def conditionalDetail(msg, detailedMsg, detailLevel):
+    if _LOGGER.level <= detailLevel:
+        log(detailLevel, detailedMsg)
+    else:
+        print(msg)
 
 setLevel = _LOGGER.setLevel
 debug = _LOGGER.debug
@@ -24,6 +32,7 @@ info = _LOGGER.info
 warning = _LOGGER.warning
 error = _LOGGER.error
 critical = _LOGGER.critical
+log = _LOGGER.log
 
 
 # Hehe

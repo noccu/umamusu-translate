@@ -2,7 +2,7 @@ import json
 from pathlib import PurePath, Path
 import shutil
 
-from common import utils, patch
+from common import utils, patch, logger
 from common.types import TranslationFile
 
 ROOT = PurePath("src")
@@ -37,10 +37,10 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
             data[key] = "" if translatedText == "<empty>" else translatedText
         else:
             if inBlacklist:
-                print(f"{key} causes issues with the game, skipping...")
+                logger.warning(f"{key} causes issues with the game, skipping...")
             # Remove previously translated hashes that no longer are to prevent garbled text
             if key in data:
-                # print(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
+                logger.debug(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
                 del data[key]
 
 
@@ -174,7 +174,7 @@ def updConfigDicts(cfgPath, dictPaths: list):
     try:
         data = utils.readJson(cfgPath)
     except FileNotFoundError:
-        print("Config file not found")
+        logger.error("Config file not found")
         return
     dicts = ["localized_data\\dynamic.json", *[str(x) for x in dictPaths]]
     data["dicts"] = dicts
@@ -291,7 +291,7 @@ class FileWatcher:
         except requests.ConnectionError:
             print("Communication error.")
             return
-        print(resp.status_code, resp.text)
+        logger.info(resp.status_code, resp.text)
 
 
 def watch():
@@ -341,26 +341,26 @@ def move():
                     dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
             updConfigDicts(installDir / "config.json", dynFiles)
         except PermissionError:
-            print(
+            logger.error(
                 f"No permission to write to {installDir}.\n"
                 "Update perms, run as admin, or copy files yourself."
             )
         except FileNotFoundError as e:
             if not installDir.exists():
-                print(
+                logger.error(
                     f"Obtained install dir doesn't exist: {str(installDir)}\n"
                     "Possibly corrupt or double game install. Copy UI files manually."
                 )
             elif not dst.exists():
-                print("TLG not installed. See guide if you wish to translate UI elements.")
+                logger.warning("TLG not installed. See guide if you wish to translate UI elements.")
             else:
-                print(
-                    f"Error: {e}\n"
+                logger.error(
+                    f"{repr(e)}\n"
                     f"A patch file with/for UI translations is missing.\n"
                     f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}."
                 )
     else:
-        print("Couldn't find game install path, files not moved.")
+        logger.error("Couldn't find game install path, files not moved.")
 
 
 def parseArgs(args=None):
@@ -470,9 +470,9 @@ def parseArgs(args=None):
             if path.exists():
                 args.src = path
             else:
-                print("Dump file not found.")
+                logger.error("Dump file not found.")
         else:
-            print("Couldn't find game path.")
+            logger.error("Couldn't find game path.")
 
         print(f"Using dump: {args.src}")
 

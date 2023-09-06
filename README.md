@@ -53,7 +53,7 @@ It will no longer be updated outside of the following:
 
 Some occasional additions are still possible. All the work that has gone into it over one and a half years as well as the abilities it provides both to users and community contributors also remain available.
 
-My own work on the project, to the degree I can afford it, is continued in a separate version accessible to monthly supporters.  
+My own work on the project, to the degree I can afford it, is continued in a separate version accessible to monthly supporters.
 This includes:
 - New translations
 - Latest game updates

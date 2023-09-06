@@ -1,25 +1,29 @@
 {
-    "version": 4,
-    "bundle": "YH2PMKVSKXPKWCHLDDLQ2XOD4HZ377VP",
+    "version": 6,
+    "bundle": "AQEZZUMAMPW7LILJS4FLSWLYPK4CNMO2",
     "type": "story",
     "storyId": "041072003",
     "title": "止水を追いて",
     "text": [
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "暴れ狂う自身の本能をレースで抑えきれずに苦しむヤエノムテキ。\r\nそんな彼女のための対策を考えるにあたって――",
             "enText": "Yaeno Muteki was troubled about being unable to \ncontrol her emotions during races. In regards \nto thinking of a countermeasure for her――",
             "nextBlock": 2,
+            "origClipLength": 115,
+            "voiceIdx": -1,
             "pathId": -936666324771374672,
             "blockIdx": 1
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "実は1つ、手がかりとして思い当たるものがあった。",
             "enText": "Actually, there was one thing I had in mind that might work.",
             "nextBlock": 3,
+            "origClipLength": 76,
+            "voiceIdx": -1,
             "pathId": 7082877165929635234,
             "blockIdx": 2
         },
@@ -29,6 +33,8 @@
             "jpText": "……『金剛八重垣流についてもっと知りたい』、ですか？",
             "enText": "……『I want to know more about the Kongou Yaegaki Ryuu』, is it？",
             "nextBlock": 4,
+            "origClipLength": 159,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "そうなんだ",
@@ -36,24 +42,46 @@
                     "nextBlock": 4
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 3854524130350396523
+                }
+            ],
             "pathId": -1632160097685888666,
             "blockIdx": 3
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "幼い頃そうであったように。初めて会ったあの日も、\r\n形を演じ選抜レースに向け昂る己を抑えようとしていたように。",
             "enText": "She was pretty wild when she was younger. The day I met her too, \nshe was practicing Kata in order help keep her emotions in check \nduring the Selection Race.",
             "nextBlock": 5,
+            "origClipLength": 116,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": 2116598423597580107
+                }
+            ],
             "pathId": -5489922350888505473,
             "blockIdx": 4
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "これまで彼女の荒ぶる本能――『烈火』を抑えてきたのは、\r\nやはり金剛八重垣流の教えであったことは間違いないはずだ。",
             "enText": "Up until now those unruly instincts of hers―― without a doubt, \nmust have been held in check by this 『Ardent Flame』 and the \nteachings of the Kongou Yaegaki Ryuu.",
             "nextBlock": 6,
+            "origClipLength": 119,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 5943433216798792209
+                }
+            ],
             "pathId": -8361202036626485036,
             "blockIdx": 5
         },
@@ -63,6 +91,18 @@
             "jpText": "で、あるからこそ、レースにおいても『烈火』を御する方法の\r\n手がかりは、金剛八重垣流の中にあるのではとお考えなのですね。",
             "enText": "So, in other words, in regards to controlling the \n『Ardent Flame』 during a race, within the Kongou \nYaegaki Ryuu, you believe there is a hint？",
             "nextBlock": 7,
+            "origClipLength": 316,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 204,
+                    "pathId": 2053159888790301173
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7256325066929280006
+                }
+            ],
             "pathId": -7677796871445487644,
             "blockIdx": 6
         },
@@ -72,6 +112,18 @@
             "jpText": "……合点がいきました。それでは――",
             "enText": "……that seems reasonable. Well then――",
             "nextBlock": 8,
+            "origClipLength": 131,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2505648074868869852
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -3721334611628491695
+                }
+            ],
             "pathId": 7627389016890001136,
             "blockIdx": 7
         },
@@ -81,11 +133,23 @@
             "jpText": "師範、師範代。ただいま参りました。\r\n本日はなにとぞ、よろしくお願いいたします。",
             "enText": "Instructor, assistant instructor. I have returned. For today, \nthank you kindly for your guidance.",
             "nextBlock": 9,
+            "origClipLength": 214,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "よろしくお願いいたします！",
                     "enText": "Thank you for your guidance！",
                     "nextBlock": 9
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 8426751250733446973
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8597015070084408132
                 }
             ],
             "pathId": -8454129944593610328,
@@ -97,6 +161,14 @@
             "jpText": "ようこそお越しくださいました、トレーナーさん。\r\nなんでも、金剛八重垣流の教えに興味がおありとか。",
             "enText": "Welcome, thank you for coming, Trainer-san. Please feel free to \nask anything about the teachings of the Kongou Yaegaki Ryuu.",
             "nextBlock": 10,
+            "origClipLength": 274,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 291,
+                    "pathId": -2156980992209215330
+                }
+            ],
             "pathId": 5066137880543552044,
             "blockIdx": 9
         },
@@ -106,6 +178,8 @@
             "jpText": "百聞は一見に如かず……どうぞ今日は、\r\n存分に体験していってくださいね。",
             "enText": "Seeing is believing…… by all means, today, \nmake the most of this experience",
             "nextBlock": 11,
+            "origClipLength": 216,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "はい……！",
@@ -113,15 +187,33 @@
                     "nextBlock": 11
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 291,
+                    "pathId": 6897814269955258603
+                }
+            ],
             "pathId": 7889861343979162040,
             "blockIdx": 10
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "と、いうことで……！",
             "enText": "And, with that said……！",
             "nextBlock": 12,
+            "origClipLength": 58,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 291,
+                    "pathId": 1218471666988855084
+                },
+                {
+                    "origLen": 106,
+                    "pathId": -6773061766451259598
+                }
+            ],
             "pathId": -3810321712779212980,
             "blockIdx": 11
         },
@@ -131,11 +223,27 @@
             "jpText": "せいっ！　……はぁッ！！",
             "enText": "Sei！ ……Haa！！",
             "nextBlock": 13,
+            "origClipLength": 70,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "や、やぁーっ！",
                     "enText": "Y-yaa！",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": 6766065107949576554
+                },
+                {
+                    "origLen": 41,
+                    "pathId": -3028850749404964880
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 1742906264776347201
                 }
             ],
             "pathId": 8178637307441801451,
@@ -147,11 +255,19 @@
             "jpText": "そう、いいですね。あとは、拳に合わせてつんのめらないように。\r\n頭を上げるというより、上から吊られているような気持ちで。",
             "enText": "Yes, just like that. Now, step and lean forward to match with \nyour fist. Rather than lifting your head, it should feel more \nlike you're being pulled along.",
             "nextBlock": 14,
+            "origClipLength": 364,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "はい、わかりました……！",
                     "enText": "Yes, I understand……！",
                     "nextBlock": 14
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 618134854592345120
                 }
             ],
             "pathId": -7508238575274276946,
@@ -163,6 +279,18 @@
             "jpText": "ヤエノ、腰をもっと落とせ！！\r\n振りは鋭く、もう1度！",
             "enText": "Yaeno, lower your hips more！！ \nWith a sharper swing, once more！",
             "nextBlock": 15,
+            "origClipLength": 165,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 138,
+                    "pathId": -4440583267304427224
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2142064451042329264
+                }
+            ],
             "pathId": 1588726828657092837,
             "blockIdx": 14
         },
@@ -172,24 +300,52 @@
             "jpText": "はいッ！　お願いいたします！！",
             "enText": "Yes！ Thank you！！",
             "nextBlock": 16,
+            "origClipLength": 67,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2547799296649181339
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -2177779029195085624
+                }
+            ],
             "pathId": -8960553786436077611,
             "blockIdx": 15
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "簡単にさらう程度ではあったが、ヤエノムテキと一緒に\r\n金剛八重垣流の形を演じてみるなど、ひと通りの稽古を受けた。",
             "enText": "While it was extremely simple sounding, together with Yaeno \nMuteki, I trained by performing the Kongou Yaegaki Ryuu Kata.",
             "nextBlock": 17,
+            "origClipLength": 118,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -3902218775720891355
+                }
+            ],
             "pathId": 191397340340230493,
             "blockIdx": 16
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "……とはいったものの、慣れない動きで早々に体力切れを迎え、\r\nあとは見学するのみとなったのだが。そこへ――",
             "enText": "……that said, moving around in a way I wasn't accustomed to \ndepleted my stamina a lot quicker than I expected. After that, I \nended up just observing, that's when――",
             "nextBlock": 18,
+            "origClipLength": 114,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": -4589751428381346256
+                }
+            ],
             "pathId": -2893839440624626151,
             "blockIdx": 17
         },
@@ -199,6 +355,8 @@
             "jpText": "少々、お話よろしいか。",
             "enText": "Do you have a moment？",
             "nextBlock": 19,
+            "origClipLength": 110,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "え！あっ、はい……！",
@@ -206,15 +364,29 @@
                     "nextBlock": 19
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 6337623220601329795
+                }
+            ],
             "pathId": -2195819133021521550,
             "blockIdx": 18
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "師範代たる妻に指導を任せたらしい、金剛八重垣流師範――\r\nヤエノムテキの祖父から、静かに話しかけられた。",
             "enText": "It seems that the guidance was left to the assistant instructor, \nhis wife, as the Kongou Yaegaki Ryuu instructor―― Yaeno Muteki's \ngrandfather, quietly started a conversation.",
             "nextBlock": 20,
+            "origClipLength": 112,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -676929931548783041
+                }
+            ],
             "pathId": 6913288871175064612,
             "blockIdx": 19
         },
@@ -224,6 +396,14 @@
             "jpText": "……孫を気にかけてくださり、感謝しております。",
             "enText": "……for being concerned about my granddaughter, I'm grateful.",
             "nextBlock": 21,
+            "origClipLength": 165,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 3020960120539111637
+                }
+            ],
             "pathId": -7866639978292913286,
             "blockIdx": 20
         },
@@ -233,11 +413,23 @@
             "jpText": "おおかた――レースにおいても己が内なる『烈火』に惑わされ、\r\n『止水』を求めているのだろうと思っとりますが、いかがでしょう。",
             "enText": "Most people―― in regards to races, are perplexed by \ntheir own 『Ardent Flame』, and are often seeking out \nthat 『Tranquil Water』, what do you think?",
             "nextBlock": 22,
+            "origClipLength": 373,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "そ、その通りです……！",
                     "enText": "T-that sounds right……！",
                     "nextBlock": 22
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 7635602367197044541
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 1637933484994684887
                 }
             ],
             "pathId": 8433366620742009767,
@@ -249,6 +441,18 @@
             "jpText": "ああ、やはり。……動きが硬い。踏み込みが浅い。\r\n今のヤエノからは、恐れを感じます。",
             "enText": "Aah, as I thought. ……her movements are stiff. Her follow-through \nis shallow. From Yaeno, right now, I can sense a feeling of fear.",
             "nextBlock": 23,
+            "origClipLength": 391,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 158,
+                    "pathId": 5555313024890204094
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5075179668704755284
+                }
+            ],
             "pathId": 1301266580668968865,
             "blockIdx": 22
         },
@@ -258,6 +462,18 @@
             "jpText": "『烈火』に悩まされ続けてきたからか、あの子は『止水』に\r\nこだわりすぎるきらいがある。……しかしね、トレーナーさん。",
             "enText": "The 『Ardent Flame』, it must be because she's been continuously \ntroubled by them, but she has been fixating on the 『Tranquil \nWater』 too much. ……However, Trainer-san.",
             "nextBlock": 24,
+            "origClipLength": 361,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 265,
+                    "pathId": -3716331552547375765
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -3587614347997697391
+                }
+            ],
             "pathId": -4071586586490804556,
             "blockIdx": 23
         },
@@ -267,6 +483,14 @@
             "jpText": "――『火水合一、則ち護成る』。",
             "enText": "――『The Fusion of Fire and Water, Becomes A Safeguard』",
             "nextBlock": 25,
+            "origClipLength": 121,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 27,
+                    "pathId": -3070848788796841285
+                }
+            ],
             "pathId": -2054890062416676358,
             "blockIdx": 24
         },
@@ -276,6 +500,8 @@
             "jpText": "金剛八重垣流は守護に重きを置く流派。\r\nこの言葉は、守護を為す上で必要な心得を現したもの。",
             "enText": "The Kongou Yaegaki Ryuu is a style that attaches great importance \nto protection. These words represent the essential understanding \nrequired to realize that protection.",
             "nextBlock": 26,
+            "origClipLength": 415,
+            "voiceIdx": 16,
             "pathId": -4079986035643762826,
             "blockIdx": 25
         },
@@ -285,6 +511,8 @@
             "jpText": "『烈火』の如き猛々しい闘志のみでは、\r\n技体は容易く崩れ、護らんとする意志も空回るのみ。",
             "enText": "Being like the 『Ardent Flame』 is not limited to \nhaving an intense fighting spirit, without the \nwill to protect, it can easily collapse.",
             "nextBlock": 27,
+            "origClipLength": 343,
+            "voiceIdx": 17,
             "pathId": -7885798088055101938,
             "blockIdx": 26
         },
@@ -294,6 +522,8 @@
             "jpText": "また、『止水』の如き静穏な理性のみでは、\r\n困難を前に二の足を踏み、護りに遅れを生じさせる……――",
             "enText": "In the same vein, the 『Tranquil Water』 is not limited to a serene \nreasonableness, which leads to hesitation in the face of \nhardship, resulting in being one step too late to protect……――",
             "nextBlock": 28,
+            "origClipLength": 395,
+            "voiceIdx": 18,
             "pathId": -4499778966445935976,
             "blockIdx": 27
         },
@@ -303,6 +533,8 @@
             "jpText": "『火水合一』とは、『烈火』と『止水』が合わさり、\r\n来るべき時に正しい方法で、迷いなく護を振るうための境地。",
             "enText": "『The Fusion of Fire and Water』 is, the balance between the \n『Ardent Flame』 and 『Tranquil Water』, so that when the time comes, \none can protect without hesitation.",
             "nextBlock": 29,
+            "origClipLength": 389,
+            "voiceIdx": 19,
             "pathId": 5764859656403054614,
             "blockIdx": 28
         },
@@ -312,6 +544,8 @@
             "jpText": "我が流派では、心身の力を『形』に流し演じることで、\r\n『火水合一』を成立させんとしているのです。",
             "enText": "For our style, we perform the 『Kata』 to cleanse the mind and \nbody, in order to facilitate 『The Fusion of Fire and Water』.",
             "nextBlock": 30,
+            "origClipLength": 362,
+            "voiceIdx": 20,
             "pathId": -680917131953776120,
             "blockIdx": 29
         },
@@ -321,6 +555,18 @@
             "jpText": "――おわかりでしょうか。『烈火』を御すとは、\r\n『止水』により抑え込み、打ち消すということではありません。",
             "enText": "――have you understood it so far？ To control the 『Ardent Flames』 \ndoes not mean, use the 『Tranquil Water』 to restrain it, it does \nnot mean to drown it out.",
             "nextBlock": 31,
+            "origClipLength": 333,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -4265340574911334192
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -8348814108431517037
+                }
+            ],
             "pathId": 4956769753364242040,
             "blockIdx": 30
         },
@@ -330,11 +576,23 @@
             "jpText": "武道であろうと、レースであろうとそれは同じ。\r\n目指すべきは『合一』。後は、いかにしてそれを成すか……。",
             "enText": "Whether it be martial arts or a race, it is the same. The aim \nshould be 『Fusion』. In what way should that be realized……",
             "nextBlock": 32,
+            "origClipLength": 417,
+            "voiceIdx": 22,
             "choices": [
                 {
                     "jpText": "……！！",
                     "enText": "……！！",
                     "nextBlock": 32
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -3838705057491073193
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3333220408295855378
                 }
             ],
             "pathId": 3084431375061170342,
@@ -346,6 +604,22 @@
             "jpText": "レースにおける『火水合一』の成し方……ですか。\r\nふむ――",
             "enText": "During a race, how to realize 『The Fusion \nof Fire and Water』…… is it? I see――",
             "nextBlock": 33,
+            "origClipLength": 206,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 265,
+                    "pathId": -1547908798983403056
+                },
+                {
+                    "origLen": 53,
+                    "pathId": -7049864739555903338
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 277240797977736122
+                }
+            ],
             "pathId": -6629828713788675482,
             "blockIdx": 32
         },
@@ -355,6 +629,18 @@
             "jpText": "祖父もお話ししたところではありますが、\r\n金剛八重垣流においてそれは『形』によって成されます。",
             "enText": "I have spoken with my grandfather about this before, \nhowever, in regards to the Kongou Yaegaki Ryuu, \nwe use the 『Kata』 to realize this.",
             "nextBlock": 34,
+            "origClipLength": 207,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": -8649207966369340236
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2385516971749898536
+                }
+            ],
             "pathId": 759949405246376637,
             "blockIdx": 33
         },
@@ -364,29 +650,53 @@
             "jpText": "だとすると、レースにおける『形』とは……？",
             "enText": "In that case, what would the 『Kata』 be for a race……？",
             "nextBlock": 35,
+            "origClipLength": 126,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": 9145365720683011086
+                }
+            ],
             "pathId": -1980844811784960809,
             "blockIdx": 34
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "武道における『形』は、相手や状況を想定し、それに対して\r\n最適な動作を繰り出すというシミュレーションの側面を持っている。",
             "enText": "For martial arts, 『Kata』 are based on hypothetical conditions and \nopponents, much like a simulation to choose the most optimal \naction to undertake.",
             "nextBlock": 36,
+            "origClipLength": 123,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": 8339372727761738440
+                }
+            ],
             "pathId": -3177379411378493579,
             "blockIdx": 35
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "これをレースに当てはめたとしたならば、考えられるものは――",
             "enText": "If one were to adapt these for the purpose of a race, then the \nthing that comes to mind is――",
             "nextBlock": 37,
+            "origClipLength": 82,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "『戦術』、じゃないかな",
                     "enText": "Wouldn't it be 『Tactics』？",
                     "nextBlock": 37
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2191468612877706364
                 }
             ],
             "pathId": 7462809686987545919,
@@ -398,6 +708,18 @@
             "jpText": "……！！",
             "enText": "……！！",
             "nextBlock": 38,
+            "origClipLength": 33,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 1311074613004107903
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 4221933477291409865
+                }
+            ],
             "pathId": -3473752171570767207,
             "blockIdx": 37
         },
@@ -407,6 +729,18 @@
             "jpText": "そうか……！　相手を打ち負かさんとする『烈火』！\r\n冷静に状況を見極めんとする『止水』！！",
             "enText": "That's right……！ To surpass the opponents, the 『Ardent Flame』！ To \ncalmly analyze and grasp the situation, the 『Tranquil Water』！！",
             "nextBlock": 39,
+            "origClipLength": 244,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 2319382526371497743
+                },
+                {
+                    "origLen": 27,
+                    "pathId": 6326152816474753530
+                }
+            ],
             "pathId": 2881936776161113452,
             "blockIdx": 38
         },
@@ -416,6 +750,18 @@
             "jpText": "これらの合一を成す『形』こそ――\r\n場面や状況に合った、多種多様なる『戦術』……！",
             "enText": "To combine these two, a 『Kata』―― With consideration for both the \nsettings and conditions, a variety of 『Tactics』……！",
             "nextBlock": 40,
+            "origClipLength": 224,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 185,
+                    "pathId": -539105384685456270
+                },
+                {
+                    "origLen": 211,
+                    "pathId": 6962085625391968550
+                }
+            ],
             "pathId": -6760305628065668966,
             "blockIdx": 39
         },
@@ -425,6 +771,8 @@
             "jpText": "すなわち、レースにおける『火水合一』は、\r\n『戦術』を学ぶことによって成り立つのですね……！！",
             "enText": "In other words, for a race 『The Fusion of Fire and Water』 can be \nrealized, by learning many different 『Tactics』……！！",
             "nextBlock": 41,
+            "origClipLength": 217,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "きっとそうだ……！",
@@ -437,6 +785,16 @@
                     "nextBlock": 41
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 207,
+                    "pathId": -3224370407970857897
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5481954339051974387
+                }
+            ],
             "pathId": 2422946422472245467,
             "blockIdx": 40
         },
@@ -446,6 +804,18 @@
             "jpText": "我、光明を得たり。\r\nさすれば、次にすべきは――",
             "enText": "I now have a guiding light. In that case, what I need next is――",
             "nextBlock": 42,
+            "origClipLength": 175,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 140,
+                    "pathId": 3979385332721891376
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 6014242062739160389
+                }
+            ],
             "pathId": -7086989259815238672,
             "blockIdx": 41
         },
@@ -455,11 +825,19 @@
             "jpText": "……その道の師に、教えを受けること。",
             "enText": "……an expert familiar with this road, that can instruct me.",
             "nextBlock": 43,
+            "origClipLength": 134,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "それって――",
                     "enText": "Does that mean――",
                     "nextBlock": 43
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 152,
+                    "pathId": -1281453828291855456
                 }
             ],
             "pathId": 3272968067762140953,
@@ -471,6 +849,14 @@
             "jpText": "トレーナーの名を持つ人々は、\r\nレースにおける戦術にも長けていると存じます。",
             "enText": "Those with the title of trainer are, in regards to race tactics, \nconsidered those most proficient at it.",
             "nextBlock": 44,
+            "origClipLength": 152,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 198,
+                    "pathId": -1823011137643893798
+                }
+            ],
             "pathId": 4189687243429615536,
             "blockIdx": 43
         },
@@ -480,6 +866,14 @@
             "jpText": "どうか、もうしばしの間、この未熟者にお付き合いを。",
             "enText": "Please, for just a little while longer, consider accompanying \nsomeone as immature as I.",
             "nextBlock": 45,
+            "origClipLength": 140,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -2317109447299538978
+                }
+            ],
             "pathId": -1918877550952246267,
             "blockIdx": 44
         },
@@ -489,6 +883,8 @@
             "jpText": "レースにおける『形』……すなわち『戦術』の数々、\r\nなにとぞ、ご指導願います！",
             "enText": "The 『Kata』 for races…… in other words, the many 『Tactics』, please \ninstruct me on them！",
             "nextBlock": 46,
+            "origClipLength": 222,
+            "voiceIdx": 34,
             "choices": [
                 {
                     "jpText": "わかった、任せてくれ！",
@@ -501,6 +897,12 @@
                     "nextBlock": 46
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": 8114967492826038321
+                }
+            ],
             "pathId": 5623375802352088882,
             "blockIdx": 45
         },
@@ -510,19 +912,39 @@
             "jpText": "ありがとうございます。\r\n……誠心溢れるお答え――心強く存じます。",
             "enText": "Thank you very much. ……a response overflowing \nin sincerity―― it's very reassuring.",
             "nextBlock": 47,
+            "origClipLength": 246,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 127,
+                    "pathId": -5400259791992348386
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 7126913561591209932
+                }
+            ],
             "pathId": 5973700358117858085,
             "blockIdx": 46
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "はたしてヤエノムテキは、戦術によってレースにおける\r\n『火水合一』を成せるのか……まずはしっかり指導していこう！",
             "enText": "Will Yaeno Muteki be able to realize 『The Fusion \nof Fire and Water』 using tactics for a race？ ……The \nfirst step is to instruct her properly！",
             "nextBlock": -1,
+            "origClipLength": 118,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": 1921847349335772515
+                }
+            ],
             "pathId": -4680468456104042247,
             "blockIdx": 47
         }
     ],
     "humanTl": true,
-    "modified": 1673054095
+    "modified": 1694039060
 }

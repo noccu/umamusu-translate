@@ -6,9 +6,9 @@ This project is a toolset to translate *Uma Musume Pretty Derby* to English. Inc
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
 Translation progress and credits are in [tl-progress]. Guides can be found below.  
-For troubleshooting, please open an issue or ask in the [Umamusume Translation Discord][].
+For troubleshooting, please open an issue or ask in the Discord server.
 
-This is based on the DMM version of the game and *should* work on linux too.  
+This is based on the DMM version of the game and *should* work on linux anc mac too, with some limitations.  
 
 # Features
 Translates (or *can* translate):
@@ -190,14 +190,13 @@ You can support the project on [Patreon](https://patreon.com/noccu) & [Ko-fi](ht
 [TLG][tlg]  
 [The original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
 [umamusume-localify]  
-[Umamusume Translation Discord]  
+[Umamusume Translation Discord](https://discord.gg/HpMRFNvsMv)  
 Various dataminers
 
 [UnityPy]: https://github.com/K0lb3/UnityPy
 [umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
 [tlg]: https://github.com/MinamiChiwa/Trainers-Legend-G
 [db-translate project]: https://github.com/noccu/umamusume-db-translate
-[Umamusume Translation Discord]: https://discord.gg/HpMRFNvsMv
 
 [tl-progress]: docs/tl-progress.md
 [translating]: docs/translating.md

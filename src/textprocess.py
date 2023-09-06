@@ -54,7 +54,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     pureText = RE_TAGS.sub("", text)
 
     if len(pureText) < lineLen:
-        logger.info("Short text line, skipping: ", text)
+        logger.info(f"Short text line, skipping: {text}")
         return text
 
     if numLines > 0:
@@ -64,7 +64,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         lines = re.split(r"\r?\n|\\n", pureText)
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
-            logger.info("Text passes length check, skipping: ", text)
+            logger.info(f"Text passes length check, skipping: {text}")
             return (
                 text.replace("\n", "\\n") if file.escapeNewline else text
             )  # I guess this ensures it's correct but should really be skipped

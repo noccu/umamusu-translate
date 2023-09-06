@@ -171,101 +171,105 @@ class StoryPatcher:
         self.bundle = bundle
         self.assetData = bundle.rootAsset.read_typetree()
 
+    def _adjustCLipLength(self, assetData:dict, textBlock:dict, blockIdx:int):
+        # Calculate length
+        # index length = sum(blocklenghts)
+        # blocklength = cliplength + startframe + 1
+        # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
+        # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
+        origClipLen = textBlock.get("origClipLength")
+        enText = textBlock.get("enText")
+        if origClipLen is None or not enText:
+            return
+        newTxtLen = len(enText) / self.manager.args.cps * self.manager.args.fps
+        newClipLen = textBlock.get("newClipLength")  # manual length override
+        if newClipLen:
+            # todo: this shouldn't happen or be cared about, really (error is fine)
+            try:
+                newClipLen = int(newClipLen)
+            except ValueError:
+                newClipLen = None
+                logger.warning(f"{blockIdx}: Invalid clip length defined, falling back to calculated value.")
+            logger.debug("Using manually defined clip length")
+        if newClipLen is None:  # support error above
+            newClipLen = int(assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"]))
+
+        # todo: should revert to original on patched files
+        if newClipLen <= origClipLen:
+            logger.debug(f"{blockIdx}: New clip length <= original. Skipping.")
+            return
+        assetData["ClipLength"] = newClipLen
+        newBlockLen = newClipLen + assetData["StartFrame"] + 1
+        self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
+        logger.debug(f"{blockIdx}: Adjusted TextClip length: {origClipLen} -> {newClipLen}")
+
+        if "animData" not in textBlock:
+            logger.debug(f"{blockIdx}: Text length adjusted but no anim data found")
+            return
+        for animGroup in textBlock["animData"]:
+            newAnimLen = animGroup["origLen"] + newClipLen - origClipLen
+            if newAnimLen <= animGroup["origLen"]:
+                logger.debug(f"{blockIdx}: New anim data <= original. Skipping.")
+                return
+            animAsset = self.bundle.assets[animGroup["pathId"]]
+            if animAsset is None:
+                logger.debug(f"{blockIdx}: Can't find animation asset ({animGroup['pathId']})")
+                return
+            animData = animAsset.read_typetree()
+            animData["ClipLength"] = newAnimLen
+            animAsset.save_typetree(animData)
+            logger.debug(f"{blockIdx}: Adjusted AnimClip length: {animGroup['origLen']} -> {newAnimLen}")
+
     def patch(self):
+        logger.debug(f"Patching {self.bundle.bundleName}")
         for textBlock in self.bundle.linkedTlFile.textBlocks:
             blockIdx = textBlock["blockIdx"]
-            try:
-                asset = self.bundle.assets[textBlock["pathId"]]
-            except KeyError:
-                logger.warning(f"{self.bundle.bundleName}: {blockIdx}: Can't find path id, skipping.")
+            asset = self.bundle.assets.get(textBlock["pathId"])
+            if asset is None:
+                logger.warning(f"{blockIdx}: Can't find path id, skipping.")
+                # ?: is there a reason we didn't skip here? untested!
+                self.skipped += 1
                 continue
-            else:
-                assetData = asset.read_typetree()
-
+            # Not translated
             if not textBlock["enText"] and not textBlock["enName"]:
                 self.skipped += 1
                 continue
-            else:
-                assetData["Text"] = textBlock["enText"] or assetData["Text"]
-                assetData["Name"] = textBlock["enName"] or assetData["Name"]
 
-                # Calculate length
-                # index length = sum(blocklenghts)
-                # blocklength = cliplength + startframe + 1
-                # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
-                # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
-                if "origClipLength" in textBlock and textBlock["enText"]:
-                    newTxtLen = len(textBlock["enText"]) / self.manager.args.cps * self.manager.args.fps
-                    newClipLen = int(assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"]))
-                    if textBlock.get("newClipLength"):  # manual length override
-                        try:
-                            newClipLen = int(textBlock["newClipLength"])
-                        except ValueError:
-                            logger.warning(
-                                f"{self.bundle.bundleName}: {blockIdx}: Invalid clip length defined, falling back to calculated value."
-                            )
-                        else:
-                            if newClipLen < textBlock["origClipLength"]:
-                                logger.warning(
-                                    f"{self.bundle.bundleName}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original."
-                                )
-                    if newClipLen > textBlock["origClipLength"]:
-                        newBlockLen = newClipLen + assetData["StartFrame"] + 1
-                        assetData["ClipLength"] = newClipLen
-                        self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
-                        logger.debug(
-                            f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}"
-                        )
+            assetData = asset.read_typetree()
+            assetData["Text"] = textBlock["enText"] or assetData["Text"]
+            assetData["Name"] = textBlock["enName"] or assetData["Name"]
 
-                        if "animData" in textBlock:
-                            for animGroup in textBlock["animData"]:
-                                newAnimLen = (
-                                    animGroup["origLen"] + newClipLen - textBlock["origClipLength"]
-                                )
-                                if newAnimLen > animGroup["origLen"]:
-                                    try:
-                                        animAsset = self.bundle.assets[animGroup["pathId"]]
-                                    except KeyError:
-                                        logger.debug(
-                                            f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}"
-                                        )
-                                    else:
-                                        animData = animAsset.read_typetree()
-                                        animData["ClipLength"] = newAnimLen
-                                        animAsset.save_typetree(animData)
-                                        logger.debug(
-                                            f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}"
-                                        )
-                        else:
-                            logger.debug(f"Text length adjusted but no anim data found at {blockIdx}")
+            self._adjustCLipLength(assetData, textBlock, blockIdx)
 
-                if "choices" in textBlock:
-                    jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]
-                    if len(jpChoices) != len(enChoices):
-                        logger.warning("Choice lengths do not match, skipping choice block.")
-                    else:
-                        for idx, choice in enumerate(textBlock["choices"]):
-                            if choice["enText"]:
-                                jpChoices[idx]["Text"] = choice["enText"]
+            if "choices" in textBlock:
+                jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]
+                if len(jpChoices) != len(enChoices):
+                    logger.warning(f"{blockIdx}: Choice lengths do not match, skipping choice block.")
+                else:
+                    for idx, choice in enumerate(enChoices):
+                        if enChoice := choice["enText"]:
+                            jpChoices[idx]["Text"] = enChoice
 
-                if "coloredText" in textBlock:
-                    jpColored, enColored = assetData["ColorTextInfoList"], textBlock["coloredText"]
-                    if len(jpColored) != len(enColored):
-                        logger.warning("Colored text lengths do not match, skipping color block...")
-                    else:
-                        for idx, text in enumerate(textBlock["coloredText"]):
-                            if text["enText"]:
-                                jpColored[idx]["Text"] = text["enText"]
+            if "coloredText" in textBlock:
+                jpColored, enColored = assetData["ColorTextInfoList"], textBlock["coloredText"]
+                if len(jpColored) != len(enColored):
+                    logger.warning(f"{blockIdx}: Colored text lengths do not match, skipping color block...")
+                else:
+                    for idx, text in enumerate(enColored):
+                        if enText := text["enText"]:
+                            jpColored[idx]["Text"] = enText
             asset.save_typetree(assetData)
 
         try:
             self.assetData["TypewriteCountPerSecond"] = self.manager.args.fps * 3
             self.assetData["Length"] = reduce(
-                lambda x, b: x + b["BlockLength"], self.assetData["BlockList"], 0
+                lambda x, b: x + b["BlockLength"], 
+                self.assetData["BlockList"], 
+                0
             )
             self.save()
         except Exception as e:
-            logger.error(f"Unexpected error in {self.bundle.bundleName}: {repr(e)}")
+            logger.error(f"Unexpected error at {blockIdx}: {repr(e)}")
 
     def save(self):
         if self.isModified:

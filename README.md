@@ -1,3 +1,7 @@
+[![Support me on Patreon](https://img.shields.io/badge/dynamic/json?color=%23ff424d&label=Patreon&query=data.attributes.patron_count&suffix=%20trainers&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F2559100&style=flat-square&logo=patreon&logoColor=%23ff424d)](https://patreon.com/noccu)
+[![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support-%2300aff1?logo=kofi&logoColor=%2300aff1)](https://ko-fi.com/noccyu)
+![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=4bba35&label=Discord)
+
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. Includes a few scripts to patch the game using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
@@ -5,7 +9,6 @@ Translation progress and credits are in [tl-progress]. Guides can be found below
 For troubleshooting, please open an issue or ask in the [Umamusume Translation Discord][].
 
 This is based on the DMM version of the game and *should* work on linux too.  
-Support the project on [Patreon](https://patreon.com/noccu) or [Ko-fi](https://ko-fi.com/noccyu) and get more updates!
 
 # Features
 Translates (or *can* translate):
@@ -40,6 +43,26 @@ Nonetheless such edits are of course against the relevant TOS so **proceed at yo
 No maintainer nor contributor will be repsonsible for any issues encountered as a result of use.
 
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
+
+# **Current state (maintainer's note)**
+This project has taken a lot of time and effort that I can't afford to keep providing.  
+It will no longer be updated outside of the following:
+- Integration of translation PRs 
+- Critical bug fixes & changes
+- Minor housekeeping
+
+Some occasional additions are still possible. All the work that has gone into it over one and a half years as well as the abilities it provides both to users and community contributors also remain available.
+
+My own work on the project, to the degree I can afford it, is continued in a separate version accessible to monthly supporters.  
+This includes:
+- New translations
+- Latest game updates
+- Additional content (lyrics, pakatube, …)
+- Patch improvements & QOL
+- Translation spotlights; a series of small periodic writeups expanding upon some translations
+- Priority tech support
+
+Currently this is available to supporters with any amount of pledge. Please come join if you can!
 
 # Setting up / Getting started
 [An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)
@@ -157,14 +180,14 @@ common/helpers | Not scripts. Hold shared functions and data for other scripts.
 
 To contribute translations, see [translating]  
 For dev contributions, open a PR or Issue.  
-You can support the project on [Patreon](https://patreon.com/noccu), [Ko-fi](https://ko-fi.com/noccyu), or by sending me DMM points (find me in the [Umamusume Translation Discord][]).
+You can support the project on [Patreon](https://patreon.com/noccu) & [Ko-fi](https://ko-fi.com/noccyu).
 
 # Thanks to
 
 [All translators][tl-progress]  
 [Project contributors](https://github.com/noccu/umamusu-translate/graphs/contributors)  
 [UnityPy]  
-[tlg]  
+[TLG][tlg]  
 [The original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
 [umamusume-localify]  
 [Umamusume Translation Discord]  

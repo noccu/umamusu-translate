@@ -65,9 +65,8 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
             logger.info(f"Text passes length check, skipping: {text}")
-            return (
-                text.replace("\n", "\\n") if file.escapeNewline else text
-            )  # I guess this ensures it's correct but should really be skipped
+            # I guess this replace ensures it's correct but should really be skipped
+            return text.replace("\n", "\\n") if file.escapeNewline else text
 
         # adjust if not
         text = cleannewLines(text)
@@ -108,11 +107,14 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         try:
             linesStr = "\n\t".join(lines)
             print(
-                f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}"
+                f"Exceeded target lines ({targetLines} -> {len(lines)}) "
+                f"by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}"
             )
         except UnicodeEncodeError:
             print(
-                f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors."
+                f"Exceeded target lines ({targetLines} -> {len(lines)}) "
+                f"by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}\n"
+                "Lines and title not shown due to terminal/system codepage errors."
             )
     return getNewline(file).join(lines)
 

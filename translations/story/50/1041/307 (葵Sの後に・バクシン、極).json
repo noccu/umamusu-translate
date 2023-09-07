@@ -1,9 +1,9 @@
 {
-    "version": 4,
-    "bundle": "JRZADL4B3JNMXUQC3XQ7GTBHHDXLSXHO",
+    "version": 6,
+    "bundle": "MH3TDORD3NDQWOKHEALTE5ECTP6LDAFZ",
     "type": "story",
     "storyId": "501041307",
-    "title": "葵ステークスの後に・バクシン、極",
+    "title": "葵Sの後に・バクシン、極",
     "text": [
         {
             "jpName": "サクラバクシンオー",
@@ -11,7 +11,19 @@
             "jpText": "フフフッ……\r\nハーッハッハッハー！",
             "enText": "Huh… Hahahahaha!",
             "nextBlock": 2,
-            "pathId": -2789358116097717138,
+            "origClipLength": 64,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 9269719466156444
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -6936093414020247370
+                }
+            ],
+            "pathId": 3724913303745026697,
             "blockIdx": 1
         },
         {
@@ -20,7 +32,19 @@
             "jpText": "やっぱり、私は速かった！\r\nさすがスピードに愛された学級委員長です！",
             "enText": "I knew I was fast! That's our class \npresident, loved by speed!",
             "nextBlock": 3,
-            "pathId": 8542279779079709989,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -263979413569289807
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -3621373537314702677
+                }
+            ],
+            "pathId": 9021998260187801171,
             "blockIdx": 2
         },
         {
@@ -29,6 +53,8 @@
             "jpText": "どうやら電光石火ではなく、\r\nもはや音速の域に達していたようです。",
             "enText": "Apparently, it wasn't lightning fast, but it \nhad reached the speed of sound.",
             "nextBlock": 4,
+            "origClipLength": 66,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（光の方が速いけど……）",
@@ -36,7 +62,17 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": -2287342643023280866,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -771568920764312482
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 378329728664607237
+                }
+            ],
+            "pathId": -7389375679226887336,
             "blockIdx": 3
         },
         {
@@ -45,7 +81,19 @@
             "jpText": "もうだいぶ成長している証ですね！\r\nならばここからは、次のステップ！",
             "enText": "That's a sign that you've grown a lot \nalready! Then here's the next step!",
             "nextBlock": 5,
-            "pathId": 5985508320622497942,
+            "origClipLength": 67,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -3552742268109998265
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -6484288386488631992
+                }
+            ],
+            "pathId": 6364904219087495139,
             "blockIdx": 4
         },
         {
@@ -54,7 +102,19 @@
             "jpText": "三冠レース最後の『菊花賞』にチャレンジ！",
             "enText": "The last of the Triple Crown races, the \nKikka-sho, is up for grabs!",
             "nextBlock": 6,
-            "pathId": 4001140926712164316,
+            "origClipLength": 58,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -2935156175751320280
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 705335087996888070
+                }
+            ],
+            "pathId": -5807084615186241533,
             "blockIdx": 5
         },
         {
@@ -63,6 +123,8 @@
             "jpText": "もしくはシニア級のスター大集合！\r\n中距離レースの最高峰『天皇賞（秋）』――",
             "enText": "Or a big gathering of senior class stars! \nThe pinnacle of middle-distance racing, \"The \nEmperor's Championship (Autumn)…",
             "nextBlock": 7,
+            "origClipLength": 69,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "シニア級",
@@ -73,24 +135,48 @@
                     "enText": "Tennoushou (Autumn)"
                 }
             ],
-            "pathId": -5423213680317648024,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": 8066855382454606560
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 3105601732717352019
+                }
+            ],
+            "pathId": 2336016719126315842,
             "blockIdx": 6
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "『菊花賞』は言わずもがな、\r\n『天皇賞（秋）』も2000m。\nやはり彼女には長すぎる。",
             "enText": "It's too long for her, after all.",
             "nextBlock": 8,
-            "pathId": -2369321277655087477,
+            "origClipLength": 73,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 84,
+                    "pathId": -3809505333366461509
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 5642057168516670078
+                }
+            ],
+            "pathId": 7055558932812493298,
             "blockIdx": 7
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "それに同じ時期に走るのであれば……。\r\nということで――",
             "enText": "And if you want to run at the same time, you \ncan go to… So—",
             "nextBlock": 9,
+            "origClipLength": 63,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "驕るな！",
@@ -103,7 +189,17 @@
                     "nextBlock": 9
                 }
             ],
-            "pathId": 5008539345343134111,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": -3990962592131046742
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -3777580171163147308
+                }
+            ],
+            "pathId": -7121662142890721737,
             "blockIdx": 8
         },
         {
@@ -112,7 +208,19 @@
             "jpText": "なッ！\r\nなぜ怒るのですかー！？",
             "enText": "Hey! Why are you angry?",
             "nextBlock": 10,
-            "pathId": -1632636569543347557,
+            "origClipLength": 55,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -1743771732833451264
+                },
+                {
+                    "origLen": 66,
+                    "pathId": 981413094120817697
+                }
+            ],
+            "pathId": -6457003492020251081,
             "blockIdx": 9
         },
         {
@@ -121,6 +229,8 @@
             "jpText": "それに、奢るってどういうことでしょう？\r\n私、奢りませんが。金銭で人気はとりません！",
             "enText": "Besides, what does it mean to buy a drink? \nI'm not buying you a drink. I don't take \npopularity for money!",
             "nextBlock": 11,
+            "origClipLength": 72,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "……まだ調子に乗るには早い！",
@@ -128,7 +238,17 @@
                     "nextBlock": 11
                 }
             ],
-            "pathId": 5164701598726915732,
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": 5725633039743862529
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -3307413261456000407
+                }
+            ],
+            "pathId": -3375470553486452930,
             "blockIdx": 10
         },
         {
@@ -137,6 +257,8 @@
             "jpText": "ムムッ！？\r\nどういうことですか！",
             "enText": "Mmm! I don't understand!",
             "nextBlock": 12,
+            "origClipLength": 56,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "本当にスピードを極めたのか？",
@@ -149,7 +271,17 @@
                     "nextBlock": 12
                 }
             ],
-            "pathId": -772864749175993227,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": -6612766246154181252
+                },
+                {
+                    "origLen": 67,
+                    "pathId": -8014402943372934256
+                }
+            ],
+            "pathId": -2275063502410515302,
             "blockIdx": 11
         },
         {
@@ -158,7 +290,19 @@
             "jpText": "何を言ってるんです！\r\nちゃんとこのレースでも、結果を出しました！",
             "enText": "What are you talking about! I got the \nresults in this race, too!",
             "nextBlock": 13,
-            "pathId": -816211365485214743,
+            "origClipLength": 66,
+            "voiceIdx": 124,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 5093386224474453707
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 2591477124135252588
+                }
+            ],
+            "pathId": 2520430725941967097,
             "blockIdx": 12
         },
         {
@@ -167,6 +311,8 @@
             "jpText": "それこそスピードの証明だと思いますが！",
             "enText": "That's what I call proving your speed!",
             "nextBlock": 14,
+            "origClipLength": 57,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "それはＧⅠをとってから言えること",
@@ -174,7 +320,17 @@
                     "nextBlock": 14
                 }
             ],
-            "pathId": -8286699278116246986,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": 1774678104512244102
+                },
+                {
+                    "origLen": 68,
+                    "pathId": -1313587270153150758
+                }
+            ],
+            "pathId": 1093855444762500698,
             "blockIdx": 13
         },
         {
@@ -183,6 +339,8 @@
             "jpText": "ＧⅠ……！\r\nと、いうと……。",
             "enText": "GI…! Which is to say…",
             "nextBlock": 15,
+            "origClipLength": 54,
+            "voiceIdx": 111,
             "choices": [
                 {
                     "jpText": "スピードの最高峰、『スプリンターズS』！",
@@ -190,16 +348,38 @@
                     "nextBlock": 15
                 }
             ],
-            "pathId": 296743721384292666,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": 4822226185223821413
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -7663878602618919564
+                }
+            ],
+            "pathId": -6304494503650980757,
             "blockIdx": 14
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "国際的評価も高く、その名の通り\r\nまさにスプリンターのためのレース。\n彼女が走るべきは、このレースしかない！",
             "enText": "An internationally acclaimed race that is, \nas the name implies, truly for sprinters. \nThis is the only race she should be running!",
             "nextBlock": 16,
-            "pathId": -6999365399086070969,
+            "origClipLength": 80,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": -4618503705408332932
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -5025696238076389421
+                }
+            ],
+            "pathId": -985613093950896879,
             "blockIdx": 15
         },
         {
@@ -208,7 +388,19 @@
             "jpText": "ムムムムム……！",
             "enText": "Mmmm…!",
             "nextBlock": 17,
-            "pathId": -7589730284509850277,
+            "origClipLength": 50,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -1967097592240462568
+                },
+                {
+                    "origLen": 61,
+                    "pathId": -2464821121899783612
+                }
+            ],
+            "pathId": -3699542316913204606,
             "blockIdx": 16
         },
         {
@@ -217,6 +409,8 @@
             "jpText": "確かに……！\r\nそのレースを勝たねば、最速とは言えません。",
             "enText": "Sure…! If you don't win that race, \nyou're not the fastest.",
             "nextBlock": 18,
+            "origClipLength": 63,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "名実ともに最速の学級委員長になろう！",
@@ -224,7 +418,17 @@
                     "nextBlock": 18
                 }
             ],
-            "pathId": 5022412063148416045,
+            "animData": [
+                {
+                    "origLen": 15,
+                    "pathId": 3501831147341798335
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 5093022034382268989
+                }
+            ],
+            "pathId": 5239672717769639735,
             "blockIdx": 17
         },
         {
@@ -233,7 +437,19 @@
             "jpText": "最速の……学級委員長……！",
             "enText": "The fastest… grade \ncommittee chair…!",
             "nextBlock": 19,
-            "pathId": -3026853145373332536,
+            "origClipLength": 53,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -3896990201954908086
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -4046758947765485457
+                }
+            ],
+            "pathId": 6323458254286298526,
             "blockIdx": 18
         },
         {
@@ -242,7 +458,19 @@
             "jpText": "わかりました。\r\n私……走りますッ！",
             "enText": "Okay, okay. I'll run…!",
             "nextBlock": 20,
-            "pathId": 1436140465937677187,
+            "origClipLength": 56,
+            "voiceIdx": 73,
+            "animData": [
+                {
+                    "origLen": 29,
+                    "pathId": 6290714632088330888
+                },
+                {
+                    "origLen": 67,
+                    "pathId": -1091650540325759730
+                }
+            ],
+            "pathId": -4874477071677875376,
             "blockIdx": 19
         },
         {
@@ -251,13 +479,25 @@
             "jpText": "『スプリンターズS』を勝って、\r\n最速の学級委員長になりますッ！",
             "enText": "I'll win the Sprinters Sprinters Sprinters \nSprinters Sprinters Sprinters Sprinters \nSprinters Sprinters Sprinters Sprinters \nSprinters",
             "nextBlock": 21,
+            "origClipLength": 65,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "スプリンターズS",
                     "enText": "Sprinter's S"
                 }
             ],
-            "pathId": 2319433112690928136,
+            "animData": [
+                {
+                    "origLen": 38,
+                    "pathId": 8748001863389242400
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 9074080277759815316
+                }
+            ],
+            "pathId": -2966445918216453013,
             "blockIdx": 20
         },
         {
@@ -266,18 +506,42 @@
             "jpText": "その称号をもって、\r\nバクシンロードに華を添えましょう！",
             "enText": "With that title, let's add \nsome flair to Bakushin Road!",
             "nextBlock": 22,
-            "pathId": 1919293962642427314,
+            "origClipLength": 63,
+            "voiceIdx": 71,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 4156144204313710288
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -593440153229996251
+                }
+            ],
+            "pathId": 6052637740171571459,
             "blockIdx": 21
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
-            "jpText": "いよいよ、サクラバクシンオーが……\r\n『スプリンターズS』に挑む",
+            "jpText": "いよいよ、サクラバクシンオーが……\r\n『スプリンターズS』に挑む！",
             "enText": "Finally, Sakura Bakushin O is going to take \non the… \"Sprinter's Sprinters\".",
             "nextBlock": -1,
-            "pathId": -8867903473829130624,
+            "origClipLength": 66,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": -5915990018210371764
+                },
+                {
+                    "origLen": 128,
+                    "pathId": 4795235718204024089
+                }
+            ],
+            "pathId": -3012502392408163574,
             "blockIdx": 22
         }
     ],
-    "modified": 1683732695
+    "modified": 1694039462
 }

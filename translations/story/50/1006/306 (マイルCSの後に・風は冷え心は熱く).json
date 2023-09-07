@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "CKJSP4C6NA6GEM3UJQNKKIXIAPYIJIFL",
+    "version": 6,
+    "bundle": "HO6JPWNMFPM6L6RE5GOU7XJXILRFX3E5",
     "type": "story",
     "storyId": "501006306",
     "title": "マイルCSの後に・風は冷え心は熱く",
@@ -11,6 +11,8 @@
             "jpText": "トレーナー……終わったぞ。",
             "enText": "I'm done with the trainer…",
             "nextBlock": 2,
+            "origClipLength": 53,
+            "voiceIdx": 55,
             "choices": [
                 {
                     "jpText": "さすがだな！",
@@ -23,7 +25,17 @@
                     "nextBlock": 2
                 }
             ],
-            "pathId": -8114844611640369005,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -3155257389075462698
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 7574415388718736188
+                }
+            ],
+            "pathId": -5530115100212101780,
             "blockIdx": 1
         },
         {
@@ -32,7 +44,19 @@
             "jpText": "ありがとう。\r\n私の実力を、見せられたと思う。",
             "enText": "Thank you. I think I've shown \nyou what I'm capable of.",
             "nextBlock": 3,
-            "pathId": -455074831658069900,
+            "origClipLength": 60,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": 4177278871305546225
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 8774783063918607536
+                }
+            ],
+            "pathId": 3561266278018259480,
             "blockIdx": 2
         },
         {
@@ -41,7 +65,19 @@
             "jpText": "（ワアアアアア……！！）",
             "enText": "(Waaaahhhh…!!!)",
             "nextBlock": 4,
-            "pathId": 7082169641871706372,
+            "origClipLength": 52,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -8733853386993178312
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -35157755647684472
+                }
+            ],
+            "pathId": -4440454513500963251,
             "blockIdx": 3
         },
         {
@@ -50,7 +86,23 @@
             "jpText": "……ん？\r\n外から歓声が……。",
             "enText": "… Hmm? There were cheers from outside…",
             "nextBlock": 5,
-            "pathId": 4616469973107439081,
+            "origClipLength": 54,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": -8301822761366245133
+                },
+                {
+                    "origLen": 40,
+                    "pathId": -7867383951530593223
+                },
+                {
+                    "origLen": 66,
+                    "pathId": 1910003056762411938
+                }
+            ],
+            "pathId": -1476416476416536961,
             "blockIdx": 4
         },
         {
@@ -59,7 +111,23 @@
             "jpText": "オグリ、すごかったぞーっ！",
             "enText": "Oguri, you were amazing!",
             "nextBlock": 6,
-            "pathId": -3554995176961139959,
+            "origClipLength": 53,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 2375766807122163277
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 2873007465364733040
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 1276226137275543626
+                }
+            ],
+            "pathId": 2080758727140444485,
             "blockIdx": 5
         },
         {
@@ -68,7 +136,23 @@
             "jpText": "距離的には難しいかもしれないけど……\r\n年末にもオグリを見てぇ～っ！",
             "enText": "It may be difficult to get the distance, \nbut… I want to see Oguri again at \nthe end of the year!",
             "nextBlock": 7,
-            "pathId": -267512431809516772,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 1339162060792815752
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -8075219622609480111
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -3591420178772419110
+                }
+            ],
+            "pathId": 7380820039720873492,
             "blockIdx": 6
         },
         {
@@ -77,7 +161,23 @@
             "jpText": "……どうやら、\r\nみんなも期待してくれているようだ。",
             "enText": "… Apparently, people are expecting \nme to do the same.",
             "nextBlock": 8,
-            "pathId": 7869684419589064905,
+            "origClipLength": 61,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 3196850678136146048
+                },
+                {
+                    "origLen": 31,
+                    "pathId": -3266038280853749132
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -1540654048820056691
+                }
+            ],
+            "pathId": -7973683307002696868,
             "blockIdx": 7
         },
         {
@@ -86,16 +186,40 @@
             "jpText": "出たいな……『有馬記念』！",
             "enText": "I want to get out of here… \"Arima Kinen\"!",
             "nextBlock": 9,
-            "pathId": 6611451063793150744,
+            "origClipLength": 53,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 8798478935102131299
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 645078263346342625
+                }
+            ],
+            "pathId": -3775953939324577910,
             "blockIdx": 8
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "気合い充分なオグリキャップ。\r\nそんな彼女に、よい報告があった。",
             "enText": "Oguri Cap is in high spirits. She \nhad some good news to report.",
             "nextBlock": 10,
-            "pathId": -7617638772431637094,
+            "origClipLength": 65,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": 6209368531149986425
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -5535867223178526999
+                }
+            ],
+            "pathId": -7898780009160841018,
             "blockIdx": 9
         },
         {
@@ -104,6 +228,8 @@
             "jpText": "――……！\r\n『有馬記念』に、出られるのか！？",
             "enText": "—…! Will you be able to attend \nthe Arima Kinen?",
             "nextBlock": 11,
+            "origClipLength": 60,
+            "voiceIdx": 27,
             "choices": [
                 {
                     "jpText": "このままいけばきっと出られる！",
@@ -111,16 +237,38 @@
                     "nextBlock": 11
                 }
             ],
-            "pathId": -7971009331080510792,
+            "animData": [
+                {
+                    "origLen": 85,
+                    "pathId": -1839945673087710226
+                },
+                {
+                    "origLen": 101,
+                    "pathId": -6844920409566882069
+                }
+            ],
+            "pathId": -8599063266502435907,
             "blockIdx": 10
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "有志によるネット投票や、\r\n新聞各社による予想を見ると、\n必ずオグリキャップの名前があった！",
             "enText": "When you look at the online polls by \nvolunteers and the predictions by \nnewspapers, Oguri Cap's name is always there!",
             "nextBlock": 12,
-            "pathId": 3026591491859810724,
+            "origClipLength": 75,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": -5399113456511119434
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 2191726628266747011
+                }
+            ],
+            "pathId": -3038273549580439068,
             "blockIdx": 11
         },
         {
@@ -129,7 +277,19 @@
             "jpText": "そうか……みんなが、\r\n私に期待してくれているんだな。",
             "enText": "Well… everyone is expecting me to do it.",
             "nextBlock": 13,
-            "pathId": -6504983388483112980,
+            "origClipLength": 62,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -5193660091835202022
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -7676780324315001005
+                }
+            ],
+            "pathId": -1812652677788877701,
             "blockIdx": 12
         },
         {
@@ -138,15 +298,29 @@
             "jpText": "声援が私の力になる。\r\nいまの私は……負ける気がしない！",
             "enText": "Cheering is my strength. Now \nI don't feel like losing…!",
             "nextBlock": 14,
-            "pathId": 2037869111262095932,
+            "origClipLength": 63,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": 527585528875328899
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 3908015150870304480
+                }
+            ],
+            "pathId": 8568749701187311420,
             "blockIdx": 13
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "観客の熱も、オグリキャップの気持ちも、\r\nそして自分も……今が最高潮に高まっている。",
             "enText": "The heat of the crowd, Oguri Cap's \nfeelings, and my own… are at an \nall-time high right now.",
             "nextBlock": 15,
+            "origClipLength": 72,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "いよいよ『有馬記念』だな！",
@@ -159,7 +333,17 @@
                     "nextBlock": 15
                 }
             ],
-            "pathId": -676785117313541512,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": -5282501700650135342
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 5139409129736086954
+                }
+            ],
+            "pathId": -4246342235625457733,
             "blockIdx": 14
         },
         {
@@ -168,16 +352,40 @@
             "jpText": "ああ……挑もう。\r\n……夢の舞台へ！",
             "enText": "Oh… let's take on the challenge. \n… to the stage of your dreams!",
             "nextBlock": 16,
-            "pathId": -4251923581168689409,
+            "origClipLength": 56,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 33,
+                    "pathId": 6194098553590200456
+                },
+                {
+                    "origLen": 67,
+                    "pathId": -8976843404459265502
+                }
+            ],
+            "pathId": 7126987150260875624,
             "blockIdx": 15
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "レースの帰り道――",
             "enText": "On the way back from the race—",
             "nextBlock": 17,
-            "pathId": 6776982521630122303,
+            "origClipLength": 50,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 14,
+                    "pathId": 8282144731794130886
+                },
+                {
+                    "origLen": 14,
+                    "pathId": 2140967395110358819
+                }
+            ],
+            "pathId": 3450599615314823209,
             "blockIdx": 16
         },
         {
@@ -186,7 +394,23 @@
             "jpText": "ふぅっ……ふぅっ……。\r\nもう1本……！",
             "enText": "Phew… phew… One more…!",
             "nextBlock": 18,
-            "pathId": -6494783230127847850,
+            "origClipLength": 87,
+            "voiceIdx": 58,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -6967835047071618802
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 7702755499838618580
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -450447877939454416
+                }
+            ],
+            "pathId": 7020218804366420058,
             "blockIdx": 17
         },
         {
@@ -195,16 +419,64 @@
             "jpText": "ちょっ……ちょいと待ちなってクリーク！\r\nちっとばかし休憩しようや！",
             "enText": "Hey… wait a minute, Creek! Let's \ntake a break for a minute!",
             "nextBlock": 19,
-            "pathId": -7621134859533921081,
+            "origClipLength": 124,
+            "voiceIdx": 58,
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": 4813538170968841842
+                },
+                {
+                    "origLen": 150,
+                    "pathId": -2267596393051816072
+                },
+                {
+                    "origLen": 150,
+                    "pathId": 4208679565249376125
+                },
+                {
+                    "origLen": 53,
+                    "pathId": -4548229443738750663
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 2725125324190539080
+                }
+            ],
+            "pathId": -7941480398549317891,
             "blockIdx": 18
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "熱いのはいい、だが根詰めすぎだっての！\r\nあんたらしくもねぇ！",
+            "jpText": "熱いのはいい、だが根詰めすぎだっての！\nお前さんらしくもねえ！",
             "enText": "I don't mind that you're hot, but you're a \nlittle overzealous! It's not like you!",
             "nextBlock": 20,
-            "pathId": -5549060960033479078,
+            "origClipLength": 65,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -3499928895350364072
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 1495864031462534370
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 3164219236167280612
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -2050504491454607681
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -7941248029255138592
+                }
+            ],
+            "pathId": -586381790916192510,
             "blockIdx": 19
         },
         {
@@ -213,7 +485,31 @@
             "jpText": "あら、心配してくれてるんですか～？\r\nイナリちゃん、いいこ、いいこ♪",
             "enText": "Oh, you're worried about me? \nInari, good boy, good boy.",
             "nextBlock": 21,
-            "pathId": 346291707198824704,
+            "origClipLength": 67,
+            "voiceIdx": 61,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 7776308455590814622
+                },
+                {
+                    "origLen": 42,
+                    "pathId": -2038951834276400477
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 7595643809532741503
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 694577719189509482
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 670234833439443853
+                }
+            ],
+            "pathId": -296161865147476950,
             "blockIdx": 20
         },
         {
@@ -222,16 +518,68 @@
             "jpText": "だーっ！　誤魔化すな！\r\n理由は夏合宿だな！？",
             "enText": "Duh! Don't fool yourself! You're \nat summer camp for a reason!",
             "nextBlock": 22,
-            "pathId": 201120068309516524,
+            "origClipLength": 60,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 8405017443942977562
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 2840078088516587443
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 410926382261655676
+                },
+                {
+                    "origLen": 40,
+                    "pathId": -172821810182880918
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 826075258361767671
+                }
+            ],
+            "pathId": 2805665006157524613,
             "blockIdx": 21
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "オグリと走った、あのレース！\r\nアレから妙に焦ってねぇか？",
+            "jpText": "オグリと走った、あのレース！\nアレから妙に焦ってねえか？",
             "enText": "That race you ran with Oguri! You've been in \na strange hurry since then, haven't you?",
             "nextBlock": 23,
-            "pathId": 8842794218073791420,
+            "origClipLength": 63,
+            "voiceIdx": 52,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -445869293852085085
+                },
+                {
+                    "origLen": 49,
+                    "pathId": -2434130014187937263
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -533082731191305211
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 2696873945214380219
+                },
+                {
+                    "origLen": 40,
+                    "pathId": -2006271824862179169
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -1274605495575498408
+                }
+            ],
+            "pathId": -6859112429347932013,
             "blockIdx": 22
         },
         {
@@ -240,7 +588,35 @@
             "jpText": "…………私、抜けなかったんです。\r\nオグリちゃんのこと。",
             "enText": "… I couldn't get out of it. Oguri-chan.",
             "nextBlock": 24,
-            "pathId": -8803042412067697395,
+            "origClipLength": 63,
+            "voiceIdx": 79,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": -3798201711340016197
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 1950603822367711724
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6105984507390248992
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 5218112732331948004
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -5530843275349089973
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6479028827120480937
+                }
+            ],
+            "pathId": -8911527947583436249,
             "blockIdx": 23
         },
         {
@@ -249,7 +625,35 @@
             "jpText": "このままオグリちゃんと瞬発力での\r\n勝負になったら……負けちゃう。",
             "enText": "If it comes down to a match between Oguri and \nme in the blink of an eye, I'll lose…",
             "nextBlock": 25,
-            "pathId": -2277958756636466971,
+            "origClipLength": 66,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -8500802840968959872
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 5712753500790001347
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 8713974892069465141
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -528608649593197818
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 7618183522536884022
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 7164537956796688092
+                }
+            ],
+            "pathId": -6291027916330765832,
             "blockIdx": 24
         },
         {
@@ -258,16 +662,64 @@
             "jpText": "得意な勝負に持ち込まれたくない。\r\nそのために、もっとスタミナをつけなくちゃ。",
             "enText": "I don't want to be brought into \na game I'm good at. I need to build \nup my stamina to do so.",
             "nextBlock": 26,
-            "pathId": 1759465007388928823,
+            "origClipLength": 70,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": 8605143429549482135
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -4181238372295267644
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -825634135875877335
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 5929914222866470794
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -1815378900735002584
+                }
+            ],
+            "pathId": -5428664545042560593,
             "blockIdx": 25
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "クリーク……\r\nあんたどうしてそこまで、オグリを……。",
+            "jpText": "クリーク……\r\nお前さんどうしてそこまで、オグリを……。",
             "enText": "Creek… Why do you so much, Oguri…",
             "nextBlock": 27,
-            "pathId": -1696213576817763639,
+            "origClipLength": 63,
+            "voiceIdx": 49,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": -1478015569271017253
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 1438299912163742593
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7898262485226675453
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -1372505118579190714
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -2129631575319190204
+                }
+            ],
+            "pathId": -6930595794109987322,
             "blockIdx": 26
         },
         {
@@ -276,7 +728,27 @@
             "jpText": "――負けられないの。だって……\r\n強くなくちゃ、みんなの支えになれない。",
             "enText": "—I can't lose. Because… you have to be \nstrong to be able to support everyone.",
             "nextBlock": 28,
-            "pathId": 2511242011564780302,
+            "origClipLength": 68,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -2826171339248237318
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 5409169845337068708
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -1373088893327734297
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -2530852842563435768
+                }
+            ],
+            "pathId": 7895916749670256687,
             "blockIdx": 27
         },
         {
@@ -285,7 +757,31 @@
             "jpText": "誰よりも強くて、誰よりも安心できる。\r\n……そんな私でいたいの！",
             "enText": "I'm stronger than anyone else and more secure \nthan anyone else… That's who I want to be!",
             "nextBlock": 29,
-            "pathId": -2510415231418732861,
+            "origClipLength": 65,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": -5262082525505320686
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -90161674943891519
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 8891557254843711062
+                },
+                {
+                    "origLen": 54,
+                    "pathId": 5165778742305577806
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 3919470307706139284
+                }
+            ],
+            "pathId": -8465491180829293128,
             "blockIdx": 28
         },
         {
@@ -294,25 +790,105 @@
             "jpText": "だから……だから、もっと強くならなくちゃ。\r\nオグリちゃんよりも……ずっと！",
             "enText": "That's why I'm… so I have to get stronger. \nMuch… more than Oguri-chan!",
             "nextBlock": 30,
-            "pathId": 2735322914889118421,
+            "origClipLength": 69,
+            "voiceIdx": 149,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -8501969526659685350
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -7804584523724658870
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 8172192488858238678
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 4238620931382988596
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -8037008974462971612
+                }
+            ],
+            "pathId": -9005777825716932813,
             "blockIdx": 29
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "……わぁーったよ！\r\nんなメラメラされちゃぁな！",
+            "jpText": "……わあーったよ！\nんなメラメラされちゃあな！",
             "enText": "… Wow! I can't believe you're \nso melodramatic!",
             "nextBlock": 31,
-            "pathId": 4440557487210309485,
+            "origClipLength": 60,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": -613043822751335315
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 2286107137748938167
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -6146548193276241571
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 4274301948825130562
+                },
+                {
+                    "origLen": 48,
+                    "pathId": 6570766019124317084
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -6048313241937400932
+                }
+            ],
+            "pathId": -6233261443682821516,
             "blockIdx": 30
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "もう止めねぇよ。\r\nその代わり、水もってくるから飲むんだぜ！",
+            "jpText": "もう止めねえよ。\nその代わり、水もってくるから飲むんだぜ！",
             "enText": "I won't stop now. I'm not going to stop you \nnow. I'm going to get you some water.",
             "nextBlock": 32,
-            "pathId": -8080540024263464108,
+            "origClipLength": 63,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 3329627090097957417
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 1390731934800556058
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -7336980092534767054
+                },
+                {
+                    "origLen": 57,
+                    "pathId": 5693368847536136582
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -8324205699126943588
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 321510866881493899
+                }
+            ],
+            "pathId": 964774443862578223,
             "blockIdx": 31
         },
         {
@@ -321,7 +897,19 @@
             "jpText": "……ありがとう、イナリちゃん。\r\nやっぱり、いいこね――",
             "enText": "Thanks for the… Inari. I knew \nyou were a good boy.",
             "nextBlock": 33,
-            "pathId": 845738645894613828,
+            "origClipLength": 63,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": -880475357578715238
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 7364727415729863127
+                }
+            ],
+            "pathId": 2082925484864976862,
             "blockIdx": 32
         },
         {
@@ -330,7 +918,19 @@
             "jpText": "――あ。",
             "enText": "—Oh.",
             "nextBlock": 34,
-            "pathId": 727065379193791047,
+            "origClipLength": 47,
+            "voiceIdx": 76,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -6408619427815303257
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 8218314835223200445
+                }
+            ],
+            "pathId": 2153706596906382587,
             "blockIdx": 33
         },
         {
@@ -339,7 +939,27 @@
             "jpText": "……クリーク。",
             "enText": "… creek.",
             "nextBlock": 35,
-            "pathId": -8722394173072725768,
+            "origClipLength": 49,
+            "voiceIdx": 76,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 9162945570951159064
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 3910680461374456012
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6762896451536919581
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 1282126273660979188
+                }
+            ],
+            "pathId": -8150357563532400917,
             "blockIdx": 34
         },
         {
@@ -348,7 +968,27 @@
             "jpText": "あら、オグリちゃん～。",
             "enText": "Oh, Oguri-chan~.",
             "nextBlock": 36,
-            "pathId": -6875374404001922687,
+            "origClipLength": 52,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 137381341968148151
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 8854560554875977956
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 7224743441279877938
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 2500621206191776440
+                }
+            ],
+            "pathId": -8895839070532980237,
             "blockIdx": 35
         },
         {
@@ -357,7 +997,27 @@
             "jpText": "今日は確か、レースでしたよね。\r\nお疲れさまです。",
             "enText": "I believe it was a race today, right? Thank \nyou for your hard work.",
             "nextBlock": 37,
-            "pathId": 3459240944845458851,
+            "origClipLength": 61,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 46,
+                    "pathId": 3710195483264653621
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -6570808229500401141
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 9155802310011765509
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -9177184094240271383
+                }
+            ],
+            "pathId": 3114451195779266918,
             "blockIdx": 36
         },
         {
@@ -366,7 +1026,27 @@
             "jpText": "ああ……ありがとう。\r\n……。",
             "enText": "Oh thank you…",
             "nextBlock": 38,
-            "pathId": -306739833285963651,
+            "origClipLength": 54,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -6561922508202647697
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -3479330062653649751
+                },
+                {
+                    "origLen": 38,
+                    "pathId": -6243113002429529277
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 5360077972557111491
+                }
+            ],
+            "pathId": 3325965488148439326,
             "blockIdx": 37
         },
         {
@@ -375,16 +1055,56 @@
             "jpText": "……。",
             "enText": "…",
             "nextBlock": 39,
-            "pathId": 2916484760567645186,
+            "origClipLength": 46,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": -5283359831318108997
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -1911496191539892610
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -9012147025435849923
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -4841514318597980271
+                }
+            ],
+            "pathId": 4604458627869450356,
             "blockIdx": 38
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "『有馬記念』のどの投票結果を見ても、\r\n必ずスーパークリークの名前があった。\nとうとう、この2人が……！",
             "enText": "Every time I looked at the voting results for \nArima Kinen, Super Creek's name was always \nthere. At last, these two are…!",
             "nextBlock": 40,
-            "pathId": -2271053839888181670,
+            "origClipLength": 78,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 1124819436436076718
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -147571309583063503
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 4197733890405763693
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -3463404951465397199
+                }
+            ],
+            "pathId": -5463581401326618927,
             "blockIdx": 39
         },
         {
@@ -393,7 +1113,27 @@
             "jpText": "……『有馬記念』、楽しみですね～。\r\nオグリちゃんとまた走れたら、嬉しいです。",
             "enText": "I'm looking forward to… \"Arima Kinen\"! I'll \nbe happy if I can run with Oguri again.",
             "nextBlock": 41,
-            "pathId": 7459347767297103499,
+            "origClipLength": 70,
+            "voiceIdx": 59,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": -3089776836712560514
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 3772579635611206233
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -1414376754464796620
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 3662429470646401920
+                }
+            ],
+            "pathId": 1717724556534889382,
             "blockIdx": 40
         },
         {
@@ -402,7 +1142,27 @@
             "jpText": "ああ。夏合宿では勝てなかったが……\r\n今回は、キミに勝つ。",
             "enText": "Yeah. I couldn't beat you at summer camp, but \n… I'm going to beat you this time.",
             "nextBlock": 42,
-            "pathId": 2084304088564961810,
+            "origClipLength": 63,
+            "voiceIdx": 69,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": -5734665050120348477
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -2951799481006572901
+                },
+                {
+                    "origLen": 41,
+                    "pathId": 9043398658198160200
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 2850303471760757891
+                }
+            ],
+            "pathId": 387019081048624080,
             "blockIdx": 41
         },
         {
@@ -411,7 +1171,27 @@
             "jpText": "……そうですか。\r\nお互い、頑張りましょうね。",
             "enText": "… I see. Let's do our best for each other.",
             "nextBlock": 43,
-            "pathId": 450292356186681467,
+            "origClipLength": 60,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": -3787037994712047082
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -2491423659945487834
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -2116553113295004939
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -3720360302107712634
+                }
+            ],
+            "pathId": 8557654773699010844,
             "blockIdx": 42
         },
         {
@@ -420,7 +1200,27 @@
             "jpText": "ただ、ひとつだけ……\r\n私も、負ける気はありませんから。",
             "enText": "Just one thing… I'm not \ngoing to lose, either.",
             "nextBlock": 44,
-            "pathId": -6226281168873932558,
+            "origClipLength": 63,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -2502955299411572120
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -2827379275637085317
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 2689470075792086236
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -6665496317266397031
+                }
+            ],
+            "pathId": -1988720176130152778,
             "blockIdx": 43
         },
         {
@@ -429,7 +1229,27 @@
             "jpText": "もちろんだ。\r\n全力のキミを、倒させてもらおう。",
             "enText": "Of course. I'll beat you with \neverything I've got.",
             "nextBlock": 45,
-            "pathId": -4169421713680981386,
+            "origClipLength": 60,
+            "voiceIdx": 69,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -3883155138074692484
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 1074302323718972040
+                },
+                {
+                    "origLen": 46,
+                    "pathId": -4514515520144562734
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -2116532506429224788
+                }
+            ],
+            "pathId": 5281933792111648066,
             "blockIdx": 44
         },
         {
@@ -438,7 +1258,27 @@
             "jpText": "はい♪\r\nじゃあ、私はトレーニングを続けるので～。",
             "enText": "Yes♪ Then, I'll continue my training~.",
             "nextBlock": 46,
-            "pathId": 459272663768177661,
+            "origClipLength": 88,
+            "voiceIdx": 44,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -3237502418411079026
+                },
+                {
+                    "origLen": 59,
+                    "pathId": 7041271694867549150
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -1682703735316425034
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -2645384156242872311
+                }
+            ],
+            "pathId": 7130179489898305568,
             "blockIdx": 45
         },
         {
@@ -447,7 +1287,23 @@
             "jpText": "……クリークも頑張っている。",
             "enText": "… Creek is also working hard.",
             "nextBlock": 47,
-            "pathId": 4528112304871315031,
+            "origClipLength": 54,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 6677694514703399340
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 2216616099606735615
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 1353925657326892824
+                }
+            ],
+            "pathId": -3482130861865621361,
             "blockIdx": 46
         },
         {
@@ -456,7 +1312,23 @@
             "jpText": "『有馬記念』まであと少しだが……\r\n私もできることをしたい。",
             "enText": "It's almost time for Arima Kinen… \nI want to do what I can to help.",
             "nextBlock": 48,
-            "pathId": 4751561804460535608,
+            "origClipLength": 64,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 1018673306354450065
+                },
+                {
+                    "origLen": 49,
+                    "pathId": 4901446537941280635
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -1869603333530865582
+                }
+            ],
+            "pathId": -7606011021163648057,
             "blockIdx": 47
         },
         {
@@ -465,6 +1337,8 @@
             "jpText": "トレーナー、キミの力を貸してくれ！",
             "enText": "Trainer, I need your help!",
             "nextBlock": 49,
+            "origClipLength": 56,
+            "voiceIdx": 72,
             "choices": [
                 {
                     "jpText": "もちろん！",
@@ -472,17 +1346,40 @@
                     "nextBlock": 49
                 }
             ],
-            "pathId": -5048056221502167081,
+            "animData": [
+                {
+                    "origLen": 19,
+                    "pathId": 1066821713950641525
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 137375081825041520
+                }
+            ],
+            "pathId": 6241989980483957737,
             "blockIdx": 48
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "――決戦の日は近い。\r\n改めてオグリキャップを勝たせたいと、\n決意を新たにした！",
             "enText": "—The day of the decisive battle is near. Once \nagain, I'm determined to make Oguri Cap win!",
             "nextBlock": -1,
-            "pathId": 3332775583893142512,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": -4335265507707377587
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -1523518153111981507
+                }
+            ],
+            "pathId": 5084610735542732809,
             "blockIdx": 49
         }
-    ]
+    ],
+    "modified": 1694039169
 }

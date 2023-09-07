@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "GAAKWW3BTILKI76JT3LTMLGDESUOILLT",
+    "version": 6,
+    "bundle": "4GVVW24N44LI2Z4UXBIAZG3SFEKVQ7TQ",
     "type": "story",
     "storyId": "041047004",
     "title": "始まるのは、君のための物語",
@@ -12,6 +12,7 @@
             "enText": "Haa, haa…… T-time…… \nAww, it's no different from before……!",
             "nextBlock": 2,
             "origClipLength": 385,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "少し休もう。さっき言ったことは覚えてる？",
@@ -39,6 +40,7 @@
             "enText": "Ah, um…… that I'm too anxious and rushing things, right? \nI'm pushing myself too much and ruining my form.",
             "nextBlock": 3,
             "origClipLength": 366,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "ああ。だから、一旦タイムは気にしないで",
@@ -65,12 +67,13 @@
             "blockIdx": 2
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "まずは、焦らず気持ちよく走ってほしい。精神的、肉体的な\n負荷を除いてトレーニングの本数をこなしていけば――",
             "enText": "For now, I wanted her to run calmly without rushing. Mentally and \nphysically, I wanted to reduce the load on her training――",
             "nextBlock": 4,
             "origClipLength": 114,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 184,
@@ -91,6 +94,7 @@
             "enText": "So I can remember my form from before my injury…… \nRight? I-I'll do my best……!",
             "nextBlock": 5,
             "origClipLength": 212,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "焦らなくていい。ゆっくり仕上げていこう！",
@@ -118,6 +122,7 @@
             "enText": "……Yeah!",
             "nextBlock": 6,
             "origClipLength": 121,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 89,
@@ -132,12 +137,13 @@
             "blockIdx": 5
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "今のゼンノロブロイは、自分の能力を正当に評価できていない。\nまずは、自分を信じることさえできれば……！",
             "enText": "The current Zenno Rob Roy couldn't really \nassess her own abilities. For now, if she \ncould just start believing in herself……!",
             "nextBlock": 7,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 187,
@@ -148,12 +154,13 @@
             "blockIdx": 6
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "数日後――",
             "enText": "A few days later――",
             "nextBlock": 8,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 187,
@@ -170,6 +177,7 @@
             "enText": "(For some reason, my body feels light……? \nEven though lately, I've just been running however I felt like……)",
             "nextBlock": 9,
             "origClipLength": 327,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 393,
@@ -186,6 +194,7 @@
             "enText": "(……yeah, that's right. It's fine not to rush. \nTrainer-san believes in my strength after all.)",
             "nextBlock": 10,
             "origClipLength": 428,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 737,
@@ -206,6 +215,7 @@
             "enText": "(That's why, me too…… I need to believe in myself \nat least as much as Trainer-san does……!)",
             "nextBlock": 11,
             "origClipLength": 345,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 515,
@@ -226,6 +236,7 @@
             "enText": "I'm fine……!",
             "nextBlock": 12,
             "origClipLength": 104,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 53,
@@ -240,12 +251,13 @@
             "blockIdx": 11
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "……種目別競技大会を目前に控えた、ある日の図書室。\nゼンノロブロイは『英雄探し』の資料を見直していた。",
             "enText": "……A few days before the Sports Festival, in the library. Zenno \nRob Roy was reviewing material related to the 『Hero Search』.",
             "nextBlock": 13,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 30,
@@ -266,6 +278,7 @@
             "enText": "……There's no mistaking it. Trainer-san said she wasn't but…… \nas I thought, Kris S-san is our Hero.",
             "nextBlock": 14,
             "origClipLength": 371,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 453,
@@ -282,6 +295,7 @@
             "enText": "At this time, on this course, on that date. \nNo matter how you look at this data, there's only Kris S-san……",
             "nextBlock": 15,
             "origClipLength": 410,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 453,
@@ -298,6 +312,7 @@
             "enText": "……This information…… I don't…… want to tell them……",
             "nextBlock": 16,
             "origClipLength": 352,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 334,
@@ -314,6 +329,7 @@
             "enText": "(But, I have to. At the Sports Festival, I'll compete \nagainst Kris S-san and lose…… and then I'll tell \nthem everything and put this to an end.)",
             "nextBlock": 17,
             "origClipLength": 580,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 459,
@@ -334,6 +350,7 @@
             "enText": "(That's why, until then……)",
             "nextBlock": 18,
             "origClipLength": 153,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 60,
@@ -348,12 +365,13 @@
             "blockIdx": 17
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "そうして、ついに迎えた種目別競技大会当日！\nゼンノロブロイはというと――",
             "enText": "And so, the day of the Sports Festival arrived! \nZenno Rob Roy was――",
             "nextBlock": 19,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 235,
@@ -370,6 +388,7 @@
             "enText": "(N-no way! No way……! Why today, \nof all days, did I have a late start……!?)",
             "nextBlock": 20,
             "origClipLength": 174,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 250,
@@ -386,6 +405,7 @@
             "enText": "……",
             "nextBlock": 21,
             "origClipLength": 29,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 155,
@@ -410,6 +430,7 @@
             "enText": "(Kris S-san's back, is getting further and further away…… \nat this rate, I won't even be able to see it anymore)",
             "nextBlock": 22,
             "origClipLength": 274,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 155,
@@ -434,6 +455,7 @@
             "enText": "(…… As I thought, I can't win. There was no way \nI could win. Even with all that training we did……)",
             "nextBlock": 23,
             "origClipLength": 228,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "負けるなーっ！！",
@@ -461,6 +483,7 @@
             "enText": "……！！",
             "nextBlock": 24,
             "origClipLength": 36,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "主役は君だ、ロブロイ！！",
@@ -493,6 +516,7 @@
             "enText": "(I…… I'm the main character?)",
             "nextBlock": 25,
             "origClipLength": 184,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 266,
@@ -509,6 +533,7 @@
             "enText": "(If I do win against Kris S-san, what will happen? \nWill my story start then? If it does――)",
             "nextBlock": 26,
             "origClipLength": 422,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 772,
@@ -529,6 +554,7 @@
             "enText": "(Even after the Sports Festival, and after we \nfind our hero. Will Trainer-san still want to \nsee the story of me being the main character?)",
             "nextBlock": 27,
             "origClipLength": 440,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 772,
@@ -549,6 +575,7 @@
             "enText": "(I want them to……!)",
             "nextBlock": 28,
             "origClipLength": 117,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 51,
@@ -569,6 +596,7 @@
             "enText": "Ha――aaaaa!!",
             "nextBlock": 29,
             "origClipLength": 119,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 136,
@@ -585,6 +613,7 @@
             "enText": "What's this, Zenno Rob Roy starts to pull forward here! But in \nthe final straight, Symboli Kris S is still far ahead!",
             "nextBlock": 30,
             "origClipLength": 199,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 293,
@@ -601,6 +630,7 @@
             "enText": "(Watch me, Trainer-san. \nAs the only reader of my Heroic Tale……!)",
             "nextBlock": 31,
             "origClipLength": 234,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 293,
@@ -617,6 +647,7 @@
             "enText": "The main character…… is me!! \nTaaaaaaaaーーーー!!",
             "nextBlock": 32,
             "origClipLength": 201,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "ロブロイの、あの走り……",
@@ -638,12 +669,13 @@
             "blockIdx": 31
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "やっと気づけた。それは力強く、荒々しく、必死で。\nしかし誇り高い――あの日見た、英雄の姿だった！",
             "enText": "I finally realized. It was a strong, wild, and desperate run. \nBut filled with pride―― just like the Hero I saw that day!",
             "nextBlock": 33,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 171,
@@ -660,6 +692,7 @@
             "enText": "Haa, haa, haa…… haaaaa!",
             "nextBlock": 34,
             "origClipLength": 143,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 247,
@@ -684,6 +717,7 @@
             "enText": "――So you've made it this far.",
             "nextBlock": 35,
             "origClipLength": 49,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 83,
@@ -708,6 +742,7 @@
             "enText": "Symboli Kris S accelerates tremendously before \nthe goal! Faster, and faster! As expected, today's \nmain character is none other than her!",
             "nextBlock": 36,
             "origClipLength": 227,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 265,
@@ -732,6 +767,7 @@
             "enText": "And now she crosses first! \nSymboli Kris S wins handily!!",
             "nextBlock": 37,
             "origClipLength": 235,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 316,
@@ -746,12 +782,13 @@
             "blockIdx": 36
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "割れんばかりの拍手と観客の声援。\nそれはやはり――勝者に向けられるものなのだ。",
             "enText": "There was a thunderous applause and cheering coming from the \nspectators. Of course―― it was intended for the victor.",
             "nextBlock": 38,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "pathId": -1947134566455552978,
             "blockIdx": 37
         },
@@ -762,6 +799,7 @@
             "enText": "(…… I lost…… I thought so. Things wouldn't be that easy. \nThat's why I need to say it. I need to give up on that.)",
             "nextBlock": 39,
             "origClipLength": 564,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 216,
@@ -778,6 +816,7 @@
             "enText": "……Trainer-san! \nUm, I know who that Hero―",
             "nextBlock": 40,
             "origClipLength": 260,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "君だったんだ！！",
@@ -810,6 +849,7 @@
             "enText": "You were―― huh?",
             "nextBlock": 41,
             "origClipLength": 94,
+            "voiceIdx": 32,
             "choices": [
                 {
                     "jpText": "英雄は君だった！",
@@ -842,6 +882,7 @@
             "enText": "Eh? W-what do you mean by that!? \nWhy are you bring that up all of a sudden……!?",
             "nextBlock": 42,
             "origClipLength": 181,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 192,
@@ -858,6 +899,7 @@
             "enText": "Rob Roy, about that race―― oh, are you preoccupied?",
             "nextBlock": 43,
             "origClipLength": 172,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 212,
@@ -882,6 +924,7 @@
             "enText": "Ah, Kris S-san! You came at just the right time, \nthere's something I want to ask you……!",
             "nextBlock": 44,
             "origClipLength": 164,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 212,
@@ -906,6 +949,7 @@
             "enText": "――And so, on this day at around 4PM! \nYou were using the outside turf course, right……!?",
             "nextBlock": 45,
             "origClipLength": 245,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 349,
@@ -930,6 +974,7 @@
             "enText": "――Yes.",
             "nextBlock": 46,
             "origClipLength": 25,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 60,
@@ -958,6 +1003,7 @@
             "enText": "With you―― we were practicing together. \nAbout the time―― I'm not sure――",
             "nextBlock": 47,
             "origClipLength": 217,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 289,
@@ -986,6 +1032,7 @@
             "enText": "S-see!? I saw it with my own eyes too! \nThere's no mistaking that the Hero was Kris S-san!",
             "nextBlock": 48,
             "origClipLength": 295,
+            "voiceIdx": 39,
             "choices": [
                 {
                     "jpText": "待って、合同練習ってことは……",
@@ -1017,6 +1064,7 @@
             "enText": "――Rob Roy was there too.",
             "nextBlock": 49,
             "origClipLength": 67,
+            "voiceIdx": 40,
             "choices": [
                 {
                     "jpText": "ロブロイ。その日は髪を後ろで縛ってた？",
@@ -1048,6 +1096,7 @@
             "enText": "Yeah…… I think so.",
             "nextBlock": 50,
             "origClipLength": 79,
+            "voiceIdx": 41,
             "choices": [
                 {
                     "jpText": "転びかけたのをかなりギリギリで耐えた？",
@@ -1079,6 +1128,7 @@
             "enText": "How come you even saw that!? \nSo then…… then that means…… eeeh!?",
             "nextBlock": 51,
             "origClipLength": 320,
+            "voiceIdx": 42,
             "choices": [
                 {
                     "jpText": "ロブロイ、俺と正式に契約してくれ！",
@@ -1115,6 +1165,7 @@
             "enText": "Eh――",
             "nextBlock": 52,
             "origClipLength": 34,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 337,
@@ -1139,6 +1190,7 @@
             "enText": "……Eeeeeeh!?",
             "nextBlock": 53,
             "origClipLength": 96,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 337,
@@ -1163,6 +1215,7 @@
             "enText": "――I see, so you ARE preoccupied.",
             "nextBlock": 54,
             "origClipLength": 78,
+            "voiceIdx": 45,
             "pathId": -6006541989792427504,
             "blockIdx": 53
         },
@@ -1173,6 +1226,7 @@
             "enText": "I see. After that I was injured so I couldn't run much, \nand you couldn't tell that that Hero was me……",
             "nextBlock": 55,
             "origClipLength": 322,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 445,
@@ -1193,6 +1247,7 @@
             "enText": "……that's surprising. \nSo from the start you…… were watching me then.",
             "nextBlock": 56,
             "origClipLength": 339,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 338,
@@ -1213,6 +1268,7 @@
             "enText": "……I said it before, right? A heroic tale becomes a \nheroic tale when it starts being told as a hero's story.",
             "nextBlock": 57,
             "origClipLength": 449,
+            "voiceIdx": 48,
             "animData": [
                 {
                     "origLen": 346,
@@ -1233,6 +1289,7 @@
             "enText": "That's why, Trainer-san! I'll do my best. From now on, \nI'll make sure you're the one that wants to tell this story.",
             "nextBlock": 58,
             "origClipLength": 438,
+            "voiceIdx": 49,
             "animData": [
                 {
                     "origLen": 516,
@@ -1253,6 +1310,7 @@
             "enText": "Together, we'll finish this story. \n『The Heroic Tale of Zenno Rob Roy』 ……!",
             "nextBlock": 59,
             "origClipLength": 247,
+            "voiceIdx": 50,
             "animData": [
                 {
                     "origLen": 218,
@@ -1267,12 +1325,13 @@
             "blockIdx": 58
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "そう言って、彼女は微笑んだ。\n――長く壮大な英雄譚の、ほんの序章のことである。",
             "enText": "She was smiling as she said that. \nAnd that was the prologue of this long and heroic story.",
             "nextBlock": -1,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 218,
@@ -1287,7 +1346,6 @@
             "blockIdx": 59
         }
     ],
-
-    "modified": 1673053634,
-    "humanTl": true
+    "humanTl": true,
+    "modified": 1694039050
 }

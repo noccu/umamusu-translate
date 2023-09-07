@@ -1,32 +1,36 @@
 {
-    "version": 4,
-    "bundle": "YNTYQNG3F3ONCBNHF6M3IGCIR2ORN26G",
+    "version": 6,
+    "bundle": "DOK2DEPA6HJGNTUA4B7RJ5GTWVPR6OUJ",
     "type": "story",
     "storyId": "501030110",
     "title": "エンディング",
     "text": [
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "ライスシャワーは見事、\r\nトゥインクル・シリーズで\n結果を残すことができた。",
             "enText": "Rice Shower was able to finish \nthe Twinkle Series in style.",
             "nextBlock": 2,
+            "origClipLength": 69,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "トゥインクル・シリーズ",
                     "enText": "Twinkle Series"
                 }
             ],
-            "pathId": -8166734654034833683,
+            "pathId": 5135593716139927272,
             "blockIdx": 1
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "とても大事な『最初の3年間』を、\r\n共に乗り切ることができたのだ――",
             "enText": "We were able to get through the very \nimportant \"first three years\" together.",
             "nextBlock": 3,
-            "pathId": 2972495039371459630,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "pathId": 1821467733817031521,
             "blockIdx": 2
         },
         {
@@ -35,7 +39,19 @@
             "jpText": "…………。\r\n……あ。",
             "enText": "… Ah.",
             "nextBlock": 4,
-            "pathId": -6111641168001022889,
+            "origClipLength": 52,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": -5185155284613724839
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -4959864062448384245
+                }
+            ],
+            "pathId": 2275419218731864389,
             "blockIdx": 3
         },
         {
@@ -44,6 +60,8 @@
             "jpText": "……おかえりなさい、お兄さま。",
             "enText": "… Welcome back, brother.",
             "nextBlock": 5,
+            "origClipLength": 107,
+            "voiceIdx": 55,
             "choices": [
                 {
                     "jpText": "ただいま、ライス",
@@ -51,7 +69,17 @@
                     "nextBlock": 6
                 }
             ],
-            "pathId": 7573753328207579210,
+            "animData": [
+                {
+                    "origLen": 28,
+                    "pathId": 8078527547390474410
+                },
+                {
+                    "origLen": 135,
+                    "pathId": 6741890613635788343
+                }
+            ],
+            "pathId": 7748677460456406402,
             "blockIdx": 4
         },
         {
@@ -60,6 +88,8 @@
             "jpText": "……おかえりなさい、お姉さま。",
             "enText": "… Welcome back, sister.",
             "nextBlock": 6,
+            "origClipLength": 107,
+            "voiceIdx": 55,
             "choices": [
                 {
                     "jpText": "ただいま、ライス",
@@ -67,7 +97,17 @@
                     "nextBlock": 6
                 }
             ],
-            "pathId": -8483592693937288315,
+            "animData": [
+                {
+                    "origLen": 28,
+                    "pathId": 7575009375758081091
+                },
+                {
+                    "origLen": 131,
+                    "pathId": -5471122907672324348
+                }
+            ],
+            "pathId": 8001723744558399697,
             "blockIdx": 5
         },
         {
@@ -76,7 +116,19 @@
             "jpText": "ふふっ……なんだか\r\nくすぐったいね。",
             "enText": "Hmmm… That kind of tickles.",
             "nextBlock": 7,
-            "pathId": -5904691668716996060,
+            "origClipLength": 57,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 14,
+                    "pathId": 813909132181704648
+                },
+                {
+                    "origLen": 68,
+                    "pathId": -3700996649765049016
+                }
+            ],
+            "pathId": -3612144428425423530,
             "blockIdx": 6
         },
         {
@@ -85,6 +137,8 @@
             "jpText": "……絵本の青いバラも、\r\nこんな気持ちだったのかな。",
             "enText": "I wonder if this is how the blue rose \nin the … picture book felt.",
             "nextBlock": 8,
+            "origClipLength": 61,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "バラの気持ち？",
@@ -92,25 +146,59 @@
                     "nextBlock": 8
                 }
             ],
-            "pathId": -8760933006909465904,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -8947738427647199854
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 1355809441816358113
+                }
+            ],
+            "pathId": -5276685245137387154,
             "blockIdx": 7
         },
         {
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
-            "jpText": "……うん。えへへ……お兄さま。\r\n『幸せの青いバラ』のお話覚えてる？",
+            "jpText": "……うん。えへへ……お兄さま。\n『しあわせの青いバラ』のお話覚えてる？",
             "enText": "… Yeah. Hehehe… Brother. Do you remember the \nstory of the Blue Rose of Happiness?",
             "nextBlock": 9,
-            "pathId": 3120988984110531598,
+            "origClipLength": 67,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -8153579098975329866
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 3749126586340226539
+                }
+            ],
+            "pathId": -3971777725912762498,
             "blockIdx": 8
         },
         {
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
-            "jpText": "……うん。えへへ……お姉さま。\r\n『幸せの青いバラ』のお話覚えてる？",
+            "jpText": "……うん。えへへ……お姉さま。\n『しあわせの青いバラ』のお話覚えてる？",
             "enText": "… Yeah. Hehehe… sister. Do you remember the \nstory of the Blue Rose of Happiness?",
             "nextBlock": 10,
-            "pathId": 1391125169195614509,
+            "origClipLength": 67,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 5941044195132957719
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 3357889337172644908
+                }
+            ],
+            "pathId": 2321440477153412106,
             "blockIdx": 9
         },
         {
@@ -119,7 +207,19 @@
             "jpText": "……青いバラは、お兄さまのおうちの窓辺に\r\n飾られて道ゆく人たちを幸せにしました。",
             "enText": "… blue roses were displayed on the windowsill \nof her brother's house, making people \non the street happy.",
             "nextBlock": 11,
-            "pathId": 4552094934699072689,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": 2026445379289784732
+                },
+                {
+                    "origLen": 267,
+                    "pathId": -3428871986593977118
+                }
+            ],
+            "pathId": -1022248485542597869,
             "blockIdx": 10
         },
         {
@@ -128,7 +228,19 @@
             "jpText": "……青いバラは、お姉さまのおうちの窓辺に\r\n飾られて道ゆく人たちを幸せにしました。",
             "enText": "… blue roses were displayed on the window \nsill of her sister's house to make people on \nthe street happy.",
             "nextBlock": 12,
-            "pathId": -5261884792624546278,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -1013902983142102305
+                },
+                {
+                    "origLen": 145,
+                    "pathId": 2700328623961436066
+                }
+            ],
+            "pathId": 3710861126939244149,
             "blockIdx": 11
         },
         {
@@ -137,7 +249,19 @@
             "jpText": "ライスね、3年間でいろんなことを知って\r\n……新しい発見をたくさんしたんだ。\nずっと見てた……この絵本にも。",
             "enText": "Rice, realised a lot in the past three years… \ndisovered many new things. Like this… picture \nbook I've always looked at.",
             "nextBlock": 13,
-            "pathId": 3191406103345978115,
+            "origClipLength": 100,
+            "voiceIdx": 79,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -5349703836770493708
+                },
+                {
+                    "origLen": 189,
+                    "pathId": -5028154462079002168
+                }
+            ],
+            "pathId": -8471276727804503070,
             "blockIdx": 12
         },
         {
@@ -146,7 +270,23 @@
             "jpText": "いままではバラにとって窓辺は……\r\n“1番見られる場所”だって思ってたの。",
             "enText": "I used to think that the windowsill was… \"the \nbest place for roses to be seen\".",
             "nextBlock": 14,
-            "pathId": -4813244606573855921,
+            "origClipLength": 69,
+            "voiceIdx": 84,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -8519366613089069284
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 8284991693899320251
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 5421637412431542631
+                }
+            ],
+            "pathId": 8259071352490918964,
             "blockIdx": 13
         },
         {
@@ -155,7 +295,23 @@
             "jpText": "でもね……きっとバラにとって窓辺は、\r\n“1番見える場所”でもあったんだよね。",
             "enText": "But… I'm sure that the window sill was also \nthe \"best place to see\" for roses.",
             "nextBlock": 15,
-            "pathId": 4954513919394781402,
+            "origClipLength": 70,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 4645634088713557781
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 5686667153245627435
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -3479262466670140484
+                }
+            ],
+            "pathId": -5563758004020158008,
             "blockIdx": 14
         },
         {
@@ -164,7 +320,19 @@
             "jpText": "おうちに帰ってくる、お兄さまの姿が。",
             "enText": "I saw my brother coming home.",
             "nextBlock": 16,
-            "pathId": -3943484910488495143,
+            "origClipLength": 56,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -1720856914883260849
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 5528368525758818911
+                }
+            ],
+            "pathId": 6202276154437817966,
             "blockIdx": 15
         },
         {
@@ -173,7 +341,19 @@
             "jpText": "おうちに帰ってくる、お姉さまの姿が。",
             "enText": "I saw my sister coming home.",
             "nextBlock": 17,
-            "pathId": -1198635746196354251,
+            "origClipLength": 56,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 1487630634302749941
+                },
+                {
+                    "origLen": 67,
+                    "pathId": 5686634206721876
+                }
+            ],
+            "pathId": 2271234616773996987,
             "blockIdx": 16
         },
         {
@@ -182,7 +362,19 @@
             "jpText": "きっとバラは楽しみに待ってたんだと思う。\r\n……1番大切な人と過ごせる時間を。",
             "enText": "I'm sure the roses were looking forward to \nthe time they could spend with their most \ndearest person…",
             "nextBlock": 18,
-            "pathId": -8428830338809335408,
+            "origClipLength": 70,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": 8376856269324045413
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -7608917631700460609
+                }
+            ],
+            "pathId": 4756816343395660209,
             "blockIdx": 17
         },
         {
@@ -191,7 +383,19 @@
             "jpText": "……ねえ、お兄さま。",
             "enText": "… Hey, brother.",
             "nextBlock": 19,
-            "pathId": 4688115305479013386,
+            "origClipLength": 51,
+            "voiceIdx": 55,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2929262014399494926
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 2694151404024637590
+                }
+            ],
+            "pathId": 1322880483323265688,
             "blockIdx": 18
         },
         {
@@ -200,7 +404,19 @@
             "jpText": "……ねえ、お姉さま。",
             "enText": "… Hey, sister.",
             "nextBlock": 20,
-            "pathId": 2813689627851262859,
+            "origClipLength": 51,
+            "voiceIdx": 55,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 2566928674009774074
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 275330991619337569
+                }
+            ],
+            "pathId": -9066586105335782741,
             "blockIdx": 19
         },
         {
@@ -209,6 +425,8 @@
             "jpText": "ライスは綺麗に咲けましたか？\r\nまだ飾りたいと……思ってくれますか？",
             "enText": "Did you get a beautiful bloom on your Rice? \nDo you still want to… decorate it?",
             "nextBlock": 21,
+            "origClipLength": 67,
+            "voiceIdx": 54,
             "choices": [
                 {
                     "jpText": "もちろん！",
@@ -216,7 +434,17 @@
                     "nextBlock": 21
                 }
             ],
-            "pathId": 806601400386608056,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": 294175634427180346
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -7269739966124462101
+                }
+            ],
+            "pathId": -5839375347164113984,
             "blockIdx": 20
         },
         {
@@ -225,7 +453,19 @@
             "jpText": "ふふっ……うれしい……っ。",
             "enText": "Phew… glad…",
             "nextBlock": 22,
-            "pathId": 3094060692726715861,
+            "origClipLength": 53,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 10,
+                    "pathId": 5753797649313793559
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -265873057686629463
+                }
+            ],
+            "pathId": 5398286947361914944,
             "blockIdx": 21
         },
         {
@@ -234,8 +474,21 @@
             "jpText": "ライスも……まだまだ\r\n一緒に咲き続けたい、です……！",
             "enText": "Rice also wants to… continue \nto bloom with you…!",
             "nextBlock": -1,
-            "pathId": 654456029108438948,
+            "origClipLength": 62,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -7610646010094624188
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -3985514273915996564
+                }
+            ],
+            "pathId": -9109778196145670730,
             "blockIdx": 22
         }
-    ]
+    ],
+    "modified": 1694039360
 }

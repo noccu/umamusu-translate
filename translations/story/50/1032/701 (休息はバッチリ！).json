@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "WKX3DVR2C5UELM3LQASKGUMDBEHDWRJU",
+    "version": 6,
+    "bundle": "XJGQQCYBUNYXOEFNLV35A42PDJQLIGT3",
     "type": "story",
     "storyId": "501032701",
     "title": "休息はバッチリ！",
@@ -11,6 +11,8 @@
             "jpText": "聞いてくれたまえ、トレーナー君！\r\n夢の中の私がやってくれたんだ！",
             "enText": "Listen to me, trainer! I'm the one who did\nthis to you in your dream!",
             "nextBlock": 2,
+            "origClipLength": 66,
+            "voiceIdx": 53,
             "choices": [
                 {
                     "jpText": "夢の中？",
@@ -18,7 +20,17 @@
                     "nextBlock": 2
                 }
             ],
-            "pathId": 5944159059260222133,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 2161435444968224740
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -2698661842620899794
+                }
+            ],
+            "pathId": -2821134808220069126,
             "blockIdx": 1
         },
         {
@@ -27,7 +39,19 @@
             "jpText": "そうとも！　ずっと謎に包まれていた\r\n肉体の神秘を解き明かしてくれたんだ！",
             "enText": "Yes, yes! You've unlocked the mysteries of\nthe body that have been shrouded in\nmystery for so long!",
             "nextBlock": 3,
-            "pathId": -26346461137335688,
+            "origClipLength": 69,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": -3110644457495641705
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 730569139285479380
+                }
+            ],
+            "pathId": -5995183053193019588,
             "blockIdx": 2
         },
         {
@@ -36,7 +60,19 @@
             "jpText": "いやぁ、あの感動たるや、\r\n鳥肌ものだったね！",
             "enText": "I had goosebumps from the excitement!",
             "nextBlock": 4,
-            "pathId": 942446482144330301,
+            "origClipLength": 60,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -4688090549294755067
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 5123373081580218948
+                }
+            ],
+            "pathId": 8206496176487412135,
             "blockIdx": 3
         },
         {
@@ -45,7 +81,19 @@
             "jpText": "もっとも、目が覚めたら\r\n神秘の内容はすべて忘れていたんだが。",
             "enText": "But when I woke up, I'd forgotten\nall about the mysteries.",
             "nextBlock": 5,
-            "pathId": 2877098888498854089,
+            "origClipLength": 65,
+            "voiceIdx": 79,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -603539422503734986
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -4356675012956793360
+                }
+            ],
+            "pathId": -8282219868658627225,
             "blockIdx": 4
         },
         {
@@ -54,7 +102,19 @@
             "jpText": "しかし！　全身を走るように巡った\r\nあの高揚感だけは、今も忘れられない……！",
             "enText": "But! I'll never forget that feeling\nof elation that ran through my\nwhole body…!",
             "nextBlock": 6,
-            "pathId": 7396965008959769050,
+            "origClipLength": 69,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 70,
+                    "pathId": -6820287421918501364
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -4368699281492160316
+                }
+            ],
+            "pathId": 2911493996028871060,
             "blockIdx": 5
         },
         {
@@ -63,7 +123,19 @@
             "jpText": "ああ……もう1度、味わいたいねぇ。\r\nなんとしても現実にしなくては！",
             "enText": "Oh,…, I want to taste it again. I\nhave to make it a reality at all costs!",
             "nextBlock": 7,
-            "pathId": -8573998031695793960,
+            "origClipLength": 67,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 30,
+                    "pathId": 7946906700449871577
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 6585583573721389808
+                }
+            ],
+            "pathId": -6311430330652371348,
             "blockIdx": 6
         },
         {
@@ -72,8 +144,21 @@
             "jpText": "アグネスタキオンは\r\nいい夢が見られて嬉しそうだ。\nじっくり休めたなら何よりだ。",
             "enText": "Agnes Tachyon is happy to have\nhad a good dream. I'm glad she\nwas able to get some rest.",
             "nextBlock": -1,
-            "pathId": 7625283422023796856,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": 1340124635288370427
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 8991888474180479357
+                }
+            ],
+            "pathId": 2881697764571698876,
             "blockIdx": 7
         }
-    ]
+    ],
+    "modified": 1694039385
 }

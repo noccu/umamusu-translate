@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "2GRZIF7PWGSSCZGCMEESEJMS3EZT5ABW",
+    "version": 6,
+    "bundle": "RF2ILLUDODDQBJ4LO6CLBFD3MTN2WXVX",
     "type": "story",
     "storyId": "501037510",
     "title": "天道の守護者",
@@ -12,6 +12,7 @@
             "enText": "Excuse me, trainer, for interrupting. Have \nyou seen a ladybug?",
             "nextBlock": 2,
             "origClipLength": 89,
+            "voiceIdx": 55,
             "choices": [
                 {
                     "jpText": "え、テントウムシ？",
@@ -22,14 +23,14 @@
             "animData": [
                 {
                     "origLen": 100,
-                    "pathId": -2964190961352523603
+                    "pathId": 6050979288654205384
                 },
                 {
                     "origLen": 100,
-                    "pathId": -2438912477848115013
+                    "pathId": -472717599688254132
                 }
             ],
-            "pathId": 635618380144956380,
+            "pathId": -5976094701392603249,
             "blockIdx": 1
         },
         {
@@ -39,17 +40,18 @@
             "enText": "Yes, I am. It is a Nanahoshitentou to be \nexact. We are currently missing several of \nthem that were supposed to be in the field.",
             "nextBlock": 3,
             "origClipLength": 97,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 72,
-                    "pathId": -6276621199023952214
+                    "pathId": -1088163658935153122
                 },
                 {
                     "origLen": 108,
-                    "pathId": 4041167250875621190
+                    "pathId": 7293431786523490270
                 }
             ],
-            "pathId": -535341911328607488,
+            "pathId": -6550765403062522507,
             "blockIdx": 2
         },
         {
@@ -59,6 +61,7 @@
             "enText": "As the person charged with the management of \nthe ladybugs, I am canvassing.",
             "nextBlock": 4,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "テントウムシを、管理……！？",
@@ -69,14 +72,14 @@
             "animData": [
                 {
                     "origLen": 55,
-                    "pathId": 2439869492983976595
+                    "pathId": 4180489976422500000
                 },
                 {
                     "origLen": 100,
-                    "pathId": 5930310703408277979
+                    "pathId": 5542172729617582701
                 }
             ],
-            "pathId": -7323869945234746366,
+            "pathId": -4632719862018484784,
             "blockIdx": 3
         },
         {
@@ -86,17 +89,18 @@
             "enText": "Personal taste, you might say.",
             "nextBlock": 5,
             "origClipLength": 71,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 26,
-                    "pathId": 8050450823729457423
+                    "pathId": 6907221446335312480
                 },
                 {
                     "origLen": 82,
-                    "pathId": 1648407218039678954
+                    "pathId": 9071987634946684434
                 }
             ],
-            "pathId": -8839660729032296217,
+            "pathId": 5902841605063999958,
             "blockIdx": 4
         },
         {
@@ -106,6 +110,7 @@
             "enText": "Even the slightest awareness is acceptable. \nWe currently have no clues at all.",
             "nextBlock": 6,
             "origClipLength": 89,
+            "voiceIdx": 39,
             "choices": [
                 {
                     "jpText": "手伝うよ",
@@ -116,14 +121,14 @@
             "animData": [
                 {
                     "origLen": 116,
-                    "pathId": -5532533131747364829
+                    "pathId": -7820432342635242488
                 },
                 {
                     "origLen": 100,
-                    "pathId": -5310809472364903042
+                    "pathId": -1539281236387876376
                 }
             ],
-            "pathId": 6678026120028717808,
+            "pathId": -1077965911617486165,
             "blockIdx": 5
         },
         {
@@ -133,49 +138,51 @@
             "enText": "I'll be right back! May I ……?",
             "nextBlock": 7,
             "origClipLength": 61,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 58,
-                    "pathId": -3772197891741394048
+                    "pathId": 7567324749230682887
                 },
                 {
                     "origLen": 72,
-                    "pathId": 6784045437795128543
+                    "pathId": 279683399469186921
                 }
             ],
-            "pathId": 3441784225963178504,
+            "pathId": 4691540480355429612,
             "blockIdx": 6
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "手分けして生徒に聞き込みを行ったところ、\n有力な情報を掴んだ。急ぎ現場へ向かうと――",
             "enText": "We divided up and interviewed the students, \nand got some promising information. We rushed \nto the scene of the crime.",
             "nextBlock": 8,
             "origClipLength": 99,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 18,
-                    "pathId": 3761360362882762662
+                    "pathId": -6557334710355269565
                 },
                 {
                     "origLen": 18,
-                    "pathId": 7585238916367229475
+                    "pathId": -5681733649070373283
                 },
                 {
                     "origLen": 152,
-                    "pathId": -6877252125143035477
+                    "pathId": -7589595864581806838
                 },
                 {
                     "origLen": 151,
-                    "pathId": -3556096513651497175
+                    "pathId": -7078662494752795173
                 },
                 {
                     "origLen": 151,
-                    "pathId": 5390298328825326002
+                    "pathId": 4713658871672958679
                 }
             ],
-            "pathId": 1242748747132536884,
+            "pathId": -1631576369158223742,
             "blockIdx": 7
         },
         {
@@ -185,21 +192,22 @@
             "enText": "Oh, my God! Move around! You're so quick for \nsuch a little guy～……!",
             "nextBlock": 9,
             "origClipLength": 90,
+            "voiceIdx": 64,
             "animData": [
                 {
                     "origLen": 103,
-                    "pathId": 9103642952053538867
+                    "pathId": 8074154415066434605
                 },
                 {
                     "origLen": 77,
-                    "pathId": 1547746716629483370
+                    "pathId": -5429418906306096910
                 },
                 {
                     "origLen": 101,
-                    "pathId": -5043385216959479167
+                    "pathId": 2737948499172379193
                 }
             ],
-            "pathId": 2029766760383729422,
+            "pathId": 4719737419028922617,
             "blockIdx": 8
         },
         {
@@ -209,21 +217,22 @@
             "enText": "Ladybug! You should have stayed \nin your magic circle!",
             "nextBlock": 10,
             "origClipLength": 81,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 92,
-                    "pathId": 2341288870034730630
+                    "pathId": 6822398280281729334
                 },
                 {
                     "origLen": 56,
-                    "pathId": -987838873253224319
+                    "pathId": -7421399412024285929
                 },
                 {
                     "origLen": 92,
-                    "pathId": -2675182624686956526
+                    "pathId": -4509722251517302322
                 }
             ],
-            "pathId": 2951314861158927905,
+            "pathId": -3948595283656799122,
             "blockIdx": 9
         },
         {
@@ -233,21 +242,22 @@
             "enText": "―That's enough! Let those children go!",
             "nextBlock": 11,
             "origClipLength": 78,
+            "voiceIdx": 101,
             "animData": [
                 {
                     "origLen": 151,
-                    "pathId": -6655574950218515270
+                    "pathId": -1713382727014422007
                 },
                 {
                     "origLen": 89,
-                    "pathId": 6492132729910105596
+                    "pathId": -3482904844229613256
                 },
                 {
                     "origLen": 89,
-                    "pathId": 7272709501503613833
+                    "pathId": -8700680852121324574
                 }
             ],
-            "pathId": -8794566280273242016,
+            "pathId": -848424968933738522,
             "blockIdx": 10
         },
         {
@@ -257,21 +267,22 @@
             "enText": "Who is it?",
             "nextBlock": 12,
             "origClipLength": 52,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 20,
-                    "pathId": 1782101513277849760
+                    "pathId": -8333982264738788
                 },
                 {
                     "origLen": 50,
-                    "pathId": -2859441616172248098
+                    "pathId": 2830784925323792489
                 },
                 {
                     "origLen": 63,
-                    "pathId": -4162129437531886578
+                    "pathId": -8348650769715063068
                 }
             ],
-            "pathId": 5936337591138736878,
+            "pathId": 5359100274114530408,
             "blockIdx": 11
         },
         {
@@ -281,6 +292,7 @@
             "enText": "We are from the \"Ladybird Management \nAssociation\". Please return the ladybugs you \nhave kidnapped.",
             "nextBlock": 13,
             "origClipLength": 98,
+            "voiceIdx": 70,
             "choices": [
                 {
                     "jpText": "（私“たち”！？）",
@@ -291,22 +303,22 @@
             "animData": [
                 {
                     "origLen": 138,
-                    "pathId": 2453987659581131600
+                    "pathId": -2998343549254733530
                 },
                 {
                     "origLen": 138,
-                    "pathId": 6410004582367449982
+                    "pathId": -1059612422088983207
                 },
                 {
                     "origLen": 166,
-                    "pathId": 9084142471407871
+                    "pathId": -3366045129184808463
                 },
                 {
                     "origLen": 149,
-                    "pathId": 573299362870647300
+                    "pathId": 6799776426159886706
                 }
             ],
-            "pathId": -4303235775988987502,
+            "pathId": -1299305360526690110,
             "blockIdx": 12
         },
         {
@@ -316,53 +328,55 @@
             "enText": "No! We're going to use them to make the magic \nwork this time.",
             "nextBlock": 14,
             "origClipLength": 88,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 99,
-                    "pathId": -7546355852973174272
+                    "pathId": -5459776250106798781
                 },
                 {
                     "origLen": 99,
-                    "pathId": 4891171878395663453
+                    "pathId": 5910113967673939806
                 },
                 {
                     "origLen": 46,
-                    "pathId": 340905393184155024
+                    "pathId": -8137903422631870920
                 },
                 {
                     "origLen": 99,
-                    "pathId": 9188708286876894191
+                    "pathId": -3898181809405593672
                 }
             ],
-            "pathId": 4133147629329018117,
+            "pathId": 4831332302512777087,
             "blockIdx": 13
         },
         {
             "jpName": "スイープトウショウ",
             "enName": "Sweep Tosho",
-            "jpText": "ナナホシテントウと、七芒星の魔方陣！\nうまくいく気がするんだもんっ！",
+            "jpText": "ナナホシテントウと、七芒星の魔法陣！\nうまくいく気がするんだもんっ！",
             "enText": "Nanahoshitentou and the magic circle of the \nseven-pointed star! I have a feeling it's \ngoing to work!",
             "nextBlock": 15,
             "origClipLength": 89,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 100,
-                    "pathId": -2019599445601226987
+                    "pathId": -3523935146802560748
                 },
                 {
                     "origLen": 100,
-                    "pathId": 5986330631093531163
+                    "pathId": -935726074346568823
                 },
                 {
                     "origLen": 77,
-                    "pathId": -63362029258596464
+                    "pathId": -1133570024796048356
                 },
                 {
                     "origLen": 100,
-                    "pathId": -1128073539708378198
+                    "pathId": -1483165915354450053
                 }
             ],
-            "pathId": 2003558510832324525,
+            "pathId": 843064078713536917,
             "blockIdx": 14
         },
         {
@@ -372,25 +386,26 @@
             "enText": "……I know the feeling of wanting \nto hang on to a ladybug.",
             "nextBlock": 16,
             "origClipLength": 82,
+            "voiceIdx": 64,
             "animData": [
                 {
                     "origLen": 55,
-                    "pathId": 168404043501423700
+                    "pathId": 9126159382277414820
                 },
                 {
                     "origLen": 93,
-                    "pathId": -3565139146081388228
+                    "pathId": 3514415976993380201
                 },
                 {
                     "origLen": 93,
-                    "pathId": -1732391456390103189
+                    "pathId": -3083720594683801027
                 },
                 {
                     "origLen": 93,
-                    "pathId": -8803478881172187839
+                    "pathId": 1409967733026860404
                 }
             ],
-            "pathId": -7048111014589174190,
+            "pathId": 2702202476287775714,
             "blockIdx": 15
         },
         {
@@ -400,25 +415,26 @@
             "enText": "―I was the same way when I first \nlearned from my father that ladybugs \nwere a symbol of good luck.",
             "nextBlock": 17,
             "origClipLength": 97,
+            "voiceIdx": 150,
             "animData": [
                 {
                     "origLen": 12,
-                    "pathId": -8994259305252045326
+                    "pathId": -3170826716577874124
                 },
                 {
                     "origLen": 12,
-                    "pathId": 56284092346372957
+                    "pathId": -2495145974904262773
                 },
                 {
                     "origLen": 12,
-                    "pathId": 848289024490325158
+                    "pathId": 6838097641812504549
                 },
                 {
                     "origLen": 12,
-                    "pathId": 6285005917889795636
+                    "pathId": -7713403169447123217
                 }
             ],
-            "pathId": 146606948215519680,
+            "pathId": -7409427971620184474,
             "blockIdx": 16
         },
         {
@@ -428,7 +444,8 @@
             "enText": "She also asked for a ladybug motif \ncake. Schulranzen…… Polishing a brooch \nattached to a school bag.",
             "nextBlock": 18,
             "origClipLength": 119,
-            "pathId": -4484915660203691811,
+            "voiceIdx": 88,
+            "pathId": -48587020989237488,
             "blockIdx": 17
         },
         {
@@ -438,7 +455,8 @@
             "enText": "But - it is only a symbol.",
             "nextBlock": 19,
             "origClipLength": 65,
-            "pathId": 848082589807847961,
+            "voiceIdx": -1,
+            "pathId": -5345394197226329911,
             "blockIdx": 18
         },
         {
@@ -448,25 +466,26 @@
             "enText": "My father taught me that it is what pushes \nme, not what I do.",
             "nextBlock": 20,
             "origClipLength": 103,
+            "voiceIdx": 153,
             "animData": [
                 {
                     "origLen": 145,
-                    "pathId": 4491991793066443503
+                    "pathId": 7428374567072150343
                 },
                 {
                     "origLen": 145,
-                    "pathId": -2373102044714024636
+                    "pathId": -7671690811484712314
                 },
                 {
                     "origLen": 145,
-                    "pathId": -596302280275423161
+                    "pathId": 3403951252626973973
                 },
                 {
                     "origLen": 145,
-                    "pathId": 7315826564321098343
+                    "pathId": 1484570368486887044
                 }
             ],
-            "pathId": -913641662280238899,
+            "pathId": 2395250720122705933,
             "blockIdx": 19
         },
         {
@@ -476,25 +495,26 @@
             "enText": "If you want to get something, you have to \ntake it by yourself. Because…",
             "nextBlock": 21,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 57,
-                    "pathId": 2977973476928146977
+                    "pathId": -5198214276142696996
                 },
                 {
                     "origLen": 100,
-                    "pathId": -6144092935269710821
+                    "pathId": 2603367649197862302
                 },
                 {
                     "origLen": 100,
-                    "pathId": 2417220881451140038
+                    "pathId": -6783063136249878283
                 },
                 {
                     "origLen": 100,
-                    "pathId": -6708555765480712432
+                    "pathId": -8603811590834408275
                 }
             ],
-            "pathId": 918097248271607976,
+            "pathId": -1230343260272483424,
             "blockIdx": 20
         },
         {
@@ -504,25 +524,26 @@
             "enText": "Ms. Sweep. If someone made it happen, would \nyou really be happy that it was your \naccomplishment?",
             "nextBlock": 22,
             "origClipLength": 98,
+            "voiceIdx": 70,
             "animData": [
                 {
                     "origLen": 64,
-                    "pathId": -3569377604879611822
+                    "pathId": -3425971274373968469
                 },
                 {
                     "origLen": 109,
-                    "pathId": 2136780332790573271
+                    "pathId": 6397859130669851165
                 },
                 {
                     "origLen": 109,
-                    "pathId": -1993572263329005516
+                    "pathId": -4364454344963395955
                 },
                 {
                     "origLen": 109,
-                    "pathId": 1170941226311664888
+                    "pathId": -774503698162880216
                 }
             ],
-            "pathId": -7107918440758498011,
+            "pathId": 1174149911567589871,
             "blockIdx": 21
         },
         {
@@ -532,25 +553,26 @@
             "enText": "……!",
             "nextBlock": 23,
             "origClipLength": 48,
+            "voiceIdx": 111,
             "animData": [
                 {
                     "origLen": 59,
-                    "pathId": 5456093580109332336
+                    "pathId": -6328989958996270988
                 },
                 {
                     "origLen": 59,
-                    "pathId": -2884577020765880345
+                    "pathId": -5664669263714839119
                 },
                 {
                     "origLen": 23,
-                    "pathId": -9120431288605806303
+                    "pathId": -9245246529769829
                 },
                 {
                     "origLen": 59,
-                    "pathId": -9692342000458207
+                    "pathId": 244531701621203301
                 }
             ],
-            "pathId": -4870631736494911844,
+            "pathId": -6854218691010036188,
             "blockIdx": 22
         },
         {
@@ -560,25 +582,26 @@
             "enText": "",
             "nextBlock": 24,
             "origClipLength": 65,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 40,
-                    "pathId": 6788422748475327530
+                    "pathId": -3321533375339606123
                 },
                 {
                     "origLen": 76,
-                    "pathId": -8676935318302578927
+                    "pathId": -7642626039396704802
                 },
                 {
                     "origLen": 41,
-                    "pathId": -8582978284701217520
+                    "pathId": 6472890870506597830
                 },
                 {
                     "origLen": 76,
-                    "pathId": -3900989658335380340
+                    "pathId": 8873064759485416912
                 }
             ],
-            "pathId": 1683947223224761256,
+            "pathId": 7687532674872109563,
             "blockIdx": 23
         },
         {
@@ -588,25 +611,26 @@
             "enText": "I get it now! You just give it back! I'll \nmake the magic work on my own!",
             "nextBlock": 25,
             "origClipLength": 95,
+            "voiceIdx": 64,
             "animData": [
                 {
                     "origLen": 106,
-                    "pathId": -3770840984002102951
+                    "pathId": -461468582802930641
                 },
                 {
                     "origLen": 106,
-                    "pathId": 7190879425451942595
+                    "pathId": -4515900703713494553
                 },
                 {
                     "origLen": 49,
-                    "pathId": -4337598534845021310
+                    "pathId": 7017885692564051895
                 },
                 {
                     "origLen": 106,
-                    "pathId": 1751769204369722167
+                    "pathId": 3044058066727507717
                 }
             ],
-            "pathId": -5312898741598386061,
+            "pathId": -9050603572291658130,
             "blockIdx": 24
         },
         {
@@ -616,6 +640,7 @@
             "enText": "One case closed, right?",
             "nextBlock": 26,
             "origClipLength": 56,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "解決おめでとう",
@@ -626,22 +651,22 @@
             "animData": [
                 {
                     "origLen": 84,
-                    "pathId": 4523466426592902098
+                    "pathId": -8824733112890797778
                 },
                 {
                     "origLen": 96,
-                    "pathId": 3165383811526509341
+                    "pathId": -3243446175094798866
                 },
                 {
                     "origLen": 12,
-                    "pathId": -3389477468130057413
+                    "pathId": 3496357485881896467
                 },
                 {
                     "origLen": 12,
-                    "pathId": -8642916203815728484
+                    "pathId": 1807422174991372452
                 }
             ],
-            "pathId": 2397761175301680187,
+            "pathId": -5592220264442034142,
             "blockIdx": 25
         },
         {
@@ -651,17 +676,18 @@
             "enText": "We solved the problem 5 minutes and 53 \nseconds earlier than expected. This was \nthanks to splitting up with the trainer.",
             "nextBlock": 27,
             "origClipLength": 95,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 63,
-                    "pathId": 8114187309769797949
+                    "pathId": -1933028486377188950
                 },
                 {
                     "origLen": 106,
-                    "pathId": -2363254558089055096
+                    "pathId": 1333006357306701549
                 }
             ],
-            "pathId": -4796568967927798795,
+            "pathId": -3330946477547574308,
             "blockIdx": 26
         },
         {
@@ -671,17 +697,18 @@
             "enText": "And ……",
             "nextBlock": 28,
             "origClipLength": 52,
+            "voiceIdx": 79,
             "animData": [
                 {
                     "origLen": 13,
-                    "pathId": 7489052223764796051
+                    "pathId": -4874572753313856346
                 },
                 {
                     "origLen": 63,
-                    "pathId": 5406725867704852052
+                    "pathId": 5217081101251821989
                 }
             ],
-            "pathId": 295492950316004645,
+            "pathId": 2699008882377385607,
             "blockIdx": 27
         },
         {
@@ -691,6 +718,7 @@
             "enText": "…… trainer, if you would like to join the \n\"Ladybird Management Society\"?",
             "nextBlock": 29,
             "origClipLength": 94,
+            "voiceIdx": 68,
             "choices": [
                 {
                     "jpText": "……え？",
@@ -701,14 +729,14 @@
             "animData": [
                 {
                     "origLen": 80,
-                    "pathId": 5790032393252298664
+                    "pathId": -4993725404564559021
                 },
                 {
                     "origLen": 105,
-                    "pathId": -8616741379661523595
+                    "pathId": 8803896337827643336
                 }
             ],
-            "pathId": -7675010149269298561,
+            "pathId": -946162160289233891,
             "blockIdx": 28
         },
         {
@@ -718,17 +746,18 @@
             "enText": "I think it's a prime quality for a ladybug to \nbe able to scramble so much.",
             "nextBlock": 30,
             "origClipLength": 88,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 53,
-                    "pathId": -7716243519509939740
+                    "pathId": -407672892496077176
                 },
                 {
                     "origLen": 99,
-                    "pathId": -4410302692167099331
+                    "pathId": 1733869409938506886
                 }
             ],
-            "pathId": -869849342899967623,
+            "pathId": -1907669695065320636,
             "blockIdx": 29
         },
         {
@@ -738,6 +767,7 @@
             "enText": "It would be reassuring if I could \nwork with such people. Of course, \nit will not affect my training.",
             "nextBlock": 31,
             "origClipLength": 99,
+            "voiceIdx": 39,
             "choices": [
                 {
                     "jpText": "体力がもたないかも……",
@@ -753,14 +783,14 @@
             "animData": [
                 {
                     "origLen": 99,
-                    "pathId": -2384652524746968681
+                    "pathId": 4104144754587267502
                 },
                 {
                     "origLen": 110,
-                    "pathId": -1305065503919977788
+                    "pathId": 2500268390308533981
                 }
             ],
-            "pathId": 5549691370749779043,
+            "pathId": 476779115125471550,
             "blockIdx": 30
         },
         {
@@ -770,17 +800,18 @@
             "enText": "…… I see. A sideline with the trainer \nbusiness, indeed.",
             "nextBlock": 32,
             "origClipLength": 80,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 67,
-                    "pathId": 1086603996738806586
+                    "pathId": -2306156705101740344
                 },
                 {
                     "origLen": 91,
-                    "pathId": -2085514133977875735
+                    "pathId": -1114724504025071549
                 }
             ],
-            "pathId": 1984687070366590999,
+            "pathId": -3046951233746551991,
             "blockIdx": 31
         },
         {
@@ -790,6 +821,7 @@
             "enText": "So, let's start with knowledge.",
             "nextBlock": 33,
             "origClipLength": 77,
+            "voiceIdx": 91,
             "choices": [
                 {
                     "jpText": "……え？",
@@ -800,14 +832,14 @@
             "animData": [
                 {
                     "origLen": 42,
-                    "pathId": -681783345023379560
+                    "pathId": 2269838061121011797
                 },
                 {
                     "origLen": 88,
-                    "pathId": -3176067904184158570
+                    "pathId": 7416232604918876689
                 }
             ],
-            "pathId": -6989575541653950337,
+            "pathId": 6555507946567311263,
             "blockIdx": 32
         },
         {
@@ -817,17 +849,18 @@
             "enText": "Aller Anfang ist schwer…… Beginnings are \nalways difficult. But if you make it But if \nyou make it, you will see a different world.",
             "nextBlock": 34,
             "origClipLength": 127,
+            "voiceIdx": 74,
             "animData": [
                 {
                     "origLen": 84,
-                    "pathId": -8782871723048227182
+                    "pathId": -2719292368016971932
                 },
                 {
                     "origLen": 138,
-                    "pathId": 763189359196086973
+                    "pathId": 4860773546472523449
                 }
             ],
-            "pathId": 1884114194099994574,
+            "pathId": 4718226269576567152,
             "blockIdx": 33
         },
         {
@@ -837,6 +870,7 @@
             "enText": "From the knowledge gained, the next step \nis to build up the physical strength to \nkeep up with the ladybug's 30 km/h flight. \nWe will then build up our physical strength \nso that we can keep up with the ladybird's \n30 km/h flight.",
             "nextBlock": 35,
             "origClipLength": 112,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "時速30km！？",
@@ -847,14 +881,14 @@
             "animData": [
                 {
                     "origLen": 80,
-                    "pathId": 5988833546906895738
+                    "pathId": 2304852997990830939
                 },
                 {
                     "origLen": 123,
-                    "pathId": -288513702403605435
+                    "pathId": 791328012195501099
                 }
             ],
-            "pathId": 1574363545155146303,
+            "pathId": 2185326475507629912,
             "blockIdx": 34
         },
         {
@@ -864,37 +898,39 @@
             "enText": "Don't worry. Ladybugs tend to be localized, \nso they can travel very short distances.",
             "nextBlock": 36,
             "origClipLength": 97,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 110,
-                    "pathId": 7853132501261749762
+                    "pathId": -7593564850884350264
                 },
                 {
                     "origLen": 108,
-                    "pathId": 8391849907589210765
+                    "pathId": -7010455951839607892
                 }
             ],
-            "pathId": 7903172392424031440,
+            "pathId": 3822164067401125828,
             "blockIdx": 35
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "生き生きとテントウムシについて語る\n彼女を止めるのも忍びなく……定期的に\nテントウムシ講座を聞くことになるのだった。",
             "enText": "I couldn't bear to stop her from talking \nabout ladybugs so vividly and…… regularly. I \nwould listen to her ladybug lecture on a \nregular basis.",
             "nextBlock": -1,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 131,
-                    "pathId": -8865760515334002730
+                    "pathId": 5542115290654772066
                 },
                 {
                     "origLen": 131,
-                    "pathId": -4166613160050778834
+                    "pathId": 5460350701539691488
                 }
             ],
-            "pathId": 2082243288421856240,
+            "pathId": 1690749034408444866,
             "blockIdx": 36
         },
         {
@@ -904,17 +940,18 @@
             "enText": "Of course. Then I will report back to the \nother members as soon as possible.",
             "nextBlock": 38,
             "origClipLength": 76,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 71,
-                    "pathId": -1459485540182010959
+                    "pathId": -9080661837749994994
                 },
                 {
                     "origLen": 87,
-                    "pathId": -2644842627455480480
+                    "pathId": -7861359902625620773
                 }
             ],
-            "pathId": -3886652021380177500,
+            "pathId": -6193894173853762350,
             "blockIdx": 37
         },
         {
@@ -924,25 +961,26 @@
             "enText": "Hoh? I didn't realize you wanted \nto join this association. It's quite \na sight to see, isn't it?",
             "nextBlock": 39,
             "origClipLength": 91,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 129,
-                    "pathId": 7268626112037658832
+                    "pathId": -482623535362217124
                 },
                 {
                     "origLen": 141,
-                    "pathId": -3291385193440386725
+                    "pathId": -5285915727872874575
                 },
                 {
                     "origLen": 141,
-                    "pathId": -4196872197217402676
+                    "pathId": 2008933993294918417
                 },
                 {
                     "origLen": 141,
-                    "pathId": -8287248961754097444
+                    "pathId": 6176290166775874298
                 }
             ],
-            "pathId": -4056800142421555543,
+            "pathId": -192467497501761843,
             "blockIdx": 38
         },
         {
@@ -952,25 +990,26 @@
             "enText": "Ladybugs are beneficial insects \nthat protect flowers in fields \nand flowerbeds day and night.",
             "nextBlock": 40,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 96,
-                    "pathId": -3204516862809388405
+                    "pathId": -2748352162140251763
                 },
                 {
                     "origLen": 96,
-                    "pathId": 8651899976538234473
+                    "pathId": 3134480909461293555
                 },
                 {
                     "origLen": 42,
-                    "pathId": 3217887829725598392
+                    "pathId": 6865044713579753131
                 },
                 {
                     "origLen": 96,
-                    "pathId": 7606478079158098073
+                    "pathId": -749634649051649434
                 }
             ],
-            "pathId": 2328921936548930814,
+            "pathId": -3326425889676731135,
             "blockIdx": 39
         },
         {
@@ -980,25 +1019,26 @@
             "enText": "Protecting those ladybugs means protecting \nthe school's environment.",
             "nextBlock": 41,
             "origClipLength": 93,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 104,
-                    "pathId": 581981785953789986
+                    "pathId": 5020705038313229233
                 },
                 {
                     "origLen": 104,
-                    "pathId": 6661502886844311303
+                    "pathId": 9082142980198951406
                 },
                 {
                     "origLen": 76,
-                    "pathId": -8276935017548133696
+                    "pathId": 4486581336148290083
                 },
                 {
                     "origLen": 104,
-                    "pathId": -5470130707074680019
+                    "pathId": -2879138562402005033
                 }
             ],
-            "pathId": -4498785248285945013,
+            "pathId": -8450901983454089451,
             "blockIdx": 40
         },
         {
@@ -1008,55 +1048,57 @@
             "enText": "For the school, for the ladybugs. \nLet's work together.",
             "nextBlock": 42,
             "origClipLength": 81,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 50,
-                    "pathId": 23151391128455527
+                    "pathId": -3878932283215651589
                 },
                 {
                     "origLen": 92,
-                    "pathId": -7649241001262219485
+                    "pathId": -6487417712121297397
                 },
                 {
                     "origLen": 92,
-                    "pathId": -6556490821535503041
+                    "pathId": 6100022729557365714
                 },
                 {
                     "origLen": 92,
-                    "pathId": 7770853845814843184
+                    "pathId": 4396044333014076969
                 }
             ],
-            "pathId": -7585875366834214483,
+            "pathId": -251754075927286776,
             "blockIdx": 41
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "その後、エイシンフラッシュと定期的に\nテントウムシの見回りを行うように\nなるのであった。",
             "enText": "She and Eishin Flash would then make regular \nladybug rounds.",
             "nextBlock": -1,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 113,
-                    "pathId": 6055741643356134287
+                    "pathId": 1742663562033179761
                 },
                 {
                     "origLen": 113,
-                    "pathId": 8377220781081224068
+                    "pathId": -5748569550119588414
                 },
                 {
                     "origLen": 113,
-                    "pathId": -1994558905189235508
+                    "pathId": 4566351113318184459
                 },
                 {
                     "origLen": 113,
-                    "pathId": -1649012388524332954
+                    "pathId": -6601189107027364273
                 }
             ],
-            "pathId": 1140856358367868223,
+            "pathId": 1516265119352901888,
             "blockIdx": 42
         }
     ],
-    "modified": 1662157551
+    "modified": 1694039430
 }

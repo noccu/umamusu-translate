@@ -1,16 +1,18 @@
 {
-    "version": 4,
-    "bundle": "SCTWPAIV3WSE75DECZ6XH47ON4IS2IBC",
+    "version": 6,
+    "bundle": "K4VIRQVKGLJFPAFGGIBHCU3C2A4CCYEQ",
     "type": "story",
     "storyId": "801050002",
     "title": "別に、邪魔しないで",
     "text": [
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
-            "jpText": "門限ギリギリの時間にも関わらず\r\nジムの明かりが点いたままになっていたので、\n見にくると……。",
+            "jpText": "門限ギリギリの時間にもかかわらず\r\nジムの明かりが点いたままになっていたので、\n見にくると……。",
             "enText": "It was just before curfew, but the lights \nwere still on in the gym, so I went to … to \nsee what was going on.",
             "nextBlock": 2,
+            "origClipLength": 75,
+            "voiceIdx": -1,
             "pathId": 8000607456458645759,
             "blockIdx": 1
         },
@@ -20,6 +22,8 @@
             "jpText": "っし、バーベル終了。\r\n次はレッグプレス50回……。",
             "enText": "I'm done with the barbell. Next \nup is 50 leg presses…",
             "nextBlock": 3,
+            "origClipLength": 61,
+            "voiceIdx": 59,
             "choices": [
                 {
                     "jpText": "そろそろ門限だぞ",
@@ -32,6 +36,16 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 6533749104207416962
+                },
+                {
+                    "origLen": 136,
+                    "pathId": -473119492540631211
+                }
+            ],
             "pathId": 6680141054051616053,
             "blockIdx": 2
         },
@@ -41,6 +55,8 @@
             "jpText": "……だから何。\r\n集中してんの、邪魔しないで。",
             "enText": "It's… so what. I'm concentrating, \ndon't interrupt me.",
             "nextBlock": 4,
+            "origClipLength": 60,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "遅くならないようにな",
@@ -56,6 +72,16 @@
                     "jpText": "無理はよくない",
                     "enText": "Don't push yourself",
                     "nextBlock": 15
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 5725554300864210368
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -976578305415679521
                 }
             ],
             "pathId": 71608503995379438,
@@ -67,6 +93,8 @@
             "jpText": "……だから何。\r\n集中してんの、邪魔しないで。",
             "enText": "It's… so what. I'm concentrating, \ndon't interrupt me.",
             "nextBlock": 5,
+            "origClipLength": 60,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "遅くならないようにな",
@@ -84,6 +112,16 @@
                     "nextBlock": 15
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": 5107335657830897534
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -3626610956772159484
+                }
+            ],
             "pathId": 4507361317874383050,
             "blockIdx": 4
         },
@@ -93,6 +131,18 @@
             "jpText": "っるさいな。ほっといて。",
             "enText": "I don't care. Leave me alone.",
             "nextBlock": 6,
+            "origClipLength": 52,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": -6579237291252499193
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 6627699920719960447
+                }
+            ],
             "pathId": -1893868556279811823,
             "blockIdx": 5
         },
@@ -102,6 +152,18 @@
             "jpText": "おーい！！　タイシーーーン！！",
             "enText": "Hey! Taishieen!",
             "nextBlock": 7,
+            "origClipLength": 54,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": 8381986052140086395
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 8051156682591770259
+                }
+            ],
             "pathId": 3077748777059667549,
             "blockIdx": 6
         },
@@ -111,6 +173,18 @@
             "jpText": "……げ。\r\nもっとうるさいヤツがきた。",
             "enText": "Go to… There's a louder one.",
             "nextBlock": 8,
+            "origClipLength": 57,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -7538590231809537134
+                },
+                {
+                    "origLen": 68,
+                    "pathId": -4674491703140839300
+                }
+            ],
             "pathId": 7048027927677095749,
             "blockIdx": 7
         },
@@ -120,6 +194,26 @@
             "jpText": "早く帰って変顔じゃんけんやろうよ！\r\n昼休みできなかったし！",
             "enText": "Let's go home early and play \nrock-paper-scissors with funny faces! I \ncouldn't do it on my lunch break!",
             "nextBlock": 9,
+            "origClipLength": 64,
+            "voiceIdx": 53,
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": -6286156135477808266
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 2279785575745398850
+                },
+                {
+                    "origLen": 110,
+                    "pathId": 1119920344957709446
+                },
+                {
+                    "origLen": 116,
+                    "pathId": -4579267101955892875
+                }
+            ],
             "pathId": 8179232444437701560,
             "blockIdx": 8
         },
@@ -129,6 +223,26 @@
             "jpText": "しつこい！\r\nいくら追っかけてきても、やらないっての！",
             "enText": "She's persistent! I don't care how many times \nyou chase me, I won't do it!",
             "nextBlock": 10,
+            "origClipLength": 62,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": 5844849972368368573
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -5887667154035268018
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 10990207300561108
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 3467661504290697310
+                }
+            ],
             "pathId": 9112744366819342436,
             "blockIdx": 9
         },
@@ -138,6 +252,26 @@
             "jpText": "あ！　追いかけっこで勝てばいいの！？\r\nよーし、絶対捕まえちゃうもんね！",
             "enText": "Ah! I'm going to win the chase! Alright, \nI'll definitely catch you!",
             "nextBlock": 11,
+            "origClipLength": 68,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 7418090694801251614
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -247693433790964233
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 1809820631454539741
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 8213199081032291333
+                }
+            ],
             "pathId": 5655244529571767593,
             "blockIdx": 10
         },
@@ -147,6 +281,26 @@
             "jpText": "はぁ！？　なに勝手に……！",
             "enText": "Huh? What are you doing…!",
             "nextBlock": 12,
+            "origClipLength": 53,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -140636741073611135
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 5452531871788217995
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 2880397251721822087
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -8924618548975358148
+                }
+            ],
             "pathId": 4138839080860331753,
             "blockIdx": 11
         },
@@ -156,6 +310,26 @@
             "jpText": "いちについてー！　よーい！！",
             "enText": "About the first! Yay!",
             "nextBlock": 13,
+            "origClipLength": 54,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 65,
+                    "pathId": -2472457203911705444
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 7884931898076749192
+                },
+                {
+                    "origLen": 27,
+                    "pathId": -3376112625163940533
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 3874042105457283888
+                }
+            ],
             "pathId": 6415410683513517843,
             "blockIdx": 12
         },
@@ -165,15 +339,47 @@
             "jpText": "～～ああ、もうっ！！",
             "enText": "~Oh, no!",
             "nextBlock": 14,
+            "origClipLength": 63,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 8590197377602674882
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -5799193433585141330
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 2394909072057574159
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 7800070322165743766
+                }
+            ],
             "pathId": -3835380080654976000,
             "blockIdx": 13
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "ナリタタイシンは、恐るべきダッシュで\r\nウイニングチケットを\n引き離しにかかっていた。",
             "enText": "Naritatai Singh was making a fearsome dash \nto pull away from Winning Ticket.",
             "nextBlock": -1,
+            "origClipLength": 73,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -4645983366045302356
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 943598311571912389
+                }
+            ],
             "pathId": 367889128958620736,
             "blockIdx": 14
         },
@@ -183,15 +389,39 @@
             "jpText": "舐めないでよ。\r\n自己管理くらいしてるっての！",
             "enText": "Don't lick me. I'm trying to control myself!",
             "nextBlock": 16,
+            "origClipLength": 60,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": -4204745565221256826
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 6181708183565616767
+                }
+            ],
             "pathId": 5375287721020374043,
             "blockIdx": 15
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "ふと、トレーニング器具の下に\r\n開きっぱなしのノートが目に入った。\n……緻密に計算された練習内容が書いてある。",
             "enText": "I noticed an open notebook under the \ntraining equipment. It had a… meticulously \ncalculated training schedule.",
             "nextBlock": 17,
+            "origClipLength": 80,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": 4747833282295493608
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -3224280739100788896
+                }
+            ],
             "pathId": 6571555177999652833,
             "blockIdx": 16
         },
@@ -201,6 +431,8 @@
             "jpText": "……ちょっと。\r\n人のノート、勝手に見んな。",
             "enText": "… a bit. Don't look at people's notes \nwithout their permission.",
             "nextBlock": 18,
+            "origClipLength": 59,
+            "voiceIdx": 99,
             "choices": [
                 {
                     "jpText": "すごいな……！",
@@ -213,6 +445,16 @@
                     "nextBlock": 18
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": 8014363364083024840
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -1012041856352723936
+                }
+            ],
             "pathId": -8031911412290363707,
             "blockIdx": 17
         },
@@ -222,6 +464,18 @@
             "jpText": "ふん……別に、こんだけやんなきゃ\r\n勝てないってだけだし。",
             "enText": "Hmm… it's just that you have \nto do all this to win.",
             "nextBlock": 19,
+            "origClipLength": 63,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 24,
+                    "pathId": 7434111823572734923
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -1177026549974007259
+                }
+            ],
             "pathId": -1549067118206201769,
             "blockIdx": 18
         },
@@ -231,6 +485,18 @@
             "jpText": "恵まれてない分、何も持ってない分、\r\nやってやってやりまくらなきゃ――",
             "enText": "Because you don't have much, because \nyou don't have anything, you have \nto do and do and do.",
             "nextBlock": 20,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": 2873671102510027909
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -5365733503834280449
+                }
+            ],
             "pathId": 4110561314438248070,
             "blockIdx": 19
         },
@@ -240,11 +506,23 @@
             "jpText": "うわぁぁぁ～～～ん！　感動したぁぁ～～！！",
             "enText": "Woohoo! I'm so impressed!",
             "nextBlock": 21,
+            "origClipLength": 95,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "……！？",
                     "enText": "…!",
                     "nextBlock": 21
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 106,
+                    "pathId": -1464621147648380905
+                },
+                {
+                    "origLen": 106,
+                    "pathId": 1722046365593379659
                 }
             ],
             "pathId": 8253594647778513194,
@@ -256,6 +534,26 @@
             "jpText": "うわっ……またアンタか、チケット！\r\n毎度毎度泣くなっての、やかましい！",
             "enText": "Oh… it's you again, the ticket! Stop crying \nevery time, you're annoying!",
             "nextBlock": 22,
+            "origClipLength": 68,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -5151076305175765764
+                },
+                {
+                    "origLen": 133,
+                    "pathId": -4400867226540533242
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -6931886647102238513
+                },
+                {
+                    "origLen": 141,
+                    "pathId": -6052832876236070367
+                }
+            ],
             "pathId": -2530781308490223412,
             "blockIdx": 21
         },
@@ -265,6 +563,30 @@
             "jpText": "むがっ、むがえにぎだんだげど……\r\nギミのはなじがぎごえでぇ～……！！\nえらい、えらいよタイシン～～～……！！",
             "enText": "Muggah, muggah ni gidanda dado… Gimi \nno hanaji ga gigoe de~…! Good job, \ngood job, Taishin~~~…!",
             "nextBlock": 23,
+            "origClipLength": 80,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -4974243240025196640
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -4093115939308989621
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -2743979892921683233
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -3116291143027834903
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 2184486102256968307
+                }
+            ],
             "pathId": 548029826075523934,
             "blockIdx": 22
         },
@@ -274,6 +596,30 @@
             "jpText": "でも……でもっ、無理しすぎてないか\r\n心配だよぉぉぉぉぉ～～～！！",
             "enText": "But with… I'm worried you're \npushing yourself too hard…!",
             "nextBlock": 24,
+            "origClipLength": 126,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 138,
+                    "pathId": 2255876671387867266
+                },
+                {
+                    "origLen": 137,
+                    "pathId": -1950752424470669422
+                },
+                {
+                    "origLen": 137,
+                    "pathId": 1073860626610665528
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 2405903876948447396
+                },
+                {
+                    "origLen": 137,
+                    "pathId": -5642097279036852133
+                }
+            ],
             "pathId": 5949358716924139453,
             "blockIdx": 23
         },
@@ -283,6 +629,30 @@
             "jpText": "あーあーあー……わかったよ、もう。\r\nこれじゃ集中できるもんもできないっての。",
             "enText": "It's hard to concentrate \nwhen you're like this.",
             "nextBlock": 25,
+            "origClipLength": 70,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": 4221362753544515273
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -7918225841507355252
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 3005379429738266215
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -1026435585260368104
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -862596347176083715
+                }
+            ],
             "pathId": 174680017499068296,
             "blockIdx": 24
         },
@@ -292,8 +662,29 @@
             "jpText": "帰ればいいんでしょ、帰れば。\r\n……ほら、泣いてないでアンタも行く！",
             "enText": "Why don't you just go home?… Come on, stop \ncrying, you're going too!",
             "nextBlock": -1,
+            "origClipLength": 67,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -537678715141832811
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 4034101972931465167
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 1021190694554184131
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 8136084218800203549
+                }
+            ],
             "pathId": 6454565551455190315,
             "blockIdx": 25
         }
-    ]
+    ],
+    "modified": 1694039664
 }

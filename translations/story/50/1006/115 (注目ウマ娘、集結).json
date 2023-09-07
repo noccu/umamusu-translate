@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "R7FKADIN4I54B2QCO43UIUHEKCKG33BS",
+    "version": 6,
+    "bundle": "3R5OYB6KYKLLR2YK7UMTOCIY24S5ADKQ",
     "type": "story",
     "storyId": "501006115",
     "title": "注目ウマ娘、集結",
@@ -11,16 +11,44 @@
             "jpText": "……よし。\r\nいい状態だな。",
             "enText": "… Good. You're in good shape.",
             "nextBlock": 2,
-            "pathId": -1243615239775848553,
+            "origClipLength": 54,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": -8462813837684715481
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -16146179767118200
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 4629944704091070480
+                }
+            ],
+            "pathId": 7958445466007855201,
             "blockIdx": 1
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
-            "jpText": "ＮＨＫマイルカップに向けて、\r\nオグリキャップと\nトレーニングをしていると――",
+            "jpText": "NHKマイルカップに向けて、\r\nオグリキャップと\nトレーニングをしていると――",
             "enText": "She says she's training with Oguri-cap \nfor the NHK Mile Cup.",
             "nextBlock": 3,
-            "pathId": -9025157030774690553,
+            "origClipLength": 70,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 9058825655398026017
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 4305698373475140251
+                }
+            ],
+            "pathId": 1222701073689188426,
             "blockIdx": 2
         },
         {
@@ -29,16 +57,76 @@
             "jpText": "おうおう、やっとるな！",
             "enText": "Oh, yeah, you're doing it!",
             "nextBlock": 4,
-            "pathId": 133753962916044329,
+            "origClipLength": 52,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": 6003235917321902140
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 2799846592697376589
+                },
+                {
+                    "origLen": 149,
+                    "pathId": -218767429496821709
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 3749097679708301865
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -1849935259982882135
+                }
+            ],
+            "pathId": 5937622531888796853,
             "blockIdx": 3
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "なかなか調子よさそうじゃねぇか！",
+            "jpText": "なかなか調子よさそうじゃねえか！",
             "enText": "You're looking pretty good!",
             "nextBlock": 5,
-            "pathId": 4601560792955331756,
+            "origClipLength": 55,
+            "voiceIdx": 47,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -7481145098574152049
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 3604352323535245993
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 7191748198452535002
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -1219711455335152540
+                },
+                {
+                    "origLen": 31,
+                    "pathId": 5207980450433410318
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -4172154274523021941
+                },
+                {
+                    "origLen": 90,
+                    "pathId": 6798943278130517288
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 4826694693417288248
+                }
+            ],
+            "pathId": 6507969609671378992,
             "blockIdx": 4
         },
         {
@@ -47,22 +135,78 @@
             "jpText": "タマにイナリ！\r\n2人もトレーニングか？",
             "enText": "Tama and Inari! You two training?",
             "nextBlock": 6,
+            "origClipLength": 58,
+            "voiceIdx": 7,
             "coloredText": [
                 {
                     "jpText": "イナリ",
                     "enText": "Ini."
                 }
             ],
-            "pathId": -4930443233614910112,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -5734411626195243511
+                },
+                {
+                    "origLen": 47,
+                    "pathId": -8630876489806178768
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -3561427134674816294
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -7387566878141257032
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -7885371992681638386
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 6019852992369607682
+                }
+            ],
+            "pathId": 2894237298017204534,
             "blockIdx": 5
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "あったりめぇのするめイカよ！\r\nこちとら走るが華のウマ娘でいっ！",
+            "jpText": "あったりめえのするめイカよ！\nこちとら走るが華のウマ娘でいっ！",
             "enText": "Of course it's a sea squid! I'm \njust a girl who likes to run!",
             "nextBlock": 7,
-            "pathId": 3727997206245509274,
+            "origClipLength": 65,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -7391431010079082860
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -7249042243769050519
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -3570429043517285159
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -91511340969486578
+                },
+                {
+                    "origLen": 49,
+                    "pathId": 321936385894903317
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 9015851006611126389
+                }
+            ],
+            "pathId": -9158652339399424786,
             "blockIdx": 6
         },
         {
@@ -71,7 +215,47 @@
             "jpText": "そしたらオグリが走ってんのが見えたんでな。\r\nま、偵察がてら見に来たわけや。",
             "enText": "Then I saw Oguri running. So I came to take \na look, just for reconnaissance.",
             "nextBlock": 8,
-            "pathId": 229664928242780734,
+            "origClipLength": 69,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 8652114471718888301
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 8658594238338556604
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -4470823795595832805
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 6086246855672135117
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 4070866691456574541
+                },
+                {
+                    "origLen": 145,
+                    "pathId": -3600748899613465823
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 484927495973621313
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 4486516541402499919
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 1466768010277457254
+                }
+            ],
+            "pathId": 5427910206227854860,
             "blockIdx": 7
         },
         {
@@ -80,7 +264,35 @@
             "jpText": "相変わらず豪快に走りよるわ。\r\n……ぶつかれば脅威やな。",
             "enText": "She's still running as fast as ever… It's a \nthreat if you run into it.",
             "nextBlock": 9,
-            "pathId": 2708023718544922198,
+            "origClipLength": 63,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -6112224368456397255
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 1883918543085588008
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -3037412562145528745
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -5325144528096850311
+                },
+                {
+                    "origLen": 28,
+                    "pathId": -1624026372424824544
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6827197231508881448
+                }
+            ],
+            "pathId": -8737738515254390964,
             "blockIdx": 8
         },
         {
@@ -89,7 +301,31 @@
             "jpText": "キウイ？",
             "enText": "Kiwi?",
             "nextBlock": 10,
-            "pathId": 637346208275450386,
+            "origClipLength": 47,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 2458641806905304034
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -3113965145953618869
+                },
+                {
+                    "origLen": 58,
+                    "pathId": 639471299563898696
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 5213741436754450514
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -6804741020628361458
+                }
+            ],
+            "pathId": 5035836103558968579,
             "blockIdx": 9
         },
         {
@@ -98,31 +334,111 @@
             "jpText": "きょ・う・い！　アンタの耳は\r\n食いモンしか聞こえんのかっ！",
             "enText": "What the…? You only hear what you eat!",
             "nextBlock": 11,
-            "pathId": 2395574894342862042,
+            "origClipLength": 64,
+            "voiceIdx": 62,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -2198768630533255523
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 4475755188073077840
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -560640467139107951
+                },
+                {
+                    "origLen": 35,
+                    "pathId": 6186131567903279946
+                },
+                {
+                    "origLen": 75,
+                    "pathId": -464121799331021885
+                }
+            ],
+            "pathId": -4743166495001002684,
             "blockIdx": 10
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "オグリキャップと同室のタマモクロスと、\r\n同学年のイナリワン。\nどちらも今年の注目株だ。",
             "enText": "Tamamo Cross — Oguri Cap's roommate —, and \nInari One — in the same grade —. Both are \nreceiving much attention this year.",
             "nextBlock": 12,
+            "origClipLength": 73,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "イナリワン",
                     "enText": "Inari One"
                 }
             ],
-            "pathId": 945520419576391989,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 5404714882319937263
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 7267127475102474133
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 8609649670716933598
+                },
+                {
+                    "origLen": 85,
+                    "pathId": 8189766381087582047
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 6394825127177779061
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -6085413353492875996
+                }
+            ],
+            "pathId": -6642377026171567313,
             "blockIdx": 11
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "2人とも小さい体躯ながら、\r\n様々なレースで勝利を重ねている。\nそれにしても……。",
             "enText": "Both of them are small in stature but have \nwon various races. But still…",
             "nextBlock": 13,
-            "pathId": 3561577083596962712,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -5669134357227921312
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -8308093730766665208
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 6147775029125969795
+                },
+                {
+                    "origLen": 85,
+                    "pathId": -6049240660341272878
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 6535286129330405885
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 7293956232459020814
+                }
+            ],
+            "pathId": -4453692803506189588,
             "blockIdx": 12
         },
         {
@@ -131,6 +447,8 @@
             "jpText": "……オイ、なにじろじろ見とんねん。\r\nアンタ今、『ちっさ！』って思ったやろ！",
             "enText": "… Oi, what are you staring at? You \njust thought, \"It's too small! \nThat's what you thought!",
             "nextBlock": 14,
+            "origClipLength": 69,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "え！？",
@@ -138,16 +456,70 @@
                     "nextBlock": 14
                 }
             ],
-            "pathId": -3828866894315786737,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": -3826015730758412347
+                },
+                {
+                    "origLen": 115,
+                    "pathId": 3295190097088253673
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -1823179109535329187
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -1736261753604011694
+                },
+                {
+                    "origLen": 31,
+                    "pathId": -5239531945483065095
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 4496897745709564851
+                }
+            ],
+            "pathId": 2551954189572883805,
             "blockIdx": 13
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "はぁっ！？　そりゃ禁句ってもんでぃ！\r\nそもそも小さくなんかないやいっ！",
+            "jpText": "はあっ！？　そりゃ禁句ってもんでい！\nそもそも小さくなんかないやいっ！",
             "enText": "Huh? You can't say that! \nIt's not small at all!",
             "nextBlock": 15,
-            "pathId": -4567276670188846575,
+            "origClipLength": 68,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -8692085907861444261
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6619374357228037662
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -3779047473401032354
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 4709875286437793764
+                },
+                {
+                    "origLen": 62,
+                    "pathId": 6048544067529268993
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 3957838267577146892
+                }
+            ],
+            "pathId": -7121629711767381280,
             "blockIdx": 14
         },
         {
@@ -156,16 +528,60 @@
             "jpText": "いや、アンタはちっこいやろ。\r\n少なくともウチよりはおチビや！",
             "enText": "No, you're too small. At least \nyou're shorter than me!",
             "nextBlock": 16,
-            "pathId": 3007125118199726107,
+            "origClipLength": 65,
+            "voiceIdx": 50,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 666772721910557105
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -367751677499190519
+                },
+                {
+                    "origLen": 122,
+                    "pathId": -4895478190583010382
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 6145076072591707149
+                }
+            ],
+            "pathId": 3705816272703119740,
             "blockIdx": 15
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "なぁっ……たかだか1センチの差だろがい！\r\nおうおう、喧嘩するなら相手になるぜっ！！",
+            "jpText": "なあっ……たかだか1センチの差だろがい！\nおうおう、喧嘩するなら相手になるぜっ！！",
             "enText": "Hey… it's only a centimeter difference! If \nyou're looking for a fight, I'm your guy!",
             "nextBlock": 17,
-            "pathId": 3268678367453655494,
+            "origClipLength": 72,
+            "voiceIdx": 63,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 7487015202152329200
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -7545375737878117888
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -8348575672519761093
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3133597269347582477
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -5801236133651536901
+                }
+            ],
+            "pathId": 3383436459514449020,
             "blockIdx": 16
         },
         {
@@ -174,7 +590,27 @@
             "jpText": "なぜ喧嘩になるんだ？\r\n2人の背が低いのは事実だろう。",
             "enText": "Why are we fighting? It's probably \ntrue that you two are short.",
             "nextBlock": 18,
-            "pathId": 4351038952726984833,
+            "origClipLength": 62,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 8150240099983314369
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 2618530345641308427
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 4212172125390706885
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 2056191936824174781
+                }
+            ],
+            "pathId": -4111479150017202503,
             "blockIdx": 17
         },
         {
@@ -183,25 +619,93 @@
             "jpText": "キーッ！\r\nうがーっ！",
             "enText": "Squeak! Ugh!",
             "nextBlock": 19,
-            "pathId": 5779773687779658407,
+            "origClipLength": 52,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": -1303191783246643287
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 6956654973389888590
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -7563603165490385249
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -5325598137067299214
+                }
+            ],
+            "pathId": -8674757422326386019,
             "blockIdx": 18
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "……なんだかほのぼのとしている。\r\n今年の注目株が3人揃ったわけだが、\nイマイチ締まらない雰囲気だ。",
             "enText": "… It's kind of heartwarming. I'm \nnot sure what to make of this.",
             "nextBlock": 20,
-            "pathId": -5486472474826351085,
+            "origClipLength": 77,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 88,
+                    "pathId": -4159811036515585870
+                },
+                {
+                    "origLen": 88,
+                    "pathId": 4667356439992329145
+                },
+                {
+                    "origLen": 111,
+                    "pathId": -8465504182363189729
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -8962443054416399179
+                }
+            ],
+            "pathId": -988036626767674417,
             "blockIdx": 19
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "しかし、そうして戯れるみんなを\r\n見守っていると――",
             "enText": "But as I watched them frolic about like that…",
             "nextBlock": 21,
-            "pathId": -5735585340993033882,
+            "origClipLength": 61,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 9027767176225913824
+                },
+                {
+                    "origLen": 120,
+                    "pathId": 4348157539797004805
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -3344948183456916247
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -8989720421636012778
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -4034691524547274753
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -4557134597831262587
+                }
+            ],
+            "pathId": 6698435590529334934,
             "blockIdx": 20
         },
         {
@@ -210,7 +714,31 @@
             "jpText": "あらあら、楽しそうですね。\r\n私も混ぜてください～♪",
             "enText": "Oh my goodness, that looks like \nfun. Please mix me in too~♪",
             "nextBlock": 22,
-            "pathId": -7060339758979413829,
+            "origClipLength": 61,
+            "voiceIdx": 53,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": 3092141567379734628
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -3491670020973206702
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 7233931952196285937
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -3860231169031863599
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -5900771704795401537
+                }
+            ],
+            "pathId": -1762104649641371364,
             "blockIdx": 21
         },
         {
@@ -219,7 +747,31 @@
             "jpText": "……っ！",
             "enText": "…!",
             "nextBlock": 23,
-            "pathId": -8012483732713500358,
+            "origClipLength": 47,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": 4120954885269993571
+                },
+                {
+                    "origLen": 113,
+                    "pathId": -7779934598463235741
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -1503097241039452720
+                },
+                {
+                    "origLen": 77,
+                    "pathId": 1433243789588379383
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -7608634505670847581
+                }
+            ],
+            "pathId": -7493356982943604129,
             "blockIdx": 22
         },
         {
@@ -228,7 +780,31 @@
             "jpText": "スーパークリーク……！",
             "enText": "Supercreek…!",
             "nextBlock": 24,
-            "pathId": -3143672656066955998,
+            "origClipLength": 52,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 63,
+                    "pathId": 487204334211191916
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 6392737777054665035
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 1389400584670009912
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 7485473380591760574
+                },
+                {
+                    "origLen": 63,
+                    "pathId": -8877585393987773377
+                }
+            ],
+            "pathId": -7078917471329265499,
             "blockIdx": 23
         },
         {
@@ -237,25 +813,109 @@
             "jpText": "……？\r\nあら、どうしました？",
             "enText": "…? Oh, my God, what's wrong?",
             "nextBlock": 25,
-            "pathId": -6867151492695098841,
+            "origClipLength": 54,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 3134105539156722641
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 1081713944291574397
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 8720673907545710834
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 5452746910773375534
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 7120097359060490645
+                },
+                {
+                    "origLen": 65,
+                    "pathId": -7487228704866439863
+                }
+            ],
+            "pathId": -1917952948065025535,
             "blockIdx": 24
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "――スーパークリーク。\r\nオグリキャップたちと同じく、\n同世代の注目株だ。",
             "enText": "—Super Creek. Like Oguri-cap and \nthe others, she's one of the hottest \ngirls of her generation.",
             "nextBlock": 26,
-            "pathId": 7068997749461977515,
+            "origClipLength": 69,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": -1419558054739147003
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 6098357380364110205
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -6278089503717979667
+                },
+                {
+                    "origLen": 91,
+                    "pathId": 4223719378703032762
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 4930732875268138097
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -8439808175762573928
+                }
+            ],
+            "pathId": -4425643640830857143,
             "blockIdx": 25
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "豊富な体力を武器に、\r\n長距離レースで大活躍。\nその強さはトレーナー間でも有名だ。",
             "enText": "She is very active in long-distance races, \nusing her great physical strength. Her \nstrength is well known even among trainers.",
             "nextBlock": 27,
-            "pathId": 7762103986549968412,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -5348855909367406531
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 7165588360541357950
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 8681247830027682908
+                },
+                {
+                    "origLen": 116,
+                    "pathId": 691496361793355601
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -403805436567493421
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -1999775731300252970
+                }
+            ],
+            "pathId": -1336408153047036260,
             "blockIdx": 26
         },
         {
@@ -264,7 +924,35 @@
             "jpText": "タマとイナリ、それにトレーナーまで。\r\nどうして急に黙ってしまったんだ？",
             "enText": "Tama, Inari, and even my trainer. \nWhy did they suddenly shut up?",
             "nextBlock": 28,
-            "pathId": -1337396313910986301,
+            "origClipLength": 68,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": -5705105588934774133
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 7579322591606567631
+                },
+                {
+                    "origLen": 79,
+                    "pathId": -1878151626700735298
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -4002969162541763302
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -6171923579096845843
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 6314250424730403797
+                }
+            ],
+            "pathId": -4427683974069583034,
             "blockIdx": 27
         },
         {
@@ -273,16 +961,76 @@
             "jpText": "お腹でも痛いのかしら？\r\n大丈夫？　さすさすしましょうか？",
             "enText": "What's wrong with your stomach? Are you okay? \nDo you want me to rub it for you?",
             "nextBlock": 29,
-            "pathId": -7447774031135440075,
+            "origClipLength": 63,
+            "voiceIdx": 62,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": -8127322513802599778
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 2374412507048660848
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7035800657844618003
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 7019699613841070032
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -8399545601282277692
+                }
+            ],
+            "pathId": -7243836724442439875,
             "blockIdx": 28
         },
         {
             "jpName": "イナリワン",
             "enName": "Inari One",
-            "jpText": "違わいっ！！　あんたら2人とも、\r\n最近名が売れてきた相手同士だろ！？",
+            "jpText": "違わいっ！！　お前さんら2人とも、\r\n最近名が売れてきた相手同士だろ！？",
             "enText": "No, you're not! You two have been making a \nname for yourselves lately, haven't you?",
             "nextBlock": 30,
-            "pathId": -4024674363288987516,
+            "origClipLength": 68,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -4320147884387159345
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 8182320899342796540
+                },
+                {
+                    "origLen": 90,
+                    "pathId": 3714489526350627133
+                },
+                {
+                    "origLen": 107,
+                    "pathId": 6290585285324995431
+                },
+                {
+                    "origLen": 59,
+                    "pathId": -1015154546136203817
+                },
+                {
+                    "origLen": 103,
+                    "pathId": 3424248485300205551
+                },
+                {
+                    "origLen": 27,
+                    "pathId": 8802760757795058969
+                },
+                {
+                    "origLen": 27,
+                    "pathId": 8358836463428401801
+                }
+            ],
+            "pathId": 9192384870842493933,
             "blockIdx": 29
         },
         {
@@ -291,31 +1039,115 @@
             "jpText": "つまり傍から見りゃ敵同士ってこっちゃ！\r\nそら周りもピリッとするわ！",
             "enText": "In other words, to the outside world, \nwe're enemies! That's why everyone \naround us is so tense!",
             "nextBlock": 31,
-            "pathId": 8498294768207686568,
+            "origClipLength": 67,
+            "voiceIdx": 51,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": -1142684210035084406
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 3159499254067778515
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -2738921052314869261
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 6256232779662962025
+                }
+            ],
+            "pathId": 7664165868648532315,
             "blockIdx": 30
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "そう、スーパークリークも\r\nクラシック級の有力候補の1人。",
             "enText": "Yes, Super Creek is one of the leading \ncandidates for the Classic class.",
             "nextBlock": 32,
+            "origClipLength": 64,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "クラシック級",
                     "enText": "classic class"
                 }
             ],
-            "pathId": -947531258021945017,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 2363345922249500888
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -8076248874872565014
+                },
+                {
+                    "origLen": 101,
+                    "pathId": 3042159001394063948
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -8928896696043003866
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -4690656722149215746
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 7116283022908380553
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 7724552105050768388
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 6597010320079614484
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -4398313641580563838
+                }
+            ],
+            "pathId": -1902130774832289834,
             "blockIdx": 31
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "今後の活躍次第では、\r\nオグリキャップにとって\n大きな壁になることは間違いないだろう。",
             "enText": "Depending on her future performance, she will \nsurely be a big obstacle for Oguri Cap.",
             "nextBlock": 33,
-            "pathId": 7845845848975298402,
+            "origClipLength": 73,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": -1779354955235482044
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 473883651021537443
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -2620766907173363479
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -6511347676948454388
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -8814127119166197808
+                }
+            ],
+            "pathId": 2619639767780305617,
             "blockIdx": 32
         },
         {
@@ -324,7 +1156,35 @@
             "jpText": "あらぁ、オグリちゃんもなんですね～。\r\n困っちゃうわぁ。",
             "enText": "Oh, you're Oguri-chan, too! I'm in trouble.",
             "nextBlock": 34,
-            "pathId": 8101797869825408727,
+            "origClipLength": 63,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": -3836359175104310845
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -6278336091466474255
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -4463854238202178237
+                },
+                {
+                    "origLen": 74,
+                    "pathId": -7131863713749935582
+                },
+                {
+                    "origLen": 49,
+                    "pathId": -691300899731079460
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 3234951066025102953
+                }
+            ],
+            "pathId": -1802696517479821414,
             "blockIdx": 33
         },
         {
@@ -333,7 +1193,35 @@
             "jpText": "なぜだ？",
             "enText": "Why?",
             "nextBlock": 35,
-            "pathId": 4370272694950824517,
+            "origClipLength": 47,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": -4160012076694557955
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -7584419495697352457
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -2181966547400945220
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 2742571821806862556
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -7546637135266573879
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -1048485611100273092
+                }
+            ],
+            "pathId": 6505313182631053504,
             "blockIdx": 34
         },
         {
@@ -342,7 +1230,35 @@
             "jpText": "だって、笠松じゃ負けなしだったんでしょう？\r\n聞いてますよ～、すごいすごいっ♪",
             "enText": "Because you never lost in Kasamatsu, right? \nI'm listening to you. Wow, that's amazing.",
             "nextBlock": 36,
-            "pathId": 8561369098641782209,
+            "origClipLength": 70,
+            "voiceIdx": 61,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": -5848750707558211623
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 4609683735380912145
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 964081020488995639
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -1340059262734169199
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 4442653363628439706
+                },
+                {
+                    "origLen": 81,
+                    "pathId": -1218666714432675922
+                }
+            ],
+            "pathId": -2558420310558620120,
             "blockIdx": 35
         },
         {
@@ -351,7 +1267,35 @@
             "jpText": "そ、そうか？\r\nふふ……。",
             "enText": "Oh, really? Hmm…",
             "nextBlock": 37,
-            "pathId": -7284408400096658296,
+            "origClipLength": 53,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 18,
+                    "pathId": -6620665798343399526
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 2522079571943032060
+                },
+                {
+                    "origLen": 64,
+                    "pathId": -2187580563510087981
+                },
+                {
+                    "origLen": 77,
+                    "pathId": -3517959659959226310
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -8545907536713889542
+                },
+                {
+                    "origLen": 72,
+                    "pathId": 2482958777247128668
+                }
+            ],
+            "pathId": -8071320890027643363,
             "blockIdx": 36
         },
         {
@@ -360,7 +1304,31 @@
             "jpText": "な～に素直に照れてんねんっ！！\r\n今のは『中央じゃわかりまへんけど♪』\n……っちゅー煽りや！",
             "enText": "Why are you so honestly embarrassed? \nThat was a \"I don't know if you're \nin the center\"… kind of joke!",
             "nextBlock": 38,
-            "pathId": -1126729331020410893,
+            "origClipLength": 75,
+            "voiceIdx": 61,
+            "animData": [
+                {
+                    "origLen": 87,
+                    "pathId": 3708637381500698741
+                },
+                {
+                    "origLen": 86,
+                    "pathId": 2639460030057190671
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -5248576047960412869
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -3595330225680074949
+                },
+                {
+                    "origLen": 86,
+                    "pathId": -4519422261943227146
+                }
+            ],
+            "pathId": 5421435551770794313,
             "blockIdx": 37
         },
         {
@@ -369,7 +1337,31 @@
             "jpText": "……そうなのか？\r\n……そうなんですか～？",
             "enText": "… Is that so?… Is that right~?",
             "nextBlock": 39,
-            "pathId": 19768964115758492,
+            "origClipLength": 58,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -1873190054934808454
+                },
+                {
+                    "origLen": 69,
+                    "pathId": 1761365316099415867
+                },
+                {
+                    "origLen": 64,
+                    "pathId": 7080952746630731057
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -6538091760415427802
+                },
+                {
+                    "origLen": 69,
+                    "pathId": -8893204953962045773
+                }
+            ],
+            "pathId": -2245358651881977551,
             "blockIdx": 38
         },
         {
@@ -378,7 +1370,51 @@
             "jpText": "……ええんかっ、こんなんで！？\r\nなんちゅう覇気のなさ！",
             "enText": "… You can't do this! What a lack of energy!",
             "nextBlock": 40,
-            "pathId": 2681004192879966683,
+            "origClipLength": 63,
+            "voiceIdx": 63,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": 1984991908790551747
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2297938296799587406
+                },
+                {
+                    "origLen": 90,
+                    "pathId": 6376284454106913014
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -6372504820936425384
+                },
+                {
+                    "origLen": 82,
+                    "pathId": -5969408125929024476
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 7061061521292515442
+                },
+                {
+                    "origLen": 97,
+                    "pathId": -1966917329947504902
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8967742304185928414
+                },
+                {
+                    "origLen": 17,
+                    "pathId": -3005758771058738583
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 5790026138179769921
+                }
+            ],
+            "pathId": -5886650302908384694,
             "blockIdx": 39
         },
         {
@@ -387,17 +1423,62 @@
             "jpText": "この2人に華ある喧嘩を求める方が、\r\n間違ってたってことよ……。",
             "enText": "It would be wrong to expect a spectacular \nfight from these two…",
             "nextBlock": 41,
-            "pathId": 4698193609640769871,
+            "origClipLength": 65,
+            "voiceIdx": 60,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 8324586355614510168
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 6691687456032631665
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 4558130294620339994
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -6586460961254198885
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 7327758109490080554
+                }
+            ],
+            "pathId": 4713806888975765439,
             "blockIdx": 40
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
             "jpText": "この2人が、レースではどう戦うのか。\r\n実現させるためにも、改めてマイルで\n実績を積まなれければ！",
             "enText": "I wonder how the two of them will fare \nin the race. We'll have to get another \nmile to make that happen!",
             "nextBlock": -1,
-            "pathId": 6778123149328421334,
+            "origClipLength": 76,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 331056876082193501
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -925921889708297290
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 3907800168619443245
+                },
+                {
+                    "origLen": 24,
+                    "pathId": 2483094752253732146
+                }
+            ],
+            "pathId": 7273759603044709563,
             "blockIdx": 41
         }
-    ]
+    ],
+    "modified": 1694039167
 }

@@ -294,6 +294,7 @@ class FileWatcher:
         except requests.ConnectionError:
             print("Communication error.")
             return
+        print("Files reloaded")
         logger.info(f"{resp.status_code}: {resp.text}")
 
 

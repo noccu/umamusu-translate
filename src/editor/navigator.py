@@ -45,6 +45,7 @@ class Navigator:
     def change_chapter(self, event=None):
         if self.cur_file:
             self.fileMan.save_block(self)
+            self.cur_file.lastBlock = self.cur_block
         if self.chapterPicker.search:
             cur_chapter = self.chapterPicker.search[self.chapterPicker.current()]
             self.resetChapterSearch()
@@ -54,6 +55,7 @@ class Navigator:
         cur_file = self.fileMan.loadFile(cur_chapter)
         self.cur_file = cur_file
         self.cur_chapter = cur_chapter
+        self.cur_block = getattr(self.cur_file, "lastBlock", 0)
         self.blockPicker["values"] = [
             f"{i+1} - {block['jpText'][:16]}" for i, block in enumerate(cur_file.textBlocks)
         ]

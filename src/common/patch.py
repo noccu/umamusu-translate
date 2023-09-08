@@ -5,14 +5,13 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path, PurePath
 from typing import Union
+from functools import cache
 
 import regex
 
 from . import utils, logger
 from .constants import GAME_ASSET_ROOT, TARGET_TYPES, TRANSLATION_FOLDER
 from .types import StoryId
-
-__IS_USING_TLG = None
 
 
 def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
@@ -93,7 +92,7 @@ def searchFiles(
             )
     return found
 
-
+@cache
 def patchVersion():
     try:
         with open(".git/refs/heads/master", "r") as f:
@@ -192,13 +191,12 @@ class Args(argparse.ArgumentParser):
     def fake(cls, **kwargs):
         return argparse.Namespace(**kwargs)
 
-
+@cache
 def isUsingTLG() -> bool:
-    global __IS_USING_TLG
-    if __IS_USING_TLG is not None:
-        return __IS_USING_TLG
-    __IS_USING_TLG = (utils.getUmaInstallDir() / "config.json").exists()
-    return __IS_USING_TLG
+    path = utils.getUmaInstallDir()
+    if path is None:
+        return
+    return path.joinpath("config.json").exists()
 
 
 class UmaTlConfig:

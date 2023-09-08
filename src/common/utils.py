@@ -2,12 +2,11 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path, PurePath
 from typing import Union, Optional
+from functools import cache
 
 import regex
 
 from .constants import DMM_CONFIG, IS_WIN
-
-__GAME_INSTALL_DIR = None
 
 
 def isParseableInt(x):
@@ -43,20 +42,17 @@ def timestampToDate(ts):
 
 ## Game ##
 
+@cache
 def getUmaInstallDir() -> Optional[Path]:
     """Return the path to the directory umamusume.exe was installed in, or None if it can't be found."""
-    global __GAME_INSTALL_DIR
-    if __GAME_INSTALL_DIR is not False:
-        return __GAME_INSTALL_DIR
-    __GAME_INSTALL_DIR = None
     try:
         with open(DMM_CONFIG, encoding="utf-8") as f:
-            dmm_um_config = next(
+            dmm_uma_config = next(
                 (game for game in json.load(f)["contents"] if game["productId"] == "umamusume"),
                 None,
             )
-            if dmm_um_config is not None:
-                __GAME_INSTALL_DIR = Path(dmm_um_config["detail"]["path"])
+            if dmm_uma_config is not None:
+                return Path(dmm_uma_config["detail"]["path"])
     except FileNotFoundError:
         # Older DMM installs might not have the DMM config file,
         # if it wasn't found try an old registry check approach
@@ -68,10 +64,9 @@ def getUmaInstallDir() -> Optional[Path]:
                     winreg.HKEY_LOCAL_MACHINE,
                     r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume",
                 ) as k:
-                    __GAME_INSTALL_DIR = Path(winreg.QueryValueEx(k, "Path")[0])
+                    return Path(winreg.QueryValueEx(k, "Path")[0])
             except OSError:
                 pass
-    return __GAME_INSTALL_DIR
 
 
 ## Files ##

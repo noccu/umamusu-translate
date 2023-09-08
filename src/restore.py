@@ -103,7 +103,7 @@ def main(args: patch.Args = None):
         print(f"Restored {processed} files.")
 
     if args.uninstall:
-        from common.patch import getUmaInstallDir
+        from common.utils import getUmaInstallDir
 
         uma = getUmaInstallDir()
         if uma:

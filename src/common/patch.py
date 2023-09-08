@@ -18,8 +18,8 @@ def searchFiles(
     targetType,
     targetGroup,
     targetId,
-    targetIdx=False,
-    targetSet=False,
+    targetIdx=None,
+    targetSet=None,
     changed=False,
     jsonOnly=True,
 ) -> list[str]:
@@ -64,11 +64,11 @@ def searchFiles(
             else os.path.join("translations", targetType)
         )
         for root, dirs, files in os.walk(searchDir):
-            depth = len(dirs[0]) if dirs else -1
-            if targetSet and depth == 5:
-                dirs[:] = [d for d in dirs if d == targetSet]
-            elif targetGroup and depth == 2:
-                dirs[:] = [d for d in dirs if d == targetGroup]
+            dirType = len(dirs[0]) if dirs else -1
+            if targetSet and dirType == 5 and targetSet in dirs:
+                dirs[:] = (targetSet,)
+            elif targetGroup and dirType == 2 and targetGroup in dirs:
+                dirs[:] = (targetGroup,)
             elif targetId:
                 if targetType in ("lyrics", "preview"):
                     found.extend(
@@ -76,9 +76,9 @@ def searchFiles(
                         for file in files
                         if PurePath(file).stem == targetId and isJson(file)
                     )
-                    continue
-                elif depth == 4:
-                    dirs[:] = [d for d in dirs if d == targetId]
+                    continue  #? probably return
+                elif dirType == 4 and targetId in dirs:
+                    dirs[:] = (targetId,)
             if targetIdx and files:
                 found.extend(
                     os.path.join(root, file)

@@ -45,9 +45,11 @@ class TextBox(tk.Text):
             state="disabled",
             **kwargs
         )
+        self.tkRoot = None
         self.tag_config("b", font=fonts.BOLD)
         self.tag_config("i", font=fonts.ITALIC)
         self.color = ColorManager(self)
+        self.bind("<Alt-Right>", self.copy_block)
 
     def loadRichText(self, text: str = None):
         """Load text into widget, converting unity RT markup to tk tags.
@@ -94,6 +96,19 @@ class TextBox(tk.Text):
             text.insert(idx + offset, tag)
             offset += 1
         return "".join(text)
+
+    def copy_block(self, event=None):
+        """Copies the text of this block or its parent to the clipboard"""
+        if self.tkRoot is None:
+            return
+        self.tkRoot.clipboard_clear()
+        self.tkRoot.clipboard_append(
+            getText(getattr(self, "linkedTextBox", self)).replace("\r", "")
+        )
+
+    def linkTo(self, target:"TextBox", root: tk.Tk):
+        self.linkedTextBox = target
+        self.tkRoot = root
 
 
 class TextBoxEditable(TextBox):

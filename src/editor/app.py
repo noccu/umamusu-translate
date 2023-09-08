@@ -65,6 +65,7 @@ class Editor:
 
         self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
         text_box_en.grid(row=4, column=0, columnspan=4)
+        text_box_en.linkTo(self.textBoxJp, root)
 
         frm_btns_bot = tk.Frame(root)
         btn_choices = tk.Button(
@@ -183,7 +184,6 @@ class Editor:
         root.bind("<Alt-Down>", self.nav.next_block)
         root.bind("<Control-Alt-Up>", self.nav.prev_ch)
         root.bind("<Control-Alt-Down>", self.nav.next_ch)
-        root.bind("<Alt-Right>", self.copy_block)
         root.bind("<Alt-c>", lambda _: self.extraText.toggle(target=self.extraText.cur_choices))
         root.bind(
             "<Control-Alt-c>", lambda _: self.extraText.toggle(target=self.extraText.cur_colored)
@@ -230,14 +230,6 @@ class Editor:
             self.textBoxEn.loadRichText(txt)
         return "break"
 
-    def copy_block(self, event=None):
-        self.root.clipboard_clear()
-        self.root.clipboard_append(
-            text.for_display(
-                self.nav.cur_file, self.nav.cur_file.textBlocks[self.nav.cur_block]["jpText"]
-            )
-        )
-
     def tlNames(self):
         import names
 
@@ -255,7 +247,7 @@ class AdditionalTextWindow:
 
         root = tk.Toplevel(master.root)
         root.protocol("WM_DELETE_WINDOW", self.close)
-        root.title("Additional Text Lists")
+        root.title("Additional Texts")
         root.geometry("580x450")  # 800 for full
         self.root = root
 
@@ -268,6 +260,7 @@ class AdditionalTextWindow:
             cur_jp_text = text.TextBox(scrollFrame.content, size=(42,2), takefocus=0)
             cur_jp_text.pack(anchor="w")
             cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(42, 2))
+            cur_en_text.linkTo(cur_jp_text, master.root)
             cur_en_text.pack(anchor="w")
             self.textBoxes.append((cur_jp_text, cur_en_text))
             cur_en_text.bind("<Tab>", display._switchWidgetFocusForced)

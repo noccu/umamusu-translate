@@ -110,3 +110,6 @@ def sanitizeFilename(fn: str):
         if cp > 31 and cp not in delSet:
             sanitizedName += c
     return sanitizedName
+
+def isJson(f: str):
+    return f.endswith(".json")

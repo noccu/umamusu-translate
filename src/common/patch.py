@@ -15,6 +15,37 @@ from .types import StoryId
 __IS_USING_TLG = None
 
 
+def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
+    from subprocess import PIPE, run
+
+    found: list[Path] = list()
+    targetType, targetGroup, targetId = minStoryId
+    cmd = (
+        ["git", "status", "--short", "--porcelain"]
+        if changeType is True
+        else ["git", "show", "--pretty=", "--name-status", changeType]
+    )
+    # Assumes git-config quotedPath = true (default) but works either way it seems.
+    for line in (
+        run(cmd, stdout=PIPE)
+        .stdout.decode("unicode-escape")
+        .encode("latin-1")
+        .decode()
+        .splitlines()
+    ):
+        m = regex.match(r'.?[AM]\s*"?([^"]+)"?', line)
+        path = PurePath(m[1])
+        if (
+            path.parts[0] != "translations" 
+            or path.parts[1] != targetType
+            or (jsonOnly and not utils.isJson(path.name))
+            or targetGroup and path.parts[2] != targetGroup
+            or targetId and path.parts[3] != targetId
+        ):
+            continue
+        found.append(path)
+    return found
+
 def searchFiles(
     targetType: Union[str, PurePath],
     targetGroup,
@@ -24,68 +55,42 @@ def searchFiles(
     changed=False,
     jsonOnly=True,
 ) -> list[Path]:
-    def isJson(f: str):
-        return f.endswith(".json") if jsonOnly else True
-
-    found: list[Path] = list()
     if changed:
-        from subprocess import PIPE, run
-
-        cmd = (
-            ["git", "status", "--short", "--porcelain"]
-            if changed is True
-            else ["git", "show", "--pretty=", "--name-status", changed]
-        )
-        # assumes git-config quotedPath = true, which is default I believe. :tmopera:
-        for line in (
-            run(cmd, stdout=PIPE)
-            .stdout.decode("unicode-escape")
-            .encode("latin-1")
-            .decode()
-            .splitlines()
-        ):
-            m = regex.match(r'.?[AM]\s*"?([^"]+)"?', line)
-            path = PurePath(m[1])
-            if (
-                path.parts[0] != "translations" 
-                or path.parts[1] != targetType
-                or not isJson(path.name)
-                or targetGroup and path.parts[2] != targetGroup
-                or targetId and path.parts[3] != targetId
-            ):
-                continue
-            found.append(path)
-    else:
-        searchDir = (
-            targetType
-            if isinstance(targetType, PurePath)
-            else TRANSLATION_FOLDER.joinpath(targetType)
-        )
-        for root, dirs, files in os.walk(searchDir):
-            root = Path(root)
-            dirType = len(dirs[0]) if dirs else -1
-            if targetSet and dirType == 5 and targetSet in dirs:
-                dirs[:] = (targetSet,)
-            elif targetGroup and dirType == 2 and targetGroup in dirs:
-                dirs[:] = (targetGroup,)
-            elif targetId:
-                if targetType in ("lyrics", "preview"):
-                    found.extend(
-                        root.joinpath(file)
-                        for file in files
-                        if PurePath(file).stem == targetId and isJson(file)
-                    )
-                    continue  #? probably return
-                elif dirType == 4 and targetId in dirs:
-                    dirs[:] = (targetId,)
-            if targetIdx and files:
+        return find_git_changed_files(changed, (targetType, targetGroup, targetId), jsonOnly)
+    found: list[Path] = list()
+    searchDir = (
+        targetType
+        if isinstance(targetType, PurePath)
+        else TRANSLATION_FOLDER.joinpath(targetType)
+    )
+    for root, dirs, files in os.walk(searchDir):
+        root = Path(root)
+        dirType = len(dirs[0]) if dirs else -1
+        if targetSet and dirType == 5 and targetSet in dirs:
+            dirs[:] = (targetSet,)
+        elif targetGroup and dirType == 2 and targetGroup in dirs:
+            dirs[:] = (targetGroup,)
+        elif targetId:
+            if targetType in ("lyrics", "preview"):
                 found.extend(
                     root.joinpath(file)
                     for file in files
-                    if file.startswith(targetIdx) and isJson(file)
-                )  #todo: consider full filename check for flexibility
-            else:
-                found.extend(root.joinpath(file) for file in files if isJson(file))
+                    if PurePath(file).stem == targetId and (utils.isJson(file) if jsonOnly else True)
+                )
+                continue  #? probably return
+            elif dirType == 4 and targetId in dirs:
+                dirs[:] = (targetId,)
+        if targetIdx and files:
+            found.extend(
+                root.joinpath(file)
+                for file in files
+                if file.startswith(targetIdx) and (utils.isJson(file) if jsonOnly else True)
+            )  #todo: consider full filename check for flexibility
+        else:
+            found.extend(
+                root.joinpath(file) for file in files 
+                if (utils.isJson(file) if jsonOnly else True)
+            )
     return found
 
 

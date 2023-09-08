@@ -1,14 +1,11 @@
 import json
 from datetime import datetime, timezone
-from pathlib import Path
-from typing import Union, TYPE_CHECKING, Optional
+from pathlib import Path, PurePath
+from typing import Union, Optional
 
 import regex
 
 from .constants import DMM_CONFIG, IS_WIN
-
-if TYPE_CHECKING:
-    from os import PathLike
 
 __GAME_INSTALL_DIR = None
 
@@ -87,13 +84,14 @@ def _to_json(o):
         raise TypeError
 
 
-def readJson(file: "PathLike") -> Union[dict, list]:
+def readJson(file: Union[str, PurePath]) -> Union[dict, list]:
     with open(file, "r", encoding="utf8") as f:
         return json.load(f)
 
 
-def writeJson(file: "PathLike", data, indent=4):
-    file = Path(file)
+def writeJson(file: Union[str, Path], data, indent=4):
+    if not isinstance(file, Path):
+        file = Path(file)
     file.parent.mkdir(parents=True, exist_ok=True)
     with open(file, "w", encoding="utf8", newline="\n") as f:
         json.dump(data, f, ensure_ascii=False, indent=indent, default=_to_json)

@@ -4,29 +4,30 @@ import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path, PurePath
+from typing import Union
 
 import regex
 
 from . import utils, logger
-from .constants import GAME_ASSET_ROOT, TARGET_TYPES
+from .constants import GAME_ASSET_ROOT, TARGET_TYPES, TRANSLATION_FOLDER
 from .types import StoryId
 
 __IS_USING_TLG = None
 
 
 def searchFiles(
-    targetType,
+    targetType: Union[str, PurePath],
     targetGroup,
     targetId,
     targetIdx=None,
     targetSet=None,
     changed=False,
     jsonOnly=True,
-) -> list[str]:
+) -> list[Path]:
     def isJson(f: str):
-        return PurePath(f).suffix == ".json" if jsonOnly else True
+        return f.endswith(".json") if jsonOnly else True
 
-    found = list()
+    found: list[Path] = list()
     if changed:
         from subprocess import PIPE, run
 
@@ -50,20 +51,21 @@ def searchFiles(
                 and path.parts[0] == "translations"
                 and path.parts[1] == targetType
             ):
-                if not isJson(path):
+                if not isJson(path.name):
                     continue
                 if targetGroup and path.parts[2] != targetGroup:
                     continue
                 if targetId and path.parts[3] != targetId:
                     continue
-                found.append(str(path))
+                found.append(path)
     else:
         searchDir = (
             targetType
-            if isinstance(targetType, os.PathLike)
-            else os.path.join("translations", targetType)
+            if isinstance(targetType, PurePath)
+            else TRANSLATION_FOLDER.joinpath(targetType)
         )
         for root, dirs, files in os.walk(searchDir):
+            root = Path(root)
             dirType = len(dirs[0]) if dirs else -1
             if targetSet and dirType == 5 and targetSet in dirs:
                 dirs[:] = (targetSet,)
@@ -72,7 +74,7 @@ def searchFiles(
             elif targetId:
                 if targetType in ("lyrics", "preview"):
                     found.extend(
-                        os.path.join(root, file)
+                        root.joinpath(file)
                         for file in files
                         if PurePath(file).stem == targetId and isJson(file)
                     )
@@ -81,12 +83,12 @@ def searchFiles(
                     dirs[:] = (targetId,)
             if targetIdx and files:
                 found.extend(
-                    os.path.join(root, file)
+                    root.joinpath(file)
                     for file in files
                     if file.startswith(targetIdx) and isJson(file)
-                )
+                )  #todo: consider full filename check for flexibility
             else:
-                found.extend(os.path.join(root, file) for file in files if isJson(file))
+                found.extend(root.joinpath(file) for file in files if isJson(file))
     return found
 
 
@@ -150,8 +152,8 @@ class Args(argparse.ArgumentParser):
                 const=True,
                 help="Limit to changed files (requires git)",
             )
-            self.add_argument("-src", default=GAME_ASSET_ROOT)
-            self.add_argument("-dst", default=Path("dat/").resolve())
+            self.add_argument("-src", type=Path, default=GAME_ASSET_ROOT)
+            self.add_argument("-dst", type=Path, default=Path("dat/").resolve())
         elif types:
             self.add_argument(
                 "-t",

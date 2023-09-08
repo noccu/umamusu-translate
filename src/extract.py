@@ -267,7 +267,7 @@ class DataTransfer:
                     group["origLen"] = targetBlock["animData"][i]["origLen"]
 
 
-def exportAsset(bundle: Optional[str], path: str, db=None):
+def exportAsset(bundle: Optional[str], path: Union[str, PurePath], db=None):
     '''Exports an AssetBundle.
        :param path: internal Unity path
        :return: number of files changed'''
@@ -326,7 +326,7 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     # Remove invalid path chars (win)
     title = sanitizeFilename(outFile.data.get("title", ""))
     idxString = f"{storyId.idx} ({title})" if title else storyId.getFilenameIdx()
-    outFile.setFile(str(exportDir / f"{idxString}.json"))
+    outFile.setFile(exportDir.joinpath(f"{idxString}.json"))
     outFile.save()
     return 1
 

@@ -89,7 +89,7 @@ class PatchManager:
             f"Skipped: {nSkipped}, Errors: {nErrors} (Check import.log for details)"
         )
 
-    def patchFile(self, file: str) -> bool:
+    def patchFile(self, file: Path) -> bool:
         isModified = False
         try:
             isModified, reason = self.patch(file)
@@ -103,7 +103,7 @@ class PatchManager:
             isModified = None
         return isModified
 
-    def loadTranslationFile(self, path):
+    def loadTranslationFile(self, path: Path):
         try:
             return TranslationFile(path, readOnly=True)
         except Exception:
@@ -130,7 +130,7 @@ class PatchManager:
         bundle.linkedTlFile = tlFile
         return bundle
 
-    def patch(self, path: str):
+    def patch(self, path: Path):
         """Swaps game assets with translation file data, returns modified state."""
         tlFile = self.loadTranslationFile(path)
         if self.args.skip_mtl and not tlFile.data.get("humanTl"):
@@ -158,7 +158,7 @@ class PatchManager:
             if self.args.overwrite and not bundle.isPatched:
                 backup.copy(bundle, self.fcArgs)
             bundle.markPatched(tlFile)
-            bundle.save(dstFolder=Path(self.args.dst))
+            bundle.save(dstFolder=self.args.dst)
 
         return patcher.isModified, bundle.importState
 

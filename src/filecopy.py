@@ -81,18 +81,17 @@ def removeOldFiles(args):
     if not args.overwrite and lastrun + 15778476 > ts:
         print(f"Skipping backup pruning as it was last done on {utils.timestampToDate(lastrun)}.")
         return 0, 0
-    from pathlib import Path, PurePath
 
     n = 0
     isHash = args.remove_old == "hash"
-    files = [Path(p) for p in patch.searchFiles(PurePath(args.dst), None, None, jsonOnly=False)]
+    files = patch.searchFiles(args.dst, None, None, jsonOnly=False)
     print(f"Found {len(files)} files in {args.dst}")
     with sqlite3.connect(GAME_META_FILE) as db:
-        for fPath in files:
-            q = f"h = '{fPath.name}'" if isHash else f"n like '%{fPath.name}'"
+        for file in files:
+            q = f"h = '{file.name}'" if isHash else f"n like '%{file.name}'"
             if not db.execute(f"select h from a where {q}").fetchone():
-                Path(fPath).unlink()
-                logger.debug(f"Removed {fPath}")
+                file.unlink()
+                logger.debug(f"Removed {file}")
                 n += 1
     cfg.core["lastBackupPrune"] = ts
     cfg.save()

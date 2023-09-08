@@ -1,3 +1,4 @@
+from pathlib import Path
 from tkinter import messagebox
 from typing import TYPE_CHECKING, Union
 
@@ -39,7 +40,7 @@ class FileManager:
         self.saveState = SaveState()
         self.formattedFiles = None
 
-    def importFiles(self, src: Union[StoryId, str, list[Union[TranslationFile, str]]]):
+    def importFiles(self, src: Union[StoryId, Path, list[Union[TranslationFile, Path]]]):
         if isinstance(src, StoryId):
             # todo: make search accept storyid
             files = patch.searchFiles(
@@ -47,10 +48,10 @@ class FileManager:
             )
             if not files:
                 raise FileNotFoundError("No files match given criteria")
-        elif isinstance(src, str):
+        elif isinstance(src, Path):
             files = [src]
         elif isinstance(src, list):
-            if not isinstance(src[0], (str, TranslationFile)):
+            if not isinstance(src[0], (Path, TranslationFile)):
                 raise ValueError
             files = src
         else:
@@ -58,16 +59,17 @@ class FileManager:
         files.sort()
         # todo: Was chapter_dropdown.formattedList
         self.files = files
-        self.formattedFiles = [f.split("\\")[-1] for f in files]
+        # f.name happens to work on both types
+        self.formattedFiles = [f.name for f in files]
         #! sigh
         self.master.nav.chapterPicker["values"] = self.formattedFiles
         self.master.nav.chapterPicker.current(0)
         self.master.nav.change_chapter()
-        # reset savestate and others?
+        #? reset savestate and others?
 
     def loadFile(self, chapter: int) -> TranslationFile:
         file = self.files[chapter]
-        if isinstance(file, str):
+        if isinstance(file, Path):
             file = TranslationFile(file)
             self.files[chapter] = file
         return file
@@ -77,7 +79,7 @@ class FileManager:
         targets = self.files if saveAll else (nav.cur_file,)
 
         for ch, file in enumerate(targets):
-            if saveAll and isinstance(file, str):
+            if saveAll and not isinstance(file, TranslationFile):
                 continue
             if self.master.options.markHuman.get():
                 file.data["humanTl"] = True

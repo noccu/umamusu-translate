@@ -103,15 +103,13 @@ def main(args: patch.Args = None):
         print(f"Restored {processed} files.")
 
     if args.uninstall:
-        from pathlib import Path
-
         from common.patch import getUmaInstallDir
 
         uma = getUmaInstallDir()
         if uma:
             (uma / "version.dll").unlink(missing_ok=True)
             (uma / "uxtheme.dll").unlink(missing_ok=True)
-        Path(const.GAME_MASTER_FILE).unlink(missing_ok=True)
+        const.GAME_MASTER_FILE.unlink(missing_ok=True)
 
 
 if __name__ == "__main__":

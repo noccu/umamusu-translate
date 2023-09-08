@@ -2,7 +2,7 @@ import json
 import os
 from dataclasses import asdict, astuple, dataclass
 from pathlib import Path, PurePath
-from typing import TYPE_CHECKING, Generator, Union, Optional
+from typing import TYPE_CHECKING, Generator, Optional
 
 import regex
 import UnityPy
@@ -110,7 +110,7 @@ class TranslationFile:
     ver_offset_mdb = 100
     textBlacklist = regex.compile(r"^タイトルコール$|イベントタイトルロゴ表示.*|※*ダミーテキスト|^欠番$")
 
-    def __init__(self, file: Union[str, Path] = None, load=True, readOnly=False):
+    def __init__(self, file: Path = None, load=True, readOnly=False):
         self.readOnly = readOnly
         if load:
             if not file:
@@ -299,8 +299,8 @@ class TranslationFile:
         else:
             self._snapshot = json.dumps(self.data, ensure_ascii=False, default=utils._to_json)
 
-    def setFile(self, file: Union[str, Path]):
-        self.file = Path(file)
+    def setFile(self, file: Path):
+        self.file = file
         self.name = self.file.name
 
     def init(self, snapshot=True):
@@ -412,7 +412,7 @@ class GameBundle:
 
         b = self.data.file.save() + self.patchData
         fn = dstName or self.data.file.name
-        fp = ((dstFolder / fn[0:2]) if dstFolder else self.bundlePath.parent) / fn
+        fp = dstFolder.joinpath(fn[0:2] if dstFolder else self.bundlePath.parent, fn)
         fp.parent.mkdir(parents=True, exist_ok=True)
         with open(fp, "wb") as f:
             f.write(b)

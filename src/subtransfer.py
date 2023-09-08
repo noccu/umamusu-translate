@@ -1,3 +1,4 @@
+from pathlib import Path
 import re
 from datetime import timedelta
 from enum import Enum, auto
@@ -367,8 +368,8 @@ class TxtSubProcessor(BasicSubProcessor):
         ]
         super().preprocess()
 
-def process(srcFile, subFile, opts: SubTransferOptions):
-    format = subFile[-3:]
+def process(srcFile:Path, subFile:Path, opts: SubTransferOptions):
+    format = subFile.suffix[1:]
     if format == "srt":
         p = SrtSubProcessor(srcFile, subFile, opts)
     elif format == "ass":
@@ -599,7 +600,7 @@ def main(args: patch.Args = None):
     if args.writeSubs:
         writeSubs(args.src, args.sub)
     else:
-        process(args.src, args.sub, SubTransferOptions.fromArgs(args))
+        process(Path(args.src), Path(args.sub), SubTransferOptions.fromArgs(args))
 
 
 if __name__ == "__main__":

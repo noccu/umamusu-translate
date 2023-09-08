@@ -500,7 +500,7 @@ def main(args: patch.Args = None):
         for file in files:
             convertTlFile(TranslationFile(file), overwrite=args.overwrite)
     elif isinstance(args.convert_asset, str):
-        convertTlFile(TranslationFile(args.convert_asset), overwrite=args.overwrite)
+        convertTlFile(TranslationFile(Path(args.convert_asset)), overwrite=args.overwrite)
 
     if args.backup_dump:
         print("Backing up dump file...")

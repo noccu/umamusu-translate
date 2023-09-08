@@ -1,3 +1,4 @@
+from pathlib import Path
 import regex as re
 import tkinter as tk
 from functools import partial
@@ -44,7 +45,7 @@ class SpellCheck:
         self.widget.tag_remove("spellError", *fixRange)
 
     def _loadNames(self):
-        namesFile = TranslationFile("translations/mdb/char-name.json")
+        namesFile = TranslationFile(Path("translations/mdb/char-name.json"))
         for entry in namesFile.textBlocks:
             name = entry.get("enText").lower().split()
             for n in name:

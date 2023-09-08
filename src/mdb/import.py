@@ -52,7 +52,7 @@ def translator(args, entry: dict):
 def parseArgs():
     ap = patch.Args("Imports translations to master.mdb", defaultArgs=False)
     ap.add_argument("-src", default="translations/mdb", type=Path, help="Import path")
-    ap.add_argument("-dst", default=GAME_MASTER_FILE, help="Path to master.mdb file")
+    ap.add_argument("-dst", default=GAME_MASTER_FILE, type=Path, help="Path to master.mdb file")
     ap.add_argument("-B", "--backup", action="store_true", help="Backup the master.mdb file")
     ap.add_argument("-R", "--restore", action="store_true", help="Restore the master.mdb file from backup")
     ap.add_argument("-sd", "--skill-data", action="store_true",

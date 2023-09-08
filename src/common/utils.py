@@ -46,27 +46,25 @@ def timestampToDate(ts):
 def getUmaInstallDir() -> Optional[Path]:
     """Return the path to the directory umamusume.exe was installed in, or None if it can't be found."""
     try:
-        with open(DMM_CONFIG, encoding="utf-8") as f:
-            dmm_uma_config = next(
-                (game for game in json.load(f)["contents"] if game["productId"] == "umamusume"),
-                None,
-            )
-            if dmm_uma_config is not None:
-                return Path(dmm_uma_config["detail"]["path"])
+        cfg = readJson(DMM_CONFIG)
     except FileNotFoundError:
         # Older DMM installs might not have the DMM config file,
         # if it wasn't found try an old registry check approach
-        if IS_WIN:
-            import winreg
+        if not IS_WIN:
+            return
 
-            try:
-                with winreg.OpenKey(
-                    winreg.HKEY_LOCAL_MACHINE,
-                    r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume",
-                ) as k:
-                    return Path(winreg.QueryValueEx(k, "Path")[0])
-            except OSError:
-                pass
+        import winreg
+        try:
+            with winreg.OpenKey(
+                winreg.HKEY_LOCAL_MACHINE,
+                r"SOFTWARE\WOW6432Node\DMM GAMES\Launcher\Content\umamusume",
+            ) as k:
+                return Path(winreg.QueryValueEx(k, "Path")[0])
+        except OSError:
+            return
+    for game in cfg["contents"]:
+        if game["productId"] == "umamusume":
+            return Path(game["detail"]["path"])
 
 
 ## Files ##

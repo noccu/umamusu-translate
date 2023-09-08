@@ -294,7 +294,7 @@ class FileWatcher:
         except requests.ConnectionError:
             print("Communication error.")
             return
-        logger.info(resp.status_code, resp.text)
+        logger.info(f"{resp.status_code}: {resp.text}")
 
 
 def watch():

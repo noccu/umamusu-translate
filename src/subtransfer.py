@@ -175,7 +175,7 @@ class BasicSubProcessor:
                 )
             ):
                 logger.warning(f"Marking untranslated line at {self.getBlockIdx(idx)}")
-                logger.debug(self.getJp(idx), subLine.text)
+                logger.debug(f"{self.getJp(idx)} || {subLine.text}")
                 self.setEn(idx, TextLine("<UNTRANSLATED>"))
                 idx += 1
                 if idx > len(self.srcLines) - 1:

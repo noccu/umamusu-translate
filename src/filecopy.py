@@ -1,8 +1,10 @@
 import shutil
 import sqlite3
 from os import makedirs, path
-import common
-from common import GAME_META_FILE
+
+from common import patch, utils, logger
+from common.constants import GAME_META_FILE, TARGET_TYPES
+from common.types import GameBundle, TranslationFile
 
 
 def buildSqlStmt(args):
@@ -45,9 +47,7 @@ def buildSqlStmt(args):
         elif args.type == "live":
             add(f"n like 'live/musicscores/m{args.id}/m{args.id}_lyrics'")
         elif args.type == "preview":
-            add(
-                f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'"
-            )
+            add(f"n like 'outgame/announceevent/loguiasset/ast_announce_event_log_ui_asset_0{args.id}'")
         elif args.type == "ruby":
             storyid = f"{args.group}{args.id}{args.idx}"
             add(f"n like 'story/data/__/____/ast_ruby_{storyid}'")
@@ -66,34 +66,32 @@ def getFiles(args):
 
 def backup(args):
     print("Backing up non-patched & extracted files...")
-    for type in common.TARGET_TYPES if args.backup is True else [args.backup]:
-        files = common.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
+    for type in TARGET_TYPES if args.backup is True else [args.backup]:
+        files = patch.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
         for file in files:
-            file = common.TranslationFile(file)
+            file = TranslationFile(file)
             copy((file.type, file.bundle, None), args)
 
 
 def removeOldFiles(args):
-    cfg = common.UmaTlConfig()
-    ts = common.currentTimestamp()
+    cfg = patch.UmaTlConfig()
+    ts = utils.currentTimestamp()
     lastrun = cfg.core.get("lastBackupPrune", 0)
     # Run every ~6 months
     if not args.overwrite and lastrun + 15778476 > ts:
-        print(f"Skipping backup pruning as it was last done on {common.timestampToDate(lastrun)}.")
+        print(f"Skipping backup pruning as it was last done on {utils.timestampToDate(lastrun)}.")
         return 0, 0
-    from pathlib import PurePath, Path
 
     n = 0
     isHash = args.remove_old == "hash"
-    files = [Path(p) for p in common.searchFiles(PurePath(args.dst), None, None, jsonOnly=False)]
+    files = patch.searchFiles(args.dst, None, None, jsonOnly=False)
     print(f"Found {len(files)} files in {args.dst}")
     with sqlite3.connect(GAME_META_FILE) as db:
-        for fPath in files:
-            q = f"h = '{fPath.name}'" if isHash else f"n like '%{fPath.name}'"
+        for file in files:
+            q = f"h = '{file.name}'" if isHash else f"n like '%{file.name}'"
             if not db.execute(f"select h from a where {q}").fetchone():
-                Path(fPath).unlink()
-                if args.verbose:
-                    print(f"Removed {fPath}")
+                file.unlink()
+                logger.debug(f"Removed {file}")
                 n += 1
     cfg.core["lastBackupPrune"] = ts
     cfg.save()
@@ -101,26 +99,25 @@ def removeOldFiles(args):
 
 
 def copy(data, args):
-    if isinstance(data, common.GameBundle):
+    if isinstance(data, GameBundle):
         if args.use_pathname:
             raise NotImplementedError
         asset = data
         fileHash = data.bundleName
     else:
         fileType, fileHash, filePath = data
-        asset = common.GameBundle.fromName(fileHash, load=False)
+        asset = GameBundle.fromName(fileHash, load=False)
         asset.bundleType = fileType  # only used for restoring
 
     if asset.exists:
         if asset.isPatched:
-            if args.verbose:
-                print(f"Skipping patched bundle: {asset.bundleName}")
+            logger.info(f"Skipping patched bundle: {asset.bundleName}")
             return 0
     else:
         if args.restore_missing and restore.save(asset, args.restore_args) == 1:
             return copy(data, args)  # retry
-        elif args.verbose:
-            print(f"Couldn't find {asset.bundlePath}, skipping...")
+        else:
+            logger.info(f"Couldn't find {asset.bundlePath}, skipping...")
         return 0
 
     if args.use_pathname:
@@ -135,16 +132,15 @@ def copy(data, args):
             print(f"Copied {asset.bundlePath} to {dst}")
             return 1
         except Exception as e:
-            print(f"Unknown error: {repr(e)}, skipping...")
+            logger.error(f"{repr(e)}, skipping...")
             return 0
     else:
-        if args.verbose:
-            print(f"Skipping existing: {asset.bundleName}")
+        logger.info(f"Skipping existing: {asset.bundleName}")
         return 0
 
 
-def parseArgs(src=None):
-    ap = common.Args("Copy files for backup or testing", types=[*common.TARGET_TYPES, "ruby"])
+def parseArgs(args=None):
+    ap = patch.Args("Copy files for backup or testing", types=[*TARGET_TYPES, "ruby"])
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-p", "--path", help="Unity filepath wildcard")
     ap.add_argument(
@@ -153,9 +149,7 @@ def parseArgs(src=None):
         help="Ignore additional argument processing.\n\
         Pure SQL queries based on --hash and/or --path",
     )
-    ap.add_argument(
-        "-miss", "--restore-missing", action="store_true", help="Download missing files."
-    )
+    ap.add_argument("-miss", "--restore-missing", action="store_true", help="Download missing files.")
     ap.add_argument(
         "-name",
         "--use-pathname",
@@ -185,11 +179,11 @@ def parseArgs(src=None):
         choices=["hash", "name"],
         help="Remove backups for old assets that are no longer used",
     )
-    return ap.parse_args(src)
+    return ap.parse_args(args)
 
 
-def main():
-    args = parseArgs()
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.backup:
         backup(args)
     elif args.remove_old:

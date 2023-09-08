@@ -1,28 +1,25 @@
-from pathlib import Path, PurePath
-import sqlite3
 import csv
+import sqlite3
+from pathlib import Path, PurePath
 from typing import Optional, Union
 
 from Levenshtein import ratio as similarity
 
-import common
-from common import GAME_META_FILE, GAME_ASSET_ROOT, TranslationFile, GameBundle, StoryId
-from helpers import sanitizeFilename
+from common import logger, patch
+from common.constants import GAME_ASSET_ROOT, GAME_META_FILE, TARGET_TYPES
+from common.utils import sanitizeFilename
+from common.types import StoryId, GameBundle, TranslationFile
 
 
 def queryDB(db=None, storyId: StoryId = None):
     storyId = StoryId.queryfy(storyId)
 
     if storyId.type == "story":
-        pattern = (
-            f"{storyId.type}/data/{storyId.group}/{storyId.id}/{storyId.type}timeline%{storyId.idx}"
-        )
+        pattern = f"{storyId.type}/data/{storyId.group}/{storyId.id}/{storyId.type}timeline%{storyId.idx}"
     elif storyId.type == "home":
         pattern = f"{storyId.type}/data/{storyId.set}/{storyId.group}/{storyId.type}timeline_{storyId.set}_{storyId.group}_{storyId.id}{storyId.idx}%"
     elif storyId.type == "race":
-        pattern = (
-            f"{storyId.type}/storyrace/text/storyrace_{storyId.group}{storyId.id}{storyId.idx}%"
-        )
+        pattern = f"{storyId.type}/storyrace/text/storyrace_{storyId.group}{storyId.id}{storyId.idx}%"
     elif storyId.type == "lyrics":
         pattern = f"live/musicscores/m{storyId.id}/m{storyId.id}_lyrics"
     elif storyId.type == "preview":
@@ -114,23 +111,19 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
                                 animGroupData["origLen"] = animData["ClipLength"]
                                 animGroupData["pathId"] = clipPathId
                                 textData["animData"].append(animGroupData)
-                            elif args.verbose:
-                                print(
-                                    f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}"
-                                )
-                    elif args.verbose:
-                        print(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
+                            else:
+                                logger.debug(f"Couldn't find anim asset ({clipPathId}) at BlockIndex {block['BlockIndex']}")
+                    else:
+                        logger.debug(f"Anim clip list empty at BlockIndex {block['BlockIndex']}")
 
                 textData["pathId"] = pathId  # important for re-importing
-                textData["blockIdx"] = block[
-                    "BlockIndex"
-                ]  # to help translators look for specific routes
+                textData["blockIdx"] = block["BlockIndex"]  # to help translators look for specific routes
                 transferExisting(storyId, textData)
                 export["text"].append(textData)
 
     if not export["text"]:
         return  # skip empty text assets
-    export = common.TranslationFile.fromData(export)
+    export = TranslationFile.fromData(export)
     if transferExisting.file:
         export.snapshot(copyFrom=transferExisting.file)
     return export
@@ -170,9 +163,7 @@ def extractText(assetType, obj):
         if choices:
             o["choices"] = list()
             for c in choices:
-                o["choices"].append(
-                    {"jpText": c["Text"], "enText": "", "nextBlock": c["NextBlock"]}
-                )
+                o["choices"].append({"jpText": c["Text"], "enText": "", "nextBlock": c["NextBlock"]})
 
         textColor = tree["ColorTextInfoList"]  # always present
         if textColor:
@@ -183,7 +174,7 @@ def extractText(assetType, obj):
 
 
 class DataTransfer:
-    def __init__(self, file: common.TranslationFile = None, newData: dict = None):
+    def __init__(self, file: TranslationFile = None, newData: dict = None):
         self.file = file
         self.offset = 0
         self.simRatio = 0.9 if args.update and args.type != "lyrics" else 0.99
@@ -191,11 +182,11 @@ class DataTransfer:
         if (newData and file) and (x := file.data.get("humanTl")):
             newData["humanTl"] = x
 
-    def print(self, text):
+    def print(self, text, level):
         if not self._printedName:
-            print(f"\nIn {self.file.name}:")
+            logger.log(level, f"\nIn {self.file.name}:")
             self._printedName = True
-        print(f"\t{text}")
+        logger.log(level, f"\t{text}")
 
     def __call__(self, storyId: StoryId, textData):
         # Existing files are skipped before reaching here
@@ -213,7 +204,7 @@ class DataTransfer:
                 self.file = 0
                 return
 
-            self.file = common.TranslationFile(file)
+            self.file = TranslationFile(file)
 
         textSearch = True
         targetBlock = None
@@ -232,18 +223,17 @@ class DataTransfer:
                     textSearch = False
 
         if textSearch:
-            if args.verbose:
-                self.print("Searching by text")
+            self.print("Searching by text", logger.DEBUG)
             for i, block in enumerate(textBlocks):
                 if similarity(block["jpText"], textData["jpText"]) > self.simRatio:
-                    if args.verbose:
-                        self.print(f"Found text at block {i}")
+                    self.print(f"Found text at block {i}", logger.DEBUG)
                     self.offset = txtIdx - i
                     targetBlock = block
                     break
             if not targetBlock:
                 self.print(
-                    f"At bIdx/time {textData.get('blockIdx', textData.get('time', 'no_idx'))}: jpText not found in file."
+                    f"At bIdx/time {textData.get('blockIdx', textData.get('time', 'no_idx'))}: jpText not found in file.",
+                    logger.INFO
                 )
 
         if targetBlock:
@@ -261,9 +251,9 @@ class DataTransfer:
                             choice["jpText"] = targetBlock["choices"][txtIdx]["jpText"]
                         choice["enText"] = targetBlock["choices"][txtIdx]["enText"]
                     except IndexError:
-                        self.print(f"New choice at bIdx {targetBlock['blockIdx']}.")
+                        self.print(f"New choice at bIdx {targetBlock['blockIdx']}.", logger.WARNING)
                     except KeyError:
-                        self.print(f"Choice mismatch when attempting data transfer at {txtIdx}")
+                        self.print(f"Choice mismatch when attempting data transfer at {txtIdx}", logger.WARNING)
             if "coloredText" in targetBlock and (coloredText := textData.get("coloredText")):
                 for txtIdx, cText in enumerate(coloredText):
                     if args.upgrade:
@@ -279,25 +269,27 @@ class DataTransfer:
                     group["origLen"] = targetBlock["animData"][i]["origLen"]
 
 
-def exportAsset(bundle: Optional[str], path: str, db=None):
+def exportAsset(bundle: Optional[str], path: Union[str, PurePath], db=None):
+    '''Exports an AssetBundle.
+       :param path: internal Unity path
+       :return: number of files changed'''
     if args.update:  # update mode, path = tlfile, bundle = None
         assert db is not None
-        tlFile = common.TranslationFile(path)
-        if args.upgrade and tlFile.version == common.TranslationFile.latestVersion:
-            print(f"File already on latest version, skipping: {path}")
-            return
+        tlFile = TranslationFile(path)
+        if args.upgrade and tlFile.version == TranslationFile.latestVersion:
+            logger.info(f"File already on latest version, skipping: {path}")
+            return 0
 
         storyId = StoryId.parse(args.type, tlFile.getStoryId())
         try:
             bundle, _ = queryDB(db, storyId)[0]  # get the newest bundle hash/name
         except IndexError:
-            print(f"Error looking up {storyId}. Corrupt data or removed asset?")
-            return
+            logger.error(f"Error looking up {storyId}. Corrupt data or removed asset?")
+            return 0
         if not args.upgrade and bundle == tlFile.bundle:
-            if args.verbose:
-                print(f"Bundle {bundle} not changed, skipping.")
-            return
-        print(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
+            logger.info(f"Bundle {bundle} not changed, skipping.")
+            return 0
+        logger.info(f"{'Upgrading' if args.upgrade else 'Updating'} {bundle}")
     else:  # path = unity internal, bundle = newest from SQL lookup
         tlFile = None
         storyId = StoryId.parseFromPath(args.type, path)
@@ -312,38 +304,37 @@ def exportAsset(bundle: Optional[str], path: str, db=None):
     if not args.overwrite:
         file = next(exportDir.glob(f"{storyId.getFilenameIdx()}*.json"), None)
         if file is not None:
-            if args.verbose:
-                print(f"Skipping existing: {file.name}")
-            return
+            logger.info(f"Skipping existing: {file.name}")
+            return 0
 
     asset = GameBundle.fromName(bundle, load=False)
     if not asset.exists:
-        print(f"AssetBundle {bundle} does not exist in your game data, skipping...")
-        return
+        logger.info(f"AssetBundle {bundle} does not exist in your game data, skipping...")
+        return 0
     if not args.upgrade and asset.isPatched:
-        if args.verbose:
-            print(f"Skipping patched asset: {asset.bundleName}")
-        return
+        logger.info(f"Skipping patched asset: {asset.bundleName}")
+        return 0
     try:
         outFile = extractAsset(asset, storyId, tlFile)
         if not outFile:
-            return
+            return 0
     except Exception:
-        print(
-            f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}"
+        logger.error(
+            f"Failed extracting bundle {bundle}, g {storyId.group}, id {storyId.id} idx {storyId.idx} to {exportDir}",
+            exc_info=True
         )
         raise
 
     # Remove invalid path chars (win)
     title = sanitizeFilename(outFile.data.get("title", ""))
     idxString = f"{storyId.idx} ({title})" if title else storyId.getFilenameIdx()
-    outFile.setFile(str(exportDir / f"{idxString}.json"))
+    outFile.setFile(exportDir.joinpath(f"{idxString}.json"))
     outFile.save()
+    return 1
 
 
-def parseArgs():
-    global args
-    ap = common.Args("Extract Game Assets to Translation Files")
+def parseArgs(args=None):
+    ap = patch.Args("Extract Game Assets to Translation Files")
     ap.add_argument("-dst")
     ap.add_argument(
         "-O",
@@ -355,7 +346,7 @@ def parseArgs():
         "-upd",
         "--update",
         nargs="*",
-        choices=common.TARGET_TYPES,
+        choices=TARGET_TYPES,
         help=(
             "Re-extract existing files, optionally limited to given type.\n"
             "Implies -O, ignores -dst and -t"
@@ -382,19 +373,23 @@ def parseArgs():
             args.update = [args.type]
         # check if upd was given without type spec and use all types if so
         elif len(args.update) == 0:
-            args.update = common.TARGET_TYPES
+            args.update = TARGET_TYPES
+    return args
 
 
-def main():
-    parseArgs()
+def main(_args: patch.Args = None):
+    global args
+    args = _args or parseArgs(_args)
+    nTotal = nSuccess = nFailed = 0
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
         db = sqlite3.connect(GAME_META_FILE)
+        logger.setFile("extract.log")
         try:
             for type in args.update:  # set correctly by arg parsing
                 args.dst = PurePath("translations") / type
                 args.type = type
-                files = common.searchFiles(
+                files = patch.searchFiles(
                     type,
                     args.group,
                     args.id,
@@ -402,25 +397,32 @@ def main():
                     targetSet=args.set,
                     changed=args.changed,
                 )
-                print(f"Found {len(files)} files for {type}.")
+                nTotal = len(files)
+                print(f"Found {nTotal} files for {type}.")
                 for i, file in enumerate(files):
                     try:
-                        exportAsset(None, file, db)
+                        nSuccess += exportAsset(None, file, db)
                     except Exception:
-                        print(f"Failed in file {i} of {type}: {file}")
-                        raise  # TODO consider continuing
+                        nFailed += 1
+                        logger.error(f"Failed in file {i} of {type}: {file}")
         finally:
             db.close()
+            logger.closeFile()
     else:
         print(
             f"Extracting type {args.type}, set {args.set}, group {args.group}, id {args.id}, idx {args.idx} (overwrite: {args.overwrite})\n"
             f"from {GAME_ASSET_ROOT} to {args.dst}"
         )
         q = queryDB(storyId=StoryId(args.type, args.set, args.group, args.id, args.idx))
-        print(f"Found {len(q)} files.")
+        nTotal = len(q)
+        print(f"Found {nTotal} files.")
         for bundle, path in q:
-            exportAsset(bundle, path)
-    print("Processing finished successfully.")
+            try:
+                nSuccess += exportAsset(bundle, path)
+            except Exception:
+                nFailed += 1
+    nSkipped = nTotal - nSuccess - nFailed
+    print(f"Processing finished. Extracted: {nSuccess}, Skipped: {nSkipped}, Errors: {nFailed}")
 
 
 if __name__ == "__main__":

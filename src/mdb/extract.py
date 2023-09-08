@@ -1,12 +1,14 @@
-import sys
-from os.path import realpath
 import sqlite3
-from pathlib import Path, PurePath
+import sys
 from importlib import import_module
+from os.path import realpath
+from pathlib import Path, PurePath
 
 sys.path.append(realpath("src"))
-import common
-import helpers
+from common import patch, utils
+from common.constants import GAME_MASTER_FILE
+from common.types import TranslationFile
+
 checkPatched = import_module("import").checkPatched
 
 
@@ -14,7 +16,7 @@ def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
     # In the spirit of the original db patch, we don't modify old files to keep the db order
     savePath = savePath.with_suffix(".json")
     try:
-        oldData = common.TranslationFile(savePath)
+        oldData = TranslationFile(savePath)
     except FileNotFoundError:
         print(f"File not found, creating new: {savePath}")
         oldData = None
@@ -28,12 +30,12 @@ def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
         oldData.save()
     else:
         o = {'version': 101, 'type': "mdb", 'lineLength': 0, 'text': newData}
-        helpers.writeJson(savePath, o)
+        utils.writeJson(savePath, o)
 
 
 def parseArgs():
-    ap = common.Args("Extracts master.mdb data for translation", defaultArgs=False)
-    ap.add_argument("-src", default=common.GAME_MASTER_FILE, help="Path to master.mdb file")
+    ap = patch.Args("Extracts master.mdb data for translation", defaultArgs=False)
+    ap.add_argument("-src", default=GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-dst", default="translations/mdb", type=Path, help="Extraction path")
     ap.add_argument("--no-skill-data", action="store_true", help="Skip extracting skill data (requires nodeJS)")
     ap.add_argument("--no-text", action="store_true", help="Skip extracting standard text data")
@@ -43,7 +45,7 @@ def parseArgs():
 
 class MdbIndex:
     def __init__(self, idxPath: str):
-        self.idx = helpers.readJson(idxPath)
+        self.idx = utils.readJson(idxPath)
     def parseListSQL(self, l: list):
         base = list()
         complex = list()
@@ -97,7 +99,7 @@ def main():
         from subprocess import run
         run(["node", "src/scripts/extract-skill-data.js", args.src], check=True)
         import textprocess
-        textprocess.processFiles(common.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=99, forceResize=True))
+        textprocess.main(patch.Args.fake(src="translations/mdb/alt/skill-desc.json", lineLength=-1, targetLines=99, forceResize=True))
 
 
 if __name__ == '__main__':

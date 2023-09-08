@@ -44,20 +44,17 @@ def searchFiles(
             .decode()
             .splitlines()
         ):
-            m = regex.match(r'.?([^\s])\s*"?([^"]+)"?', line)
-            state, path = m[1], PurePath(m[2])
+            m = regex.match(r'.?[AM]\s*"?([^"]+)"?', line)
+            path = PurePath(m[1])
             if (
-                state in ("A", "M")
-                and path.parts[0] == "translations"
-                and path.parts[1] == targetType
+                path.parts[0] != "translations" 
+                or path.parts[1] != targetType
+                or not isJson(path.name)
+                or targetGroup and path.parts[2] != targetGroup
+                or targetId and path.parts[3] != targetId
             ):
-                if not isJson(path.name):
-                    continue
-                if targetGroup and path.parts[2] != targetGroup:
-                    continue
-                if targetId and path.parts[3] != targetId:
-                    continue
-                found.append(path)
+                continue
+            found.append(path)
     else:
         searchDir = (
             targetType

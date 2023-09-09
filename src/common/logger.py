@@ -6,47 +6,50 @@ from pathlib import Path
 
 
 _FORMATTER = logging.Formatter("[$levelname] $filename: $message", style="$")
-_HANDLER = logging.StreamHandler(stdout)
-_HANDLER.setFormatter(_FORMATTER)
+_STDOUT_HANDLER = logging.StreamHandler(stdout)
+_STDOUT_HANDLER.setFormatter(_FORMATTER)
 _LOGGER = logging.getLogger("UmaTL_Shared")
-_LOGGER.addHandler(_HANDLER)
-_FILE_LOGGER = None
+# Set logger to lowest level and config handlers instead
+_LOGGER.setLevel(DEBUG)
+_LOGGER.addHandler(_STDOUT_HANDLER)
+_FILE_HANDLER = None
 
 def levelFromArgs(args):
     if getattr(args, "verbose", None):
-        _LOGGER.setLevel(INFO)
+        _STDOUT_HANDLER.setLevel(INFO)
     elif getattr(args, "debug", None):
-        _LOGGER.setLevel(DEBUG)
+        _STDOUT_HANDLER.setLevel(DEBUG)
     else:
-        _LOGGER.setLevel(WARNING)
+        _STDOUT_HANDLER.setLevel(WARNING)
 
 def getLevel():
-    return _LOGGER.level
+    # todo: generalize
+    return _STDOUT_HANDLER.level
 
 def conditionalDetail(msg, detailedMsg, detailLevel):
-    if _LOGGER.level <= detailLevel:
+    if _STDOUT_HANDLER.level <= detailLevel:
         log(detailLevel, detailedMsg)
     else:
         print(msg)
 
 def setFile(filename: str = "umatl.log", level = logging.INFO):
     from datetime import datetime, timezone
-    global _FILE_LOGGER
+    global _FILE_HANDLER
     closeFile()
     logDir = Path("logs")
     logDir.mkdir(exist_ok=True)
-    _FILE_LOGGER = logging.FileHandler(logDir.joinpath(filename), encoding="utf8")
-    _FILE_LOGGER.setFormatter(_FORMATTER)
-    _FILE_LOGGER.setLevel(min(level, _LOGGER.level))  # todo: generalize
-    _LOGGER.addHandler(_FILE_LOGGER)
+    _FILE_HANDLER = logging.FileHandler(logDir.joinpath(filename), encoding="utf8")
+    _FILE_HANDLER.setFormatter(_FORMATTER)
+    _FILE_HANDLER.setLevel(min(level, _STDOUT_HANDLER.level))  # todo: generalize
+    _LOGGER.addHandler(_FILE_HANDLER)
     date = datetime.now(timezone.utc).isoformat(" ", "seconds")  
-    if _FILE_LOGGER.stream.tell() > 1:
-        _FILE_LOGGER.stream.write("\n")
-    _FILE_LOGGER.stream.write(f"== {date} ==\n")
+    if _FILE_HANDLER.stream.tell() > 1:
+        _FILE_HANDLER.stream.write("\n")
+    _FILE_HANDLER.stream.write(f"== {date} ==\n")
 
 def closeFile():
-    if _FILE_LOGGER is not None:
-        _FILE_LOGGER.close()
+    if _FILE_HANDLER is not None:
+        _FILE_HANDLER.close()
 
 setLevel = _LOGGER.setLevel
 debug = _LOGGER.debug

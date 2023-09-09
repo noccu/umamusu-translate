@@ -380,7 +380,7 @@ def parseArgs(args=None):
 def main(_args: patch.Args = None):
     global args
     args = _args or parseArgs(_args)
-    nTotal = nSuccess = nFailed = 0
+    nTotal = nSuccess = nFailed = nSkipped = 0
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
         db = sqlite3.connect(GAME_META_FILE)
@@ -397,11 +397,13 @@ def main(_args: patch.Args = None):
                     targetSet=args.set,
                     changed=args.changed,
                 )
-                nTotal = len(files)
-                print(f"Found {nTotal} files for {type}.")
+                nFiles = len(files)
+                nTotal += nFiles
+                nSkipped += nFiles
+                print(f"Found {nFiles} files for {type}.")
                 for i, file in enumerate(files):
                     try:
-                        nSuccess += exportAsset(None, file, db)
+                        nSkipped -= exportAsset(None, file, db)
                     except Exception:
                         nFailed += 1
                         logger.error(f"Failed in file {i} of {type}: {file}")
@@ -414,14 +416,14 @@ def main(_args: patch.Args = None):
             f"from {GAME_ASSET_ROOT} to {args.dst}"
         )
         q = queryDB(storyId=StoryId(args.type, args.set, args.group, args.id, args.idx))
-        nTotal = len(q)
+        nTotal = nSkipped = len(q)
         print(f"Found {nTotal} files.")
         for bundle, path in q:
             try:
-                nSuccess += exportAsset(bundle, path)
+                nSkipped -= exportAsset(bundle, path)
             except Exception:
                 nFailed += 1
-    nSkipped = nTotal - nSuccess - nFailed
+    nSuccess = nTotal - nSkipped - nFailed
     print(f"Processing finished. Extracted: {nSuccess}, Skipped: {nSkipped}, Errors: {nFailed}")
 
 

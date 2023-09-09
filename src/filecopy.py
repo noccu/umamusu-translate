@@ -80,7 +80,7 @@ def removeOldFiles(args):
     # Run every ~6 months
     if not args.overwrite and lastrun + 15778476 > ts:
         print(f"Skipping backup pruning as it was last done on {utils.timestampToDate(lastrun)}.")
-        return 0, 0
+        return 0, "unknown"
 
     n = 0
     isHash = args.remove_old == "hash"

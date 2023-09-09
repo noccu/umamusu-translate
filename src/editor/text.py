@@ -115,9 +115,10 @@ class TextBoxEditable(TextBox):
     def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
         super().__init__(parent, size, font, **kwargs)
         self.config(state="normal", undo=True)
-
         self.spellChecker = SpellCheck(self)
-
+        # Move default class binds last to allow overwriting
+        this, cls, toplevel, all = self.bindtags()
+        self.bindtags((this, toplevel, all, cls))
         # Keybinds
         self.bind("<Alt-x>", self.char_convert)
         self.bind("<Control-BackSpace>", self.del_word)
@@ -167,6 +168,7 @@ class TextBoxEditable(TextBox):
             self.delete(f"{pos} -1c {start}", pos)
         elif event.keycode == 46:
             self.delete(pos, f"{pos} {end}")
+        return "break"
 
     def char_convert(self, event=None):
         pos = self.index(tk.INSERT)
@@ -179,6 +181,7 @@ class TextBoxEditable(TextBox):
             except ValueError:
                 return
             self.replace(f"{start}+{str(m.start())}c", pos, res)
+        return "break"
 
 
 def process_text(file: "TranslationFile", text: str = None, redoNewlines: bool = False):

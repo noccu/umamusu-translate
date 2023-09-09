@@ -178,8 +178,7 @@ class Editor:
 
         ## Keybinds
         root.bind("<Control-Return>", self.nav.next_block)
-        root.bind("<Control-s>", self.saveFile)
-        root.bind("<Control-S>", self.saveFile)
+        root.bind_all("<Control-s>", self.saveFile)
         root.bind("<Alt-Up>", self.nav.prev_block)
         root.bind("<Alt-Down>", self.nav.next_block)
         root.bind("<Control-Alt-Up>", self.nav.prev_ch)
@@ -191,7 +190,7 @@ class Editor:
         text_box_en.bind("<Alt-f>", self._evProcessText)
         text_box_en.bind("<Alt-F>", lambda e: self._evProcessText(e, redoNewlines=True))
         root.bind("<Control-f>", self.search.toggle)
-        root.bind("<Control-h>", self.audio.listen)
+        root.bind_all("<Control-h>", self.audio.listen)
         root.bind("<Control-p>", self.preview.toggle)
 
         root.protocol("WM_DELETE_WINDOW", self.onClose)

@@ -412,7 +412,7 @@ class GameBundle:
 
         b = self.data.file.save() + self.patchData
         fn = dstName or self.data.file.name
-        fp = dstFolder.joinpath(fn[0:2] if dstFolder else self.bundlePath.parent, fn)
+        fp = ((dstFolder / fn[0:2]) if dstFolder else self.bundlePath.parent) / fn
         fp.parent.mkdir(parents=True, exist_ok=True)
         with open(fp, "wb") as f:
             f.write(b)

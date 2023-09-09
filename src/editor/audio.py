@@ -96,7 +96,7 @@ class AudioPlayer:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.awb'"
             h = self._db.execute(stmt).fetchone()
             if h is None:
-                print("Couldn't find audio asset.")
+                print(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
                 return
             asset = GameBundle.fromName(h[0], load=False)
             asset.bundleType = "sound"

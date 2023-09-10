@@ -229,7 +229,7 @@ class UmaTlConfig:
     def createDefault(self):
         data = {
             "core": {},
-            "import": {"update": True, "skip_mtl": False},
+            "import": {"update": True, "skip_mtl": True},
             "mdb/import": {"skill_data": False},
         }
         try:

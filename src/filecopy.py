@@ -129,7 +129,8 @@ def copy(data, args):
         try:
             makedirs(path.dirname(dst), exist_ok=True)
             shutil.copyfile(asset.bundlePath, dst)
-            print(f"Copied {asset.bundlePath} to {dst}")
+            log = print if  __name__ == "__main__" else logger.info
+            log(f"Copied {asset.bundlePath} to {dst}")
             return 1
         except Exception as e:
             logger.error(f"{repr(e)}, skipping...")

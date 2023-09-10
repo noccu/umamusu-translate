@@ -256,9 +256,9 @@ class AdditionalTextWindow:
 
         scrollFrame = display.ScrollableFrame(root)
         for i in range(0, 5):
-            cur_jp_text = text.TextBox(scrollFrame.content, size=(42,2), takefocus=0)
+            cur_jp_text = text.TextBox(scrollFrame.content, size=(30,2), takefocus=0)
             cur_jp_text.pack(anchor="w")
-            cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(42, 2))
+            cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(30, 2))
             cur_en_text.linkTo(cur_jp_text, master.root)
             cur_en_text.pack(anchor="w")
             self.textBoxes.append((cur_jp_text, cur_en_text))

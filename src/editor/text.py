@@ -128,6 +128,8 @@ class TextBoxEditable(TextBox):
         self.bind("<Control-i>", self.format_text)
         self.bind("<Control-b>", self.format_text)
         self.bind("<Control-C>", self.format_text)
+        self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
+        self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
 
     def loadRichText(self, text: str = None):
         super().loadRichText(text)
@@ -181,6 +183,17 @@ class TextBoxEditable(TextBox):
             except ValueError:
                 return
             self.replace(f"{start}+{str(m.start())}c", pos, res)
+        return "break"
+    
+    def moveLine(self, event, dir: int):
+        text = getText(self).split("\n")[:-1]  # tk newline
+        curIdx = int(self.index(tk.INSERT).split(".")[0]) - 1
+        newIdx = (curIdx + dir) % len(text)
+        curLine = text[curIdx]
+        text[curIdx] = text[newIdx]
+        text[newIdx] = curLine
+        setText(self, "\n".join(text))
+        self.mark_set(tk.INSERT, f"{newIdx + 1}.0")
         return "break"
 
 

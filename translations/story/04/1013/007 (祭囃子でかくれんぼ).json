@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "J7HWNBVOHKA6UUNPJBC3C4RW6EGQOQSP",
     "type": "story",
     "storyId": "041013007",
@@ -9,19 +9,21 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――海辺の合宿施設で行われる夏合宿。そこでウマ娘たちは、\r\nいつも以上に厳しいトレーニングに打ち込むことになる。",
-            "enText": "―The summer camp is held at a training camp facility by the sea. \nThere, the Umamusume devote themselves to even more rigorous \ntraining than usual.",
+            "enText": "― During the summer training camp held at the \nseaside training facility, the horsegirls engage \nin even more rigorous training than usual.",
             "nextBlock": 2,
             "origClipLength": 118,
+            "voiceIdx": -1,
             "pathId": -3181606798118852897,
             "blockIdx": 1
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ふっ……ふっ……。",
-            "enText": "Phew…… phew ……",
+            "enText": "<i>Ha… ha… \n</i>",
             "nextBlock": 3,
             "origClipLength": 106,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 79,
@@ -33,11 +35,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "普段のコースとは全く感覚が違いますわね。\r\nけれど、鍛えられていると実感できて悪くありませんわ。",
-            "enText": "It feels completely different from the usual course. But it's not \nso bad to feel that you are getting a good workout.",
+            "enText": "The sensation here is completely different \nfrom our usual course. However, I can feel \nthat being trained here is hardly a bad thing.",
             "nextBlock": 4,
             "origClipLength": 272,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 260,
@@ -53,11 +56,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "さあ、今のうちにもう少し――",
-            "enText": "Now, while we're at it, let's get a little more―",
+            "enText": "Now, let's keep going at it――",
             "nextBlock": 5,
             "origClipLength": 92,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 109,
@@ -74,6 +78,7 @@
             "enText": "Hey, did you hear? There's a festival nearby tonight!",
             "nextBlock": 6,
             "origClipLength": 140,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 188,
@@ -91,9 +96,10 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "ホント？　じゃあトレーニング終わったら一緒に行こうよ！",
-            "enText": "Really? Then come with me when you're done training!",
+            "enText": "Really? Let's go together after we're done with training then!",
             "nextBlock": 7,
             "origClipLength": 116,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 179,
@@ -109,11 +115,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "あら、お祭り……？\r\nなかなか風流なことをやっていますのね。",
-            "enText": "Oh, a festival ……? You are doing something quite elegant.",
+            "enText": "Oh, a festival…? They're engaging in \nquite the refined activity, aren't they?",
             "nextBlock": 8,
             "origClipLength": 182,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 116,
@@ -129,20 +136,21 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "確か、小さい頃に連れて行ってもらったことがあります。\r\nたくさんの屋台があって、にぎやかだったのを覚えていますわ。",
-            "enText": "I remember I was taken there when I was a little girl. I remember \nthere were so many stalls and it was so lively.",
+            "enText": "I remember being taken there when I was a little. I remember \nthere were lots of stalls, and it was lively and bustling.",
             "nextBlock": 9,
             "origClipLength": 286,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "行ってみようか",
-                    "enText": "Let's go.",
+                    "enText": "Want to go check it out?",
                     "nextBlock": 9
                 },
                 {
                     "jpText": "行ってみよっか",
-                    "enText": "Let's go.",
+                    "enText": "Want to go check it out?",
                     "nextBlock": 9
                 }
             ],
@@ -161,11 +169,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "まあ……いいんですの？",
-            "enText": "Well, are you sure…… is a good place to start?",
+            "enText": "Ah… are you sure?",
             "nextBlock": 10,
             "origClipLength": 68,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 165,
@@ -185,11 +194,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "でしたら、早めにトレーニングを終わらせないといけませんね。\r\n気合いを入れて、もう1本行って参りますわ。",
-            "enText": "If so, I need to finish my training early. I'm going to go for \none more run, just to get my energy up.",
+            "enText": "In that case, we should hurry up and wrap up training. \nI'll give it my all and do one more session.",
             "nextBlock": 11,
             "origClipLength": 250,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 125,
@@ -207,9 +217,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "夕暮れ時までトレーニングをした後、\r\nメジロマックイーンと祭り会場へと向かうことにした。",
-            "enText": "After training until dusk, I decided to head to the festival site \nwith Medillo McQueen.",
+            "enText": "After finishing up training around sunset, Mejiro Mcqueen \nand I made our way to the festival venue.",
             "nextBlock": 12,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 58,
@@ -225,11 +236,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "まあ、大勢の人でにぎわっていますわね。",
-            "enText": "Well, there are a lot of people here.",
+            "enText": "My, this is quite a large, bustling crowd, isn't it.",
             "nextBlock": 13,
             "origClipLength": 134,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 144,
@@ -245,11 +257,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "屋台もたくさんあって目移りしてしまいます。\r\nどこから見て回りましょうか――あっ！",
-            "enText": "There are so many food stalls to choose from. Where should we \nstart looking around?",
+            "enText": "There are so many stalls that it's hard to decide where \nto start looking. What should we try out first? Oh!",
             "nextBlock": 14,
             "origClipLength": 253,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "どうかしたのか？",
@@ -277,15 +290,16 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "あの、奥の方にある屋台……\r\nちょっと見に行ってみてもよろしいですか？",
-            "enText": "Um, may I go take a look at the stall in the back ……?",
+            "enText": "That stall out further in the back… \ncould we have a quick look at it?",
             "nextBlock": 15,
             "origClipLength": 162,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "もちろん",
-                    "enText": "of course",
+                    "enText": "Of course.",
                     "nextBlock": 15
                 }
             ],
@@ -304,11 +318,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ありがとうございます。では参りましょう。",
-            "enText": "Thank you very much. Now let's go.",
+            "enText": "Thank you very much. Well then, let's check it out.",
             "nextBlock": 16,
             "origClipLength": 171,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 102,
@@ -326,13 +341,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "早足で歩き始めたメジロマックイーンを追いかけようとした。\r\nしかし、その時――",
-            "enText": "She tried to chase after the white-tailed McQueen, who began to \nwalk at a fast pace. But then―",
+            "enText": "I started walking quickly to catch up with \nMejiro McQueen. However, at that moment—",
             "nextBlock": 17,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "うわっ……！！",
-                    "enText": "Wow!!! ……!!!",
+                    "enText": "Uff…!!",
                     "nextBlock": 17
                 }
             ],
@@ -343,9 +359,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "人混みのせいで、運悪く人にぶつかってしまった。",
-            "enText": "Because of the crowd, I was unlucky enough to bump into someone.",
+            "enText": "I unfortunately bumped into someone.",
             "nextBlock": 18,
             "origClipLength": 77,
+            "voiceIdx": -1,
             "pathId": -3193126700076308071,
             "blockIdx": 17
         },
@@ -353,9 +370,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "このままではメジロマックイーンを見失ってしまう――\r\nそう思った頃にはすでに遅く、彼女は視界からいなくなっていた。",
-            "enText": "By the time I realized this, it was already \ntoo late and she was out of sight.",
+            "enText": "If it continues like this, I'm going to lose sight \nof Mejiro Mcqueen. But it was already too late.",
             "nextBlock": 19,
             "origClipLength": 119,
+            "voiceIdx": -1,
             "pathId": 9088817976378728560,
             "blockIdx": 18
         },
@@ -363,18 +381,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "あれからしばらくメジロマックイーンを探しているが、\r\n一向に見つからない。",
-            "enText": "I've been looking for a whitebait McQueen for a while since then, \nbut haven't been able to find one.",
+            "enText": "For a while now, I've been searching for \nMejiro Mcqueen with no luck.",
             "nextBlock": 20,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（どこに行ってしまったんだろう……）",
-                    "enText": "(Where did they go? ……)",
+                    "enText": "(Where did she go…?)",
                     "nextBlock": 20
                 },
                 {
                     "jpText": "（どこ行っちゃったのかな……）",
-                    "enText": "(Where did she go? ……)",
+                    "enText": "(Where did she go…?)",
                     "nextBlock": 20
                 }
             ],
@@ -385,33 +404,36 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ピーンポーンパーンポーン♪）",
-            "enText": "(Beep-pow-pow-pow-pow-pow-pow-pow-pow-pow-pow-pow-pow-pow-pow)",
+            "enText": "(Ding dong, ding dong♪）",
             "nextBlock": 21,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "pathId": -5878551439589814968,
             "blockIdx": 20
         },
         {
             "jpName": "アナウンスA",
-            "enName": "",
+            "enName": "Announcer A",
             "jpText": "迷子のお知らせです。メジロマックイーンさんのトレーナーさん、\r\n至急、実行委員会のテントまでお越しください。",
-            "enText": "Lost and Found Notice. Please come to \nthe Executive Committee's tent ASAP.",
+            "enText": "Lost and found announcement. Can the trainer of \nMejiro McQueen please come to the committee \ntent immediately, thank you.",
             "nextBlock": 22,
             "origClipLength": 356,
+            "voiceIdx": 13,
             "pathId": -3164056318244200683,
             "blockIdx": 21
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "あっ……トレーナーさん！",
-            "enText": "Oh…… trainer!",
+            "enText": "Ah…… Trainer!",
             "nextBlock": 23,
             "origClipLength": 65,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "無事でよかった！",
-                    "enText": "Glad you are safe!",
+                    "enText": "I'm glad you are safe!",
                     "nextBlock": 23
                 }
             ],
@@ -430,11 +452,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ごめんなさい、私が先に行ってしまったせいで……。",
-            "enText": "Sorry, I went ahead of you. ……",
+            "enText": "I'm sorry, it's because I went ahead without waiting…",
             "nextBlock": 24,
             "origClipLength": 144,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 197,
@@ -450,20 +473,21 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "今度は決してはぐれないよう、はしゃがず\r\nきちんとトレーナーさんについて行きますわ……。",
-            "enText": "This time, I will follow the trainer properly without any \nhesitation so as not to stray. ……",
+            "enText": "This time, I will make sure not to get carried \naway and stay with you, Trainer……",
             "nextBlock": 25,
             "origClipLength": 196,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "たいしたことないから、そんなに気にするな",
-                    "enText": "It's not a big deal, so don't worry so much.",
+                    "enText": "It's not a big deal, so don't worry about it.",
                     "nextBlock": 25
                 },
                 {
                     "jpText": "たいしたことないから、そんな気にしないで",
-                    "enText": "It's not a big deal. Don't worry about it.",
+                    "enText": "It's not a big deal, so don't worry about it.",
                     "nextBlock": 25
                 }
             ],
@@ -482,20 +506,21 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ですが、それでまたご迷惑をかけてしまってはいけませんし――",
-            "enText": "But we don't want that to get you in trouble again, and―",
+            "enText": "But, I don't want to cause you trouble――",
             "nextBlock": 26,
             "origClipLength": 151,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "羽目を外して楽しむのがお祭りのルールだ",
-                    "enText": "The rules of the festival are to ruffle \nsome feathers and have fun.",
+                    "enText": "It's a festival rule to let loose and have fun.",
                     "nextBlock": 26
                 },
                 {
                     "jpText": "羽目を外して楽しむのがお祭りのルールだよ",
-                    "enText": "The rules of the festival are to ruffle \nsome feathers and have fun.",
+                    "enText": "It's a festival rule to let loose and have fun.",
                     "nextBlock": 26
                 }
             ],
@@ -514,11 +539,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "えっ、お祭りのルール……ですか？",
-            "enText": "What, the festival rules ……?",
+            "enText": "Huh? Festival rule…?",
             "nextBlock": 27,
             "origClipLength": 132,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 190,
@@ -534,11 +560,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ふふっ、確かにそうですわね。\r\nここに来ている方は皆、羽目を外して楽しんでいますもの。",
-            "enText": "Hmmm, you're absolutely right. Everyone \nwho comes here enjoys ruffling feathers.",
+            "enText": "Haha, you're certainly right about that. After all, everyone \nwho comes here is enjoying themselves without restraint.",
             "nextBlock": 28,
             "origClipLength": 271,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 225,
@@ -554,11 +581,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "そういうことなら、少しだけお願いがあります。\r\n先ほど行こうとした屋台なんですが――",
-            "enText": "If that's the case, I have a small favor to ask. This is the \nstall I was going to go to earlier―",
+            "enText": "If that's the case, then I have a small favor to ask. \nThis is the stall I was going to go to earlier―",
             "nextBlock": 29,
             "origClipLength": 236,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 96,
@@ -574,11 +602,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "よろしければ、一緒に行ってくださいませんか？",
-            "enText": "If you would like, please go with us.",
+            "enText": "If it's all right with you, will you come with me?",
             "nextBlock": 30,
             "origClipLength": 108,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 85,
@@ -590,11 +619,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ここで釣り上げれば――はっ！",
-            "enText": "If we catch it here―ha!",
+            "enText": "If I can catch one right… <i>there</i>!",
             "nextBlock": 31,
             "origClipLength": 106,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 33,
@@ -606,11 +636,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "あぁ、紐が切れてしまいました……。\r\nすみません店員さん、もう1回お願いします！",
-            "enText": "Oh, the string broke.…… Sorry clerk, one more time please!",
+            "enText": "Ah, the string broke…… \nExcuse me, I would like another try please!",
             "nextBlock": 32,
             "origClipLength": 249,
+            "voiceIdx": 23,
             "pathId": 2008568426508894976,
             "blockIdx": 31
         },
@@ -618,9 +649,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "メジロマックイーンが気になっていたのは、\r\nヨーヨー釣りの屋台だったようだ。",
-            "enText": "It seems that the yo-yo fishing stall was the one that caught the \nattention of the white meat McQueen.",
+            "enText": "It turns out that the stall that caught Mejiro \nMcqueen's interest was a <i>Yo-yo Tsuri </i>stall.",
             "nextBlock": 33,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "pathId": -8864613379912767300,
             "blockIdx": 32
         },
@@ -631,16 +663,18 @@
             "enText": "And then, a short time later―",
             "nextBlock": 34,
             "origClipLength": 60,
+            "voiceIdx": -1,
             "pathId": -2746439821325148904,
             "blockIdx": 33
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "やりましたわ、トレーナーさん！",
-            "enText": "We did it, trainer!",
+            "enText": "I did it, Trainer!",
             "nextBlock": 35,
             "origClipLength": 75,
+            "voiceIdx": 24,
             "pathId": -5252269166729524791,
             "blockIdx": 34
         },
@@ -648,19 +682,21 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "見ると、メジロマックイーンが見事に\r\nヨーヨーを釣り上げていた。",
-            "enText": "I looked over and saw that the white meat McQueen had \nsuccessfully hooked a yo-yo.",
+            "enText": "I looked over and saw that Mejiro Mcqueen \nhad successfully reeled in a <i>Yo-yo</i> balloon.",
             "nextBlock": 36,
             "origClipLength": 86,
+            "voiceIdx": -1,
             "pathId": -3799970984244913325,
             "blockIdx": 35
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ふふっ、なかなか苦労しましたが、\r\n取れると嬉しいものですね。",
-            "enText": "It was quite a challenge, but I was happy when I got it.",
+            "enText": "Huhu, it was quite a challenge, but it feels so \nrewarding when you manage to catch one.",
             "nextBlock": 37,
             "origClipLength": 189,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 249,
@@ -676,11 +712,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "今ならどんな遊びも、うまくできそうな気分です。\r\nさあ、次はどのお店に行きましょうか。",
-            "enText": "I feel like I can play any game well now. \nNow, which store shall we go to next?",
+            "enText": "I'm feeling good about winning the next game. \nSo, which stall should we go to next?",
             "nextBlock": 38,
             "origClipLength": 247,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 193,
@@ -700,11 +737,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "――あっ、見てください！　あちらには射的があるようです！\r\nしかも、『豪華景品あり』と書いてありますわ！",
-            "enText": "―Oh, look! It looks like there's a shooting game over there! And \nit says, \"Gorgeous prizes\"!",
+            "enText": "――Ah, look over here! That looks like a shooting game! \nAnd what's more, it says that you can win luxury prizes!",
             "nextBlock": 39,
             "origClipLength": 301,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 60,
@@ -720,11 +758,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "どんな景品が当たるのでしょう。\r\nせっかくですし、行ってみませんか？",
-            "enText": "What kind of prizes will be awarded? \nSince we are here, why don't you go?",
+            "enText": "I wonder what kind of prizes those are. \nWell, since we're already here, shall we give it a go?",
             "nextBlock": 40,
             "origClipLength": 181,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 163,
@@ -740,11 +779,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "さあトレーナーさん、こっちですわ！",
-            "enText": "Come on, trainer, over here!",
+            "enText": "Come on, Trainer, over here!",
             "nextBlock": 41,
             "origClipLength": 90,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 60,
@@ -762,9 +802,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "お祭りをひとしきり楽しんだ後、\r\n合宿所までの道を一緒に歩いて帰ることにした。",
-            "enText": "After enjoying the festival, we decided \nto walk back to the camp together.",
+            "enText": "After thoroughly enjoying the festival, we decided \nto walk back to the training facility together.",
             "nextBlock": 42,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 171,
@@ -780,11 +821,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "今日は一緒に来てくださってありがとうございました。\r\nおかげですごく楽しめましたわ。",
-            "enText": "Thank you for coming with me today. \nI had a lot of fun thanks to you.",
+            "enText": "Thank you for coming along with me today. \nThanks to you, I had a really great time.",
             "nextBlock": 43,
             "origClipLength": 213,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "特に何もしてないけど",
@@ -807,11 +849,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "そんなことはありません。\r\nその、なんと言いますか……。",
-            "enText": "That is not true. Well, how can I put it: ……",
+            "enText": "That is not true. It's just, how can I put it into words…",
             "nextBlock": 44,
             "origClipLength": 165,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 124,
@@ -827,11 +870,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "一緒に来たのがトレーナーさんでなければ、\r\nこんなに羽目を外すことはなかったと思うんです。",
-            "enText": "I don't think I would have ruffled so many feathers if it hadn't \nbeen for the trainer who came with me.",
+            "enText": "If you hadn't been here with me as my Trainer, I probably \nwouldn't have let loose and had as much fun like this.",
             "nextBlock": 45,
             "origClipLength": 209,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 143,
@@ -847,11 +891,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "今まではメジロ家のウマ娘として、\r\nいかなる時も節度を守るよう心がけてきましたから。でも――",
-            "enText": "Up until now, as a horse girl of the Mejiro family, I have always \ntried to maintain moderation at all times. But―",
+            "enText": "Until now, as a horsegirl of the Mejiro family, I have always \nstriven to maintain proper conduct at all times. But――",
             "nextBlock": 46,
             "origClipLength": 277,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 60,
@@ -867,11 +912,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "トレーナーさんの前でなら、\r\n少しだけ……それを破ってもいいかなと思うのです。",
-            "enText": "I'd be willing to break it…… just \na little in front of the trainer.",
+            "enText": "If it's for you, Trainer… I'd be willing \nto break that rule, just a little bit.",
             "nextBlock": 47,
             "origClipLength": 203,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 221,
@@ -887,15 +933,16 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "だってトレーナーさんなら、許してくださるでしょう？",
-            "enText": "Because I'm sure your trainer will forgive you.",
+            "enText": "After all, you'll forgive me, won't you, Trainer?",
             "nextBlock": 48,
             "origClipLength": 120,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "もちろん",
-                    "enText": "of course",
+                    "enText": "Of course.",
                     "nextBlock": 48
                 }
             ],
@@ -914,11 +961,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "っ……、ありがとうございます！\r\nでは早速、提案があるのですが――",
-            "enText": "I'll be sure to check out …… thank you! \nNow, I have a quick suggestion―",
+            "enText": "…… Thank you so much! Now, I want to \npropose an idea right away―",
             "nextBlock": 49,
             "origClipLength": 210,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 89,
@@ -934,11 +982,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "お祭りで買ったにんじんカステラ、\r\n歩きながら一緒に食べませんか？",
-            "enText": "Why don't you eat the carrot sponge cake you bought at the \nfestival while walking around?",
+            "enText": "That carrot castella we bought at the festival… \nshall we eat that while walking together?",
             "nextBlock": 50,
             "origClipLength": 193,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 166,
@@ -954,15 +1003,16 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "普段は食べ歩きなんて絶対にしないのですが、\r\n今ここには私たちだけしかいませんから……。",
-            "enText": "Normally I would never go out to eat, but since we are the only \nones here right now, ……",
+            "enText": "I usually would never eat while walking, but \nsince it's just the two of us here right now…",
             "nextBlock": 51,
             "origClipLength": 228,
+            "voiceIdx": 38,
             "choices": [
                 {
                     "jpText": "いいよ",
-                    "enText": "All right.",
+                    "enText": "Sure.",
                     "nextBlock": 51
                 }
             ],
@@ -981,11 +1031,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ふふっ、ありがとうございます。\r\nではトレーナーさんから、おひとつどうぞ。",
-            "enText": "Phew, thank you very much. Now, please have one from your trainer.",
+            "enText": "Haha, thank you very much. \nWell then, Trainer, please help yourself.",
             "nextBlock": -1,
             "origClipLength": 222,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 214,
@@ -1000,5 +1051,6 @@
             "blockIdx": 51
         }
     ],
-    "modified": 1657208219
+    "modified": 1694469772,
+    "humanTl": true
 }

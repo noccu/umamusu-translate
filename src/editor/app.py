@@ -192,6 +192,7 @@ class Editor:
         root.bind("<Control-f>", self.search.toggle)
         root.bind_all("<Control-h>", self.audio.listen)
         root.bind("<Control-p>", self.preview.toggle)
+        root.bind("<Alt-s>", lambda _: self.options.skip_translated.set(not self.options.skip_translated.get()))
 
         root.protocol("WM_DELETE_WINDOW", self.onClose)
 

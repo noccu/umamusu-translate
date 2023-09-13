@@ -22,8 +22,8 @@ Not fully set yet.
 
 Term | Translation
 ---|---
-ものすごく | greatly
-すごく | a lot
+ものすごく | greatly, huge
+すごく | a lot, large
 少し | lightly, somewhat
 わずかに | slightly
 ちょっと | a little

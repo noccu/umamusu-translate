@@ -1,5 +1,6 @@
 import re
 import tkinter as tk
+from functools import partial
 from tkinter import colorchooser
 from typing import Union, TYPE_CHECKING
 
@@ -13,20 +14,30 @@ TkDisplaysText = Union[tk.Text, tk.Entry, tk.Label]
 
 
 class ColorManager:
-    def __init__(self, master) -> None:
-        self.LAST_COLOR = None
+    ACTIVE: str = None
+
+    def __init__(self, master: tk.Text) -> None:
+        self.colors: set[str] = set()
         self.master = master
 
-    def pick(self, useLast=True):
-        if not useLast or not self.LAST_COLOR:
-            self.LAST_COLOR = colorchooser.askcolor()[1]  # 0 = rgb tuple, 1=hex str
-            self.define(self.LAST_COLOR)
-        return self.LAST_COLOR
+    def pick(self, useActive=True):
+        if not useActive or not ColorManager.ACTIVE:
+            # 0 = rgb tuple, 1=hex str
+            ColorManager.ACTIVE = self.define(colorchooser.askcolor()[1])
+        elif ColorManager.ACTIVE not in self.colors:
+            self.define(ColorManager.ACTIVE)
+        return ColorManager.ACTIVE
 
-    # todo: this wrote to en_box, adjust calls
+    def setActive(self, event, color: str):
+        print(f"Setting color: {color}")
+        ColorManager.ACTIVE = color
+
     def define(self, color: str):
-        # self.master.tag_config(f"color={color}", foreground=color)
-        tk.Text.tag_config(self.master, f"color={color}", foreground=color)
+        tagname = f"color={color}"
+        self.master.tag_config(tagname, foreground=color)
+        self.master.tag_bind(tagname, "<Button-3>", partial(self.setActive, color=color))
+        self.colors.add(color)
+        return color
 
 
 class TextBox(tk.Text):

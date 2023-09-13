@@ -33,7 +33,7 @@ def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
         .splitlines()
     ):
         m = regex.match(r'.?[AM]\s*"?([^"]+)"?', line)
-        path = PurePath(m[1])
+        path = Path(m[1])
         if (
             path.parts[0] != "translations" 
             or path.parts[1] != targetType

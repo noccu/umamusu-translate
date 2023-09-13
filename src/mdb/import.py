@@ -66,12 +66,12 @@ def main():
         if checkPatched(args.dst):
             print("master.mdb already patched, backup cancelled.")
             return
-        shutil.copyfile(args.dst, args.dst + ".bak")
+        shutil.copyfile(args.dst, args.dst.with_suffix(".bak"))
         print("master.mdb backed up.")
         return
     elif args.restore:
         try:
-            shutil.copyfile(args.dst + ".bak", args.dst)
+            shutil.copyfile(args.dst.with_suffix(".bak"), args.dst)
         except FileNotFoundError:
             print("No backup found.")
         else:

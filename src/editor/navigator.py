@@ -125,14 +125,14 @@ class Navigator:
     def prev_block(self, event=None):
         idx = self.cur_block - 1
         if idx < 0:
-            print("Reached start of chapter")
+            print("Reached start of file")
             return
         self.change_block(idx, dir=-1)
 
     def next_block(self, event=None):
         idx = self.cur_data.get("nextBlock", self.cur_block + 2) - 1
-        if idx < 1 or idx > len(self.cur_file.textBlocks):
-            print("Reached end of chapter")
+        if idx < 1 or idx >= len(self.cur_file.textBlocks):
+            print("Reached end of file")
             return
         self.change_block(idx, dir=1)
 

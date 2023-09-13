@@ -57,7 +57,7 @@ def parseArgs(args=None):
         "-e",
         "--extract",
         action="store_true",
-        help="Target Translation File(s), overwrites other file options",
+        help="Write new names from files to names file instead. Copies any existing EN names.",
     )
     args = ap.parse_args(args)
 

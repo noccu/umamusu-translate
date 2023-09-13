@@ -8,23 +8,31 @@ sys.path.append(realpath("src"))
 from common import patch, utils
 from common.constants import GAME_MASTER_FILE
 from common.types import TranslationFile
+from datatransfer import DataTransfer
 
 checkPatched = import_module("import").checkPatched
-
 
 def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
     # In the spirit of the original db patch, we don't modify old files to keep the db order
     savePath = savePath.with_suffix(".json")
     try:
         oldData = TranslationFile(savePath)
+        transferExisting = DataTransfer(oldData)
     except FileNotFoundError:
         print(f"File not found, creating new: {savePath}")
         oldData = None
+        transferExisting = None
     newData = dict()
     cur = db.execute(stmt)
+
     for row in cur:
-        val = row[0]
-        newData[val] = oldData.textBlocks.get(val, "") if oldData else ""
+        jpVal = row[0]
+        enVal = oldData.textBlocks.get(jpVal, "") if oldData else ""
+        if transferExisting and enVal == "":
+            lookupBlock = {"jpText": jpVal, "enText": enVal}
+            transferExisting(lookupBlock)
+            enVal = lookupBlock.get("enText", "")
+        newData[jpVal] = enVal
     if oldData:
         oldData.textBlocks = newData
         oldData.save()

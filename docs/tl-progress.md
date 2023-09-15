@@ -95,7 +95,7 @@ Haru Urara | Complete | [Vacxy][] (ep 1), MTL
 Hishi Miracle | Complete | [LotoDS][]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
 Inari One | Complete | [LotoDS][]
-Ines Fujin | Complete | [noccu] (ep 1-4), MTL
+Ines Fujin | Complete | [noccu] (ep 1-4), [noccu] (ep 5-7)☆
 Katsuragi Ace | Complete | [LotoDS][]
 Kawakami Princess | Complete | [Director Kok]
 King Halo | Complete | [burritoblaster][]

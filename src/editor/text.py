@@ -34,7 +34,10 @@ class ColorManager:
 
     def define(self, color: str):
         tagname = f"color={color}"
-        self.master.tag_config(tagname, foreground=color)
+        if color.startswith("#{"):
+            self.master.tag_config(tagname, background="#ff00ff")
+        else:
+            self.master.tag_config(tagname, foreground=color)
         self.master.tag_bind(tagname, "<Button-3>", partial(self.setActive, color=color))
         self.colors.add(color)
         return color
@@ -70,18 +73,18 @@ class TextBox(tk.Text):
         tagList = list()
         offset = 0
         openedTags = dict()
-        tagRe = r"<(/?)(([a-z]+)(?:[=#a-z\d]+)?)>"
+        tagRe = r"<(/?)(([a-z]+)=?([#a-z\d{}]+)?)>"
         for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
-            isClose, fullTag, tagName = m.groups()
+            isClose, fullTag, tagName, tagVal = m.groups()
             if tagName not in ("color", "b", "i", "size"):
                 continue
             if isClose:
                 openedTags[tagName]["end"] = m.start() - offset
             else:
-                tagList.append({"name": fullTag, "start": m.start() - offset})
+                tagList.append({"name": fullTag, "value": tagVal, "start": m.start() - offset})
                 openedTags[tagName] = tagList[-1]
                 if tagName == "color":
-                    self.color.define(fullTag.split("=")[-1])
+                    self.color.define(tagVal)
             offset += len(m[0])
         # Add the cleaned text
         setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE))

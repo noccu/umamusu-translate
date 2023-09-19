@@ -112,10 +112,13 @@ Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
+Narita Top Road | In progress | [LotoDS]
 Nice Nature | Complete | [xct]
+Neo Universe | In progress | [LotoDS]
 Rice Shower  | Complete | [Ben][] (ep 1-4), MTL
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
+Satono Diamond | Exists | [Riersa] (MTL edit?)
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
 Shinko Windy | Complete | [LotoDS][]
 Silence Suzuka | Complete | [LotoDS][]
@@ -170,11 +173,17 @@ idx | name (short) | progress | translator
 08/003 | Campaign intro | Complete | [noccu]
 All not listed | up to 2022/08/24 | Complete | MTL
 
+### l'Arc
+idx | name (short) | progress | translator
+--- | --- | --- | ---
+08/005 | Campaign intro | In progress | [noccu]
+
 ## Umas
 name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 Agnes Tachyon | Complete, In progress | MTL, [noccu]☆
+Admire Vega | In progress | [noccu]☆
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Daiwa Scarlet | Complete | MTL (contributed by Korgi)
 Eishin Flash | Complete | MTL
@@ -291,15 +300,16 @@ Honnou Speed | Complete | [Eight][]
 *L’s Surprise!!* | Stalled | [noccu]☆
 *Lightless * | Complete | [Ren]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
-[*Mikadowarai kageki ~Tataeyo Towa Ni~*](https://youtu.be/XtTn3GSVKM0) | Complete | [Kasey]
+[*Mikadowarai kageki \~Tataeyo Towa Ni~*](https://youtu.be/XtTn3GSVKM0) | Complete | [Kasey]
 Ms. VICTORIA | Complete | [Nine]
 Namida hikatte asu ni nare! | Complete | [noccu]
 Next Frontier | Complete | [LotoDS][]
 Never Looking Back | Complete | [COSMET]
-Nigekiri! Fallin’Love | Complete | [noccu]
+*Nigekiri! Fallin’Love* | Complete | [noccu]
 Pyoitto♪Hallelujah! | Complete | [Kasey]
 [*Rising Girl*](https://twitter.com/dorcarolle/status/1192625305795489792) | Complete, Stalled | [dorcarolle](https://twitter.com/dorcarolle), [noccu]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
+[TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
 transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | Anonymous Reindeer + [Karimenrider] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]

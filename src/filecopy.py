@@ -30,6 +30,8 @@ def buildSqlStmt(args):
         args.id = "____"
     if not args.idx:
         args.idx = "___"
+    if not args.set:
+        args.set = "_____"
 
     if args.path:
         add(f"n like '{args.path if args.custom else f'%{args.path}%'}' escape '\\'")
@@ -41,7 +43,7 @@ def buildSqlStmt(args):
         if args.type == "story":
             add(f"n like 'story/data/{args.group}/{args.id}/storytimeline%'")
         elif args.type == "home":
-            add(f"n like 'home/data/00000/{args.group}/hometimeline_00000_{args.group}_{args.id}%'")
+            add(f"n like 'home/data/{args.set}/{args.group}/hometimeline_{args.set}_{args.group}_{args.id}%'")
         elif args.type == "race":
             add(f"n like 'race/storyrace/text/storyrace_{args.group}{args.id}%'")
         elif args.type == "live":

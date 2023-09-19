@@ -205,6 +205,7 @@ name | progress | translator
 All not listed up to 2023/01/01 | Complete | MTL (contributed by Korgi up to 2022/07/08)
 Agnes Tachyon | Complete | [nem] (bday duo 1-2)
 Aston Machan | Stalled | [Snep] (bday duo 1, bday triplet 1)
+Matikanetannhauser | Stalled | [Snep] (bday duo 1, bday triplet 1)
 Maruzensky | Complete | [noccu]
 Mihono Bourbon | In progress | [noccu] (solo 1)
 Curren Chan | Complete | [noccu]

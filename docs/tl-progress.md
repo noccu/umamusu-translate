@@ -1,5 +1,5 @@
 This document gives an overview of translation progress.  
-If you'd like to contribute a translation, it is suggested to open an issue or join the [TL Discord](https://discord.gg/HpMRFNvsMv) for organization.
+If you'd like to contribute a translation, it is suggested to open an issue or join the [Discord](https://discord.gg/PAK3ztkAg) for organization.
 
 Note: MTL = machine translation. These have very limited and arbitrary manual edits, sometimes. Quality varies based on content (speech patterns, topics, etc).  
 Translations by [UmaTL] or marked by ☆ are available in the [supporters edition](https://ko-fi.com/noccyu).

@@ -131,7 +131,7 @@ def resizeText(tlFile: TranslationFile, text: str, force=False):
             text = re.sub(r"^<size=\d+>(.+?) *(?:\\+n)?</size>$", r"\1", text, flags=re.DOTALL)
         else:
             return text  # ignore already-sized textpy src\
-    return f"<size={size}>{text}{getNewline(tlFile)}</size>"
+    return f"<size={size}>{text} {getNewline(tlFile)}</size>"
 
 
 def getNewline(tlFile: TranslationFile):
@@ -186,7 +186,6 @@ def parseArgs(args=None):
         "Process text for linebreaks (game length limits), common errors, and standardized formatting",
         types=SUPPORTED_TYPES,
     )
-    ap.add_argument("-src", help="Target Translation File, overwrites other file options")
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
     # Through overflow (thanks anni update!) up to 4 work for landscape content,
     # and up to 5 for portrait (quite pushing it though)

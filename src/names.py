@@ -70,7 +70,7 @@ def parseArgs(args=None):
 def main(args: patch.Args = None):
     args = args or parseArgs(args)
 
-    files = args.src or patch.searchFiles(
+    files = (args.src,) or patch.searchFiles(
         args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
     )
     if args.extract:

@@ -98,7 +98,7 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
                     # if args.verbose: print(f"Attempting anim data export at BlockIndex {block['BlockIndex']}")
                     clipsToUpdate = list()
                     for trackGroup in block["CharacterTrackList"]:
-                        for key in trackGroup.keys():
+                        for key in trackGroup:
                             if key.endswith("MotionTrackData") and trackGroup[key]["ClipList"]:
                                 clipsToUpdate.append(trackGroup[key]["ClipList"][-1]["m_PathID"])
                     if clipsToUpdate:
@@ -161,15 +161,11 @@ def extractText(assetType, obj):
             o["voiceIdx"] = tree["CueId"]
         choices = tree["ChoiceDataList"]  # always present
         if choices:
-            o["choices"] = list()
-            for c in choices:
-                o["choices"].append({"jpText": c["Text"], "enText": "", "nextBlock": c["NextBlock"]})
+            o["choices"] = [{"jpText": c["Text"], "enText": "", "nextBlock": c["NextBlock"]} for c in choices]
 
         textColor = tree["ColorTextInfoList"]  # always present
         if textColor:
-            o["coloredText"] = list()
-            for c in textColor:
-                o["coloredText"].append({"jpText": c["Text"], "enText": ""})
+            o["coloredText"] = [{"jpText": c["Text"], "enText": ""} for c in textColor]
     return o if o["jpText"] else None
 
 

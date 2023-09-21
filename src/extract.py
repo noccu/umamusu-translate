@@ -263,7 +263,10 @@ class DataTransfer:
                 textData["skip"] = targetBlock["skip"]
             if "newClipLength" in targetBlock:
                 textData["newClipLength"] = targetBlock["newClipLength"]
-            if args.upgrade and textData.get("origClipLength"):
+            # Should be a check on both targetBlock and textData but as it's there's nothing 
+            # to extract on unsupported types it will never wrongly transfer either
+            # Also should only transfer when asset is assumed patched, hence upgrade mode
+            if args.upgrade and "origClipLength" in targetBlock:
                 textData["origClipLength"] = targetBlock["origClipLength"]
                 for i, group in enumerate(textData.get("animData", [])):
                     group["origLen"] = targetBlock["animData"][i]["origLen"]

@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "KWGEQFTQRMADBTCLREFJOXIDZRIC3A5D",
     "type": "story",
     "storyId": "041014001",
@@ -11,6 +11,14 @@
             "jpText": "今日は、トレーナーたちがウマ娘の実力を見極め、スカウトを行う\r\n選抜レース。ウマ娘たちの将来を決める、一大イベントだ。",
             "enText": "Today, the trainers will be scouting the horses to \nsee if they are up to the task. This is a big event \nthat decides the future of the horsegirls.",
             "nextBlock": 2,
+            "origClipLength": 121,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 155,
+                    "pathId": -7318411616118011873
+                }
+            ],
             "pathId": -8624109597476245587,
             "blockIdx": 1
         },
@@ -20,6 +28,14 @@
             "jpText": "そんな大事なレースを控えた日の早朝、\r\nコースにてひたすら走り込んでいるウマ娘を見かけた――",
             "enText": "Early in the morning on the day before such an important race, I \nsaw a horse girl who was running hard on the course.",
             "nextBlock": 3,
+            "origClipLength": 108,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -3667067718263175645
+                }
+            ],
             "pathId": 8060012823434446215,
             "blockIdx": 2
         },
@@ -29,6 +45,8 @@
             "jpText": "ふぅっ……！\nよーし、もう1周、いえ10周っ！！",
             "enText": "Whew!…! Okay, one more round, no, ten rounds!",
             "nextBlock": 4,
+            "origClipLength": 177,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "レース前にあまり無理をしすぎないようにな",
@@ -41,6 +59,20 @@
                     "nextBlock": 4
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -1806340311657682208
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 1396998061291268169
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 2258876802523148757
+                }
+            ],
             "pathId": -7925424993802550459,
             "blockIdx": 3
         },
@@ -50,6 +82,22 @@
             "jpText": "いえいえ、アタシにとっては\nウォーミングアップにもなりませんよ！",
             "enText": "No, no, it's not even a warm-up for me!",
             "nextBlock": 5,
+            "origClipLength": 122,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -6261110923679655806
+                },
+                {
+                    "origLen": 35,
+                    "pathId": 5717275028465108726
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -8496253779161944373
+                }
+            ],
             "pathId": -6774536619083333919,
             "blockIdx": 4
         },
@@ -59,6 +107,22 @@
             "jpText": "なんたって、アタシはエルコンドルパサー！\r\nいずれは、世界という名の大空に羽ばたくウマ娘デスからねっ！！",
             "enText": "After all, I am Elcon Dolpasser! I'm a horse girl who will \neventually spread her wings to the sky in the name of the world!",
             "nextBlock": 6,
+            "origClipLength": 257,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -5623509989924373885
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 7249666404788070059
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 964167473327837667
+                }
+            ],
             "pathId": 1235638326886767760,
             "blockIdx": 5
         },
@@ -68,11 +132,27 @@
             "jpText": "って！　なんか普通に話してしまいましたが！\nアナタ、いったい誰デスかっ！？",
             "enText": "I'm sorry! I'm sorry, I'm just talking \nnormally! Who the hell are you?",
             "nextBlock": 7,
+            "origClipLength": 169,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "選抜レースを観に来たトレーナーだよ",
                     "enText": "She's a trainer who came to watch a select race.",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 8094573221149623007
+                },
+                {
+                    "origLen": 108,
+                    "pathId": 2524314038786707184
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 5212533803481734383
                 }
             ],
             "pathId": 4285138509803662297,
@@ -84,6 +164,22 @@
             "jpText": "トレーナーさんっ！？",
             "enText": "Trainer!",
             "nextBlock": 8,
+            "origClipLength": 46,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -5547338913264988033
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5150050401306655144
+                },
+                {
+                    "origLen": 44,
+                    "pathId": 5126415143463962878
+                }
+            ],
             "pathId": 2172498852174050935,
             "blockIdx": 7
         },
@@ -93,6 +189,18 @@
             "jpText": "ということは、もしかしてもしかして……\nアタシをスカウトしに来たんデスかっ！？",
             "enText": "So, is it possible that you came to… to scout for me?",
             "nextBlock": 9,
+            "origClipLength": 171,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -6451423011614083483
+                },
+                {
+                    "origLen": 141,
+                    "pathId": -209436090273706243
+                }
+            ],
             "pathId": 8957856272483093595,
             "blockIdx": 8
         },
@@ -102,11 +210,23 @@
             "jpText": "まだ選抜レースも始まっていないというのに、エルの実力に、\r\n才能に、将来性に！　惹かれてしまったということデスかっ！？",
             "enText": "Even though the Selection Race has not yet started, Elle's \nability, talent, and potential are still very much alive! You \nmean you've been attracted to them?",
             "nextBlock": 10,
+            "origClipLength": 289,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "いや、えっと……",
                     "enText": "No, um…",
                     "nextBlock": 10
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": -242141511167413458
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 6309962548946065779
                 }
             ],
             "pathId": 6428482435816941925,
@@ -118,6 +238,18 @@
             "jpText": "ブエノ！　来てくれて嬉しいデース！\nそのパッション、なかなか好印象デスよー！",
             "enText": "Bueno! I'm so glad you're here, Deuce! \nI quite like your passion!",
             "nextBlock": 11,
+            "origClipLength": 204,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 8527565539950750674
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 1699614791543903038
+                }
+            ],
             "pathId": -3337396852423036754,
             "blockIdx": 10
         },
@@ -127,6 +259,14 @@
             "jpText": "話を聞いてもらえない……！",
             "enText": "They won't listen to me…!",
             "nextBlock": 12,
+            "origClipLength": 61,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 1091528234221696545
+                }
+            ],
             "pathId": -7730372977180072752,
             "blockIdx": 11
         },
@@ -136,6 +276,18 @@
             "jpText": "でも残念デスが、現時点での答えはノーです。",
             "enText": "But alas, Death, the answer at this point is no.",
             "nextBlock": 13,
+            "origClipLength": 148,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -6376658507155670801
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 1222491488770180779
+                }
+            ],
             "pathId": -5002351989153891597,
             "blockIdx": 12
         },
@@ -145,6 +297,22 @@
             "jpText": "……それはなぜか？　今すぐスカウトしたいのに\r\nなぜエルは想いに答えてくれないのかっ！？",
             "enText": "… Why is that? I want to scout now, why \nwon't Elle answer my thoughts!",
             "nextBlock": 14,
+            "origClipLength": 225,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 193,
+                    "pathId": 9217839027962484842
+                },
+                {
+                    "origLen": 46,
+                    "pathId": 8660842018316462764
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -3660067790306565491
+                }
+            ],
             "pathId": -8612579418443385133,
             "blockIdx": 13
         },
@@ -154,6 +322,22 @@
             "jpText": "答えは簡単！　トレーナーさん、アナタには今日の！\r\nこれからのレースを見て、エルの実力を判断してほしいのデース！",
             "enText": "The answer is simple! Trainer, you have today! I want you to \nwatch the upcoming races and judge Elle's ability!",
             "nextBlock": 15,
+            "origClipLength": 270,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": 5398630410256713964
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -1668321846622908555
+                },
+                {
+                    "origLen": 56,
+                    "pathId": 7480258529628586731
+                }
+            ],
             "pathId": -6609865193258129753,
             "blockIdx": 14
         },
@@ -163,6 +347,18 @@
             "jpText": "トレーナーとの、熱く固い信頼関係！\nそれは、世界最強のウマ娘には必要不可欠！",
             "enText": "A hot and solid relationship of trust with your trainer! That's \nessential for the world's strongest Uma Musume!",
             "nextBlock": 16,
+            "origClipLength": 254,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8482376041368427627
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6101095111246337311
+                }
+            ],
             "pathId": -5021096291995342575,
             "blockIdx": 15
         },
@@ -172,6 +368,18 @@
             "jpText": "だからこそ、トレーナーさんにも、\nしっかりと判断してほしいのデース！",
             "enText": "That's why I want my trainer to make the right decision!",
             "nextBlock": 17,
+            "origClipLength": 152,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 193,
+                    "pathId": 1971853958485190605
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -6704044143134805795
+                }
+            ],
             "pathId": 1931260674822536995,
             "blockIdx": 16
         },
@@ -181,11 +389,27 @@
             "jpText": "……あ、でもレース前に声をかけてくれるそのパッション、\r\n響きましたよ♪　エルエルポイント、1ポイント差し上げます！",
             "enText": "… but your passion for calling out to me before the race really \nresonated with me… I'll give you one Elle point for that!",
             "nextBlock": 18,
+            "origClipLength": 285,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "あ、ありがとう……？",
                     "enText": "Oh, thanks…?",
                     "nextBlock": 18
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": 2101949646658483623
+                },
+                {
+                    "origLen": 35,
+                    "pathId": 7582699499282811097
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -3352411150760784129
                 }
             ],
             "pathId": -4603934308239011450,
@@ -197,6 +421,18 @@
             "jpText": "おっと！　そろそろレースの時間デスね。\nそれでは、チャオ～♪",
             "enText": "Oops! It's almost time for the race. So, Ciao～♪",
             "nextBlock": 19,
+            "origClipLength": 208,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": -3221630316756088161
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -2621924371944153881
+                }
+            ],
             "pathId": -8199864883118169384,
             "blockIdx": 18
         },
@@ -206,6 +442,8 @@
             "jpText": "エルコンドルパサーは、飛ぶような足取りで\nその場から立ち去っていった……。",
             "enText": "Elcon Dolpasser walked away from the place with flying steps…",
             "nextBlock": 20,
+            "origClipLength": 93,
+            "voiceIdx": -1,
             "pathId": 8046951014537865649,
             "blockIdx": 19
         },
@@ -215,6 +453,8 @@
             "jpText": "そんなことがありつつも、いよいよ始まった『選抜レース』\r\nそこで素晴らしい走りを見せたウマ娘は――",
             "enText": "Despite all of this, the \"Selection Race\" has finally begun, and \nthe horsegirls who showed great performance in the race are…",
             "nextBlock": 21,
+            "origClipLength": 108,
+            "voiceIdx": -1,
             "pathId": 6583711101497143170,
             "blockIdx": 20
         },
@@ -224,6 +464,8 @@
             "jpText": "エルコンドルパサー！\r\n誰も追いつけない！　伸びる伸びる！",
             "enText": "Elcon d'Orpasar! No one can catch up! Stretch, stretch, stretch!",
             "nextBlock": 22,
+            "origClipLength": 139,
+            "voiceIdx": 15,
             "pathId": 8977298408463764497,
             "blockIdx": 21
         },
@@ -233,6 +475,8 @@
             "jpText": "素晴らしい切れ味ッ！！\n堂々の1着は、エルコンドルパサーですっ！！",
             "enText": "Great sharpness! The first place winner is Elcon d'Orpasar!",
             "nextBlock": 23,
+            "origClipLength": 187,
+            "voiceIdx": 16,
             "pathId": 5077425784590882664,
             "blockIdx": 22
         },
@@ -242,6 +486,22 @@
             "jpText": "優勝、快勝、エル圧勝っ！！\r\nこれがアタシの実力デェェス！！",
             "enText": "Winner, a great win, el dominating win! This is how good I am!",
             "nextBlock": 24,
+            "origClipLength": 217,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": 9063448163848985651
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -312343824627330555
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 5859584948721905180
+                }
+            ],
             "pathId": 3753549054950742289,
             "blockIdx": 23
         },
@@ -251,6 +511,18 @@
             "jpText": "最後の直線、他の子たちが置き去りにされてたわ……！\r\n頭ひとつ抜け出た実力者ね……！",
             "enText": "That last straightaway, the other kids were left behind…! You're \na head and shoulders above the rest…!",
             "nextBlock": 25,
+            "origClipLength": 213,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": 3990048061363423678
+                },
+                {
+                    "origLen": 127,
+                    "pathId": 4716775748862472304
+                }
+            ],
             "pathId": 5449705741642144437,
             "blockIdx": 24
         },
@@ -260,6 +532,18 @@
             "jpText": "こりゃあ、将来とんでもない\nウマ娘になるんじゃないか……！？",
             "enText": "I think she's going to be a hell of a horse girl in the future…!",
             "nextBlock": 26,
+            "origClipLength": 126,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": -7418472586441781099
+                },
+                {
+                    "origLen": 42,
+                    "pathId": 7126414791056877484
+                }
+            ],
             "pathId": 6989847473648815606,
             "blockIdx": 25
         },
@@ -269,6 +553,22 @@
             "jpText": "ふっふっふ……聞こえますよ、\n世界最強のエルを称える声が……！",
             "enText": "Pfft… I can hear you, the voices praising \nthe world's mightiest Elle…!",
             "nextBlock": 27,
+            "origClipLength": 206,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 176,
+                    "pathId": 5092733023371063078
+                },
+                {
+                    "origLen": 195,
+                    "pathId": 5325451182275357346
+                },
+                {
+                    "origLen": 52,
+                    "pathId": -7051586931050688820
+                }
+            ],
             "pathId": 1505540063719041929,
             "blockIdx": 26
         },
@@ -278,6 +578,18 @@
             "jpText": "さぁ、ここからがスカウトタイムです！　アタシと一緒に世界へ\r\n行ってくれるトレーナーさんは、どなたデスかーっ！？",
             "enText": "Now it's scout time! Who is the trainer \nwho will go to the world with me?",
             "nextBlock": 28,
+            "origClipLength": 252,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 4100674296181314465
+                },
+                {
+                    "origLen": 28,
+                    "pathId": 7958597135409888229
+                }
+            ],
             "pathId": -4941720380940176709,
             "blockIdx": 27
         },
@@ -287,6 +599,18 @@
             "jpText": "エルコンドルパサー！\r\nぜひ私のスカウトを受けてちょうだい！！",
             "enText": "El Condor Pacer! Please accept my scout!",
             "nextBlock": 29,
+            "origClipLength": 146,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 158,
+                    "pathId": 4595158675034851858
+                },
+                {
+                    "origLen": 121,
+                    "pathId": 4433044232179826496
+                }
+            ],
             "pathId": -674374813512160993,
             "blockIdx": 28
         },
@@ -296,6 +620,18 @@
             "jpText": "いやいや、ウチだ！\n君を必ず羽ばたかせてみせるぞ！！",
             "enText": "No, no, no, we're home! I will make sure you flap your wings!",
             "nextBlock": 30,
+            "origClipLength": 144,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 158,
+                    "pathId": -7082433925544965770
+                },
+                {
+                    "origLen": 142,
+                    "pathId": 1702253000658861041
+                }
+            ],
             "pathId": 2480655541951807733,
             "blockIdx": 29
         },
@@ -305,6 +641,22 @@
             "jpText": "おおっ、ブエノ♪\nみんなの気持ち、とっても嬉しいデース！",
             "enText": "Oh, Bueno… I'm so happy for all of you!",
             "nextBlock": 31,
+            "origClipLength": 185,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 3806569797203962083
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2340552600620928285
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 7505678940372527985
+                }
+            ],
             "pathId": 3132652549535530967,
             "blockIdx": 30
         },
@@ -314,6 +666,22 @@
             "jpText": "でもでも、エルが欲しいのはしっかり信頼しあえるパートナー！\r\nというわけで――",
             "enText": "But what Elle wants is a partner she can trust! So―",
             "nextBlock": 32,
+            "origClipLength": 211,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -1545819508282289094
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8059128926394001181
+                },
+                {
+                    "origLen": 44,
+                    "pathId": 6500603472423804749
+                }
+            ],
             "pathId": 6794363083787921799,
             "blockIdx": 31
         },
@@ -323,6 +691,14 @@
             "jpText": "激闘！　争奪！\n『スカウト選手権』の開・幕・デェェス！",
             "enText": "Fierce battle! Fighting! The \"Scout \nChampionship\" is about to begin!",
             "nextBlock": 33,
+            "origClipLength": 185,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": 6299892933411893796
+                }
+            ],
             "pathId": 2582588337536844704,
             "blockIdx": 32
         },
@@ -332,6 +708,14 @@
             "jpText": "『スカウト選手権』……？",
             "enText": "The \"Scouting Championship,\"…?",
             "nextBlock": 34,
+            "origClipLength": 60,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": 4700772797018341854
+                }
+            ],
             "pathId": 4525099607594284263,
             "blockIdx": 33
         },
@@ -341,6 +725,18 @@
             "jpText": "はい！　トレーナーといえばやっぱり、\nトレーニングメニュー！",
             "enText": "Yes! Speaking of trainers, training menus!",
             "nextBlock": 35,
+            "origClipLength": 145,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -2840749201397952113
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2679407321616837064
+                }
+            ],
             "pathId": 1471903545991816875,
             "blockIdx": 34
         },
@@ -350,6 +746,18 @@
             "jpText": "ということでみんな、世界最強のエルにふさわしい\r\nトレーニングメニューを、バンバン考えてきてください！",
             "enText": "So, everyone, please come up with a training \nmenu worthy of the world's strongest elle!",
             "nextBlock": 36,
+            "origClipLength": 248,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 214,
+                    "pathId": -5897529747560821119
+                },
+                {
+                    "origLen": 188,
+                    "pathId": -5196256540161730729
+                }
+            ],
             "pathId": 6321815063452362183,
             "blockIdx": 35
         },
@@ -359,6 +767,18 @@
             "jpText": "エルがビビッとくるトレーニングメニューを用意してくれたら、\r\nそのトレーナーさんのスカウトを受けますデース！！",
             "enText": "If Elle has a training menu that spooks \nme, I'll take that trainer's scout!",
             "nextBlock": 37,
+            "origClipLength": 224,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 132,
+                    "pathId": 8526819879958524139
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 4027384384409840466
+                }
+            ],
             "pathId": -193466289111080354,
             "blockIdx": 36
         },
@@ -368,6 +788,18 @@
             "jpText": "なるほど……！\n『トレーニングメニュー考案対決』だな！",
             "enText": "I see…! It's a \"training menu design showdown\"!",
             "nextBlock": 38,
+            "origClipLength": 142,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": -7599628864784174116
+                },
+                {
+                    "origLen": 120,
+                    "pathId": -4630932048097183254
+                }
+            ],
             "pathId": -1601720915694749534,
             "blockIdx": 37
         },
@@ -377,6 +809,18 @@
             "jpText": "望むところよ！\n必ずあなたを満足させてみせるわ……！",
             "enText": "I hope so! I will surely satisfy you…!",
             "nextBlock": 39,
+            "origClipLength": 133,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": -3915308555587061777
+                },
+                {
+                    "origLen": 113,
+                    "pathId": 4259349826302624102
+                }
+            ],
             "pathId": -5860391104862979031,
             "blockIdx": 38
         },
@@ -386,6 +830,18 @@
             "jpText": "こうして、張り切った様子のトレーナーたちは散っていき、\r\nそして――",
             "enText": "And so, the exuberant trainers dispersed, and―",
             "nextBlock": 40,
+            "origClipLength": 89,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 74,
+                    "pathId": 3905542433188258003
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8659205263121195650
+                }
+            ],
             "pathId": 1665412786338888089,
             "blockIdx": 39
         },
@@ -395,6 +851,22 @@
             "jpText": "最後に残ったのは……やはりアナタでしたか！\nパッション溢れるトレーナーさんっ！！",
             "enText": "The last one left was… and it was you, \nafter all! Passionate trainer!",
             "nextBlock": 41,
+            "origClipLength": 215,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -8316497780443045078
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7061174272464469992
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -6520042865304036117
+                }
+            ],
             "pathId": 6833298724902508099,
             "blockIdx": 40
         },
@@ -404,6 +876,18 @@
             "jpText": "しかぁーし！　申し訳ありませんが、\n特別扱いはできませんデース。",
             "enText": "But! I'm sorry, but we can't give you special treatment.",
             "nextBlock": 42,
+            "origClipLength": 180,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 2702558380488517050
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3681203637415162555
+                }
+            ],
             "pathId": -7032456019864051084,
             "blockIdx": 41
         },
@@ -413,6 +897,18 @@
             "jpText": "でも……こっそりひっそり教えちゃいますが、\r\nアナタの考えてくるメニュー、とても楽しみにしていますデスよ♪",
             "enText": "But… secretly and secretly, I'm really looking forward to seeing \nwhat you come up with for the menu.",
             "nextBlock": 43,
+            "origClipLength": 246,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 234,
+                    "pathId": 6551763803811333374
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 3423304990923771538
+                }
+            ],
             "pathId": 5791939507379759855,
             "blockIdx": 42
         },
@@ -422,6 +918,18 @@
             "jpText": "だって、エルのことをフライングしてまで\nスカウトしに来てくれた方デスから。",
             "enText": "Because she was the one who came to scout \nfor us, even flown out to see Elle.",
             "nextBlock": 44,
+            "origClipLength": 151,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 167,
+                    "pathId": 1454518392590107831
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -5201614576482716674
+                }
+            ],
             "pathId": -7354166393185588143,
             "blockIdx": 43
         },
@@ -431,6 +939,22 @@
             "jpText": "待ってますね、トレーナーさんっ！！",
             "enText": "I'll be waiting for you, trainer!",
             "nextBlock": 45,
+            "origClipLength": 74,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -8827318822684418423
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 835858029425466676
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -7257634344594049709
+                }
+            ],
             "pathId": 3121976474684965320,
             "blockIdx": 44
         },
@@ -440,8 +964,21 @@
             "jpText": "……なりゆきで、エルコンドルパサーのための\r\nトレーニングメニューを考えることになったのだった。",
             "enText": "The idea was to come up with a training \nmenu for Elcondor Passer…",
             "nextBlock": -1,
+            "origClipLength": 98,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 436308132119502198
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6298851335042628916
+                }
+            ],
             "pathId": -4997731262155083942,
             "blockIdx": 45
         }
-    ]
+    ],
+    "modified": 1695296147
 }

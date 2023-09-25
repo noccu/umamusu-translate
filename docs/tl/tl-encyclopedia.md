@@ -29,7 +29,24 @@ Term | Translation
 ちょっと | a little
 ほんのわずかに | very slightly
 ほんのちょっと | a tiny bit?
-上げ続ける | Gradually (in/decrease)
+上げ続ける | Gradually (in/decrease) or continuously
+
+# Horse racing
+Term | Meaning| Explanation
+---|---|---
+脚 | Pace, running performance | Mostly used to refer to the pace of a horse or the (physical) "running" of the race.
+末脚 | Last spurt (performance) | Refers to the "ending pace" or last spurt strength essentially. [tip/end + leg/pace/etc]
+末脚の切れる馬 | Strong spurter | Refers to horses who are strong/speed up on the final stretch. The idea is "as if a sharp sword had sliced through the pack of horses", or "a horse which can slice through the pack at the end", in English parlance.
+末脚が甘い馬 | Weak spurter | Conversely, is used for those with weaker/slumping final spurt performance, lacking in tenacity for that last bit.
+鋭い | Quick acceleration | Generally used as "a sharp increase (in pace)", but also ties into 切れる which is why you get shortenings (?) like 切れる脚 and 鋭脚. This seems to somewhat tie into "betweeners" (and chasers) or more generally the term 差し as those are the ones most often exhibiting this strong final spurt performance.
+差す | Overtaking from further back | Basically refers to horses towards the back half of the pack "inserting" themselves or "thrusting" between the more front ones to overtake.
+差し返す/した | Counter-comeback | Refers to a leading horse being overtaken as per 差す, and then re-overtaking to win.
+差し脚 | |  See terms above
+一杯 | Out of energy |
+脚色 | Running status | lit. leg color; the manner/"condition" of the run. Related to energy/stam.
+脚色一杯 | Running on empty |
+脚質 | Running style/strategy | lit. leg nature
+切れ味が鋭い | | Basically same as 鋭い
 
 # Horsegirls
 
@@ -68,3 +85,9 @@ METI | active SETI
 LIDAR | an acronym of light detection and ranging
 EVLT | evolution 
 THIS | THIS
+
+## El Condor Pasa
+Term | Translation
+---|---
+最強、最速、怪鳥！　エルコンドルパサー参上！ | Power! Speed! Bird of mystery and fear! El Condor Pasa appears!
+優勝、快勝、エル圧勝っ！！ | Glorious! Meritorious! El's victorious!!

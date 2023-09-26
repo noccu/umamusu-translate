@@ -174,8 +174,6 @@ class Editor:
         speaker_en_entry.bind("<Tab>", display._switchWidgetFocusForced)
         text_box_en.focus()
 
-        # self.nav.change_chapter(initialLoad=True)
-
         ## Keybinds
         root.bind("<Control-Return>", self.nav.next_block)
         root.bind_all("<Control-s>", self.saveFile)
@@ -414,8 +412,7 @@ class SearchWindow:
             if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
                 # print(f"Found {s_re} at ch{chapter}:b{i}")
                 if chapter != self.master.nav.cur_chapter:
-                    self.master.nav.chapterPicker.current(chapter)
-                    self.master.nav.change_chapter()
+                    self.master.nav.change_chapter(chapter)
                 self.master.nav.change_block(i)
                 self.search_cur_state = self.master.nav.cur_chapter, i + 1
                 return True
@@ -428,8 +425,7 @@ class SearchWindow:
 
     def restoreState(self):
         ch, b, *_ = self.stateOnOpen
-        self.master.nav.chapterPicker.current(ch)
-        self.master.nav.change_chapter()
+        self.master.nav.change_chapter(ch)
         self.master.nav.change_block(b)
 
 

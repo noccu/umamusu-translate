@@ -42,19 +42,22 @@ class Navigator:
         self.master = master
         self.fileMan = master.fileMan
 
-    def change_chapter(self, event=None):
+    def change_chapter(self, chapter):
+        if not isinstance(chapter, int):
+            chapter = self.chapterPicker.current()
+        else:
+            self.chapterPicker.current(chapter)  # Update the ui
+
         if self.cur_file:
             self.fileMan.save_block(self)
             self.cur_file.lastBlock = self.cur_block
         if self.chapterPicker.search:
-            cur_chapter = self.chapterPicker.search[self.chapterPicker.current()]
+            chapter = self.chapterPicker.search[chapter]
             self.resetChapterSearch()
-        else:
-            cur_chapter = self.chapterPicker.current()
 
-        cur_file = self.fileMan.loadFile(cur_chapter)
+        cur_file = self.fileMan.loadFile(chapter)
         self.cur_file = cur_file
-        self.cur_chapter = cur_chapter
+        self.cur_chapter = chapter
         self.cur_block = getattr(self.cur_file, "lastBlock", 0)
         self.blockPicker["values"] = [
             f"{i+1} - {block['jpText'][:16]}" for i, block in enumerate(cur_file.textBlocks)
@@ -71,16 +74,14 @@ class Navigator:
 
     def prev_ch(self, event=None):
         if self.cur_chapter - 1 > -1:
-            self.chapterPicker.current(self.cur_chapter - 1)
-            self.change_chapter()
+            self.change_chapter(self.cur_chapter - 1)
         else:
             print("Reached first chapter")
 
     def next_ch(self, event=None):
         #! ugh
         if self.cur_chapter + 1 < len(self.fileMan.files):
-            self.chapterPicker.current(self.cur_chapter + 1)
-            self.change_chapter()
+            self.change_chapter(self.cur_chapter + 1)
         else:
             print("Reached last chapter")
 

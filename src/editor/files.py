@@ -63,8 +63,7 @@ class FileManager:
         self.formattedFiles = [f.name for f in files]
         #! sigh
         self.master.nav.chapterPicker["values"] = self.formattedFiles
-        self.master.nav.chapterPicker.current(0)
-        self.master.nav.change_chapter()
+        self.master.nav.change_chapter(0)
         #? reset savestate and others?
 
     def loadFile(self, chapter: int) -> TranslationFile:

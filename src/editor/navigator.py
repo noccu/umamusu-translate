@@ -33,7 +33,7 @@ class Navigator:
         block_dropdown.current(0)
         block_dropdown.grid(row=0, column=3, sticky=tk.NSEW)
 
-        self.cur_chapter = 0
+        self.cur_chapter = None
         self.cur_block = 0
         self.cur_data = None
         self.cur_file: "TranslationFile" = None
@@ -43,6 +43,8 @@ class Navigator:
         self.fileMan = master.fileMan
 
     def change_chapter(self, chapter):
+        if chapter == self.cur_chapter:
+            return
         if not isinstance(chapter, int):
             chapter = self.chapterPicker.current()
         else:

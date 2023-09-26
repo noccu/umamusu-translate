@@ -411,8 +411,7 @@ class SearchWindow:
                 continue
             if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
                 # print(f"Found {s_re} at ch{chapter}:b{i}")
-                if chapter != self.master.nav.cur_chapter:
-                    self.master.nav.change_chapter(chapter)
+                self.master.nav.change_chapter(chapter)
                 self.master.nav.change_block(i)
                 self.search_cur_state = self.master.nav.cur_chapter, i + 1
                 return True

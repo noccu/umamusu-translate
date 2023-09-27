@@ -307,6 +307,18 @@ class AdditionalTextWindow:
 
 
 class SearchWindow:
+    class State:
+        def __init__(self, master: Editor):
+            self.master = master
+        def save(self):
+            self.chapter = self.master.nav.cur_chapter
+            self.block = self.master.nav.cur_block
+            self.save_per_block = self.master.options.saveOnBlockChange.get()
+            self.skip_translated = self.master.options.skip_translated.get()
+        def setPos(self, chapter, block):
+            self.chapter = chapter
+            self.block = block
+    
     def __init__(self, master: Editor) -> None:
         root = tk.Toplevel(master.root)
         root.title("Search")
@@ -325,8 +337,7 @@ class SearchWindow:
         search_re.grid(row=1, column=1, columnspan=2, sticky=tk.W)
         search_re.bind("<Return>", self.search)
 
-        search_chapters = tk.IntVar()
-        search_chapters.set(0)
+        search_chapters = tk.BooleanVar(root, False)
         chk_search_chapters = tk.Checkbutton(
             root, text="Search all loaded chapters", variable=search_chapters
         )
@@ -346,36 +357,23 @@ class SearchWindow:
         self.master = master
         self.root = root
         self.filter = search_filter
-        self.optSearchChapters = search_chapters
+        self.optSearchAll = search_chapters
         self.searchBox = search_re
-        # set it here so it exists when window closed without searching
-        # todo: access these from master
-        self.stateOnOpen = (
-            self.master.nav.cur_block,
-            self.master.nav.cur_chapter,
-            self.master.options.saveOnBlockChange.get(),
-            self.master.options.skip_translated.get(),
-        )
+        self.savedState = self.State(master)
+        self.curState = self.State(master)
         self.reset_search()  # sets cur state
-
         root.withdraw()
 
     def show(self):
-        # todo: uhh...
-        self.stateOnOpen = (
-            self.master.nav.cur_block,
-            self.master.nav.cur_chapter,
-            self.master.options.saveOnBlockChange.get(),
-            self.master.options.skip_translated.get(),
-        )
-        self.master.options.saveOnBlockChange.set(0)
-        self.master.options.skip_translated.set(0)
+        self.savedState.save()
+        self.master.options.saveOnBlockChange.set(False)
+        self.master.options.skip_translated.set(False)
         self.root.deiconify()
         self.searchBox.focus()
 
     def close(self):
-        self.master.options.saveOnBlockChange.set(self.stateOnOpen[2])
-        self.master.options.skip_translated.set(self.stateOnOpen[3])
+        self.master.options.saveOnBlockChange.set(self.savedState.save_per_block)
+        self.master.options.skip_translated.set(self.savedState.skip_translated)
         self.root.withdraw()
 
     def toggle(self, event=None):
@@ -385,8 +383,8 @@ class SearchWindow:
             self.show()
 
     def search(self, *_):
-        min_ch = self.search_cur_state[0]
-        if self.optSearchChapters.get():
+        min_ch = self.curState.chapter
+        if self.optSearchAll.get():
             for ch in range(min_ch, len(self.master.fileMan.files)):
                 self.master.fileMan.loadFile(ch)
                 if self._search_text_blocks(ch):
@@ -394,11 +392,12 @@ class SearchWindow:
         else:
             self._search_text_blocks(self.master.nav.cur_chapter)
 
-    def _search_text_blocks(self, chapter):
-        start_block = self.search_cur_state[1]
+    def _search_text_blocks(self, chapter: int):
+        start_block = self.curState.block
         s_field, s_re = (x.get() for x in self.filter)
 
-        # print(f"searching in {cur_file.name}, from {self.search_cur_state}, on {s_field} = {s_re}")
+        # print(f"searching in {self.master.nav.cur_file.name} ({chapter}), "
+        #       f"from {vars(self.cur_state)}, on {s_field} = {s_re}")
         file = self.master.fileMan.files[chapter]
         for i in range(start_block, len(file.textBlocks)):
             block = file.textBlocks[i]
@@ -411,21 +410,20 @@ class SearchWindow:
                 continue
             if re.search(s_re, block.get(s_field, ""), flags=re.IGNORECASE):
                 # print(f"Found {s_re} at ch{chapter}:b{i}")
+                self.curState.setPos(chapter, i + 1)
                 self.master.nav.change_chapter(chapter)
                 self.master.nav.change_block(i)
-                self.search_cur_state = self.master.nav.cur_chapter, i + 1
                 return True
-        self.search_cur_state = self.master.nav.cur_chapter + 1, 0
+        self.curState.setPos(chapter + 1, 0)
         return False
 
     def reset_search(self, event=None, *args):
         # event = the Var itself
-        self.search_cur_state = 0, 0
+        self.curState.setPos(0, 0)
 
     def restoreState(self):
-        ch, b, *_ = self.stateOnOpen
-        self.master.nav.change_chapter(ch)
-        self.master.nav.change_block(b)
+        self.master.nav.change_chapter(self.savedState.chapter)
+        self.master.nav.change_block(self.savedState.block)
 
 
 class PreviewWindow:

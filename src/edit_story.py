@@ -8,6 +8,7 @@ def parseArgs(args=None):
     ap = patch.Args("Story editor", types=constants.SUPPORTED_TYPES)
     ap.add_argument("-src", type=Path)
     ap.add_argument("-dst", help=SUPPRESS)
+    ap.add_argument("-merge", type=Path, help="Add another file or directory to use as alternate tl and enter merge mode")
     args = ap.parse_args(args)
     return args
 
@@ -23,6 +24,8 @@ def main(args=None):
 
     editor = Editor()
     editor.fileMan.importFiles(files)
+    if args.merge:
+        editor.merge(args.merge)
     editor.start()
 
 

@@ -1,3 +1,4 @@
+from pathlib import Path
 import re
 import tkinter as tk
 from tkinter import messagebox, ttk
@@ -5,6 +6,7 @@ from types import SimpleNamespace
 
 from common import constants as const
 from common.constants import NAMES_BLACKLIST
+from common.types import TranslationFile
 
 from . import display, files, navigator, text, fonts
 from .spellcheck import SpellCheck
@@ -40,6 +42,7 @@ class Editor:
         self.extraText = AdditionalTextWindow(self)
         self.search = SearchWindow(self)
         self.preview = PreviewWindow(self)
+        self.merging = False
 
         speaker_jp_label = tk.Label(root, text="Speaker (JP)")
         speaker_jp_label.grid(row=1, column=0)
@@ -233,6 +236,10 @@ class Editor:
 
         names.translate(self.nav.cur_file, forceReload=True)
         self.fileMan.load_block(self.nav.cur_file, self.nav.cur_block)
+
+    def merge(self, files):
+        self.mergeWWindow = MergeWindow(self)
+        self.mergeWWindow.setFiles(files)
 
 
 class AdditionalTextWindow:
@@ -472,3 +479,59 @@ class PreviewWindow:
             self.root.withdraw()
         else:
             self.root.deiconify()
+
+
+class MergeWindow:
+    def __init__(self, master: Editor) -> None:
+        root = tk.Toplevel()
+        root.title("Merge")
+        root.resizable(True, True)
+        root.protocol("WM_DELETE_WINDOW", root.withdraw)
+        self.master = master
+        self.root = root
+        self.nav = master.nav
+        master.merging = True
+        self.activeFile = None
+
+        filePicker = ttk.Combobox(root, width=35)
+        filePicker.pack(anchor="n")
+        ttk.Separator(root, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
+        textOrig = text.TextBox(root, size=(None,5))
+        textOrig.pack(anchor="w")
+        ttk.Separator(root, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
+        textAlt = text.TextBox(root, size=(None,5))
+        textAlt.pack(anchor="w")
+
+        filePicker.bind("<<ComboboxSelected>>", self.changeFile)
+        self.filePicker = filePicker
+        self.textOrig = textOrig
+        self.textAlt = textAlt
+
+    def setFiles(self, files:Path):
+        if files.is_file():
+            files = (files,)
+        elif files.is_dir():
+            files = files.glob("*.json")
+        self.files = [TranslationFile(f) for f in files]
+        self.filePicker.config(values=[f.name for f in self.files])
+        if len(files) == 1:
+            self.filePicker.current(0)
+            self.changeFile()
+
+    def changeFile(self, event=None):
+        self.activeFile = self.files[self.filePicker.current()]
+        self.evBlockUpdated(self.master.nav.cur_data, self.master.nav.cur_block)
+
+    def evFileChanged(self, loadedFile: TranslationFile):
+        for i, refFile in enumerate(self.files):
+            if refFile.name != loadedFile.name:
+                continue
+            self.filePicker.current(i)
+            self.changeFile()
+            return
+
+    def evBlockUpdated(self, data: dict, blockIdx: int):
+        if not self.activeFile:
+            return
+        self.textOrig.loadRichText(data.get("enText"))
+        self.textAlt.loadRichText(self.activeFile.textBlocks[blockIdx].get("enText"))

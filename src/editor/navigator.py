@@ -33,9 +33,9 @@ class Navigator:
         block_dropdown.current(0)
         block_dropdown.grid(row=0, column=3, sticky=tk.NSEW)
 
-        self.cur_chapter = None
-        self.cur_block = 0
-        self.cur_data = None
+        self.cur_chapter: int = None
+        self.cur_block: int = 0
+        self.cur_data: dict = None
         self.cur_file: "TranslationFile" = None
         self.chapterPicker = chapter_dropdown
         self.blockPicker = block_dropdown
@@ -69,6 +69,9 @@ class Navigator:
         ll = textprocess.calcLineLen(cur_file, False) or self.master.textBoxEn.DEFAULT_WIDTH
         self.master.textBoxEn.config(width=ll)
         self.master.textBoxJp.config(width=ll)
+
+        if self.master.merging:
+            self.master.mergeWWindow.evFileChanged(cur_file)
 
     def reload_chapter(self, event=None):
         self.cur_file.reload()
@@ -124,6 +127,10 @@ class Navigator:
         else:
             display.setActive(self.btnNext, True)
             self.btnNext["text"] = f"Next ({idx} -> {nextIdx}!)" if nextIdx - idx > 1 else "Next"
+        
+        #  todo: events?
+        if self.master.merging:
+            self.master.mergeWWindow.evBlockUpdated(self.cur_data, idx)
 
     def prev_block(self, event=None):
         idx = self.cur_block - 1

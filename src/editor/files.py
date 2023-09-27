@@ -120,9 +120,7 @@ class FileManager:
             text.setText(self.master.blockDurationLabel, f"Text Duration ({origClipLen})")
             self.master.blockDuration.set(block.get("newClipLength", 0))
 
-        display.setActive(self.master.textBoxJp, True)
         self.master.textBoxJp.loadRichText(text.for_display(file, block["jpText"]))
-        display.setActive(self.master.textBoxJp, False)
         displayText = text.for_display(file, block["enText"])
         self.master.textBoxEn.loadRichText(displayText)
 

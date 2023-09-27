@@ -48,6 +48,7 @@ class TextBox(tk.Text):
 
     DEFAULT_WIDTH = 54
     DEFAULT_HEIGHT = 4
+    _EDITABLE = False
 
     # todo: maybe move color to post_init and pass through init itself to tk
     def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
@@ -68,6 +69,8 @@ class TextBox(tk.Text):
     def loadRichText(self, text: str = None):
         """Load text into widget, converting unity RT markup to tk tags.
         If no text is given it converts all existing text"""
+        if not self._EDITABLE:
+            self.config(state="normal")
         if text is None:
             text = self.get(1.0, tk.END)
         tagList = list()
@@ -91,6 +94,8 @@ class TextBox(tk.Text):
         # Apply tags
         for toTag in tagList:
             self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
+        if not self._EDITABLE:
+            self.config(state="disabled")
 
     def toRichText(self):
         text = list(self.get(1.0, tk.END))
@@ -126,6 +131,7 @@ class TextBox(tk.Text):
 
 
 class TextBoxEditable(TextBox):
+    _EDITABLE = True
     def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
         super().__init__(parent, size, font, **kwargs)
         self.config(state="normal", undo=True)

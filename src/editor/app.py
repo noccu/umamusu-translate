@@ -55,7 +55,7 @@ class Editor:
 
         block_duration_label = tk.Label(root, text="Text Duration")
         block_duration_label.grid(row=2, column=2)
-        block_duration_spinbox = ttk.Spinbox(root, from_=0, to=9999, increment=1, width=5)
+        block_duration_spinbox = ttk.Spinbox(root, from_=0, to=1000, increment=1, width=5)
         block_duration_spinbox.grid(row=2, column=3, sticky=tk.W)
         self.blockDuration = block_duration_spinbox
         self.blockDurationLabel = block_duration_label

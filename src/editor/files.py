@@ -111,16 +111,14 @@ class FileManager:
                 self.master.speakerEn.config(bg="red")
 
         # Spinbox for text block duration
-        text.clearText(self.master.blockDuration)
-        if "origClipLength" in block:
-            text.setText(self.master.blockDurationLabel, f"Text Duration ({block['origClipLength']})")
-        if "newClipLength" in block:
-            text.setText(self.master.blockDuration, block["newClipLength"])
+        origClipLen = block.get("origClipLength")
+        if origClipLen is None:
+            self.master.blockDuration.set(-1)
+            display.setActive(self.master.blockDuration, False)
         else:
-            if "origClipLength" in block:
-                text.setText(self.master.blockDuration, block["origClipLength"])
-            else:
-                text.setText(self.master.blockDuration, "-1")
+            display.setActive(self.master.blockDuration, True)
+            text.setText(self.master.blockDurationLabel, f"Text Duration ({origClipLen})")
+            self.master.blockDuration.set(block.get("newClipLength", 0))
 
         display.setActive(self.master.textBoxJp, True)
         self.master.textBoxJp.loadRichText(text.for_display(file, block["jpText"]))
@@ -162,21 +160,19 @@ class FileManager:
         cur_data["enText"] = text.for_storage(cur_file, self.master.textBoxEn.toRichText())
 
         # Get the new clip length from spinbox
-        new_clip_length = self.master.blockDuration.get()
-        if new_clip_length.isnumeric():
-            new_clip_length = int(new_clip_length)
-            if "origClipLength" in cur_data and new_clip_length != cur_data["origClipLength"]:
-                cur_data["newClipLength"] = new_clip_length
-            else:
-                cur_data.pop("newClipLength", None)
-                if "origClipLength" not in cur_data:
-                    messagebox.showwarning(
-                        master=self.master.blockDuration,
-                        title="Cannot save clip length",
-                        message="This text block does not have an original clip length defined"
-                        " and thus cannot save a custom clip length. Resetting to -1.",
-                    )
-                    text.setText(self.master.blockDuration, "-1")
-        elif new_clip_length != "-1":
+        try:
+            new_clip_length = int(self.master.blockDuration.get())
+        except ValueError:
+            messagebox.showwarning(
+                master=self.master.blockDuration,
+                title="Invalid clip length",
+                message="Clip length must be an integer."
+            )
+            new_clip_length = -1
+        origClipLen = cur_data.get("origClipLength", 9999)
+        if new_clip_length == origClipLen:
             cur_data.pop("newClipLength", None)
+        elif origClipLen < new_clip_length < 1001:
+            cur_data["newClipLength"] = new_clip_length
+
         self.saveState.markBlockSaved(nav.cur_chapter, cur_data)

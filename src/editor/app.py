@@ -514,7 +514,7 @@ class MergeWindow:
             files = files.glob("*.json")
         self.files = [TranslationFile(f) for f in files]
         self.filePicker.config(values=[f.name for f in self.files])
-        if len(files) == 1:
+        if len(self.files) == 1:
             self.filePicker.current(0)
             self.changeFile()
 

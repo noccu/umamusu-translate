@@ -183,13 +183,15 @@ class TextBoxEditable(TextBox):
         return "break"  # prevent control char entry
 
     def del_word(self, event):
-        pos = self.index(tk.INSERT)
-        start = "linestart" if event.state & 0x0001 else "wordstart"
-        end = "lineend" if event.state & 0x0001 else "wordend"
-        if event.keycode == 8:
-            self.delete(f"{pos} -1c {start}", pos)
-        elif event.keycode == 46:
-            self.delete(pos, f"{pos} {end}")
+        shift = event.state & 0x0001
+        if event.keycode == 8:  # backspace
+            ptn = r"^" if shift else r"[^ …—]+|^"
+            sIdx = self.search(ptn, index=tk.INSERT, backwards=True, regexp=True, nocase=True)
+            self.delete(sIdx, tk.INSERT)  # 
+        elif event.keycode == 46:  # delete
+            ptn = r".$" if shift else r" ?.(?=[ …—]|$)"
+            sIdx = self.search(ptn, index=tk.INSERT, backwards=False, regexp=True, nocase=True)
+            self.delete(tk.INSERT, sIdx + "+1c")
         return "break"
 
     def char_convert(self, event=None):

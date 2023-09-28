@@ -491,21 +491,26 @@ class MergeWindow:
         self.root = root
         self.nav = master.nav
         master.merging = True
-        self.activeFile = None
 
-        filePicker = ttk.Combobox(root, width=35)
-        filePicker.pack(anchor="n")
-        ttk.Separator(root, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
-        textOrig = text.TextBox(root, size=(None,5))
+        selectionFrame = tk.Frame(root)
+        viewFrame = tk.Frame(root)
+        fileNum = tk.IntVar(value=1)
+        fileNumPicker = ttk.Spinbox(selectionFrame, from_=1, to=5, increment=1, width=8, textvariable=fileNum)
+        fileNumPicker.grid(row=0, column=0)
+        fileNum.trace("w", self.evFileNumChange)
+        ttk.Separator(viewFrame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
+        textOrig = text.TextBox(viewFrame, size=(None,3))
         textOrig.pack(anchor="w")
-        ttk.Separator(root, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
-        textAlt = text.TextBox(root, size=(None,5))
-        textAlt.pack(anchor="w")
+        textOrig.loadRichText(master.nav.cur_data.get("enText"))
+        selectionFrame.pack()
+        viewFrame.pack()
 
-        filePicker.bind("<<ComboboxSelected>>", self.changeFile)
-        self.filePicker = filePicker
         self.textOrig = textOrig
-        self.textAlt = textAlt
+        self.fileNum = fileNum
+        self.fileNumPicker = fileNumPicker
+        self.filePickers: list[ttk.Combobox] = list()
+        self.selectionFrame = selectionFrame
+        self.viewFrame = viewFrame
 
     def setFiles(self, files:Path):
         if files.is_file():
@@ -513,25 +518,61 @@ class MergeWindow:
         elif files.is_dir():
             files = files.glob("*.json")
         self.files = [TranslationFile(f) for f in files]
-        self.filePicker.config(values=[f.name for f in self.files])
+        self.fileNames = [f.name for f in self.files]
+        firstPicker = self.createFilePicker()
         if len(self.files) == 1:
-            self.filePicker.current(0)
-            self.changeFile()
+            firstPicker.current(0)
+            display.setActive(self.fileNumPicker, False)
+            self.changeFile(widget=firstPicker)
 
-    def changeFile(self, event=None):
-        self.activeFile = self.files[self.filePicker.current()]
-        self.evBlockUpdated(self.master.nav.cur_data, self.master.nav.cur_block)
+    def createFilePicker(self):
+        filePicker = ttk.Combobox(self.selectionFrame, width=30)
+        filePicker.id = len(self.filePickers)
+        filePicker.view = self.createBlockView()
+        filePicker.activeFile = None
+        filePicker.config(values=self.fileNames)
+        filePicker.bind("<<ComboboxSelected>>", self.changeFile)
+        filePicker.bind("<Destroy>", lambda e: e.widget.view.destroy())
+        filePicker.grid(row=0, column=len(self.filePickers) + 1)
+        self.filePickers.append(filePicker)
+        return filePicker
 
-    def evFileChanged(self, loadedFile: TranslationFile):
-        for i, refFile in enumerate(self.files):
-            if refFile.name != loadedFile.name:
+    def createBlockView(self):
+        sep = ttk.Separator(self.viewFrame, orient=tk.HORIZONTAL)
+        sep.pack(fill=tk.X, pady=20)
+        textbox = text.TextBox(self.viewFrame, size=(None,3))
+        textbox.pack(anchor="w")
+        textbox.sep = sep
+        textbox.bind("<Destroy>", lambda e: e.widget.sep.destroy())
+        return textbox
+
+    def changeFile(self, event=None, widget: ttk.Combobox = None):
+        widget = widget or event.widget
+        widget.activeFile = self.files[widget.current()]
+        self.evBlockUpdated(self.master.nav.cur_data, self.master.nav.cur_block, widget=widget)
+
+    def evBlockUpdated(self, data: dict, blockIdx: int, widget: ttk.Combobox = None):
+        if widget is None:
+            self.textOrig.loadRichText(data.get("enText"))
+        pickers = (widget,) if widget else self.filePickers
+        for picker in pickers:
+            if not picker.activeFile:
+                print(f"No active file for picker {picker.id}")
                 continue
-            self.filePicker.current(i)
-            self.changeFile()
-            return
+            try:
+                picker.view.loadRichText(picker.activeFile.textBlocks[blockIdx].get("enText"))
+            except IndexError:
+                pass
 
-    def evBlockUpdated(self, data: dict, blockIdx: int):
-        if not self.activeFile:
+    def evFileNumChange(self, *_):
+        reqNumPickers = self.fileNum.get()
+        curNumPickers = len(self.filePickers)
+        if curNumPickers == reqNumPickers:
             return
-        self.textOrig.loadRichText(data.get("enText"))
-        self.textAlt.loadRichText(self.activeFile.textBlocks[blockIdx].get("enText"))
+        elif curNumPickers < reqNumPickers:
+            while len(self.filePickers) < reqNumPickers:
+                self.createFilePicker()
+        elif curNumPickers > reqNumPickers:
+            while len(self.filePickers) > reqNumPickers:
+                p = self.filePickers.pop()
+                p.destroy()

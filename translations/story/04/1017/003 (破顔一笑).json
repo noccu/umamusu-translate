@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "4U3C234XUGECBSSEIZAAV5FZPKMO5KFT",
     "type": "story",
     "storyId": "041017003",
@@ -11,6 +11,8 @@
             "jpText": "選抜レースから、2日後のこと。",
             "enText": "It was two days after the Selection Race.",
             "nextBlock": 2,
+            "origClipLength": 64,
+            "voiceIdx": -1,
             "pathId": 5442510022309906881,
             "blockIdx": 1
         },
@@ -20,6 +22,14 @@
             "jpText": "シンボリルドルフに言い渡された期限を明日に控え、\r\n答えに悩みながら歩いていると――",
             "enText": "with the deadline given by Symboli Rudolf fast approaching, I \nfound myself strolling along, grappling with the answer she \nawaited――",
             "nextBlock": 3,
+            "origClipLength": 99,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": -6575873427435954384
+                }
+            ],
             "pathId": -5514709938540871038,
             "blockIdx": 2
         },
@@ -29,6 +39,18 @@
             "jpText": "おや、トレーナー君じゃないか。",
             "enText": "Oh, it's you, trainer.",
             "nextBlock": 4,
+            "origClipLength": 79,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": -7488253679034518047
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -435734535686512876
+                }
+            ],
             "pathId": -1287975543454787234,
             "blockIdx": 3
         },
@@ -38,11 +60,23 @@
             "jpText": "あぁっ！　すみません、先日ルドルフさんとカフェテリアで\r\nお話してらしたトレーナーさんですよね？",
             "enText": "Ah! Excuse me, aren't you the trainer who was chatting with \nRudolph in the cafeteria the other day?",
             "nextBlock": 5,
+            "origClipLength": 216,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "どうしてそれを……？",
                     "enText": "How did you know…?",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 264,
+                    "pathId": 8204642691209250126
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -485104100925869089
                 }
             ],
             "pathId": -3194628041084931804,
@@ -54,6 +88,14 @@
             "jpText": "ははっ！　ルドルフさんほど有名な子が選抜レース直後って時期に\r\nトレーナーと食事してたら、それは注目されますよ！",
             "enText": "Haha! When a renowned horsegirl like Rudolf is spotted \nsharing a meal with a trainer right after the Selection Race, \nit naturally catches people's attention!",
             "nextBlock": 6,
+            "origClipLength": 252,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 264,
+                    "pathId": -5634614896621846696
+                }
+            ],
             "pathId": -1548644932302476028,
             "blockIdx": 5
         },
@@ -63,6 +105,18 @@
             "jpText": "はは……私たちは予想していた以上に、\r\n衆目を集めていたらしいね。",
             "enText": "Haha… It seems we've garnered even more interest than we \nanticipated.",
             "nextBlock": 7,
+            "origClipLength": 199,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": 1024634421656479765
+                },
+                {
+                    "origLen": 148,
+                    "pathId": 5351742068707000256
+                }
+            ],
             "pathId": 3699128763564832273,
             "blockIdx": 6
         },
@@ -72,6 +126,18 @@
             "jpText": "そんな、ルドルフさんと距離の近しい\nトレーナーさんにお願いなのですが……。",
             "enText": "Oh, would it be possible to ask a favor from \na trainer close to Ms. Rudolf…?",
             "nextBlock": 8,
+            "origClipLength": 175,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 191,
+                    "pathId": -3143712025708696675
+                },
+                {
+                    "origLen": 23,
+                    "pathId": 6014301322233098981
+                }
+            ],
             "pathId": -6920175227740487522,
             "blockIdx": 7
         },
@@ -81,11 +147,19 @@
             "jpText": "今日1日、ルドルフさんに密着して\n写真を撮っていただけませんか！？",
             "enText": "Could you spend the day with her \nand take some photos?",
             "nextBlock": 9,
+            "origClipLength": 145,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "写真？",
                     "enText": "Photo?",
                     "nextBlock": 9
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 157,
+                    "pathId": 3344320587426379465
                 }
             ],
             "pathId": 2973677325563156396,
@@ -97,6 +171,18 @@
             "jpText": "急に巻き込んですまないな、トレーナー君。\r\n実は、私の素顔に迫りたいといった内容の取材を受けていてね。",
             "enText": "I apologize for springing this on you, Trainer. You see, \nI've been approached for a feature report that delves into my \ntrue self.",
             "nextBlock": 10,
+            "origClipLength": 276,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 288,
+                    "pathId": -7620169762251567501
+                },
+                {
+                    "origLen": 285,
+                    "pathId": -8761234002922545027
+                }
+            ],
             "pathId": 1543283283215933393,
             "blockIdx": 9
         },
@@ -106,6 +192,18 @@
             "jpText": "といっても私は、取材陣に囲まれていると、\nどうしてもそれ相応の振舞いをしてしまう。",
             "enText": "However, in the presence of the media, I tend to assume a \nparticular persona.",
             "nextBlock": 11,
+            "origClipLength": 224,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 288,
+                    "pathId": -2950947006820828228
+                },
+                {
+                    "origLen": 241,
+                    "pathId": 7102913260117340180
+                }
+            ],
             "pathId": -3570059705729928629,
             "blockIdx": 10
         },
@@ -115,6 +213,18 @@
             "jpText": "どうしたものかと悩んでいたら――\r\n君が通りかかった、という訳だ。",
             "enText": "I was contemplating my options \nwhen you walked by.",
             "nextBlock": 12,
+            "origClipLength": 177,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 3550313543873572436
+                },
+                {
+                    "origLen": 220,
+                    "pathId": -4172821718895071698
+                }
+            ],
             "pathId": 7166360334711287635,
             "blockIdx": 11
         },
@@ -124,11 +234,23 @@
             "jpText": "トレーナーさんの前でなら、ルドルフさんも\r\nリラックスできると思うんです！　お願いしますっ！！",
             "enText": "I believe Ms. Rudolf can be more at ease around you, Trainer. \nPlease, I'm counting on you!",
             "nextBlock": 13,
+            "origClipLength": 167,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "わかりました",
                     "enText": "Okay…",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 189,
+                    "pathId": 4080839232627046595
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 389796887093741317
                 }
             ],
             "pathId": -4458838928298696000,
@@ -140,6 +262,18 @@
             "jpText": "えっ、引き受けてくれるのか？\r\nなんと……君は本当に付き合いがいいな。",
             "enText": "Really? You're willing to do it? \nWell, you're quite accommodating.",
             "nextBlock": 14,
+            "origClipLength": 239,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": 3067679385658929792
+                },
+                {
+                    "origLen": 255,
+                    "pathId": 6535265203017010060
+                }
+            ],
             "pathId": 7022693697047221379,
             "blockIdx": 13
         },
@@ -149,6 +283,18 @@
             "jpText": "ならば今日1日、よろしく頼む。",
             "enText": "Then I'll rely on you for today.",
             "nextBlock": 15,
+            "origClipLength": 95,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 3458158192994094526
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -2347226292644524966
+                }
+            ],
             "pathId": 6432965698870538338,
             "blockIdx": 14
         },
@@ -158,6 +304,18 @@
             "jpText": "こうして、記者からカメラを受け取り、\r\nシンボリルドルフの写真を撮影することになった……。",
             "enText": "And so, I received the camera from the reporter and \nproceeded to take pictures of Symboli Rudolf…",
             "nextBlock": 16,
+            "origClipLength": 103,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 275,
+                    "pathId": 737563806686571196
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -5579898996675932946
+                }
+            ],
             "pathId": 2000514238633137990,
             "blockIdx": 15
         },
@@ -167,6 +325,8 @@
             "jpText": "さて。記者によれば、特にカメラは気にせず、\nいつも通り過ごして欲しいとの事だったな。",
             "enText": "Now, according to the reporter, there's no need to worry about \nthe camera. They want me to carry on with my day as usual.",
             "nextBlock": 17,
+            "origClipLength": 243,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "今日は何をする予定なんだ？",
@@ -179,6 +339,16 @@
                     "nextBlock": 17
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 275,
+                    "pathId": 1218333210661186725
+                },
+                {
+                    "origLen": 281,
+                    "pathId": -2585826926286045614
+                }
+            ],
             "pathId": -5089820544131140318,
             "blockIdx": 16
         },
@@ -188,6 +358,18 @@
             "jpText": "新入生の中で、様子の気がかりな子がいてね。\r\nその子について、1つ対策を打つよ。",
             "enText": "Among the new students, there's one who appears \na bit anxious. I intend to take specific measures to address \ntheir concerns.",
             "nextBlock": 18,
+            "origClipLength": 226,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 200,
+                    "pathId": 116771663580268936
+                },
+                {
+                    "origLen": 260,
+                    "pathId": -4806965146365462346
+                }
+            ],
             "pathId": 2746783101212645444,
             "blockIdx": 17
         },
@@ -197,6 +379,18 @@
             "jpText": "では行こうか。",
             "enText": "Care to join me?",
             "nextBlock": 19,
+            "origClipLength": 38,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": -4316491827865036859
+                },
+                {
+                    "origLen": 54,
+                    "pathId": -3796550870730833496
+                }
+            ],
             "pathId": -6968238583618694025,
             "blockIdx": 18
         },
@@ -206,6 +400,26 @@
             "jpText": "おっと。\r\n……ここにいたか、マルゼンスキー。",
             "enText": "Ah. \n…There you are, Maruzensky.",
             "nextBlock": 20,
+            "origClipLength": 123,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": 2652478967500085848
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -992705841868168139
+                },
+                {
+                    "origLen": 194,
+                    "pathId": 5678051574798765538
+                },
+                {
+                    "origLen": 38,
+                    "pathId": -1469846773216996152
+                }
+            ],
             "pathId": -3957937300730317897,
             "blockIdx": 19
         },
@@ -215,6 +429,22 @@
             "jpText": "あら、ルドルフ！\nと……こんにちは、トレーナーさん♪",
             "enText": "Oh, Rudolph! \nAnd… Hello, trainer! ♪",
             "nextBlock": 21,
+            "origClipLength": 150,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -3416281711583962116
+                },
+                {
+                    "origLen": 148,
+                    "pathId": -1226366552892586672
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -7145994706818316245
+                }
+            ],
             "pathId": -3427161081173839440,
             "blockIdx": 20
         },
@@ -224,6 +454,22 @@
             "jpText": "あたしを探していたみたいね？\nなにかご用かしら。",
             "enText": "Did you come looking for me? \nHow can I assist you?",
             "nextBlock": 22,
+            "origClipLength": 130,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 162,
+                    "pathId": -5951683111163050023
+                },
+                {
+                    "origLen": 160,
+                    "pathId": -2378072381460240079
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7939945223691988902
+                }
+            ],
             "pathId": 4047253364973265875,
             "blockIdx": 21
         },
@@ -233,6 +479,18 @@
             "jpText": "ああ。グラスワンダーという新入生の事で、\n君に折り入って頼みがあってな。",
             "enText": "Yes, I have a request regarding a new student named \nGrass Wonder.",
             "nextBlock": 23,
+            "origClipLength": 193,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 208,
+                    "pathId": -4373298588436430219
+                },
+                {
+                    "origLen": 206,
+                    "pathId": -5921174880927202033
+                }
+            ],
             "pathId": -6745650449707631668,
             "blockIdx": 22
         },
@@ -242,6 +500,18 @@
             "jpText": "グラスワンダーちゃん！　知ってるわ、お淑やかで可愛いわよね♪\r\nあの子がどうかしたの？",
             "enText": "Grass Wonder! I know her. She's so charming and cute♪ \nWhat's going on with her?",
             "nextBlock": 24,
+            "origClipLength": 237,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 306,
+                    "pathId": 8822190370209977989
+                },
+                {
+                    "origLen": 114,
+                    "pathId": -7066468396850423036
+                }
+            ],
             "pathId": -7330365482528812639,
             "blockIdx": 23
         },
@@ -251,6 +521,18 @@
             "jpText": "学園のコースにまだ慣れていない為か、\r\nスタートに少々難を抱えてしまっているようでね。",
             "enText": "I'm not sure if it's because she's still adjusting to the \ncampus and courses, but she seems to be facing some \ninitial challenges.",
             "nextBlock": 25,
+            "origClipLength": 214,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": -2823985502209129752
+                },
+                {
+                    "origLen": 250,
+                    "pathId": 3306579966573313498
+                }
+            ],
             "pathId": 7648996578934560061,
             "blockIdx": 24
         },
@@ -260,6 +542,22 @@
             "jpText": "あら、そうなの？　まあ、環境が大きく変わると、\r\n適応するのもひと苦労よねぇ……。",
             "enText": "Oh, is that so? Well, when one's surroundings change \nsignificantly, adapting can indeed be quite a challenge……",
             "nextBlock": 26,
+            "origClipLength": 265,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 2666680264266590181
+                },
+                {
+                    "origLen": 258,
+                    "pathId": 7984627266561155738
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2677490314122651295
+                }
+            ],
             "pathId": 7928536990930025650,
             "blockIdx": 25
         },
@@ -269,6 +567,22 @@
             "jpText": "このまま沈んでいってしまうのは忍びない。\r\n君から、何か助言をしてはもらえないだろうか？",
             "enText": "It's unbearable to just let things take a downturn like this. \nWould you mind offering her some advice?",
             "nextBlock": 27,
+            "origClipLength": 215,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": 5509859764621917945
+                },
+                {
+                    "origLen": 226,
+                    "pathId": -1544722035714656967
+                },
+                {
+                    "origLen": 211,
+                    "pathId": 1354890198692745104
+                }
+            ],
             "pathId": 331244840054606748,
             "blockIdx": 26
         },
@@ -278,6 +592,22 @@
             "jpText": "ええ、もちろん構わないけれど……\nでもルドルフ、どうしてあたしに？",
             "enText": "Of course… \nWhy me, though?",
             "nextBlock": 28,
+            "origClipLength": 206,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 203,
+                    "pathId": 4181682307420860880
+                },
+                {
+                    "origLen": 190,
+                    "pathId": -4667132415449896413
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -3056005733718139217
+                }
+            ],
             "pathId": 7087109187489488250,
             "blockIdx": 27
         },
@@ -287,6 +617,22 @@
             "jpText": "グラスワンダー……彼女の爆発力は、\nどこか君の走りを彷彿とさせるものがある。",
             "enText": "Grass Wonder… There's something about her explosive speed \nthat reminds me of your running style.",
             "nextBlock": 29,
+            "origClipLength": 217,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 844621780931683443
+                },
+                {
+                    "origLen": 164,
+                    "pathId": 8069065986000293562
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1241928141761547017
+                }
+            ],
             "pathId": -3108189093769855833,
             "blockIdx": 28
         },
@@ -296,6 +642,18 @@
             "jpText": "だからこそ、伝えてやれる事が\nあるのではないかと思ってね。",
             "enText": "That's why I believe you might have something valuable \nto convey to her.",
             "nextBlock": 30,
+            "origClipLength": 129,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 53,
+                    "pathId": -5679963841167993727
+                },
+                {
+                    "origLen": 229,
+                    "pathId": 6647692915933268577
+                }
+            ],
             "pathId": -445982913029468123,
             "blockIdx": 29
         },
@@ -305,6 +663,18 @@
             "jpText": "なるほど……。\nルドルフったら、ホントによく見てるわねぇ。",
             "enText": "I see… \nYou're quite observant, aren't you?",
             "nextBlock": 31,
+            "origClipLength": 187,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 287,
+                    "pathId": -8292911678709116354
+                },
+                {
+                    "origLen": 183,
+                    "pathId": -7944399164774940219
+                }
+            ],
             "pathId": 4935828426320568152,
             "blockIdx": 30
         },
@@ -314,6 +684,22 @@
             "jpText": "そういうことなら、任せてちょうだい！\nグラスちゃんは、今どこにいるかわかる？",
             "enText": "Well, leave it to me! \nDo you know where Grass-chan is right now?",
             "nextBlock": 32,
+            "origClipLength": 179,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 69,
+                    "pathId": -6644261612374452347
+                },
+                {
+                    "origLen": 95,
+                    "pathId": -8854368391916858579
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -4297099505380838734
+                }
+            ],
             "pathId": 8042588471203333824,
             "blockIdx": 31
         },
@@ -323,6 +709,22 @@
             "jpText": "迅速な対応、感謝する。\n案内するよ、マルゼンスキー。",
             "enText": "Thank you for your swift response. I'll lead the way to \nGrass Wonder, Maruzensky.",
             "nextBlock": 33,
+            "origClipLength": 178,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 287,
+                    "pathId": -344604982376275901
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 3084218410178035451
+                },
+                {
+                    "origLen": 191,
+                    "pathId": -8942112328722265072
+                }
+            ],
             "pathId": 6415491586620303085,
             "blockIdx": 32
         },
@@ -332,6 +734,22 @@
             "jpText": "こうして、シンボリルドルフの案内で、\r\nマルゼンスキーと共にグラスワンダーの元へとやってきた……。",
             "enText": "Guided by Symboli Rudolf, we reached Grass Wonder's \nlocation with Maruzensky…",
             "nextBlock": 34,
+            "origClipLength": 108,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": 3542009940539224427
+                },
+                {
+                    "origLen": 17,
+                    "pathId": -6385567947451448220
+                },
+                {
+                    "origLen": 160,
+                    "pathId": 290861614727596377
+                }
+            ],
             "pathId": -8545995431199382819,
             "blockIdx": 33
         },
@@ -341,6 +759,18 @@
             "jpText": "…………。",
             "enText": "…………",
             "nextBlock": 35,
+            "origClipLength": 61,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 160,
+                    "pathId": -4120483951637653102
+                },
+                {
+                    "origLen": 10,
+                    "pathId": -450261321552373194
+                }
+            ],
             "pathId": 3539679777790426705,
             "blockIdx": 34
         },
@@ -350,6 +780,26 @@
             "jpText": "あら……。ホント、しょんぼりしちゃってるのね。\r\nよーし、お姉さん、頑張っちゃうわよ～！",
             "enText": "Oh… she seems really down. \nAlright, big sis is here to help～!",
             "nextBlock": 36,
+            "origClipLength": 278,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 329,
+                    "pathId": 95615551091556789
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 8590126219596082760
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 2848242732597415813
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 8730601915259068793
+                }
+            ],
             "pathId": 5367356425621249321,
             "blockIdx": 35
         },
@@ -359,6 +809,8 @@
             "jpText": "頼もしい限りだ。\r\nでは後の事は頼んだよ、マルゼンスキー。",
             "enText": "I'm counting on you. \nI'll leave the rest to you, Maruzensky.",
             "nextBlock": 37,
+            "origClipLength": 185,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "君は行かないのか？",
@@ -371,6 +823,20 @@
                     "nextBlock": 37
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 312,
+                    "pathId": -2971051153935148783
+                },
+                {
+                    "origLen": 211,
+                    "pathId": -2735942705867969936
+                },
+                {
+                    "origLen": 156,
+                    "pathId": 908637640514259275
+                }
+            ],
             "pathId": -1249126639614474200,
             "blockIdx": 36
         },
@@ -380,6 +846,22 @@
             "jpText": "私が行っても、威圧感を与えてしまうだろう？\nそれは本意ではないからな。",
             "enText": "Even if I were to go, I might appear intimidating. \nThat's not my intention.",
             "nextBlock": 38,
+            "origClipLength": 200,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 9223001756929728543
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -8537637690730418229
+                },
+                {
+                    "origLen": 212,
+                    "pathId": 3339933500811610588
+                }
+            ],
             "pathId": -8537453138981126452,
             "blockIdx": 37
         },
@@ -389,6 +871,22 @@
             "jpText": "ちゃんと見てるし、心配してるってことだけでも\r\n伝えてあげればいいのに……ふふ、不器用なんだから。",
             "enText": "Just letting her know that you're watching and concerned \nwould be enough… Hehe, you're so clumsy.",
             "nextBlock": 39,
+            "origClipLength": 270,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 312,
+                    "pathId": 9028957839044555066
+                },
+                {
+                    "origLen": 283,
+                    "pathId": -8390160129768440386
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -117181192803959868
+                }
+            ],
             "pathId": 3036104696959969365,
             "blockIdx": 38
         },
@@ -398,6 +896,22 @@
             "jpText": "それじゃ、行ってくるわね。",
             "enText": "Well then, I'm off.",
             "nextBlock": 40,
+            "origClipLength": 75,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 312,
+                    "pathId": -4544407059690638666
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -1177454314850312197
+                },
+                {
+                    "origLen": 89,
+                    "pathId": -7593509600727104689
+                }
+            ],
             "pathId": 5695336270486027204,
             "blockIdx": 39
         },
@@ -407,6 +921,8 @@
             "jpText": "さて……これで少しでも、\r\n元気を取り戻してくれるといいのだが。",
             "enText": "I hope this brings back some of her spirits, \neven if just a bit.",
             "nextBlock": 41,
+            "origClipLength": 164,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "他の子たちの事をすごくよく見ているんだな",
@@ -419,6 +935,20 @@
                     "nextBlock": 41
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 312,
+                    "pathId": 8162876505970109437
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6005556598844657820
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 2392385231252646692
+                }
+            ],
             "pathId": -6098627966890065549,
             "blockIdx": 40
         },
@@ -428,6 +958,14 @@
             "jpText": "――グラスワンダー。米国よりの帰国子女で、性格は温厚篤実。\r\nだが非常に強い芯を持ち、剛直な面もある。",
             "enText": "――Grass Wonder. She's a returnee from the United States, \nknown for her kind and dependable nature. But she also \npossesses a strong inner drive and a no-nonsense side",
             "nextBlock": 42,
+            "origClipLength": 354,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 329,
+                    "pathId": 3686066850679632466
+                }
+            ],
             "pathId": -1031441827046087382,
             "blockIdx": 41
         },
@@ -437,6 +975,14 @@
             "jpText": "脚質は差し。性格を活かした冷静な観察力で、戦況を正しく見極め、\r\n虎視眈々と勝利を狙う。今後へ大いに期待が持てる優秀なウマ娘だ。",
             "enText": "She runs as a betweener. She's a promising horsegirl, \nwho uses her observational skills to aim for victory with \npatience and accuracy.",
             "nextBlock": 43,
+            "origClipLength": 416,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 126,
+                    "pathId": -5631669402248822335
+                }
+            ],
             "pathId": -8214371842161205526,
             "blockIdx": 42
         },
@@ -446,6 +992,14 @@
             "jpText": "彼女だけではない。どのウマ娘も皆、素晴らしい可能性を持ち、\r\n未来への希望を抱いて学園の門戸を叩く。",
             "enText": "And it's not just her; every horsegirl here arrives at the \nschool gates filled with hopes for their future.",
             "nextBlock": 44,
+            "origClipLength": 276,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 246,
+                    "pathId": 103264096809557543
+                }
+            ],
             "pathId": -5101271822625072108,
             "blockIdx": 43
         },
@@ -455,6 +1009,18 @@
             "jpText": "私は……どの子らにも、笑顔でいて欲しい。\r\nそう在る世界を創らねばと、思わずにはいられないんだ。",
             "enText": "I wish… all these students could continue smiling. \nI can't help but feel that we must create a world where \nthat's possible.",
             "nextBlock": 45,
+            "origClipLength": 267,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 278,
+                    "pathId": 2844193453813439995
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -4634197982601585505
+                }
+            ],
             "pathId": -4787793637045431726,
             "blockIdx": 44
         },
@@ -464,6 +1030,14 @@
             "jpText": "世間を知らない小娘の、愚かで甘い夢と思うか？\r\n……ああ、そうかも知れんさ。",
             "enText": "Is it the fanciful dream of a young girl who hasn't yet seen \nthe world? \n…Yes, that might be the case.",
             "nextBlock": 46,
+            "origClipLength": 252,
+            "voiceIdx": 40,
+            "animData": [
+                {
+                    "origLen": 250,
+                    "pathId": -1079197608003989783
+                }
+            ],
             "pathId": 407740118561249777,
             "blockIdx": 45
         },
@@ -473,6 +1047,18 @@
             "jpText": "無論、実現までの道程は、果てなく遠い。\nだが――",
             "enText": "Of course, the journey to make it a reality is an endless one. \nBut…",
             "nextBlock": 47,
+            "origClipLength": 213,
+            "voiceIdx": 41,
+            "animData": [
+                {
+                    "origLen": 439,
+                    "pathId": -2086565390002804361
+                },
+                {
+                    "origLen": 35,
+                    "pathId": 687262124725261784
+                }
+            ],
             "pathId": 4483348319346112281,
             "blockIdx": 46
         },
@@ -482,6 +1068,26 @@
             "jpText": "マルゼンスキーさん、ありがとうございます。\n私……少し、焦り過ぎていたんでしょうか。",
             "enText": "Thank you, Ms. Maruzensky. \nMaybe I was getting a little too impatient.",
             "nextBlock": 48,
+            "origClipLength": 266,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 15,
+                    "pathId": 2934474109327346153
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -3620327741625572049
+                },
+                {
+                    "origLen": 141,
+                    "pathId": 8647686308878696138
+                },
+                {
+                    "origLen": 306,
+                    "pathId": -5797045572713780831
+                }
+            ],
             "pathId": -5519150794403748782,
             "blockIdx": 47
         },
@@ -491,6 +1097,22 @@
             "jpText": "そうねぇ……あなたは、\r\n真面目な頑張り屋さんで、とってもいい子よ！",
             "enText": "Well, you know, you're hardworking and diligent, \na really good kid!",
             "nextBlock": 49,
+            "origClipLength": 250,
+            "voiceIdx": 43,
+            "animData": [
+                {
+                    "origLen": 307,
+                    "pathId": -2464541222150619386
+                },
+                {
+                    "origLen": 208,
+                    "pathId": -4623004259472027759
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -5499372086638454935
+                }
+            ],
             "pathId": -2165703368734177359,
             "blockIdx": 48
         },
@@ -500,6 +1122,18 @@
             "jpText": "でも、いい子過ぎると肩が凝っちゃうわ。\r\nたまにはお姉さんと一緒にドライブでも行きましょ♪",
             "enText": "But sometimes, being too good can be overwhelming. \nHow about going for a drive with your big sister once in a \nwhile?♪",
             "nextBlock": 50,
+            "origClipLength": 250,
+            "voiceIdx": 44,
+            "animData": [
+                {
+                    "origLen": 277,
+                    "pathId": 7989515360559822140
+                },
+                {
+                    "origLen": 45,
+                    "pathId": 6395657903523214099
+                }
+            ],
             "pathId": -2986448781118495217,
             "blockIdx": 49
         },
@@ -509,6 +1143,22 @@
             "jpText": "はい！\nふふっ……お誘い頂き、光栄です♪",
             "enText": "Yes! \nHehe… I'm honored to be invited♪",
             "nextBlock": 51,
+            "origClipLength": 153,
+            "voiceIdx": 45,
+            "animData": [
+                {
+                    "origLen": 150,
+                    "pathId": 960103503270524017
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -8006350011740621040
+                },
+                {
+                    "origLen": 138,
+                    "pathId": 8836582274089102640
+                }
+            ],
             "pathId": 8359439611345246049,
             "blockIdx": 50
         },
@@ -518,6 +1168,26 @@
             "jpText": "――見てくれ、彼女の笑顔を。",
             "enText": "—look at her smile.",
             "nextBlock": 52,
+            "origClipLength": 92,
+            "voiceIdx": 46,
+            "animData": [
+                {
+                    "origLen": 136,
+                    "pathId": 3684486054281236340
+                },
+                {
+                    "origLen": 133,
+                    "pathId": 4520182438475998169
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 2889566968737609746
+                },
+                {
+                    "origLen": 15,
+                    "pathId": -8814428071941658379
+                }
+            ],
             "pathId": 8303015371781687823,
             "blockIdx": 51
         },
@@ -527,6 +1197,18 @@
             "jpText": "あれがいつまでも続くようにと願う……。\r\nその事に、何の躊躇いがあるだろう。",
             "enText": "I wish it would last forever… \nWhat's there to hesitate about?",
             "nextBlock": 53,
+            "origClipLength": 206,
+            "voiceIdx": 47,
+            "animData": [
+                {
+                    "origLen": 258,
+                    "pathId": -4645686333154609838
+                },
+                {
+                    "origLen": 217,
+                    "pathId": 2321664806570322938
+                }
+            ],
             "pathId": 6353131708168205479,
             "blockIdx": 52
         },
@@ -536,6 +1218,18 @@
             "jpText": "そう語るシンボリルドルフの横顔には、思わず魅入られるほど\r\n穏やかで、そして幸福そうな笑みが浮かんでいた。",
             "enText": "As Symboli Rudolf expressed these sentiments, her profile \nexuded serenity, and a contented smile played upon her lips.",
             "nextBlock": 54,
+            "origClipLength": 114,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 258,
+                    "pathId": 8158689018125830904
+                },
+                {
+                    "origLen": 154,
+                    "pathId": -1711947948804862982
+                }
+            ],
             "pathId": -1825420725631543542,
             "blockIdx": 53
         },
@@ -545,6 +1239,18 @@
             "jpText": "――ふと、手元のカメラが目に入る。",
             "enText": "――Suddenly, the camera in my hand caught my eye.",
             "nextBlock": 55,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 258,
+                    "pathId": -6427437182413518506
+                },
+                {
+                    "origLen": 154,
+                    "pathId": 8211219672014007877
+                }
+            ],
             "pathId": -3434735931649549935,
             "blockIdx": 54
         },
@@ -554,6 +1260,18 @@
             "jpText": "（カシャッ）",
             "enText": "*click",
             "nextBlock": 56,
+            "origClipLength": 52,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": 7719514307069039580
+                },
+                {
+                    "origLen": 154,
+                    "pathId": 2295336322132588333
+                }
+            ],
             "pathId": 3486250163582842538,
             "blockIdx": 55
         },
@@ -563,6 +1281,8 @@
             "jpText": "素晴らしい写真が撮れた。\nそれと同時に――",
             "enText": "I took an incredible photo. \nAt that very moment――",
             "nextBlock": 57,
+            "origClipLength": 72,
+            "voiceIdx": -1,
             "pathId": 6775825315230852893,
             "blockIdx": 56
         },
@@ -572,9 +1292,11 @@
             "jpText": "シンボリルドルフに出された課題の答えが、\n見つかったような気がした。",
             "enText": "it felt as if I had found the answer to \nSymboli Rudolf's question.",
             "nextBlock": -1,
+            "origClipLength": 89,
+            "voiceIdx": -1,
             "pathId": -4254927652454221620,
             "blockIdx": 57
         }
     ],
-    "modified": 1696080616
+    "modified": 1696098765
 }

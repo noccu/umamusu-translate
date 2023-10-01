@@ -1,6 +1,6 @@
 [![Support me on Patreon](https://img.shields.io/badge/dynamic/json?color=%23ff424d&label=Patreon&query=data.attributes.patron_count&suffix=%20trainers&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F2559100&style=flat-square&logo=patreon&logoColor=%23ff424d)](https://patreon.com/noccu)
 [![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support-%2300aff1?logo=kofi&logoColor=%2300aff1)](https://ko-fi.com/noccyu)
-[![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=4bba35&label=Discord)](https://discord.gg/PAK3ztkAg)
+[![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=4bba35&label=Discord)](https://discord.gg/eqZT27TeJ)
 
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. Includes a few scripts to patch the game using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].

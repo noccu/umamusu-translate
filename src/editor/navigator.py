@@ -70,9 +70,6 @@ class Navigator:
         self.master.textBoxEn.config(width=ll)
         self.master.textBoxJp.config(width=ll)
 
-        if self.master.merging:
-            self.master.mergeWWindow.evFileChanged(cur_file)
-
     def reload_chapter(self, event=None):
         self.cur_file.reload()
         self.cur_data = self.fileMan.load_block(self.cur_file, self.cur_block)

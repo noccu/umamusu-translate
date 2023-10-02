@@ -361,6 +361,8 @@ def parseArgs(args=None):
             "Implies -O and -upd, uses type from -upd or -t"
         ),
     )
+    ap.add_argument("-text", "--plaintext", action="store_true", help="Convert tlFiles to txt format")
+
     args = ap.parse_args()
 
     if args.dst is None:
@@ -376,9 +378,31 @@ def parseArgs(args=None):
     return args
 
 
+def converToPlainText(args: patch.Args):
+    files = patch.searchFiles(
+        args.type,
+        args.group,
+        args.id,
+        args.idx,
+        targetSet=args.set,
+        changed=args.changed,
+    )
+    print(f"Converting {len(files)} files.")
+    for file in files:
+        tlFile = TranslationFile(file)
+        with open(file.with_suffix(".txt"), "w", encoding="utf8") as f:
+            f.writelines(f"{b.get('jpName')}: \n{b.get('jpText')}\n\n" for b in tlFile.textBlocks)
+    print("Done.")
+
+
 def main(_args: patch.Args = None):
     global args
     args = _args or parseArgs(_args)
+
+    if args.plaintext:
+        converToPlainText(args)
+        return
+
     nTotal = nSuccess = nFailed = nSkipped = 0
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")

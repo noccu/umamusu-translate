@@ -131,7 +131,7 @@ def resizeText(tlFile: TranslationFile, text: str, force=False):
             text = re.sub(r"^<size=\d+>(.+?) *(?:\\+n)?</size>$", r"\1", text, flags=re.DOTALL)
         else:
             return text  # ignore already-sized textpy src\
-    return f"<size={size}>{text}{getNewline(tlFile)}</size>"
+    return f"<size={size}>{text} {getNewline(tlFile)}</size>"
 
 
 def getNewline(tlFile: TranslationFile):

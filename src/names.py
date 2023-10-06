@@ -31,7 +31,7 @@ def translate(file: TranslationFile, forceReload=False):
             block["enName"] = tlName
 
 
-def extract(files: list):
+def extract(files: list[utils.Path]):
     curNames, *_ = loadDict()
     newNames = 0
     for file in files:
@@ -51,7 +51,7 @@ def extract(files: list):
 def parseArgs(args=None):
     ap = patch.Args("Translate many enName fields in Translation Files by lookup")
     ap.add_argument(
-        "-src", nargs="*", help="Target Translation File(s), overwrites other file options"
+        "-src", nargs="*", type=utils.Path, help="Target Translation File(s), overwrites other file options"
     )
     ap.add_argument(
         "-e",
@@ -69,8 +69,7 @@ def parseArgs(args=None):
 
 def main(args: patch.Args = None):
     args = args or parseArgs(args)
-
-    files = (args.src,) or patch.searchFiles(
+    files = (args.src,) if args.src else patch.searchFiles(
         args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
     )
     if args.extract:

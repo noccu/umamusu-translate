@@ -172,7 +172,7 @@ def convertTlFile(tlFile: TranslationFile, overwrite=False):
     return converted
 
 
-def updConfigDicts(cfgPath, dictPaths: list):
+def updConfig(cfgPath, dictPaths: list):
     """Update the dicts key in the cfgPath file with the given dictPaths."""
     try:
         data = utils.readJson(cfgPath)
@@ -187,6 +187,10 @@ def updConfigDicts(cfgPath, dictPaths: list):
     data["race_jikkyo_comment_dict"] = ""
     data["race_jikkyo_message_dict"] = ""
     data["stories_path"] = ""
+    data["extraAssetBundlePath"] = "localized_data/includes"
+    data["customFontPath"] = "assets/rodinwanpakupro-umatl.otf"
+    # data["customFontSizeOffset"] = -3
+    # data["customFontLinespacing"] = 0.55
     utils.writeJson(cfgPath, data)
 
 
@@ -327,44 +331,50 @@ def watch():
 
 
 def move():
-    print("Copying UI translations")
+    print("Copying UI translations...")
     installDir = utils.getUmaInstallDir()
-    if installDir:
-        try:
-            dst = installDir / LOCALIFY_DATA_DIR.name
-            # Following disabled to check TLG status. First install must be manual.
-            # dst.mkdir(exist_ok=True)
-            # Using rglob for future functionality
-            dynFiles = list()
-            for f in LOCALIFY_DATA_DIR.rglob("*.json"):
-                subPath = f.relative_to(LOCALIFY_DATA_DIR)
-                fn = dst / subPath
-                fn.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(f, fn)
-                if len(subPath.parts) > 1:
-                    dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
-            updConfigDicts(installDir / "config.json", dynFiles)
-        except PermissionError:
-            logger.error(
-                f"No permission to write to {installDir}.\n"
-                "Update perms, run as admin, or copy files yourself."
-            )
-        except FileNotFoundError as e:
-            if not installDir.exists():
-                logger.error(
-                    f"Obtained install dir doesn't exist: {str(installDir)}\n"
-                    "Possibly corrupt or double game install. Copy UI files manually."
-                )
-            elif not dst.exists():
-                logger.warning("TLG not installed. See guide if you wish to translate UI elements.")
-            else:
-                logger.error(
-                    f"{repr(e)}\n"
-                    f"A patch file with/for UI translations is missing.\n"
-                    f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}."
-                )
-    else:
+    if not installDir:
         logger.error("Couldn't find game install path, files not moved.")
+        return
+    dst = installDir / LOCALIFY_DATA_DIR.name
+    # Following disabled to check TLG status. First install must be manual.
+    # dst.mkdir(exist_ok=True)
+    dynFiles = list()
+    try:
+        for f in LOCALIFY_DATA_DIR.rglob("*.json"):
+            subPath = f.relative_to(LOCALIFY_DATA_DIR)
+            fn = dst / subPath
+            fn.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(f, fn)
+            if len(subPath.parts) > 1:
+                dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
+    except PermissionError:
+        logger.error(
+            f"No permission to write to {installDir}.\n"
+            "Update perms, run as admin, or copy files yourself."
+        )
+    except FileNotFoundError as e:
+        if not installDir.exists():
+            logger.error(
+                f"Obtained install dir doesn't exist: {str(installDir)}\n"
+                "Possibly corrupt or double game install. Copy UI files manually."
+            )
+        elif not dst.exists():
+            logger.warning("TLG not installed. See guide if you wish to translate UI elements.")
+        else:
+            logger.error(
+                f"{repr(e)}\n"
+                "A patch file with/for UI translations is missing.\n"
+                f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}."
+            )
+    updConfig(installDir / "config.json", dynFiles)
+    localIncl = LOCALIFY_DATA_DIR.joinpath("includes")
+    gameIncl = dst.joinpath("includes")
+    if not gameIncl.exists():
+        logger.warning("No custom UmaTL assets file! Consider repeating UI guide.")
+        return
+    if localIncl.stat().st_mtime > gameIncl.stat().st_mtime:
+        shutil.copyfile(localIncl, gameIncl)
 
 
 def parseArgs(args=None):
@@ -491,7 +501,7 @@ def main(args: patch.Args = None):
 
     if args.convert_mdb:
         mdbDicts = convertMdb()
-        updConfigDicts(CONFIG_FILE, mdbDicts)
+        updConfig(CONFIG_FILE, mdbDicts)
 
     if args.convert_asset is True:
         # We currently don't use the needed default args

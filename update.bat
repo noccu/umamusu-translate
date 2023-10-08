@@ -8,7 +8,7 @@ IF EXIST ".mingit" (
         SET /P token=<token.txt
         IF NOT EXIST ".git\refs\heads\supporter" (
             .mingit\mingw64\bin\git.exe fetch !token! master:supporter
-            .mingit\mingw64\bin\git.exe checkout supporter
+            .mingit\mingw64\bin\git.exe checkout -f supporter
         ) ELSE (
             .mingit\mingw64\bin\git.exe pull !token! master
         )

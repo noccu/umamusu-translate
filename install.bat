@@ -1,8 +1,6 @@
 @ECHO OFF
 SETLOCAL
-SET /P usemingit=Download MinGit (~20MB) to enable auto-updating? Enter first letter [y]es, [n]o: 
-IF /I %usemingit% EQU y ( CALL :mingit ) ELSE ( ECHO Skipping MinGit. )
-
+CALL :mingit
 CALL run.bat install
 EXIT /B
 
@@ -20,13 +18,18 @@ CALL :initgit
 EXIT /B 0
 
 :initgit
+SET mingit=.mingit\mingw64\bin\git.exe
 IF NOT EXIST ".git" (
     REM Make sure the CA certs are found. This sets mingit's default config to use its own certs (why is that not a thing?)
-    .mingit\mingw64\bin\git.exe config --system http.sslcainfo .mingit\mingw64\ssl\certs\ca-bundle.crt
+    %mingit% config --system http.sslcainfo .mingit\mingw64\ssl\certs\ca-bundle.crt
+    REM Ensure this setting is set
+    %mingit% config --system credential.helper manager-core
     ECHO Initializing git repo...
-    .mingit\mingw64\bin\git.exe clone --no-checkout https://github.com/noccu/umamusu-translate.git gittmp
+    %mingit% clone --no-checkout https://github.com/noccu/umamusu-translate.git gittmp
     REM cmdline mv wont deal with .files so we still require powershell
     powershell -command "mv gittmp\.git .git"
     DEL /Q gittmp
+    REM Build index...
+    %mingit% reset --quiet
 ) ELSE ( ECHO Already a Git repo. )
 EXIT /B 0

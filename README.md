@@ -2,7 +2,7 @@
 [![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support-%2300aff1?logo=kofi&logoColor=%2300aff1)](https://ko-fi.com/noccyu)
 [![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=4bba35&label=Discord)](https://discord.gg/eqZT27TeJ)
 
-This project is a toolset to translate *Uma Musume Pretty Derby* to English. Includes a few scripts to patch the game using these tools.  
+This project is a toolset to translate *Uma Musume Pretty Derby* to English. It includes a few scripts to patch the game using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
 Translation progress and credits are in [tl-progress]. Guides can be found below.  
@@ -11,7 +11,7 @@ For troubleshooting, please open an issue or ask in the Discord server.
 This is based on the DMM version of the game and *should* work on linux anc mac too, with some limitations.  
 
 # Features
-Translates (or *can* translate):
+Supports translating:
 - Tutorials
 - Character stories
 - Main & Event stories
@@ -40,7 +40,7 @@ Toolset info: [scripts](#script-info)
 UmaTL is not affiliated with Cygames and is purely a fan-community effort.  
 Assets are edited only for the purpose of translation and it is *the maintainer's belief* this is harmless and unlikely to be an issue. [^1]  
 Nonetheless such edits are of course against the relevant TOS so **proceed at your own risk**!  
-No maintainer nor contributor will be repsonsible for any issues encountered as a result of use.
+No maintainer nor contributor will be responsible for any issues encountered as a result of use.
 
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
 
@@ -69,14 +69,14 @@ Currently this is available to supporters with any amount of pledge. Please come
 
 ## Requirements (get these first!)
 1. Install [Python](https://www.python.org/downloads/) 3.9+
-    - Install the py launcher (recommended) *do not* select "add to path".
-    - If the latest version is very recent use the version *before* that unless you know what you are doing.
+    - The defaults should work fine. To customize; you need pip, the py launcher, and tcl/tk. *Do not* select "add to path".
+    - If the latest version is less than, say, a month old then use the version *before* that unless you know what you are doing.
 1. Clone or [download a zip](https://github.com/noccu/umamusu-translate/archive/refs/heads/master.zip) (green "code" button) of this project and extract it.
 1. Make sure you opened and logged in to the game at least once before.
 
 ## Install (do this once)
-1. Open the (extracted) folder and double click `install.bat` (This downloads a few technical requirements)
-    - If you choose to install MinGit when it asks, that will be used to auto-update when patching.
+1. Open the (extracted) folder and double click `install.bat` 
+    - This downloads a few technical requirements and sets UmaTL up for use.
 1. (Optional, for dialogue) Download all game data [through the game menu](docs/guide_batch_download.jpg)
     - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import step below for new content.
 

@@ -128,8 +128,10 @@ class FileManager:
         cur_choices = block.get("choices")
         if cur_choices:
             self.master.choices.setChoices(cur_choices)
+            self.master.choices.widget.grid()
         else:
             self.master.choices.clearChoices()
+            self.master.choices.widget.grid_remove()
 
         # Update colored button
         cur_colored = block.get("coloredText")

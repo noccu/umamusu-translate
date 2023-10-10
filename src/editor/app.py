@@ -71,7 +71,7 @@ class Editor:
         text_box_en.linkTo(self.textBoxJp, root)
 
         self.choices = Choices(root)
-        self.choices.widget.grid(row=3, rowspan=2, column=5, sticky=tk.NSEW)
+        self.choices.widget.grid_configure(row=3, rowspan=2, column=5, sticky=tk.NSEW)
 
         frm_btns_bot = tk.Frame(root)
         btn_colored = tk.Button(

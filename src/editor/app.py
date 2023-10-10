@@ -70,15 +70,10 @@ class Editor:
         text_box_en.grid(row=4, column=0, columnspan=4)
         text_box_en.linkTo(self.textBoxJp, root)
 
+        self.choices = Choices(root)
+        self.choices.widget.grid(row=3, rowspan=2, column=5, sticky=tk.NSEW)
+
         frm_btns_bot = tk.Frame(root)
-        btn_choices = tk.Button(
-            frm_btns_bot,
-            text="Choices",
-            command=lambda: self.extraText.toggle(target=self.extraText.cur_choices),
-            state="disabled",
-            width=10,
-        )
-        btn_choices.grid(row=0, column=0)
         btn_colored = tk.Button(
             frm_btns_bot,
             text="Colored",
@@ -109,7 +104,6 @@ class Editor:
         # Todo: move to nav class?
         self.nav.btnNext = btn_next
         self.nav.btnPrev = btn_prev
-        self.btnChoices = btn_choices
         self.btnColored = btn_colored
 
         # Todo: split off?
@@ -150,7 +144,7 @@ class Editor:
         )
         for btn in side_buttons:
             btn.pack(pady=3, fill=tk.X)
-        frm_btns_side.grid(column=5, row=0, rowspan=5, sticky=tk.NE)
+        frm_btns_side.grid(column=6, row=0, rowspan=5, sticky=tk.E)
 
         ## Options
         # todo: move to a separate frame class
@@ -184,9 +178,8 @@ class Editor:
         root.bind("<Alt-Down>", self.nav.next_block)
         root.bind("<Control-Alt-Up>", self.nav.prev_ch)
         root.bind("<Control-Alt-Down>", self.nav.next_ch)
-        root.bind("<Alt-c>", lambda _: self.extraText.toggle(target=self.extraText.cur_choices))
         root.bind(
-            "<Control-Alt-c>", lambda _: self.extraText.toggle(target=self.extraText.cur_colored)
+            "<Alt-c>", lambda _: self.extraText.toggle(target=self.extraText.cur_colored)
         )
         text_box_en.bind("<Alt-f>", self._evProcessText)
         text_box_en.bind("<Alt-F>", lambda e: self._evProcessText(e, redoNewlines=True))
@@ -242,6 +235,59 @@ class Editor:
         self.mergeWWindow.setFiles(files)
 
 
+class Choices:
+    def __init__(self, parent: tk.Toplevel):
+        self.textBoxes:list[tuple[text.TextBox, text.TextBoxEditable]] = list()
+        self.curChoices = None
+        scrollFrame = display.ScrollableFrame(parent)
+        self.widget = scrollFrame  # Use this to add to UI
+        font = fonts.create(scrollFrame, size=14, id="choices")
+
+        idx = 0
+        for i in range(0, 5):
+            cur_jp_text = text.TextBox(scrollFrame.content, size=(31,1), font=font, takefocus=0)
+            cur_jp_text.grid(row=idx, column=0, sticky=tk.W)
+            cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(31, 2), font=font)
+            cur_en_text.linkTo(cur_jp_text, parent)
+            cur_en_text.grid(row=idx+1, column=0, sticky=tk.W)
+            follow_btn = tk.Button(
+                scrollFrame.content, 
+                text="≫",
+                relief="groove",
+                command=lambda: messagebox.showinfo(message="spemini"))
+            follow_btn.grid(row=idx, column=1, rowspan=2, sticky=tk.NSEW)
+            self.textBoxes.append((cur_jp_text, cur_en_text))
+            cur_en_text.bind("<Tab>", display._switchWidgetFocusForced)
+            if i < 4:
+                ttk.Separator(scrollFrame.content, orient=tk.HORIZONTAL).grid(row=idx+2, column=0, columnspan=2, pady=8)
+            idx += 3
+        
+    def setChoices(self, choices:list):
+        self.curChoices = choices
+        for i, (jpBox, enBox) in enumerate(self.textBoxes):
+            if i == len(choices):
+                self.clearChoices(boxes=self.textBoxes[i:])
+                return
+            jpBox.loadRichText(choices[i]["jpText"])
+            enBox.loadRichText(choices[i]["enText"])
+
+    def saveChoices(self):
+        if not self.curChoices:
+            return
+        for i, (jpBox, enBox) in enumerate(self.textBoxes):
+            if i == len(self.curChoices):
+                break
+            self.curChoices[i]["enText"] = text.normalize(enBox.toRichText())
+        self.curChoices = None
+
+    def clearChoices(self, boxes: list = None):
+        for jpBox, enBox in (boxes or self.textBoxes):
+            display.setActive(jpBox, True)
+            text.clearText(jpBox)
+            display.setActive(jpBox, False)
+            text.clearText(enBox)
+
+
 class AdditionalTextWindow:
     def __init__(self, master: Editor) -> None:
         self.master = master
@@ -256,9 +302,7 @@ class AdditionalTextWindow:
         # root.geometry("580x450")  # 800 for full
         self.root = root
 
-        # todo: can you call self funcs in a lambda? doesn't work in js iirc!
-        root.bind("<Alt-c>", lambda _: self.toggle(target=self.cur_choices))
-        root.bind("<Control-Alt-c>", lambda _: self.toggle(target=self.cur_colored))
+        root.bind("<Alt-c>", lambda _: self.toggle(target=self.cur_colored))
 
         scrollFrame = display.ScrollableFrame(root, scrollbar=True)
         for i in range(0, 5):

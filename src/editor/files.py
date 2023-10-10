@@ -127,13 +127,9 @@ class FileManager:
         # Update choices button
         cur_choices = block.get("choices")
         if cur_choices:
-            self.master.extraText.cur_choices = cur_choices
-            display.setActive(self.master.btnChoices, True)
-            self.master.btnChoices.config(bg="#00ff00")
-            self.master.extraText.toggle(allowShow=False, target=cur_choices)
+            self.master.choices.setChoices(cur_choices)
         else:
-            display.setActive(self.master.btnChoices, False)
-            self.master.btnChoices.config(bg=self.master.COLOR_BTN)
+            self.master.choices.clearChoices()
 
         # Update colored button
         cur_colored = block.get("coloredText")
@@ -145,6 +141,7 @@ class FileManager:
         else:
             display.setActive(self.master.btnColored, False)
             self.master.btnColored.config(bg=self.master.COLOR_BTN)
+
         self.saveState.markBlockLoaded(block)
         self.master.preview.setText(displayText)
         return block
@@ -156,6 +153,8 @@ class FileManager:
         if "enName" in cur_data:
             cur_data["enName"] = text.normalize(self.master.speakerEn.get())
         cur_data["enText"] = text.for_storage(cur_file, self.master.textBoxEn.toRichText())
+        if "choices" in cur_data:
+            self.master.choices.saveChoices()
 
         # Get the new clip length from spinbox
         try:

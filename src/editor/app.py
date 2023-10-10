@@ -253,14 +253,14 @@ class AdditionalTextWindow:
         root = tk.Toplevel(master.root)
         root.protocol("WM_DELETE_WINDOW", self.close)
         root.title("Additional Texts")
-        root.geometry("580x450")  # 800 for full
+        # root.geometry("580x450")  # 800 for full
         self.root = root
 
         # todo: can you call self funcs in a lambda? doesn't work in js iirc!
         root.bind("<Alt-c>", lambda _: self.toggle(target=self.cur_choices))
         root.bind("<Control-Alt-c>", lambda _: self.toggle(target=self.cur_colored))
 
-        scrollFrame = display.ScrollableFrame(root)
+        scrollFrame = display.ScrollableFrame(root, scrollbar=True)
         for i in range(0, 5):
             cur_jp_text = text.TextBox(scrollFrame.content, size=(30,2), takefocus=0)
             cur_jp_text.pack(anchor="w")
@@ -272,7 +272,9 @@ class AdditionalTextWindow:
             if i == 0:
                 self.firstText = cur_en_text
             if i < 4:
-                ttk.Separator(scrollFrame.content, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=20)
+                ttk.Separator(scrollFrame.content, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=8)
+        scrollFrame.pack(fill="both", expand=True)
+
         self.close()
 
     def close(self):

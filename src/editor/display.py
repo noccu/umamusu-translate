@@ -20,34 +20,42 @@ class PopupMenu(tk.Menu):
             self.grab_release()
 
 
-class ScrollableFrame:
-    def __init__(self, parent: tk.Toplevel):
-        scroll_frame = ttk.Frame(parent)
-        scroll_frame.pack(fill="both", expand=True)
+class ScrollableFrame(tk.Frame):
+    def __init__(self, parent: tk.Toplevel, scrollbar=False):
+        super().__init__(parent)
+        scroll_canvas = tk.Canvas(self)
+        scroll_canvas.pack(side="left", fill="both")
 
-        scroll_canvas = tk.Canvas(scroll_frame)
-        scroll_canvas.pack(side="left", fill="both", expand=True)
+        if scrollbar:
+            scroll_bar = ttk.Scrollbar(self, orient="vertical", command=scroll_canvas.yview)
+            scroll_bar.pack(side="right", fill="y")
+            scroll_canvas.configure(yscrollcommand=scroll_bar.set)
 
-        scroll_bar = ttk.Scrollbar(scroll_frame, orient="vertical", command=scroll_canvas.yview)
-        scroll_bar.pack(side="right", fill="y")
-
-        scroll_canvas.configure(yscrollcommand=scroll_bar.set)
-        scroll_canvas.bind(
-            "<Configure>", lambda e: scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all"))
+        content_frame = tk.Frame(scroll_canvas)
+        scroll_canvas.create_window((0, 0), window=content_frame, anchor="nw")
+        content_frame.bind(
+            "<Configure>", lambda e: scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all"), width=content_frame.winfo_reqwidth())
         )
-        window_frame = ttk.Frame(scroll_canvas)
-        scroll_canvas.create_window((0, 0), window=window_frame, anchor="nw")
+        content_frame.bind("<Enter>", self.enableScroll)
+        content_frame.bind("<Leave>", self.disableScroll)
+        content_frame.bind("<MouseWheel>", self.scroll)
+        content_frame.bind("<Map>", self._ev_mapped)
 
-        scroll_canvas.bind_all("<MouseWheel>", self.scroll)
-        window_frame.bind("<Enter>", self.toggle)
-        window_frame.bind("<Leave>", self.toggle)
-
-        self.canvas = scroll_canvas
         self.isScrollable = False
-        self.content = window_frame
+        self.canvas = scroll_canvas
+        self.content = content_frame
 
-    def toggle(self, e):
-        self.isScrollable = not self.isScrollable
+    # Allow scrolling widget on any child
+    #? Could also implement optional scroll event overwriting in scrollable children
+    def _ev_mapped(self, e:tk.Event):
+        for child in e.widget.children.values():
+            child.bind("<MouseWheel>", self.scroll)
+
+    def enableScroll(self, e):
+        self.isScrollable = True
+
+    def disableScroll(self, e):
+        self.isScrollable = False
 
     def scroll(self, e):
         if self.isScrollable:

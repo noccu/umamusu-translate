@@ -3,6 +3,7 @@ import re
 import tkinter as tk
 from tkinter import messagebox, ttk
 from types import SimpleNamespace
+from functools import partial
 
 from common import constants as const
 from common.constants import NAMES_BLACKLIST
@@ -70,7 +71,7 @@ class Editor:
         text_box_en.grid(row=4, column=0, columnspan=4)
         text_box_en.linkTo(self.textBoxJp, root)
 
-        self.choices = Choices(root)
+        self.choices = Choices(self)
         self.choices.widget.grid_configure(row=3, rowspan=2, column=5, sticky=tk.NSEW)
 
         frm_btns_bot = tk.Frame(root)
@@ -236,10 +237,11 @@ class Editor:
 
 
 class Choices:
-    def __init__(self, parent: tk.Toplevel):
+    def __init__(self, editor: Editor):
+        self.editor = editor
         self.textBoxes:list[tuple[text.TextBox, text.TextBoxEditable]] = list()
         self.curChoices = None
-        scrollFrame = display.ScrollableFrame(parent)
+        scrollFrame = display.ScrollableFrame(editor.root)
         self.widget = scrollFrame  # Use this to add to UI
         font = fonts.create(scrollFrame, size=14, id="choices")
 
@@ -248,19 +250,27 @@ class Choices:
             cur_jp_text = text.TextBox(scrollFrame.content, size=(31,1), font=font, takefocus=0)
             cur_jp_text.grid(row=idx, column=0, sticky=tk.W)
             cur_en_text = text.TextBoxEditable(scrollFrame.content, size=(31, 2), font=font)
-            cur_en_text.linkTo(cur_jp_text, parent)
+            cur_en_text.linkTo(cur_jp_text, editor.root)
             cur_en_text.grid(row=idx+1, column=0, sticky=tk.W)
             follow_btn = tk.Button(
                 scrollFrame.content, 
                 text="≫",
                 relief="groove",
-                command=lambda: messagebox.showinfo(message="spemini"))
+                command=partial(self._evFollowBlock, i))
             follow_btn.grid(row=idx, column=1, rowspan=2, sticky=tk.NSEW)
             self.textBoxes.append((cur_jp_text, cur_en_text))
             cur_en_text.bind("<Tab>", display._switchWidgetFocusForced)
             if i < 4:
                 ttk.Separator(scrollFrame.content, orient=tk.HORIZONTAL).grid(row=idx+2, column=0, columnspan=2, pady=8)
             idx += 3
+
+    def _evFollowBlock(self, choiceId):
+        if choiceId >= len(self.curChoices):
+            print("This choice is not active!")
+            return
+        blockId = self.curChoices[choiceId].get("nextBlock")
+        if blockId and blockId != -1:
+            self.editor.nav.change_block(blockId - 1)
         
     def setChoices(self, choices:list):
         self.curChoices = choices

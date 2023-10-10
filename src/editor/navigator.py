@@ -120,7 +120,7 @@ class Navigator:
             self.btnPrev["text"] = "Prev"
         if nextIdx < 1 or nextIdx > fileLen:
             display.setActive(self.btnNext, False)
-            self.btnNext["text"] = "End"
+            self.btnNext["text"] = "Section End" if fileLen > self.cur_block + 1 else "End"
         else:
             display.setActive(self.btnNext, True)
             self.btnNext["text"] = f"Next ({idx} -> {nextIdx}!)" if nextIdx - idx > 1 else "Next"
@@ -138,8 +138,12 @@ class Navigator:
 
     def next_block(self, event=None):
         idx = self.cur_data.get("nextBlock", self.cur_block + 2) - 1
-        if idx < 1 or idx >= len(self.cur_file.textBlocks):
-            print("Reached end of file")
+        nBlocks = len(self.cur_file.textBlocks)
+        if idx < 1 or idx >= nBlocks:
+            if nBlocks > self.cur_block + 1:
+                print("Reached end of section. Check block list")
+            else:
+                print("Reached end of file")
             return
         self.change_block(idx, dir=1)
 

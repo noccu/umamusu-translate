@@ -198,11 +198,11 @@ class TextBoxEditable(TextBox):
     def del_word(self, event):
         shift = event.state & 0x0001
         if event.keycode == 8:  # backspace
-            ptn = r"^" if shift else r"[^ …—]+|^"
+            ptn = r"^" if shift else r"[^ …—\.?!]+|^"
             sIdx = self.search(ptn, index=tk.INSERT, backwards=True, regexp=True, nocase=True)
             self.delete(sIdx, tk.INSERT)  # 
         elif event.keycode == 46:  # delete
-            ptn = r".$" if shift else r" ?.(?=[ …—]|$)"
+            ptn = r".$" if shift else r" ?.(?=[ …—\.?!]|$)"
             sIdx = self.search(ptn, index=tk.INSERT, backwards=False, regexp=True, nocase=True)
             self.delete(tk.INSERT, sIdx + "+1c")
         return "break"

@@ -256,6 +256,7 @@ class Choices:
                 scrollFrame.content, 
                 text="≫",
                 relief="groove",
+                takefocus=0,
                 command=partial(self._evFollowBlock, i))
             follow_btn.grid(row=idx, column=1, rowspan=2, sticky=tk.NSEW)
             self.textBoxes.append((cur_jp_text, cur_en_text))
@@ -275,10 +276,13 @@ class Choices:
     def setChoices(self, choices:list):
         self.curChoices = choices
         for i, (jpBox, enBox) in enumerate(self.textBoxes):
-            if i == len(choices):
-                self.clearChoices(boxes=self.textBoxes[i:])
-                return
+            if i >= len(choices):
+                jpBox.clear()
+                enBox.clear()
+                enBox.setActive(False)
+                continue
             jpBox.loadRichText(choices[i]["jpText"])
+            enBox.setActive(True)
             enBox.loadRichText(choices[i]["enText"])
 
     def saveChoices(self):
@@ -290,12 +294,10 @@ class Choices:
             self.curChoices[i]["enText"] = text.normalize(enBox.toRichText())
         self.curChoices = None
 
-    def clearChoices(self, boxes: list = None):
-        for jpBox, enBox in (boxes or self.textBoxes):
-            display.setActive(jpBox, True)
-            text.clearText(jpBox)
-            display.setActive(jpBox, False)
-            text.clearText(enBox)
+    # def clearChoices(self, boxes: list = None):
+    #     for jpBox, enBox in (boxes or self.textBoxes):
+    #         jpBox.clear()
+    #         enBox.clear()
 
 
 class AdditionalTextWindow:

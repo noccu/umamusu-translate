@@ -130,7 +130,7 @@ class FileManager:
             self.master.choices.setChoices(cur_choices)
             self.master.choices.widget.grid()
         else:
-            self.master.choices.clearChoices()
+            # self.master.choices.clearChoices()
             self.master.choices.widget.grid_remove()
 
         # Update colored button

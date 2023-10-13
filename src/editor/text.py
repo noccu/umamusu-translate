@@ -48,29 +48,47 @@ class TextBox(tk.Text):
 
     DEFAULT_WIDTH = 54
     DEFAULT_HEIGHT = 4
-    _EDITABLE = False
 
     # todo: maybe move color to post_init and pass through init itself to tk
-    def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
+    def __init__(self, parent, size: tuple[int] = (None, None), editable:bool = False, font: fonts.Font = None, **kwargs) -> None:
         super().__init__(
             parent,
             width=size[0] or TextBox.DEFAULT_WIDTH,
             height=size[1] or TextBox.DEFAULT_HEIGHT,
             font=font or fonts.DEFAULT,
-            state="disabled",
+            state="normal" if editable else "disabled",
             **kwargs
         )
         self.tkRoot = None
+        self._editable = self._enabled = editable
         self.tag_config("b", font=fonts.BOLD)
         self.tag_config("i", font=fonts.ITALIC)
         self.color = ColorManager(self)
         self.bind("<Alt-Right>", self.copy_block)
 
+        if editable:
+            self.config(undo=True)
+            self.spellChecker = SpellCheck(self)
+            # Move default class binds last to allow overwriting
+            this, cls, toplevel, all = self.bindtags()
+            self.bindtags((this, toplevel, all, cls))
+            # Keybinds
+            self.bind("<Alt-x>", self.char_convert)
+            self.bind("<Control-BackSpace>", self.del_word)
+            self.bind("<Control-Shift-BackSpace>", self.del_word)
+            self.bind("<Control-Delete>", self.del_word)
+            self.bind("<Control-Shift-Delete>", self.del_word)
+            self.bind("<Control-i>", self.format_text)
+            self.bind("<Control-b>", self.format_text)
+            self.bind("<Control-C>", self.format_text)
+            self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
+            self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
+
     def loadRichText(self, text: str = None):
         """Load text into widget, converting unity RT markup to tk tags.
         If no text is given it converts all existing text"""
-        if not self._EDITABLE:
-            self.config(state="normal")
+        if not self._editable:
+            self.setActive(True)
         if text is None:
             text = self.get(1.0, tk.END)
         tagList = list()
@@ -94,8 +112,10 @@ class TextBox(tk.Text):
         # Apply tags
         for toTag in tagList:
             self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
-        if not self._EDITABLE:
-            self.config(state="disabled")
+        if self._editable:
+            self.spellChecker.check_spelling()
+        else:
+            self.setActive(False)
 
     def toRichText(self):
         text = list(self.get(1.0, tk.END))
@@ -115,6 +135,20 @@ class TextBox(tk.Text):
             text.insert(idx + offset, tag)
             offset += 1
         return "".join(text)
+    
+    def clear(self):
+        wasEnabled = self._enabled
+        if not wasEnabled:
+            self.setActive(True)
+        clearText(self)
+        if not wasEnabled:
+            self.setActive(False)
+
+    def setActive(self, state:bool):
+        if self._enabled == state:
+            return
+        self._enabled = state  # keep a simple bool, gdi tk
+        self.config(state="normal" if state else "disabled")
 
     def copy_block(self, event=None):
         """Copies the text of this block or its parent to the clipboard"""
@@ -131,30 +165,9 @@ class TextBox(tk.Text):
 
 
 class TextBoxEditable(TextBox):
-    _EDITABLE = True
     def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
-        super().__init__(parent, size, font, **kwargs)
-        self.config(state="normal", undo=True)
-        self.spellChecker = SpellCheck(self)
-        # Move default class binds last to allow overwriting
-        this, cls, toplevel, all = self.bindtags()
-        self.bindtags((this, toplevel, all, cls))
-        # Keybinds
-        self.bind("<Alt-x>", self.char_convert)
-        self.bind("<Control-BackSpace>", self.del_word)
-        self.bind("<Control-Shift-BackSpace>", self.del_word)
-        self.bind("<Control-Delete>", self.del_word)
-        self.bind("<Control-Shift-Delete>", self.del_word)
-        self.bind("<Control-i>", self.format_text)
-        self.bind("<Control-b>", self.format_text)
-        self.bind("<Control-C>", self.format_text)
-        self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
-        self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
-
-    def loadRichText(self, text: str = None):
-        super().loadRichText(text)
-        self.spellChecker.check_spelling()
-
+        super().__init__(parent, size, True, font, **kwargs)
+    
     def format_text(self, event):
         if not self.tag_ranges("sel"):
             print("No selection to format.")

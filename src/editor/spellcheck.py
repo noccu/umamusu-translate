@@ -104,17 +104,17 @@ class SpellCheck:
         isCapitalized = partialWord[0].isupper()
         partialWord = partialWord.lower()
         self.menu.clear()
-        suggestions = 0
-        for word in SpellCheck.dictionary.words:
-            if word.startswith(partialWord):
-                if isCapitalized:
-                    word = word.title()
-                self.menu.add_command(
-                    label=word, command=partial(self.autoReplace, wordstart, word)
-                )
-                suggestions += 1
-            if suggestions == 25:
-                break
+        suggestions = list()
+        #todo: Try optimizing ops
+        for word, freq in SpellCheck.dictionary.words.items():
+            if not word.startswith(partialWord):
+                continue
+            if isCapitalized:
+                word[0] = word[0].upper()
+            suggestions.append((wordstart, word, freq))
+        suggestions.sort(key=lambda x: x[2], reverse=True)  # freq sort
+        for wordstart, word, freq in suggestions[:25]:
+            self.menu.add_command(label=word, command=partial(self.autoReplace, wordstart, word))
         self.menu.show(event, atInsert=True)
 
     def autoReplace(self, wordstart, word):

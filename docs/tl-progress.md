@@ -90,7 +90,7 @@ Daitaku Helios | Complete | [LotoDS][]
 Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
 Daiichi Ruby | Complete | [Riersa]
 Eishin Flash | Complete, In progress, Stalled | MTL, [noccu] (ep 1-2), Admiy
-El Condor Pasa | Complete, In progress | MTL (contributed by CryDuringItAll), [noccu]☆
+El Condor Pasa | Complete, In progress | MTL (contributed by CryDuringItAll), [UmaTL] (noccu)☆
 Fine Motion | Complete | [LotoDS][]
 Fuji Kiseki | Complete | [Kasey]
 Gold City | Complete | [Hades of Games][]
@@ -105,6 +105,7 @@ Katsuragi Ace | Complete | [LotoDS][]
 Kawakami Princess | Complete | [Director Kok]
 King Halo | Complete | [burritoblaster][]
 Kitasan Black | Complete | [LotoDS][]
+K.S. Miracle | In progress | [Kasey]
 Manhattan Cafe | Complete | [xct][]
 Matikanetannhauser | Complete | [Snep][]
 Maruzensky | Complete | [noccu][]
@@ -132,7 +133,7 @@ Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), MTL
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, MTL
 Symboli Kris S | Complete | [LotoDS][]
-Symboli Rudolf | Complete, In progress | MTL, [UmaTL]☆
+Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)☆
 Taiki Shuttle | Complete | [LotoDS][]
 TM Opera O | In progress | [Kasey]
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]

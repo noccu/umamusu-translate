@@ -321,6 +321,7 @@ Pyoitto♪Hallelujah! | Complete | [Kasey]
 [*Rising Girl*](https://twitter.com/dorcarolle/status/1192625305795489792) | Complete, Stalled | [dorcarolle](https://twitter.com/dorcarolle), [noccu]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
 [TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
+Tracen Ondo | Complete | [Kasey]
 transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | Anonymous Reindeer + [Karimenrider] (missing parts)
 UNLIMITED IMPACT | Complete | [noccu][]

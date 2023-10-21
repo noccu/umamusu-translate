@@ -68,9 +68,10 @@ Currently this is available to supporters with any amount of pledge. Please [com
 [An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)
 
 ## Requirements (get these first!)
-1. Install [Python](https://www.python.org/downloads/) 3.9+
+1. Install Python 3.11 from the files at the bottom of [this page](https://www.python.org/downloads/release/python-3116/).
     - The defaults should work fine. To customize; you need pip, the py launcher, and tcl/tk. *Do not* select "add to path".
-    - If the latest version is less than, say, a month old then use the version *before* that unless you know what you are doing.
+    - [Direct link to download](https://www.python.org/ftp/python/3.11.6/python-3.11.6-amd64.exe).
+    - For the more technical: UmaTL is written for Python 3.9+, the latest versions might not have pre-build dependency binaries, use at own caution and setup.
 1. Clone or [download a zip](https://github.com/noccu/umamusu-translate/archive/refs/heads/master.zip) (green "code" button) of this project and extract it.
 1. Make sure you opened and logged in to the game at least once before.
 

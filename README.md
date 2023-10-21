@@ -1,6 +1,6 @@
 [![Support me on Patreon](https://img.shields.io/badge/dynamic/json?color=%23ff424d&label=Patreon&query=data.attributes.patron_count&suffix=%20trainers&url=https%3A%2F%2Fwww.patreon.com%2Fapi%2Fcampaigns%2F2559100&style=flat-square&logo=patreon&logoColor=%23ff424d)](https://patreon.com/noccu)
 [![Support me on Ko-fi](https://img.shields.io/badge/Ko--fi-Support-%2300aff1?logo=kofi&logoColor=%2300aff1)](https://ko-fi.com/noccyu)
-[![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=4bba35&label=Discord)](https://discord.gg/eqZT27TeJ)
+[![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=4bba35&label=Discord)](https://discord.gg/xBMgwh6hHY)
 
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. It includes a few scripts to patch the game using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
@@ -59,18 +59,19 @@ This includes:
 - Latest game updates
 - Additional content (lyrics, pakatube, …)
 - Patch improvements & QOL
-- Translation spotlights; a series of small periodic writeups expanding upon some translations
+- Translation spotlights; a series of small periodic writeups expanding upon some terms & translations
 - Priority tech support
 
-Currently this is available to supporters with any amount of pledge. Please come join if you can!
+Currently this is available to supporters with any amount of pledge. Please [come](https://ko-fi.com/noccyu) [join](https://www.patreon.com/noccu) if you can!
 
 # Setting up / Getting started
 [An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)
 
 ## Requirements (get these first!)
-1. Install [Python](https://www.python.org/downloads/) 3.9+
+1. Install Python 3.11 from the files at the bottom of [this page](https://www.python.org/downloads/release/python-3116/).
     - The defaults should work fine. To customize; you need pip, the py launcher, and tcl/tk. *Do not* select "add to path".
-    - If the latest version is less than, say, a month old then use the version *before* that unless you know what you are doing.
+    - [Direct link to download](https://www.python.org/ftp/python/3.11.6/python-3.11.6-amd64.exe).
+    - For the more technical: UmaTL is written for Python 3.9+, the latest versions might not have pre-build dependency binaries, use at own caution and setup.
 1. Clone or [download a zip](https://github.com/noccu/umamusu-translate/archive/refs/heads/master.zip) (green "code" button) of this project and extract it.
 1. Make sure you opened and logged in to the game at least once before.
 
@@ -82,7 +83,7 @@ Currently this is available to supporters with any amount of pledge. Please come
 
 ### Troubleshooting
 - Errors about "pip not found"?
-    - This is uncommon as pip is an intergral part of python [Check here](https://pip.pypa.io/en/stable/installation/#ensurepip) for solutions.
+    - This is uncommon as pip is an integral part of python [Check here](https://pip.pypa.io/en/stable/installation/#ensurepip) for solutions.
     - If you still get errors, delete the .venv folder first.
 
 ## Config
@@ -118,30 +119,29 @@ This is a one-time procedure. To update TLG itself simply overwrite the `version
 Change `skill_data` to true in the config if you want to see [the skill's raw requirements and effects](docs/guide_skilldata.png).  
 Make sure the game is closed and double click the `mdb import.bat` file.
 - The mdb file that this modifies updates regularly (with banners usually), undoing changes. You will need to rerun this .bat.
-- There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases but it it not maintained well anymore.
+- There is also [a web version](https://noccu.github.io/umamusume-db-translate/) for mobile or other usecases but it is not maintained anymore.
 
 ## Dialogue
-Change `skip_mtl` to `true` in the config if you'd like to skip importing machine translations.  
+Change `skip_mtl` to `false` in the config if you'd like to import machine translations to fill in parts the community hasn't done yet.  
 If you use tlg to change fps, add a comma to the above and `"fps": 60` (or whatever your fps is) on a new line under it.
 Double click `run.bat` 
-- This can take a few minutes because there are many files.
+- This can take a few minutes because there are many files, especially the first time.
 - You can close this at any time and resume later, or play the game while this runs.
 - Changes apply without game restart.
 - Should be run occasionally to apply updates or translate files you didn't have downloaded yet.
+- At the end, it will remove outdated backups. This can take a long time and isn't important so you can close the window at this point.
 
 # Updating
-- If you did **not** install MinGit, first download the project again and overwrite. **Skip this otherwise**.
-     - See step 2 [here](#requirements-get-these-first)
 - Double click `run.bat` and/or `mdb import.bat` as required.  
     - `run.bat` also updates the UI-related files **if you've followed the UI step above**.
 
 If you only want to use and update the UI, repeat step 1-2 of the [UI section](#ui-menus-buttons-) or use `py src\manage.py -M`  
-If you want to update only the patch itself and not actually apply it, you can use the `update.bat` if you installed MinGit. This should not usually be needed.
+If you want to update only the patch itself and not actually apply it, you can use the `update.bat`. This should not usually be needed.
 
 ### Troubleshooting
 - If you see [commit/merge errors](docs/guide_git_update.png):
     - Open a cmdline in the folder and paste `.mingit\mingw64\bin\git.exe reset --hard`, enter.
-    - This will happen if you (or something on your PC) edited any non-config file, including if you're using a test/bugfix file someone sent you. Or if you update by overwriting your install from a new ZIP while using MinGit.
+    - This will happen if you (or something on your PC) edited any non-config file, including if you're using a test/bugfix file someone sent you.
 
 # Advanced Usage
 In general, check out the [scripts](#script-info). You probably also want to `pip install -r src/devreq.txt`

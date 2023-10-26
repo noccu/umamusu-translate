@@ -112,6 +112,7 @@ Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
+Narita Top Road | Complete | [LotoDS][]
 Nice Nature | Complete | [xct]
 Rice Shower  | Complete | [Ben][] (ep 1-4), MTL
 Sakura Bakushin O | Complete | [noccu][]

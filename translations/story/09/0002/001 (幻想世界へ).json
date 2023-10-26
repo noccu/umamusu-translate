@@ -1,6 +1,6 @@
 {
-    "version": 5,
-    "bundle": "YVSBOQG5DU6TYVYPKVSR3OWS2YTZH7AH",
+    "version": 6,
+    "bundle": "QUIXM7IK7ORLJ7MAVDEWHBGDQCLXHRMN",
     "type": "story",
     "storyId": "090002001",
     "title": "幻想世界へ",
@@ -12,6 +12,7 @@
             "enText": "―Umanest, a kingdom of swords and magic",
             "nextBlock": 2,
             "origClipLength": 130,
+            "voiceIdx": 0,
             "pathId": 742001785013027438,
             "blockIdx": 1
         },
@@ -22,6 +23,7 @@
             "enText": "The fastest speeders in this world are not direwolves or wyverns.",
             "nextBlock": 3,
             "origClipLength": 230,
+            "voiceIdx": 1,
             "pathId": 3346940740500102324,
             "blockIdx": 2
         },
@@ -32,6 +34,7 @@
             "enText": "Buggoo, buggoo, buggooooooooo! (Stupid! \nThey're chasing us at this speed?)",
             "nextBlock": 4,
             "origClipLength": 99,
+            "voiceIdx": 2,
             "pathId": 9149120404020319254,
             "blockIdx": 3
         },
@@ -42,6 +45,7 @@
             "enText": "Wooooooooooo! Thieving orcs, wait, wait, wait!",
             "nextBlock": 5,
             "origClipLength": 188,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 256,
@@ -62,6 +66,7 @@
             "enText": "…… I'm catching up, Elle. ―This is the place to set it up!",
             "nextBlock": 6,
             "origClipLength": 146,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 256,
@@ -86,6 +91,7 @@
             "enText": "Sue, glass! Haaaa! Condor onslaught wave: ！！！！！！！！！",
             "nextBlock": 7,
             "origClipLength": 208,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 101,
@@ -104,22 +110,24 @@
             "blockIdx": 6
         },
         {
-            "jpName": "モノローグ",
+            "jpName": "",
             "enName": "",
-            "jpText": "イベントタイトルロゴ表示",
+            "jpText": "イベントタイトルロゴ表示。",
             "enText": "",
             "nextBlock": 8,
             "origClipLength": 194,
+            "voiceIdx": -1,
             "pathId": 6133472382677158163,
             "blockIdx": 7
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "――遡ること数時間前。",
             "enText": "―few hours ago, back in the day.",
             "nextBlock": 9,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 159,
@@ -140,6 +148,7 @@
             "enText": "Introducing! VR Umarator!",
             "nextBlock": 10,
             "origClipLength": 127,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 80,
@@ -164,6 +173,7 @@
             "enText": "VR…… umalator? Ms. Chancellor, what are these three iron \ncoffin-like machines?",
             "nextBlock": 11,
             "origClipLength": 332,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 207,
@@ -196,6 +206,7 @@
             "enText": "Let me explain. VR Umarator\" is a racing simulator developed for \nthe Uma Musume of Tracen Academy.",
             "nextBlock": 12,
             "origClipLength": 255,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 23,
@@ -228,6 +239,7 @@
             "enText": "Turf, dirt, good ba field, heavy ba field. It's possible to \nreproduce any race course in any conditions.",
             "nextBlock": 13,
             "origClipLength": 251,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 129,
@@ -248,6 +260,7 @@
             "enText": "Wow, it's so convenient to be able to \nreproduce all kinds of conditions.",
             "nextBlock": 14,
             "origClipLength": 195,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 20,
@@ -276,6 +289,7 @@
             "enText": "Meh, it's a simulator. I thought it was a nap pod just for me.",
             "nextBlock": 15,
             "origClipLength": 214,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 50,
@@ -304,6 +318,7 @@
             "enText": "In addition, you can connect to various affiliated online games \nand play as Uma Musume!",
             "nextBlock": 16,
             "origClipLength": 231,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 50,
@@ -344,6 +359,7 @@
             "enText": "With this feature, you can send your beloved \nUma Musume into magical lands, science fiction, \ncyberpunk, and everything in between!",
             "nextBlock": 17,
             "origClipLength": 321,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 60,
@@ -376,6 +392,7 @@
             "enText": "I am very happy to hear from you, Ms. Chairman…… I was opposed to \nthat function, saying that it was impossible in many ways. ……",
             "nextBlock": 18,
             "origClipLength": 221,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 172,
@@ -404,6 +421,7 @@
             "enText": "Still, you were prepared for trouble and implemented it. ……",
             "nextBlock": 19,
             "origClipLength": 126,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 145,
@@ -432,6 +450,7 @@
             "enText": "Of course! I did this to spread the word about \nhow wonderful Uma Musume is! The money in my \npocket will never come back! I'm on fire!",
             "nextBlock": 20,
             "origClipLength": 277,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 60,
@@ -464,6 +483,7 @@
             "enText": "Oh wow, not only can you run, but you \ncan play games! That's just perfect!",
             "nextBlock": 21,
             "origClipLength": 205,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 60,
@@ -500,6 +520,7 @@
             "enText": "Oh? I see one plane is already in motion. Who's that over there?",
             "nextBlock": 22,
             "origClipLength": 192,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 244,
@@ -528,6 +549,7 @@
             "enText": "On behalf of the school, I asked Ms. Symbol Rudolf, \nthe president of the school, to run a test run first. \nWe didn't want to have any problems.",
             "nextBlock": 23,
             "origClipLength": 272,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 75,
@@ -560,6 +582,7 @@
             "enText": "Way to go, Chairman! Hey, Chairman of the Board, Chairman of the \nBoard, Elle also has that machine ……",
             "nextBlock": 24,
             "origClipLength": 180,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 283,
@@ -592,6 +615,7 @@
             "enText": "What, what is this alarm!",
             "nextBlock": 25,
             "origClipLength": 111,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 89,
@@ -624,6 +648,7 @@
             "enText": "EMERGENCY, EMERGENCY. Overall program error caused by Unit 1.",
             "nextBlock": 26,
             "origClipLength": 213,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 41,
@@ -652,6 +677,7 @@
             "enText": "It is necessary to assign to the same session from \nUnits 2 and 3 and release the session. If it cannot \nbe released, all software must be reset.",
             "nextBlock": 27,
             "origClipLength": 333,
+            "voiceIdx": 23,
             "pathId": 64961981652278697,
             "blockIdx": 26
         },
@@ -662,6 +688,7 @@
             "enText": "All software reset! No!",
             "nextBlock": 28,
             "origClipLength": 129,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 79,
@@ -686,6 +713,7 @@
             "enText": "If that happens, we'll have to redo the \nwhole setup.…… What happened to Unit 1!",
             "nextBlock": 29,
             "origClipLength": 207,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 278,
@@ -714,6 +742,7 @@
             "enText": "Ha, ha…… ha, ha ……",
             "nextBlock": 30,
             "origClipLength": 123,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 23,
@@ -742,6 +771,7 @@
             "enText": "The chairman seems to keep running very normally. ……",
             "nextBlock": 31,
             "origClipLength": 139,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 60,
@@ -766,6 +796,7 @@
             "enText": "Oh, this is a world device! No, it's a crisis!",
             "nextBlock": 32,
             "origClipLength": 175,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 14,
@@ -794,6 +825,7 @@
             "enText": "Okay, I'll go! If everyone is in trouble, Elle will go!",
             "nextBlock": 33,
             "origClipLength": 154,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 228,
@@ -814,6 +846,7 @@
             "enText": "Sturdy, robust, and the strongest of all! It won't be shaken by \nthe slightest trouble!",
             "nextBlock": 34,
             "origClipLength": 228,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 249,
@@ -838,6 +871,7 @@
             "enText": "If so - I'll be there.",
             "nextBlock": 35,
             "origClipLength": 84,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 109,
@@ -858,6 +892,7 @@
             "enText": "When it comes to machine trouble, Elle may not be able to handle \nit alone. As an assistant at that time.",
             "nextBlock": 36,
             "origClipLength": 236,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 60,
@@ -882,6 +917,7 @@
             "enText": "Well, what a great duo! Then I'll leave it to these two \nwell-meaning people!",
             "nextBlock": 37,
             "origClipLength": 185,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 77,
@@ -914,6 +950,7 @@
             "enText": "Please do not get hurt. Let's go!",
             "nextBlock": 38,
             "origClipLength": 148,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 60,
@@ -938,6 +975,7 @@
             "enText": "Let's see, the…… start button is this one. If you press this, you \nwill be in running mode. ……",
             "nextBlock": 39,
             "origClipLength": 207,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 41,
@@ -962,6 +1000,7 @@
             "enText": "What, this is not a running mode! The same session is…… Huh?",
             "nextBlock": 40,
             "origClipLength": 264,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 311,
@@ -990,6 +1029,7 @@
             "enText": "Yeah, yeah, yeah! Glass, what is the meaning of this? This place! \nAnd what's with the outfit?",
             "nextBlock": 41,
             "origClipLength": 249,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 173,
@@ -1022,6 +1062,7 @@
             "enText": "This is…… apparently a fantasy game world. Another mode activated?",
             "nextBlock": 42,
             "origClipLength": 315,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 60,
@@ -1046,6 +1087,7 @@
             "enText": "Fantasy…… Is this outfit of Elle's…… \npossibly a martial artist desu?",
             "nextBlock": 43,
             "origClipLength": 242,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 221,
@@ -1070,6 +1112,7 @@
             "enText": "I seem to be a healer. Let's see, ……",
             "nextBlock": 44,
             "origClipLength": 188,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 85,
@@ -1098,6 +1141,7 @@
             "enText": "You can also see the status. This \nis definitely a fantasy game mode.",
             "nextBlock": 45,
             "origClipLength": 207,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 198,
@@ -1126,6 +1170,7 @@
             "enText": "But why? It's supposed to go into the same \nrunning mode as the first unit. ……",
             "nextBlock": 46,
             "origClipLength": 279,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 297,
@@ -1154,6 +1199,7 @@
             "enText": "There must be a reason! Something that is happening in this world \nthat needs to be solved!",
             "nextBlock": 47,
             "origClipLength": 258,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 246,
@@ -1174,6 +1220,7 @@
             "enText": "Yale. You just want to explore this world, don't you?",
             "nextBlock": 48,
             "origClipLength": 199,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 169,
@@ -1194,6 +1241,7 @@
             "enText": "But as long as they were brought here by the program, there may \nbe a reason they are close. ……",
             "nextBlock": 49,
             "origClipLength": 218,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 221,
@@ -1212,12 +1260,13 @@
             "blockIdx": 48
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ざわざわざわ……）",
             "enText": "(Zawazawa Zawazawa ……)",
             "nextBlock": 50,
             "origClipLength": 58,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 34,
@@ -1242,6 +1291,7 @@
             "enText": "Ah, someone has gathered! Could it be another player?",
             "nextBlock": 51,
             "origClipLength": 176,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 302,
@@ -1266,6 +1316,7 @@
             "enText": "Hey, hey, what's with that race! Are they long-eared but…… elves! \nA war wolf with a fluffy tail?",
             "nextBlock": 52,
             "origClipLength": 255,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 283,
@@ -1294,6 +1345,7 @@
             "enText": "No, we are not! We are the Horse Girls!",
             "nextBlock": 53,
             "origClipLength": 150,
+            "voiceIdx": 48,
             "animData": [
                 {
                     "origLen": 60,
@@ -1318,6 +1370,7 @@
             "enText": "What? Umamusume is…… that Umamusume? The real Uma Musume is in \nthe game world?…… This is going to be great!",
             "nextBlock": 54,
             "origClipLength": 294,
+            "voiceIdx": 49,
             "animData": [
                 {
                     "origLen": 292,
@@ -1342,6 +1395,7 @@
             "enText": "Oh, oh, oh, Uma Musume ……! I knew the legend was true! This may \nbe salvation from the heavens.",
             "nextBlock": 55,
             "origClipLength": 311,
+            "voiceIdx": 50,
             "animData": [
                 {
                     "origLen": 243,
@@ -1370,6 +1424,7 @@
             "enText": "That…… grandmother? What is legendary is ……",
             "nextBlock": 56,
             "origClipLength": 157,
+            "voiceIdx": 51,
             "animData": [
                 {
                     "origLen": 99,
@@ -1394,6 +1449,7 @@
             "enText": "When the world is at stake―there is a saying here on the \ncontinent of Umanesto that goes something like this.",
             "nextBlock": 57,
             "origClipLength": 251,
+            "voiceIdx": 52,
             "animData": [
                 {
                     "origLen": 263,
@@ -1418,6 +1474,7 @@
             "enText": "The \"Attendant of the Phantom has descended. \"The demonic \nspirits descend from the clouds to look down on the \nworld below, and with their innate thunderbolt, bring \ndestruction and pleasure to the Demon Lord.\"",
             "nextBlock": 58,
             "origClipLength": 632,
+            "voiceIdx": 53,
             "animData": [
                 {
                     "origLen": 20,
@@ -1442,6 +1499,7 @@
             "enText": "Phantom眷…… Are you referring to Uma \nMusume? I'm more interested in ……",
             "nextBlock": 59,
             "origClipLength": 278,
+            "voiceIdx": 54,
             "pathId": -2908002136119191165,
             "blockIdx": 58
         },
@@ -1452,6 +1510,7 @@
             "enText": "The Demon King! Is there a Demon King in this world?",
             "nextBlock": 60,
             "origClipLength": 153,
+            "voiceIdx": 55,
             "animData": [
                 {
                     "origLen": 86,
@@ -1472,6 +1531,7 @@
             "enText": "Indeed. Just the other day, she suddenly appeared in this world. \nMany heroes have been defeated by the Demon King, and the world \nis in the midst of a crisis.",
             "nextBlock": 61,
             "origClipLength": 420,
+            "voiceIdx": 56,
             "animData": [
                 {
                     "origLen": 68,
@@ -1492,6 +1552,7 @@
             "enText": "Bueno! Did you hear that, Glass? It is no accident that Elle and \nher friends came here!",
             "nextBlock": 62,
             "origClipLength": 240,
+            "voiceIdx": 57,
             "animData": [
                 {
                     "origLen": 192,
@@ -1516,6 +1577,7 @@
             "enText": "That demon king is the source of all the trouble! \nEven if a normal race can't stop her, an Uma \nMusume can! That's why I've been called!",
             "nextBlock": 63,
             "origClipLength": 341,
+            "voiceIdx": 58,
             "animData": [
                 {
                     "origLen": 262,
@@ -1536,6 +1598,7 @@
             "enText": "Is it a kind of bug mastery? Does the fact that there is lore \nmean that…… Uma Musume is somehow the key?",
             "nextBlock": 64,
             "origClipLength": 407,
+            "voiceIdx": 59,
             "animData": [
                 {
                     "origLen": 229,
@@ -1556,6 +1619,7 @@
             "enText": "That's what I'm talking about! If we defeat the Demon King, I'm \nsure our troubles will be solved!",
             "nextBlock": 65,
             "origClipLength": 201,
+            "voiceIdx": 60,
             "animData": [
                 {
                     "origLen": 193,
@@ -1580,6 +1644,7 @@
             "enText": "Okay, let's embark on a journey of adventure, \ncombat, and triumph! Let's defeat the Demon \nKing, and save the world along the way!",
             "nextBlock": -1,
             "origClipLength": 382,
+            "voiceIdx": 61,
             "animData": [
                 {
                     "origLen": 143,
@@ -1598,6 +1663,6 @@
             "blockIdx": 65
         }
     ],
-    "modified": 1673054669,
-    "humanTl": true
+    "humanTl": true,
+    "modified": 1694039070
 }

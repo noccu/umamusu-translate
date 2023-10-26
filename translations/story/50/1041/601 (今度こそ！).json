@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "XII5WAVN3A7PCZFDCQGFVPVOCHNOS3C2",
+    "version": 6,
+    "bundle": "53J2MQYCBMHUIWOMOJRRDDIVTOGX4PFV",
     "type": "story",
     "storyId": "501041601",
     "title": "今度こそ！",
@@ -11,7 +11,19 @@
             "jpText": "前回のレース、私は\r\nたいっ…………へんに反省いたしましたッ！！",
             "enText": "I cannot express…… \nhow sorry I am about my last race!!",
             "nextBlock": 2,
-            "pathId": 4161928492110222929,
+            "origClipLength": 86,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 1722175068054469161
+                },
+                {
+                    "origLen": 97,
+                    "pathId": 3875299291615013684
+                }
+            ],
+            "pathId": -4527502123987331457,
             "blockIdx": 1
         },
         {
@@ -20,7 +32,19 @@
             "jpText": "あれは優等生の走りではなかった！\r\nもっと、模範となる走りができたはずと！！",
             "enText": "That was not an honor roll student run! \nI must be a better role model!!",
             "nextBlock": 3,
-            "pathId": 6558891302101635693,
+            "origClipLength": 94,
+            "voiceIdx": 64,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": -3408686522141977657
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 5396892801093163371
+                }
+            ],
+            "pathId": -764257847610271739,
             "blockIdx": 2
         },
         {
@@ -29,6 +53,8 @@
             "jpText": "みなさーんッ！！　今日は学級委員長が\r\n完全復活した走りをお見せしますよーーッ！",
             "enText": "Everyooooone!! Today, I'd like to show \nyou all the class president's comeback \nkid ruuuun―!",
             "nextBlock": 4,
+            "origClipLength": 97,
+            "voiceIdx": 48,
             "choices": [
                 {
                     "jpText": "行ってこい！",
@@ -41,7 +67,17 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": -1302577867535838825,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -8062689716220094435
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -805251883003009354
+                }
+            ],
+            "pathId": 4582827947633983433,
             "blockIdx": 3
         },
         {
@@ -50,7 +86,19 @@
             "jpText": "ええっ、行ってまいります！！",
             "enText": "Indeed, I shall go on!!",
             "nextBlock": 5,
-            "pathId": -6508421282649469019,
+            "origClipLength": 63,
+            "voiceIdx": 137,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": 2702211254032839054
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 6606206087402994208
+                }
+            ],
+            "pathId": 5888330280818800166,
             "blockIdx": 4
         },
         {
@@ -59,10 +107,22 @@
             "jpText": "さぁ……\r\nオメイヘンコー、メイヨバンザイですッ！！",
             "enText": "Come on… Omeihenko, meiyo banzai!",
             "nextBlock": -1,
-            "pathId": -3516714777856561458,
+            "origClipLength": 78,
+            "voiceIdx": 98,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": -3954285952946007768
+                },
+                {
+                    "origLen": 56,
+                    "pathId": 4611352336244950979
+                }
+            ],
+            "pathId": -7245115933589232599,
             "blockIdx": 5
         }
     ],
     "humanTl": true,
-    "modified": 1683732695
+    "modified": 1694039467
 }

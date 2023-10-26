@@ -506,7 +506,7 @@ class ScriptConfig(dict):
         data = {
             "import": {
                 "update": True,
-                "skip_mtl": False
+                "skip_mtl": True
             },
             "mdb/import": {
                 "skill_data": False

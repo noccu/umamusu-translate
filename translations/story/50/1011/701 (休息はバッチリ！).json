@@ -1,18 +1,19 @@
 {
-    "version": 5,
-    "bundle": "H65XJMPTFRJUXEOL44VK7GLJGDAXJL6H",
+    "version": 6,
+    "bundle": "FULJ3AFLAOIXNZR3WKJZPCMWVZS6OA4J",
     "type": "story",
     "storyId": "501011701",
     "title": "休息はバッチリ！",
     "text": [
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "明け方に目が覚めてしまったので、\r\n早めに学園に向かうと――",
             "enText": "I woke up at the crack of dawn, so I headed \nto the academy early.",
             "nextBlock": 2,
             "origClipLength": 64,
-            "pathId": -5749322353099244632,
+            "voiceIdx": -1,
+            "pathId": 8364523273803248373,
             "blockIdx": 1
         },
         {
@@ -22,6 +23,7 @@
             "enText": "Good morning, trainer. It's \na refreshing morning…Â",
             "nextBlock": 3,
             "origClipLength": 64,
+            "voiceIdx": 41,
             "choices": [
                 {
                     "jpText": "おはよう、上機嫌だな",
@@ -37,34 +39,35 @@
             "animData": [
                 {
                     "origLen": 120,
-                    "pathId": 7164116191565905583
+                    "pathId": -1489740859347054969
                 },
                 {
                     "origLen": 89,
-                    "pathId": -4958682797368208623
+                    "pathId": -6947381372586895989
                 }
             ],
-            "pathId": 6528289560187287199,
+            "pathId": 1407628771593695408,
             "blockIdx": 2
         },
         {
             "jpName": "グラスワンダー",
             "enName": "Grass Wonder",
-            "jpText": "はい。昨日はお琴の教室に行ったんです。\r\nいいお休みの日になりました～。",
+            "jpText": "はい。昨日はお箏の教室に行ったんです。\r\nいいお休みの日になりました～。",
             "enText": "Yes, I am. I went to a koto class yesterday. \nIt was a nice day off!",
             "nextBlock": 4,
             "origClipLength": 68,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 51,
-                    "pathId": 1775152532442049356
+                    "pathId": -6046490830836124739
                 },
                 {
                     "origLen": 79,
-                    "pathId": 7405947883237131754
+                    "pathId": -1119043234960924443
                 }
             ],
-            "pathId": -2792475423063220869,
+            "pathId": 6423007392712743532,
             "blockIdx": 3
         },
         {
@@ -74,17 +77,18 @@
             "enText": "It feels so good to be able to make nice \nsounds with my own hands!",
             "nextBlock": 5,
             "origClipLength": 65,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 53,
-                    "pathId": 5895601004516069574
+                    "pathId": 8673443890077407171
                 },
                 {
                     "origLen": 76,
-                    "pathId": 74445426990237124
+                    "pathId": 9186482442792003744
                 }
             ],
-            "pathId": -2660305841696423791,
+            "pathId": 8299936447641180672,
             "blockIdx": 4
         },
         {
@@ -94,39 +98,41 @@
             "enText": "Enough rest for training. We will \ncontinue to push forward today, \ntirelessly, toward the summit.",
             "nextBlock": 6,
             "origClipLength": 69,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 51,
-                    "pathId": 4273189050468372933
+                    "pathId": -8147338700247948328
                 },
                 {
                     "origLen": 80,
-                    "pathId": -7186581274836205996
+                    "pathId": 4690017400338643320
                 }
             ],
-            "pathId": -1909317504096967999,
+            "pathId": 8164828108727367364,
             "blockIdx": 5
         },
         {
-            "jpName": "",
+            "jpName": "モノローグ",
             "enName": "",
             "jpText": "グラスワンダーは、\r\n休日でゆっくりと休めたようだ。",
             "enText": "Grass Wonder seems to have had \na good rest on her day off.",
             "nextBlock": -1,
             "origClipLength": 61,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 72,
-                    "pathId": 8789224477312980648
+                    "pathId": -5905880246387789583
                 },
                 {
                     "origLen": 72,
-                    "pathId": -619137711185671739
+                    "pathId": -5572826066594964061
                 }
             ],
-            "pathId": -3256877710934069116,
+            "pathId": 5832472948010577169,
             "blockIdx": 6
         }
     ],
-    "modified": 1657555055
+    "modified": 1694039213
 }

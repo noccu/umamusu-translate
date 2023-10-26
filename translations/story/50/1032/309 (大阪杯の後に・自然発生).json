@@ -1,6 +1,6 @@
 {
-    "version": 4,
-    "bundle": "E7DEZ5DE6C36CWFPYT33RNGKUUMAP2YG",
+    "version": 6,
+    "bundle": "L2TIKF2WYMUKRPC5UVADQE7VFU674KSP",
     "type": "story",
     "storyId": "501032309",
     "title": "大阪杯の後に・自然発生",
@@ -11,7 +11,9 @@
             "jpText": "――阪神レース場はざわめきに包まれていた。",
             "enText": "—The Hanshin Racecourse\nwas filled with a buzz.",
             "nextBlock": 2,
-            "pathId": 2581572777153846527,
+            "origClipLength": 58,
+            "voiceIdx": -1,
+            "pathId": 2175743666016576762,
             "blockIdx": 1
         },
         {
@@ -20,7 +22,9 @@
             "jpText": "あれが……問題児、アグネスタキオン？\r\nなんて走り方をするんだ、彼女は。",
             "enText": "That's the… problem child, Agnes\nTachyon? What a way to run, she is.",
             "nextBlock": 3,
-            "pathId": -6841514119577643494,
+            "origClipLength": 68,
+            "voiceIdx": -1,
+            "pathId": 2555257536570830801,
             "blockIdx": 2
         },
         {
@@ -29,7 +33,9 @@
             "jpText": "ずっと、目が離せなかった。\r\n彼女の可能性は、本物よ……！",
             "enText": "I couldn't take my eyes off her the whole\ntime. Her potential is real…!",
             "nextBlock": 4,
-            "pathId": -9032673563336153477,
+            "origClipLength": 63,
+            "voiceIdx": -1,
+            "pathId": -1916653681002818235,
             "blockIdx": 3
         },
         {
@@ -38,7 +44,9 @@
             "jpText": "……。\r\n実力は、認めざるを得ませんね。",
             "enText": "… I have to admit that\nI'm very good at it.",
             "nextBlock": 5,
-            "pathId": 7695756210818129597,
+            "origClipLength": 58,
+            "voiceIdx": -1,
+            "pathId": 2616579958266609990,
             "blockIdx": 4
         },
         {
@@ -47,7 +55,9 @@
             "jpText": "……その後、自然発生的に生まれた拍手は、\r\nまぎれもなくアグネスタキオンに\n向けられたものだった。",
             "enText": "… The spontaneous applause\nthat followed was unmistakably\nfor Agnes Tachyon.",
             "nextBlock": 6,
-            "pathId": 2634231689154390768,
+            "origClipLength": 163,
+            "voiceIdx": -1,
+            "pathId": 858033848348570303,
             "blockIdx": 5
         },
         {
@@ -56,7 +66,19 @@
             "jpText": "（おや、何やら外が騒がしいな。\r\n拍手、それに……私の名前……？）",
             "enText": "(Oh, there's something noisy\nout there. Applause, and that's\n… my name…?)",
             "nextBlock": 7,
-            "pathId": 9149889818502563865,
+            "origClipLength": 66,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": 5382247323296358920
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 3229116634905261330
+                }
+            ],
+            "pathId": 7044935297793975896,
             "blockIdx": 6
         },
         {
@@ -65,7 +87,19 @@
             "jpText": "（……ふぅン。どうやら、\r\nそれなりに走れたようだね）",
             "enText": "(… hmmm. Looks like\nyou had a good run.)",
             "nextBlock": 8,
-            "pathId": 2988181238292185176,
+            "origClipLength": 62,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": 1962697465385042700
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -7376132295239670376
+                }
+            ],
+            "pathId": -579068544921659028,
             "blockIdx": 7
         },
         {
@@ -74,6 +108,8 @@
             "jpText": "――と、おやおや、モルモット君！\r\nどうだったかい、私の疾走は！",
             "enText": "—Well, well, well, guinea pig!\nHow did you like my sprint?",
             "nextBlock": 9,
+            "origClipLength": 65,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "体の具合は？",
@@ -81,7 +117,17 @@
                     "nextBlock": 9
                 }
             ],
-            "pathId": 1934344800853593886,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": -7976036376275390502
+                },
+                {
+                    "origLen": 76,
+                    "pathId": 2183347873389238200
+                }
+            ],
+            "pathId": 1149762864824574142,
             "blockIdx": 8
         },
         {
@@ -90,7 +136,19 @@
             "jpText": "クク、見てわかったろう。\r\n何の不具合もないよ。",
             "enText": "Kuk, you should have seen it. There's\nnothing wrong with it.",
             "nextBlock": 10,
-            "pathId": -2863880590810949541,
+            "origClipLength": 60,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 33,
+                    "pathId": 7686556302661521894
+                },
+                {
+                    "origLen": 71,
+                    "pathId": 5303797508423793347
+                }
+            ],
+            "pathId": 3928673017949741777,
             "blockIdx": 9
         },
         {
@@ -99,6 +157,8 @@
             "jpText": "君に宣言していた通り、\r\nシニア級は無事走り抜けられるさ。",
             "enText": "As I've been telling you, the senior class\nwill make it through.",
             "nextBlock": 11,
+            "origClipLength": 63,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "よかった！",
@@ -106,7 +166,17 @@
                     "nextBlock": 11
                 }
             ],
-            "pathId": 7781892913862248935,
+            "animData": [
+                {
+                    "origLen": 21,
+                    "pathId": -3316185190321388231
+                },
+                {
+                    "origLen": 74,
+                    "pathId": 7345468255111708942
+                }
+            ],
+            "pathId": -8894092642984428439,
             "blockIdx": 10
         },
         {
@@ -115,7 +185,19 @@
             "jpText": "ああ。だがしかしここからだ、モルモット君！\r\n限界の先はまだはるか遠くだ！",
             "enText": "Ah. But here's the thing, guinea pig! The\nedge is still far, far away!",
             "nextBlock": 12,
-            "pathId": 6999322638126087983,
+            "origClipLength": 69,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 43,
+                    "pathId": -1241291529474447555
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -3567442197332991569
+                }
+            ],
+            "pathId": -1766819240814086103,
             "blockIdx": 11
         },
         {
@@ -124,7 +206,19 @@
             "jpText": "今ようやくまともな機体での出航が\r\n叶っただけだ。私はまだ先へ行く！",
             "enText": "We're only just now getting off\nthe ground in a proper aircraft.\nI still have a ways to go!",
             "nextBlock": 13,
-            "pathId": -6744510448932581990,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 31,
+                    "pathId": 1822302208168128753
+                },
+                {
+                    "origLen": 78,
+                    "pathId": 8582006096620380233
+                }
+            ],
+            "pathId": -8448124482109629412,
             "blockIdx": 12
         },
         {
@@ -133,6 +227,8 @@
             "jpText": "――そしてそこへ行くには、“トレーナー”\r\nという役回りも必要不可欠だ。",
             "enText": "—And to get there, the role\nof \"trainer\" is essential.",
             "nextBlock": 14,
+            "origClipLength": 68,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "ああ……！",
@@ -145,7 +241,17 @@
                     "nextBlock": 14
                 }
             ],
-            "pathId": -660827820400362728,
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": 8035287928023102590
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 8602160525179540
+                }
+            ],
+            "pathId": -1929809034846993886,
             "blockIdx": 13
         },
         {
@@ -154,7 +260,19 @@
             "jpText": "さて、そんなわけで次は『宝塚記念』だな。\r\n今回より200m長いレースになる。",
             "enText": "So, the next race is Takarazuka\nKinen. The race will be 200 meters\nlonger than this one.",
             "nextBlock": 15,
-            "pathId": -2176402007674497464,
+            "origClipLength": 70,
+            "voiceIdx": 84,
+            "animData": [
+                {
+                    "origLen": 33,
+                    "pathId": 8399311496331049395
+                },
+                {
+                    "origLen": 81,
+                    "pathId": 1990012823260649528
+                }
+            ],
+            "pathId": 9011383759156408607,
             "blockIdx": 14
         },
         {
@@ -163,7 +281,19 @@
             "jpText": "ということは、\r\n乳酸性閾値と耐乳酸能力の向上が必須。",
             "enText": "This means that the lactic acidity\nthreshold and lactic acid resistance\nmust be improved.",
             "nextBlock": 16,
-            "pathId": 2372463533390262240,
+            "origClipLength": 62,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 16,
+                    "pathId": 6835749250938098078
+                },
+                {
+                    "origLen": 73,
+                    "pathId": 2886027456871478065
+                }
+            ],
+            "pathId": -286381580225937613,
             "blockIdx": 15
         },
         {
@@ -172,7 +302,19 @@
             "jpText": "というわけで、ここに\r\n夜なべして作った新薬がある！　じゃん！",
             "enText": "So, here's a new drug I've been\nworking on all night! Ta-da!",
             "nextBlock": 17,
-            "pathId": 3644030215606808306,
+            "origClipLength": 65,
+            "voiceIdx": 90,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -7345587471796262180
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -2428738811595108538
+                }
+            ],
+            "pathId": 1088268900754123398,
             "blockIdx": 16
         },
         {
@@ -181,7 +323,19 @@
             "jpText": "そう言うとポケットから蛍光ピンクの\r\n液体を取り出し、手に握らせてきた。",
             "enText": "Then she pulled a fluorescent pink liquid\nout of her pocket and put it in my hand.",
             "nextBlock": 18,
-            "pathId": 8901541205314845122,
+            "origClipLength": 68,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 48,
+                    "pathId": 3963192196492288388
+                },
+                {
+                    "origLen": 80,
+                    "pathId": -6547800363920509096
+                }
+            ],
+            "pathId": 6933727284941886236,
             "blockIdx": 17
         },
         {
@@ -190,6 +344,8 @@
             "jpText": "私の体は宝だ。\r\nそこで、モルモット君の出番というわけさ。",
             "enText": "My body is a treasure. That's where\nyou come in, guinea pig.",
             "nextBlock": 19,
+            "origClipLength": 63,
+            "voiceIdx": 62,
             "choices": [
                 {
                     "jpText": "い、色がおかしい！",
@@ -197,7 +353,17 @@
                     "nextBlock": 19
                 }
             ],
-            "pathId": -2009492161133978792,
+            "animData": [
+                {
+                    "origLen": 75,
+                    "pathId": 9167299660540510564
+                },
+                {
+                    "origLen": 75,
+                    "pathId": 3177487341757822974
+                }
+            ],
+            "pathId": 1067428102393169490,
             "blockIdx": 18
         },
         {
@@ -206,7 +372,19 @@
             "jpText": "君みたいな百戦錬磨のモルモットが\r\n今更色なんて気にするな。ククク！",
             "enText": "A hundred battle-hardened guinea pigs like\nyou don't care about color now. Kukk!",
             "nextBlock": 20,
-            "pathId": -4303277782697052633,
+            "origClipLength": 67,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 41,
+                    "pathId": 2471238265912178725
+                },
+                {
+                    "origLen": 78,
+                    "pathId": -6022365889045709317
+                }
+            ],
+            "pathId": -3278181990321395825,
             "blockIdx": 19
         },
         {
@@ -215,7 +393,19 @@
             "jpText": "『さぁすぐに飲め』と詰め寄ってくる\r\n彼女は相変わらずだったが――",
             "enText": "'Drink up now,' she said, still the same.",
             "nextBlock": 21,
-            "pathId": 5444236701354398276,
+            "origClipLength": 66,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -7826827151427095442
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8641620483383314778
+                }
+            ],
+            "pathId": -2177923622829650868,
             "blockIdx": 20
         },
         {
@@ -224,8 +414,11 @@
             "jpText": "それでも、外から漏れ聞こえる拍手は\r\nしばらく止むことはなかった。",
             "enText": "Even so, the applause that leaked out from\noutside didn't stop for a while.",
             "nextBlock": -1,
-            "pathId": 5929633372830747779,
+            "origClipLength": 66,
+            "voiceIdx": -1,
+            "pathId": 7199255406135980879,
             "blockIdx": 21
         }
-    ]
+    ],
+    "modified": 1694039381
 }

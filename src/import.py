@@ -320,8 +320,8 @@ class LyricsPatcher(StoryPatcher):
             if not text:
                 text = textBlock["jpText"]
                 self.skipped += 1
-            elif "," in text or '"' in text:
-                text = '"' + text.replace('"', '""') + '"'
+            # Enforce CSV quoting to prevent issues
+            text = '"' + text.replace('"', '""') + '"'
             self.assetText += f"{textBlock['time']},{text}\n"
         self.save()
 

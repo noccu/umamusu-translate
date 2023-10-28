@@ -56,7 +56,7 @@ Happy new future ～Bonds dyed in the sunrise～ | Complete, In progress | MTL +
 Sweet Memory ♥ Teatime | Complete | [noccu]☆
 Leap into a New World! | Complete | [yumeimi](https://www.reddit.com/user/yumeimi/), [noccu] (preview)
 Wherefore I adore you | Stalled | [noccu] (preview)
-Ingenious!? Spring Festival! Dodgeball Fury! | Stalled | [noccu] (preview)
+Ingenious!? Spring Festival! Dodgeball Fury! | In progress | [noccu] (preview) + [UmaTL] (Anonymous Panda)☆
 An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 #summer #besties | Complete | [BlunterMonk](https://github.com/BlunterMonk) (MTL edit)
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
@@ -115,6 +115,7 @@ Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS][]
 Mejiro McQueen | Complete | [UmaTL] (bocchi)☆
 Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (3-7)☆, MTL
+Mejiro Ramonu | In progress | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
@@ -135,12 +136,12 @@ Sweep Tosho | Stalled, Complete | FragmentalSolstice, MTL
 Symboli Kris S | Complete | [LotoDS][]
 Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)☆
 Taiki Shuttle | Complete | [LotoDS][]
-TM Opera O | In progress | [Kasey]
+TM Opera O | Stalled | [Kasey]
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete | MTL
-Yaeno Muteki | Complete | [LotoDS][] (ep 1-4), MTL
+Yaeno Muteki | In progress, Complete | [LotoDS], [LotoDS] (ep 1-4) + MTL (rest)
 Yamanin Zephyr | Complete | [Director Kok][]
 Wonder Acute | In progress | [Riersa]
 Zenno Rob Roy | Complete | [LotoDS][]
@@ -306,9 +307,11 @@ Glorious Moment! | Complete | TR
 *Hat on your head!* | Complete | [noccu]☆
 *Hashire Umamusume* | Complete | [noccu]
 Honnou Speed | Complete | [Eight][]
+Kirari Magic Show | Complete | [LotoDS]
 *Kanjou no Reimei* | In progress | [noccu]☆
 *Koi Wa Derby* | Complete | Hentai Maskudo
-*L’s Surprise!!* | Stalled | [noccu]☆
+*L's Surprise!!* | Stalled | [noccu]☆
+l'Arc de Gloire | Complete | [LotoDS]
 *Lightless * | Complete | [Ren]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 [*Mikadowarai kageki \~Tataeyo Towa Ni~*](https://youtu.be/XtTn3GSVKM0) | Complete | [Kasey]

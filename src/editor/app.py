@@ -45,68 +45,58 @@ class Editor:
         self.preview = PreviewWindow(self)
         self.merging = False
 
-        speaker_jp_label = tk.Label(root, text="Speaker (JP)")
-        speaker_jp_label.grid(row=1, column=0)
-        speaker_jp_entry = tk.Entry(root, state="readonly")
-        speaker_jp_entry.grid(row=1, column=1, sticky=tk.NSEW)
-        self.speakerJp = speaker_jp_entry
-
-        speaker_en_label = tk.Label(root, text="Speaker (EN)")
-        speaker_en_label.grid(row=1, column=2)
-        speaker_en_entry = tk.Entry(root)
-        speaker_en_entry.grid(row=1, column=3, sticky=tk.NSEW)
-        self.speakerEn = speaker_en_entry
-
-        block_duration_label = tk.Label(root, text="Text Duration")
-        block_duration_label.grid(row=2, column=2)
-        block_duration_spinbox = ttk.Spinbox(root, from_=0, to=1000, increment=1, width=5)
-        block_duration_spinbox.grid(row=2, column=3, sticky=tk.W)
-        self.blockDuration = block_duration_spinbox
-        self.blockDurationLabel = block_duration_label
+        # Widgets
+        speakers = tk.Frame(root)
+        tk.Label(speakers, text="Speaker (JP)").grid()
+        self.speakerJp = speaker_jp_entry = tk.Entry(speakers, state="readonly", width=30)
+        tk.Label(speakers, text="Speaker (EN)").grid(row=1)
+        self.speakerEn = speaker_en_entry = tk.Entry(speakers, width=30)
+        speaker_jp_entry.grid(row=0, column=1)
+        speaker_en_entry.grid(row=1, column=1)
 
         self.textBoxJp = text.TextBox(root, size=(None,5))
-        self.textBoxJp.grid(row=3, column=0, columnspan=4)
-
         self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
-        text_box_en.grid(row=4, column=0, columnspan=4)
         text_box_en.linkTo(self.textBoxJp, root)
-
         self.choices = Choices(self)
-        self.choices.widget.grid_configure(row=3, rowspan=2, column=5, sticky=tk.NSEW)
 
+        # Metadata
+        meta = tk.Frame(root)
+        self.blockDurationLabel = block_duration_label = tk.Label(meta, text="Text Duration")
+        self.blockDuration = block_duration_spinbox = ttk.Spinbox(meta, from_=0, to=1000, increment=1, width=5)
+        block_duration_label.pack(side=tk.LEFT)
+        block_duration_spinbox.pack(side=tk.LEFT)
+
+        # Bottom bar
         frm_btns_bot = tk.Frame(root)
-        btn_colored = tk.Button(
+        self.btnColored = btn_colored = tk.Button(
             frm_btns_bot,
             text="Colored",
             command=lambda: self.extraText.toggle(target=self.extraText.cur_colored),
             state="disabled",
             width=10,
         )
-        btn_colored.grid(row=1, column=0)
         btn_listen = tk.Button(
             frm_btns_bot, text="Listen", command=self.audio.listen, width=10
         )
-        btn_listen.grid(row=0, column=1)
         btn_search = tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10)
-        btn_search.grid(row=1, column=1)
         btn_reload = tk.Button(
             frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10
         )
-        btn_reload.grid(row=0, column=2)
         btn_save = tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10)
+        # Todo: move prev/next to nav class
+        self.nav.btnPrev = btn_prev = tk.Button(frm_btns_bot, text="Prev", command=self.nav.prev_block, width=10)
+        self.nav.btnNext = btn_next = tk.Button(frm_btns_bot, text="Next", command=self.nav.next_block, width=10)
+        btn_reload.grid(row=0, column=2)
         btn_save.grid(row=1, column=2)
-        btn_prev = tk.Button(frm_btns_bot, text="Prev", command=self.nav.prev_block, width=10)
         btn_prev.grid(row=0, column=3)
-        btn_next = tk.Button(frm_btns_bot, text="Next", command=self.nav.next_block, width=10)
         btn_next.grid(row=1, column=3)
-        frm_btns_bot.grid(row=5, columnspan=4, sticky=tk.NSEW)
+        btn_colored.grid(row=1, column=0)
+        btn_listen.grid(row=0, column=1)
+        btn_search.grid(row=1, column=1)
         for idx in range(frm_btns_bot.grid_size()[0]):
             frm_btns_bot.columnconfigure(idx, weight=1)
-        # Todo: move to nav class?
-        self.nav.btnNext = btn_next
-        self.nav.btnPrev = btn_prev
-        self.btnColored = btn_colored
 
+        # Side bar
         # Todo: split off?
         frm_btns_side = tk.Frame(root)
         side_buttons = (
@@ -145,22 +135,27 @@ class Editor:
         )
         for btn in side_buttons:
             btn.pack(pady=3, fill=tk.X)
-        frm_btns_side.grid(column=6, row=0, rowspan=5, sticky=tk.E)
 
         ## Options
-        # todo: move to a separate frame class
-        save_checkbox = tk.Checkbutton(
-            root, text="Save chapter on block change", variable=self.options.saveOnBlockChange
+        opts = (
+            ("Save chapter on block change", self.options.saveOnBlockChange),
+            ("Skip translated blocks", self.options.skip_translated),
+            ("Mark as human TL", self.options.markHuman),
         )
-        save_checkbox.grid(row=6, column=1)
-        skip_checkbox = tk.Checkbutton(
-            root, text="Skip translated blocks", variable=self.options.skip_translated
-        )
-        skip_checkbox.grid(row=6, column=0)
-        set_humanTl_checkbox = tk.Checkbutton(
-            root, text="Mark as human TL", variable=self.options.markHuman
-        )
-        set_humanTl_checkbox.grid(row=6, column=2)
+        f_options = tk.Frame(root)
+        for txt, var in opts:
+            tk.Checkbutton(f_options, text=txt, variable=var).pack(side=tk.LEFT, ipadx=3)
+
+        # Build UI
+        self.nav.c_blocks.grid(row=0, column=0, columnspan=2)
+        speakers.grid(row=0, column=2, columnspan=2, pady=5)
+        self.textBoxJp.grid(row=1, column=0, columnspan=4)
+        text_box_en.grid(row=2, column=0, columnspan=4)
+        self.choices.widget.grid_configure(row=1, rowspan=2, column=4, sticky=tk.NSEW)
+        frm_btns_side.grid(row=0, column=5, rowspan=5, sticky=tk.E)
+        meta.grid(row=3, columnspan=4, sticky=tk.W)
+        frm_btns_bot.grid(row=4, columnspan=4, sticky=tk.NSEW)
+        f_options.grid(row=5, columnspan=4, sticky=tk.NSEW)
 
         ## Focus management
         for f in (root, frm_btns_bot, frm_btns_side):

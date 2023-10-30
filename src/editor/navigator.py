@@ -14,24 +14,23 @@ if TYPE_CHECKING:
 
 class Navigator:
     def __init__(self, master: "Editor") -> None:
-        # todo: turn this class into a frame that can be composited in
-        chapter_label = tk.Label(master.root, text="Chapter")
+        self.c_blocks = blockNav = tk.Frame(master.root)
+        chapter_label = tk.Label(blockNav, text="Chapter")
         chapter_label.grid(row=0, column=0)
-        chapter_dropdown = ttk.Combobox(master.root, width=35)
+        chapter_dropdown = ttk.Combobox(blockNav, width=35)
         chapter_dropdown.bind("<<ComboboxSelected>>", self.change_chapter)
         chapter_dropdown.bind("<KeyRelease>", self.searchChapters)
         chapter_dropdown.config(values=("No files loaded",))
         chapter_dropdown.current(0)
         chapter_dropdown.search = None
         chapter_dropdown.grid(row=0, column=1, sticky=tk.NSEW)
-
-        textblock_label = tk.Label(master.root, text="Block")
-        textblock_label.grid(row=0, column=2)
-        block_dropdown = ttk.Combobox(master.root, width=35)
+        textblock_label = tk.Label(blockNav, text="Block")
+        textblock_label.grid(row=1, column=0)
+        block_dropdown = ttk.Combobox(blockNav, width=35)
         block_dropdown.bind("<<ComboboxSelected>>", self.change_block)
         block_dropdown.config(values=("No file loaded",))
         block_dropdown.current(0)
-        block_dropdown.grid(row=0, column=3, sticky=tk.NSEW)
+        block_dropdown.grid(row=1, column=1, sticky=tk.NSEW)
 
         self.cur_chapter: int = None
         self.cur_block: int = 0

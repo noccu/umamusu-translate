@@ -14,32 +14,35 @@ if TYPE_CHECKING:
 
 class Navigator:
     def __init__(self, master: "Editor") -> None:
-        self.c_blocks = blockNav = tk.Frame(master.root)
+        self.cur_chapter: int = None
+        self.cur_block: int = 0
+        self.cur_data: dict = None
+        self.cur_file: "TranslationFile" = None
+        self.master = master
+        self.fileMan = master.fileMan
+
+        self.frm_blocks = blockNav = tk.Frame(master.root)
         chapter_label = tk.Label(blockNav, text="Chapter")
-        chapter_label.grid(row=0, column=0)
-        chapter_dropdown = ttk.Combobox(blockNav, width=35)
+        chapter_dropdown = ttk.Combobox(blockNav, width=40)
         chapter_dropdown.bind("<<ComboboxSelected>>", self.change_chapter)
         chapter_dropdown.bind("<KeyRelease>", self.searchChapters)
         chapter_dropdown.config(values=("No files loaded",))
         chapter_dropdown.current(0)
         chapter_dropdown.search = None
-        chapter_dropdown.grid(row=0, column=1, sticky=tk.NSEW)
         textblock_label = tk.Label(blockNav, text="Block")
-        textblock_label.grid(row=1, column=0)
-        block_dropdown = ttk.Combobox(blockNav, width=35)
+        block_dropdown = ttk.Combobox(blockNav, width=40, state="readonly")
         block_dropdown.bind("<<ComboboxSelected>>", self.change_block)
         block_dropdown.config(values=("No file loaded",))
         block_dropdown.current(0)
-        block_dropdown.grid(row=1, column=1, sticky=tk.NSEW)
-
-        self.cur_chapter: int = None
-        self.cur_block: int = 0
-        self.cur_data: dict = None
-        self.cur_file: "TranslationFile" = None
+        # Build
+        blockNav.rowconfigure((0,1), weight=1)
+        chapter_label.grid(row=0, column=0, sticky=tk.E)
+        chapter_dropdown.grid(row=0, column=1)
+        textblock_label.grid(row=1, column=0, sticky=tk.E)
+        block_dropdown.grid(row=1, column=1)
+        # Save used refs
         self.chapterPicker = chapter_dropdown
         self.blockPicker = block_dropdown
-        self.master = master
-        self.fileMan = master.fileMan
 
     def change_chapter(self, chapter):
         if chapter == self.cur_chapter:

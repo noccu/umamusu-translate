@@ -45,24 +45,32 @@ class Editor:
         self.preview = PreviewWindow(self)
         self.merging = False
 
-        # Widgets
-        speakers = tk.Frame(root)
-        tk.Label(speakers, text="Speaker (JP)").grid()
-        self.speakerJp = speaker_jp_entry = tk.Entry(speakers, state="readonly", width=30)
-        tk.Label(speakers, text="Speaker (EN)").grid(row=1)
-        self.speakerEn = speaker_en_entry = tk.Entry(speakers, width=30)
+        # Speakers
+        frm_speakers = tk.Frame(root)
+        fnt_speakers = fonts.create(root, size=9)
+        self.speakerJp = speaker_jp_entry = tk.Entry(frm_speakers, state="readonly", width=26, font=fnt_speakers)
+        self.speakerEn = speaker_en_entry = tk.Entry(frm_speakers, width=26, font=fnt_speakers)
+        tk.Label(frm_speakers, text="Speaker (JP)").grid()
+        tk.Label(frm_speakers, text="Speaker (EN)").grid(row=1)
         speaker_jp_entry.grid(row=0, column=1)
         speaker_en_entry.grid(row=1, column=1)
+        tk.Button(frm_speakers, text="Translate all", command=self.tlNames).grid(row=0, column=2)
+        tk.Button(frm_speakers, text="Find missing", command=self.nav.nextMissingName).grid(row=1, column=2)
 
-        self.textBoxJp = text.TextBox(root, size=(None,5))
-        self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
+        # Text editing
+        frm_text_edit = tk.Frame(root)
+        self.textBoxJp = text.TextBox(frm_text_edit, size=(None,5))
+        self.textBoxEn = text_box_en = text.TextBoxEditable(frm_text_edit, size=(None, 6))
         text_box_en.linkTo(self.textBoxJp, root)
+        self.textBoxJp.pack()
+        text_box_en.pack()
+
         self.choices = Choices(self)
 
         # Metadata
-        meta = tk.Frame(root)
-        self.blockDurationLabel = block_duration_label = tk.Label(meta, text="Text Duration")
-        self.blockDuration = block_duration_spinbox = ttk.Spinbox(meta, from_=0, to=1000, increment=1, width=5)
+        frm_meta = tk.Frame(root)
+        self.blockDurationLabel = block_duration_label = tk.Label(frm_meta, text="Text Duration")
+        self.blockDuration = block_duration_spinbox = ttk.Spinbox(frm_meta, from_=0, to=1000, increment=1, width=5)
         block_duration_label.pack(side=tk.LEFT)
         block_duration_spinbox.pack(side=tk.LEFT)
 
@@ -105,8 +113,6 @@ class Editor:
             ("fmt", self._evProcessText),
             ("fmt hard", lambda: self._evProcessText(redoNewlines=True)),
             ("fmt file", lambda: self._evProcessText(wholeFile=True)),
-            ("names", self.tlNames),
-            ("missing names", self.nav.nextMissingName),
         )
         for txt, cmd in editing_actions:
             tk.Button(frm_editing_actions, text=txt, command=cmd).pack(side=tk.LEFT, padx=2)
@@ -122,15 +128,14 @@ class Editor:
             tk.Checkbutton(f_options, text=txt, variable=var).pack(side=tk.LEFT, ipadx=3)
 
         # Build UI
-        self.nav.c_blocks.grid(row=0, column=0, columnspan=2)
-        speakers.grid(row=0, column=2, columnspan=2, pady=5)
-        self.textBoxJp.grid(row=1, column=0, columnspan=4)
-        text_box_en.grid(row=2, column=0, columnspan=4)
-        self.choices.widget.grid_configure(row=1, rowspan=2, column=4, sticky=tk.NSEW)
-        frm_editing_actions.grid(row=3, column=0, columnspan=2, sticky=tk.W, pady=5)
-        meta.grid(row=3, column=2, columnspan=2, sticky=tk.W)
-        frm_btns_bot.grid(row=4, columnspan=4, sticky=tk.NSEW)
-        f_options.grid(row=5, columnspan=4, sticky=tk.NSEW)
+        self.nav.frm_blocks.grid(row=0, column=0, sticky=tk.NSEW, pady=5)
+        frm_speakers.grid(row=0, column=1, sticky=tk.NSEW, pady=5)
+        frm_text_edit.grid(row=1, columnspan=2, sticky=tk.NSEW)
+        self.choices.widget.grid_configure(row=1, column=2, sticky=tk.NSEW)
+        frm_editing_actions.grid(row=3, column=0, sticky=tk.W, pady=5)
+        frm_meta.grid(row=3, column=1, sticky=tk.W)
+        frm_btns_bot.grid(row=4, columnspan=2, sticky=tk.NSEW)
+        f_options.grid(row=5, columnspan=2, sticky=tk.EW)
 
         ## Focus management
         for f in (root, frm_btns_bot, frm_editing_actions):

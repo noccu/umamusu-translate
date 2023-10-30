@@ -98,43 +98,18 @@ class Editor:
 
         # Side bar
         # Todo: split off?
-        frm_btns_side = tk.Frame(root)
-        side_buttons = (
-            tk.Button(
-                frm_btns_side,
-                text="Italic",
-                command=lambda: text_box_en.format_text(SimpleNamespace(keysym="i")),
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Bold",
-                command=lambda: text_box_en.format_text(SimpleNamespace(keysym="b")),
-            ),
-            tk.Button(
-                frm_btns_side, text="Convert\nunicode codepoint", command=text_box_en.char_convert
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Process text",
-                command=self._evProcessText,
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Process text\n(clean newlines)",
-                command=lambda: self._evProcessText(redoNewlines=True),
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Process text\n(whole chapter)",
-                command=lambda: self._evProcessText(wholeFile=True),
-            ),
-            tk.Button(frm_btns_side, text="Translate speakers", command=self.tlNames),
-            tk.Button(
-                frm_btns_side, text="Find missing speakers", command=self.nav.nextMissingName
-            ),
+        frm_editing_actions = tk.Frame(root)
+        editing_actions = (
+            ("i", lambda: text_box_en.format_text(SimpleNamespace(keysym="i"))),
+            ("b", lambda: text_box_en.format_text(SimpleNamespace(keysym="b"))),
+            ("fmt", self._evProcessText),
+            ("fmt hard", lambda: self._evProcessText(redoNewlines=True)),
+            ("fmt file", lambda: self._evProcessText(wholeFile=True)),
+            ("names", self.tlNames),
+            ("missing names", self.nav.nextMissingName),
         )
-        for btn in side_buttons:
-            btn.pack(pady=3, fill=tk.X)
+        for txt, cmd in editing_actions:
+            tk.Button(frm_editing_actions, text=txt, command=cmd).pack(side=tk.LEFT, padx=2)
 
         ## Options
         opts = (
@@ -152,13 +127,13 @@ class Editor:
         self.textBoxJp.grid(row=1, column=0, columnspan=4)
         text_box_en.grid(row=2, column=0, columnspan=4)
         self.choices.widget.grid_configure(row=1, rowspan=2, column=4, sticky=tk.NSEW)
-        frm_btns_side.grid(row=0, column=5, rowspan=5, sticky=tk.E)
-        meta.grid(row=3, columnspan=4, sticky=tk.W)
+        frm_editing_actions.grid(row=3, column=0, columnspan=2, sticky=tk.W, pady=5)
+        meta.grid(row=3, column=2, columnspan=2, sticky=tk.W)
         frm_btns_bot.grid(row=4, columnspan=4, sticky=tk.NSEW)
         f_options.grid(row=5, columnspan=4, sticky=tk.NSEW)
 
         ## Focus management
-        for f in (root, frm_btns_bot, frm_btns_side):
+        for f in (root, frm_btns_bot, frm_editing_actions):
             for w in f.children.values():
                 w.configure(takefocus=0)
         text_box_en.configure(takefocus=1)

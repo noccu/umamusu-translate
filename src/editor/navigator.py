@@ -21,28 +21,19 @@ class Navigator:
         self.master = master
         self.fileMan = master.fileMan
 
-        self.frm_blocks = blockNav = tk.Frame(master.root)
-        chapter_label = tk.Label(blockNav, text="Chapter")
-        chapter_dropdown = ttk.Combobox(blockNav, width=40)
-        chapter_dropdown.bind("<<ComboboxSelected>>", self.change_chapter)
-        chapter_dropdown.bind("<KeyRelease>", self.searchChapters)
-        chapter_dropdown.config(values=("No files loaded",))
-        chapter_dropdown.current(0)
-        chapter_dropdown.search = None
-        textblock_label = tk.Label(blockNav, text="Block")
-        block_dropdown = ttk.Combobox(blockNav, width=40, state="readonly")
-        block_dropdown.bind("<<ComboboxSelected>>", self.change_block)
-        block_dropdown.config(values=("No file loaded",))
-        block_dropdown.current(0)
-        # Build
-        blockNav.rowconfigure((0,1), weight=1)
-        chapter_label.grid(row=0, column=0, sticky=tk.E)
-        chapter_dropdown.grid(row=0, column=1)
-        textblock_label.grid(row=1, column=0, sticky=tk.E)
-        block_dropdown.grid(row=1, column=1)
-        # Save used refs
-        self.chapterPicker = chapter_dropdown
-        self.blockPicker = block_dropdown
+    def uiInit(self, chapters, blocks, btnNext, btnPrev):
+        chapters.config(values=("No files loaded",))
+        chapters.current(0)
+        chapters.search = None
+
+        blocks.config(values=("No file loaded",))
+        blocks.current(0)
+
+        # Save refs
+        self.chapterPicker = chapters
+        self.blockPicker = blocks
+        self.btnNext = btnNext
+        self.btnPrev = btnPrev
 
     def change_chapter(self, chapter):
         if chapter == self.cur_chapter:

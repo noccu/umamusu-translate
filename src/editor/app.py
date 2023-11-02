@@ -20,6 +20,7 @@ class Options:
         self.markHuman = tk.BooleanVar()
         self.saveOnBlockChange = tk.BooleanVar()
         self.skip_translated = tk.BooleanVar()
+        self.alwaysOnTop = tk.BooleanVar()
 
 
 class Editor:
@@ -130,6 +131,7 @@ class Editor:
             ("Save chapter on block change", self.options.saveOnBlockChange),
             ("Skip translated blocks", self.options.skip_translated),
             ("Mark as human TL", self.options.markHuman),
+            ("Keep editor on top", self.options.alwaysOnTop),
         )
         f_options = tk.Frame(root)
         for txt, var in opts:
@@ -137,7 +139,8 @@ class Editor:
 
         # Init required parts
         self.nav.uiInit(chapters, blocks, btn_next, btn_prev)
-        
+        self.options.alwaysOnTop.trace_add("write", self._evhSetOnTop)
+
         # Build UI
         frm_filenav.grid(row=0, column=0, sticky=tk.NSEW, pady=5)
         frm_speakers.grid(row=0, column=1, sticky=tk.NSEW, pady=5)
@@ -198,6 +201,14 @@ class Editor:
             self.audio.dealloc()
         SpellCheck.saveNewDict()
         self.root.quit()
+
+    def _evhSetOnTop(self, *_):
+        if self.options.alwaysOnTop.get():
+            self.root.attributes("-topmost", True)
+            self.root.lift()
+        else:
+            self.root.attributes("-topmost", False)
+        self.root.update()
 
     def _evProcessText(self, event=None, wholeFile=False, redoNewlines=False):
         """Event handler for external text process calls."""

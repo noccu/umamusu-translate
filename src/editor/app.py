@@ -4,10 +4,11 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 from types import SimpleNamespace
 from functools import partial
+from subprocess import run
 
 from common import constants as const
-from common.constants import NAMES_BLACKLIST
-from common.types import TranslationFile
+from common.constants import NAMES_BLACKLIST, TRANSLATION_FOLDER
+from common.types import TranslationFile, StoryId
 
 from . import display, files, navigator, text, fonts
 from .spellcheck import SpellCheck
@@ -76,6 +77,10 @@ class Editor:
 
         # Bottom bar
         frm_btns_bot = tk.Frame(root)
+        def open_folder():
+            sid = StoryId.parse(self.nav.cur_file.type, self.nav.cur_file.getStoryId())
+            run(("explorer", TRANSLATION_FOLDER.joinpath(sid.type, sid.asPath()).resolve()))
+        tk.Button(frm_btns_bot, text="Open folder", width=10, command=open_folder).grid(row=0, column=0)
         self.btnColored = btn_colored = tk.Button(
             frm_btns_bot,
             text="Colored",

@@ -88,24 +88,16 @@ class Editor:
             state="disabled",
             width=10,
         )
-        btn_listen = tk.Button(
-            frm_btns_bot, text="Listen", command=self.audio.listen, width=10
-        )
-        btn_search = tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10)
-        btn_reload = tk.Button(
-            frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10
-        )
-        btn_save = tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10)
-        # Todo: move prev/next to nav class
+        btn_colored.grid(row=1, column=0)
+        tk.Button(frm_btns_bot, text="Listen", command=self.audio.listen, width=10).grid(row=0, column=1)
+        tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10).grid(row=1, column=1)
+        tk.Button(frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10).grid(row=0, column=2)
+        tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10).grid(row=1, column=2)
+        # Todo: move prev/next to nav class?
         self.nav.btnPrev = btn_prev = tk.Button(frm_btns_bot, text="Prev", command=self.nav.prev_block, width=10)
         self.nav.btnNext = btn_next = tk.Button(frm_btns_bot, text="Next", command=self.nav.next_block, width=10)
-        btn_reload.grid(row=0, column=2)
-        btn_save.grid(row=1, column=2)
         btn_prev.grid(row=0, column=3)
         btn_next.grid(row=1, column=3)
-        btn_colored.grid(row=1, column=0)
-        btn_listen.grid(row=0, column=1)
-        btn_search.grid(row=1, column=1)
         for idx in range(frm_btns_bot.grid_size()[0]):
             frm_btns_bot.columnconfigure(idx, weight=1)
 

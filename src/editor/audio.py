@@ -83,7 +83,7 @@ class AudioPlayer:
         storyId: patch.StoryId = patch.StoryId.parse(sType, storyId)
         qStoryId = patch.StoryId.queryfy(storyId)
         if not voice.timeBased and voice.idx < 0:
-            print("Text block is not voiced.")
+            self.master.status.log("Text block is not voiced.")
             return
         # New assets
         if reloaded := self.curPlaying[0] != storyId:
@@ -96,7 +96,7 @@ class AudioPlayer:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.awb'"
             h = self._db.execute(stmt).fetchone()
             if h is None:
-                print(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
+                self.master.status.log(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
                 return
             asset = GameBundle.fromName(h[0], load=False)
             asset.bundleType = "sound"
@@ -112,7 +112,7 @@ class AudioPlayer:
             reloaded or self.curPlaying[1] != voice.idx
         ):  # most things, add requested track
             if voice.idx > len(self.subFiles):
-                print("Index out of range")
+                self.master.status.log("Index out of range")
                 return
             audData = self.decodeAudio(self.subFiles[voice.idx])
             if self.wavFiles:
@@ -152,11 +152,11 @@ class AudioPlayer:
     def _playAudio(self, voice: PlaySegment):
         """Deals with the technical side of playing audio"""
         if not self.wavFiles:
-            print("No WAV loaded.")
+            self.master.status.log("No WAV loaded.")
             return
         for i, (stream, wavFile) in enumerate(zip_longest(self.outStreams, self.wavFiles)):
             if wavFile.getfp().closed:
-                print("WAV unexpectedly closed")
+                self.master.status.log("WAV unexpectedly closed")
                 return
             channels = wavFile.getnchannels() or 1
             rate = wavFile.getframerate() or 48000
@@ -196,23 +196,23 @@ class AudioPlayer:
         file = self.master.nav.cur_file
         block = self.master.nav.cur_block
         if not const.IS_WIN:
-            print("Audio currently only supported on Windows")
+            self.master.status.log("Audio currently only supported on Windows")
             return
         voice = PlaySegment.fromBlock(file.textBlocks[block], file.textBlocks[block + 1])
         if not voice:
-            print("Old file version, does not have voice info.")
+            self.master.status.log("Old file version, does not have voice info.")
             return "break"
         storyId = file.data.get("storyId")
         if not storyId:
-            print("File has an invalid storyid.")
+            self.master.status.log("File has an invalid storyid.")
             return "break"
         elif len(storyId) < 9 and file.type != "lyrics":
             # Preview type would work but I don't understand
             # the format/where it gets info unless it's really just awbTracks[15:-1]
-            print("Unsupported type.")
+            self.master.status.log("Unsupported type.")
             return "break"
         elif voice is None:
-            print("No voice info found for this block.")
+            self.master.status.log("No voice info found for this block.")
             return "break"
 
         self.play(storyId, voice, sType=file.type)

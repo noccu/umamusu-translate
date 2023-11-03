@@ -30,7 +30,7 @@ class SpellCheck:
             SpellCheck.dictionary = symspellpy.SymSpell()
             SpellCheck.dictionary.load_dictionary(SpellCheck.dictPath, 0, 1)
             if not SpellCheck.dictionary.create_dictionary(self.customDictPath, "utf8"):
-                print("No custom dict loaded.")
+                widget.event_generate("<<Log>>", "No custom dict loaded.")
             self._loadNames()
 
     def add_word(self, word: str, fixRange: tuple, isName=False):

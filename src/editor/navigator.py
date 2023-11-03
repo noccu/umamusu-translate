@@ -51,6 +51,7 @@ class Navigator:
             self.resetChapterSearch()
 
         cur_file = self.fileMan.loadFile(chapter)
+        self.master.status.onFileChanged(chapter)
         self.cur_file = cur_file
         self.cur_chapter = chapter
         self.cur_block = getattr(self.cur_file, "lastBlock", 0)
@@ -71,14 +72,14 @@ class Navigator:
         if self.cur_chapter - 1 > -1:
             self.change_chapter(self.cur_chapter - 1)
         else:
-            print("Reached first chapter")
+            self.master.status.log("Reached first chapter")
 
     def next_ch(self, event=None):
         #! ugh
         if self.cur_chapter + 1 < len(self.fileMan.files):
             self.change_chapter(self.cur_chapter + 1)
         else:
-            print("Reached last chapter")
+            self.master.status.log("Reached last chapter")
 
     def change_block(self, idx, dir=0, newFile=False):
         if not isinstance(idx, int):  # UI event (setting picker directly)
@@ -88,6 +89,8 @@ class Navigator:
             self.fileMan.save_block(self)
             if self.master.options.saveOnBlockChange.get():
                 self.fileMan.saveFile()
+            else:
+                self.master.status.onFileChanged(self.cur_chapter)
 
         fileLen = len(self.cur_file.textBlocks)
         if dir != 0 and self.master.options.skip_translated.get():
@@ -125,7 +128,7 @@ class Navigator:
     def prev_block(self, event=None):
         idx = self.cur_block - 1
         if idx < 0:
-            print("Reached start of file")
+            self.master.status.log("Reached start of file")
             return
         self.change_block(idx, dir=-1)
 
@@ -134,9 +137,9 @@ class Navigator:
         nBlocks = len(self.cur_file.textBlocks)
         if idx < 1 or idx >= nBlocks:
             if nBlocks > self.cur_block + 1:
-                print("Reached end of section. Check block list")
+                self.master.status.log("Reached end of section. Check block list")
             else:
-                print("Reached end of file")
+                self.master.status.log("Reached end of file")
             return
         self.change_block(idx, dir=1)
 

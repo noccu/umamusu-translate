@@ -39,6 +39,7 @@ class Editor:
         self.fileMan = files.FileManager(self)
         self.nav = navigator.Navigator(self)
         self.audio = AudioPlayer(self)
+        self.status = Status(self)
         # Windows
         self.extraText = AdditionalTextWindow(self)
         self.search = SearchWindow(self)
@@ -150,6 +151,7 @@ class Editor:
         frm_meta.grid(row=3, column=1, sticky=tk.W)
         frm_btns_bot.grid(row=4, columnspan=2, sticky=tk.NSEW)
         f_options.grid(row=5, columnspan=2, sticky=tk.EW)
+        self.status.widget.grid(row=6, columnspan=2, sticky=tk.EW)
 
         ## Focus management
         for f in (root, frm_btns_bot, frm_editing_actions):
@@ -264,7 +266,7 @@ class Choices:
 
     def _evFollowBlock(self, choiceId):
         if choiceId >= len(self.curChoices):
-            print("This choice is not active!")
+            self.editor.status.log("This choice is not active!")
             return
         blockId = self.curChoices[choiceId].get("nextBlock")
         if blockId and blockId != -1:
@@ -612,7 +614,7 @@ class MergeWindow:
         pickers = (widget,) if widget else self.filePickers
         for picker in pickers:
             if not picker.activeFile:
-                print(f"No active file for picker {picker.id}")
+                self.master.status.log(f"No active file for picker {picker.id}")
                 continue
             try:
                 picker.view.loadRichText(picker.activeFile.textBlocks[blockIdx].get("enText"))
@@ -631,3 +633,39 @@ class MergeWindow:
             while len(self.filePickers) > reqNumPickers:
                 p = self.filePickers.pop()
                 p.destroy()
+
+#todo: merge with SaveState
+class Status:
+    def __init__(self, editor: Editor) -> None:
+        self.editor = editor
+        self.widget = tk.Frame(editor.root)
+        self.saveStatus = tk.Label(self.widget)
+        self.statusLog = tk.Label(self.widget)
+
+        self.fileSaved = None
+        self._defaultBg = self.statusLog.cget("background")
+
+        self.saveStatus.pack(side=tk.LEFT, padx=(0,5))
+        self.statusLog.pack(side=tk.LEFT, fill=tk.X)
+
+    def log(self, text:str):
+        self.statusLog.config(text=text, bg="#34c6eb")
+        self.statusLog.after(500, lambda: self.statusLog.config(bg=self._defaultBg))
+
+    def setSaved(self):
+        if self.fileSaved:
+            return
+        self.saveStatus.config(text="Saved", fg="#008a29")
+        self.fileSaved = True
+
+    def setUnsaved(self):
+        if not self.fileSaved:
+            return
+        self.saveStatus.config(text="Unsaved", fg="#8a0000")
+        self.fileSaved = False
+
+    def onFileChanged(self, chapter):
+        if chapter in self.editor.fileMan.saveState.unsavedChanges:
+            self.setUnsaved()
+        else:
+            self.setSaved()

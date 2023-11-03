@@ -197,6 +197,8 @@ class Editor:
         root.bind("<Control-p>", self.preview.toggle)
         root.bind("<Alt-s>", lambda _: self.options.skip_translated.set(not self.options.skip_translated.get()))
 
+        # Event handlers
+        root.bind_all("<<Log>>", lambda e: self.status.log(e.user_data))
         root.protocol("WM_DELETE_WINDOW", self.onClose)
 
     def start(self):

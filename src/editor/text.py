@@ -29,7 +29,7 @@ class ColorManager:
         return ColorManager.ACTIVE
 
     def setActive(self, event, color: str):
-        print(f"Setting color: {color}")
+        self.master.event_generate("<<Log>>", data=f"Setting color: {color}")
         ColorManager.ACTIVE = color
 
     def define(self, color: str):
@@ -170,7 +170,7 @@ class TextBoxEditable(TextBox):
     
     def format_text(self, event):
         if not self.tag_ranges("sel"):
-            print("No selection to format.")
+            self.master.event_generate("<<Log>>", "No selection to format.")
             return
         currentTags = self.tag_names(tk.SEL_FIRST)
         if event.keysym == "i":

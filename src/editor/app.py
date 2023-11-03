@@ -14,6 +14,23 @@ from . import display, files, navigator, text, fonts
 from .spellcheck import SpellCheck
 from .audio import AudioPlayer
 
+# Monkey patch tk event userdata because 5 lines of code too hard for tk maintainers
+class tuplehack(tuple):
+    def __len__(self):
+        return super().__len__() - 1
+tk.Misc._subst_format = tuplehack(('%#', '%b', '%d', '%f', '%h', '%k',
+             '%s', '%t', '%w', '%x', '%y',
+             '%A', '%E', '%K', '%N', '%W', '%T', '%X', '%Y', '%D'))
+tk.Misc._subst_format_str = " ".join(tk.Misc._subst_format)
+_o_sub = tk.Misc._substitute
+def _sub(self, *args):
+    args = list(args)
+    data = args.pop(2)
+    ev_data = _o_sub(self, *args)
+    if isinstance(ev_data[0], tk.Event):
+        ev_data[0].user_data = data
+    return ev_data
+tk.Misc._substitute = _sub
 
 class Options:
     def __init__(self) -> None:

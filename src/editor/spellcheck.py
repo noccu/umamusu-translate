@@ -110,7 +110,7 @@ class SpellCheck:
             if not word.startswith(partialWord):
                 continue
             if isCapitalized:
-                word[0] = word[0].upper()
+                word = word.title()
             suggestions.append((wordstart, word, freq))
         suggestions.sort(key=lambda x: x[2], reverse=True)  # freq sort
         for wordstart, word, freq in suggestions[:25]:

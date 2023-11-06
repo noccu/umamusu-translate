@@ -51,6 +51,12 @@ class Editor:
         self.root = root
         fonts.init(root)
 
+        # Freeeedom!
+        global copyToClipboard
+        def copyToClipboard(text:str):
+            root.clipboard_clear()
+            root.clipboard_append(text)        
+
         # Managers
         self.options = Options()
         self.fileMan = files.FileManager(self)

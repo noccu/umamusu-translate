@@ -1,4 +1,4 @@
-from tkinter.font import Font
+from tkinter.font import Font, nametofont
 from common import constants
 
 if constants.IS_WIN:
@@ -56,6 +56,18 @@ def create(root, name="RodinWanpakuPro UmaTl B", size=18, italic=False, bold=Fal
 
 def get(id):
     return _DYNAMIC.get(id)
+
+
+def createFrom(root, font:Font = None, size=None, italic=False, bold=False, id=None):
+    """Duplicate a font with new parameters, uses default tk font if not specified."""
+    if id and (f := _DYNAMIC.get(id)):
+        return f
+    if font is None:
+        font = nametofont("TkDefaultFont")
+    # elif isinstance(font, tk.Widget):
+        # pass
+    font = font.actual()
+    return create(root, font["family"], size or font["size"], italic, bold, id)
 
 
 def init(root):

@@ -48,8 +48,12 @@ class ScrollableFrame(tk.Frame):
     # Allow scrolling widget on any child
     #? Could also implement optional scroll event overwriting in scrollable children
     def _ev_mapped(self, e:tk.Event):
-        for child in e.widget.children.values():
+        self._bind_children(e.widget)
+
+    def _bind_children(self, widget):
+        for child in widget.winfo_children():
             child.bind("<MouseWheel>", self.scroll)
+            self._bind_children(child)  # recurse
 
     def enableScroll(self, e):
         self.isScrollable = True

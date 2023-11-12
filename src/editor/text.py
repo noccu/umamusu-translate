@@ -51,18 +51,20 @@ class TextBox(tk.Text):
 
     # todo: maybe move color to post_init and pass through init itself to tk
     def __init__(self, parent, size: tuple[int] = (None, None), editable:bool = False, font: fonts.Font = None, **kwargs) -> None:
+        if not font:
+            font = fonts.DEFAULT
         super().__init__(
             parent,
             width=size[0] or TextBox.DEFAULT_WIDTH,
             height=size[1] or TextBox.DEFAULT_HEIGHT,
-            font=font or fonts.DEFAULT,
+            font=font,
             state="normal" if editable else "disabled",
             **kwargs
         )
         self.tkRoot = None
         self._editable = self._enabled = editable
-        self.tag_config("b", font=fonts.BOLD)
-        self.tag_config("i", font=fonts.ITALIC)
+        self.tag_config("b", font=fonts.createFrom(self, font, bold=True))
+        self.tag_config("i", font=fonts.createFrom(self, font, italic=True))
         self.color = ColorManager(self)
         self.bind("<Alt-Right>", self.copy_block)
 

@@ -7,7 +7,7 @@ from functools import partial
 from subprocess import run
 import ast
 
-from common import constants as const
+from common import constants as const, utils
 from common.constants import NAMES_BLACKLIST, TRANSLATION_FOLDER
 from common.types import TranslationFile, StoryId
 
@@ -73,6 +73,7 @@ class Editor:
         self.extraText = AdditionalTextWindow(self)
         self.search = SearchWindow(self)
         self.preview = PreviewWindow(self)
+        self.notes = SpeakerNotes(self)
         self.merging = False
 
         # Nav
@@ -174,9 +175,10 @@ class Editor:
         # Build UI
         frm_filenav.grid(row=0, column=0, sticky=tk.NSEW, pady=5)
         frm_speakers.grid(row=0, column=1, sticky=tk.NSEW, pady=5)
-        frm_text_edit.grid(row=1, columnspan=2, sticky=tk.NSEW)
+        frm_text_edit.grid(row=1, columnspan=2)
         self.choices.widget.grid_configure(row=1, column=2, sticky=tk.NSEW)
         frm_editing_actions.grid(row=3, column=0, sticky=tk.W, pady=5)
+        self.notes.widget.grid(row=0, column=3, rowspan=2, sticky=tk.NSEW)
         frm_meta.grid(row=3, column=1, sticky=tk.W)
         frm_btns_bot.grid(row=4, columnspan=2, sticky=tk.NSEW)
         f_options.grid(row=5, columnspan=2, sticky=tk.EW)
@@ -211,6 +213,8 @@ class Editor:
 
         # Event handlers
         root.bind_all("<<Log>>", lambda e: self.status.log(e.user_data))
+        root.bind_all("<<BlockChangeStart>>", self.notes.save)
+        root.bind_all("<<BlockChangeEnd>>", self.notes.load)
         root.protocol("WM_DELETE_WINDOW", self.onClose)
 
     def start(self):
@@ -233,6 +237,7 @@ class Editor:
         if self.audio:
             self.audio.dealloc()
         SpellCheck.saveNewDict()
+        self.notes.onExit()
         self.root.quit()
 
     def _evhSetOnTop(self, *_):
@@ -700,3 +705,45 @@ class Status:
             self.setUnsaved()
         else:
             self.setSaved()
+
+
+class SpeakerNotes:
+    file = Path("src/data/speaker_notes.json")
+    wrapLen = 35
+
+    def __init__(self, editor: Editor) -> None:
+        self.notes = utils.readJson(self.file)
+        self.changed = False
+        self.widget = frm = tk.LabelFrame(editor.root, text="Speaker Notes")
+        self.scrollFrame = display.ScrollableFrame(frm, True)
+        self.textBox = text.TextBoxEditable(
+            self.scrollFrame.content, 
+            size=(self.wrapLen, 50), 
+            font=fonts.createFrom(frm, None, size=10)
+        )
+        self.textBox.pack(fill=tk.BOTH)
+        self.scrollFrame.pack(fill=tk.BOTH, expand=1)
+
+    def _parseSpeaker(self, block):
+        return block.get("jpName", "default")
+
+    def load(self, event):
+        speaker = self._parseSpeaker(event.user_data)
+        note = self.notes.get(speaker, "")
+        self.textBox.loadRichText(note)
+        self.textBox.edit_modified(False)
+
+    def save(self, event):
+        if not self.textBox.edit_modified():
+            # print("not modified")
+            return
+        note = text.normalize(self.textBox.toRichText())
+        speaker = self._parseSpeaker(event.user_data)
+        if len(note) < 2:  # empty text
+            self.notes.pop(speaker, None)
+        else:
+            self.notes[speaker] = note
+        # print("Saved: ", note, "\n", "For: ", speaker)
+    
+    def onExit(self):
+        utils.writeJson(self.file, self.notes)

@@ -82,6 +82,7 @@ class Navigator:
             self.master.status.log("Reached last chapter")
 
     def change_block(self, idx, dir=0, newFile=False):
+        self.master.root.event_generate("<<BlockChangeStart>>", data=self.cur_data)
         if not isinstance(idx, int):  # UI event (setting picker directly)
             idx = self.blockPicker.current()
         
@@ -122,6 +123,7 @@ class Navigator:
             self.btnNext["text"] = f"Next ({idx} -> {nextIdx}!)" if nextIdx - idx > 1 else "Next"
         
         #  todo: events?
+        self.master.root.event_generate("<<BlockChangeEnd>>", data=self.cur_data)
         if self.master.merging:
             self.master.mergeWWindow.evBlockUpdated(self.cur_data, idx)
 

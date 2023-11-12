@@ -23,7 +23,7 @@ class PopupMenu(tk.Menu):
 class ScrollableFrame(tk.Frame):
     def __init__(self, parent: tk.Toplevel, scrollbar=False):
         super().__init__(parent)
-        scroll_canvas = tk.Canvas(self)
+        scroll_canvas = tk.Canvas(self, highlightthickness=0)
         scroll_canvas.pack(side="left", fill="both")
 
         if scrollbar:

@@ -91,6 +91,9 @@ class TextBox(tk.Text):
             self.setActive(True)
         if text is None:
             text = self.get(1.0, tk.END)
+        elif text == "":  # shortcut
+            clearText(self)
+            return
         tagList = list()
         offset = 0
         openedTags = dict()

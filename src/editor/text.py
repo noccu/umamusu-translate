@@ -198,6 +198,7 @@ class TextBoxEditable(TextBox):
                 self.tag_add(color, tk.SEL_FIRST, tk.SEL_LAST)
         else:
             return
+        self.edit_modified(True)
         return "break"  # prevent control char entry
 
     def del_word(self, event):

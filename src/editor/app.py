@@ -714,12 +714,12 @@ class SpeakerNotes:
     def __init__(self, editor: Editor) -> None:
         self.notes = utils.readJson(self.file)
         self.changed = False
-        self.widget = frm = tk.LabelFrame(editor.root, text="Speaker Notes")
-        self.scrollFrame = display.ScrollableFrame(frm, True)
+        self.widget = display.SlidingTray(editor.root, "Speaker Notes", vertical=True)
+        self.scrollFrame = display.ScrollableFrame(self.widget.tray, True)
         self.textBox = text.TextBoxEditable(
             self.scrollFrame.content, 
             size=(self.wrapLen, 50), 
-            font=fonts.createFrom(frm, None, size=10)
+            font=fonts.createFrom(self.widget, None, size=10)
         )
         self.textBox.pack(fill=tk.BOTH)
         self.scrollFrame.pack(fill=tk.BOTH, expand=1)

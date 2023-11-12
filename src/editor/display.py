@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+from . import fonts
 
 
 class PopupMenu(tk.Menu):
@@ -64,6 +65,51 @@ class ScrollableFrame(tk.Frame):
     def scroll(self, e):
         if self.isScrollable:
             self.canvas.yview_scroll(-1 * int(e.delta / 35), "units")
+
+
+class SlidingTray(tk.Frame):
+    def __init__(self, parent, text, vertical=False):
+        super().__init__(parent)
+        labelText = f"⇕ {text} ⇕"
+        font = fonts.createFrom(self, None, id="tray")
+        w = font.measure(labelText)
+        h = font.metrics("linespace")
+        activator = tk.Canvas(
+            self, 
+            width=h if vertical else w, 
+            height=w if vertical else h
+        )
+        tray = tk.LabelFrame(self, text=text)
+        textObj = activator.create_text(
+            0,0, 
+            anchor=tk.CENTER, 
+            justify=tk.CENTER, 
+            text=labelText, 
+            angle=270 if vertical else 0
+        )
+        activator.bind("<ButtonPress-1>", self.toggle)
+        activator.bind(
+            "<Configure>", 
+            lambda e: activator.coords(
+                textObj, 
+                activator.winfo_width()/2, 
+                activator.winfo_height()/2
+            )
+        )
+        activator.pack(side=tk.LEFT, fill=tk.Y, expand=1)
+        self.tray = tray
+
+    def toggle(self, ev=None):
+        if self.tray.winfo_ismapped():
+            self.retractTray()
+        else:
+            self.expandTray()
+
+    def expandTray(self):
+        self.tray.pack(side=tk.LEFT, fill=tk.BOTH, expand=1)
+        
+    def retractTray(self):
+        self.tray.pack_forget()
 
 
 def _switchWidgetFocusForced(e):

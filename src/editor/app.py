@@ -5,6 +5,7 @@ from tkinter import messagebox, ttk
 from types import SimpleNamespace
 from functools import partial
 from subprocess import run
+import ast
 
 from common import constants as const
 from common.constants import NAMES_BLACKLIST, TRANSLATION_FOLDER
@@ -26,6 +27,11 @@ _o_sub = tk.Misc._substitute
 def _sub(self, *args):
     args = list(args)
     data = args.pop(2)
+    try:
+        if data[0] == "{":
+            data = ast.literal_eval(data)
+    except:
+        pass
     ev_data = _o_sub(self, *args)
     if isinstance(ev_data[0], tk.Event):
         ev_data[0].user_data = data

@@ -753,8 +753,12 @@ class SpeakerNotes:
 
 
 class TextLog:
+    MODE_JP = 0
     MODE_EN = 1
-    MODE_JP = 2
+    MODE_MIX = 2
+    TEXT_KEYS = ("jpText", "enText")
+    NAME_KEY = ("jpName", "enName")
+    TAG_KEYS = ("jp", "en")
 
     def __init__(self, master: Editor) -> None:
         self.master = master
@@ -779,7 +783,7 @@ class TextLog:
             ("Redo", self.text_area.edit_redo),
             ("English", lambda: self.setMode(TextLog.MODE_EN)),
             ("Japanese", lambda: self.setMode(TextLog.MODE_JP)),
-            ("Mixed", lambda: messagebox.showinfo(message="Not implemented yet"))
+            ("Mixed", lambda: self.setMode(TextLog.MODE_MIX))
         )
         for txt, cmd in buttons:
             tk.Button(frm_btns, text=txt, command=cmd).pack(side=tk.LEFT, padx=5, pady=5)
@@ -801,6 +805,7 @@ class TextLog:
         cur_idx = self.text_area.index(tk.INSERT)
         self.populate_texts()
         self.text_area.see(cur_idx)
+        self.text_area.mark_set(tk.INSERT, cur_idx)
         # todo: scroll to same block idx
 
     def populate_texts(self):
@@ -810,21 +815,28 @@ class TextLog:
             return True
         text.clearText(self.text_area)
         self.text_area.config(width=calcLineLen(self.master.nav.cur_file))
+
         if self.mode == TextLog.MODE_EN:
-            text_key = "enText"
-            name_key = "enName"
-            tag = "en"
             self.text_area.toggleSpellCheck(True)
         else:
-            text_key = "jpText"
-            name_key = "jpName"
-            tag = "jp"
             self.text_area.toggleSpellCheck(False)
-        for block in self.master.nav.cur_file.textBlocks:
-            block_text = block.get(text_key, "")
-            block_name = block.get(name_key, "")
-            text.setText(self.text_area, f"{block_name}:", tag="name", append=True)
-            self.text_area.loadRichText(f"\n{block_text}\n\n", tag=tag, append=True)
+
+        if self.mode == TextLog.MODE_MIX:
+            for block in self.master.nav.cur_file.textBlocks:
+                jp_name = block.get(self.NAME_KEY[self.MODE_JP], "")
+                en_name = block.get(self.NAME_KEY[self.MODE_EN], "")
+                jp_Text = block.get(self.TEXT_KEYS[self.MODE_JP], "")
+                en_Text = block.get(self.TEXT_KEYS[self.MODE_EN], "")
+                text.setText(self.text_area,f"{jp_name} / {en_name}:", tag="name", append=True)
+                self.text_area.loadRichText(f"\n{jp_Text}", tag="jp", append=True)
+                self.text_area.loadRichText(f"\n\n{en_Text}\n\n", tag="en", append=True)
+        else:
+            for block in self.master.nav.cur_file.textBlocks:
+                block_name = block.get(self.NAME_KEY[self.mode], "")
+                block_text = block.get(self.TEXT_KEYS[self.mode], "")
+                text.setText(self.text_area, f"{block_name}:", tag="name", append=True)
+                self.text_area.loadRichText(f"\n{block_text}\n\n", tag=self.TAG_KEYS[self.mode], append=True)
+
         self.lastLoad = (self.mode, self.master.nav.cur_file)
         return True
 

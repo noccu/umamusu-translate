@@ -94,7 +94,7 @@ class TextBox(tk.Text):
                 if tagName == "color":
                     self.color.define(tagVal)
             offset += len(m[0])
-        tagBase = self.index(f"{tk.END}-1lines") if append else "1.0"
+        tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         # Add the cleaned text
         setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE), append, tag)
         # Apply tags

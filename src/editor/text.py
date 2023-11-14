@@ -68,7 +68,7 @@ class TextBox(tk.Text):
         self.color = ColorManager(self)
         self.bind("<Alt-Right>", self.copy_block)
 
-    def loadRichText(self, text: str = None):
+    def loadRichText(self, text: str = None, tag=None, append=False):
         """Load text into widget, converting unity RT markup to tk tags.
         If no text is given it converts all existing text"""
         if not self._editable:
@@ -94,11 +94,12 @@ class TextBox(tk.Text):
                 if tagName == "color":
                     self.color.define(tagVal)
             offset += len(m[0])
+        tagBase = self.index(f"{tk.END}-1lines") if append else "1.0"
         # Add the cleaned text
-        setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE))
+        setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE), append, tag)
         # Apply tags
         for toTag in tagList:
-            self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
+            self.tag_add(toTag["name"], f"{tagBase}+{toTag['start']}c", f"{tagBase}+{toTag['end']}c")
         if not self._editable:
             self.setActive(False)
 
@@ -170,8 +171,8 @@ class TextBoxEditable(TextBox):
         self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
         self.doSpellCheck = True
 
-    def loadRichText(self, text: str = None):
-        super().loadRichText(text)
+    def loadRichText(self, text: str = None, tag=None, append=False):
+        super().loadRichText(text, tag, append)
         if self.doSpellCheck:
             self.spellChecker.check_spelling()
 
@@ -290,16 +291,17 @@ def getText(widget: TkDisplaysText):
         return widget.get(1.0, tk.END)
 
 
-def setText(widget: TkDisplaysText, text: str):
+def setText(widget: TkDisplaysText, text: str, append=False, tag=None):
     """Sets full text of supported widgets."""
     if isinstance(widget, tk.Label):
         widget.config(text=text)
     else:
-        clearText(widget)
+        if not append:
+            clearText(widget)
         if isinstance(widget, tk.Entry):
             widget.insert(0, text)
         elif isinstance(widget, tk.Text):
-            widget.insert(1.0, text)
+            widget.insert(tk.END if append else 1.0, text, tag)
         else:
             raise ValueError
 

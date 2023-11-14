@@ -23,7 +23,7 @@ class SpellCheck:
         widget.tag_bind("spellError", "<Button-3>", self.show_suggestions)
         widget.bind("<KeyRelease>", self.check_spelling)
         widget.bind("<Control-space>", self.autocomplete)
-        # widget.word_suggestions = {}
+        self.enabled = True
         self.menu = PopupMenu(widget, tearoff=0)
         self.widget = widget
         if SpellCheck.dictionary is None:
@@ -54,7 +54,8 @@ class SpellCheck:
                 SpellCheck.dictionary.create_dictionary_entry(n, SpellCheck.nameFreq)
 
     def check_spelling(self, event=None):
-        if event and event.keysym not in ("space", "BackSpace", "Delete"):
+        # "space", "BackSpace", "Delete"
+        if not self.enabled or event and event.keysym_num not in (32, 65288, 65535):
             return
         text = self.widget.get("1.0", tk.END)
         words = re.split(r"[^\p{L}\-']+", text)

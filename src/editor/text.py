@@ -169,12 +169,10 @@ class TextBoxEditable(TextBox):
         self.bind("<Control-C>", self.format_text)
         self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
         self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
-        self.doSpellCheck = True
 
     def loadRichText(self, text: str = None, tag=None, append=False):
         super().loadRichText(text, tag, append)
-        if self.doSpellCheck:
-            self.spellChecker.check_spelling()
+        self.spellChecker.check_spelling()
 
     def format_text(self, event):
         if not self.tag_ranges("sel"):
@@ -240,9 +238,9 @@ class TextBoxEditable(TextBox):
     def toggleSpellCheck(self, active:bool=None):
         """Toggle spellcheck state or set on/off explicitly."""
         if active is None:
-            self.doSpellCheck = not self.doSpellCheck
+            self.spellChecker.enabled = not self.spellChecker.enabled
         else:
-            self.doSpellCheck = active
+            self.spellChecker.enabled = active
 
 
 def process_text(file: "TranslationFile", text: str = None, redoNewlines: bool = False):

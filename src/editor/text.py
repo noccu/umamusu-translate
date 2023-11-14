@@ -68,24 +68,6 @@ class TextBox(tk.Text):
         self.color = ColorManager(self)
         self.bind("<Alt-Right>", self.copy_block)
 
-        if editable:
-            self.config(undo=True)
-            self.spellChecker = SpellCheck(self)
-            # Move default class binds last to allow overwriting
-            this, cls, toplevel, all = self.bindtags()
-            self.bindtags((this, toplevel, all, cls))
-            # Keybinds
-            self.bind("<Alt-x>", self.char_convert)
-            self.bind("<Control-BackSpace>", self.del_word)
-            self.bind("<Control-Shift-BackSpace>", self.del_word)
-            self.bind("<Control-Delete>", self.del_word)
-            self.bind("<Control-Shift-Delete>", self.del_word)
-            self.bind("<Control-i>", self.format_text)
-            self.bind("<Control-b>", self.format_text)
-            self.bind("<Control-C>", self.format_text)
-            self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
-            self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
-
     def loadRichText(self, text: str = None):
         """Load text into widget, converting unity RT markup to tk tags.
         If no text is given it converts all existing text"""
@@ -117,9 +99,7 @@ class TextBox(tk.Text):
         # Apply tags
         for toTag in tagList:
             self.tag_add(toTag["name"], f"1.0+{toTag['start']}c", f"1.0+{toTag['end']}c")
-        if self._editable:
-            self.spellChecker.check_spelling()
-        else:
+        if not self._editable:
             self.setActive(False)
 
     def toRichText(self):
@@ -140,7 +120,7 @@ class TextBox(tk.Text):
             text.insert(idx + offset, tag)
             offset += 1
         return "".join(text)
-    
+
     def clear(self):
         wasEnabled = self._enabled
         if not wasEnabled:
@@ -172,7 +152,29 @@ class TextBox(tk.Text):
 class TextBoxEditable(TextBox):
     def __init__(self, parent, size: tuple[int] = (None, None), font: fonts.Font = None, **kwargs) -> None:
         super().__init__(parent, size, True, font, **kwargs)
-    
+        self.config(undo=True)
+        self.spellChecker = SpellCheck(self)
+        # Move default class binds last to allow overwriting
+        this, cls, toplevel, all = self.bindtags()
+        self.bindtags((this, toplevel, all, cls))
+        # Keybinds
+        self.bind("<Alt-x>", self.char_convert)
+        self.bind("<Control-BackSpace>", self.del_word)
+        self.bind("<Control-Shift-BackSpace>", self.del_word)
+        self.bind("<Control-Delete>", self.del_word)
+        self.bind("<Control-Shift-Delete>", self.del_word)
+        self.bind("<Control-i>", self.format_text)
+        self.bind("<Control-b>", self.format_text)
+        self.bind("<Control-C>", self.format_text)
+        self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
+        self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
+        self.doSpellCheck = True
+
+    def loadRichText(self, text: str = None):
+        super().loadRichText(text)
+        if self.doSpellCheck:
+            self.spellChecker.check_spelling()
+
     def format_text(self, event):
         if not self.tag_ranges("sel"):
             self.master.event_generate("<<Log>>", "No selection to format.")
@@ -190,7 +192,7 @@ class TextBoxEditable(TextBox):
             return
         self.edit_modified(True)
         return "break"  # prevent control char entry
-    
+
     def toggleSelectionTag(self, tag):
         currentTags = self.tag_names(tk.SEL_FIRST)
         if tag in currentTags:
@@ -222,7 +224,7 @@ class TextBoxEditable(TextBox):
                 return
             self.replace(f"{start}+{str(m.start())}c", pos, res)
         return "break"
-    
+
     def moveLine(self, event, dir: int):
         text = getText(self).split("\n")[:-1]  # tk newline
         curIdx = int(self.index(tk.INSERT).split(".")[0]) - 1
@@ -233,6 +235,13 @@ class TextBoxEditable(TextBox):
         setText(self, "\n".join(text))
         self.mark_set(tk.INSERT, f"{newIdx + 1}.0")
         return "break"
+
+    def toggleSpellCheck(self, active:bool=None):
+        """Toggle spellcheck state or set on/off explicitly."""
+        if active is None:
+            self.doSpellCheck = not self.doSpellCheck
+        else:
+            self.doSpellCheck = active
 
 
 def process_text(file: "TranslationFile", text: str = None, redoNewlines: bool = False):

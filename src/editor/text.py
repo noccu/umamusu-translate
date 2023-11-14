@@ -177,29 +177,26 @@ class TextBoxEditable(TextBox):
         if not self.tag_ranges("sel"):
             self.master.event_generate("<<Log>>", "No selection to format.")
             return
-        currentTags = self.tag_names(tk.SEL_FIRST)
         if event.keysym == "i":
-            if "i" in currentTags:
-                self.tag_remove("i", tk.SEL_FIRST, tk.SEL_LAST)
-            else:
-                self.tag_add("i", tk.SEL_FIRST, tk.SEL_LAST)
+            self.toggleSelectionTag("i")
         elif event.keysym == "b":
-            if "b" in currentTags:
-                self.tag_remove("b", tk.SEL_FIRST, tk.SEL_LAST)
-            else:
-                self.tag_add("b", tk.SEL_FIRST, tk.SEL_LAST)
+            self.toggleSelectionTag("b")
         elif event.keysym == "C":
             color = f"color={self.color.pick(not (event.state & 131072))}"  # alt
             if color is None:
                 return
-            if color in currentTags:
-                self.tag_remove(color, tk.SEL_FIRST, tk.SEL_LAST)
-            else:
-                self.tag_add(color, tk.SEL_FIRST, tk.SEL_LAST)
+            self.toggleSelectionTag(color)
         else:
             return
         self.edit_modified(True)
         return "break"  # prevent control char entry
+    
+    def toggleSelectionTag(self, tag):
+        currentTags = self.tag_names(tk.SEL_FIRST)
+        if tag in currentTags:
+            self.tag_remove(tag, tk.SEL_FIRST, tk.SEL_LAST)
+        else:
+            self.tag_add(tag, tk.SEL_FIRST, tk.SEL_LAST)
 
     def del_word(self, event):
         shift = event.state & 0x0001

@@ -46,7 +46,8 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     targetLines: int = overrides.get("targetLines", opts.get("targetLines", 3))
     lineLen: int = overrides.get("lineLength", opts.get("lineLength", -1))
     if lineLen == -1:
-        lineLen = calcLineLen(file, opts.get("verbose"))
+        lineLen = calcLineLen(file)
+        logger.debug(f"Line length set to {lineLen} for {file.name}")
     if lineLen == 0:
         return text  # auto mode can return 0
     # Calculate an estimation of raw characters from size-based length
@@ -156,7 +157,7 @@ def replace(text: str, mode):
     return text
 
 
-def calcLineLen(file: TranslationFile, verbose):
+def calcLineLen(file: TranslationFile):
     global LL_CACHE
     if LL_CACHE[0] is file:  # should be same as id() -> fast
         return LL_CACHE[1]
@@ -177,7 +178,6 @@ def calcLineLen(file: TranslationFile, verbose):
         else:
             lineLength = 34
     LL_CACHE = file, lineLength
-    logger.info(f"Line length set to {lineLength} for {file.name}")
     return lineLength
 
 

@@ -60,7 +60,7 @@ class Navigator:
         ]
         self.change_block(self.cur_block, newFile=True)  # Takes care of loading
 
-        ll = textprocess.calcLineLen(cur_file, False) or self.master.textBoxEn.DEFAULT_WIDTH
+        ll = textprocess.calcLineLen(cur_file) or self.master.textBoxEn.DEFAULT_WIDTH
         self.master.textBoxEn.config(width=ll)
         self.master.textBoxJp.config(width=ll)
 

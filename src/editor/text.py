@@ -103,24 +103,31 @@ class TextBox(tk.Text):
         if not self._editable:
             self.setActive(False)
 
-    def toRichText(self):
-        text = list(self.get(1.0, tk.END))
+    def toRichText(self, start=1.0, end=tk.END):
+        text = list(self.get(start, end))
+        end = self.index(end)
         offset = 0
         tagList = list()
         for tag in self.tag_names():
             tagBaseName = tag.split("=")[0]
             if tagBaseName not in ("i", "b", "color", "size"):
                 continue
-            ranges = self.tag_ranges(tag)
-            tagList.extend((text_count(self, "1.0", x, "-chars"), f"<{tag}>") for x in ranges[0::2])
-            tagList.extend(
-                (text_count(self, "1.0", x, "-chars"), f"</{tagBaseName}>") for x in ranges[1::2]
-            )
-        tagList.sort(key=lambda x: x[0])
+            # ranges = self.tag_ranges(tag)
+            for tagStart, tagEnd in TextBox.deinterleaveTagRange(self.tag_ranges(tag)):
+                if self.compare(tagStart, "<", start) or self.compare(tagEnd, ">", end):
+                    continue
+                tagList.append((text_count(self, start, tagStart, "-chars"), f"<{tag}>"))
+                tagList.append((text_count(self, start, tagEnd, "-chars"), f"</{tagBaseName}>"))
+        tagList.sort(key=lambda x: x[0])  # sort by start idx
         for idx, tag in tagList:
             text.insert(idx + offset, tag)
             offset += 1
         return "".join(text)
+
+    @staticmethod
+    def deinterleaveTagRange(tagRange):
+        for i in range(0, len(tagRange), 2):
+            yield tagRange[i], tagRange[i + 1]
 
     def clear(self):
         wasEnabled = self._enabled

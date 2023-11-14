@@ -10,6 +10,7 @@ import ast
 from common import constants as const, utils
 from common.constants import NAMES_BLACKLIST, TRANSLATION_FOLDER
 from common.types import TranslationFile, StoryId
+from textprocess import calcLineLen
 
 from . import display, files, navigator, text, fonts
 from .spellcheck import SpellCheck
@@ -74,6 +75,7 @@ class Editor:
         self.search = SearchWindow(self)
         self.preview = PreviewWindow(self)
         self.notes = SpeakerNotes(self)
+        self.textLog = TextLog(self)
         self.merging = False
 
         # Nav
@@ -132,15 +134,16 @@ class Editor:
             state="disabled",
             width=10,
         )
-        btn_colored.grid(row=1, column=0)
-        tk.Button(frm_btns_bot, text="Listen", command=self.audio.listen, width=10).grid(row=0, column=1)
-        tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10).grid(row=1, column=1)
-        tk.Button(frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10).grid(row=0, column=2)
-        tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10).grid(row=1, column=2)
+        tk.Button(frm_btns_bot, text="Text log", command=self.textLog.toggle, width=10).grid(row=1, column=1)
+        btn_colored.grid(row=0, column=1)
+        tk.Button(frm_btns_bot, text="Listen", command=self.audio.listen, width=10).grid(row=0, column=2)
+        tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10).grid(row=1, column=2)
+        tk.Button(frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10).grid(row=0, column=3)
+        tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10).grid(row=1, column=3)
         btn_prev = tk.Button(frm_btns_bot, text="Prev", command=self.nav.prev_block, width=10)
         btn_next = tk.Button(frm_btns_bot, text="Next", command=self.nav.next_block, width=10)
-        btn_prev.grid(row=0, column=3)
-        btn_next.grid(row=1, column=3)
+        btn_prev.grid(row=0, column=4)
+        btn_next.grid(row=1, column=4)
         for idx in range(frm_btns_bot.grid_size()[0]):
             frm_btns_bot.columnconfigure(idx, weight=1)
 
@@ -747,3 +750,111 @@ class SpeakerNotes:
     
     def onExit(self):
         utils.writeJson(self.file, self.notes)
+
+
+class TextLog:
+    MODE_EN = 1
+    MODE_JP = 2
+
+    def __init__(self, master: Editor) -> None:
+        self.master = master
+        self.root = root = tk.Toplevel(master.root)
+        root.title("Text Log")
+        root.protocol("WM_DELETE_WINDOW", self.toggle)
+        root.resizable(False, True)
+
+        self.mode = TextLog.MODE_EN
+        self.lastLoad = (None, None)
+        self.typing = False
+        self.typeTimer = None
+
+        self.text_area = text.TextBoxEditable(root, size=(None, 25), font=fonts.create(root, size=12))
+
+        scroll = tk.Scrollbar(root, command=self.text_area.yview)
+        self.text_area.config(yscrollcommand=scroll.set)
+
+        frm_btns = tk.Frame(root)
+        buttons = (
+            ("Undo", self.text_area.edit_undo),
+            ("Redo", self.text_area.edit_redo),
+            ("English", lambda: self.setMode(TextLog.MODE_EN)),
+            ("Japanese", lambda: self.setMode(TextLog.MODE_JP)),
+            ("Mixed", lambda: messagebox.showinfo(message="Not implemented yet"))
+        )
+        for txt, cmd in buttons:
+            tk.Button(frm_btns, text=txt, command=cmd).pack(side=tk.LEFT, padx=5, pady=5)
+        save_button = tk.Button(frm_btns, text="Save Changes", command=self.save_edits)
+        save_button.pack(side=tk.RIGHT, padx=5, pady=5)
+
+        root.grid_rowconfigure(0, weight=1)
+        self.text_area.grid(sticky=tk.NS)
+        scroll.grid(row=0, column=1, sticky=tk.NS)
+        frm_btns.grid(row=1, columnspan=2, sticky=tk.EW)
+
+        self.text_area.tag_configure("en")
+        self.text_area.tag_configure("jp")
+        self.text_area.tag_configure("name", background="light grey")
+        root.withdraw()
+
+    def setMode(self, mode):
+        self.mode = mode
+        cur_idx = self.text_area.index(tk.INSERT)
+        self.populate_texts()
+        self.text_area.see(cur_idx)
+        # todo: scroll to same block idx
+
+    def populate_texts(self):
+        if not self.master.nav.cur_file:
+            return False
+        if self.lastLoad == (self.mode, self.master.nav.cur_file):
+            return True
+        text.clearText(self.text_area)
+        self.text_area.config(width=calcLineLen(self.master.nav.cur_file))
+        if self.mode == TextLog.MODE_EN:
+            text_key = "enText"
+            name_key = "enName"
+            tag = "en"
+            self.text_area.toggleSpellCheck(True)
+        else:
+            text_key = "jpText"
+            name_key = "jpName"
+            tag = "jp"
+            self.text_area.toggleSpellCheck(False)
+        for block in self.master.nav.cur_file.textBlocks:
+            block_text = block.get(text_key, "")
+            block_name = block.get(name_key, "")
+            text.setText(self.text_area, f"{block_name}:", tag="name", append=True)
+            self.text_area.loadRichText(f"\n{block_text}\n\n", tag=tag, append=True)
+        self.lastLoad = (self.mode, self.master.nav.cur_file)
+        return True
+
+    def toggle(self, event=None):
+        if self.root.state() == "normal":
+            self.root.withdraw()
+        else:
+            if not self.populate_texts():
+                self.master.status.log("No active file")
+                return
+            self.root.deiconify()
+            
+    def save_edits(self):
+        if self.mode == TextLog.MODE_JP:
+            return
+        ranges = self.text_area.tag_ranges("en")
+        blockEquiv = len(ranges)//2
+
+        if blockEquiv != len(self.master.nav.cur_file.textBlocks):
+            messagebox.showerror(message="Text log is corrupted, aborting save.")
+            print(f"mode: {self.mode}, edit blocks: {blockEquiv}, file blocks: {len(self.master.nav.cur_file.textBlocks)}\n")
+            print(ranges)
+            return
+
+        for i, (start, end) in enumerate(text.TextBox.deinterleaveTagRange(ranges)):
+            block_text = text.normalize(self.text_area.toRichText(start, end))
+            if self.master.nav.cur_file.textBlocks[i]["enText"] != block_text:
+                self.master.nav.cur_file.textBlocks[i]["enText"] = block_text
+                # Directly update the main UI English text box if it's the currently displayed block
+                if i == self.master.nav.cur_block:
+                    self.master.textBoxEn.loadRichText(block_text)
+
+        self.text_area.edit_reset()

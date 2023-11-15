@@ -85,10 +85,10 @@ class FileManager:
             file.save()
             # Prevent message spam
             if not self.master.options.saveOnBlockChange.get() and not saveAll:
-                print("Saved")
+                self.master.status.setSaved()
             self.saveState.onFileSaved(ch if saveAll else nav.cur_chapter, nav.cur_data)
         if saveAll:
-            print("Saved all files")
+            self.master.status.log("Saved all files")
 
     def load_block(self, file: TranslationFile, idx: int):
         """Loads a block by index. Note block data may not be available before this."""
@@ -175,3 +175,4 @@ class FileManager:
             cur_data["newClipLength"] = new_clip_length
 
         self.saveState.markBlockSaved(nav.cur_chapter, cur_data)
+        self.master.root.event_generate("<<BlockSaved>>", data=cur_data)

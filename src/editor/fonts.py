@@ -1,12 +1,13 @@
-from tkinter.font import Font
+from tkinter.font import Font, nametofont
 from common import constants
+from functools import cache
 
 if constants.IS_WIN:
     from ctypes import byref, create_string_buffer, create_unicode_buffer, windll
 
 
 _DYNAMIC: dict[tuple, Font] = dict()
-
+UMATL_FONT_NAME = "RodinWanpakuPro UmaTl B"
 
 def load(fontPath):
     # code modified from https://github.com/ifwe/digsby/blob/f5fe00244744aa131e07f09348d10563f3d8fa99/digsby/src/gui/native/win/winfonts.py#L15
@@ -39,7 +40,7 @@ def load(fontPath):
     return numFontsAdded
 
 
-def create(root, name="RodinWanpakuPro UmaTl B", size=18, italic=False, bold=False, id=None):
+def create(root, name=UMATL_FONT_NAME, size=18, italic=False, bold=False, id=None):
     if not id:
         id = (name, size, italic, bold)
     if id in _DYNAMIC:
@@ -57,6 +58,21 @@ def create(root, name="RodinWanpakuPro UmaTl B", size=18, italic=False, bold=Fal
 def get(id):
     return _DYNAMIC.get(id)
 
+
+def createFrom(root, font:Font = None, size=None, italic=False, bold=False, id=None):
+    """Duplicate a font with new parameters, uses default tk font if not specified."""
+    if id and (f := _DYNAMIC.get(id)):
+        return f
+    if font is None:
+        font = nametofont("TkDefaultFont")
+    # elif isinstance(font, tk.Widget):
+        # pass
+    font = font.actual()
+    return create(root, font["family"], size or font["size"], italic, bold, id)
+
+@cache
+def getDefaultFontName():
+    return nametofont("TkDefaultFont").actual()["family"]
 
 def init(root):
     global DEFAULT, BOLD, ITALIC

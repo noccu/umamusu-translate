@@ -9,7 +9,7 @@ from common.types import StoryId, GameBundle
 def removeRuby(args, db: sqlite3.Connection):
     storyId = StoryId.queryfy(StoryId(args.type, args.set, args.group, args.id, args.idx))
     del storyId.set
-    del storyId.type
+    # del storyId.type
 
     q = db.execute(f"select h, n from a where n like 'story/data/__/____/ast_ruby_{storyId}'")
     patched = total = 0
@@ -17,7 +17,7 @@ def removeRuby(args, db: sqlite3.Connection):
     for bundle, path in q:
         bundle = GameBundle.fromName(bundle, load=False)
         if bundle.isPatched:
-            logger.info(f"Skipping {StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched")
+            logger.info(f"Skipping {StoryId.parseFromPath(storyId.type, path)} ({bundle.bundleName}): Already patched")
         else:
             bundle.load()
             tree = bundle.rootAsset.read_typetree()

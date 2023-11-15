@@ -772,7 +772,8 @@ class TextLog:
         self.typing = False
         self.typeTimer = None
 
-        self.text_area = text.TextBoxEditable(root, size=(None, 25), font=fonts.create(root, size=12))
+        self.font = fonts.create(root, size=12, id="tlog")
+        self.text_area = text.TextBoxEditable(root, size=(None, 25), font=self.font)
 
         scroll = tk.Scrollbar(root, command=self.text_area.yview)
         self.text_area.config(yscrollcommand=scroll.set)
@@ -790,10 +791,19 @@ class TextLog:
         save_button = tk.Button(frm_btns, text="Save Changes", command=self.save_edits)
         save_button.pack(side=tk.RIGHT, padx=5, pady=5)
 
+        frm_opts = tk.Frame(root)
+        self.useUmaFont = tk.BooleanVar(frm_opts, name="umafont", value=True)
+        self.useUmaFont.trace_add("write", self.swapFont)
+        tk.Checkbutton(frm_opts, text="Uma font", variable=self.useUmaFont).pack(side=tk.LEFT, padx=3)
+        self.fontSize = fontSize = tk.IntVar(frm_opts, value=13)
+        fontSize.trace_add("write", self.changeFontSize)
+        ttk.Spinbox(frm_opts, from_=2, to=75, increment=1, textvariable=fontSize).pack(side=tk.LEFT, padx=3)
+
         root.grid_rowconfigure(0, weight=1)
         self.text_area.grid(sticky=tk.NS)
         scroll.grid(row=0, column=1, sticky=tk.NS)
         frm_btns.grid(row=1, columnspan=2, sticky=tk.EW)
+        frm_opts.grid(row=2, columnspan=2, sticky=tk.EW)
 
         self.text_area.tag_configure("en")
         self.text_area.tag_configure("jp")
@@ -870,3 +880,16 @@ class TextLog:
                     self.master.textBoxEn.loadRichText(block_text)
 
         self.text_area.edit_reset()
+
+    def swapFont(self, *_):
+        if self.useUmaFont.get():
+            self.font.config(family=fonts.UMATL_FONT_NAME)
+        else:
+            self.font.config(family=fonts.getDefaultFontName())
+
+    def changeFontSize(self, *_):
+        try:
+            newsize = self.fontSize.get()
+        except tk.TclError:
+            return
+        self.font.config(size=newsize)

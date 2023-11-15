@@ -865,20 +865,23 @@ class TextLog:
         ranges = self.text_area.tag_ranges("en")
         blockEquiv = len(ranges)//2
 
-        if blockEquiv != len(self.master.nav.cur_file.textBlocks):
+        textBLocks = self.master.nav.cur_file.textBlocks
+        if blockEquiv != len(textBLocks):
             messagebox.showerror(message="Text log is corrupted, aborting save.")
-            print(f"mode: {self.mode}, edit blocks: {blockEquiv}, file blocks: {len(self.master.nav.cur_file.textBlocks)}\n")
+            print(f"mode: {self.mode}, edit blocks: {blockEquiv}, file blocks: {len(textBLocks)}\n")
             print(ranges)
             return
 
         for i, (start, end) in enumerate(text.TextBox.deinterleaveTagRange(ranges)):
             block_text = text.normalize(self.text_area.toRichText(start, end))
-            if self.master.nav.cur_file.textBlocks[i]["enText"] != block_text:
-                self.master.nav.cur_file.textBlocks[i]["enText"] = block_text
-                # Directly update the main UI English text box if it's the currently displayed block
-                if i == self.master.nav.cur_block:
-                    self.master.textBoxEn.loadRichText(block_text)
-
+            if textBLocks[i]["enText"] == block_text:
+                continue
+            textBLocks[i]["enText"] = block_text
+            self.master.status.setUnsaved()
+            self.master.fileMan.saveState.unsavedChanges.add(self.master.nav.cur_chapter)
+            # Directly update the main UI English text box if it's the currently displayed block
+            if i == self.master.nav.cur_block:
+                self.master.textBoxEn.loadRichText(block_text)
         self.text_area.edit_reset()
 
     def swapFont(self, *_):

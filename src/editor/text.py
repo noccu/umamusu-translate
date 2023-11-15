@@ -188,6 +188,7 @@ class TextBoxEditable(TextBox):
     def loadRichText(self, text: str = None, tag=None, append=False):
         super().loadRichText(text, tag, append)
         self.spellChecker.check_spelling()
+        self.edit_modified(False)
 
     def format_text(self, event):
         if not self.tag_ranges("sel"):

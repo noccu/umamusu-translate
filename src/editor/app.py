@@ -772,8 +772,8 @@ class TextLog:
         self.typing = False
         self.typeTimer = None
 
-        self.font = fonts.create(root, size=12, id="tlog")
-        self.text_area = text.TextBoxEditable(root, size=(None, 25), font=self.font)
+        font = fonts.create(root, size=12, id="tlog")
+        self.text_area = text.TextBoxEditable(root, size=(None, 25), font=font)
 
         scroll = tk.Scrollbar(root, command=self.text_area.yview)
         self.text_area.config(yscrollcommand=scroll.set)
@@ -886,13 +886,13 @@ class TextLog:
 
     def swapFont(self, *_):
         if self.useUmaFont.get():
-            self.font.config(family=fonts.UMATL_FONT_NAME)
+            self.text_area.fontConfig(family=fonts.UMATL_FONT_NAME)
         else:
-            self.font.config(family=fonts.getDefaultFontName())
+            self.text_area.fontConfig(family=fonts.getDefaultFontName())
 
     def changeFontSize(self, *_):
         try:
             newsize = self.fontSize.get()
         except tk.TclError:
             return
-        self.font.config(size=newsize)
+        self.text_area.fontConfig(size=newsize)

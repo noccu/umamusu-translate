@@ -63,10 +63,18 @@ class TextBox(tk.Text):
         )
         self.tkRoot = None
         self._editable = self._enabled = editable
-        self.tag_config("b", font=fonts.createFrom(self, font, bold=True))
-        self.tag_config("i", font=fonts.createFrom(self, font, italic=True))
+        self.font = font
+        self.font_italic = fonts.createFrom(self, font, italic=True)
+        self.font_bold = fonts.createFrom(self, font, bold=True)
+        self.tag_config("b", font=self.font_bold)
+        self.tag_config("i", font=self.font_italic)
         self.color = ColorManager(self)
         self.bind("<Alt-Right>", self.copy_block)
+
+    def fontConfig(self, **kwargs):
+        self.font.config(**kwargs)
+        self.font_bold.config(**kwargs)
+        self.font_italic.config(**kwargs)
 
     def loadRichText(self, text: str = None, tag=None, append=False):
         """Load text into widget, converting unity RT markup to tk tags.

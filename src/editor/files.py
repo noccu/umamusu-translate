@@ -175,3 +175,4 @@ class FileManager:
             cur_data["newClipLength"] = new_clip_length
 
         self.saveState.markBlockSaved(nav.cur_chapter, cur_data)
+        self.master.root.event_generate("<<BlockSaved>>", data=cur_data)

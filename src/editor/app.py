@@ -769,6 +769,7 @@ class TextLog:
 
         self.mode = TextLog.MODE_EN
         # self.lastLoad = (None, None)
+        root.bind_all("<<BlockSaved>>", self.evhOnBlockChange)
         font = fonts.create(root, size=12, id="tlog")
         self.text_area = text.TextBoxEditable(root, size=(None, 25), font=font)
 
@@ -893,3 +894,7 @@ class TextLog:
         except tk.TclError:
             return
         self.text_area.fontConfig(size=newsize)
+
+    def evhOnBlockChange(self, event):
+        if self.root.winfo_ismapped() and self.master.textBoxEn.edit_modified():
+            self.populate_texts()

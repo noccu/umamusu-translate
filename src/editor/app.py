@@ -768,10 +768,7 @@ class TextLog:
         root.resizable(False, True)
 
         self.mode = TextLog.MODE_EN
-        self.lastLoad = (None, None)
-        self.typing = False
-        self.typeTimer = None
-
+        # self.lastLoad = (None, None)
         font = fonts.create(root, size=12, id="tlog")
         self.text_area = text.TextBoxEditable(root, size=(None, 25), font=font)
 
@@ -821,8 +818,8 @@ class TextLog:
     def populate_texts(self):
         if not self.master.nav.cur_file:
             return False
-        if self.lastLoad == (self.mode, self.master.nav.cur_file):
-            return True
+        # if self.lastLoad == (self.mode, self.master.nav.cur_file):
+        #     return True
         text.clearText(self.text_area)
         self.text_area.config(width=calcLineLen(self.master.nav.cur_file))
 
@@ -847,7 +844,7 @@ class TextLog:
                 text.setText(self.text_area, f"{block_name}:", tag="name", append=True)
                 self.text_area.loadRichText(f"\n{block_text}\n\n", tag=self.TAG_KEYS[self.mode], append=True)
 
-        self.lastLoad = (self.mode, self.master.nav.cur_file)
+        # self.lastLoad = (self.mode, self.master.nav.cur_file)
         return True
 
     def toggle(self, event=None):

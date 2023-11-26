@@ -108,6 +108,7 @@
         "第3コーナーで先頭なら速度を少し上げ\\n持久力を少し回復する、東京の\\n中距離レースなら効果時間が増える": "",
         "レース中間付近で中団にいると\\n速度が上がる、中距離レースで7回以上\\nスキルを使っているとすごく上がる": "",
         "最終コーナー後半で中団にいると速度を\\n少し上げ続ける、さらに長距離レースで\\n人気が低い場合すごく上げ続ける": "",
+        "終盤の最終直線で先頭にいると速度が\\n少し上がる、終盤開始までに取った\\nリードの距離に応じて効果が増える": "",
         "中盤に2回スキルを使い\\n中団にいるとリラックスして\\n持久力を回復する": "",
         "終盤突入時に先頭だと少し前に出る\\nそこが第3コーナーで中盤に大きく差を\\nつけて先頭にいた場合すごく前に出る": "",
         "最終コーナー以降に前の方で\\n追いすがっていると最終直線を走行中\\n不屈の闘志で速度がすごく上がる": "<size=22>Increase speed a lot with unwavering spirit on \\nthe last straight when chasing someone near the \\nfront on the last corner or beyond\\n</size>",
@@ -681,6 +682,8 @@
         "レース中盤に前の方にいると\\nしばらくの間速度が少し上がる\\n＜作戦・先行＞": "<size=22>Chaser・Increase speed lightly for a while when \\nin the trailing pack during the Middle Leg\\n</size>",
         "レース中盤に前の方にいると\\nしばらくの間速度がちょっと上がる\\n＜作戦・先行＞": "<size=22>Chaser・Subtly increase speed for a while when in \\nthe trailing pack during the Middle Leg\\n</size>",
         "レース終盤始めの方早めに\\n前の方にいると加速力がわずかに上がる\\n＜先行・長距離＞": "",
+        "レース中盤に速度がわずかに上がる": "",
+        "レース中盤が迫ったとき\\n速度がわずかに上がる": "<size=22>Slightly increase speed when \\nnearing the final leg\\n</size>",
         "レース中盤にアオハル魂が燃え\\nレース中のチームメンバーの\\nスピード合計が高いほど速度が上がる": "<size=22>Increase speed in the Middle Leg based on total \\nteam member speed\\n</size>",
         "レース中盤にアオハル魂が燃え\\nレース中のチームメンバーのスピード\\n合計が高いほど速度がわずかに上がる": "<size=22>Increase speed slightly in the Middle Leg based \\non total team member speed\\n</size>",
         "レース中盤にアオハル魂が燃え\\nレース中のチームメンバーのスタミナ\\n合計が高いほど持久力が回復する": "<size=22>Recover stamina in the Middle Leg based on total \\nteam member stamina\\n</size>",
@@ -811,6 +814,7 @@
         "第3コーナーで先頭なら速度をちょっと\\n上げ持久力をちょっと回復する、東京の\\n中距離レースなら効果時間が増える": "",
         "レース中間付近で中団にいると速度が\\nわずかに上がる、中距離レースで7回\\n以上スキルを使っていると少し上がる": "",
         "最終コーナー後半で中団にいると速度を\\nちょっと上げ続ける、さらに長距離\\nレースで人気が低い場合少し上げ続ける": "",
+        "終盤の最終直線で先頭にいると\\n速度がちょっと上がる": "",
         "中盤に2回スキルを使い\\n中団にいると\\n持久力をわずかに回復する": "",
         "終盤突入時に先頭だとちょっと前に出る\\nそこが第3コーナーで中盤に大きく差を\\nつけて先頭にいた場合少し前に出る": "",
         "最終コーナー以降に\\n前の方で追いすがっていると\\n最終直線を走行中速度が少し上がる": "<size=22>Lightly increase speed on the last straight when \\nchasing someone near the front on the last \\ncorner or beyond\\n</size>",
@@ -951,7 +955,7 @@
         "コーナーが得意になり\\nしばらくの間速度が上がる": "",
         "レース中盤が迫ったとき前の方にいると\\n持久力をすごく回復する＜作戦・先行＞": "",
         "秋のレースが得意になり\\nスピードとパワーが\\nすごく上昇する": "<size=22>Become better at races in Autumn, \\nincreasing speed and power\\n</size>",
-        "レース終盤に前の方にいると\\nしばらくの間速度が上がる\\n＜作戦・先行＞": "",
+        "レース終盤に前の方にいると\\nしばらくの間速度が上がる\\n＜作戦・先行＞": "<size=22>Chaser・Increase speed lightly for a while when \\nin the trailing pack during the Middle Leg\\n</size>",
         "レース終盤にコース取りがうまくなり\\nわずかに前に出る": "",
         "追い抜こうとするとしばらくの間\\n速度が上がる＜マイル＞": "",
         "コーナーで加速力が上がり\\nさらにわずかに前に出る": "",
@@ -1118,6 +1122,8 @@
         "レース中盤に大きく差をつけて先頭に\\nいたとき、最終直線で先頭だと速度が\\nすごく上がる、東京レース場の中距離\\nレースなら効果が増える＜作戦・逃げ＞": "",
         "レース中にスキルを13回発動すると\\nしばらくの間前に出る＜中距離＞": "",
         "レース中盤に中団以降にいると\\n持久力をすごく回復する\\n＜作戦・差し＞": "",
-        "レース中盤に中団にいると\\nしばらくの間速度が上がる\\n＜作戦・差し＞": ""
+        "レース中盤に中団にいると\\nしばらくの間速度が上がる\\n＜作戦・差し＞": "",
+        "レース中盤に先頭にいると\\n速度がすごく上がる\\n＜作戦・逃げ＞": "",
+        "レース中盤にスキルを多く発動して\\n先頭にいるとき速度がすごく上がる": ""
     }
 }

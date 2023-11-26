@@ -12,16 +12,15 @@ from datatransfer import DataTransfer
 
 checkPatched = import_module("import").checkPatched
 
-def extract(db: sqlite3.Connection, stmt: str, savePath: Path):
+def extract(db: sqlite3.Connection, stmt: str, savePath: Path, dt=False):
     # In the spirit of the original db patch, we don't modify old files to keep the db order
     savePath = savePath.with_suffix(".json")
     try:
         oldData = TranslationFile(savePath)
-        transferExisting = DataTransfer(oldData)
     except FileNotFoundError:
         print(f"File not found, creating new: {savePath}")
         oldData = None
-        transferExisting = None
+    transferExisting = DataTransfer(oldData) if dt else None
     newData = dict()
     cur = db.execute(stmt)
 
@@ -49,6 +48,7 @@ def parseArgs():
     ap.add_argument("--no-text", action="store_true", help="Skip extracting standard text data")
     ap.add_argument("-f", "--file", help="Extract specific file name (as found in index.json)")
     ap.add_argument("--forced", action="store_true", help="Ignore mdb patch state")
+    ap.add_argument("-dt", "--datatransfer", action="store_true", help="Try to Find similar entries")
     return ap.parse_args()
 
 class MdbIndex:
@@ -99,7 +99,7 @@ def main():
         print("Extracting standard text...")
         with sqlite3.connect(args.src) as db:
             for stmt, outPathRel in MdbIndex("src/mdb/index.json").parseSQL(args.file):
-                extract(db, stmt, args.dst / outPathRel)
+                extract(db, stmt, args.dst / outPathRel, args.datatransfer)
         db.close()
     if not args.no_skill_data:
         print("Extracting skill data...")

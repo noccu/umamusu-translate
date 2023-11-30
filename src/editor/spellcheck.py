@@ -80,6 +80,9 @@ class SpellCheck:
             if lWord.lower() in SpellCheck.dictionary.words:
                 searchIdx += len(word)
                 continue
+            #check empty again after possible edits
+            if not lWord:
+                continue
             # print(f"Looking up {lWord}")
             suggestions = SpellCheck.dictionary.lookup(
                 lWord, symspellpy.Verbosity.CLOSEST, transfer_casing=True

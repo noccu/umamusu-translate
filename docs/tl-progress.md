@@ -115,7 +115,7 @@ Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS][]
 Mejiro McQueen | Complete | [UmaTL] (bocchi)☆
 Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (3-7)☆, MTL
-Mejiro Ramonu | In progress | [LotoDS]
+Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207](https://github.com/KevinVG207)
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)

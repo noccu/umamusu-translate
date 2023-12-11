@@ -75,8 +75,9 @@ def getDefaultFontName():
     return nametofont("TkDefaultFont").actual()["family"]
 
 def init(root):
-    global DEFAULT, BOLD, ITALIC
+    global DEFAULT, UI_JP, BOLD, ITALIC
     load(r"src/data/RodinWanpakuPro-UmaTl.otf")
     DEFAULT = create(root, id="default")
+    UI_JP = create(root, "Meiryo UI", size=9, id="jp")
     BOLD = create(root, bold=True, id="bold")
     ITALIC = create(root, italic=True, id="italic")

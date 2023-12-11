@@ -80,10 +80,10 @@ class Editor:
 
         # Nav
         frm_filenav = tk.Frame(root)
-        chapters = ttk.Combobox(frm_filenav, width=40)
+        chapters = ttk.Combobox(frm_filenav, width=40, font=fonts.UI_JP)
         chapters.bind("<<ComboboxSelected>>", self.nav.change_chapter)
         chapters.bind("<KeyRelease>", self.nav.searchChapters)
-        blocks = ttk.Combobox(frm_filenav, width=40, state="readonly")
+        blocks = ttk.Combobox(frm_filenav, width=40, font=fonts.UI_JP, state="readonly")
         blocks.bind("<<ComboboxSelected>>", self.nav.change_block)
         
         frm_filenav.rowconfigure((0,1), weight=1)
@@ -94,12 +94,13 @@ class Editor:
 
         # Speakers
         frm_speakers = tk.Frame(root)
-        fnt_speakers = fonts.create(root, size=9)
-        self.speakerJp = speaker_jp_entry = tk.Entry(frm_speakers, state="readonly", width=26, font=fnt_speakers)
-        self.speakerEn = speaker_en_entry = tk.Entry(frm_speakers, width=26, font=fnt_speakers)
+        fnt_speakers = fonts.createFrom(root, fonts.UI_JP)
+        fnt_speakers_en = fonts.create(root, size=9)
+        self.speakerJp = speaker_jp_entry = tk.Entry(frm_speakers, state="readonly", font=fnt_speakers)
+        self.speakerEn = speaker_en_entry = tk.Entry(frm_speakers, width=26, font=fnt_speakers_en)
         tk.Label(frm_speakers, text="Speaker (JP)").grid()
         tk.Label(frm_speakers, text="Speaker (EN)").grid(row=1)
-        speaker_jp_entry.grid(row=0, column=1)
+        speaker_jp_entry.grid(row=0, column=1, sticky=tk.EW)
         speaker_en_entry.grid(row=1, column=1)
         tk.Button(frm_speakers, text="Translate all", command=self.tlNames).grid(row=0, column=2)
         tk.Button(frm_speakers, text="Find missing", command=self.nav.nextMissingName).grid(row=1, column=2)
@@ -722,7 +723,7 @@ class SpeakerNotes:
         self.textBox = text.TextBoxEditable(
             self.scrollFrame.content, 
             size=(self.wrapLen, 50), 
-            font=fonts.createFrom(self.widget, None, size=10)
+            font=fonts.UI_JP,
         )
         self.textBox.pack(fill=tk.BOTH)
         self.scrollFrame.pack(fill=tk.BOTH, expand=1)

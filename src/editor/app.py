@@ -116,10 +116,16 @@ class Editor:
 
         # Metadata
         frm_meta = tk.Frame(root)
-        self.blockDurationLabel = block_duration_label = tk.Label(frm_meta, text="Text Duration")
+        self.blockDurationLabel = block_duration_label = tk.Label(frm_meta, text="Duration")
         self.blockDuration = block_duration_spinbox = ttk.Spinbox(frm_meta, from_=0, to=1000, increment=1, width=5)
+        self.titleEn = txt_title = tk.StringVar(frm_meta)
+        txt_title.trace_add("write", self.fileMan.save_title)
+        titleLabel = tk.Label(frm_meta, text="Title (EN)")
+        titleEn = tk.Entry(frm_meta, width=27, font=fnt_speakers_en, textvariable=txt_title)
         block_duration_label.pack(side=tk.LEFT)
         block_duration_spinbox.pack(side=tk.LEFT)
+        titleLabel.pack(side=tk.LEFT)
+        titleEn.pack(side=tk.LEFT)
 
         # Bottom bar
         frm_btns_bot = tk.Frame(root)

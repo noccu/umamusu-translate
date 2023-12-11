@@ -48,6 +48,7 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
         "type": args.type,
         "storyId": "",
         "title": "",
+        "enTitle": "",
         "text": list(),
     }
     transferExisting = DataTransfer(tlFile, export)
@@ -175,8 +176,10 @@ class DataTransfer:
         self.offset = 0
         self.simRatio = 0.9 if args.update and args.type != "lyrics" else 0.99
         self._printedName = False
-        if (newData and file) and (x := file.data.get("humanTl")):
-            newData["humanTl"] = x
+        if (newData and file):
+            if file.data.get("humanTl"):
+                newData["humanTl"] = True
+            newData["enTitle"] = file.data.get("enTitle", "")
 
     def print(self, text, level):
         if not self._printedName:

@@ -51,13 +51,16 @@ class Navigator:
             self.resetChapterSearch()
 
         cur_file = self.fileMan.loadFile(chapter)
+        self.fileMan.saveState.markFileLoaded(cur_file)
         self.master.status.onFileChanged(chapter)
         self.cur_file = cur_file
         self.cur_chapter = chapter
         self.cur_block = getattr(self.cur_file, "lastBlock", 0)
+
         self.blockPicker["values"] = [
             f"{i+1} - {block['jpText'][:16]}" for i, block in enumerate(cur_file.textBlocks)
         ]
+        self.master.titleEn.set(cur_file.data.get("enTitle", ""))
         self.change_block(self.cur_block, newFile=True)  # Takes care of loading
 
         ll = textprocess.calcLineLen(cur_file) or self.master.textBoxEn.DEFAULT_WIDTH

@@ -94,9 +94,8 @@ class Editor:
 
         # Speakers
         frm_speakers = tk.Frame(root)
-        fnt_speakers = fonts.createFrom(root, fonts.UI_JP)
         fnt_speakers_en = fonts.create(root, size=9)
-        self.speakerJp = speaker_jp_entry = tk.Entry(frm_speakers, state="readonly", font=fnt_speakers)
+        self.speakerJp = speaker_jp_entry = tk.Entry(frm_speakers, state="readonly", font=fonts.UI_JP)
         self.speakerEn = speaker_en_entry = tk.Entry(frm_speakers, width=26, font=fnt_speakers_en)
         tk.Label(frm_speakers, text="Speaker (JP)").grid()
         tk.Label(frm_speakers, text="Speaker (EN)").grid(row=1)

@@ -724,6 +724,7 @@ class SpeakerNotes:
             self.scrollFrame.content, 
             size=(self.wrapLen, 50), 
             font=fonts.UI_JP,
+            wrap=tk.WORD,
         )
         self.textBox.pack(fill=tk.BOTH)
         self.scrollFrame.pack(fill=tk.BOTH, expand=1)

@@ -48,6 +48,8 @@ class TextBox(tk.Text):
 
     DEFAULT_WIDTH = 54
     DEFAULT_HEIGHT = 4
+    SUPPORTED_TAGS = ("color", "b", "i", "size")
+    TAG_RE = r"<(/?)((" f"(?:{'|'.join(SUPPORTED_TAGS)})" r"+)=?([#a-z\d{}]+)?)>"
 
     # todo: maybe move color to post_init and pass through init itself to tk
     def __init__(self, parent, size: tuple[int] = (None, None), editable:bool = False, font: fonts.Font = None, **kwargs) -> None:
@@ -89,11 +91,8 @@ class TextBox(tk.Text):
         tagList = list()
         offset = 0
         openedTags = dict()
-        tagRe = r"<(/?)(([a-z]+)=?([#a-z\d{}]+)?)>"
-        for m in re.finditer(tagRe, text, flags=re.IGNORECASE):
+        for m in re.finditer(TextBox.TAG_RE, text, flags=re.IGNORECASE):
             isClose, fullTag, tagName, tagVal = m.groups()
-            if tagName not in ("color", "b", "i", "size"):
-                continue
             if isClose:
                 openedTags[tagName]["end"] = m.start() - offset
             else:
@@ -104,7 +103,7 @@ class TextBox(tk.Text):
             offset += len(m[0])
         tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         # Add the cleaned text
-        setText(self, re.sub(tagRe, "", text, flags=re.IGNORECASE), append, tag)
+        setText(self, re.sub(TextBox.TAG_RE, "", text, flags=re.IGNORECASE), append, tag)
         # Apply tags
         for toTag in tagList:
             self.tag_add(toTag["name"], f"{tagBase}+{toTag['start']}c", f"{tagBase}+{toTag['end']}c")

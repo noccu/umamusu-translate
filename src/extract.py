@@ -281,6 +281,8 @@ def exportAsset(bundle: Optional[str], path: Union[str, PurePath], db=None):
         if args.upgrade and tlFile.version == TranslationFile.latestVersion:
             logger.info(f"File already on latest version, skipping: {path}")
             return 0
+        if args.skip_mtl and not tlFile.data.get("humanTl"):
+            return 0
 
         storyId = StoryId.parse(args.type, tlFile.getStoryId())
         try:
@@ -365,6 +367,9 @@ def parseArgs(args=None):
         ),
     )
     ap.add_argument("-text", "--plaintext", action="store_true", help="Convert tlFiles to txt format")
+    ap.add_argument(
+        "-nomtl", "--skip-mtl", action="store_true", help="Only extract human translations when updating"
+    )
 
     args = ap.parse_args()
 

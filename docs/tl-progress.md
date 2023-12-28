@@ -37,7 +37,7 @@ Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 name | progress | translator
 --- | --- | ---
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slight edit)
-The Sounds of Autumn | Complete, Stalled, In progress | MTL (old), Anonymous Reindeer, [UmaTL] (Anonymous Panda)☆
+The Sounds of Autumn | In progress | [UmaTL] (Anonymous Panda)☆
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | MTL, [noccu]☆
@@ -60,7 +60,7 @@ Ingenious!? Spring Festival! Dodgeball Fury! | In progress | [noccu] (preview) +
 An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 #summer #besties | Complete | [BlunterMonk](https://github.com/BlunterMonk) (MTL edit)
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
-Tapestry of Endless Farewells | Complete | [UmaTL] (Anonymous Panda)☆
+Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)☆
 As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)☆
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
@@ -138,8 +138,8 @@ Symboli Kris S | Complete | [LotoDS][]
 Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)☆
 Tap Dance City | In Progress | [KevinVG207]
 Taiki Shuttle | Complete | [LotoDS][]
-??? | In Progress | [UmaTL] (Anonymous Panda)☆
-TM Opera O | Stalled | [Kasey]
+Tanino Gimlet | In Progress | [UmaTL] (Anonymous Panda)☆
+TM Opera O | In Progress | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
@@ -224,32 +224,34 @@ Vodka (SSR, Heart Ignition!!) | Exists | Anonymous Raccoon
 name | progress | translator
 --- | --- | ---
 All not listed up to 2023/01/01 | Complete | MTL (contributed by Korgi up to 2022/07/08)
+Admire Vega | In progress | [UmaTL] (noccu)☆
 Agnes Tachyon | Complete | [nem] (bday duo 1-2)
 Aston Machan | Exists | [Snep] (bday duo 1, bday triplet 1)
 Curren Chan | Complete | [noccu]
-Daiichi Ruby | In progress | [UmaTL]☆
+Daiichi Ruby | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Gold Ship | Complete | [noccu] (solo 1-2), MTL
 Hishi Amazon | Stalled | [noccu] (duo 2)
-Hishi Miracle | In progress | [UmaTL]☆
-K.S. Miracle | In progress | [UmaTL]☆
+Hishi Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Ines Fujin | In progress | [UmaTL] (noccu)☆
+K.S.Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Kitasan Black | Stalled | [noccu] (solo 2)
 Maruzensky | Complete | [noccu]
-Marvelous Sunday | In progress | [UmaTL]☆
+Marvelous Sunday | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Matikanetannhauser | Exists | [Snep] (bday duo 1, bday triplet 1)
-Meisho Doto | In progress | [UmaTL]☆
-Mejiro McQueen | In progress | [UmaTL]☆
-Mejiro Ramonu | In progress | [UmaTL]☆
+Meisho Doto | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Mejiro McQueen | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Mejiro Ramonu | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Mihono Bourbon | In progress | [noccu] (solo 1)
-Mr. C.B. | In progress | [UmaTL]☆
-Narita Top Road | In progress | [UmaTL]☆
+Mr. C.B. | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Narita Top Road | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Rice Shower | In progress | [UmaTL]☆
 Sakura Bakushin O | In progress | [Kasey]
-Sakura Laurel | In progress | [UmaTL]☆
+Sakura Laurel | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Shinko Windy | Stalled | [noccu] (solo 3)
-Sirius Symboli | In progress | [UmaTL]☆
-Symboli Kris S | In progress | [UmaTL]☆
-Taiki Shuttle | In progress | [UmaTL]☆
-Tanino Gimlet | In progress | [UmaTL]☆
+Sirius Symboli | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Symboli Kris S | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Taiki Shuttle | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Tanino Gimlet | In progress | [UmaTL] ([noob])☆ (solo 1-3)
 Twin Turbo | In progress | [UmaTL]☆
 Yaeno Muteki | Complete | [noccu] (solo 2), MTL
 
@@ -380,3 +382,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [KevinVG207]: https://ko-fi.com/kevinvg207
 [Kasey]: https://diabolicalbaker.carrd.co/
 [UmaTL]: https://www.patreon.com/noccu
+[noob]: https://twitter.com/noobcakeart

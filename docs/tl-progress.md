@@ -62,6 +62,7 @@ An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
 Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)☆
 As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)☆
+Mine and Everyone's | In progress | [UmaTL] (Anonymous Panda)☆
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events
@@ -210,6 +211,7 @@ Oguri Cap | Complete | MTL
 Rice Shower | Complete | MTL
 Rudolph | Stalled | Anonymous Reindeer
 Sakura Bakushin O | Complete, Stalled, In progress | MTL, [Kasey] (100-306, 511-900)(88/133), [noccu]
+Satono Crown | In progress | [UmaTL] (Anonymous Panda)☆
 
 ## Cards
 name | progress | translator

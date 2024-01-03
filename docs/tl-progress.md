@@ -122,7 +122,7 @@ Mihono Bourbon | Complete | [KevinVG207]
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS][]
 Nice Nature | Complete | [xct]
-Neo Universe | In progress | [LotoDS]
+Neo Universe | Complete | [LotoDS]
 Rice Shower  | Complete | [Ben][] (ep 1-4), MTL
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
@@ -144,7 +144,7 @@ Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
 Vodka | Complete, Exists | MTL, Anonymous Raccoon
-Yaeno Muteki | In progress, Complete | [LotoDS], [LotoDS] (ep 1-4) + MTL (rest)
+Yaeno Muteki | Complete | [LotoDS]
 Yamanin Zephyr | Complete | [Director Kok][]
 Wonder Acute | Stalled | [Riersa]
 Zenno Rob Roy | Complete | [LotoDS][]

@@ -215,12 +215,16 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1077 | ミッドナイト・エピローグ | Midnight Epilogue
 1078 | Ambitious World | 
 1079 | winning the soul (PandaBoY Remix) | 
-8501 | スタホTV | 
-8502 | 条件戦 | 
-8503 | 怪物誕生 | 
-8504 | 親馬選択 | 
-8505 | 新馬生産 | 
-9051 | 【MCパート】笑顔の宝物 -Beyond The Future!- | 
+1080 | Droite dance part |
+1081 | Glorious Moment！ |
+1086 | Hat on your Head! |
+1087 | GSK☆ |
+8501 | スタホTV | Sutaho TV
+8502 | 条件戦 | Allowance Race
+8503 | 怪物誕生 | Birth of a Monster
+8504 | 親馬選択 | Parent Selection
+8505 | 新馬生産 | New Yearling
+9051 | 【MCパート】笑顔の宝物 -Beyond The Future!- | [MC] Treasured Smile -Beyond The Future!―
 
 # Index IDs
 

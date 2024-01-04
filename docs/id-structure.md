@@ -41,7 +41,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
 ----|--- | ---
  01 | Solo | Characters alone/talking to trainer
  02 | Duo | Two characters talking
- 03 | Triplets | Three characters interacting, most are in "common" id `0000`
+ 03 | Trio | Three characters interacting, most are in "common" id `0000`
 
 # Uma IDs
 

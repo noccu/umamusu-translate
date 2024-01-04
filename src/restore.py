@@ -109,7 +109,10 @@ def main(args: patch.Args = None):
         if uma:
             (uma / "version.dll").unlink(missing_ok=True)
             (uma / "uxtheme.dll").unlink(missing_ok=True)
+        mdbFileBackup = const.GAME_MASTER_FILE.with_suffix(".mdb.bak")
         const.GAME_MASTER_FILE.unlink(missing_ok=True)
+        if mdbFileBackup.exists():
+            mdbFileBackup.rename(const.GAME_MASTER_FILE)
 
 
 if __name__ == "__main__":

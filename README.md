@@ -5,8 +5,9 @@
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. It includes a few scripts to patch the game using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
-Translation progress and credits are in [tl-progress]. Guides can be found below.  
-For troubleshooting, please open an issue or ask in the Discord server.
+[Current state](#current-state). Guides for install and use can be found [below](#setting-up--getting-started).
+Translation progress and credits are in [tl-progress].  
+If you encounter problems, check the troubleshooting section with each guide step first. Open an issue or ask in the Discord server if this doesn't solve it.
 
 This is based on the DMM version of the game and *should* work on linux anc mac too, with some limitations.  
 
@@ -19,7 +20,8 @@ Supports translating:
     - Event prologues
 - Special events
 - Training stories
-- Home screen lines & interactions (own & lobby characters)
+- Home interactions (lobby characters)
+- Speech balloons (home screen, training, …) 
 - Lyrics
 - Most of the UI through [tlg].
 - Skills, names, missions, and other such "dynamic" texts. (Same as the old *mdb patch*)
@@ -31,7 +33,7 @@ Other:
 - Support for syncing with arbitrary framerates 
 - Adjustable reading speed.
 - Basic file/asset management tools (wip)
-- Auto-updating
+- Auto-updates
 
 Included translations & credits: [tl-progress]  
 Toolset info: [scripts](#script-info)
@@ -44,34 +46,38 @@ No maintainer nor contributor will be responsible for any issues encountered as 
 
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
 
-# **Current state (maintainer's note)**
-This project has taken a lot of time and effort that I can't afford to keep providing.  
-It will no longer be updated outside of the following:
-- Integration of translation PRs 
-- Critical bug fixes & changes
-- Minor housekeeping
+# **Current state**
+This project has taken a lot of time and effort that I can't afford to keep providing freely.  
+Work is continued, to the degree affordable and with a focus on translations, through the help of monthly supporters. This work is available first to said supporters who make it possible, and later finds its way to the wider community.
 
-Some occasional additions are still possible. All the work that has gone into it over one and a half years as well as the abilities it provides both to users and community contributors also remain available.
-
-My own work on the project, to the degree I can afford it, is continued in a separate version accessible to monthly supporters.
 This includes:
-- New translations
-- Latest game updates
-- Additional content (lyrics, pakatube, …)
-- Patch improvements & QOL
-- Translation spotlights; a series of small periodic writeups expanding upon some terms & translations
+- New translations for various story contents
+- Keeping up with the latest game updates
+- (occasional) Patch improvements & QOL
+- (occasional) Lyrics translations
+
+Some extra work or benefits, when available, remain only for supporters:
+- Polls & requests
+- Additional content (pakatube tl, …)
+- Translation spotlights; a series of small writeups expanding upon some terms, culture, and translations
 - Priority tech support
 
-Currently this is available to supporters with any amount of pledge. Please [come](https://ko-fi.com/noccyu) [join](https://www.patreon.com/noccu) if you can!
+Finally, some things will continue to be simultaneously updated for everyone:
+- Critical bug fixes
+- Integration of community translations (when permitted or submitted by the relevant contributor)
+- Minor housekeeping
+- Community-wide translation progress
+
+All the work that has gone into since 2021 as well as the abilities it provides both to users and community contributors remain available.  
+If you'd like to contribute as a supporter, please check the links at the top of this readme or at the right of the page.
 
 # Setting up / Getting started
-[An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)
+~~[An alternative guide with images by CryDuringItAll](https://docs.google.com/document/d/1_Ze8oez90d3Ic1rJhbK4F3wWe7hAIB_j2vJFjmcHfkY)~~ Outdated and not recommended anymore but could still be useful for images or extra guides.
 
 ## Requirements (get these first!)
 1. Install Python 3.11 from the files at the bottom of [this page](https://www.python.org/downloads/release/python-3116/).
     - The defaults should work fine. To customize; you need pip, the py launcher, and tcl/tk. *Do not* select "add to path".
     - [Direct link to download](https://www.python.org/ftp/python/3.11.6/python-3.11.6-amd64.exe).
-    - For the more technical: UmaTL is written for Python 3.9+, the latest versions might not have pre-build dependency binaries, use at own caution and setup.
 1. Clone or [download a zip](https://github.com/noccu/umamusu-translate/archive/refs/heads/master.zip) (green "code" button) of this project and extract it.
 1. Make sure you opened and logged in to the game at least once before.
 
@@ -81,21 +87,23 @@ Currently this is available to supporters with any amount of pledge. Please [com
 1. (Optional, for dialogue) Download all game data [through the game menu](docs/guide_batch_download.jpg)
     - The patch will only edit files existing in your game data. If you don't do this you can simply rerun the dialogue import step below for new content.
 
-### Troubleshooting
+### Troubleshooting (help, errors!)
+- [Something about building wheels…?](https://github.com/noccu/umamusu-translate/issues/56)
 - Errors about "pip not found"?
     - This is uncommon as pip is an integral part of python [Check here](https://pip.pypa.io/en/stable/installation/#ensurepip) for solutions.
     - If you still get errors, delete the .venv folder first.
 
 ## Config
 The **first time** you run any of the `.bat` files mentioned in the Patching section below, an `umatl.json` file will be created in the folder **and the script will exit without doing anything else**.  
-You can change any settings in this config file as you like at any time. Simply run the same .bat file again to have it start patching this first time.
+This file can be opened in any text editor and you can change any settings in this config file as you like at any time. Simply run the same .bat file again to have it start patching this first time.
 
-The format of this file is `relative script path (no ext) -> argument -> value`.  
+For advanced users: The format of this file is `relative script path (no ext) -> argument -> value`.  
 For a list of arguments, run the scripts with -h or check near the bottom of the relevant .py files.  
 Some config changes only apply to new files by default. To forcefully update all files, (temporarily) set update to false.
 
 # Patching
-Each of the following parts is separate and can be used independently, though some effectiveness may be lost.
+The following parts are intended to be used together, and the patch as a whole assumes this is the case.  
+However, they can be used independently if so wished.
 
 ## UI (menus, buttons, ...)
 1. Open the game's *install folder* (where the `Umamusume.exe` is)

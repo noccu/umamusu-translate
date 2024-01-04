@@ -113,7 +113,11 @@ def main():
         if uma:
             (uma / "version.dll").unlink(missing_ok=True)
             (uma / "uxtheme.dll").unlink(missing_ok=True)
-        Path(common.GAME_MASTER_FILE).unlink(missing_ok=True)
+        mdbFile = Path(common.GAME_MASTER_FILE)
+        mdbFileBackup = mdbFile.with_suffix(".mdb.bak")
+        mdbFile.unlink(missing_ok=True)
+        if mdbFileBackup.exists():
+            mdbFileBackup.rename(mdbFile)
 
 
 if __name__ == "__main__":

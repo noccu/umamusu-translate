@@ -222,7 +222,7 @@ Vodka (SR, Annoying Observer) | Complete, Exists | MTL, Anonymous Raccoon
 Vodka (SSR, Road of Vodka) | Complete, Exists | MTL, Anonymous Raccoon
 Vodka (SSR, Heart Ignition!!) | Exists | Anonymous Raccoon
 
-# Home Dialogue
+# Home Interactions
 name | progress | translator
 --- | --- | ---
 All not listed up to 2023/01/01 | Complete | MTL (contributed by Korgi up to 2022/07/08)

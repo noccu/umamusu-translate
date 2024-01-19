@@ -108,6 +108,8 @@ class PatchManager:
                 print(e)
         except PatchError as e:
             print(f"Skipped {file}: {e}")
+        except UnicodeError:
+            print(f"Successfully processed file idx {file[:3]}, details unknown. (Could not render full name)")
         except Exception:
             print(f"Error importing {file}")
             if self.args.verbose:

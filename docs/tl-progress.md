@@ -37,7 +37,7 @@ Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 name | progress | translator
 --- | --- | ---
 Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slight edit)
-The Sounds of Autumn | In progress | [UmaTL] (Anonymous Panda)☆
+The Sounds of Autumn | Complete | [UmaTL] (Anonymous Panda)☆
 Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
 Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
 Blossoming New Year's Karuta Contest | Complete, In progress | MTL, [noccu]☆
@@ -124,7 +124,7 @@ Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS][]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
-Rice Shower  | Complete | [Ben][] (ep 1-4), MTL
+Rice Shower  | Complete, In progress | [Ben][] (ep 1-4) + MTL, [UmaTL] (bocchi)☆
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
@@ -140,7 +140,7 @@ Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)☆
 Tap Dance City | In Progress | [KevinVG207]
 Taiki Shuttle | Complete | [LotoDS][]
 Tanino Gimlet | In Progress | [UmaTL] (Anonymous Panda)☆
-TM Opera O | In Progress | [UmaTL] (noccu)☆
+TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
@@ -295,6 +295,7 @@ Mejiro Ardan | Complete | [Riersa] (MTL edit)
 Meisho Doto | Complete, In Progress | MTL, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa] (MTL edit)
 Narita Taishin | Complete | [Riersa] (MTL edit)
+Rice Shower | In progress | [UmaTL] ([noob])☆
 Sakura Bakushin O | Complete | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)

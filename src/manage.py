@@ -70,8 +70,7 @@ def importDump(path: PurePath, args) -> dict:
             continue
         # remove animated text
         if len(animationCheck) == 0 or (
-            val.startswith(animationCheck[-1][1])
-            and len(val) - len(animationCheck[-1][1]) < 2
+            val.startswith(animationCheck[-1][1]) and len(val) - len(animationCheck[-1][1]) < 2
         ):
             animationCheck.append((key, val))
         else:
@@ -295,13 +294,82 @@ class FileWatcher:
         print(resp.status_code, resp.text)
 
 
+def watch():
+    import threading
+    import time
+
+    watcher = FileWatcher()
+    try:
+        t = threading.Thread(
+            target=watcher.watch,
+            args=(helpers.getUmaInstallDir() / "localized_data",),
+            daemon=True,
+        )
+        t.start()
+        time.sleep(9999)  # wait for exit
+    except KeyboardInterrupt:
+        print("Stop requested...")
+        watcher.close()
+    finally:
+        t.join(15)
+        print("Exiting")
+    # Manual form
+    # while True:
+    #     x = input("Action (r,q): ")
+    #     if x == "r":
+    #         watcher._reloadTlg()
+    #     else:
+    #         return
+
+
+def move():
+    print("Copying UI translations")
+    installDir = helpers.getUmaInstallDir()
+    if installDir:
+        try:
+            dst = installDir / LOCALIFY_DATA_DIR.name
+            # Following disabled to check TLG status. First install must be manual.
+            # dst.mkdir(exist_ok=True)
+            # Using rglob for future functionality
+            dynFiles = list()
+            for f in LOCALIFY_DATA_DIR.rglob("*.json"):
+                subPath = f.relative_to(LOCALIFY_DATA_DIR)
+                fn = dst / subPath
+                fn.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(f, fn)
+                if len(subPath.parts) > 1:
+                    dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
+            updConfigDicts(installDir / "config.json", dynFiles)
+        except PermissionError:
+            print(
+                f"No permission to write to {installDir}.\n"
+                "Update perms, run as admin, or copy files yourself."
+            )
+        except FileNotFoundError as e:
+            if not installDir.exists():
+                print(
+                    f"Obtained install dir doesn't exist: {str(installDir)}\n"
+                    "Possibly corrupt or double game install. Copy UI files manually."
+                )
+            elif not dst.exists():
+                print("TLG not installed. See guide if you wish to translate UI elements.")
+            else:
+                print(
+                    f"Error: {e}\n"
+                    f"A patch file with/for UI translations is missing.\n"
+                    f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}."
+                )
+    else:
+        print("Couldn't find game install path, files not moved.")
+
+
 def parseArgs():
     ap = common.Args("Manages localify data files for UI translations", defaultArgs=False)
     ap.add_argument(
         "-new",
         "--populate",
         action="store_true",
-        help="Add dump (local or target) entries to static_en.json for translating",
+        help="Add dump (local or target) entries to ui.json for translating",
     )
     # ? in hindsight I don't think it's useful to not import as
     # ? we need both dump and tl file for the whole thing to
@@ -316,7 +384,7 @@ def parseArgs():
         "-upd",
         "--update",
         action="store_true",
-        help="Create/update the final static.json file used by the dll from static_dump.json and static_en.json",
+        help="Create/update the final json files used by TLG",
     )
     ap.add_argument(
         "-clean",
@@ -325,11 +393,10 @@ def parseArgs():
         nargs="?",
         const="both",
         default=False,
-        help="Remove untranslated entries from tl file and local dump."
-        'Pass "ui" or "dump" to clean only one or the other file; default "both".',
+        help="Remove untranslated entries from ui tl file and/or local dump. Defaults to 'both'",
     )
     ap.add_argument(
-        "-sort", "-order", action="store_true", help="Sort keys in local dump and final file"
+        "-sort", "-order", action="store_true", help="Sort keys in local dump and final files"
     )
     ap.add_argument(
         "-O",
@@ -421,30 +488,24 @@ def main():
     if args.convert_mdb:
         mdbDicts = convertMdb()
         updConfigDicts(CONFIG_FILE, mdbDicts)
-    elif args.convert_asset:
-        if args.convert_asset is True:
-            files = common.searchFiles(args.type, args.group, args.id, args.idx)
-            for file in files:
-                convertTlFile(common.TranslationFile(file), overwrite=args.overwrite)
-        else:  # str
-            convertTlFile(common.TranslationFile(args.convert_asset), overwrite=args.overwrite)
 
-    if args.clean:
-        clean(args.clean)
-        return
-    elif args.sort:
-        order()
-        return
+    if args.convert_asset is True:
+        # We currently don't use the needed default args
+        raise NotImplementedError("Provide a direct path.")
+        files = common.searchFiles(args.type, args.group, args.id, args.idx)
+        for file in files:
+            convertTlFile(common.TranslationFile(file), overwrite=args.overwrite)
+    elif isinstance(args.convert_asset, str):
+        convertTlFile(common.TranslationFile(args.convert_asset), overwrite=args.overwrite)
 
+    if args.backup_dump:
+        print("Backing up dump file...")
+        shutil.copyfile(LOCAL_DUMP, LOCAL_DUMP.with_stem("static_dump_old"))
     if args.populate or args.update or args.import_only:
-        if args.backup_dump:
-            print("Backing up dump file...")
-            shutil.copyfile(LOCAL_DUMP, LOCAL_DUMP.with_stem("static_dump_old"))
         dumpData = importDump(DUMP_FILE, args)
         if args.import_only:
             return
         tlData = helpers.readJson(TL_FILE)
-
         if args.populate:
             updateTlData(dumpData, tlData)
             if args.tlg:
@@ -456,72 +517,14 @@ def main():
             helpers.writeJson(HASH_FILE_STATIC, hashData[0])
             helpers.writeJson(HASH_FILE_DYNAMIC, hashData[1])
 
+    if args.clean:
+        clean(args.clean)
+    if args.sort:
+        order()
     if args.move:
-        print("Copying UI translations")
-        installDir = helpers.getUmaInstallDir()
-        if installDir:
-            try:
-                dst = installDir / LOCALIFY_DATA_DIR.name
-                # Following disabled to check TLG status. First install must be manual.
-                # dst.mkdir(exist_ok=True)
-                # Using rglob for future functionality
-                dynFiles = list()
-                for f in LOCALIFY_DATA_DIR.rglob("*.json"):
-                    subPath = f.relative_to(LOCALIFY_DATA_DIR)
-                    fn = dst / subPath
-                    fn.parent.mkdir(parents=True, exist_ok=True)
-                    shutil.copyfile(f, fn)
-                    if len(subPath.parts) > 1:
-                        dynFiles.append(LOCALIFY_DATA_DIR.name / subPath)
-                updConfigDicts(installDir / "config.json", dynFiles)
-            except PermissionError:
-                print(
-                    f"No permission to write to {installDir}.\n"
-                    "Update perms, run as admin, or copy files yourself."
-                )
-            except FileNotFoundError as e:
-                if not installDir.exists():
-                    print(
-                        f"Obtained install dir doesn't exist: {str(installDir)}\n"
-                        "Possibly corrupt or double game install. Copy UI files manually."
-                    )
-                elif not dst.exists():
-                    print("TLG not installed. See guide if you wish to translate UI elements.")
-                else:
-                    print(
-                        f"Error: {e}\n"
-                        f"A patch file with/for UI translations is missing.\n"
-                        f"Data may have been corrupted somehow, restore the files in {LOCALIFY_DATA_DIR}."
-                    )
-        else:
-            print("Couldn't find game install path, files not moved.")
-
+        move()
     if args.watch:
-        import threading
-        import time
-
-        watcher = FileWatcher()
-        try:
-            t = threading.Thread(
-                target=watcher.watch,
-                args=(helpers.getUmaInstallDir() / "localized_data",),
-                daemon=True,
-            )
-            t.start()
-            time.sleep(9999)  # wait for exit
-        except KeyboardInterrupt:
-            print("Stop requested...")
-            watcher.close()
-        finally:
-            t.join(15)
-            print("Exiting")
-        # Manual form
-        # while True:
-        #     x = input("Action (r,q): ")
-        #     if x == "r":
-        #         watcher._reloadTlg()
-        #     else:
-        #         return
+        watch()
 
 
 if __name__ == "__main__":

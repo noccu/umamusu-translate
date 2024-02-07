@@ -75,6 +75,8 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
             if header:
                 header = False
                 continue
+            if not row:  # fully empty lines
+                continue
             textData = extractText("lyrics", row)
             transferExisting(storyId, textData)
             export["text"].append(textData)

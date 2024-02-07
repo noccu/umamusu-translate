@@ -221,6 +221,7 @@ class StoryPatcher:
             logger.debug(f"{blockIdx}: Text length adjusted but no anim data found")
 
         # Adjust length of screen effect clips if they originally extended until the end of the block.
+        #todo: store the originals, probably
         for track in self.assetData["BlockList"][blockIdx]['ScreenEffectTrackList']:
             if not track['ClipList']:
                 continue
@@ -234,7 +235,7 @@ class StoryPatcher:
             if clipData['StartFrame'] + clipData['ClipLength'] < assetData["StartFrame"] + origClipLen:
                 continue
             curClipLen = clipData['ClipLength']
-            clipData["ClipLength"] = curClipLen + newClipLen - origClipLen
+            clipData["ClipLength"] = max(newClipLen, clipData['ClipLength'])
             clipAsset.save_typetree(clipData)
             logger.debug(f"Adjusted ScreenEffectClip length at {blockIdx}: {curClipLen} -> {clipData['ClipLength']}")
 

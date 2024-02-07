@@ -124,7 +124,7 @@ Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS][]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
-Rice Shower  | Complete, In progress | [Ben][] (ep 1-4) + MTL, [UmaTL] (bocchi)☆
+Rice Shower  | Complete, In Progress | [Ben][] (ep 1-4) + MTL, [UmaTL] (bocchi)☆
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
@@ -144,6 +144,7 @@ TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
+Vivlos | In Progress | [LotoDS]
 Vodka | Complete, Exists | MTL, Anonymous Raccoon
 Yaeno Muteki | Complete | [LotoDS]
 Yamanin Zephyr | Complete | [Director Kok][]
@@ -230,30 +231,30 @@ Admire Vega | In progress | [UmaTL] (noccu)☆
 Agnes Tachyon | Complete | [nem] (bday duo 1-2)
 Aston Machan | Exists | [Snep] (bday duo 1, bday triplet 1)
 Curren Chan | Complete | [noccu]
-Daiichi Ruby | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Daiichi Ruby | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Gold Ship | Complete | [noccu] (solo 1-2), MTL
 Hishi Amazon | Stalled | [noccu] (duo 2)
-Hishi Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Hishi Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Ines Fujin | In progress | [UmaTL] (noccu)☆
-K.S.Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+K.S.Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Kitasan Black | Stalled | [noccu] (solo 2)
 Maruzensky | Complete | [noccu]
-Marvelous Sunday | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Marvelous Sunday | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Matikanetannhauser | Exists | [Snep] (bday duo 1, bday triplet 1)
-Meisho Doto | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Mejiro McQueen | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Mejiro Ramonu | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Meisho Doto | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Mejiro McQueen | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Mejiro Ramonu | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Mihono Bourbon | In progress | [noccu] (solo 1)
-Mr. C.B. | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Narita Top Road | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Rice Shower | In progress | [UmaTL]☆
+Mr. C.B. | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Narita Top Road | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Rice Shower | In progress | [UmaTL]☆ (bocchi)
 Sakura Bakushin O | In progress | [Kasey]
-Sakura Laurel | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Sakura Laurel | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Shinko Windy | Stalled | [noccu] (solo 3)
-Sirius Symboli | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Symboli Kris S | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Taiki Shuttle | In progress | [UmaTL] ([noob])☆ (solo 1-3)
-Tanino Gimlet | In progress | [UmaTL] ([noob])☆ (solo 1-3)
+Sirius Symboli | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Symboli Kris S | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Taiki Shuttle | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Tanino Gimlet | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Twin Turbo | In progress | [UmaTL]☆
 Yaeno Muteki | Complete | [noccu] (solo 2), MTL
 
@@ -295,7 +296,7 @@ Mejiro Ardan | Complete | [Riersa] (MTL edit)
 Meisho Doto | Complete, In Progress | MTL, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa] (MTL edit)
 Narita Taishin | Complete | [Riersa] (MTL edit)
-Rice Shower | In progress | [UmaTL] ([noob])☆
+Rice Shower | In progress | [UmaTL]☆ ([noob])
 Sakura Bakushin O | Complete | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)
@@ -330,13 +331,14 @@ Glorious Moment! | Complete | TR
 *Golshi Rap* | Complete | [noccu]
 *Hat on your head!* | Complete | [noccu]☆
 *Hashire Umamusume* | Complete | [noccu]
+*??? (Hishi Miracle)* | In progress | [Kuwaiden]
 Honnou Speed | Complete | [Eight][]
 Kirari Magic Show | Complete | [LotoDS]
 *Kanjou no Reimei* | In progress | [noccu]☆
 *Koi Wa Derby* | Complete | Hentai Maskudo
 *L's Surprise!!* | Stalled | [noccu]☆
 l'Arc de Gloire | Complete | [LotoDS]
-*Lightless * | Complete | [Ren]
+*Lightless* | Complete | [Ren]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
 [*Mikadowarai kageki \~Tataeyo Towa Ni~*](https://youtu.be/XtTn3GSVKM0) | Complete | [Kasey]
 Ms. VICTORIA | Complete | [Nine]
@@ -348,6 +350,7 @@ Pyoitto♪Hallelujah! | Complete | [Kasey]
 [*Rising Girl*](https://twitter.com/dorcarolle/status/1192625305795489792) | Complete, Stalled | [dorcarolle](https://twitter.com/dorcarolle), [noccu]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
 [TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
+*Tachiichi Zeroban! Juni ha Ichiban! (Smart Falcon)* | In progress | [Kasey]
 Tracen Ondo | Complete | [Kasey]
 transforming | Complete | [LotoDS][]
 Umapyoi Densetsu | Complete | Anonymous Reindeer + [Karimenrider] (missing parts)

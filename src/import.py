@@ -203,22 +203,40 @@ class StoryPatcher:
         self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
         logger.debug(f"{blockIdx}: Adjusted TextClip length: {origClipLen} -> {newClipLen}")
 
-        if "animData" not in textBlock:
+        if "animData" in textBlock:
+            for animGroup in textBlock["animData"]:
+                newAnimLen = animGroup["origLen"] + newClipLen - origClipLen
+                if newAnimLen <= animGroup["origLen"]:
+                    logger.debug(f"{blockIdx}: New anim data <= original. Skipping.")
+                    break
+                animAsset = self.bundle.assets.get(animGroup["pathId"])
+                if animAsset is None:
+                    logger.debug(f"{blockIdx}: Can't find animation asset ({animGroup['pathId']})")
+                    break
+                animData = animAsset.read_typetree()
+                animData["ClipLength"] = newAnimLen
+                animAsset.save_typetree(animData)
+                logger.debug(f"{blockIdx}: Adjusted AnimClip length: {animGroup['origLen']} -> {newAnimLen}")
+        else:
             logger.debug(f"{blockIdx}: Text length adjusted but no anim data found")
-            return
-        for animGroup in textBlock["animData"]:
-            newAnimLen = animGroup["origLen"] + newClipLen - origClipLen
-            if newAnimLen <= animGroup["origLen"]:
-                logger.debug(f"{blockIdx}: New anim data <= original. Skipping.")
-                return
-            animAsset = self.bundle.assets[animGroup["pathId"]]
-            if animAsset is None:
-                logger.debug(f"{blockIdx}: Can't find animation asset ({animGroup['pathId']})")
-                return
-            animData = animAsset.read_typetree()
-            animData["ClipLength"] = newAnimLen
-            animAsset.save_typetree(animData)
-            logger.debug(f"{blockIdx}: Adjusted AnimClip length: {animGroup['origLen']} -> {newAnimLen}")
+
+        # Adjust length of screen effect clips if they originally extended until the end of the block.
+        for track in self.assetData["BlockList"][blockIdx]['ScreenEffectTrackList']:
+            if not track['ClipList']:
+                continue
+            clipPathID = track['ClipList'][-1]['m_PathID']
+            try:
+                clipAsset = self.bundle.assets[clipPathID]
+            except KeyError:
+                logger.debug(f"Can't find screen effect clip asset ({clipPathID}) at {blockIdx}")
+                continue
+            clipData = clipAsset.read_typetree()
+            if clipData['StartFrame'] + clipData['ClipLength'] < assetData["StartFrame"] + origClipLen:
+                continue
+            curClipLen = clipData['ClipLength']
+            clipData["ClipLength"] = curClipLen + newClipLen - origClipLen
+            clipAsset.save_typetree(clipData)
+            logger.debug(f"Adjusted ScreenEffectClip length at {blockIdx}: {curClipLen} -> {clipData['ClipLength']}")
 
     def patch(self):
         logger.debug(f"Patching {self.bundle.bundleName}")

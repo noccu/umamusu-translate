@@ -108,6 +108,8 @@ class PatchManager:
                 print(e)
         except PatchError as e:
             print(f"Skipped {file}: {e}")
+        except UnicodeError:
+            print(f"Successfully processed file idx {file[:3]}, details unknown. (Could not render full name)")
         except Exception:
             print(f"Error importing {file}")
             if self.args.verbose:
@@ -258,6 +260,32 @@ class StoryPatcher:
                                             )
                         elif self.manager.args.verbose:
                             print(f"Text length adjusted but no anim data found at {blockIdx}")
+                        
+                        # Adjust length of screen effect clips if they originally extended until the end of the block.
+                        for track in self.assetData["BlockList"][blockIdx]['ScreenEffectTrackList']:
+                            if not track['ClipList']:
+                                continue
+                            clipPathID = track['ClipList'][-1]['m_PathID']
+                            try:
+                                clipAsset = self.bundle.assets[clipPathID]
+                            except KeyError:
+                                if self.manager.args.verbose:
+                                    print(
+                                        f"Can't find screen effect clip asset ({clipPathID}) at {blockIdx}"
+                                    )
+                            else:
+                                clipData = clipAsset.read_typetree()
+                                
+                                if clipData['StartFrame'] + clipData['ClipLength'] < assetData["StartFrame"] + textBlock["origClipLength"]:
+                                    continue
+
+                                tmpClipLen = clipData['ClipLength']
+                                clipData["ClipLength"] = tmpClipLen + newClipLen - textBlock["origClipLength"]
+                                clipAsset.save_typetree(clipData)
+                                if self.manager.args.verbose:
+                                    print(
+                                        f"Adjusted ScreenEffectClip length at {blockIdx}: {tmpClipLen} -> {clipData['ClipLength']}"
+                                    )
 
                 if "choices" in textBlock:
                     jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]

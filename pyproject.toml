@@ -1,0 +1,42 @@
+[project]
+name = "UmaTL"
+description = "Translation mod for Uma Musume (DMM)."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  {name = "noccu", email = "37862870+noccu@users.noreply.github.com"},
+]
+maintainers = [
+  {name = "noccu", email = "37862870+noccu@users.noreply.github.com"},
+]
+dependencies = [
+  "lz4",
+  "UnityPy >= 1.9.19",
+  "regex",
+  "Levenshtein",
+  "requests",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+editor = [
+    "PyCriCodecs",
+    "pyaudio",
+    "symspellpy",
+]
+subs = [
+  "ass",
+  "srt",
+]
+mtl = ["websockets"]
+dev = [
+    "black",
+    "flake8",
+]
+
+[project.urls]
+Homepage = "https://github.com/noccu/umamusu-translate"
+Repository = "https://github.com/noccu/umamusu-translate.git"
+
+[tool.black]
+line-length = 100

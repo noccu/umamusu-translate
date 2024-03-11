@@ -3,6 +3,7 @@ import helpers
 
 NAMES_DICT = None
 
+
 def loadDict():
     global NAMES_DICT
     names = helpers.readJson("src/data/names.json")
@@ -15,27 +16,27 @@ def loadDict():
 
 
 def translate(file: common.TranslationFile, forceReload=False):
-    if forceReload or not NAMES_DICT: 
+    if forceReload or not NAMES_DICT:
         loadDict()
     for block in file.textBlocks:
-        jpName = block.get('jpName')
+        jpName = block.get("jpName")
         if jpName is None:
             continue
         if jpName in common.NAMES_BLACKLIST:
             # Force original names for game compat
-            block['enName'] = ""
+            block["enName"] = ""
         elif tlName := NAMES_DICT.get(jpName):
             # Prevent overwriting names with empty strings in case a key is missing tl
-            block['enName'] = tlName
+            block["enName"] = tlName
 
 
-def extract(files:list):
+def extract(files: list):
     curNames, *_ = loadDict()
     newNames = 0
     for file in files:
         file = common.TranslationFile(file)
         for block in file.textBlocks:
-            name = block.get("jpName") 
+            name = block.get("jpName")
             if name in common.NAMES_BLACKLIST:
                 continue
             if name not in NAMES_DICT:
@@ -48,15 +49,24 @@ def extract(files:list):
 
 def main():
     ap = common.Args("Translate many enName fields in Translation Files by lookup")
-    ap.add_argument("-src", nargs="*", help="Target Translation File(s), overwrites other file options")
-    ap.add_argument("-e", "--extract", action="store_true", help="Target Translation File(s), overwrites other file options")
+    ap.add_argument(
+        "-src", nargs="*", help="Target Translation File(s), overwrites other file options"
+    )
+    ap.add_argument(
+        "-e",
+        "--extract",
+        action="store_true",
+        help="Target Translation File(s), overwrites other file options",
+    )
     args = ap.parse_args()
 
     if args.type in ("race", "lyrics"):
         print("No names in given type.")
         raise SystemExit
 
-    files = args.src or common.searchFiles(args.type, args.group, args.id, args.idx, targetSet=args.set, changed = args.changed)
+    files = args.src or common.searchFiles(
+        args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
+    )
     if args.extract:
         n = extract(files)
         print(f"Extracted {n} new names from {len(files)} files.")

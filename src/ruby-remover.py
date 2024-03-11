@@ -2,8 +2,11 @@ import common
 import sqlite3
 from types import SimpleNamespace
 
+
 def removeRuby(args, db: sqlite3.Connection):
-    storyId = common.StoryId.queryfy(common.StoryId(args.type, args.set, args.group, args.id, args.idx))
+    storyId = common.StoryId.queryfy(
+        common.StoryId(args.type, args.set, args.group, args.id, args.idx)
+    )
     del storyId.set
     del storyId.type
 
@@ -11,19 +14,23 @@ def removeRuby(args, db: sqlite3.Connection):
     patched = total = 0
     dummytl = SimpleNamespace(data=dict())
     for bundle, path in q:
-        bundle = common.GameBundle.fromName(bundle, load = False)
+        bundle = common.GameBundle.fromName(bundle, load=False)
         if bundle.isPatched:
-            if args.verbose: print(f"Skipping {common.StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched")
+            if args.verbose:
+                print(
+                    f"Skipping {common.StoryId.parseFromPath(path)} ({bundle.bundleName}): Already patched"
+                )
         else:
             bundle.load()
             tree = bundle.rootAsset.read_typetree()
-            tree['DataArray'] = []
+            tree["DataArray"] = []
             bundle.rootAsset.save_typetree(tree)
             bundle.markPatched(dummytl)
             bundle.save()
             patched += 1
         total += 1
     return patched, total
+
 
 def main():
     ap = common.Args("Removes ruby data from assets")
@@ -38,5 +45,6 @@ def main():
     finally:
         db.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

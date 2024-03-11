@@ -41,7 +41,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
 ----|--- | ---
  01 | Solo | Characters alone/talking to trainer
  02 | Duo | Two characters talking
- 03 | Triplets | Three characters interacting, most are in "common" id `0000`
+ 03 | Trio | Three characters interacting, most are in "common" id `0000`
 
 # Uma IDs
 
@@ -196,13 +196,14 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1057 | 立ち位置ゼロ番！順位は一番！ | Tachiichi Zeroban! Juni ha Ichiban!
 1058 | Everlasting BEATS
 1059 | Overrunner! | 
+1060 | DRAMATIC JOURNEY
 1061 | ゆるパカHAPPY DAYS！ | YuruPaka HAPPY DAYS!
 1062 | わたしの印は大本命◎ | わたしの印は大本命◎
 1063 | unbreakable | 
 1064 | SEVEN | 
 1065 | ふんわりSlowly | Fluffy&Slowly
 1066 | My Against Fight | 
-1067 | アウト・オブ・トライアングル | Out of Training
+1067 | アウト・オブ・トライアングル | Out of Triangle
 1068 | 願いのカタチ | The Shape of a Wish
 1069 | 硝子のエトワール | Glass Étoile
 1070 | LIKE THE WIND | 
@@ -215,12 +216,37 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1077 | ミッドナイト・エピローグ | Midnight Epilogue
 1078 | Ambitious World | 
 1079 | winning the soul (PandaBoY Remix) | 
-8501 | スタホTV | 
-8502 | 条件戦 | 
-8503 | 怪物誕生 | 
-8504 | 親馬選択 | 
-8505 | 新馬生産 | 
-9051 | 【MCパート】笑顔の宝物 -Beyond The Future!- | 
+1080 | Droite dance part |
+1081 | Glorious Moment！ |
+1082 | L'Arc de gloire
+1083 | Tracen Ondo
+1086 | Hat on your Head! |
+1087 | GSK☆ |
+1096 | Dance 2 Endless Beat
+1097 | Bright Melody
+1098 | Eternal Colors
+1099 | Ichibanboshi ga kakeru sora
+1100 | Make debut! (モリシー (Awesome City Club) Remix)
+1101 | Never Looking Back (PandaBoY Remix)
+1102 | Keppare! Kagayaki Straight
+1103 | Yuuyuukankan
+1104 | Reins and Bonds
+1105 | Air Race
+1106 | THE SUPER STRONG S
+1107 | Play Again
+1108 | Lucky Happy Fantastic
+1109 | Destroy for Dasein
+1110 | Lightless
+1111 | Zettai Tonari…!
+1112 | Forever gold
+1113 | Like a Shooting Star
+1114 | ONCE MORE, I CAN
+8501 | スタホTV | Sutaho TV
+8502 | 条件戦 | Allowance Race
+8503 | 怪物誕生 | Birth of a Monster
+8504 | 親馬選択 | Parent Selection
+8505 | 新馬生産 | New Yearling
+9051 | 【MCパート】笑顔の宝物 -Beyond The Future!- | [MC] Treasured Smile -Beyond The Future!―
 
 # Index IDs
 

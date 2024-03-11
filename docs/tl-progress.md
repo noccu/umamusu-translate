@@ -127,6 +127,7 @@ Neo Universe | Complete | [LotoDS]
 Rice Shower  | Complete, In Progress | [Ben][] (ep 1-4) + MTL, [UmaTL] (bocchi)☆
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
+Satono Crown | Complete | [LotoDS][]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
 Shinko Windy | Complete | [LotoDS][]

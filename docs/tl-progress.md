@@ -144,7 +144,7 @@ TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
-Vivlos | In Progress | [LotoDS]
+Vivlos | Complete | [LotoDS][]
 Vodka | Complete, Exists | MTL, Anonymous Raccoon
 Yaeno Muteki | Complete | [LotoDS]
 Yamanin Zephyr | Complete | [Director Kok][]

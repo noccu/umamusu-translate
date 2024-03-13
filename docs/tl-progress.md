@@ -2,7 +2,7 @@ This document gives an overview of translation progress.
 If you'd like to contribute a translation, please submit a PR, or open an issue or join the [Discord](https://discord.gg/eqZT27TeJ) for organization.
 
 Note: MTL = machine translation. These have very limited and arbitrary manual edits, sometimes. Quality varies based on content (speech patterns, topics, etc).  
-Translations by [UmaTL] or marked by ☆ are available in the [supporters edition](https://ko-fi.com/noccyu).
+Translations marked by ☆ are available in the [supporters edition](https://ko-fi.com/noccyu).
 
 ### Legend
 term | meaning
@@ -53,7 +53,7 @@ Days in a Flash | Complete | [Kuwaiden] + [noccu] (preview)
 Intertwined Memories, Galloping Emotions | Complete | [UmaTL] (noccu)☆
 Illuminate the Heart | Complete, Exists | MTL, Anonymous Raccoon
 Happy new future ～Bonds dyed in the sunrise～ | Complete, In progress | MTL + [noccu] (preview), [noccu]☆
-Sweet Memory ♥ Teatime | Complete | [noccu]☆
+Sweet Memory ♥ Teatime | Complete | [noccu]
 Leap into a New World! | Complete | [yumeimi](https://www.reddit.com/user/yumeimi/), [noccu] (preview)
 Wherefore I adore you | Stalled | [noccu] (preview)
 Ingenious!? Spring Festival! Dodgeball Fury! | In progress | [noccu] (preview) + [UmaTL] (Anonymous Panda)☆
@@ -86,6 +86,7 @@ Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster][]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
+Cheval Grand | Exists | Naellza
 Copano Rickey | Complete | [LotoDS][]
 Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
 Daitaku Helios | Complete | [LotoDS][]
@@ -102,7 +103,7 @@ Haru Urara | Complete, In progress | [Vacxy][] (ep 1) + MTL (rest), [xct]
 Hishi Miracle | Complete | [LotoDS][]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
 Inari One | Complete | [LotoDS][]
-Ines Fujin | Complete | [noccu] (ep 1-4) + [noccu] (ep 5-7)☆
+Ines Fujin | Complete | [noccu]
 Katsuragi Ace | Complete | [LotoDS][]
 Kawakami Princess | Complete | [Director Kok]
 King Halo | Complete | [burritoblaster][]
@@ -115,7 +116,7 @@ Marvelous Sunday | Complete | [LotoDS][]
 Mayano Top Gun | Complete | [Director Kok]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS][]
-Mejiro McQueen | Complete | [UmaTL] (bocchi)☆
+Mejiro McQueen | Complete | [UmaTL] (bocchi)
 Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (3-7) (bocchi)☆, MTL
 Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
@@ -124,9 +125,10 @@ Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS][]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
-Rice Shower  | Complete, In Progress | [Ben][] (ep 1-4) + MTL, [UmaTL] (bocchi)☆
+Rice Shower  | Exists, Complete | [Ben][] (ep 1-4), [UmaTL] (bocchi)☆
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
+Satono Crown | Complete | [LotoDS][]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
 Shinko Windy | Complete | [LotoDS][]
@@ -137,14 +139,14 @@ Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), MTL
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, MTL
 Symboli Kris S | Complete | [LotoDS][]
 Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)☆
-Tap Dance City | In Progress | [KevinVG207]
+Tap Dance City | Complete | [KevinVG207]
 Taiki Shuttle | Complete | [LotoDS][]
 Tanino Gimlet | In Progress | [UmaTL] (Anonymous Panda)☆
 TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
-Vivlos | In Progress | [LotoDS]
+Vivlos | Complete | [LotoDS][]
 Vodka | Complete, Exists | MTL, Anonymous Raccoon
 Yaeno Muteki | Complete | [LotoDS]
 Yamanin Zephyr | Complete | [Director Kok][]
@@ -247,7 +249,7 @@ Mejiro Ramonu | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Mihono Bourbon | In progress | [noccu] (solo 1)
 Mr. C.B. | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Narita Top Road | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
-Rice Shower | In progress | [UmaTL]☆ (bocchi)
+Rice Shower | Complete | [UmaTL] (bocchi)☆
 Sakura Bakushin O | In progress | [Kasey]
 Sakura Laurel | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Shinko Windy | Stalled | [noccu] (solo 3)
@@ -296,7 +298,7 @@ Mejiro Ardan | Complete | [Riersa] (MTL edit)
 Meisho Doto | Complete, In Progress | MTL, [Mini Fox][]
 Mejiro Dober | Complete | [Riersa] (MTL edit)
 Narita Taishin | Complete | [Riersa] (MTL edit)
-Rice Shower | In progress | [UmaTL]☆ ([noob])
+Rice Shower | Complete | [UmaTL] ([noob])☆
 Sakura Bakushin O | Complete | [Kasey]
 Tazuna | In Progress | [Nephiro] (5/78)
 Tokai Teio | Stalled | [noccu] (2/211)

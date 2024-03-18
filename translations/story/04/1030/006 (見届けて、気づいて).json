@@ -1,9 +1,10 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "3YBOXKXEXLFU2V62EGBV2LBXLEUKREWG",
     "type": "story",
     "storyId": "041030006",
     "title": "見届けて、気づいて",
+    "enTitle": "",
     "text": [
         {
             "jpName": "ライスシャワー",
@@ -11,6 +12,14 @@
             "jpText": "やった……やった、やったぁ！　えへへっ……！",
             "enText": "Yaayyy～!! Yay, yaaay～!! Ehehehe～",
             "nextBlock": 2,
+            "origClipLength": 125,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 8478637921643880837
+                }
+            ],
             "pathId": 6010633312846826997,
             "blockIdx": 1
         },
@@ -20,6 +29,8 @@
             "jpText": "休日の街中で、なにやら楽しそうにしている\r\nライスシャワーを見かけた。",
             "enText": "On our day off, I happened to spot Rice Shower \nat the town who seemed to be in high spirits.",
             "nextBlock": 3,
+            "origClipLength": 90,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "ご機嫌だな、ライス！",
@@ -32,6 +43,12 @@
                     "nextBlock": 3
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -4023689377475016025
+                }
+            ],
             "pathId": 1921796222946380586,
             "blockIdx": 2
         },
@@ -41,11 +58,23 @@
             "jpText": "あっ、お兄さま……！\r\nえへへ……うん。いいこと、あったから……。",
             "enText": "Ah, it's big brother! Ehehe, yep! \nI've got really exciting news to share～",
             "nextBlock": 4,
+            "origClipLength": 180,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "いいことって？",
                     "enText": "Exciting news?",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 332,
+                    "pathId": 1064981445412981369
+                },
+                {
+                    "origLen": 142,
+                    "pathId": -9110634738662422003
                 }
             ],
             "pathId": -8356306424018806218,
@@ -57,11 +86,23 @@
             "jpText": "あっ、お姉さま……！\r\nえへへ……うん。いいこと、あったから……。",
             "enText": "Ah, it's big sister! Ehehe, yep! \nI've got really exciting news to share～",
             "nextBlock": 5,
+            "origClipLength": 180,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "いいことって？",
                     "enText": "Exciting news?",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 306,
+                    "pathId": 3936548492234513176
+                },
+                {
+                    "origLen": 142,
+                    "pathId": -6886629570240400580
                 }
             ],
             "pathId": 3085843147891355874,
@@ -73,6 +114,18 @@
             "jpText": "えっとね……チケット、買えたんだ。\r\n『しあわせの青いバラ』の、舞台……。",
             "enText": "You see… I bought tickets to see the \n\"The Blue Rose of Happiness\" theatre performance!",
             "nextBlock": 6,
+            "origClipLength": 198,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": 2328352313791177520
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7191088621055007643
+                }
+            ],
             "pathId": -5871953317196677787,
             "blockIdx": 5
         },
@@ -82,6 +135,8 @@
             "jpText": "『しあわせの青いバラ』といえば、\r\n確かライスシャワーの大好きな絵本作品だったはずだ。",
             "enText": "If I remember correctly, \"The Blue Rose of Happiness\" \nis Rice Shower's favorite storybook.",
             "nextBlock": 7,
+            "origClipLength": 101,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "チケット、手に入ってよかったな！",
@@ -94,6 +149,12 @@
                     "nextBlock": 7
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": 8347893135484427717
+                }
+            ],
             "pathId": -5900850748782400586,
             "blockIdx": 6
         },
@@ -103,6 +164,18 @@
             "jpText": "うんっ……！",
             "enText": "…Yeah!!",
             "nextBlock": 8,
+            "origClipLength": 28,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": -6912030589867560969
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -5759209115821768160
+                }
+            ],
             "pathId": 9002746412257385670,
             "blockIdx": 7
         },
@@ -112,6 +185,14 @@
             "jpText": "ライスね、すぐ悪いこと起きちゃうから……普段は劇場とか\r\n人がいっぱいいるところって、いかないようにしてるんだけど。",
             "enText": "You see, I usually avoid crowded areas like the \ntheatres, since I usually attract all kinds of trouble.",
             "nextBlock": 9,
+            "origClipLength": 295,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 306,
+                    "pathId": -1095237192132825448
+                }
+            ],
             "pathId": 782799329238361269,
             "blockIdx": 8
         },
@@ -121,6 +202,14 @@
             "jpText": "でも……でもね。\r\nこ、この舞台だけは……あのね……！",
             "enText": "But… Well, you know… This is the stage play for \nmy most favorite story! And so, I really want to—",
             "nextBlock": 10,
+            "origClipLength": 191,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8845550713604351384
+                }
+            ],
             "pathId": 1270687817168597166,
             "blockIdx": 9
         },
@@ -130,6 +219,14 @@
             "jpText": "にゃにゃーーーーー！",
             "enText": "Meeeeowww～!",
             "nextBlock": 11,
+            "origClipLength": 58,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 78,
+                    "pathId": 7961297260752943107
+                }
+            ],
             "pathId": -6841715110056369988,
             "blockIdx": 10
         },
@@ -139,6 +236,14 @@
             "jpText": "きゃっ！？",
             "enText": "Huh?!",
             "nextBlock": 12,
+            "origClipLength": 26,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": -6187594991105338345
+                }
+            ],
             "pathId": 6240227497164610571,
             "blockIdx": 11
         },
@@ -148,6 +253,14 @@
             "jpText": "その時、突然現れた黒猫がライスシャワーのポケットから\r\n舞台のチケットを奪い去り、駆けて行ってしまった！",
             "enText": "At that moment, a sleek, black cat suddenly emerged \nfrom the shadows and snatched the tickets for the stage \nperformance from Rice Shower's pocket, then darted away!",
             "nextBlock": 13,
+            "origClipLength": 112,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 124,
+                    "pathId": 4807236388314756779
+                }
+            ],
             "pathId": -3023969932675193881,
             "blockIdx": 12
         },
@@ -157,6 +270,14 @@
             "jpText": "た、大変……！\r\n黒猫さんっ、待ってぇ～！！",
             "enText": "O-Oh no!!! M-My ticket! \nPlease come back, black cat! \nWait for me～!!",
             "nextBlock": 14,
+            "origClipLength": 139,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": -6453735797505381519
+                }
+            ],
             "pathId": 8657375043711506325,
             "blockIdx": 13
         },
@@ -166,6 +287,8 @@
             "jpText": "ライスシャワーが黒猫を追って走っていってしまった。\r\n後を追いかけよう……！",
             "enText": "As Rice Shower took off after the elusive black cat, I \nimmediately joined the pursuit to retrieve the stolen ticket.",
             "nextBlock": 15,
+            "origClipLength": 94,
+            "voiceIdx": -1,
             "pathId": -648535970923942364,
             "blockIdx": 14
         },
@@ -175,6 +298,18 @@
             "jpText": "はぁ、はぁ……確か、こっちに……！",
             "enText": "<i>Haa, haa… </i> \nI'm pretty sure it went this way…!",
             "nextBlock": 16,
+            "origClipLength": 108,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -3570764353651355605
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 8809439807120437690
+                }
+            ],
             "pathId": -7037851690960235046,
             "blockIdx": 15
         },
@@ -184,6 +319,22 @@
             "jpText": "おっと、嬢ちゃん！　悪いな、ここは工事中で通れないんだ。",
             "enText": "Hey, hold on just a sec, miss! \nSorry about that, but this area's \noff-limits 'cause construction work.",
             "nextBlock": 17,
+            "origClipLength": 175,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 153,
+                    "pathId": -8003902771818023448
+                },
+                {
+                    "origLen": 220,
+                    "pathId": 6560480626027120430
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 3271376217920939710
+                }
+            ],
             "pathId": -4323162405160768142,
             "blockIdx": 16
         },
@@ -193,6 +344,18 @@
             "jpText": "えっ！？　ど、どうしよう……。\r\n黒猫さん、この先にいっちゃったのに……！",
             "enText": "Oh no! A-Ah… what should we do? \nThe black cat went ahead from here!",
             "nextBlock": 18,
+            "origClipLength": 162,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 234,
+                    "pathId": 3013591349425817495
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6489753680843531263
+                }
+            ],
             "pathId": -7368111151437611585,
             "blockIdx": 17
         },
@@ -202,6 +365,18 @@
             "jpText": "うーん、回り道なら教えてあげられるが……\r\nちょっと坂がきついんだよなぁ。",
             "enText": "Hmm, well… Ya see, miss, there's a way 'round, but it's \na bit of a climb. The hill's a bit steep, innit.",
             "nextBlock": 19,
+            "origClipLength": 225,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 251,
+                    "pathId": -2519721579845487063
+                },
+                {
+                    "origLen": 283,
+                    "pathId": 7075477232773086930
+                }
+            ],
             "pathId": -3896385944259770155,
             "blockIdx": 18
         },
@@ -211,6 +386,18 @@
             "jpText": "あ……お、教えてくださいっ！\r\n坂、大丈夫です……私、走れますっ！",
             "enText": "Ah… please tell me the way! \nI don't mind if it's a steep climb! I can run!",
             "nextBlock": 20,
+            "origClipLength": 177,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 154,
+                    "pathId": 3886379480269052594
+                },
+                {
+                    "origLen": 283,
+                    "pathId": -5382211982917698576
+                }
+            ],
             "pathId": 2497698017890001628,
             "blockIdx": 19
         },
@@ -220,6 +407,18 @@
             "jpText": "お兄さまも、坂でくたびれたらライスにいってね。\r\nライスがお兄さまの手、引っ張るから……！",
             "enText": "Big brother, if you ever get tired \nduring the hill, please let me know! \nI'll hold your hands, and pull you along!",
             "nextBlock": 21,
+            "origClipLength": 213,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": -3421070741316186001
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 5019912592571721428
+                }
+            ],
             "pathId": 6957594331504775836,
             "blockIdx": 20
         },
@@ -229,6 +428,18 @@
             "jpText": "お姉さまも、坂でくたびれたらライスにいってね。\r\nライスがお姉さまの手、引っ張るから……！",
             "enText": "Big sister, if you ever get tired \nduring the hill, please let me know! \nI'll hold your hands, and pull you along!",
             "nextBlock": 22,
+            "origClipLength": 213,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 175,
+                    "pathId": -4738232659156374264
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -5791169978007093200
+                }
+            ],
             "pathId": 2352662872023712495,
             "blockIdx": 21
         },
@@ -238,6 +449,18 @@
             "jpText": "はぁっ、はぁっ……見つけた……！",
             "enText": "<i>Haa, haa… </i> \n…Finally, we found you!",
             "nextBlock": 23,
+            "origClipLength": 92,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 125,
+                    "pathId": -2813751921678424129
+                },
+                {
+                    "origLen": 105,
+                    "pathId": 8711908738245496472
+                }
+            ],
             "pathId": -1381933489074625536,
             "blockIdx": 22
         },
@@ -247,11 +470,23 @@
             "jpText": "にゃにゃ……！",
             "enText": "Meeoowww～!",
             "nextBlock": 24,
+            "origClipLength": 54,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "そーっと近づこう……！",
                     "enText": "Let's approach from behind, quietly…",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": -9092927258310232760
+                },
+                {
+                    "origLen": 104,
+                    "pathId": -3405781611735880325
                 }
             ],
             "pathId": 251111792018629594,
@@ -263,6 +498,18 @@
             "jpText": "うんっ、そーっと……！\r\n黒猫さ～ん、怖くない、怖くないよ～……！",
             "enText": "Okay! We'll approach from behind, quietly… \nIt's okay, don't be afraid, Mr. Black Cat～ \nNothing to be afraid of, okay～?",
             "nextBlock": 25,
+            "origClipLength": 279,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 310,
+                    "pathId": -3269218375406737447
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -3894018407577749272
+                }
+            ],
             "pathId": 1615005775700581417,
             "blockIdx": 24
         },
@@ -272,6 +519,14 @@
             "jpText": "ライスシャワーとともに、黒猫へにじり寄る。\r\nその瞬間、足元に違和感が……！",
             "enText": "Rice Shower and I cautiously approached the black \ncat from behind, and just as it was within reach, \nI suddenly felt something slippery under my feet.",
             "nextBlock": 26,
+            "origClipLength": 94,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 204,
+                    "pathId": -3245146864109367642
+                }
+            ],
             "pathId": 7632114166504998845,
             "blockIdx": 25
         },
@@ -281,6 +536,8 @@
             "jpText": "ひゃ！！",
             "enText": "<i>Hyaaaa—! \n</i>",
             "nextBlock": 27,
+            "origClipLength": 29,
+            "voiceIdx": 16,
             "pathId": 7177044070368091358,
             "blockIdx": 26
         },
@@ -290,6 +547,8 @@
             "jpText": "あいたぁっ……なんでこんなとこにバナナの皮が2つも～……！？\r\nお兄さま、大丈夫！？",
             "enText": "Owieee… Big brother, are you okay?! \nWhat are two banana peels doing here of all places…?",
             "nextBlock": 28,
+            "origClipLength": 274,
+            "voiceIdx": 17,
             "pathId": 1026078549379377014,
             "blockIdx": 27
         },
@@ -299,6 +558,8 @@
             "jpText": "あいたぁっ……なんでこんなとこにバナナの皮が2つも～……！？\r\nお姉さま、大丈夫！？",
             "enText": "Owieee… Big sister, are you okay?! \nWhat are two banana peels doing here of all places…?",
             "nextBlock": 29,
+            "origClipLength": 274,
+            "voiceIdx": 17,
             "pathId": 8557610787953916416,
             "blockIdx": 28
         },
@@ -308,11 +569,19 @@
             "jpText": "慌てて立ち上がり見てみるが、黒猫はすでにいなくなっていた。\r\nどちらの方へ走っていったかすらもわからない……。",
             "enText": "I quickly stood up to scan the surroundings, but the \nblack cat had already vanished. With no clues as \nto which direction it had fled, we were at a loss…",
             "nextBlock": 30,
+            "origClipLength": 116,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（どうしようか……）",
                     "enText": "(What should we do…?)",
                     "nextBlock": 30
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": 5019915265143763518
                 }
             ],
             "pathId": 830122252711405957,
@@ -324,6 +593,18 @@
             "jpText": "……お兄さま。私、『黒猫さん見てませんか』って、\r\n周りの人に聞いてくるね。",
             "enText": "…Big brother, I'm going to go around the neighbourhood \nasking people if they've seen a black cat nearby, okay?",
             "nextBlock": 31,
+            "origClipLength": 221,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 265,
+                    "pathId": -6588242508033230001
+                },
+                {
+                    "origLen": 224,
+                    "pathId": -7100066333750708116
+                }
+            ],
             "pathId": -8168142307216125401,
             "blockIdx": 30
         },
@@ -333,6 +614,18 @@
             "jpText": "……お姉さま。私、『黒猫さん見てませんか』って、\r\n周りの人に聞いてくるね。",
             "enText": "…Big sister, I'm going to go around the neighbourhood \nasking people if they've seen a black cat nearby, okay?",
             "nextBlock": 32,
+            "origClipLength": 221,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 265,
+                    "pathId": 9110586820643820191
+                },
+                {
+                    "origLen": 224,
+                    "pathId": 8651501713665287543
+                }
+            ],
             "pathId": -7446767632494530992,
             "blockIdx": 31
         },
@@ -342,6 +635,18 @@
             "jpText": "そう言うとライスシャワーは立ち上がり、\r\n勇気を振り絞った表情で、周囲の人々に声をかけ始めた。",
             "enText": "Rice Shower stood up with a determined expression. With \nunwavering courage and resolve, she diligently approached \neveryone around us to find clues about the cat's whereabouts.",
             "nextBlock": 33,
+            "origClipLength": 106,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 230,
+                    "pathId": 5141725977889953587
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -2518818762665050681
+                }
+            ],
             "pathId": 5776619348091154774,
             "blockIdx": 32
         },
@@ -351,6 +656,14 @@
             "jpText": "あ、ぁ……あのっ！！　黒猫さん、見てませんか……！？",
             "enText": "U-Um, excuse me!! \n…Have you seen a black cat around here?",
             "nextBlock": 34,
+            "origClipLength": 153,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 230,
+                    "pathId": 5912791306445647196
+                }
+            ],
             "pathId": -7491186219179843971,
             "blockIdx": 33
         },
@@ -360,6 +673,14 @@
             "jpText": "その後もライスシャワーと黒猫を探し続けた。\r\nそして日暮れも近づいた頃、ついに――！",
             "enText": "Our relentless pursuit of the cheeky black cat continued. \nAnd as dusk was approaching, our efforts paid off as \nwe finally laid eyes on the elusive feline――!",
             "nextBlock": 35,
+            "origClipLength": 99,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 71,
+                    "pathId": 4874988906527399023
+                }
+            ],
             "pathId": 7625904918504904100,
             "blockIdx": 34
         },
@@ -369,6 +690,14 @@
             "jpText": "にゃう～……。",
             "enText": "…Meeowww～",
             "nextBlock": 36,
+            "origClipLength": 54,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 5116280164308894103
+                }
+            ],
             "pathId": -7109993633856697503,
             "blockIdx": 35
         },
@@ -378,6 +707,8 @@
             "jpText": "黒猫さん……！\r\nライスのチケットも、まだくわえてる……よかったぁ……！",
             "enText": "...It's the black cat! \nThe cat's still holding onto my ticket in its mouth... \nThank goodness!",
             "nextBlock": 37,
+            "origClipLength": 204,
+            "voiceIdx": 20,
             "choices": [
                 {
                     "jpText": "よし、俺が上手く取り返してみるよ",
@@ -390,6 +721,12 @@
                     "nextBlock": 37
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -146886538489540597
+                }
+            ],
             "pathId": 5131121999754376633,
             "blockIdx": 36
         },
@@ -399,6 +736,18 @@
             "jpText": "お兄さま……ありがとう。",
             "enText": "Thank you, big brother.",
             "nextBlock": 38,
+            "origClipLength": 82,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": 1974118605360442185
+                },
+                {
+                    "origLen": 138,
+                    "pathId": 5652099525746636926
+                }
+            ],
             "pathId": 1545417867588896955,
             "blockIdx": 37
         },
@@ -408,6 +757,18 @@
             "jpText": "お姉さま……ありがとう。",
             "enText": "Thank you, big sister.",
             "nextBlock": 39,
+            "origClipLength": 82,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": 260816846046581965
+                },
+                {
+                    "origLen": 138,
+                    "pathId": -894825224631024953
+                }
+            ],
             "pathId": -5574291431232447004,
             "blockIdx": 38
         },
@@ -417,6 +778,18 @@
             "jpText": "でも、大丈夫……ライスががんばるよ。\r\nがんばりたいの。",
             "enText": "But, it's okay…! I want to make things right by \ndoing it myself. Please let me take care of it!",
             "nextBlock": 40,
+            "origClipLength": 155,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 117,
+                    "pathId": 8947097900972788624
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7192052202446277299
+                }
+            ],
             "pathId": 4060586593305303557,
             "blockIdx": 39
         },
@@ -426,6 +799,18 @@
             "jpText": "じゃあ……いってきますっ。",
             "enText": "Well then… I'm going to go talk to the black cat, okay?",
             "nextBlock": 41,
+            "origClipLength": 71,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 54,
+                    "pathId": 6767244523836906928
+                },
+                {
+                    "origLen": 102,
+                    "pathId": -1448035421487214448
+                }
+            ],
             "pathId": -3902077668536586785,
             "blockIdx": 40
         },
@@ -435,6 +820,18 @@
             "jpText": "そう告げると、ライスシャワーは意を決した表情で\r\n黒猫のいる茂みに向かって歩みを進め――",
             "enText": "With a determined expression on her face, \nRice Shower stepped forward towards \nthe bush where the black cat lying――",
             "nextBlock": 42,
+            "origClipLength": 117,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -2155483950813162956
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5752594149048652046
+                }
+            ],
             "pathId": -3263013196622998541,
             "blockIdx": 41
         },
@@ -444,6 +841,14 @@
             "jpText": "黒猫さん……！\r\nに、逃げないで、聞いてくださいっ。",
             "enText": "Excuse me, Mr. Black cat! \nP-Please don't run away. \nI have something to say!",
             "nextBlock": 43,
+            "origClipLength": 127,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": -496917503985026684
+                }
+            ],
             "pathId": -7858303609142643940,
             "blockIdx": 42
         },
@@ -453,6 +858,18 @@
             "jpText": "そのチケットね、ライスのすっごく大切な物で……\r\nだ、だから、返してほしいの……！",
             "enText": "You see, that ticket is very important to me... \nSo, please, I want you to return it to me!",
             "nextBlock": 44,
+            "origClipLength": 302,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 424,
+                    "pathId": -478449418497490521
+                },
+                {
+                    "origLen": 40,
+                    "pathId": 8472328288976751838
+                }
+            ],
             "pathId": 1708752363576062623,
             "blockIdx": 43
         },
@@ -462,6 +879,18 @@
             "jpText": "お願いします……にゃ……！",
             "enText": "<i>…Purrlease～～? \n</i>",
             "nextBlock": 45,
+            "origClipLength": 97,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -4445478880538104413
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -1754461390765463587
+                }
+            ],
             "pathId": -4257768566546554671,
             "blockIdx": 44
         },
@@ -471,6 +900,14 @@
             "jpText": "……にゃあん。",
             "enText": "…Meeooow.",
             "nextBlock": 46,
+            "origClipLength": 54,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": -3537438756079956926
+                }
+            ],
             "pathId": 464086849705467398,
             "blockIdx": 45
         },
@@ -480,6 +917,14 @@
             "jpText": "あ……。",
             "enText": "Ah…",
             "nextBlock": 47,
+            "origClipLength": 50,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -4625888914070751841
+                }
+            ],
             "pathId": -2526674968445137044,
             "blockIdx": 46
         },
@@ -489,6 +934,14 @@
             "jpText": "黒猫が、チケットを置いて去っていった……！",
             "enText": "…The black cat left the ticket behind!",
             "nextBlock": 48,
+            "origClipLength": 72,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -2061412077399429739
+                }
+            ],
             "pathId": 5677188356795134648,
             "blockIdx": 47
         },
@@ -498,6 +951,14 @@
             "jpText": "黒猫さん……ありがとう……！",
             "enText": "Thank you, Mr. Black Cat…!",
             "nextBlock": 49,
+            "origClipLength": 86,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 34,
+                    "pathId": 8308747601222887074
+                }
+            ],
             "pathId": -43684350987861731,
             "blockIdx": 48
         },
@@ -507,11 +968,19 @@
             "jpText": "よかった……お兄さまも、手伝ってくれてありがとう……！",
             "enText": "I'm so glad it turned out fine... \nThank you so much for helping me, big brother!",
             "nextBlock": 50,
+            "origClipLength": 172,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "よく諦めずに頑張ったな、ライス！",
                     "enText": "Good job doing your best without giving up, Rice!",
                     "nextBlock": 51
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 256,
+                    "pathId": -2707702431504409791
                 }
             ],
             "pathId": -4187504070353893101,
@@ -523,6 +992,8 @@
             "jpText": "よかった……お姉さまも、手伝ってくれてありがとう……！",
             "enText": "I'm so glad it turned out fine... \nThank you so much for helping me, big sister!",
             "nextBlock": 51,
+            "origClipLength": 172,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "よく諦めずに頑張ったな、ライス！",
@@ -535,6 +1006,12 @@
                     "nextBlock": 51
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 256,
+                    "pathId": 7537453081069312330
+                }
+            ],
             "pathId": -5594133297056747470,
             "blockIdx": 50
         },
@@ -544,6 +1021,18 @@
             "jpText": "うん……お兄さまが、一緒だから。",
             "enText": "Yeah… it's all thanks to you, big brother.",
             "nextBlock": 52,
+            "origClipLength": 110,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 161,
+                    "pathId": -6308208478301852299
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 5917299123341412529
+                }
+            ],
             "pathId": 8799982096987402519,
             "blockIdx": 51
         },
@@ -553,6 +1042,18 @@
             "jpText": "うん……お姉さまが、一緒だから。",
             "enText": "Yeah… it's all thanks to you, big sister.",
             "nextBlock": 53,
+            "origClipLength": 110,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 161,
+                    "pathId": -4569600739269592859
+                },
+                {
+                    "origLen": 98,
+                    "pathId": 6409880676651282173
+                }
+            ],
             "pathId": 9110229261352393059,
             "blockIdx": 52
         },
@@ -562,6 +1063,18 @@
             "jpText": "ライスね、お兄さまがそばにいてくれたら……\r\nがんばろう、がんばるぞって、いくらでも思えるみたいなの。",
             "enText": "You know, when big brother is by my side, \nI feel like I can keep pushing forward. \nI feel like I can overcome anything, no matter what.",
             "nextBlock": 54,
+            "origClipLength": 307,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -6202761122832197837
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -3972086398492319339
+                }
+            ],
             "pathId": -133826679521687921,
             "blockIdx": 53
         },
@@ -571,6 +1084,18 @@
             "jpText": "ライスね、お姉さまがそばにいてくれたら……\r\nがんばろう、がんばるぞって、いくらでも思えるみたいなの。",
             "enText": "You know, when big sister is by my side, \nI feel like I can keep pushing forward. \nI feel like I can overcome anything, no matter what.",
             "nextBlock": 55,
+            "origClipLength": 307,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 23,
+                    "pathId": -5699351847243161572
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -682277374404543842
+                }
+            ],
             "pathId": 2679405083479329038,
             "blockIdx": 54
         },
@@ -580,6 +1105,18 @@
             "jpText": "だから……だからね、お兄さま。",
             "enText": "And so, big brother, there's something I want to give you…",
             "nextBlock": 56,
+            "origClipLength": 108,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": 2615873850912264075
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 6425828597813520589
+                }
+            ],
             "pathId": 4302155324007794628,
             "blockIdx": 55
         },
@@ -589,6 +1126,18 @@
             "jpText": "だから……だからね、お姉さま。",
             "enText": "And so, big sister, there's something I want to give you…",
             "nextBlock": 57,
+            "origClipLength": 108,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 129,
+                    "pathId": -5621018019082966105
+                },
+                {
+                    "origLen": 102,
+                    "pathId": 8879668138264019420
+                }
+            ],
             "pathId": 2696945464453294273,
             "blockIdx": 56
         },
@@ -598,6 +1147,8 @@
             "jpText": "――チケット、受け取ってくださいっ！",
             "enText": "――Please accept this ticket!!",
             "nextBlock": 58,
+            "origClipLength": 87,
+            "voiceIdx": 33,
             "choices": [
                 {
                     "jpText": "えっ、俺！？",
@@ -610,6 +1161,16 @@
                     "nextBlock": 58
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 32,
+                    "pathId": -2229377398651994716
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5351244091128796786
+                }
+            ],
             "pathId": 1261656978712704383,
             "blockIdx": 57
         },
@@ -619,6 +1180,18 @@
             "jpText": "あの、実は……ペアチケットなんだ。\r\nお兄さまにプレゼント……いつものお返し、したいなって思って。",
             "enText": "Um, this ticket is actually… for two people. \nI wanted to use the ticket with big brother as \na present to say thank you for everything.",
             "nextBlock": 59,
+            "origClipLength": 365,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": 5847680121101976517
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 7588771076226983296
+                }
+            ],
             "pathId": -2442842783371395270,
             "blockIdx": 58
         },
@@ -628,6 +1201,18 @@
             "jpText": "あの、実は……ペアチケットなんだ。\r\nお姉さまにプレゼント……いつものお返し、したいなって思って。",
             "enText": "Um, this ticket is actually… for two people. \nI wanted to use the ticket with big sister as \na present to say thank you for everything.",
             "nextBlock": 60,
+            "origClipLength": 365,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": 5654190879840821771
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2050744331757707625
+                }
+            ],
             "pathId": 663256615350401524,
             "blockIdx": 59
         },
@@ -637,6 +1222,8 @@
             "jpText": "い、一緒に、いってくれる……？\r\nそれとも……や、やっぱり迷惑だったかな、ライスなんかと……。",
             "enText": "W-Would you like to come with me to see the play? \nOr, am I asking for too much… \nAh, of course… who do I think I am…",
             "nextBlock": 61,
+            "origClipLength": 254,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "そんなことない、うれしいぞ！",
@@ -649,6 +1236,16 @@
                     "nextBlock": 61
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 227,
+                    "pathId": 9008409227683997918
+                },
+                {
+                    "origLen": 31,
+                    "pathId": 6795649855586311888
+                }
+            ],
             "pathId": 8857235933057801510,
             "blockIdx": 60
         },
@@ -658,6 +1255,18 @@
             "jpText": "ほんと！？　よ、よかったぁ～……！！",
             "enText": "R-Really?! \nI'm so glad～!!",
             "nextBlock": 62,
+            "origClipLength": 127,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 2733343983559148927
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2195919088894696768
+                }
+            ],
             "pathId": -3551452470711540316,
             "blockIdx": 61
         },
@@ -667,6 +1276,8 @@
             "jpText": "しかし、いつ観に行こうかと舞台の日付を確認すると……。",
             "enText": "However, when I checked the dates for the performance…",
             "nextBlock": 63,
+            "origClipLength": 80,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "――これ、当日券か！？",
@@ -679,6 +1290,12 @@
                     "nextBlock": 63
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": 4422876167253090027
+                }
+            ],
             "pathId": 864404678469889864,
             "blockIdx": 62
         },
@@ -688,6 +1305,14 @@
             "jpText": "え？　当日券って……ああっ！！",
             "enText": "Huh? The performance is today?! ...Ahhhh!!",
             "nextBlock": 64,
+            "origClipLength": 141,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -6742890790807237165
+                }
+            ],
             "pathId": 4139970219632088450,
             "blockIdx": 63
         },
@@ -697,6 +1322,14 @@
             "jpText": "ほんとだ……！　い、急がなくっちゃ～！！",
             "enText": "…You're right! W-We need to hurry～!!",
             "nextBlock": 65,
+            "origClipLength": 98,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -4835806524066746958
+                }
+            ],
             "pathId": -8428521737993448442,
             "blockIdx": 64
         },
@@ -706,9 +1339,17 @@
             "jpText": "急いでライスシャワーと舞台会場へ滑り込み、\r\nなんとか夜の部で観劇できたのだった……。",
             "enText": "And so, we rushed our way to the theater with Rice Shower, \njust in time to catch the evening performance.",
             "nextBlock": -1,
+            "origClipLength": 101,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 1431180920605814267
+                }
+            ],
             "pathId": 9107071812192327079,
             "blockIdx": 65
         }
     ],
-    "modified": 1708750973
+    "modified": 1710794206
 }

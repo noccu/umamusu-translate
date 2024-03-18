@@ -1,9 +1,10 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "5GVP7AGB2FNBJMFVOFMNX2G5RYFFEHCQ",
     "type": "story",
     "storyId": "041030004",
     "title": "ここから、踏み出して",
+    "enTitle": "",
     "text": [
         {
             "jpName": "ライスシャワー",
@@ -11,6 +12,8 @@
             "jpText": "はぅ……トレーナーさん……。",
             "enText": "Ahh… Trainer…",
             "nextBlock": 2,
+            "origClipLength": 130,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "今日のレース、出られそうにないか？",
@@ -23,6 +26,16 @@
                     "nextBlock": 2
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 153,
+                    "pathId": 7939679160651143132
+                },
+                {
+                    "origLen": 26,
+                    "pathId": 6241013558444457995
+                }
+            ],
             "pathId": 3059277731304686742,
             "blockIdx": 1
         },
@@ -32,6 +45,18 @@
             "jpText": "…………っ！　ご、ごめんなさい。\r\nごめんなさい、ごめんなさい……！",
             "enText": "…………I-I'm so sorry. \nI'm so sorry, I'm so sorry…!",
             "nextBlock": 3,
+            "origClipLength": 208,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 266,
+                    "pathId": 3706265841703833574
+                },
+                {
+                    "origLen": 119,
+                    "pathId": -190777066878878971
+                }
+            ],
             "pathId": -7677179859566146814,
             "blockIdx": 2
         },
@@ -41,6 +66,8 @@
             "jpText": "ライス……ライスはっ……うぅ、ごめんなさい……！",
             "enText": "I-I'm so…… sorry! \n……I'm just so—",
             "nextBlock": 4,
+            "origClipLength": 209,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "謝らなくてもいいんだ",
@@ -53,6 +80,16 @@
                     "nextBlock": 4
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 185,
+                    "pathId": -1510803415737760319
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8062462094093135349
+                }
+            ],
             "pathId": 6077695005062886272,
             "blockIdx": 3
         },
@@ -62,6 +99,14 @@
             "jpText": "……どうして？",
             "enText": "Why?",
             "nextBlock": 5,
+            "origClipLength": 44,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 185,
+                    "pathId": 5717427080667632545
+                }
+            ],
             "pathId": -4647118915926396454,
             "blockIdx": 4
         },
@@ -71,11 +116,19 @@
             "jpText": "どうしてトレーナーさんは、そんなに優しいの？\r\nライス……ライスは、こんなにだめな子なのに。",
             "enText": "Why are you so nice to me? \nEven though I-I'm… such a good-for-nothing.",
             "nextBlock": 6,
+            "origClipLength": 355,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "ライスはだめなんかじゃない",
                     "enText": "You're not a good-for-nothing.",
                     "nextBlock": 6
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 295,
+                    "pathId": 5092794865429329664
                 }
             ],
             "pathId": -7649153768284486215,
@@ -87,6 +140,18 @@
             "jpText": "だめだよっ！！\r\nライスはっ……ライスは、だめだめの、だめっ子だよ……！",
             "enText": "No, it's true!! \nI'm so useless… a useless good-for-nothing…!",
             "nextBlock": 7,
+            "origClipLength": 219,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 499,
+                    "pathId": 1475257049863680808
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -8001731092972117363
+                }
+            ],
             "pathId": -2885324925719980024,
             "blockIdx": 6
         },
@@ -96,6 +161,18 @@
             "jpText": "……っ、変わろうとしたんだよ。\r\n何回も……何回も。",
             "enText": "I told myself that I wanted to change… \nover and over again…",
             "nextBlock": 8,
+            "origClipLength": 235,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 465,
+                    "pathId": -8888967205614037156
+                },
+                {
+                    "origLen": 136,
+                    "pathId": 2971063039689908839
+                }
+            ],
             "pathId": -141663318496500289,
             "blockIdx": 7
         },
@@ -105,6 +182,18 @@
             "jpText": "お母さまと離れ離れはイヤだったけど、トレセン学園まで来たよ。\r\nいっぱいトレーニングもした、レースにも申し込んだ！",
             "enText": "Even though I didn't want to separate from \nmy mother, I came all the way to Tracen Academy. \nI did so much training, and even signed up for races!",
             "nextBlock": 9,
+            "origClipLength": 310,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 436,
+                    "pathId": 357146636731192606
+                },
+                {
+                    "origLen": 360,
+                    "pathId": 6628158572067989346
+                }
+            ],
             "pathId": 6894951291103041912,
             "blockIdx": 8
         },
@@ -114,6 +203,8 @@
             "jpText": "だけどっ……だめなの。レースに出るって考えると、\r\nどうしても怖くなっちゃうの……選抜のときも、いまも……！",
             "enText": "But, that wasn't enough… Just thinking about entering \nthe race fills me with so much fear, just like that time \nduring the Selection Race, and even right now…!",
             "nextBlock": 10,
+            "origClipLength": 414,
+            "voiceIdx": 8,
             "choices": [
                 {
                     "jpText": "何が怖いんだ？",
@@ -126,6 +217,16 @@
                     "nextBlock": 10
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": 6451430961753409786
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2584945868950059639
+                }
+            ],
             "pathId": -5851511201891781525,
             "blockIdx": 9
         },
@@ -135,6 +236,14 @@
             "jpText": "……『青いバラには絶対なれない』って、わかっちゃうこと。",
             "enText": "…I'm afraid of being unable to achieve \nmy dream of becoming the blue rose.",
             "nextBlock": 11,
+            "origClipLength": 166,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 1200,
+                    "pathId": 7413356659780043373
+                }
+            ],
             "pathId": 8917914358633384586,
             "blockIdx": 10
         },
@@ -144,6 +253,14 @@
             "jpText": "ライスなんかがレースに出ても……\r\n誰も幸せにできないって、わかっちゃうこと。",
             "enText": "I'm also afraid that, if I were to enter a race, \nI wouldn't be able to make people happy…",
             "nextBlock": 12,
+            "origClipLength": 248,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 1200,
+                    "pathId": -1792653817475615624
+                }
+            ],
             "pathId": -4206700242478569795,
             "blockIdx": 11
         },
@@ -153,6 +270,18 @@
             "jpText": "レースに出たら、ほんとのことがわかっちゃう。\r\nこの先ずうっと、だめな子だって、わかっちゃうかもしれない……。",
             "enText": "I'm afraid of facing reality… If I were to enter a race, \nthen I'd have to face the truth that, no matter \nwhat I do, I'll always be a good-for-nothing…",
             "nextBlock": 13,
+            "origClipLength": 393,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 718,
+                    "pathId": 1758020534826739998
+                },
+                {
+                    "origLen": 146,
+                    "pathId": 2235152996266185080
+                }
+            ],
             "pathId": -5142027535358091108,
             "blockIdx": 12
         },
@@ -162,6 +291,18 @@
             "jpText": "そう考えたら……怖くて、怖くて震えが止まらないの……！",
             "enText": "Whenever those thoughts cross my mind, \nI become so afraid that I feel paralyzed…",
             "nextBlock": 14,
+            "origClipLength": 221,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": 4961922548930173841
+                },
+                {
+                    "origLen": 414,
+                    "pathId": 1454589457188716254
+                }
+            ],
             "pathId": 6934025732016891576,
             "blockIdx": 13
         },
@@ -171,6 +312,8 @@
             "jpText": "っ、ごめんなさいトレーナーさん。もうライスのことなんか……\r\nこんなだめな子のことなんか、あきらめていいから……！",
             "enText": "I'm just… Ugh. I'm sorry, Trainer, for being so useless. \nIf you want to give up on me, I completely understand…!",
             "nextBlock": 15,
+            "origClipLength": 381,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "君は、それだけ変わりたいんだな",
@@ -183,6 +326,16 @@
                     "nextBlock": 15
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 1200,
+                    "pathId": 5206206923856325646
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6622605299286868590
+                }
+            ],
             "pathId": -1101295632750852211,
             "blockIdx": 14
         },
@@ -192,6 +345,8 @@
             "jpText": "え…………？",
             "enText": "…Huh?",
             "nextBlock": 16,
+            "origClipLength": 23,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "怖いのは、つまり変わりたいってことだ",
@@ -204,6 +359,12 @@
                     "nextBlock": 16
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 1200,
+                    "pathId": -8221677168177760421
+                }
+            ],
             "pathId": 2283955636596429953,
             "blockIdx": 15
         },
@@ -213,6 +374,8 @@
             "jpText": "そ、それは……でも……。",
             "enText": "B-But, that's…",
             "nextBlock": 17,
+            "origClipLength": 127,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "君が諦めない限り、俺も君を諦めない",
@@ -225,6 +388,12 @@
                     "nextBlock": 17
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 1200,
+                    "pathId": -8738965818128776850
+                }
+            ],
             "pathId": 8392936131024098164,
             "blockIdx": 16
         },
@@ -234,6 +403,18 @@
             "jpText": "っ……！　トレーナー、さん。",
             "enText": "R-Really? Trainer…!",
             "nextBlock": 18,
+            "origClipLength": 142,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 1200,
+                    "pathId": -7832920212879706167
+                },
+                {
+                    "origLen": 96,
+                    "pathId": 1282671959056928753
+                }
+            ],
             "pathId": -8663182915506788442,
             "blockIdx": 17
         },
@@ -243,6 +424,8 @@
             "jpText": "あきらめないで、いてくれるの……？\r\nライスは変われるって……信じて、くれるの……？",
             "enText": "You're telling me, it's okay for me to keep trying? \nYou really believe in me… that I can change?",
             "nextBlock": 19,
+            "origClipLength": 334,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "レース場で待ってるぞ、ライス！",
@@ -255,6 +438,16 @@
                     "nextBlock": 19
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 572,
+                    "pathId": -5009559985058976641
+                },
+                {
+                    "origLen": 249,
+                    "pathId": -7154327782321495673
+                }
+            ],
             "pathId": 3668876561281070799,
             "blockIdx": 18
         },
@@ -264,6 +457,18 @@
             "jpText": "あ……！！",
             "enText": "Ah…!",
             "nextBlock": 20,
+            "origClipLength": 39,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 618,
+                    "pathId": -8428767384928701249
+                },
+                {
+                    "origLen": 79,
+                    "pathId": 2304462814795420489
+                }
+            ],
             "pathId": -7095945721262562719,
             "blockIdx": 19
         },
@@ -273,6 +478,22 @@
             "jpText": "ふんふふふーん、ふんふふ～……♪",
             "enText": "Lalala～♪ Lalala～♪",
             "nextBlock": 21,
+            "origClipLength": 98,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 44,
+                    "pathId": 6785044335706114407
+                },
+                {
+                    "origLen": 47,
+                    "pathId": -6963291362129693787
+                },
+                {
+                    "origLen": 193,
+                    "pathId": -7410933766406824361
+                }
+            ],
             "pathId": 7378635579762796907,
             "blockIdx": 20
         },
@@ -282,6 +503,18 @@
             "jpText": "がんばれ、がんばれ、ライス……がんばれ……！",
             "enText": "You can do this. \nYou can do this, Rice! \n…You got this!",
             "nextBlock": 22,
+            "origClipLength": 162,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 147,
+                    "pathId": 5832407956302186341
+                },
+                {
+                    "origLen": 341,
+                    "pathId": 3079529593167690961
+                }
+            ],
             "pathId": 34866535468933272,
             "blockIdx": 21
         },
@@ -291,6 +524,22 @@
             "jpText": "あっ、ライスちゃん！　ライスちゃん出てきたー！！",
             "enText": "Ah, it's Rice! \nRice came out～!",
             "nextBlock": 23,
+            "origClipLength": 119,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 131,
+                    "pathId": -399315791170698656
+                },
+                {
+                    "origLen": 173,
+                    "pathId": -9105905358893726359
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 6300457369764508833
+                }
+            ],
             "pathId": -3039801778278149502,
             "blockIdx": 22
         },
@@ -300,6 +549,18 @@
             "jpText": "あ、っ……ウララちゃん。\r\n待ってて、くれたの……？",
             "enText": "Ah, Urara…! \nYou were waiting for me?",
             "nextBlock": 24,
+            "origClipLength": 161,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 130,
+                    "pathId": 96679455490662678
+                },
+                {
+                    "origLen": 173,
+                    "pathId": 7756386618132514583
+                }
+            ],
             "pathId": 4716437223219753576,
             "blockIdx": 23
         },
@@ -309,6 +570,26 @@
             "jpText": "うん！　ライスちゃん、がんばるの？\r\nじゃあウララも応援するね！　がんばれ～、ライスちゃーん！",
             "enText": "Yeah! You're going to do your best, right? \nThen, of course I'll be rooting for you! \nLet's go Rice, yeah～!!!",
             "nextBlock": 25,
+            "origClipLength": 261,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 327,
+                    "pathId": -1509014839120676160
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 5389063713956675670
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -3154962837975513337
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -5329860164654658602
+                }
+            ],
             "pathId": -405527287742008555,
             "blockIdx": 24
         },
@@ -318,6 +599,26 @@
             "jpText": "ウララちゃん……！\r\nうんっ！　ありがとう……。",
             "enText": "Urara…! Yes, you're right! \nThank you so much!",
             "nextBlock": 26,
+            "origClipLength": 130,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -7937835220347691133
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 1412317141251135711
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -411356062806281776
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 1789859577280460203
+                }
+            ],
             "pathId": 3109149851494340770,
             "blockIdx": 25
         },
@@ -327,6 +628,18 @@
             "jpText": "がんばるぞ、おー……！！",
             "enText": "You can do this, Rice… \nYeah!!",
             "nextBlock": 27,
+            "origClipLength": 86,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -4870258496425774697
+                },
+                {
+                    "origLen": 150,
+                    "pathId": -8288708676723317383
+                }
+            ],
             "pathId": 729273564249721852,
             "blockIdx": 26
         },
@@ -336,6 +649,22 @@
             "jpText": "はぁ、っ……。",
             "enText": "Ahh…",
             "nextBlock": 28,
+            "origClipLength": 63,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 4585402770935865846
+                },
+                {
+                    "origLen": 26,
+                    "pathId": -889430991820933702
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -4554812386506840913
+                }
+            ],
             "pathId": 3819699137772541721,
             "blockIdx": 27
         },
@@ -345,6 +674,14 @@
             "jpText": "（脚も……手も、まだ震えてる。指が、すごく冷たい……！）",
             "enText": "(My legs and hands… they're still trembling. \nMy fingers… feel so cold.)",
             "nextBlock": 29,
+            "origClipLength": 289,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 526,
+                    "pathId": -4089455037612351401
+                }
+            ],
             "pathId": 5220030002315526228,
             "blockIdx": 28
         },
@@ -354,11 +691,23 @@
             "jpText": "（でも……！！）",
             "enText": "(But even so, this is something I must do—!)",
             "nextBlock": 30,
+            "origClipLength": 43,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "ライス！！",
                     "enText": "Rice!!",
                     "nextBlock": 30
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 301,
+                    "pathId": 3685686565550091085
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -2380998058448735167
                 }
             ],
             "pathId": 7037822987520347466,
@@ -370,6 +719,18 @@
             "jpText": "トレーナーさん……！！",
             "enText": "…Trainer!!!",
             "nextBlock": 31,
+            "origClipLength": 38,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -3715135303449071098
+                },
+                {
+                    "origLen": 29,
+                    "pathId": -8001409655054156543
+                }
+            ],
             "pathId": 4816324997041017061,
             "blockIdx": 30
         },
@@ -379,6 +740,8 @@
             "jpText": "あのっ……あの、あのね私……！！",
             "enText": "I, um… ah… \nYou know, I—",
             "nextBlock": 32,
+            "origClipLength": 147,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "大丈夫、君だって咲ける！",
@@ -391,6 +754,16 @@
                     "nextBlock": 32
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -1985362046996066811
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -6128983697268930173
+                }
+            ],
             "pathId": -134474600953344832,
             "blockIdx": 31
         },
@@ -400,6 +773,18 @@
             "jpText": "……！",
             "enText": "……!",
             "nextBlock": 33,
+            "origClipLength": 51,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 201,
+                    "pathId": -7983528941172880712
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -6686882051829001956
+                }
+            ],
             "pathId": -8035004683171743624,
             "blockIdx": 32
         },
@@ -409,6 +794,22 @@
             "jpText": "うんっ。……いって、きます！！",
             "enText": "You're right… \nI'm going to show them what I'm made out of!",
             "nextBlock": 34,
+            "origClipLength": 133,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": 1121962431088847734
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 4415472655638473117
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 3499808198257299105
+                }
+            ],
             "pathId": -6273454861430543134,
             "blockIdx": 33
         },
@@ -418,6 +819,14 @@
             "jpText": "（……私は、私のことが嫌い）",
             "enText": "(…You know, I've always hated myself…)",
             "nextBlock": 35,
+            "origClipLength": 117,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 47,
+                    "pathId": 5468702680930583958
+                }
+            ],
             "pathId": 5352260598083126929,
             "blockIdx": 34
         },
@@ -427,6 +836,8 @@
             "jpText": "（迷惑かけてばかり、みんなを不幸にしてばかりの\r\nだめな子だから。ずっと、ずっと大っ嫌いだった）",
             "enText": "(For the longest time, I've always despised how I'm \nalways causing trouble for others, bringing misfortune \nto people, all because I'm a worthless, good-for-nothing.)",
             "nextBlock": 36,
+            "origClipLength": 343,
+            "voiceIdx": 34,
             "pathId": -8011969705646260773,
             "blockIdx": 35
         },
@@ -436,6 +847,8 @@
             "jpText": "（だけど――！！）",
             "enText": "(But, today is different—!!)",
             "nextBlock": 37,
+            "origClipLength": 31,
+            "voiceIdx": 35,
             "pathId": 682184731520039538,
             "blockIdx": 36
         },
@@ -445,6 +858,14 @@
             "jpText": "はっ、はっ、はっ、はっ……！！",
             "enText": "Haa, haa, haa, haa…!",
             "nextBlock": 38,
+            "origClipLength": 98,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 188,
+                    "pathId": -378864371303643135
+                }
+            ],
             "pathId": 2085654366344725325,
             "blockIdx": 37
         },
@@ -454,6 +875,18 @@
             "jpText": "先頭が第3コーナーを通過！！\r\nここで外から上がってきたのは、漆黒のウマ娘ライスシャワー！",
             "enText": "The frontrunner storms past the third corner! However, \nmaking a bold move from the outside is none other than \nRice Shower, cloaked in an aura of jet-black intensity!!",
             "nextBlock": 39,
+            "origClipLength": 219,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 231,
+                    "pathId": -8755301927711438820
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 631353132577167947
+                }
+            ],
             "pathId": 366998397875699321,
             "blockIdx": 38
         },
@@ -463,6 +896,18 @@
             "jpText": "（変わりたい！　あきらめたくない！\r\nだめな子のままじゃイヤ、絶対にイヤっ！！）",
             "enText": "(I want to change! I refuse to give up! \nI want to become someone who brings happiness!!)",
             "nextBlock": 40,
+            "origClipLength": 237,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 249,
+                    "pathId": -4160596232891652750
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 410210635236321523
+                }
+            ],
             "pathId": 3121901326468202612,
             "blockIdx": 39
         },
@@ -472,6 +917,18 @@
             "jpText": "（私だって……みんなを幸せにできる、青いバラに……！）",
             "enText": "(I want to believe that even someone \nlike me can bring happiness to people, \njust like the blue rose!)",
             "nextBlock": 41,
+            "origClipLength": 213,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": 6641705186023704847
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3350376214309693115
+                }
+            ],
             "pathId": -3480058930393627013,
             "blockIdx": 40
         },
@@ -481,6 +938,14 @@
             "jpText": "残り200mを切りまして、先頭に立ったのはライスシャワー！！\r\n最後の直線、2番手と熾烈な争いですっ！",
             "enText": "With 200m remaining, Rice Shower forces her way to the front! \nIt's an intense showdown between first and second place!! \nWho's it going to be? Who's going to take home the victory?!",
             "nextBlock": 42,
+            "origClipLength": 233,
+            "voiceIdx": 40,
+            "animData": [
+                {
+                    "origLen": 245,
+                    "pathId": -7198993928227941939
+                }
+            ],
             "pathId": -4270472109647157612,
             "blockIdx": 41
         },
@@ -490,6 +955,14 @@
             "jpText": "残り100m！　果たして最後に制するのは――！",
             "enText": "Now, only 100m remaining! \nWho will emerge victorious in the end—!",
             "nextBlock": 43,
+            "origClipLength": 135,
+            "voiceIdx": 41,
+            "animData": [
+                {
+                    "origLen": 151,
+                    "pathId": -6551776907126672287
+                }
+            ],
             "pathId": 5152671316479572946,
             "blockIdx": 42
         },
@@ -499,6 +972,18 @@
             "jpText": "私はっ……なりたい私に、なるんだぁあああああ！！",
             "enText": "I want to change… \n<b>No, I will change!!!!!</b>",
             "nextBlock": 44,
+            "origClipLength": 207,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 98,
+                    "pathId": -4787704745238341729
+                },
+                {
+                    "origLen": 71,
+                    "pathId": -2790396925740029284
+                }
+            ],
             "pathId": -3698533150711855078,
             "blockIdx": 43
         },
@@ -508,6 +993,8 @@
             "jpText": "ゴォォォオオール！！　勝利を手にしたのは、ライスシャワー！！\r\n激しい争いの末、最後に意地を見せましたっ！！",
             "enText": "GOOOAAALLL!!! The triumphant victor is none other than \nRice Shower!! Her unwavering resolve to not let go of \nher lead at the final showdown was truly remarkable!",
             "nextBlock": 45,
+            "origClipLength": 312,
+            "voiceIdx": 43,
             "pathId": -4498412940870051516,
             "blockIdx": 44
         },
@@ -517,6 +1004,8 @@
             "jpText": "（ワァアアアアアアー！！）",
             "enText": "(YEAAAAAHHHHH!!!)",
             "nextBlock": 46,
+            "origClipLength": 61,
+            "voiceIdx": -1,
             "pathId": -355151619681978384,
             "blockIdx": 45
         },
@@ -526,6 +1015,8 @@
             "jpText": "いいぞ、ライスシャワーっ！！\r\n素晴らしいレースだったぞ～！！",
             "enText": "Amazing stuff, Rice Shower! \nThat was such an exhilarating race!",
             "nextBlock": 47,
+            "origClipLength": 142,
+            "voiceIdx": 44,
             "pathId": -8740549340720971468,
             "blockIdx": 46
         },
@@ -535,6 +1026,8 @@
             "jpText": "ワクワクしちゃった！！\r\nまた次も観に行くからねーっ！！",
             "enText": "That had my heart pumping!! \nI will definitely come to watch you race, again!",
             "nextBlock": 48,
+            "origClipLength": 118,
+            "voiceIdx": 45,
             "pathId": -1620915586135448017,
             "blockIdx": 47
         },
@@ -544,6 +1037,8 @@
             "jpText": "わぁ、っ……！！",
             "enText": "Ah…!",
             "nextBlock": 49,
+            "origClipLength": 81,
+            "voiceIdx": 46,
             "pathId": -1644917858392133567,
             "blockIdx": 48
         },
@@ -553,11 +1048,23 @@
             "jpText": "トレーナーさん……あのね、いっこ、わがまま言ってもいい……？",
             "enText": "U-Um, Trainer… \nWould you let me make a selfish request?",
             "nextBlock": 50,
+            "origClipLength": 218,
+            "voiceIdx": 47,
             "choices": [
                 {
                     "jpText": "わがまま？",
                     "enText": "A selfish request?",
                     "nextBlock": 50
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 526,
+                    "pathId": -960169773306068651
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2472328646479599974
                 }
             ],
             "pathId": -960685845132736483,
@@ -569,6 +1076,18 @@
             "jpText": "うん。あの、あのね……？",
             "enText": "Yeah. \nIf you're okay with it…",
             "nextBlock": 51,
+            "origClipLength": 130,
+            "voiceIdx": 48,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 1847656410547840855
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -4276804554508413397
+                }
+            ],
             "pathId": -1478798116412899924,
             "blockIdx": 50
         },
@@ -578,6 +1097,18 @@
             "jpText": "トレーナーさんのこと……『お兄さま』って呼びたいの。",
             "enText": "Would you let me call you, big brother?",
             "nextBlock": 52,
+            "origClipLength": 136,
+            "voiceIdx": 49,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -1754919204741520196
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1187789973068169389
+                }
+            ],
             "pathId": 3687047302217351181,
             "blockIdx": 51
         },
@@ -587,6 +1118,18 @@
             "jpText": "トレーナーさんのこと……『お姉さま』って呼びたいの。",
             "enText": "Would you let me call you, big sister?",
             "nextBlock": 53,
+            "origClipLength": 136,
+            "voiceIdx": 49,
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -2556082995206804597
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -167036170757265315
+                }
+            ],
             "pathId": 7908822435994034837,
             "blockIdx": 52
         },
@@ -596,6 +1139,8 @@
             "jpText": "だめ、かな……？",
             "enText": "Or… is that, too weird?",
             "nextBlock": 54,
+            "origClipLength": 45,
+            "voiceIdx": 50,
             "choices": [
                 {
                     "jpText": "ライスがそうしたいなら、いいとも",
@@ -608,6 +1153,12 @@
                     "nextBlock": 54
                 }
             ],
+            "animData": [
+                {
+                    "origLen": 148,
+                    "pathId": -3974272244929342277
+                }
+            ],
             "pathId": -4617714564243285582,
             "blockIdx": 53
         },
@@ -617,6 +1168,22 @@
             "jpText": "いいの！？　じゃ、じゃあ……！",
             "enText": "R-Really!? T-Then…",
             "nextBlock": 55,
+            "origClipLength": 116,
+            "voiceIdx": 51,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -3502248835606474840
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4576443418733133867
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 8172806366157948662
+                }
+            ],
             "pathId": -2729563231058189098,
             "blockIdx": 54
         },
@@ -626,6 +1193,14 @@
             "jpText": "これからも……よろしくお願いしますっ。",
             "enText": "Please continue to look after me from now on!",
             "nextBlock": 56,
+            "origClipLength": 105,
+            "voiceIdx": 52,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 3259201043497580911
+                }
+            ],
             "pathId": 8765464834874905562,
             "blockIdx": 55
         },
@@ -635,6 +1210,14 @@
             "jpText": "――お兄さま！",
             "enText": "――Big brother!",
             "nextBlock": 57,
+            "origClipLength": 41,
+            "voiceIdx": 53,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -6956804223566512411
+                }
+            ],
             "pathId": 5823369156226215135,
             "blockIdx": 56
         },
@@ -644,10 +1227,18 @@
             "jpText": "――お姉さま！",
             "enText": "――Big sister!",
             "nextBlock": -1,
+            "origClipLength": 41,
+            "voiceIdx": 53,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 3484370843084356745
+                }
+            ],
             "pathId": -9004246873705592855,
             "blockIdx": 57
         }
     ],
     "humanTl": true,
-    "modified": 1708748976
+    "modified": 1710794205
 }

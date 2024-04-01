@@ -1,16 +1,25 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "TOTZ7D6KWZS4L4TL5IX4BCVYZZRHFBGF",
     "type": "story",
     "storyId": "041030001",
     "title": "どうか、脚よ止まらないで",
+    "enTitle": "I can't give up…",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "少し離れた駅前まで買い物に出かけた、ある日のこと。\r\n学園まで戻る道の途中で、とあるウマ娘を見かけた――",
-            "enText": "On a certain day, as I was out shopping near the train station, I \nhappened to spot a horse girl on my way back to school.",
+            "enText": "One day, I was out shopping near the train station. \nOn my way back to the campus, a certain horsegirl's \nsilhouette caught my eye ——",
             "nextBlock": 2,
+            "origClipLength": 112,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -14007231053344892
+                }
+            ],
             "pathId": -4947545252033821683,
             "blockIdx": 1
         },
@@ -18,8 +27,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふぅ……うん、休憩おしまいっ。",
-            "enText": "Whew… Ok that's enough of a break.",
+            "enText": "<i>Phew…</i> Okay, break's over!",
             "nextBlock": 3,
+            "origClipLength": 109,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -1539607647523252178
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -5193993734597173684
+                }
+            ],
             "pathId": -8196336955595350626,
             "blockIdx": 2
         },
@@ -27,8 +48,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "早く戻って……\r\nそしたら、次のメニューやらなくっちゃ。",
-            "enText": "I've got to get back quickly so that I \ncan get started on my next training.",
+            "enText": "I should hurry back… so that I can \ncontinue the next part of my training!",
             "nextBlock": 4,
+            "origClipLength": 131,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 28,
+                    "pathId": -5764750623546604389
+                }
+            ],
             "pathId": -6576799313515788430,
             "blockIdx": 3
         },
@@ -36,18 +65,30 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "がんばれライス、がんばれー……おー！",
-            "enText": "You can do it Rice. Go Rice… Go!!!",
+            "enText": "You can do it, Rice! \nYou can do it, yeah～!",
             "nextBlock": 5,
+            "origClipLength": 192,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "（キレイなフォームだな……）",
-                    "enText": "(That's a nice running form)",
+                    "enText": "(She has good running form…)",
                     "nextBlock": 5
                 },
                 {
                     "jpText": "（キレイなフォーム……）",
-                    "enText": "(That's a nice running form)",
+                    "enText": "(Her form looks good…)",
                     "nextBlock": 5
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 35,
+                    "pathId": 2924511550048599202
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -2396306892480759094
                 }
             ],
             "pathId": 666557289244295410,
@@ -57,8 +98,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "強いバネを感じさせる走りで、ライスシャワーが駆けていく。\r\n小柄な体躯ながら、纏う覇気にはどこか目を惹かれるものがあった。",
-            "enText": "With a spring in her step, Rice Shower took off \nrunning. Because of her small stature, she seemed \nto radiate an aura that drew my attention.",
+            "enText": "Rice Shower took off running with a stride that was both \npowerful and efficient. Despite her petite figure, she exuded \na strong sense of determination that caught my attention.",
             "nextBlock": 6,
+            "origClipLength": 124,
+            "voiceIdx": -1,
             "pathId": 6123007977465263386,
             "blockIdx": 5
         },
@@ -66,8 +109,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "なんだか期待を寄せたくなる子だ――そう感じつつ、\r\n彼女と同じく学園方面へと続く道を辿っていると……。",
-            "enText": "For some reason, I felt as if she was someone that could \naccomplish anything. As we were both heading back to the campus, \nI decided to go the same route.",
+            "enText": "She somehow gave off an impression that inspired high hopes. \nI followed the same road after her, back to the Academy……",
             "nextBlock": 7,
+            "origClipLength": 111,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 157,
+                    "pathId": 5076861349662384592
+                }
+            ],
             "pathId": -2050129631637710854,
             "blockIdx": 6
         },
@@ -75,8 +126,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "………………。",
-            "enText": "Phew…",
+            "enText": "……………….",
             "nextBlock": 8,
+            "origClipLength": 62,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 6382766913317230854
+                }
+            ],
             "pathId": 7955429644641571720,
             "blockIdx": 7
         },
@@ -84,8 +143,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "赤信号に捕まった……。",
-            "enText": "But then she was stopped by a red light…",
+            "enText": "We were stopped at a red light……",
             "nextBlock": 9,
+            "origClipLength": 59,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 157,
+                    "pathId": -6384391705737352338
+                }
+            ],
             "pathId": -4396063601734315086,
             "blockIdx": 8
         },
@@ -93,8 +160,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "…………はぅ。",
-            "enText": "Haaaah…",
+            "enText": "………… <i>Aww</i>.",
             "nextBlock": 10,
+            "origClipLength": 71,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 141,
+                    "pathId": 2542273575914787645
+                }
+            ],
             "pathId": -2449045037822049669,
             "blockIdx": 9
         },
@@ -102,8 +177,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "またもや赤信号に捕まった……。",
-            "enText": "And then she was stopped by another red light…",
+            "enText": "A red light stopped us again……",
             "nextBlock": 11,
+            "origClipLength": 64,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 193,
+                    "pathId": 1602908373854157165
+                }
+            ],
             "pathId": 6248991641578415155,
             "blockIdx": 10
         },
@@ -111,8 +194,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あぅぅぅ……！！",
-            "enText": "!!!",
+            "enText": "<i>Ahh……!!</i>",
             "nextBlock": 12,
+            "origClipLength": 76,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 193,
+                    "pathId": 1778947026940709657
+                }
+            ],
             "pathId": -760847336109302723,
             "blockIdx": 11
         },
@@ -120,8 +211,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "…………っ。",
-            "enText": "Ugh!!!",
+            "enText": "…………",
             "nextBlock": 13,
+            "origClipLength": 57,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 104,
+                    "pathId": 6029631961138074017
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -8511265854926826398
+                }
+            ],
             "pathId": -1173698980817000138,
             "blockIdx": 12
         },
@@ -129,8 +232,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "恐るべき頻度で赤信号に捕まった……！\r\n今日は、なんだか随分と巡り合わせが悪いようだ……。",
-            "enText": "As if some mysterious force was at play, she was once again \nstopped by a red light. Maybe today was just not a good day…",
+            "enText": "Yet another red light…! Maybe there's \na lot of bad luck going around today…?",
             "nextBlock": 14,
+            "origClipLength": 103,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 135,
+                    "pathId": -1042149054565574566
+                },
+                {
+                    "origLen": 230,
+                    "pathId": 9069511796563075992
+                }
+            ],
             "pathId": 6539479363425668668,
             "blockIdx": 13
         },
@@ -138,8 +253,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その後も信号という信号に捕まり続け、\r\nやっとトレセン学園へ戻れた頃には、とっぷりと日が暮れていた。",
-            "enText": "Afterward we were stopped by red light after red light, by the \ntime we finally reached the campus, the sun had long set.",
+            "enText": "By the time we finally returned to Tracen Academy, \nthe sun had completely set as we were relentlessly \nstopped by a series of traffic lights.",
             "nextBlock": 15,
+            "origClipLength": 110,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": -7370593444919220391
+                },
+                {
+                    "origLen": 45,
+                    "pathId": -8459112257240723809
+                }
+            ],
             "pathId": 9102948605982635926,
             "blockIdx": 14
         },
@@ -147,8 +274,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "すると――",
-            "enText": "And then…",
+            "enText": "And then, shortly after ——",
             "nextBlock": 16,
+            "origClipLength": 51,
+            "voiceIdx": -1,
             "pathId": -1462295033747552295,
             "blockIdx": 15
         },
@@ -156,18 +285,30 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あのっ……す、すみません……！",
-            "enText": "E… excuse me!",
+            "enText": "U-Um, excuse me……!",
             "nextBlock": 17,
+            "origClipLength": 99,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "ん？俺？",
-                    "enText": "Me?",
+                    "enText": "Hm? <i>Me</i>…?",
                     "nextBlock": 17
                 },
                 {
                     "jpText": "え？私？",
-                    "enText": "Me?",
+                    "enText": "Hm? <i>Me</i>…?",
                     "nextBlock": 17
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": -7121600751944520803
+                },
+                {
+                    "origLen": 93,
+                    "pathId": -3127491469480844605
                 }
             ],
             "pathId": 8413197843628907677,
@@ -177,8 +318,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "は、はい。\r\nあの……ご、ご……。",
-            "enText": "Yes! I, I'm…",
+            "enText": "Y-Yes! \nUmm… I-I'm…",
             "nextBlock": 18,
+            "origClipLength": 123,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 213,
+                    "pathId": -3038468506836502791
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6425784502140918912
+                }
+            ],
             "pathId": -3025194503355968324,
             "blockIdx": 17
         },
@@ -186,13 +339,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ごめんなさいっ！！",
-            "enText": "I'm so sorry!",
+            "enText": "I'm so sorry!!",
             "nextBlock": 19,
+            "origClipLength": 37,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "えっ！？",
                     "enText": "Huh!?",
                     "nextBlock": 19
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 2800461357179330191
+                },
+                {
+                    "origLen": 62,
+                    "pathId": -7754042252185364735
                 }
             ],
             "pathId": -6530846063458554116,
@@ -202,8 +367,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "だって……ライスがそばを走ってたばっかりに、\r\n学園まで戻るのこんなに遅くなっちゃって……。",
-            "enText": "That's… because I was running near you, you ended \nup arriving this late to the campus…",
+            "enText": "It's because… Rice was running alongside you that \nit took you so long to get back to the Academy…!",
             "nextBlock": 20,
+            "origClipLength": 236,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -2822480916497499682
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -5104836978135189130
+                }
+            ],
             "pathId": -2816954385475102481,
             "blockIdx": 19
         },
@@ -211,18 +388,26 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ほんとにほんとに、ごめんなさいっ……！！",
-            "enText": "I'm really really sorry!",
+            "enText": "I'm really, really sorry…!!",
             "nextBlock": 21,
+            "origClipLength": 94,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "いや、君のせいじゃ……",
-                    "enText": "That's not really your fault…",
+                    "enText": "That's not exactly your fault…",
                     "nextBlock": 21
                 },
                 {
                     "jpText": "いえ、貴方のせいじゃ……",
-                    "enText": "That's not really your fault…",
+                    "enText": "Oh, but that's not your fault…",
                     "nextBlock": 21
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 506449223793743290
                 }
             ],
             "pathId": -5011569425809141416,
@@ -232,8 +417,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ううん、ライスのせいなんです。\r\nライスはすぐみんなを不幸にしちゃう、だめな子だから……。",
-            "enText": "No, it really is my fault. I'm always causing misfortune for \nothers. Because I… I'm useless…!",
+            "enText": "No, it really is my fault. I'm always causing misfortune \nfor others. Because I'm just a good-for-nothing……",
             "nextBlock": 22,
+            "origClipLength": 248,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": 1408567911842325259
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -4819717582978011360
+                }
+            ],
             "pathId": -5937876424020209244,
             "blockIdx": 21
         },
@@ -241,8 +438,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ごめんなさい……で、でもライスがいなくなれば大丈夫ですから！\r\nそれではっ……！！",
-            "enText": "I'm so sorry. But everything will be ok \nif I'm not here! If you'll excuse me!",
+            "enText": "I'm sorry… b-but everything will be better when \nI'm not around anymore! So if you'll excuse me…!",
             "nextBlock": 23,
+            "origClipLength": 191,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 168,
+                    "pathId": -7216940309093765469
+                },
+                {
+                    "origLen": 45,
+                    "pathId": 3547652768572522025
+                }
+            ],
             "pathId": -2982320291954061818,
             "blockIdx": 22
         },
@@ -250,13 +459,25 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "止める間もなくライスシャワーは駆け去ってしまった……。\r\nあれほど気にさせたまま放っておくのも可哀想だ。",
-            "enText": "Saying her piece, Rice Shower ended up running away. If I left \neverything after all that it would've been too depressing.",
+            "enText": "Before I had even a chance to respond, Rice Shower quickly \nfled into the dark…… She seemed so distressed it would \nmake me feel bad for her to just leave it at that.",
             "nextBlock": 24,
+            "origClipLength": 115,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（考えすぎだって伝えに行こう……！）",
-                    "enText": "(Let's not think too hard about it and go after her!)",
+                    "enText": "(I need to let her know that \nshe's overthinking things!)",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -759828926412736088
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 5142092415995465479
                 }
             ],
             "pathId": -8083559128923132042,
@@ -266,8 +487,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ライスシャワーを追いかけることにした。",
-            "enText": "I immediately went after her.",
+            "enText": "And so I chased after Rice Shower.",
             "nextBlock": 25,
+            "origClipLength": 69,
+            "voiceIdx": -1,
             "pathId": -4522059595580173822,
             "blockIdx": 24
         },
@@ -275,8 +498,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はぁっ、はぁっ、はぁっ……はぁ。",
-            "enText": "Huh… huh… huh… haah…",
+            "enText": "<i>Haa, haa, haa… haa…</i>",
             "nextBlock": 26,
+            "origClipLength": 156,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": -697362031640086801
+                },
+                {
+                    "origLen": 129,
+                    "pathId": 3985997180304970364
+                }
+            ],
             "pathId": -3421475850936766144,
             "blockIdx": 25
         },
@@ -284,8 +519,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……うぅ。\r\nさっきの人、こんなに遅くなっちゃって、大丈夫だったかなぁ。",
-            "enText": "The person from before, I wonder if he'll \nbe alright after being so late.",
+            "enText": "<i>……</i> <i>Ahh. </i>I wonder if that person will be okay. \nIt's gotten so late after all.",
             "nextBlock": 27,
+            "origClipLength": 222,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 200,
+                    "pathId": 2897777090916488132
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -2870557957022759332
+                }
+            ],
             "pathId": -1876716527972586974,
             "blockIdx": 26
         },
@@ -293,8 +540,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "お腹ぺこぺこになっちゃってたり……\r\n見たいテレビ終わっちゃってたりしたら、どうしよう……。",
-            "enText": "What if he ended up becoming hungry? Or if he ended up missing a \nshow he wanted to watch because he was so late?",
+            "enText": "What if they were really hungry…? Or if they ended up missing \na show they wanted to watch? Oh no… what should I do……",
             "nextBlock": 28,
+            "origClipLength": 221,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 250,
+                    "pathId": -7317685698175067056
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -935009581507499815
+                }
+            ],
             "pathId": 7519047956711246498,
             "blockIdx": 27
         },
@@ -302,8 +561,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はぁ……ほんとにだめな子だなぁ、私……。",
-            "enText": "(Sigh) I really am such a useless girl…",
+            "enText": "<i>Haah…</i> I really am such a good-for-nothing……",
             "nextBlock": 29,
+            "origClipLength": 184,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -6187678687609680329
+                }
+            ],
             "pathId": -4722848728616420558,
             "blockIdx": 28
         },
@@ -311,8 +578,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……どうやら、随分色々と背負い込んでしまう子のようだ。\r\nとりあえず声をかけようとしたその時――",
-            "enText": "It looked as if she had a lot on her mind. However, \nas I was about to call out to her…",
+            "enText": "… She seems to be the kind of person who heaps \nall sorts of burdens and worries upon herself. \nThen, right before I could reach out to her ——",
             "nextBlock": 30,
+            "origClipLength": 107,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 143,
+                    "pathId": 3208171787331295996
+                }
+            ],
             "pathId": 3048930280487669442,
             "blockIdx": 29
         },
@@ -320,8 +595,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "…………ううんっ、でも、がんばらなきゃ！",
-            "enText": "But even still I have to do my best!",
+            "enText": "………… But even so, I have to keep doing my best!",
             "nextBlock": 31,
+            "origClipLength": 119,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 204,
+                    "pathId": 560533152716024683
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3229223786995289765
+                }
+            ],
             "pathId": 3809308364798445315,
             "blockIdx": 30
         },
@@ -329,8 +616,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "次の選抜レース出るって、決めたんだもん。\r\nちゃんと出て、ちゃんと走って、それで……。",
-            "enText": "Because the Selection Race is already decided, I have to make \nsure to compete, run properly, and then…",
+            "enText": "Because I already decided that I would participate \nin the next Selection Race! I'll make sure to be there, \nrun well, and then……",
             "nextBlock": 32,
+            "origClipLength": 258,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 239,
+                    "pathId": 8123165448194350915
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -7432795113632026334
+                }
+            ],
             "pathId": -871827045418362687,
             "blockIdx": 31
         },
@@ -338,8 +637,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ちゃんとデビューして、いっぱい活躍して……。\r\nだめじゃないライスになるんだから……！",
-            "enText": "I'll debut, compete in a lot of races, and then \nI'll no longer be just a useless girl.",
+            "enText": "I'm going to debut, compete in a lot of races…… \nI won't be a good-for-nothing anymore…!",
             "nextBlock": 33,
+            "origClipLength": 211,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": -1923674406332105619
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -7391053774853948043
+                }
+            ],
             "pathId": -7024163775467352765,
             "blockIdx": 32
         },
@@ -347,8 +658,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "うんっ……トレーニングしなくっちゃ！\r\nがんばれライス、がんばれー……！",
-            "enText": "So I have to train. You can do it Rice. Go Rice…",
+            "enText": "Yes… that's right! So I have to keep training! \nYou can do it, Rice! You can do it ——",
             "nextBlock": 34,
+            "origClipLength": 186,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": 7191179574354102042
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 5448641406183219041
+                }
+            ],
             "pathId": 1947553686389453407,
             "blockIdx": 33
         },
@@ -356,8 +679,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "おーっ！！",
-            "enText": "Go!!!",
+            "enText": "—— Yeah!!",
             "nextBlock": 35,
+            "origClipLength": 54,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -93925817742124807
+                }
+            ],
             "pathId": -5719186237948688662,
             "blockIdx": 34
         },
@@ -365,8 +696,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "あまりにも必死にトレーニングをし始めてしまったので、\r\n邪魔するのが忍びなく、結局声はかけられなかった……。",
-            "enText": "And so Rice Shower desperately continued her harsh training. \nSilently I left the area, never managing to call out to her…",
+            "enText": "She began her rigorous training with such fervor that \nI couldn't bring myself to interrupt. Ultimately, I quietly \nleft the scene without ever calling out to her……",
             "nextBlock": 36,
+            "origClipLength": 115,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -4135796372591566549
+                }
+            ],
             "pathId": -2929627259645627396,
             "blockIdx": 35
         },
@@ -374,8 +713,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ライスシャワー……彼女の本気の走りが\r\n次の選抜レースで見られるのならば、とても楽しみだ。",
-            "enText": "I can't wait to see her run seriously \nduring the upcoming Selection Race.",
+            "enText": "Rice Shower…… I'm really looking forward to seeing the result \nof your determination in the upcoming Selection Race.",
             "nextBlock": 37,
+            "origClipLength": 106,
+            "voiceIdx": -1,
             "pathId": -1071652682536256720,
             "blockIdx": 36
         },
@@ -383,8 +724,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そんな期待を膨らませつつ、いよいよ迎えた選抜レース当日。\r\n会場はトレーナーからのスカウトを狙うウマ娘で溢れていた。",
-            "enText": "As expectations continued to rise, the day of the Selection Race \nfinally arrived. Trainers filled the race stands, looking to \nscout any horse girls that caught their eyes.",
+            "enText": "Anticipation peaked as the long-awaited day of the Selection \nRace finally arrived. The venue was overflowing with horsegirls, \nall seeking to attract the attention of trainers scouting for talent.",
             "nextBlock": 38,
+            "origClipLength": 120,
+            "voiceIdx": -1,
             "pathId": -566008690894429730,
             "blockIdx": 37
         },
@@ -392,8 +735,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "が――",
-            "enText": "But…",
+            "enText": "However ——",
             "nextBlock": 39,
+            "origClipLength": 48,
+            "voiceIdx": -1,
             "pathId": -388959439729744253,
             "blockIdx": 38
         },
@@ -401,8 +746,24 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ライスさーん！　ライスさんライスさんライスさんッ！？\r\nどちらにいらっしゃるのですか、ライスさぁぁーーんッ！！",
-            "enText": "Rice-san! Rice-san, Rice-san, Rice-san!? Where are you!!",
+            "enText": "Miss Rice! Miss Rice, Miss Rice, Miss Rice! \n<b>Where did you go, Miss Rice?!!</b>",
             "nextBlock": 40,
+            "origClipLength": 227,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -6971294412400300488
+                },
+                {
+                    "origLen": 137,
+                    "pathId": -529186818422578841
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 3105881883387594526
+                }
+            ],
             "pathId": -6342691968848231013,
             "blockIdx": 39
         },
@@ -410,8 +771,20 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "学級委員長たるこの私が、貴方の出走が近いことを\r\nダッシュでお知らせしに参りましたよーッ！？",
-            "enText": "I, the class representative, have dashed all the way over here to \ninform you that your race is just about to start!",
+            "enText": "Your proud class representative has dashed over \nto inform you that your race is about to begin!",
             "nextBlock": 41,
+            "origClipLength": 202,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": 482900012513373568
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2972268650304941931
+                }
+            ],
             "pathId": 3113659556804673231,
             "blockIdx": 40
         },
@@ -419,8 +792,16 @@
             "jpName": "選抜レース係員A",
             "enName": "Selection Race Official A",
             "jpText": "そう言うサクラバクシンオーさんこそ、次のグループですよね？\r\n出走準備、お早くお願いします！",
-            "enText": "Speaking of which Sakura Bakushin O-san, your group \nis also the next to depart, so please hurry and \nmake your preparations for the race!",
+            "enText": "Speaking of which, Sakura Bakushin O, your group \nis next in line, right? Please hurry and make your \npreparations for the race!",
             "nextBlock": 42,
+            "origClipLength": 206,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 173,
+                    "pathId": 4367455016773214489
+                }
+            ],
             "pathId": 8983424291934592993,
             "blockIdx": 41
         },
@@ -428,8 +809,20 @@
             "jpName": "サクラバクシンオー",
             "enName": "Sakura Bakushin O",
             "jpText": "ちょわっ！？",
-            "enText": "Oh no!",
+            "enText": "<i>Gyah!?</i>",
             "nextBlock": 43,
+            "origClipLength": 40,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": 2728007790676938632
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 1352308697304473451
+                }
+            ],
             "pathId": -8337240365140342495,
             "blockIdx": 42
         },
@@ -437,8 +830,16 @@
             "jpName": "ベテラントレーナーA",
             "enName": "Veteran Trainer A",
             "jpText": "……ライスシャワー、とうとう選抜レースまでボイコットか。\r\n資質としてはいいものを持っている子なんだがなぁ。",
-            "enText": "It looks like Rice Shower is boycotting the Selection Race. It's \na shame since she had some good racing qualities.",
+            "enText": "… Rice Shower is finally boycotting the Selection Race, hmm? \nIt's such a shame, considering she's got some real potential.",
             "nextBlock": 44,
+            "origClipLength": 238,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 39,
+                    "pathId": -4109564688240470153
+                }
+            ],
             "pathId": -1070361446618083782,
             "blockIdx": 43
         },
@@ -446,8 +847,10 @@
             "jpName": "中堅トレーナーA",
             "enName": "Average Trainer A",
             "jpText": "そもそもレースに出たがらないのでは……資質以前の問題ですね。",
-            "enText": "Racing qualities aside, it's a problem \nif she isn't showing up to her races.",
+            "enText": "It doesn't seem like she wants to participate in \nraces to begin with… I'd say it's a problem that \ngoes beyond her potential.",
             "nextBlock": 45,
+            "origClipLength": 170,
+            "voiceIdx": 28,
             "pathId": 6280462765622276900,
             "blockIdx": 44
         },
@@ -455,8 +858,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……結局、その日の選抜レースにライスシャワーは現れなかった。",
-            "enText": "In the end, I wasn't able to see Rice \nShower run at the Selection Race.",
+            "enText": "In the end, Rice Shower did not appear for the Selection Race…",
             "nextBlock": 46,
+            "origClipLength": 84,
+            "voiceIdx": -1,
             "pathId": 5246539777145032839,
             "blockIdx": 45
         },
@@ -464,8 +869,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "次にライスシャワーを見かけたのは――\r\nその日の夜のことだ。",
-            "enText": "However I would soon see Rice Shower later again that night.",
+            "enText": "Later that evening, a familiar figure came into view…",
             "nextBlock": 47,
+            "origClipLength": 84,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 243,
+                    "pathId": 65195600699644450
+                }
+            ],
             "pathId": 1730101677296816496,
             "blockIdx": 46
         },
@@ -473,8 +886,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ぐすっ、ふえぇ……うぇぇぇぇーん！！",
-            "enText": "[Crying]",
+            "enText": "<i>Sniffle, sob…… Uwaaaahh!!</i>",
             "nextBlock": 48,
+            "origClipLength": 201,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 304,
+                    "pathId": 634812365250141357
+                }
+            ],
             "pathId": 6383779974318147122,
             "blockIdx": 47
         },
@@ -482,8 +903,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ばかっ、ばかばか、ライスのばか！\r\nがんばるって、がんばろうって、決めたのに……。",
-            "enText": "Stupid! Stupid! Stupid! I'm so stupid! Even though I worked so \nhard, even though I decided to work hard…",
+            "enText": "Stupid! Stupid! Stupid! I'm so stupid! \nEven though I made a decision to try \nmy best… to give it my all!",
             "nextBlock": 49,
+            "origClipLength": 266,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 383,
+                    "pathId": -8247026128068308968
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2606754153374981057
+                }
+            ],
             "pathId": 3014068769434899612,
             "blockIdx": 48
         },
@@ -491,8 +924,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ぐすっ……！\r\nなんで……なんでライスは、こんなにだめな子なの……？",
-            "enText": "[Sniff] Why? Why do I have to be such a useless girl…?",
+            "enText": "Why? Why do I have to be such a good-for-nothing…?",
             "nextBlock": 50,
+            "origClipLength": 258,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 828971518734827979
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2298181036438428752
+                }
+            ],
             "pathId": 1414213003007212720,
             "blockIdx": 49
         },
@@ -500,18 +945,26 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "泣き喚くライスシャワーがあまりに痛ましく見え、\r\n気づけば彼女に歩み寄っていた……。",
-            "enText": "Watching her cry and being in so much pain, before I even realize \nit, I had already made my way towards her.",
+            "enText": "Rice Shower's cries of anguish filled the lonely \nnight air, the sight of her distressed figure \ncompelling me to draw nearer…",
             "nextBlock": 51,
+            "origClipLength": 99,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "……大丈夫か？",
-                    "enText": "Are you ok?",
+                    "enText": "…… Are you okay?",
                     "nextBlock": 51
                 },
                 {
                     "jpText": "……大丈夫？",
-                    "enText": "Are you ok?",
+                    "enText": "…… Are you okay?",
                     "nextBlock": 51
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": -578793726332078929
                 }
             ],
             "pathId": -7659326939978896816,
@@ -521,8 +974,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふぇっ……！？",
-            "enText": "Huh!?",
+            "enText": "<i>Hwuh!?</i>",
             "nextBlock": 52,
+            "origClipLength": 38,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -2271002557231559169
+                },
+                {
+                    "origLen": 52,
+                    "pathId": 5033026290699964590
+                }
+            ],
             "pathId": -3845341831184353720,
             "blockIdx": 51
         },
@@ -530,12 +995,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ、あなたは……この前の……？",
-            "enText": "You're… the person from before?",
+            "enText": "A-Aren't you the person… from the other day?",
             "nextBlock": -1,
+            "origClipLength": 145,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -7212181708300643065
+                }
+            ],
             "pathId": 8365804955487916177,
             "blockIdx": 52
         }
     ],
     "humanTl": true,
-    "modified": 1673054095
+    "modified": 1711994576
 }

@@ -1,9 +1,10 @@
 {
-    "version": 4,
-    "bundle": "34YNBLCOKTJKRU2COK46GAWQ7IGZ3KAU",
+    "version": 6,
+    "bundle": "LTSAV4ON7RQ7T5DT4IHQTYA6O2N47FQI",
     "type": "story",
     "storyId": "041060001",
     "title": "どうも、庶民派デス",
+    "enTitle": "",
     "text": [
         {
             "jpName": "モノローグ",
@@ -11,7 +12,9 @@
             "jpText": "今日は、ウマ娘たちの実力を見極める\n一大イベント『選抜レース』の開催日だ。",
             "enText": "It was the day of the big qualifying race. A chance for \nup-and-coming Uma Musume to show off their potential…",
             "nextBlock": 2,
-            "pathId": 7818615320121497660,
+            "origClipLength": 93,
+            "voiceIdx": -1,
+            "pathId": -1148686600717825065,
             "blockIdx": 1
         },
         {
@@ -20,7 +23,19 @@
             "jpText": "さっそく会場であるコースへ向かうため、\n学園内を歩いていると――",
             "enText": "I was walking through the academy grounds \non my way to the track, when…",
             "nextBlock": 3,
-            "pathId": -9048132843203113537,
+            "origClipLength": 91,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -9038191201222762960
+                },
+                {
+                    "origLen": 83,
+                    "pathId": -8702056862881433801
+                }
+            ],
+            "pathId": 188212731988018323,
             "blockIdx": 2
         },
         {
@@ -29,6 +44,8 @@
             "jpText": "――あっ！　ちょっとちょっと、そこのお方。\r\nすこーしばかり協力してくれませんかね。",
             "enText": "Ah, um, excuse me? Yeah, you over there! I couldn't ask you to \nassist me for just a tiny second, could I?",
             "nextBlock": 4,
+            "origClipLength": 202,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "協力？",
@@ -36,7 +53,17 @@
                     "nextBlock": 4
                 }
             ],
-            "pathId": -1079393493655920447,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -2296329748923267622
+                },
+                {
+                    "origLen": 19,
+                    "pathId": -6641763394098954146
+                }
+            ],
+            "pathId": -7376139373885455652,
             "blockIdx": 3
         },
         {
@@ -45,7 +72,19 @@
             "jpText": "ですです。これからここに来る人たちに、『ネイチャ？\r\n見てないですね～』って答えてくれるだけでいいので――",
             "enText": "\"Assist\", exactly. Now, some people are going to come by here in \na moment and when they do, I need you to tell them, \"Nice Nature? \nNoooo, I haven't seen her all day!\"",
             "nextBlock": 5,
-            "pathId": -3938990205483238298,
+            "origClipLength": 295,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 83,
+                    "pathId": 7855007629964539239
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5967837845626956627
+                }
+            ],
+            "pathId": 4126581138695943672,
             "blockIdx": 4
         },
         {
@@ -54,7 +93,19 @@
             "jpText": "あっ、ネイちゃん！\nいたいた～やっと見つけたわよ～！！",
             "enText": "Ah! Nay-chan! There you are, we've been looking all over for you!",
             "nextBlock": 6,
-            "pathId": -7409570786739754658,
+            "origClipLength": 153,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 133,
+                    "pathId": -8762825734997743447
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -1628092692475473216
+                }
+            ],
+            "pathId": -7394371905141291392,
             "blockIdx": 5
         },
         {
@@ -63,7 +114,19 @@
             "jpText": "げ…………。",
             "enText": "Guck.",
             "nextBlock": 7,
-            "pathId": 2757972866536416490,
+            "origClipLength": 25,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": -8034601624711408807
+                },
+                {
+                    "origLen": 100,
+                    "pathId": -2952627934007643759
+                }
+            ],
+            "pathId": 1902118481821152100,
             "blockIdx": 6
         },
         {
@@ -72,7 +135,19 @@
             "jpText": "なんだなんだ、こんなところにいたのか！　出走者のはずなのに\r\n会場にいないから、寝坊したのかと心配しちまったぞ？",
             "enText": "What are you doing here? We heard you were racing, but we \ncouldn't find you at the track! We thought you'd overslept!",
             "nextBlock": 8,
-            "pathId": -2441395403800658779,
+            "origClipLength": 247,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 231,
+                    "pathId": 4130277496501115469
+                },
+                {
+                    "origLen": 259,
+                    "pathId": -4846603629824734533
+                }
+            ],
+            "pathId": -942948951591188782,
             "blockIdx": 7
         },
         {
@@ -81,7 +156,19 @@
             "jpText": "いや、そーいうドジっ子キャラじゃないから。\r\nむしろ最近、みょーに朝早く目覚める日が増えちゃってさ～……。",
             "enText": "Aww c'mon now, would I do that!? Why, if anything I think I've \nbeen getting up earlier recently and…",
             "nextBlock": 9,
-            "pathId": 5525481530054844825,
+            "origClipLength": 250,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 217,
+                    "pathId": 1411214686463106094
+                },
+                {
+                    "origLen": 95,
+                    "pathId": 7890650654991501105
+                }
+            ],
+            "pathId": 7991608599309374075,
             "blockIdx": 8
         },
         {
@@ -90,7 +177,19 @@
             "jpText": "あははっ、やだよネイちゃんたら、\nあたしらみたいなこと言っちゃって！",
             "enText": "Oh, really now, Nay-chan, you sound like one of us!",
             "nextBlock": 10,
-            "pathId": -2383588928079385441,
+            "origClipLength": 169,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 239,
+                    "pathId": -2087332105584393957
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8396423580674902967
+                }
+            ],
+            "pathId": 966273614659607206,
             "blockIdx": 9
         },
         {
@@ -99,7 +198,15 @@
             "jpText": "それより選抜レースだよ、選抜レース！\r\nあたしらみーんな応援してるからさ。がんばるんだよ、ネイちゃん！",
             "enText": "Anyway, it's the qualifying race, Nay-chan! We're all here to \ncheer you on! You'll do your best won't you, Nay-chan?",
             "nextBlock": 11,
-            "pathId": -7463822792360382884,
+            "origClipLength": 271,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 204,
+                    "pathId": 5872178001814308418
+                }
+            ],
+            "pathId": -7217645465214479555,
             "blockIdx": 10
         },
         {
@@ -108,7 +215,19 @@
             "jpText": "えーっと、お忙しい中ご来場くださったのは大変うれしいんです\r\nけれどもー……アタシなんかに過剰な期待はしないでねー？",
             "enText": "Uuuuhhh… I, uh, appreciate you all taking time out of your busy \nschedules to attend today but… I'm worried you might all be \ngetting your hopes up a little too much…",
             "nextBlock": 12,
-            "pathId": -5909333966431888128,
+            "origClipLength": 354,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 86,
+                    "pathId": 3583563725610499563
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9158794157737174064
+                }
+            ],
+            "pathId": 8842601111888944164,
             "blockIdx": 11
         },
         {
@@ -117,7 +236,19 @@
             "jpText": "“素晴らしい素質”なーんてお名前しちゃってますけど、\r\n実際の才能はホント、大したことないんだからさ。",
             "enText": "They might call me Nice Nature, but you've got to understand. \nWhat nature gave me just ain't that great.",
             "nextBlock": 13,
-            "pathId": -8971016264096594597,
+            "origClipLength": 258,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": 5430656143300017764
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1537766175575274812
+                }
+            ],
+            "pathId": 2118362093562205569,
             "blockIdx": 12
         },
         {
@@ -126,7 +257,19 @@
             "jpText": "模擬レースの結果だって、いいとこ3着だし？\nご大層な夢ってのも持ってないしさー……。",
             "enText": "You saw my practice races, I'm a solid third place, at best. So \nit's probably better not to get carried away, right?",
             "nextBlock": 14,
-            "pathId": -653592202650728900,
+            "origClipLength": 230,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": 300516773324308614
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4369922890159433020
+                }
+            ],
+            "pathId": -814961333492142140,
             "blockIdx": 13
         },
         {
@@ -135,7 +278,15 @@
             "jpText": "まあまあそう言うなって。じゃ、俺たちは応援の準備をしてくるな。\r\nネイちゃんもしっかり出走準備するんだぞ～！",
             "enText": "Awww, don't be so hard on yourself! Now, we're going \nto go down to the track and get ready. You make \nsure you get a proper warm up, alright!?",
             "nextBlock": 15,
-            "pathId": 301375748319946025,
+            "origClipLength": 282,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 331,
+                    "pathId": -3679515187990332942
+                }
+            ],
+            "pathId": -2878046719759486319,
             "blockIdx": 14
         },
         {
@@ -144,7 +295,27 @@
             "jpText": "あはは……はーい、どもども。",
             "enText": "A-hahaha… yes, okay, thank you…!",
             "nextBlock": 16,
-            "pathId": -621291020360953097,
+            "origClipLength": 129,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": 945331521506062499
+                },
+                {
+                    "origLen": 30,
+                    "pathId": 6528606730441326094
+                },
+                {
+                    "origLen": 51,
+                    "pathId": 2795295444745633114
+                },
+                {
+                    "origLen": 51,
+                    "pathId": 3969233391129077614
+                }
+            ],
+            "pathId": 6699792974603114194,
             "blockIdx": 15
         },
         {
@@ -153,6 +324,8 @@
             "jpText": "……って。えーっと、ごめんね？\n話しかけたのに放ったらかしちゃって。",
             "enText": "Oh right. Umm… sorry! I kind of left you \nflapping in the breeze there didn't I.",
             "nextBlock": 17,
+            "origClipLength": 165,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "さっきの人たちは、君の応援団か？",
@@ -165,7 +338,17 @@
                     "nextBlock": 17
                 }
             ],
-            "pathId": 3093663840078986863,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -3795971925316163039
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3866957062230727523
+                }
+            ],
+            "pathId": -3822794981581861029,
             "blockIdx": 16
         },
         {
@@ -174,7 +357,19 @@
             "jpText": "や、そんな大したものじゃないって。よくぶらつく商店街の\r\nみなさんが、厚意で来てくれましたよーってだけ。",
             "enText": "What? No! Don't be silly. They're just folks from the \nneighborhood. They're only here out of politeness, really.",
             "nextBlock": 18,
-            "pathId": -3889925791053347506,
+            "origClipLength": 287,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 233,
+                    "pathId": 5606301232866599041
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2202810019036778376
+                }
+            ],
+            "pathId": 5442207401426233161,
             "blockIdx": 17
         },
         {
@@ -183,7 +378,15 @@
             "jpText": "まーその厚意もアタシなんかにゃ\r\n受け止めきれないから、ちょっくら隠れたかったわけだけど……。",
             "enText": "Even so, I'm not very good at dealing with that sot of thing, \nsooo I thought it'd be better if I made myself scarce.",
             "nextBlock": 19,
-            "pathId": -6400591962189673521,
+            "origClipLength": 210,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -6946141822064538469
+                }
+            ],
+            "pathId": 2052468755438170791,
             "blockIdx": 18
         },
         {
@@ -192,7 +395,15 @@
             "jpText": "というか……んんん？\nよく見るとその襟のバッジ……。",
             "enText": "Just a sec… that badge on your collar there…",
             "nextBlock": 20,
-            "pathId": -8869610362212543899,
+            "origClipLength": 198,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 7323934206009613522
+                }
+            ],
+            "pathId": 4688121845141825158,
             "blockIdx": 19
         },
         {
@@ -201,6 +412,8 @@
             "jpText": "もしや、学園所属のトレーナーさんです？",
             "enText": "You wouldn't happen to be one of the academy trainers, would you?",
             "nextBlock": 21,
+            "origClipLength": 129,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "そうだ",
@@ -213,7 +426,17 @@
                     "nextBlock": 21
                 }
             ],
-            "pathId": 5086982005457260843,
+            "animData": [
+                {
+                    "origLen": 197,
+                    "pathId": -3078095991876286697
+                },
+                {
+                    "origLen": 147,
+                    "pathId": -6911172429355007989
+                }
+            ],
+            "pathId": 5511300002341124950,
             "blockIdx": 20
         },
         {
@@ -222,7 +445,19 @@
             "jpText": "うっわ、マジか！　あちゃー、逆アピールみたいなこと\r\n言っちゃった……！　いや、全部本当のことなんだけどさ～……！",
             "enText": "Ack! You've gotta be kidding me. Well this is awkward. I couldn't \nhave made a worse first impression if I'd tried, could I? Yeesh. \nI mean, it's not that that stuff wasn't true, it's just…",
             "nextBlock": 22,
-            "pathId": -4542902437205837409,
+            "origClipLength": 266,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -7301716487722096429
+                },
+                {
+                    "origLen": 127,
+                    "pathId": 5438907062361673346
+                }
+            ],
+            "pathId": 4318100105268165773,
             "blockIdx": 21
         },
         {
@@ -231,7 +466,19 @@
             "jpText": "えーっと……あはは。どーも、ネイチャです。\r\n一応今日の選抜レース走るんで、よろしくお願いしまーす……。",
             "enText": "Um. A-hahaha… \nH… hello! I'm Nice Nature! Apparently I'm running \nin the qualifying race today so… yeah!",
             "nextBlock": 23,
-            "pathId": 5750956201154404822,
+            "origClipLength": 335,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 1193766335823584609
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 357627593653594930
+                }
+            ],
+            "pathId": 697789566775108946,
             "blockIdx": 22
         },
         {
@@ -240,7 +487,15 @@
             "jpText": "では、そーいうことで。",
             "enText": "Now! If you'll excuse me.",
             "nextBlock": 24,
-            "pathId": 6559066167244497022,
+            "origClipLength": 60,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -4461351638579412736
+                }
+            ],
+            "pathId": -7382420060216826892,
             "blockIdx": 23
         },
         {
@@ -249,7 +504,15 @@
             "jpText": "どこか斜に構えたウマ娘・ナイスネイチャは、\nそう言い残して、コースへと去って行った。",
             "enText": "\"Nice Nature\"… something seemed a little odd about her, but \nbefore I could find out more, she was gone.",
             "nextBlock": 25,
-            "pathId": -6056601771353730202,
+            "origClipLength": 99,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 1997317862409649553
+                }
+            ],
+            "pathId": -19339555808055162,
             "blockIdx": 24
         },
         {
@@ -258,7 +521,9 @@
             "jpText": "――そして、選抜レースが始まった！",
             "enText": "Soon it was time for the day's racing to begin…",
             "nextBlock": 26,
-            "pathId": -3550543488595480568,
+            "origClipLength": 67,
+            "voiceIdx": -1,
+            "pathId": 486400919257217275,
             "blockIdx": 25
         },
         {
@@ -267,7 +532,19 @@
             "jpText": "はっ、はっ、はっ、はっ……。\r\nよぉーし、いっちばーん！！",
             "enText": "Alright!! First place!!",
             "nextBlock": 27,
-            "pathId": 4877215074689780387,
+            "origClipLength": 160,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 49,
+                    "pathId": -4231723128225612154
+                },
+                {
+                    "origLen": 80,
+                    "pathId": 2718943474323740327
+                }
+            ],
+            "pathId": -4686317607032733295,
             "blockIdx": 26
         },
         {
@@ -276,7 +553,19 @@
             "jpText": "す、すばらしいわ……！\r\nなんてしなやかで美しい走りなの、トウカイテイオー！！",
             "enText": "Tokai Teio, that was stunning! Such grace! Such agility!",
             "nextBlock": 28,
-            "pathId": 3492072895214532397,
+            "origClipLength": 191,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 216,
+                    "pathId": 8633602644484217032
+                },
+                {
+                    "origLen": 140,
+                    "pathId": 6507047996652742163
+                }
+            ],
+            "pathId": -1947499527014534270,
             "blockIdx": 27
         },
         {
@@ -285,7 +574,19 @@
             "jpText": "『シンボリルドルフの再来』って噂も、あながち大げさな\r\nもんじゃないらしい！　テイオー、是非君をスカウトさせてくれっ！",
             "enText": "Truly, it's no exaggeration to call her the \"Second Coming of \nSymboli Rudolph\"! Tokai Teio, please! Let me be your trainer!",
             "nextBlock": 29,
-            "pathId": 3784818681585057983,
+            "origClipLength": 253,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 243,
+                    "pathId": 29144271104403779
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8179148476948270701
+                }
+            ],
+            "pathId": 4807698950010085113,
             "blockIdx": 28
         },
         {
@@ -294,7 +595,19 @@
             "jpText": "はいはい順番、順番だよ～！\nワガハイの前にちゃーんと整列してね♪",
             "enText": "Alright, alright! One at a time! Line up \nin an orderly fashion, that's right!",
             "nextBlock": 30,
-            "pathId": 8802918749691921610,
+            "origClipLength": 209,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 6607526812770800300
+                },
+                {
+                    "origLen": 55,
+                    "pathId": 3174122619031278460
+                }
+            ],
+            "pathId": 7658001190772038894,
             "blockIdx": 29
         },
         {
@@ -303,7 +616,15 @@
             "jpText": "レースでは次々と優秀なウマ娘が見出され、\nトレーナーたちのスカウトを受けていた。",
             "enText": "As the races continued, trainers scrambled \nto recruit the top performers.",
             "nextBlock": 31,
-            "pathId": 2249085254389981163,
+            "origClipLength": 97,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 9186954546039315716
+                }
+            ],
+            "pathId": 162265816089132374,
             "blockIdx": 30
         },
         {
@@ -312,7 +633,15 @@
             "jpText": "が、その一方で――",
             "enText": "However…",
             "nextBlock": 32,
-            "pathId": 4384614432597402000,
+            "origClipLength": 56,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 68,
+                    "pathId": -2306687683577979729
+                }
+            ],
+            "pathId": -4183763665677591928,
             "blockIdx": 31
         },
         {
@@ -321,7 +650,19 @@
             "jpText": "いやー、さっすがテイオー。\nキラッキラしてるねー……。",
             "enText": "Ahh, that's Teio alright. Look at her! What a sight!",
             "nextBlock": 33,
-            "pathId": 8888433685612404173,
+            "origClipLength": 160,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 17,
+                    "pathId": -5771332289536632161
+                },
+                {
+                    "origLen": 214,
+                    "pathId": 6286715142563141704
+                }
+            ],
+            "pathId": -5197547985652030946,
             "blockIdx": 32
         },
         {
@@ -330,7 +671,19 @@
             "jpText": "あの才能にあの実力、ついでにあの見た目。でもって\r\n『ルドルフ会長みたいになる！』なーんてでっかい夢まで持ってて。",
             "enText": "All that talent, all that potential… and looks to \ngo with it! She's going to be the next Symboli Rudolph… \nthe story practically writes itself!",
             "nextBlock": 34,
-            "pathId": -6530779911797504735,
+            "origClipLength": 313,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 200,
+                    "pathId": -6883190470643557725
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5491550581292058180
+                }
+            ],
+            "pathId": 2917343708334667225,
             "blockIdx": 33
         },
         {
@@ -339,7 +692,27 @@
             "jpText": "いやはや、どこまで主人公なんだか。\n眩しすぎでしょー。",
             "enText": "Yes sir, a star that bright… it almost \nhurts your eyes to look at her…",
             "nextBlock": 35,
-            "pathId": 2623297539021405912,
+            "origClipLength": 176,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -272900421047366231
+                },
+                {
+                    "origLen": 91,
+                    "pathId": -4714863284998879481
+                },
+                {
+                    "origLen": 51,
+                    "pathId": -7688132365589643971
+                },
+                {
+                    "origLen": 51,
+                    "pathId": 6498252411346426693
+                }
+            ],
+            "pathId": 5938538135655704191,
             "blockIdx": 34
         },
         {
@@ -348,7 +721,19 @@
             "jpText": "ホント……すごいよねー、あーいう子は……。",
             "enText": "Yep. She really is something…",
             "nextBlock": 36,
-            "pathId": -8140232304218814951,
+            "origClipLength": 121,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -8258758453520338756
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 9055392926557023085
+                }
+            ],
+            "pathId": -2433773936504089258,
             "blockIdx": 35
         },
         {
@@ -357,7 +742,19 @@
             "jpText": "ナイスネイチャさん！\n出走準備、お願いいたします！",
             "enText": "Nice Nature, please make your way to the start.",
             "nextBlock": 37,
-            "pathId": 6004843436383350971,
+            "origClipLength": 103,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -8868477523330156299
+                },
+                {
+                    "origLen": 123,
+                    "pathId": 1547616713459322652
+                }
+            ],
+            "pathId": -7996569683349646833,
             "blockIdx": 36
         },
         {
@@ -366,7 +763,19 @@
             "jpText": "っと、はいはーい。\n……さて、行きますかー！",
             "enText": "Oops. Okay, be right there! Alright, guess I should be going.",
             "nextBlock": 38,
-            "pathId": 4184608536626603506,
+            "origClipLength": 147,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": -7143599152070219304
+                },
+                {
+                    "origLen": 99,
+                    "pathId": 5407398446661363686
+                }
+            ],
+            "pathId": -2375706090829157526,
             "blockIdx": 37
         },
         {
@@ -375,7 +784,19 @@
             "jpText": "（ガコン！！）",
             "enText": "Go, Nay-chan, go!! That's it!!!",
             "nextBlock": 39,
-            "pathId": 1080648732113831852,
+            "origClipLength": 54,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 36,
+                    "pathId": -705328963891004829
+                },
+                {
+                    "origLen": 37,
+                    "pathId": 5560047404028606162
+                }
+            ],
+            "pathId": -403254424457318772,
             "blockIdx": 38
         },
         {
@@ -384,7 +805,9 @@
             "jpText": "ネイちゃーん！！　いけっ、そこだー！！\nがんばれー、ネイちゃーん！！",
             "enText": "Come on, Nay-chan, you can do it!",
             "nextBlock": 40,
-            "pathId": 8129746008643248395,
+            "origClipLength": 172,
+            "voiceIdx": 31,
+            "pathId": 5255394046668831639,
             "blockIdx": 39
         },
         {
@@ -393,7 +816,15 @@
             "jpText": "はっ、はっ、はっ、はっ……！",
             "enText": "Huff, huff, huff…!",
             "nextBlock": 41,
-            "pathId": -7314920065962363791,
+            "origClipLength": 85,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 159,
+                    "pathId": 4248417709558508066
+                }
+            ],
+            "pathId": -431176174462645708,
             "blockIdx": 40
         },
         {
@@ -402,7 +833,15 @@
             "jpText": "さあ第4コーナーを曲がって、最後の直線！\n先頭はいまだ変わらず――",
             "enText": "And as they come out of turn four onto the final straight, \nthere's still no change in the lead…!",
             "nextBlock": 42,
-            "pathId": -2826133992295975048,
+            "origClipLength": 162,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 257,
+                    "pathId": 2665040044736522303
+                }
+            ],
+            "pathId": 1313704118320676494,
             "blockIdx": 41
         },
         {
@@ -411,7 +850,19 @@
             "jpText": "くぅ、っ……！！",
             "enText": "Guuh…!!",
             "nextBlock": 43,
-            "pathId": 286527182015268702,
+            "origClipLength": 57,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": 2194917271361154062
+                },
+                {
+                    "origLen": 96,
+                    "pathId": -798429230613786147
+                }
+            ],
+            "pathId": -7664133944313866185,
             "blockIdx": 42
         },
         {
@@ -420,6 +871,8 @@
             "jpText": "ここで上がってきました、ナイスネイチャ！\nナイスネイチャ、一気に差を詰めます！！",
             "enText": "And from behind, here comes Nice Nature! Nice Nature moving up \nnow, and that gap to the front is disappearing FAST!!",
             "nextBlock": 44,
+            "origClipLength": 179,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "（すごいな……！）",
@@ -432,7 +885,17 @@
                     "nextBlock": 44
                 }
             ],
-            "pathId": 6134613971163225020,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 3156935502641817638
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 3531970892586885576
+                }
+            ],
+            "pathId": -2357202314426072087,
             "blockIdx": 43
         },
         {
@@ -441,7 +904,19 @@
             "jpText": "あまりのキレに、思わず目を見張る。\n素晴らしい末脚だ……！！",
             "enText": "Her sudden turn of speed took me totally off guard. \nThis girl had a heck of a finish on her!",
             "nextBlock": 45,
-            "pathId": -5379801180640003035,
+            "origClipLength": 84,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 97,
+                    "pathId": -5664731103532063821
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3585090001700291194
+                }
+            ],
+            "pathId": 6280104782554668782,
             "blockIdx": 44
         },
         {
@@ -450,7 +925,15 @@
             "jpText": "しかし――惜しくも届かず！\nナイスネイチャ、3着でゴールインっ！！",
             "enText": "…but not quite fast enough! Nice Nature can't quite \nget there and crosses the line in third place!",
             "nextBlock": 46,
-            "pathId": -717998994794764351,
+            "origClipLength": 175,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -986303866964785874
+                }
+            ],
+            "pathId": -4018306354054985105,
             "blockIdx": 45
         },
         {
@@ -459,7 +942,15 @@
             "jpText": "はっ、はっ、はっ……はぁー。\r\n……ま、こういうオチですよねー。",
             "enText": "Welp. There it is.",
             "nextBlock": 47,
-            "pathId": 1105490334757014841,
+            "origClipLength": 313,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 151,
+                    "pathId": 5721859591894602975
+                }
+            ],
+            "pathId": -7752515415752570218,
             "blockIdx": 46
         },
         {
@@ -468,7 +959,15 @@
             "jpText": "踏ん張ってみても、3着……か。\n………………。",
             "enText": "Third place. I really gave it some that \ntime. But still… third place……",
             "nextBlock": 48,
-            "pathId": -8165741875312043042,
+            "origClipLength": 190,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 267,
+                    "pathId": 3538363528857142023
+                }
+            ],
+            "pathId": 4535879016723434335,
             "blockIdx": 47
         },
         {
@@ -477,6 +976,8 @@
             "jpText": "結果は惜しかったが、先程の走りには確かに光るものがあった。\r\nそこで――！",
             "enText": "(The result might have been a little disappointing, \nbut I knew I'd seen something special. So…)",
             "nextBlock": 49,
+            "origClipLength": 93,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "君をスカウトさせてくれ！",
@@ -489,7 +990,13 @@
                     "nextBlock": 49
                 }
             ],
-            "pathId": 1938352861540706956,
+            "animData": [
+                {
+                    "origLen": 267,
+                    "pathId": 4887610034937644353
+                }
+            ],
+            "pathId": 1139400753559681403,
             "blockIdx": 48
         },
         {
@@ -498,7 +1005,19 @@
             "jpText": "へ…………？",
             "enText": "Huh?",
             "nextBlock": 50,
-            "pathId": -3459267642151224651,
+            "origClipLength": 27,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 267,
+                    "pathId": 6236088744428439678
+                },
+                {
+                    "origLen": 38,
+                    "pathId": -4324288722732335385
+                }
+            ],
+            "pathId": -8011313978396258646,
             "blockIdx": 49
         },
         {
@@ -507,6 +1026,8 @@
             "jpText": "えーーーーーっと……あっ。やだなートレーナーさん、\r\nおっちょこちょい。テイオーの待機列なら向こうですよー？",
             "enText": "Um…… Ah…! \nC'mon, Trainer-san, quit fooling around! I think you'll \nfind the line for Tokai Teio is over there.",
             "nextBlock": 51,
+            "origClipLength": 301,
+            "voiceIdx": 40,
             "choices": [
                 {
                     "jpText": "君に言ったんだ、ナイスネイチャ！",
@@ -519,7 +1040,17 @@
                     "nextBlock": 51
                 }
             ],
-            "pathId": 6999130849564621490,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 5484748730648979377
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 7596737545123722258
+                }
+            ],
+            "pathId": -8608285244260735370,
             "blockIdx": 50
         },
         {
@@ -528,7 +1059,23 @@
             "jpText": "へ…………へぇぇぇ！？",
             "enText": "W… WHAAAAT?",
             "nextBlock": 52,
-            "pathId": -1388479852138438404,
+            "origClipLength": 92,
+            "voiceIdx": 41,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 2134063601216001798
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 54554178168440174
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -6037871262943490895
+                }
+            ],
+            "pathId": 7923186821522759394,
             "blockIdx": 51
         },
         {
@@ -537,7 +1084,15 @@
             "jpText": "いやでも、えーっと……あ、その、お断りでーすとかじゃ\r\nないんだけどね？　むしろお声がけどーもですっていうか……。",
             "enText": "Wait, um, I… I mean, I couldn't possibly! I mean, I guess I could \npossibly… and don't get me wrong, I'm very flattered but……",
             "nextBlock": 53,
-            "pathId": 4323375216151857248,
+            "origClipLength": 300,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 102,
+                    "pathId": -8648350223543527606
+                }
+            ],
+            "pathId": 943179759620357727,
             "blockIdx": 52
         },
         {
@@ -546,7 +1101,15 @@
             "jpText": "ただ、そのー……アタシでホントに大丈夫？\nなんていうか……嫌になったら言いなよね？",
             "enText": "Like, I mean… are you sure? Me? If you change your \nmind, you just need to say the word, okay?",
             "nextBlock": 54,
-            "pathId": -2535117307542406032,
+            "origClipLength": 270,
+            "voiceIdx": 43,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 7944526971896420001
+                }
+            ],
+            "pathId": 1961680309810390395,
             "blockIdx": 53
         },
         {
@@ -555,7 +1118,19 @@
             "jpText": "まあでも、それまでは……。\nとりあえずそのー……よ、よろしく？",
             "enText": "But until then… I… um… I accept? I guess…?",
             "nextBlock": 55,
-            "pathId": 4432527895029220339,
+            "origClipLength": 217,
+            "voiceIdx": 44,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 6351830227710663618
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -9067631784494477497
+                }
+            ],
+            "pathId": -1726388645338605723,
             "blockIdx": 54
         },
         {
@@ -564,10 +1139,22 @@
             "jpText": "戸惑うナイスネイチャの手をしっかりと握り、\n担当ウマ娘が決定したのだった。",
             "enText": "She seemed pretty unsure about the whole thing, but nevertheless \nI gave Nice Nature a firm handshake and made it official.",
             "nextBlock": -1,
-            "pathId": -8082749107441324423,
+            "origClipLength": 93,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": 3438869165505059748
+                },
+                {
+                    "origLen": 44,
+                    "pathId": 3318804547569873863
+                }
+            ],
+            "pathId": 6912082818028491678,
             "blockIdx": 55
         }
     ],
     "humanTl": true,
-    "modified": 1673053215
+    "modified": 1712247670
 }

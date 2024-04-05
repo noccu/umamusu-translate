@@ -2,7 +2,7 @@ This document gives an overview of translation progress.
 If you'd like to contribute a translation, please submit a PR, or open an issue or join the [Discord](https://discord.gg/eqZT27TeJ) for organization.
 
 Note: MTL = machine translation. These have very limited and arbitrary manual edits, sometimes. Quality varies based on content (speech patterns, topics, etc).  
-Translations marked by ☆ are available in the [supporters edition](https://ko-fi.com/noccyu).
+Translations by the UmaTL team are made possible by [supporters](https://ko-fi.com/noccyu). Those marked by ☆ are currently only available in the Supporters Edition.
 
 ### Legend
 term | meaning
@@ -26,6 +26,7 @@ Main story Act 1 Ch 4 | Complete | [Hades of Games]
 Main story Act 1 Ch 5 | Complete | [LotoDS][]
 Main story Act 1 Ch 6 Finale Part 1 | Complete | [LotoDS][]
 Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
+Main story Act 2 Prologue | In progress | [LotoDS]
 Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 1.5th Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
@@ -56,11 +57,11 @@ Happy new future ～Bonds dyed in the sunrise～ | Complete, In progress | MTL +
 Sweet Memory ♥ Teatime | Complete | [noccu]
 Leap into a New World! | Complete | [yumeimi](https://www.reddit.com/user/yumeimi/), [noccu] (preview)
 Wherefore I adore you | Stalled | [noccu] (preview)
-Ingenious!? Spring Festival! Dodgeball Fury! | In progress | [noccu] (preview) + [UmaTL] (Anonymous Panda)☆
+Ingenious!? Spring Festival! Dodgeball Fury! | Stalled | [noccu] (preview) + [UmaTL] (Anonymous Panda)☆
 An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 #summer #besties | Complete | [BlunterMonk](https://github.com/BlunterMonk) (MTL edit)
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
-Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)☆
+Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)
 As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)☆
 Mine and Everyone's | In progress | [UmaTL] (Anonymous Panda)☆
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
@@ -100,6 +101,7 @@ Gold City | Complete | [Hades of Games][]
 Gold Ship | Complete, Stalled | MTL, UmaTL☆
 Grass Wonder | Complete | [LotoDS][]
 Haru Urara | Complete, In progress | [Vacxy][] (ep 1) + MTL (rest), [xct]
+Hishi Amazon | In progress | [UmaTL] ([noccu])☆
 Hishi Miracle | Complete | [LotoDS][]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
 Inari One | Complete | [LotoDS][]
@@ -117,7 +119,7 @@ Mayano Top Gun | Complete | [Director Kok]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS][]
 Mejiro McQueen | Complete | [UmaTL] (bocchi)
-Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (3-7) (bocchi)☆, MTL
+Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (bocchi)☆, MTL
 Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207]
@@ -128,6 +130,7 @@ Neo Universe | Complete | [LotoDS]
 Rice Shower  | Exists, Complete | [Ben][] (ep 1-4), [UmaTL] (bocchi)☆
 Sakura Bakushin O | Complete | [noccu][]
 Sakura Chiyono O | Complete | [LotoDS][]
+Sakura Laurel | In progress | [LotoDS]
 Satono Crown | Complete | [LotoDS][]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
@@ -138,12 +141,13 @@ Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), MTL
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, MTL
 Symboli Kris S | Complete | [LotoDS][]
-Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)☆
+Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)
 Tap Dance City | Complete | [KevinVG207]
 Taiki Shuttle | Complete | [LotoDS][]
 Tanino Gimlet | In Progress | [UmaTL] (Anonymous Panda)☆
 TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
+Transcend | In progress | [KevinVG207]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS][]
 Vivlos | Complete | [LotoDS][]
@@ -249,7 +253,7 @@ Mejiro Ramonu | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Mihono Bourbon | In progress | [noccu] (solo 1)
 Mr. C.B. | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Narita Top Road | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
-Rice Shower | Complete | [UmaTL] (bocchi)☆
+Rice Shower | Complete | [UmaTL] (noccu)☆
 Sakura Bakushin O | In progress | [Kasey]
 Sakura Laurel | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Shinko Windy | Stalled | [noccu] (solo 3)
@@ -266,16 +270,17 @@ Yaeno Muteki | Complete | [noccu] (solo 2), MTL
 ## Valentine
 name | translator
 --- | ---
-Air Groove | [noccu]
-Agnes Tachyon | [noccu]
-Grass Wonder | [noccu]
-Inari One | [noccu]
-Ines Fujin | [noccu]
-Manhattan Cafe | [Kuwaiden]
-Maruzensky | [noccu]
-Mihono Bourbon | [noccu]
-Nice Nature | [noccu]
-Sakura Bakushin O | [Kasey]
+Air Groove | [noccu] (dialogue, chocos)
+Agnes Tachyon | [noccu] (dialogue, chocos)
+Grass Wonder | [noccu] (dialogue, chocos)
+Inari One | [noccu] (dialogue, chocos)
+Ines Fujin | [noccu] (dialogue, chocos)
+Manhattan Cafe | [Kuwaiden] (dialogue, chocos)
+Maruzensky | [noccu] (dialogue, chocos)
+Mihono Bourbon | [noccu] (dialogue, chocos)
+Nice Nature | [noccu] (dialogue, chocos)
+Sakura Bakushin O | [Kasey] (dialogue, chocos)
+All others up to 2024/02 | [Puga] (chocos) + [noccu] (partial edits)
 
 ## Sakura Front (April Fools (?) 2023)
 name | progress | translator
@@ -391,3 +396,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [Kasey]: https://diabolicalbaker.carrd.co/
 [UmaTL]: https://www.patreon.com/noccu
 [noob]: https://twitter.com/noobcakeart
+[Puga]: https://pugakirio.carrd.co/

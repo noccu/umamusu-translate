@@ -19,17 +19,17 @@ Finished | Content satisfies this project's translation standards and style guid
 # Main Story
 name | progress | translator
 --- | --- | ---
-Main story Act 1 Ch 1 | Complete | [CatNipHoarder][] & [Holo][]
+Main story Act 1 Ch 1 | Complete | [CatNipHoarder] & [Holo]
 Main story Act 1 Ch 2 | Complete | [Hades of Games]
 Main story Act 1 Ch 3 | Complete | [Hades of Games]
 Main story Act 1 Ch 4 | Complete | [Hades of Games]
-Main story Act 1 Ch 5 | Complete | [LotoDS][]
-Main story Act 1 Ch 6 Finale Part 1 | Complete | [LotoDS][]
-Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS][]
+Main story Act 1 Ch 5 | Complete | [LotoDS]
+Main story Act 1 Ch 6 Finale Part 1 | Complete | [LotoDS]
+Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS]
 Main story Act 2 Prologue | In progress | [LotoDS]
-Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
-1st Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
-1.5th Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
+Half Anniversary Story | Complete | [CatNipHoarder] & [Holo]
+1st Anniversary Story | Complete | [CatNipHoarder] & [Holo]
+1.5th Anniversary Story | Complete | [CatNipHoarder] & [Holo]
 2nd Anniversary Story | Complete | [CatNipHoarder] & [Holo]
 2.5th Anniversary Story | In progress | [CatNipHoarder] & [Holo]
 
@@ -37,17 +37,17 @@ Half Anniversary Story | Complete | [CatNipHoarder][] & [Holo][]
 # Event Stories
 name | progress | translator
 --- | --- | ---
-Brand-New Friend | Complete | [Hades of Games][] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy][] (ep 3, 4 (partial)) + [noccu][] (slight edit)
+Brand-New Friend | Complete | [Hades of Games] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy] (ep 3, 4 (partial)) + [noccu] (slight edit)
 The Sounds of Autumn | Complete | [UmaTL] (Anonymous Panda)☆
-Make up in Halloween！ | Complete | [CatNipHoarder][] & [Holo][]
-Miracles of the Holy Night | Complete | [CatNipHoarder][] & [Holo][]
+Make up in Halloween！ | Complete | [CatNipHoarder] & [Holo]
+Miracles of the Holy Night | Complete | [CatNipHoarder] & [Holo]
 Blossoming New Year's Karuta Contest | Complete, In progress | MTL, [noccu]☆
-Patisserie Grandeur | Complete | [noccu][]
-Flapping Run-up | Complete | [Hades of Games][]
+Patisserie Grandeur | Complete | [noccu]
+Flapping Run-up | Complete | [Hades of Games]
 Tonight at the Ligne Droite | Complete | Anonymous Reindeer
 A Resounding Cheer, Tracen Academy Cheerleading Squad! | Complete | [LotoDS]
 The Promised Time: Silks & Three Riddles | Complete | MTL
-Seek, Solve, Summer Walk! | Complete | [noccu][]
+Seek, Solve, Summer Walk! | Complete | [noccu]
 Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
 Wings of Iron: Hazy Tales | Complete | [noccu]
 Days in a Flash | Complete | [Kuwaiden] + [noccu] (preview)
@@ -80,82 +80,82 @@ Omikuji | Complete | [noccu]
 name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | MTL (contributed by Korgi)
-Admire Vega | Complete | [CatNipHoarder][] & [Holo][]
+Admire Vega | Complete | [CatNipHoarder] & [Holo]
 Agnes Digital | Complete | MTL (contributed by CryDuringItAll)
-Agnes Tachyon | Complete | [Ren][] (ep 1), [noccu][] + [xct][] (ep 2-3), [xct][] (ep 4-7)
+Agnes Tachyon | Complete | [Ren] (ep 1), [noccu] + [xct] (ep 2-3), [xct] (ep 4-7)
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
-Air Groove | Complete | [burritoblaster][]
+Air Groove | Complete | [burritoblaster]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
 Cheval Grand | Exists | Naellza
-Copano Rickey | Complete | [LotoDS][]
-Curren Chan | Complete | [CatNipHoarder][] & [Holo][]
-Daitaku Helios | Complete | [LotoDS][]
-Daiwa Scarlet | Complete | [XiantheMiguel][] (commissioned by AhriParty)
+Copano Rickey | Complete | [LotoDS]
+Curren Chan | Complete | [CatNipHoarder] & [Holo]
+Daitaku Helios | Complete | [LotoDS]
+Daiwa Scarlet | Complete | [XiantheMiguel] (commissioned by AhriParty)
 Daiichi Ruby | Complete | [Riersa]
 Eishin Flash | Complete, In progress, Stalled | MTL, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | [UmaTL] (noccu)☆
-Fine Motion | Complete | [LotoDS][]
+Fine Motion | Complete | [LotoDS]
 Fuji Kiseki | Complete | [Kasey]
-Gold City | Complete | [Hades of Games][]
+Gold City | Complete | [Hades of Games]
 Gold Ship | Complete, Stalled | MTL, UmaTL☆
-Grass Wonder | Complete | [LotoDS][]
-Haru Urara | Complete, In progress | [Vacxy][] (ep 1) + MTL (rest), [xct]
+Grass Wonder | Complete | [LotoDS]
+Haru Urara | Complete, In progress | [Vacxy] (ep 1) + MTL (rest), [xct]
 Hishi Amazon | In progress | [UmaTL] ([noccu])☆
-Hishi Miracle | Complete | [LotoDS][]
+Hishi Miracle | Complete | [LotoDS]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
-Inari One | Complete | [LotoDS][]
+Inari One | Complete | [LotoDS]
 Ines Fujin | Complete | [noccu]
-Katsuragi Ace | Complete | [LotoDS][]
+Katsuragi Ace | Complete | [LotoDS]
 Kawakami Princess | Complete | [Director Kok]
-King Halo | Complete | [burritoblaster][]
-Kitasan Black | Complete | [LotoDS][]
+King Halo | Complete | [burritoblaster]
+Kitasan Black | Complete | [LotoDS]
 K.S. Miracle | In progress | [Kasey]
-Manhattan Cafe | Complete | [xct][]
+Manhattan Cafe | Complete | [xct]
 Matikanetannhauser | Exists | [Snep]
-Maruzensky | Complete | [noccu][]
-Marvelous Sunday | Complete | [LotoDS][]
+Maruzensky | Complete | [noccu]
+Marvelous Sunday | Complete | [LotoDS]
 Mayano Top Gun | Complete | [Director Kok]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
-Mejiro Dober | Complete | [LotoDS][]
+Mejiro Dober | Complete | [LotoDS]
 Mejiro McQueen | Complete | [UmaTL] (bocchi)
 Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (bocchi)☆, MTL
 Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207]
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
-Narita Top Road | Complete | [LotoDS][]
+Narita Top Road | Complete | [LotoDS]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
-Rice Shower  | Exists, Complete | [Ben][] (ep 1-4), [UmaTL] (bocchi)☆
-Sakura Bakushin O | Complete | [noccu][]
-Sakura Chiyono O | Complete | [LotoDS][]
+Rice Shower  | Exists, Complete | [Ben] (ep 1-4), [UmaTL] (bocchi)☆
+Sakura Bakushin O | Complete | [noccu]
+Sakura Chiyono O | Complete | [LotoDS]
 Sakura Laurel | In progress | [LotoDS]
-Satono Crown | Complete | [LotoDS][]
+Satono Crown | Complete | [LotoDS]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]
-Shinko Windy | Complete | [LotoDS][]
-Silence Suzuka | Complete | [LotoDS][]
-Smart Falcon | Complete | [LotoDS][]
+Shinko Windy | Complete | [LotoDS]
+Silence Suzuka | Complete | [LotoDS]
+Smart Falcon | Complete | [LotoDS]
 Special Week | Complete | Mann
 Super Creek | In Progress, Complete | [DantheBoss] (ep 1-2), MTL
 Sweep Tosho | Stalled, Complete | FragmentalSolstice, MTL
-Symboli Kris S | Complete | [LotoDS][]
+Symboli Kris S | Complete | [LotoDS]
 Symboli Rudolf | Complete | [UmaTL] (Anonymous Panda)
 Tap Dance City | Complete | [KevinVG207]
-Taiki Shuttle | Complete | [LotoDS][]
+Taiki Shuttle | Complete | [LotoDS]
 Tanino Gimlet | In Progress | [UmaTL] (Anonymous Panda)☆
 TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Transcend | In progress | [KevinVG207]
 Twin Turbo | Complete| [Riersa]
-Tamamo Cross | Complete | [LotoDS][]
-Vivlos | Complete | [LotoDS][]
+Tamamo Cross | Complete | [LotoDS]
+Vivlos | Complete | [LotoDS]
 Vodka | Complete, Exists | MTL, Anonymous Raccoon
 Yaeno Muteki | Complete | [LotoDS]
-Yamanin Zephyr | Complete | [Director Kok][]
+Yamanin Zephyr | Complete | [Director Kok]
 Wonder Acute | Stalled | [Riersa]
-Zenno Rob Roy | Complete | [LotoDS][]
+Zenno Rob Roy | Complete | [LotoDS]
 
 
 # Training events
@@ -163,7 +163,7 @@ Zenno Rob Roy | Complete | [LotoDS][]
 ## Scenarios
 name | progress | translator
 --- | --- | ---
-Shared events | Complete | [noccu][]
+Shared events | Complete | [noccu]
 
 ### URA
 idx | name (short) | progress | translator
@@ -300,7 +300,7 @@ Haru Urara | Complete | MTL
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
 Ines Fujin | In progress | [noccu]☆
 Mejiro Ardan | Complete | [Riersa] (MTL edit)
-Meisho Doto | Complete, In Progress | MTL, [Mini Fox][]
+Meisho Doto | Complete, In Progress | MTL, [Mini Fox]
 Mejiro Dober | Complete | [Riersa] (MTL edit)
 Narita Taishin | Complete | [Riersa] (MTL edit)
 Rice Shower | Complete | [UmaTL] ([noob])☆
@@ -324,13 +324,13 @@ Not all of these might be present in the patch data.
 
 name | progress | translator
 --- | --- | ---
-Blaze | Complete | [noccu][]
-BLOW my GALE | Complete | [noccu][]
+Blaze | Complete | [noccu]
+BLOW my GALE | Complete | [noccu]
 [*Boukyaku Nite*](https://youtu.be/o400qsQ3vhY) | Complete | [Snep]
 [*Chototsumoushin Kibaku-chuu!!*](https://youtu.be/wHBeqJ-2Ejk) | Complete | [Kasey]
 *Daisuki no Takarabako* | Stalled | [noccu]☆
 DRAMATIC JOURNEY | Complete | [Kasey]
-Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS][]
+Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS]
 Everlasting BEATS | Complete | [noccu]
 Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu] (Edited slightly based on tl by [COSMET])
@@ -339,18 +339,18 @@ Glorious Moment! | Complete | TR
 *Hat on your head!* | Complete | [noccu]☆
 *Hashire Umamusume* | Complete | [noccu]
 *??? (Hishi Miracle)* | In progress | [Kuwaiden]
-Honnou Speed | Complete | [Eight][]
+Honnou Speed | Complete | [Eight]
 Kirari Magic Show | Complete | [LotoDS]
 *Kanjou no Reimei* | In progress | [noccu]☆
 *Koi Wa Derby* | Complete | Hentai Maskudo
 *L's Surprise!!* | Stalled | [noccu]☆
 l'Arc de Gloire | Complete | [LotoDS]
 *Lightless* | Complete | [Ren]
-Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu][] (missing parts)
+Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu] (missing parts)
 [*Mikadowarai kageki \~Tataeyo Towa Ni~*](https://youtu.be/XtTn3GSVKM0) | Complete | [Kasey]
 Ms. VICTORIA | Complete | [Nine]
 Namida hikatte asu ni nare! | Complete | [noccu]
-Next Frontier | Complete | [LotoDS][]
+Next Frontier | Complete | [LotoDS]
 Never Looking Back | Complete | [COSMET]
 *Nigekiri! Fallin’Love* | Complete | [noccu]
 Pyoitto♪Hallelujah! | Complete | [Kasey]
@@ -359,11 +359,11 @@ Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by
 [TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
 *Tachiichi Zeroban! Juni ha Ichiban! (Smart Falcon)* | In progress | [Kasey]
 Tracen Ondo | Complete | [Kasey]
-transforming | Complete | [LotoDS][]
+transforming | Complete | [LotoDS]
 Umapyoi Densetsu | Complete | Anonymous Reindeer + [Karimenrider] (missing parts)
-UNLIMITED IMPACT | Complete | [noccu][]
+UNLIMITED IMPACT | Complete | [noccu]
 We are DREAMERS!! | Complete | TR
-winning the soul | Complete | [Kuun0][]
+winning the soul | Complete | [Kuun0]
 Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 
 

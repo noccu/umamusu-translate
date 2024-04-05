@@ -1,6 +1,5 @@
 import asyncio
 import json
-import common
 import textprocess
 from importlib import import_module
 from pathlib import Path
@@ -8,6 +7,10 @@ from argparse import SUPPRESS
 
 import websockets
 from websockets import server
+
+from common import patch
+from common.types import TranslationFile
+from common.constants import SUPPORTED_TYPES
 
 SUGOI_ROOT = "src/data/sugoi-model"
 
@@ -39,7 +42,7 @@ class Translator:
         self.files = (
             [args.src]
             if args.src
-            else common.searchFiles(
+            else patch.searchFiles(
                 args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
             )
         )
@@ -72,7 +75,7 @@ class Translator:
     def _fileGenerator(self):
         for file in self.files:
             print(f"Translating {file}...")
-            yield common.TranslationFile(file)
+            yield TranslationFile(file)
 
     async def translate(self):
         for file in self._fileGenerator():
@@ -129,11 +132,10 @@ async def sugoiTranslate():
     await tl.translate()
 
 
-def main():
-    global args
-    ap = common.Args(
+def parseArgs(args=None):
+    ap = patch.Args(
         "Machine translate files. Requires sugoi model or deepl userscript",
-        types=common.SUPPORTED_TYPES,
+        types=SUPPORTED_TYPES,
     )
     ap.add_argument("-src", help="Target Translation File")
     ap.add_argument("-dst", help=SUPPRESS)
@@ -148,10 +150,16 @@ def main():
         help="Line length for wrapping/newlines. 0: disable, -1: auto. Default auto.",
     )
     ap.add_argument("-O", "--overwrite", action="store_true", help="Overwrite existing tl")
-    args = ap.parse_args()
+    args = ap.parse_args(args)
     args.replaceMode = "all"
+    return args
 
+
+# Todo: Remove global args usage
+def main(_args=None):
     global USING_SERVER
+    global args
+    args = parseArgs(_args)
     if args.model == "deepl":
         USING_SERVER = True
         asyncio.run(startServer())

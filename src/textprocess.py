@@ -1,16 +1,15 @@
-import common
-from common import TranslationFile, StoryId
 import re
 from math import ceil
-import helpers
+
+from common import utils, patch, logger
+from common.constants import SUPPORTED_TYPES
+from common.types import StoryId, TranslationFile
 
 REPLACEMENT_DATA = None
 LL_CACHE = None, None
 SUPPORTED_TAGS = ["i", "b", "color", "size"]
 RE_TAGS = re.compile(r"(?<!\\)</?" + f"(?:{'|'.join(SUPPORTED_TAGS)})" + r"(?:=[^>]+)?(?<!\\)>")
-RE_BREAK_WORDS = re.compile(
-    r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}"
-)  # yes we want to allow null matches
+RE_BREAK_WORDS = re.compile(r"<?/?([^ <>=]*)=?[^ <>]*[> ]{0,2}")  # allow null matches
 
 
 def processText(file: TranslationFile, text: str, opts: dict):
@@ -58,8 +57,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     pureText = RE_TAGS.sub("", text)
 
     if len(pureText) < lineLen:
-        if opts.get("verbose"):
-            print("Short text line, skipping: ", text)
+        logger.info(f"Short text line, skipping: {text}")
         return text
 
     if numLines > 0:
@@ -69,11 +67,9 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
         lines = re.split(r"\r?\n|\\n", pureText)
         tooLong = [line for line in lines if len(line) > lineLen]
         if not tooLong and len(lines) <= targetLines:
-            if opts.get("verbose"):
-                print("Text passes length check, skipping: ", text)
-            return (
-                text.replace("\n", "\\n") if file.escapeNewline else text
-            )  # I guess this ensures it's correct but should really be skipped
+            logger.info(f"Text passes length check, skipping: {text}")
+            # I guess this replace ensures it's correct but should really be skipped
+            return text.replace("\n", "\\n") if file.escapeNewline else text
 
         # adjust if not
         text = cleannewLines(text)
@@ -85,9 +81,8 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
             if numLines > 0:  # allow one-word "overflow" in line split mode
                 lineFits = pureLen[-1] < lineLen
             else:
-                lineFits = (
-                    pureLen[-1] + len(m.group(0)) - 2 < lineLen
-                )  # -2 = -1 for spaces (common), -1 for <= comparison
+                # -2 = -1 for spaces (common), -1 for <= comparison
+                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen  
             if isTag or lineFits or len(m[0]) < 2 or len(lines[-1]) == 0:
                 lines[-1] += m.group(0)
             else:
@@ -108,20 +103,21 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
 
         nLines = len(lines)
         if numLines < 1 and nLines > 1 and pureLen[-1] < lineLen / 3.25:
-            if opts.get("verbose"):
-                linesStr = "\n\t".join(lines)
-                print(f"Last line is short, balancing on line number:\n\t{linesStr}")
+            logger.info(f"Last line is short, balancing on line number:\n\t" + "\n\t".join(lines))
             return adjustLength(file, text, opts, numLines=nLines, lineLen=-2)
 
     if 0 < targetLines < len(lines):
         try:
             linesStr = "\n\t".join(lines)
             print(
-                f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}"
+                f"Exceeded target lines ({targetLines} -> {len(lines)}) "
+                f"by {len(text) - lineLen * targetLines} in {file.name}:\n\t{linesStr}"
             )
         except UnicodeEncodeError:
             print(
-                f"Exceeded target lines ({targetLines} -> {len(lines)}) by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}: Lines not shown due to terminal/system codepage errors."
+                f"Exceeded target lines ({targetLines} -> {len(lines)}) "
+                f"by {len(text) - lineLen * targetLines} in storyId {file.getStoryId()}\n"
+                "Lines and title not shown due to terminal/system codepage errors."
             )
     return getNewline(file).join(lines)
 
@@ -135,7 +131,7 @@ def resizeText(tlFile: TranslationFile, text: str, force=False):
             text = re.sub(r"^<size=\d+>(.+?) *(?:\\+n)?</size>$", r"\1", text, flags=re.DOTALL)
         else:
             return text  # ignore already-sized textpy src\
-    return f"<size={size}>{text}{getNewline(tlFile)}</size>"
+    return f"<size={size}>{text} {getNewline(tlFile)}</size>"
 
 
 def getNewline(tlFile: TranslationFile):
@@ -148,7 +144,7 @@ def replace(text: str, mode):
 
     global REPLACEMENT_DATA
     if REPLACEMENT_DATA is None:
-        REPLACEMENT_DATA = helpers.readJson("src/data/replacer.json")
+        REPLACEMENT_DATA = utils.readJson("src/data/replacer.json")
         for rep in REPLACEMENT_DATA:
             rep["re"] = re.compile(rep["re"], flags=re.IGNORECASE)
     for rep in REPLACEMENT_DATA:
@@ -160,12 +156,37 @@ def replace(text: str, mode):
     return text
 
 
-def main():
-    ap = common.Args(
+def calcLineLen(file: TranslationFile, verbose):
+    global LL_CACHE
+    if LL_CACHE[0] is file:  # should be same as id() -> fast
+        return LL_CACHE[1]
+
+    lineLength = file.data.get("lineLength")
+    if lineLength in (None, -1, 0):
+        if file.type == "lyrics":
+            lineLength = 57
+        if file.type == "preview":
+            lineLength = 41
+        elif (file.type == "race") or (
+            file.type == "story"
+            and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")
+        ):
+            lineLength = 48
+        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
+            lineLength = 30
+        else:
+            lineLength = 34
+    LL_CACHE = file, lineLength
+    logger.info(f"Line length set to {lineLength} for {file.name}")
+    return lineLength
+
+
+def parseArgs(args=None):
+    ap = patch.Args(
         "Process text for linebreaks (game length limits), common errors, and standardized formatting",
-        types=common.SUPPORTED_TYPES,
+        types=SUPPORTED_TYPES,
     )
-    ap.add_argument("-src", help="Target Translation File, overwrites other file options")
+    ap.set_defaults(src=None)
     # Roughly 42-46 for most training story dialogue, 63-65 for wide screen stories (events etc)
     # Through overflow (thanks anni update!) up to 4 work for landscape content,
     # and up to 5 for portrait (quite pushing it though)
@@ -212,25 +233,26 @@ def main():
         type=int,
         help="Target lines. Length adjustment skips input obeying -ll and not exceeding -tl",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
 
     if args.exclusiveNewlines and args.redoNewlines:
-        print("Incompatible newline options: force all + exclusive add.")
-        return
+        logger.critical("Incompatible newline options: force all + exclusive add.")
+        raise SystemExit
 
-    processFiles(args)
+    return args
 
 
-def processFiles(args):
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.src:
         files = [args.src]
     else:
-        files = common.searchFiles(
+        files = patch.searchFiles(
             args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
         )
     print(f"Processing {len(files)} files...")
     if args.lineLength == -1:
-        print("Automatically setting line length based on story type/id or file value")
+        logger.info("Automatically setting line length based on story type/id or file value")
     for file in files:
         file = TranslationFile(file)
 
@@ -239,32 +261,6 @@ def processFiles(args):
                 block["enText"] = processText(file, block["enText"], vars(args))
         file.save()
     print("Files processed.")
-
-
-def calcLineLen(file: TranslationFile, verbose):
-    global LL_CACHE
-    if LL_CACHE[0] is file:  # should be same as id() -> fast
-        return LL_CACHE[1]
-
-    lineLength = file.data.get("lineLength")
-    if lineLength in (None, -1, 0):
-        if file.type == "lyrics":
-            lineLength = 57
-        if file.type == "preview":
-            lineLength = 41
-        elif (file.type == "race") or (
-            file.type == "story"
-            and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")
-        ):
-            lineLength = 48
-        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
-            lineLength = 30
-        else:
-            lineLength = 34
-    LL_CACHE = file, lineLength
-    if verbose:
-        print(f"Line length set to {lineLength} for {file.name}")
-    return lineLength
 
 
 if __name__ == "__main__":

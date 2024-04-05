@@ -1,14 +1,16 @@
+from pathlib import Path
 import re
-from enum import Enum, auto
 from datetime import timedelta
+from enum import Enum, auto
 from typing import Union
 
-from Levenshtein import ratio
 import ass
 import srt
+from Levenshtein import ratio
 
-import common
-import helpers
+from common import patch, utils, logger
+from common.constants import NAMES_BLACKLIST
+from common.types import StoryId, GameBundle, TranslationFile
 
 
 class SubFormat(Enum):
@@ -61,14 +63,12 @@ class BasicSubProcessor:
     npreRe = re.compile(r"\[?([^\]:]{2,40})\]?: (.+)", flags=re.DOTALL)
 
     def __init__(self, srcFile, options: SubTransferOptions = None):
-        self.srcFile = common.TranslationFile(srcFile)
+        self.srcFile = TranslationFile(srcFile)
         self.srcLines = self.srcFile.textBlocks
         self.subLines: list[TextLine] = list()
         self.format = SubFormat.NONE
         self.options = options or SubTransferOptions()
-        self.cpreRe = re.compile(
-            "|".join(options.choicePrefix), re.IGNORECASE
-        )  # match searches start only
+        self.cpreRe = re.compile("|".join(options.choicePrefix), re.IGNORECASE)  # match searches start only
         # self.idx = 0 #TODO: track idx on class
 
         self.choiceNames = list()
@@ -90,10 +90,8 @@ class BasicSubProcessor:
     def setEn(self, idx, line: TextLine):
         self.srcLines[idx]["enText"] = self.filter(line, self.srcLines[idx])
         if "jpName" in self.srcLines[idx]:
-            if self.srcLines[idx]["jpName"] in common.NAMES_BLACKLIST:
-                self.srcLines[idx][
-                    "enName"
-                ] = ""  # forcefully clear names that should not be translated
+            if self.srcLines[idx]["jpName"] in NAMES_BLACKLIST:
+                self.srcLines[idx]["enName"] = ""  # forcefully clear names that should not be translated
             elif line.name and (not self.srcLines[idx]["enName"] or self.options.overrideNames):
                 self.srcLines[idx]["enName"] = line.name
 
@@ -158,7 +156,7 @@ class BasicSubProcessor:
 
     def addSub(self, idx: int, subLine: TextLine):
         if idx > len(self.srcLines) - 1:
-            print("Attempted to add sub beyond last line of file.")
+            logger.warning("Attempted to add sub beyond last line of file.")
             return idx
 
         # Attempt to match untranslated text
@@ -167,9 +165,7 @@ class BasicSubProcessor:
         else:
             while (
                 len(subLine.text) == 0
-                or re.match(
-                    r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx)
-                )
+                or re.match(r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx))
                 and not (
                     len(subLine.text) < 15
                     or re.match(
@@ -179,8 +175,8 @@ class BasicSubProcessor:
                     )
                 )
             ):
-                print(f"Marking untranslated line at {self.getBlockIdx(idx)}")
-                # print("debug:", self.getJp(idx), "||", subLine.text)
+                logger.warning(f"Marking untranslated line at {self.getBlockIdx(idx)}")
+                logger.debug(f"{self.getJp(idx)} || {subLine.text}")
                 self.setEn(idx, TextLine("<UNTRANSLATED>"))
                 idx += 1
                 if idx > len(self.srcLines) - 1:
@@ -206,7 +202,7 @@ class BasicSubProcessor:
             return False
         prevName = self.srcLines[idx - 1]["jpName"]
         curName = self.srcLines[idx]["jpName"]
-        if not self.options.dupeCheckAll and curName not in common.NAMES_BLACKLIST:
+        if not self.options.dupeCheckAll and curName not in NAMES_BLACKLIST:
             return False
         return curName == prevName and ratio(self.getJp(idx), self.getJp(idx - 1)) > 0.6
 
@@ -368,12 +364,12 @@ class TxtSubProcessor(BasicSubProcessor):
         self.subLines = [
             TextLine(line)
             for line in raw
-            if helpers.isEnglish(line) and not re.match(r"\n+\s*", line)
+            if utils.isEnglish(line) and not re.match(r"\n+\s*", line)
         ]
         super().preprocess()
 
-def process(srcFile, subFile, opts: SubTransferOptions):
-    format = subFile[-3:]
+def process(srcFile:Path, subFile:Path, opts: SubTransferOptions):
+    format = subFile.suffix[1:]
     if format == "srt":
         p = SrtSubProcessor(srcFile, subFile, opts)
     elif format == "ass":
@@ -381,7 +377,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
     elif format == "txt":
         p = TxtSubProcessor(srcFile, subFile, opts)
     else:
-        print("Unsupported subtitle format.")
+        logger.critical("Unsupported subtitle format.")
         raise NotImplementedError
 
     storyType = p.srcFile.type
@@ -400,11 +396,11 @@ def process(srcFile, subFile, opts: SubTransferOptions):
             idx += 1
         # Skip repeated subs (usually for style)
         if opts.noDupeSubs:
-            # print(f"checking\n{subLine}\nto\n{p.getEn(idx-1).text}")
+            logger.debug(f"checking\n{subLine}\nto\n{p.getEn(idx-1).text}")
             if (opts.noDupeSubs == "strict" and subLine.text == p.getEn(idx - 1).text) or (
                 opts.noDupeSubs == "loose" and subLine.text in p.getEn(idx - 1).text
             ):
-                print(f"Dupe sub skipped at {p.getBlockIdx(idx)}: {subLine.text}")
+                logger.info(f"Dupe sub skipped at {p.getBlockIdx(idx)}: {subLine.text}")
                 continue
 
         # Races can have "choices" but their format is different because
@@ -419,9 +415,7 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                         except IndexError:
                             # can give false positives
                             skipLine = opts.strictChoices
-                            print(
-                                f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}"
-                            )
+                            logger.error(f"Choice idx error at {p.getBlockIdx(idx-1)}{'' if skipLine else ' (ignored)'}")
                             if skipLine:
                                 errors += 1
                     else:  # Copy text to all choices
@@ -431,29 +425,29 @@ def process(srcFile, subFile, opts: SubTransferOptions):
                     if skipLine:
                         continue  # don't increment idx
                 elif opts.strictChoices:
-                    print(
+                    logger.warning(
                         f"Found assumed choice subtitle, but no matching choice found at block {p.getBlockIdx(idx-1)}, skipping..."
                     )
                     errors += 1
                     continue
             elif idx > 0 and p.getChoices(idx - 1) and idx - lastChoice[0] > 0:
-                print(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
+                logger.warning(f"Missing choice subtitle at block {p.getBlockIdx(idx-1)}")
                 errors += 1
             lastChoice[1] = 0
 
         # Add text
         if p.isDuplicateBlock(idx):
-            print(f"Found dupe source line at block {p.getBlockIdx(idx)}, duplicating.")
+            logger.info(f"Found dupe source line at block {p.getBlockIdx(idx)}, duplicating.")
             idx = p.duplicateSub(idx, subLine)
 
         idx = p.addSub(idx, subLine)
     # check niche case of duplicate last line (idx is already increased)
     if idx < srcLen:
         if p.isDuplicateBlock(idx):
-            print("Last line is duplicate! (check correctness)")
+            logger.warning("Last line is duplicate! (check correctness)")
             p.duplicateSub(idx)
         else:
-            print(f"Lacking {srcLen - idx} subtitle(s).")
+            logger.warning(f"Lacking {srcLen - idx} subtitle(s).")
             errors += 1
 
     p.saveSrc()
@@ -465,9 +459,9 @@ def process(srcFile, subFile, opts: SubTransferOptions):
 
 def createSubs(tlFile, fps=30):
     try:
-        bundle = common.GameBundle.fromName(tlFile.bundle)
+        bundle = GameBundle.fromName(tlFile.bundle)
     except FileNotFoundError:
-        print("Bundle doesn't exist.")
+        logger.critical("Bundle doesn't exist.")
         return None
     title = tlFile.data.get("title", "")
     # if tlFile.version < 5:
@@ -502,22 +496,20 @@ def createSubs(tlFile, fps=30):
 
 
 def writeSubs(sType, storyid):
-    sid = common.StoryId.parse(sType, storyid)
-    files = common.searchFiles(sType, sid.group, sid.id, sid.idx, sid.set)
+    sid = StoryId.parse(sType, storyid)
+    files = patch.searchFiles(sType, sid.group, sid.id, sid.idx, sid.set)
     for tlFile in files:
-        tlFile = common.TranslationFile(tlFile)
+        tlFile = TranslationFile(tlFile)
         subs = createSubs(tlFile)
         if not subs:
             return
-        helpers.mkdir("subs")
-        with open(
-            f"subs/{tlFile.getStoryId()} {subs.info['Title']}.ass", "w", encoding="utf_8_sig"
-        ) as f:
+        utils.mkdir("subs")
+        with open(f"subs/{tlFile.getStoryId()} {subs.info['Title']}.ass", "w", encoding="utf_8_sig") as f:
             subs.dump_file(f)
 
 
-def main():
-    ap = common.Args(
+def parseArgs(args=None):
+    ap = patch.Args(
         "Imports translations from subtitle files. A few conventions are used.",
         defaultArgs=False,
         epilog="Ideally 1 sub line per 1 game text screen. Add empty lines for untranslated.\n"
@@ -599,11 +591,16 @@ def main():
         action="store_true",
         help="Auto-unsplit lines based on sub times.",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
+    return args
+
+
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.writeSubs:
         writeSubs(args.src, args.sub)
     else:
-        process(args.src, args.sub, SubTransferOptions.fromArgs(args))
+        process(Path(args.src), Path(args.sub), SubTransferOptions.fromArgs(args))
 
 
 if __name__ == "__main__":

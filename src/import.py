@@ -99,6 +99,8 @@ class PatchManager:
                 print(f"Imported {file} ({reason})")
             else:
                 logger.info(f"Skipped {file} ({reason})")
+        except UnicodeError:
+            print(f"Successfully processed file idx {file[:3]}, details unknown. (Could not render full name)")
         except Exception:
             logger.error(f"Error importing {file}", exc_info=True)
             # raise PatchError(f"UnityPy error: {repr(e)}, skipping {tlFile.bundle}.")

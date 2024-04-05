@@ -13,7 +13,7 @@ IF EXIST ".mingit" (
             .mingit\mingw64\bin\git.exe pull !token! master
         )
     ) ELSE ( 
-        ECHO You are using the Community Edition. Consider supporting to access more content!
+        ECHO You are using the Community Edition. Consider supporting us to continue our work and access content faster!
         IF EXIST ".git\refs\heads\supporter" ( 
             .mingit\mingw64\bin\git.exe checkout master 
             .mingit\mingw64\bin\git.exe branch --delete supporter

@@ -8,7 +8,7 @@ IF %ERRORLEVEL% NEQ 0 (
     SET snek=python
     WHERE !snek! >nul 2>&1
     IF !ERRORLEVEL! NEQ 0 (
-        ECHO Can't find python. Likely not added to PATH ^(google it^) or not installed.
+        ECHO Can't find python. Likely incorrect install or not installed.
         GOTO quit
     )
 )
@@ -16,8 +16,10 @@ ECHO Using %snek%
 %snek% --version
 %snek% -m pip show unitypy  | findstr /B "Version Location"
 
+REM Newline
 ECHO(
 
+REM Treat first arg as label call if exists.
 IF [%1] NEQ [] ( GOTO %1 )
 
 :open
@@ -49,8 +51,10 @@ ECHO Installing required libraries...
 IF %ERRORLEVEL% NEQ 0 (
     ECHO.
     echo [93mSomething went wrong. Please screenshot as much as possible or copy this whole window when asking for help. You can hide your username if you want.[0m
-    PAUSE
+    GOTO quit
 )
+
+%snek% src/post-install.py
 GOTO quit
 
 :mdb
@@ -69,8 +73,6 @@ ECHO Uninstalling patch...
 :quit
 PAUSE
 EXIT /B
-
-REM FUNCTIONS
 
 :venv
 IF EXIST ".venv" (

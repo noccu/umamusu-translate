@@ -2,10 +2,13 @@
 SETLOCAL ENABLEDELAYEDEXPANSION
 REM This script is intended to be run where you want the patch to live, not from its source folder.
 IF EXIST "UmaTL" (
-    SET /P reinstall=An UmaTL folder already exists. Replace it? Enter first letter [y]es, [n]o: 
+    SET /P reinstall=An UmaTL folder already exists. Replace it? [y]es, [n]o, [u]pdate: 
     IF /I !reinstall! EQU y (
         RMDIR /S /Q UmaTL
         CALL :install
+    ) ELSE IF /I !reinstall! EQU u (
+        CALL run.bat install
+        EXIT /B
     ) ELSE ( 
         ECHO No actions required, exiting.
     )

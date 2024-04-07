@@ -5,7 +5,7 @@
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. A few included scripts also let it function as a game patch using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
-**[Note on current state](#current-state). [Guides for install and use](#setting-up--getting-started).
+**[Note on current state](#current-state). [Guides for install and use](#install).
 [Translation progress and credits][tl-progress].**  
 If you encounter problems, check the troubleshooting section with each guide step first. Open an issue or ask in the Discord server if this doesn't solve it.
 

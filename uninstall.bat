@@ -1,1 +1,1 @@
-@CALL run.bat uninstall
+@CALL patch.bat uninstall

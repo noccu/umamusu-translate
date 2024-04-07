@@ -3,7 +3,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone
-from pathlib import Path, PurePath
+from pathlib import Path, PurePath, PosixPath
 from typing import Union
 from functools import cache
 
@@ -208,38 +208,39 @@ class UmaTlConfig:
     cfg = None
     core = None
     empty = {}
+    filename = Path("umatl.json")
 
     def __init__(self) -> None:
         # Resolve to make sure it works on both abs and rel paths.
+        cur_script = PosixPath(sys.argv[0]).resolve()
         ctx = str(
-            Path(sys.argv[0]).resolve().relative_to(Path("src").resolve()).with_suffix("")
-        ).replace("\\", "/")
+            cur_script.relative_to(PosixPath("src").resolve()).with_suffix("")
+        )
         if not UmaTlConfig.cfg:
             try:
-                UmaTlConfig.cfg = utils.readJson("umatl.json")
+                UmaTlConfig.cfg = utils.readJson(UmaTlConfig.filename)
                 UmaTlConfig.core = UmaTlConfig.cfg.get("core", UmaTlConfig.empty)
             except FileNotFoundError:
                 self.createDefault()
-        self.ensureCore()
         self.script = UmaTlConfig.cfg.get(ctx, UmaTlConfig.empty)
 
-    def save(self):
-        utils.writeJson("umatl.json", UmaTlConfig.cfg, 2)
+    @staticmethod
+    def save():
+        utils.writeJson(UmaTlConfig.filename, UmaTlConfig.cfg, 2)
 
-    def ensureCore(self):
-        if "core" not in UmaTlConfig.cfg:
-            UmaTlConfig.cfg["core"] = {}
-            self.save()
-
-    def createDefault(self):
+    @staticmethod
+    def createDefault():
+        if UmaTlConfig.filename.exists():
+            print("UmaTL config file already exists.")
+            return
         data = {
             "core": {},
             "import": {"update": True, "skip_mtl": True},
             "mdb/import": {"skill_data": False},
         }
+        UmaTlConfig.cfg = data
         try:
-            UmaTlConfig.cfg = data
-            self.save()
+            UmaTlConfig.save()
         except PermissionError:
             print(
                 "Error: Lacking permissions to create the config file in this location. \n"
@@ -247,10 +248,6 @@ class UmaTlConfig:
             )
             sys.exit()
         print(
-            "Uma-tl uses the umatl.json config file for user preferences when requested.\n"
-            "This seems to be your first time running uma-tl this way so a new file was created.\n"
-            "Uma-tl has quit without doing anything this first time so you can edit the config before running it again. Defaults are:"
+            "UmaTL uses the umatl.json config file for user preferences when directed to.\n"
+            "This happens automatically when used as a patch. The file can be opened in a text editor."
         )
-        del data["core"]
-        print(json.dumps(data, indent=2))
-        sys.exit()

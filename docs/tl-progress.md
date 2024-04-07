@@ -37,15 +37,19 @@ Half Anniversary Story | Complete | [CatNipHoarder] & [Holo]
 # Event Stories
 name | progress | translator
 --- | --- | ---
+Chase Your Dreams! | |
 Brand-New Friend | Complete | [Hades of Games] (ep 1-2, 5-8, 4 (missing parts)), [Vacxy] (ep 3, 4 (partial)) + [noccu] (slight edit)
-The Sounds of Autumn | Complete | [UmaTL] (Anonymous Panda)☆
+Blooming Maiden's June Pride | |
+Fantasy World Uma Nest | |
+Uma Musume Summer Story | |
 Make up in Halloween！ | Complete | [CatNipHoarder] & [Holo]
+The Sounds of Autumn | Complete | [UmaTL] (Anonymous Panda)☆
 Miracles of the Holy Night | Complete | [CatNipHoarder] & [Holo]
 Blossoming New Year's Karuta Contest | Complete, In progress | MTL, [noccu]☆
 Patisserie Grandeur | Complete | [noccu]
 Flapping Run-up | Complete | [Hades of Games]
 Tonight at the Ligne Droite | Complete | Anonymous Reindeer
-A Resounding Cheer, Tracen Academy Cheerleading Squad! | Complete | [LotoDS]
+Roar, Tracen Academy Cheerleading Squad! | Complete | [LotoDS]
 The Promised Time: Silks & Three Riddles | Complete | MTL
 Seek, Solve, Summer Walk! | Complete | [noccu]
 Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
@@ -63,7 +67,10 @@ An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
 Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)
 As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)☆
-Mine and Everyone's | In progress | [UmaTL] (Anonymous Panda)☆
+A Gleaming Mejiro Gala |  |
+Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
+Come On Down To Calming Koumian! |  |
+To You, My Dancing Orchid ～Let's dance now!～ | In progress | Banana
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events

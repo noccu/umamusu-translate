@@ -7,7 +7,7 @@ IF EXIST "UmaTL" (
         RMDIR /S /Q UmaTL
         CALL :install
     ) ELSE IF /I !reinstall! EQU u (
-        CALL run.bat install
+        CALL patch.bat install
         EXIT /B
     ) ELSE ( 
         ECHO No actions required, exiting.
@@ -25,7 +25,7 @@ CALL :mingit
 CALL :initgit
 MOVE uma-temp-mingit UmaTL\.mingit
 CD UmaTL
-CALL run.bat install
+CALL patch.bat install
 EXIT /B 0
 
 :mingit

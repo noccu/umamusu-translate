@@ -3,7 +3,7 @@ import json
 import os
 import sys
 from datetime import datetime, timezone
-from pathlib import Path, PurePath, PosixPath
+from pathlib import Path, PurePath
 from typing import Union
 from functools import cache
 
@@ -212,9 +212,9 @@ class UmaTlConfig:
 
     def __init__(self) -> None:
         # Resolve to make sure it works on both abs and rel paths.
-        cur_script = PosixPath(sys.argv[0]).resolve()
+        cur_script = Path(sys.argv[0]).resolve()
         ctx = str(
-            cur_script.relative_to(PosixPath("src").resolve()).with_suffix("")
+            cur_script.relative_to(Path("src").resolve()).with_suffix("").replace("\\", "/")
         )
         if not UmaTlConfig.cfg:
             try:

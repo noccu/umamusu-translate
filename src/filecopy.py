@@ -1,6 +1,7 @@
 import shutil
 import sqlite3
 from os import makedirs, path
+from pathlib import PurePath
 
 from common import patch, utils, logger
 from common.constants import GAME_META_FILE, TARGET_TYPES
@@ -164,7 +165,7 @@ def parseArgs(args=None):
         action="store_true",
         help="Use full unity path in save dest, creating folders. Needs -name",
     )
-    ap.add_argument("-dst", default="dump/")
+    ap.add_argument("-dst", type=PurePath, default="dump/")
     ap.add_argument("-O", dest="overwrite", action="store_true", help="Overwrite existing")
     ap.add_argument(
         "-B",

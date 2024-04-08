@@ -370,10 +370,7 @@ def move():
     updConfig(installDir / "config.json", dynFiles)
     localIncl = LOCALIFY_DATA_DIR.joinpath("includes")
     gameIncl = dst.joinpath("includes")
-    if not gameIncl.exists():
-        logger.warning("No custom UmaTL assets file! Consider repeating UI guide.")
-        return
-    if localIncl.stat().st_mtime > gameIncl.stat().st_mtime:
+    if not gameIncl.exists() or localIncl.stat().st_mtime > gameIncl.stat().st_mtime:
         shutil.copyfile(localIncl, gameIncl)
 
 

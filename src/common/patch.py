@@ -206,31 +206,34 @@ def isUsingTLG() -> bool:
 
 class UmaTlConfig:
     cfg = None
-    core = None
-    empty = {}
     filename = Path("umatl.json")
 
     def __init__(self) -> None:
-        # Resolve to make sure it works on both abs and rel paths.
-        cur_script = Path(sys.argv[0]).resolve()
-        ctx = str(
-            cur_script.relative_to(Path("src").resolve()).with_suffix("").replace("\\", "/")
-        )
         if not UmaTlConfig.cfg:
             try:
                 UmaTlConfig.cfg = utils.readJson(UmaTlConfig.filename)
-                UmaTlConfig.core = UmaTlConfig.cfg.get("core", UmaTlConfig.empty)
             except FileNotFoundError:
                 self.createDefault()
-        self.script = UmaTlConfig.cfg.get(ctx, UmaTlConfig.empty)
+            UmaTlConfig.core = self.getOrCreateCtx("core")
+        # Resolve to make sure it works on both abs and rel paths.
+        cur_script = Path(sys.argv[0]).resolve()
+        ctx = cur_script.relative_to(Path("src").resolve()).with_suffix("").as_posix()
+        self.script = self.getOrCreateCtx(ctx)
+    
+    @classmethod
+    def getOrCreateCtx(cls, ctx):
+        data = cls.cfg.get(ctx)
+        if data is None:
+            cls.cfg[ctx] = data = {}
+        return data
+    
+    @classmethod
+    def save(cls):
+        utils.writeJson(cls.filename, cls.cfg, 2)
 
-    @staticmethod
-    def save():
-        utils.writeJson(UmaTlConfig.filename, UmaTlConfig.cfg, 2)
-
-    @staticmethod
-    def createDefault():
-        if UmaTlConfig.filename.exists():
+    @classmethod
+    def createDefault(cls):
+        if cls.filename.exists():
             print("UmaTL config file already exists.")
             return
         data = {
@@ -238,9 +241,9 @@ class UmaTlConfig:
             "import": {"update": True, "skip_mtl": True},
             "mdb/import": {"skill_data": False},
         }
-        UmaTlConfig.cfg = data
+        cls.cfg = data
         try:
-            UmaTlConfig.save()
+            cls.save()
         except PermissionError:
             print(
                 "Error: Lacking permissions to create the config file in this location. \n"

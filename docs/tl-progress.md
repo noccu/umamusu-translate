@@ -337,7 +337,6 @@ BLOW my GALE | Complete | [noccu]
 [*Chototsumoushin Kibaku-chuu!!*](https://youtu.be/wHBeqJ-2Ejk) | Complete | [Kasey]
 *Daisuki no Takarabako* | Stalled | [noccu]☆
 DRAMATIC JOURNEY | Complete | [Kasey]
-Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS]
 Everlasting BEATS | Complete | [noccu]
 Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu] (Edited slightly based on tl by [COSMET])

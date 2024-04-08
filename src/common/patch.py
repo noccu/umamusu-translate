@@ -208,9 +208,7 @@ class UmaTlConfig:
     def __init__(self) -> None:
         # Resolve to make sure it works on both abs and rel paths.
         cur_script = Path(sys.argv[0]).resolve()
-        ctx = str(
-            cur_script.relative_to(Path("src").resolve()).with_suffix("").replace("\\", "/")
-        )
+        ctx = cur_script.relative_to(Path("src").resolve()).with_suffix("").as_posix()
         if not UmaTlConfig.cfg:
             try:
                 UmaTlConfig.cfg = utils.readJson(UmaTlConfig.filename)

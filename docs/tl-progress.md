@@ -63,14 +63,14 @@ Leap into a New World! | Complete | [yumeimi](https://www.reddit.com/user/yumeim
 Wherefore I adore you | Stalled | [noccu] (preview)
 Ingenious!? Spring Festival! Dodgeball Fury! | Stalled | [noccu] (preview) + [UmaTL] (Anonymous Panda)☆
 An Oath to My Dear Challengers | Stalled | [noccu] (preview)
-#summer #besties | Complete | [BlunterMonk](https://github.com/BlunterMonk) (MTL edit)
+#summer #besties | Complete | [Jimoori]
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
 Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)
 As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)☆
 A Gleaming Mejiro Gala |  |
 Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
 Come On Down To Calming Koumian! |  |
-To You, My Dancing Orchid ～Let's dance now!～ | In progress | Banana
+To You, My Dancing Orchid ～Let's dance now!～ | Complete | [Jimoori]
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events
@@ -337,7 +337,6 @@ BLOW my GALE | Complete | [noccu]
 [*Chototsumoushin Kibaku-chuu!!*](https://youtu.be/wHBeqJ-2Ejk) | Complete | [Kasey]
 *Daisuki no Takarabako* | Stalled | [noccu]☆
 DRAMATIC JOURNEY | Complete | [Kasey]
-Egao no Takaramono -Beyond the Future!- | Complete | [LotoDS]
 Everlasting BEATS | Complete | [noccu]
 Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu] (Edited slightly based on tl by [COSMET])
@@ -404,3 +403,4 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [UmaTL]: https://www.patreon.com/noccu
 [noob]: https://twitter.com/noobcakeart
 [Puga]: https://pugakirio.carrd.co/
+[Jimoori]: https://www.youtube.com/@Jimoori

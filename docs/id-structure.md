@@ -259,6 +259,7 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1112 | Forever gold
 1113 | Like a Shooting Star
 1114 | ONCE MORE, I CAN
+0000 | **IDs from here on are likely non-lyrics content implemented as live/lyrics**
 8501 | スタホTV | Sutaho TV
 8502 | 条件戦 | Allowance Race
 8503 | 怪物誕生 | Birth of a Monster

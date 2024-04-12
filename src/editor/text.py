@@ -191,7 +191,7 @@ class TextBoxEditable(TextBox):
 
     def format_text(self, event):
         if not self.tag_ranges("sel"):
-            self.master.event_generate("<<Log>>", "No selection to format.")
+            self.master.event_generate("<<Log>>", data="No selection to format.")
             return
         if event.keysym == "i":
             self.toggleSelectionTag("i")

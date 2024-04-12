@@ -12,7 +12,6 @@ TLG_TARGETS = (
     "xinput1_3.dll"
 )
 TMP_STORE = Path("temp")
-SUCCESS = True
 
 
 def call_api(url):
@@ -52,7 +51,7 @@ def download_tlg():
         file_choice = "\n".join(f"{i}: {n}" for i, n in enumerate(TLG_TARGETS))
         tlg_idx = int(input(
             f"\nTLG and other mods can share these filenames\n{file_choice}\n"
-            "Input the number corresponding to your TLG file: "
+            "Input the number corresponding to your existing TLG file to overwrite: "
         ).strip()[0])
     # Find latest release
     logger.info("Finding latest TLG release...")

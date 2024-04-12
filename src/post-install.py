@@ -76,6 +76,8 @@ def install_tlg(tlg_idx):
             utils.getUmaInstallDir().joinpath(TLG_TARGETS[tlg_idx]).unlink()
         except PermissionError:
             pass # Defer to message later.
+        except FileNotFoundError:
+            pass # continue install
     # Extract zip
     with ZipFile(TMP_STORE.joinpath("tlg.zip")) as zip:
         # Extract overwrites existing files

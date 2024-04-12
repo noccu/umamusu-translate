@@ -120,7 +120,8 @@ def main():
     TMP_STORE.mkdir(exist_ok=True)
     try:
         download_tlg()
-    except:
+    except Exception:
+        logger.debug("", exc_info=True)
         logger.info(
             "\nNot everything went right, check the steps on GitHub or ask in the Discord if you need help.\n"
             "Details are in logs/install.log, please include it when asking."

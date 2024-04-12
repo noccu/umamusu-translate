@@ -100,6 +100,11 @@ class TextBox(tk.Text):
                 openedTags[tagName] = tagList[-1]
                 if tagName == "color":
                     self.color.define(tagVal)
+                elif tagName == "size" and fullTag not in self.tag_names():
+                    ratio = int(tagVal) / 40 #todo: story content, need to generalize
+                    newSize = round(self.font.cget("size") * ratio)
+                    newSizeFont = fonts.createFrom(self, self.font, newSize)
+                    self.tag_config(fullTag, font=newSizeFont)
             offset += len(m[0])
         tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         # Add the cleaned text

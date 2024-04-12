@@ -45,11 +45,16 @@ def setFile(filename: str = "umatl.log", level = logging.DEBUG):
     date = datetime.now(timezone.utc).isoformat(" ", "seconds")  
     _FILE_HANDLER.stream.write(f"{'\n' if _FILE_HANDLER.stream.tell() > 1 else ''}== {date} ==\n")
 
+def setFileLevel(level):
+    if _FILE_HANDLER is not None:
+        _FILE_HANDLER.setLevel(level)
+
 def closeFile():
     if _FILE_HANDLER is not None:
         _FILE_HANDLER.close()
 
-setLevel = _LOGGER.setLevel
+setConsoleLevel = _STDOUT_HANDLER.setLevel
+setFileLevel = setFileLevel
 debug = _LOGGER.debug
 info = _LOGGER.info
 warning = _LOGGER.warning

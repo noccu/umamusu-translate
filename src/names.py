@@ -1,28 +1,29 @@
-import common
-import helpers
+from common import utils, patch
+from common.constants import NAMES_BLACKLIST
+from common.types import TranslationFile
 
 NAMES_DICT = None
 
 
 def loadDict():
     global NAMES_DICT
-    names = helpers.readJson("src/data/names.json")
-    umas = helpers.readJson("translations/mdb/char-name.json").get("text")
-    misc = helpers.readJson("translations/mdb/miscellaneous.json").get("text")
+    names = utils.readJson("src/data/names.json")
+    umas = utils.readJson("translations/mdb/char-name.json").get("text")
+    misc = utils.readJson("translations/mdb/miscellaneous.json").get("text")
     NAMES_DICT = misc.copy()
     NAMES_DICT.update(names)
     NAMES_DICT.update(umas)
     return names, umas, misc
 
 
-def translate(file: common.TranslationFile, forceReload=False):
+def translate(file: TranslationFile, forceReload=False):
     if forceReload or not NAMES_DICT:
         loadDict()
     for block in file.textBlocks:
         jpName = block.get("jpName")
         if jpName is None:
             continue
-        if jpName in common.NAMES_BLACKLIST:
+        if jpName in NAMES_BLACKLIST:
             # Force original names for game compat
             block["enName"] = ""
         elif tlName := NAMES_DICT.get(jpName):
@@ -30,41 +31,45 @@ def translate(file: common.TranslationFile, forceReload=False):
             block["enName"] = tlName
 
 
-def extract(files: list):
+def extract(files: list[utils.Path]):
     curNames, *_ = loadDict()
     newNames = 0
     for file in files:
-        file = common.TranslationFile(file)
+        file = TranslationFile(file)
         for block in file.textBlocks:
             name = block.get("jpName")
-            if name in common.NAMES_BLACKLIST:
+            if name in NAMES_BLACKLIST:
                 continue
             if name not in NAMES_DICT:
                 curNames[name] = block.get("enName", "")
                 NAMES_DICT[name] = block.get("enName", "")
                 newNames += 1
-    helpers.writeJson("src/data/names.json", curNames)
+    utils.writeJson("src/data/names.json", curNames)
     return newNames
 
 
-def main():
-    ap = common.Args("Translate many enName fields in Translation Files by lookup")
+def parseArgs(args=None):
+    ap = patch.Args("Translate many enName fields in Translation Files by lookup")
     ap.add_argument(
-        "-src", nargs="*", help="Target Translation File(s), overwrites other file options"
+        "-src", nargs="*", type=utils.Path, help="Target Translation File(s), overwrites other file options"
     )
     ap.add_argument(
         "-e",
         "--extract",
         action="store_true",
-        help="Target Translation File(s), overwrites other file options",
+        help="Write new names from files to names file instead. Copies any existing EN names.",
     )
-    args = ap.parse_args()
+    args = ap.parse_args(args)
 
     if args.type in ("race", "lyrics"):
         print("No names in given type.")
         raise SystemExit
+    return args
 
-    files = args.src or common.searchFiles(
+
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
+    files = (args.src,) if args.src else patch.searchFiles(
         args.type, args.group, args.id, args.idx, targetSet=args.set, changed=args.changed
     )
     if args.extract:
@@ -72,7 +77,7 @@ def main():
         print(f"Extracted {n} new names from {len(files)} files.")
     else:
         for file in files:
-            file = common.TranslationFile(file)
+            file = TranslationFile(file)
             translate(file)
             file.save()
         print(f"Names translated in {len(files)} files.")

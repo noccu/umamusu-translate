@@ -174,6 +174,7 @@ class TextBoxEditable(TextBox):
         super().__init__(parent, size, True, font, **kwargs)
         self.config(undo=True)
         self.spellChecker = SpellCheck(self)
+        self.rawMode = False
         # Move default class binds last to allow overwriting
         this, cls, toplevel, all = self.bindtags()
         self.bindtags((this, toplevel, all, cls))
@@ -186,15 +187,23 @@ class TextBoxEditable(TextBox):
         self.bind("<Control-i>", self.format_text)
         self.bind("<Control-b>", self.format_text)
         self.bind("<Control-C>", self.format_text)
+        self.bind("<Control-d>", self.format_text)
         self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
         self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
 
     def loadRichText(self, text: str = None, tag=None, append=False):
-        super().loadRichText(text, tag, append)
+        if self.rawMode:
+            setText(self, text)
+        else:
+            super().loadRichText(text, tag, append)
         self.spellChecker.check_spelling()
         self.edit_modified(False)
 
     def format_text(self, event):
+        if event.keysym == "d":
+            self.rawMode = not self.rawMode
+            self.loadRichText(normalize(self.toRichText()))
+            return
         if not self.tag_ranges("sel"):
             self.master.event_generate("<<Log>>", data="No selection to format.")
             return
@@ -224,7 +233,7 @@ class TextBoxEditable(TextBox):
         if event.keycode == 8:  # backspace
             ptn = r"^" if shift else r"[^ …—\.?!]+|^"
             sIdx = self.search(ptn, index=tk.INSERT, backwards=True, regexp=True, nocase=True)
-            self.delete(sIdx, tk.INSERT)  # 
+            self.delete(sIdx, tk.INSERT)  #
         elif event.keycode == 46:  # delete
             ptn = r".$" if shift else r" ?.(?=[ …—\.?!]|$)"
             sIdx = self.search(ptn, index=tk.INSERT, backwards=False, regexp=True, nocase=True)

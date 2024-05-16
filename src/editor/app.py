@@ -549,20 +549,19 @@ class PreviewWindow:
         fontSize = tk.IntVar(value=16)  # common UI size
         fontSize.trace("w", self._evChangeFontSize)
         fontSizeCfg = ttk.Spinbox(root, from_=2, to=75, increment=1, textvariable=fontSize)
-        fontSizeCfg.pack(expand=True, fill="x")
+        fontSizeCfg.pack(expand=False, fill="x")
         previewFont = fonts.create(root, id="preview", size=fontSize.get())
-        previewText = tk.Label(root, font=previewFont, justify="left", anchor="w")
+        previewText = text.TextBox(root, font=previewFont)
         previewText.pack(expand=True, fill="both")
 
         self.master = master
         self.root = root
         self.text = previewText
-        self.font = previewFont
         self.fontSize = fontSize
         root.withdraw()
 
     def setText(self, text: str):
-        self.text.config(text=text)
+        self.text.loadRichText(text)
 
     def moveWindow(self, event):
         raise NotImplementedError
@@ -574,7 +573,7 @@ class PreviewWindow:
             newsize = self.fontSize.get()
         except tk.TclError:
             return
-        self.font.config(size=newsize)
+        self.text.fontConfig(size=newsize)
 
     def toggle(self, event=None):
         if self.root.state() == "normal":

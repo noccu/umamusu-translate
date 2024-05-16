@@ -563,6 +563,13 @@ class PreviewWindow:
     def setText(self, text: str):
         self.text.loadRichText(text)
 
+    def addChoices(self, choices):
+        if not choices:
+            return
+        for choice in choices:
+            choiceText = f"\n\n{choice.get('enText')}"
+            self.text.loadRichText(choiceText, append=True)
+
     def moveWindow(self, event):
         raise NotImplementedError
         self.root.geometry(f"+{event.x_root}+{event.y_root}")

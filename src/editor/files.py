@@ -37,7 +37,7 @@ class SaveState:
         self.lastTitle = newTitle
         self.unsavedChanges.add(ch)
         return True
-    
+
     def onFileSaved(self, ch: int, block: dict):
         # Little hack to prevent false unsaved files on chapter change without block change
         # Essentially pretend the block was reloaded. Could be done in markBlockSaved but
@@ -158,6 +158,7 @@ class FileManager:
 
         self.saveState.markBlockLoaded(block)
         self.master.preview.setText(displayText)
+        self.master.preview.addChoices(cur_choices)
         return block
 
     def save_block(self, nav: "Navigator"):

@@ -66,8 +66,8 @@ class TextBox(tk.Text):
         self.tkRoot = None
         self._editable = self._enabled = editable
         self.font = font
-        self.font_italic = fonts.createFrom(self, font, italic=True)
-        self.font_bold = fonts.createFrom(self, font, bold=True)
+        self.font_italic = fonts.createFrom(self, font, italic=True, suffix="i")
+        self.font_bold = fonts.createFrom(self, font, bold=True, suffix="b")
         self.tag_config("b", font=self.font_bold)
         self.tag_config("i", font=self.font_italic)
         self.color = ColorManager(self)

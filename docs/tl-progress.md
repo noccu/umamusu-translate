@@ -26,7 +26,7 @@ Main story Act 1 Ch 4 | Complete | [Hades of Games]
 Main story Act 1 Ch 5 | Complete | [LotoDS]
 Main story Act 1 Ch 6 Finale Part 1 | Complete | [LotoDS]
 Main story Act 1 Ch 6 Finale Part 2 | Complete | [LotoDS]
-Main story Act 2 Prologue | In progress | [LotoDS]
+Main story Act 2 Ch 1 | Complete | [LotoDS]
 Half Anniversary Story | Complete | [CatNipHoarder] & [Holo]
 1st Anniversary Story | Complete | [CatNipHoarder] & [Holo]
 1.5th Anniversary Story | Complete | [CatNipHoarder] & [Holo]
@@ -71,12 +71,13 @@ A Gleaming Mejiro Gala |  |
 Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
 Come On Down To Calming Koumian! |  |
 To You, My Dancing Orchid ～Let's dance now!～ | Complete | [Jimoori]
+Uprising: The Soldiers' Battle Cry | In progress | [Chiwawa] (tl) + [noccu] (edit)
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events
 name | progress | translator
 --- | --- | ---
-KIRARI MAGIC SHOW | Complete | MTL, [noccu] (intro)
+KIRARI MAGIC SHOW | Complete, Stalled | MTL, [noccu] (intro)
 
 # Campaigns
 name | progress | translator
@@ -88,7 +89,8 @@ name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 Admire Vega | Complete | [CatNipHoarder] & [Holo]
-Agnes Digital | Complete | MTL (contributed by CryDuringItAll)
+Air Shakur | Exists | [fling]
+Agnes Digital | In progress | [fling]
 Agnes Tachyon | Complete | [Ren] (ep 1), [noccu] + [xct] (ep 2-3), [xct] (ep 4-7)
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
@@ -130,6 +132,7 @@ Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL
 Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207]
+Mr. C.B. | In progress | [kanade]
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS]
 Nice Nature | Complete | [xct]
@@ -154,7 +157,7 @@ Taiki Shuttle | Complete | [LotoDS]
 Tanino Gimlet | In Progress | [UmaTL] (Anonymous Panda)☆
 TM Opera O | Complete | [UmaTL] (noccu)☆
 Tokai Teio | Complete | [CatNipHoarder] & [Holo]
-Transcend | In progress | [KevinVG207]
+Transcend | Exists | [KevinVG207]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS]
 Vivlos | Complete | [LotoDS]
@@ -204,6 +207,11 @@ idx | name (short) | progress | translator
 --- | --- | --- | ---
 08/005 | Campaign intro | In progress | [noccu]
 
+### U.A.F.
+idx | name (short) | progress | translator
+--- | --- | --- | ---
+08/005 | Full Scenario | In progress | [UmaTL] (noccu)☆
+
 ## Umas
 name | progress | translator
 --- | --- | ---
@@ -245,11 +253,13 @@ Agnes Tachyon | Complete | [nem] (bday duo 1-2)
 Aston Machan | Exists | [Snep] (bday duo 1, bday triplet 1)
 Curren Chan | Complete | [noccu]
 Daiichi Ruby | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Espoir City | In progress | [KevinVG207] (bdays)
 Gold Ship | Complete | [noccu] (solo 1-2), MTL
 Hishi Amazon | Stalled | [noccu] (duo 2)
 Hishi Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Ines Fujin | In progress | [UmaTL] (noccu)☆
 K.S.Miracle | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+King Halo | In progress | [KevinVG207] (bdays)
 Kitasan Black | Stalled | [noccu] (solo 2)
 Maruzensky | Complete | [noccu]
 Marvelous Sunday | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
@@ -257,7 +267,7 @@ Matikanetannhauser | Exists | [Snep] (bday duo 1, bday triplet 1)
 Meisho Doto | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Mejiro McQueen | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Mejiro Ramonu | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
-Mihono Bourbon | In progress | [noccu] (solo 1)
+Mihono Bourbon | In progress, In progress | [noccu] (solo 1), [KevinVG207] (bdays)
 Mr. C.B. | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Narita Top Road | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Rice Shower | Complete | [UmaTL] (noccu)☆
@@ -268,6 +278,7 @@ Sirius Symboli | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Symboli Kris S | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Taiki Shuttle | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
 Tanino Gimlet | In progress | [UmaTL] ([noob])☆ (solo 1-3, duo 1-2)
+Transcend | Exists | [KevinVG207]
 Twin Turbo | In progress | [UmaTL]☆
 Yaeno Muteki | Complete | [noccu] (solo 2), MTL
 
@@ -326,7 +337,7 @@ Tutorial (Group 01) | Complete | [ericathyz](https://twitter.com/ericathyz) + [n
 
 
 # Lyrics / Songs / Lives
-Italics = Not in game (or no live)  
+Italics = Not in game, or no has no live perfomance.  
 Not all of these might be present in the patch data.
 
 name | progress | translator
@@ -341,7 +352,9 @@ Everlasting BEATS | Complete | [noccu]
 Gaze on Me! | Complete | [noccu] + [COSMET]
 Girls Legend U | Complete | [noccu] (Edited slightly based on tl by [COSMET])
 Glorious Moment! | Complete | TR
+[*GOCHISO様*](https://youtu.be/RaJtHir_q3g) | Complete | [Kasey]
 *Golshi Rap* | Complete | [noccu]
+[*GSK*](https://youtu.be/gIiudDdqxFI) | Complete | [Kasey]
 *Hat on your head!* | Complete | [noccu]☆
 *Hashire Umamusume* | Complete | [noccu]
 *??? (Hishi Miracle)* | In progress | [Kuwaiden]
@@ -404,3 +417,6 @@ Yume wo Kakeru! | Complete | [SkySubs](https://skysubs.carrd.co/)
 [noob]: https://twitter.com/noobcakeart
 [Puga]: https://pugakirio.carrd.co/
 [Jimoori]: https://www.youtube.com/@Jimoori
+[kanade]: https://www.youtube.com/@kanadeself
+[fling]: https://www.youtube.com/@fling-oc5xg
+[Chiwawa]: https://www.youtube.com/@chiwawasemporium

@@ -32,7 +32,7 @@ def conditionalDetail(msg, detailedMsg, detailLevel):
     else:
         print(msg)
 
-def setFile(filename: str = "umatl.log", level = logging.INFO):
+def setFile(filename: str = "umatl.log", level = logging.DEBUG):
     from datetime import datetime, timezone
     global _FILE_HANDLER
     closeFile()
@@ -40,18 +40,23 @@ def setFile(filename: str = "umatl.log", level = logging.INFO):
     logDir.mkdir(exist_ok=True)
     _FILE_HANDLER = logging.FileHandler(logDir.joinpath(filename), encoding="utf8")
     _FILE_HANDLER.setFormatter(_FORMATTER)
-    _FILE_HANDLER.setLevel(min(level, _STDOUT_HANDLER.level))  # todo: generalize
+    _FILE_HANDLER.setLevel(level)
     _LOGGER.addHandler(_FILE_HANDLER)
     date = datetime.now(timezone.utc).isoformat(" ", "seconds")  
     if _FILE_HANDLER.stream.tell() > 1:
         _FILE_HANDLER.stream.write("\n")
     _FILE_HANDLER.stream.write(f"== {date} ==\n")
 
+def setFileLevel(level):
+    if _FILE_HANDLER is not None:
+        _FILE_HANDLER.setLevel(level)
+
 def closeFile():
     if _FILE_HANDLER is not None:
         _FILE_HANDLER.close()
 
-setLevel = _LOGGER.setLevel
+setConsoleLevel = _STDOUT_HANDLER.setLevel
+setFileLevel = setFileLevel
 debug = _LOGGER.debug
 info = _LOGGER.info
 warning = _LOGGER.warning

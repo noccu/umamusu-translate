@@ -12,7 +12,6 @@ TLG_TARGETS = (
     "xinput1_3.dll"
 )
 TMP_STORE = Path("temp")
-SUCCESS = True
 
 
 def call_api(url):
@@ -27,7 +26,7 @@ def call_api(url):
 def download_file(url:str, name:str):
     file_path = TMP_STORE.joinpath(name)
     if file_path.exists():
-        print(f"Using existing temp file: {name}")
+        logger.info(f"Using existing temp file: {name}")
         return
     data = requests.get(url)
     if data.status_code == 200:
@@ -52,21 +51,21 @@ def download_tlg():
         file_choice = "\n".join(f"{i}: {n}" for i, n in enumerate(TLG_TARGETS))
         tlg_idx = int(input(
             f"\nTLG and other mods can share these filenames\n{file_choice}\n"
-            "Input the number corresponding to your TLG file: "
+            "Input the number corresponding to your existing TLG file to overwrite: "
         ).strip()[0])
     # Find latest release
-    print("Finding latest TLG release...")
+    logger.info("Finding latest TLG release...")
     info = call_api("https://api.github.com/repos/MinamiChiwa/Trainers-Legend-G/releases/latest").json()
     try:
         archive = info["assets"][0]["browser_download_url"]
         size = int(info["assets"][0]["size"] *10**-6)
     except KeyError:
-        print("Aborted: Couldn't locate TLG archive, please install manually.")
+        logger.error("Aborted: Couldn't locate TLG archive, please install manually.")
         raise
     # Download release
-    print(f"Downloading TLG ({size} MB)...")
+    logger.info(f"Downloading TLG ({size} MB)...")
     download_file(archive, "tlg.zip")
-    print("Download finished, installing...")
+    logger.info("Download finished, installing...")
     install_tlg(tlg_idx)
 
 
@@ -77,6 +76,8 @@ def install_tlg(tlg_idx):
             utils.getUmaInstallDir().joinpath(TLG_TARGETS[tlg_idx]).unlink()
         except PermissionError:
             pass # Defer to message later.
+        except FileNotFoundError:
+            pass # continue install
     # Extract zip
     with ZipFile(TMP_STORE.joinpath("tlg.zip")) as zip:
         # Extract overwrites existing files
@@ -85,7 +86,7 @@ def install_tlg(tlg_idx):
     try:
         shutil.copyfile(TLG_CFG, utils.getUmaInstallDir().joinpath(TLG_CFG.name))
     except PermissionError:
-        print(
+        logger.error(
             "No permission to write to the Uma Musume install dir.\n"
             "Please copy temp/version.dll & localify/config.json there yourself.\n"
             f"Install dir: {utils.getUmaInstallDir()}"
@@ -99,19 +100,20 @@ def install_tlg(tlg_idx):
             shutil.copyfile(tlg_dll, utils.getUmaInstallDir().joinpath(name))
         except FileExistsError:
             # New install (no config) but dll exists. idx == -1
-            print(
+            logger.info(
                 f"File {name} already exists, renaming...\n"
                 "You may need to adjust configs if you use other mods."
             )
             continue
-        print(f"TLG successfully installed as {name}")
+        logger.info(f"TLG successfully installed as {name}")
         break
 
 
 def main():
     if not constants.IS_WIN:
         return
-    print("Creating UmaTL config file.")
+    logger.setFile("install.log")
+    logger.info("Creating UmaTL config file.")
     patch.UmaTlConfig.createDefault()
     get_tlg = input("Install TLG for UI translations? [y]es, [n]o: ")
     if get_tlg.startswith("n"):
@@ -120,10 +122,11 @@ def main():
     TMP_STORE.mkdir(exist_ok=True)
     try:
         download_tlg()
-    except:
-        print(
-            "\nNot everything went right, check the steps on GitHub "
-            "or ask in the Discord if you need help."
+    except Exception:
+        logger.debug("", exc_info=True)
+        logger.info(
+            "\nNot everything went right, check the steps on GitHub or ask in the Discord if you need help.\n"
+            "Details are in logs/install.log, please include it when asking."
         )
     else:
         shutil.rmtree(str(TMP_STORE))

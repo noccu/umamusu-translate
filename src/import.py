@@ -1,15 +1,15 @@
 import argparse
-from pathlib import Path
-from traceback import print_exc
+from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 
 # from sys import stdout
 from functools import reduce
+from pathlib import Path
 from time import time as now
-from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
-import common
-from common import GameBundle
+import common.constants as const
 import filecopy as backup
+from common import patch, logger
+from common.types import GameBundle, TranslationFile
 
 
 class ConfigError(Exception):
@@ -20,16 +20,20 @@ class PatchError(Exception):
     pass
 
 
-class AlreadyPatchedError(PatchError):
-    pass
-
-
 class TranslationFileError(PatchError):
     pass
 
 
+class AlreadyPatchedError(PatchError):
+    def __init__(self, bundle: str):
+        super().__init__(f"{bundle} is already patched")
+        self.bundle = bundle
+
+
 class NoAssetError(PatchError):
-    pass
+    def __init__(self, bundle: str):
+        super().__init__(f"{bundle} does not exist in your game data")
+        self.bundle = bundle
 
 
 class PatchManager:
@@ -37,7 +41,6 @@ class PatchManager:
     totalFilesImported = 0
 
     def __init__(self, args: argparse.Namespace) -> None:
-        # self.errorLog = stdout
         self.config(args)
 
     def config(self, args=None, **kwargs):
@@ -50,33 +53,23 @@ class PatchManager:
                 else:
                     raise ConfigError(f"Invalid config arg: {k}: {v}")
         if self.args.overwrite:
-            self.args.dst = common.GAME_ASSET_ROOT
+            self.args.dst = const.GAME_ASSET_ROOT
             self.fcArgs = backup.parseArgs([])
             self.fcArgs.restore_missing = False
             self.fcArgs.full_path = False
-        # if self.args.write_log and self.errorLog is stdout:
-        #     self.errorLog = open("import.log", "w")
-        # elif not self.args.write_log and self.errorLog is not stdout:
-        #     self.errorLog.close()
-        #     self.errorLog = stdout
-
-    # TODO: replace with logger module probably
-    # def __getstate__(self):
-    #     data = self.__dict__.copy()
-    #     del data['errorLog']
-    #     return data
 
     def start(self):
         startTime = now()
         print(
-            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} from translations/{self.args.type} to {self.args.dst}"
+            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} " 
+            f"from translations/{self.args.type} to {self.args.dst}"
         )
-        files = common.searchFiles(
+        files = patch.searchFiles(
             self.args.type, self.args.group, self.args.id, self.args.idx, changed=self.args.changed
         )
         nFiles = len(files)
         self.totalFilesProcessed += nFiles
-        nErrors = 0
+        nSuccess = nSkipped = nErrors = 0
         print(f"Found {nFiles} files.")
 
         # Not sure if threads are useful but multi-process takes too long upfront for low counts.
@@ -86,78 +79,72 @@ class PatchManager:
             for result in pool.map(self.patchFile, files):
                 if result is None:
                     nErrors += 1
-                    nFiles -= 1
                 elif result is False:
-                    nFiles -= 1
+                    nSkipped += 1
+                else:
+                    nSuccess += 1
         self.totalFilesImported += nFiles
-        print(f"Imported {nFiles} files in {deltaTime(startTime)} seconds.")
-        if nErrors > 0:
-            print(f"There were {nErrors} errors. Check import.log for details.")
+        print(
+            f"Imported {nSuccess} files in {deltaTime(startTime)} seconds. "
+            f"Skipped: {nSkipped}, Errors: {nErrors} (Check import.log for details)"
+        )
 
-    def patchFile(self, file: str) -> bool:
+    def patchFile(self, file: Path) -> bool:
         isModified = False
         try:
             isModified, reason = self.patch(file)
             if isModified:
-                print(f"Imported {file}{f' ({reason})' if reason else ''}")
+                print(f"Imported {file} ({reason})")
             else:
-                if self.args.verbose:
-                    print(f"{file} not modified.")
-        except (NoAssetError, AlreadyPatchedError) as e:
-            if self.args.verbose:
-                print(e)
-        except PatchError as e:
-            print(f"Skipped {file}: {e}")
+                logger.info(f"Skipped {file} ({reason})")
         except UnicodeError:
             print(f"Successfully processed file idx {file[:3]}, details unknown. (Could not render full name)")
         except Exception:
-            print(f"Error importing {file}")
-            if self.args.verbose:
-                print_exc(chain=True)
-                isModified = None
+            logger.error(f"Error importing {file}", exc_info=True)
+            # raise PatchError(f"UnityPy error: {repr(e)}, skipping {tlFile.bundle}.")
+            isModified = None
         return isModified
 
-    def finish(self):
-        pass
-        # if self.errorLog is not stdout: self.errorLog.close()
-
-    def loadTranslationFile(self, path):
+    def loadTranslationFile(self, path: Path):
         try:
-            return common.TranslationFile(path, readOnly=True)
+            return TranslationFile(path, readOnly=True)
         except Exception:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
-    def loadBundle(self, tlFile: common.TranslationFile):
+    def loadBundle(self, tlFile: TranslationFile):
         bundle = GameBundle.fromName(tlFile.bundle, load=False)
         if not bundle.exists:
-            raise NoAssetError(f"{tlFile.bundle} does not exist in your game data.")
+            raise NoAssetError(tlFile.bundle)
         if self.args.update:
-            if (
-                b := GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)
-            ).isPatched:
+            # Find the right output file as it may not be in game dir!
+            b = GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)
+            if b.isPatched:
                 tlModTime = tlFile.data.get("modified")
                 if tlModTime and b.patchedTime != tlModTime:
                     bundle.importState = "translations modified"
                 else:
-                    raise AlreadyPatchedError(f"{tlFile.bundle} already patched.")
-        try:
-            bundle.load()
-            bundle.linkedTlFile = tlFile
-            return bundle
-        except Exception as e:
-            raise PatchError(f"UnityPy error: {repr(e)}, skipping {tlFile.bundle}.")
+                    raise AlreadyPatchedError(tlFile.bundle)
+            else:
+                bundle.importState = "new"
+        else:
+            bundle.importState = "overwrite"
+        bundle.load()
+        bundle.linkedTlFile = tlFile
+        return bundle
 
-    def patch(self, path: str):
+    def patch(self, path: Path):
         """Swaps game assets with translation file data, returns modified state."""
         tlFile = self.loadTranslationFile(path)
         if self.args.skip_mtl and not tlFile.data.get("humanTl"):
-            return False, None
+            return False, "Skip MTL requested"
         if self.args.use_tlg and isUsingTLG() and tlFile.data.get("tlg"):
             convertTlFile(tlFile)
-            if self.args.verbose:
-                print(f"Writing TLG version: {tlFile.name}")
-            return False, None
-        bundle = self.loadBundle(tlFile)
+            logger.info(f"Writing TLG version: {tlFile.name}")
+            return False, "Prefer TLG version requested"
+        try:
+            bundle = self.loadBundle(tlFile)
+        except PatchError as reason:
+            return False, reason
 
         if tlFile.type in ("story", "home"):
             patcher = StoryPatcher(self, bundle)
@@ -173,9 +160,9 @@ class PatchManager:
             if self.args.overwrite and not bundle.isPatched:
                 backup.copy(bundle, self.fcArgs)
             bundle.markPatched(tlFile)
-            bundle.save(dstFolder=Path(self.args.dst))
+            bundle.save(dstFolder=self.args.dst)
 
-        return patcher.isModified, getattr(bundle, "importState", None)
+        return patcher.isModified, bundle.importState
 
 
 class StoryPatcher:
@@ -186,134 +173,123 @@ class StoryPatcher:
         self.bundle = bundle
         self.assetData = bundle.rootAsset.read_typetree()
 
+    def _adjustCLipLength(self, assetData:dict, textBlock:dict, blockIdx:int):
+        # Calculate length
+        # index length = sum(blocklenghts)
+        # blocklength = cliplength + startframe + 1
+        # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
+        # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
+        origClipLen = textBlock.get("origClipLength")
+        enText = textBlock.get("enText")
+        if origClipLen is None or not enText:
+            return
+        newTxtLen = len(enText) / self.manager.args.cps * self.manager.args.fps
+        newClipLen = textBlock.get("newClipLength")  # manual length override
+        if newClipLen:
+            # todo: this shouldn't happen or be cared about, really (error is fine)
+            try:
+                newClipLen = int(newClipLen)
+            except ValueError:
+                newClipLen = None
+                logger.warning(f"{blockIdx}: Invalid clip length defined, falling back to calculated value.")
+            logger.debug("Using manually defined clip length")
+        if newClipLen is None:  # support error above
+            newClipLen = int(assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"]))
+
+        # todo: should revert to original on patched files
+        if newClipLen <= origClipLen:
+            logger.debug(f"{blockIdx}: New clip length <= original. Skipping.")
+            return
+        assetData["ClipLength"] = newClipLen
+        newBlockLen = newClipLen + assetData["StartFrame"] + 1
+        self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
+        logger.debug(f"{blockIdx}: Adjusted TextClip length: {origClipLen} -> {newClipLen}")
+
+        if "animData" in textBlock:
+            for animGroup in textBlock["animData"]:
+                newAnimLen = animGroup["origLen"] + newClipLen - origClipLen
+                if newAnimLen <= animGroup["origLen"]:
+                    logger.debug(f"{blockIdx}: New anim data <= original. Skipping.")
+                    break
+                animAsset = self.bundle.assets.get(animGroup["pathId"])
+                if animAsset is None:
+                    logger.debug(f"{blockIdx}: Can't find animation asset ({animGroup['pathId']})")
+                    break
+                animData = animAsset.read_typetree()
+                animData["ClipLength"] = newAnimLen
+                animAsset.save_typetree(animData)
+                logger.debug(f"{blockIdx}: Adjusted AnimClip length: {animGroup['origLen']} -> {newAnimLen}")
+        else:
+            logger.debug(f"{blockIdx}: Text length adjusted but no anim data found")
+
+        # Adjust length of screen effect clips if they originally extended until the end of the block.
+        for track in self.assetData["BlockList"][blockIdx]['ScreenEffectTrackList']:
+            if not track['ClipList']:
+                continue
+            clipPathID = track['ClipList'][-1]['m_PathID']
+            try:
+                clipAsset = self.bundle.assets[clipPathID]
+            except KeyError:
+                logger.debug(f"Can't find screen effect clip asset ({clipPathID}) at {blockIdx}")
+                continue
+            clipData = clipAsset.read_typetree()
+            if clipData['StartFrame'] + clipData['ClipLength'] < assetData["StartFrame"] + origClipLen:
+                continue
+            curClipLen = clipData['ClipLength']
+            clipData["ClipLength"] = curClipLen + newClipLen - origClipLen
+            clipAsset.save_typetree(clipData)
+            logger.debug(f"Adjusted ScreenEffectClip length at {blockIdx}: {curClipLen} -> {clipData['ClipLength']}")
+
     def patch(self):
+        logger.debug(f"Patching {self.bundle.bundleName}")
         for textBlock in self.bundle.linkedTlFile.textBlocks:
             blockIdx = textBlock["blockIdx"]
-            try:
-                asset = self.bundle.assets[textBlock["pathId"]]
-            except KeyError:
-                print(f"{self.bundle.bundleName}: {blockIdx}: Can't find path id, skipping.")
+            asset = self.bundle.assets.get(textBlock["pathId"])
+            if asset is None:
+                logger.warning(f"{blockIdx}: Can't find path id, skipping.")
+                # ?: is there a reason we didn't skip here? untested!
+                self.skipped += 1
                 continue
-            else:
-                assetData = asset.read_typetree()
-
+            # Not translated
             if not textBlock["enText"] and not textBlock["enName"]:
                 self.skipped += 1
                 continue
-            else:
-                assetData["Text"] = textBlock["enText"] or assetData["Text"]
-                assetData["Name"] = textBlock["enName"] or assetData["Name"]
 
-                # Calculate length
-                # index length = sum(blocklenghts)
-                # blocklength = cliplength + startframe + 1
-                # cliplength = max(0, voicelength OR (text-length * cps / fps)) + waitframe
-                # waitframe: usually 12 if voiced, 45 otherwise BUT random exceptions occur
-                if "origClipLength" in textBlock and textBlock["enText"]:
-                    newTxtLen = (
-                        len(textBlock["enText"]) / self.manager.args.cps * self.manager.args.fps
-                    )
-                    newClipLen = int(
-                        assetData["WaitFrame"] + max(newTxtLen, assetData["VoiceLength"])
-                    )
-                    if textBlock.get("newClipLength"):  # manual length override
-                        try:
-                            newClipLen = int(textBlock["newClipLength"])
-                        except ValueError:
-                            print(
-                                f"{self.bundle.bundleName}: {blockIdx}: Invalid clip length defined, falling back to calculated value."
-                            )
-                        else:
-                            if newClipLen < textBlock["origClipLength"]:
-                                print(
-                                    f"{self.bundle.bundleName}: {blockIdx}: Shorter clip length defined, currently only lengthening is supported. Length will cap to original."
-                                )
-                    if newClipLen > textBlock["origClipLength"]:
-                        newBlockLen = newClipLen + assetData["StartFrame"] + 1
-                        assetData["ClipLength"] = newClipLen
-                        self.assetData["BlockList"][blockIdx]["BlockLength"] = newBlockLen
-                        if self.manager.args.verbose:
-                            print(
-                                f"Adjusted TextClip length at {blockIdx}: {textBlock['origClipLength']} -> {newClipLen}"
-                            )
+            assetData = asset.read_typetree()
+            assetData["Text"] = textBlock["enText"] or assetData["Text"]
+            assetData["Name"] = textBlock["enName"] or assetData["Name"]
 
-                        if "animData" in textBlock:
-                            for animGroup in textBlock["animData"]:
-                                newAnimLen = (
-                                    animGroup["origLen"] + newClipLen - textBlock["origClipLength"]
-                                )
-                                if newAnimLen > animGroup["origLen"]:
-                                    try:
-                                        animAsset = self.bundle.assets[animGroup["pathId"]]
-                                    except KeyError:
-                                        if self.manager.args.verbose:
-                                            print(
-                                                f"Can't find animation asset ({animGroup['pathId']}) at {blockIdx}"
-                                            )
-                                    else:
-                                        animData = animAsset.read_typetree()
-                                        animData["ClipLength"] = newAnimLen
-                                        animAsset.save_typetree(animData)
-                                        if self.manager.args.verbose:
-                                            print(
-                                                f"Adjusted AnimClip length at {blockIdx}: {animGroup['origLen']} -> {newAnimLen}"
-                                            )
-                        elif self.manager.args.verbose:
-                            print(f"Text length adjusted but no anim data found at {blockIdx}")
-                        
-                        # Adjust length of screen effect clips if they originally extended until the end of the block.
-                        for track in self.assetData["BlockList"][blockIdx]['ScreenEffectTrackList']:
-                            if not track['ClipList']:
-                                continue
-                            clipPathID = track['ClipList'][-1]['m_PathID']
-                            try:
-                                clipAsset = self.bundle.assets[clipPathID]
-                            except KeyError:
-                                if self.manager.args.verbose:
-                                    print(
-                                        f"Can't find screen effect clip asset ({clipPathID}) at {blockIdx}"
-                                    )
-                            else:
-                                clipData = clipAsset.read_typetree()
-                                
-                                if clipData['StartFrame'] + clipData['ClipLength'] < assetData["StartFrame"] + textBlock["origClipLength"]:
-                                    continue
+            self._adjustCLipLength(assetData, textBlock, blockIdx)
 
-                                tmpClipLen = clipData['ClipLength']
-                                clipData["ClipLength"] = tmpClipLen + newClipLen - textBlock["origClipLength"]
-                                clipAsset.save_typetree(clipData)
-                                if self.manager.args.verbose:
-                                    print(
-                                        f"Adjusted ScreenEffectClip length at {blockIdx}: {tmpClipLen} -> {clipData['ClipLength']}"
-                                    )
+            if "choices" in textBlock:
+                jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]
+                if len(jpChoices) != len(enChoices):
+                    logger.warning(f"{blockIdx}: Choice lengths do not match, skipping choice block.")
+                else:
+                    for idx, choice in enumerate(enChoices):
+                        if enChoice := choice["enText"]:
+                            jpChoices[idx]["Text"] = enChoice
 
-                if "choices" in textBlock:
-                    jpChoices, enChoices = assetData["ChoiceDataList"], textBlock["choices"]
-                    if len(jpChoices) != len(enChoices):
-                        print("Choice lengths do not match, skipping choice block.")
-                    else:
-                        for idx, choice in enumerate(textBlock["choices"]):
-                            if choice["enText"]:
-                                jpChoices[idx]["Text"] = choice["enText"]
-
-                if "coloredText" in textBlock:
-                    jpColored, enColored = assetData["ColorTextInfoList"], textBlock["coloredText"]
-                    if len(jpColored) != len(enColored):
-                        print("Colored text lengths do not match, skipping color block...")
-                    else:
-                        for idx, text in enumerate(textBlock["coloredText"]):
-                            if text["enText"]:
-                                jpColored[idx]["Text"] = text["enText"]
+            if "coloredText" in textBlock:
+                jpColored, enColored = assetData["ColorTextInfoList"], textBlock["coloredText"]
+                if len(jpColored) != len(enColored):
+                    logger.warning(f"{blockIdx}: Colored text lengths do not match, skipping color block...")
+                else:
+                    for idx, text in enumerate(enColored):
+                        if enText := text["enText"]:
+                            jpColored[idx]["Text"] = enText
             asset.save_typetree(assetData)
 
         try:
             self.assetData["TypewriteCountPerSecond"] = self.manager.args.fps * 3
             self.assetData["Length"] = reduce(
-                lambda x, b: x + b["BlockLength"], self.assetData["BlockList"], 0
+                lambda x, b: x + b["BlockLength"], 
+                self.assetData["BlockList"], 
+                0
             )
             self.save()
         except Exception as e:
-            print(f"Unexpected error in {self.bundle.bundleName}: {repr(e)}")
+            logger.error(f"Unexpected error at {blockIdx}: {repr(e)}")
 
     def save(self):
         if self.isModified:
@@ -381,8 +357,8 @@ def deltaTime(startTime: float):
     return f"{m:.0f}m {s:.3f}s"
 
 
-def parseArgs():
-    ap = common.Args("Write Game Assets from Translation Files")
+def parseArgs(args=None):
+    ap = patch.Args("Write Game Assets from Translation Files")
     ap.add_argument(
         "-O",
         "--overwrite",
@@ -401,7 +377,7 @@ def parseArgs():
         "-wf",
         "--write-log",
         action="store_true",
-        help="Ignore some errors and print debug info to file instead of terminal (stdout)",
+        help="Print more detailed info to file",
     )
     ap.add_argument(
         "-cps",
@@ -418,33 +394,29 @@ def parseArgs():
     ap.add_argument(
         "-nomtl", "--skip-mtl", action="store_true", help="Only import human translations"
     )
+    return ap.parse_args(args)
 
-    return ap.parse_args()
 
-
-def main():
-    args = parseArgs()
+def main(args: patch.Args = None):
+    args = args or parseArgs(args)
     if args.write_log:
-        print("Error logs temporarily not supported, output will be in console.")
+        logger.setFile("import.log")
 
     if args.use_tlg:
-        global isUsingTLG
-        global convertTlFile
-        from helpers import isUsingTLG
+        global isUsingTLG, convertTlFile
+        from common.patch import isUsingTLG
         from manage import convertTlFile
     startTime = now()
     patcher = PatchManager(args)
     try:
         patcher.start()
         if args.fullImport:
-            for type in common.TARGET_TYPES[1:]:
+            for type in const.TARGET_TYPES[1:]:
                 patcher.config(type=type)
                 patcher.start()
-            print(
-                f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}"
-            )
+            print(f"Updated a total of {patcher.totalFilesImported} files in {deltaTime(startTime)}")
     finally:
-        patcher.finish()
+        logger.closeFile()
 
 
 if __name__ == "__main__":

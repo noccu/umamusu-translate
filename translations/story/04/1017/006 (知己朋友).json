@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "APDH2UUXJZZ5EYISD4ZEJTQVX4PYJRCI",
     "type": "story",
     "storyId": "041017006",
@@ -9,8 +9,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "休日、映画を観に行くと――",
-            "enText": "You go to a movie on your day off.",
+            "enText": "It was my day off, and I was heading to \ncatch a movie when suddenly ——",
             "nextBlock": 2,
+            "origClipLength": 28,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": -8542115421391998117
+                },
+                {
+                    "origLen": 73,
+                    "pathId": -6158561166816385999
+                }
+            ],
             "pathId": 4708087148981928318,
             "blockIdx": 1
         },
@@ -18,13 +30,25 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "おや、トレーナー君。君も観に来たのか？\r\n『ウマ娘の夜明け～未踏の記録へ～』を。",
-            "enText": "Oh, Ms. Trainer. Did you come to see it too? You've come to see\n\"The Dawn of Uma Musume: To an Unprecedented Record\"?",
+            "enText": "Oh, Trainer! Are you here for \"The Dawn of Horsegirls: \nToward Untrodden Records\" as well?",
             "nextBlock": 3,
+            "origClipLength": 226,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "『ウマ娘の夜明け』？",
-                    "enText": "\"The Dawn of the Horse Girls\"?",
+                    "enText": "\"The Dawn of Horsegirls\"?",
                     "nextBlock": 3
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 208,
+                    "pathId": -4989639124574708116
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5877534371478297592
                 }
             ],
             "pathId": -7260422025386466809,
@@ -34,8 +58,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ん？　その反応を見るに、\r\nこの作品自体を知らない様子だな。",
-            "enText": "Hmm? Judging from your reaction, you don't\nseem to have heard of this work.",
+            "enText": "Hmm? Your reaction suggests you're \nnot familiar with this movie at all.",
             "nextBlock": 4,
+            "origClipLength": 180,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 212,
+                    "pathId": -4065857149812743139
+                }
+            ],
             "pathId": 4422222025227675719,
             "blockIdx": 3
         },
@@ -43,8 +75,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "『ウマ娘の夜明け』というのは、\r\n人生を競技に捧げたウマ娘の伝記シリーズでね。",
-            "enText": "Uma Musume no Yoake\" is a series of biographies of Uma Musume\nwho dedicated their lives to competition.",
+            "enText": "\"The Dawn of Horsegirls\" is a biographical series about \nhorsegirls who've dedicated their lives to competitive racing.",
             "nextBlock": 5,
+            "origClipLength": 197,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 196,
+                    "pathId": 7304240124535766411
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -9024701800967373777
+                }
+            ],
             "pathId": -2128569428761052144,
             "blockIdx": 4
         },
@@ -52,8 +96,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "無論、脚色された部分もあるかもしれないが、\r\nレースに臨むウマ娘の心情を見事に映し出している。",
-            "enText": "Although some parts may have been adapted, the\nstory beautifully reflects the emotions of the\nhorse girls as they face the race.",
+            "enText": "While there's probably some dramatization, it beautifully \ncaptures the emotions of horsegirls as they compete.",
             "nextBlock": 6,
+            "origClipLength": 246,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 277,
+                    "pathId": 1818897473135707202
+                }
+            ],
             "pathId": -3512886879927842024,
             "blockIdx": 5
         },
@@ -61,13 +113,21 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "トレーナーである君にも、参考となるはずだ。\r\n機会があれば鑑賞する事を勧めるよ。",
-            "enText": "As a trainer, you will also find it helpful. I recommend\nyou to watch it if you have a chance.",
+            "enText": "As a trainer, it should be a valuable reference to you. \nI'd recommend giving it a watch if you get the chance.",
             "nextBlock": 7,
+            "origClipLength": 208,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "なら、今観ようかな",
-                    "enText": "Then maybe I'll watch it now.",
+                    "enText": "Alright, why don't I watch it right now.",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": 7964996133971821473
                 }
             ],
             "pathId": 7957964159042093925,
@@ -77,8 +137,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "おお。早速、興味を持ってくれたか！",
-            "enText": "Oh. You got me interested right away!",
+            "enText": "Oh, your interest's been piqued already!",
             "nextBlock": 8,
+            "origClipLength": 104,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": -7333440580129806800
+                }
+            ],
             "pathId": -4164368736547287451,
             "blockIdx": 7
         },
@@ -86,8 +154,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "では共に観るとしようか。\r\nふふっ、終わったら感想を語り合おう！",
-            "enText": "So let's watch it together. Phew, let's talk\nabout our impressions when we're done!",
+            "enText": "Shall we watch it together then? \nHeheh, we can discuss our thoughts afterward!",
             "nextBlock": 9,
+            "origClipLength": 177,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 225,
+                    "pathId": 7001817840156121029
+                }
+            ],
             "pathId": -7800385362359646560,
             "blockIdx": 8
         },
@@ -95,8 +171,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そして映画の上映が始まり……。",
-            "enText": "Then the movie starts and…",
+            "enText": "And with that, the movie began……",
             "nextBlock": 10,
+            "origClipLength": 64,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 4688176910920177849
+                },
+                {
+                    "origLen": 70,
+                    "pathId": -6097326555069696925
+                }
+            ],
             "pathId": 5446084805501715546,
             "blockIdx": 9
         },
@@ -104,8 +192,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ケガでの葛藤に、奇跡の復活劇……。",
-            "enText": "His struggles with injuries and her\nmiraculous comeback…",
+            "enText": "The struggle with injuries, a miraculous comeback story…",
             "nextBlock": 11,
+            "origClipLength": 126,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 215,
+                    "pathId": -1322559571786436310
+                },
+                {
+                    "origLen": 178,
+                    "pathId": 668883344920706914
+                }
+            ],
             "pathId": 5441782235861591656,
             "blockIdx": 10
         },
@@ -113,8 +213,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "誰もがあのように見事な復活を果たせるわけではないだろう。\r\nだが抱える悩みは、きっと私たちにも通じるものがある。",
-            "enText": "Not everyone will be able to make such a spectacular\ncomeback. But I am sure that we can all relate\nto the problems that we face.",
+            "enText": "Not everyone can achieve such a remarkable turnaround. \nBut the challenges they face are something we can all relate to.",
             "nextBlock": 12,
+            "origClipLength": 292,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 321,
+                    "pathId": 255229818572953236
+                },
+                {
+                    "origLen": 174,
+                    "pathId": -6509106999386091197
+                }
+            ],
             "pathId": -3070000179642455383,
             "blockIdx": 11
         },
@@ -122,13 +234,25 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そうシンボリルドルフが語るように、\r\nトレーナーの身としても非常に参考になる映画だった。",
-            "enText": "As Simbol Rudolph said, as a trainer,\nI found this movie very informative.",
+            "enText": "Just as Symboli Rudolf had mentioned, it was \nan enlightening movie for me as a trainer.",
             "nextBlock": 13,
+            "origClipLength": 102,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "すごく勉強になった",
                     "enText": "I learned a lot.",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": 8130659095869139018
+                },
+                {
+                    "origLen": 164,
+                    "pathId": -1577969448383143262
                 }
             ],
             "pathId": -8390043218374183134,
@@ -138,8 +262,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ふふっ、だろう？　良かったよ、\r\nトレーナー君も気に入ってくれたみたいで。",
-            "enText": "Huh, right? I'm glad you liked it, Trainer.",
+            "enText": "Heheh, right? I'm glad you enjoyed it.",
             "nextBlock": 14,
+            "origClipLength": 190,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 186,
+                    "pathId": 7620475098081831807
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 663700969943858520
+                }
+            ],
             "pathId": 6222061132445801534,
             "blockIdx": 13
         },
@@ -147,8 +283,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "その様子なら、きっと前作も君の意に適うだろう。\r\n興味があれば貸すから、ひと声かけてくれ。",
-            "enText": "If you're interested, I can lend it to you. If you're\ninterested, I'll lend it to you, just let me know.",
+            "enText": "In which case, you might also like the previous movie. \nIf you're interested, just let me know and I'll lend it to you.",
             "nextBlock": 15,
+            "origClipLength": 235,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 258,
+                    "pathId": -8205905995862370102
+                }
+            ],
             "pathId": -470211361870512922,
             "blockIdx": 14
         },
@@ -156,8 +300,20 @@
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "――あっ、ほらほら！　やっぱ今日からだ！\r\nアタシ超たのしみにしてたから覚えてたんだよね～♪",
-            "enText": "—Oh, look, look, look! I knew it started today! I was really\nlooking forward to it, so I remembered it.",
+            "enText": "—— Oh, look, look! Just as I thought, it's starting today! \nI've been so excited about this so I remembered～♪",
             "nextBlock": 16,
+            "origClipLength": 214,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 266,
+                    "pathId": 6940271494328858464
+                },
+                {
+                    "origLen": 196,
+                    "pathId": -1037538602638462398
+                }
+            ],
             "pathId": 8379495532525899223,
             "blockIdx": 15
         },
@@ -165,8 +321,20 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "ホントだ！　初日に見れるとか、めちゃめちゃラッキー♪\r\nは～、早くキュンキュンしたーい！！",
-            "enText": "It's true! I'm so lucky to be able to see it on the first\nday… I can't wait to get my heart pounding!",
+            "enText": "No way! Being able to see it on the first day is like super lucky♪ \nAh～ I can't wait to feel the butterflies!!",
             "nextBlock": 17,
+            "origClipLength": 279,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 303,
+                    "pathId": 394766254930719049
+                },
+                {
+                    "origLen": 298,
+                    "pathId": 884236079688010399
+                }
+            ],
             "pathId": -1349821871529034518,
             "blockIdx": 16
         },
@@ -174,8 +342,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ん？　今のはうちの生徒か。ふむ、殊勝な心がけだ。\r\n『ウマ娘の夜明け』を公開初日に観るとは……。",
-            "enText": "Hmm? Was that one of my students? Hmm, that's an auspicious\nthought. I can't believe I saw \"Dawn of the Horse Girls\" on the\nfirst day of its release at…",
+            "enText": "Hm? Was that one of our students? Well, that's commendable. \nWatching \"The Dawn of Horsegirls\" on its opening day…",
             "nextBlock": 18,
+            "origClipLength": 319,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 339,
+                    "pathId": -3287875990005378360
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -1251509864015415671
+                }
+            ],
             "pathId": 5054994044809259835,
             "blockIdx": 17
         },
@@ -183,8 +363,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "……しかし、“きゅんきゅん”か。\r\nこの映画にそのような感覚を求める子たちもいるのだな。",
-            "enText": "… But \"chunky\". There are children who look\nfor that kind of feeling in this movie.",
+            "enText": "… But, \"feel the butterflies\", was it? I guess some \nare looking for that kind of feeling from this movie.",
             "nextBlock": 19,
+            "origClipLength": 251,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 166,
+                    "pathId": -2653292080341944588
+                }
+            ],
             "pathId": 2511505823843950764,
             "blockIdx": 18
         },
@@ -192,18 +380,26 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……映画館の中を見回すと、『本日公開！』と書かれた\r\n恋愛映画の広告があることに気づいた。",
-            "enText": "As I looked around the… movie theater, I noticed an ad\nfor a romance movie that said, \"In theaters today! I noticed an\nad for a romance movie that said, \"In theaters today!",
+            "enText": "…… As I glanced around the movie theater, \nI noticed an advertisement for a romance film \nthat read: \"Now in Theaters!\"",
             "nextBlock": 20,
+            "origClipLength": 103,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "こっちを観に来たんじゃないか？",
-                    "enText": "I think you're here to see this.",
+                    "enText": "I think they're here to see this.",
                     "nextBlock": 20
                 },
                 {
                     "jpText": "こっちを観に来たんじゃない？",
-                    "enText": "I thought you were here to see this.",
+                    "enText": "I think they're here to see this.",
                     "nextBlock": 20
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 159,
+                    "pathId": -7557959233452014365
                 }
             ],
             "pathId": -7848032337597394765,
@@ -213,8 +409,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ほう、どれどれ……\r\n『初恋キャロットケーキ～恋はにんじんより甘く～』……？",
-            "enText": "Huh, which one is… \"First Love Carrot Cake\n- Love is Sweeter than Carrots\"…?",
+            "enText": "Oh, let's see…… \"First Love Carrot Cake \n～ Love Is Sweeter Than Carrots ～\" …?",
             "nextBlock": 21,
+            "origClipLength": 237,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 217,
+                    "pathId": 2850344914792782602
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8879344151280882578
+                }
+            ],
             "pathId": -6806166638652878501,
             "blockIdx": 20
         },
@@ -222,18 +430,26 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ポスターからして、どうやら青春恋愛映画のようだな。\r\nもしかすると、生徒の間ではこれが流行っている……のか？",
-            "enText": "From the poster, it looks like it's a coming-of-age\nromance movie. Could it be that this is popular\namong the students…?",
+            "enText": "Judging by the poster, it seems to be a teen romance movie. \nMaybe it's popular among the students…?",
             "nextBlock": 22,
+            "origClipLength": 327,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "ちょっと観てみるか？",
-                    "enText": "You want to watch a little?",
+                    "enText": "Want to give it a try?",
                     "nextBlock": 22
                 },
                 {
                     "jpText": "ちょっと観てみる？",
-                    "enText": "You want to see something?",
+                    "enText": "Want to give it a try?",
                     "nextBlock": 22
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 360,
+                    "pathId": 8640941043680738407
                 }
             ],
             "pathId": -3796708493358277267,
@@ -243,18 +459,26 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "え？　それは構わないが、何故……？",
-            "enText": "Huh? That's fine, but why…?",
+            "enText": "Huh? I don't mind, but why…?",
             "nextBlock": 23,
+            "origClipLength": 119,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "同じ趣味は会話のきっかけになるぞ",
-                    "enText": "Same hobbies can be a great conversation starter.",
+                    "enText": "Having the same interests can be \na great conversation starter.",
                     "nextBlock": 23
                 },
                 {
                     "jpText": "同じ趣味は会話のきっかけになるよ",
-                    "enText": "The same hobby can be a great conversation starter.",
+                    "enText": "Having the same interests can be \na great conversation starter.",
                     "nextBlock": 23
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": -8887232115959324712
                 }
             ],
             "pathId": 8358948147773430071,
@@ -264,8 +488,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "……なるほど。",
-            "enText": "… I see.",
+            "enText": "…… I see.",
             "nextBlock": 24,
+            "origClipLength": 41,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 57,
+                    "pathId": 4540599735043896383
+                },
+                {
+                    "origLen": 45,
+                    "pathId": 3972198103679535408
+                }
+            ],
             "pathId": 91218062750879240,
             "blockIdx": 23
         },
@@ -273,8 +509,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "確かに共通の趣味があると話が弾む。\r\nそれに自分の趣味を許容する相手には懐を開き易い。",
-            "enText": "It's true that having a common hobby is a great\nway to talk. And it's easy to open your heart\nto someone who is open to your hobbies.",
+            "enText": "Indeed, having shared hobbies can make conversations \nsmoother. Plus, it's easier to connect with someone who \nappreciates your interests.",
             "nextBlock": 25,
+            "origClipLength": 247,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 273,
+                    "pathId": -260271655841205746
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1427102957081504056
+                }
+            ],
             "pathId": 5899826909294814116,
             "blockIdx": 24
         },
@@ -282,8 +530,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "うむ。私が生徒たちとうまく話す事ができないのは\r\n性格のせいだけでなく、趣味嗜好の問題もあるのだろうな。",
-            "enText": "Hmmm. I guess my inability to talk to students is not only due\nto my personality, but also due to my hobbies.",
+            "enText": "Right. My difficulty in connecting with the students isn't \nsolely because of my personality, it's likely due to differences \nin our interests and preferences as well.",
             "nextBlock": 26,
+            "origClipLength": 297,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 346,
+                    "pathId": -453573422580706809
+                }
+            ],
             "pathId": 7532221574199348494,
             "blockIdx": 25
         },
@@ -291,8 +547,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "君の言うとおりだ。虎穴虎子、何事も行動せねば始まらない。",
-            "enText": "You're right. If you don't take action, nothing will happen.",
+            "enText": "You're absolutely right. Nothing will begin unless we take action, \njust as the saying goes; \"Nothing ventured, nothing gained\".",
             "nextBlock": 27,
+            "origClipLength": 189,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 239,
+                    "pathId": -5098322987276337660
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 4759572981179991329
+                }
+            ],
             "pathId": 3559682455404221619,
             "blockIdx": 26
         },
@@ -300,8 +568,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "よし、早速チケットを取りに行こう！\r\n是非とも観てみようじゃないか！",
-            "enText": "All right, let's go get tickets right away! Let's go see it!",
+            "enText": "Sure, let's go grab the tickets now! \nWe absolutely have to check it out!",
             "nextBlock": 28,
+            "origClipLength": 143,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": 7332433932851125284
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1446985528573437927
+                }
+            ],
             "pathId": -860199981377253384,
             "blockIdx": 27
         },
@@ -309,8 +589,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "とあるカフェのキャロットケーキをきっかけに出会った2人が\r\n恋に落ち、甘酸っぱい恋愛模様を描いていく作品……。",
-            "enText": "The story is about two people who meet over carrot cake at a\ncafé and fall in love… is a sweet and sour love story.",
+            "enText": "The movie was a bittersweet tale of two \npeople who met over a carrot cake in a \nquaint café and gradually fell in love…",
             "nextBlock": 29,
+            "origClipLength": 116,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 250,
+                    "pathId": -3697203253234363358
+                }
+            ],
             "pathId": -3043547639346444071,
             "blockIdx": 28
         },
@@ -318,8 +606,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ラストで、ヒロインが去ろうとする男性の腕を引き、\r\n勇気を振り絞って告白するシーンが特に印象的だった。",
-            "enText": "In the last scene, the heroine pulls the arm of a man who is\nabout to leave and courageously confesses her love to her.",
+            "enText": "The final scene where the heroine grabs the boy's arm as \nhe's about to leave and musters the courage to confess \nwas particularly impactful.",
             "nextBlock": 30,
+            "origClipLength": 111,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 250,
+                    "pathId": 1863152207170539933
+                }
+            ],
             "pathId": 8314749264581774858,
             "blockIdx": 29
         },
@@ -327,18 +623,26 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "映画を2本も見てしまうとは、なんだか贅沢な日だな。",
-            "enText": "What a luxurious day to watch two movies.",
+            "enText": "Watching two movies in a day feels like quite the indulgence.",
             "nextBlock": 31,
+            "origClipLength": 151,
+            "voiceIdx": 23,
             "choices": [
                 {
                     "jpText": "恋愛映画は楽しめたか？",
-                    "enText": "Did you enjoy the romance movie?",
+                    "enText": "Did you enjoy the movie?",
                     "nextBlock": 31
                 },
                 {
                     "jpText": "恋愛映画は楽しめた？",
-                    "enText": "Did you enjoy the romance movie?",
+                    "enText": "Did you enjoy the movie?",
                     "nextBlock": 31
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 164,
+                    "pathId": 5139743006850602878
                 }
             ],
             "pathId": -7074952776852676398,
@@ -348,8 +652,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ああ、とても楽しめたよ。",
-            "enText": "Yeah, I enjoyed it a lot.",
+            "enText": "Yes, I enjoyed it a lot.",
             "nextBlock": 32,
+            "origClipLength": 80,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -1084300433726629131
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 5746407854250357026
+                }
+            ],
             "pathId": 8902526161515991171,
             "blockIdx": 31
         },
@@ -357,8 +673,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "中盤までは緩やかに2人の関係性を描いていたが、\r\nラストで一気に加速させる事で、感動を引き出す――",
-            "enText": "In the middle part of the film, the relationship between the\ntwo is depicted slowly, but in the last part, it is accelerated\nall at once to bring out the emotion.",
+            "enText": "The movie slowly built the characters' relationship in the first \nhalf, but the final moments were dramatic and emotional ——",
             "nextBlock": 33,
+            "origClipLength": 247,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 61,
+                    "pathId": -2916820744976643714
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3319011683465625056
+                }
+            ],
             "pathId": -1495298812637824456,
             "blockIdx": 32
         },
@@ -366,8 +694,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "特殊なトリックは用いられていなかったが、\r\n主人公の感情に寄り添って丁寧に物語が描かれていたね。",
-            "enText": "There were no special tricks used, but the story was carefully\ndrawn with the main character's emotions in mind.",
+            "enText": "While there weren't any unique tricks employed, \nthe story was crafted meticulously, staying close \nto the emotions of the main character.",
             "nextBlock": 34,
+            "origClipLength": 247,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 284,
+                    "pathId": -6145037877572684797
+                }
+            ],
             "pathId": 901663410751939384,
             "blockIdx": 33
         },
@@ -375,8 +711,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "派手さはないが、よく練られた筋立てだった。\r\nうん、生徒たちの中で流行る理由がわかった気がするよ。",
-            "enText": "It wasn't flashy, but it was a well-developed plot. Yeah, I\nthink I understand why it's so popular among the students.",
+            "enText": "It may not be flashy, but it had a well-crafted plot. \nMm, I feel like I understand why it's popular among \nthe students now.",
             "nextBlock": 35,
+            "origClipLength": 257,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 162,
+                    "pathId": 3767178572113593999
+                },
+                {
+                    "origLen": 145,
+                    "pathId": 1831276140113566719
+                }
+            ],
             "pathId": 1016281560582810047,
             "blockIdx": 34
         },
@@ -384,13 +732,25 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "シンボリルドルフの感想は的確だが、\r\nやや批評に偏っている気がするのは気のせいだろうか……？",
-            "enText": "Your thoughts on Symboli Rudolf are spot on, but is it just my\nimagination or is there a slight bias towards criticism…?",
+            "enText": "Symboli Rudolf's impressions were perceptive, but why did I \nget the feeling I just listened to a movie review…?",
             "nextBlock": 36,
+            "origClipLength": 105,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "内容の方は……？",
-                    "enText": "The content is available at…?",
+                    "enText": "What about the scenes…?",
                     "nextBlock": 36
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 117,
+                    "pathId": -6734309601236346272
+                },
+                {
+                    "origLen": 124,
+                    "pathId": 6203115834577537987
                 }
             ],
             "pathId": -2994672531581583139,
@@ -400,8 +760,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ん？　今言った通りだが……何かおかしかっただろうか？",
-            "enText": "Hmm? I just said that… Did I do something wrong?",
+            "enText": "Huh? I just told you… Was there something strange about it?",
             "nextBlock": 37,
+            "origClipLength": 172,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 237,
+                    "pathId": -1974995635775975380
+                },
+                {
+                    "origLen": 178,
+                    "pathId": 3093431090153484825
+                }
+            ],
             "pathId": 3708006699875344666,
             "blockIdx": 36
         },
@@ -409,8 +781,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ああ、そうか。あの主人公のユニークな\r\nかけ合いの部分が気になったというわけだな。",
-            "enText": "Oh, I see. So you were curious about the unique\ndialogue between the main characters.",
+            "enText": "Ah, I see what you mean now. You must be talking \nabout the main character's peculiar dialogue.",
             "nextBlock": 38,
+            "origClipLength": 200,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": -842039454661547451
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -6118479374294852480
+                }
+            ],
             "pathId": 2439121644895733408,
             "blockIdx": 37
         },
@@ -418,13 +802,21 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "『好きだと申す気はございません』……ふふっ。\r\n『好き』と『もうすき』の組み合わせには、意表を突かれたよ。",
-            "enText": "The combination of \"like\" and \"already like\"\ncaught me off guard. The combination of \"like\"\nand \"already like\" caught me off guard.",
+            "enText": "\"Adore her as I do, I shan't open my heart's door to her\". \n… Heheh. The usage of \"heart's door\" and \"a-dore\" \ncertainly caught me off guard.",
             "nextBlock": 39,
+            "origClipLength": 302,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "共感とかはしなかった？",
-                    "enText": "Did you feel any empathy?",
+                    "enText": "Did you not find it relatable?",
                     "nextBlock": 39
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 301,
+                    "pathId": 4527455359220921996
                 }
             ],
             "pathId": -306330915878898069,
@@ -434,8 +826,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "共感……？　それは、恋愛をする主人公に対する共感、\r\nという意味だろうか……？",
-            "enText": "Empathy…? Does that mean sympathy for the\nmain character who falls in love…?",
+            "enText": "Relatable…? You mean empathizing with \nthe protagonist's romantic journey…?",
             "nextBlock": 40,
+            "origClipLength": 238,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 246,
+                    "pathId": -370768706872321144
+                },
+                {
+                    "origLen": 285,
+                    "pathId": -4147394523012889312
+                }
+            ],
             "pathId": 3640463831311632881,
             "blockIdx": 39
         },
@@ -443,8 +847,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "………………。",
-            "enText": "…",
+            "enText": "…………",
             "nextBlock": 41,
+            "origClipLength": 54,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 67,
+                    "pathId": 5897115294280214955
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2221670697243178791
+                }
+            ],
             "pathId": 8412484529963257648,
             "blockIdx": 40
         },
@@ -452,8 +868,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "残念ながら、その観点は全く以ってなかったな。",
-            "enText": "Unfortunately, you didn't give me that perspective at all.",
+            "enText": "Regrettably, that perspective never crossed my mind.",
             "nextBlock": 42,
+            "origClipLength": 141,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 202,
+                    "pathId": 8923989050453468349
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -6247384165631505281
+                }
+            ],
             "pathId": 7975053774712737500,
             "blockIdx": 41
         },
@@ -461,8 +889,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "登場人物たちの恋愛に\r\n自己を重ねる事でときめきを追体験する、か……。",
-            "enText": "You can relive your crush by putting yourself in the\ncharacters' love lives, or you can go to…",
+            "enText": "Immersing deeper in the excitement by projecting ourselves \nonto the characters' romantic experiences…",
             "nextBlock": 43,
+            "origClipLength": 224,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 264,
+                    "pathId": -263093273333484859
+                }
+            ],
             "pathId": -6134632431145636295,
             "blockIdx": 42
         },
@@ -470,8 +906,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "確かに、一般的にはそちらを重視するのかもしれない。\r\nだからこそ若者たちに人気があるのだろう。",
-            "enText": "Indeed, they may focus on that in general. That's probably why\nit's so popular among young people.",
+            "enText": "That aspect might indeed be more significant to most. \nThis must be why it is popular among young people.",
             "nextBlock": 44,
+            "origClipLength": 249,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 292,
+                    "pathId": 6663440766891235688
+                },
+                {
+                    "origLen": 297,
+                    "pathId": -9056985777356808187
+                }
+            ],
             "pathId": 6155346620030371595,
             "blockIdx": 43
         },
@@ -479,8 +927,20 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "よし、今後はそういった部分も含めて鑑賞してみようか。\r\nそうすれば、より生徒たちと同じ感覚を得られるはずだ。",
-            "enText": "All right, let's try to include those aspects in our\nappreciation in the future. That way, I'll be able to get the\nsame feeling as the students.",
+            "enText": "Well then, I should start appreciating it from that angle as well. \nBy doing so, I can share our students' feelings more effectively.",
             "nextBlock": 45,
+            "origClipLength": 266,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 250,
+                    "pathId": 5291021080934284459
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2593736538657899986
+                }
+            ],
             "pathId": -4322079978243334427,
             "blockIdx": 44
         },
@@ -488,8 +948,16 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ははっ、また1つ君に教えられてしまったな。\r\n君の視点は実に勉強になる。",
-            "enText": "Haha, another thing you've taught me. Your\nperspective is really enlightening.",
+            "enText": "Hahah, you taught me something new again. \nYour perspective is quite enlightening.",
             "nextBlock": 46,
+            "origClipLength": 217,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 245,
+                    "pathId": -2950610845642225289
+                }
+            ],
             "pathId": 2838341640612725030,
             "blockIdx": 45
         },
@@ -497,10 +965,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……“皇帝”シンボリルドルフと1日を過ごしたことで、\r\nまた少しだけ彼女のことがわかった気がした。",
-            "enText": "After spending a day with… \"Emperor\" Symboli Rudolf, I felt\nlike I knew her a little better.",
+            "enText": "… Spending a day with the \"Emperor\" Symboli Rudolf \nmade me feel like I understood her a bit more.",
             "nextBlock": -1,
+            "origClipLength": 108,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 26,
+                    "pathId": -3853409625191091898
+                }
+            ],
             "pathId": 6649397354817575240,
             "blockIdx": 46
         }
-    ]
+    ],
+    "modified": 1697414224,
+    "humanTl": true
 }

@@ -1,0 +1,23 @@
+name: Update install script
+
+on:
+  push:
+    paths:
+      - 'src/scripts/install-umatl.bat'
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - uses: "softprops/action-gh-release@v1"
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          tag_name: "latest"
+          prerelease: false
+          generate_release_notes: false
+          name: "Install script"
+          files: 'src/scripts/install-umatl.bat'

@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "7QLUKHUCCSAPSMTZAKMII2BY572MC6E2",
     "type": "story",
     "storyId": "041013002",
@@ -9,9 +9,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "選抜レースの翌日、メジロマックイーンの様子を見に行くため、\r\nトレーニングコースを訪れた。",
-            "enText": "The day after the Selection Race, I visited the training course \nto see how the white meat McQueen was doing.",
+            "enText": "The day following the Selection Race, I visited \nthe training course to check on Mejiro Mcqueen.",
             "nextBlock": 2,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 120,
@@ -23,11 +24,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "はぁ……はぁっ、はぁ……っ。",
-            "enText": "Hah…… haha, haha ……",
+            "enText": "<i>Haa… haa… haa… \n</i>",
             "nextBlock": 3,
             "origClipLength": 94,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 28,
@@ -39,11 +41,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "……ダメですわね。\r\n脚にうまく力が伝わらない……昨日と同じ、イヤな感覚……。",
-            "enText": "It's not…… good. I can't transmit power to my legs properly…… \nsame as yesterday, a bad feeling……",
+            "enText": "This is not good. I can't muster strength into my legs… \nThis is the same unpleasant feeling as yesterday.",
             "nextBlock": 4,
             "origClipLength": 320,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 87,
@@ -59,20 +62,21 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "…………ふぅ。",
-            "enText": "……… Whew.",
+            "enText": "…… Whew.",
             "nextBlock": 5,
             "origClipLength": 61,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "お腹の調子、悪いのか？",
-                    "enText": "Is your stomach upset?",
+                    "enText": "Is your stomach feeling unwell?",
                     "nextBlock": 5
                 },
                 {
                     "jpText": "お腹の調子、悪いの？",
-                    "enText": "Is your stomach upset?",
+                    "enText": "Is your stomach feeling unwell?",
                     "nextBlock": 5
                 }
             ],
@@ -91,11 +95,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "えっ！？",
-            "enText": "What?",
+            "enText": "Eh?!",
             "nextBlock": 6,
             "origClipLength": 30,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 66,
@@ -111,15 +116,16 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "貴方は……\nすみません、どちら様ですか？",
-            "enText": "You are…… Excuse me, who are you?",
+            "enText": "You are… \nExcuse me, who are you?",
             "nextBlock": 7,
             "origClipLength": 176,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "初めまして、新人トレーナーだ",
-                    "enText": "Nice to meet you, new trainer.",
+                    "enText": "Nice to meet you, I'm a new trainer.",
                     "nextBlock": 7
                 },
                 {
@@ -143,11 +149,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "まあ、トレーナーさん！\r\nもしかして、私のトレーニングをご覧にいらしたのですか？",
-            "enText": "Well, trainer! Perhaps you have come to see my training?",
+            "enText": "Ah, a trainer! Could it be that you came to oversee my training?",
             "nextBlock": 8,
             "origClipLength": 210,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 154,
@@ -167,11 +174,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "光栄ですわ。\nご足労いただき、感謝いたします。",
-            "enText": "It's an honor. Thank you for your time and effort.",
+            "enText": "It's an honor. I appreciate you going out of your way to come.",
             "nextBlock": 9,
             "origClipLength": 141,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 109,
@@ -187,11 +195,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "けれど……1つ、お聞かせください。\r\nなぜ、私に興味を持っていただけたのですか？",
-            "enText": "But ……1 would like to ask you a few questions. \nWhy were you interested in me?",
+            "enText": "However… I would like to ask you one question. \nWhy did you become interested in me?",
             "nextBlock": 10,
             "origClipLength": 210,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 150,
@@ -207,11 +216,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "私、先の選抜レースでは、メジロの名に泥を塗ってしまうような\r\n情けない走りしかお見せできませんでした。",
-            "enText": "In the last race, I could only show you my pathetic performance, \nwhich was a disgrace to the name of \"Mejiro\".",
+            "enText": "In the recent Selection Race, I displayed a pathetic performance \nthat brought disgrace to the Mejiro name.",
             "nextBlock": 11,
             "origClipLength": 273,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 252,
@@ -227,15 +237,16 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "だというのに、なぜ……？",
-            "enText": "So why ……?",
+            "enText": "Given this, why do you…?",
             "nextBlock": 12,
             "origClipLength": 77,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "心の強さが魅力的だったから",
-                    "enText": "I found her strength of mind fascinating.",
+                    "enText": "I was drawn to the strength of your spirit.",
                     "nextBlock": 12
                 }
             ],
@@ -254,11 +265,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "心……なるほど。精神的な面を見ていただけたのですね。\r\nありがとうございます。",
-            "enText": "The mind…… I see. So you were able to see \nthe spiritual side of me. Thank you.",
+            "enText": "My spirit…? I see, you were able to see my \ninner spirit. Thank you for the kind words.",
             "nextBlock": 13,
             "origClipLength": 255,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 16,
@@ -278,11 +290,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "メジロのウマ娘たるもの、\n心も常に強く在らねばならない……。",
-            "enText": "As a horse girl of Mejiro, you must always be strong at heart. ……",
+            "enText": "A proud horsegirl of the Mejiro family must possess \na strong and unwavering spirit at all times…",
             "nextBlock": 14,
             "origClipLength": 161,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 128,
@@ -298,11 +311,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "せめてそちらだけでもお見せできたのなら、\n嬉しく思います。",
-            "enText": "If I could have shown you at least \nthat part, I would have been happy.",
+            "enText": "I would be content if I can at least demonstrate that.",
             "nextBlock": 15,
             "origClipLength": 125,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 109,
@@ -318,11 +332,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "……けれど。私をご担当いただくか否かは、\r\nぜひ、走りを見てご判断くださいませ。",
-            "enText": "Please contact me…… Please take a look at the run and decide \nwhether or not you would like me to be in charge of your project.",
+            "enText": "However, whether you decide to be my trainer or not, \nI would like to request that you make your decision after \nobserving my performance.",
             "nextBlock": 16,
             "origClipLength": 232,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 170,
@@ -338,11 +353,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "私には、メジロの名を持つウマ娘として、\r\n果たさなければならない、高い目標があります。",
-            "enText": "As a horse girl with the name of Mejiro, \nI have a lofty goal that I must achieve.",
+            "enText": "As a horsegirl from the Mejiro bloodline, I \nhave ambitious goals that I must achieve.",
             "nextBlock": 17,
             "origClipLength": 219,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "目標？",
@@ -365,11 +381,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "はい。\n――『天皇賞の制覇』という目標です。",
-            "enText": "Yes, I have a goal of 'winning the Tennou-sho'. ―The goal is to \n\"conquer the Tennou-sho.",
+            "enText": "Yes, my goal is to conquer the Tenno Sho race.",
             "nextBlock": 18,
             "origClipLength": 131,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 154,
@@ -389,11 +406,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "それはもちろん、トレーナーさんとの\n適切な信頼関係も無ければ果たせないもの。",
-            "enText": "Of course, this cannot be accomplished without a proper \nrelationship of trust with the trainer.",
+            "enText": "Of course, this is a feat that cannot be accomplished without \na proper relationship of trust with my trainer.",
             "nextBlock": 19,
             "origClipLength": 178,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 109,
@@ -413,11 +431,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "言い換えれば、トレーナーさんが私の力を信じられなければ、\r\n成し得ないことなのです。",
-            "enText": "In other words, it would not have been possible without the \ntrainer's faith in my ability.",
+            "enText": "In other words, I cannot realize my goals if \nmy trainer does not believe in my ability.",
             "nextBlock": 20,
             "origClipLength": 209,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 155,
@@ -433,11 +452,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ですから、貴方には……\r\n走りの方も認めていただいた上で、ご判断願いたいのです。",
-            "enText": "Therefore, I would like to ask you to make a decision after \nacknowledging the…… runner.",
+            "enText": "Therefore, please finalize your decision \nafter judging my running performance.",
             "nextBlock": 21,
             "origClipLength": 180,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 202,
@@ -457,11 +477,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "私を、メジロの名に相応しいウマ娘として\n育てていただけるか否かを。",
-            "enText": "I would like to know if you will raise me as a horse girl worthy \nof the name \"Mejiro.",
+            "enText": "Should you believe you will be able to raise me to \nbecome a horsegirl worthy of the Mejiro name.",
             "nextBlock": 22,
             "origClipLength": 201,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "メジロの名をとても誇りに思っているんだな",
@@ -493,11 +514,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ええ！　私は――この家に生まれたことを、\r\nとても幸せに思っておりますわ。",
-            "enText": "Yes! I'm so happy to have been born in this family.",
+            "enText": "Yes! I am truly grateful to have been born in this family.",
             "nextBlock": 23,
             "origClipLength": 183,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 152,
@@ -517,11 +539,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "立派な家族に囲まれ、代々応援してくださる方々に\r\n期待をかけていただき……。",
-            "enText": "Surrounded by a fine family and with the expectations of those \nwho have supported us for generations. ……",
+            "enText": "Being surrounded by a wonderful family and carrying the \nexpectations of those who have supported us for generations…",
             "nextBlock": 24,
             "origClipLength": 201,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 94,
@@ -541,11 +564,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "そのおかげで今、私はここに立てています。",
-            "enText": "Thanks to that, I am standing here now.",
+            "enText": "It's all thanks to that I am standing here today.",
             "nextBlock": 25,
             "origClipLength": 108,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 120,
@@ -565,11 +589,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ですから……勝利を義務付けられたメジロのウマ娘として、\r\n責任を果たしたいのです！",
-            "enText": "So, as a horsegirl from ……'s obligated to \nwin Mediro, I want to be accountable!",
+            "enText": "Therefore, I want to fulfill my role as \na Mejiro horsegirl by securing victory.",
             "nextBlock": 26,
             "origClipLength": 198,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 212,
@@ -581,11 +606,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "そのためにもどうか、\n走りの方も認めた上でのご判断を。",
-            "enText": "To that end, please, please, please allow \nthe runner to make the right decision.",
+            "enText": "For that reason, I humbly request that you make your \ndecision after judging my running performance.",
             "nextBlock": 27,
             "origClipLength": 144,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "わかった、そうしよう",
@@ -613,11 +639,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ありがとうございます。先日は少々情けない姿を\r\nお見せしましたが……ここで挽回させてくださいませ！",
-            "enText": "Thank you very much. I know I appeared a bit pathetic the other \nday, but please let me make up for it here at ……!",
+            "enText": "Thank you very much. I may have shown a rather disappointing \nperformance the other day, but allow me to make up for it here!",
             "nextBlock": 28,
             "origClipLength": 285,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 109,
@@ -633,11 +660,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "では、行って参りますわ。\r\nメジロ家仕込みのトレーニング、ご覧ください！",
-            "enText": "Well, here I go. Watch me train the Mejiro family!",
+            "enText": "Then, I will be on my way. Please witness the result of the \ntraining that has been instilled in me by the Mejiro family!",
             "nextBlock": 29,
             "origClipLength": 197,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 58,
@@ -655,29 +683,32 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "メジロマックイーンは、張りきった様子で\nトレーニングを始めた。",
-            "enText": "Medillo McQueen began her training with a taut look on her face.",
+            "enText": "Mejiro Mcqueen commenced training \nwith a determined look on her face.",
             "nextBlock": 30,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "pathId": -3152010625251248538,
             "blockIdx": 29
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "はっ！　はっ！　はっ！　はっ！　はっ！",
-            "enText": "Ha! Ha! Ha! Ha! Ha! Ha!",
+            "enText": "<i>Ha! Ha! Ha! Ha! Ha! \n</i>",
             "nextBlock": 31,
             "origClipLength": 73,
+            "voiceIdx": 27,
             "pathId": 456177721884749059,
             "blockIdx": 30
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ふぅっ……。",
-            "enText": "Phew. ……",
+            "enText": "Whew…",
             "nextBlock": 32,
             "origClipLength": 82,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 50,
@@ -691,9 +722,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "幼い頃から鍛えられてきたせいもあってか、\nフォームは非常に美しく、無駄がない。",
-            "enText": "Perhaps because she has been trained since childhood, her form is \nvery beautiful and lean.",
+            "enText": "Perhaps due to being trained from a young age, her form \nwas incredibly beautiful with no wasted movements.",
             "nextBlock": 33,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 137,
@@ -709,11 +741,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "さあ……もう1本！",
-            "enText": "Come on…… another bottle!",
+            "enText": "Now… one more!",
             "nextBlock": 34,
             "origClipLength": 87,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 58,
@@ -735,9 +768,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "長距離向きの体力と、強い精神力。",
-            "enText": "Physical fitness for long distances and strong mental strength.",
+            "enText": "The endurance and mental fortitude required in long distance…",
             "nextBlock": 35,
             "origClipLength": 65,
+            "voiceIdx": -1,
             "pathId": -1349257703933163551,
             "blockIdx": 34
         },
@@ -745,9 +779,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "確かに彼女ならば、一流のステイヤーの祭典\r\n『天皇賞（春）』を取るのも、夢ではないだろう。",
-            "enText": "She would certainly not dream of winning the Tennou-sho (Spring), \nthe top prize for stayers.",
+            "enText": "Certainly, with her abilities it wouldn't be out of reach to win \nthe prestigious stayer's race, \"Tenno Sho (Spring)\".",
             "nextBlock": 36,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "pathId": 8537924993850187070,
             "blockIdx": 35
         },
@@ -755,28 +790,30 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ただ――",
-            "enText": "Just―",
+            "enText": "However…",
             "nextBlock": 37,
             "origClipLength": 50,
+            "voiceIdx": -1,
             "pathId": 6357654197749410515,
             "blockIdx": 36
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "ふぅっ……ふぅっ……\nいかがでしたか、私のトレーニングは？",
-            "enText": "Phew…… Phew…… How was my training?",
+            "enText": "<i>Huff… huff… </i> \nWhat did you think of my training?",
             "nextBlock": 38,
             "origClipLength": 167,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "脚に力が入りにくいのか？",
-                    "enText": "Do you have difficulty getting strength into your legs?",
+                    "enText": "Do you have difficulty getting \nstrength into your legs?",
                     "nextBlock": 38
                 },
                 {
                     "jpText": "脚に力が入りにくいの？",
-                    "enText": "Do you have difficulty getting strength in your legs?",
+                    "enText": "Do you have difficulty getting \nstrength into your legs?",
                     "nextBlock": 38
                 }
             ],
@@ -791,11 +828,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "え？\nあっ……そ、それは――",
-            "enText": "Huh? Oh…… that's―",
+            "enText": "<i>Hehh</i>? \nOh… um, well, that is—",
             "nextBlock": 39,
             "origClipLength": 142,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 106,
@@ -811,15 +849,16 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "……うぅ。",
-            "enText": "…… ugh.",
+            "enText": "… <i>Uuugh</i>.",
             "nextBlock": 40,
             "origClipLength": 91,
+            "voiceIdx": 32,
             "choices": [
                 {
                     "jpText": "やっぱりお腹の調子が……？",
-                    "enText": "I still have a tummy ……?",
+                    "enText": "As I thought, your stomach isn't feeling well?",
                     "nextBlock": 40
                 }
             ],
@@ -838,11 +877,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "あっ、い、いえ！　そういうわけでは！",
-            "enText": "Oh, no, no! That's not what I meant!",
+            "enText": "Ah, n-no! My stomach feels fine!",
             "nextBlock": 41,
             "origClipLength": 85,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 72,
@@ -862,11 +902,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "その……申し訳ございません！\r\nもう1周、走って参ります！",
-            "enText": "Its…… sorry! I'm off to run another lap!",
+            "enText": "It's um… I sincerely apologize! \nI'm off to run another lap!",
             "nextBlock": 42,
             "origClipLength": 166,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 60,
@@ -882,11 +923,12 @@
         },
         {
             "jpName": "メジロマックイーン",
-            "enName": "",
+            "enName": "Mejiro McQueen",
             "jpText": "次こそは……っ！",
-            "enText": "Next time: ……!",
+            "enText": "This time for sure…!",
             "nextBlock": 43,
             "origClipLength": 83,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 36,
@@ -900,12 +942,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その後もメジロマックイーンはトレーニングを続けたが、\r\nずっと調子がよくなさそうだった……。",
-            "enText": "After that, Medillo McQueen continued to train, but she never \nseemed to be in good shape. ……",
+            "enText": "Even after continuing her training, Mejiro Mcqueen's \ncondition did not seem to improve much.",
             "nextBlock": -1,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "pathId": -3450054482312718279,
             "blockIdx": 43
         }
     ],
-    "modified": 1657207929
+    "humanTl": true,
+    "modified": 1694468632
 }

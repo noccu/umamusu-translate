@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "GXJO77BK3GNIFSPQFDM7YB6X3PLTPXS3",
     "type": "story",
     "storyId": "041064001",
     "title": "始まらない私",
+    "enTitle": "Struggling out of the gates",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――また、タイミングを逃した……！",
-            "enText": "―I missed the timing again……!",
+            "enText": "—— Ah man, I missed my opportunity again…!",
             "nextBlock": 2,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "pathId": 8451027868307147175,
             "blockIdx": 1
         },
@@ -19,13 +21,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "せっかく選抜レースで気になる子を見つけたのに、\n声をかける前に他のトレーナーと契約されてしまった……。",
-            "enText": "I finally found a girl I was interested in at the Selection Race, \nbut before I could approach her, she was already signed by \nanother trainer…",
+            "enText": "Just when someone had finally caught my interest at \nthe Selection Race, she already signed a contract \nwith another trainer before I could approach her…",
             "nextBlock": 3,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "はぁ……へこむなぁ……",
-                    "enText": "Sigh… this sucks……",
+                    "enText": "Ah… just my luck, I guess…",
                     "nextBlock": 3
                 }
             ],
@@ -36,13 +39,14 @@
             "jpName": "？？？",
             "enName": "???",
             "jpText": "お～～～。おっきなため息ー。",
-            "enText": "Oh my～～～～ That was a big sigh.",
+            "enText": "Ooh～ That was a mighty big sigh!",
             "nextBlock": 4,
             "origClipLength": 121,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "っ！",
-                    "enText": "Oh!",
+                    "enText": "Ah!",
                     "nextBlock": 4
                 }
             ],
@@ -51,11 +55,12 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "あははっ！　ごめんごめん、驚かせちゃった？\r\nそっちの陰で昼寝してたんだけど、つい気になっちゃってさ。",
-            "enText": "Ahahaha! Sorry, did I surprise you? I was taking a nap over \nthere in the shade, but I couldn't help being curious.",
+            "enText": "Ahahah! Sorry, did I startle you? I was taking a nap over there \nin the shade, but I couldn't help being curious.",
             "nextBlock": 5,
             "origClipLength": 258,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 145,
@@ -71,15 +76,16 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "で、へこむって？　よかったら話、聞かせてくれない？\n言葉にするってだけでも、けっこー楽になるもんだよ。",
-            "enText": "So, what's making you feel down? Would you like to tell me \nabout it? Just putting it into words can make you feel better.",
+            "enText": "So, something making you feel down? Wanna tell me about it? \nJust putting it into words can make you feel better.",
             "nextBlock": 6,
             "origClipLength": 245,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "いやいや、生徒に話すようなことじゃ……",
-                    "enText": "Oh no, it's not something I should talk about \nwith my students…",
+                    "enText": "<size=32>Ah, it's not really something to discuss with students…</size>",
                     "nextBlock": 6
                 }
             ],
@@ -94,15 +100,16 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "ふんふん、な～るほど。ってことは仕事の悩みかな？\nもしくは、表には出せない学園の闇を見た！　とか……！？",
-            "enText": "Hmm, I see. So is it a work-related problem? Or did you witness some dark secrets of the school that cannot be revealed…!?\"",
+            "enText": "Hm-hmm, that so～ Must be a work-related problem then? \nOr, could it be… that you witnessed some dark secrets \nof the academy that you can't disclose?!",
             "nextBlock": 7,
             "origClipLength": 374,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "いや、仕事の悩みで……",
-                    "enText": "No, it's work related……",
+                    "enText": "No, it's work-related…",
                     "nextBlock": 7
                 }
             ],
@@ -121,15 +128,16 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "あははっ！　そっかそっか、仕事のお悩みかぁ～。\r\n大変そーだよね～トレーナー業って。今は担当の子いるの？",
-            "enText": "Ahahaha! I see, I see. So, it's a work-related concern, huh? \nBeing a trainer must be tough. Do you have any Uma Musume \nunder your care right now?",
+            "enText": "Ahahaa! I see, I see. So it <i>is</i> work-related～ Being a trainer \nsounds like a tough job. Are you in charge of any horsegirls \nright now?",
             "nextBlock": 8,
             "origClipLength": 276,
+            "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "き、気になる子はいたんだけど……",
-                    "enText": "I-I did have a girl that caught my eye, but…",
+                    "enText": "I-I did have a girl who caught my eye, but…",
                     "nextBlock": 8
                 }
             ],
@@ -148,11 +156,12 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "けど？　その子の担当には、なんなかったワケだ。\nそれでそれで――？",
-            "enText": "But? Okay, so there was a girl that caught your attention, but \nshe was already assigned to another trainer. And then what?",
+            "enText": "But? I'll assume you didn't end up as her trainer. \nSo what happened? Tell me more.",
             "nextBlock": 9,
             "origClipLength": 162,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 79,
@@ -166,9 +175,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "と、いう感じであれよあれよと引き出され……。\n聞いてもらっているうちに、いつしか心が軽くなっていた。",
-            "enText": "And so, before I knew it, everything came pouring out of me… \nAs I was being listened to, my heart had gradually lightened.",
+            "enText": "Before I knew it, I found myself gradually being swept by the \nflow of the conversation… As I began to open up and share my \nthoughts, it felt like a weight had been lifted off my shoulders.",
             "nextBlock": 10,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 11,
@@ -180,11 +190,12 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "気持ち切り替えたらさ、また見に行ってみたら？　選抜レース。",
-            "enText": "How about changing your mindset and checking out the \nSelection Race again?",
+            "enText": "How about going for a change of pace first, and then \ntrying your luck again at the next Selection Race?",
             "nextBlock": 11,
             "origClipLength": 130,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "ありがとう、そうしてみるよ",
@@ -207,11 +218,12 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "ふふっ、じゃあ待ってるね！\n次のレースには、なんと～……私も出るからさっ！",
-            "enText": "Hehe, then I'll be waiting! And guess what, I'll also be running \nin the next race!\"",
+            "enText": "Hehe, then I'll see you there! \n'Cause guess who's running in the next race～!",
             "nextBlock": 12,
             "origClipLength": 233,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 55,
@@ -227,11 +239,12 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "あはは、しかも満を持しての初出走！　気になるっしょ～？\n……なーんて、これ宣伝ねっ？　ま、気楽な感じで来てみてよ！",
-            "enText": "Hahaha, and it's my debut race too! You must be curious, right? …I'm just kidding, it's a bit of self-promotion. But feel free to \ncome and see me race!",
+            "enText": "Ahaha. And it's my carefully timed debut race to boot! \nCurious yet～? …Heh, I gotta self promote a lil', right? \nWell anyway, feel free to come and see me race!",
             "nextBlock": 13,
             "origClipLength": 389,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 64,
@@ -253,18 +266,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "おどけたように笑う陽気なウマ娘。\r\nそんな彼女を見て、思わず訊ねる。",
-            "enText": "A cheerful Uma Musume laughs jokingly, and upon seeing her, \nyou can't help but ask.",
+            "enText": "Charmed by the horsegirl's playful aura and contagious \nlaughter, a question slipped from my mouth…",
             "nextBlock": 14,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "待って――君の名前は？",
-                    "enText": "Wait―what's your name?",
+                    "enText": "Wait — what's your name?",
                     "nextBlock": 14
                 },
                 {
                     "jpText": "待って――貴方の名前は？",
-                    "enText": "Wait―what's your name?",
+                    "enText": "Wait — what's your name?",
                     "nextBlock": 14
                 }
             ],
@@ -279,11 +293,12 @@
         },
         {
             "jpName": "陽気なウマ娘",
-            "enName": "Jolly Uma Musume",
+            "enName": "Jolly Horsegirl",
             "jpText": "ん、私？　私の名前は――",
-            "enText": "Hmm, me? I'm―",
+            "enText": "Hmm, mine? It's ——",
             "nextBlock": 15,
             "origClipLength": 105,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 74,
@@ -297,9 +312,10 @@
             "jpName": "中堅トレーナーA",
             "enName": "Experienced Trainer A",
             "jpText": "やっぱり今日の注目は『メジロライアン』ですね！\n調子もよさそう……！　あぁ、期待しかない……。",
-            "enText": "\"I see, so the focus is on 'Mejiro Ryan' today! It looks like she's \nin good shape…! Ah, I can't help but have high expectations…",
+            "enText": "Today's center of attention is undoubtedly Mejiro Ryan! \nHer condition seems impeccable, too. Ah, the anticipation \nis overwhelming……",
             "nextBlock": 16,
             "origClipLength": 279,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 21,
@@ -325,13 +341,14 @@
             "jpName": "中堅トレーナーB",
             "enName": "Experienced Trainer B",
             "jpText": "あれ、隣にいるのもメジロの子だったか……？\n名前はメジロ～、なんだっけ……イマイチパッとしないんですよね。",
-            "enText": "Oh, is the one next to her also a child of Mejiro…? What was the name again… Mejiro-something…… \nNothing comes up in my head……",
+            "enText": "Huh? Is that another Mejiro horsegirl next to her? \nWhat was her name, again…? Mejiro something…",
             "nextBlock": 17,
             "origClipLength": 289,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "（『メジロパーマー』、だ……）",
-                    "enText": "(It's 『Mejiro Palmer』…)",
+                    "enText": "(It's Mejiro Palmer…)",
                     "nextBlock": 17
                 }
             ],
@@ -356,9 +373,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――屋上で出会った彼女は、あの名門メジロ家のウマ娘だった。",
-            "enText": "―The girl I met on the rooftop was a Uma Musume from the \nprestigious Mejiro family.",
+            "enText": "—— The horsegirl I met on the rooftop earlier \ncame from the prestigious Mejiro family.",
             "nextBlock": 18,
             "origClipLength": 82,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 103,
@@ -380,9 +398,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "メジロ家とは、『メジロ』の名を冠する\r\n優秀なウマ娘を数多く輩出している名門だ。",
-            "enText": "The Mejiro family is a prestigious institution that has produced \nmany outstanding Uma Musume carrying the name \"Mejiro.\"",
+            "enText": "The Mejiro family is a prestigious family that has produced \nnumerous exceptional horsegirls bearing the name \"Mejiro\".",
             "nextBlock": 19,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 11,
@@ -404,9 +423,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "中でもメジロライアン、メジロマックイーンなど、特に才能を\r\n感じさせる子たちは、入学当初から大きな話題を呼んでいた。",
-            "enText": "Among them, Uma Musume such as Mejiro Ryan and \nMejiro McQueen, who especially showed their talents, \nhad already been a big topic of conversation since their \nenrollment.",
+            "enText": "Among them, Mejiro Ryan, Mejiro McQueen, and a few other \nparticularly exceptional talents have gripped public attention \nsince their enrollment.",
             "nextBlock": 20,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 117,
@@ -424,9 +444,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "おっ、君！　来てくれたんだー！！\n応援しててよ～、今日は頑張るからっ！",
-            "enText": "Oh, hey there! You came to cheer for me!! \nThanks so much, I'm gonna do my best today!",
+            "enText": "Oh, it's you! Great to see you! Cheer for me, 'kay～? \nI'm putting my best foot forward today!",
             "nextBlock": 21,
             "origClipLength": 193,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 50,
@@ -452,9 +473,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "ま、注目度じゃーライアンには全然かなわないんだけどさ。\nあはは、私どーにもパッとしなくって！",
-            "enText": "Well, I can't really compete with the attention that Ryan gets. \nHaha, I just don't stand out that much!",
+            "enText": "Well, not that I can compete with Ryan in terms of popularity. \nAhaha, guess I just don't stand out that much!",
             "nextBlock": 22,
             "origClipLength": 254,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 229,
@@ -472,18 +494,19 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……でもさ、見ててよ。私もメジロのウマ娘なんだから。\nここで決めなきゃメジロの名折れ、ってね！",
-            "enText": "…But you know, watch me too. I'm also an Uma Musume \nof the Mejiro family, after all. If I don't make it here, it would be \na disgrace to the Mejiro name!",
+            "enText": "… But hey, watch me. After all, I'm a Mejiro horsegirl as well. \nIf I don't show my resolve here, it'd disgrace our great name, \nisn't that right?",
             "nextBlock": 23,
             "origClipLength": 307,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "あ、ああ……応援してるよ！",
-                    "enText": "Y, yeah…… I'm rooting for you!",
+                    "enText": "Y-Yeah…… I'm rooting for you!",
                     "nextBlock": 23
                 },
                 {
                     "jpText": "う、うん……応援してるよ！",
-                    "enText": "Y, yeah…… I'm rooting for you!",
+                    "enText": "Y-Yeah…… I'm rooting for you!",
                     "nextBlock": 23
                 }
             ],
@@ -504,9 +527,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "あくまで朗らかな調子は崩さないまま。だがどこか硬い表情を\r\n一瞬見せたようにも思えた、そんな彼女のレースがついに始まり――",
-            "enText": "She maintained her cheerful demeanor without faltering, but it \nseemed like for a moment she showed a somewhat rigid \nexpression. And so, her race finally began――",
+            "enText": "Her unwavering cheerful demeanor hid any trace of worry. \nNevertheless, I thought I caught a tense expression flashing \nacross her face, before the race got underway ——",
             "nextBlock": 24,
             "origClipLength": 124,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -520,13 +544,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "メジロパーマーは先頭に立って、逃げていた。\r\n……パッと見でも感じるほど、美しく模範的なフォームだ。",
-            "enText": "Mejiro Palmer took the lead and was running in front. Her form \nwas so beautiful and perfect that even at a glance you could tell.",
+            "enText": "Mejiro Palmer immediately took the lead, looking to \nescape from the rest. Her graceful and flawless form \nwas obvious at a glance.",
             "nextBlock": 25,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（名家の令嬢らしい走り、なのかな）",
-                    "enText": "(A running style befitting a daughter of a \ndistinguished family)",
+                    "enText": "<size=31>(I suppose her way of running befits her family's prestige.)</size>",
                     "nextBlock": 25
                 }
             ],
@@ -547,9 +572,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "だが、レース終盤にさしかかると――",
-            "enText": "But as the race neared the end―",
+            "enText": "However, as the race approached its final leg ——",
             "nextBlock": 26,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 91,
@@ -567,9 +593,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "――ここだっ！　はああぁぁぁぁーーーーーっ！",
-            "enText": "―This is it! Haaaaaaaaaaaaa!!!!",
+            "enText": "—— This is it! <i>Haaaaaaaaaaaaa—!</i>",
             "nextBlock": 27,
             "origClipLength": 87,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 74,
@@ -587,9 +614,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "っ……！　はぁっ、はぁっ、はぁっ、はぁっ……！",
-            "enText": "Ha ha ha ha ha ha ha ……! Hah, hah, hah ……!",
+            "enText": "<i>……! Haa, haa, haah, haa…!</i>",
             "nextBlock": 28,
             "origClipLength": 120,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "（あれ、メジロパーマー……！？）",
@@ -614,9 +642,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "各々スパートをかけるウマ娘たちに、次々と追い抜かされていく。\r\nもがくような表情、それに反して固まりきった『綺麗な』フォーム。",
-            "enText": "One by one, the Umamusume who put on a spurt overtook her. \nDespite the strained expression on her face, her \"beautiful\" \nform remained rigid.",
+            "enText": "As each horsegirl unleashed their final spurt, they overtook \nher one by one. Her visibly strained expression contrasted \nwith her beautiful and perfectly composed form.",
             "nextBlock": 29,
             "origClipLength": 127,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 155,
@@ -634,18 +663,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "それは“きちんと走りすぎている”というか、\r\n守りに入っているかのような――",
-            "enText": "It's more like she's \"running too properly,\" or as if she's \nplaying defense―",
+            "enText": "It was as if she was \"running too properly\", or playing it safe ——",
             "nextBlock": 30,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（どこか堅苦しい走りだ……）",
-                    "enText": "\"That's a somewhat stiff running style…\"",
+                    "enText": "(Something about her running feels stiff…)",
                     "nextBlock": 30
                 },
                 {
                     "jpText": "（どこか堅苦しい走り……）",
-                    "enText": "\"That's a somewhat stiff running style…\"",
+                    "enText": "(Something about her running feels stiff…)",
                     "nextBlock": 30
                 }
             ],
@@ -666,9 +696,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "はぁっ……はぁっ……あ～～～クソッ、最下位とか……！！",
-            "enText": "Haah… Haah… Ahhhh, damn it, last place…!!",
+            "enText": "<i>Haa… Haa… </i>ahhhh, damn it! To think I finished last…!!",
             "nextBlock": 31,
             "origClipLength": 263,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 100,
@@ -690,9 +721,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "ダメじゃん！\nメジロのウマ娘がこんなんじゃ、みんな――",
-            "enText": "It's no good! \nFor a Mejiro Uma Musume to run like this, everyone will…",
+            "enText": "That's terrible! For a Mejiro horsegirl \nto perform like this… everyone will ——",
             "nextBlock": 32,
             "origClipLength": 164,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 158,
@@ -718,9 +750,10 @@
             "jpName": "中堅トレーナーA",
             "enName": "Experienced Trainer A",
             "jpText": "やっぱりあなたが1着かぁ！　メジロの名は伊達じゃないね！\r\nさっそくだけど、お話いいかな？",
-            "enText": "I knew you'd win! The name of \"Mejiro\" is not just for show! \nCan I talk to you for a moment?",
+            "enText": "Of course it'd be you who would win! Goes to show that \nthe Mejiro name is not just for show! So getting right into it, \ncan we talk for a moment?",
             "nextBlock": 33,
             "origClipLength": 240,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 189,
@@ -746,9 +779,10 @@
             "jpName": "中堅トレーナーB",
             "enName": "Experienced Trainer B",
             "jpText": "うんうん、さっすがメジロ家！　期待通りの強さだよ！\nぜひうちのチームに……！",
-            "enText": "Yes, as expected of the Mejiro family! You are just as fast as I \nexpected! I would love to have you on our team…!",
+            "enText": "She said it, we would not expect less of the Mejiro family! \nYou are just as fast as I expected! I would absolutely love \nto have you on our team…!",
             "nextBlock": 34,
             "origClipLength": 185,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 123,
@@ -762,9 +796,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "あわわっ……じゅ、順番にいいですかっ？\nここじゃ邪魔になっちゃうので、あっちでお話を……！",
-            "enText": "Um… can we take turns? We're getting in the way here, \nso maybe we could talk over there…!",
+            "enText": "Whoah… could we slow down things a little so that \neveryone can get their turn? We're getting in the \nway here, so maybe we could talk over there…!",
             "nextBlock": 35,
             "origClipLength": 234,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 124,
@@ -782,9 +817,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……あっ、はは。私ってば『メジロの名折れ』とか、なーに\nズレた心配してたんだか！　誰も私の名前なんか出してないじゃん。",
-            "enText": "…Oh, haha. Why was I even worried about being a \n'stain on the Medjio name' or something like that! Nobody \neven mentioned my name.",
+            "enText": "…… <i>Ahhahah</i>. Why was I getting so worked up about bringing \ndisgrace to the Mejiro name? Not a single person stepped up \nto mention me.",
             "nextBlock": 36,
             "origClipLength": 383,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 102,
@@ -814,9 +850,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "いやマジ、気にすることなかったなー！\n注目されなきゃ……失望もされないんだから。",
-            "enText": "\"No, seriously, I didn't have to worry about that! \nIf you're not in the spotlight… you can't disappoint…",
+            "enText": "Ah, what a relief! Turns out that I didn't have \nto worry about that at all. If you're not worthy \nof attention… you can't disappoint anyone.",
             "nextBlock": 37,
             "origClipLength": 238,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 260,
@@ -834,13 +871,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "…………ホント、ね……。",
-            "enText": "……… for real……",
+            "enText": "…… Who am I kidding.",
             "nextBlock": 38,
             "origClipLength": 72,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "……あの",
-                    "enText": "……Uhm",
+                    "enText": "… Hey, uh…",
                     "nextBlock": 38
                 }
             ],
@@ -861,13 +899,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "おっ、と……あはっ、どもどもー！　レース、どうだった？\nいい子いたかな？　って、ライアン1択だよね～そりゃ！",
-            "enText": "Oh, hey there… Ahaha, sorry-! How was the race? \nDid you spot any promising girls? Although, let's be real, \nit's pretty much all about Ryan, right?",
+            "enText": "… Oh! Sorry about that, ahahah. Thanks for coming! How was \nthe race? Did you find any promising talents? Well, actually, \nof course — Ryan is obviously the number one candidate～!",
             "nextBlock": 39,
             "origClipLength": 299,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "そんなことは――",
-                    "enText": "No, that's not true――",
+                    "enText": "No, that's not true ——",
                     "nextBlock": 39
                 }
             ],
@@ -888,9 +927,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "いーのいーの、わかってるから！　メジロ家にはさ、\n才能のある子がいっぱいいるんだ。私が眼中にないのも仕方ない！",
-            "enText": "It's okay, it's okay, I know! The thing is, there are a lot of \ntalented kids in the Mejiro family. It's only natural that I'm not \nstanding out!",
+            "enText": "It's okay, it's okay, I understand! There are so many \ntalented kids in the Mejiro family, y'know. It's a given \nthat I wouldn't get any attention!",
             "nextBlock": 40,
             "origClipLength": 292,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 74,
@@ -908,9 +948,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "けどもちろん、あきらめてなんかないよ？　今のままじゃダメなら、\nもっと強くなるしかないっ。落ち込んでる暇なんてないなーい！",
-            "enText": "But of course, I haven't given up! If things don't work out the \nway they are now, I just have to become stronger. \nThere's no time to be feeling down!",
+            "enText": "But of course, I'm not going to give up. If things aren't \nworking out at the moment, then I'll just have to become \nstronger. There's no time to be feeling sad — none at all!",
             "nextBlock": 41,
             "origClipLength": 312,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 88,
@@ -928,13 +969,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "この後も早速トレーニングしなくっちゃね！\nもっとスタミナつけて、基礎からしっかり見直して――",
-            "enText": "I have to train again right away after this! \nI need to build more stamina and review the basics \nthoroughly――",
+            "enText": "I'll have to resume my training right away! \nFirst, I need to build more stamina, thoroughly \nreview the fundamentals, and then ——",
             "nextBlock": 42,
             "origClipLength": 228,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "本当に、それでいいのかな……？",
-                    "enText": "Is that really what you want ……?",
+                    "enText": "Is that really what you want……?",
                     "nextBlock": 42
                 }
             ],
@@ -958,6 +1000,7 @@
             "enText": "Huh…?",
             "nextBlock": 43,
             "origClipLength": 28,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 111,
@@ -975,9 +1018,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "レースを見て思った。今の彼女は『メジロ家』らしく、\nという想いがプレッシャーになっているのでは……と。",
-            "enText": "I was thinking as I watched the race. Maybe she feels pressure \nbecause she wants to live up to the expectations of being a \npart of the \"Mejiro family\".",
+            "enText": "After observing the race, a realization dawned on me. \nPerhaps, she is affected by the pressure stemming from \nhaving to live up to the esteemed Mejiro name.",
             "nextBlock": 44,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -995,18 +1039,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "それゆえに、走りが硬くなっている気がする。\r\n基本に忠実なのはいいことだが、稀にそれが合わない子もいる……。",
-            "enText": "As a result, I feel like her running has become stiff. \nIt's a good thing to be faithful to the basics, but sometimes \nit doesn't work for certain individuals…",
+            "enText": "I feel like, as a result of that pressure, her running stiffens up. \nWhile it is a good thing to be faithful to the fundamentals, \nevery so often, exceptions arise…",
             "nextBlock": 45,
             "origClipLength": 115,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "もっと君に合うスタイルがあるかも……",
-                    "enText": "There might be a style that suits you better…",
+                    "enText": "<size=32>There might be a way of running that suits you better…</size>",
                     "nextBlock": 45
                 },
                 {
                     "jpText": "もっと貴方に合うスタイルがあるかも……",
-                    "enText": "There might be a style that suits you better…",
+                    "enText": "<size=32>There might be a way of running that suits you better…</size>",
                     "nextBlock": 45
                 }
             ],
@@ -1023,9 +1068,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "！　私に合う、スタイル……？\nそれって……。",
-            "enText": "! A style that suits me…? \nWhat do you mean…?",
+            "enText": "… Suits me better? What do you mean by that…?",
             "nextBlock": 46,
             "origClipLength": 207,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 60,
@@ -1043,9 +1089,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "…………や、ありがと！！\nちょっと……考えてみるよ。",
-            "enText": "……nevrmind. Thanks! \nI'll think about…… for a bit.",
+            "enText": "…… Ah, thanks for letting me know!! \nI'll… try having a think about it.",
             "nextBlock": -1,
             "origClipLength": 189,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 163,
@@ -1060,5 +1107,6 @@
             "blockIdx": 46
         }
     ],
-    "modified": 1681372059
+    "modified": 1716652382,
+    "humanTl": true
 }

@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "VZT4YDPS32ZIYOFYCA2ALXWIS2NRJZ5H",
     "type": "story",
     "storyId": "041012004",
     "title": "吠えろ、女傑のタイマン道",
+    "enTitle": "A brave girl's battle cry",
     "text": [
         {
             "jpName": "",
             "enName": "",
             "jpText": "選抜レース前日――",
-            "enText": "The day before the selected race―",
+            "enText": "It was the day before the Selection Race.",
             "nextBlock": 2,
             "origClipLength": 56,
+            "voiceIdx": -1,
             "pathId": 2174778484321863121,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……ふぅ。",
-            "enText": "…… Whew.",
+            "enText": "… <i>Phoo</i>.",
             "nextBlock": 3,
             "origClipLength": 30,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 89,
@@ -39,9 +42,10 @@
             "jpName": "ベテラントレーナーA",
             "enName": "Veteran Trainer A",
             "jpText": "ううむ、あのキレのある加速……！\r\nナリタブライアン……やはり資質を感じずにはいられないな。",
-            "enText": "Ummm, that snappy acceleration……! Naritabryan…… still can't help \nbut feel the qualities.",
+            "enText": "Hmm, just look at that acceleration…! Narita Brian… \nThere is no mistaking her quality.",
             "nextBlock": 4,
             "origClipLength": 252,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 193,
@@ -59,9 +63,10 @@
             "jpName": "ベテラントレーナーB",
             "enName": "Veteran Trainer B",
             "jpText": "まだ粗削りですが、裏を返せばこれからいくらでも強くなる可能性\r\nがあるということ……明日の選抜レースでの走り、楽しみですね。",
-            "enText": "It is still rough, but the flip side is that it has the potential \nto become as strong as it can be in the future.…… I am looking \nforward to seeing how it performs in tomorrow's Selection Race.",
+            "enText": "She's still rough around the edges, but that also means she \nstill has so much more potential to unlock… I can't wait to see \nher performance in tomorrow's Selection Race.",
             "nextBlock": 5,
             "origClipLength": 332,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 58,
@@ -79,9 +84,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "おやおや。本番は明日だってのに、既に大注目って感じだねぇ。\r\nま、その方がこっちの気合いも入るってもんだ！",
-            "enText": "Well, well, well. The show is tomorrow, and you're already \ngetting a lot of attention. Well, that should get us all fired up!",
+            "enText": "<i>Hoh hoh</i>, the race is only tomorrow but it feels \nlike a lot of eyes are already watching, huh? \nThough, that fires <i>me</i> up as well!",
             "nextBlock": 6,
             "origClipLength": 321,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 45,
@@ -99,9 +105,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "姐さん……。",
-            "enText": "Miss ……",
+            "enText": "Ma'am……",
             "nextBlock": 7,
             "origClipLength": 36,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 56,
@@ -119,9 +126,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "おっ。……アンタもブライアンを見てたのかい？",
-            "enText": "Oops.…… you've been watching Brian too?",
+            "enText": "Oh! …You here to watch Brian too?",
             "nextBlock": 8,
             "origClipLength": 136,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 50,
@@ -139,9 +147,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "……ブライアン先輩は、やっぱりやべーっすよ。\r\nなのに……マジでタイマン張る気なんすか？",
-            "enText": "…… Brian senior is still a badass. And yet…… \nyou're really going to put up a fight?",
+            "enText": "…… She really is monstrous, you know? \n… Are you really going to go toe-to-toe with her?",
             "nextBlock": 9,
             "origClipLength": 216,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 228,
@@ -155,9 +164,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "ああ、大マジさ。アンタ、絶対観戦しにおいでよ？\r\nアツいレースを見せてやっから！",
-            "enText": "Yeah, I'm serious. You should definitely come out and watch the \nrace. I'll show you a hot race!",
+            "enText": "For sure. And I better see you in the stands, too! \nI'll show ya a race to remember!",
             "nextBlock": 10,
             "origClipLength": 240,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 73,
@@ -175,9 +185,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "姐さん……自分なんかのこと、\r\nどうしてそこまで気にかけてくれるんすか……？",
-            "enText": "Miss …… why do you care so much about me ……?",
+            "enText": "…… Why are you so concerned with someone like me, ma'am…?",
             "nextBlock": 11,
             "origClipLength": 176,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 188,
@@ -191,9 +202,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "アタシは、アタシを強くしてくれるはずの連中が\r\n勝手にいなくなりやがるなんて許せねぇ。それだけのことさね。",
-            "enText": "I can't allow the people who are supposed to make me stronger to \ndisappear without my permission. That's all.",
+            "enText": "It really bugs me when those who could make me stronger \njust up and disappear. That's all there is to it.",
             "nextBlock": 12,
             "origClipLength": 255,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 113,
@@ -211,9 +223,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "さてと。トレーナー！　いつまでもブライアンを眺めてないで、\r\nこっちも仕上げるよ。今日のメニューを寄越しな！",
-            "enText": "Well, let's see. Trainer! Don't keep staring at Brian. I'm gonna \nfinish up here. Give me today's menu!",
+            "enText": "Alright, Trainer, stop gazing at Brian and come focus \non our training! Gimme today's program!",
             "nextBlock": 13,
             "origClipLength": 250,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 30,
@@ -231,9 +244,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "ナリタブライアンは確かに恐るべき相手だ。\r\nしかし……ヒシアマゾンの動きも確実に進化しつつあった。",
-            "enText": "Narita Bryan is certainly a fearsome opponent. But…… Hsiamazon's \nmovement was certainly evolving as well.",
+            "enText": "Narita Brian looked to be a formidable opponent indeed, but… \nHishi Amazon steadily continued to make improvements herself.",
             "nextBlock": 14,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 32,
@@ -247,9 +261,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "優れた感性に裏付けされた、天性の学習能力の高さ。\r\n指導は日ごとに実を結び、ヒシアマゾンは実力を高めていく。",
-            "enText": "Hsiamazon's natural ability to learn, backed up by her superior \nsensitivity. The guidance bore fruit day by day, and Hsiamazon's \nabilities continued to grow.",
+            "enText": "She was gifted with incredible adaptability backed by her \nsuperb sense for running. Our training bore fruit by the day, \nand her ability was constantly rising.",
             "nextBlock": 15,
             "origClipLength": 115,
+            "voiceIdx": -1,
             "pathId": 4670187586478193581,
             "blockIdx": 14
         },
@@ -257,9 +272,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "そんなトレーニングの仕上げを終えた翌日。\r\nついに――",
-            "enText": "The day after finishing up such training. Finally―",
+            "enText": "Our training came to an end here, as the next day \nhad arrived and it was time for the race ——",
             "nextBlock": 16,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "pathId": -6093144218959414916,
             "blockIdx": 15
         },
@@ -267,9 +283,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "選抜レース、本日最後のグループの出走が近づいて参りました！\r\n大注目は資質に対し、高い評価が集まっているナリタブライアン！",
-            "enText": "The last group of runners for today's Selection Race is \napproaching! The most notable is NARITABURIAN, who is highly \nrated for her qualities!",
+            "enText": "We're moving on to the final group of today's Selection Race! \nEveryone's eyes will no doubt be on Narita Brian, whose \nincredible natural talents have attracted plenty of attention!",
             "nextBlock": 17,
             "origClipLength": 325,
+            "voiceIdx": 11,
             "pathId": 2030846817885550050,
             "blockIdx": 16
         },
@@ -277,9 +294,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "各ウマ娘、ゲートに収まりまして……\r\n選抜第11レース芝2000m、スタートですっ！！",
-            "enText": "All the horses are now settled in the gate.…… Race 11, Turf \n2000m, the Selection Race, is about to start!",
+            "enText": "All horsegirls are in their gates, as we wait for the start… \nSelection Race number 11, 2000m on turf… and off they go!!",
             "nextBlock": 18,
             "origClipLength": 248,
+            "voiceIdx": 12,
             "pathId": -6247225043156490283,
             "blockIdx": 17
         },
@@ -287,9 +305,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "大きく逃げる先頭の背を眺めつつも、\r\nナリタブライアンは4番手から5番手！　落ち着いた走りです！",
-            "enText": "Naritabryan is in 4th to 5th place, while watching the leader who \nis running far away from her! She is running calmly!",
+            "enText": "Narita Brian drops from fourth to fifth as the leader runs \nout far in front! She's staying calm back there!",
             "nextBlock": 19,
             "origClipLength": 191,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 239,
@@ -311,9 +330,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアンをしっかりとマークしているのは、\r\n7番手ヒシアマゾン！　ここで1周目を回ります！！",
-            "enText": "Firmly marking Naritabryan is 7th place, Hsi Amazon! Here they go \naround the first lap!",
+            "enText": "In 7th we find Hishi Amazon, keeping close tabs \non Narita Brian as we complete a full lap!!",
             "nextBlock": 20,
             "origClipLength": 177,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 239,
@@ -335,9 +355,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "ヒシアマ姐さん……。",
-            "enText": "Miss Hsiama ……",
+            "enText": "Amazon, ma'am……",
             "nextBlock": 21,
             "origClipLength": 47,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 239,
@@ -355,9 +376,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "レース中盤、ナリタブライアンは早めに仕掛け、\r\n3番手まで順位を上げた。",
-            "enText": "Midway through the race, NARITABURIAN made an early move and \nmoved up to 3rd position.",
+            "enText": "With the race still in the middle leg, Narita Brian had \nmade an early move up to third place.",
             "nextBlock": 22,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 15,
@@ -375,9 +397,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "そして、迎えた第4コーナーでは――",
-            "enText": "And then, at the fourth corner―",
+            "enText": "And then, approaching the fourth corner again ——",
             "nextBlock": 23,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 17,
@@ -395,9 +418,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "ブッちぎる……！！",
-            "enText": "Bleh!!! ……!!!",
+            "enText": "I'll break free…!!",
             "nextBlock": 24,
             "origClipLength": 34,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 47,
@@ -415,9 +439,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアン！　ナリタブライアン先頭！！\r\nブライアン先頭！　3バ身から4バ身、後続を突き放すっ！！",
-            "enText": "Naritabryan is in the lead! Naritabryan in the lead! Brian leads! \nShe's going three or four lengths clear of the chasing pack!",
+            "enText": "Narita Brian! Narita Brian takes the lead! Three lengths, \nfour lengths, Brian is taking off on her own!!",
             "nextBlock": 25,
             "origClipLength": 200,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 196,
@@ -434,6 +459,7 @@
             "enText": "……!",
             "nextBlock": 26,
             "origClipLength": 34,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 196,
@@ -447,9 +473,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "ハッ……させるかよ、タイマンだぁあああっ！！",
-            "enText": "Ha…… won't let me, I'm a tycoon!",
+            "enText": "Hah… Not on my watch! I'm coming for yoouuuu!!",
             "nextBlock": 27,
             "origClipLength": 135,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 196,
@@ -467,9 +494,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "外から追い上げてきたのはヒシアマゾン！！\r\n力強い走りでブライアンに喰らいついていきますっ！！",
-            "enText": "Hishi Amazon is chasing up from the outside! She is running \nstrong and is taking a bite out of Brian!",
+            "enText": "Hishi Amazon chases her from the outside!! \nHer stride is powerful! She's closing in on Brian!!",
             "nextBlock": 28,
             "origClipLength": 200,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 218,
@@ -495,9 +523,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "やはり来たか……だが……！！",
-            "enText": "I knew you were coming.…… but ……!",
+            "enText": "Knew someone would come… but…!!",
             "nextBlock": 29,
             "origClipLength": 86,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 218,
@@ -523,9 +552,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアン、さらに加速っ！！　恐るべきスピード！\r\nヒシアマゾンを突き放そうと動きます、が――",
-            "enText": "Naritabryan, even faster! Terrible speed! She's moving to try to \noutpace Hsiar Amazon, but…",
+            "enText": "Further acceleration from Narita Brian!! Her speed is fearsome! \nShe's trying to lose Hishi Amazon ——",
             "nextBlock": 30,
             "origClipLength": 213,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 277,
@@ -551,9 +581,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "でぇりゃぁあああああああーっ！！",
-            "enText": "Dheeryaaaaaahhhhh!",
+            "enText": "<i>Ghraaaaaaaaaaaaaahh!!</i>",
             "nextBlock": 31,
             "origClipLength": 95,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 90,
@@ -575,9 +606,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "っ……！！",
-            "enText": "I'm at ……!!!!!!!",
+            "enText": "……!!",
             "nextBlock": 32,
             "origClipLength": 24,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 90,
@@ -595,9 +627,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "突き放せないっ！！　ヒシアマゾンも加速っ！！\r\n最後の直線、激しい叩き合いが繰り広げられていますっ！！",
-            "enText": "I can't push her away! Hsi Amazon is accelerating! A fierce \nbattle is going on in the last straight!",
+            "enText": "But she won't go!! Hishi Amazon matches her speed up!! \nAn intense battle is unfolding on the final straight!!",
             "nextBlock": 33,
             "origClipLength": 217,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 296,
@@ -623,9 +656,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "あ……姐さんっ……！！",
-            "enText": "Oh…… Miss ……!",
+            "enText": "…… Ma'am!!",
             "nextBlock": 34,
             "origClipLength": 58,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 296,
@@ -643,9 +677,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "（無理なんかじゃねぇ！　終わってなんかねぇんだよ！！\r\n負けても、負けても、何回負けても、それでも！！）",
-            "enText": "（It's not impossible! It's not over! Losing, losing, losing, \nlosing over and over again, but still!)",
+            "enText": "(My chances are right here! Nothing about this is over!! \nI don't care if I lose and lose and lose some more!!)",
             "nextBlock": 35,
             "origClipLength": 267,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 296,
@@ -667,9 +702,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "（最後の最後――自分自身ってやつに負けちまわない限り！\r\n勝負に終わりなんか、ねぇんだよっ！！）",
-            "enText": "（Unless, at the end of the day, you lose to \nyourself! There is no end to the game!)",
+            "enText": "(As long as you push to the bitter end, as long as you don't \ngive in to yourself, the fight is far from over!!)",
             "nextBlock": 36,
             "origClipLength": 286,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 301,
@@ -687,9 +723,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "うらぁあああああああっ！！",
-            "enText": "Uraaaaah!!!",
+            "enText": "<i>Uhraaaaaaaaah!!</i>",
             "nextBlock": 37,
             "origClipLength": 88,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 98,
@@ -707,9 +744,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "結果――ヒシアマゾンは、惜しくもナリタブライアンに敗北した。",
-            "enText": "The result - Hsi Amazon was narrowly defeated by Narita Bryan.",
+            "enText": "In the end, Hishi Amazon had to concede defeat to Narita Brian.",
             "nextBlock": 38,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 15,
@@ -723,9 +761,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "だがその走りは、誰もが思わず拍手を送りたくなるような、\r\n観客を勇気づけてくれる力強さを持ったものだった……。",
-            "enText": "But the run was so powerful that it made everyone want to \napplaud, encouraging the audience. ……",
+            "enText": "But her performance carried such power, was so inspiring \nto the audience, that no one would think twice about giving \nher a standing ovation……",
             "nextBlock": 39,
             "origClipLength": 116,
+            "voiceIdx": -1,
             "pathId": 2177655688292317376,
             "blockIdx": 38
         },
@@ -733,9 +772,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "あーチックショー、負けちまった！！\r\nま、けど――",
-            "enText": "Oh, Chick Show, I lost! Well, but―",
+            "enText": "<i>Aaagh</i>, flippin' heck, I lost!! \nBut, well ——",
             "nextBlock": 40,
             "origClipLength": 189,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 19,
@@ -753,9 +793,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "うぅっ、ぐすっ、へぐぅ……姐ざぁぁぁんっ……！！\r\n自分はっ……自分はぁ……感動したっすぅぅぅ～……！！",
-            "enText": "Ugh, gosh, hegggghhhh Miss…… Miss ……!!!",
+            "enText": "<i>Ubwuehgwubweeeeeeh</i>…… Ma'aaaaam…!! \nThat wahs… That waszh zo… so inspiriiiiing……!!",
             "nextBlock": 41,
             "origClipLength": 511,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 523,
@@ -773,9 +814,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "コラコラ、ウマ娘がんなみっともねー顔で泣くんじゃねぇよ。\r\n……で、どうなんだい？　学園を辞めるとかいう話はさ。",
-            "enText": "Kora kora, don't cry with your ugly Uma Musume cancer face. How \nare you doing at ……? What about quitting the school or something?",
+            "enText": "Hey now, hey, horsegirls don't go crying like that. Look at you… \nSo, whatcha think, still feel like dropping out?",
             "nextBlock": 42,
             "origClipLength": 304,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 128,
@@ -793,9 +835,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "キレーさっぱり忘れてくださいっ！！\r\nズドンと気合い入ったんで、イチから鍛え直しますっ！！",
-            "enText": "Forget about it! I'm so fired up, I'm \ngoing to train again from scratch!",
+            "enText": "I wouldn't even think about it, forget I ever said anything!! \nI've never felt more motivated! Even if I have to go back \nto basics, I'm gonna train my ass off!!",
             "nextBlock": 43,
             "origClipLength": 200,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 98,
@@ -809,9 +852,10 @@
             "jpName": "美浦寮のウマ娘",
             "enName": "Miho Dorm Horsegirl",
             "jpText": "そんで自分、いつか……\r\n姐さんとタイマン張れるくらい、強くなるっす！！",
-            "enText": "And I'm going to be strong enough to have \na one-on-one with Miss…… someday!",
+            "enText": "And I'll be… Someday, I'll be strong enough \nto take you on one-to-one, ma'am!!",
             "nextBlock": 44,
             "origClipLength": 163,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 175,
@@ -825,9 +869,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "おうっ、楽しみにしてるぜ！！\r\n……って、ん？",
-            "enText": "Oooh, I'm looking forward to it! What's …… hmm?",
+            "enText": "Hell yeah, I'll be waiting!! \n…… Hmm?",
             "nextBlock": 45,
             "origClipLength": 118,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 15,
@@ -841,9 +886,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "アマさん。……面白かった。またやろう。",
-            "enText": "Ama.…… was interesting. Let's do it again.",
+            "enText": "Hey, Am. ……That was fun. Let's do it again sometime.",
             "nextBlock": 46,
             "origClipLength": 152,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 105,
@@ -865,9 +911,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "はん！　次こそはアタシがアンタをブッちぎってやるよ。\r\n首を洗って待ってな、ブライアン！！",
-            "enText": "Oh, no! Next time I'm going to beat you \nto a pulp. You just wait and see, Brian!",
+            "enText": "Hmph! Next time I'm gonna blow you away. \nYou just wait, Brian!!",
             "nextBlock": 47,
             "origClipLength": 205,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 75,
@@ -893,9 +940,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……ふっ。",
-            "enText": "…… phew.",
+            "enText": "…… Heh.",
             "nextBlock": 48,
             "origClipLength": 77,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 87,
@@ -921,9 +969,10 @@
             "jpName": "ベテラントレーナーA",
             "enName": "Veteran Trainer A",
             "jpText": "ヒシアマゾン！　君の勝負強さには感服したぞ。\r\nぜひスカウトさせてくれないか！？",
-            "enText": "Hsiia mason! I admire your competitive \nspirit. Please let me scout for you!",
+            "enText": "Hishi Amazon! I was thoroughly impressed by your strength \nand fighting spirit! Would you like to come train under me!?",
             "nextBlock": 49,
             "origClipLength": 189,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 115,
@@ -941,18 +990,19 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "おっと、その話だが……悪いね、相棒は決まっちまったんだ。\r\n――なぁ、トレーナー！",
-            "enText": "Oops, about that…… sorry about that, I've already found a \npartner. ―Hey, trainer!",
+            "enText": "Ohh, I'm sorry, but in regards to that… I've already \nfound my partner. Right, Trainer?",
             "nextBlock": 50,
             "origClipLength": 261,
+            "voiceIdx": 40,
             "choices": [
                 {
                     "jpText": "俺！？いいのか……！？",
-                    "enText": "Me! Are you sure ……!",
+                    "enText": "Who, me?! Are you sure…?!",
                     "nextBlock": 50
                 },
                 {
                     "jpText": "私！？いいの……！？",
-                    "enText": "Me! It's okay. ……!",
+                    "enText": "Who, me?! Are you sure…?!",
                     "nextBlock": 50
                 }
             ],
@@ -973,9 +1023,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "ああ。ブライアンとタイマン張れたのは、\r\nまっ、アンタのメニューが効いたってのもあったからさ。",
-            "enText": "Yeah. I was able to get into a tussle with \nBrian because, well, your menu worked.",
+            "enText": "Damn sure. I couldn't deny that your training program \nplayed a big part in being able to take on Brian, y'know?",
             "nextBlock": 51,
             "origClipLength": 208,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 89,
@@ -993,9 +1044,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "これからもアツい勝負をさしとくれよ？\r\nトレーナーさん……ん～、『さん』ってのもなんか堅っ苦しいねぇ。",
-            "enText": "Please keep me in the game, will you? \nTrainer…… hmmm, \"Ms.\" is a bit formal.",
+            "enText": "You better let me have a bunch more intense battles, Trainer! \n… Hmm, <i>Trainer</i> does sound a bit stuffy.",
             "nextBlock": 52,
             "origClipLength": 300,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 92,
@@ -1013,18 +1065,19 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "そーだ、『トレ公』ってのはどうだい？",
-            "enText": "Oh yeah, how about \"Trekkie\"?",
+            "enText": "I know, how about I call ya <i>Big T </i>instead?",
             "nextBlock": 53,
             "origClipLength": 100,
+            "voiceIdx": 43,
             "choices": [
                 {
                     "jpText": "なんか犬みたいだな……？",
-                    "enText": "What's it like to be a dog ……?",
+                    "enText": "Am I a rapper now? Or your bodyguard…?",
                     "nextBlock": 53
                 },
                 {
                     "jpText": "なんか犬みたいだね……？",
-                    "enText": "What's it like to be a dog ……?",
+                    "enText": "Am I a rapper now? Or your bodyguard…?",
                     "nextBlock": 53
                 }
             ],
@@ -1045,9 +1098,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "『忠犬トレ公』ってか？　あっはっは、悪くないじゃないか！！\r\nま、親しみを込めてってやつだよ。",
-            "enText": "You mean \"Toreko, the Loyal Dog\"? Ha-ha-ha, that's not bad! Well, \nI'm just trying to be friendly.",
+            "enText": "Like a giant protective bouncer, <i>Big T</i>? Ahhahahah, I dig it!! \nWell, just think of it as being on close terms.",
             "nextBlock": 54,
             "origClipLength": 282,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 71,
@@ -1065,9 +1119,10 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "さぁてと……次はどいつとタイマン張ろうかねぇ、トレ公！",
-            "enText": "Let's see……… who's next on the list, Trekkie!",
+            "enText": "In any case… who am I going up against next, Big T?",
             "nextBlock": 55,
             "origClipLength": 167,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 50,
@@ -1085,9 +1140,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうして、豪快な女傑・ヒシアマゾンとの日々が始まったのだった。",
-            "enText": "Thus began the days with the dynamic female heroine, Hsiamazon.",
+            "enText": "That was the start of my journey with \nthe bold and spirited Hishi Amazon.",
             "nextBlock": -1,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 97,
@@ -1102,5 +1158,6 @@
             "blockIdx": 55
         }
     ],
-    "modified": 1712266081
+    "modified": 1716770551,
+    "humanTl": true
 }

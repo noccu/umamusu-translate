@@ -55,7 +55,7 @@ Seek, Solve, Summer Walk! | Complete | [noccu]
 Super Smashing☆Summer Vacation | Stalled | Anonymous Reindeer
 Wings of Iron: Hazy Tales | Complete | [noccu]
 Days in a Flash | Complete | [Kuwaiden] + [noccu] (preview)
-Intertwined Memories, Galloping Emotions | Complete | [UmaTL] (noccu)☆
+Intertwined Memories, Galloping Emotions | Complete | [UmaTL] (noccu)
 Illuminate the Heart | Complete, Exists | MTL, Anonymous Raccoon
 Happy new future ～Bonds dyed in the sunrise～ | Complete, In progress | MTL + [noccu] (preview), [noccu]☆
 Sweet Memory ♥ Teatime | Complete | [noccu]
@@ -66,7 +66,7 @@ An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 #summer #besties | Complete | [Jimoori]
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
 Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)
-As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)☆
+As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)
 A Gleaming Mejiro Gala |  |
 Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
 Come On Down To Calming Koumian! |  |
@@ -110,7 +110,7 @@ Gold City | Complete | [Hades of Games]
 Gold Ship | Complete, Stalled | MTL, UmaTL☆
 Grass Wonder | Complete | [LotoDS]
 Haru Urara | Complete, In progress | [Vacxy] (ep 1) + MTL (rest), [xct]
-Hishi Amazon | In progress | [UmaTL] ([noccu])☆
+Hishi Amazon | Complete | [UmaTL] ([noccu])☆
 Hishi Miracle | Complete | [LotoDS]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
 Inari One | Complete | [LotoDS]
@@ -128,7 +128,7 @@ Mayano Top Gun | Complete | [Director Kok]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS]
 Mejiro McQueen | Complete | [UmaTL] (bocchi)
-Mejiro Palmer | Stalled, In progress, Complete | [Director Kok] (ep 1-2), [UmaTL] (bocchi)☆, MTL
+Mejiro Palmer | Complete | [UmaTL] (bocchi)☆
 Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207]

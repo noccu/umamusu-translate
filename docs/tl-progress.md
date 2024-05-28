@@ -137,10 +137,10 @@ Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
-Rice Shower  | Exists, Complete | [Ben] (ep 1-4), [UmaTL] (bocchi)☆
+Rice Shower | Exists, Complete | [Ben] (ep 1-4), [UmaTL] (bocchi)☆
 Sakura Bakushin O | Complete | [noccu]
 Sakura Chiyono O | Complete | [LotoDS]
-Sakura Laurel | In progress | [LotoDS]
+Sakura Laurel | Complete | [LotoDS]
 Satono Crown | Complete | [LotoDS]
 Satono Diamond | Exists | [Riersa] (MTL edit?)
 Seiun Sky | Complete | [CatNipHoarder] & [Holo]

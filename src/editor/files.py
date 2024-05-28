@@ -15,6 +15,7 @@ if TYPE_CHECKING:
 
 class SaveState:
     lastEnText: str
+    lastTitle: str = ""
     unsavedChanges = set()
 
     def markBlockLoaded(self, block: dict):
@@ -26,6 +27,17 @@ class SaveState:
         if chapter not in self.unsavedChanges and text != self.lastEnText:
             self.unsavedChanges.add(chapter)
 
+    def markFileLoaded(self, file: TranslationFile):
+        self.lastTitle = file.data.get("enTitle", "")
+
+    def markTitleChanged(self, ch, newTitle):
+        """Sets save state as needed, returns whether title changed"""
+        if newTitle == self.lastTitle:
+            return False
+        self.lastTitle = newTitle
+        self.unsavedChanges.add(ch)
+        return True
+    
     def onFileSaved(self, ch: int, block: dict):
         # Little hack to prevent false unsaved files on chapter change without block change
         # Essentially pretend the block was reloaded. Could be done in markBlockSaved but
@@ -85,10 +97,10 @@ class FileManager:
             file.save()
             # Prevent message spam
             if not self.master.options.saveOnBlockChange.get() and not saveAll:
-                print("Saved")
+                self.master.status.setSaved()
             self.saveState.onFileSaved(ch if saveAll else nav.cur_chapter, nav.cur_data)
         if saveAll:
-            print("Saved all files")
+            self.master.status.log("Saved all files")
 
     def load_block(self, file: TranslationFile, idx: int):
         """Loads a block by index. Note block data may not be available before this."""
@@ -117,7 +129,7 @@ class FileManager:
             display.setActive(self.master.blockDuration, False)
         else:
             display.setActive(self.master.blockDuration, True)
-            text.setText(self.master.blockDurationLabel, f"Text Duration ({origClipLen})")
+            text.setText(self.master.blockDurationLabel, f"Duration ({origClipLen})")
             self.master.blockDuration.set(block.get("newClipLength", 0))
 
         self.master.textBoxJp.loadRichText(text.for_display(file, block["jpText"]))
@@ -175,3 +187,11 @@ class FileManager:
             cur_data["newClipLength"] = new_clip_length
 
         self.saveState.markBlockSaved(nav.cur_chapter, cur_data)
+        self.master.root.event_generate("<<BlockSaved>>", data=cur_data)
+
+    # Event handler
+    def save_title(self, *_):
+        title = self.master.titleEn.get()
+        if self.saveState.markTitleChanged(self.master.nav.cur_chapter, title):
+            self.master.nav.cur_file.data["enTitle"] = title
+            self.master.status.setUnsaved()

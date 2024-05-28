@@ -130,15 +130,29 @@ Home type has an extra prefix (`00000 00 0000 000`):
 1085 | Daiichi Ruby
 1086 | Mejiro Ramonu
 1087 | Aston Machan
-1093 | K.S. Miracle
+1088 | Satono Crown
+1089 | Cheval Grand
+1090 | Verxina
+1091 | Vivlos
+1093 | K.S.Miracle
+1094 | Jungle Pocket
 1098 | Copano Rickey
 1099 | Hokko Tarumae
 1100 | Wonder Acute
+1101 | Samson Big
+1102 | Sounds of Earth
+1103 | Royce and Royce
+1104 | Katsuragi Ace
+1105 | Neo Universe
 1106 | Hishi Miracle
+1107 | Tap Dance City
+1108 | Duramente
 2001 | Happy Meek
 2002 | Bitter Glasse
 2003 | Little Cocon
 2004 | Montjeu
+2005 | Venus Park
+2006 | Rigantona
 9001 | Hayakawa Tazuna
 9002 | President Akikawa
 9003 | Otonashi Etsuko
@@ -146,6 +160,10 @@ Home type has an extra prefix (`00000 00 0000 000`):
 9005 | Anshinzawa Sasami
 9006 | Kashimoto Riko
 9008 | Light Hello
+9043 | Satake Mei
+9040 | Darley Arabian
+9041 | Godolphin Barb
+9042 | Byerley Turk
 
 # Song IDs
 

@@ -4,21 +4,47 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 from types import SimpleNamespace
 from functools import partial
+from subprocess import run
+import ast
 
-from common import constants as const
-from common.constants import NAMES_BLACKLIST
-from common.types import TranslationFile
+from common import constants as const, utils
+from common.constants import NAMES_BLACKLIST, TRANSLATION_FOLDER
+from common.types import TranslationFile, StoryId
+from textprocess import calcLineLen
 
 from . import display, files, navigator, text, fonts
 from .spellcheck import SpellCheck
 from .audio import AudioPlayer
 
+# Monkey patch tk event userdata because 5 lines of code too hard for tk maintainers
+class tuplehack(tuple):
+    def __len__(self):
+        return super().__len__() - 1
+tk.Misc._subst_format = tuplehack(('%#', '%b', '%d', '%f', '%h', '%k',
+             '%s', '%t', '%w', '%x', '%y',
+             '%A', '%E', '%K', '%N', '%W', '%T', '%X', '%Y', '%D'))
+tk.Misc._subst_format_str = " ".join(tk.Misc._subst_format)
+_o_sub = tk.Misc._substitute
+def _sub(self, *args):
+    args = list(args)
+    data = args.pop(2)
+    try:
+        if data[0] == "{":
+            data = ast.literal_eval(data)
+    except:
+        pass
+    ev_data = _o_sub(self, *args)
+    if isinstance(ev_data[0], tk.Event):
+        ev_data[0].user_data = data
+    return ev_data
+tk.Misc._substitute = _sub
 
 class Options:
     def __init__(self) -> None:
         self.markHuman = tk.BooleanVar()
         self.saveOnBlockChange = tk.BooleanVar()
         self.skip_translated = tk.BooleanVar()
+        self.alwaysOnTop = tk.BooleanVar()
 
 
 class Editor:
@@ -32,138 +58,143 @@ class Editor:
         self.root = root
         fonts.init(root)
 
-        self.cur_chapter = 0
-        self.cur_block = 0
+        # Freeeedom!
+        global copyToClipboard
+        def copyToClipboard(text:str):
+            root.clipboard_clear()
+            root.clipboard_append(text)        
+
         # Managers
         self.options = Options()
         self.fileMan = files.FileManager(self)
         self.nav = navigator.Navigator(self)
         self.audio = AudioPlayer(self)
+        self.status = Status(self)
         # Windows
         self.extraText = AdditionalTextWindow(self)
         self.search = SearchWindow(self)
         self.preview = PreviewWindow(self)
+        self.notes = SpeakerNotes(self)
+        self.textLog = TextLog(self)
         self.merging = False
 
-        speaker_jp_label = tk.Label(root, text="Speaker (JP)")
-        speaker_jp_label.grid(row=1, column=0)
-        speaker_jp_entry = tk.Entry(root, state="readonly")
-        speaker_jp_entry.grid(row=1, column=1, sticky=tk.NSEW)
-        self.speakerJp = speaker_jp_entry
+        # Nav
+        frm_filenav = tk.Frame(root)
+        chapters = ttk.Combobox(frm_filenav, width=40, font=fonts.UI_JP)
+        chapters.bind("<<ComboboxSelected>>", self.nav.change_chapter)
+        chapters.bind("<KeyRelease>", self.nav.searchChapters)
+        blocks = ttk.Combobox(frm_filenav, width=40, font=fonts.UI_JP, state="readonly")
+        blocks.bind("<<ComboboxSelected>>", self.nav.change_block)
+        
+        frm_filenav.rowconfigure((0,1), weight=1)
+        tk.Label(frm_filenav, text="Chapter").grid(row=0, column=0, sticky=tk.E)
+        tk.Label(frm_filenav, text="Block").grid(row=1, column=0, sticky=tk.E)
+        chapters.grid(row=0, column=1)
+        blocks.grid(row=1, column=1)
 
-        speaker_en_label = tk.Label(root, text="Speaker (EN)")
-        speaker_en_label.grid(row=1, column=2)
-        speaker_en_entry = tk.Entry(root)
-        speaker_en_entry.grid(row=1, column=3, sticky=tk.NSEW)
-        self.speakerEn = speaker_en_entry
+        # Speakers
+        frm_speakers = tk.Frame(root)
+        fnt_speakers_en = fonts.create(root, size=9)
+        self.speakerJp = speaker_jp_entry = tk.Entry(frm_speakers, state="readonly", font=fonts.UI_JP)
+        self.speakerEn = speaker_en_entry = tk.Entry(frm_speakers, width=26, font=fnt_speakers_en)
+        tk.Label(frm_speakers, text="Speaker (JP)").grid()
+        tk.Label(frm_speakers, text="Speaker (EN)").grid(row=1)
+        speaker_jp_entry.grid(row=0, column=1, sticky=tk.EW)
+        speaker_en_entry.grid(row=1, column=1)
+        tk.Button(frm_speakers, text="Translate all", command=self.tlNames).grid(row=0, column=2)
+        tk.Button(frm_speakers, text="Find missing", command=self.nav.nextMissingName).grid(row=1, column=2)
 
-        block_duration_label = tk.Label(root, text="Text Duration")
-        block_duration_label.grid(row=2, column=2)
-        block_duration_spinbox = ttk.Spinbox(root, from_=0, to=1000, increment=1, width=5)
-        block_duration_spinbox.grid(row=2, column=3, sticky=tk.W)
-        self.blockDuration = block_duration_spinbox
-        self.blockDurationLabel = block_duration_label
-
-        self.textBoxJp = text.TextBox(root, size=(None,5))
-        self.textBoxJp.grid(row=3, column=0, columnspan=4)
-
-        self.textBoxEn = text_box_en = text.TextBoxEditable(root, size=(None, 6))
-        text_box_en.grid(row=4, column=0, columnspan=4)
+        # Text editing
+        frm_text_edit = tk.Frame(root)
+        self.textBoxJp = text.TextBox(frm_text_edit, size=(None,5))
+        self.textBoxEn = text_box_en = text.TextBoxEditable(frm_text_edit, size=(None, 6))
         text_box_en.linkTo(self.textBoxJp, root)
+        self.textBoxJp.pack()
+        text_box_en.pack()
 
         self.choices = Choices(self)
-        self.choices.widget.grid_configure(row=3, rowspan=2, column=5, sticky=tk.NSEW)
 
+        # Metadata
+        frm_meta = tk.Frame(root)
+        self.blockDurationLabel = block_duration_label = tk.Label(frm_meta, text="Duration")
+        self.blockDuration = block_duration_spinbox = ttk.Spinbox(frm_meta, from_=0, to=1000, increment=1, width=5)
+        self.titleEn = txt_title = tk.StringVar(frm_meta)
+        txt_title.trace_add("write", self.fileMan.save_title)
+        titleLabel = tk.Label(frm_meta, text="Title (EN)")
+        titleEn = tk.Entry(frm_meta, width=27, font=fnt_speakers_en, textvariable=txt_title)
+        block_duration_label.pack(side=tk.LEFT)
+        block_duration_spinbox.pack(side=tk.LEFT)
+        titleLabel.pack(side=tk.LEFT)
+        titleEn.pack(side=tk.LEFT)
+
+        # Bottom bar
         frm_btns_bot = tk.Frame(root)
-        btn_colored = tk.Button(
+        def open_folder():
+            sid = StoryId.parse(self.nav.cur_file.type, self.nav.cur_file.getStoryId())
+            run(("explorer", TRANSLATION_FOLDER.joinpath(sid.type, sid.asPath()).resolve()))
+        tk.Button(frm_btns_bot, text="Open folder", width=10, command=open_folder).grid(row=0, column=0)
+        self.btnColored = btn_colored = tk.Button(
             frm_btns_bot,
             text="Colored",
             command=lambda: self.extraText.toggle(target=self.extraText.cur_colored),
             state="disabled",
             width=10,
         )
-        btn_colored.grid(row=1, column=0)
-        btn_listen = tk.Button(
-            frm_btns_bot, text="Listen", command=self.audio.listen, width=10
-        )
-        btn_listen.grid(row=0, column=1)
-        btn_search = tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10)
-        btn_search.grid(row=1, column=1)
-        btn_reload = tk.Button(
-            frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10
-        )
-        btn_reload.grid(row=0, column=2)
-        btn_save = tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10)
-        btn_save.grid(row=1, column=2)
+        tk.Button(frm_btns_bot, text="Text log", command=self.textLog.toggle, width=10).grid(row=1, column=1)
+        btn_colored.grid(row=0, column=1)
+        tk.Button(frm_btns_bot, text="Listen", command=self.audio.listen, width=10).grid(row=0, column=2)
+        tk.Button(frm_btns_bot, text="Search", command=self.search.toggle, width=10).grid(row=1, column=2)
+        tk.Button(frm_btns_bot, text="Reload", command=self.nav.reload_chapter, width=10).grid(row=0, column=3)
+        tk.Button(frm_btns_bot, text="Save", command=self.saveFile, width=10).grid(row=1, column=3)
         btn_prev = tk.Button(frm_btns_bot, text="Prev", command=self.nav.prev_block, width=10)
-        btn_prev.grid(row=0, column=3)
         btn_next = tk.Button(frm_btns_bot, text="Next", command=self.nav.next_block, width=10)
-        btn_next.grid(row=1, column=3)
-        frm_btns_bot.grid(row=5, columnspan=4, sticky=tk.NSEW)
+        btn_prev.grid(row=0, column=4)
+        btn_next.grid(row=1, column=4)
         for idx in range(frm_btns_bot.grid_size()[0]):
             frm_btns_bot.columnconfigure(idx, weight=1)
-        # Todo: move to nav class?
-        self.nav.btnNext = btn_next
-        self.nav.btnPrev = btn_prev
-        self.btnColored = btn_colored
 
+        # Side bar
         # Todo: split off?
-        frm_btns_side = tk.Frame(root)
-        side_buttons = (
-            tk.Button(
-                frm_btns_side,
-                text="Italic",
-                command=lambda: text_box_en.format_text(SimpleNamespace(keysym="i")),
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Bold",
-                command=lambda: text_box_en.format_text(SimpleNamespace(keysym="b")),
-            ),
-            tk.Button(
-                frm_btns_side, text="Convert\nunicode codepoint", command=text_box_en.char_convert
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Process text",
-                command=self._evProcessText,
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Process text\n(clean newlines)",
-                command=lambda: self._evProcessText(redoNewlines=True),
-            ),
-            tk.Button(
-                frm_btns_side,
-                text="Process text\n(whole chapter)",
-                command=lambda: self._evProcessText(wholeFile=True),
-            ),
-            tk.Button(frm_btns_side, text="Translate speakers", command=self.tlNames),
-            tk.Button(
-                frm_btns_side, text="Find missing speakers", command=self.nav.nextMissingName
-            ),
+        frm_editing_actions = tk.Frame(root)
+        editing_actions = (
+            ("i", lambda: text_box_en.format_text(SimpleNamespace(keysym="i"))),
+            ("b", lambda: text_box_en.format_text(SimpleNamespace(keysym="b"))),
+            ("fmt", self._evProcessText),
+            ("fmt hard", lambda: self._evProcessText(redoNewlines=True)),
+            ("fmt file", lambda: self._evProcessText(wholeFile=True)),
         )
-        for btn in side_buttons:
-            btn.pack(pady=3, fill=tk.X)
-        frm_btns_side.grid(column=6, row=0, rowspan=5, sticky=tk.E)
+        for txt, cmd in editing_actions:
+            tk.Button(frm_editing_actions, text=txt, command=cmd).pack(side=tk.LEFT, padx=2)
 
         ## Options
-        # todo: move to a separate frame class
-        save_checkbox = tk.Checkbutton(
-            root, text="Save chapter on block change", variable=self.options.saveOnBlockChange
+        opts = (
+            ("Save chapter on block change", self.options.saveOnBlockChange),
+            ("Skip translated blocks", self.options.skip_translated),
+            ("Mark as human TL", self.options.markHuman),
+            ("Keep editor on top", self.options.alwaysOnTop),
         )
-        save_checkbox.grid(row=6, column=1)
-        skip_checkbox = tk.Checkbutton(
-            root, text="Skip translated blocks", variable=self.options.skip_translated
-        )
-        skip_checkbox.grid(row=6, column=0)
-        set_humanTl_checkbox = tk.Checkbutton(
-            root, text="Mark as human TL", variable=self.options.markHuman
-        )
-        set_humanTl_checkbox.grid(row=6, column=2)
+        f_options = tk.Frame(root)
+        for txt, var in opts:
+            tk.Checkbutton(f_options, text=txt, variable=var).pack(side=tk.LEFT, ipadx=3)
+
+        # Init required parts
+        self.nav.uiInit(chapters, blocks, btn_next, btn_prev)
+        self.options.alwaysOnTop.trace_add("write", self._evhSetOnTop)
+
+        # Build UI
+        frm_filenav.grid(row=0, column=0, sticky=tk.NSEW, pady=5)
+        frm_speakers.grid(row=0, column=1, sticky=tk.NSEW, pady=5)
+        frm_text_edit.grid(row=1, columnspan=2)
+        self.choices.widget.grid_configure(row=1, column=2, sticky=tk.NSEW)
+        frm_editing_actions.grid(row=3, column=0, sticky=tk.W, pady=5)
+        self.notes.widget.grid(row=0, column=3, rowspan=2, sticky=tk.NSEW)
+        frm_meta.grid(row=3, column=1, sticky=tk.W)
+        frm_btns_bot.grid(row=4, columnspan=2, sticky=tk.NSEW)
+        f_options.grid(row=5, columnspan=2, sticky=tk.EW)
+        self.status.widget.grid(row=6, columnspan=2, sticky=tk.EW)
 
         ## Focus management
-        for f in (root, frm_btns_bot, frm_btns_side):
+        for f in (root, frm_btns_bot, frm_editing_actions):
             for w in f.children.values():
                 w.configure(takefocus=0)
         text_box_en.configure(takefocus=1)
@@ -189,6 +220,10 @@ class Editor:
         root.bind("<Control-p>", self.preview.toggle)
         root.bind("<Alt-s>", lambda _: self.options.skip_translated.set(not self.options.skip_translated.get()))
 
+        # Event handlers
+        root.bind_all("<<Log>>", lambda e: self.status.log(e.user_data))
+        root.bind_all("<<BlockChangeStart>>", self.notes.save)
+        root.bind_all("<<BlockChangeEnd>>", self.notes.load)
         root.protocol("WM_DELETE_WINDOW", self.onClose)
 
     def start(self):
@@ -211,7 +246,16 @@ class Editor:
         if self.audio:
             self.audio.dealloc()
         SpellCheck.saveNewDict()
+        self.notes.onExit()
         self.root.quit()
+
+    def _evhSetOnTop(self, *_):
+        if self.options.alwaysOnTop.get():
+            self.root.attributes("-topmost", True)
+            self.root.lift()
+        else:
+            self.root.attributes("-topmost", False)
+        self.root.update()
 
     def _evProcessText(self, event=None, wholeFile=False, redoNewlines=False):
         """Event handler for external text process calls."""
@@ -267,7 +311,7 @@ class Choices:
 
     def _evFollowBlock(self, choiceId):
         if choiceId >= len(self.curChoices):
-            print("This choice is not active!")
+            self.editor.status.log("This choice is not active!")
             return
         blockId = self.curChoices[choiceId].get("nextBlock")
         if blockId and blockId != -1:
@@ -615,7 +659,7 @@ class MergeWindow:
         pickers = (widget,) if widget else self.filePickers
         for picker in pickers:
             if not picker.activeFile:
-                print(f"No active file for picker {picker.id}")
+                self.master.status.log(f"No active file for picker {picker.id}")
                 continue
             try:
                 picker.view.loadRichText(picker.activeFile.textBlocks[blockIdx].get("enText"))
@@ -634,3 +678,230 @@ class MergeWindow:
             while len(self.filePickers) > reqNumPickers:
                 p = self.filePickers.pop()
                 p.destroy()
+
+#todo: merge with SaveState
+class Status:
+    def __init__(self, editor: Editor) -> None:
+        self.editor = editor
+        self.widget = tk.Frame(editor.root)
+        self.saveStatus = tk.Label(self.widget)
+        self.statusLog = tk.Label(self.widget)
+
+        self.fileSaved = None
+        self._defaultBg = self.statusLog.cget("background")
+
+        self.saveStatus.pack(side=tk.LEFT, padx=(0,5))
+        self.statusLog.pack(side=tk.LEFT, fill=tk.X)
+
+    def log(self, text:str):
+        self.statusLog.config(text=text, bg="#34c6eb")
+        self.statusLog.after(500, lambda: self.statusLog.config(bg=self._defaultBg))
+
+    def setSaved(self):
+        if self.fileSaved:
+            return
+        self.saveStatus.config(text="Saved", fg="#008a29")
+        self.fileSaved = True
+
+    def setUnsaved(self):
+        if not self.fileSaved:
+            return
+        self.saveStatus.config(text="Unsaved", fg="#8a0000")
+        self.fileSaved = False
+
+    def onFileChanged(self, chapter):
+        if chapter in self.editor.fileMan.saveState.unsavedChanges:
+            self.setUnsaved()
+        else:
+            self.setSaved()
+
+
+class SpeakerNotes:
+    file = Path("src/data/speaker_notes.json")
+    wrapLen = 35
+
+    def __init__(self, editor: Editor) -> None:
+        self.notes = utils.readJson(self.file)
+        self.changed = False
+        self.widget = display.SlidingTray(editor.root, "Speaker Notes", vertical=True)
+        self.scrollFrame = display.ScrollableFrame(self.widget.tray, True)
+        self.textBox = text.TextBoxEditable(
+            self.scrollFrame.content, 
+            size=(self.wrapLen, 50), 
+            font=fonts.UI_JP,
+            wrap=tk.WORD,
+        )
+        self.textBox.pack(fill=tk.BOTH)
+        self.scrollFrame.pack(fill=tk.BOTH, expand=1)
+
+    def _parseSpeaker(self, block):
+        return block.get("jpName", "default")
+
+    def load(self, event):
+        speaker = self._parseSpeaker(event.user_data)
+        note = self.notes.get(speaker, "")
+        self.textBox.loadRichText(note)
+        self.textBox.edit_modified(False)
+
+    def save(self, event):
+        if not self.textBox.edit_modified():
+            # print("not modified")
+            return
+        note = text.normalize(self.textBox.toRichText())
+        speaker = self._parseSpeaker(event.user_data)
+        if len(note) < 2:  # empty text
+            self.notes.pop(speaker, None)
+        else:
+            self.notes[speaker] = note
+        # print("Saved: ", note, "\n", "For: ", speaker)
+    
+    def onExit(self):
+        utils.writeJson(self.file, self.notes)
+
+
+class TextLog:
+    MODE_JP = 0
+    MODE_EN = 1
+    MODE_MIX = 2
+    TEXT_KEYS = ("jpText", "enText")
+    NAME_KEY = ("jpName", "enName")
+    TAG_KEYS = ("jp", "en")
+
+    def __init__(self, master: Editor) -> None:
+        self.master = master
+        self.root = root = tk.Toplevel(master.root)
+        root.title("Text Log")
+        root.protocol("WM_DELETE_WINDOW", self.toggle)
+        root.resizable(False, True)
+
+        self.mode = TextLog.MODE_EN
+        # self.lastLoad = (None, None)
+        root.bind_all("<<BlockSaved>>", self.evhOnBlockChange)
+        font = fonts.create(root, size=12, id="tlog")
+        self.text_area = text.TextBoxEditable(root, size=(None, 25), font=font)
+
+        scroll = tk.Scrollbar(root, command=self.text_area.yview)
+        self.text_area.config(yscrollcommand=scroll.set)
+
+        frm_btns = tk.Frame(root)
+        buttons = (
+            ("Undo", self.text_area.edit_undo),
+            ("Redo", self.text_area.edit_redo),
+            ("English", lambda: self.setMode(TextLog.MODE_EN)),
+            ("Japanese", lambda: self.setMode(TextLog.MODE_JP)),
+            ("Mixed", lambda: self.setMode(TextLog.MODE_MIX))
+        )
+        for txt, cmd in buttons:
+            tk.Button(frm_btns, text=txt, command=cmd).pack(side=tk.LEFT, padx=5, pady=5)
+        save_button = tk.Button(frm_btns, text="Save Changes", command=self.save_edits)
+        save_button.pack(side=tk.RIGHT, padx=5, pady=5)
+
+        frm_opts = tk.Frame(root)
+        self.useUmaFont = tk.BooleanVar(frm_opts, name="umafont", value=True)
+        self.useUmaFont.trace_add("write", self.swapFont)
+        tk.Checkbutton(frm_opts, text="Uma font", variable=self.useUmaFont).pack(side=tk.LEFT, padx=3)
+        self.fontSize = fontSize = tk.IntVar(frm_opts, value=13)
+        fontSize.trace_add("write", self.changeFontSize)
+        ttk.Spinbox(frm_opts, from_=2, to=75, increment=1, textvariable=fontSize).pack(side=tk.LEFT, padx=3)
+
+        root.grid_rowconfigure(0, weight=1)
+        self.text_area.grid(sticky=tk.NS)
+        scroll.grid(row=0, column=1, sticky=tk.NS)
+        frm_btns.grid(row=1, columnspan=2, sticky=tk.EW)
+        frm_opts.grid(row=2, columnspan=2, sticky=tk.EW)
+
+        self.text_area.tag_configure("en")
+        self.text_area.tag_configure("jp")
+        self.text_area.tag_configure("name", background="light grey")
+        root.withdraw()
+
+    def setMode(self, mode):
+        self.mode = mode
+        cur_idx = self.text_area.index(tk.INSERT)
+        self.populate_texts()
+        self.text_area.see(cur_idx)
+        self.text_area.mark_set(tk.INSERT, cur_idx)
+        # todo: scroll to same block idx
+
+    def populate_texts(self):
+        if not self.master.nav.cur_file:
+            return False
+        # if self.lastLoad == (self.mode, self.master.nav.cur_file):
+        #     return True
+        text.clearText(self.text_area)
+        self.text_area.config(width=calcLineLen(self.master.nav.cur_file))
+
+        if self.mode == TextLog.MODE_EN:
+            self.text_area.toggleSpellCheck(True)
+        else:
+            self.text_area.toggleSpellCheck(False)
+
+        if self.mode == TextLog.MODE_MIX:
+            for block in self.master.nav.cur_file.textBlocks:
+                jp_name = block.get(self.NAME_KEY[self.MODE_JP], "")
+                en_name = block.get(self.NAME_KEY[self.MODE_EN], "")
+                jp_Text = block.get(self.TEXT_KEYS[self.MODE_JP], "")
+                en_Text = block.get(self.TEXT_KEYS[self.MODE_EN], "")
+                text.setText(self.text_area,f"{jp_name} / {en_name}:", tag="name", append=True)
+                self.text_area.loadRichText(f"\n{jp_Text}", tag="jp", append=True)
+                self.text_area.loadRichText(f"\n\n{en_Text}\n\n", tag="en", append=True)
+        else:
+            for block in self.master.nav.cur_file.textBlocks:
+                block_name = block.get(self.NAME_KEY[self.mode], "")
+                block_text = block.get(self.TEXT_KEYS[self.mode], "")
+                text.setText(self.text_area, f"{block_name}:", tag="name", append=True)
+                self.text_area.loadRichText(f"\n{block_text}\n\n", tag=self.TAG_KEYS[self.mode], append=True)
+
+        # self.lastLoad = (self.mode, self.master.nav.cur_file)
+        return True
+
+    def toggle(self, event=None):
+        if self.root.state() == "normal":
+            self.root.withdraw()
+        else:
+            if not self.populate_texts():
+                self.master.status.log("No active file")
+                return
+            self.root.deiconify()
+            
+    def save_edits(self):
+        if self.mode == TextLog.MODE_JP:
+            return
+        ranges = self.text_area.tag_ranges("en")
+        blockEquiv = len(ranges)//2
+
+        textBLocks = self.master.nav.cur_file.textBlocks
+        if blockEquiv != len(textBLocks):
+            messagebox.showerror(message="Text log is corrupted, aborting save.")
+            print(f"mode: {self.mode}, edit blocks: {blockEquiv}, file blocks: {len(textBLocks)}\n")
+            print(ranges)
+            return
+
+        for i, (start, end) in enumerate(text.TextBox.deinterleaveTagRange(ranges)):
+            block_text = text.normalize(self.text_area.toRichText(start, end))
+            if textBLocks[i]["enText"] == block_text:
+                continue
+            textBLocks[i]["enText"] = block_text
+            self.master.status.setUnsaved()
+            self.master.fileMan.saveState.unsavedChanges.add(self.master.nav.cur_chapter)
+            # Directly update the main UI English text box if it's the currently displayed block
+            if i == self.master.nav.cur_block:
+                self.master.textBoxEn.loadRichText(block_text)
+        self.text_area.edit_reset()
+
+    def swapFont(self, *_):
+        if self.useUmaFont.get():
+            self.text_area.fontConfig(family=fonts.UMATL_FONT_NAME)
+        else:
+            self.text_area.fontConfig(family=fonts.getDefaultFontName())
+
+    def changeFontSize(self, *_):
+        try:
+            newsize = self.fontSize.get()
+        except tk.TclError:
+            return
+        self.text_area.fontConfig(size=newsize)
+
+    def evhOnBlockChange(self, event):
+        if self.root.winfo_ismapped() and self.master.textBoxEn.edit_modified():
+            self.populate_texts()

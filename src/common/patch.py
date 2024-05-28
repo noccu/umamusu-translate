@@ -33,6 +33,9 @@ def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
         .splitlines()
     ):
         m = regex.match(r'.?[AM]\s*"?([^"]+)"?', line)
+        # Ignore other statuses like "new/??"
+        if not m:
+            continue
         path = Path(m[1])
         if (
             path.parts[0] != "translations" 
@@ -65,10 +68,10 @@ def searchFiles(
     for root, dirs, files in os.walk(searchDir):
         root = Path(root)
         dirType = len(dirs[0]) if dirs else -1
-        if targetSet and dirType == 5 and targetSet in dirs:
-            dirs[:] = (targetSet,)
-        elif targetGroup and dirType == 2 and targetGroup in dirs:
-            dirs[:] = (targetGroup,)
+        if targetSet and dirType == 5:
+            dirs[:] = [d for d in dirs if d == targetSet]
+        elif targetGroup and dirType == 2:
+            dirs[:] = [d for d in dirs if d == targetGroup]
         elif targetId:
             if targetType in ("lyrics", "preview"):
                 found.extend(
@@ -77,9 +80,11 @@ def searchFiles(
                     if PurePath(file).stem == targetId and (utils.isJson(file) if jsonOnly else True)
                 )
                 continue  #? probably return
-            elif dirType == 4 and targetId in dirs:
-                dirs[:] = (targetId,)
-        if targetIdx and files:
+            elif dirType == 4:
+                dirs[:] =  [d for d in dirs if d == targetId]
+        if not files:
+            continue
+        if targetIdx:
             found.extend(
                 root.joinpath(file)
                 for file in files

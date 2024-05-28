@@ -2,13 +2,13 @@ from os import environ, name as osname
 from pathlib import Path
 
 IS_WIN = osname == "nt"
-DMM_CONFIG = Path(environ["APPDATA"], "dmmgameplayer5/dmmgame.cnf") if IS_WIN else None
+DMM_CONFIG = Path(environ["APPDATA"], "dmmgameplayer5", "dmmgame.cnf") if IS_WIN else None
 
 if IS_WIN:
-    GAME_ROOT = Path(environ["LOCALAPPDATA"], "../LocalLow/Cygames/umamusume").resolve()
+    GAME_ROOT = Path(environ["LOCALAPPDATA"], "..", "LocalLow", "Cygames", "umamusume").resolve()
     GAME_ASSET_ROOT = GAME_ROOT.joinpath("dat")
     GAME_META_FILE = GAME_ROOT.joinpath("meta")
-    GAME_MASTER_FILE = GAME_ROOT.joinpath("master/master.mdb")
+    GAME_MASTER_FILE = GAME_ROOT.joinpath("master", "master.mdb")
 else:
     _none:Path = None  # Fuckery to gaslight IDE into common scenario
     GAME_ROOT = GAME_ASSET_ROOT = GAME_META_FILE = GAME_MASTER_FILE = _none

@@ -89,5 +89,6 @@ THIS | THIS
 ## El Condor Pasa
 Term | Translation
 ---|---
-最強、最速、怪鳥！　エルコンドルパサー参上！ | Power! Speed! Bird of mystery and fear! El Condor Pasa appears!
+最強、最速、怪鳥！　エルコンドルパサー参上！ | Power! Speed! Bird of mystery and fear! El Condor Pasa is here!
 優勝、快勝、エル圧勝っ！！ | Glorious! Meritorious! El's victorious!!
+怪鳥！快勝！エル参上！！ | Bird of prey! Snatching victory away! El's here to stay!

@@ -342,6 +342,7 @@ Not all of these might be present in the patch data.
 
 name | progress | translator
 --- | --- | ---
+Bakunetsu My Soul | Complete | [LotoDS]
 Blaze | Complete | [noccu]
 BLOW my GALE | Complete | [noccu]
 [*Boukyaku Nite*](https://youtu.be/o400qsQ3vhY) | Complete | [Snep]
@@ -380,6 +381,7 @@ Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by
 Tracen Ondo | Complete | [Kasey]
 transforming | Complete | [LotoDS]
 Umapyoi Densetsu | Complete | Anonymous Reindeer + [Karimenrider] (missing parts)
+U.M.A. New World | Complete | [LotoDS]
 UNLIMITED IMPACT | Complete | [noccu]
 We are DREAMERS!! | Complete | TR
 winning the soul | Complete | [Kuun0]

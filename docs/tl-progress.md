@@ -89,8 +89,8 @@ name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 Admire Vega | Complete | [CatNipHoarder] & [Holo]
-Air Shakur | Exists | [fling]
-Agnes Digital | In progress | [fling]
+Air Shakur | Complete | [fling]
+Agnes Digital | Complete | [fling]
 Agnes Tachyon | Complete | [Ren] (ep 1), [noccu] + [xct] (ep 2-3), [xct] (ep 4-7)
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
@@ -342,6 +342,7 @@ Not all of these might be present in the patch data.
 
 name | progress | translator
 --- | --- | ---
+Bakunetsu My Soul | Complete | [LotoDS]
 Blaze | Complete | [noccu]
 BLOW my GALE | Complete | [noccu]
 [*Boukyaku Nite*](https://youtu.be/o400qsQ3vhY) | Complete | [Snep]
@@ -380,6 +381,7 @@ Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by
 Tracen Ondo | Complete | [Kasey]
 transforming | Complete | [LotoDS]
 Umapyoi Densetsu | Complete | Anonymous Reindeer + [Karimenrider] (missing parts)
+U.M.A. New World | Complete | [LotoDS]
 UNLIMITED IMPACT | Complete | [noccu]
 We are DREAMERS!! | Complete | TR
 winning the soul | Complete | [Kuun0]

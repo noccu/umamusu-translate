@@ -89,8 +89,8 @@ name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 Admire Vega | Complete | [CatNipHoarder] & [Holo]
-Air Shakur | Exists | [fling]
-Agnes Digital | In progress | [fling]
+Air Shakur | Complete | [fling]
+Agnes Digital | Complete | [fling]
 Agnes Tachyon | Complete | [Ren] (ep 1), [noccu] + [xct] (ep 2-3), [xct] (ep 4-7)
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]

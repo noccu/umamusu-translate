@@ -110,7 +110,7 @@ If you only want to update UmaTL without applying the patch, you can run `update
 More info (read first!) and troubleshooting for each part below.
 
 ## UI (menus, buttons, ...)
-TLG itself can be updated by running the install script again from UmaTL's parent folder and choosing update mode, or by simply overwriting its `.dll` file with the new one manually.
+TLG itself can be updated by running the install script again from UmaTL's parent folder and choosing update mode, or by simply overwriting its 2 `.dll` files with the new one manually.
 
 ### Troubleshooting
 - If you get **errors** when starting the game: 

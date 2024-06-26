@@ -1,17 +1,21 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
-REM This script is intended to be run where you want the patch to live, not from its source folder.
+
+REM Set workdir correctly when called from scripts dir
+FOR %%I IN (.) DO SET parent=%%~nxI
+IF %parent% EQU scripts (
+    CD ../../..
+)
+
+REM Check for existing install
 IF EXIST "UmaTL" (
-    SET /P reinstall=An UmaTL folder already exists. Replace it? [y]es, [n]o, [u]pdate: 
-    IF /I !reinstall! EQU y (
-        RMDIR /S /Q UmaTL
-        CALL :install
-    ) ELSE IF /I !reinstall! EQU u (
-        CALL patch.bat install
-        EXIT /B
-    ) ELSE ( 
-        ECHO No actions required, exiting.
-    )
+    SET name=UmaTL
+)
+IF EXIST "umamusu-translate" (
+    SET name=umamusu-translate
+)
+IF DEFINED name (
+    CALL :update
 ) ELSE (
     CALL :install
 )
@@ -27,6 +31,19 @@ MOVE uma-temp-mingit UmaTL\.mingit
 CD UmaTL
 CALL patch.bat install
 EXIT /B 0
+
+:update
+SET /P reinstall=Existing UmaTL found. What do you want to do? [u]pdate, [r]einstall, [e]xit:
+IF /I !reinstall! EQU r (
+    RMDIR /S /Q %name%
+    CALL :install
+) ELSE IF /I !reinstall! EQU u (
+    CALL patch.bat install
+    EXIT /B
+) ELSE (
+    ECHO No actions required, exiting.
+)
+EXIT /B
 
 :mingit
 ECHO Installing MinGit ^(https://github.com/git-for-windows/git/releases^)...

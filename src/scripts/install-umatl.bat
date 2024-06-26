@@ -1,6 +1,13 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
-REM This script is intended to be run where you want the patch to live, not from its source folder.
+
+REM Set workdir correctly when called from scripts dir
+FOR %%I IN (.) DO SET parent=%%~nxI
+IF %parent% EQU scripts (
+    CD ../../..
+)
+
+REM Check for existing install
 IF EXIST "UmaTL" (
     SET /P reinstall=An UmaTL folder already exists. Replace it? [y]es, [n]o, [u]pdate: 
     IF /I !reinstall! EQU y (

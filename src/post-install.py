@@ -50,7 +50,7 @@ def download_tlg():
         # Ask to replace the correct file
         file_choice = "\n".join(f"{i}: {n}" for i, n in enumerate(TLG_TARGETS))
         tlg_idx = int(input(
-            f"\nTLG and other mods can share these filenames\n{file_choice}\n"
+            f"\nTLG and other mods can share these filenames:\n{file_choice}\n"
             "Input the number corresponding to your existing TLG file to overwrite: "
         ).strip()[0])
     # Find latest release
@@ -74,6 +74,7 @@ def install_tlg(tlg_idx):
     if tlg_idx != -1:
         try:
             utils.getUmaInstallDir().joinpath(TLG_TARGETS[tlg_idx]).unlink()
+            utils.getUmaInstallDir().joinpath("tlg.dll").unlink()
         except PermissionError:
             pass # Defer to message later.
         except FileNotFoundError:
@@ -81,7 +82,8 @@ def install_tlg(tlg_idx):
     # Extract zip
     with ZipFile(TMP_STORE.joinpath("tlg.zip")) as zip:
         # Extract overwrites existing files
-        tlg_dll = Path(zip.extract(TLG_TARGETS[0], TMP_STORE))
+        loader_dll = Path(zip.extract("version.dll", TMP_STORE))
+        tlg_dll = Path(zip.extract("tlg.dll", TMP_STORE))
     # Copy config
     try:
         shutil.copyfile(TLG_CFG, utils.getUmaInstallDir().joinpath(TLG_CFG.name))
@@ -94,10 +96,11 @@ def install_tlg(tlg_idx):
         raise
     except FileExistsError:
         pass # Overwrite requested, copy dll
-    # Copy DLL
+    # Copy DLLs
+    shutil.copyfile(tlg_dll, utils.getUmaInstallDir().joinpath("tlg.dll"))
     for name in (TLG_TARGETS if tlg_idx == -1 else (TLG_TARGETS[tlg_idx],)):
         try:
-            shutil.copyfile(tlg_dll, utils.getUmaInstallDir().joinpath(name))
+            shutil.copyfile(loader_dll, utils.getUmaInstallDir().joinpath(name))
         except FileExistsError:
             # New install (no config) but dll exists. idx == -1
             logger.info(
@@ -118,7 +121,7 @@ def main():
     get_tlg = input("Install TLG for UI translations? [y]es, [n]o: ")
     if get_tlg.startswith("n"):
         return
-    
+
     TMP_STORE.mkdir(exist_ok=True)
     try:
         download_tlg()

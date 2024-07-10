@@ -48,7 +48,9 @@ EXIT /B
 :mingit
 ECHO Installing MinGit ^(https://github.com/git-for-windows/git/releases^)...
 MKDIR uma-temp-mingit
-curl -L -o uma-temp-mingit.zip "https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/MinGit-2.38.1-64-bit.zip"
+if not exist "uma-temp-mingit.zip" (
+    curl -L -o uma-temp-mingit.zip "https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/MinGit-2.38.1-64-bit.zip"
+)
 tar -xf uma-temp-mingit.zip -C uma-temp-mingit
 DEL uma-temp-mingit.zip
 EXIT /B 0

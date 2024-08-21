@@ -7,7 +7,7 @@ from manage import CONFIG_FILE as TLG_CFG
 import requests
 
 TLG_TARGETS = (
-    "version.dll",
+    "dxgi.dll",
     "umpdc.dll",
     "xinput1_3.dll"
 )
@@ -92,7 +92,7 @@ def install_tlg(tlg_idx):
     # Extract zip
     with ZipFile(TMP_STORE.joinpath("tlg.zip")) as zip:
         # Extract overwrites existing files
-        loader_dll = Path(zip.extract("version.dll", TMP_STORE))
+        loader_dll = Path(zip.extract("dxgi.dll", TMP_STORE))
         tlg_dll = Path(zip.extract("tlg.dll", TMP_STORE))
     # Copy config
     try:
@@ -100,7 +100,7 @@ def install_tlg(tlg_idx):
     except PermissionError:
         logger.error(
             "No permission to write to the Uma Musume install dir.\n"
-            "Please copy temp/version.dll & localify/config.json there yourself.\n"
+            "Please copy temp/dxgi.dll & localify/config.json there yourself.\n"
             f"Install dir: {utils.getUmaInstallDir()}"
         )
         raise

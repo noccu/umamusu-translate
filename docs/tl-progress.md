@@ -96,6 +96,7 @@ Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
+Cesario | Complete | [LotoDS]
 Cheval Grand | Exists | Naellza
 Copano Rickey | Complete | [LotoDS]
 Curren Chan | Complete | [CatNipHoarder] & [Holo]

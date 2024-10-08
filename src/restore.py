@@ -9,7 +9,7 @@ import common.constants as const
 from common import patch, logger
 from common.types import TranslationFile, GameBundle
 
-HOSTNAME = "https://prd-storage-umamusume.akamaized.net/dl/resources"
+HOSTNAME = "https://prd-storage-game-umamusume.akamaized.net/dl/resources"
 GENERIC_ENDPOINT = HOSTNAME + "/Generic/{0:.2}/{0}"
 ASSET_ENDPOINT = HOSTNAME + "/Windows/assetbundles/{0:.2}/{0}"
 MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"

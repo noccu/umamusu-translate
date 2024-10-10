@@ -379,6 +379,7 @@ Never Looking Back | Complete | [COSMET]
 Pyoitto♪Hallelujah! | Complete | [Kasey]
 [*Rising Girl*](https://twitter.com/dorcarolle/status/1192625305795489792) | Complete, Stalled | [dorcarolle](https://twitter.com/dorcarolle), [noccu]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
+Slapstick Clash insert song | Complete | [LotoDS]
 [TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
 *Tachiichi Zeroban! Juni ha Ichiban! (Smart Falcon)* | In progress | [Kasey]
 Tracen Ondo | Complete | [Kasey]

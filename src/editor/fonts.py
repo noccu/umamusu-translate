@@ -41,12 +41,14 @@ def load(fontPath):
 
 
 def create(root, name=UMATL_FONT_NAME, size=18, italic=False, bold=False, id=None):
+    idArg = id
     if not id:
         id = (name, size, italic, bold)
     if id in _DYNAMIC:
         return _DYNAMIC[id]
     _DYNAMIC[id] = font = Font(
         root=root,
+        name=idArg,
         family=name,
         size=size,
         weight="bold" if bold else "normal",
@@ -59,7 +61,7 @@ def get(id):
     return _DYNAMIC.get(id)
 
 
-def createFrom(root, font:Font = None, size=None, italic=False, bold=False, id=None):
+def createFrom(root, font:Font = None, size=None, italic=False, bold=False, id=None, suffix=None):
     """Duplicate a font with new parameters, uses default tk font if not specified."""
     if id and (f := _DYNAMIC.get(id)):
         return f
@@ -67,6 +69,8 @@ def createFrom(root, font:Font = None, size=None, italic=False, bold=False, id=N
         font = nametofont("TkDefaultFont")
     # elif isinstance(font, tk.Widget):
         # pass
+    if suffix and font.name:
+        id = f"{font.name}_{suffix}"
     font = font.actual()
     return create(root, font["family"], size or font["size"], italic, bold, id)
 

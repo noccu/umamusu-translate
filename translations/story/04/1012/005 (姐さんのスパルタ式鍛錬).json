@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "YCETQRD4V4DQVO7IXVYP6NIQHB6CLSZE",
     "type": "story",
     "storyId": "041012005",
     "title": "姐さんのスパルタ式鍛錬",
+    "enTitle": "A caring sister's spartan workout",
     "text": [
         {
             "jpName": "",
             "enName": "",
             "jpText": "ヒシアマゾンと2人、ビュッフェスタイルの\r\nカフェテリアにランチしにきた。",
-            "enText": "Hsiamazon and I came to have lunch at a buffet-style cafeteria.",
+            "enText": "Hishi Amazon and I had come to the cafeteria, \nwith its buffet-style service, for lunch.",
             "nextBlock": 2,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 131,
@@ -27,11 +29,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "お、色々よそってきたみたいだな、トレ公！\r\nどんなオカズ取ってきたんだ？",
-            "enText": "Oh, looks like you've got some food on the table, Tre! What kind \nof food did you get?",
+            "enText": "<i>Ooh</i>, picked up a bunch of stuff, didn't ya, Big T! \nWhich sides did you get today?",
             "nextBlock": 3,
             "origClipLength": 161,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 50,
@@ -47,11 +50,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "ん、その皿の色合い……なんか見覚えあるな。\r\nアンタ、いつもまったく同じもん食ってないか？",
-            "enText": "Hmm, the color of that plate…… looks familiar. You always eat the \nexact same thing, don't you?",
+            "enText": "Hm? The look of those plates feels familiar. \n… You eating the same thing all the time?",
             "nextBlock": 4,
             "origClipLength": 335,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 100,
@@ -69,9 +73,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "鉄板のメニューは、ついついリピートしてしまうものだ。\r\nそう説明したけれど……。",
-            "enText": "The iron plate menu is what keeps me coming \nback. That's what I explained but ……",
+            "enText": "I have to admit I have a hard time moving away \nfrom the griddle-cooked options. They've become \nan easy go-to. When I told her this, though…",
             "nextBlock": 5,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 50,
@@ -87,11 +92,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "甘いっ、甘いねトレ公！　そういうお決まりコースに\r\nつい乗っちまうのが罠なのさ！",
-            "enText": "Sweet, sweet Lord Tre! It's a trap to fall into such a routine!",
+            "enText": "How spiritless and indulgent! You're letting yourself \nget caught up in the same old routine, Big T!",
             "nextBlock": 6,
             "origClipLength": 190,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 50,
@@ -103,11 +109,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "健康ってのは、そういうもんじゃないだろ。定番でいいやと思う\r\n気持ちを捨てて、ガンガン栄養の幅を広げていかないと！",
-            "enText": "That's not what health is all about. We need to get rid of the \nfeeling that the standard is fine, and broaden our nutritional \nhorizons with gusto!",
+            "enText": "That's not healthy and you know it. \nDitch the complacency, get some variety in your diet!",
             "nextBlock": 7,
             "origClipLength": 241,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 75,
@@ -123,11 +130,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "そんで、栄養と同じくらい大切なのが運動だ。\r\n最近、どうも気になってたんだよね。",
-            "enText": "And just as important as nutrition is exercise. I've been \nthinking about it a lot lately.",
+            "enText": "On that topic, physical activity is just as important as diet. \nI've been asking myself lately…",
             "nextBlock": 8,
             "origClipLength": 243,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 64,
@@ -143,15 +151,16 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "トレ公、アンタ、ちゃんと運動してるか？　まさか運動は\r\nアタシたちに任せて、ラク決め込んでるんじゃないだろうね？",
-            "enText": "Are you doing your exercises, Tre? You're not going to leave the \nexercise to us, are you?",
+            "enText": "Are you getting enough exercise, Big T? You're not thinking \nyou can leave the physical work to us and watch comfortably \nfrom the sidelines, are you?",
             "nextBlock": 9,
             "origClipLength": 302,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "適度にはやってるつもりだけど……",
-                    "enText": "I think I do it in moderation. ……",
+                    "enText": "I think I'm doing just about enough……",
                     "nextBlock": 9
                 }
             ],
@@ -170,11 +179,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "適度！　そんなもんでトレーナーにふさわしい体が作れると\r\n思ったら大間違いだよ！",
-            "enText": "Moderate! If you think that's going to make you fit to be a \ntrainer, you're wrong!",
+            "enText": "Just about!? You think that's all it takes to have \nthe physique required of a trainer!?",
             "nextBlock": 10,
             "origClipLength": 186,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 20,
@@ -190,11 +200,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "こいつは放っておけないね。よし、このヒシアマ姐さんに任せな！\r\n美浦寮長の名にかけて、その体、引き締めてやるよ。",
-            "enText": "I can't leave this guy alone. All right, leave \nit to Miss Hsiama here! In the name of the Miho \nmatron, I'll tighten up that body of yours.",
+            "enText": "We can't be having this, now. Right, you just leave it to me! \nOn my pride as Miho RA, I'll whip ya into shape.",
             "nextBlock": 11,
             "origClipLength": 344,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 50,
@@ -210,11 +221,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "さぁ、ついて来な！",
             "enText": "Come on, follow me!",
             "nextBlock": 12,
             "origClipLength": 58,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 50,
@@ -226,11 +238,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "まずは軽くジョギングだ！　このアタシを追い抜いたら、\r\nレッスン終了だよ！　せーの、たあああああああ！",
-            "enText": "First, a quick jog! If you pass me, the lesson is over! Ready, go!",
+            "enText": "We're gonna start with a light jog! You're done \nwhen you pass me! One, two, gooooooo!",
             "nextBlock": 13,
             "origClipLength": 305,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 31,
@@ -250,21 +263,23 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "何チンタラ歩いてんだい？　え、それでも走ってる？\r\nそんなにノロノロやってたら、いつまでも痩せらんないよ？",
-            "enText": "What are you walking so slowly? Are you still running? If you're \nrunning so slowly, you'll never lose weight, will you?",
+            "enText": "What's that lazy walk about? You call that running? \nHow're you gonna firm up going that slow?",
             "nextBlock": 14,
             "origClipLength": 312,
+            "voiceIdx": 10,
             "pathId": -7960929945315895194,
             "blockIdx": 13
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "つぎは筋トレだ。1セットやったら、はい休みなんて、生半可な\r\nメニューじゃないよ。サーキットトレーニングはじめ！",
-            "enText": "Next up is strength training, and I don't want \nyou to just do one set and then take the rest of \nthe day off. Let the circuit training begin!",
+            "enText": "Let's move on to weights. And don't think you're getting away \nwith resting after one set. You're doing circuit training!",
             "nextBlock": 15,
             "origClipLength": 302,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 50,
@@ -280,11 +295,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "腕、脚、腹！　腕、脚、腹！　ここで休憩と見せかけて、\r\n背中いくよ！　はい、エビ反りー！",
-            "enText": "Arms, legs, belly! Arms, legs, stomach! We'll \npretend we're taking a break here, but here comes \nthe back! Yes, curl up in the shrimp!",
+            "enText": "Arms, legs, core! Arms, legs, core! Now, as a rest, we can \nwork on your back! Show me your bow pose!",
             "nextBlock": 16,
             "origClipLength": 339,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 40,
@@ -300,15 +316,16 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "なんだい、そのハンパな反りは。もっともっと！\r\n気合い入れてやんないと、イセエビに笑われるよ？",
-            "enText": "What's with the humpy warp? More, more, more! Put your back into \nit, or the lobsters will laugh at you.",
+            "enText": "What's that supposed to be? Where's the curve?! \nPut your back into it, even a violin bow would laugh at you!",
             "nextBlock": 17,
             "origClipLength": 234,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "さすがに……もう無理……",
-                    "enText": "You're right, I can't…… anymore ……",
+                    "enText": "I'm… done for…",
                     "nextBlock": 17
                 }
             ],
@@ -327,11 +344,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "こら、なに怠けてんだ！　タイマン上等、\r\nけど怠慢はよくないよ！",
-            "enText": "Hey, what are you waiting for? I love \na good fight, but don't be lazy!",
+            "enText": "Hey, don't go all slack on me! I'll take a one-on-one anytime, \nbut I won't have a one-and-done!",
             "nextBlock": 18,
             "origClipLength": 178,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 50,
@@ -347,11 +365,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "ってトレ公！？　トレ公ってば。あーあ、なんだい、\r\nそのザマは。だらしないねぇ。",
-            "enText": "What do you mean, \"Lord Tre? Lord Tre. Oh, my God, what's wrong \nwith you? You're so sloppy.",
+            "enText": "Hm? Big T?! ……Big T. <i>Huaah</i>… what a sorry sight. \nMaybe I should start calling ya <i>Lil' T</i>.",
             "nextBlock": 19,
             "origClipLength": 336,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 137,
@@ -367,11 +386,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "はははは、少～しアツくなりすぎちまったかね。\r\n悪い、ついクセっていうか……。",
-            "enText": "Ha-ha-ha, maybe I'm getting a little too enthusiastic. Sorry, \nit's just a habit. ……",
+            "enText": "Ahahaha, I might've gotten just a liiiittle too into it. \nMy bad, it's kind of a habit……",
             "nextBlock": 20,
             "origClipLength": 281,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 210,
@@ -387,20 +407,21 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "顔見知りの面倒は、徹底的にみたくなっちまうのさ。\r\n尻がムズムズしちまって。",
-            "enText": "I'm always so eager to take care of \npeople I know. My ass is itching.",
+            "enText": "I can't help but want to take care of the people around me.",
             "nextBlock": 21,
             "origClipLength": 215,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "世話女房肌なんだな",
-                    "enText": "You have the skin of a caretaker wife.",
+                    "enText": "You'd make a great wife.",
                     "nextBlock": 21
                 },
                 {
                     "jpText": "世話女房肌なんだね",
-                    "enText": "You have the skin of a caretaker wife.",
+                    "enText": "You'll make someone very happy one day.",
                     "nextBlock": 21
                 }
             ],
@@ -419,11 +440,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "せ、世話女房！？　バカっ、何ハズいこと言ってんだよ～！\r\nそんな優しいもんじゃねぇし！",
-            "enText": "A caretaker's wife! What the hell are \nyou talking about! It's not that kind!",
+            "enText": "<b>H-H-Huh!?</b> Why do you gotta make it embarrassing like that～! \nAnd it ain't nothing that sweet!",
             "nextBlock": 22,
             "origClipLength": 203,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 50,
@@ -439,11 +461,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "アタシはっ、いつもリードしたいのさ。\r\n誰かと二人三脚で進んだことなんてないしね。",
-            "enText": "I always want to lead. I've never gone on a tripod with someone.",
+            "enText": "I just always want to take the lead is what it is. \nWalking side by side with someone isn't something \nI've ever done before.",
             "nextBlock": 23,
             "origClipLength": 216,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 153,
@@ -455,11 +478,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "トレ公がついた今も、なんか距離感つかめないってか\r\nどう付き合えばいいのか、わかんないってか。",
-            "enText": "Even now, with the new trekkie, I can't seem to grasp the \ndistance between us, and I don't know how to get along with her.",
+            "enText": "Even now, trying to do so with you, it's hard for me to grasp \nour relationship or how I should act sometimes.",
             "nextBlock": 24,
             "origClipLength": 242,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 87,
@@ -475,20 +499,21 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "タイマンなら得意だけど、手を組んでやるってのは\r\n難しいもんだね。",
-            "enText": "I'm good in a tie-up, but it's hard \nto do it in a hand-to-hand combat.",
+            "enText": "I have zero issues facing off with anyone, but standing \nside by side is a whole different matter, huh.",
             "nextBlock": 25,
             "origClipLength": 164,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "徐々に慣れていこう",
-                    "enText": "Let's get used to it.",
+                    "enText": "You'll get used to it, step by step.",
                     "nextBlock": 25
                 },
                 {
                     "jpText": "徐々に慣れていこうよ",
-                    "enText": "Let's just get used to it.",
+                    "enText": "You'll get used to it, step by step.",
                     "nextBlock": 25
                 }
             ],
@@ -507,11 +532,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "徐々に、か……。そうだな、やってみるしかないよな！\r\nできるかどうかはわかんないけど。",
-            "enText": "Gradually, or…… Yeah, we'll just have to \ntry! I don't know if I can do it or not.",
+            "enText": "Step by step… You're right, we just gotta give it a go! \nI don't know if it'll work out…",
             "nextBlock": 26,
             "origClipLength": 282,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 50,
@@ -527,20 +553,21 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "アタシたちはまだ、はじまったばかりなんだから！",
-            "enText": "We've only just begun!",
+            "enText": "But we're only just getting to know each other, after all!",
             "nextBlock": 27,
             "origClipLength": 105,
+            "voiceIdx": 23,
             "choices": [
                 {
                     "jpText": "ああ、よろしくな！",
-                    "enText": "Yeah, nice to meet you!",
+                    "enText": "That's right! Glad to be with you!",
                     "nextBlock": 27
                 },
                 {
                     "jpText": "うん、よろしくね！",
-                    "enText": "Yeah, nice to meet you!",
+                    "enText": "That's right! Glad to be with you!",
                     "nextBlock": 27
                 }
             ],
@@ -559,11 +586,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "おう！　ははは、少し元気になったようだね。",
-            "enText": "Oh! Haha, you seem to be feeling a little better.",
+            "enText": "Same here! Hahah, looks like you got some mojo back.",
             "nextBlock": 28,
             "origClipLength": 129,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 44,
@@ -579,11 +607,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "つーことで、休憩終わり！\r\nさ、運動再開といこうか。",
-            "enText": "So, the break is over! Now, let's resume exercise.",
+            "enText": "Great, because that's the end of your break! \nLet's get back to it.",
             "nextBlock": 29,
             "origClipLength": 167,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 87,
@@ -599,11 +628,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "って、何イヤそうな顔してるんだよ。このヒシアマ姐さん、\r\n1度面倒見ると決めたら、絶対に見捨てたりしないよ。",
-            "enText": "What's with the sour look on your face? This Miss Hishiamah, once \nshe decides to take care of you, she will never abandon you.",
+            "enText": "Whoa, don't look at me like that. I told you, once you got me \ncaring for you, <i>you got me caring</i>. Big sister style.",
             "nextBlock": 30,
             "origClipLength": 277,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 202,
@@ -619,11 +649,12 @@
         },
         {
             "jpName": "ヒシアマゾン",
-            "enName": "",
+            "enName": "Hishi Amazon",
             "jpText": "さぁ、走った走った！　ははは、これじゃあどっちがトレーナーか\r\nわかりゃしないね。ま、こんなのも悪くないさ！",
-            "enText": "Now, let's run, run, run! I can't tell which one of us is the \ntrainer. Well, this isn't so bad!",
+            "enText": "Come on then, run, run! Hahaha, anyone watching would be \nconfused who's training who. Can't say I dislike it, though!",
             "nextBlock": 31,
             "origClipLength": 286,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 239,
@@ -641,9 +672,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "歩幅もペースも、ヒシアマゾンは合わせることを知らない。\r\nそれでも……はじめて二人三脚で走り始めた。",
-            "enText": "Neither stride nor pace knew Hsiamazon to match. Nevertheless…… \nfor the first time, they began to run together as a tripod.",
+            "enText": "She might be not be used to matching pace with someone, \nbut all the same, Hishi Amazon tried to for the first time…",
             "nextBlock": -1,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 129,
@@ -658,5 +690,6 @@
             "blockIdx": 31
         }
     ],
-    "modified": 1657207754
+    "modified": 1716771166,
+    "humanTl": true
 }

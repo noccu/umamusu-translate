@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "TXQMFJ6CQOEJ32F5WDKVSR6KUBEDAUKS",
     "type": "story",
     "storyId": "041064007",
     "title": "メジロパーマーのトレーナー",
+    "enTitle": "Mejiro Palmer's trainer",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "夏合宿。メジロパーマーは、トレーニングにも真面目に取り組み、\r\nその上で自分らしさを活かすように、楽しそうに走っている。",
-            "enText": "Summer training camp. Mejiro Palmer takes her training seriously, \nand on top of that, she runs happily, as if to make the most of \nher own personality.",
+            "enText": "We'd come to the summer training camp. Mejiro Palmer was \nnot only dedicated to her training, but running cheerfully, \nembracing her unique running style.",
             "nextBlock": 2,
             "origClipLength": 123,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 13,
@@ -25,9 +27,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "何も問題はない――の、だが。",
-            "enText": "There is nothing wrong with that - but.",
+            "enText": "Everything was going smoothly, or so it seemed…",
             "nextBlock": 3,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 9,
@@ -41,9 +44,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "あ。トレーナー、先に休んでていいよ？\r\n喉渇いてない？　私のことは気にせず、休憩とってね？",
-            "enText": "Ah. Trainer, you can go ahead and rest, okay? Are you thirsty? \nDon't worry about me, just take a break, okay?",
+            "enText": "Ah, Trainer, you can go ahead and rest, all right? \nAren't you thirsty? Don't worry about me, just take \na break, 'kay?",
             "nextBlock": 4,
             "origClipLength": 253,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 46,
@@ -61,13 +65,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "っていうか、ちょっと顔が赤いような……！？\r\n日陰に入って、日陰に！　たしか濡れタオル、あったよね！？",
-            "enText": "I mean, you look a little red ……! In the shade, in the shade! I \nthink I saw a wet towel, right!",
+            "enText": "Wait, you look a little flushed?! Let's find some shade, quickly! \nDidn't we have a wet towel somewhere around here…?!",
             "nextBlock": 5,
             "origClipLength": 308,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "パ、パーマー！？",
-                    "enText": "Pa, Palmer!",
+                    "enText": "P-Palmer?!",
                     "nextBlock": 5
                 }
             ],
@@ -88,9 +93,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "落ち着いてと言うより先に走り去っていく。\r\n……一体、どうしたのだろうか。",
-            "enText": "They run off before I can tell them to calm \ndown. What is wrong with…… one body?",
+            "enText": "In a rush, she dashes off before I can tell her to calm down. \n… What on earth has her so panicked?",
             "nextBlock": 6,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "pathId": -3818372169487674873,
             "blockIdx": 5
         },
@@ -98,9 +104,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "元々、気遣い屋ではあるのだが……\r\n彼女のそれは、もっとさりげなく行われるものだったはず。",
-            "enText": "She is a caring person to begin with, but…… \nhers should have been done more casually.",
+            "enText": "She had always been considerate, but her way \nof being so had always been more subtle…",
             "nextBlock": 7,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "pathId": -3061679544338880120,
             "blockIdx": 6
         },
@@ -108,9 +115,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――まさか。",
-            "enText": "― No way.",
+            "enText": "—— Could it be because…",
             "nextBlock": 8,
             "origClipLength": 52,
+            "voiceIdx": -1,
             "pathId": -6028499419726081601,
             "blockIdx": 7
         },
@@ -118,9 +126,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "あははっ、そっかそっか。文句かー。\r\nでもわざわざトレーニング中に言ってきたってことはー……。",
-            "enText": "Haha, I see. Complaints, huh? But the fact that you went to the \ntrouble of telling me during training - ……",
+            "enText": "Ahaha, alright, alright. Complaints, huh? \nBut if someone went out of their way for \nthat during our training session, then…",
             "nextBlock": 9,
             "origClipLength": 273,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 130,
@@ -134,9 +143,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "私の走りについて、かな？\r\nうーん、なるほどね！　まーわからなくもない！",
-            "enText": "About my running, I guess? Hmmm, I see! Well, I can see why!",
+            "enText": "It's probably about my running, right? \nHmm, okay! Well, I can kinda understand why!",
             "nextBlock": 10,
             "origClipLength": 246,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 138,
@@ -154,9 +164,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "あの時のことを気にして……？\r\nだとしたら、このままにはしておけない。",
-            "enText": "Do you care about what happened then \n……? If so, I can't leave it at that.",
+            "enText": "Could it be she's worrying about that time…? \nIf that's the case, I can't leave things as they are.",
             "nextBlock": 11,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 33,
@@ -174,9 +185,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "口を滑らせて、聞き出された自分の責任だ。気遣うべきはこちらで、\r\nメジロパーマーには伸び伸びとしていてもらいたい。",
-            "enText": "It is my own fault for slipping up and being overheard. I should \nbe concerned, and I want White Palmer to stretch out.",
+            "enText": "It was my fault for letting it slip. I should be \nthe one showing concern. I want Mejiro Palmer \nto feel unrestrained and at ease.",
             "nextBlock": 12,
             "origClipLength": 119,
+            "voiceIdx": -1,
             "pathId": -8907520243482029150,
             "blockIdx": 11
         },
@@ -184,9 +196,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……確か、今夜はお祭りがあったはず。\r\nよい機会なので、メジロパーマーを誘ってみることにした。",
-            "enText": "…… As I recall, there was a festival tonight. Since it was a good \nopportunity, I decided to invite Mejiro Palmer.",
+            "enText": "…… If I remember correctly, wasn't there a festival tonight? \nMaybe it'd be a good opportunity to invite Mejiro Palmer.",
             "nextBlock": 13,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "pathId": 7602565399592717297,
             "blockIdx": 12
         },
@@ -194,9 +207,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "うっわー！　賑わってるー！\r\n屋台も思ってたより、ずっと出てるねっ。",
-            "enText": "Wow! It's so crowded! There are more food \nstalls than I thought there would be.",
+            "enText": "Woooow! Look at the crowd! There are \neven more food stalls than I expected!",
             "nextBlock": 14,
             "origClipLength": 217,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 70,
@@ -214,13 +228,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "ね、トレーナーは、なにが食べたい？\r\nそれとも先に遊ぶ？　どこでも付き合――",
-            "enText": "Hey, what do you want to eat, trainer? Or do you want to play \nfirst? I'll go with you anywhere―",
+            "enText": "Hey, Trainer, anything you feel like eating? \nOr do you want to check out the games first? \nI'm down for anyth—",
             "nextBlock": 15,
             "origClipLength": 178,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "パーマーは何したい？",
-                    "enText": "What does Palmer want to do?",
+                    "enText": "What do you want to do?",
                     "nextBlock": 15
                 }
             ],
@@ -241,13 +256,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "え、私？　うんと……私よりさ、トレーナーのしたいこと――",
-            "enText": "Oh, me? Well…… I'm more interested \nin what the trainer wants to do―",
+            "enText": "Huh, me? Umm… that's okay, I'm more \ninterested in what you want to—",
             "nextBlock": 16,
             "origClipLength": 233,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "パーマーのしたいことを一緒にやりたい",
-                    "enText": "I want to do with Palmer what she wants to do.",
+                    "enText": "I want to do what you want to do, together.",
                     "nextBlock": 16
                 }
             ],
@@ -268,13 +284,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "えっ、あ……っと……ええ？\r\nでも、私は別に、その……。",
-            "enText": "What, oh…… and…… yeah? But I'm not, you know, that ……",
+            "enText": "Eh, ah… um? Eeehh? \nBut, I don't really, uhh…",
             "nextBlock": 17,
             "origClipLength": 227,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "……嫌なら、諦める",
-                    "enText": "……If you don't like it, give it up.",
+                    "enText": "…… If you don't want to, we don't have to.",
                     "nextBlock": 17
                 }
             ],
@@ -291,9 +308,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "嫌じゃないよ！？　ぜんっぜん嫌じゃない！　マジで！\r\nだから、そう……射的！　射的から行こう！　ねっ。",
-            "enText": "I don't hate it! I don't mind at all! Seriously! So, so…… shoot! \nLet's start with target practice! Hey.",
+            "enText": "No, it's not that I don't want to! I don't mind at all! Not one bit! \nHow about, umm… target practice! Let's start with that! \nSounds fun, right?",
             "nextBlock": 18,
             "origClipLength": 241,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 50,
@@ -311,9 +329,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "トレーナー、欲しいものある？\r\n任せといて、絶対に私が取るからさ！",
-            "enText": "Trainer, is there anything you want? Leave \nit to me, I'll definitely get it!",
+            "enText": "Trainer, is there anything you got your eyes on? \nTrust me, I'll win it for you no matter what!",
             "nextBlock": 19,
             "origClipLength": 207,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 115,
@@ -331,9 +350,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……ごめん。ハズれた。全部、ハズれた。\r\nおっかしいなー？　どうして明後日の方向に飛んで……って。",
-            "enText": "Sorry…… I'm sorry. All of them were missed. That's funny, isn't \nit? Why did it jump the day after tomorrow and go to ……?",
+            "enText": "…… Sorry. I missed… every shot. That's so weird… \nwhy did they go off in the wrong direction? …Hm?",
             "nextBlock": 20,
             "origClipLength": 407,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 201,
@@ -355,9 +375,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "えっ、落ちた！？　スゴッ！　トレーナー、射的うまい！！\r\nなんで！？　ヤバイんだけどっ。",
-            "enText": "What? I fell! Amazing! Trainer, you're \ngood at shooting! Why? It's not good!",
+            "enText": "Whoa!? You scored!? Sick! You're a natural at this, Trainer!! \nHow'd you do that!? That's next level!",
             "nextBlock": 21,
             "origClipLength": 236,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "欲しいものある？",
@@ -382,9 +403,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "いいの！？　じゃあ、1番上にある置物みたいな……って、\r\nダメダメ！　トレーナーの好きなもの取ってよっ。",
-            "enText": "No problem! Then…… like the figurine at the top. No, no, no! Take \nwhatever you want from the trainer.",
+            "enText": "Really? I can choose something? Then… how about \nthe rigged looking one way at the top. Wait, no, no, no! \nYou should pick something you like, Trainer!",
             "nextBlock": 22,
             "origClipLength": 304,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 36,
@@ -398,9 +420,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "型抜き、ムッズ！　今度こそ商品取って、\r\nトレーナーにあげようと思ってたのに……。",
-            "enText": "Die-cut, Mudz! I was going to take the product this time and give \nit to my trainer. ……",
+            "enText": "This shape cutting game's savage! And I was so sure \nthat I was going to win you something this time……",
             "nextBlock": 23,
             "origClipLength": 237,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 122,
@@ -418,13 +441,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "トレーナーは、どう？　うまく型が……\r\nあっ、もう少しだね！　そーっと、そーっと……。",
-            "enText": "How's the trainer coming along? Well molded…… \nOh, almost there! Gently, gently ……",
+            "enText": "How's it going on your end, Trainer? \nOh, you're almost there! Careful, gently…",
             "nextBlock": 24,
             "origClipLength": 292,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "続きは任せた……！",
-                    "enText": "I'll leave the rest to you: ……!",
+                    "enText": "You take it from here…!",
                     "nextBlock": 24
                 }
             ],
@@ -445,13 +469,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "えー！？　1番大事なトコなんだけど！？\r\nや、でもやる……やるよ！　任されたからにはっ。",
-            "enText": "What? That's the most important part! But I'll do it.…… I'll do \nit! Now that I've been entrusted with it.",
+            "enText": "Ehh!? But this is the most important part?! \nNo… I'm up for the challenge. I won't let you down!",
             "nextBlock": 25,
             "origClipLength": 296,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "じゃあ、これ……あっ",
-                    "enText": "Okay, here it is: ……",
+                    "enText": "Okay, take this… <i>ahh</i>.",
                     "nextBlock": 25
                 }
             ],
@@ -476,9 +501,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "あっ！？　割れた！！",
-            "enText": "Ah! It's cracked!",
+            "enText": "Ah?! It broke!!",
             "nextBlock": 26,
             "origClipLength": 59,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 44,
@@ -496,9 +522,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……あははっ！　トレーナー、めっちゃビックリした顔して……\r\nふふっ、ヤバ……！",
-            "enText": "…… hahaha! The trainer looked so surprised and…… hmmm, yuck……!",
+            "enText": "…… Ahaha! Trainer, the look on your face… \nOh man, that's hilarious…!",
             "nextBlock": 27,
             "origClipLength": 270,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 63,
@@ -516,9 +543,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "どんまいどんまいっ、次は成功させよ！\r\nほら、あっちに水風船とるやつあるし！　一緒に頑張ろー！",
-            "enText": "Boom, boom, boom, let's make it work next time! Look, there's a \nwater balloon thingy over there! Let's do it together!",
+            "enText": "Don't sweat it, we'll get it next time! Hey, there's a water balloon \nfishing game over there! Let's have a go at it together!",
             "nextBlock": 28,
             "origClipLength": 280,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 25,
@@ -536,9 +564,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "はー……楽しかったー……。めっちゃ遊んで、\r\nお腹もいっぱいになるまで食べたし。満足、満足♪",
-            "enText": "I had a great time…… We had a lot of fun and ate until we were \nfull. Satisfied, satisfied…",
+            "enText": "Ahh, that was a blast…… We played so much, \nand ate until my stomach gave out. Pure bliss♪",
             "nextBlock": 29,
             "origClipLength": 300,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "楽しかったならよかった",
@@ -563,13 +592,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……逆に、気を使われちゃったなー。\r\nごめん、最近の私がおかしいこと、気づいてたんだよね？",
-            "enText": "…… On the contrary, I'm sorry I got your attention. Sorry, you've \nnoticed that I've been acting strange lately, right?",
+            "enText": "…… Turns out, I made <i>you</i> worry about <i>me</i>, after all. Sorry. \nYou've noticed that I've been acting strange lately, right?",
             "nextBlock": 30,
             "origClipLength": 302,
+            "voiceIdx": 20,
             "choices": [
                 {
                     "jpText": "やっぱり前に言われたことが……",
-                    "enText": "I knew what you said before: ……",
+                    "enText": "<size=34>Is it because of what we talked about last time…?</size>",
                     "nextBlock": 30
                 }
             ],
@@ -590,9 +620,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "ん？　ああ、他のトレーナーから言われたってやつ？\r\n違う違う！　そんなん私はヘーキだし。",
-            "enText": "Hmm? Oh, you mean the one that the other trainer told you about? \nNo, no, no! I'm not afraid of that kind of thing.",
+            "enText": "Hmm? Ahh, you mean the thing with the other trainer? \nNo, no, that's not bothering me at all!",
             "nextBlock": 31,
             "origClipLength": 249,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 50,
@@ -610,9 +641,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "ただ、いつも支えられてばっかなのは、どうなんだ！？　って。\r\nや、もちろんそれがトレーナーの仕事なんだろうけどねっ。",
-            "enText": "I just don't know about always being supported! I thought. I \nguess that's the job of a trainer, of course.",
+            "enText": "It's just… I was thinking, it's strange to always be the one \nbeing supported. Yeah, I mean, I know it's part of your job.",
             "nextBlock": 32,
             "origClipLength": 258,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 104,
@@ -630,9 +662,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "やってもらってる分、できる限り返していくぞーって\r\n気合い入れたら、こんなことに。あははっ、失敗失敗！",
-            "enText": "I was so fired up to give back as much as I could \nfor all the help I've been given, and then this \nhappened. Haha, failure failure failure!",
+            "enText": "I wanted to give back to match your support with my effort, \nbut look where it led me. Ahaha, talk about backfiring!",
             "nextBlock": 33,
             "origClipLength": 269,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 29,
@@ -650,9 +683,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "迷惑かけないようにって、必要以上に意識しちゃってたみたい。\r\n変な気を使わせて、ごめん！　もうっ、恥ずかしいなー。",
-            "enText": "I guess I was more conscious than I should have \nbeen so as not to bother you. I'm sorry for making \nyou feel weird! I'm so embarrassed.",
+            "enText": "It seems like I was too worried about being a burden. Sorry for \nmaking you feel concerned. Gosh, this is embarrassing…",
             "nextBlock": 34,
             "origClipLength": 368,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "そんなこと気にしなくていいよ",
@@ -677,13 +711,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "や、でもさ。トレーナーの負担が――",
-            "enText": "But, you know… The burden on the trainer―",
+            "enText": "But, you know… the thought of burdening you ——",
             "nextBlock": 35,
             "origClipLength": 93,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "パーマーを支えるのが楽しいのに",
-                    "enText": "Even though I enjoy supporting Palmer.",
+                    "enText": "I enjoy supporting you.",
                     "nextBlock": 35
                 }
             ],
@@ -704,9 +739,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "――――",
-            "enText": "――",
+            "enText": "————",
             "nextBlock": 36,
             "origClipLength": 81,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 52,
@@ -720,9 +756,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……え？　あれ……や、ちょっと待って。",
-            "enText": "That's…… what? That's…… or, wait a minute.",
+            "enText": "… Eh? That… Wait, hang on.",
             "nextBlock": 37,
             "origClipLength": 205,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 90,
@@ -740,9 +777,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（トレーナーが、トレーナーの仕事をしてる。\r\n真面目に、真摯に向き合って、本気で）",
-            "enText": "(The trainer is doing the trainer's job. \n(Serious, sincere, serious about it)",
+            "enText": "(You've taken on the job of a trainer. \nWith such seriousness, such sincerity.)",
             "nextBlock": 38,
             "origClipLength": 272,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 41,
@@ -760,9 +798,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（担当のウマ娘がついたから。\r\n『トレーナー』として仕事ができるようになったから）",
-            "enText": "(Because I got a horsegirl in charge. (Because \nI got a \"trainer\" to work with.)",
+            "enText": "(Ever since you found yourself a horsegirl… \nEver since you've truly become a \"trainer\".)",
             "nextBlock": 39,
             "origClipLength": 199,
+            "voiceIdx": 29,
             "pathId": -8297920060452294662,
             "blockIdx": 38
         },
@@ -770,9 +809,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（だから、トレーナーとして……）",
-            "enText": "(So, as a trainer ……)",
+            "enText": "(That's why, as a trainer……)",
             "nextBlock": 40,
             "origClipLength": 87,
+            "voiceIdx": 30,
             "pathId": -8903036453216822133,
             "blockIdx": 39
         },
@@ -780,9 +820,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（……『私』の、トレーナーとして……？）",
-            "enText": "(…… \"I\", as a trainer ……?)",
+            "enText": "(…… As <i>my</i> trainer……?)",
             "nextBlock": 41,
             "origClipLength": 125,
+            "voiceIdx": 31,
             "pathId": -7424520262595457341,
             "blockIdx": 40
         },
@@ -790,9 +831,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『パーマーのトレーナーになれてよかった』",
-            "enText": "I'm glad I became a trainer for Palmer's.\"",
+            "enText": "I'm glad I became your trainer.",
             "nextBlock": 42,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "pathId": 7391089361036766738,
             "blockIdx": 41
         },
@@ -800,18 +842,19 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……っ！！！！！",
-            "enText": "…… and ！！！！！",
+            "enText": "……!!!!!",
             "nextBlock": 43,
             "origClipLength": 40,
+            "voiceIdx": 32,
             "choices": [
                 {
                     "jpText": "ど、どうした！？",
-                    "enText": "What's wrong?",
+                    "enText": "W-What's wrong?!",
                     "nextBlock": 43
                 },
                 {
                     "jpText": "ど、どうしたの！？",
-                    "enText": "What's wrong?",
+                    "enText": "W-What's wrong?!",
                     "nextBlock": 43
                 }
             ],
@@ -828,9 +871,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（トレーナーはトレーナーの仕事をしてるって……\r\nでもそれは、トレーナーになれて嬉しいってだけじゃなくて）",
-            "enText": "(Trainers say they do what trainers do…… but that's not just \nbecause they're happy to be trainers)",
+            "enText": "(You take on your duties as a trainer… but it's not that \nyou find happiness in simply becoming a trainer.)",
             "nextBlock": 44,
             "origClipLength": 237,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 116,
@@ -844,9 +888,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（……『私』のトレーナーになれたことが、嬉しいの？）",
-            "enText": "(Are you happy to be a trainer for…… 'me'?)",
+            "enText": "(… You find happiness… in becoming <i>my</i> trainer?)",
             "nextBlock": 45,
             "origClipLength": 184,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 142,
@@ -864,9 +909,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "（ト、トレーナーとして……『私』を支えるのが、\r\n楽しいんだって……言ってるんだよね……！？）",
-            "enText": "（I'm just saying that I enjoy…… supporting…… \n\"me\" as a trainer, right ……?)",
+            "enText": "(Y-You're happy to support me, as a trainer… \nis what that means, right…?!)",
             "nextBlock": 46,
             "origClipLength": 273,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 182,
@@ -884,13 +930,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "あー……あああー……！",
-            "enText": "Ahh…… ah ……!",
+            "enText": "Ahhh… aahhhh…!",
             "nextBlock": 47,
             "origClipLength": 108,
+            "voiceIdx": 36,
             "choices": [
                 {
                     "jpText": "パーマー！？食べ過ぎた！？それとも熱！？",
-                    "enText": "Palmer! You ate too much! Or fever!",
+                    "enText": "<size=34>Palmer!? Did you eat too much?! Have a fever?!</size>",
                     "nextBlock": 47
                 }
             ],
@@ -911,13 +958,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……。トレーナー。",
-            "enText": "Available…… Trainer.",
+            "enText": "…… Trainer.",
             "nextBlock": 48,
             "origClipLength": 145,
+            "voiceIdx": 37,
             "choices": [
                 {
                     "jpText": "う、うん？",
-                    "enText": "Uh-huh?",
+                    "enText": "Y-Yeah?",
                     "nextBlock": 48
                 }
             ],
@@ -938,9 +986,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……私、めっちゃ頑張る。\r\nめっちゃ走って、めっちゃ勝つ。マジで。",
-            "enText": "……I'm going to work so hard. I'm going to \nrun so hard and win so hard. Seriously.",
+            "enText": "…… I'm gonna give it everything. I'm gonna run \nmy legs off, I'm gonna win big. For real.",
             "nextBlock": 49,
             "origClipLength": 246,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 62,
@@ -958,9 +1007,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "これが私の、私たちの走りだって。\r\nみんなに見せつけて、絶対に勝つよ。それで――",
-            "enText": "This is my run, this is our run. I'm going to show everyone, and \nI'm going to win. And then…",
+            "enText": "I wanna show everyone what we're all \nabout and win, proving ——",
             "nextBlock": 50,
             "origClipLength": 253,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 132,
@@ -978,18 +1028,19 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "……トレーナーが、私のトレーナーになって\r\n正解だったって言えるようにするから！！",
-            "enText": "I'll make sure…… trainers can say they made the right choice in \nbecoming my trainer!!!",
+            "enText": "… Proving that you made the right choice in being my trainer!!",
             "nextBlock": 51,
             "origClipLength": 195,
+            "voiceIdx": 40,
             "choices": [
                 {
                     "jpText": "じ、じゃあ、俺も！",
-                    "enText": "Well, then, me too!",
+                    "enText": "M-Me too!",
                     "nextBlock": 51
                 },
                 {
                     "jpText": "じ、じゃあ、私も！",
-                    "enText": "Well, then, me too!",
+                    "enText": "M-Me too!",
                     "nextBlock": 51
                 }
             ],
@@ -1010,9 +1061,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "メジロパーマーに『トレーナーになったのが君でよかった』と\r\n言ってもらえるように頑張ると告げ――",
-            "enText": "She told Mejiro Palmer that she would do her best to make her \nsay, \"I'm glad you became my trainer.",
+            "enText": "I vowed to Mejiro Palmer that I'd make her say, \n\"I'm glad you became my trainer!\" ——",
             "nextBlock": 52,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 30,
@@ -1026,13 +1078,14 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "あああああ……！",
-            "enText": "Ohhhh ……!",
+            "enText": "Ahhhhhhhhhhhhh……!",
             "nextBlock": 53,
             "origClipLength": 56,
+            "voiceIdx": 41,
             "choices": [
                 {
                     "jpText": "パーマーーー！？",
-                    "enText": "Palmer!",
+                    "enText": "Palmer!!!??",
                     "nextBlock": 53
                 }
             ],
@@ -1049,9 +1102,10 @@
             "jpName": "メジロパーマー",
             "enName": "Mejiro Palmer",
             "jpText": "ううう……私のトレーナー、ヤバイ……。",
-            "enText": "Ugh…… my trainer, yikes ……",
+            "enText": "<i>Ubwuuu</i>… my trainer, you're incredible…",
             "nextBlock": 54,
             "origClipLength": 173,
+            "voiceIdx": 42,
             "pathId": 1863370356008026457,
             "blockIdx": 53
         },
@@ -1059,9 +1113,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "もしや、暑いのだろうか？\r\n座り込んでしまったメジロパーマーを、手で必死にあおぐ。",
-            "enText": "If it is hot? I fanned the white-tailed Palmer, who had sat up, \nfrantically with my hand.",
+            "enText": "Is it the heat? I try to fan the collapsed \nMejiro Palmer, wondering.",
             "nextBlock": 55,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "pathId": 5022486270473115034,
             "blockIdx": 54
         },
@@ -1069,12 +1124,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "慌てるこちらをチラリと見て、メジロパーマーは顔を赤くしたまま、\r\nクスクスと笑ったのだった。",
-            "enText": "Glancing at our flustered face, the white-tailed \nPalmer giggled, her face reddening.",
+            "enText": "Stealing a glance at my frantic efforts, Mejiro Palmer, \ncheeks still flushed, lets out a soft, amused laugh.",
             "nextBlock": -1,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "pathId": 2585059676036281792,
             "blockIdx": 55
         }
     ],
-    "modified": 1657429823
+    "modified": 1716865019,
+    "humanTl": true
 }

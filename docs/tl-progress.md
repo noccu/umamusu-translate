@@ -71,7 +71,7 @@ A Gleaming Mejiro Gala |  |
 Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
 Come On Down To Calming Koumian! |  |
 To You, My Dancing Orchid ～Let's dance now!～ | Complete | [Jimoori]
-Uprising: The Soldiers' Battle Cry | In progress | [Chiwawa] (tl) + [noccu] (edit)
+Uprising: The Soldiers' Battle Cry | Complete | [Chiwawa] (tl) + [noccu] (tlc, edit)
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events

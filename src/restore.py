@@ -52,7 +52,11 @@ def restore(file, args):
     if args.src:
         bundle = GameBundle.fromName(args.src, load=False, bType=args.srctype)
     else:
-        file = TranslationFile(file, readOnly=True)
+        try:
+            file = TranslationFile(file, readOnly=True)
+        except:
+            logger.error(f"Error in file: {file}")
+            return 0
         bundle = GameBundle.fromName(file.bundle, load=False, bType=file.type)
     if not args.force_restore and bundle.exists and not bundle.isPatched:
         logger.info(f"Bundle {bundle.bundleName} not patched, skipping.")
@@ -109,10 +113,16 @@ def main(args: patch.Args = None):
         if uma:
             (uma / "version.dll").unlink(missing_ok=True)
             (uma / "uxtheme.dll").unlink(missing_ok=True)
+            (uma / "tlg.dll").unlink(missing_ok=True)
+            (uma / "xinput1_3.dll").unlink(missing_ok=True)
+            (uma / "dxgi.dll").unlink(missing_ok=True)
         mdbFileBackup = const.GAME_MASTER_FILE.with_suffix(".mdb.bak")
         const.GAME_MASTER_FILE.unlink(missing_ok=True)
         if mdbFileBackup.exists():
             mdbFileBackup.rename(const.GAME_MASTER_FILE)
+        logger.warning("Warning: dxgi.dll in the game folder has been removed as it was possibly used for TLG.\n"
+              "If you already had Hachimi installed under that name, you'll need to reinstall it.")
+        logger.info("Uninstall complete.")
 
 
 if __name__ == "__main__":

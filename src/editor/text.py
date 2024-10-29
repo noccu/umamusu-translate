@@ -313,7 +313,7 @@ def getText(widget: TkDisplaysText):
     if isinstance(widget, tk.Label):
         return widget.cget("text")
     elif isinstance(widget, tk.Entry):
-        return widget.get(0, tk.END)
+        return widget.get()
     elif isinstance(widget, tk.Text):
         return widget.get(1.0, tk.END)
 

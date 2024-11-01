@@ -4,39 +4,39 @@ description = "Translation mod for Uma Musume (DMM)."
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
-  {name = "noccu", email = "37862870+noccu@users.noreply.github.com"},
+  { name = "noccu", email = "37862870+noccu@users.noreply.github.com" },
 ]
 maintainers = [
-  {name = "noccu", email = "37862870+noccu@users.noreply.github.com"},
+  { name = "noccu", email = "37862870+noccu@users.noreply.github.com" },
 ]
-dependencies = [
-  "lz4",
-  "UnityPy >= 1.9.19",
-  "regex",
-  "Levenshtein",
-  "requests",
-]
+dependencies = ["lz4", "UnityPy >= 1.9.19", "regex", "Levenshtein", "requests"]
 dynamic = ["version"]
 
 [project.optional-dependencies]
-editor = [
-    "PyCriCodecs",
-    "pyaudio",
-    "symspellpy",
-]
-subs = [
-  "ass",
-  "srt",
-]
+editor = ["PyCriCodecs", "pyaudio", "symspellpy"]
+subs = ["ass", "srt"]
 mtl = ["websockets"]
-dev = [
-    "black",
-    "flake8",
-]
+dev = ["ruff"]
 
 [project.urls]
 Homepage = "https://github.com/noccu/umamusu-translate"
 Repository = "https://github.com/noccu/umamusu-translate.git"
 
-[tool.black]
-line-length = 100
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+src = ["src"]
+preview = true
+
+[tool.ruff.lint]
+# Default select: ["E4", "E7", "E9", "F"]
+extend-select = [
+  "N804", # First argument of a classmethod should be named ‘cls’
+  "N805", # First argument of a method should be named ‘self’
+  "E501", # Line too long
+  "E203", # Whitespace before ':'
+  "C901", # Enable complexity check
+]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12

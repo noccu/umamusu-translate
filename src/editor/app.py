@@ -62,7 +62,7 @@ class Editor:
         global copyToClipboard
         def copyToClipboard(text:str):
             root.clipboard_clear()
-            root.clipboard_append(text)        
+            root.clipboard_append(text)
 
         # Managers
         self.options = Options()
@@ -85,7 +85,7 @@ class Editor:
         chapters.bind("<KeyRelease>", self.nav.searchChapters)
         blocks = ttk.Combobox(frm_filenav, width=40, font=fonts.UI_JP, state="readonly")
         blocks.bind("<<ComboboxSelected>>", self.nav.change_block)
-        
+
         frm_filenav.rowconfigure((0,1), weight=1)
         tk.Label(frm_filenav, text="Chapter").grid(row=0, column=0, sticky=tk.E)
         tk.Label(frm_filenav, text="Block").grid(row=1, column=0, sticky=tk.E)
@@ -297,7 +297,7 @@ class Choices:
             cur_en_text.linkTo(cur_jp_text, editor.root)
             cur_en_text.grid(row=idx+1, column=0, sticky=tk.W)
             follow_btn = tk.Button(
-                scrollFrame.content, 
+                scrollFrame.content,
                 text="≫",
                 relief="groove",
                 takefocus=0,
@@ -316,7 +316,7 @@ class Choices:
         blockId = self.curChoices[choiceId].get("nextBlock")
         if blockId and blockId != -1:
             self.editor.nav.change_block(blockId - 1)
-        
+
     def setChoices(self, choices:list):
         self.curChoices = choices
         for i, (jpBox, enBox) in enumerate(self.textBoxes):
@@ -427,7 +427,7 @@ class SearchWindow:
         def setPos(self, chapter, block):
             self.chapter = chapter
             self.block = block
-    
+
     def __init__(self, master: Editor) -> None:
         root = tk.Toplevel(master.root)
         root.title("Search")
@@ -549,20 +549,26 @@ class PreviewWindow:
         fontSize = tk.IntVar(value=16)  # common UI size
         fontSize.trace("w", self._evChangeFontSize)
         fontSizeCfg = ttk.Spinbox(root, from_=2, to=75, increment=1, textvariable=fontSize)
-        fontSizeCfg.pack(expand=True, fill="x")
+        fontSizeCfg.pack(expand=False, fill="x")
         previewFont = fonts.create(root, id="preview", size=fontSize.get())
-        previewText = tk.Label(root, font=previewFont, justify="left", anchor="w")
+        previewText = text.TextBox(root, font=previewFont)
         previewText.pack(expand=True, fill="both")
 
         self.master = master
         self.root = root
         self.text = previewText
-        self.font = previewFont
         self.fontSize = fontSize
         root.withdraw()
 
     def setText(self, text: str):
-        self.text.config(text=text)
+        self.text.loadRichText(text)
+
+    def addChoices(self, choices):
+        if not choices:
+            return
+        for choice in choices:
+            choiceText = f"\n\n{choice.get('enText')}"
+            self.text.loadRichText(choiceText, append=True)
 
     def moveWindow(self, event):
         raise NotImplementedError
@@ -574,7 +580,7 @@ class PreviewWindow:
             newsize = self.fontSize.get()
         except tk.TclError:
             return
-        self.font.config(size=newsize)
+        self.text.fontConfig(size=newsize)
 
     def toggle(self, event=None):
         if self.root.state() == "normal":
@@ -726,8 +732,8 @@ class SpeakerNotes:
         self.widget = display.SlidingTray(editor.root, "Speaker Notes", vertical=True)
         self.scrollFrame = display.ScrollableFrame(self.widget.tray, True)
         self.textBox = text.TextBoxEditable(
-            self.scrollFrame.content, 
-            size=(self.wrapLen, 50), 
+            self.scrollFrame.content,
+            size=(self.wrapLen, 50),
             font=fonts.UI_JP,
             wrap=tk.WORD,
         )
@@ -754,7 +760,7 @@ class SpeakerNotes:
         else:
             self.notes[speaker] = note
         # print("Saved: ", note, "\n", "For: ", speaker)
-    
+
     def onExit(self):
         utils.writeJson(self.file, self.notes)
 
@@ -863,7 +869,7 @@ class TextLog:
                 self.master.status.log("No active file")
                 return
             self.root.deiconify()
-            
+
     def save_edits(self):
         if self.mode == TextLog.MODE_JP:
             return

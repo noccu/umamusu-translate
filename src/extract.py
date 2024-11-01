@@ -124,6 +124,7 @@ def extractAsset(asset: GameBundle, storyId: StoryId, tlFile=None) -> Union[None
 
     if not export["text"]:
         return  # skip empty text assets
+    export["storyId"] = export["storyId"].strip()
     export = TranslationFile.fromData(export)
     if transferExisting.file:
         export.snapshot(copyFrom=transferExisting.file)

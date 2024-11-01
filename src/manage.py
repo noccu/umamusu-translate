@@ -40,7 +40,7 @@ def updateHashData(dumpData: dict, tlData: dict, hashData: tuple[dict, dict]):
                 logger.warning(f"{key} causes issues with the game, skipping...")
             # Remove previously translated hashes that no longer are to prevent garbled text
             if key in data:
-                logger.debug(f"Missing {text} at {hash}. Removing existing: {hashData[hash]}")
+                logger.debug(f"Missing {text} at {hash}. Removing existing: {data[key]}")
                 del data[key]
 
 
@@ -95,8 +95,8 @@ def clean(mode):
     Keep the dump's static hashes regardless."""
     # Remove empty translations
     translations = {
-        jp: en 
-        for jp, en in utils.readJson(TL_FILE).items() 
+        jp: en
+        for jp, en in utils.readJson(TL_FILE).items()
         if en
     }
     if mode in ("both", "ui"):

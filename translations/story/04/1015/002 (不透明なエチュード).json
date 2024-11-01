@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "7HPLBYI3CAW2TPLRPV3IAQ7WG6NKT4DZ",
     "type": "story",
     "storyId": "041015002",
     "title": "不透明なエチュード",
+    "enTitle": "An enigmatic étude",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "テイエムオペラオーと出会った翌日、\r\n『トレーニングをする』と言われ呼び出された。",
-            "enText": "The day after I met TM Operao, I was called in for training.",
+            "enText": "The day after I had stumbled across T.M. Opera O, \nshe called me up, saying \"We're going training\".",
             "nextBlock": 2,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "pathId": -1394291384020611331,
             "blockIdx": 1
         },
@@ -19,23 +21,25 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "彼女は普段、どのようなトレーニングをしているのだろう……。\r\nそんなことを考えながら呼び出された場所へ行くと――",
-            "enText": "I wonder what kind of training she usually does…… With this in \nmind, I went to the place where I was called―",
+            "enText": "I'm curious as to how she normally trains… \nThis thought was on my mind as I made my way \nto the location she had specified.",
             "nextBlock": 3,
             "origClipLength": 118,
+            "voiceIdx": -1,
             "pathId": 4464849927908811841,
             "blockIdx": 2
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ふふっ、来たようだね。\r\nそれではトレーニングを始めるとしよう。",
-            "enText": "Hmmm… looks like you're here. Let's start the training.",
+            "enText": "<i>Heheh</i>, there you are. Let's get this training underway.",
             "nextBlock": 4,
             "origClipLength": 215,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "どうしてダンススタジオに……？",
-                    "enText": "Why are you…… in a dance studio?",
+                    "enText": "Why are we in the dance studio…?",
                     "nextBlock": 4
                 }
             ],
@@ -58,11 +62,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "おやおや、トレーニングだと伝えたのだから、\r\nそれ以外にないじゃないか。",
-            "enText": "Well, well, well. I told them it was \ntraining, so what else could it be?",
+            "enText": "Dear oh dear, I've informed you we were training so \nwhat else do you think we'll be doing?",
             "nextBlock": 5,
             "origClipLength": 177,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 50,
@@ -78,11 +83,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "それでは、そこで見ていてくれたまえ。",
-            "enText": "Now, please watch me there.",
+            "enText": "To it, then. You're in a great spot to observe me from.",
             "nextBlock": 6,
             "origClipLength": 99,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 67,
@@ -94,11 +100,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "いくよ――とうっ！",
-            "enText": "Let's go―tooooooo!",
+            "enText": "Here I go — <i>huoh</i>!",
             "nextBlock": 7,
             "origClipLength": 75,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 32,
@@ -114,11 +121,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "嗚呼、白鳥のように美しく舞うボク……！！",
-            "enText": "Aha, Boku dancing beautifully like a swan ……!",
+            "enText": "<i>Aah! </i>My dancing figure calls to mind the elegance of a swan…!!",
             "nextBlock": 8,
             "origClipLength": 150,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 50,
@@ -138,11 +146,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "時に優雅に……時に激しくっ！！\r\nここで雷鳴の演出が入るよっ！　どど～んっ！！",
-            "enText": "Gracefully…… and violently at ……! \nHere comes the thunderclap! Boom!",
+            "enText": "At times graceful… at times rebellious!! \nAD, a clap of thunder, please! <i>Ba-bang!!</i>",
             "nextBlock": 9,
             "origClipLength": 267,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 66,
@@ -164,9 +173,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その後もテイエムオペラオーの謎に満ちた演舞が続いた。",
-            "enText": "The enigmatic performance of the TM Operao followed.",
+            "enText": "It was hardly the last of T.M. Opera O's \npeculiar dance performance.",
             "nextBlock": 10,
             "origClipLength": 78,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 57,
@@ -188,9 +198,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "これは一体、\r\nなんのトレーニングなのだろうか……？",
-            "enText": "What is this training all about? ……",
+            "enText": "What in heavens is this training for…?",
             "nextBlock": 11,
             "origClipLength": 88,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 114,
@@ -210,20 +221,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "フッ……こんなところかな。\r\nでは君の感想を聞かせてもらおう。",
-            "enText": "Hoo…… here's what I think. Let's see what you think.",
+            "enText": "<i>Heh… </i>that should do it. \nRight then, share with me your impressions.",
             "nextBlock": 12,
             "origClipLength": 203,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "何を言ったらいいかわからないんだが……",
-                    "enText": "I don't know what to say. ……",
+                    "enText": "Words fail me once again…",
                     "nextBlock": 12
                 },
                 {
                     "jpText": "何を言ったらいいかわからないんだけど……",
-                    "enText": "I don't know what to say. ……",
+                    "enText": "Words fail me once again…",
                     "nextBlock": 12
                 }
             ],
@@ -242,11 +254,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "なっ……君はちゃんと見ていたのかい！？",
-            "enText": "You've been watching …… haven't you?",
+            "enText": "<i>Wha</i>… Have you been observing me at all!?",
             "nextBlock": 13,
             "origClipLength": 127,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 69,
@@ -266,11 +279,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "まあいいさ……しばらくすれば、ボクの表現を理解できるだろう。\r\nさっ、次のトレーニングだ！",
-            "enText": "Oh well…… in a while you'll understand my \nexpression. Now, on to the next training!",
+            "enText": "Oh, so be it… Given enough time, I am certain you will come to \nappreciate my expression. On then, to the next phase of training!",
             "nextBlock": 14,
             "origClipLength": 252,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 137,
@@ -286,20 +300,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ダイヤモンドのように澄み切った水……。\r\nこの輝きはまるで、ボクの訪れを祝福しているかのようだね。",
-            "enText": "The water is as clear as a diamond…… It's as if this sparkle is a \nblessing for my visit.",
+            "enText": "The water here looks as clean and sparkling as diamond… \nWhy, it's almost as if it is celebrating my arrival.",
             "nextBlock": 15,
             "origClipLength": 272,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "ここでは何をするんだ？",
-                    "enText": "What are we doing here?",
+                    "enText": "What are you up to here?",
                     "nextBlock": 15
                 },
                 {
                     "jpText": "ここでは何をするの？",
-                    "enText": "What do we do here?",
+                    "enText": "What are you up to here?",
                     "nextBlock": 15
                 }
             ],
@@ -326,11 +341,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "もちろん空中で美しいポーズを決めるのさ。\r\nでは行ってくるよ！",
-            "enText": "Of course I'm going to strike a beautiful \npose in the air. Well, I'm off!",
+            "enText": "Yours truly shall be striking ravishing poses \nin mid-air, what else? Off I am!",
             "nextBlock": 16,
             "origClipLength": 251,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 102,
@@ -352,19 +368,21 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "どういう意味かと考えていると、テイエムオペラオーは\r\n飛び込み台にのぼり、勢いよく飛び降りた――！",
-            "enText": "As I wondered what she meant, TM Operao climbed up onto the \ndiving board and jumped down with a mighty leap―!",
+            "enText": "As my mind raced to comprehend, T.M. Opera O climbed up \nthe diving platform and jumped down with gusto!",
             "nextBlock": 17,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "pathId": 4472984848160963041,
             "blockIdx": 16
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "嗚呼、ツバメのように美しく宙を舞うボク……！！",
-            "enText": "Aha, I'm beautiful like a swallow in the air ……!",
+            "enText": "<i>Aah!</i> My figure dancing on air calls to mind \nthe elegance of a swallow…!!",
             "nextBlock": 18,
             "origClipLength": 130,
+            "voiceIdx": 11,
             "pathId": 8384923309832937271,
             "blockIdx": 17
         },
@@ -372,9 +390,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（バッシャアアアアアン！！）",
-            "enText": "(BASHAAAAAAN!!!)",
+            "enText": "(<i>SPLAAAAAASH!!</i>)",
             "nextBlock": 19,
             "origClipLength": 63,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 66,
@@ -390,11 +409,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "はーっはっはっはっは！　華やかすぎて少々目に悪かったかな？",
-            "enText": "Ha ha ha ha! Was it too glamorous and a little bad for the eyes?",
+            "enText": "<i>Haa-ha-ha-ha-ha! </i>Has my dazzling display left you speechless?",
             "nextBlock": 20,
             "origClipLength": 195,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 91,
@@ -410,11 +430,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "はっ……はっ……はっ……。この長い石段を上がった先が、\r\n最後のトレーニング場所さ……！",
-            "enText": "Haha…… ha…… ha…… ha…… ha…… ha…… The last place to train is at the \ntop of these long stone steps. ……",
+            "enText": "<i>Hah… hah… hah… </i>Our final training spot lies \njust beyond this long set of stone steps…!",
             "nextBlock": 21,
             "origClipLength": 218,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 32,
@@ -430,20 +451,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "さあ、着いたよ！",
-            "enText": "Well, here we are!",
+            "enText": "Here we are!",
             "nextBlock": 22,
             "origClipLength": 61,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "こんなところで何をするんだ……？",
-                    "enText": "What are you doing here ……?",
+                    "enText": "What are we <i>here</i> for……?",
                     "nextBlock": 22
                 },
                 {
                     "jpText": "こんなところで何をするの……？",
-                    "enText": "What are you doing here ……?",
+                    "enText": "What are we <i>here</i> for……?",
                     "nextBlock": 22
                 }
             ],
@@ -458,11 +480,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "神社に来てすることなんて、決まっているじゃないか。",
-            "enText": "What is there to do at a shrine, of course?",
+            "enText": "Can't you tell by the fact we have come to a shrine?",
             "nextBlock": 23,
             "origClipLength": 120,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 29,
@@ -476,9 +499,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（チャリーン！）",
-            "enText": "(Charlene! )",
+            "enText": "(<i>Ch-Ching!</i>)",
             "nextBlock": 24,
             "origClipLength": 55,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 102,
@@ -494,21 +518,23 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ボクの美しさで\r\n世界に幸せが満ちあふれますように……！",
-            "enText": "May my beauty fill the world with happiness. ……!",
+            "enText": "<i>May my beauty spread throughout the world \nand fill it with cheer and laughter…!</i>",
             "nextBlock": 25,
             "origClipLength": 137,
+            "voiceIdx": 16,
             "pathId": 4104197182216128309,
             "blockIdx": 24
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ボクの美しさで\r\n世界に幸せが満ちあふれますように……！",
-            "enText": "May my beauty fill the world with happiness. ……!",
+            "enText": "<i>May my beauty spread throughout the world \nand fill it with cheer and laughter…!</i>",
             "nextBlock": 26,
             "origClipLength": 138,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 43,
@@ -520,11 +546,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "神社ではこうしてお祈りをするのさ。",
-            "enText": "This is how they pray at the shrine.",
+            "enText": "—— Pray, of course.",
             "nextBlock": 27,
             "origClipLength": 83,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 77,
@@ -548,11 +575,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "さあ、神様がボクに嫉妬しないうちに\r\n学園へ戻るとしよう！",
-            "enText": "Now, let's get back to the academy \nbefore the gods get jealous of me!",
+            "enText": "With that done, let's make our way back \nto the academy, before the gods should \nfall prey to jealousy in my presence!",
             "nextBlock": 28,
             "origClipLength": 171,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 50,
@@ -570,9 +598,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "テイエムオペラオー流のトレーニングを終え、\r\n学園に戻ってきた。",
-            "enText": "After completing her training in the style of TM Operao, she \nreturned to the school.",
+            "enText": "Training finished in T.M. Opera O style, we headed back.",
             "nextBlock": 29,
             "origClipLength": 86,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 123,
@@ -588,11 +617,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ふふっ、なかなか有意義なトレーニングだったね。",
-            "enText": "Phew, that was quite a meaningful training.",
+            "enText": "<i>Heheh</i>, I've certainly managed some worthwhile training today.",
             "nextBlock": 30,
             "origClipLength": 132,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 144,
@@ -612,20 +642,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "君はどうだったかな？　1日を共に過ごしてみて、\r\nボクの素晴らしさが理解できたかい？",
-            "enText": "How about you? After spending the day with \nme, do you understand how wonderful I am?",
+            "enText": "How was it for you? Has spending the day with me \nenlightened you on my magnificence yet?",
             "nextBlock": 31,
             "origClipLength": 216,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "普通のトレーニングはやらなくていいのか？",
-                    "enText": "Don't you have to do regular training?",
+                    "enText": "You see no need for conventional training?",
                     "nextBlock": 31
                 },
                 {
                     "jpText": "普通のトレーニングはやらなくていいの？",
-                    "enText": "Don't you have to do regular training?",
+                    "enText": "You see no need for conventional training?",
                     "nextBlock": 31
                 }
             ],
@@ -644,11 +675,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "普通のトレーニング？\r\n今の今まで、やって見せたじゃないか。",
-            "enText": "Regular training? You've done it and shown it until now.",
+            "enText": "Conventional training? Have you not \njust observed my training all day?",
             "nextBlock": 32,
             "origClipLength": 197,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 72,
@@ -664,11 +696,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ボクは“世紀末覇王”なのだから、\r\n“覇王”たるトレーニングをするのは当然だろう？",
-            "enText": "I am the \"High King of the Century,\" so it's only natural that I \nshould train like a \"High King,\" right?",
+            "enText": "Yours truly is The Era's High King. \nIs it as such not reasonable to train in \nthe manner of a high king?",
             "nextBlock": 33,
             "origClipLength": 216,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 66,
@@ -690,9 +723,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そう力説するテイエムオペラオーだが、\r\n果たしてこのままでいいのだろうか……？",
-            "enText": "But will she really be able to keep it up? ……",
+            "enText": "T.M. Opera O insisted this was the case, but is she \nreally managing like that…?",
             "nextBlock": 34,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 111,
@@ -704,15 +738,16 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "何か言いたそうだね？\r\nいいよ、言ってみたまえ。",
-            "enText": "You want to say something? Okay, go ahead, say it.",
+            "enText": "Your face expresses doubts. \nIt's quite alright, share them with me.",
             "nextBlock": 35,
             "origClipLength": 147,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "“覇王”になるには勝たなきゃいけない",
-                    "enText": "To be the \"High King,\" you have to win.",
+                    "enText": "Is a high king not in need of victories?",
                     "nextBlock": 35
                 }
             ],
@@ -731,11 +766,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ああ、それは至極当然なことだが……\r\nもしかして君は、こう思っているのかな？",
-            "enText": "Yeah, that's quite obvious.…… Perhaps \nyou think this is what you're doing?",
+            "enText": "Naturally that is the case… You must be thinking \nsomething like the following ——",
             "nextBlock": 36,
             "origClipLength": 227,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 214,
@@ -755,11 +791,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "『本気でトレーニングをしないのなら勝てないし、\r\n“覇王”にもなれない』、と。",
-            "enText": "If you don't train hard, you can't win, \nand you can't be the High King.",
+            "enText": "\"How could someone who doesn't take training seriously \nattain any victories, let alone become the high king\".",
             "nextBlock": 37,
             "origClipLength": 174,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 146,
@@ -775,11 +812,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "なら言わせてもらうが、ボクはいつだって本気さ。",
-            "enText": "Then let me tell you, I am always serious.",
+            "enText": "In which case I must impress upon you \nthat yours truly is serious at all times.",
             "nextBlock": 38,
             "origClipLength": 130,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 55,
@@ -799,11 +837,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "“覇王”であるためには、\r\nこれがベストなトレーニングだと思っている。",
-            "enText": "I believe this is the best training to be a \"High King.",
+            "enText": "I believe the way I train is the best method by which to \nattain my goal of becoming the high king.",
             "nextBlock": 39,
             "origClipLength": 149,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 82,
@@ -825,9 +864,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――あまりに堂々と語るテイエムオペラオーに、\r\n何も言い返すことができない。",
-            "enText": "―I could not say anything back to TM Operao, \nwho spoke with so much bravado.",
+            "enText": "T.M. Opera O spoke with such confidence that \nI could not find words to reply with.",
             "nextBlock": 40,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 159,
@@ -839,11 +879,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "……どうやら迷いがあるようだね。",
-            "enText": "…… Apparently you have lost your way.",
+            "enText": "…… It would seem hesitation remains in your heart.",
             "nextBlock": 41,
             "origClipLength": 74,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 159,
@@ -859,11 +900,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "仕方ない、ならば仮トレーナーの件はなしにしよう。\r\nボクは、ボクの夢についてきてくれるトレーナーがほしいんだ。",
-            "enText": "Well, then, let's dispense with the temporary trainer thing. I \nwant a trainer who will follow my dreams.",
+            "enText": "Alas, come to this, I think it best we forget about your \nprovisional appointment. Yours truly desires a trainer \nwho will follow her in her dreams.",
             "nextBlock": 42,
             "origClipLength": 324,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 166,
@@ -883,11 +925,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "今まで付き合わせてしまって悪かったね。\r\nそれじゃ、失礼するよ。",
-            "enText": "I'm sorry I've kept you company all \nthis time. Now, if you'll excuse me.",
+            "enText": "My apologies for taking up your time. \nI shall take my leave here.",
             "nextBlock": 43,
             "origClipLength": 190,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 66,
@@ -907,11 +950,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "――さあ、今日もバラ風呂で疲れを癒すとしよう！\r\nはーっはっはっはっはっはっは！",
-            "enText": "―Now, let's take another rose bath today to relieve our \nexhaustion! Ha-ha-ha-ha!",
+            "enText": "—— Now then, a rose bath sounds like the perfect \nway to remedy my fatigue! <i>Haa-ha-ha-ha-ha-ha-ha!</i>",
             "nextBlock": 44,
             "origClipLength": 218,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 17,
@@ -941,9 +985,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "テイエムオペラオーは気を悪くした様子もなく去っていった。",
-            "enText": "TM Operao left without seeming to be offended.",
+            "enText": "T.M. Opera O walked off, her good humor seemingly unaffected.",
             "nextBlock": 45,
             "origClipLength": 81,
+            "voiceIdx": -1,
             "pathId": 5380857244824082064,
             "blockIdx": 44
         },
@@ -951,12 +996,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その姿を見ながら、果たして彼女に何を言うのが\r\n正しかったのだろうかと考えていた……。",
-            "enText": "As I watched her, I wondered what was \nthe right thing to say to her. ……",
+            "enText": "Seeing her figure diminish in the distance, I pondered how I \nshould have approached my conversation with her……",
             "nextBlock": -1,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "pathId": 2340184811123860486,
             "blockIdx": 45
         }
     ],
-    "modified": 1657208331
+    "modified": 1712265739,
+    "humanTl": true
 }

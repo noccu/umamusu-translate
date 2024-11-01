@@ -1,16 +1,19 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "UNYPQFW5O3MNCG4RRXXFK6CNW63LSPBZ",
     "type": "story",
     "storyId": "041030007",
     "title": "私の知らない、私の役割",
+    "enTitle": "My newfound place in the world",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今日からライスシャワーとの夏合宿。\r\nさっそくビーチでのトレーニングに励んでいたのだが――",
-            "enText": "Today was the start of the summer training camp with Rice \nShower. We've been working out on the beach, but…",
+            "enText": "Today, Rice Shower and I were at the beach for the first \nday of summer training camp. Wasting no time, we dove \nstraight into our training, however ——",
             "nextBlock": 2,
+            "origClipLength": 103,
+            "voiceIdx": -1,
             "pathId": 3564320580302127460,
             "blockIdx": 1
         },
@@ -18,13 +21,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はぁっ、はぁっ、はぁ……ふぅ……。\r\nお兄さま、タイムはどう……？",
-            "enText": "Hah, hah, hah… phew… Brother, \nhow is your time…?",
+            "enText": "<i>Haa, haa, haa, phew… </i> \nHow was my time, big brother?",
             "nextBlock": 3,
+            "origClipLength": 242,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "徐々によくなってはいるんだが……",
-                    "enText": "It's getting better and better, but…",
+                    "enText": "You're making steady progress, but…",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 232,
+                    "pathId": -3185409311944320677
+                },
+                {
+                    "origLen": 130,
+                    "pathId": 2398075766624231203
                 }
             ],
             "pathId": 2377640764865517453,
@@ -34,18 +49,30 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はぁっ、はぁっ、はぁ……ふぅ……。\r\nお姉さま、タイムはどう……？",
-            "enText": "Hah, hah, hah… phew… \nHow's your time, sister…?",
+            "enText": "<i>Haa, haa, haa, phew… </i> \nHow was my time, big sister?",
             "nextBlock": 4,
+            "origClipLength": 242,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "徐々によくなってはいるんだが……",
-                    "enText": "It's getting better and better, but…",
+                    "enText": "You're making steady progress, but…",
                     "nextBlock": 4
                 },
                 {
                     "jpText": "徐々によくなってはいるんだけど……",
-                    "enText": "It's getting better, but…",
+                    "enText": "You're making steady progress, but…",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 232,
+                    "pathId": -4019354689403749221
+                },
+                {
+                    "origLen": 118,
+                    "pathId": 17013641027788368
                 }
             ],
             "pathId": 1895926946884454229,
@@ -55,8 +82,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "目標には、まだ、届いてないんだね……うぅ、ごめんなさい。\r\nライスがだめなせいで……。",
-            "enText": "I guess I haven't reached my goal yet… Ugh, I'm sorry. \nIt's because I can't eat rice…",
+            "enText": "Ahh… we haven't quite reached our goal, right? \nI'm sorry… it's because I'm not good enough…",
             "nextBlock": 5,
+            "origClipLength": 283,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 309,
+                    "pathId": 3737523361968944841
+                },
+                {
+                    "origLen": 189,
+                    "pathId": 290968262365793648
+                }
+            ],
             "pathId": 5091500488062495792,
             "blockIdx": 4
         },
@@ -64,13 +103,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……でもね、できてないとこ、どこなのかはわかるよ。\r\nだ、だから……できるまでやればいいんだって思うの。",
-            "enText": "I'm sure you'll be able to figure out where \nit's not… That's why I think you should \nwork on… until you get it right.",
+            "enText": "… But, you know, I understand where I'm having issues. \nS-So I want to keep trying until I overcome them.",
             "nextBlock": 6,
+            "origClipLength": 292,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "よし、諦めずに頑張ろう！",
-                    "enText": "Okay, let's not give up!",
+                    "enText": "Good stuff! Keep giving it your all!",
                     "nextBlock": 6
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": -2388726473650930465
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -4841580217314395108
                 }
             ],
             "pathId": 6680708444498987612,
@@ -80,8 +131,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "うん！　できてないこと、1こずつできるようになって……。\r\nだめなとこも、1こずつだめじゃなくして……。",
-            "enText": "Yeah! One by one, you can do the things you haven't \ndone yet… Even the things you can't do, \nyou can do one thing at a time…",
+            "enText": "Yeah! If I keep working on one weakness at a time… \nkeep learning new things, then slowly, but surely……",
             "nextBlock": 7,
+            "origClipLength": 270,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 222,
+                    "pathId": -8704273145462836363
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -551263536634819350
+                }
+            ],
             "pathId": -7117353885422265762,
             "blockIdx": 6
         },
@@ -89,8 +152,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスも……ちゃんと、速くなりたいから……！",
-            "enText": "And Rice… properly, because I want to be fast…!",
+            "enText": "… Even someone like me can run faster!",
             "nextBlock": 8,
+            "origClipLength": 108,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 51,
+                    "pathId": -8694291508103800248
+                },
+                {
+                    "origLen": 98,
+                    "pathId": -3434382487488585860
+                }
+            ],
             "pathId": 5825863734814342595,
             "blockIdx": 7
         },
@@ -98,8 +173,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "いってきますっ、お兄さま！",
-            "enText": "I'm off, big brother!",
+            "enText": "I'm going to go for one more lap, big brother!",
             "nextBlock": 9,
+            "origClipLength": 70,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 6540718852631632755
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 7857783689839103536
+                }
+            ],
             "pathId": -704259595755266067,
             "blockIdx": 8
         },
@@ -107,8 +194,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "いってきますっ、お姉さま！",
-            "enText": "I'm off, sister!",
+            "enText": "I'm going to go for one more lap, big sister!",
             "nextBlock": 10,
+            "origClipLength": 70,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": 3838204397638018477
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -372216922522665230
+                }
+            ],
             "pathId": 6400185522876728683,
             "blockIdx": 9
         },
@@ -116,26 +215,40 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ライスシャワーは、疲れた顔も見せずに力強く駆けていった。\r\nその背中を見守っていると――",
-            "enText": "Rice Shower ran powerfully, not showing any sign of \nfatigue. As I watched her back…",
+            "enText": "Eyes filled with determination, Rice Shower sprinted ahead \nwith bold strides that reflected her unwavering resolve. \nWhile watching over her, I heard a little voice ——",
             "nextBlock": 11,
+            "origClipLength": 102,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 59,
+                    "pathId": -8232123015987104644
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5190992010390160151
+                }
+            ],
             "pathId": 1876631632609699796,
             "blockIdx": 10
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "……すごい。あの子、まだ走るんだ。",
-            "enText": "… Amazing. She's still running.",
+            "enText": "… Wow, that's so amazing! Even though she's \nbeen at it for a while, she's still running!",
             "nextBlock": 12,
+            "origClipLength": 152,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "君は……？",
-                    "enText": "Are you…?",
+                    "enText": "You are…?",
                     "nextBlock": 12
                 },
                 {
                     "jpText": "貴方は……？",
-                    "enText": "Are you…?",
+                    "enText": "You are…?",
                     "nextBlock": 12
                 }
             ],
@@ -144,10 +257,12 @@
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "あっ……！\r\nす、すみません。なんでもありませんっ……！",
-            "enText": "Oh…! I'm sorry. It's nothing…!",
+            "enText": "… Ah! E-Excuse me. Please ignore what I said…!",
             "nextBlock": 13,
+            "origClipLength": 126,
+            "voiceIdx": 7,
             "pathId": -1667967280106891516,
             "blockIdx": 12
         },
@@ -155,8 +270,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "小柄なウマ娘は、ひどく慌てた様子で駆け去っていった……。",
-            "enText": "The small horse girl ran off, looking \nterribly flustered…",
+            "enText": "The small horsegirl frantically dashed away into the distance…",
             "nextBlock": 14,
+            "origClipLength": 81,
+            "voiceIdx": -1,
             "pathId": 5818604406698398296,
             "blockIdx": 13
         },
@@ -164,18 +281,26 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はぁ、はぁ、ふわぁぁ……！",
-            "enText": "Huh, huh, fluffy…!",
+            "enText": "Ahhh, I'm beat…!!",
             "nextBlock": 15,
+            "origClipLength": 137,
+            "voiceIdx": 8,
             "choices": [
                 {
                     "jpText": "やったぞライス、目標達成だ！",
-                    "enText": "We did it, Rice. We achieved our goal!",
+                    "enText": "Well done, Rice! We reached our goal!",
                     "nextBlock": 15
                 },
                 {
                     "jpText": "やったねライス、目標達成だよ！",
-                    "enText": "You did it, Rice. You achieved your goal!",
+                    "enText": "Well done, Rice! We reached our goal!",
                     "nextBlock": 15
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 9077760675373632033
                 }
             ],
             "pathId": 3594660783005001481,
@@ -185,8 +310,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "えっ……ほ、ホント！？",
-            "enText": "What… really?",
+            "enText": "Ah… R-Really?!",
             "nextBlock": 16,
+            "origClipLength": 65,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 25,
+                    "pathId": 7243977755485568539
+                },
+                {
+                    "origLen": 108,
+                    "pathId": -4942309351397648838
+                }
+            ],
             "pathId": 6060794057945515543,
             "blockIdx": 15
         },
@@ -194,8 +331,24 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "や、やった……やったぁぁ～！！",
-            "enText": "Yay, I did it… I did it!",
+            "enText": "Y-Yay… Yaaaaayyy～!!! We did it!!",
             "nextBlock": 17,
+            "origClipLength": 115,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 3263532901769299852
+                },
+                {
+                    "origLen": 111,
+                    "pathId": 1667303454509411317
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -677397550306687357
+                }
+            ],
             "pathId": -998582006413632793,
             "blockIdx": 16
         },
@@ -203,17 +356,41 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "いっぱい、時間かかっちゃったけど、\r\nでも……できるようになれてうれしいっ。",
-            "enText": "It took me a lot of time, but I'm \nhappy to be able to use…",
+            "enText": "It took a while… but I'm glad I was able to pull it off in the end!",
             "nextBlock": 18,
+            "origClipLength": 181,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 359,
+                    "pathId": -2014072403538506182
+                },
+                {
+                    "origLen": 83,
+                    "pathId": 6638786685255761314
+                }
+            ],
             "pathId": 5796050496699368689,
             "blockIdx": 17
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "……すごいね。",
-            "enText": "… is amazing.",
+            "enText": "… Wow, that's incredible.",
             "nextBlock": 19,
+            "origClipLength": 53,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 359,
+                    "pathId": 1571720130496032372
+                },
+                {
+                    "origLen": 29,
+                    "pathId": -1801094339608457286
+                }
+            ],
             "pathId": 7478211731254948308,
             "blockIdx": 18
         },
@@ -221,8 +398,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "へっ……？",
-            "enText": "Heck…?",
+            "enText": "Hmm…?",
             "nextBlock": 20,
+            "origClipLength": 31,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 359,
+                    "pathId": -2942803489170702170
+                },
+                {
+                    "origLen": 93,
+                    "pathId": 8371842780605689598
+                }
+            ],
             "pathId": -2734520174654756351,
             "blockIdx": 19
         },
@@ -230,17 +419,41 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ふと見てみると、先ほどもライスシャワーを見ていた、\r\n小柄なウマ娘が傍に立っていた。",
-            "enText": "I looked over and saw the same petite horse girl who had been \nwatching Rice Shower earlier, standing beside her.",
+            "enText": "As I glanced over to Rice Shower, I noticed the small \nhorsegirl from earlier was standing by her side.",
             "nextBlock": 21,
+            "origClipLength": 101,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 359,
+                    "pathId": 2209547072035394173
+                },
+                {
+                    "origLen": 241,
+                    "pathId": -511045321599153724
+                }
+            ],
             "pathId": -6669309562985905207,
             "blockIdx": 20
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "ライスちゃん、だっけ。すごいね……そんなにがんばれて。",
-            "enText": "Rice, right? It's great that you're doing so well at…",
+            "enText": "You're Rice, right? You're so amazing… \nI've never seen anyone work so hard before!",
             "nextBlock": 22,
+            "origClipLength": 202,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 361,
+                    "pathId": -8396230790579304823
+                },
+                {
+                    "origLen": 241,
+                    "pathId": -9154250975534539410
+                }
+            ],
             "pathId": -793247358237904579,
             "blockIdx": 21
         },
@@ -248,17 +461,41 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "すごい？　えっと……ライスが？\r\nそ、そんなこと！　ぜんぜん、ないですっ……！",
-            "enText": "Great? Um… rice? No, no, no! No, not at all…!",
+            "enText": "Amazing? Huh… me?! \n… N-No way, not at all! Far from it…!",
             "nextBlock": 23,
+            "origClipLength": 226,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 139,
+                    "pathId": -834172609626757622
+                },
+                {
+                    "origLen": 68,
+                    "pathId": -5647379816573442189
+                }
+            ],
             "pathId": 169993511810908964,
             "blockIdx": 22
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "あるよ！　ずっと諦めないで走れるなんて……。\r\nすぐ諦めたくなる私なんかとは、大違い……。",
-            "enText": "I have! I can't believe I can run without giving \nup all the time… It's so different from me, \nwho wants to give up immediately…",
+            "enText": "It's true though! I saw you running this whole time \nwithout taking any breaks. Completely different from \nme, who easily gives up……",
             "nextBlock": 24,
+            "origClipLength": 262,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 443,
+                    "pathId": 2015172789508245635
+                },
+                {
+                    "origLen": 26,
+                    "pathId": -3680053451566963668
+                }
+            ],
             "pathId": 6927303682543222365,
             "blockIdx": 23
         },
@@ -266,8 +503,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "わっ、私も、あきらめたいって思うこと、あります………！\r\nあるんです……たくさん。",
-            "enText": "Wow, there are times when I want to give up, too…! \nThere are a lot of… things I want to give up.",
+            "enText": "T-There's been many times when I want to give up, too! \n… Really… lots of times……",
             "nextBlock": 25,
+            "origClipLength": 288,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -4117669462925751731
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 2589404324321595490
+                }
+            ],
             "pathId": -2695323041152617274,
             "blockIdx": 24
         },
@@ -275,17 +524,41 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスは、できないことばっかり……だめなとこ、ばっかりだから。\r\nこんなライスなんか嫌い、もうやだーって、思うことばっかりです。",
-            "enText": "Rice is full of things you can't do… It's \nfull of things you can't do. I'm not sure what \nto say, but I'm sure you'll understand.",
+            "enText": "You see, I'm always failing, and I'm not very talented… \nBecause I don't like that about myself, I keep thinking, \n\"I want to change! I'm done with staying like this!\".",
             "nextBlock": 26,
+            "origClipLength": 422,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 197,
+                    "pathId": -958548789711731416
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 8472262892919443536
+                }
+            ],
             "pathId": -2130237547231785254,
             "blockIdx": 25
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "そうなの？\r\nでも……ならどうして、あんなにがんばれるの……？",
-            "enText": "Is that so? But if you're… how come \nyou're able to work so hard…?",
+            "enText": "Is that so? But… But then, how are you able to work so hard?",
             "nextBlock": 27,
+            "origClipLength": 214,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 266,
+                    "pathId": -8752741283356301795
+                },
+                {
+                    "origLen": 242,
+                    "pathId": -3658720549491222887
+                }
+            ],
             "pathId": 5044399864710552061,
             "blockIdx": 26
         },
@@ -293,8 +566,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "それは――",
-            "enText": "It's—",
+            "enText": "Well, that's because ——",
             "nextBlock": 28,
+            "origClipLength": 47,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 110,
+                    "pathId": -8078844163059029194
+                },
+                {
+                    "origLen": 25,
+                    "pathId": 5844810780327267782
+                }
+            ],
             "pathId": -8940899645594001494,
             "blockIdx": 27
         },
@@ -302,17 +587,41 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……“なりたい私”が、できちゃった、から。",
-            "enText": "… Because I've found the \"me\" I want to be.",
+            "enText": "…… Because I found my ideal self that I want to pursue.",
             "nextBlock": 29,
+            "origClipLength": 135,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 334,
+                    "pathId": 4490159569719172649
+                },
+                {
+                    "origLen": 94,
+                    "pathId": 4945658444583684647
+                }
+            ],
             "pathId": 1744923742558870581,
             "blockIdx": 28
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "“なりたい私”……？",
-            "enText": "\"The me I want to be…?",
+            "enText": "Your ideal self…?",
             "nextBlock": 30,
+            "origClipLength": 68,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 176,
+                    "pathId": 8088884118129328029
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -5056372516272274177
+                }
+            ],
             "pathId": -8561584306966582057,
             "blockIdx": 29
         },
@@ -320,8 +629,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はい。……レースに出て、いっぱい活躍して、みんなを幸せにする。\r\nそんな私に……なりたいって、思っちゃって。",
-            "enText": "Yes. I want to… race, do well, and make everyone happy. \nThat's what I want to be…",
+            "enText": "Yeah, that's right. I wanted to become someone who \ncould do all sorts of things, like being good at racing, \nmaking everyone happy. Those kind of things!",
             "nextBlock": 31,
+            "origClipLength": 402,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 334,
+                    "pathId": 8005116905830448429
+                },
+                {
+                    "origLen": 115,
+                    "pathId": -7919151719556460601
+                }
+            ],
             "pathId": -5140670160387681358,
             "blockIdx": 30
         },
@@ -329,17 +650,37 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "思っちゃったら、もう、止められなかった……です。\r\nなりたいって、走りたいって、走らなきゃって……！",
-            "enText": "Once I thought about it, I couldn't stop… I wanted to \nbe, I wanted to run, I had to run…!",
+            "enText": "Once I made up my mind there was no turning back. \nTo achieve my goal, I needed to push myself further. \nI wanted to run… I <i>had</i> to run. Harder, and faster…!",
             "nextBlock": 32,
+            "origClipLength": 349,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 321,
+                    "pathId": 232118968560496168
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8921233858525288956
+                }
+            ],
             "pathId": 549127786978158835,
             "blockIdx": 31
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "っ……！",
-            "enText": "っ…!",
+            "enText": "……!",
             "nextBlock": 33,
+            "origClipLength": 36,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 321,
+                    "pathId": -5696179549741588161
+                }
+            ],
             "pathId": 5105484808999334225,
             "blockIdx": 32
         },
@@ -347,8 +688,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ、あのっ、ごめんなさい、うまく答えられなくて……！\r\nら、ライス、おしゃべりも上手じゃないから――",
-            "enText": "Oh, um, I'm sorry, I didn't answer your question very well. \n…! I'm not a very good talker, so…",
+            "enText": "A-Ah, umm… I'm sorry. I'm not very good with words…! \nSo I might not have answered your question very well!",
             "nextBlock": 34,
+            "origClipLength": 253,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 276,
+                    "pathId": -7117303838985706635
+                },
+                {
+                    "origLen": 21,
+                    "pathId": 5723436038895523460
+                }
+            ],
             "pathId": 2882113554642369320,
             "blockIdx": 33
         },
@@ -356,8 +709,24 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "って……うひゃっ！？",
-            "enText": "And…?",
+            "enText": "H-Huh…… <i>whaaaaa</i>?!",
             "nextBlock": 35,
+            "origClipLength": 58,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -8475665182321519154
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -5483771406208912383
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 1473403066226795535
+                }
+            ],
             "pathId": -926562275119691178,
             "blockIdx": 34
         },
@@ -365,8 +734,24 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ザッパ～～～～～ン！）",
-            "enText": "(Zappa ～～～～～!)",
+            "enText": "(<i>WOOOOOOSHHH</i>!!)",
             "nextBlock": 36,
+            "origClipLength": 60,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 149,
+                    "pathId": -61506600128661562
+                },
+                {
+                    "origLen": 84,
+                    "pathId": 4915038987258771531
+                },
+                {
+                    "origLen": 103,
+                    "pathId": 3150280961179509947
+                }
+            ],
             "pathId": -4519645937605230303,
             "blockIdx": 35
         },
@@ -374,8 +759,24 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "突如高波が打ち寄せてきて、3人ともびしょ濡れになってしまった！",
-            "enText": "Suddenly a tidal wave came crashing in, \nand all three of us were soaked!",
+            "enText": "Out of nowhere, a massive wave came roaring \ndown and drenched all of us from head to toe!",
             "nextBlock": 37,
+            "origClipLength": 85,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 179,
+                    "pathId": 1438654250326494665
+                },
+                {
+                    "origLen": 28,
+                    "pathId": 5977684855023000331
+                },
+                {
+                    "origLen": 103,
+                    "pathId": -5245949397939914618
+                }
+            ],
             "pathId": 3319848512652531412,
             "blockIdx": 36
         },
@@ -383,17 +784,53 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "けほっ、こほっ……！！\r\nあぁぁ、ごめんなさい！　ライスなんかと一緒にいたせいで……！",
-            "enText": "Keho, keho…! Oh, I'm so sorry! I'm \nsorry for being with Rice…!",
+            "enText": "<i>Cough, cough…! </i> Aaaaahhhh, I'm so sorry! \nIt's because you're with me this happened…!",
             "nextBlock": 38,
+            "origClipLength": 194,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 152,
+                    "pathId": -8316683747431638011
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 8312489734948339975
+                },
+                {
+                    "origLen": 172,
+                    "pathId": -945277179882363594
+                },
+                {
+                    "origLen": 65,
+                    "pathId": 8553560976203997793
+                }
+            ],
             "pathId": 609136221432587034,
             "blockIdx": 37
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "げほっげほっ！\r\n……ふふっ。ふふふ、あははははっ！！",
-            "enText": "Geez, geez!… phew. Hmmm, hahahaha!",
+            "enText": "<i>Cough, cough! </i> \n…… Pfffftt, bahahahahaha!!!",
             "nextBlock": 39,
+            "origClipLength": 204,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": 3300021135144668519
+                },
+                {
+                    "origLen": 216,
+                    "pathId": 5832663461050519594
+                },
+                {
+                    "origLen": 173,
+                    "pathId": 845355726793470473
+                }
+            ],
             "pathId": 146493379546316779,
             "blockIdx": 38
         },
@@ -401,26 +838,74 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ……あれ？　どうして、笑って……？",
-            "enText": "Oh… that? Why are you smiling and…?",
+            "enText": "H-Huh? What's so funny…?",
             "nextBlock": 40,
+            "origClipLength": 125,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 282575056410180314
+                },
+                {
+                    "origLen": 94,
+                    "pathId": 8369879505452812427
+                },
+                {
+                    "origLen": 173,
+                    "pathId": 7017815142172762736
+                }
+            ],
             "pathId": -4451755550852204143,
             "blockIdx": 39
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "あははっ……ごめん、頭から水浴びたからかなぁ、\r\nなんかスッキリしちゃって。",
-            "enText": "Hahaha… Sorry, maybe it's because I bathed \nmy head in water, I feel so refreshed.",
+            "enText": "Ahahaha, sorry. Maybe it's because of that big wave hitting it, \nbut my head feels all clear and refreshed now!",
             "nextBlock": 41,
+            "origClipLength": 248,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 386,
+                    "pathId": 553652348234361540
+                },
+                {
+                    "origLen": 260,
+                    "pathId": 1208520190222285479
+                },
+                {
+                    "origLen": 260,
+                    "pathId": 6978168411406413154
+                }
+            ],
             "pathId": 6464480215618739280,
             "blockIdx": 40
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "……ありがとう、ライスちゃん。おかげで大事なこと思い出せたよ。",
-            "enText": "Thanks for… Rice. Thanks to you, \nI remembered something important.",
+            "enText": "Thank you, Rice… Thanks to you, I was able \nto remember something very important.",
             "nextBlock": 42,
+            "origClipLength": 162,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 189,
+                    "pathId": -2549247205496856644
+                },
+                {
+                    "origLen": 260,
+                    "pathId": 8896973270303320558
+                },
+                {
+                    "origLen": 260,
+                    "pathId": -3071089543946579276
+                }
+            ],
             "pathId": 5321116828684163496,
             "blockIdx": 41
         },
@@ -428,26 +913,74 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "えっ、えっ……？",
-            "enText": "What, what…?",
+            "enText": "Hm… Hmm…?",
             "nextBlock": 43,
+            "origClipLength": 68,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": -8908740953830944081
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -2068602529201925389
+                },
+                {
+                    "origLen": 260,
+                    "pathId": 2774648374172464541
+                }
+            ],
             "pathId": 5441629038364299291,
             "blockIdx": 42
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "速くなりたい、強くなりたいって思う気持ち……忘れかけてた。\r\nなりたいものがあるのに、諦めてなんかいられないよね……！",
-            "enText": "I almost forgot about… the feeling of wanting to be \nfaster and stronger. You can't just give up when you have \nsomething you want to be…!",
+            "enText": "I almost forgot the feeling of wanting to become stronger, \nto become faster… If I hold on to those feelings, then that \nmeans there's no time to be thinking about giving up, right?",
             "nextBlock": 44,
+            "origClipLength": 345,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 593,
+                    "pathId": 7071249475614866912
+                },
+                {
+                    "origLen": 357,
+                    "pathId": -3632167292104179232
+                },
+                {
+                    "origLen": 357,
+                    "pathId": -6893175964124012060
+                }
+            ],
             "pathId": 8067258366965502236,
             "blockIdx": 43
         },
         {
             "jpName": "小柄なウマ娘",
-            "enName": "",
+            "enName": "Small Horsegirl",
             "jpText": "うんっ、私、ちょっと走ってくる！\r\nライスちゃん――次は、レースで会おうねっ！！",
-            "enText": "Yeah, I'm going for a run! I'll see you at the next race, Rice!",
+            "enText": "I get it now! I'm gonna go for a quick run～! \nThanks for the help, Rice! I'll see you in a race next!!",
             "nextBlock": 45,
+            "origClipLength": 241,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 593,
+                    "pathId": 7548211415307772105
+                },
+                {
+                    "origLen": 357,
+                    "pathId": -93987400707044730
+                },
+                {
+                    "origLen": 357,
+                    "pathId": -3708452488876061381
+                }
+            ],
             "pathId": -1239870234580927858,
             "blockIdx": 44
         },
@@ -455,8 +988,28 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あっ……。",
-            "enText": "Oh…",
+            "enText": "Ah……",
             "nextBlock": 46,
+            "origClipLength": 36,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 593,
+                    "pathId": 7663098904692404360
+                },
+                {
+                    "origLen": 76,
+                    "pathId": -155468266817387542
+                },
+                {
+                    "origLen": 99,
+                    "pathId": -4410422499390329642
+                },
+                {
+                    "origLen": 82,
+                    "pathId": 1496892452562231582
+                }
+            ],
             "pathId": 636268041397375879,
             "blockIdx": 45
         },
@@ -464,13 +1017,33 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ど、どうして……？　ライスのせいで、びしょ濡れに……。\r\nなのに、『ありがとう』なんて……なんで……？",
-            "enText": "How and why…? Because of the rice, I was soaked… \nAnd yet, you can't say 'thank you'… why…?",
+            "enText": "W-Why…? It's because of me that she's all drenched like this… \nSo… why is she thanking me…?",
             "nextBlock": 47,
+            "origClipLength": 295,
+            "voiceIdx": 37,
             "choices": [
                 {
                     "jpText": "ライスがあの子を励ませたんだよ",
-                    "enText": "Rice was the one who encouraged the kid.",
+                    "enText": "Because you're the one who inspired her.",
                     "nextBlock": 47
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 3265363038376824785
+                },
+                {
+                    "origLen": 25,
+                    "pathId": -6356200302064178401
+                },
+                {
+                    "origLen": 307,
+                    "pathId": 4056539697806026
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2607029165409971772
                 }
             ],
             "pathId": 5231836733459406654,
@@ -480,8 +1053,24 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "私、が……？\r\nわ、たし……ふ、ふぇ……。",
-            "enText": "I'm…? I'm… I'm… I'm…",
+            "enText": "H-Huh, me? I… inspired her…? \n<i>Sob… sob…</i>",
             "nextBlock": 48,
+            "origClipLength": 228,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 101,
+                    "pathId": -2552397863761670003
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4312434249534436057
+                },
+                {
+                    "origLen": 193,
+                    "pathId": -2164229621444947974
+                }
+            ],
             "pathId": -1237644454686273158,
             "blockIdx": 47
         },
@@ -489,8 +1078,28 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふえぇぇぇ～～～ん！",
-            "enText": "Heeeeeeeee!",
+            "enText": "<i>Uwaaaahh!!</i>",
             "nextBlock": 49,
+            "origClipLength": 115,
+            "voiceIdx": 39,
+            "animData": [
+                {
+                    "origLen": 193,
+                    "pathId": -4283295956771182810
+                },
+                {
+                    "origLen": 89,
+                    "pathId": 8696527139660655564
+                },
+                {
+                    "origLen": 193,
+                    "pathId": 9070624365538291627
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -742840232465158700
+                }
+            ],
             "pathId": -6715710517480247556,
             "blockIdx": 48
         },
@@ -498,8 +1107,24 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――大泣きしてしまったライスシャワーを、夜までなだめてあげた。",
-            "enText": "—I soothed Rice Shower, who had \ncried a lot, through the night.",
+            "enText": "The weight of all her struggles and emotions came \ncrashing down on her at once. I decided to stay with \nher to give her comfort until night time.",
             "nextBlock": 50,
+            "origClipLength": 85,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 156,
+                    "pathId": 9156854859819836875
+                },
+                {
+                    "origLen": 193,
+                    "pathId": -4217312781090751898
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -175387852513514446
+                }
+            ],
             "pathId": -406110840839626057,
             "blockIdx": 49
         },
@@ -507,8 +1132,28 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ぐすっ……ごめんなさい、急に泣いちゃって。\r\nでも……うれしくって。",
-            "enText": "I'm sorry for… crying so suddenly. \nBut I'm… so happy.",
+            "enText": "I'm sorry… for suddenly crying on you like that… \nBut… I was just so happy.",
             "nextBlock": 51,
+            "origClipLength": 233,
+            "voiceIdx": 40,
+            "animData": [
+                {
+                    "origLen": 347,
+                    "pathId": 7646208624685185352
+                },
+                {
+                    "origLen": 110,
+                    "pathId": -4631065924644479403
+                },
+                {
+                    "origLen": 245,
+                    "pathId": 779161292978358601
+                },
+                {
+                    "origLen": 223,
+                    "pathId": -4140410149569963895
+                }
+            ],
             "pathId": -2829230508889931610,
             "blockIdx": 50
         },
@@ -516,18 +1161,38 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "初めて、だったから。\r\n誰かを不幸にするんじゃなくて……励ませたの、なんて。",
-            "enText": "It was my first time. I didn't want to make anyone unhappy, I \njust wanted to encourage…",
+            "enText": "That was my first time. To be able to inspire someone \nlike that instead of bringing them unhappiness…",
             "nextBlock": 52,
+            "origClipLength": 245,
+            "voiceIdx": 41,
             "choices": [
                 {
                     "jpText": "あの子を幸せにできたな",
-                    "enText": "You could've made her happy.",
+                    "enText": "You definitely lit up her world!",
                     "nextBlock": 52
                 },
                 {
                     "jpText": "あの子を幸せにできたね",
-                    "enText": "You've made her happy.",
+                    "enText": "You definitely lit up her world!",
                     "nextBlock": 52
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 250824795551695196
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -751131209695036815
+                },
+                {
+                    "origLen": 264,
+                    "pathId": -9008188914266685236
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -9047252085812165173
                 }
             ],
             "pathId": -3240898329447127312,
@@ -537,8 +1202,28 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……！\r\nうんっ……そうだったんなら……うれしいな……！",
-            "enText": "…! Yeah… I'm glad… you did…!",
+            "enText": "……! Mm… If that's the case then I'm really happy about that…!",
             "nextBlock": 53,
+            "origClipLength": 220,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": -4616609616975828491
+                },
+                {
+                    "origLen": 72,
+                    "pathId": -77772061635196321
+                },
+                {
+                    "origLen": 213,
+                    "pathId": -203594013266861870
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -8340601144761704643
+                }
+            ],
             "pathId": 2789319460012337387,
             "blockIdx": 52
         },
@@ -546,8 +1231,24 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスね、いままでずっと、だめなライスが嫌いだったけど――",
-            "enText": "Rice. I've always hated bad rice, but…",
+            "enText": "You see, up until now, I've always hated myself for who I am…",
             "nextBlock": 54,
+            "origClipLength": 195,
+            "voiceIdx": 43,
+            "animData": [
+                {
+                    "origLen": 222,
+                    "pathId": -8586974092233451897
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 4721850586905518555
+                },
+                {
+                    "origLen": 168,
+                    "pathId": -2917282632430237101
+                }
+            ],
             "pathId": 2561740070320386678,
             "blockIdx": 53
         },
@@ -555,8 +1256,24 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "今日のライスは……ちょっとだけ、好き、かも。\r\nえへへへっ。",
-            "enText": "Today's rice is… just a little \nbit, like, maybe. Hehehehe.",
+            "enText": "But, maybe… maybe, just a <i>tiny</i> bit, I don't \nmind myself that much today… Ehehe.",
             "nextBlock": 55,
+            "origClipLength": 229,
+            "voiceIdx": 44,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": -5262879826054550440
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 6960401810909462511
+                },
+                {
+                    "origLen": 209,
+                    "pathId": -7658903509294408218
+                }
+            ],
             "pathId": 1181215895186726733,
             "blockIdx": 54
         },
@@ -564,10 +1281,24 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "微笑むライスシャワーの顔は、星空より眩く輝いていたのだった。",
-            "enText": "The smiling face of Rice Shower shone \nbrighter than the starry sky.",
+            "enText": "Rice Shower's slightly bashful smile illuminated the night \nsky more than any of its twinkling stars, radiating warmth \nand joy amidst the cool night air.",
             "nextBlock": -1,
+            "origClipLength": 84,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": 2738724514308823221
+                },
+                {
+                    "origLen": 209,
+                    "pathId": -1202828994273148501
+                }
+            ],
             "pathId": -6763555223390692838,
             "blockIdx": 55
         }
-    ]
+    ],
+    "modified": 1711994576,
+    "humanTl": true
 }

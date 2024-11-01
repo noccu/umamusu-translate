@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "XF65CDONJVBZTKRZPUUDZQHTN4SSMHDH",
     "type": "story",
     "storyId": "090007002",
     "title": "菊膾を共に囲い",
+    "enTitle": "Gathering under copper leaves",
     "text": [
         {
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ふむ、出発予定時刻を5分超過。\r\nしかし、ユキノビジンとゴールドシチーの姿はいまだ見えず……か。",
-            "enText": "Hmmm, 5 minutes over the scheduled departure time. But still no \nsign of Yukino Bizin and Gold City. ……?",
+            "enText": "Hmm, we're already more than five minutes over our ETD. \nYet there is no sign of Yukino Bijin or Gold City…",
             "nextBlock": 2,
             "origClipLength": 272,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 132,
@@ -45,9 +47,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……別に連れ立って向かう必要はないんじゃないか？\r\n行き先は同じ合宿所だ、現地集合でも構わないだろう。",
-            "enText": "…… don't you have to head out together? The destination is the \nsame camp, we can meet there.",
+            "enText": "… Is it really necessary for us to travel together? \nWe're all headed to the same camp. Why not just meet there?",
             "nextBlock": 3,
             "origClipLength": 249,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 164,
@@ -77,9 +80,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "必要かどうかって話でいくとそうですけど～……\r\nせっかくですし、みんなでいっしょに行きましょうよ！",
-            "enText": "If we're talking about whether it's necessary or not, then yes.…… \nBut since we're here, let's all go together!",
+            "enText": "Well, it might not be necessary <i>per se</i>… but it's more \nfun together～! Let's all head there as a group!",
             "nextBlock": 4,
             "origClipLength": 212,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 50,
@@ -105,9 +109,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "合宿所までのバス移動、割と長いですよね？　カレン、色々準備\r\nしてきたんです♪　みんなといーっぱいおしゃべりできるように！",
-            "enText": "The bus ride to the camp is rather long, isn't \nit? Curren, I've prepared a lot of things for you… \nso that you can have a lot of fun and chat!",
+            "enText": "The bus ride to the camp is pretty long, so guess what?♪ \nI've got lots planned so we can chat and bond the whole way!",
             "nextBlock": 5,
             "origClipLength": 286,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 305,
@@ -137,9 +142,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "気遣い感謝するよ、カレンチャン。\r\n共に駿大祭を創り上げるのだ、私も和衷協同は必要と考えている。",
-            "enText": "I appreciate your concern, Currenchan. Together we will create \nthe Sunda Festival, and I, too, believe that a harmonious \ncooperation is necessary.",
+            "enText": "I appreciate your considerations, Curren Chan. Since we're \ncollaboratively shaping the Festival of Illustrious Equines, \nI believe it is important that we stand shoulder to shoulder.",
             "nextBlock": 6,
             "origClipLength": 285,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 99,
@@ -173,9 +179,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "幸い、時間にはまだ多少の猶予がある。\r\nもう5分待ってから――",
-            "enText": "Fortunately, there is still some time left on the clock. We'll \nwait another five minutes and then―",
+            "enText": "Fortunately, we still have a bit of time. \nWe can wait another five——",
             "nextBlock": 7,
             "origClipLength": 162,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 174,
@@ -205,9 +212,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "す、すンませぇーん！",
-            "enText": "I'm sorry!",
+            "enText": "I-I'm sorry fer being plumb late!",
             "nextBlock": 8,
             "origClipLength": 82,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 341,
@@ -237,9 +245,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "あ！　ユキノちゃんにシチーさん、来た来た～！　大丈夫？",
-            "enText": "Ah! Yukino and City, here they come～! Are you okay?",
+            "enText": "Ah, Yukino and Gold City! There you are～! \nIs everything okay?",
             "nextBlock": 9,
             "origClipLength": 150,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 23,
@@ -285,9 +294,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "ひぃ、はぁ……み、みなさん、おもさげねぇです～！\r\nあたしが合宿の準備に手間取っちまったせいで……！",
-            "enText": "Hi, haha, …… everyone, it's not looking so good～! I've been \ntaking so much time to get ready for the camp that I've been ……!",
+            "enText": "<i>Heeh, haah…</i> I-I'm terribly sorry for keeping \nyou held up～! It done took me longer than \nexpected to get ready for the camp…!",
             "nextBlock": 10,
             "origClipLength": 313,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 241,
@@ -321,9 +331,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "じゃなくてっ、アタシのせい！　アタシが寝坊なんかしたから、\r\n栗東寮まで迎えに来てくれたユキノも一緒に遅れて……。",
-            "enText": "No, it's my fault! Because I overslept, Yukino, who came to pick \nme up at the Kruto dormitory, was also late ……",
+            "enText": "No, it's actually my fault! I overslept and Yukino had to come \nall the way to the Ritto dorm to get me, which made us late…",
             "nextBlock": 11,
             "origClipLength": 267,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 206,
@@ -353,9 +364,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "いやいやっ、迎えに行った時点でもう時間には遅れてたンですよぉ！",
-            "enText": "No, no, I was already late when I went to pick her up!",
+            "enText": "No, no, I was already running late when I went to pick you up!",
             "nextBlock": 12,
             "origClipLength": 166,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 206,
@@ -389,9 +401,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "いやいやいや、ユキノは頑張って準備してただけだとしても、\r\nアタシのほうはマジでただバカやっただけだから――",
-            "enText": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, \nno, no, no, no, no, no, no.",
+            "enText": "No really, it's on me. You were at least trying to prepare, \nbut I was just oversleeping like an irresponsible dork ——",
             "nextBlock": 13,
             "origClipLength": 252,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 122,
@@ -425,9 +438,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "はぁーいっ、『悪いのは私』バトルおしまーいっ！",
-            "enText": "Hahaha, the \"I'm the bad guy\" battle is on!",
+            "enText": "Alright, alright, let's end this blame game!",
             "nextBlock": 14,
             "origClipLength": 113,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 47,
@@ -457,9 +471,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "それよりも、早くバス乗り場向かいましょ！\r\n時間にはまだヨユーありめってお話だったので、慌てずで♪",
-            "enText": "Let's go to the bus stop earlier! We were told that there was \nstill time, so let's not rush.",
+            "enText": "We have a bus to get onto so let's make our way there! \nRudolf was just saying how we still have some buffer time, \nso no need to rush♪",
             "nextBlock": 15,
             "origClipLength": 231,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 234,
@@ -491,11 +506,12 @@
         },
         {
             "jpName": "シチー&ユキノ",
-            "enName": "",
+            "enName": "City and Yukino",
             "jpText": "……ハイ。",
-            "enText": "…… Hi.",
+            "enText": "…… Okay.",
             "nextBlock": 16,
             "origClipLength": 43,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 370,
@@ -525,9 +541,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "はぁ……アンタ風に言うなら、『前途多難』ってヤツだな。",
-            "enText": "Hah…… I guess you could call it 'the road ahead' in Anta's style.",
+            "enText": "<i>Haah</i>… If I were to put it in your words, \nwe're heading into \"troubled waters\".",
             "nextBlock": 17,
             "origClipLength": 175,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 238,
@@ -569,9 +586,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ふふっ、そうかな？\r\n――さあ、出発しようか。",
-            "enText": "Hmmm… ―Now, let's get going.",
+            "enText": "Haha, you think so? \n—— Either way, let's get going.",
             "nextBlock": 18,
             "origClipLength": 161,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 62,
@@ -597,9 +615,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "合宿所、とうちゃーく！　これぞ王道！　和風！　って感じで\r\nアガりますね♪　あ、ブライアンさん、旅館バックに1枚いいです？",
-            "enText": "The training camp, ta-da! This is the royal way! Japanese style! \nOh, Brian, can I take one for the Ryokan bag?",
+            "enText": "Camp site touchdown! It just screams traditional \nJapanese style, I love it♪ Ah, Ms. Brian, mind if I \nsnap a pic with the inn in the back?",
             "nextBlock": 19,
             "origClipLength": 320,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 351,
@@ -633,9 +652,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "オマエ……バスでもそうだったが、本当に騒がしいな……。",
-            "enText": "You're really noisy, as you were on the Omae…… bus. ……",
+            "enText": "You're so overbearing… as you were on the bus……",
             "nextBlock": 20,
             "origClipLength": 175,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 187,
@@ -665,9 +685,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "あは、確かにちょっとはしゃいでるかもです♪　でもマヤちゃん\r\nみたいで、ブライアンさん的には親しみやすかったりします？",
-            "enText": "Haha, I'm sure I'm a little excited… but like Maya, I'm easy to \nrelate to for you, Brian?",
+            "enText": "Ahah, maybe I'm a bit too enthusiastic♪ But it's not \ntoo different from sweet little Maya, so doesn't that \nmake you feel more at ease with me, Brian?",
             "nextBlock": 21,
             "origClipLength": 266,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 278,
@@ -693,9 +714,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "…………腹立たしい誤解だ。",
-            "enText": "………It's an infuriating misunderstanding.",
+            "enText": "…… That's an irritating misconception.",
             "nextBlock": 22,
             "origClipLength": 114,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 126,
@@ -723,11 +745,12 @@
         },
         {
             "jpName": "旅館従業員",
-            "enName": "",
+            "enName": "Inn Employee",
             "jpText": "ああ、トレセン学園ご一行の皆さまですね！\r\n長旅お疲れ様です。ようこそお越しくださいました！",
-            "enText": "Ah, the Tressen Academy delegation, ladies and gentlemen! Thank \nyou for your long trip. Welcome to our school!",
+            "enText": "Ah, you must be the group from Tracen Academy! Welcome! \nI hope your journey wasn't too exhausting!",
             "nextBlock": 23,
             "origClipLength": 266,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 214,
@@ -757,9 +780,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "こんにちは。先日お電話いたしました、シンボリルドルフです。\r\nこのたびは合宿へのご協力、ありがとうございます。",
-            "enText": "Hello. This is Symbol Rudolph, whom I called the other day. Thank \nyou very much for your cooperation in the camp.",
+            "enText": "Good afternoon. I am Symboli Rudolf, we spoke on the phone. \nThank you for accommodating us during our camp.",
             "nextBlock": 24,
             "origClipLength": 275,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 50,
@@ -787,11 +811,12 @@
         },
         {
             "jpName": "旅館従業員",
-            "enName": "",
+            "enName": "Inn Employee",
             "jpText": "いえいえ！　うちの孫もウマ娘でしてね、駿大祭は毎年楽しみに\r\nしているんですよ。何かありましたらいつでもお申し付けください！",
-            "enText": "No, no, no! My grandson is also a horse girl, and she looks \nforward to the Suntai Festival every year. Please let me know if \nthere is anything I can do to help!",
+            "enText": "No problem at all! My granddaughter is also a horsegirl, you see, \nso we're always excited about the Festival of Illustrious Equines. \nIf you need anything please don't hesitate to let me know!",
             "nextBlock": 25,
             "origClipLength": 342,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 334,
@@ -821,9 +846,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "お心遣い、感謝いたします。……では諸君、一旦部屋に向かい、\r\n荷物の整理を行おう。それが済んだら、まずは打ち合わせだ。",
-            "enText": "Thank you for your consideration. At …… gentlemen, let's head \nback to our rooms and get our things in order. Once that is done, \nwe will have a meeting first.",
+            "enText": "Thank you for your hospitality. ……Now comrades, let us \nhead to our rooms to unpack. Once that is taken care of \nwe'll start off with a meeting.",
             "nextBlock": 26,
             "origClipLength": 334,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 246,
@@ -857,9 +883,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "全員、準備は整ったようだな。\r\nでは、改めて――",
-            "enText": "I think we're all ready to go. Now, once again―",
+            "enText": "It looks like everyone's ready. \nLet's get down to business then ——",
             "nextBlock": 27,
             "origClipLength": 127,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 120,
@@ -893,9 +920,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "本合宿の目的は、駿大祭本番に向けた技術向上だ。\r\n各々、自らの担う役割と責任を理解し、しっかり励んでほしい。",
-            "enText": "The purpose of this camp is to improve our skills in preparation \nfor the Sunda Festival. I hope that each of you will understand \nyour roles and responsibilities and work hard.",
+            "enText": "Our goal here is to hone our skills for the Festival of \nIllustrious Equines. Recognize the roles and responsibilities \nyou each have, and endeavor to live up to them.",
             "nextBlock": 28,
             "origClipLength": 330,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 360,
@@ -921,9 +949,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "まず、ナリタブライアン。\r\n君には私と共に『流鏑馬』へ参加してもらう。",
-            "enText": "First, Naritabryan. You are going to participate in Yabusame \n(horseback archery) with me.",
+            "enText": "First, Narita Brian, you and I will be participating \nin the <i>Yabusame</i> ceremony.",
             "nextBlock": 29,
             "origClipLength": 208,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 94,
@@ -949,9 +978,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "流鏑馬とは、聖なる霊山にて清めの弓矢を手に、岩を越え崖を飛び\r\n厄に見立てたいくつもの的を射抜き祓う、勇猛無比なる儀式――",
-            "enText": "Yabusame (horseback archery) is a brave and matchless ceremony in \nwhich people use bows and arrows to purify themselves on the \nsacred mountain, cross rocks and fly over cliffs, and shoot at \ntargets to exorcise evil spirits.",
+            "enText": "This is not a ceremony for the faint of heart. Horsegirls brave \nthe crags and cliffs of the sacred mountain, evil-banishing bow \nin hand, shooting arrows at targets symbolic of misfortune.",
             "nextBlock": 30,
             "origClipLength": 380,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 329,
@@ -973,9 +1003,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "だったのだが、現在では少々簡略化され、\r\n霊山前に据え置かれた的を射るのみとなっているな。",
-            "enText": "The ceremony used to be held in the old days, but now it has been \nsimplified a bit and people only shoot at the target placed in \nfront of the Reizan.",
+            "enText": "At least, so it was. It has been simplified in modern \ntimes, focusing on simply shooting at targets set up \nin front of the sacred mountain.",
             "nextBlock": 31,
             "origClipLength": 231,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 105,
@@ -993,9 +1024,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "とはいえ、弓の練習は必要不可欠なのだが――\r\n確か、習い事として経験はあるのだったな？",
-            "enText": "However, bow practice is essential - as I recall, you have \nexperience with it as a learning experience, right?",
+            "enText": "Still, mastering the bow is crucial. \nYou've had some archery lessons, have you not?",
             "nextBlock": 32,
             "origClipLength": 234,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 177,
@@ -1013,9 +1045,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……姉貴と一緒に通わされた。",
-            "enText": "I was sent to…… with my sister.",
+            "enText": "…… I was dragged there with my sister.",
             "nextBlock": 33,
             "origClipLength": 67,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 79,
@@ -1033,9 +1066,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ふふ、流鏑馬の伝統があるからか、\r\nウマ娘たちに習い事としての弓道は人気が高いからな。",
-            "enText": "I guess because of the tradition of horseback archery, Kyudo is \nvery popular among the Uma Musume.",
+            "enText": "Hahah, archery is popular among horsegirls, \nperhaps due to its <i>Yabusame</i> connection.",
             "nextBlock": 34,
             "origClipLength": 247,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 210,
@@ -1057,9 +1091,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "私も教養程度にはたしなんでいるが――\r\n今回の合宿では、共に更なる技術向上を目指すとしよう。",
-            "enText": "I have a good knowledge of the arts, too, but we will be working \ntogether to further improve our skills at this camp.",
+            "enText": "I too have dabbled in it… but let's aim to \nenhance our skills further on this camp.",
             "nextBlock": 35,
             "origClipLength": 246,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 347,
@@ -1081,9 +1116,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "近くに仮設の練習場を用意してもらっている。用具も手配済みだ。\r\n本日午後より稽古開始……ということでよいかな、ブライアン？",
-            "enText": "We have a temporary practice field nearby. The equipment has \nalready been arranged. We will start training this afternoon at \n…… is that correct, Brian?",
+            "enText": "A temporary practice area has been set up for us nearby, \nand all necessary equipment is available. We can begin \ntraining this afternoon… does that work for you, Brian?",
             "nextBlock": 36,
             "origClipLength": 328,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 133,
@@ -1105,9 +1141,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……女帝殿に耳元で怒鳴られるのも、姉貴と顔を合わせるたびに\r\nくどくど言われるのもいい加減飽きた。",
-            "enText": "I'm tired of having the…… empress yell in my ear and nagging me \nevery time I see my sister.",
+            "enText": "… I've about had it with the Empress' yelling in my ears \nor being lectured by my sister every time I see her.",
             "nextBlock": 37,
             "origClipLength": 292,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 304,
@@ -1133,9 +1170,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "やれと言うなら、やってやる。……だが、無意味にだらだらと\r\n稽古は続けんぞ。勘だけ取り戻したら、さっさと切り上げる。",
-            "enText": "If you tell me to do it, I'll do it. I'm …… but I'm not going to \ncontinue practicing for no reason. I'm not going to keep on \npracticing for no reason.",
+            "enText": "Sure, I'll join if you want. …But don't think I'll \nkeep you company for some drawn out program. \nOnce I've regained my touch, I'm out.",
             "nextBlock": 38,
             "origClipLength": 324,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 120,
@@ -1161,9 +1199,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ああ、それでも構わないよ。\r\nさて次に、『奉納舞』についてだが――",
-            "enText": "Yeah, that's fine. Now, next, about the \"Dedication Dance\"…",
+            "enText": "That's perfectly fine. Now, about the Votive Dance ——",
             "nextBlock": 39,
             "origClipLength": 200,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 212,
@@ -1189,9 +1228,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "はいはーいっ！　カレンとユキノちゃんとシチーさんの3人で、\r\n三女神様に捧げるための舞を踊るんですよね♪",
-            "enText": "Yes, yes! Curren, Yukino and City are going to dance a dance \ndedicated to the three goddesses, right?",
+            "enText": "That's us～! Me, Yukino, and Gold City are gonna \ndance in tribute to the three goddesses, right?♪",
             "nextBlock": 40,
             "origClipLength": 249,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 24,
@@ -1245,9 +1285,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "三女神様ありがとうございますっ、これからも私たちを\r\n見守っていてください……という気持ちを、カワイく表現して！",
-            "enText": "Thank you, Goddess Three, for continuing to watch over us…… with \nyour kawaii expression!",
+            "enText": "To express horsegirls' gratitude with a charming performance! \n\"Thank you, three goddesses, for watching over us… \"",
             "nextBlock": 41,
             "origClipLength": 263,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 50,
@@ -1285,9 +1326,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "『カワイく』……！　が、がが、がンばります～……！",
-            "enText": "Cute! ……! I'll be happy to help you ……!",
+            "enText": "\"Charming\"……! I-I-I'll give it my best～!",
             "nextBlock": 42,
             "origClipLength": 164,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 143,
@@ -1317,9 +1359,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "ユキノ、落ち着きなって。……レッスンは近くの公民館で、\r\n講師はURAから派遣される……で、いいんでしたよね？",
-            "enText": "Yukino, calm down. The…… lesson will be held at a nearby \ncommunity center, and the instructor will be sent by URA …… right?",
+            "enText": "Keep calm, Yukino. ……We'll be having lessons in the community \ncenter, with an instructor from the URA…… right?",
             "nextBlock": 43,
             "origClipLength": 330,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 349,
@@ -1349,9 +1392,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ああ。奉納舞へ参加経験がある、URA職員の方だ。\r\nそれも、本日午後にはこちらへ到着する手筈になっている。",
-            "enText": "Ah. She is a URA employee who has participated in the dedication \ndance. She is also scheduled to arrive here this afternoon.",
+            "enText": "That is correct. URA personnel with firsthand Votive Dance \nexperience. They should be arriving this afternoon.",
             "nextBlock": 44,
             "origClipLength": 305,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 79,
@@ -1381,9 +1425,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "ライブ用のダンスはともかく、舞ってなると経験少ないですから……\r\nしっかりカワイく、仕上げていきますね♪",
-            "enText": "I don't have much experience in dancing for live performances, \nbut when it comes to dancing, I don't have much experience.…… \nI'll make sure to make it cute and pretty.",
+            "enText": "As used as I am to dance routines for live shows, \ntraditional dance is a bit new to me… but I'll make \nsure it's adorably perfect♪",
             "nextBlock": 45,
             "origClipLength": 258,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 270,
@@ -1421,9 +1466,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "よし……確認は以上だな。\r\nでは解散！　各々稽古に励んでくれ！",
-            "enText": "Okay, that's it for the…… confirmation. Then, we are dismissed! \nGood luck with your training!",
+            "enText": "Good… that concludes our check-in. Dismissed! \nGo and focus on your practice!",
             "nextBlock": 46,
             "origClipLength": 199,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 220,
@@ -1457,9 +1503,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "――おっと、そうそう。\r\n諸君に重々注意してほしい事がある。",
-            "enText": "―Oh, yes, yes, yes. I want to warn you all about something.",
+            "enText": "—— Oh, one last thing. An important reminder for everyone.",
             "nextBlock": 47,
             "origClipLength": 161,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 58,
@@ -1480,6 +1527,7 @@
             "enText": "……?",
             "nextBlock": 48,
             "origClipLength": 37,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 58,
@@ -1497,9 +1545,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ウマ娘は体が資本、無理は禁物だ。\r\nくれぐれも熱中しすぎないよう――",
-            "enText": "Uma Musume's body is her capital, so don't overdo it. Please do \nnot get overzealous…",
+            "enText": "A horsegirl's body is her greatest asset. \nDon't push yourselves too hard, and so \nyou won't lose track of time ——",
             "nextBlock": 49,
             "origClipLength": 200,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 212,
@@ -1517,9 +1566,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "資料の『稽古』時間には、『蛍光』ペンを引いておくように！",
-            "enText": "Keep your 'highlighter' pens drawn during \nthe 'practice' time of the material!",
+            "enText": "Remember to <i>highlight</i> your practice periods \nwith a <i>highlighter</i> in your schedules!",
             "nextBlock": 50,
             "origClipLength": 138,
+            "voiceIdx": 48,
             "animData": [
                 {
                     "origLen": 106,
@@ -1540,6 +1590,7 @@
             "enText": "…………",
             "nextBlock": -1,
             "origClipLength": 49,
+            "voiceIdx": 49,
             "animData": [
                 {
                     "origLen": 106,
@@ -1550,5 +1601,6 @@
             "blockIdx": 50
         }
     ],
-    "modified": 1657285583
+    "humanTl": true,
+    "modified": 1707180302
 }

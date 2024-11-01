@@ -66,8 +66,8 @@ class TextBox(tk.Text):
         self.tkRoot = None
         self._editable = self._enabled = editable
         self.font = font
-        self.font_italic = fonts.createFrom(self, font, italic=True)
-        self.font_bold = fonts.createFrom(self, font, bold=True)
+        self.font_italic = fonts.createFrom(self, font, italic=True, suffix="i")
+        self.font_bold = fonts.createFrom(self, font, bold=True, suffix="b")
         self.tag_config("b", font=self.font_bold)
         self.tag_config("i", font=self.font_italic)
         self.color = ColorManager(self)
@@ -100,6 +100,11 @@ class TextBox(tk.Text):
                 openedTags[tagName] = tagList[-1]
                 if tagName == "color":
                     self.color.define(tagVal)
+                elif tagName == "size" and fullTag not in self.tag_names():
+                    ratio = int(tagVal) / 40 #todo: story content, need to generalize
+                    newSize = round(self.font.cget("size") * ratio)
+                    newSizeFont = fonts.createFrom(self, self.font, newSize)
+                    self.tag_config(fullTag, font=newSizeFont)
             offset += len(m[0])
         tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         # Add the cleaned text
@@ -169,6 +174,7 @@ class TextBoxEditable(TextBox):
         super().__init__(parent, size, True, font, **kwargs)
         self.config(undo=True)
         self.spellChecker = SpellCheck(self)
+        self.rawMode = False
         # Move default class binds last to allow overwriting
         this, cls, toplevel, all = self.bindtags()
         self.bindtags((this, toplevel, all, cls))
@@ -181,17 +187,25 @@ class TextBoxEditable(TextBox):
         self.bind("<Control-i>", self.format_text)
         self.bind("<Control-b>", self.format_text)
         self.bind("<Control-C>", self.format_text)
+        self.bind("<Control-d>", self.format_text)
         self.bind("<Control-Shift-Up>", lambda e: self.moveLine(e, -1))
         self.bind("<Control-Shift-Down>", lambda e: self.moveLine(e, 1))
 
     def loadRichText(self, text: str = None, tag=None, append=False):
-        super().loadRichText(text, tag, append)
+        if self.rawMode:
+            setText(self, text)
+        else:
+            super().loadRichText(text, tag, append)
         self.spellChecker.check_spelling()
         self.edit_modified(False)
 
     def format_text(self, event):
+        if event.keysym == "d":
+            self.rawMode = not self.rawMode
+            self.loadRichText(normalize(self.toRichText()))
+            return
         if not self.tag_ranges("sel"):
-            self.master.event_generate("<<Log>>", "No selection to format.")
+            self.master.event_generate("<<Log>>", data="No selection to format.")
             return
         if event.keysym == "i":
             self.toggleSelectionTag("i")
@@ -219,7 +233,7 @@ class TextBoxEditable(TextBox):
         if event.keycode == 8:  # backspace
             ptn = r"^" if shift else r"[^ …—\.?!]+|^"
             sIdx = self.search(ptn, index=tk.INSERT, backwards=True, regexp=True, nocase=True)
-            self.delete(sIdx, tk.INSERT)  # 
+            self.delete(sIdx, tk.INSERT)  #
         elif event.keycode == 46:  # delete
             ptn = r".$" if shift else r" ?.(?=[ …—\.?!]|$)"
             sIdx = self.search(ptn, index=tk.INSERT, backwards=False, regexp=True, nocase=True)
@@ -299,7 +313,7 @@ def getText(widget: TkDisplaysText):
     if isinstance(widget, tk.Label):
         return widget.cget("text")
     elif isinstance(widget, tk.Entry):
-        return widget.get(0, tk.END)
+        return widget.get()
     elif isinstance(widget, tk.Text):
         return widget.get(1.0, tk.END)
 

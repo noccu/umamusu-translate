@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "PQINY2X4K6CZBXVPFFGNWTQ7KJQV2UXV",
     "type": "story",
     "storyId": "090007004",
     "title": "後の月もまた美しく",
+    "enTitle": "The Hunter's Moon holds its own beauty",
     "text": [
         {
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "……はは、珍し。このアタシが、合宿メンの中で1番早起きとか。",
-            "enText": "…… is a rarity. I've heard that I'm the \nearliest waker among the camp members.",
+            "enText": "…… <i>Haha</i>, how unusual for me to be the first one to wake up.",
             "nextBlock": 2,
             "origClipLength": 226,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 200,
@@ -29,9 +31,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "（いや……わかってる。これ早起きっつーか……\r\nちゃんと寝られてないだけだ、単に）",
-            "enText": "(No…… I know. It's not that I'm up early, it's just that I \nhaven't…… been sleeping properly, that's all.)",
+            "enText": "(No…… I know. It's not that I'm up early… I just \nhaven't been sleeping properly to start with.)",
             "nextBlock": 3,
             "origClipLength": 275,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 212,
@@ -49,9 +52,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "………………ちょい、走るか。",
-            "enText": "…………… a little bit, let's run.",
+            "enText": "……… Maybe a run would do me good.",
             "nextBlock": 4,
             "origClipLength": 152,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 58,
@@ -69,9 +73,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "はっ……はっ……はっ……。",
-            "enText": "Ha…… ha…… ha…… ha ……",
+            "enText": "<i>Ha…… hah…… hahh……</i>",
             "nextBlock": 5,
             "origClipLength": 95,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 51,
@@ -85,9 +90,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "『キレイな舞楽しみにしてます』、『ビジュアル大勝利すぎやばい』\r\n『衣装写真ぜひいっぱいあげてください』……か。",
-            "enText": "I'm looking forward to seeing your beautiful dances,\" \"Too much \nof a visual triumph,\" \"Please give us lots of outfit photos. ……?",
+            "enText": "\"Can't wait for the pretty dance\", \"You're gonna look \nso stunning\", \"Please share lots of pics in costume\"……",
             "nextBlock": 6,
             "origClipLength": 318,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 16,
@@ -105,9 +111,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "…………。\r\nやっぱ、アタシが選ばれたのって――",
-            "enText": "………… I knew it! I knew it! I knew it! I knew it!",
+            "enText": "……… <i>Hah</i>… I guess I was chosen because ——",
             "nextBlock": 7,
             "origClipLength": 201,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 372,
@@ -125,9 +132,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "おキレイなお人形さんとして、ってことなわけ？",
-            "enText": "As a pretty doll, you mean?",
+            "enText": "—— I'm like a pretty doll?",
             "nextBlock": 8,
             "origClipLength": 117,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 372,
@@ -143,11 +151,12 @@
         },
         {
             "jpName": "奉納舞講師",
-            "enName": "",
+            "enName": "Votive Dance Instructor",
             "jpText": "うーん……いえ、ごめんなさい。\r\n今のままでも、十分素晴らしいと思います！",
-            "enText": "Hmmm…… no, sorry. I think it's great enough as it is!",
+            "enText": "Hmm…… No, it's nothing. My apologies. \nI think your dance is wonderful as it is!",
             "nextBlock": 9,
             "origClipLength": 218,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 404,
@@ -185,9 +194,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "……そうですか。\r\n『キレイ』に見えてるなら、よかったです。",
-            "enText": "…… I see. If it looks 'clean', I'm glad.",
+            "enText": "…… Okay. If it looks \"pretty\" then that's good.",
             "nextBlock": 10,
             "origClipLength": 205,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 138,
@@ -221,9 +231,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "これで、カレンなりの役割は果たせたかな～って。",
-            "enText": "I hope I've done my part in this, in Curren's own way.",
+            "enText": "I think I've managed my part this time～",
             "nextBlock": 11,
             "origClipLength": 120,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 17,
@@ -265,9 +276,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "……役割？",
-            "enText": "…… Role?",
+            "enText": "…… Your part?",
             "nextBlock": 12,
             "origClipLength": 41,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 160,
@@ -293,9 +305,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "とか、ポジション？　今回はマスコットだと思ったんです。\r\nカレン、『歴史！』とか『伝統！』とかのイメージはないですし。",
-            "enText": "And the position? I thought it was the mascot this time. Curren, \n'History! or 'Tradition! And I don't have the image of a",
+            "enText": "Mmlike, role maybe? I saw myself as the mascot for this. \nSince history and tradition aren't exactly part of my image.",
             "nextBlock": 13,
             "origClipLength": 307,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 75,
@@ -321,9 +334,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "なら、いつも通りバズってバズって広～い層にアピールして、\r\nでも舞そのものはマジメに。ここだけは『意外』なカレンで。",
-            "enText": "So, as usual, we will create a lot of buzz and appeal to a wide \nrange of people, but the dance itself will be serious. Only here, \nI'm going with the \"unexpected\" Curren.",
+            "enText": "So I focused on what I know; generating buzz and trying to \nreach a broad audience, but while keeping a serious approach \nto the dance itself. That can be the \"unexpected\" side of me.",
             "nextBlock": 14,
             "origClipLength": 319,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 138,
@@ -345,9 +359,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "――っていうのが、今回は1番カワイイと思って♪",
-            "enText": "―I thought it was the cutest thing in this case.",
+            "enText": "I thought that would be most appealing♪",
             "nextBlock": 15,
             "origClipLength": 114,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 164,
@@ -365,9 +380,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "はっ、はっ、……～～～～～っ！",
-            "enText": "Ha, ha, ……～～～～～!",
+            "enText": "<i>Ha, hah, ……～～～～～!</i>",
             "nextBlock": 16,
             "origClipLength": 138,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 212,
@@ -389,9 +405,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "ぁあああああああ、クソッ！！\r\n……ダッッッセーな、今のアタシ！！",
-            "enText": "Aaaaahhhh, dammit!…… Dasssssshhhh, now that's Atta!!!!",
+            "enText": "<i>Aaaaahhhh</i>, damn it!! \n…… I'm being so lame right now!!",
             "nextBlock": 17,
             "origClipLength": 253,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 294,
@@ -409,9 +426,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "（上っ面だけで評価されんのは絶対にイヤだ。\r\nけど、そう言って拗ねてばっかの自分も、ダサすぎる）",
-            "enText": "(I definitely don't want to be evaluated only on the surface. (I \nabsolutely don't want to be evaluated only on the surface, but \nI'm also too lame to keep sulking like that.)",
+            "enText": "(I can't stand being valued purely for looks. \nBut constantly just moping about it is as lame as it gets.)",
             "nextBlock": 18,
             "origClipLength": 271,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 16,
@@ -425,9 +443,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "（ならカレンみたく、自分の立ち位置理解して、演じ切ればいいの？\r\nそれで……アタシは、お人形じゃない“アタシ”になれる？）",
-            "enText": "(If so, why don't I just understand my position and act it out \nlike Curren? (So I can be…… \"me\" and not a doll?)",
+            "enText": "(Should I be more like Curren then? Understand my role and \nplay the part? Will that… help me be more than just a doll?)",
             "nextBlock": 19,
             "origClipLength": 339,
+            "voiceIdx": 17,
             "pathId": -2855160568506951890,
             "blockIdx": 18
         },
@@ -435,9 +454,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "（……違う。カレンは、カレンだ。\r\nそういうことじゃないんだ、きっと――）",
-            "enText": "(…… not. Curren is Curren. That's not what I meant, I'm sure―)",
+            "enText": "(… No, that's not right. I'm not Curren. \nSomething tells me that's not the answer ——)",
             "nextBlock": 20,
             "origClipLength": 289,
+            "voiceIdx": 18,
             "pathId": -4804602808992560798,
             "blockIdx": 19
         },
@@ -445,9 +465,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "はぁっ……はぁ……。\r\nん？",
-            "enText": "Hah…… haha…… Hmm?",
+            "enText": "<i>Hah…… ha……</i> \nHuh?",
             "nextBlock": 21,
             "origClipLength": 132,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 157,
@@ -465,9 +486,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "ほっ！　よいしょっ！\r\nんんん～っ……で、こうっ！！",
-            "enText": "Ho! Here we go! Mmmm～～～…… and here we go!",
+            "enText": "<i>Hohh</i>! There! \n<i>Nnnn</i>… like this!!",
             "nextBlock": 22,
             "origClipLength": 177,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 124,
@@ -485,9 +507,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "ユキノ……。",
-            "enText": "Yukino. ……",
+            "enText": "Yukino……",
             "nextBlock": 23,
             "origClipLength": 80,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 17,
@@ -509,9 +532,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "じゃ！　し、シチーさん、おはよがんす！\r\nえと、自主トレなさってたンですか？",
-            "enText": "Bye! Good morning, Ms. City! Were you training on your own?",
+            "enText": "Oh! G-G'morning, Ms. City! \nUhm, were you training on your own?",
             "nextBlock": 24,
             "origClipLength": 266,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 331,
@@ -537,9 +561,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "ん、まぁ……そんなとこ。\r\n……そっちは？　1人で舞の練習？",
-            "enText": "Hmm, well…… something like that. What about you, ……? Practicing \nyour dance by yourself?",
+            "enText": "Yeah, something like that… What about you? \nPracticing the dance alone?",
             "nextBlock": 25,
             "origClipLength": 281,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 68,
@@ -565,9 +590,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "あはは……です。お2人に比べてあたしだけへたっぴなのに、\r\n盛り上がりどころじゃ真ん中に出たりもすっから……。",
-            "enText": "Haha, it's…… Compared to the two of you, I'm not very good at it, \nbut I'm sometimes in the middle of the excitement. ……",
+            "enText": "Ahaha… yeah. I'm the least experienced among us, \nand I'll be in the spotlight, so……",
             "nextBlock": 26,
             "origClipLength": 308,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 365,
@@ -589,9 +615,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "せめて、悪目立ちして迷惑かけねぇようにって……ととと！？",
-            "enText": "At least try not to be a bad influence \nand cause trouble.…… and and and!",
+            "enText": "I just wanna make sure I don't become a \nburden…… Oh, whoops!!?",
             "nextBlock": 27,
             "origClipLength": 214,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 60,
@@ -629,9 +656,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "うわ、大丈夫？　朝から無理すんなって。\r\nそもそも迷惑とか、いっこも思ってないし。",
-            "enText": "Wow, are you okay? Don't be too hard on yourself this morning. I \ndon't think you're bothering me at all.",
+            "enText": "Whoa, are you okay? Don't push yourself so early in the day. \nAnd you're not a burden at all, not one bit.",
             "nextBlock": 28,
             "origClipLength": 246,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 120,
@@ -665,9 +693,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "あー……そだ、一緒に汗流しに行く？\r\n朝っぱらから体ベタついてるしさ、アタシも。",
-            "enText": "Ahh…… yeah, you want to go sweat it out with me? I'm sticky all \nmorning, and so am I.",
+            "enText": "Uhh… Hey, why don't we go freshen up together? \nIt's still morning and we're both already all sweaty.",
             "nextBlock": 29,
             "origClipLength": 247,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 157,
@@ -689,9 +718,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "ふわぁ～、ふさふさ……なンだか自分の尻尾じゃないみたいです～！\r\nまさかシチーさんに洗ってもらえるなンて……ふわわぁ～……！！",
-            "enText": "Wow, it's so fluffy…… it's like it's not my tail! I didn't expect \nMs. Siti to wash it for me. ……",
+            "enText": "Whoah～ my tail's so fluffy…… I barely recognize it～! \nI could never dream you'd wash it for me… <i>Hwahaa</i>～……!!",
             "nextBlock": 30,
             "origClipLength": 442,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 18,
@@ -729,9 +759,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "経験上、ちょっとしたコツ知ってるってだけだよ。\r\nあとはオイルとか、トリートメントのおかげ。",
-            "enText": "It's just that I know a few tricks from experience. The rest is \nthanks to oils and other treatments.",
+            "enText": "It's just a little technique I've picked up. \nThe rest is thanks to oils and other treatment products.",
             "nextBlock": 31,
             "origClipLength": 215,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 120,
@@ -749,9 +780,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "それに、そんだけ状態よくなんのは元がいいからだって。\r\n毛並みにも、肌にも――",
-            "enText": "And, she said, the reason why they are in such good condition is \nbecause they are from the original source. The fur, the skin…",
+            "enText": "Plus, this level of improvement is down to your natural features. \nYour hair, your skin, they're all great ——",
             "nextBlock": 32,
             "origClipLength": 234,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 248,
@@ -773,9 +805,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "あと、舞にもさ。\r\nユキノはもっと、自分に自信持っていいと思うよ？",
-            "enText": "And to Mai. I think Yukino should have more confidence in herself.",
+            "enText": "Oh, same for the dance. Yukino, you should be \nmore confident in yourself.",
             "nextBlock": 33,
             "origClipLength": 209,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 248,
@@ -801,9 +834,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "シチーさん……えへへ、ありがとがんす。",
-            "enText": "City-san…… ehehe, thanks Gansu.",
+            "enText": "Ms. City…… ehehe, thank yous.",
             "nextBlock": 34,
             "origClipLength": 183,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 89,
@@ -825,9 +859,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "そンでも――大事なお祭りの演し物ですから。\r\nみっともねぇとこ見せねぇように、もっとがンばらねぇと！",
-            "enText": "But it's an important festival performance. We have to work \nharder so that we don't look like a disgrace!",
+            "enText": "But still… we's performing in a major festival. \nI've got to push myself to not mess up!",
             "nextBlock": 35,
             "origClipLength": 273,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 308,
@@ -849,9 +884,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "大事なお祭り、か……。\r\n………………。",
-            "enText": "An important festival, or…… ……………",
+            "enText": "A major festival, huh…………",
             "nextBlock": 36,
             "origClipLength": 204,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 205,
@@ -877,9 +913,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "……ユキノはさ、好き？　お祭り。",
-            "enText": "…… Yukino is, do you like it? Festival.",
+            "enText": "…… Do you enjoy festivals, Yukino?",
             "nextBlock": 37,
             "origClipLength": 120,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 50,
@@ -901,9 +938,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "えっ？　う～ンと……そうですねぇ。",
-            "enText": "Eh? Ummm… and…… I guess so.",
+            "enText": "Huh? Well… yes, I do.",
             "nextBlock": 38,
             "origClipLength": 133,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 152,
@@ -925,9 +963,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "うちの地元でもやってるンですよ、収穫祝いの秋祭り。\r\n駿大祭とか、昨日行ったのに比べると小せぇもンですけど。",
-            "enText": "My hometown also holds an autumn festival to celebrate the \nharvest. It's a small one compared to the Suntai Festival or the \none I went to yesterday.",
+            "enText": "We have a small autumn harvest festival in my hometown too. \nIt's a whole lot smaller than the Festival of Illustrious Equines \nor the one from yesterday, though.",
             "nextBlock": 39,
             "origClipLength": 314,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 237,
@@ -945,9 +984,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "でも、楽しいンです。採れたて使った屋台料理みーんなで食べて、\r\n火ぃ囲んで踊ったり、田植え歌うたったり。",
-            "enText": "But it is fun. Everyone eats freshly harvested food, dances \naround the fire, and sings songs about rice planting.",
+            "enText": "But it's a ton of fun. We alls eat fresh harvest cooking from \nthe stalls, dance around the fire, sing rice-planting songs.",
             "nextBlock": 40,
             "origClipLength": 269,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 148,
@@ -969,9 +1009,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "冬になったらなンもかも雪に覆われちまって、まンずシーンと\r\nしちまうけど……お祭りの賑わいを思い出すと、元気が出るンです。",
-            "enText": "When winter comes, everything is covered with snow and it's all \nquiet. …… but when I remember the festivities, it cheers me up.",
+            "enText": "Everything gets buried under snow in winter, and it \ngets so quiet… but remembering the festival's buzz \nalways lifts my spirits.",
             "nextBlock": 41,
             "origClipLength": 365,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 494,
@@ -989,9 +1030,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "そっか……ユキノにとってのお祭りって、そういうものなんだね。",
-            "enText": "I see.…… So that's what festivals are like for Yukino.",
+            "enText": "Mmm… so that's what festivals make you think of.",
             "nextBlock": 42,
             "origClipLength": 202,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 128,
@@ -1009,9 +1051,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "ですねぇ～。\r\nシチーさんにとっては、どんなモンですか？",
-            "enText": "I guess so. What is it like for you?",
+            "enText": "Yeah～ What about you, Ms. City? \nHow do you feel about festivals?",
             "nextBlock": 43,
             "origClipLength": 159,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 283,
@@ -1029,9 +1072,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "…………アタシ？",
-            "enText": "……… Atashi?",
+            "enText": "……… Me?",
             "nextBlock": 44,
             "origClipLength": 64,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 89,
@@ -1049,9 +1093,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "アタシに、とっては――",
-            "enText": "For me, it's―",
+            "enText": "To me, festivals are ——",
             "nextBlock": 45,
             "origClipLength": 70,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 150,
@@ -1076,6 +1121,7 @@
             "enText": "Ah! There you are, both of you～!",
             "nextBlock": 46,
             "origClipLength": 99,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 168,
@@ -1101,9 +1147,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "ぷぅ、カレンだけ仲間外れでお風呂なんてひどいひどい！\r\n3人で奉納舞トリオじゃないですか～！",
-            "enText": "Pfft, it's terrible, terrible, terrible that Curren \nis the only one left out of the bath! The three \nof us are the Dedication Dance Trio!",
+            "enText": "Boo, leaving Curren out of the bath, meanies! \nWe're the Votive Dance trio, aren't we～?",
             "nextBlock": 47,
             "origClipLength": 254,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 379,
@@ -1145,9 +1192,10 @@
             "jpName": "ユキノビジン",
             "enName": "Yukino Bijin",
             "jpText": "わわわ、おもさげながんす！？\r\n置いてったつもりはなかったンですけど……！",
-            "enText": "Wow, that's a very interesting cancer! I \ndidn't mean to leave you here, but ……!",
+            "enText": "<i>Owuhh</i>, I'm reals sorry! We didn't mean ta exclude you…!",
             "nextBlock": 48,
             "origClipLength": 171,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 224,
@@ -1185,9 +1233,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "ダメーッ、許しません☆　ということで～、\r\nいっしょに露天で半身浴おしゃべり、付き合ってく～ださいっ☆",
-            "enText": "No, I won't allow it☆ So please join me for a half-bathing chat \nin the open-air with me☆.",
+            "enText": "No way, I won't let that slide☆ So～ we're gonna take \na nice open-air <i>half bath</i> together and have a chat☆",
             "nextBlock": 49,
             "origClipLength": 251,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 193,
@@ -1225,9 +1274,10 @@
             "jpName": "カレンチャン",
             "enName": "Curren Chan",
             "jpText": "ほらほら、行きましょ～！",
-            "enText": "Come on, come on, let's go!",
+            "enText": "Let's go, come on～!",
             "nextBlock": 50,
             "origClipLength": 125,
+            "voiceIdx": 48,
             "animData": [
                 {
                     "origLen": 136,
@@ -1265,9 +1315,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "（……カレンは、カレン。ユキノはユキノだ）",
-            "enText": "(…… Curren is Curren. Yukino is Yukino.)",
+            "enText": "(…… Curren and Yukino both have their sense of self.)",
             "nextBlock": 51,
             "origClipLength": 190,
+            "voiceIdx": 49,
             "animData": [
                 {
                     "origLen": 173,
@@ -1289,9 +1340,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "じゃあ、アタシは――……？",
-            "enText": "So, I'm at―……?",
+            "enText": "But what about me……?",
             "nextBlock": 52,
             "origClipLength": 87,
+            "voiceIdx": 50,
             "animData": [
                 {
                     "origLen": 260,
@@ -1321,9 +1373,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "あ……会長！　あの、ちょっといいですか。",
-            "enText": "Ah, Chairman ……! Um, may I have a word?",
+            "enText": "Oh… Prez! Can I talk to you for a second?",
             "nextBlock": 53,
             "origClipLength": 124,
+            "voiceIdx": 51,
             "animData": [
                 {
                     "origLen": 260,
@@ -1345,9 +1398,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "おや、ゴールドシチー。何かな？",
-            "enText": "Oh, Gold City. Yes?",
+            "enText": "Oh, Gold City. What is it?",
             "nextBlock": 54,
             "origClipLength": 99,
+            "voiceIdx": 52,
             "animData": [
                 {
                     "origLen": 70,
@@ -1369,9 +1423,10 @@
             "jpName": "ゴールドシチー",
             "enName": "Gold City",
             "jpText": "確か、駿大祭に関する資料をお持ちでしたよね？\r\nあれ……見させてもらっても、構いませんか？",
-            "enText": "I believe you have materials related to the Sundae Festival, \ndon't you? Do you mind if I take a look at ……?",
+            "enText": "You have some documents about the Festival \nof Illustrious Equines, right? Could I take a look \nat them, if you don't mind?",
             "nextBlock": -1,
             "origClipLength": 265,
+            "voiceIdx": 53,
             "animData": [
                 {
                     "origLen": 187,
@@ -1390,5 +1445,6 @@
             "blockIdx": 54
         }
     ],
-    "modified": 1657285584
+    "modified": 1707182670,
+    "humanTl": true
 }

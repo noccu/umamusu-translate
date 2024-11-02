@@ -343,7 +343,6 @@ class GameBundle:
         self.bundlePath = Path(path)
         self.bundleName = self.bundlePath.stem
         self.bundleType = bType
-        self.exists = self.bundlePath.exists()
         self.data = None
         self.patchData: bytes = b""
         self._autoloaded = load
@@ -417,6 +416,10 @@ class GameBundle:
         with open(fp, "wb") as f:
             f.write(b)
         self.isPatched = True
+
+    @property
+    def exists(self):
+        return self.bundlePath.exists()
 
     @classmethod
     def fromName(cls, name, **kwargs):

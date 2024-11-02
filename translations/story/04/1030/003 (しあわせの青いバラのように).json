@@ -1,26 +1,35 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "E537UBBUK24GCBS2WMHX3ZOQTFGY5UCK",
     "type": "story",
     "storyId": "041030003",
     "title": "しあわせの青いバラのように",
+    "enTitle": "Like the Blue Rose of Happiness",
     "text": [
         {
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "………………。",
-            "enText": "…",
+            "enText": "………………",
             "nextBlock": 2,
+            "origClipLength": 42,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "ライス、来てたのか",
-                    "enText": "You've arrived.",
+                    "enText": "Ah, Rice, you were here?",
                     "nextBlock": 2
                 },
                 {
                     "jpText": "ライス、来てたんだ",
-                    "enText": "You've arrived.",
+                    "enText": "Ah, Rice, you were here?",
                     "nextBlock": 2
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": 1700652342808969571
                 }
             ],
             "pathId": 7013431698490722445,
@@ -30,13 +39,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ、おに……じゃなかった、トレーナーさん！\r\nこ、こんにちは。",
-            "enText": "Oh, big broth… I mean Trainer! Good morning.",
+            "enText": "Oh, big broth— I mean, Trainer! G-Good morning!",
             "nextBlock": 3,
+            "origClipLength": 160,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "何を読んでたんだ？",
-                    "enText": "What are you reading?",
+                    "enText": "What were you reading?",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": -1825717152598233545
+                },
+                {
+                    "origLen": 172,
+                    "pathId": -7908693764964524028
                 }
             ],
             "pathId": 8711214139932316107,
@@ -46,18 +67,30 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ、おね……じゃなかった、トレーナーさん！\r\nこ、こんにちは。",
-            "enText": "Oh, big sist… I mean Trainer! Good morning.",
+            "enText": "Oh, big sis— I mean, Trainer! G-Good morning!",
             "nextBlock": 4,
+            "origClipLength": 160,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "何を読んでたんだ？",
-                    "enText": "What are you reading?",
+                    "enText": "What were you reading?",
                     "nextBlock": 4
                 },
                 {
                     "jpText": "何を読んでいたの？",
-                    "enText": "What have you been reading?",
+                    "enText": "What were you reading?",
                     "nextBlock": 4
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 178,
+                    "pathId": 7869025788146691926
+                },
+                {
+                    "origLen": 336,
+                    "pathId": -4531845915544941117
                 }
             ],
             "pathId": -1747510858329978255,
@@ -67,8 +100,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "絵本だよ。いちばんお気に入りの……\r\n『しあわせの青いバラ』っていう絵本。",
-            "enText": "A picture book. It's my favorite story \ncalled, \"The Blue Rose of Happiness\"",
+            "enText": "A storybook. It's my favorite fairy \ntale, \"The Blue Rose of Happiness\".",
             "nextBlock": 5,
+            "origClipLength": 206,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 121,
+                    "pathId": -9129224992200106167
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 73092812402930643
+                }
+            ],
             "pathId": 1395965779329564562,
             "blockIdx": 4
         },
@@ -76,8 +121,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "お話はね、バラがたくさん植えられたお庭から始まるの。\r\n色とりどりのバラたちが、訪れる人みんなに幸せをくれるお庭。",
-            "enText": "This story takes place in a garden that is filled with roses. The \nroses came in all sorts of different colors, and everyone who \nvisited the garden would be filled with happiness.",
+            "enText": "The story begins in a garden where many different colored \nroses grew. Anyone who visited it would find themselves \nfilled with blessings and happiness.",
             "nextBlock": 6,
+            "origClipLength": 351,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 406,
+                    "pathId": -3742879082754563791
+                },
+                {
+                    "origLen": 25,
+                    "pathId": 775708414095203262
+                }
+            ],
             "pathId": 7887813910789257634,
             "blockIdx": 5
         },
@@ -85,8 +142,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "でもね……ある日そのお庭に、\r\n誰も見たことのない真っ青なバラがつぼみをつけたの。",
-            "enText": "But one day, a never before seen blue rose bud had sprouted.",
+            "enText": "However, on a fateful day, a certain deep \nazure rose began to bloom in the garden…",
             "nextBlock": 7,
+            "origClipLength": 236,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 406,
+                    "pathId": 1238302181464501283
+                },
+                {
+                    "origLen": 127,
+                    "pathId": -393259634434270497
+                }
+            ],
             "pathId": 6160310578324116027,
             "blockIdx": 6
         },
@@ -94,8 +163,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "そしたら周りのバラたちも、お庭を見に来た人たちもみんな、\r\n『青いバラなんて気味が悪い』『きっと不幸の花だ』って……。",
-            "enText": "The other roses and the people that came to the \ngarden all said, \"A blue rose is a terrible omen, \nit will surely bring misfortune.\"",
+            "enText": "Both the surrounding roses and curious visitors began to voice \ntheir doubts. \"It's unsettling, that blue rose\", they murmured, \n\"It must be a flower of misfortune\"…",
             "nextBlock": 8,
+            "origClipLength": 347,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 186,
+                    "pathId": -7425174128137652484
+                },
+                {
+                    "origLen": 35,
+                    "pathId": 3892814598951707458
+                }
+            ],
             "pathId": 9218590303353019099,
             "blockIdx": 7
         },
@@ -103,8 +184,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "そのうち、青いバラ自身も『ぼくはだめな花なんだ』って思って、\r\nだんだんしおれてきちゃうんだ……。",
-            "enText": "Hearing this, the blue rose started to believe in its own \nmisfortune and gradually started to wither…",
+            "enText": "Before long, the blue rose, too, began to see \nits own existence as meaningless and slowly \nwithered under the weight of its misfortune…",
             "nextBlock": 9,
+            "origClipLength": 298,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 339,
+                    "pathId": -526625904376611945
+                },
+                {
+                    "origLen": 193,
+                    "pathId": -2044721286000739970
+                }
+            ],
             "pathId": -766576017138826614,
             "blockIdx": 8
         },
@@ -112,13 +205,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あっ、で、でもね、ここで終わりじゃないんだよ？\r\nしおれた青いバラの前に、『お兄さま』が現れるの。",
-            "enText": "Oh, but the story doesn't end there! Before the blue rose fully \nwithered away, a big brother appeared.",
+            "enText": "Ah, but you see, the story doesn't end there! \nBefore the blue rose wilts completely, a big \nbrotherly figure appears.",
             "nextBlock": 10,
+            "origClipLength": 265,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "『お兄さま』？",
-                    "enText": "A big brother?",
+                    "enText": "A big brotherly figure?",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 2681445862087747617
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5337954569150140246
                 }
             ],
             "pathId": 6237185663116531823,
@@ -128,18 +233,30 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あっ、で、でもね、ここで終わりじゃないんだよ？\r\nしおれた青いバラの前に、『お姉さま』が現れるの。",
-            "enText": "Oh, but the story doesn't end there! Before the blue rose fully \nwithered away, a big sister appeared.",
+            "enText": "Ah, but you see, the story doesn't end there! \nBefore the blue rose wilts completely, a big \nsisterly figure appears.",
             "nextBlock": 11,
+            "origClipLength": 265,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "『お兄さま』？",
-                    "enText": "A big brother?",
+                    "enText": "A big brotherly figure?",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "『お姉さま』？",
-                    "enText": "A big sister?",
+                    "enText": "A big sisterly figure?",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 2392145759280800084
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 237433249752907519
                 }
             ],
             "pathId": 5536680239716802161,
@@ -149,8 +266,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "そう！　心の優しい、とっても穏やかに笑う人。\r\nその人は、青いバラのつぼみを見つけて、すぐに笑顔でこう言うの。",
-            "enText": "That's right! He was kind and had a gentle smile. Upon seeing the \nblue rose bud, the big brother said with a smile,",
+            "enText": "That's right! They were a kind-hearted person with a gentle \nsmile. When they saw the blue rose, they immediately spoke \nout with a tender tone, wrapped in warmth and compassion.",
             "nextBlock": 12,
+            "origClipLength": 393,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 425,
+                    "pathId": 5896633355669274722
+                },
+                {
+                    "origLen": 30,
+                    "pathId": -8603306678169463124
+                }
+            ],
             "pathId": 2476346549645505381,
             "blockIdx": 11
         },
@@ -158,8 +287,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "『やあ、青いバラだなんてとっても素敵だ！\r\nきっときれいに咲くに違いない。ぜひ買い取らせてください！』",
-            "enText": "\"A blue rose is wonderful! One day it will surely bloom into a \nbeautiful rose! Please let me buy it!\"",
+            "enText": "\"Look at the stunning blue color of this rose! \nOne day it will surely bloom into a splendid flower! \nPlease, allow me to purchase it!\"",
             "nextBlock": 13,
+            "origClipLength": 277,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 388,
+                    "pathId": -1852330606222914564
+                }
+            ],
             "pathId": 9088016481373130424,
             "blockIdx": 12
         },
@@ -167,8 +304,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "『やあ、青いバラだなんてとっても素敵ね！\r\nきっときれいに咲くに違いないわ。ぜひ買い取らせてください！』",
-            "enText": "\"A blue rose is wonderful! One day it will surely bloom into a \nbeautiful rose! Please let me buy it!\"",
+            "enText": "\"Look at the stunning blue color of this rose! \nOne day it will surely bloom into a splendid flower! \nPlease, allow me to purchase it!\"",
             "nextBlock": 14,
+            "origClipLength": 271,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 388,
+                    "pathId": 5205205026380179122
+                }
+            ],
             "pathId": -2985240377160089958,
             "blockIdx": 13
         },
@@ -176,8 +321,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "それでね、しおれかけてた青いバラは鉢に植え替えられて、\r\nお兄さまに毎日声を掛けてもらって、見事な花を咲かせるの。",
-            "enText": "Afterward, the withered blue rose was planted in a pot. Everyday, \nthe older brother would encourage the blue rose and then just as \nhe said, it bloomed beautifully.",
+            "enText": "And thus, the wilting blue rose found new life in a fresh pot. \nWith daily tender nurture and encouragement from the kind, \nbig-brotherly man, it had bloomed into a stunning flower.",
             "nextBlock": 15,
+            "origClipLength": 359,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 483,
+                    "pathId": -2827446574214732852
+                },
+                {
+                    "origLen": 121,
+                    "pathId": -8916628214839775219
+                }
+            ],
             "pathId": 1012330301495131777,
             "blockIdx": 14
         },
@@ -185,8 +342,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "それでね、しおれかけてた青いバラは鉢に植え替えられて、\r\nお姉さまに毎日声を掛けてもらって、見事な花を咲かせるの。",
-            "enText": "Afterward, the withered blue rose was planted in a pot. Everyday, \nthe older sister would encourage the blue rose and then just as \nhe said, it bloomed beautifully.",
+            "enText": "And thus, the wilting blue rose found new life in a fresh pot. \nWith daily tender nurture and encouragement from the kind, \nbig-sisterly woman, it had bloomed into a stunning flower.",
             "nextBlock": 16,
+            "origClipLength": 356,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 483,
+                    "pathId": 2644758500476767854
+                },
+                {
+                    "origLen": 104,
+                    "pathId": 8470367447337490230
+                }
+            ],
             "pathId": -5998336384765427428,
             "blockIdx": 15
         },
@@ -194,13 +363,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "青いバラは、お兄さまのおうちの窓辺に飾られて、\r\n道ゆく人たちをたくさん幸せにできたんだよ。",
-            "enText": "The flower was then moved to a windowsill, and from then on all \nof the people that walked by were able to see the blue rose were \nfilled with happiness.",
+            "enText": "Perched gracefully on the windowsill, the blue rose found new \nmeaning in life. Its vibrant hues extended a warm welcome \nto every passerby, filling them with joy and delight.",
             "nextBlock": 17,
+            "origClipLength": 262,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "素敵な絵本だな",
                     "enText": "That's a really nice story.",
                     "nextBlock": 18
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 219,
+                    "pathId": -2029982106948343538
+                },
+                {
+                    "origLen": 26,
+                    "pathId": 760805070588524328
                 }
             ],
             "pathId": -2693629546227117945,
@@ -210,8 +391,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "青いバラは、お姉さまのおうちの窓辺に飾られて、\r\n道ゆく人たちをたくさん幸せにできたんだよ。",
-            "enText": "The flower was then moved to a windowsill, and from then on all \nof the people that walked by were able to see the blue rose were \nfilled with happiness.",
+            "enText": "Perched gracefully on the windowsill, the blue rose found new \nmeaning in life. Its vibrant hues extended a warm welcome \nto every passerby, filling them with joy and delight.",
             "nextBlock": 18,
+            "origClipLength": 262,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "素敵な絵本だな",
@@ -220,8 +403,18 @@
                 },
                 {
                     "jpText": "素敵な絵本だね",
-                    "enText": "It's a beautiful book.",
+                    "enText": "That's a really nice story.",
                     "nextBlock": 18
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 219,
+                    "pathId": -4036615825355599462
+                },
+                {
+                    "origLen": 26,
+                    "pathId": 288534062700103233
                 }
             ],
             "pathId": 8935016698090507088,
@@ -231,8 +424,24 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……！　と、トレーナーさんもそう思う！？\r\nえへへ、うれしいな……！",
-            "enText": "You think so too? That makes me so happy!",
+            "enText": "……! Y-You think so too, Trainer?! \nHehe, that makes me so happy…!",
             "nextBlock": 19,
+            "origClipLength": 223,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 262,
+                    "pathId": 2686385679631314220
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 7589924253122895441
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -2853911719449802812
+                }
+            ],
             "pathId": 6356573449201762983,
             "blockIdx": 18
         },
@@ -240,8 +449,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……ちっちゃい頃、初めてこのお話を読んだときにね。\r\nライスも、この青いバラみたいになりたいなぁって思ったんだ。",
-            "enText": "Ever since I was young, from the first time that I read this \nstory I've always to become like the blue rose.",
+            "enText": "… When I read this story for the first time, it became \nmy childhood dream to become like the blue rose.",
             "nextBlock": 20,
+            "origClipLength": 330,
+            "voiceIdx": 13,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": -3956113924959468602
+                },
+                {
+                    "origLen": 176,
+                    "pathId": 3861784463187109452
+                }
+            ],
             "pathId": 9212050644044121421,
             "blockIdx": 19
         },
@@ -249,8 +470,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "みんなを不幸にしちゃう、だめな子じゃない……。\r\nみんなを幸せにできる、青いバラに。",
-            "enText": "Instead of a useless girl that brings misfortune to others, I \nwanted to become like the blue rose and make everyone happy.",
+            "enText": "A blue rose capable of bringing happiness \nto everyone, not misfortune…",
             "nextBlock": 21,
+            "origClipLength": 282,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 118,
+                    "pathId": 1413245326981034493
+                },
+                {
+                    "origLen": 22,
+                    "pathId": 6260716870574138240
+                }
+            ],
             "pathId": -8495615671772771924,
             "blockIdx": 20
         },
@@ -258,8 +491,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "そう思い始めた頃に……\r\nお母さまがね、ライスをレースへ連れていってくれたの。",
-            "enText": "Around the time I started to think like this, \nmy mother took me to a race track.",
+            "enText": "Around that time, my mother took me to a racetrack.",
             "nextBlock": 22,
+            "origClipLength": 228,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 252,
+                    "pathId": -1260461907554912649
+                }
+            ],
             "pathId": -1515772023653939035,
             "blockIdx": 21
         },
@@ -267,8 +508,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "レース場は人がいっぱいで……迷惑かけたくないから、おうちで\r\nいつもじっとしてたライスのおめめ、ぐるぐるになっちゃったけど。",
-            "enText": "Because the race track is always filled with \npeople, I've always tried to avoid it in order \nto not cause any misfortune for others.",
+            "enText": "The racetrack was filled with people… It was \nso overwhelming to me, because I had always \nstayed at home trying not to bother anyone.",
             "nextBlock": 23,
+            "origClipLength": 317,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 82,
+                    "pathId": -4215703369661259597
+                }
+            ],
             "pathId": 3642801837913991570,
             "blockIdx": 22
         },
@@ -276,8 +525,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "でもね、それでもしっかり覚えてるんだよ！\r\n周りの人みんな、レースをめいっぱいの笑顔で見てた。",
-            "enText": "I can still remember that day so clearly. Everyone around me was \nwatching the race track with big smiles on all of their faces.",
+            "enText": "But, you know, that sight is still burned into my memory! \nEveryone around me was fully immersed in the race, looking \ntoward the track with great big smiles.",
             "nextBlock": 24,
+            "origClipLength": 285,
+            "voiceIdx": 17,
             "pathId": 1636782883929699869,
             "blockIdx": 23
         },
@@ -285,8 +536,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "応援してる子が、がんばってレースで勝ったら……\r\nみんな、とっても幸せそうなお顔になってた。",
-            "enText": "And when the girl that everyone was cheering for won the race, \neverybody in the stands became so happy!",
+            "enText": "And then, when the girl that everyone was cheering \nfor won… all their faces lit up with pure joy.",
             "nextBlock": 25,
+            "origClipLength": 253,
+            "voiceIdx": 18,
             "pathId": -2702407727047257558,
             "blockIdx": 24
         },
@@ -294,8 +547,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "それでライスも……ライスもね、\r\nあんなふうになりたいなぁって、思ったんだ。",
-            "enText": "I thought to myself, I also want to become like that girl.",
+            "enText": "That's when I thought to myself… \nI want to be like that, too.",
             "nextBlock": 26,
+            "origClipLength": 243,
+            "voiceIdx": 19,
+            "animData": [
+                {
+                    "origLen": 80,
+                    "pathId": -6596497681209887930
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8522947981632808439
+                }
+            ],
             "pathId": 5265280635946799387,
             "blockIdx": 25
         },
@@ -303,18 +568,26 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "みんなを不幸にするだけの、だめな子じゃなくて……\r\nみんなを幸せにできる、そんなウマ娘に。",
-            "enText": "Instead of a useless girl that could only bring \nmisfortune to others, I wanted to become a horse \ngirl that could make everyone happy.",
+            "enText": "I didn't want to be a good-for-nothing who \nonly brings misfortune, but the kind of horsegirl \nwho can make everyone happy.",
             "nextBlock": 27,
+            "origClipLength": 327,
+            "voiceIdx": 20,
             "choices": [
                 {
                     "jpText": "ライスならきっとなれるさ",
-                    "enText": "If it's you, you can definitely do it.",
+                    "enText": "I believe that you can pull it off.",
                     "nextBlock": 27
                 },
                 {
                     "jpText": "ライスならきっとなれるよ",
-                    "enText": "If it's you, you can definitely do it.",
+                    "enText": "I believe that you can pull it off.",
                     "nextBlock": 27
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 291,
+                    "pathId": 176457058558988769
                 }
             ],
             "pathId": 6292771135125237885,
@@ -324,8 +597,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "トレーナーさん……！",
-            "enText": "Trainer!…",
+            "enText": "Trainer……!",
             "nextBlock": 28,
+            "origClipLength": 45,
+            "voiceIdx": 21,
+            "animData": [
+                {
+                    "origLen": 286,
+                    "pathId": 2372811217708347473
+                },
+                {
+                    "origLen": 100,
+                    "pathId": 7612363068073326837
+                }
+            ],
             "pathId": -3163720859887485628,
             "blockIdx": 27
         },
@@ -333,8 +618,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "えへへっ……うん、ありがとう！\r\nライス、がんばってトレーニングするねっ！！",
-            "enText": "Thank you! I'll make sure to work hard on my training!",
+            "enText": "Ehehe… Thank you! I'll make sure to work hard on my training!!",
             "nextBlock": 29,
+            "origClipLength": 210,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": 2873100133838205430
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -3188807964033949835
+                }
+            ],
             "pathId": 3709518591342780960,
             "blockIdx": 28
         },
@@ -342,8 +639,16 @@
             "jpName": "",
             "enName": "",
             "jpText": "それからも、ライスシャワーは懸命にトレーニングを重ねた。",
-            "enText": "After that, Rice Shower again diligently \nworked hard on her training.",
+            "enText": "After that, Rice Shower continued to train \ndiligently and push herself to the limit.",
             "nextBlock": 30,
+            "origClipLength": 81,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 108,
+                    "pathId": -215058034324513924
+                }
+            ],
             "pathId": 4028493990165903372,
             "blockIdx": 29
         },
@@ -351,8 +656,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "そして、いよいよ……！",
-            "enText": "And then finally…",
+            "enText": "Until eventually, the time had come…!",
             "nextBlock": 31,
+            "origClipLength": 59,
+            "voiceIdx": -1,
             "pathId": -4256649382260554303,
             "blockIdx": 30
         },
@@ -360,18 +667,30 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "トレーナーさん、大事なお話ってなあに……？",
-            "enText": "Trainer, you said you had something important today?",
+            "enText": "Trainer, you said you had something important to say…?",
             "nextBlock": 32,
+            "origClipLength": 133,
+            "voiceIdx": 23,
             "choices": [
                 {
                     "jpText": "デビュー戦が決まったぞ！",
-                    "enText": "Your debut race has been decided!",
+                    "enText": "I've settled on your debut race!",
                     "nextBlock": 32
                 },
                 {
                     "jpText": "デビュー戦が決まったよ！",
-                    "enText": "Your debut race has been decided!",
+                    "enText": "I've settled on your debut race!",
                     "nextBlock": 32
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 199,
+                    "pathId": -7464746850220297994
+                },
+                {
+                    "origLen": 135,
+                    "pathId": 1824586695683953718
                 }
             ],
             "pathId": -5570242531889042127,
@@ -381,8 +700,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "で、デビュー戦……！",
-            "enText": "M-my debut race!?",
+            "enText": "D-Debut race?!",
             "nextBlock": 33,
+            "origClipLength": 69,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 9032582199195367482
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 481512893697160636
+                }
+            ],
             "pathId": 4378128847800139729,
             "blockIdx": 32
         },
@@ -390,18 +721,26 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "じゃあライス、とうとうレースに……。",
-            "enText": "Then that means soon I'll be…",
+            "enText": "Then… that means Rice will be racing soon……",
             "nextBlock": 34,
+            "origClipLength": 96,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "……出られそうか？",
-                    "enText": "Do you think you can do it?",
+                    "enText": "…… Think you're up to it?",
                     "nextBlock": 34
                 },
                 {
                     "jpText": "……出られそう？",
-                    "enText": "Do you think you can do it?",
+                    "enText": "…… Think you're up to it?",
                     "nextBlock": 34
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -2966551079607923643
                 }
             ],
             "pathId": -5322496021455502789,
@@ -411,8 +750,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あっ、えっと……！",
-            "enText": "T-thats…",
+            "enText": "Ah, u-um…!",
             "nextBlock": 35,
+            "origClipLength": 48,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": -5095478003401211542
+                }
+            ],
             "pathId": 1704514015395004201,
             "blockIdx": 34
         },
@@ -420,8 +767,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "だ、だいじょうぶ。\r\n選抜レースのときみたいには、しないから……。",
-            "enText": "I'll be fine. I won't do what I did during the Selection Race…",
+            "enText": "I-It'll be okay. I won't repeat what \nhappened with the Selection Race…",
             "nextBlock": 36,
+            "origClipLength": 207,
+            "voiceIdx": 27,
+            "animData": [
+                {
+                    "origLen": 192,
+                    "pathId": -5041850946827284236
+                },
+                {
+                    "origLen": 22,
+                    "pathId": -8405479194533627722
+                }
+            ],
             "pathId": 2938583434312414643,
             "blockIdx": 35
         },
@@ -429,8 +788,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "トレーナーさんも一緒だし……ライス、がんばるよ！\r\nうん……がんばるぞ、おー！！",
-            "enText": "Especially now that you're with me, \nI'll do my best! Go Rice… Go!!!",
+            "enText": "Especially now that I have you by my side…! \n… You can do it, Rice! You can do it, yeah～!!",
             "nextBlock": 37,
+            "origClipLength": 242,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": 3001855709955984243
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -6694002375442802632
+                }
+            ],
             "pathId": -3447904794766962671,
             "blockIdx": 36
         },
@@ -438,8 +809,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ、えっと……これね、お母さまが教えてくれたの。\r\n『こうやって言ったら、がんばる気持ちが湧いてくるよ』って。",
-            "enText": "Oh… That just now was a special chant my mom \ntaught me. She told me, \"If you say these words, \nyou'll feel like you can do anything.\"",
+            "enText": "Ah, this… this is a special spell my mother taught me. \nShe told me that if I say these words, I'll have the power \nto do anything!",
             "nextBlock": 38,
+            "origClipLength": 296,
+            "voiceIdx": 29,
+            "animData": [
+                {
+                    "origLen": 454,
+                    "pathId": -4435313787222354053
+                },
+                {
+                    "origLen": 183,
+                    "pathId": -3940874991574646632
+                }
+            ],
             "pathId": 2929142603605582197,
             "blockIdx": 37
         },
@@ -447,13 +830,25 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "トレーナーさんも一緒にやる？",
-            "enText": "Would you also like to try it?",
+            "enText": "Would you like to try it with me, Trainer?",
             "nextBlock": 39,
+            "origClipLength": 59,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "頑張るぞ、おー！！",
-                    "enText": "Go me… Go!!!",
+                    "enText": "We can do it, yeah～!!",
                     "nextBlock": 39
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 454,
+                    "pathId": -1202491362687813077
+                },
+                {
+                    "origLen": 183,
+                    "pathId": 4120853224480749798
                 }
             ],
             "pathId": 8802599624128226365,
@@ -463,8 +858,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……！　ら、ライスも！　おー！！",
-            "enText": "Me too! Go!!!",
+            "enText": "……! Yeaaah～!!!",
             "nextBlock": 40,
+            "origClipLength": 142,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 40,
+                    "pathId": -1869380864600007288
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3783836941790066583
+                }
+            ],
             "pathId": 4174302245351568664,
             "blockIdx": 39
         },
@@ -472,8 +879,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふふっ……ふふふふっ！",
-            "enText": "[giggle]… hahahaha!",
+            "enText": "<i>Pffft… Ehehehe!!</i>",
             "nextBlock": 41,
+            "origClipLength": 79,
+            "voiceIdx": 32,
+            "animData": [
+                {
+                    "origLen": 64,
+                    "pathId": 8311909764402511843
+                }
+            ],
             "pathId": -4247995155828158916,
             "blockIdx": 40
         },
@@ -481,8 +896,16 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして、ライスシャワーと共にさらなるトレーニングを重ねた。\r\nデビュー戦に向け仕上がりは十分、士気も高かった。",
-            "enText": "And so another day of training ended. With the debut \nrace as our goal, we felt confident in our preparation \nand morale was also running high.",
+            "enText": "Time passed by quickly as we racked up the training days \nin a cheerful mood. With our eyes firmly set on the debut race, \nwe felt confident in our preparation to bring home victory!",
             "nextBlock": 42,
+            "origClipLength": 117,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 128,
+                    "pathId": 2864799109964503906
+                }
+            ],
             "pathId": 3112210843889739758,
             "blockIdx": 41
         },
@@ -490,8 +913,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "……かに、思えたのだが。",
-            "enText": "Or so I thought…",
+            "enText": "…… At least, that's what I had thought.",
             "nextBlock": 43,
+            "origClipLength": 60,
+            "voiceIdx": -1,
             "pathId": -5264209512892430920,
             "blockIdx": 42
         },
@@ -499,12 +924,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "デビュー戦当日の朝――",
-            "enText": "The day of the debut race.",
+            "enText": "On the day of the debut race ——",
             "nextBlock": 44,
+            "origClipLength": 59,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（ライスが来ない……！？）",
-                    "enText": "(Is Rice not coming!?)",
+                    "enText": "(… Rice hasn't arrived yet?!)",
                     "nextBlock": 44
                 }
             ],
@@ -515,8 +942,16 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "あっ、いた～！\r\nねえねえきみ、ライスちゃんのトレーナーさんだよね？",
-            "enText": "Found you! Hey hey, aren't you Rice's trainer?",
+            "enText": "Ah! There you are～! ! \nHey, hey, aren't you Rice's trainer?",
             "nextBlock": 45,
+            "origClipLength": 174,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 132,
+                    "pathId": -327331005062666649
+                }
+            ],
             "pathId": 604988548808691999,
             "blockIdx": 44
         },
@@ -524,18 +959,30 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "よーし、それじゃあ美浦寮に向けてしゅっぱーつ！！",
-            "enText": "Good! Then let's make our way to the dorms!",
+            "enText": "Alrighty! Let's head over to the Miho dooorms～!!",
             "nextBlock": 46,
+            "origClipLength": 148,
+            "voiceIdx": 34,
             "choices": [
                 {
                     "jpText": "待って待って、どういうことだ！？",
-                    "enText": "Hold on a minute! What's going on?",
+                    "enText": "Hold on a minute! What's going on?!",
                     "nextBlock": 46
                 },
                 {
                     "jpText": "待って待って、どういうこと！？",
-                    "enText": "Hold on a minute! What's going on?",
+                    "enText": "Hold on a minute! What's going on?!",
                     "nextBlock": 46
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 3466605381395185898
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -7769134453857351743
                 }
             ],
             "pathId": -776374905196262128,
@@ -545,8 +992,16 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "うーんとね、ライスちゃん、朝から美浦寮のみんなと\r\nずーっとかくれんぼしてるの！",
-            "enText": "You see, since this morning Rice has been playing \nhide and seek with everyone at the dorms!",
+            "enText": "Weeell, you see, Rice has been playing hide and seek \nwith everyone at the dorms since this morning!",
             "nextBlock": 47,
+            "origClipLength": 202,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 234,
+                    "pathId": -9011211332365538619
+                }
+            ],
             "pathId": 3551232793604162415,
             "blockIdx": 46
         },
@@ -554,8 +1009,16 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "ヒシアマさんもバクシンオーさんも、みーんな探してたんだよ！\r\nおもしろそーだったから、わたしも参加してきたんだ～！",
-            "enText": "Everyone including Hishi Ama-san and Bakushin \nO-san have been looking for her this whole time! \nIt looked like fun so I also joined in!",
+            "enText": "Amazon and Bakushin and everyone else have \nbeen trying to find her this whole time! It looked \nlike so much fun, so I also joined in～!",
             "nextBlock": 48,
+            "origClipLength": 253,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": -1268094135177334702
+                }
+            ],
             "pathId": 4077656800286216890,
             "blockIdx": 47
         },
@@ -563,8 +1026,16 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "それでね、『ここかなー？』ってすみっこの空き部屋覗いたら、\r\nライスちゃんのこと見つけたんだけど――",
-            "enText": "Thinking could it be here? I peeked into an empty \nroom and managed to find Rice-chan but…",
+            "enText": "And then I thought, \"Could she be here…?\", while peeking into \nan empty room far in the back, and found her. But then ——",
             "nextBlock": 49,
+            "origClipLength": 206,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": 634158817078162666
+                }
+            ],
             "pathId": 1740712024372656808,
             "blockIdx": 48
         },
@@ -572,8 +1043,16 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "ちっちゃな声で『トレーナーさん』って言ってるのが聞こえたの！",
-            "enText": "In a small voice she whispered to herself, \"Trainer\"!",
+            "enText": "I heard a teeny tiny voice whispering \"… Trainer\" to herself!",
             "nextBlock": 50,
+            "origClipLength": 133,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 236,
+                    "pathId": -4046499745462762866
+                }
+            ],
             "pathId": -8643221121609303800,
             "blockIdx": 49
         },
@@ -581,13 +1060,21 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "たぶんライスちゃん、トレーナーさんに『みーっけ！』って\r\nしてもらいたいんじゃないかなぁ。",
-            "enText": "Rice-chan probably wants you to find her!",
+            "enText": "So I was thinking, maybe Rice wants you \nto find her and be like, \"I found you～!\"",
             "nextBlock": 51,
+            "origClipLength": 162,
+            "voiceIdx": 39,
             "choices": [
                 {
                     "jpText": "（ライス……！）",
-                    "enText": "(Rice…)",
+                    "enText": "(…… Rice!)",
                     "nextBlock": 51
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 6846772146233203158
                 }
             ],
             "pathId": 7472408797392193629,
@@ -599,6 +1086,18 @@
             "jpText": "だから、一緒に行こ！　ウララが案内するよ。",
             "enText": "So let's go! I'll lead the way!",
             "nextBlock": 52,
+            "origClipLength": 107,
+            "voiceIdx": 40,
+            "animData": [
+                {
+                    "origLen": 79,
+                    "pathId": 2905292547762906324
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 6061700025815823504
+                }
+            ],
             "pathId": -510721063997168902,
             "blockIdx": 51
         },
@@ -606,8 +1105,28 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "おっ、ウララ！　ライスは見つか……って、おい！？\r\nなんでトレーナーを連れてきてんだよ！？",
-            "enText": "Urarara! Did you manage to find Rice… hey!? \nWhy did you bring the trainer over here!?",
+            "enText": "Oh, Urara! Did you manage to find Rice? \nWait a minute, hey! Why'd you bring a trainer over here?!",
             "nextBlock": 53,
+            "origClipLength": 196,
+            "voiceIdx": 41,
+            "animData": [
+                {
+                    "origLen": 197,
+                    "pathId": -4171476980238855814
+                },
+                {
+                    "origLen": 112,
+                    "pathId": -6584455558724845703
+                },
+                {
+                    "origLen": 68,
+                    "pathId": 9106584709834494212
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 323105079856945619
+                }
+            ],
             "pathId": -1957229918924711289,
             "blockIdx": 52
         },
@@ -615,8 +1134,28 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "まさか、中に入れるつもりじゃないだろうね！？\r\nウマ娘寮に、トレーナーは立ち入り厳禁だよ！！",
-            "enText": "You didn't plan on letting him into the dorms did you!? You know \nthat trainers aren't allowed into the dorms!!",
+            "enText": "You can't be planning to let them in, can you?! \nYou know that trainers are strictly prohibited \nfrom entering the dormitory, yeah?!",
             "nextBlock": 54,
+            "origClipLength": 219,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 214,
+                    "pathId": -1616373408000789301
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1566545083855559265
+                },
+                {
+                    "origLen": 63,
+                    "pathId": 2795020936059704692
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 3270670316624769679
+                }
+            ],
             "pathId": 8352269806768515530,
             "blockIdx": 53
         },
@@ -624,8 +1163,20 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "うひゃー！？　ごめんなさーい！\r\nでも、ライスちゃんが呼んでたから……。",
-            "enText": "What!? I'm sorry! but this is what Rice-chan wanted…",
+            "enText": "Oops! I'm sorry! But Rice was calling out for her trainer…",
             "nextBlock": 55,
+            "origClipLength": 178,
+            "voiceIdx": 43,
+            "animData": [
+                {
+                    "origLen": 55,
+                    "pathId": -5794265294754426535
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -7525003968428454607
+                }
+            ],
             "pathId": -3598357673016119714,
             "blockIdx": 54
         },
@@ -633,8 +1184,24 @@
             "jpName": "ヒシアマゾン",
             "enName": "Hishi Amazon",
             "jpText": "……ぁあー、もうっ！　しょうがねぇな、いまだけ特別だ！\r\n寮長権限ってことで許可してやるから、とっとと行きな！",
-            "enText": "Ahhh whatever! Since it can't be helped I'll be making an \nexception this one time! I'll get permission from the dorm \nmanager so hurry up and go!",
+            "enText": "…… Ahh, whatever, you're hopeless! Just this \none time, yeah!? I'll give you an exception on my \nauthority as dormitory supervisor, so make it quick!",
             "nextBlock": 56,
+            "origClipLength": 269,
+            "voiceIdx": 44,
+            "animData": [
+                {
+                    "origLen": 114,
+                    "pathId": 3354115966797875051
+                },
+                {
+                    "origLen": 213,
+                    "pathId": 1866375820737207486
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1079089530452448391
+                }
+            ],
             "pathId": -8059607585488765375,
             "blockIdx": 55
         },
@@ -642,8 +1209,24 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "うんっ！　ヒシアマさん、ありがとー！！\r\nトレーナーさん、こっちだよ！！",
-            "enText": "Thanks! Let's go Trainer it's this way!",
+            "enText": "Okie! Thanks, Amazon!! \nThis way, Trainer! Let's go!!",
             "nextBlock": 57,
+            "origClipLength": 161,
+            "voiceIdx": 45,
+            "animData": [
+                {
+                    "origLen": 45,
+                    "pathId": -6236291692228546079
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8680352933320211558
+                },
+                {
+                    "origLen": 90,
+                    "pathId": 1614410136764323465
+                }
+            ],
             "pathId": -662567765554398336,
             "blockIdx": 56
         },
@@ -651,8 +1234,20 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "えーっと。\r\nこんこんこん、ライスちゃーん！",
-            "enText": "Let's see… Knock knock! Rice it's me!",
+            "enText": "Umm… <i>knock, knock</i>! \nRice, are you in there?",
             "nextBlock": 58,
+            "origClipLength": 151,
+            "voiceIdx": 46,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8564154360990513156
+                },
+                {
+                    "origLen": 70,
+                    "pathId": 127644699655510852
+                }
+            ],
             "pathId": 6228795812286892308,
             "blockIdx": 57
         },
@@ -660,8 +1255,16 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "っ！？　う、ウララちゃん……どうしてここが……！？",
-            "enText": "Huh!? Urarara, why are you here!?",
+            "enText": "Huh!? Urara…? What are you doing here…?!",
             "nextBlock": 59,
+            "origClipLength": 156,
+            "voiceIdx": 47,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": 6398173112355338023
+                }
+            ],
             "pathId": 4964313859462440262,
             "blockIdx": 58
         },
@@ -669,13 +1272,21 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "あのね、ライスちゃんが呼んでたから、\r\nトレーナーさん連れてきたよ～！",
-            "enText": "I've brought over your trainer just like you wanted!",
+            "enText": "Hey umm, see? I brought your trainer \nalong, just like you wanted～!",
             "nextBlock": 60,
+            "origClipLength": 143,
+            "voiceIdx": 48,
             "choices": [
                 {
                     "jpText": "ライス、話をしよう",
-                    "enText": "Rice, let's talk.",
+                    "enText": "Rice, I want to talk to you.",
                     "nextBlock": 60
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -6905283817903252002
                 }
             ],
             "pathId": -2553381333645148188,
@@ -685,12 +1296,20 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "と……トレーナーさん……！",
-            "enText": "Trainer…",
+            "enText": "T-Trainer…!",
             "nextBlock": -1,
+            "origClipLength": 84,
+            "voiceIdx": 49,
+            "animData": [
+                {
+                    "origLen": 143,
+                    "pathId": 5459934467853977794
+                }
+            ],
             "pathId": -6819103874851069750,
             "blockIdx": 60
         }
     ],
     "humanTl": true,
-    "modified": 1673054095
+    "modified": 1711994576
 }

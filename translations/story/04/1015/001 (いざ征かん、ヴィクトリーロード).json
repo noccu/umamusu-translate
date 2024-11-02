@@ -1,17 +1,19 @@
 {
-    "version": 5,
+    "version": 6,
     "bundle": "QC2VMZWVHKURBKU7HMPX4JN74ULV53QL",
     "type": "story",
     "storyId": "041015001",
     "title": "いざ征かん、ヴィクトリーロード",
+    "enTitle": "Embarking on the Victory Road",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――ウマ娘たちがトレーナーに\r\n実力をアピールする場である『選抜レース』。",
-            "enText": "―The \"Selection Race\" is an opportunity for the Uma Musume to \nshow off their abilities to their trainers.",
+            "enText": "The Selection Race. An opportunity for horsegirls \nto tout their abilities to prospective trainers.",
             "nextBlock": 2,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "pathId": 7066837164272015139,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その時期が近づくと、\r\nウマ娘たちは熱心にトレーニングに打ち込むのだが――",
-            "enText": "When the time comes, the Uma Musume devote themselves to their \ntraining with great enthusiasm.",
+            "enText": "Whenever its time nears, one can find many \nhorsegirls buckling down to training.",
             "nextBlock": 3,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "pathId": -2454587240095122052,
             "blockIdx": 2
         },
@@ -29,9 +32,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "その中で1人だけ、\r\n独特の行動を取っているウマ娘がいた。",
-            "enText": "Among them, there was one horse girl who behaved \nuncharacteristically.",
+            "enText": "Among them, one horsegirl stood out \nthrough her peculiar demeanor ——",
             "nextBlock": 4,
             "origClipLength": 82,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 203,
@@ -43,11 +47,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "――今宵幕を開けるのは、このボク\r\nテイエムオペラオーの、輝かしきヴィクトリーロード。",
-            "enText": "―Tonight, the curtain will rise on the glorious Victory Road of \nBoku, the famous \"Boku\", the famous \"Tatemu\", the famous \"Tatemu\".",
+            "enText": "Curtains rise tonight, on whom but \nmy own gleaming Victory Road.",
             "nextBlock": 5,
             "origClipLength": 258,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 66,
@@ -63,11 +68,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "この演目に名前を付けるならば『テイエムオペラオー\r\n栄冠へのプレリュード』といったところかな。",
-            "enText": "If I had to name this performance, I would \ncall it \"Teimu Operao: Prelude to Glory\".",
+            "enText": "To put a name to this show — yes, \"T.M. Opera O's \nPrelude to Prestige\" sounds most suitable indeed.",
             "nextBlock": 6,
             "origClipLength": 272,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 62,
@@ -87,11 +93,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "フッ……一体どれほど美しく感動的な物語となるのか――",
-            "enText": "Hoo…… How beautiful and moving will the story be―?",
+            "enText": "<i>Heh</i>… Just imagine how splendid of a story will unfold ——",
             "nextBlock": 7,
             "origClipLength": 206,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 158,
@@ -111,11 +118,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "想像しただけで、頭の中に天使たちのファンファーレが\r\n鳴り響いてくるようだよ！",
-            "enText": "Just imagining it, I can almost hear \nthe fanfare of angels in my head!",
+            "enText": "The thought alone has me hearing the fanfare of angels!",
             "nextBlock": 8,
             "origClipLength": 197,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 17,
@@ -135,11 +143,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "あとは観客が訪れるのを待つだけなんだが――",
-            "enText": "Now all we have to do is wait for the \naudience to visit―and they will.",
+            "enText": "All which leaves me is to await my dear audience ——",
             "nextBlock": 9,
             "origClipLength": 118,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 161,
@@ -155,11 +164,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "う～ん……みなトレーニングに気を取られているせいか、\r\nなかなか人が通らないな。",
-            "enText": "Hmmm……… people don't seem to be passing by, probably because they \nare all distracted by their training.",
+            "enText": "Alas… perchance training occupies their minds, \nbut not a soul has passed by.",
             "nextBlock": 10,
             "origClipLength": 209,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 160,
@@ -177,18 +187,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "一風変わったウマ娘は、\r\n誰もいない中央広場で独り語りをしている。",
-            "enText": "The unusual Uma Musume is talking to \nherself in the empty central plaza.",
+            "enText": "This peculiar, even eccentric, horsegirl stood in the \ndeserted central plaza, conversing with herself.",
             "nextBlock": 11,
             "origClipLength": 88,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "（……一体、何をしているんだろう）",
-                    "enText": "(…… what the hell is she doing?)",
+                    "enText": "(… What in heavens is going on with her?)",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "（……一体、何してるんだろ）",
-                    "enText": "(…… what the hell is she doing?)",
+                    "enText": "(… What in heavens is going on with her?)",
                     "nextBlock": 11
                 }
             ],
@@ -203,11 +214,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "――おや？",
-            "enText": "―Oh?",
+            "enText": "—— Oh now?",
             "nextBlock": 12,
             "origClipLength": 27,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 40,
@@ -225,9 +237,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そんなことを考えていた時、彼女と目が合ってしまった。",
-            "enText": "As I was thinking about this, my eyes met hers.",
+            "enText": "The moment that thought crossed my mind, our eyes met.",
             "nextBlock": 13,
             "origClipLength": 78,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -243,11 +256,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "おおっ！！　よく来てくれたね、そこの君っ！！",
-            "enText": "Oh! Welcome to the party, you there!",
+            "enText": "Oooh!! Welcome, welcome, how delightful of you to join me!!",
             "nextBlock": 14,
             "origClipLength": 132,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 94,
@@ -263,11 +277,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ふふっ、目的はわかっているよ。\r\nボクのオペラを鑑賞しに来たんだろう？",
-            "enText": "I know what you're here for. You came to see my opera, right?",
+            "enText": "<i>Heheh</i>, I know precisely what are you are here for. \nIt is to delight in my opera, is it not?",
             "nextBlock": 15,
             "origClipLength": 199,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 60,
@@ -283,11 +298,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "なんといっても、脚本ボク！　演出ボク！　主演ボク！\r\n豪華キャストで送る、史上最高の超大作オペラだからね。",
-            "enText": "After all, I wrote the script! Directing! Starring me! It's the \ngreatest blockbuster opera of all time, with a splendid cast.",
+            "enText": "Screenplay by yours truly! Direction by yours truly! \nStarring — in lead role — yours truly! An operatic tour \nde force, played by a most extravagant cast.",
             "nextBlock": 16,
             "origClipLength": 317,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 99,
@@ -307,20 +323,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "さあさあ、そこのベンチに腰をかけてくれたまえ。\r\n……コホン、では始めるよ――",
-            "enText": "Come on, come on, come on, come on, sit down on the bench \nthere.…… Okay, let's get started…",
+            "enText": "Waste no further time, take your place on that bench over there. \n…… <i>Ahem</i>, let us begin ——",
             "nextBlock": 17,
             "origClipLength": 230,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "ち、ちょっと待ってくれ！",
-                    "enText": "Hey, wait a minute!",
+                    "enText": "J-Just a moment now!",
                     "nextBlock": 17
                 },
                 {
                     "jpText": "ち、ちょっと待って！",
-                    "enText": "Hey, wait a minute!",
+                    "enText": "J-Just a moment now!",
                     "nextBlock": 17
                 }
             ],
@@ -339,20 +356,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "――ん、なんだい？",
-            "enText": "―What is it?",
+            "enText": "—— Hm? What bothers you?",
             "nextBlock": 18,
             "origClipLength": 50,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "オペラってどういうことだ……？",
-                    "enText": "What do you mean by opera: ……?",
+                    "enText": "Why are you performing an opera…?",
                     "nextBlock": 18
                 },
                 {
                     "jpText": "オペラってどういうこと……？",
-                    "enText": "What do you mean by opera: ……?",
+                    "enText": "Why are you performing an opera…?",
                     "nextBlock": 18
                 }
             ],
@@ -371,11 +389,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "フッ……簡単な質問だね。",
-            "enText": "Hu…… That's an easy question.",
+            "enText": "<i>Heh</i>… What a foolish question.",
             "nextBlock": 19,
             "origClipLength": 113,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 66,
@@ -391,11 +410,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "いいかい、3日後にはボクの走る『選抜レース』がある。\r\nこれは学園全体を巻き込む一大イベントだ。",
-            "enText": "You see, in three days, there will be a \"Selection \nRace\" that I will be running in. This is a big \nevent that involves the whole school.",
+            "enText": "In three days, I will appear in a \"Selection Race\", \nyou understand? This is a significant event with an \nimpact across the whole academy.",
             "nextBlock": 20,
             "origClipLength": 277,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 50,
@@ -411,15 +431,16 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "だからボクは前夜祭としてオペラを上演し、\r\nレースをさらに盛り上げようと考えているわけさ！",
-            "enText": "So I'm thinking of putting on an opera as the eve of the race, to \nadd to the excitement!",
+            "enText": "Creating further excitement for the race is precisely why \nI am performing my opera, as it's eve celebration!",
             "nextBlock": 21,
             "origClipLength": 216,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "前夜祭は前日にやるものじゃ……？",
-                    "enText": "Isn't the eve of the festival supposed to be the day before ……?",
+                    "enText": "I thought the eve is on the day before…?",
                     "nextBlock": 21
                 }
             ],
@@ -438,20 +459,21 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "おやおや、おかしなことを言うね。\r\n前夜祭が前日でなければダメだと誰が決めたというんだい？",
-            "enText": "Well, well, that's a funny thing to say. Who decided that the eve \nof the festival has to be the day before?",
+            "enText": "Oh dear, what a curious thing you state. \nWhoever decreed that eve celebrations \nshould take place the day before?",
             "nextBlock": 22,
             "origClipLength": 240,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "そもそも夜じゃないんだが……",
-                    "enText": "It wasn't night to begin with. ……",
+                    "enText": "I also want to point out the sun in the sky…",
                     "nextBlock": 22
                 },
                 {
                     "jpText": "そもそも夜じゃないけど……",
-                    "enText": "Not at night to begin with. ……",
+                    "enText": "I also want to point out the sun in the sky…",
                     "nextBlock": 22
                 }
             ],
@@ -470,11 +492,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "はっはっはっはっ！　前夜祭が夜じゃなければダメだと\r\n誰が決めたというんだい？",
-            "enText": "Ha ha ha ha! Who says the eve of the festival has to be at night?",
+            "enText": "<i>Ha-ha-ha-ha!</i> Now wherefrom do you have the idea \nthat eve celebrations must transpire at night time?",
             "nextBlock": 23,
             "origClipLength": 232,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 50,
@@ -490,11 +513,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "常識に縛られるなんて、全くもってナンセンスなことだ。",
-            "enText": "It is utter nonsense to be bound by common sense.",
+            "enText": "How preposterous to let common sense chain you this way.",
             "nextBlock": 24,
             "origClipLength": 150,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 55,
@@ -506,11 +530,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "なぜならボクは、王者の中の王者！\r\nつまり“世紀末覇王”だからさっ！！",
-            "enText": "Because I am the king among champions! In other words, I am the \n\"King of the End of the Century!",
+            "enText": "For I am a king among kings! In other words, \none might call me \"The Era's High King\"!!",
             "nextBlock": 25,
             "origClipLength": 222,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 66,
@@ -530,15 +555,16 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "“覇王”にとって、前夜祭が前日だの夜だの、\r\nそれは問題にも満たない……ふふっ、わかったかい？",
-            "enText": "For the High King, it doesn't matter if the festival is the night \nbefore or the night after. ……",
+            "enText": "To a high king, time of month or day are but trifling matters. \n…… <i>Heh</i>, has comprehension set in yet?",
             "nextBlock": 26,
             "origClipLength": 281,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "全然わからない……",
-                    "enText": "I have no idea. ……",
+                    "enText": "I am at loss for words……",
                     "nextBlock": 26
                 }
             ],
@@ -557,11 +583,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ふむ、ボクの思想についてくるには\r\nまだ少し早かったみたいだね。",
-            "enText": "Hmmm, I guess it's a little early to follow my ideology.",
+            "enText": "Hm, perhaps it was premature to expect you to \ncomprehend the grand ideology of yours truly.",
             "nextBlock": 27,
             "origClipLength": 197,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 180,
@@ -577,11 +604,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "まあいい、とにかく君は記念すべき1人目の観客だ。",
-            "enText": "Oh well, you're the first memorable spectator anyway.",
+            "enText": "No matter, you are still the momentous first attendee of mine.",
             "nextBlock": 28,
             "origClipLength": 154,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 60,
@@ -597,11 +625,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ボクの素晴らしい演技を、その目に焼き付けてくれ――って、ん？",
-            "enText": "I want you to see my wonderful performance… hmmm?",
+            "enText": "Feast your eyes on a splendiferous \nperformance by yours—— <i>Hm</i>?",
             "nextBlock": 29,
             "origClipLength": 194,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 66,
@@ -617,15 +646,16 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "……ちょっと待ちたまえ。\r\n君が身につけているのはもしや、トレーナーバッジではないかい？",
-            "enText": "…… Wait a minute. If I'm not mistaken, \nyou're wearing a trainer badge.",
+            "enText": "…… Hold a moment. Could not that be a trainer's badge \nI see pinned upon your figure?",
             "nextBlock": 30,
             "origClipLength": 209,
+            "voiceIdx": 23,
             "choices": [
                 {
                     "jpText": "そうだけど……",
-                    "enText": "Yes, but ……",
+                    "enText": "That's right……",
                     "nextBlock": 30
                 }
             ],
@@ -644,11 +674,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ふふっ……はははっ……はっはっは！\r\nはーっはっはっはっはっはぁ！！",
-            "enText": "Phew…… hahahaha…… hahahaha! Ha ha ha ha ha ha!!!",
+            "enText": "<i>Heh…… hahah… ha-ha-ha! \nHaaa-ha-ha-ha-ha-haah!!</i>",
             "nextBlock": 31,
             "origClipLength": 217,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 107,
@@ -664,11 +695,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "それはいい！　ボクは今、トレーナーを探していたんだ！\r\nヴィクトリーロードを疾走するためにね！",
-            "enText": "That's great! I was just looking for a trainer! I'm looking for a \ntrainer to run Victory Road!",
+            "enText": "Most marvelous! Yours truly happens to be \nin search of a trainer! To accompany me on \nthe Victory Road, you understand!",
             "nextBlock": 32,
             "origClipLength": 241,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 66,
@@ -688,11 +720,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "これこそまさに運命！　ボクのオペラに魅せられた君ならば、\r\nトレーナーになる資格がある！",
-            "enText": "This is destiny! If you are fascinated by \nmy opera, you deserve to be a trainer!",
+            "enText": "What would this be but fate! You, having been enchanted by \nmy opera, make for the perfect candidate!",
             "nextBlock": 33,
             "origClipLength": 238,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 105,
@@ -712,15 +745,16 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "恥ずかしがらずにボクの手を取ってくれ！\r\nさあさあ！！",
-            "enText": "Don't be shy, take my hand! Come on, come on!",
+            "enText": "Please step forth and grasp my hand! \nDon't be shy now!!",
             "nextBlock": 34,
             "origClipLength": 126,
+            "voiceIdx": 27,
             "choices": [
                 {
                     "jpText": "急にそんなこと言われても……！",
-                    "enText": "Suddenly that's what I'm talking about. ……!",
+                    "enText": "Quite something to spring on me…!",
                     "nextBlock": 34
                 }
             ],
@@ -743,11 +777,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "おや、ボクのトレーナーになるなんて畏れ多いかい？",
-            "enText": "Oh, are you in awe of being my trainer?",
+            "enText": "Oh dear, do you find it too daunting to become my trainer?",
             "nextBlock": 35,
             "origClipLength": 152,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 108,
@@ -763,11 +798,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "君の気持ちはよくわかるよ。ボク自身でさえ、\r\n鏡に映った自分を見ると、動悸が止まらないほどだからね。",
-            "enText": "I know exactly how you feel. Even I can't stop palpitating when I \nlook at myself in the mirror.",
+            "enText": "I empathize completely. Even the heart of yours truly \nbeats faster upon observing herself in the mirror.",
             "nextBlock": 36,
             "origClipLength": 268,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 168,
@@ -783,11 +819,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ではそんな君にひとつ提案だ。心の準備のために、\r\nまずは選抜レースまでの仮トレーナーでどうだろう？",
-            "enText": "I have a suggestion for you. How about a temporary trainer to \nprepare your mind for the upcoming races?",
+            "enText": "In that case, I have a proposition for you. What say you to \nstarting as my provisional trainer until the Selection Race, \nso that you may sort out your thoughts?",
             "nextBlock": 37,
             "origClipLength": 293,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 239,
@@ -803,11 +840,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "選抜レースまでの間に、じっくりと互いの相性を\r\n見極めようじゃないか！",
-            "enText": "Let's take our time and find out if we are a good match for each \nother in the run-up to the race!",
+            "enText": "We can take our time getting to know each other \nin these days before the race!",
             "nextBlock": 38,
             "origClipLength": 182,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 100,
@@ -819,11 +857,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "ボクは逃げも隠れもしない。\r\nじっっっくりとこの輝きに慣れていくといいよ！",
-            "enText": "I won't run and hide. You better get used to the glow!",
+            "enText": "Yours truly will neither run nor hide! Take all the time \nyou need to familiarize yourself with my glow!",
             "nextBlock": 39,
             "origClipLength": 205,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 66,
@@ -839,11 +878,12 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "",
+            "enName": "T.M. Opera O",
             "jpText": "はーっはっはっはっは！\r\nボクらのヴィクトリーロードの幕開けだよ、トレーナー君！",
-            "enText": "Ha-ha-ha-ha! Let's start our Victory Road, trainers!",
+            "enText": "<i>Haa-ha-ha-ha-ha! </i>The stage of our Victory Road \nis coming into view, my dear trainer!",
             "nextBlock": 40,
             "origClipLength": 205,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 50,
@@ -865,9 +905,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "それから何度話をしようとしてもまともに\r\n取り合ってもらえず――",
-            "enText": "And no matter how many times I tried to talk to her after that, \nshe wouldn't take me seriously.",
+            "enText": "She wouldn't pay me any attention whenever \nI tried talking about it afterward…",
             "nextBlock": 41,
             "origClipLength": 86,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 50,
@@ -881,12 +922,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "結局、テイエムオペラオーの仮トレーナーに\r\nさせられてしまったのだった……。",
-            "enText": "In the end, I was made a temporary trainer for TM Operao. ……",
+            "enText": "As a result, I had become T.M. Opera O's provisional trainer……",
             "nextBlock": -1,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "pathId": 2499041214696524639,
             "blockIdx": 41
         }
     ],
-    "modified": 1657208269
+    "modified": 1712265739,
+    "humanTl": true
 }

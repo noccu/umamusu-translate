@@ -5,11 +5,12 @@
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. A few included scripts also let it function as a game patch using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
-**[Note on current state](#current-state). [Guides for install and use](#install).
-[Translation progress and credits][tl-progress].**  
+**⚠ UmaTL development will soon end in favor of using Hachimi. Translations will be continued in [our own hachimi translation repo](https://github.com/UmaTL/hachimi-tl-en).**
+
+**[Translation progress and credits][tl-progress].**  
 If you encounter problems, check the troubleshooting section with each guide step first. Open an issue or ask in the Discord server if this doesn't solve it.
 
-UmaTL and the patching functionality is aimed at the DMM (Windows) version of the game. The toolset itself *should* work on linux and mac too, with some limitations.  
+UmaTL and the patching functionality is aimed at the DMM (Windows) version of the game. The toolset itself *should* work on linux and mac too, with some limitations.
 
 # Features
 Supports translating:
@@ -36,6 +37,16 @@ Other:
 Included translations & credits: [tl-progress]  
 Toolset info: [scripts](#script-info)
 
+# Supporting the project
+This project has taken a lot of time and effort since 2021 that I can't afford to keep providing freely.  
+Work is continued, to the degree affordable and with a focus on translations, through the help of donations and supporters.  
+Monthly supporters gain the following benefits (based on tier & when available): 
+- Polls & requests
+- Translation notes & spotlights (small write-ups expanding upon some terms, culture, and translations)
+- Additional content (pakatube tl, …)
+
+If you'd like to donate or contribute as a supporter, please check the links at the top of this readme or at the right of the page.
+
 # Disclaimer
 UmaTL is not affiliated with Cygames and is purely a fan-community effort.  
 Assets are edited only for the purpose of translation and it is *the maintainer's belief* this is harmless and unlikely to be an issue. [^1]  
@@ -43,30 +54,6 @@ Nonetheless, such edits are against the relevant TOS so **proceed at your own ri
 No maintainer nor contributor will be responsible for any issues encountered as a result of use.
 
 [^1]: cygames has a relatively good track record in leaving non-cheating, non-damaging tools and users alone in my experience. Any possible crackdown is also likely to start with announcements and warnings before bans.
-
-# **Current state**
-This project has taken a lot of time and effort since 2021 that I can't afford to keep providing freely.  
-Work is continued, to the degree affordable and with a focus on translations, through the help of monthly supporters. This work is available first to said supporters who make it possible, and later finds its way to the wider community.
-
-This includes:
-- New translations for various story contents
-- Keeping up with the latest game updates
-- (occasional) Patch improvements & QOL
-- (occasional) Lyrics translations
-
-Some extra work or benefits, when available, remain only for supporters:
-- Polls & requests
-- Additional content (pakatube tl, …)
-- Translation spotlights; a series of small write-ups expanding upon some terms, culture, and translations
-- Priority tech support
-
-Finally, some things will continue to be simultaneously updated for everyone:
-- Critical bug fixes
-- Integration of community translations (when permitted or submitted by the relevant contributor)
-- Minor housekeeping
-- Community-wide translation progress
-
-If you'd like to contribute as a supporter, please check the links at the top of this readme or at the right of the page.
 
 # Install
 1. Download & install Python 3.11 from the files at the bottom of [this page](https://www.python.org/downloads/release/python-3116/).
@@ -110,7 +97,7 @@ If you only want to update UmaTL without applying the patch, you can run `update
 More info (read first!) and troubleshooting for each part below.
 
 ## UI (menus, buttons, ...)
-TLG itself can be updated by running the install script again from UmaTL's parent folder and choosing update mode, or by simply overwriting its `.dll` file with the new one manually.
+TLG itself can be updated by running the install script again from UmaTL's parent folder and choosing update mode, or by simply overwriting its 2 `.dll` files with the new one manually.
 
 ### Troubleshooting
 - If you get **errors** when starting the game: 

@@ -71,7 +71,7 @@ A Gleaming Mejiro Gala |  |
 Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
 Come On Down To Calming Koumian! |  |
 To You, My Dancing Orchid ～Let's dance now!～ | Complete | [Jimoori]
-Uprising: The Soldiers' Battle Cry | In progress | [Chiwawa] (tl) + [noccu] (edit)
+Uprising: The Soldiers' Battle Cry | Complete | [Chiwawa] (tl) + [noccu] (tlc, edit)
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events
@@ -89,23 +89,26 @@ name | progress | translator
 --- | --- | ---
 All not listed up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 Admire Vega | Complete | [CatNipHoarder] & [Holo]
-Air Shakur | Exists | [fling]
-Agnes Digital | In progress | [fling]
+Air Shakur | Complete | [fling]
+Agnes Digital | Complete | [fling]
 Agnes Tachyon | Complete | [Ren] (ep 1), [noccu] + [xct] (ep 2-3), [xct] (ep 4-7)
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
+Cesario | Complete | [LotoDS]
 Cheval Grand | Exists | Naellza
 Copano Rickey | Complete | [LotoDS]
 Curren Chan | Complete | [CatNipHoarder] & [Holo]
 Daitaku Helios | Complete | [LotoDS]
 Daiwa Scarlet | Complete | [XiantheMiguel] (commissioned by AhriParty)
 Daiichi Ruby | Complete | [Riersa]
+Dream Journey | Complete | [LotoDS]
 Eishin Flash | Complete, In progress, Stalled | MTL, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | [UmaTL] (noccu)☆
 Fine Motion | Complete | [LotoDS]
 Fuji Kiseki | Complete | [Kasey]
+Gentildonna | Complete | [LotoDS]
 Gold City | Complete | [Hades of Games]
 Gold Ship | Complete, Stalled | MTL, UmaTL☆
 Grass Wonder | Complete | [LotoDS]
@@ -376,6 +379,7 @@ Never Looking Back | Complete | [COSMET]
 Pyoitto♪Hallelujah! | Complete | [Kasey]
 [*Rising Girl*](https://twitter.com/dorcarolle/status/1192625305795489792) | Complete, Stalled | [dorcarolle](https://twitter.com/dorcarolle), [noccu]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
+Slapstick Clash insert song | Complete | [LotoDS]
 [TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
 *Tachiichi Zeroban! Juni ha Ichiban! (Smart Falcon)* | In progress | [Kasey]
 Tracen Ondo | Complete | [Kasey]

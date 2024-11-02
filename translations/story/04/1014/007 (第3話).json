@@ -1,5 +1,5 @@
 {
-    "version": 4,
+    "version": 6,
     "bundle": "OCFBVXWXTA3WDAJDUAVFEM5ZFJX6WBQW",
     "type": "story",
     "storyId": "041014007",
@@ -9,8 +9,16 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "きたきたきたーー！\r\n最速タイム更新デェェェェス！！",
-            "enText": "I got it, I got it, I got it! Fastest time ever!",
+            "enText": "I di-di-di-di-did iiiiit! \nA new personal beeeest!!",
             "nextBlock": 2,
+            "origClipLength": 189,
+            "voiceIdx": 0,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 5503292190673987659
+                }
+            ],
             "pathId": -2036628034137791573,
             "blockIdx": 1
         },
@@ -18,8 +26,16 @@
             "jpName": "",
             "enName": "",
             "jpText": "夏合宿に来て3日目。強い陽射しの中、\r\nエルコンドルパサーとのトレーニングに連日励んでいた。",
-            "enText": "It's the third day at the summer camp. Under \nthe strong sunlight, they worked hard day \nafter day training with El Condor Pacer.",
+            "enText": "It's the third day of the summer camp. Each one of these \ndays had been spent tirelessly training with El Condor Pasa \nunder the blazing sun.",
             "nextBlock": 3,
+            "origClipLength": 105,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 76,
+                    "pathId": 8372260920850317095
+                }
+            ],
             "pathId": -4952024688048731474,
             "blockIdx": 2
         },
@@ -27,8 +43,24 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "灼熱の地からきたウマ娘を侮るなかれ！\r\n熱気、熱風、熱砂！　何もアタシの敵ではありません！",
-            "enText": "Don't underestimate the Uma Musume from the scorching heat! Hot \nair, hot wind, hot sand! Nothing is against me!",
+            "enText": "Don't underestimate horsegirls from the land \nof scorching hot sun! Hot winds! Hot sands! \nHot hearts! They don't scare me!",
             "nextBlock": 4,
+            "origClipLength": 282,
+            "voiceIdx": 1,
+            "animData": [
+                {
+                    "origLen": 91,
+                    "pathId": 8175627503370464408
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -4472575680915806260
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -9159556742999947518
+                }
+            ],
             "pathId": 6000357255706324858,
             "blockIdx": 3
         },
@@ -36,8 +68,24 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "さぁ、今度はビーチの端から端まで走りますよ～～！！",
-            "enText": "Okay, now we're running from one end of the beach to the other～!",
+            "enText": "Okay, we're running from one end \nof the beach to the other next～～!!",
             "nextBlock": 5,
+            "origClipLength": 161,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -5056470540594108968
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -2013355137027133761
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -8203443470237955612
+                }
+            ],
             "pathId": -982317389756432556,
             "blockIdx": 4
         },
@@ -45,8 +93,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "合宿に来てから、エルコンドルパサーの調子は右肩上がりだ。\r\n自分も彼女の頑張りに応えなければ――",
-            "enText": "Since coming to the training camp, El Condor \nPasa's condition has been steadily improving. \nI have to respond to her efforts myself―",
+            "enText": "El Condor Pasa's been increasingly upbeat since arriving here. \nIt's my job to respond to her enthusiasm ——",
             "nextBlock": 6,
+            "origClipLength": 107,
+            "voiceIdx": -1,
             "pathId": 2871270321070016620,
             "blockIdx": 5
         },
@@ -54,13 +104,21 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "――トレーナーさんっ、聞いてます！？",
-            "enText": "―trainer, are you listening to me!",
+            "enText": "—— Trainer, are you listening!?",
             "nextBlock": 7,
+            "origClipLength": 79,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "……え？",
-                    "enText": "… What?",
+                    "enText": "…… Huh?",
                     "nextBlock": 7
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -3696083127975292723
                 }
             ],
             "pathId": 5512454854102533238,
@@ -70,8 +128,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ええ～～～、またデスか！？",
-            "enText": "E～, Death again!",
+            "enText": "Whaaaa～～, again!?",
             "nextBlock": 8,
+            "origClipLength": 106,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -4719256124537604198
+                },
+                {
+                    "origLen": 90,
+                    "pathId": -159359807066467091
+                }
+            ],
             "pathId": -4218047030704390340,
             "blockIdx": 7
         },
@@ -79,8 +149,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "どうせトレーニングのことばーっかり考えてたんでしょ？\r\n昨日もお祭りの話、全然聞いてなかったし……。",
-            "enText": "You were probably thinking of training words anyway, weren't \nyou? I didn't hear anything about the festival yesterday either…",
+            "enText": "I'm sure you were just thinking about training \nagain, right? You didn't hear anything I said \nabout the festival yesterday either……",
             "nextBlock": 9,
+            "origClipLength": 261,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 152,
+                    "pathId": -1768337031360987105
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -358283417879495789
+                }
+            ],
             "pathId": 7738627828626966211,
             "blockIdx": 8
         },
@@ -88,8 +170,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "この合宿中ずーっと仕事マシマシで、\r\nエルのことムシムシじゃないデスかぁ！",
-            "enText": "I've been working hard all through this camp, \nand it's been bugging me about Elle!",
+            "enText": "You've been focusing on work aaaall camp long and \nhaven't paid El aaany attention!",
             "nextBlock": 10,
+            "origClipLength": 197,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 145,
+                    "pathId": -7952434396282714785
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -3537484365107073650
+                }
+            ],
             "pathId": 6518847893482601662,
             "blockIdx": 9
         },
@@ -97,18 +191,30 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "もう、にっこりエルも3度までデス！\r\n今度ムシしたら、激怒、憤慨、大噴火デスよ～……？",
-            "enText": "I've already had it up to three times with the \"Nikkori-El\"! \nIf you ever bug me again, I will be furious, outraged, \nand erupt in a big way～…?",
+            "enText": "<i>Nice El</i> only appears three times! If you ignore her again \nshe'll become Angry, Furious, Exploding Volcano El～!",
             "nextBlock": 11,
+            "origClipLength": 265,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "ごめん、次は気をつけるよ",
-                    "enText": "Sorry, I'll be careful next time.",
+                    "enText": "Sorry, I'll be attentive next time.",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "ごめんね、次は気をつけるから",
-                    "enText": "Sorry, I'll be careful next time.",
+                    "enText": "Sorry, I'll be attentive next time.",
                     "nextBlock": 11
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 81,
+                    "pathId": 8014805731480833306
+                },
+                {
+                    "origLen": 43,
+                    "pathId": 5846274754813248970
                 }
             ],
             "pathId": -1534279444685694706,
@@ -118,8 +224,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "なら、よろしい！　それじゃ話を戻しますけど。",
-            "enText": "Then, good! Let me back up then.",
+            "enText": "Good! Let me go back to what I was saying then.",
             "nextBlock": 12,
+            "origClipLength": 124,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 169,
+                    "pathId": 1175788748110696826
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -4910691280922035476
+                }
+            ],
             "pathId": -4525631728415214537,
             "blockIdx": 11
         },
@@ -127,13 +245,29 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "今夜の『エル考案！　びっくりどっきり地獄のトレーニング！』の\r\n準備がぜーんぶ整ったので、動きやすい格好で来てくださいね！",
-            "enText": "Tonight's \"El devised! Surprise, surprise, hell training! \nWe're all ready for you to come dressed to the nines, \nso please come dressed to move!",
+            "enText": "Everything is set! Wear clothing that's easy to move in for \n\"El's Amazing Shocking Training From Hell!\" tonight!",
             "nextBlock": 13,
+            "origClipLength": 317,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "地獄のトレーニング！？",
-                    "enText": "Training in Hell!",
+                    "enText": "Training From Hell?!",
                     "nextBlock": 13
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 1026997270723266401
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 6673923981805090706
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 5735568236411686139
                 }
             ],
             "pathId": 2965164905620298902,
@@ -143,8 +277,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ええ、アタシとトレーナーさん\r\n2人でする、地獄のトレーニングですよ！",
-            "enText": "Yes, it's just me and the trainer, training \nthe hell out of each other!",
+            "enText": "Yeees, it's just me and you, Trainer! \nSide by side, going through hellish training!",
             "nextBlock": 14,
+            "origClipLength": 208,
+            "voiceIdx": 10,
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": 6031406995842391488
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1354392710173536308
+                }
+            ],
             "pathId": -3987435651321726139,
             "blockIdx": 13
         },
@@ -152,8 +298,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "トレーナーさんと一緒に走るため、\r\nかんっぺきに用意しましたから！　トレーニング用のタイヤとか！",
-            "enText": "I have everything ready to run with \nthe trainer! Like training tires!",
+            "enText": "I have everything ready for us to run together! \nLike training tires and such!",
             "nextBlock": 15,
+            "origClipLength": 238,
+            "voiceIdx": 11,
+            "animData": [
+                {
+                    "origLen": 93,
+                    "pathId": -2175360498160728862
+                },
+                {
+                    "origLen": 57,
+                    "pathId": -3335116481269452506
+                }
+            ],
             "pathId": 4831645843017389646,
             "blockIdx": 14
         },
@@ -161,8 +319,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "……なのに、まさかまさかトレーナーさん。\r\n『お忘れになった』、なんてことありませんよねー？",
-            "enText": "It's… but no way, no way, trainer. You \ndon't \"forget\" to do that, do you?",
+            "enText": "…… You wouldn't go and say that you \n<i>forgot</i>, now would you, Traineeer?",
             "nextBlock": 16,
+            "origClipLength": 244,
+            "voiceIdx": 12,
+            "animData": [
+                {
+                    "origLen": 27,
+                    "pathId": 5718854797692208979
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -895894433018777180
+                }
+            ],
             "pathId": -3255944925916628792,
             "blockIdx": 15
         },
@@ -170,13 +340,25 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "絶対にありえないデスけど、直前で『そんな話あったかなー』\r\n『聞いてなかったなー』とか言うわけ、ないデスよねー？",
-            "enText": "It's absolutely impossible, but you wouldn't \nsay, \"Did we ever talk about that?",
+            "enText": "It's completely impossible that you'd suddenly tell me \n\"Did you mention this?\", \"I don't remember hearing this\", \nor anything, right the moment before, <i>isn't iiit</i>?",
             "nextBlock": 17,
+            "origClipLength": 326,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "えーっと……",
-                    "enText": "Let's see…",
+                    "enText": "<i>Uhhhh……</i>",
                     "nextBlock": 17
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": 1468345614154725969
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -249730821836810256
                 }
             ],
             "pathId": -7562460893397052068,
@@ -186,8 +368,24 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "いや～、今夜がとっても楽しみデス！",
-            "enText": "I'm really looking forward to tonight!",
+            "enText": "<i>Oh boy～ I'm so excited for tonight!</i>",
             "nextBlock": 18,
+            "origClipLength": 142,
+            "voiceIdx": 14,
+            "animData": [
+                {
+                    "origLen": 52,
+                    "pathId": 6082883714333179899
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 196678852292285636
+                },
+                {
+                    "origLen": 36,
+                    "pathId": -2780937740966847226
+                }
+            ],
             "pathId": -3774276097123058540,
             "blockIdx": 17
         },
@@ -195,8 +393,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "最強のタッグと称するなら、\r\n呼吸のシンクロくらい、できて当然デスからね。",
-            "enText": "If you call yourself the best tag team, it is only natural that \nyou should be able to synchronize your breathing.",
+            "enText": "If we're the greatest tag team, then of course \nyou can at least follow me into the ring, right?",
             "nextBlock": 19,
+            "origClipLength": 220,
+            "voiceIdx": 15,
+            "animData": [
+                {
+                    "origLen": 72,
+                    "pathId": 5801005582696173551
+                },
+                {
+                    "origLen": 22,
+                    "pathId": -3039968233169732038
+                }
+            ],
             "pathId": -302126596248897631,
             "blockIdx": 18
         },
@@ -204,8 +414,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "まずは海を走って跳んで潜り抜けて……。\r\nその後は森で登って降りて滑走して……。",
-            "enText": "First, you can run, jump and dive through the ocean… Then you \ncan climb up, down, and run in the forest…",
+            "enText": "First we go running along the shore and dive into the ocean… \nAfter that, we'll climb and slide down hills in the forest…",
             "nextBlock": 20,
+            "origClipLength": 247,
+            "voiceIdx": 16,
+            "animData": [
+                {
+                    "origLen": 293,
+                    "pathId": -3685429151470735125
+                },
+                {
+                    "origLen": 21,
+                    "pathId": -8152192960370436636
+                }
+            ],
             "pathId": -2945865796300161231,
             "blockIdx": 19
         },
@@ -213,8 +435,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ふふ、合宿ならではのハードなトレーニングにしましょうね！\r\nアタシ、絶対手を抜きませんから！",
-            "enText": "Let's make this a hard training camp! I will never cut corners!",
+            "enText": "<i>Hehe</i>, let's train hard now that we're at camp! \nI'm not going to hold anything back!",
             "nextBlock": 21,
+            "origClipLength": 257,
+            "voiceIdx": 17,
+            "animData": [
+                {
+                    "origLen": 111,
+                    "pathId": 7800326471124144496
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8883204219066529666
+                }
+            ],
             "pathId": 6427979452946797560,
             "blockIdx": 20
         },
@@ -222,8 +456,16 @@
             "jpName": "",
             "enName": "",
             "jpText": "――どうやら、覚悟を決めるしかないようだ。",
-            "enText": "-apparently, we have no choice but to be prepared.",
+            "enText": "—— Looks like there's no way out of this one.",
             "nextBlock": 22,
+            "origClipLength": 72,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 58,
+                    "pathId": -607590770609868408
+                }
+            ],
             "pathId": -4913614156058892826,
             "blockIdx": 21
         },
@@ -231,8 +473,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "夜空に輝く二対の羽！　天から賜りし才を手に、\r\nエルコンドルパサー、見・参デェェェス！",
-            "enText": "Two pairs of wings shining in the night sky! With the gift of \nthe heavens in her hands, El Condor Pacer, here she comes!",
+            "enText": "Two pairs of wings glisten in the night sky! \nEndowed with the blessings of the heavens, \nEl Condor Pasa maaakes her entraaance!",
             "nextBlock": 23,
+            "origClipLength": 290,
+            "voiceIdx": 18,
+            "animData": [
+                {
+                    "origLen": 42,
+                    "pathId": -4071482203457076333
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 5756936411995768572
+                }
+            ],
             "pathId": 4597693514559415965,
             "blockIdx": 22
         },
@@ -240,18 +494,30 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "さぁ、地獄のトレーニングの開始デスよ！\r\nトレーナーさん、今のお気持ちをどうぞっ！",
-            "enText": "Now, let the hellish training begin! \nTrainer, how do you feel now?",
+            "enText": "Let the training from hell begin! ¡Vamos! \nTrainer, a few words on how you feel right now?!",
             "nextBlock": 24,
+            "origClipLength": 217,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "……覚悟はしてきた",
-                    "enText": "… I've been prepared.",
+                    "enText": "…… I'm ready to go.",
                     "nextBlock": 24
                 },
                 {
                     "jpText": "……覚悟はしてきたよ",
-                    "enText": "… I've been prepared for this.",
+                    "enText": "…… I'm ready to go.",
                     "nextBlock": 24
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -4948577104279687368
+                },
+                {
+                    "origLen": 19,
+                    "pathId": 5288318105559565018
                 }
             ],
             "pathId": -745013557962071444,
@@ -261,8 +527,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ほーっ！　威勢はいいようデスね！！\r\nその元気がどこまで続くか、見ものデェェス……ッ！",
-            "enText": "Ho! You seem to be in high spirits! Let's \nsee how long that energy lasts…!",
+            "enText": "¡Guau! You seem to be in high spirits!! \nLet's see how long that laaasts…!",
             "nextBlock": 25,
+            "origClipLength": 285,
+            "voiceIdx": 20,
+            "animData": [
+                {
+                    "origLen": 62,
+                    "pathId": -9202543692081788149
+                },
+                {
+                    "origLen": 36,
+                    "pathId": 4836718512661301921
+                }
+            ],
             "pathId": 1928594076281468811,
             "blockIdx": 24
         },
@@ -270,13 +548,21 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "いざ、到着デェェェェェェエエス！！",
-            "enText": "Here we come, arrival deeeeeeeeesss!",
+            "enText": "We. Are. Heeeeeeere!!",
             "nextBlock": 26,
+            "origClipLength": 144,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "ここって……",
-                    "enText": "Here is…",
+                    "enText": "Isn't this……?",
                     "nextBlock": 26
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 6896199319685115135
                 }
             ],
             "pathId": 3044794476442539803,
@@ -286,8 +572,24 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "そう！　キラキラ、楽しい、夏祭り！",
-            "enText": "Yes! Sparkling, fun, summer festivals!",
+            "enText": "Indeed! The sparkling, joyful, summer festival!",
             "nextBlock": 27,
+            "origClipLength": 133,
+            "voiceIdx": 22,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": -8673807187013949952
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -8282999834871402998
+                },
+                {
+                    "origLen": 60,
+                    "pathId": -9051165327426773207
+                }
+            ],
             "pathId": -5495639366996781585,
             "blockIdx": 26
         },
@@ -295,8 +597,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ここでトレーナーさんには、\r\n心と体の栄養補給のトレーニングをしてもらいます！",
-            "enText": "This is where your trainer will train \nyou to nourish your mind and body!",
+            "enText": "This is where you'll be training to recharge your body and mind!",
             "nextBlock": 28,
+            "origClipLength": 179,
+            "voiceIdx": 23,
+            "animData": [
+                {
+                    "origLen": 120,
+                    "pathId": -6053707312155487649
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 438541373566884268
+                }
+            ],
             "pathId": 2977067614708030843,
             "blockIdx": 27
         },
@@ -304,8 +618,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "最近、ずっとお仕事ばーーっかりでしたからね。\r\n休憩時間も、ご飯食べる時も、全然資料を手放さないし！",
-            "enText": "I've been working a lot lately. Even during breaks and when \neating, I never let go of my materials!",
+            "enText": "Because lately you're only ever engrossed in work \nand more work! Even during breaks and at meals \nyou kept holding on to your papers!",
             "nextBlock": 29,
+            "origClipLength": 300,
+            "voiceIdx": 24,
+            "animData": [
+                {
+                    "origLen": 244,
+                    "pathId": 8372081883684135061
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 3479057640223229254
+                }
+            ],
             "pathId": 3372441149010168914,
             "blockIdx": 28
         },
@@ -313,8 +639,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "夜も遅いのに、朝も早い！\r\n……寝不足でもあったんじゃないデスか？",
-            "enText": "Late nights and early mornings!… I guess \nyou didn't get enough sleep, desu?",
+            "enText": "Going to bed late and waking up early! \n… You've been lacking sleep, haven't you?",
             "nextBlock": 30,
+            "origClipLength": 193,
+            "voiceIdx": 25,
+            "animData": [
+                {
+                    "origLen": 109,
+                    "pathId": -5722137783743012126
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 8176197112045456365
+                }
+            ],
             "pathId": 5923987606456437696,
             "blockIdx": 29
         },
@@ -322,8 +660,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "だから今まで休まなかった分、存分に遊んじゃいましょう！",
-            "enText": "So let's play to the fullest for all \nthe time we haven't rested so far!",
+            "enText": "So it's time to catch up hard on all the fun you missed out on!",
             "nextBlock": 31,
+            "origClipLength": 170,
+            "voiceIdx": 26,
+            "animData": [
+                {
+                    "origLen": 96,
+                    "pathId": -1629255210705320574
+                },
+                {
+                    "origLen": 88,
+                    "pathId": -4753038277129597350
+                }
+            ],
             "pathId": -4375705230811512931,
             "blockIdx": 30
         },
@@ -331,18 +681,30 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "むむっ、奥からスパイシーな香りが！　あれは絶対タコスです！\r\n早く、今すぐ、ダッシュで！　買いに行きますよ！",
-            "enText": "Mmmm, I can smell the spicy aroma from deep inside! Those are \ndefinitely tacos! Quick, now, dash! I'm going to go buy some!",
+            "enText": "<i>Mmn</i>? I can smell a spicy aroma coming from further in! \nDefinitely tacos! Quick, let's dash over to buy some!",
             "nextBlock": 32,
+            "origClipLength": 337,
+            "voiceIdx": 27,
             "choices": [
                 {
                     "jpText": "ちょ、ちょっと待ってくれ",
-                    "enText": "Hey, wait a minute.",
+                    "enText": "Now just a jolly second there!",
                     "nextBlock": 32
                 },
                 {
                     "jpText": "ちょ、ちょっと待って",
-                    "enText": "Hey, wait a minute.",
+                    "enText": "Now just a jolly second there!",
                     "nextBlock": 32
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 90,
+                    "pathId": -6211200167636473182
+                },
+                {
+                    "origLen": 37,
+                    "pathId": -2787499598891727945
                 }
             ],
             "pathId": -8907329119534901774,
@@ -352,8 +714,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ちょっとも待ても受け付けません！\r\nたくさん、いっぱい、最高に！　祭りを楽しむんデェェェスっ！",
-            "enText": "We don't accept little or no wait! Lots and \nlots of the best! Enjoy the festival!",
+            "enText": "No, no, the seconds are wasting! We're here to have \na great, exciting, awesome time at the festivaaal!",
             "nextBlock": 33,
+            "origClipLength": 271,
+            "voiceIdx": 28,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 2214103835598914659
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -8494508988495494936
+                }
+            ],
             "pathId": 1517633933599259287,
             "blockIdx": 32
         },
@@ -361,8 +735,20 @@
             "jpName": "",
             "enName": "",
             "jpText": "そしてエルコンドルパサーに手を引かれ、\r\n様々な露店へ連れ回され――",
-            "enText": "Then El Condor Pacer took me by the hand \nand led me around to various stalls…",
+            "enText": "From there, El Condor Pasa took me by the hand \nand led me around the various stalls…",
             "nextBlock": 34,
+            "origClipLength": 89,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 116,
+                    "pathId": -2549752524250977340
+                },
+                {
+                    "origLen": 55,
+                    "pathId": -1072093728650081036
+                }
+            ],
             "pathId": -475860822902073702,
             "blockIdx": 33
         },
@@ -370,18 +756,30 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "もぐっ、あっ、とれーなーはん。\r\nつぎは、もぐ、金魚すくい、もぐ、でもしまふか？",
-            "enText": "Mokugu, ah, tore-na-han. Next time, let's do mogu, goldfish \nscooping, and mogu, too, shall we?",
+            "enText": "<i>Nmunch</i>, agh, Hrainer. Wand to g<i>nom</i> golfizh sgoobing negxt?",
             "nextBlock": 35,
+            "origClipLength": 246,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "飲み込んでから話そうな",
-                    "enText": "Swallow before you speak.",
+                    "enText": "Swallow that down first, will ya?",
                     "nextBlock": 35
                 },
                 {
                     "jpText": "飲み込んでから話そうね",
-                    "enText": "Swallow and then we'll talk.",
+                    "enText": "Swallow that down first, will ya?",
                     "nextBlock": 35
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 314,
+                    "pathId": -6931166812913836432
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -7947288789388933395
                 }
             ],
             "pathId": 2967923846875746104,
@@ -391,8 +789,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ごっくん……あははっ、\r\nやっといつものトレーナーさんに戻ってきましたね。",
-            "enText": "Gokkun… haha, you are finally back to your usual trainer.",
+            "enText": "<i>Gulp</i>…… ahaha, you're finally back to your old self.",
             "nextBlock": 36,
+            "origClipLength": 202,
+            "voiceIdx": 30,
+            "animData": [
+                {
+                    "origLen": 144,
+                    "pathId": 8624239392282532135
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 2596120815903479502
+                }
+            ],
             "pathId": 6877653807326456496,
             "blockIdx": 35
         },
@@ -400,8 +810,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "その調子、その調子！　どんどん元気になってください！\r\n適度に力を抜いて、適度に力を入れて。",
-            "enText": "Keep it up, keep it up! Keep getting better and better! Relax \nmoderately and put in the right amount of effort.",
+            "enText": "That's the spirit! Keep it going, let me see that smile! \nRelax when you need to, and put in the effort when required.",
             "nextBlock": 37,
+            "origClipLength": 288,
+            "voiceIdx": 31,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -4493500168879714797
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 1128080800786914992
+                }
+            ],
             "pathId": 7234130153614950708,
             "blockIdx": 36
         },
@@ -409,8 +831,10 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "自然体、あるがままで、アナタらしく！\r\nじゃないと未来のアタシが困ります。",
-            "enText": "Be natural, be who you are, be you! Otherwise, \nfuture Atashi will be in trouble.",
+            "enText": "Relax and just be yourself! \nOtherwise future me will have a problem.",
             "nextBlock": 38,
+            "origClipLength": 232,
+            "voiceIdx": 32,
             "choices": [
                 {
                     "jpText": "未来の君が？",
@@ -419,8 +843,18 @@
                 },
                 {
                     "jpText": "未来の貴方が？",
-                    "enText": "You in the future?",
+                    "enText": "Future you?",
                     "nextBlock": 38
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": 5116360540591515442
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 7124088162487270880
                 }
             ],
             "pathId": 6780192992832595980,
@@ -430,8 +864,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ええ。いいデスか？\r\nご存知の通り、アタシはいずれ歴史に名を遺すウマ娘になります。",
-            "enText": "Yes. Okay, Des? As you know, Atashi will eventually become a \nhorse girl who will leave her mark on history.",
+            "enText": "That's right. Did you hear what I always said? I will become \na horsegirl whose name will go down in history.",
             "nextBlock": 39,
+            "origClipLength": 258,
+            "voiceIdx": 33,
+            "animData": [
+                {
+                    "origLen": 99,
+                    "pathId": -919360878749842453
+                },
+                {
+                    "origLen": 16,
+                    "pathId": -8966162099055205669
+                }
+            ],
             "pathId": 4729807024092043015,
             "blockIdx": 38
         },
@@ -439,8 +885,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "そしてプロレスラーのパパみたいに、たくさんの大会で優勝する！\r\n送られる歓声、とめどない拍手！　そこに立つふたつの影！",
-            "enText": "And like my dad, a pro wrestler, I'm going to \nwin a lot of tournaments! The cheers, the endless \napplause! Two shadows standing there!",
+            "enText": "Papa's a pro wrestler, and just like him, I'm going to win \na ton of tournaments! To cheers and endless applause! \nAnd in the center, two figures will stand!",
             "nextBlock": 40,
+            "origClipLength": 357,
+            "voiceIdx": 34,
+            "animData": [
+                {
+                    "origLen": 92,
+                    "pathId": 409237448867994928
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -1597102654187307826
+                }
+            ],
             "pathId": -5902365915843166932,
             "blockIdx": 39
         },
@@ -448,8 +906,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "そんな中、アタシは隣を指してこう言うのデス。\r\n『私を勝者にしてくれた、トレーナーに拍手を』……と。",
-            "enText": "In the midst of all this, Atashi points to her \nneighbor and says I say, \"Give a round of applause \nto my trainer for making me a winner.\"…",
+            "enText": "And I will point to the one next to me, and say; \"A big round \nof applause for my trainer, who made me into a champion!\"…",
             "nextBlock": 41,
+            "origClipLength": 332,
+            "voiceIdx": 35,
+            "animData": [
+                {
+                    "origLen": 89,
+                    "pathId": 2839650557619585985
+                },
+                {
+                    "origLen": 20,
+                    "pathId": -3399008317759755774
+                }
+            ],
             "pathId": 9007807269891709096,
             "blockIdx": 40
         },
@@ -457,8 +927,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "えへへ。全部、パパの受け売りデスけど。",
-            "enText": "Heh heh. I got it all from my dad.",
+            "enText": "Ehehe. Though I'm just repeating what papa said…",
             "nextBlock": 42,
+            "origClipLength": 114,
+            "voiceIdx": 36,
+            "animData": [
+                {
+                    "origLen": 105,
+                    "pathId": 7607390039216256096
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 9222681316057948735
+                }
+            ],
             "pathId": -4393641941689119708,
             "blockIdx": 41
         },
@@ -466,8 +948,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "だからトレーナーさんには、いつでも元気でいてもらわないと\r\n未来のアタシが困るんデス。",
-            "enText": "That's why I need my trainer to be in good health at all times, \nor future Atashi will be in trouble.",
+            "enText": "That's why I need you to be in good spirits at all \ntimes, Trainer, or future me will have a problem.",
             "nextBlock": 43,
+            "origClipLength": 212,
+            "voiceIdx": 37,
+            "animData": [
+                {
+                    "origLen": 195,
+                    "pathId": -1723663782212547617
+                },
+                {
+                    "origLen": 24,
+                    "pathId": -5612850968586981000
+                }
+            ],
             "pathId": -7317712328506773335,
             "blockIdx": 42
         },
@@ -475,8 +969,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "アタシたちは2人で最強になるんデスから。",
-            "enText": "We will be the strongest together.",
+            "enText": "Because we'll only become the mightiest together.",
             "nextBlock": 44,
+            "origClipLength": 117,
+            "voiceIdx": 38,
+            "animData": [
+                {
+                    "origLen": 56,
+                    "pathId": 2805585238906996285
+                },
+                {
+                    "origLen": 49,
+                    "pathId": 5884582207469954311
+                }
+            ],
             "pathId": 7605816788613745130,
             "blockIdx": 43
         },
@@ -484,18 +990,30 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "……このエルとの約束、守ってくれますよね？",
-            "enText": "… You will keep your promise to this Elle, won't you?",
+            "enText": "…… You'll keep this promise with me, right?",
             "nextBlock": 45,
+            "origClipLength": 123,
+            "voiceIdx": 39,
             "choices": [
                 {
                     "jpText": "ああ、約束だ！",
-                    "enText": "Oh, I promise!",
+                    "enText": "For sure! I promise!",
                     "nextBlock": 45
                 },
                 {
                     "jpText": "うん、約束だよ！",
-                    "enText": "Yeah, I promise!",
+                    "enText": "For sure! I promise!",
                     "nextBlock": 45
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 119,
+                    "pathId": 878509256296821240
+                },
+                {
+                    "origLen": 94,
+                    "pathId": -3081139644626791176
                 }
             ],
             "pathId": -5191605501295649959,
@@ -505,8 +1023,24 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ブエノ！　力強いお返事！\r\nここに連れてきたかいがありました！",
-            "enText": "Bueno! Strong reply! It was worth bringing them here!",
+            "enText": "¡Bueno! A good, strong reply! \nIt was worth bringing you here!",
             "nextBlock": 46,
+            "origClipLength": 188,
+            "voiceIdx": 40,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 512789453477104618
+                },
+                {
+                    "origLen": 16,
+                    "pathId": 1449666223633023125
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 8489537711691010429
+                }
+            ],
             "pathId": 4663487353655720281,
             "blockIdx": 45
         },
@@ -514,18 +1048,30 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ではそろそろ『地獄のお祭りトレーニング』を開始しましょうか！",
-            "enText": "Well, it's time to start \"Hell of a Festival Training\"!",
+            "enText": "Then it's really getting time to start \nthe \"Festival training from hell\"!",
             "nextBlock": 47,
+            "origClipLength": 170,
+            "voiceIdx": 41,
             "choices": [
                 {
                     "jpText": "まだ始まってなかったのか！？",
-                    "enText": "I didn't know it hadn't started yet!",
+                    "enText": "It hadn't started yet!?",
                     "nextBlock": 47
                 },
                 {
                     "jpText": "まだ始まってなかったの！？",
-                    "enText": "It hadn't started yet!",
+                    "enText": "It hadn't started yet!?",
                     "nextBlock": 47
+                }
+            ],
+            "animData": [
+                {
+                    "origLen": 73,
+                    "pathId": -4183695245275330924
+                },
+                {
+                    "origLen": 20,
+                    "pathId": 8016153135242537571
                 }
             ],
             "pathId": 988678497401820111,
@@ -535,8 +1081,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "ええ！　さっきのタコスとたこ焼きと焼きそばは、\r\nトレーニング前の腹ごしらえデス！",
-            "enText": "Yes! The tacos, takoyaki and yakisoba I \njust ate were my pre-training meal!",
+            "enText": "Noo! Those tacos and <i>takoyaki</i> and <i>yakisoba</i> \nwere a pre-training meal!",
             "nextBlock": 48,
+            "origClipLength": 202,
+            "voiceIdx": 42,
+            "animData": [
+                {
+                    "origLen": 95,
+                    "pathId": 2093720241571780530
+                },
+                {
+                    "origLen": 47,
+                    "pathId": 8493384400083316879
+                }
+            ],
             "pathId": -5978266268761638715,
             "blockIdx": 47
         },
@@ -544,8 +1102,20 @@
             "jpName": "エルコンドルパサー",
             "enName": "El Condor Pasa",
             "jpText": "まだまだ、夏祭りは始まったばかり！\r\n来たからには全部の出店を制覇しますよーーっ！",
-            "enText": "The Summer Festival has only just begun! Now that I'm here, I'm \ngoing to conquer all the stalls!",
+            "enText": "The Summer Festival has only just begun! Now that \nwe're here, we're going to visit aaall of the stalls!",
             "nextBlock": 49,
+            "origClipLength": 253,
+            "voiceIdx": 43,
+            "animData": [
+                {
+                    "origLen": 60,
+                    "pathId": 8011540363761817599
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 4809941392483663418
+                }
+            ],
             "pathId": 179805695582783903,
             "blockIdx": 48
         },
@@ -553,10 +1123,21 @@
             "jpName": "",
             "enName": "",
             "jpText": "そしてエルコンドルパサーと共に、\r\n久しぶりの休息と楽しいひと時を過ごしたのだった。",
-            "enText": "And with El Condor Pacer, we had a rest \nand a good time after a long absence.",
+            "enText": "My first rest in a long while was thus spent \nhaving a grand time with El Condor Pasa.",
             "nextBlock": -1,
+            "origClipLength": 99,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 22,
+                    "pathId": 5037513687602061973
+                }
+            ],
             "pathId": -3755384751960737671,
             "blockIdx": 49
         }
-    ]
+    ],
+    "modified": 1716859068,
+    "humanTl": true,
+    "enTitle": "A memorable night and red-hot promise!!"
 }

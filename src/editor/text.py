@@ -300,12 +300,15 @@ def for_display(file, text):
         return text.replace("\r", "")
 
 
-def for_storage(file, text):
-    return normalize(text, "\\n" if file.escapeNewline else "\n")
+def for_storage(file, text, tkOnly = False):
+    return normalize(text, "\\n" if file.escapeNewline else "\n", tkOnly)
 
 
-def normalize(text: str, newline: str = "\n"):
-    return f" {newline}".join([line.strip() for line in text.strip().split("\n")])
+def normalize(text: str, newline: str = "\n", tkOnly = False):
+    if tkOnly:
+        return text.rstrip("\n")
+    else:
+        return f" {newline}".join([line.strip() for line in text.strip().split("\n")])
 
 
 def getText(widget: TkDisplaysText):

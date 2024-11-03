@@ -22,7 +22,7 @@ def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
     cmd = (
         ["git", "status", "--short", "--porcelain"]
         if changeType is True
-        else ["git", "show", "--pretty=", "--name-status", changeType]
+        else ["git", "show", "--pretty=", "--name-status", "--diff-merges=1", changeType]
     )
     # Assumes git-config quotedPath = true (default) but works either way it seems.
     for line in (
@@ -38,7 +38,7 @@ def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
             continue
         path = Path(m[1])
         if (
-            path.parts[0] != "translations" 
+            path.parts[0] != "translations"
             or path.parts[1] != targetType
             or (jsonOnly and not utils.isJson(path.name))
             or targetGroup and path.parts[2] != targetGroup
@@ -92,7 +92,7 @@ def searchFiles(
             )  #todo: consider full filename check for flexibility
         else:
             found.extend(
-                root.joinpath(file) for file in files 
+                root.joinpath(file) for file in files
                 if (utils.isJson(file) if jsonOnly else True)
             )
     return found
@@ -219,14 +219,14 @@ class UmaTlConfig:
         cur_script = Path(sys.argv[0]).resolve()
         ctx = cur_script.relative_to(Path("src").resolve()).with_suffix("").as_posix()
         self.script = self.getOrCreateCtx(ctx)
-    
+
     @classmethod
     def getOrCreateCtx(cls, ctx):
         data = cls.cfg.get(ctx)
         if data is None:
             cls.cfg[ctx] = data = {}
         return data
-    
+
     @classmethod
     def save(cls):
         utils.writeJson(cls.filename, cls.cfg, 2)

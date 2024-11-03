@@ -2,7 +2,7 @@ This document gives an overview of translation progress.
 If you'd like to contribute a translation, please submit a PR, or open an issue or join the [Discord](https://discord.gg/eqZT27TeJ) for organization.
 
 Note: MTL = machine translation. These have very limited and arbitrary manual edits, sometimes. Quality varies based on content (speech patterns, topics, etc).  
-Translations by the UmaTL team are made possible by [supporters](https://ko-fi.com/noccyu). Those marked by ☆ are currently only available in the Supporters Edition.
+Translations by the UmaTL team are made possible by [supporters](https://ko-fi.com/noccyu).
 
 ### Legend
 term | meaning
@@ -68,11 +68,15 @@ An Oath to My Dear Challengers | Stalled | [noccu] (preview)
 Summer's Sunlight Fades to Blue | In progress | [UmaTL] (noccu)☆
 Tapestry of Farewells Everlasting | Complete | [UmaTL] (Anonymous Panda)
 As the Leaves Rust, Feelings Blossom | Complete | [UmaTL] (Anonymous Panda)
-A Gleaming Mejiro Gala |  |
+A Gleaming Mejiro Gala | In Progress | [Chiwawa]
 Together with Everyone | In progress | [UmaTL] (Anonymous Panda)☆
 Come On Down To Calming Koumian! |  |
 To You, My Dancing Orchid ～Let's dance now!～ | Complete | [Jimoori]
 Uprising: The Soldiers' Battle Cry | Complete | [Chiwawa] (tl) + [noccu] (tlc, edit)
+A Letter From the Baroque Pearl |  |
+Sunset-Lit Jugend by the Shore |  |
+Gazing at the Harvest Moon With You | Complete | [fling]
+Slapstick Crash! |  |
 The rest up to 2022/07/08 | Complete | MTL (contributed by Korgi)
 
 # Collab Events
@@ -97,6 +101,8 @@ Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
+Bubble Gum Fellow | In Progress | [LotoDS]
+Calstone Light O | Stalled | [kanade]
 Cesario | Complete | [LotoDS]
 Cheval Grand | Exists | Naellza
 Copano Rickey | Complete | [LotoDS]
@@ -117,8 +123,10 @@ Haru Urara | Complete, In progress | [Vacxy] (ep 1) + MTL (rest), [xct]
 Hishi Amazon | Complete | [UmaTL] ([noccu])☆
 Hishi Miracle | Complete | [LotoDS]
 Hokko Tarumae | Complete | [Riersa] (MTL edit)
+Ikuno Dictus | Stalled | [kanade]
 Inari One | Complete | [LotoDS]
 Ines Fujin | Complete | [noccu]
+Jungle Pocket | Stalled | Naellza
 Katsuragi Ace | Complete | [LotoDS]
 Kawakami Princess | Complete | [Director Kok]
 King Halo | Complete | [burritoblaster]
@@ -129,6 +137,7 @@ Matikanetannhauser | Exists | [Snep]
 Maruzensky | Complete | [noccu]
 Marvelous Sunday | Complete | [LotoDS]
 Mayano Top Gun | Complete | [Director Kok]
+Meisho Doto | Complete | [fling]
 Mejiro Ardan | Complete | [LotoDS] + [Mini Fox] (minor edits)
 Mejiro Dober | Complete | [LotoDS]
 Mejiro McQueen | Complete | [UmaTL] (bocchi)
@@ -136,12 +145,13 @@ Mejiro Palmer | Complete | [UmaTL] (bocchi)☆
 Mejiro Ramonu | Complete | [LotoDS]
 Mejiro Ryan | Complete | MTL (contributed by CryDuringItAll)
 Mihono Bourbon | Complete | [KevinVG207]
-Mr. C.B. | In progress | [kanade]
+Mr. C.B. | Complete | [kanade]
 Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
 Rice Shower | Exists, Complete | [Ben] (ep 1-4), [UmaTL] (bocchi)☆
+Rhein Kraft | In Progress | [LotoDS]
 Sakura Bakushin O | Complete | [noccu]
 Sakura Chiyono O | Complete | [LotoDS]
 Sakura Laurel | Complete | [LotoDS]
@@ -380,7 +390,7 @@ Never Looking Back | Complete | [COSMET]
 Pyoitto♪Hallelujah! | Complete | [Kasey]
 [*Rising Girl*](https://twitter.com/dorcarolle/status/1192625305795489792) | Complete, Stalled | [dorcarolle](https://twitter.com/dorcarolle), [noccu]
 Sasayaka na Inori | Complete | [Eight] (edited by [noccu] based in part on tl by [Solo])
-Slapstick Clash insert song | Complete | [LotoDS]
+SHAKEROCK (Slapstick Clash insert) | Complete | [LotoDS]
 [TAILWIND](https://youtu.be/MFFQeEru65A) | Complete | [Snep]
 *Tachiichi Zeroban! Juni ha Ichiban! (Smart Falcon)* | In progress | [Kasey]
 Tracen Ondo | Complete | [Kasey]

@@ -16,12 +16,14 @@ def loadDict():
     return names, umas, misc
 
 
-def translate(file: TranslationFile, forceReload=False):
+def translate(file: TranslationFile, forceReload=False, onlyName=None):
     if forceReload or not NAMES_DICT:
         loadDict()
     for block in file.textBlocks:
         jpName = block.get("jpName")
         if jpName is None:
+            continue
+        if onlyName is not None and onlyName != jpName:
             continue
         if jpName in NAMES_BLACKLIST:
             # Force original names for game compat
@@ -59,6 +61,11 @@ def parseArgs(args=None):
         action="store_true",
         help="Write new names from files to names file instead. Copies any existing EN names.",
     )
+    ap.add_argument(
+        "-l",
+        "--limit",
+        help="Update only the given name.",
+    )
     args = ap.parse_args(args)
 
     if args.type in ("race", "lyrics"):
@@ -78,7 +85,7 @@ def main(args: patch.Args = None):
     else:
         for file in files:
             file = TranslationFile(file)
-            translate(file)
+            translate(file, onlyName=args.limit)
             file.save()
         print(f"Names translated in {len(files)} files.")
 

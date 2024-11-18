@@ -1,17 +1,21 @@
 @ECHO OFF
 SETLOCAL ENABLEDELAYEDEXPANSION
-REM This script is intended to be run where you want the patch to live, not from its source folder.
+
+REM Set workdir correctly when called from scripts dir
+FOR %%I IN (.) DO SET parent=%%~nxI
+IF %parent% EQU scripts (
+    CD ../../..
+)
+
+REM Check for existing install
 IF EXIST "UmaTL" (
-    SET /P reinstall=An UmaTL folder already exists. Replace it? [y]es, [n]o, [u]pdate: 
-    IF /I !reinstall! EQU y (
-        RMDIR /S /Q UmaTL
-        CALL :install
-    ) ELSE IF /I !reinstall! EQU u (
-        CALL patch.bat install
-        EXIT /B
-    ) ELSE ( 
-        ECHO No actions required, exiting.
-    )
+    SET name=UmaTL
+)
+IF EXIST "umamusu-translate" (
+    SET name=umamusu-translate
+)
+IF DEFINED name (
+    CALL :update
 ) ELSE (
     CALL :install
 )
@@ -28,10 +32,28 @@ CD UmaTL
 CALL patch.bat install
 EXIT /B 0
 
+:update
+SET /P reinstall=Existing UmaTL found. What do you want to do? [u]pdate, [r]einstall, [e]xit:
+IF /I !reinstall! EQU r (
+    RMDIR /S /Q %name%
+    CALL :install
+) ELSE IF /I !reinstall! EQU u (
+    CALL patch.bat install
+    EXIT /B
+) ELSE (
+    ECHO No actions required, exiting.
+)
+EXIT /B
+
 :mingit
 ECHO Installing MinGit ^(https://github.com/git-for-windows/git/releases^)...
+IF EXIST "uma-temp-mingit\mingw64" (
+    EXIT /B 0
+)
 MKDIR uma-temp-mingit
-curl -L -o uma-temp-mingit.zip "https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/MinGit-2.38.1-64-bit.zip"
+IF NOT EXIST "uma-temp-mingit.zip" (
+    curl -L -o uma-temp-mingit.zip "https://github.com/git-for-windows/git/releases/download/v2.38.1.windows.1/MinGit-2.38.1-64-bit.zip"
+)
 tar -xf uma-temp-mingit.zip -C uma-temp-mingit
 DEL uma-temp-mingit.zip
 EXIT /B 0

@@ -44,7 +44,7 @@
             "campaigns": 187,
             "campaigns-desc": 188,
             "gacha-info": 13,
-            "gacha-names": 26,
+            "gacha-names": [26, 327],
             "presents-desc": 64,
             "item-uma-pieces": 113,
             "uma-profile-intro": 163,
@@ -126,7 +126,15 @@
             "larc-challenges": 315,
             "larc-challenge-debuffs": 316,
             "larc-evo-alts": 326,
-            "ssmatch-effects": 322
+            "ssmatch-effects": 322,
+            "uaf-heatup-effects": 330,
+            "uaf-epithets": 345,
+            "gff-dishes": [332, 349, 359],
+            "gff-dishes-desc": 353,
+            "gff-effects": [333, 358],
+            "gff-messages": [354, 352],
+            "gff-produce": 331,
+            "gff-produce-lv": 334
         },
         "overrides": {
             "skill_data": ["skill-desc", "alt/skill-desc"]

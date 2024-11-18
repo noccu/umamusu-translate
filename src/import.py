@@ -8,6 +8,7 @@ from time import time as now
 
 import common.constants as const
 import filecopy as backup
+import restore
 from common import patch, logger
 from common.types import GameBundle, TranslationFile
 
@@ -52,6 +53,7 @@ class PatchManager:
                     setattr(self.args, k, v)
                 else:
                     raise ConfigError(f"Invalid config arg: {k}: {v}")
+        self.restoreArgs = restore.parseArgs([])
         if self.args.overwrite:
             self.args.dst = const.GAME_ASSET_ROOT
             self.fcArgs = backup.parseArgs([])
@@ -112,9 +114,12 @@ class PatchManager:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
     def loadBundle(self, tlFile: TranslationFile):
-        bundle = GameBundle.fromName(tlFile.bundle, load=False)
+        bundle = GameBundle.fromName(tlFile.bundle, load=False, bType=tlFile.type)
         if not bundle.exists:
-            raise NoAssetError(tlFile.bundle)
+            logger.info(f"Asset {tlFile.bundle} doesn't exist, attempting download. (from {tlFile.name})")
+            restore.save(bundle, self.restoreArgs) # should be synchronous
+            if not bundle.exists:
+                raise NoAssetError(tlFile.bundle)
         if self.args.update:
             # Find the right output file as it may not be in game dir!
             b = GameBundle(GameBundle.createPath(self.args.dst, tlFile.bundle), load=False)
@@ -223,6 +228,7 @@ class StoryPatcher:
             logger.debug(f"{blockIdx}: Text length adjusted but no anim data found")
 
         # Adjust length of screen effect clips if they originally extended until the end of the block.
+        #todo: store the originals, probably
         for track in self.assetData["BlockList"][blockIdx]['ScreenEffectTrackList']:
             if not track['ClipList']:
                 continue
@@ -236,7 +242,7 @@ class StoryPatcher:
             if clipData['StartFrame'] + clipData['ClipLength'] < assetData["StartFrame"] + origClipLen:
                 continue
             curClipLen = clipData['ClipLength']
-            clipData["ClipLength"] = curClipLen + newClipLen - origClipLen
+            clipData["ClipLength"] = max(newClipLen, clipData['ClipLength'])
             clipAsset.save_typetree(clipData)
             logger.debug(f"Adjusted ScreenEffectClip length at {blockIdx}: {curClipLen} -> {clipData['ClipLength']}")
 

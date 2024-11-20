@@ -150,6 +150,7 @@ Narita Taishin | Complete | MTL (contributed by CryDuringItAll)
 Narita Top Road | Complete | [LotoDS]
 Nice Nature | Complete | [xct]
 Neo Universe | Complete | [LotoDS]
+Rhein Kraft | Complete | [LotoDS]
 Rice Shower | Exists, Complete | [Ben] (ep 1-4), [UmaTL] (bocchi)☆
 Rhein Kraft | In Progress | [LotoDS]
 Sakura Bakushin O | Complete | [noccu]

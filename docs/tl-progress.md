@@ -101,7 +101,7 @@ Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
-Bubble Gum Fellow | In Progress | [LotoDS]
+Bubble Gum Fellow | Complete | [LotoDS]
 Calstone Light O | Stalled | [kanade]
 Cesario | Complete | [LotoDS]
 Cheval Grand | Exists | Naellza

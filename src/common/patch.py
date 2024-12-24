@@ -127,6 +127,7 @@ class Args(argparse.ArgumentParser):
         self.add_argument(
             "--read-defaults",
             "--read-config",
+            "-cfg",
             action="store_true",
             help="Overwrite args with data from umatl.json config",
         )

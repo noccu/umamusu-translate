@@ -78,9 +78,8 @@ class AudioPlayer:
             self._closeWavStream(wavFile)
         self.pyaud.terminate()
 
-    def play(self, storyId: str, voice: PlaySegment, sType="story"):
+    def play(self, storyId: patch.StoryId, voice: PlaySegment, sType):
         """Plays audio for a specific text block"""
-        storyId: patch.StoryId = patch.StoryId.parse(sType, storyId)
         qStoryId = patch.StoryId.queryfy(storyId)
         if not voice.timeBased and voice.idx < 0:
             self.master.status.log("Text block is not voiced.")
@@ -96,6 +95,13 @@ class AudioPlayer:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.awb'"
             h = self._db.execute(stmt).fetchone()
             if h is None:
+                if sType == "story":
+                    idx = int(storyId.idx)
+                    if idx > 4 and storyId.group != "06":
+                        storyId.group = "06"
+                        storyId.idx = f"{idx-4:03}"
+                        self.play(storyId, voice, sType)
+                        return
                 self.master.status.log(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
                 return
             asset = GameBundle.fromName(h[0], load=False)
@@ -214,6 +220,6 @@ class AudioPlayer:
         elif voice is None:
             self.master.status.log("No voice info found for this block.")
             return "break"
-
-        self.play(storyId, voice, sType=file.type)
+        sType = file.type or "story"
+        self.play(patch.StoryId.parse(sType, storyId), voice, sType)
         return "break"

@@ -115,6 +115,7 @@ Eishin Flash | Complete, In progress, Stalled | MTL, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | [UmaTL] (noccu)☆
 Fine Motion | Complete | [LotoDS]
 Fuji Kiseki | Complete | [Kasey]
+Furioso | Complete | [LotoDS]
 Gentildonna | Complete | [LotoDS]
 Gold City | Complete | [Hades of Games]
 Gold Ship | Complete, Stalled | MTL, UmaTL☆

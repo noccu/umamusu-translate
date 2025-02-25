@@ -94,7 +94,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "涙を流すライスシャワーに、先日見た姿が重なる――",
-            "enText": "Seeing the crying girl in front of me, I couldn't help but \nremember the look of determination she had the other day.",
+            "enText": "Seeing the crying girl in front of me, I couldn't \nhelp but remember the determined look she had \nshown the other day.",
             "nextBlock": 6,
             "origClipLength": 76,
             "voiceIdx": -1,
@@ -186,7 +186,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "詳しいことはまだわからないが、彼女は確かに変わろうとしていた。\r\nそのために、懸命にトレーニングを重ねていたのも知っている……。",
-            "enText": "Even though I didn't know her full story, it was undeniable that \nshe was desperately trying to change. After all, I've witnessed \nher unwavering dedication and persistence to training firsthand.",
+            "enText": "Even though I didn't know her full story, it was undeniable that \nshe was desperately trying to change. After all, I've witnessed \nher persistence and dedication to training firsthand.",
             "nextBlock": 10,
             "origClipLength": 128,
             "voiceIdx": -1,
@@ -357,19 +357,19 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "それでも、いいの……？",
-            "enText": "Even considering all that, you're still okay with me…?",
+            "enText": "Even considering all that, you still want to coach me…?",
             "nextBlock": 17,
             "origClipLength": 121,
             "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "それでも、君を支えたいんだ",
-                    "enText": "Even so, I still want to support you.",
+                    "enText": "Even so, I want to support you.",
                     "nextBlock": 17
                 },
                 {
                     "jpText": "それでも、貴方を支えたいの",
-                    "enText": "Even so, I still want to support you.",
+                    "enText": "Even so, I want to support you.",
                     "nextBlock": 17
                 }
             ],
@@ -706,7 +706,7 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "一緒にいる子が転んだり、靴紐切っちゃったり……\r\nひどいときは、鳥のフンを頭に落っことされちゃって……。",
-            "enText": "Kids around me would trip, or find their shoe laces \nsnapping… and on really bad days there's even been \ntimes when a bird pooped on someone's head……",
+            "enText": "Kids around me would trip, or find their shoe laces \nsnapping… and there's even been really bad days \nwhen a bird pooped on someone's head……",
             "nextBlock": 33,
             "origClipLength": 282,
             "voiceIdx": 23,
@@ -727,7 +727,7 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスは、いつもいつもみんなに迷惑かけちゃう\r\nだめな子なの……。",
-            "enText": "I'm a good-for-nothing endlessly \ncausing trouble for others……",
+            "enText": "I'm a good-for-nothing endlessly causing trouble for others……",
             "nextBlock": 34,
             "origClipLength": 205,
             "voiceIdx": 24,
@@ -807,7 +807,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうして始まった初トレーニングだったが、\r\nライスシャワーは指示したメニューを懸命にこなしてくれた。",
-            "enText": "Thus we began our first day of training. With unwavering \ndetermination, Rice Shower diligently completed each \npart of the training menu as instructed.",
+            "enText": "We thus began our first day of training. With unwavering \ndetermination, Rice Shower diligently completed each \npart of the training menu as instructed.",
             "nextBlock": 38,
             "origClipLength": 110,
             "voiceIdx": -1,
@@ -1131,12 +1131,12 @@
             "choices": [
                 {
                     "jpText": "ご褒美だからな、なんでも言ってくれ！",
-                    "enText": "It's your reward, so feel free \nto pick anything you'd like!",
+                    "enText": "<size=38>It's your reward, so pick anything you'd like!</size>",
                     "nextBlock": 52
                 },
                 {
                     "jpText": "ご褒美だからね、なんでも言って！",
-                    "enText": "It's your reward, so feel free \nto pick anything you'd like!",
+                    "enText": "<size=38>It's your reward, so pick anything you'd like!</size>",
                     "nextBlock": 52
                 }
             ],
@@ -1157,7 +1157,7 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "なんでも……！　なんでも……なんでも、かぁ……。\r\n……………………。",
-            "enText": "Anything…! Anything… \nAnything I want……",
+            "enText": "Anything…! Anything… \nAnything I'd like……",
             "nextBlock": 53,
             "origClipLength": 286,
             "voiceIdx": 37,
@@ -1306,5 +1306,5 @@
         }
     ],
     "humanTl": true,
-    "modified": 1711994576
+    "modified": 1740490403
 }

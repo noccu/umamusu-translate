@@ -380,6 +380,7 @@ Kirari Magic Show | Complete | [LotoDS]
 *Koi Wa Derby* | Complete | Hentai Maskudo
 *L's Surprise!!* | Stalled | [noccu]☆
 l'Arc de Gloire | Complete | [LotoDS]
+Legend-Changer | Complete | [LotoDS]
 *Lightless* | Complete | [Ren]
 Make Debut! | Complete | Unknown (https://www.animesonglyrics.com/) + [noccu] (missing parts)
 [*Mikadowarai kageki \~Tataeyo Towa Ni~*](https://youtu.be/XtTn3GSVKM0) | Complete | [Kasey]

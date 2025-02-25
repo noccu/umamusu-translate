@@ -1,6 +1,9 @@
 This document gives an overview of translation progress.  
 If you'd like to contribute a translation, please submit a PR, or open an issue or join the [Discord](https://discord.gg/eqZT27TeJ) for organization.
 
+> [!WARNING]
+> [This page has moved to UmaTL's Hachimi-format wiki](https://github.com/UmaTL/hachimi-tl-en/wiki/Translation-Progress).
+
 Note: MTL = machine translation. These have very limited and arbitrary manual edits, sometimes. Quality varies based on content (speech patterns, topics, etc).  
 Translations by the UmaTL team are made possible by [supporters](https://ko-fi.com/noccyu).
 

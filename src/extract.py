@@ -9,6 +9,7 @@ from common import logger, patch
 from common.constants import GAME_ASSET_ROOT, GAME_META_FILE, TARGET_TYPES
 from common.utils import sanitizeFilename
 from common.types import StoryId, GameBundle, TranslationFile
+import restore
 
 
 def queryDB(db=None, storyId: StoryId = None):
@@ -450,8 +451,12 @@ def main(_args: patch.Args = None):
         q = queryDB(storyId=StoryId(args.type, args.set, args.group, args.id, args.idx))
         nTotal = nSkipped = len(q)
         print(f"Found {nTotal} files.")
+        restore_args = restore.parseArgs(["--forcedl"])
         for bundle, path in q:
             try:
+                asset = GameBundle.fromName(bundle, load=False, bType=args.type)
+                if not asset.exists:
+                    restore.save(asset, restore_args)
                 nSkipped -= exportAsset(bundle, path)
             except Exception:
                 nFailed += 1

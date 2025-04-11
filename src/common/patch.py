@@ -179,11 +179,10 @@ class Args(argparse.ArgumentParser):
             cfg = UmaTlConfig()
             for k, v in cfg.script.items():
                 o = getattr(a, k, None)
-                if o is None:
-                    continue
-                t = type(o)
-                if not isinstance(v, t):
-                    v = t(v)
+                if o is not None:
+                    t = type(o)
+                    if not isinstance(v, t):
+                        v = t(v)
                 setattr(a, k, v)
         if self.hasDefault and a.story:
             a.story = StoryId.parse(a.type, a.story)

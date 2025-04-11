@@ -122,6 +122,7 @@ Furioso | Complete | [LotoDS]
 Gentildonna | Complete | [LotoDS]
 Gold City | Complete | [Hades of Games]
 Gold Ship | Complete, Stalled | MTL, UmaTL☆
+Gran Alegria | Complete | [LotoDS]
 Grass Wonder | Complete | [LotoDS]
 Haru Urara | Complete, In progress | [Vacxy] (ep 1) + MTL (rest), [xct]
 Hishi Amazon | Complete | [UmaTL] ([noccu])☆

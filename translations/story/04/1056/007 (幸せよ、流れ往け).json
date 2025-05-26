@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "UKMV3T5F2PSNDVEUUIIOUW2DWPJ4JQK6",
+    "version": 6,
+    "bundle": "T5A6D62D6MOAFAF63Q57KIZEGPAVJIAM",
     "type": "story",
     "storyId": "041056007",
     "title": "幸せよ、流れ往け",
+    "enTitle": "Let Happiness Flow",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "マチカネフクキタルを含むトレセン学園のウマ娘たちは、\n実力向上のため海辺にある施設へ合宿に来ていた。",
-            "enText": "The horsegirls of Tracen Academy, including Machikanefukukkitaru, \nhad come to a training camp at a facility by the \nsea to improve their skills.",
+            "enText": "Like many of Tracen Academy's horsegirls, Matikanefukukitaru \nhad chosen to make use of summer camp to improve her skills, \nso here we were at the beachside facilities.",
             "nextBlock": 2,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "pathId": -8496528139070449202,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ふぅ～……\r\nトレーニング前にひと汗かきました！",
-            "enText": "Whew～…… got in a sweat before training!",
+            "enText": "<i>Fwooohoo～</i> I've really worked up a sweat \nand we haven't even started training yet!",
             "nextBlock": 3,
             "origClipLength": 131,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 91,
@@ -35,13 +38,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "これからトレーニングという時に、\r\nマチカネフクキタルはなにやら大きな荷物を運んできた。",
-            "enText": "Just as we were about to start training, Machikanefukukkitar \nbrought in a large package.",
+            "enText": "Though we were here for training, Matikanefukukitaru had \nshown up carrying a large amount of baggage.",
             "nextBlock": 4,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "それは……？",
-                    "enText": "Is that ……?",
+                    "enText": "Dare I ask…?",
                     "nextBlock": 4
                 }
             ],
@@ -58,9 +62,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "開運グッズの山です！　寮に100個ほど残して、\nあとは全部持ってきました！",
-            "enText": "It's a pile of goodies! I left about 100 in the dorms and brought \nall the rest with me!",
+            "enText": "My collection of lucky items, it is! I left something like a hundred \nof them behind in the dorm and brought the rest here with me!",
             "nextBlock": 5,
             "origClipLength": 172,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 50,
@@ -74,13 +79,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "実はこの夏を機に、思い切ってお別れしようと思いまして。\nさて、どのように供養しましょうか。",
-            "enText": "Actually, I decided to take this summer as an opportunity to say \ngoodbye with all my heart. Now, how shall I make offerings?",
+            "enText": "You see, I actually thought this summer would be a good \nopportunity to part ways with them once and for all. \nNow the only question is how I should do so.",
             "nextBlock": 6,
             "origClipLength": 251,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "ゴミに出す？",
-                    "enText": "Do you want to put it in the garbage?",
+                    "enText": "Chuck them in the trash?",
                     "nextBlock": 6
                 }
             ],
@@ -101,9 +107,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ゴミ！？　どれも霊験あらたかな品なのに\nそれをゴミとして捨てるだなんて！",
-            "enText": "Garbage! All of these items are miraculous, \nand you throw them away as garbage!",
+            "enText": "In the what!? You would simply throw these \nwondrous miracle items into the <i>trash</i>!?",
             "nextBlock": 7,
             "origClipLength": 195,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 75,
@@ -121,9 +128,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "……かといって浜に埋めたら怒られるでしょうし。\n勢いで持ってきたものの、処理の仕方を考えてませんでした。",
-            "enText": "…… but if I buried it on the beach, I would probably \nget angry. I brought it with me on a whim, but \ndidn't think about how to handle it.",
+            "enText": "…… Granted, I can't just bury them on the beach here. \nIt was good and well to bring them on impulse, but I \nhaven't quite thought about how to dispose of them.",
             "nextBlock": 8,
             "origClipLength": 250,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 76,
@@ -141,9 +149,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "とてもお世話になったので、厳かに葬りたいんですが\nなにか方法は……。",
-            "enText": "I would like to bury her in a solemn manner, as she has been very \nkind to me. Please let me know how I can do that at ……",
+            "enText": "I owe a lot to these little trinkets, so I was hoping to give \nthem a proper burial. It lacks me only a good method…",
             "nextBlock": 9,
             "origClipLength": 197,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 60,
@@ -157,9 +166,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "なにかと開運グッズに頼ってばかりだったマチカネフクキタルが\nそれを手放すに至ったのは、大きな心変わりがあったからだろう。",
-            "enText": "Machikanefukukkitaru, who had always relied on lucky charms, had \na major change of heart when she decided to let go of them.",
+            "enText": "Given how lovingly she relied on her lucky items at all times, \nseeing her willingly looking to part with them was a clear \nindication of just how much she had changed.",
             "nextBlock": 10,
             "origClipLength": 123,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 159,
@@ -173,18 +183,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "それがどういう想いかはわからないが、\r\n彼女の気持ちを汲んであげるべきだと思い――",
-            "enText": "I don't know what those feelings are, but I think you should take \nher feelings into account―",
+            "enText": "I'm not sure exactly how she arrived at this decision, \nbut her determination is to be acknowledged.",
             "nextBlock": 11,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "何か考えてみるよ",
-                    "enText": "I'll see what I can come up with.",
+                    "enText": "I'll help you think of something.",
                     "nextBlock": 11
                 },
                 {
                     "jpText": "何か考えてみるね",
-                    "enText": "I'll see what I can come up with.",
+                    "enText": "I'll help you think of something.",
                     "nextBlock": 11
                 }
             ],
@@ -201,9 +212,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "本当ですか！？　ぜひぜひにお願いします！",
-            "enText": "Really? By all means, please!",
+            "enText": "You will!? Oh, I am most grateful for your help!",
             "nextBlock": 12,
             "origClipLength": 124,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 74,
@@ -221,9 +233,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "鈴のように鳴り響く、夏の虫たちの声。\nそして――",
-            "enText": "The voices of summer insects ringing like bells. And then―",
+            "enText": "For a while, I enjoyed the chirps and hums of insects \ndrifting on the summer air. Until ——",
             "nextBlock": 13,
             "origClipLength": 76,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 23,
@@ -237,9 +250,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あっ、いたいた！　トレーナーさーん！",
-            "enText": "Oh, there she is! Hey, trainer!",
+            "enText": "<i>Ah, there you are, Trainer!</i>",
             "nextBlock": 14,
             "origClipLength": 96,
+            "voiceIdx": 7,
             "pathId": 2197097234936832880,
             "blockIdx": 13
         },
@@ -247,9 +261,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "それを、けたたましく切り裂いて、\nマチカネフクキタルはやってきた。",
-            "enText": "Cutting through the noise, Machikanefukukkitaru arrived.",
+            "enText": "A familiar shrill voice pierced through this peaceful \nmoment to herald the arrival of Matikanefukukitaru.",
             "nextBlock": 15,
             "origClipLength": 138,
+            "voiceIdx": -1,
             "pathId": -8257527645917112571,
             "blockIdx": 14
         },
@@ -257,9 +272,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "どうして、こんな場所に？\nここは……。",
-            "enText": "Why this place? This is ……",
+            "enText": "Why have you chosen this place? \nI don't see anything of particular note…",
             "nextBlock": 16,
             "origClipLength": 122,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 50,
@@ -273,9 +289,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あ、小川ですね。こんなところに川があったなんて。\r\nへぇ～風流ですね～。",
-            "enText": "Ah, a creek. I didn't know there was \na river here. Wow, it's so elegant!",
+            "enText": "Ah, there's a small creek here, who would have thought! \n<i>Heeh</i>, now that's charming～",
             "nextBlock": 17,
             "origClipLength": 282,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 89,
@@ -289,18 +306,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "笹舟でも作って流したいところです。ちゃんと浮かんだら大吉、\r\n倒れたらドンマイ、みたいな！",
-            "enText": "I would like to make a bamboo boat and float it down the river. \nIf it floats properly, great luck, if it falls over, don't worry!",
+            "enText": "I'm getting the urge to make one of those bamboo leaf boats \nto send downstream. Great luck if it stays afloat, and else \ndon't mind, I guess!",
             "nextBlock": 18,
             "origClipLength": 233,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "流すのはグッズだぞ",
-                    "enText": "It's the goods you're flushing.",
+                    "enText": "I thought we could send down your items.",
                     "nextBlock": 18
                 },
                 {
                     "jpText": "流すのはグッズだよ",
-                    "enText": "It's the goods that flush.",
+                    "enText": "I thought we could send down your items.",
                     "nextBlock": 18
                 }
             ],
@@ -321,9 +339,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "え……グッズ？　あ！　もしかして……。\nここで弔いのお流ししようってわけですか？　な、なるほどぉ～！",
-            "enText": "What…… goods? Ah! Maybe it's…… Are you trying to offer your \ncondolences here? I see～!",
+            "enText": "<i>Heh?</i> My items…? Ah! You mean… I can send \nthem off down the water here? I… I get it now～!",
             "nextBlock": 19,
             "origClipLength": 342,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 137,
@@ -341,9 +360,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "川にいろんなものを流して弔う。\nそれが、この国の古式ゆかしい風習ですもんね。",
-            "enText": "We mourn by pouring all kinds of things into the river. That is \nan old-fashioned custom in this country, isn't it?",
+            "enText": "Indeed, sending items and persons off down a river in mourning \nor remembrance is a most traditional Japanese custom.",
             "nextBlock": 20,
             "origClipLength": 216,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 67,
@@ -361,13 +381,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "精霊流し、灯籠流し、雛流し、流しそうめん……。\nなにか混ざった気もしますが、大体そんな感じで。",
-            "enText": "Spiritual floating ceremony, lantern floating ceremony, \nHina-nagashi, Nagashi Somen (floating noodles)…… I feel like I'm \nmixing things up, but that's pretty much it.",
+            "enText": "Be it the offerings of <i>Obon</i>, the lanterns and <i>hina</i> dolls of their \nrespective floating rituals, the noodles of <i>nagashi soumen</i>… \nAn odd one crept in, perhaps, but the practice is common.",
             "nextBlock": 21,
             "origClipLength": 271,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "この案、どうかな？",
-                    "enText": "What do you think of this idea?",
+                    "enText": "How do you feel about my suggestion?",
                     "nextBlock": 21
                 }
             ],
@@ -384,9 +405,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "はい！　いいと思います！",
-            "enText": "Yes! I think it's good!",
+            "enText": "Right! I must say, I like it!",
             "nextBlock": 22,
             "origClipLength": 71,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 60,
@@ -404,9 +426,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "思い出を振り返りながら、1つ1つ流していきましょう。\n開運グッズに頼りきりだった自分が、少しでも成長できるように。",
-            "enText": "As you look back on your memories, let them flow one by one. May \nyou grow as much as possible from your reliance on opening goods.",
+            "enText": "Reminiscing about each one while watching it drift away… \nHopefully, it will help me conclude a chapter of my growth, \nleaving behind the times when I relied on them so much.",
             "nextBlock": 23,
             "origClipLength": 299,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 148,
@@ -424,9 +447,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうして、マチカネフクキタルの開運グッズ流しが始まった。",
-            "enText": "Thus began Machikanefukkital's flow of good luck goods.",
+            "enText": "With that settled, we began sending her \nlucky items down the flowing stream.",
             "nextBlock": 24,
             "origClipLength": 81,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -440,9 +464,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "さよなら『お子様ランチの旗』……。小学生の頃、\nこれに願掛けるとテストでいい点が取れました。",
-            "enText": "Goodbye \"Children's Lunch Flag\"…… When I was in elementary \nschool, I got good marks on tests by wishing on this.",
+            "enText": "Farewell, my dear little <i>kids' meal flag</i>… \nBack in elementary, offering a small prayer \nto this gave me a good score on a test.",
             "nextBlock": 25,
             "origClipLength": 249,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 143,
@@ -456,9 +481,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "頑張れば、お母さんがまたお子様ランチを食べに連れてってくれる。\nそう思うと、なんか勉強に集中できて！",
-            "enText": "If I do my best, my mom will take me out for children's lunch \nagain. Thinking of that, I can kind of concentrate on my studies!",
+            "enText": "If I did my best, mom would take me out \nfor another kids' meal. Thinking about that \nhelped me focus more on studying!",
             "nextBlock": 26,
             "origClipLength": 261,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 50,
@@ -476,9 +502,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『それは食欲のせいでは？』\r\nそんな思いを乗せて、旗は川を流れていく……。",
-            "enText": "'Isn't that just your appetite?' With these thoughts, the flag \nflows down the river. ……",
+            "enText": "The little flag was thus set adrift on the water. \nFor my part, I couldn't help but think to myself… \n\"Wasn't that just your stomach speaking…?\".",
             "nextBlock": 27,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 136,
@@ -492,9 +519,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "次はその、とびっきりの開運グッズ\r\n『折れちゃったトランプ』をお願いします。",
-            "enText": "Next, I would like to ask you for that extraordinary lucky charm, \nthe \"Broken Playing Cards\".",
+            "enText": "Please hand me that damaged playing card deck next. \nIt's quite exceptional, I tell you.",
             "nextBlock": 28,
             "origClipLength": 169,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 143,
@@ -512,9 +540,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "このトランプで遊ぶと、いつも勝てました。\r\n私にしかわからない折り目がついてたから。さよーならー！",
-            "enText": "Whenever I played with these playing cards, I always won. Because \nit had a fold that only I could understand. Sayonara!",
+            "enText": "I always won when I played with this deck, and that's because \nonly I recognized the cards' blemishes. So long, my dears!",
             "nextBlock": 29,
             "origClipLength": 304,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 124,
@@ -532,9 +561,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『それはイカサマでは……？』\r\nそんな思いを乗せて、トランプは川を流れていく……。",
-            "enText": "'Isn't that cheating ……?' With these thoughts on board, the cards \nare flowing down the river. ……",
+            "enText": "The deck of cards was thus set adrift on the water. \nFor my part, I couldn't help but think to myself… \n\"Aren't those just straight-up marked cards…?\".",
             "nextBlock": 30,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -548,9 +578,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そして、いくつもの開運グッズが川を流れてゆき――",
-            "enText": "Then, a number of goodies flowed down the river…",
+            "enText": "This pattern continued for a while ——",
             "nextBlock": 31,
             "origClipLength": 76,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -564,9 +595,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "最後はそれ！　おばあちゃんがくれた木彫りの人形。\r\n大切な大切な、ラッキーグッズ……。",
-            "enText": "That's the last one! A wooden carved doll that my grandma gave \nme. A precious, precious, lucky goodie. ……",
+            "enText": "We've reached the last one! It's also one of my most \nprecious ones. Granny gave me this carved wooden doll…",
             "nextBlock": 32,
             "origClipLength": 254,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 136,
@@ -584,9 +616,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "臆病な私にって、おばあちゃんがくれて。\nいつもおばあちゃんの代わりに見守っててくれて。",
-            "enText": "My grandmother gave it to me because I was timid. She was always \nwatching over me instead of my grandmother.",
+            "enText": "It was back when I was a timid little girl. \nEver since, it has watched over me, the same way she did.",
             "nextBlock": 33,
             "origClipLength": 217,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 132,
@@ -604,9 +637,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "……でももう大丈夫、私は大きな一歩を踏み出しました。\r\nさあ、トレーナーさん、流してください！",
-            "enText": "…… but I'm good to go now, I've taken a big step forward. Come \non, trainer, let it flow!",
+            "enText": "…… But I've grown a lot. I won't need it anymore now. \nYou do the honors for me, Trainer!",
             "nextBlock": 34,
             "origClipLength": 353,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 50,
@@ -624,9 +658,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "おばあちゃん、私、もう1人でも平気ですから！\r\n……さようならー！",
-            "enText": "Grandma, I'm fine with one more!…… goodbye!",
+            "enText": "Granny… I'll be fine on my own now! \n<i>…… Fareweeeell!</i>",
             "nextBlock": 35,
             "origClipLength": 267,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 14,
@@ -640,9 +675,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……おばあちゃんもきっと\nこの空の向こうで喜んでいるだろう。",
-            "enText": "I'm sure…… grandma would be happy to see you across this sky.",
+            "enText": "…… Somewhere in heaven, I'm sure her grandma is smiling.",
             "nextBlock": 36,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "pathId": -8718971061435467414,
             "blockIdx": 35
         },
@@ -650,9 +686,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "合宿終わったら、お土産買って帰るからねー！",
-            "enText": "I'll buy you some souvenirs after the camp!",
+            "enText": "<i>I'll bring you back a souvenir when this camp is oveeeer!</i>",
             "nextBlock": 37,
             "origClipLength": 129,
+            "voiceIdx": 24,
             "pathId": -2519600593356029303,
             "blockIdx": 36
         },
@@ -660,9 +697,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……まだ生きていた。",
-            "enText": "…… still alive.",
+            "enText": "…… Or somewhere in Japan still.",
             "nextBlock": 38,
             "origClipLength": 58,
+            "voiceIdx": -1,
             "pathId": -932720337345315770,
             "blockIdx": 37
         },
@@ -670,9 +708,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ふぅ、これで終わりですね。",
-            "enText": "Phew, I guess that's it.",
+            "enText": "<i>Phew</i>, we're all done now.",
             "nextBlock": 39,
             "origClipLength": 97,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 124,
@@ -686,9 +725,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "なんだかちょっぴり成長できた気がします。\nそれに部屋も片付きましたし。",
-            "enText": "I feel like I have grown up a little \nbit. Besides, my room is tidier now.",
+            "enText": "I feel like I've grown just a small amount. \nNot to mention my room will look a lot cleaner.",
             "nextBlock": 40,
             "origClipLength": 171,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 73,
@@ -702,13 +742,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "これからはみんなにも迷惑かけない程度に……\nって、ああああああ！",
-            "enText": "From now on, I'm not even going to bother you guys with…… Ohhhh!",
+            "enText": "I will make sure not to cause anyone trouble anymore with… \n<i>Heh? Aaaaaaaaaaaaaaaaaaah!</i>",
             "nextBlock": 41,
             "origClipLength": 191,
+            "voiceIdx": 27,
             "choices": [
                 {
                     "jpText": "どうしたんだ？",
-                    "enText": "What's going on?",
+                    "enText": "What's wrong?",
                     "nextBlock": 41
                 },
                 {
@@ -730,9 +771,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "早速迷惑かけちゃいました！　今、流したのって\n川を下って、やがて海に行っちゃいますよね？",
-            "enText": "I'm sorry to have bothered you so soon! What \nyou just flushed down the river will go down \nthe river and eventually to the sea, right?",
+            "enText": "Have I not just caused trouble already?! Those items will be \ncarried all the way to the ocean, will they not?!",
             "nextBlock": 42,
             "origClipLength": 229,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 155,
@@ -750,9 +792,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "自然を汚しちゃったかも。\nあわわわ、どうしましょう？",
-            "enText": "I may have polluted nature. Aww, what should I do?",
+            "enText": "Have I been polluting our beautiful natural environment!? \n<i>Awawawah</i>, what do I do now!?",
             "nextBlock": 43,
             "origClipLength": 160,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 60,
@@ -770,9 +813,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "慌てふためくマチカネフクキタルを\n川下へと連れて行った。",
-            "enText": "She took the flustered Machikanefukkitar downstream.",
+            "enText": "Seeing how panicked she was, I guided her \ndownstream along the river.",
             "nextBlock": 44,
             "origClipLength": 81,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 118,
@@ -786,9 +830,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "およ？　川に網が張ってあるじゃないですか！？\r\n流したものが全部引っかかって……。",
-            "enText": "Oyo? You see the netting on the river! All the stuff you pour \ndownstream gets caught in it. ……",
+            "enText": "<i>Mhoh?</i> Do my eyes pick up a net spanning the creek?! \nAll my items are caught in it…",
             "nextBlock": 45,
             "origClipLength": 224,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 85,
@@ -802,18 +847,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "トレーナーさん、こんなのも準備してくれてたんですね！\nさすがです！　いよっ大明神！",
-            "enText": "My trainer, you prepared these things for \nme! I'm impressed! Iyiyo Daimyojin!",
+            "enText": "Truly, you have thought of everything, Trainer! \nI knew you were incredible! A real savior!",
             "nextBlock": 46,
             "origClipLength": 218,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "これを護摩焚きしようか",
-                    "enText": "Shall I burn this in a goma?",
+                    "enText": "Let's give these a proper <i>homa</i> burial.",
                     "nextBlock": 46
                 },
                 {
                     "jpText": "これを護摩焚きしよっか",
-                    "enText": "Shall we burn this in a goma?",
+                    "enText": "Let's give these a proper <i>homa</i> burial.",
                     "nextBlock": 46
                 }
             ],
@@ -830,9 +876,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "はいっ！　キャンプファイヤーみたく\n浜辺でお焚き上げしましょう！",
-            "enText": "Yes! Let's burn them on the beach like a campfire!",
+            "enText": "Yes! We can do it on the beach like one of those big bonfires!",
             "nextBlock": 47,
             "origClipLength": 134,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 63,
@@ -850,9 +897,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "うわぁ～……綺麗ですねぇ。",
-            "enText": "Wow…… that's beautiful!",
+            "enText": "<i>Hwooaah</i>… it really is a pretty sight.",
             "nextBlock": 48,
             "origClipLength": 143,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 66,
@@ -870,9 +918,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "積み上げた開運グッズに火が灯り、\n辺り一面を照らしている。",
-            "enText": "Piles of goodies were lit on fire, illuminating the entire area.",
+            "enText": "With all her lucky items collected, the resulting ritual fire \nbathed the whole area in a warm light.",
             "nextBlock": 49,
             "origClipLength": 82,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 122,
@@ -890,9 +939,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "まだ寮に開運グッズを残しているとはいえ、\nひとつ踏ん切りがついたのは自分でも驚きです。",
-            "enText": "Even though I still have some goodies left in the dormitory, I am \nsurprised at myself that I was able to make a decision.",
+            "enText": "I may have many lucky items left at the dorm, but it still \ncomes as a surprise to myself that I could find the resolve \nto go through with this.",
             "nextBlock": 50,
             "origClipLength": 222,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 245,
@@ -910,9 +960,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "私にとって占いや開運グッズは、なくてはならないものですが\n私自身が頑張るという気持ちも大切だと思ったので。",
-            "enText": "For me, fortune-telling and good luck items are \nindispensable, but I also thought it was important \nfor me to be willing to do my best.",
+            "enText": "Though divination and my lucky items are both things \nI never want to find myself without, I believe my own \nefforts and struggles are just as important.",
             "nextBlock": 51,
             "origClipLength": 287,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 129,
@@ -930,18 +981,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "シラオキ様に甘えてばかりいては、\n怒られてしまうかもしれませんし。",
-            "enText": "And if I keep spoiling Master Siraoki, she might get mad at me.",
+            "enText": "I might even invite Divine Shiraoki's admonishment \nupon me if I rely on her kindness all the time.",
             "nextBlock": 52,
             "origClipLength": 153,
+            "voiceIdx": 36,
             "choices": [
                 {
                     "jpText": "立派な考えだと思うぞ",
-                    "enText": "I think it's a noble idea.",
+                    "enText": "That's real admirable if you ask me.",
                     "nextBlock": 52
                 },
                 {
                     "jpText": "立派な考えだと思うよ",
-                    "enText": "I think it's a noble idea.",
+                    "enText": "That's a good attitude to have.",
                     "nextBlock": 52
                 }
             ],
@@ -958,9 +1010,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "えへへ……なんだか照れてしまいますね。",
-            "enText": "Ehehehe…… I'm kind of embarrassed.",
+            "enText": "<i>Ehehe…</i> it's a little embarrassing to hear such praise.",
             "nextBlock": 53,
             "origClipLength": 126,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 123,
@@ -978,18 +1031,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "それと、どんな開運グッズよりも運気を上げてくれる\r\nトレーナーさんが、私の隣にいますから。",
-            "enText": "Oh, and I have a trainer right next to me who can bring me more \nluck than any good luck item I've ever had.",
+            "enText": "Aside from that, I have you by my side, Trainer. \nThe power you wield to change my future is many \ntimes more potent than any lucky item.",
             "nextBlock": 54,
             "origClipLength": 222,
+            "voiceIdx": 38,
             "choices": [
                 {
                     "jpText": "福をもたらすよう、頑張るよ",
-                    "enText": "I'll do my best to bring you good fortune.",
+                    "enText": "I'll do my best to bring you fortune.",
                     "nextBlock": 54
                 },
                 {
                     "jpText": "福をもたらすよう、頑張るね",
-                    "enText": "I'll do my best to bring you good fortune.",
+                    "enText": "I'll do my best to bring you fortune.",
                     "nextBlock": 54
                 }
             ],
@@ -1010,9 +1064,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "おお～、心強い！\nこれは近い将来、ビッグな福を掴むこと間違いなしです！",
-            "enText": "Oh, that's reassuring! This is sure to \nbe a BIG blessing in the near future!",
+            "enText": "<i>Ohhoo～</i> Hearing you say so is emboldening. \nI'm certain great blessings await just around the corner!",
             "nextBlock": 55,
             "origClipLength": 234,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 60,
@@ -1030,9 +1085,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "私も、福を受け取れるだけの努力をして待ってます！",
-            "enText": "I, for one, will be waiting with as much effort as I can muster \nto receive the blessings!",
+            "enText": "I will do my very best as well, so that I can be ready \nto welcome any good fortune that comes my way!",
             "nextBlock": 56,
             "origClipLength": 130,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 60,
@@ -1050,9 +1106,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "お焚き上げの火のごとく、\nやる気を燃やすマチカネフクキタルなのだった。",
-            "enText": "Like a fire burning in a bonfire, Machikanefukukitaru \nis burning with enthusiasm.",
+            "enText": "Matikanefukukitaru's enthusiasm seemed \nto burn as bright as the bonfire.",
             "nextBlock": -1,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 81,
@@ -1067,5 +1124,6 @@
             "blockIdx": 56
         }
     ],
-    "modified": 1712266081
+    "humanTl": true,
+    "modified": 1748266848
 }

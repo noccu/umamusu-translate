@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "LBLUKUMAUHCX64ZUQQFO66LYWUYURLAN",
+    "version": 6,
+    "bundle": "UFV46P3RIJBFRL2O7UTGTI3B2ME6UOL3",
     "type": "story",
     "storyId": "041056004",
     "title": "大敗北でも大開運！",
+    "enTitle": "The fortune of defeat",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "選抜レース当日――",
-            "enText": "On the day of the Selection Race―",
+            "enText": "On the day of the Selection Race ——",
             "nextBlock": 2,
             "origClipLength": 56,
+            "voiceIdx": -1,
             "pathId": 3603141589428960391,
             "blockIdx": 1
         },
@@ -19,18 +21,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "れんこん、そーさい、ほーれんそう……。\r\nれんこん、そーさい、ほーれんそう……。",
-            "enText": "Rensai, Sosai, Horenso.…… Rengon, Sosai, Horenso. ……",
+            "enText": "Lotus root balanced by spinach… \nLotus root balanced by spinach…",
             "nextBlock": 3,
             "origClipLength": 184,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "それなんだ？呪文……？",
-                    "enText": "What's that? Spell ……?",
+                    "enText": "What's that, some sort of incantation…?",
                     "nextBlock": 3
                 },
                 {
                     "jpText": "それ何？呪文……？",
-                    "enText": "What's that? Spell ……?",
+                    "enText": "What's that, some sort of incantation…?",
                     "nextBlock": 3
                 }
             ],
@@ -51,9 +54,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "オマジナイです！　これによって精神が集中し、\n本来の実力を発揮できるという、すぐれものなのですよ！",
-            "enText": "Omadinai! This is a great way to focus \nyour mind and show your true ability!",
+            "enText": "It is in fact a good luck charm! I find it is absolutely superb \nfor focusing the mind and drawing out latent potential!",
             "nextBlock": 4,
             "origClipLength": 228,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 50,
@@ -71,9 +75,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "トレーニングは十分に積んできました！　結果はともかくとして、\r\n必ずやスカウトして頂けるような走りをお見せしましょうっ！",
-            "enText": "We have trained hard! Regardless of the results, we will \ndefinitely show you a run that will get us scouted!",
+            "enText": "I have trained more than enough! Regardless of the outcome, \nI shall demonstrate my running prowess so that you accept me!",
             "nextBlock": 5,
             "origClipLength": 256,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 50,
@@ -91,9 +96,10 @@
             "jpName": "タイキシャトル",
             "enName": "Taiki Shuttle",
             "jpText": "ハウディ～、フクキタル！　調子はいかがデスカ！",
-            "enText": "Howdy～, fukkital! How are you doing?",
+            "enText": "Howdy, Fukukitaru～! How're ya doing?",
             "nextBlock": 6,
             "origClipLength": 133,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 80,
@@ -119,9 +125,10 @@
             "jpName": "サイレンススズカ",
             "enName": "Silence Suzuka",
             "jpText": "あの、今日は見学させてもらうわね。",
-            "enText": "Um, I'll be observing today.",
+            "enText": "I'll be watching from the stands this time…",
             "nextBlock": 7,
             "origClipLength": 112,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 124,
@@ -143,9 +150,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "おおーっ！　タイキさんにスズカさん！\r\n応援に来てくれたのですか！　なんとも心強いです！",
-            "enText": "Oh! Taiki-san and Suzuka-san! You came \nto support us! That's very reassuring!",
+            "enText": "Oooh! Taiki, Suzuka! Have you come to support me?! \nThank you, I feel so much calmer now!",
             "nextBlock": 8,
             "origClipLength": 205,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 107,
@@ -171,9 +179,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ここまでいろいろありましたが、\r\nおかげさまで調子も準備もバッチリです！",
-            "enText": "We've been through a lot, but thanks to you, \nwe're in great shape and ready to go!",
+            "enText": "I have gone through a lot in the past few days, but thanks \nto that, I'm feeling downright fantastic and fully prepared!",
             "nextBlock": 9,
             "origClipLength": 162,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 40,
@@ -195,9 +204,10 @@
             "jpName": "タイキシャトル",
             "enName": "Taiki Shuttle",
             "jpText": "オウ！　今日はいいレースが見られそうデスネ！\r\nワタシもスズカも、すぐにデビューしてみせマース！",
-            "enText": "Ow! Looks like we're in for a good race today! Watashi and Suzuka \nwill be making their debut soon!",
+            "enText": "You got this! I just know you're gonna put on a great race! \nMe and Suzuka here are gonna follow you into debuting \nsoon enough!",
             "nextBlock": 10,
             "origClipLength": 255,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 216,
@@ -223,9 +233,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "お先にトゥインクル・シリーズで待ってますよ～！",
-            "enText": "I'll be waiting for you in the Twinkle Series first!",
+            "enText": "I'll be there waiting for you in the Twinkle Series～!",
             "nextBlock": 11,
             "origClipLength": 91,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 36,
@@ -247,9 +258,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "さあ、そろそろ時間ですねっ！\nそれでは精いっぱい走って、負けてきますっ！！",
-            "enText": "Well, it's about time! I'm off to run as hard as I can and lose!",
+            "enText": "The start is getting close now… Alrighty then, friends, \nI'm going to run my heart out. Wish me good losing!!",
             "nextBlock": 12,
             "origClipLength": 171,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 40,
@@ -275,18 +287,19 @@
             "jpName": "サイレンススズカ",
             "enName": "Silence Suzuka",
             "jpText": "うん、頑張って……って、え？",
-            "enText": "Yeah, good luck with …… eh?",
+            "enText": "Okay! Good… <i>huh</i>, <i>ehh</i>?",
             "nextBlock": 13,
             "origClipLength": 108,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "頑張れ！！",
-                    "enText": "Come on!",
+                    "enText": "Go for it!!",
                     "nextBlock": 13
                 },
                 {
                     "jpText": "頑張って！！",
-                    "enText": "Good luck!!!",
+                    "enText": "Go for it!!",
                     "nextBlock": 13
                 }
             ],
@@ -315,9 +328,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "はい、行ってきます！",
-            "enText": "Yes, I'm off!",
+            "enText": "Count on me!",
             "nextBlock": 14,
             "origClipLength": 58,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 60,
@@ -339,9 +353,10 @@
             "jpName": "サイレンススズカ",
             "enName": "Silence Suzuka",
             "jpText": "あの……今、負けてくるって……え？",
-            "enText": "That…… now, I'm going to lose.…… What?",
+            "enText": "Umm… did she just say \"losing\"…? Ehh?",
             "nextBlock": 15,
             "origClipLength": 172,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 58,
@@ -367,9 +382,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そしてついに、マチカネフクキタルのレースはスタートした。",
-            "enText": "Finally, the race for Machikanefukkitar started.",
+            "enText": "So, after everything that transpired, it was \nfinally time for Matikanefukukitaru's race.",
             "nextBlock": 16,
             "origClipLength": 81,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 31,
@@ -383,9 +399,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "さあ、出走メンバーが実力者ぞろいという注目のレースです！",
-            "enText": "Now, this is a race to watch, as the \nrunners are all very talented!",
+            "enText": "No doubt everyone's had their eyes on this race since seeing \nthe extraordinary horsegirls on the entry list… and off they go!",
             "nextBlock": 17,
             "origClipLength": 148,
+            "voiceIdx": 13,
             "pathId": -3225775958477230925,
             "blockIdx": 16
         },
@@ -393,9 +410,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "マチカネフクキタルはズルっと下がって後方へ。\r\n先行するウマ娘たちについていけないか！？",
-            "enText": "Machikanefukukkitar is slipping backwards. \nCan't she keep up with the leading horses?",
+            "enText": "Matikanefukukitaru is slipping further and further backwards. \nIs she having trouble keeping up with the leaders?!",
             "nextBlock": 18,
             "origClipLength": 194,
+            "voiceIdx": 14,
             "pathId": 8883204856175796986,
             "blockIdx": 17
         },
@@ -403,9 +421,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "くうぅ～～、やっぱりみなさん速いですね……。",
-            "enText": "Kuuuh～～ I knew you guys were fast. ……",
+            "enText": "<i>Khhhhhhh～～</i> They're all so fast…",
             "nextBlock": 19,
             "origClipLength": 116,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 160,
@@ -419,9 +438,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "でも、私がこのレースでやることはただ1つ、\n全力で走りきることですっ！",
-            "enText": "But I have only one thing to do in this race, \nand that is to run as hard as I can!",
+            "enText": "But all I am required to do in this race is run my heart out!",
             "nextBlock": 20,
             "origClipLength": 188,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 199,
@@ -435,9 +455,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "行きますよぉ～～！　開運ダァァーーーーシュッ！！！！",
-            "enText": "Let's go～! Kaiun daaaaahhhhhhhh ！！！！",
+            "enText": "Here I goooo～～! To fortuuuune!!!!",
             "nextBlock": 21,
             "origClipLength": 169,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 131,
@@ -451,9 +472,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "最終コーナーを抜けて、各ウマ娘がラストスパートに入りますっ！",
-            "enText": "The last corner has been passed, and each \nhorsegirl is now in the last spurt!",
+            "enText": "They're all starting their spurts as they turn the final corner!",
             "nextBlock": 22,
             "origClipLength": 143,
+            "voiceIdx": 18,
             "pathId": 4184487710879081560,
             "blockIdx": 21
         },
@@ -461,9 +483,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ここで後ろにいたマチカネフクキタルが\nものすごい末脚で上がってくるっ！　差し切れるのか！？",
-            "enText": "Here comes Machikanefukkitar, who was behind, with a tremendous \nlate run! Will she be able to overtake her?",
+            "enText": "Is that Matikanefukukitaru suddenly showing tremendous pace \nfrom the back of the field?! Can she make a comeback here?!",
             "nextBlock": 23,
             "origClipLength": 217,
+            "voiceIdx": 19,
             "pathId": -1268205967478706280,
             "blockIdx": 22
         },
@@ -471,9 +494,10 @@
             "jpName": "観客たち",
             "enName": "Crowd",
             "jpText": "（ワアアアアアア～～～っ！！！！）",
-            "enText": "(waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaayyyy \n！！！！)",
+            "enText": "(Wooooaaaaaaaaaaah!!!)",
             "nextBlock": 24,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "pathId": 4349860666984969970,
             "blockIdx": 23
         },
@@ -481,18 +505,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "いや～、先頭に立てるかとも思ったのですが、\r\n結局追いつけずの最下位でした～。",
-            "enText": "I thought I might be able to take the lead, but I couldn't catch \nup and ended up in last place.",
+            "enText": "<i>Ahhhhah～</i> For a moment I thought I could take the lead, \nbut I couldn't catch up and finished last～",
             "nextBlock": 25,
             "origClipLength": 214,
+            "voiceIdx": 20,
             "choices": [
                 {
                     "jpText": "目が覚める走りだった",
-                    "enText": "It was an eye-opening run.",
+                    "enText": "Great effort, everyone noticed you.",
                     "nextBlock": 25
                 },
                 {
                     "jpText": "目が覚める走りだったよ",
-                    "enText": "It was an eye-opening run.",
+                    "enText": "Great effort, everyone noticed you.",
                     "nextBlock": 25
                 }
             ],
@@ -521,9 +546,10 @@
             "jpName": "サイレンススズカ",
             "enName": "Silence Suzuka",
             "jpText": "ホント、惜しかったわ。\r\nゴールがあと50m先にあれば、全員を抜けてたと思う。",
-            "enText": "It was really close. If the finish line had been 50 meters \nfurther, I think I would have gotten through all of them.",
+            "enText": "That's right, it was really close. I think you would have \novertaken them all at once if the line was 50 m further.",
             "nextBlock": 26,
             "origClipLength": 232,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 218,
@@ -553,9 +579,10 @@
             "jpName": "タイキシャトル",
             "enName": "Taiki Shuttle",
             "jpText": "ですねデスネ！\r\n最下位だったとしても、1番インパクトがありマシタ！",
-            "enText": "Yes, it's true, isn't it? Even if it was the \nlast place, it was the most impactful!",
+            "enText": "Absolutely! You might've been last, but you \nmade the biggest impact for sure!",
             "nextBlock": 27,
             "origClipLength": 181,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 125,
@@ -577,9 +604,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "んも～、褒めすぎですよぉ～みなさん。",
-            "enText": "You give out too many compliments, everyone.",
+            "enText": "Aww cut it out, friends, it wasn't <i>that</i> close～",
             "nextBlock": 28,
             "origClipLength": 110,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 47,
@@ -601,9 +629,10 @@
             "jpName": "中堅トレーナーA",
             "enName": "Experienced Trainer A",
             "jpText": "ああ、いたいた！\nマチカネフクキタルくん、是非とも君をスカウトしたいんだ！",
-            "enText": "Oh, there you are! Machikanefukukkitaru, \nI really want to scout you out!",
+            "enText": "Oh, there you are! Matikanefukukitaru, if you'll allow me, \nI'd love to work with you as your trainer!",
             "nextBlock": 29,
             "origClipLength": 155,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 44,
@@ -625,9 +654,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "え……？　私をですか？",
-            "enText": "What, ……? You mean me?",
+            "enText": "Huh……? With me?",
             "nextBlock": 30,
             "origClipLength": 86,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 50,
@@ -641,9 +671,10 @@
             "jpName": "ベテラントレーナーA",
             "enName": "Veteran Trainer A",
             "jpText": "あなたの末脚、目を見張るものがあるわ！\n私と一緒に勝利を目指しましょう！",
-            "enText": "Your endgame is spectacular! Join me in your quest for victory!",
+            "enText": "Dearie, I haven't seen many cover ground at the end like that! \nWould you like to come and aim for glory with me?",
             "nextBlock": 31,
             "origClipLength": 187,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 176,
@@ -657,9 +688,10 @@
             "jpName": "ベテラントレーナーB",
             "enName": "Veteran Trainer B",
             "jpText": "いや、私の方が君を活躍させられる！\nスカウトを受けてくれ！",
-            "enText": "No, I can make you more active! Get scouted!",
+            "enText": "Never mind them, if anyone will lead you to glory, it'll be me! \nPlease team up with me!",
             "nextBlock": 32,
             "origClipLength": 186,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 141,
@@ -673,9 +705,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あわわわっ……！？\n最下位なのに、こんなにも声をかけてもらえるなんて……！",
-            "enText": "Awww ……! I'm at the bottom of the list, but I can't believe how \nmany people are calling me ……!",
+            "enText": "<i>Awawawawa…!?</i> I didn't expect so many trainers \nto call out to me after finishing last…!",
             "nextBlock": 33,
             "origClipLength": 179,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 50,
@@ -689,9 +722,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ですけど、私には“運命の人”がいるのです！",
-            "enText": "But I have the man of my dreams!",
+            "enText": "I must disappoint you, however, for I have \nalready found my predestined one!",
             "nextBlock": 34,
             "origClipLength": 114,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 33,
@@ -709,9 +743,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そう言って、マチカネフクキタルはこちらを見つめてきた。",
-            "enText": "Saying so, Machikanefukkitar stared at us.",
+            "enText": "She looked my way as she said that.",
             "nextBlock": 35,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 115,
@@ -725,9 +760,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "占いを信じ、占いに後押しされる個性的なウマ娘――\nそして、走ることが大好きだというウマ娘。",
-            "enText": "The unique Uma Musume believe in fortune-telling and are \nencouraged by fortune-telling - and they love to run.",
+            "enText": "I'm reminded of how, for all she loves fortune-telling \nand all the support she's found in it, this curious little \nhorsegirl also still loves to run.",
             "nextBlock": 36,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -741,18 +777,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あの、トレーナーさん……あまり焦らされると、\n緊張で口からおみくじが出てきそうです……。",
-            "enText": "Um, trainer…… if you rush me too much, I'm going to get so \nnervous I'm going to get a fortune out of my mouth……",
+            "enText": "Umm, Trainer… If you leave me hanging any longer, I believe \nI might start regurgitating fortunes out of nervousness……",
             "nextBlock": 37,
             "origClipLength": 229,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "一緒に福を掴みに行こう！",
-                    "enText": "Let's grab our blessings together!",
+                    "enText": "Let's go chase our luck together!",
                     "nextBlock": 37
                 },
                 {
                     "jpText": "一緒に福を掴みに行きましょう！",
-                    "enText": "Let's grab our blessings together!",
+                    "enText": "Let's go chase our luck together!",
                     "nextBlock": 37
                 }
             ],
@@ -769,9 +806,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "おおおーっ！！　その言葉を待ってました！\nぜひぜひ、よろしくお願いしますっ！！",
-            "enText": "Ooooh!!! I've been waiting for those \nwords! I'd love to have you!!!",
+            "enText": "<i>Ooooooh!!</i> I've been waiting to hear you say that! \nOur time together is one I certainly look forward to!!",
             "nextBlock": 38,
             "origClipLength": 198,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 60,
@@ -785,9 +823,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうして正式に、マチカネフクキタルの\n担当トレーナーになることが決まった。",
-            "enText": "Thus, it was officially decided that she would be the trainer in \ncharge of Machikanefukkitar.",
+            "enText": "This was how I officially became Matikanefukukitaru's trainer.",
             "nextBlock": 39,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 62,
@@ -805,9 +844,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "トレーナーさん、張り切ってトレーニングを始めましょうっ！",
-            "enText": "Let's start training, trainers!",
+            "enText": "Trainer! Let's go, I'm excited as can be to start training!",
             "nextBlock": 40,
             "origClipLength": 119,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 76,
@@ -825,9 +865,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "っと、その前に1ついいですか？",
-            "enText": "But first, can I have one more question?",
+            "enText": "Ah, but one thing before we start, if you please.",
             "nextBlock": 41,
             "origClipLength": 87,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 53,
@@ -841,9 +882,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "実はにんじん占いで『併走で運気上昇』と出ていたのです。\r\nですが、今日はスズカさんを呼ぶことはできなかったので……。",
-            "enText": "In fact, the carrot horoscope showed that 'luck \nrises when running together'. But I couldn't \ncall Suzuka today, so I went to ……",
+            "enText": "Today's carrot reading said running against a partner would \nlead to improved fortune, see, but as luck would have it, \nSuzuka wasn't available…",
             "nextBlock": 42,
             "origClipLength": 271,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 60,
@@ -861,18 +903,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "トレーナーさん！　私と一緒に走りましょうっ！",
-            "enText": "Trainers! Come run with me!",
+            "enText": "That being the case, I thought you could run with me, Trainer!",
             "nextBlock": 43,
             "origClipLength": 107,
+            "voiceIdx": 35,
             "choices": [
                 {
                     "jpText": "走る速度が違いすぎるぞ！？",
-                    "enText": "You're running too fast!",
+                    "enText": "You think I can keep up with a horsegirl?!",
                     "nextBlock": 43
                 },
                 {
                     "jpText": "走る速度が違いすぎるよ！？",
-                    "enText": "You're running too fast!",
+                    "enText": "You think I can keep up with a horsegirl?!",
                     "nextBlock": 43
                 }
             ],
@@ -889,9 +932,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "大丈夫です！　いざとなったら私が引きずって走りますから！\nさあ、行きますよ～！",
-            "enText": "Don't worry! If push comes to shove, I'll \ndrag you out and run! Here we go!",
+            "enText": "Nothing to worry about! I'll drag you along if need be! \nLet's goo～!",
             "nextBlock": 44,
             "origClipLength": 201,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 58,
@@ -905,12 +949,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "占いに振り回されながら、2人のレースは始まったのだった。",
-            "enText": "The race was on for the two, with the \nfortune-telling swirling around them.",
+            "enText": "We truly are at the mercy of fate, and today \nthat fate dictated I should race a horsegirl.",
             "nextBlock": -1,
             "origClipLength": 81,
+            "voiceIdx": -1,
             "pathId": 8835603868620607880,
             "blockIdx": 44
         }
     ],
-    "modified": 1712266081
+    "humanTl": true,
+    "modified": 1748263871
 }

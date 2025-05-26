@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "AAIKDLEKGTBVBOOTJQGTHEYZYATSOK5M",
+    "version": 6,
+    "bundle": "QYHTBGBYWWWUN2W66KQKJERCD4BE4MLB",
     "type": "story",
     "storyId": "041056005",
     "title": "その福、捨てるべからず",
+    "enTitle": "Do not discard your happiness",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "何気なく、学生寮の前を歩いていると――",
-            "enText": "I was casually walking past the student dormitory when―",
+            "enText": "I was having a leisurely walk, unencumbered, \nwhen I passed by the student dormitories ——",
             "nextBlock": 2,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "pathId": 9119883838479707475,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "きゃあああああああっ！",
-            "enText": "Aaahhh!",
+            "enText": "<i>Gyaaaaaaaaaah!</i>",
             "nextBlock": 3,
             "origClipLength": 72,
+            "voiceIdx": 0,
             "pathId": -5639184801539008003,
             "blockIdx": 2
         },
@@ -29,9 +32,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ああああっ、ごめんなさいごめんなさいごめんなさい～～～！",
-            "enText": "Ohhhh, sorry, sorry, sorry～!",
+            "enText": "<i>Aaaaaah!</i> I'm sorry, I'm sorry, I'm sorrysorrysorry～～!",
             "nextBlock": 4,
             "origClipLength": 119,
+            "voiceIdx": 1,
             "pathId": -3873385367090686755,
             "blockIdx": 3
         },
@@ -39,9 +43,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "栗東寮の建物の中から、誰かの悲鳴と\r\n陳謝するマチカネフクキタルの声が聞こえてきた。",
-            "enText": "From inside the Ritto Dormitory building, I could hear someone \nscreaming and Machikanefukkitar's voice apologizing.",
+            "enText": "The sounds of screams and an apologetic Matikanefukukitaru \nechoed from the Ritto dormitory.",
             "nextBlock": 5,
             "origClipLength": 99,
+            "voiceIdx": -1,
             "pathId": -70691771351859878,
             "blockIdx": 4
         },
@@ -49,9 +54,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "はぁっ……はぁっ……誰か手を貸してくれる人は～……。",
-            "enText": "Hah…… Hah…… anyone who can lend a hand ～……",
+            "enText": "<i>Haah… haah…</i> Is there any kind person who could lend a hand…",
             "nextBlock": 6,
             "origClipLength": 190,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 50,
@@ -65,13 +71,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あっ、トレーナーさん、いいところに！\r\nじつは、ちょっと大弱りでして……。",
-            "enText": "Ah, trainer, good point! As a matter \nof fact, I'm a little vulnerable. ……",
+            "enText": "Ah, Trainer! Fortunate timing! \nTruth be told, I find myself in a bit of a major pickle…",
             "nextBlock": 7,
             "origClipLength": 180,
+            "voiceIdx": 3,
             "choices": [
                 {
                     "jpText": "ロクでもないことのような……",
-                    "enText": "Like a rogue ……",
+                    "enText": "I'm sure it's something absurd again…",
                     "nextBlock": 7
                 }
             ],
@@ -92,9 +99,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "まま、待ってください！\r\n助けてくださいよ～！",
-            "enText": "Ma, wait! Please help me～!",
+            "enText": "W-W-Wait, don't go! I beg for your sympathy～!",
             "nextBlock": 8,
             "origClipLength": 126,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 51,
@@ -108,9 +116,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "私たちは一蓮托生！　トレーナーさんはシラオキ様に遣わされた\r\n運命の人じゃないですか。ささっ、こちらへ来てください！",
-            "enText": "We are one and the same! Isn't your trainer the man of destiny \nsent by Master Shiraoki? Quickly, come this way!",
+            "enText": "Our fates are entwined, are they not, Trainer!? \nMy preordained one, guided to me by Divine Shiraoki! \nCome, come, follow me, this way!",
             "nextBlock": 9,
             "origClipLength": 269,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 52,
@@ -124,9 +133,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "有無を言わさず、寮の一室へと連れていかれた。",
-            "enText": "Without saying whether or not, I was \ntaken to a room in the dormitory.",
+            "enText": "Fated, predetermined, forced, I was led to a room in the dorms.",
             "nextBlock": 10,
             "origClipLength": 73,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 179,
@@ -140,13 +150,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "見ると――部屋はゴミの山で埋め尽くされていた。先ほどの悲鳴は\r\n崩れたゴミに飲まれたルームメイトの悲鳴だったようだ。",
-            "enText": "I looked - the room was filled with piles of trash. The screams I \nheard earlier seemed to be those of my roommate who had been \nengulfed by the crumbling trash.",
+            "enText": "I looked around to see garbage stacked from floor to ceiling. \nThe scream I had heard earlier turned out to be her roommate's \nencounter with a rogue element of this massive pile.",
             "nextBlock": 11,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "このゴミの山は……？",
-                    "enText": "Is this pile of trash ……?",
+                    "enText": "Does this trash heap have a name…?",
                     "nextBlock": 11
                 }
             ],
@@ -163,9 +174,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ゴミじゃないですよ～。これは、ぜ～んぶ私の開運グッズ。\r\n半生をかけて集めた、ありがた厳か～なコレクションです！",
-            "enText": "This is not garbage! These are all my good luck \ncharms. I've spent half my life collecting them, \nand I'm very thankful to have them!",
+            "enText": "It is not trash～! This, this is my collection of lucky items. \nAnd a very majestic one at that, if I may say! I spent half \nmy life gathering it all!",
             "nextBlock": 12,
             "origClipLength": 304,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 60,
@@ -183,9 +195,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "どれも希少な品々ゆえ捨てられず、ついには宝の山となり、\r\n崩れて友だちを飲み込んだ次第でして……。",
-            "enText": "All of them were so rare that they could not be thrown \naway, and finally they became a treasure trove that \ncollapsed and swallowed up my friends. ……",
+            "enText": "Every single item is rare and important. I found myself unable \nto part with them, slowly accumulating this pile of treasures, \nuntil, eventually, it came crashing down on my friend here…",
             "nextBlock": 13,
             "origClipLength": 253,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 97,
@@ -203,18 +216,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "この勢いで増え続ければ、いつかこのトレセン学園はまるっと\r\n宝に飲まれるでしょう！　あ、これはお告げじゃなくて予想です。",
-            "enText": "If it continues to grow at this rate, one day this Tressen \nAcademy will be completely engulfed in treasure! Oh, this is not \na prediction, but a prediction.",
+            "enText": "If left to grow further, the whole of Tracen Academy \nshall one day be swallowed by these many treasures! \nAh, this isn't a prophecy, just my prediction.",
             "nextBlock": 14,
             "origClipLength": 283,
+            "voiceIdx": 8,
             "choices": [
                 {
                     "jpText": "全部捨てようか……",
-                    "enText": "Let's throw it all away: ……",
+                    "enText": "Let's just throw it all out…",
                     "nextBlock": 14
                 },
                 {
                     "jpText": "全部捨てよっか……",
-                    "enText": "Let's throw it all away: ……",
+                    "enText": "Let's just throw it all out…",
                     "nextBlock": 14
                 }
             ],
@@ -235,9 +249,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "って、ぎゃあああああ！　なに、しれっと罰当たりなこと\r\n言ってるんですか！？　それを捨てるなんて、とんでもない！",
-            "enText": "Oh, no! What are you talking about? You can't just throw it away!",
+            "enText": "<i>Heh? Gyaaaaaaah!</i> Who would utter these cursed words with \nsuch nonchalance!? Throw it all out!? I wouldn't think of it!",
             "nextBlock": 15,
             "origClipLength": 219,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 131,
@@ -255,18 +270,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "開運グッズですよ？　この数々のご利益のおかげで、今の私が\r\nあるんですよ？　なのに全部捨てるだなんてっ。",
-            "enText": "It's a good luck item, right? Thanks to these many blessings, I \nam the person I am today, right? But to throw them all away?",
+            "enText": "Did you hear me when I said they were my lucky items? \nI've made it this far thanks to their glorious blessings! \nAnd you intent to throw them all out?!",
             "nextBlock": 16,
             "origClipLength": 266,
+            "voiceIdx": 10,
             "choices": [
                 {
                     "jpText": "開運グッズも山となれば危険だぞ",
-                    "enText": "Even a mountain of goodies can be dangerous.",
+                    "enText": "<size=34>This giant pile looks more dangerous than lucky.</size>",
                     "nextBlock": 16
                 },
                 {
                     "jpText": "開運グッズも山となれば危険だよ",
-                    "enText": "Even a mountain of goodies can be dangerous.",
+                    "enText": "<size=34>This giant pile looks more dangerous than lucky.</size>",
                     "nextBlock": 16
                 }
             ],
@@ -287,9 +303,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ぐむぅ……たしかに、被害者も出てしまいました……。",
-            "enText": "Gummmm.…… Indeed, some victims have been killed. ……",
+            "enText": "<i>Ghuuu…</i> It is unfortunately undeniable \nthat it has claimed its first victim……",
             "nextBlock": 17,
             "origClipLength": 162,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 144,
@@ -307,9 +324,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "うむぅ～非常に心苦しいですが、シラオキ様の御使いである\r\nトレーナーさんがそこまで言うなら仕方ありません。",
-            "enText": "I am very sorry to hear that, but if the trainer, \nwho is Shiraoki-sama's messenger, insists \nthat much, then I have no choice.",
+            "enText": "Mmmm～ It very much pains me to concede, but given even my \nDivine Shiraoki–sent trainer opines this way, it seems I must.",
             "nextBlock": 18,
             "origClipLength": 311,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 37,
@@ -327,9 +345,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "では少しだけ、ほんの一部だけ、焼却炉でお護摩しましょうか。",
-            "enText": "So let's have a little bit, just a small part of it, and let's \nhave a goma in the incinerator.",
+            "enText": "I'll agree, then, to hold just the <i>tiniest</i> \nof <i>homa</i> rituals at the incinerator.",
             "nextBlock": 19,
             "origClipLength": 183,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 131,
@@ -347,9 +366,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "マチカネフクキタルと共に、粛々と開運グッズを風呂敷に詰めると\r\n焼却炉のある校舎裏へとやってきた。",
-            "enText": "Together with Machikanefukukkitar, she solemnly packed the \ngoodies into a furoshiki, and came to the back of the school \nbuilding where the incinerator was located.",
+            "enText": "All was silent for a while as I helped Matikanefukukitaru \ncarefully wrap up some of her lucky items and we made our \nway to the incinerator behind the academy's main building.",
             "nextBlock": 20,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 179,
@@ -363,9 +383,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あ、あ、あ……名残り惜しや～、\r\nたとえ一部でもラッキーの結晶を捨てるだなんて！",
-            "enText": "Ah, ah, ah…… name left out～, how dare you throw away even a \nportion of Lucky's crystals!",
+            "enText": "<i>Ah, ah, ah…</i> How I loathe to part with these～ \nFew as they may be, it's still unimaginable to \nthrow away such embodiments of fortune!",
             "nextBlock": 21,
             "origClipLength": 336,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 81,
@@ -383,13 +404,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "……ううう、トレーナーさん。\r\nどれからいくんですかぁ～……？",
-            "enText": "…… ugh, trainer. Which one are you going to start with - ……?",
+            "enText": "…… <i>Wuuuuh</i>, Trainer. Which one do I start with…?",
             "nextBlock": 22,
             "origClipLength": 169,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "この御守から",
-                    "enText": "From this talisman",
+                    "enText": "How about this charm here?",
                     "nextBlock": 22
                 }
             ],
@@ -410,13 +432,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ああっ、それは小学校の時、球技大会で見事ベスト8まで\r\n導いてくれた御守っ。正気ですか、それから捨てるなんて！",
-            "enText": "Oh, that's the charm that got me to the top 8 \nin a ball game in elementary school. Are you \nout of your mind? You can't throw that away!",
+            "enText": "<i>Aah!</i> That's the charm that lead me to the quarterfinals \nat a ball game tournament in elementary! Do you know \nwhat you're asking!? I couldn't possibly start with this!",
             "nextBlock": 23,
             "origClipLength": 260,
+            "voiceIdx": 16,
             "choices": [
                 {
                     "jpText": "じゃあ、こっちの人形を",
-                    "enText": "Okay, I'll take this doll over here.",
+                    "enText": "Alright, then maybe this doll?",
                     "nextBlock": 23
                 }
             ],
@@ -433,13 +456,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あああっ、それは私が三輪車に脚を踏まれそうになった時、\r\n代わりに踏まれてくれた依り代人形！　そんなのを燃やしたら……。",
-            "enText": "Ahhhh, that's the dependent doll that took my place \nwhen I almost got my leg stepped on by a tricycle! \nIf you burn such a thing, you can go to ……",
+            "enText": "<i>Aaaah!</i> When a tricycle was about to run over my foot, \nthis doll got ran over in my stead! It's a <i>yorishiro</i>, I tell you! \nI don't want to imagine what would happen if I burned it…",
             "nextBlock": 24,
             "origClipLength": 297,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "じゃあ、このプリンのカップを……",
-                    "enText": "Then you can get a cup of this pudding at ……",
+                    "enText": "Fine, start with this pudding cup…",
                     "nextBlock": 24
                 }
             ],
@@ -460,9 +484,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "それは私が4歳の時、はじめて上手にプッチンできた時のカップ！\r\nそれを燃やしちゃうなんて、あんまりですよ～。",
-            "enText": "That was the cup I first successfully puckered when I was four \nyears old! I can't believe I'm going to burn it!",
+            "enText": "That is the cup from the first time I broke off the tab \nof a <i>Pucchin Pudding</i> at age four! You can't ask me \nto burn something like thaaat～!",
             "nextBlock": 25,
             "origClipLength": 306,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 60,
@@ -480,9 +505,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "うぐぐ、やっぱりどれもダメ～！　後生です、捨てないで！\r\nなんでもしますから、神様仏様トレーナー様～！",
-            "enText": "Ugh, I knew it, none of them are good～! Don't throw them away! \nI'll do anything, God, Buddha, and trainer～!",
+            "enText": "<i>Guguguh…</i> I really don't wish to part with any of these after all! \nPlease have mercy, O gods above, enlightened one, esteemed \nTrainer, I'll do anything you ask me of meee!",
             "nextBlock": 26,
             "origClipLength": 306,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 123,
@@ -500,9 +526,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "必死に手をすり合わせるマチカネフクキタルを連れて、\r\n焼却炉の前から離れた。",
-            "enText": "I left the incinerator with Machikanefukkitar, who was \nfrantically rubbing her hands together.",
+            "enText": "With Matikanefukukitaru rubbing her hands together as if \npraying for dear life, we decided to leave the incinerator \nbehind for the moment.",
             "nextBlock": 27,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 165,
@@ -516,9 +543,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "どれもこれも私にとってかけがえのないものばかり……\r\nとはいえ、持って帰れば新たな犠牲者を生むだけ……。",
-            "enText": "All of them are irreplaceable for me.…… However, if I take them \nhome with me, I will only create new victims. ……",
+            "enText": "These items are all incredibly important to me… \nThat said, taking them back to the dorm with me \nwill eventually result in more casualties……",
             "nextBlock": 28,
             "origClipLength": 266,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 105,
@@ -532,18 +560,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "トレーナーさん、なにかいい手はありませんか？\r\n賢くなるお守りをあげますから、一緒に考えてください～！",
-            "enText": "Trainer, do you have any suggestions? I'll give you a good luck \ncharm to make you smarter, please think with me～!",
+            "enText": "Do you have any good ideas, Trainer? I will entrust you \nthis wit charm, so please help me think of something～!",
             "nextBlock": 29,
             "origClipLength": 246,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "俺が預かろうか？",
-                    "enText": "Do you want me to take it?",
+                    "enText": "Do you want me to keep them?",
                     "nextBlock": 29
                 },
                 {
                     "jpText": "私が預かろうか？",
-                    "enText": "Do you want me to take care of it?",
+                    "enText": "Would you like me to keep them?",
                     "nextBlock": 29
                 }
             ],
@@ -564,9 +593,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "預かる……！　おおっ、いいのですか！？\r\nありがとうございます！　運命の人とは幸運も半分こですね！",
-            "enText": "I'll keep it for you: ……! Oh, is that okay! Thank you! Half your \nluck with the doomed one!",
+            "enText": "Keep them…! Ooh, will you?! Thank you so much! \nWe'll be sharing both our fate and luck, won't we!",
             "nextBlock": 30,
             "origClipLength": 294,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 50,
@@ -580,9 +610,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "それにしても、よかったぁ～。1つでも捨ててしまうと\r\n幸せが……あ、なんでもないですっ。",
-            "enText": "But still, thank goodness… If I throw one away, my happiness will \nbe…… Oh, it's nothing.",
+            "enText": "I have to say I'm so relieved. If I'd had to throw even a single \none away, my happiness would… <i>ah</i>, never mind!",
             "nextBlock": 31,
             "origClipLength": 242,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 40,
@@ -600,13 +631,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "よかったと言いつつも、いざ置いていくとなると後ろ髪が……。\r\n週に1回、開運グッズたちに会いに来てもいいですか？",
-            "enText": "I said I was glad, but when it came time to leave \nthem behind, I had to go back to…… Can I come \nback once a week to see the opening goods?",
+            "enText": "I did say I was relieved, but now that I'm really leaving \nthem with you, I still feel anxious… Can I at least come \nto look at them once a week?",
             "nextBlock": 32,
             "origClipLength": 281,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "別に構わないけど……",
-                    "enText": "I don't mind if you don't. ……",
+                    "enText": "I don't really mind…",
                     "nextBlock": 32
                 }
             ],
@@ -627,9 +659,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ありがとうございます！\r\nいい人にもらわれて、ホントによかったです。",
-            "enText": "Thank you! I'm really glad that a good person took me in.",
+            "enText": "Bless your heart! I'm really fortunate to have \nsuch a kind soul as my fated partner!",
             "nextBlock": 33,
             "origClipLength": 150,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 60,
@@ -647,9 +680,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "それではトレーナーさん、おやすみなさい！\r\n開運グッズたちも幸せに暮らすんですよおおお～っ！",
-            "enText": "Well then, trainer, good night! The good-luck \ngoods will live happily ever after.",
+            "enText": "I bid you good night then, Trainer! \nMake sure to tuck my lucky items in cozily too～!",
             "nextBlock": 34,
             "origClipLength": 192,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 57,
@@ -663,9 +697,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……まるで子犬を里子に出したように、マチカネフクキタルは\r\n白いハンカチをブンブン振りながら、帰っていった。",
-            "enText": "…… Like a puppy in a foster home, Machikanefukukkitaru left, \nwaving her white handkerchief in the air.",
+            "enText": "…… Matikanefukukitaru vigorously waved a white \nhandkerchief when we parted ways for the day, \nas if she'd just left behind a puppy for adoption.",
             "nextBlock": -1,
             "origClipLength": 115,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 29,
@@ -676,5 +711,6 @@
             "blockIdx": 34
         }
     ],
-    "modified": 1712266081
+    "humanTl": true,
+    "modified": 1748263992
 }

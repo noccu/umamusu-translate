@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "A5MXB454SYUKG7LW4RUGLM6D2YI7GSFD",
+    "version": 6,
+    "bundle": "LFK5XUWR3HG7JYL7FTBYTALH7NS4HU2B",
     "type": "story",
     "storyId": "041056003",
     "title": "選抜レースは大殺界？",
+    "enTitle": "Saturn returns for the Selection Race?",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "選抜レースまで残りわずかという、ある日……。",
-            "enText": "One day, with only a few days left before the Selection Race, ……",
+            "enText": "On a day right before the Selection Race…",
             "nextBlock": 2,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "pathId": 8869423369491581082,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "たたたたた、大変ですぅ～～～～っ！！！！",
-            "enText": "Oh, my God… ～～～～… ！！！！",
+            "enText": "E-E-E-E-E-E-Emergency～～～～!!!!",
             "nextBlock": 3,
             "origClipLength": 99,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 80,
@@ -35,9 +38,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "放課後、慌てた様子のマチカネフクキタルが\r\nトレーナー室に飛び込んできた。",
-            "enText": "After school, a flustered-looking Machikanefukkitar popped into \nthe trainer's office.",
+            "enText": "School had ended for the day when a distressed \nMatikanefukukitaru burst into the room.",
             "nextBlock": 4,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 105,
@@ -51,18 +55,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ああああ～～、トレーナーさぁ～～ん……。\r\n私は……私はどうすればいいのでしょうか～～！？",
-            "enText": "Ohhhhhh, my trainer……… I am…… what should I do～!",
+            "enText": "<i>Daaaah～～</i> Trainer… \nWhat… What am I to dooooo～!?",
             "nextBlock": 5,
             "origClipLength": 312,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "何があったんだ？",
-                    "enText": "What happened?",
+                    "enText": "What's wrong?",
                     "nextBlock": 5
                 },
                 {
                     "jpText": "何があったの？",
-                    "enText": "What happened?",
+                    "enText": "What's wrong?",
                     "nextBlock": 5
                 }
             ],
@@ -83,9 +88,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "うう……実は先ほど、\n選抜レースの結果について占ってみたのです。",
-            "enText": "Uu…… actually just divined about the \noutcome of the Selection Race.",
+            "enText": "<i>Guhuh…</i> I just attempted to divine \nthe outcome of the Selection Race.",
             "nextBlock": 6,
             "origClipLength": 194,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 159,
@@ -103,9 +109,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "そうしたらなんと、\n“最悪”と出てしまったのですよおぉぉ～～～～！",
-            "enText": "I did, and to my surprise, it came up as \"the worst.\" Oh, ～～～～!",
+            "enText": "And would you know it… Terrible Luck～～～!",
             "nextBlock": 7,
             "origClipLength": 190,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 31,
@@ -123,9 +130,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "まさに大殺界がおみこし担いでやってきたような事態です！\r\nこの厄をなんとかしなくては！",
-            "enText": "It is just as if the world of the dead had come to us carrying a \nportable shrine! We must do something about this evil!",
+            "enText": "This is awful! It's like Saturn returned, and with a party hat on! \nI simply have to address this somehow!",
             "nextBlock": 8,
             "origClipLength": 230,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 75,
@@ -143,9 +151,10 @@
             "jpName": "タイキシャトル",
             "enName": "Taiki Shuttle",
             "jpText": "ビッグニュース、ビッグニュース！\r\nどエライ事態になりマシタっ！！",
-            "enText": "Big news, big news! We've got a big situation!",
+            "enText": "Big news, big news! We have a situation on our hands!",
             "nextBlock": 9,
             "origClipLength": 150,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 80,
@@ -167,9 +176,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "タ……タイキさん？\r\nなんでしょう、とてもイヤな予感がするのですが……。",
-            "enText": "Ta…… Taiki? What is it, I have a very bad feeling about it. ……",
+            "enText": "Ta… Taiki? It can't be anything good, but I shall \nask you what is going on regardless……",
             "nextBlock": 10,
             "origClipLength": 195,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 137,
@@ -191,9 +201,10 @@
             "jpName": "タイキシャトル",
             "enName": "Taiki Shuttle",
             "jpText": "選抜レースの出走表が貼りだされたのデスが、\r\nフクキタルの走るグループが、まさにアンビリーバボー！",
-            "enText": "The race list for the Selection Race was posted, and the group \nthat Fukkitar is running in is truly an \"unbelievable\" group!",
+            "enText": "The schedule for the Selection Race is up, \nand Fukukitaru's group is <i>unbelievable</i>!",
             "nextBlock": 11,
             "origClipLength": 274,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 321,
@@ -219,9 +230,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "タイキシャトルから出走メンバーを1人1人聞くたびに、\r\nマチカネフクキタルの顔色が青ざめていく。",
-            "enText": "Machikanefukkitar's face turned pale as she listened to each \nmember of the running group one by one from the Taikishattle.",
+            "enText": "As Taiki listed the group's entrants, each name \ndrew more color from Matikanefukukitaru's face.",
             "nextBlock": 12,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 67,
@@ -243,9 +255,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "マチカネフクキタルと同じグループの出走者は、いずれも\r\nデビュー確実と言われる、そうそうたるメンバーだった……。",
-            "enText": "The runners in the same group as Machikanefukukkitar were all \nmembers of the same group, all of whom were said to be sure to \nmake their debut. ……",
+            "enText": "All of them were prominent horsegirls, all but guaranteed \nto be making their debuts…",
             "nextBlock": 13,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 74,
@@ -263,9 +276,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "あああ～～っ、もうダメですぅ～～！\n私の選抜レースは、始まる前に終わってしまいました～！",
-            "enText": "Ohhhhhh, I'm soooooooooooooooooooooooo screwed! My Selection Race \nwas over before it even started～!",
+            "enText": "<i>Aaaaah～～</i> I'm done foooor～～! \nMy Selection Race has ended before it even begaaan～!",
             "nextBlock": 14,
             "origClipLength": 227,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 56,
@@ -287,9 +301,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "これだったんですよ、占いが指していたのは……。\r\n今までの努力はなんだったんでしょうか……とほぉ～……。",
-            "enText": "This was it, the horoscope was pointing to…… What was all the \neffort I've been putting into…… and ho～……",
+            "enText": "Clearly, this is the very thing my divination tried to warn me of… \nOhh, why did I even try so hard… <i>boohoo…</i>",
             "nextBlock": 15,
             "origClipLength": 333,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 43,
@@ -315,9 +330,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ガックリと肩を落とすマチカネフクキタル。\nその落ち込みぶりはトレーニングにも現れていた。",
-            "enText": "Machikanefukkitar's shoulders slump in disappointment. Her \ndepression was evident in her training.",
+            "enText": "Matikanefukukitaru was left entirely dejected, \nand her low spirits reflected in her training.",
             "nextBlock": 16,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 24,
@@ -343,9 +359,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "んにににぃ～～～～っ！！　ゴオオォォ～～ル！",
-            "enText": "Nini ni ni ni ～～～～!!!! Goooooooooool!",
+            "enText": "<i>Nnnyininininiiiii～～～!</i> Finiiished～!",
             "nextBlock": 17,
             "origClipLength": 146,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 45,
@@ -359,13 +376,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "はあっ……はあっ……タイムは言わなくても大丈夫です。\r\n全然走れていないのは、わかりますから。",
-            "enText": "You don't have to say haha…… haha…… time. I \ncan tell that you are not running at all.",
+            "enText": "<i>Haah… haah…</i> You need not bother telling me. \nI know the time was as dreadful as my running.",
             "nextBlock": 18,
             "origClipLength": 252,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "今日はもう上がろうか",
-                    "enText": "I think I'd better go up today.",
+                    "enText": "Let's call it a day here then.",
                     "nextBlock": 18
                 }
             ],
@@ -386,9 +404,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "……はい、そうしましょう。",
-            "enText": "…… Yes, let's do that.",
+            "enText": "…… Yes, that would be for the best.",
             "nextBlock": 19,
             "origClipLength": 77,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 94,
@@ -406,9 +425,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "はぁ……やはり運命とは決まっているものなのですね……。",
-            "enText": "Huh. ……After all, fate is a fixed thing. ……",
+            "enText": "<i>Hueeh…</i> It's true what they say, fate is already set in stone……",
             "nextBlock": 20,
             "origClipLength": 167,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 152,
@@ -422,9 +442,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "自分でもわかっているんです……トゥインクル・シリーズで\r\n幸せを掴めるほど、実力を持っているわけじゃないって。",
-            "enText": "I know myself that I'm not good enough to \nfind happiness in the…… twinkle series.",
+            "enText": "I knew it all along… that I really don't have the ability \nto find happiness in the Twinkle Series.",
             "nextBlock": 21,
             "origClipLength": 253,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "どういうこと？",
@@ -449,9 +470,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "……私、よくできた姉がいて比べられることが多いのです。",
-            "enText": "…… I have a sister who is well to \ndo and I am often compared to her.",
+            "enText": "…… I have a sister, actually. A really incredible \nolder sister to whom I've oft been compared.",
             "nextBlock": 22,
             "origClipLength": 150,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 142,
@@ -469,9 +491,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ああっ、別に姉の事を嫌いとかじゃないですよ！？\r\nむしろ尊敬しているくらいです！",
-            "enText": "Oh, it's not that I don't like my sister \nor anything! In fact, I even respect her!",
+            "enText": "Ah, don't get me wrong now, I don't bear any ill feelings! \nOn the contrary, I respect her a lot!",
             "nextBlock": 23,
             "origClipLength": 186,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 159,
@@ -489,9 +512,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "とはいえ、どうしても自分とその姉を比較してしまって……。",
-            "enText": "However, I couldn't help but compare myself to that sister. ……",
+            "enText": "All the same, I end up comparing myself to her often as well…",
             "nextBlock": 24,
             "origClipLength": 164,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 109,
@@ -509,9 +533,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ホント言うと、トレセン学園に入るかどうかも迷ったんです。\r\n自分なんかが通用するのかと……。",
-            "enText": "To tell you the truth, I wasn't even sure if I wanted to join \nTracen Academy or not. I wondered if I could make it. ……",
+            "enText": "Truth be told, I was incredibly unsure about applying \nto Tracen Academy, doubtful that someone like me \nwould really be able to make it…",
             "nextBlock": 25,
             "origClipLength": 237,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 76,
@@ -529,9 +554,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ですが、そんなことを考えていた私の枕元に\r\nシラオキ様がやってきて、こう告げたのです。",
-            "enText": "As I was thinking about this, Shiraoki-sama came to my bedside \nand told me, \"I am a very good person.",
+            "enText": "That is precisely the moment when Divine Shiraoki descended \nupon my dreams and spoke the following ——",
             "nextBlock": 26,
             "origClipLength": 219,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 17,
@@ -549,9 +575,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "『走りなさい、さすれば道は開かれる』と。",
-            "enText": "Run, and the way will be opened to you.",
+            "enText": "<i>Run, and you shall find a path opened to you.</i>",
             "nextBlock": 27,
             "origClipLength": 164,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 190,
@@ -569,9 +596,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "その言葉を信じて、ここまで走ってきたのですが……。",
-            "enText": "I've run so far on that word. ……",
+            "enText": "By putting my trust in her words, I was \nable to reach where I am now……",
             "nextBlock": 28,
             "origClipLength": 144,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 115,
@@ -589,9 +617,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今の話を聞いて、\r\n以前マチカネフクキタルが言っていたことを思い出した。",
-            "enText": "What you just said reminded me of something \nMachikanefukkitar once said.",
+            "enText": "Hearing this, I was reminded of something she had said before.",
             "nextBlock": 29,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 22,
@@ -609,9 +638,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "タイキさんとのレースでもそうでしたが、私が迷ったり不安を\r\n感じた時は、進むべき道を示してもらっています。",
-            "enText": "As was the case in the race with Ms. Taiki, when I feel lost or \nuncertain, she shows me the path I should take.",
+            "enText": "She always guides me to the right path whenever I feel \nlost and anxious, as she did after my race with Taiki.",
             "nextBlock": 30,
             "origClipLength": 250,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 197,
@@ -629,9 +659,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "私がこうして走っていられるのも、シラオキ様を信じ、\r\n占いを信じてきたおかげ。ありがたやぁ～……。",
-            "enText": "I am able to run like this because I have believed in \nShiraoki-sama and in divination. Thank you～……",
+            "enText": "For me to even be here running is all thanks \nto my trust in her and the powers of divination. \nTruly, I am not worthy～",
             "nextBlock": 31,
             "origClipLength": 280,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 65,
@@ -649,9 +680,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "シラオキ様の話が本当かどうかはわからないが、\r\n彼女は走りたくて、占いがその後押しになっている。",
-            "enText": "I don't know if what Master Siraoki said is true, but she wants \nto run, and divination is helping her do so.",
+            "enText": "I don't know what to make of this Shiraoki entity, but the reality \nis that Matikanefukukitaru wants to run, and fortune-telling has \nalways supported her in that.",
             "nextBlock": 32,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 144,
@@ -669,13 +701,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "彼女にとって占いはかけがえのないもので、\nそのおかげでここまで走ってきたという事実もある。ならば――",
-            "enText": "For her, fortune-telling is irreplaceable, and the fact is that \nshe has run this far because of it. Then―",
+            "enText": "Those mysterious forces are irreplaceable to her, and it's \nundeniable that she has made it this far through them. \nGiven that, there's only one thing for me to do ——",
             "nextBlock": 33,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "やっぱりトレーニングを続けよう！",
-                    "enText": "Let's keep training after all!",
+                    "enText": "On second thought, let's continue training!",
                     "nextBlock": 33
                 }
             ],
@@ -696,9 +729,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "へ……？　ですが、今の私は運気どん底フク娘ですよ？\r\nいくら走ってもいい結果になるとは思いませんけど……。",
-            "enText": "She ……? But, I'm a luckless fukugirl right now, right? I don't \nthink I'm going to have a good result no matter how much I run. ……",
+            "enText": "Huh…? But right now I am simply a girl, discarded by fortune. \nRegardless of how much I run, I cannot imagine the results \nto be positive…",
             "nextBlock": 34,
             "origClipLength": 334,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 102,
@@ -716,9 +750,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "渋るマチカネフクキタルを説得し、\nトレーニングを再開した。",
-            "enText": "She persuaded the reluctant Machikanefukkitar to resume training.",
+            "enText": "Disheartened as she was, I still managed \nto convince her to return to training.",
             "nextBlock": 35,
             "origClipLength": 158,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 110,
@@ -732,9 +767,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "ぜえ……ぜえ……。\nやっぱりダメです、体が思うように動きません～……。",
-            "enText": "I can't get it to work -…… …… It's still not working, my body \ndoesn't move as well as it should - ……",
+            "enText": "<i>Bheeh… ghehh…</i> It really is of no use. \nMy body feels so heavy……",
             "nextBlock": 36,
             "origClipLength": 239,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 140,
@@ -752,18 +788,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "これも全て占い通り……なんせ“最悪”ですから……。",
-            "enText": "It's all as fortune-telling…… says, \nbecause…… is the \"worst\" of all.",
+            "enText": "Divination doesn't lie… my lot's exactly as terrible as predicted…",
             "nextBlock": 37,
             "origClipLength": 172,
+            "voiceIdx": 26,
             "choices": [
                 {
                     "jpText": "君はどこまで占いを信じてる？",
-                    "enText": "How much do you believe in fortune-telling?",
+                    "enText": "<size=38>How much do you really trust in divination?</size>",
                     "nextBlock": 37
                 },
                 {
                     "jpText": "貴方はどこまで占いを信じてる？",
-                    "enText": "How much do you believe in fortune telling?",
+                    "enText": "<size=38>How much do you really trust in divination?</size>",
                     "nextBlock": 37
                 }
             ],
@@ -784,9 +821,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "へ……？\r\nそれはもちろん、どこまでも、です！",
-            "enText": "To ……? That is, of course, as far as it goes!",
+            "enText": "What……? I have complete and utter trust in it, of course!",
             "nextBlock": 38,
             "origClipLength": 149,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 60,
@@ -804,9 +842,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "占いは、私にいくつもの道を示してくれました！\r\nいわば私の人生そのものっ！",
-            "enText": "Fortune telling has shown me many paths! My life, so to speak!",
+            "enText": "Nothing has shown me the way forward like divination has! \nIt would be no mistake to call it the essence of my life!",
             "nextBlock": 39,
             "origClipLength": 214,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 29,
@@ -824,13 +863,14 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "なので、信じる信じないではありません。\r\n占いは本当なのです！",
-            "enText": "So it is not a matter of believing or not believing. \nFortune-telling is real!",
+            "enText": "As such, it is not really even a matter of trust. \nDivination is my reality!",
             "nextBlock": 40,
             "origClipLength": 153,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "なら運命の人っていうのも本当？",
-                    "enText": "So is it true that she's the one?",
+                    "enText": "<size=32>Then your <i>predestined one</i> here is part of this reality?</size>",
                     "nextBlock": 40
                 }
             ],
@@ -851,9 +891,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "とーぜん！　トレーナーさんは私にとって運命を変える存在！",
-            "enText": "Totally!!! Your trainer is a lifesaver for me!",
+            "enText": "With all course in the world! You are one of my most fateful \nencounters, holding the power to change my future!",
             "nextBlock": 41,
             "origClipLength": 137,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 80,
@@ -871,18 +912,19 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "そのために私は、選抜レースで実力を見せようと\r\nここまで頑張ってきたんです！",
-            "enText": "That's why I've worked so hard to get this far, to show what I'm \ncapable of in the Selection Races!",
+            "enText": "The whole reason why I have persevered so long, \naiming to show you my power at the Selection Race!",
             "nextBlock": 42,
             "origClipLength": 177,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "だったら結果より、君の走りを見せてくれ",
-                    "enText": "Then let's see how you run, not the results.",
+                    "enText": "<size=34>Then forget about results, and let me see you run.</size>",
                     "nextBlock": 42
                 },
                 {
                     "jpText": "だったら結果より、貴方の走りを見せて",
-                    "enText": "Then let's see how you run, not the results.",
+                    "enText": "<size=34>Then forget about results, and let me see you run.</size>",
                     "nextBlock": 42
                 }
             ],
@@ -899,9 +941,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "結果より、私の走り……？",
-            "enText": "More than the results, my run ……?",
+            "enText": "You want to see me run… over results?",
             "nextBlock": 43,
             "origClipLength": 102,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 89,
@@ -915,9 +958,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "おお……おおおっ！！\r\nそうですっ！　まさにその通りです！",
-            "enText": "Oh…… Oh, whoa! That's right! That's exactly right!",
+            "enText": "Ooo… ooooooooh!! \nOf course, yes! That's exactly it!",
             "nextBlock": 44,
             "origClipLength": 164,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 31,
@@ -935,9 +979,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "たとえ結果が最悪であっても、\r\n私が選抜レースですべきは、精いっぱい走ること！",
-            "enText": "Even if the result sucks, all I have to \ndo is run the race as hard as I can!",
+            "enText": "Even if the result is most terrible, what I must do \nat the Selection Race is to run with all my heart!",
             "nextBlock": 45,
             "origClipLength": 201,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 206,
@@ -955,9 +1000,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "そして、トレーナーさんにスカウトしてもらうのが、\r\n私の目標なのですっ！",
-            "enText": "And my goal is to be scouted by a trainer!",
+            "enText": "With my goal being to have you officially \naccept me under your tutelage!",
             "nextBlock": 46,
             "origClipLength": 157,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 30,
@@ -975,9 +1021,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "“最悪”だというなら、甘んじて受けましょうっ！\nですが、実力はしっかりお見せしますっ！",
-            "enText": "If that's the worst you can say, we'll take \nit! But we will show you what we can do!",
+            "enText": "If terrible my prospects will be, then let them be so! \nI shall make sure you see my ability nonetheless!",
             "nextBlock": 47,
             "origClipLength": 198,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 80,
@@ -995,9 +1042,10 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "そうと決まれば、もう1本走ってきますね！\n相手が誰であろうと、全力でぶつかって砕けてきますよぉ～っ！",
-            "enText": "If that's what I decide, I'll go for another \nrun! No matter who my opponent is, I'm going \nto hit her with all my might and crush her～!",
+            "enText": "With that settled, I will go run another lap! No matter who my \nopponents might be, I will face them with all I haaave～!",
             "nextBlock": 48,
             "origClipLength": 273,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 51,
@@ -1015,12 +1063,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうしてマチカネフクキタルは、再び前に向かって\n走り始めたのだった。",
-            "enText": "Thus, Machikanefukkital began to run forward again.",
+            "enText": "In this way, Matikanefukukitaru came \nto run towards the future once more.",
             "nextBlock": -1,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "pathId": 5936115678618573551,
             "blockIdx": 48
         }
     ],
-    "modified": 1712266081
+    "humanTl": true,
+    "modified": 1748266894
 }

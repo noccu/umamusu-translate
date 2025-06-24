@@ -1,4 +1,5 @@
 import shutil
+import sqlite3
 from argparse import SUPPRESS
 from concurrent.futures import Future, ThreadPoolExecutor
 from os.path import isfile, join, realpath
@@ -14,6 +15,7 @@ GENERIC_ENDPOINT = HOSTNAME + "/Generic/{0:.2}/{0}"
 ASSET_ENDPOINT = HOSTNAME + "/Windows/assetbundles/{0:.2}/{0}"
 MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"
 
+META_DB = sqlite3.connect(const.GAME_META_FILE, autocommit=True)
 
 def download(file, t: str = "story"):
     if t in ("sound", "movie", "font"):
@@ -41,6 +43,10 @@ def save(bundle: GameBundle, args):
         if data.status_code == 200:
             with open(bundle.bundlePath, "wb") as f:
                 f.write(data.content)
+            try:
+                META_DB.execute(f"UPDATE a SET s = 1 WHERE h = '{bundle.bundleName}';")
+            except Exception:
+                pass
         else:
             logger.error(f"Error downloading file {bundle.bundleName}")
             logger.debug(f"Status: {data.status_code}\nContent:{data.text}")

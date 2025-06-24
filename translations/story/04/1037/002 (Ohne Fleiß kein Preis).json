@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "X7GJ55VW4RPZMHEIQD3OSJ33JWOI25R2",
+    "version": 6,
+    "bundle": "U5F54HD7ZKVPEB5XWC7X3VESS7U2GCA2",
     "type": "story",
     "storyId": "041037002",
     "title": "Ohne Fleiß kein Preis",
+    "enTitle": "",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――時は少し遡り、選抜レースの数日前。",
-            "enText": "―Rewinding time a bit, to before the Selection Race…",
+            "enText": "Rewinding back to a few days before the Selection Race…",
             "nextBlock": 2,
             "origClipLength": 69,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 19,
@@ -25,9 +27,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "休日。河川敷を歩いていると、\r\nトレーニング中のエイシンフラッシュを見かけた。だが――",
-            "enText": "It was my day off. Walking along the riverbank, \nI spotted Eishin Flash training. But…",
+            "enText": "It was a weekend, and walking along the riverbank, \nI spotted Eishin Flash training. But…",
             "nextBlock": 3,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 98,
@@ -41,9 +44,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "――……はぁっ……はぁっ……。\r\n休憩開始――",
-            "enText": "— Haa… haa… \nIt is time for a break ―",
+            "enText": "—— <i>Haa… haa…</i> \nTime for a break…",
             "nextBlock": 4,
             "origClipLength": 178,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 89,
@@ -64,6 +68,7 @@
             "enText": "It looks like she's been training pretty hard. From the pained \nexpression on her face, I could tell she was exhausted.",
             "nextBlock": 5,
             "origClipLength": 118,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 186,
@@ -81,13 +86,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "は……ふぅ……休憩、終了……。",
-            "enText": "Ha… phew… \nBreak time is over…",
+            "enText": "<i>Hahh… phew…</i> \nBreak time is over…",
             "nextBlock": 6,
             "origClipLength": 225,
+            "voiceIdx": 1,
             "choices": [
                 {
                     "jpText": "（早い！？）",
-                    "enText": "（Already!?)",
+                    "enText": "(Already!?)",
                     "nextBlock": 6
                 }
             ],
@@ -104,9 +110,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "はぁ……次は――",
-            "enText": "Haah… Next up—",
+            "enText": "<i>Haah…</i> Next up ——",
             "nextBlock": 7,
             "origClipLength": 94,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "もう少し休憩した方が……！",
@@ -134,6 +141,7 @@
             "enText": "……? And you are…?",
             "nextBlock": 8,
             "origClipLength": 73,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 89,
@@ -151,9 +159,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "改めてトレセン学園のトレーナーだと名乗り、\r\nまだ休息が必要そうに見えると指摘してみたのだが――",
-            "enText": "I introduced myself as a trainer at Tracen Academy and \nattempted to tell her she looked like she still needed rest, but—",
+            "enText": "I introduced myself as a trainer at Tracen Academy \nand attempted to tell her she looked like she still \nneeded rest, but ——",
             "nextBlock": 9,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 212,
@@ -167,9 +176,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "いえっ……ふぅ。……支障はありません。\r\n休憩が短いのはスケジュールで決めていたことなので。",
-            "enText": "No… haa. …It will not prove a hindrance. \nShort breaks are part of my regimen.",
+            "enText": "No… <i>haah</i>. …It will not prove a hindrance. \nShort breaks are part of my program.",
             "nextBlock": 10,
             "origClipLength": 270,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 317,
@@ -187,9 +197,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "今日の15時、つまりこの時間での疲労感は想定通り。\r\n次に用意した30分の休憩で息を整える予定です。",
-            "enText": "Fatigue is expected around 3 pm today — that is, right now. \nI can catch my breath in the 30 minute break coming up.",
+            "enText": "Fatigue is expected around 15:00 — that is, right now. \nI can rest more in the 30 minute break coming up.",
             "nextBlock": 11,
             "origClipLength": 304,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 155,
@@ -207,18 +218,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "彼女はどうやら、自分の作ったスケジュールに絶対の自信があり、\r\nその通りに進行することにこだわっているらしい。だが……。",
-            "enText": "It sounds like she has absolute confidence in her regimen \nand is adamant about sticking to it. However…",
+            "enText": "It sounds like she has absolute confidence in her program \nand is adamant about sticking to it. However…",
             "nextBlock": 12,
             "origClipLength": 123,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "予定外のことが起こったらどうするんだ？",
-                    "enText": "What if something unplanned happens?",
+                    "enText": "What if something unforeseen happens?",
                     "nextBlock": 12
                 },
                 {
                     "jpText": "予定外のことが起こったらどうするの？",
-                    "enText": "What if something unplanned happens?",
+                    "enText": "What if something unforeseen happens?",
                     "nextBlock": 12
                 }
             ],
@@ -239,9 +251,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "当然、ある程度のバッファはとっています。例えば今、\r\n貴方と話していることで4分25秒の遅れが生じていますが……。",
-            "enText": "Naturally, I keep a margin. For example, this chat with you has \ncaused a 4 minute and 25 second delay…",
+            "enText": "Naturally, I keep a margin. For example, this chat with you \nhas caused a 4 minute and 25 second delay…",
             "nextBlock": 13,
             "origClipLength": 269,
+            "voiceIdx": 6,
             "choices": [
                 {
                     "jpText": "あ……ごめん",
@@ -266,9 +279,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "いえ、構いません。この後の5分の休憩を削り、\r\n元のスケジュールに戻ればいいだけですから。",
-            "enText": "No, that's fine. I can simply subtract it from my next \nfive-minute break to get back on track.",
+            "enText": "No, that's fine. I can simply subtract it from my next \nfive minute break to get back on track.",
             "nextBlock": 14,
             "origClipLength": 203,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "休憩を削るのか！？",
@@ -298,9 +312,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "若干の無理は承知の上です。今回は目標まで密度の高い\r\nスケジュールを組んだため、普段より時間的猶予を抑えています。",
-            "enText": "I know full well I'm pushing it a little. \nBut I put together a tight regimen to my goal \nand it leaves me less time to spare than usual.",
+            "enText": "I know full well I'm pushing it a little. I put together \na packed program to reach my target, which leaves \nme less time to spare than usual.",
             "nextBlock": 15,
             "origClipLength": 273,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 292,
@@ -314,9 +329,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "このスケジュールを完璧にこなすことが最優先です。\r\nでなければ……――",
-            "enText": "Completing this regimen is a top priority. \nIf not…—",
+            "enText": "Completing this program is my top priority. \nIf not, I……",
             "nextBlock": 16,
             "origClipLength": 165,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "（……？）",
@@ -341,9 +357,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……5分45秒経過。これ以上の時間的ロスは避けたいので、\r\n失礼します。",
-            "enText": "… 5 minutes and 45 seconds have passed. \nI can't lose any more time, so if you'll excuse me…",
+            "enText": "……Five minutes and 45 seconds have passed. \nI can't lose any more time, so if you'll excuse me…",
             "nextBlock": 17,
             "origClipLength": 186,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 74,
@@ -361,9 +378,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……言い忘れていました。\r\nご心配ありがとうございます。それでは。",
-            "enText": "… I forgot to mention. \nThank you for your concern. Well then.",
+            "enText": "…I forgot to say… Thank you for your concern. Goodbye.",
             "nextBlock": 18,
             "origClipLength": 171,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 89,
@@ -381,9 +399,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今度のレースに向け、エイシンフラッシュの気合いは充分……\r\nというよりも、肩の力が入りすぎているようにも見えた。",
-            "enText": "Eishin Flash is really putting in the effort for her next race… \nBut I should say, I get the feeling she's trying <i>too</i> hard.",
+            "enText": "Eishin Flash is really putting in the effort for her next race… \nBut I have to say, I get the feeling she's trying <i>too</i> hard.",
             "nextBlock": 19,
             "origClipLength": 118,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 59,
@@ -401,9 +420,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "選抜レースは確かに重要だが、年に数回チャンスはある。\r\n今回どうしてもデビューしたい理由があるのかと考えていると――",
-            "enText": "For sure, the Selection Races are important, but there are \nseveral opportunities throughout the year. \nAs I pondered why she was so set on debuting right now—",
+            "enText": "For sure, the Selection Races are important, but there are \nseveral opportunities throughout the year. As I pondered \nwhy she was so set on debuting right now ——",
             "nextBlock": 20,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "pathId": -273698072592992210,
             "blockIdx": 19
         },
@@ -411,18 +431,19 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "こ・ん・に・ち・は～～っ☆\r\nファル子ともちょこっとお話、いいかな？",
-            "enText": "Good～ day～ to～ you～～ ☆ \nCan Falko have a little chat?",
+            "enText": "Good～ day～ to～ you～～ ☆ \nCan Falco have a little chat?",
             "nextBlock": 21,
             "origClipLength": 205,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "！！君は……",
-                    "enText": "!! You're…",
+                    "enText": "!! It's you…",
                     "nextBlock": 21
                 },
                 {
                     "jpText": "！！貴方は……",
-                    "enText": "!! You are…",
+                    "enText": "!! It's you…",
                     "nextBlock": 21
                 }
             ],
@@ -439,9 +460,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "――ファル子、フラッシュさんと同室なんだ。\r\nだから今、すごーく頑張ってるのも知ってるの。",
-            "enText": "— Falko. I'm sharing a room with Flash. \nSo I know she's working reeaaally hard right now.",
+            "enText": "—— I'm sharing a room with Flash. \nSo I know she's working reeaaally hard right now.",
             "nextBlock": 22,
             "origClipLength": 215,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "もしかしてその理由も？",
@@ -466,9 +488,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "……ふふっ。もちろん！\r\n今からする話は、オフレコでお願いね？",
-            "enText": "… Fufu. Of course! \nPlease keep this off-record, okay?",
+            "enText": "…<i>Hehe</i>. Of course! \nPlease keep this off the record, okay?",
             "nextBlock": 23,
             "origClipLength": 200,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 143,
@@ -489,6 +512,7 @@
             "enText": "Flash's parents are coming from Germany \nto watch the upcoming Selection Race!",
             "nextBlock": 24,
             "origClipLength": 156,
+            "voiceIdx": 15,
             "choices": [
                 {
                     "jpText": "ご両親が……",
@@ -509,9 +533,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "フラッシュさんの実家って、人気のケーキ屋さんみたいでね？\r\n超忙しい中来てくれるから、フラッシュさんも張り切ってるの。",
-            "enText": "Flash's parents own a popular cake shop, right? They're super \nbusy, so Flash-san is really excited they're coming over.",
+            "enText": "Her parents own a popular cake shop, you know? \nBoth of them are super busy, so Flash is really excited \nthat they're coming over.",
             "nextBlock": 25,
             "origClipLength": 265,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 124,
@@ -529,9 +554,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "肩の力が入る理由も、今回に賭ける事情もわかった。しかし成長の\r\nためとはいえ、なぜあそこまでスケジュールに固執するのだろうか。",
-            "enText": "I now understood the reason for her efforts and why she'd want to \nstake it all on this race. That said, even if it's for her \ndevelopment, why does she so adhere to her regimen so much?",
+            "enText": "I now understood the reason for her efforts, and why she'd \nwant to stake it all on this race. But even if it's for her own \ndevelopment, why does she stick so strictly to her program?",
             "nextBlock": 26,
             "origClipLength": 127,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 147,
@@ -549,9 +575,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "とりあえず、ファル子が今言えるのはそれくらいかな？",
-            "enText": "At any rate, that's all Falco can say right now, I think?",
+            "enText": "At any rate, I think that's all Falco can say right now?",
             "nextBlock": 27,
             "origClipLength": 157,
+            "voiceIdx": 17,
             "choices": [
                 {
                     "jpText": "なんで俺に教えてくれたんだ？",
@@ -581,9 +608,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "ん～とね……ピピッ！　ときたから、かな☆",
-            "enText": "Iiit's because… something hit me like beepbeep! I guess ☆",
+            "enText": "Iiit's because… something hit me like <i>be-beep</i>, I guess ☆",
             "nextBlock": 28,
             "origClipLength": 139,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 60,
@@ -597,9 +625,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "2人が話してるところを見てて、思ったの。あなたなら、\r\nフラッシュさんのいいところをわかってくれそうだなって☆",
-            "enText": "When I saw you two talking, I thought you looked like… \nYou would understand the good things about Flash-san ☆",
+            "enText": "When I saw you two talking, I thought you looked like… \nsomeone who would understand Flash's qualities ☆",
             "nextBlock": 29,
             "origClipLength": 231,
+            "voiceIdx": 19,
             "choices": [
                 {
                     "jpText": "……？",
@@ -624,9 +653,10 @@
             "jpName": "スマートファルコン",
             "enName": "Smart Falcon",
             "jpText": "フラッシュさんのこと、気になってるんでしょ？\r\n……だったらしっかり、見ててあげてね☆",
-            "enText": "You've taken an interest in Flash-san, right? \n… So make sure you watch over her ☆",
+            "enText": "You've taken an interest in her, right? \n…So make sure you watch over her ☆",
             "nextBlock": 30,
             "origClipLength": 202,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 81,
@@ -644,9 +674,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "――選抜レースの前日。スマートファルコンの言葉の意味を\r\n考えつつ、学園内を歩いていると……。",
-            "enText": "— The day before the Selection Race. I walked around the \nacademy, pondering the meaning of Smart Falcon's words…",
+            "enText": "—— The day before the Selection Race. I walked around the \nacademy, pondering the meaning of Smart Falcon's words…",
             "nextBlock": 31,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 21,
@@ -660,13 +691,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "toi,toi,toi……――",
-            "enText": "Toi toi toi…",
+            "enText": "<i>Toi toi toi…</i>",
             "nextBlock": 32,
             "origClipLength": 80,
+            "voiceIdx": 21,
             "choices": [
                 {
                     "jpText": "（音がする？それに、この声は――）",
-                    "enText": "(A sound? That voice is…)",
+                    "enText": "(What's that? I recognize this voice…)",
                     "nextBlock": 32
                 }
             ],
@@ -677,13 +709,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……っ。\r\nあ……貴方は、この間お会いした……。",
-            "enText": "…… \nAh… you… we met the other day……",
+            "enText": "……Ah… you… We met the other day……",
             "nextBlock": 33,
             "origClipLength": 173,
+            "voiceIdx": 22,
             "choices": [
                 {
                     "jpText": "何か物音がしたけど……",
-                    "enText": "I heard some sorta noise…",
+                    "enText": "I heard something…",
                     "nextBlock": 33
                 }
             ],
@@ -704,9 +737,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……両親から教わった、ドイツのおまじないです。",
-            "enText": "… It's a German spell that I learned from my parents.",
+            "enText": "…It's a German spell that I learned from my parents.",
             "nextBlock": 34,
             "origClipLength": 106,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 113,
@@ -724,9 +758,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "机を3回叩きながら、『toi,toi,toi……』と繰り返す。\r\nその音で魔を祓い、幸運を守ってくれるそうです。",
-            "enText": "Tap the desk three times while repeating \"toi toi toi…\". \nThe sound is said to ward off evil and protect from bad luck.",
+            "enText": "Tap a desk three times while repeating \"toi toi toi\". \nThe sound is said to ward off evil and protect from bad luck.",
             "nextBlock": 35,
             "origClipLength": 324,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 132,
@@ -744,9 +779,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "気休めかもしれませんが、明日に万が一にも\r\n予定外のことが起こらないようにしたいので……。",
-            "enText": "It may just be superstition, but I want to ensure \nthat nothing unplanned happens tomorrow…",
+            "enText": "It may just be superstition, but I want to ensure \nthat nothing unforeseen happens tomorrow…",
             "nextBlock": 36,
             "origClipLength": 201,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "懸念でもあるのか？",
@@ -772,9 +808,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……そういうわけでは、ありませんが。\r\n明日は両親が、多忙の合間を縫ってレースを観に来てくれます。",
-            "enText": "… That's not really it. Tomorrow, my parents will take time \nout of their busy schedule to come and watch the race.",
+            "enText": "…That's not really it. Tomorrow, my parents will take time \nout of their busy schedule to come and watch my race.",
             "nextBlock": 37,
             "origClipLength": 252,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 170,
@@ -792,9 +829,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "正しい仕事を正しく行い、完璧な結果を導く。\r\nその姿を見せることが、娘として絶対の使命なので。",
-            "enText": "Doing the right job correctly will lead to perfect results. \nDemonstrating that is my obligation as their daughter.",
+            "enText": "Properly executing the correct actions will bring perfect results. \nDemonstrating that is my obligation as their daughter.",
             "nextBlock": 38,
             "origClipLength": 286,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 322,
@@ -812,13 +850,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "仮に予定外の……情けない結果を見せてしまえば、\r\n2人は私を誇りに思わないでしょうから……。",
-            "enText": "Because I'm certain they would be highly disappointed if \nI was to… miss expectations and register a miserable result…",
+            "enText": "Because I'm certain they would be highly disappointed \nif I was to… miss expectations and do terribly…",
             "nextBlock": 39,
             "origClipLength": 249,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "……そういうものかな？",
-                    "enText": "… Is that how it works?",
+                    "enText": "…Is that really so?",
                     "nextBlock": 39
                 }
             ],
@@ -839,9 +878,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……それは、どういう意味ですか？",
-            "enText": "… What do you mean by that?",
+            "enText": "…What do you mean?",
             "nextBlock": 40,
             "origClipLength": 79,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 158,
@@ -859,9 +899,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "彼女のこともよく知らないし、ましてや両親のことなどわからない。\r\nだが、彼女の走る姿を見れば大変な努力家なことは誰でもわかる。",
-            "enText": "I don't know much about her, much less her parents. \nBut anyone who sees her run can tell \nthat she is a very hard worker.",
+            "enText": "I don't know much about her, much less her parents. \nBut anyone who sees her run can tell that she is a very \nhard worker.",
             "nextBlock": 41,
             "origClipLength": 127,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "君の努力は誇りに値するものだと思う",
@@ -891,13 +932,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……っ、詭弁ですね。\r\n規則や理屈を軽んじた……意味のない励ましです……。",
-            "enText": "… Sophistry, that is. Meaningless encouragement… \nwhich tramples upon logic and reason…",
+            "enText": "……Fallacious comments. Meaningless encouragement… \nwhich tramples upon logic and reason…",
             "nextBlock": 42,
             "origClipLength": 243,
+            "voiceIdx": 30,
             "choices": [
                 {
                     "jpText": "（……？）",
-                    "enText": "(…?)",
+                    "enText": "(……?)",
                     "nextBlock": 42
                 }
             ],
@@ -918,13 +960,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "今気づいたが、彼女の様子がおかしい。\r\nどこか息をつきながらで、体調が悪そうに見える……。",
-            "enText": "I just noticed that she's not looking right. \nIt looks like she started feeling unwell during her break…",
+            "enText": "I just noticed something's off about her. \nShe keeps having to catch her breath and looks unwell…",
             "nextBlock": 43,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "もしかして具合が悪い？",
-                    "enText": "You don't look too well.",
+                    "enText": "Are you feeling alright?",
                     "nextBlock": 43
                 }
             ],
@@ -945,9 +988,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……少しばかり無理なスケジュールだったかもしれませんが、\r\n成長に必要なことは全て達成しました。",
-            "enText": "… This regimen may be a little excessive, but it has \ncompleted everything required for my development.",
+            "enText": "…This program might be a little excessive, but I have \ncompleted everything required to improve.",
             "nextBlock": 44,
             "origClipLength": 200,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 206,
@@ -965,9 +1009,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ですからこの程度の体調不良は誤差の範囲内。\r\n今日は全休にしているので、明日には回復する予定です。",
-            "enText": "That is to say, this degree of malaise is within expectations. \nI'm taking the full day off today and will recover tomorrow.",
+            "enText": "That is to say, this degree of malaise is within expectations. \nI'm resting up today and will recover by tomorrow.",
             "nextBlock": 45,
             "origClipLength": 265,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 161,
@@ -985,13 +1030,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "……などと話している間も、覇気を感じられない。\r\n明日に全快するとはとても思えないが……。",
-            "enText": "… I can't feel an ounce of vigour in her words. \nExpecting a full recovery by tomorrow seems far-fetched…",
+            "enText": "…I can't feel an ounce of vigour in her words. \nExpecting a full recovery by tomorrow seems far-fetched…",
             "nextBlock": 46,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "明日休むことも考えてみた方が――",
-                    "enText": "You should considering taking tomorrow off a—",
+                    "enText": "<size=34>You should considering taking tomorrow off a—</size>",
                     "nextBlock": 46
                 }
             ],
@@ -1012,9 +1058,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……っ、ありえません！",
-            "enText": "… Ridiculous!",
+            "enText": "…Ridiculous!",
             "nextBlock": 47,
             "origClipLength": 58,
+            "voiceIdx": 33,
             "choices": [
                 {
                     "jpText": "……！",
@@ -1039,9 +1086,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "明日走らないという予定はありません。\r\nレースで勝つという、完璧な結果を目指して頑張ったんです……！",
-            "enText": "There is no plan where I do not run tomorrow. I worked hard \nto achieve the perfect result known as winning the race…!",
+            "enText": "I have every plan to run tomorrow. I worked hard to achieve \nthe perfect result known as winning the race…!",
             "nextBlock": 48,
             "origClipLength": 192,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 182,
@@ -1059,9 +1107,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "1つの狂いもなくスケジュールを遂行し、\r\n決められた手順を全うする。でなければ……でな、ければ――",
-            "enText": "Execute the plan without a single deviation and carry out \nthe established procedures. If I can't… can't… do—",
+            "enText": "I will execute my plans without a single deviation and follow \nthe procedures I established. If I can't… can't… do ——",
             "nextBlock": 49,
             "origClipLength": 259,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 42,
@@ -1079,9 +1128,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ドサッ……）",
-            "enText": "(Thud…)",
+            "enText": "(<i>Thud…</i>)",
             "nextBlock": 50,
             "origClipLength": 54,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "フラッシュ……！？",
@@ -1102,13 +1152,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "全てが狂ってしまう……から……――",
-            "enText": "Everything will fall… into chaos ――",
+            "enText": "Everything will be… thrown off ——",
             "nextBlock": -1,
             "origClipLength": 123,
+            "voiceIdx": 36,
             "pathId": -7114084459342423656,
             "blockIdx": 50
         }
     ],
-    "modified": 1673054095,
-    "humanTl": true
+    "humanTl": true,
+    "modified": 1750769168
 }

@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "N42XDTPQFGJCD73Q2XNY5Q4MKANKGM6X",
+    "version": 6,
+    "bundle": "F4NCKOUEOSHOFCK66AVY3H3CQ725MDYI",
     "type": "story",
     "storyId": "041037007",
     "title": "Augenblick",
+    "enTitle": "",
     "text": [
         {
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "実力向上のための夏合宿に向け、トレーニングスケジュールの\r\n打ち合わせをしていた時のこと――",
-            "enText": "We were discussing the training schedule for \nthe summer camp to improve our performance.",
+            "enText": "With the summer training camp approaching, we were \ncurrently putting together a training program for it.",
             "nextBlock": 2,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 129,
@@ -25,9 +27,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "トレーナーさん、1つお願いがあります。",
-            "enText": "Trainer, I have one request.",
+            "enText": "I have a favor to ask, Trainer.",
             "nextBlock": 3,
             "origClipLength": 96,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 129,
@@ -45,9 +48,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "夏合宿中のこの日、トレーニング後の2時間……\r\nいえ、2時間から3時間、予定の枠を頂けるでしょうか？",
-            "enText": "On this day during the summer camp, can you give me a two-hour \n… or two to three hour slot after training?",
+            "enText": "Could we schedule in a two… no, two to three hour \nblock of time after training on this day of the camp?",
             "nextBlock": 4,
             "origClipLength": 285,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 90,
@@ -65,18 +69,19 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "念のためお伝えしますが、\r\n私だけではなくトレーナーさんも、です。",
-            "enText": "In case you're wondering, it's not \njust me, but my trainer as well.",
+            "enText": "To be clear, it's for both of us, not only me.",
             "nextBlock": 5,
             "origClipLength": 151,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "何かあるのか？",
-                    "enText": "What do you got?",
+                    "enText": "Is something happening then?",
                     "nextBlock": 5
                 },
                 {
                     "jpText": "何かあるの？",
-                    "enText": "What do you got?",
+                    "enText": "Is something happening then?",
                     "nextBlock": 5
                 }
             ],
@@ -97,9 +102,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……予定を、完遂するためです。\r\nそれには……そう、トレーナーさんが必要なんです。",
-            "enText": "It is to complete the… schedule. For \nthat… yes, you need a trainer.",
+            "enText": "……It's… to fulfill a scheduled objective. \nAnd, <i>umm</i>… Right, I need you to be there for it.",
             "nextBlock": 6,
             "origClipLength": 248,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 89,
@@ -117,9 +123,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ご協力、いただけますか……？",
-            "enText": "Can you help us with this?…?",
+            "enText": "Is that acceptable…?",
             "nextBlock": 7,
             "origClipLength": 87,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 90,
@@ -133,9 +140,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "彼女にしては珍しく曖昧な言い回しだったが、どこか不安げな\r\n様子が気にかかり……それ以上理由は聞かずにOKした。",
-            "enText": "It was an unusually vague statement for her, but her anxiousness \nwas worrisome… I said yes without asking her why further.",
+            "enText": "That was an uncharacteristically vague request for her \nto make, but seeing as she seemed pretty tense about it, \nI decided to not press her further and agreed…",
             "nextBlock": 8,
             "origClipLength": 118,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 153,
@@ -149,9 +157,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そして迎えた夏合宿。エイシンフラッシュと、\r\n予定通りのスケジュールをこなしていたある日――",
-            "enText": "Then came the summer training camp. One day, Eishin Flash and I \nwere going through our schedule as planned.",
+            "enText": "Later, after finishing our scheduled training \non a certain day of the camp ——",
             "nextBlock": 9,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 23,
@@ -169,13 +178,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ふぅ……ふぅ……。",
-            "enText": "Phew… Phew…",
+            "enText": "<i>Fwooh… fhaah…</i>",
             "nextBlock": 10,
             "origClipLength": 138,
+            "voiceIdx": 5,
             "choices": [
                 {
                     "jpText": "よし、今日はここまで！",
-                    "enText": "Okay, that's it for today!",
+                    "enText": "Alright, let's call it a day!",
                     "nextBlock": 10
                 }
             ],
@@ -196,9 +206,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "はい……お疲れ様でした。\r\nそれで……その。",
-            "enText": "Yes… thank you for your time. So… that.",
+            "enText": "Yes… thank you for your time. \nBy the way… <i>umm</i>…",
             "nextBlock": 11,
             "origClipLength": 173,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 87,
@@ -216,13 +227,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "この後ですが。\r\n『2時間から3時間』の予定、空けてくださっています……よね？",
-            "enText": "After this. You've got two to three hours \nfree on your schedule… right?",
+            "enText": "You've kept those two to three hours \nI requested open… haven't you?",
             "nextBlock": 12,
             "origClipLength": 219,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "もちろん！",
-                    "enText": "Of course!",
+                    "enText": "Absolutely!",
                     "nextBlock": 12
                 }
             ],
@@ -243,9 +255,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "では、1時間35分後に神社の境内に集合お願いします。\r\n準備があるので、私は一旦ここで。では……。",
-            "enText": "Please meet me in the precincts of the shrine in \none hour and 35 minutes. I have to get ready, so \nI'll be here for a while. Please visit…",
+            "enText": "Then please meet me at the shrine in 1 hour and 35 minutes. \nI have a few preparations to make, so I will see you later…",
             "nextBlock": 13,
             "origClipLength": 280,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 144,
@@ -263,9 +276,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そして1時間35分後、神社に向かうと――",
-            "enText": "And an hour and thirty-five minutes later, \nas I made my way to the shrine—",
+            "enText": "That amount of time later, therefore, \nI made my way to the shrine.",
             "nextBlock": 14,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 20,
@@ -287,13 +301,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "時間ぴったり。\r\nさすがトレーナーさんですね。",
-            "enText": "Right on time. That's what I call a trainer.",
+            "enText": "Very punctual, just as I expect from you, Trainer.",
             "nextBlock": 15,
             "origClipLength": 113,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "その格好……",
-                    "enText": "That outfit…",
+                    "enText": "Your outfit…",
                     "nextBlock": 15
                 }
             ],
@@ -310,9 +325,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "トレーナーさんは……\r\nお祭り、お好きでしたか？",
-            "enText": "The trainer is… Did you like the festival?",
+            "enText": "…Are you a fan of festivals, Trainer?",
             "nextBlock": 16,
             "origClipLength": 109,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 62,
@@ -326,18 +342,19 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "――今日の夏祭りは、とても賑やかですね。\r\nそれに……食欲をそそる香りが一面に漂っています。",
-            "enText": "—The summer festival is very lively today. Besides… \nappetizing aroma is all over the place.",
+            "enText": "This summer festival is very lively, isn't it? \nThe whole area smells delicious as well… I'm getting hungry.",
             "nextBlock": 17,
             "origClipLength": 239,
+            "voiceIdx": 11,
             "choices": [
                 {
                     "jpText": "夏祭りに来たかったんだな",
-                    "enText": "You wanted to come to the summer festival.",
+                    "enText": "You wanted to try this, huh?",
                     "nextBlock": 17
                 },
                 {
                     "jpText": "夏祭りに来たかったんだね",
-                    "enText": "You wanted to come to the summer festival.",
+                    "enText": "You wanted to try this, huh?",
                     "nextBlock": 17
                 }
             ],
@@ -358,9 +375,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "以前、同室の方が教えてくれたんです。\r\n合宿先の近くで、伝統的な夏祭りが行われると。",
-            "enText": "My roommate once told me about it. She told me that there was a \ntraditional summer festival held near the camp.",
+            "enText": "My roommate told me about it before. That there's a traditional \nsummer festival held close by the training camp location.",
             "nextBlock": 18,
             "origClipLength": 217,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 166,
@@ -378,13 +396,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "留学当初から、日本のお祭りには興味があったんです。\r\n幸い今日はトレーニング後に余裕があったので……。",
-            "enText": "I've been interested in Japanese festivals since I first came to \nJapan to study. Fortunately, I had some time to spare after \ntraining today, so I went to…",
+            "enText": "I had an interest in Japan's festivals from early on, \nwhen I decided to study abroad. It's fortunate that \nwe had time after training today…",
             "nextBlock": 19,
             "origClipLength": 226,
+            "voiceIdx": 13,
             "choices": [
                 {
                     "jpText": "言ってくれればよかったのに",
-                    "enText": "You should've told me.",
+                    "enText": "You could have just told me.",
                     "nextBlock": 19
                 }
             ],
@@ -405,18 +424,19 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……隠したいわけではありませんでした。\r\nただ……いつ伝えるか迷っていたら、当日に。",
-            "enText": "I didn't want to hide… it. I just wasn't \nsure when… to tell you, but on the day.",
+            "enText": "……I didn't mean to keep it a secret. \nI just… wasn't sure when to ask.",
             "nextBlock": 20,
             "origClipLength": 251,
+            "voiceIdx": 14,
             "choices": [
                 {
                     "jpText": "でも、なんだか意外だな",
-                    "enText": "But it's kind of surprising.",
+                    "enText": "I do have to say, I'm a little surprised.",
                     "nextBlock": 20
                 },
                 {
                     "jpText": "でも、なんだか意外だね",
-                    "enText": "But it's kind of surprising.",
+                    "enText": "I do have to say, I'm a little surprised.",
                     "nextBlock": 20
                 }
             ],
@@ -437,9 +457,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "意外……というのは、私がお祭りに興味を示したことですか？\r\n同室の方にも似たようなことを言われました。",
-            "enText": "Unexpected… is the fact that I showed interest in the \nfestival? My roommate said something similar to me.",
+            "enText": "Are you surprised… that I have an interest in festivals? \nMy roommate said a similar thing.",
             "nextBlock": 21,
             "origClipLength": 264,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 114,
@@ -457,9 +478,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "正しく引用すると、私は\r\n『クールだし静かな方が好きそう』とのことです。",
-            "enText": "To quote her correctly, I'm \"cool and seem to prefer quiet.",
+            "enText": "To quote her more precisely; I \"give off a cool impression\" \nand seem like I \"would like more quiet places\", apparently.",
             "nextBlock": 22,
             "origClipLength": 184,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 100,
@@ -477,9 +499,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ですがドイツにはカーニバルがあります。カーニバルの騒がしさは、\r\nこのお祭りの比ではありません。まさしくバカ騒ぎです。",
-            "enText": "But in Germany, there is Carnival. The noise at Carnival is \nnothing compared to this festival. It is truly a riot.",
+            "enText": "But Germany has something called a carnival. The rowdiness \nof such an event can't be compared to a festival like this. \nIt really is what you might call a boisterous spectacle.",
             "nextBlock": 23,
             "origClipLength": 268,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 257,
@@ -497,9 +520,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "そして私は――\r\n誰もが笑顔で酔いしれるカーニバルが、嫌いではありません。",
-            "enText": "And I - I don't mind carnivals where \neveryone smiles and gets drunk.",
+            "enText": "And I… don't mind that atmosphere of intoxicating fun \nwith smiles all around in the slightest.",
             "nextBlock": 24,
             "origClipLength": 172,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 113,
@@ -517,9 +541,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "なので日本の素晴らしい文化である夏祭りも、\r\n存分に楽しむ予定を立ててきました。さあ、行きましょう。",
-            "enText": "So, I've made plans to enjoy the summer festival, which is a \nwonderful part of Japanese culture. So, let's go.",
+            "enText": "That is to say, I came fully prepared to enjoy the wonderful \nculture of a Japanese summer festival. So come, let's get going.",
             "nextBlock": 25,
             "origClipLength": 238,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 63,
@@ -537,9 +562,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ドイツにもりんご飴があるのはご存じですか？\r\nクリスマスマーケットの時期には水色のりんごも出回り――",
-            "enText": "Did you know that Germany also has candy apples? During the \nChristmas market season, light blue apples are also available.",
+            "enText": "Did you know that candied apples exist in Germany too? \nDuring the Christmas market season, you can find apples \ncoated in bright blue colors ——",
             "nextBlock": 26,
             "origClipLength": 208,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 244,
@@ -557,9 +583,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "あ……トレーナーさん、あちらで盆踊りをやっていますよ。\r\nとても面白い文化ですよね。",
-            "enText": "Oh… trainer, they have a bon dance over \nthere. It's a very interesting culture.",
+            "enText": "Ah… Trainer, look, they're having a <i>bon</i> dance over there. \nThe culture here is really enjoyable.",
             "nextBlock": 27,
             "origClipLength": 223,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 209,
@@ -577,13 +604,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "皆さん、楽しそうに踊っていらっしゃいます――ん？\r\nあの、私たち……手招きされてませんか？　これって……。",
-            "enText": "Everyone seems to be dancing happily. Um, aren't we being \nbeckoned by…? This is…",
+            "enText": "All those people look like they're having so much fun… <i>Hm</i>? \n<i>Umm</i>, are they… waving us closer? Do they want us to…?",
             "nextBlock": 28,
             "origClipLength": 335,
+            "voiceIdx": 22,
             "choices": [
                 {
                     "jpText": "行こう！",
-                    "enText": "Let's go!",
+                    "enText": "Let's join in!",
                     "nextBlock": 28
                 }
             ],
@@ -604,9 +632,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "えっ！？　トレーナーさん……！？",
-            "enText": "What? Trainer…!",
+            "enText": "<i>Huh!?</i> Trainer…!?",
             "nextBlock": 29,
             "origClipLength": 63,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 60,
@@ -624,9 +653,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうして、エイシンフラッシュと存分に夏祭りを\r\n楽しんでいたのだが……。",
-            "enText": "Thus, I was enjoying the summer festival with \nEishin Flash to the fullest…",
+            "enText": "I had a great time with Eishin Flash at the summer festival.",
             "nextBlock": 30,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 24,
@@ -640,18 +670,19 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……っ！\r\nいけない、もうこんな時間……！",
-            "enText": "…! I can't believe it's already this late…!",
+            "enText": "……! Oh no, it's gotten really late already…!",
             "nextBlock": 31,
             "origClipLength": 103,
+            "voiceIdx": 24,
             "choices": [
                 {
                     "jpText": "どうした？",
-                    "enText": "What's wrong?",
+                    "enText": "What's wrong with that?",
                     "nextBlock": 31
                 },
                 {
                     "jpText": "どうしたの？",
-                    "enText": "What's going on?",
+                    "enText": "What's wrong with that?",
                     "nextBlock": 31
                 }
             ],
@@ -668,13 +699,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "花火があと3分後には始まってしまいます。\r\n急いで移動しなければ……でも、間に合わない可能性の方が……。",
-            "enText": "The fireworks will start in three minutes. If \nyou don't hurry and move… there's a better \nchance… that you won't make it.",
+            "enText": "The fireworks will start in 3 minutes. We need to hurry up \nand find a spot to watch… although we likely won't make \nit anymore…",
             "nextBlock": 32,
             "origClipLength": 262,
+            "voiceIdx": 25,
             "choices": [
                 {
                     "jpText": "ここじゃ見えない？",
-                    "enText": "Can't you see it from here?",
+                    "enText": "Can we not see them from here?",
                     "nextBlock": 32
                 }
             ],
@@ -695,9 +727,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "いえ、見えます。ですが事前に調べたところ、\r\n全体像は確認できないようです。",
-            "enText": "Yes, I can see it. But from my preliminary \nresearch, I can't see the whole thing.",
+            "enText": "We can… but according to what I looked up beforehand, \nwe won't be able to see them in full here.",
             "nextBlock": 33,
             "origClipLength": 180,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 161,
@@ -715,13 +748,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "なので10分歩いたところに、良い場所を見つけておいたんです。\r\n……私の脚であれば、軽く走っても間に合うでしょうが――",
-            "enText": "So I found a good spot 10 minutes walk away… With my legs, \nI'm sure I could make it with a light run, but—",
+            "enText": "That's why I had found a nice place, roughly a 10 minute \nwalk away. …I could make it there in time without much \neffort, surely, but…",
             "nextBlock": 34,
             "origClipLength": 260,
+            "voiceIdx": 27,
             "choices": [
                 {
                     "jpText": "じゃあ走ろう！",
-                    "enText": "Then let's run!",
+                    "enText": "Well, let's run!",
                     "nextBlock": 34
                 }
             ],
@@ -738,13 +772,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ですが、トレーナーさんは……。",
-            "enText": "But the trainer is…",
+            "enText": "But Trainer, you…",
             "nextBlock": 35,
             "origClipLength": 73,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "フラッシュが花火を楽しむことが1番！",
-                    "enText": "Flash's first priority is to enjoy the fireworks!",
+                    "enText": "I care that you get to enjoy the fireworks!",
                     "nextBlock": 35
                 }
             ],
@@ -761,9 +796,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……っ。",
-            "enText": "…",
+            "enText": "……",
             "nextBlock": 36,
             "origClipLength": 30,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 53,
@@ -777,9 +813,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……1番の予定を、忘れていました。",
-            "enText": "I had forgotten about the schedule for the…1 number.",
+            "enText": "……I forgot my most important objective.",
             "nextBlock": 37,
             "origClipLength": 76,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 78,
@@ -797,9 +834,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "移動は必要ありません。\r\n予定を変更して、ここで花火を見ましょう。",
-            "enText": "No need to move. Change your plans and watch the fireworks here.",
+            "enText": "We don't need to move after all. I will change \nmy plan to watching the fireworks from here.",
             "nextBlock": 38,
             "origClipLength": 159,
+            "voiceIdx": 31,
             "choices": [
                 {
                     "jpText": "いいのか？",
@@ -808,7 +846,7 @@
                 },
                 {
                     "jpText": "いいの？",
-                    "enText": "Are you sure?",
+                    "enText": "Are you okay with that?",
                     "nextBlock": 38
                 }
             ],
@@ -829,9 +867,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "はい、いいんです。\r\nだって――",
-            "enText": "Yes, it's okay. Because—",
+            "enText": "Yes, it's fine. Because…",
             "nextBlock": 39,
             "origClipLength": 92,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 90,
@@ -849,9 +888,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "（ヒュゥゥゥゥ……）",
-            "enText": "(Huw…)",
+            "enText": "(<i>Fyuuuuu…</i>)",
             "nextBlock": 40,
             "origClipLength": 58,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 90,
@@ -869,9 +909,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "あ――……。",
-            "enText": "Oh—…",
+            "enText": "Ah……",
             "nextBlock": 41,
             "origClipLength": 50,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 21,
@@ -889,9 +930,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "Wunderschön……。\r\nとても美しい……ですね。",
-            "enText": "Wunderschön… It's very beautiful…",
+            "enText": "Wunderschön…… \nIt really is… a pretty sight.",
             "nextBlock": 42,
             "origClipLength": 170,
+            "voiceIdx": 34,
             "pathId": -1501950719459751596,
             "blockIdx": 41
         },
@@ -899,9 +941,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……やっぱりここでよかったです。\r\nだって最初に立てた予定を完遂できますから。",
-            "enText": "… I'm glad I'm here after all. I'm glad I'm here, because I \ncan complete the plans I made in the beginning.",
+            "enText": "……I'm glad we stayed here, so that I could \naccomplish my first and foremost objective.",
             "nextBlock": 43,
             "origClipLength": 215,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 261,
@@ -919,9 +962,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "『トレーナーさんと一緒に楽しむ』\r\nそれが今日の1番の予定……。",
-            "enText": "Enjoying with the trainer\" is the first \nthing I plan to do today…",
+            "enText": "Which was \"to spend a pleasant time with Trainer\"…",
             "nextBlock": 44,
             "origClipLength": 159,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 162,
@@ -935,13 +979,14 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "私は今、とても……楽しいです。\r\n貴方は？",
-            "enText": "I'm having so much… fun right now. What about you?",
+            "enText": "This time right now… is a very pleasant one. \nDo you think so too?",
             "nextBlock": 45,
             "origClipLength": 160,
+            "voiceIdx": 37,
             "choices": [
                 {
                     "jpText": "もちろん、グリュックリッヒ！",
-                    "enText": "Of course, Glücklich!",
+                    "enText": "I'm feeling mighty <i>Glücklich</i> right now!",
                     "nextBlock": 45
                 }
             ],
@@ -958,9 +1003,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "……！",
-            "enText": "…!",
+            "enText": "……!",
             "nextBlock": 46,
             "origClipLength": 34,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 222,
@@ -974,9 +1020,10 @@
             "jpName": "エイシンフラッシュ",
             "enName": "Eishin Flash",
             "jpText": "ありがとうございます。\r\n私も――正しく、同じ気持ちです。",
-            "enText": "Thank you very much. I - correctly - feel the same way.",
+            "enText": "Thank you, Trainer. Me too, I… firmly feel the same way.",
             "nextBlock": -1,
             "origClipLength": 176,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 116,
@@ -990,5 +1037,7 @@
             "pathId": -8492845087145832887,
             "blockIdx": 46
         }
-    ]
+    ],
+    "modified": 1750771913,
+    "humanTl": true
 }

@@ -5,9 +5,14 @@
 This project is a toolset to translate *Uma Musume Pretty Derby* to English. A few included scripts also let it function as a game patch using these tools.  
 It accomplishes this by modifying the master.mdb file and Unity assets, aided additionally with dll hijacking through [TLG].
 
-> [!WARNING]
-> UmaTL translations have transitioned to [our own translation repo](https://github.com/UmaTL/hachimi-tl-en) for the Hachimi patch. Check out the install instructions on that page.
+> [!CAUTION]
+> For those looking to play the game translated:  
+> UmaTL translations have transitioned to [a separate translation repository](https://github.com/UmaTL/hachimi-tl-en), in a format useable by Hachimi. Check out the install instructions on that page instead!  
 > Development of translation tools will continue, patching functionality will not.
+
+> [!TIP]
+> This project takes a lot of time and effort, the vast majority of which my own.  
+> Please consider [supporting](#supporting-the-project) and receive some small bonuses.
 
 **[Translation progress and credits][tl-progress].**  
 If you encounter problems, check the troubleshooting section with each guide step first. Open an issue or ask in the Discord server if this doesn't solve it.
@@ -43,9 +48,8 @@ Toolset info: [scripts](#script-info)
 This project has taken a lot of time and effort since 2021 that I can't afford to keep providing freely.  
 Work is continued, to the degree affordable and with a focus on translations, through the help of donations and supporters.  
 Monthly supporters gain the following benefits (based on tier & when available):
-- Polls & requests
-- Translation notes & spotlights (small write-ups expanding upon some terms, culture, and translations)
-- Additional content (pakatube tl, …)
+- Polls
+- Translation notes (expanding upon some terms, culture, and translations)
 
 If you'd like to donate or contribute as a supporter, please check the links at the top of this readme or at the right of the page.
 

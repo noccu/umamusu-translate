@@ -180,6 +180,7 @@ Tokai Teio | Complete | [CatNipHoarder] & [Holo]
 Transcend | Exists | [KevinVG207]
 Twin Turbo | Complete| [Riersa]
 Tamamo Cross | Complete | [LotoDS]
+Verxina | Complete | [LotoDS]
 Vivlos | Complete | [LotoDS]
 Vodka | Complete, Exists | MTL, Anonymous Raccoon
 Yaeno Muteki | Complete | [LotoDS]

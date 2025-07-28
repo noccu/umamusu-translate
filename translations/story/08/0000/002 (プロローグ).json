@@ -1,17 +1,19 @@
 {
-    "version": 4,
-    "bundle": "OYIBGZTYD7KRJCMY3SWKR5ZNPRTRGONN",
+    "version": 6,
+    "bundle": "DWQ3EOQGZQFR56WYQNLGT4RF6MSGUPQQ",
     "type": "story",
     "storyId": "080000002",
     "title": "プロローグ",
-    "humanTl": true,
+    "enTitle": "",
     "text": [
         {
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "さぁ、いよいよ始まりました『アオハル杯』！",
-            "enText": "Now it's time for the Aoharu Hai to begin!",
+            "enText": "Ladies and gentlemen, the Aoharu Hai \nis about to begin!",
             "nextBlock": 2,
+            "origClipLength": 113,
+            "voiceIdx": 0,
             "coloredText": [
                 {
                     "jpText": "アオハル杯",
@@ -25,8 +27,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『アオハル杯』とは、\r\nトゥインクル・シリーズと並行で走る\nもう1つのドラマ――",
-            "enText": "Aoharu Hai — another drama that runs \nparallel to the Twinkle Series.",
+            "enText": "The Aoharu Hai. It was a spectacle that \nwould run alongside the Twinkle Series.",
             "nextBlock": 3,
+            "origClipLength": 97,
+            "voiceIdx": -1,
             "coloredText": [
                 {
                     "jpText": "トゥインクル・シリーズ",
@@ -40,8 +44,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "トレセン学園主催のチーム対抗戦！\r\n自身の実力以上に、チーム力が試されます！",
-            "enText": "A team competition organized by Tracen \nAcademy! Your team's strength will be tested \neven more than your own abilities!",
+            "enText": "This team competition, organized by \nTracen Academy, will test teamwork \nover individual ability!",
             "nextBlock": 4,
+            "origClipLength": 200,
+            "voiceIdx": 1,
             "coloredText": [
                 {
                     "jpText": "トレセン学園",
@@ -55,8 +61,20 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "しかし、これはただのレースではない――！",
-            "enText": "But this isn't just any race —!",
+            "enText": "This, however, wasn't an \nordinary racing event!",
             "nextBlock": 5,
+            "origClipLength": 71,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 50,
+                    "pathId": -753482990496141572
+                },
+                {
+                    "origLen": 60,
+                    "pathId": 4525139476839438029
+                }
+            ],
             "pathId": 8242741477496383508,
             "blockIdx": 4
         },
@@ -64,8 +82,24 @@
             "jpName": "マチカネフクキタル",
             "enName": "Matikanefukukitaru",
             "jpText": "学園の危機を、我々が救わねば！",
-            "enText": "The school is in danger, \nand we must save it!",
+            "enText": "We must save our academy from \nthe crisis it faces!",
             "nextBlock": 6,
+            "origClipLength": 109,
+            "voiceIdx": 2,
+            "animData": [
+                {
+                    "origLen": 122,
+                    "pathId": 1611808993436488632
+                },
+                {
+                    "origLen": 48,
+                    "pathId": 2244347727606573963
+                },
+                {
+                    "origLen": 122,
+                    "pathId": 5846817765241068675
+                }
+            ],
             "pathId": -4423917802430582590,
             "blockIdx": 5
         },
@@ -73,8 +107,28 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "それって、ウララたちが\r\nヒーローになるってこと！？",
-            "enText": "Does that mean that Urara and the \nothers are going to be heroes?",
+            "enText": "Hey, are we going to become heroes?!",
             "nextBlock": 7,
+            "origClipLength": 110,
+            "voiceIdx": 3,
+            "animData": [
+                {
+                    "origLen": 123,
+                    "pathId": -772272796226205863
+                },
+                {
+                    "origLen": 18,
+                    "pathId": -7230924767207431176
+                },
+                {
+                    "origLen": 84,
+                    "pathId": -5841526631729956693
+                },
+                {
+                    "origLen": 126,
+                    "pathId": -3886368154345960382
+                }
+            ],
             "pathId": -6465889474441998883,
             "blockIdx": 6
         },
@@ -82,8 +136,28 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ラ、ライスに、できるかな……？",
-            "enText": "C, Can Rice do it …?",
+            "enText": "I… don't know if I can do it…",
             "nextBlock": 8,
+            "origClipLength": 104,
+            "voiceIdx": 4,
+            "animData": [
+                {
+                    "origLen": 7,
+                    "pathId": 1372843379134671918
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 7068000145712845001
+                },
+                {
+                    "origLen": 126,
+                    "pathId": -3654543340629701661
+                },
+                {
+                    "origLen": 144,
+                    "pathId": 6359008362096041352
+                }
+            ],
             "pathId": 610258460547594980,
             "blockIdx": 7
         },
@@ -91,17 +165,57 @@
             "jpName": "タイキシャトル",
             "enName": "Taiki Shuttle",
             "jpText": "ワタシたちならできマス！\r\n力を合わせて――ファイ！",
-            "enText": "We can do it! Let's work together.",
+            "enText": "We can do it, together! \nGo, team… gooo!",
             "nextBlock": 9,
+            "origClipLength": 176,
+            "voiceIdx": 5,
+            "animData": [
+                {
+                    "origLen": 112,
+                    "pathId": 5632742056496801144
+                },
+                {
+                    "origLen": 112,
+                    "pathId": 6858879727484058699
+                },
+                {
+                    "origLen": 92,
+                    "pathId": 2101717122595577614
+                },
+                {
+                    "origLen": 122,
+                    "pathId": 5014072807888828680
+                }
+            ],
             "pathId": -7775359552627320317,
             "blockIdx": 8
         },
         {
             "jpName": "チームメンバー",
-            "enName": "Team members",
+            "enName": "Team Members",
             "jpText": "オーーーッ！",
-            "enText": "Ooh!",
+            "enText": "Gooo!",
             "nextBlock": 10,
+            "origClipLength": 63,
+            "voiceIdx": 6,
+            "animData": [
+                {
+                    "origLen": 77,
+                    "pathId": 1856004276172256345
+                },
+                {
+                    "origLen": 110,
+                    "pathId": 7673094732084577968
+                },
+                {
+                    "origLen": 55,
+                    "pathId": -9029780160726557404
+                },
+                {
+                    "origLen": 58,
+                    "pathId": -5408622224031913274
+                }
+            ],
             "pathId": -685874745130704732,
             "blockIdx": 9
         },
@@ -111,6 +225,38 @@
             "jpText": "へぇ……。\r\nそれで勝てりゃ世話ないけどね。",
             "enText": "Heh… If that's all it took to \nwin, nobody would struggle.",
             "nextBlock": 11,
+            "origClipLength": 149,
+            "voiceIdx": 7,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -5457701945626716143
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 5958197851368663745
+                },
+                {
+                    "origLen": 50,
+                    "pathId": -749471473028103454
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 3081993971601604145
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -3472130262450582266
+                },
+                {
+                    "origLen": 252,
+                    "pathId": -1678537302824500813
+                },
+                {
+                    "origLen": 237,
+                    "pathId": -1309088422910793510
+                }
+            ],
             "pathId": 771095669549988810,
             "blockIdx": 10
         },
@@ -118,8 +264,28 @@
             "jpName": "ビターグラッセ",
             "enName": "Bitter Glasse",
             "jpText": "うん、つくづく同感！",
-            "enText": "Yeah, I totally agree!",
+            "enText": "Yeah, you said it!",
             "nextBlock": 12,
+            "origClipLength": 71,
+            "voiceIdx": 8,
+            "animData": [
+                {
+                    "origLen": 113,
+                    "pathId": 411469325399340776
+                },
+                {
+                    "origLen": 87,
+                    "pathId": -4956257113575272485
+                },
+                {
+                    "origLen": 50,
+                    "pathId": 594711281943737765
+                },
+                {
+                    "origLen": 15,
+                    "pathId": 5632805251748032085
+                }
+            ],
             "pathId": -5853666937358057325,
             "blockIdx": 11
         },
@@ -127,8 +293,28 @@
             "jpName": "樫本代理",
             "enName": "Acting Chair Kashimoto",
             "jpText": "――貴方たちに、私のチームが倒せますか？",
-            "enText": "— Can you defeat my team?",
+            "enText": "—— Do you people think you \ncan defeat my team?",
             "nextBlock": 13,
+            "origClipLength": 113,
+            "voiceIdx": 9,
+            "animData": [
+                {
+                    "origLen": 13,
+                    "pathId": -3738235279975331938
+                },
+                {
+                    "origLen": 13,
+                    "pathId": -2204019997799677848
+                },
+                {
+                    "origLen": 13,
+                    "pathId": 536728423459163241
+                },
+                {
+                    "origLen": 216,
+                    "pathId": -7943463599407521349
+                }
+            ],
             "pathId": 5678967171428666620,
             "blockIdx": 12
         },
@@ -136,8 +322,16 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『アオハル杯』をめぐる、波乱万丈な\r\nチームの物語が、今、始まる――！",
-            "enText": "The tumultuous team story surrounding \nthe Aoharu Hai begins now —!",
+            "enText": "The tumultuous team story surrounding \nthe Aoharu Hai awaits!",
             "nextBlock": 14,
+            "origClipLength": 90,
+            "voiceIdx": -1,
+            "animData": [
+                {
+                    "origLen": 20,
+                    "pathId": -6858231244535542487
+                }
+            ],
             "pathId": -2301072687115380445,
             "blockIdx": 13
         },
@@ -145,11 +339,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『アオハル杯』をめぐる、波乱万丈な\r\nチームの物語が、今、始まる――！",
-            "enText": "The tumultuous team story surrounding \nthe Aoharu Hai begins now —!",
+            "enText": "The tumultuous team story surrounding \nthe Aoharu Hai awaits!",
             "nextBlock": -1,
+            "origClipLength": 129,
+            "voiceIdx": -1,
             "pathId": -782027027182650334,
             "blockIdx": 14
         }
     ],
-    "modified": 1674857445
+    "humanTl": true,
+    "modified": 1753985161
 }

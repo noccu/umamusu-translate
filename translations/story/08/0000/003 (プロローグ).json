@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "3VFBAI3PDUIEHWZ6I5DBDN6E7WGAOYCZ",
+    "version": 6,
+    "bundle": "WU2JO2336SFQ6EIYLVB7ABQ7YH7KMLPK",
     "type": "story",
     "storyId": "080000003",
     "title": "プロローグ",
+    "enTitle": "",
     "text": [
         {
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "いつかウイニングライブで、\nファンの人に感謝を伝えたい！",
-            "enText": "One day I want to show my fans \nhowmuch I appreciate them \nthrough a winning live!",
+            "enText": "One day, I want to stand on the stage \nof a victory concert, and show my fans \nhow much I love them!",
             "nextBlock": 2,
             "origClipLength": 129,
+            "voiceIdx": 0,
             "pathId": 1770335101353267637,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "センターに立って『ありがとう』って、\n心の底から歌ってみたい！",
-            "enText": "I want to stand in the center of \nthat stage, singing my heart out!",
+            "enText": "I wish I could stand in the center of \nthat stage, singing my heart out!",
             "nextBlock": 3,
             "origClipLength": 172,
+            "voiceIdx": 1,
             "pathId": 8332092356066044406,
             "blockIdx": 2
         },
@@ -29,9 +32,10 @@
             "jpName": "ウマ娘C",
             "enName": "Horsegirl C",
             "jpText": "私だって、いつか――！",
-            "enText": "Some day I'll also be—!",
+            "enText": "Some day… I'll have my chance!",
             "nextBlock": 4,
             "origClipLength": 101,
+            "voiceIdx": 2,
             "pathId": 2355934107860965282,
             "blockIdx": 3
         },
@@ -39,9 +43,10 @@
             "jpName": "ウマ娘",
             "enName": "Horsegirl",
             "jpText": "……ごめん、ごめんねっ……。\nまた私、勝てなかったぁ……っ！",
-            "enText": "… Sorry. I'm so sorry…… \nI couldn't finish in first place again……!",
+            "enText": "…Sorry. I'm so sorry…… \nI couldn't win… again……!",
             "nextBlock": 5,
             "origClipLength": 213,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 52,
@@ -55,9 +60,10 @@
             "jpName": "ライトハロー",
             "enName": "Light Hello",
             "jpText": "……その夢がいつ叶うのかわからなくても。\nウマ娘たちは夢を見る。",
-            "enText": "… Regardless of when or if they will come \ntrue, these horsegirls continue to dream.",
+            "enText": "…Regardless of when, or if, they will \ncome true, all horsegirls harbor their \nown dreams.",
             "nextBlock": 6,
             "origClipLength": 219,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 289,
@@ -75,9 +81,10 @@
             "jpName": "ライトハロー",
             "enName": "Light Hello",
             "jpText": "ステージを煌々と輝かせる\nスポットライトにも照らせない場所はある。",
-            "enText": "The bright spotlights don't lend their \nsparkling glow to every part of the stage. \n \nThere are parts of the stage where the \nbrilliance of the spotlights doesn't reach.",
+            "enText": "The bright spotlights don't lend their \nsparkling glow to every part of the stage.",
             "nextBlock": 7,
             "origClipLength": 265,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 286,
@@ -102,6 +109,7 @@
             "enText": "And I…",
             "nextBlock": 8,
             "origClipLength": 90,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 95,
@@ -122,6 +130,7 @@
             "enText": "A Grand Live revival project…?",
             "nextBlock": 9,
             "origClipLength": 92,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 19,
@@ -143,9 +152,10 @@
             "jpName": "アグネスタキオン",
             "enName": "Agnes Tachyon",
             "jpText": "ふぅン、いいじゃないか！\nライブという要素には検討の余地がある！",
-            "enText": "Hmm, how interesting! The live element \nis worth some consideration!",
+            "enText": "Hmm, well, why not! The live concert \nelement is worth closer analysis!",
             "nextBlock": 10,
             "origClipLength": 195,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 94,
@@ -171,9 +181,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "……私はいただいた指示に従います。",
-            "enText": "… I will execute the instructions received.",
+            "enText": "…I will execute the instructions received.",
             "nextBlock": 11,
             "origClipLength": 86,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 97,
@@ -199,9 +210,10 @@
             "jpName": "サイレンススズカ",
             "enName": "Silence Suzuka",
             "jpText": "…………えっと、私は。",
-            "enText": "…… I, umm…",
+            "enText": "……I, umm…",
             "nextBlock": 12,
             "origClipLength": 82,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 21,
@@ -223,9 +235,10 @@
             "jpName": "サイレンススズカ",
             "enName": "Silence Suzuka",
             "jpText": "私には……わかりません。\nそもそもライブが必要なのか、どうかも。",
-            "enText": "I'm… not really sure. \nDo we even really need a live…?",
+            "enText": "I'm… not really sure. \nDo we even really need concerts…?",
             "nextBlock": 13,
             "origClipLength": 239,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 250,
@@ -243,9 +256,10 @@
             "jpName": "ライトハロー",
             "enName": "Light Hello",
             "jpText": "私は、このグランドライブで\n……想いをつなぎたい。",
-            "enText": "I want to use this Grand Live… to bring \ntogether the feelings of many horsegirls.",
+            "enText": "I'd like this Grand Live… \nto bring people together.",
             "nextBlock": 14,
             "origClipLength": 299,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 174,
@@ -271,9 +285,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "つなげ、照らせ、ひかれ。\n私たちのグランドライブ",
-            "enText": "Connect, Illuminate, Shine. \nOur Grand Live!",
+            "enText": "Link hands & shine bright. \nOur Grand Live!",
             "nextBlock": -1,
             "origClipLength": 251,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 87,
@@ -284,5 +299,6 @@
             "blockIdx": 14
         }
     ],
-    "modified": 1674855357
+    "modified": 1753985245,
+    "humanTl": true
 }

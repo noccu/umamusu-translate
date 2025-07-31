@@ -607,7 +607,7 @@ class MergeWindow:
         fileNumPicker.grid(row=0, column=0)
         fileNum.trace("w", self.evFileNumChange)
         ttk.Separator(viewFrame, orient=tk.HORIZONTAL).pack(fill=tk.X, pady=10)
-        textOrig = text.TextBox(viewFrame, size=(None,3))
+        textOrig = text.TextBox(viewFrame, size=(None,5))
         textOrig.pack(anchor="w")
         textOrig.loadRichText(master.nav.cur_data.get("enText"))
         selectionFrame.pack()
@@ -648,7 +648,7 @@ class MergeWindow:
     def createBlockView(self):
         sep = ttk.Separator(self.viewFrame, orient=tk.HORIZONTAL)
         sep.pack(fill=tk.X, pady=20)
-        textbox = text.TextBox(self.viewFrame, size=(None,3))
+        textbox = text.TextBox(self.viewFrame, size=(None,5))
         textbox.pack(anchor="w")
         textbox.sep = sep
         textbox.bind("<Destroy>", lambda e: e.widget.sep.destroy())

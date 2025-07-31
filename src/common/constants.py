@@ -22,6 +22,6 @@ SUPPORTED_TYPES = [
     "mdb",
 ]  # Update indexing on next line
 TARGET_TYPES = SUPPORTED_TYPES[:-2]  # Classic asset types we want to read/write.
-NAMES_BLACKLIST = ["<username>", "", "モノローグ"]  # Special-use game names, don't touch
+NAMES_BLACKLIST = ["<username>", "", "モノローグ", "合成音声"]  # Special-use game names, don't touch
 
 TRANSLATION_FOLDER = Path("translations")

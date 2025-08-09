@@ -16,8 +16,12 @@ ASSET_ENDPOINT = HOSTNAME + "/Windows/assetbundles/{0:.2}/{0}"
 MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"
 
 META_DB = sqlite3.connect(const.GAME_META_FILE, autocommit=True)
+SESSION = None
 
 def download(file, t: str = "story"):
+    global SESSION
+    if SESSION is None:
+        SESSION = requests.Session()
     if t in ("sound", "movie", "font"):
         url = GENERIC_ENDPOINT.format(file)
     elif t.startswith("manifest"):
@@ -25,7 +29,7 @@ def download(file, t: str = "story"):
     else:
         url = ASSET_ENDPOINT.format(file)
     logger.conditionalDetail(f"Downloading {file}", f"Downloading {file} from {url}", logger.INFO)
-    return requests.get(url)
+    return SESSION.get(url)
 
 
 def save(bundle: GameBundle, args):
@@ -96,21 +100,26 @@ def parseArgs(args=None):
 
 def main(args: patch.Args = None):
     args = args or parseArgs(args)
-    if args.src:
-        restore(args.src, args)
-    else:
-        processed = 0
+    try:
+        if args.src:
+            restore(args.src, args)
+        else:
+            processed = 0
 
-        def update(f: Future):
-            nonlocal processed
-            processed += f.result()
+            def update(f: Future):
+                nonlocal processed
+                processed += f.result()
 
-        with ThreadPoolExecutor() as pool:
-            for type in const.TARGET_TYPES if args.uninstall else (args.type,):
-                files = patch.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
-                for file in files:
-                    pool.submit(restore, file, args).add_done_callback(update)
-        print(f"Restored {processed} files.")
+            with ThreadPoolExecutor() as pool:
+                for type in const.TARGET_TYPES if args.uninstall else (args.type,):
+                    files = patch.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
+                    for file in files:
+                        pool.submit(restore, file, args).add_done_callback(update)
+            print(f"Restored {processed} files.")
+    finally:
+        if SESSION:
+            SESSION.close()
+        META_DB.close()
 
     if args.uninstall:
         from common.utils import getUmaInstallDir

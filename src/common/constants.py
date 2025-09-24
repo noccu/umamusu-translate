@@ -10,7 +10,7 @@ if IS_WIN:
     GAME_META_FILE = GAME_ROOT.joinpath("meta")
     GAME_MASTER_FILE = GAME_ROOT.joinpath("master", "master.mdb")
 else:
-    _none:Path = None  # Fuckery to gaslight IDE into common scenario
+    _none: Path = None  # Fuckery to gaslight IDE into common scenario
     GAME_ROOT = GAME_ASSET_ROOT = GAME_META_FILE = GAME_MASTER_FILE = _none
 SUPPORTED_TYPES = [
     "story",
@@ -25,3 +25,8 @@ TARGET_TYPES = SUPPORTED_TYPES[:-2]  # Classic asset types we want to read/write
 NAMES_BLACKLIST = ["<username>", "", "モノローグ", "合成音声"]  # Special-use game names, don't touch
 
 TRANSLATION_FOLDER = Path("translations")
+
+
+def set_meta(path: str | Path):
+    global GAME_META_FILE
+    GAME_META_FILE = Path(path)

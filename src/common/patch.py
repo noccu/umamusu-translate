@@ -10,7 +10,7 @@ from functools import cache
 import regex
 
 from . import utils, logger
-from .constants import GAME_ASSET_ROOT, TARGET_TYPES, TRANSLATION_FOLDER
+from .constants import GAME_ASSET_ROOT, TARGET_TYPES, TRANSLATION_FOLDER, GAME_META_FILE, set_meta
 from .types import StoryId
 
 
@@ -161,6 +161,7 @@ class Args(argparse.ArgumentParser):
             )
             self.add_argument("-src", type=Path, default=GAME_ASSET_ROOT)
             self.add_argument("-dst", type=Path, default=Path("dat/").resolve())
+            self.add_argument("-meta", type=Path, default=None)
         elif types:
             self.add_argument(
                 "-t",
@@ -196,6 +197,9 @@ class Args(argparse.ArgumentParser):
         if not Args.loggerLevelSet:
             logger.levelFromArgs(a)
             Args.loggerLevelSet = True
+        meta = getattr(a, "meta", None)
+        if meta:
+            set_meta(meta)
         return a
 
     @classmethod

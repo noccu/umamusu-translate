@@ -202,7 +202,7 @@ class TextBoxEditable(TextBox):
     def format_text(self, event):
         if event.keysym == "d":
             self.rawMode = not self.rawMode
-            self.loadRichText(normalize(self.toRichText()))
+            self.loadRichText(normalize(self.toRichText(), tkOnly=True))
             return
         if not self.tag_ranges("sel"):
             self.master.event_generate("<<Log>>", data="No selection to format.")

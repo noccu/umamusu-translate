@@ -167,7 +167,7 @@ class FileManager:
 
         if "enName" in cur_data:
             cur_data["enName"] = text.normalize(self.master.speakerEn.get())
-        cur_data["enText"] = text.for_storage(cur_file, self.master.textBoxEn.toRichText())
+        cur_data["enText"] = text.for_storage(cur_file, self.master.textBoxEn.toRichText(), tkOnly=True)
         if "choices" in cur_data:
             self.master.choices.saveChoices()
 

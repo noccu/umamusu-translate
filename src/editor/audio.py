@@ -7,7 +7,7 @@ from common import patch, constants as const
 from common.types import GameBundle
 
 if const.IS_WIN:
-    import sqlite3
+    import apsw
     import wave
 
     import pyaudio
@@ -65,7 +65,7 @@ class AudioPlayer:
 
     def __init__(self, master: "Editor") -> None:
         self.pyaud = pyaudio.PyAudio()
-        self._db = sqlite3.connect(const.GAME_META_FILE)
+        self._db = apsw.Connection(f"file:{str(const.GAME_META_FILE)}?hexkey={const.DB_KEY}", apsw.SQLITE_OPEN_URI | apsw.SQLITE_OPEN_READONLY)
         self._restoreArgs = restore.parseArgs([])
         self.master = master
 

@@ -8,7 +8,7 @@ import regex
 import UnityPy
 
 from . import utils
-from .constants import GAME_ASSET_ROOT
+from .constants import GAME_ASSET_ROOT, BUNDLE_BASE_KEY
 
 if TYPE_CHECKING:
     from UnityPy.files import ObjectReader
@@ -337,9 +337,10 @@ class TranslationFile:
 
 
 class GameBundle:
+    # Decryption based on code and work by croakfang
     editMark = b"\x08\x04"
 
-    def __init__(self, path, load=True, bType="story") -> None:
+    def __init__(self, path, load=True, bType="story", bundle_key:int=0) -> None:
         self.bundlePath = Path(path)
         self.bundleName = self.bundlePath.stem
         self.bundleType = bType
@@ -348,6 +349,7 @@ class GameBundle:
         self._autoloaded = load
         self._patchedState = None
         self.patchedTime = None
+        self.bundle_key = bundle_key # encryption key from meta
 
         if load:
             self.load()
@@ -397,13 +399,37 @@ class GameBundle:
         # UnityPy does not error and loads empty files
         if not self.exists:
             raise FileNotFoundError
-
-        self.data = UnityPy.load(str(self.bundlePath))
+        # We'll just assume nobody will use this to read massive files. Hehe.
+        if self.bundle_key == 0:
+            self.data = UnityPy.load(str(self.bundlePath))
+        else:
+            file_data = self.bundlePath.read_bytes()
+            if len(file_data) > 256:
+                file_data = self._decrypt(file_data)
+            self.data = UnityPy.load(file_data)
         if self._autoloaded:
             self.readPatchState()
         self.rootAsset: "ObjectReader" = next(iter(self.data.container.values())).get_obj()
         self.assets: dict[str, "ObjectReader"] = self.rootAsset.assets_file.files
         return self
+
+    def _decrypt(self, data:bytes):
+        final_key = self._create_final_key()
+        decrypted_data = bytearray(data)
+        for i in range(256, len(decrypted_data)):
+            decrypted_data[i] ^= final_key[i % len(final_key)]
+        return bytes(decrypted_data)
+
+    def _create_final_key(self):
+        base_key = bytes.fromhex(BUNDLE_BASE_KEY)
+        bundle_key = self.bundle_key.to_bytes(8, byteorder="little")
+        base_len = len(base_key)
+        final_key = bytearray(base_len * 8)
+        for i, b in enumerate(base_key):
+            baseOffset = i << 3 # i * 8
+            for j, k in enumerate(bundle_key):
+                final_key[baseOffset + j] = b ^ k
+        return final_key
 
     def save(self, dstFolder: Path = None, dstName: str = None):
         if not self.data:

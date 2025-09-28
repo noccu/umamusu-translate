@@ -26,6 +26,9 @@ NAMES_BLACKLIST = ["<username>", "", "モノローグ", "合成音声"]  # Speci
 
 TRANSLATION_FOLDER = Path("translations")
 
+# Keys found by croakfang
+DB_KEY = "9c2bab97bcf8c0c4f1a9ea7881a213f6c9ebf9d8d4c6a8e43ce5a259bde7e9fd"
+BUNDLE_BASE_KEY = "532b4631e4a7b9473e7cfb"
 
 def set_meta(path: str | Path):
     global GAME_META_FILE

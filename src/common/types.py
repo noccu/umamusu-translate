@@ -422,7 +422,7 @@ class GameBundle:
 
     def _create_final_key(self):
         base_key = bytes.fromhex(BUNDLE_BASE_KEY)
-        bundle_key = self.bundle_key.to_bytes(8, byteorder="little")
+        bundle_key = self.bundle_key.to_bytes(8, byteorder="little", signed=True)
         base_len = len(base_key)
         final_key = bytearray(base_len * 8)
         for i, b in enumerate(base_key):

@@ -435,7 +435,7 @@ class GameBundle:
         if not self.data:
             return
 
-        b = self.data.file.save()
+        b = self.data.file.save(packer="lz4")
         if self.bundle_key != 0:
             b = self._decrypt(b) # XOR-based, so works both ways
         b += self.patchData

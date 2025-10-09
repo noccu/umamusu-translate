@@ -5,7 +5,11 @@ IS_WIN = osname == "nt"
 DMM_CONFIG = Path(environ["APPDATA"], "dmmgameplayer5", "dmmgame.cnf") if IS_WIN else None
 
 if IS_WIN:
-    GAME_ROOT = Path(environ["LOCALAPPDATA"], "..", "LocalLow", "Cygames", "umamusume").resolve()
+    GAME_ROOT = environ.get("UMA_DATA_DIR")
+    if GAME_ROOT:
+        GAME_ROOT = Path(GAME_ROOT)
+    else:
+        GAME_ROOT = Path(environ["LOCALAPPDATA"], "..", "LocalLow", "Cygames", "umamusume").resolve()
     GAME_ASSET_ROOT = GAME_ROOT.joinpath("dat")
     GAME_META_FILE = GAME_ROOT.joinpath("meta")
     GAME_MASTER_FILE = GAME_ROOT.joinpath("master", "master.mdb")

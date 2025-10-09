@@ -11,7 +11,7 @@ import filecopy as backup
 import restore
 from common import patch, logger
 from common.types import GameBundle, TranslationFile
-
+import apsw
 
 class ConfigError(Exception):
     pass
@@ -63,7 +63,7 @@ class PatchManager:
     def start(self):
         startTime = now()
         print(
-            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} " 
+            f"Importing group {self.args.group or 'all'}, id {self.args.id or 'all'}, idx {self.args.idx or 'all'} "
             f"from translations/{self.args.type} to {self.args.dst}"
         )
         files = patch.searchFiles(
@@ -114,7 +114,13 @@ class PatchManager:
             raise TranslationFileError(f"Couldn't load translation data from {path}.")
 
     def loadBundle(self, tlFile: TranslationFile):
-        bundle = GameBundle.fromName(tlFile.bundle, load=False, bType=tlFile.type)
+        mode = apsw.SQLITE_OPEN_URI | apsw.SQLITE_OPEN_READONLY
+        db = apsw.Connection(f"file:{str(const.GAME_META_FILE)}?hexkey={const.DB_KEY}", mode)
+        res = db.execute(f"SELECT e from a where h = '{tlFile.bundle}'").fetchone()
+        db.close()
+        if res is None:
+            logger.error(f"Couldn't find bundle key: {tlFile.bundle}")
+        bundle = GameBundle.fromName(tlFile.bundle, load=False, bType=tlFile.type, bundle_key=res[0])
         if not bundle.exists:
             logger.info(f"Asset {tlFile.bundle} doesn't exist, attempting download. (from {tlFile.name})")
             restore.save(bundle, self.restoreArgs) # should be synchronous
@@ -289,8 +295,8 @@ class StoryPatcher:
         try:
             self.assetData["TypewriteCountPerSecond"] = self.manager.args.fps * 3
             self.assetData["Length"] = reduce(
-                lambda x, b: x + b["BlockLength"], 
-                self.assetData["BlockList"], 
+                lambda x, b: x + b["BlockLength"],
+                self.assetData["BlockList"],
                 0
             )
             self.save()

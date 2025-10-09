@@ -1,5 +1,5 @@
 import shutil
-import sqlite3
+import apsw
 from argparse import SUPPRESS
 from concurrent.futures import Future, ThreadPoolExecutor
 from os.path import isfile, join, realpath
@@ -15,7 +15,7 @@ GENERIC_ENDPOINT = HOSTNAME + "/Generic/{0:.2}/{0}"
 ASSET_ENDPOINT = HOSTNAME + "/Windows/assetbundles/{0:.2}/{0}"
 MANIFEST_ENDPOINT = HOSTNAME + "/Manifest/{0:.2}/{0}"
 
-META_DB = sqlite3.connect(const.GAME_META_FILE, autocommit=True)
+META_DB = apsw.Connection(f"file:{str(const.GAME_META_FILE)}?hexkey={const.DB_KEY}", apsw.SQLITE_OPEN_URI | apsw.SQLITE_OPEN_READONLY)
 SESSION = None
 
 def download(file, t: str = "story"):

@@ -1,10 +1,10 @@
 import shutil
-import sqlite3
+import apsw
 from os import makedirs, path
 from pathlib import PurePath
 
 from common import patch, utils, logger
-from common.constants import GAME_META_FILE, TARGET_TYPES
+import common.constants as const
 from common.types import GameBundle, TranslationFile
 
 
@@ -59,7 +59,8 @@ def buildSqlStmt(args):
 
 
 def getFiles(args):
-    with sqlite3.connect(GAME_META_FILE) as db:
+    mode = apsw.SQLITE_OPEN_URI | apsw.SQLITE_OPEN_READONLY
+    with apsw.Connection(f"file:{str(const.GAME_META_FILE)}?hexkey={const.DB_KEY}", mode) as db:
         stmt = buildSqlStmt(args)
         if not stmt:
             raise SystemExit("Invalid statement. No args given? Pass -h for usage")
@@ -69,7 +70,7 @@ def getFiles(args):
 
 def backup(args):
     print("Backing up non-patched & extracted files...")
-    for type in TARGET_TYPES if args.backup is True else [args.backup]:
+    for type in const.TARGET_TYPES if args.backup is True else [args.backup]:
         files = patch.searchFiles(type, args.group, args.id, args.idx, changed=args.changed)
         for file in files:
             file = TranslationFile(file)
@@ -89,7 +90,8 @@ def removeOldFiles(args):
     isHash = args.remove_old == "hash"
     files = patch.searchFiles(args.dst, None, None, jsonOnly=False)
     print(f"Found {len(files)} files in {args.dst}")
-    with sqlite3.connect(GAME_META_FILE) as db:
+    mode = apsw.SQLITE_OPEN_URI | apsw.SQLITE_OPEN_READONLY
+    with apsw.Connection(f"file:{str(const.GAME_META_FILE)}?hexkey={const.DB_KEY}", mode) as db:
         for file in files:
             q = f"h = '{file.name}'" if isHash else f"n like '%{file.name}'"
             if not db.execute(f"select h from a where {q}").fetchone():
@@ -144,7 +146,7 @@ def copy(data, args):
 
 
 def parseArgs(args=None):
-    ap = patch.Args("Copy files for backup or testing", types=[*TARGET_TYPES, "ruby"])
+    ap = patch.Args("Copy files for backup or testing", types=[*const.TARGET_TYPES, "ruby"])
     ap.add_argument("-c", "--hash", "--checksum", nargs="+", help="Hash/asset filename")
     ap.add_argument("-p", "--path", help="Unity filepath wildcard")
     ap.add_argument(

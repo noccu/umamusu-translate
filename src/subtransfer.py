@@ -165,11 +165,11 @@ class BasicSubProcessor:
         else:
             while (
                 len(subLine.text) == 0
-                or re.match(r"（.+）$|(?:[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx))
+                or re.match(r"（.+）$|(?>[…。―ー？！、　]*(?:(?:げほ|ごほ|[はくふワあアえ]*)[ぁァッぅっ]*)*)+$", self.getJp(idx))
                 and not (
                     len(subLine.text) < 15
-                    or re.match(
-                        r"[(<*)].+[>*)]$|^(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$",
+                    or re.search(
+                        r"\*|[(<*)].+[>*)]$|^(?:\W*[gnfh]*[eao]*[gfh]*\W*)+$",
                         subLine.text,
                         flags=re.IGNORECASE,
                     )

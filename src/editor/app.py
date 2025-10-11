@@ -41,7 +41,7 @@ tk.Misc._substitute = _sub
 
 class Options:
     def __init__(self) -> None:
-        self.markHuman = tk.BooleanVar()
+        self.markHuman = tk.BooleanVar(value=True)
         self.saveOnBlockChange = tk.BooleanVar()
         self.skip_translated = tk.BooleanVar()
         self.alwaysOnTop = tk.BooleanVar()
@@ -230,6 +230,7 @@ class Editor:
         self.root.mainloop()
 
     def saveFile(self, event=None):
+        self._evProcessText(wholeFile=True)
         self.fileMan.saveFile(self.nav, saveAll=event and (event.state & 0x0001))
 
     def onClose(self, event=None):

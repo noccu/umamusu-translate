@@ -275,13 +275,13 @@ class TranslationFile:
         self.fileExists = True  # should error if it does not
         self.init()
 
-    def save(self):
+    def save(self, update=True):
         if self.fileExists and self._snapshot == json.dumps(
             self.data, ensure_ascii=False, default=utils._to_json
         ):
             return
         assert self.file
-        if 3 < self.version < self.ver_offset_mdb:
+        if update and 3 < self.version < self.ver_offset_mdb:
             self.data["modified"] = utils.currentTimestamp()
         utils.writeJson(self.file, self.data)
 

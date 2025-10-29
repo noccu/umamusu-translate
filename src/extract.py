@@ -420,6 +420,7 @@ def main(_args: patch.Args = None):
         converToPlainText(args)
         return
 
+    restore.META_DB.execute("BEGIN")
     nTotal = nSuccess = nFailed = nSkipped = 0
     if args.update is not None:
         print(f"{'Upgrading' if args.upgrade else 'Updating'} exports...")
@@ -463,6 +464,7 @@ def main(_args: patch.Args = None):
                 nSkipped -= exportAsset(bundle, path, bundle_key=bundle_key)
             except Exception:
                 nFailed += 1
+    restore.META_DB.execute("COMMIT")
     nSuccess = nTotal - nSkipped - nFailed
     print(f"Processing finished. Extracted: {nSuccess}, Skipped: {nSkipped}, Errors: {nFailed}")
 

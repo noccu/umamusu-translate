@@ -100,6 +100,7 @@ def parseArgs(args=None):
 
 def main(args: patch.Args = None):
     args = args or parseArgs(args)
+    META_DB.execute("BEGIN")
     try:
         if args.src:
             restore(args.src, args)
@@ -119,6 +120,7 @@ def main(args: patch.Args = None):
     finally:
         if SESSION:
             SESSION.close()
+        META_DB.execute("COMMIT")
         META_DB.close()
 
     if args.uninstall:

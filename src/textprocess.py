@@ -83,7 +83,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
                 lineFits = pureLen[-1] < lineLen
             else:
                 # -2 = -1 for spaces (common), -1 for <= comparison
-                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen  
+                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen
             if isTag or lineFits or len(m[0]) < 2 or len(lines[-1]) == 0:
                 lines[-1] += m.group(0)
             else:
@@ -165,8 +165,8 @@ def calcLineLen(file: TranslationFile):
     lineLength = file.data.get("lineLength")
     if lineLength in (None, -1, 0):
         if file.type == "lyrics":
-            lineLength = 57
-        if file.type == "preview":
+            lineLength = 67
+        elif file.type == "preview":
             lineLength = 41
         elif (file.type == "race") or (
             file.type == "story"

@@ -50,6 +50,7 @@ class TextBox(tk.Text):
     DEFAULT_HEIGHT = 4
     SUPPORTED_TAGS = ("color", "b", "i", "size")
     TAG_RE = r"<(/?)((" f"(?:{'|'.join(SUPPORTED_TAGS)})" r"+)=?([#a-z\d{}]+)?)>"
+    HACHIMI_FORMAT_RE = r"^\$\(((\w+)(?: ([^\) ]+))?)\)"
 
     # todo: maybe move color to post_init and pass through init itself to tk
     def __init__(self, parent, size: tuple[int] = (None, None), editable:bool = False, font: fonts.Font = None, **kwargs) -> None:
@@ -70,6 +71,7 @@ class TextBox(tk.Text):
         self.font_bold = fonts.createFrom(self, font, bold=True, suffix="b")
         self.tag_config("b", font=self.font_bold)
         self.tag_config("i", font=self.font_italic)
+        self.tag_config("nb", background="#91BABD")
         self.color = ColorManager(self)
         self.bind("<Alt-Right>", self.copy_block)
 
@@ -106,9 +108,22 @@ class TextBox(tk.Text):
                     newSizeFont = fonts.createFrom(self, self.font, newSize)
                     self.tag_config(fullTag, font=newSizeFont)
             offset += len(m[0])
+        # Repeat for Hachimi formatting templates.
+        offset = 0
+        for m in re.finditer(TextBox.HACHIMI_FORMAT_RE, text, flags=re.IGNORECASE):
+            full_tag, name, val = m.groups()
+            # Hachimi tags always apply to the whole text.
+            tag = {"name": full_tag, "value": val, "start": m.start() - offset, "end": len(text) - offset}
+            if name == "scale":
+                new_size = round(self.font.cget("size") * (int(val) / 100))
+                new_size_font = fonts.createFrom(self, self.font, new_size)
+                self.tag_config(full_tag, font=new_size_font)
+            offset += len(m[0])
+            tagList.append(tag)
+
         tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         # Add the cleaned text
-        setText(self, re.sub(TextBox.TAG_RE, "", text, flags=re.IGNORECASE), append, tag)
+        setText(self, re.sub(f"{TextBox.TAG_RE}|{TextBox.HACHIMI_FORMAT_RE}", "", text, flags=re.IGNORECASE), append, tag)
         # Apply tags
         for toTag in tagList:
             self.tag_add(toTag["name"], f"{tagBase}+{toTag['start']}c", f"{tagBase}+{toTag['end']}c")
@@ -121,15 +136,23 @@ class TextBox(tk.Text):
         offset = 0
         tagList = list()
         for tag in self.tag_names():
-            tagBaseName = tag.split("=")[0]
-            if tagBaseName not in ("i", "b", "color", "size"):
+            tagBaseName = re.split(r"=| ", tag)[0]
+            tag_fmt_start = None
+            tag_fmt_end = None
+            if tagBaseName in ("nb", "scale", "vo", "ho", "anchor"):
+                tag_fmt_start = f"$({tag})"
+            elif tagBaseName in ("i", "b", "color", "size"):
+                tag_fmt_start = f"<{tag}>"
+                tag_fmt_end = f"</{tagBaseName}>"
+            else:
                 continue
             # ranges = self.tag_ranges(tag)
             for tagStart, tagEnd in TextBox.deinterleaveTagRange(self.tag_ranges(tag)):
                 if self.compare(tagStart, "<", start) or self.compare(tagEnd, ">", end):
                     continue
-                tagList.append((text_count(self, start, tagStart, "-chars"), f"<{tag}>"))
-                tagList.append((text_count(self, start, tagEnd, "-chars"), f"</{tagBaseName}>"))
+                tagList.append((text_count(self, start, tagStart, "-chars"), tag_fmt_start))
+                if tag_fmt_end:
+                    tagList.append((text_count(self, start, tagEnd, "-chars"), tag_fmt_end))
         tagList.sort(key=lambda x: x[0])  # sort by start idx
         for idx, tag in tagList:
             text.insert(idx + offset, tag)

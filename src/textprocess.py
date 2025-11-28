@@ -16,7 +16,7 @@ def processText(file: TranslationFile, text: str, opts: dict):
     if opts.get("redoNewlines"):
         text = cleannewLines(text)
     if opts.get("replaceMode"):
-        text = replace(text, opts["replaceMode"])
+        text = replace(text, opts["replaceMode"], opts.get("extrarep", False))
     if opts.get("lineLength") is not None and opts.get("lineLength") != 0:
         text = adjustLength(file, text, opts)
 
@@ -53,7 +53,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     # Calculate an estimation of raw characters from size-based length
     # Adjusted by font size
     fontsize = file.data.get("textSize", 24)
-    sizeMod = 1.07 * (fontsize / 24)**0.6
+    sizeMod = 1.07 * (fontsize / 24) ** 0.6
     lineLen = int((lineLen * (1.135 * lineLen**0.05) + 1) * sizeMod)
     pureText = RE_TAGS.sub("", text)
 
@@ -139,7 +139,7 @@ def getNewline(tlFile: TranslationFile):
     return "\\n" if tlFile.escapeNewline else "\n"
 
 
-def replace(text: str, mode):
+def replace(text: str, mode, extra_rep=False):
     if mode == "none":
         return text
 
@@ -154,6 +154,17 @@ def replace(text: str, mode):
         if rep.get("disabled", False):
             continue
         text = rep["re"].sub(rep["repl"], text)
+
+    # - UmaTL standard -
+    if extra_rep:
+        # Fix inconsistent case in stutters.
+        text = re.sub(
+            r"([A-Z])(?:-\1)+",
+            lambda m: "-".join(m[1] * int(len(m[0][1:]) / 2 + 1)),
+            text,
+            flags=re.IGNORECASE,
+        )
+
     return text
 
 
@@ -215,6 +226,11 @@ def parseArgs(args=None):
         choices=["all", "limit", "none"],
         default="limit",
         help="Mode/aggressiveness of replacements",
+    )
+    ap.add_argument(
+        "-extrarep",
+        action="store_true",
+        help="Do extra processing. For special cases, based on UmaTL standards.",
     )
     ap.add_argument(
         "-fsize",

@@ -11,7 +11,7 @@ if const.IS_WIN:
     import wave
 
     import pyaudio
-    from PyCriCodecs import AWB, HCA
+    from PyCriCodecs import AWB, HCA, ACB
 
     import restore
 
@@ -61,11 +61,12 @@ class AudioPlayer:
     subkey = None
     outStreams: list[pyaudio.PyAudio.Stream] = list()
     wavFiles: list[wave.Wave_read] = list()
-    subFiles = None
+    subFiles: dict[int, bytes] | None = None
 
     def __init__(self, master: "Editor") -> None:
         self.pyaud = pyaudio.PyAudio()
         self._db = apsw.Connection(f"file:{str(const.GAME_META_FILE)}?hexkey={const.DB_KEY}", apsw.SQLITE_OPEN_URI | apsw.SQLITE_OPEN_READONLY)
+        self._mdb = apsw.Connection(str(const.GAME_MASTER_FILE), apsw.SQLITE_OPEN_READONLY)
         self._restoreArgs = restore.parseArgs([])
         self.master = master
 
@@ -88,13 +89,13 @@ class AudioPlayer:
         if reloaded := self.curPlaying[0] != storyId:
             if sType == "home":
                 # sound/c/snd_voi_story_00001_02_1054001.acb
-                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.awb' ESCAPE '\'"
+                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.a_b' ORDER BY n ESCAPE '\'"
             elif sType == "lyrics":
-                stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.awb'"
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.a_b' ORDER BY n"
             else:
-                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.awb'"
-            h = self._db.execute(stmt).fetchone()
-            if h is None:
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.a_b' ORDER BY n"
+            hashes = self._db.execute(stmt).fetchall()
+            if hashes is None:
                 if sType == "story":
                     idx = int(storyId.idx)
                     if idx > 4 and storyId.group != "06":
@@ -104,23 +105,30 @@ class AudioPlayer:
                         return
                 self.master.status.log(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
                 return
-            asset = GameBundle.fromName(h[0], load=False)
-            asset.bundleType = "sound"
-            if not asset.exists:
-                restore.save(asset, self._restoreArgs)
+
+            (acb_hash,), (awb_hash,) = hashes
+            acb_asset = GameBundle.fromName(acb_hash, load=False)
+            acb_asset.bundleType = "sound"
+            if not acb_asset.exists:
+                restore.save(acb_asset, self._restoreArgs)
+            awb_asset = GameBundle.fromName(awb_hash, load=False)
+            awb_asset.bundleType = "sound"
+            if not awb_asset.exists:
+                restore.save(awb_asset, self._restoreArgs)
             self.wavFiles.clear()
-            self.load(str(asset.bundlePath))
+            self.load(str(acb_asset.bundlePath), str(awb_asset.bundlePath))
         # New subfile/time
         if voice.timeBased and reloaded:  # lyrics, add all tracks
-            for file in self.subFiles:
+            for file in self.subFiles.values():
                 self.wavFiles.append(self.decodeAudio(file))
         elif not voice.timeBased and (
-            reloaded or self.curPlaying[1] != voice.idx
+            reloaded or self.curPlaying[1].idx != voice.idx
         ):  # most things, add requested track
-            if voice.idx > len(self.subFiles):
+            try:
+                audData = self.decodeAudio(self.subFiles[voice.idx])
+            except KeyError:
                 self.master.status.log("Index out of range")
                 return
-            audData = self.decodeAudio(self.subFiles[voice.idx])
             if self.wavFiles:
                 self.wavFiles[0] = audData
             else:
@@ -128,11 +136,20 @@ class AudioPlayer:
         self.curPlaying = (storyId, voice)
         self._playAudio(voice)
 
-    def load(self, path: str):
+    def load(self, acb_path:str, awb_path: str):
         """Loads the main audio container at path"""
-        awbFile = AWB(path)
-        # get by idx method seems to corrupt half the files??
-        self.subFiles = [f for f in awbFile.getfiles()]
+        # Game uses cue sheets, matched to ACB data. This doesn't always map linearly to AWB tracks.
+        # We assume ACBs map to a single AWB.
+        acb_file = ACB(acb_path)
+        awbFile = AWB(awb_path)
+        # getfile_atindex seems to corrupt half the files. The method works differently
+        # and returns different data (likely broken), so we work around that.
+        sub_files = list(awbFile.getfiles())
+        #* Int-indexed dict
+        self.subFiles = {
+            cue_entry["CueId"][1]: sub_files[cue_entry["ReferenceIndex"][1]]
+            for cue_entry in acb_file.payload[0]["CueTable"]
+        }
         self.subkey = awbFile.subkey
         awbFile.stream.close()
 
@@ -223,3 +240,6 @@ class AudioPlayer:
         sType = file.type or "story"
         self.play(patch.StoryId.parse(sType, storyId), voice, sType)
         return "break"
+
+# ACB tries to load the linked or embedded AWB and fails. Turn it off.
+ACB.load_awb = lambda *_: None

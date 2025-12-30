@@ -331,7 +331,7 @@ def normalize(text: str, newline: str = "\n", tkOnly = False):
     if tkOnly:
         return text.rstrip("\n")
     else:
-        return f" {newline}".join([line.strip() for line in text.strip().split("\n")])
+        return newline.join([line.strip() for line in text.strip().split("\n")])
 
 
 def getText(widget: TkDisplaysText):

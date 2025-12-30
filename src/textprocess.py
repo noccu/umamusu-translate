@@ -184,8 +184,8 @@ def calcLineLen(file: TranslationFile):
             and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")
         ):
             lineLength = 48
-        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
-            lineLength = 30
+        elif file.file.parent.name == "character_system_text":
+            lineLength = 25
         else:
             lineLength = 34
     LL_CACHE = file, lineLength

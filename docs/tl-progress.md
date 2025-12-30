@@ -114,6 +114,7 @@ Daitaku Helios | Complete | [LotoDS]
 Daiwa Scarlet | Complete | [XiantheMiguel] (commissioned by AhriParty)
 Daiichi Ruby | Complete | [Riersa]
 Dream Journey | Complete | [LotoDS]
+Duramente | Complete | [LotoDS]
 Durandal | Complete | [LotoDS]
 Eishin Flash | Complete, In progress, Stalled | MTL, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | [UmaTL] (noccu)☆

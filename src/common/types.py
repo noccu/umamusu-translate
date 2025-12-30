@@ -126,7 +126,7 @@ class TranslationFile:
         def __init__(self, root: "TranslationFile", data=None) -> None:
             self.root = root
             self.map = None
-            if not data:
+            if data is None:
                 data = root.textBlocks
             self.data = self.toInterchange(data)
 
@@ -142,12 +142,19 @@ class TranslationFile:
                 raise NotImplementedError
 
         def set(self, key, val, idx: int = None):
-            if isinstance(key, int) and not idx or idx == key:
+            if isinstance(key, int) and idx in (None, key):
                 self.data[key] = val
-            if idx:
+            elif idx:
                 self.data[idx][key] = val
-            elif self.map:
-                self.map[key]["enText"] = val
+            elif self.map is not None:
+                if key not in self.map:
+                    self.data.append({"jpText": key, "enText":val})
+                    self.map[key] = self.data[-1]
+                else:
+                    self.map[key]["jpText"] = key
+                    self.map[key]["enText"] = val
+            elif key is None:
+                self.data.append(val)
             else:
                 raise LookupError(f"No index provided for list-format file {self.root.name}")
 
@@ -174,7 +181,7 @@ class TranslationFile:
             return next((x for x in self.data if x.get(key) == val), None)
 
         def toInterchange(self, data=None) -> list[dict]:
-            data = data or self.data
+            data = self.data if data is None else data
             self._nativeData = data  # todo: change the whole system
             if isinstance(data, dict):
                 self.map = dict()
@@ -186,7 +193,7 @@ class TranslationFile:
             return data
 
         def toNative(self, data=None):
-            data = data or self.data
+            data = self.data if data is None else data
             if (
                 self.root.version == -2 or self.root.version > self.root.ver_offset_mdb
             ) and isinstance(data, list):
@@ -316,9 +323,10 @@ class TranslationFile:
             self.snapshot()
 
     @classmethod
-    def fromData(cls, data, snapshot=False):
+    def fromData(cls, data, file_path:Path|None = None, snapshot=False):
         c = cls(load=False)
         c.data = {"version": cls.latestVersion, **data}
+        c.file = file_path or Path("tl_file_dump.json")
         c.init(snapshot)
         return c
 

@@ -16,7 +16,7 @@ def processText(file: TranslationFile, text: str, opts: dict):
     if opts.get("redoNewlines"):
         text = cleannewLines(text)
     if opts.get("replaceMode"):
-        text = replace(text, opts["replaceMode"])
+        text = replace(text, opts["replaceMode"], opts.get("extrarep", False))
     if opts.get("lineLength") is not None and opts.get("lineLength") != 0:
         text = adjustLength(file, text, opts)
 
@@ -53,7 +53,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
     # Calculate an estimation of raw characters from size-based length
     # Adjusted by font size
     fontsize = file.data.get("textSize", 24)
-    sizeMod = 1.07 * (fontsize / 24)**0.6
+    sizeMod = 1.07 * (fontsize / 24) ** 0.6
     lineLen = int((lineLen * (1.135 * lineLen**0.05) + 1) * sizeMod)
     pureText = RE_TAGS.sub("", text)
 
@@ -83,7 +83,7 @@ def adjustLength(file: TranslationFile, text: str, opts, **overrides):
                 lineFits = pureLen[-1] < lineLen
             else:
                 # -2 = -1 for spaces (common), -1 for <= comparison
-                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen  
+                lineFits = pureLen[-1] + len(m.group(0)) - 2 < lineLen
             if isTag or lineFits or len(m[0]) < 2 or len(lines[-1]) == 0:
                 lines[-1] += m.group(0)
             else:
@@ -139,7 +139,7 @@ def getNewline(tlFile: TranslationFile):
     return "\\n" if tlFile.escapeNewline else "\n"
 
 
-def replace(text: str, mode):
+def replace(text: str, mode, extra_rep=False):
     if mode == "none":
         return text
 
@@ -154,6 +154,17 @@ def replace(text: str, mode):
         if rep.get("disabled", False):
             continue
         text = rep["re"].sub(rep["repl"], text)
+
+    # - UmaTL standard -
+    if extra_rep:
+        # Fix inconsistent case in stutters.
+        text = re.sub(
+            r"([A-Z])(?:-\1)+",
+            lambda m: "-".join(m[1] * int(len(m[0][1:]) / 2 + 1)),
+            text,
+            flags=re.IGNORECASE,
+        )
+
     return text
 
 
@@ -165,16 +176,16 @@ def calcLineLen(file: TranslationFile):
     lineLength = file.data.get("lineLength")
     if lineLength in (None, -1, 0):
         if file.type == "lyrics":
-            lineLength = 57
-        if file.type == "preview":
+            lineLength = 67
+        elif file.type == "preview":
             lineLength = 41
         elif (file.type == "race") or (
             file.type == "story"
             and StoryId.parse(file.type, file.getStoryId()).group in ("02", "04", "09", "10", "13")
         ):
             lineLength = 48
-        elif file.type == "mdb" and file.file.parent.name == "character_system_text":
-            lineLength = 30
+        elif file.file.parent.name == "character_system_text":
+            lineLength = 25
         else:
             lineLength = 34
     LL_CACHE = file, lineLength
@@ -215,6 +226,11 @@ def parseArgs(args=None):
         choices=["all", "limit", "none"],
         default="limit",
         help="Mode/aggressiveness of replacements",
+    )
+    ap.add_argument(
+        "-extrarep",
+        action="store_true",
+        help="Do extra processing. For special cases, based on UmaTL standards.",
     )
     ap.add_argument(
         "-fsize",

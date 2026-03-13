@@ -381,7 +381,7 @@ def parseArgs(args=None):
     args = ap.parse_args()
 
     if args.dst is None:
-        args.dst = PurePath("translations") / args.type
+        args.dst = const.TRANSLATION_FOLDER / args.type
     if args.upgrade or args.update is not None:
         args.overwrite = True
         # Doesn't make sense to upgrade non-existent files.
@@ -428,7 +428,7 @@ def main(_args: patch.Args = None):
         logger.setFile("extract.log")
         try:
             for type in args.update:  # set correctly by arg parsing
-                args.dst = PurePath("translations") / type
+                args.dst = const.TRANSLATION_FOLDER / type
                 args.type = type
                 files = patch.searchFiles(
                     type,

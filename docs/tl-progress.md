@@ -102,6 +102,7 @@ Agnes Digital | Complete | [fling]
 Agnes Tachyon | Complete | [Ren] (ep 1), [noccu] + [xct] (ep 2-3), [xct] (ep 4-7)
 Air Shakur | Complete | MTL (contributed by CryDuringItAll)
 Air Groove | Complete | [burritoblaster]
+Almond Eye | Complete | [LotoDS]
 Aston Machan | Exists | [Snep]
 Biwa Hayahide | Complete | MTL (contributed by CryDuringItAll)
 Bubble Gum Fellow | Complete | [LotoDS]

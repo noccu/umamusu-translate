@@ -108,7 +108,7 @@ class AudioPlayer:
                 self.master.status.log(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
                 return
 
-            (acb_hash,), (awb_hash,) = hashes
+            (acb_hash,), (awb_hash,), *_ = hashes
             acb_asset = GameBundle.fromName(acb_hash, load=False)
             acb_asset.bundleType = "sound"
             if not acb_asset.exists:

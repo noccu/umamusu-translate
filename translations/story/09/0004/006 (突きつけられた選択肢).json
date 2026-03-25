@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "L2XSTNHZPWEREBGNAP35FPQ3AZPA5LMY",
+    "version": 6,
+    "bundle": "J5KGQR7HUAZKG4AJWBUPTTSCD7CFJ3V7",
     "type": "story",
     "storyId": "090004006",
     "title": "突きつけられた選択肢",
+    "enTitle": "Faced with a Choice",
     "text": [
         {
             "jpName": "カワカミプリンセス",
             "enName": "Kawakami Princess",
             "jpText": "マヤノさんとアケボノさん、\r\nまだ来ませんわね……。",
-            "enText": "Mayano and Akebono, they haven't arrived yet. ……",
+            "enText": "Neither Mayano nor Akebono have arrived yet…",
             "nextBlock": 2,
             "origClipLength": 118,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 60,
@@ -45,9 +47,10 @@
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "リタイアはしてないって話だけど、\r\nなにかあったのかな？",
-            "enText": "You said you didn't retire. Did something happen?",
+            "enText": "They haven't retired from the race either… \nI wonder if something happened to them.",
             "nextBlock": 3,
             "origClipLength": 128,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 60,
@@ -81,9 +84,10 @@
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "ビューティー氏、\r\nもしや、2人も私のように――",
-            "enText": "Ms. Beauty, if you two are anything like me―",
+            "enText": "Wait… Don't tell me you used the slide on—",
             "nextBlock": 4,
             "origClipLength": 130,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 59,
@@ -117,9 +121,10 @@
             "jpName": "ビューティー安心沢",
             "enName": "Beauty Anshinzawa",
             "jpText": "ノンノン！\r\nそれはノンよ、エアグルーヴちゃん！",
-            "enText": "Non non non! That's a non, little Airgroove!",
+            "enText": "<i>Non non</i>! I certainly did not, Air Groove!",
             "nextBlock": 5,
             "origClipLength": 127,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 79,
@@ -157,9 +162,10 @@
             "jpName": "ビューティー安心沢",
             "enName": "Beauty Anshinzawa",
             "jpText": "あの子たちは今も、自分のビューティーに向き合ってる。\r\n……ただそれだけのことよ♪",
-            "enText": "Those girls are still facing their beauty.…… \nthat's all there is to it… ♪",
+            "enText": "Right now, those two are discovering their own beauty… \n…It's nothing more than that♪",
             "nextBlock": 6,
             "origClipLength": 231,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 197,
@@ -193,9 +199,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "エアグルーヴたちがそんな会話を交わしている\r\n数時間前のこと――",
-            "enText": "A few hours before the Airgrooves were having such a conversation―",
+            "enText": "Several hours earlier…",
             "nextBlock": 7,
             "origClipLength": 86,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 20,
@@ -225,9 +232,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "えっほ、えっほ！",
-            "enText": "Eh-ho, eh-ho!",
+            "enText": "One, two! One, two!",
             "nextBlock": 8,
             "origClipLength": 68,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 60,
@@ -241,9 +249,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "エアグルーヴさんも追ってきてないみたいだし、\r\nやっぱりマヤがいっちばーん！",
-            "enText": "It looks like Airgroove isn't following, \nso it's Maya all over again!",
+            "enText": "Air Groove's stopped chasing after me, \nso I must really be in the lead!",
             "nextBlock": 9,
             "origClipLength": 162,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 58,
@@ -261,9 +270,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "マヤだけのウェディングドレスをゲットして、\r\nみーんなメロメロにしちゃうんだから♪",
-            "enText": "I'm going to get Maya her very own wedding dress and make \neveryone fall in love with her.",
+            "enText": "Once I get my very own wedding dress, \neveryone's gonna swoon over me!♪",
             "nextBlock": 10,
             "origClipLength": 177,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 60,
@@ -279,11 +289,12 @@
         },
         {
             "jpName": "カッコいい男性",
-            "enName": "",
+            "enName": "Handsome Guy",
             "jpText": "なんて素敵なんだ！\r\nこんなに魅力的なウマ娘、見たことがない！",
-            "enText": "How lovely!!! I've never seen such a charming Uma Musume!",
+            "enText": "What beauty! I've never seen such a \ncaptivating horsegirl before!",
             "nextBlock": 11,
             "origClipLength": 171,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 25,
@@ -299,21 +310,23 @@
         },
         {
             "jpName": "セクシーな女性",
-            "enName": "",
+            "enName": "Sexy Lady",
             "jpText": "セクシー☆ダイナマイト・マヤ、\r\nなんて美しいのかしら……憧れちゃうわぁ♪",
-            "enText": "Sexy Dynamite Maya, what a beauty.…… I adore her!",
+            "enText": "Such allure, so seductive… I wish I could be like yooouuu!♪",
             "nextBlock": 12,
             "origClipLength": 233,
+            "voiceIdx": 9,
             "pathId": 3589178016509377876,
             "blockIdx": 11
         },
         {
             "jpName": "イケてるウマ娘",
-            "enName": "",
+            "enName": "Popular Horsegirl",
             "jpText": "うんうん！！　やっぱり大人なウマ娘といえば、\r\nマヤノトップガンしかいないよね～！",
-            "enText": "Yes, yes! I guess the only mature Uma Musume is Mayano Top Gun～!",
+            "enText": "Uh-huh! No one has more mature charm \nthan Mayano Top Gun, that's for sure!",
             "nextBlock": 13,
             "origClipLength": 231,
+            "voiceIdx": 10,
             "pathId": -2747475504054426514,
             "blockIdx": 12
         },
@@ -321,9 +334,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "ああっ！\r\nマヤってば……罪なオ・ン・ナ♪",
-            "enText": "Ah! Maya is so…… guilty o-n-na ♪",
+            "enText": "Ooh! I'm such a catch!♪",
             "nextBlock": 14,
             "origClipLength": 169,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 45,
@@ -341,9 +355,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "……なーんちゃって！\r\nそのためにも、さっさとゴールしないとね！",
-            "enText": "I'm on…… whoo hoo! We've got to get \nto the finish line for that one!",
+            "enText": "…Just kidding! I'd better hurry to the goal \nif I want to make my dream come true!",
             "nextBlock": 15,
             "origClipLength": 152,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 60,
@@ -361,9 +376,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "わわっ！\r\nなにこの吊り橋！？",
-            "enText": "Whoa! What is this suspension bridge?",
+            "enText": "<i>Eek!</i> What's with the suspension bridge?",
             "nextBlock": 16,
             "origClipLength": 87,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 73,
@@ -385,9 +401,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "こんなに高いと、\r\n落ちたら大変なことになるよね……。",
-            "enText": "With it being this high, it would be a big deal if it fell. ……",
+            "enText": "If I were to fall from this height, I'd be in a world of pain…",
             "nextBlock": 17,
             "origClipLength": 142,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 154,
@@ -405,9 +422,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "でも、行くしかないよね！\r\n大人のオンナは勇気と愛嬌っ！！",
-            "enText": "But we have to go! Adult women are brave and charming!",
+            "enText": "But I have to cross it! I've gotta be brave and charming \nlike real, grown-up women are!!",
             "nextBlock": 18,
             "origClipLength": 170,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 50,
@@ -429,9 +447,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "よっ！　ほっ！",
-            "enText": "Yo! Ho!",
+            "enText": "<i>Hup! Hah!</i>\n",
             "nextBlock": 19,
             "origClipLength": 50,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 20,
@@ -445,9 +464,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "えへへ♪\r\n慣れてきたらアスレチックみたいで楽しー！",
-            "enText": "Hehehe… Once you get used to it, it's like \nan athletic activity, it's so fun!",
+            "enText": "Ehehe♪ This is kinda fun now that I've gotten \nused to it! It's just like an obstacle course!",
             "nextBlock": 20,
             "origClipLength": 148,
+            "voiceIdx": 17,
             "pathId": -7674414430910886130,
             "blockIdx": 19
         },
@@ -455,9 +475,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "よーし！\r\nこのまま教会までテイクオーフ☆",
-            "enText": "All right! Take this all the way to the church.",
+            "enText": "All right! Time to take off and soar all the way to the chapel!☆",
             "nextBlock": 21,
             "origClipLength": 171,
+            "voiceIdx": 18,
             "pathId": -6458942422893443809,
             "blockIdx": 20
         },
@@ -465,9 +486,10 @@
             "jpName": "？？？",
             "enName": "???",
             "jpText": "――ちゃ～ん！",
-            "enText": "―Oh, my gosh!",
+            "enText": "—<i>YAAA!</i>\n",
             "nextBlock": 22,
             "origClipLength": 68,
+            "voiceIdx": 19,
             "pathId": 1033129043096045925,
             "blockIdx": 21
         },
@@ -475,9 +497,10 @@
             "jpName": "？？？",
             "enName": "???",
             "jpText": "マヤちゃ～ん！",
-            "enText": "Maya～!",
+            "enText": "MAYAAA!",
             "nextBlock": 23,
             "origClipLength": 80,
+            "voiceIdx": 20,
             "pathId": -4535240384588195679,
             "blockIdx": 22
         },
@@ -485,9 +508,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "あれ？\r\nこの声……ボーノちゃん？",
-            "enText": "Huh? Is that your voice…… Bono?",
+            "enText": "Huh? That voice… Bono?",
             "nextBlock": 24,
             "origClipLength": 134,
+            "voiceIdx": 21,
             "pathId": -7519179202896206501,
             "blockIdx": 23
         },
@@ -495,9 +519,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "この辺で聞こえたはずだけど……\r\nボーノちゃーん、どこー？",
-            "enText": "I thought I heard it around here…… Bono, where are you?",
+            "enText": "I thought I heard her voice, but I don't see her… \nBono! Where are you?",
             "nextBlock": 25,
             "origClipLength": 201,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 57,
@@ -511,9 +536,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "こっちこっち～！\r\n橋の下だよ～！",
-            "enText": "This way, this way～! Under the bridge!",
+            "enText": "Down here! Below the bridge!",
             "nextBlock": 26,
             "origClipLength": 124,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 66,
@@ -527,9 +553,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "下って……もしかして崖！？",
-            "enText": "Go down to…… maybe a cliff!",
+            "enText": "Below? Wait, are you on the cliff?!",
             "nextBlock": 27,
             "origClipLength": 139,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 60,
@@ -547,9 +574,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "あいたたたた。\r\nよかったぁ、気づいてくれて～。",
-            "enText": "Oh, no, I'm so glad you noticed! Thank goodness you noticed～.",
+            "enText": "Ow, ow, ow. Thank goodness you noticed me.",
             "nextBlock": 28,
             "origClipLength": 176,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 16,
@@ -571,9 +599,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "危ないよ、ボーノちゃん！\r\nなんでそんなとこにいるのっ？",
-            "enText": "Watch out, Bono-chan! What are you doing there?",
+            "enText": "Oh no, Bono! What are you doing down there?",
             "nextBlock": 29,
             "origClipLength": 125,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 89,
@@ -591,9 +620,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "ちょっと滑って、足をくじいちゃって……\r\nあたしなら、ぽんぽーんって登れると思ったんだけどな～。",
-            "enText": "I slipped a little and hurt my foot.…… \nI thought I could just pop my foot up!",
+            "enText": "I slipped and twisted my ankle… I was sure \nI'd be able to just climb right back up, but…",
             "nextBlock": 30,
             "origClipLength": 298,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 125,
@@ -611,9 +641,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "マヤちゃん、教会に着いたら、\r\n救護班に連絡してもらっていいかな～？",
-            "enText": "Maya, when you get to the church, can you call the rescue team?",
+            "enText": "Maya, when you get to the chapel, could you \nget them to send a medical team over?",
             "nextBlock": 31,
             "origClipLength": 193,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 64,
@@ -631,9 +662,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "えっ？\r\nでもそれじゃボーノちゃんは――",
-            "enText": "What? But that doesn't mean that Bono is…",
+            "enText": "Huh? But if I do that you'll ——",
             "nextBlock": 32,
             "origClipLength": 129,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 75,
@@ -659,9 +691,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "……うーん、リタイアだね～。",
-            "enText": "…… Hmmm, I guess I'm retired!",
+            "enText": "Yeah… I'll have to retire from the race.",
             "nextBlock": 33,
             "origClipLength": 115,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 127,
@@ -679,9 +712,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "しょうがないよ、\r\nこのままじゃゴールまで行けないし～。",
-            "enText": "I can't help it, I can't reach the goal at this rate～.",
+            "enText": "But there's no way around it. \nI can't possibly reach the goal like this.",
             "nextBlock": 34,
             "origClipLength": 157,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 122,
@@ -699,9 +733,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "けど……。",
-            "enText": "But see ……",
+            "enText": "But…",
             "nextBlock": 35,
             "origClipLength": 42,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 60,
@@ -719,9 +754,10 @@
             "jpName": "ビューティー安心沢",
             "enName": "Beauty Anshinzawa",
             "jpText": "『ピンポンパンポーン☆\r\nビューティーな原石ちゃんたちに中間発表よ～♪』",
-            "enText": "The first midterm announcement is here for all you beauty \ngemstones out there!",
+            "enText": "Ring-a-ding-dong☆ I have a halftime announcement \nfor my beautiful gemstones out there♪",
             "nextBlock": 36,
             "origClipLength": 250,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 15,
@@ -739,9 +775,10 @@
             "jpName": "ビューティー安心沢",
             "enName": "Beauty Anshinzawa",
             "jpText": "『今、ゴールに1番近いのはマヤノトップガンちゃん！\r\nそれをエアグルーヴちゃんが追っている感じネ！』",
-            "enText": "The one closest to the finish line is Mayano Top Gun! And \nAirgroove is chasing her.",
+            "enText": "At present, Mayano Top Gun is closest to the finish line, \nwith Air Groove following close behind!",
             "nextBlock": 37,
             "origClipLength": 238,
+            "voiceIdx": 34,
             "pathId": -1745629110443812951,
             "blockIdx": 36
         },
@@ -749,9 +786,10 @@
             "jpName": "ビューティー安心沢",
             "enName": "Beauty Anshinzawa",
             "jpText": "『他のみんなも2人に負けないような、\r\nトレビアーンな活躍を期待してるワ！　アデュ～♪』",
-            "enText": "I hope the rest of you will do as good \na job as the two of you! Adieu～♪",
+            "enText": "I hope you're all going to make a <i>très bien</i> effort \nnot to lose to the two of them! <i>Adieu</i>♪",
             "nextBlock": 38,
             "origClipLength": 244,
+            "voiceIdx": 35,
             "pathId": 7036882139240453844,
             "blockIdx": 37
         },
@@ -759,9 +797,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "マヤがトップ……。",
-            "enText": "Maya is the top ……",
+            "enText": "I'm in the lead…",
             "nextBlock": 39,
             "origClipLength": 102,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 122,
@@ -779,9 +818,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "すごいねマヤちゃん、\r\nこのままいけば“ミューズ”間違いなしだよ～！",
-            "enText": "Great job Maya, if you keep it up, you'll be a muse for sure!",
+            "enText": "That's amazing, Maya! At this rate, you'll be \nmade a muse for sure!",
             "nextBlock": 40,
             "origClipLength": 187,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 199,
@@ -799,9 +839,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "……だからほら～\r\n行かないと、ねっ？",
-            "enText": "It's …… you see～ I gotta go, right?",
+            "enText": "So… you can't stop now, right?",
             "nextBlock": 41,
             "origClipLength": 186,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 16,
@@ -827,9 +868,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "ボーノちゃん、\r\nけど、けどさ……！",
-            "enText": "Bono-chan, but, but, but… ……!",
+            "enText": "But, but… Bono!",
             "nextBlock": 42,
             "origClipLength": 140,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 89,
@@ -847,9 +889,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "あたしのことなら大丈夫～。\r\n",
-            "enText": "I'll be fine～.",
+            "enText": "Don't worry about me. I'll be fine!",
             "nextBlock": 43,
             "origClipLength": 96,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 50,
@@ -867,9 +910,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "マヤちゃんが“ミューズ”になってくれたら、\r\nボーノボーノだもん♪",
-            "enText": "If Maya could be my muse, it would be bonobono.",
+            "enText": "But I'll be extra buono if you become a muse for the two of us♪",
             "nextBlock": 44,
             "origClipLength": 157,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 45,
@@ -887,9 +931,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "（1着でゴールすれば、きっとビューティーさんも認めてくれる。\r\nウェディングドレスを着て、大人のオンナに近づける）",
-            "enText": "(If you finish in one dress, I'm sure Beauty will approve. \n(Wearing a wedding dress will bring me closer to an adult woman)",
+            "enText": "(If I reach the chapel first, Ms. Beauty will definitely \nacknowledge me. I'll be able to wear a wedding dress \nand get closer to becoming a real lady.)",
             "nextBlock": 45,
             "origClipLength": 269,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 294,
@@ -915,9 +960,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "（でも、ボーノちゃんだって……）",
-            "enText": "(But even Bono, ……)",
+            "enText": "(But Bono's aiming for the same thing…)",
             "nextBlock": 46,
             "origClipLength": 91,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 89,
@@ -935,9 +981,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "（ボーノちゃんだって、“ミューズ”になりたいじゃん。\r\nウェディングドレス、着たいじゃん……）",
-            "enText": "(Even Bono wants to be a muse, don't you? \nYou want to wear a wedding dress. ……)",
+            "enText": "(I bet she wants to become a muse \nand wear a wedding dress too…)",
             "nextBlock": 47,
             "origClipLength": 215,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 149,
@@ -955,9 +1002,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "あはは、気合い充分だね～。\r\nあたしも負けずにがんばらないと～！",
-            "enText": "Haha, you are so enthusiastic! I have \nto keep up the good work too～!",
+            "enText": "Ahaha! You two sure are fired up for this. \nI'll have to give it my all too!",
             "nextBlock": 48,
             "origClipLength": 193,
+            "voiceIdx": 45,
             "animData": [
                 {
                     "origLen": 18,
@@ -987,9 +1035,10 @@
             "jpName": "ヒシアケボノ",
             "enName": "Hishi Akebono",
             "jpText": "みんなでウェディングドレス着て走れたら、\r\nきっとすっごくボーノだよね～♪",
-            "enText": "If we could all run together in our wedding dresses, it would be \nso bonooooooooooooooooooooooooooooooooooooooo!",
+            "enText": "It would be so buono if we could all \nrun in wedding dresses together!♪",
             "nextBlock": 49,
             "origClipLength": 189,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 38,
@@ -1015,9 +1064,10 @@
             "jpName": "マヤノトップガン",
             "enName": "Mayano Top Gun",
             "jpText": "（も～！\r\nマヤ、わかんないよー！！）",
-            "enText": "(Moo～! Maya, I don't get it!)",
+            "enText": "(Ohhh! I don't know what to do!)",
             "nextBlock": -1,
             "origClipLength": 112,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 22,
@@ -1036,5 +1086,6 @@
             "blockIdx": 49
         }
     ],
-    "modified": 1662146486
+    "modified": 1774417945,
+    "humanTl": true
 }

@@ -6,7 +6,7 @@ from functools import cache
 
 import regex
 
-from .constants import DMM_CONFIG, IS_WIN
+from .constants import DMM_CONFIG, IS_WIN, DB_KEY_BASE
 
 
 def isParseableInt(x):
@@ -65,6 +65,13 @@ def getUmaInstallDir() -> Optional[Path]:
     for game in cfg["contents"]:
         if game["productId"] == "umamusume":
             return Path(game["detail"]["path"])
+
+def create_final_db_key(db_key_raw:str, true_len=13):
+    base_key = bytes.fromhex(DB_KEY_BASE)
+    final_key = bytearray.fromhex(db_key_raw)
+    for i, n in enumerate(final_key):
+        final_key[i] = n ^ base_key[i % true_len]
+    return bytes(final_key)
 
 
 ## Files ##

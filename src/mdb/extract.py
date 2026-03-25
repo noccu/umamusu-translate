@@ -44,8 +44,7 @@ def parseArgs():
     ap = patch.Args("Extracts master.mdb data for translation", defaultArgs=False)
     ap.add_argument("-src", default=GAME_MASTER_FILE, help="Path to master.mdb file")
     ap.add_argument("-dst", default="translations/mdb", type=Path, help="Extraction path")
-    ap.add_argument("--no-skill-data", action="store_true", help="Skip extracting skill data (requires nodeJS)")
-    ap.add_argument("--no-text", action="store_true", help="Skip extracting standard text data")
+    ap.add_argument("--skill-data", action="store_true", help="Extracts skill data (requires nodeJS)")
     ap.add_argument("-f", "--file", help="Extract specific file name (as found in index.json)")
     ap.add_argument("--forced", action="store_true", help="Ignore mdb patch state")
     ap.add_argument("-dt", "--datatransfer", action="store_true", help="Try to Find similar entries")
@@ -95,19 +94,19 @@ def main():
     if not args.forced and checkPatched(args.src):
         print("master.mdb is patched, aborting extract.")
         return
-    if not args.no_text:
-        print("Extracting standard text...")
-        with sqlite3.connect(args.src) as db:
-            for stmt, outPathRel in MdbIndex("src/mdb/index.json").parseSQL(args.file):
-                extract(db, stmt, args.dst / outPathRel, args.datatransfer)
-        db.close()
-    if not args.no_skill_data:
+    if args.skill_data:
         print("Extracting skill data...")
         # This is just a QoL thing
         from subprocess import run
         run(["node", "src/scripts/extract-skill-data.js", args.src], check=True)
         import textprocess
         textprocess.main(patch.Args.fake(src=Path("translations/mdb/alt/skill-desc.json"), lineLength=-1, targetLines=99, forceResize=True))
+    else:
+        print("Extracting standard text...")
+        with sqlite3.connect(args.src) as db:
+            for stmt, outPathRel in MdbIndex("src/mdb/index.json").parseSQL(args.file):
+                extract(db, stmt, args.dst / outPathRel, args.datatransfer)
+        db.close()
 
 
 if __name__ == '__main__':

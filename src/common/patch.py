@@ -226,8 +226,8 @@ class UmaTlConfig:
                 self.createDefault()
             UmaTlConfig.core = self.getOrCreateCtx("core")
         # Resolve to make sure it works on both abs and rel paths.
-        cur_script = Path(sys.argv[0]).resolve()
-        ctx = cur_script.relative_to(Path("src").resolve()).with_suffix("").as_posix()
+        cur_script = Path(sys.argv[0])
+        ctx = Path(*cur_script.parts[1:]).with_suffix("").as_posix()
         self.script = self.getOrCreateCtx(ctx)
 
     @classmethod

@@ -200,7 +200,7 @@ class DataTransfer:
 
         if self.file is None:
             file = next(
-                (Path(args.dst).joinpath(storyId.asPath())).glob(f"{storyId.idx}*.json"),
+                (args.dst.joinpath(storyId.asPath())).glob(f"{storyId.idx}*.json"),
                 None,
             )
             if file is None:  # Check we actually found a file above
@@ -304,9 +304,9 @@ def exportAsset(bundle: Optional[str], path: Union[str, PurePath], db=None, bund
         storyId = StoryId.parseFromPath(args.type, path)
 
     exportDir = (
-        Path(args.dst)
+        args.dst
         if args.type in ("lyrics", "preview")
-        else Path(args.dst).joinpath(storyId.asPath())
+        else args.dst.joinpath(storyId.asPath())
     )
 
     # Skip if already exported and we're not overwriting
@@ -346,7 +346,7 @@ def exportAsset(bundle: Optional[str], path: Union[str, PurePath], db=None, bund
 
 def parseArgs(args=None):
     ap = patch.Args("Extract Game Assets to Translation Files")
-    ap.add_argument("-dst")
+    ap.add_argument("-dst", type=Path)
     ap.add_argument(
         "-O",
         "--overwrite",
@@ -380,8 +380,7 @@ def parseArgs(args=None):
 
     args = ap.parse_args()
 
-    if args.dst is None:
-        args.dst = PurePath("translations") / args.type
+    args.dst = (args.dst or const.TRANSLATION_FOLDER) / args.type
     if args.upgrade or args.update is not None:
         args.overwrite = True
         # Doesn't make sense to upgrade non-existent files.
@@ -428,7 +427,7 @@ def main(_args: patch.Args = None):
         logger.setFile("extract.log")
         try:
             for type in args.update:  # set correctly by arg parsing
-                args.dst = PurePath("translations") / type
+                args.dst = const.TRANSLATION_FOLDER / type
                 args.type = type
                 files = patch.searchFiles(
                     type,

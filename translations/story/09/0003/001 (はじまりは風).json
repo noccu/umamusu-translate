@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "NO2MWBS4AHAKBPXD64PBSPE4TF623XUS",
+    "version": 6,
+    "bundle": "XBQTOGVRKN72TO5IAX52GND7T6XCTINT",
     "type": "story",
     "storyId": "090003001",
     "title": "はじまりは風",
+    "enTitle": "A New Wind Blows",
     "text": [
         {
             "jpName": "子どものウマ娘A",
             "enName": "Child Horsegirl A",
             "jpText": "――ほんとの、ほんとうだよ？\r\nほんとに、ほんとうだからねっ？",
-            "enText": "Really, Really? Really, Really?",
+            "enText": "Do you mean it? Like… really, really mean it?",
             "nextBlock": 2,
             "origClipLength": 150,
+            "voiceIdx": 0,
             "pathId": -2472860091424670866,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "子どものウマ娘B",
             "enName": "Child Horsegirl B",
             "jpText": "あははっ！　うん、もちろん約束する！\r\nゆびきりしたっていいよ！",
-            "enText": "ha ha! yeah, of course I promise! we can do a pinkie promise!",
+            "enText": "Haha! You bet! Wanna pinky swear on it?",
             "nextBlock": 3,
             "origClipLength": 164,
+            "voiceIdx": 1,
             "pathId": 6428922912555748801,
             "blockIdx": 2
         },
@@ -29,9 +32,10 @@
             "jpName": "子どものウマ娘A",
             "enName": "Child Horsegirl A",
             "jpText": "ゆびきり……？　って、なぁに？",
-            "enText": "pinkie promise……? What is it?",
+            "enText": "Pinky swear…? What's that?",
             "nextBlock": 4,
             "origClipLength": 109,
+            "voiceIdx": 2,
             "pathId": -6949021341361438603,
             "blockIdx": 3
         },
@@ -39,9 +43,10 @@
             "jpName": "子どものウマ娘B",
             "enName": "Child Horsegirl B",
             "jpText": "えーっ、知らないのっ？\r\nあのね、こうやってこゆびをかけて……。",
-            "enText": "eh, you don't know? you know, this is how \nyou do it, you put your pinky finger on…",
+            "enText": "Oh, you don't know? Well, you see… we put our \nlittle fingers together like this…",
             "nextBlock": 5,
             "origClipLength": 211,
+            "voiceIdx": 3,
             "pathId": -8569725802085631571,
             "blockIdx": 4
         },
@@ -49,9 +54,10 @@
             "jpName": "子どものウマ娘B",
             "enName": "Child Horsegirl B",
             "jpText": "ゆーびきーりげーんまーん……ってやるの。\r\nぜったいに約束をまもるっておまじないだよ！　わかった？",
-            "enText": "I'm going to do it. It's not a trick, I will keep \nmy promise to you no matter what! got it?",
+            "enText": "Then you gotta say, \"Cross my heart and hope to die\". \nIt's like a magic spell to make sure we keep our promise! Got it?",
             "nextBlock": 6,
             "origClipLength": 243,
+            "voiceIdx": 4,
             "pathId": -7315595814426452646,
             "blockIdx": 5
         },
@@ -59,19 +65,21 @@
             "jpName": "子どものウマ娘A",
             "enName": "Child Horsegirl A",
             "jpText": "おまじない……わかったぁ！\r\nええと、せーのっ……！",
-            "enText": "It's not a trick…… I got it! Etuuu, One-two……!",
+            "enText": "A magic spell… I got it! Okay… one, two, three!",
             "nextBlock": 7,
             "origClipLength": 194,
+            "voiceIdx": 5,
             "pathId": 1964850989140985078,
             "blockIdx": 6
         },
         {
             "jpName": "2人の子ども",
-            "enName": "2 Child Horse Girls",
+            "enName": "Horsegirl Children",
             "jpText": "ゆーびきーりげーんまーんっ。\r\nこれからも、一緒に……――！",
-            "enText": "It's a promise. From now on we will be together forever.",
+            "enText": "Cross my heart and hope to die. Together forever, you and I!",
             "nextBlock": 8,
             "origClipLength": 182,
+            "voiceIdx": 6,
             "pathId": -2537710250470454373,
             "blockIdx": 7
         },
@@ -79,9 +87,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "数年後――",
-            "enText": "A few Years later____",
+            "enText": "Several years later…",
             "nextBlock": 9,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "pathId": 8710484563469808231,
             "blockIdx": 8
         },
@@ -89,9 +98,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "ダイヤちゃーんっっ！\r\n急げ急げ～っ！！",
-            "enText": "Dia-chan! hurry, hurry!!",
+            "enText": "Come on, Dia! Hurry up!!",
             "nextBlock": 10,
             "origClipLength": 138,
+            "voiceIdx": 7,
             "pathId": -1178674834567404702,
             "blockIdx": 9
         },
@@ -99,9 +109,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "キタちゃん、待って～！",
-            "enText": "Kita-chan, wait",
+            "enText": "Slow down, Kita!",
             "nextBlock": 11,
             "origClipLength": 88,
+            "voiceIdx": 8,
             "pathId": 4887133230173238536,
             "blockIdx": 10
         },
@@ -109,9 +120,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "早くしないと、遅刻だよ～！\r\nああ～、なんでこんなに遅くなっちゃったんだっけ！？",
-            "enText": "If we don't hurry, we will be late, why did it get so late!?",
+            "enText": "But we'll be tardy if we don't pick up the pace! \nSeriously, how can it be this late already?!",
             "nextBlock": 12,
             "origClipLength": 186,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 183,
@@ -145,9 +157,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "しょうがないよ～。\r\n“お助け大将キタさん”、大活躍だったもの。",
-            "enText": "we can't help it. “Helper general Kita-san”,was on the roll.",
+            "enText": "Well, of course we're late! You went into \nFriendly Neighborhood Kita mode, after all.",
             "nextBlock": 13,
             "origClipLength": 177,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 45,
@@ -177,9 +190,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "おばあさまのお荷物運びに、迷子のご案内……\r\nあと、落ち込んでらしたおじさまの励ましとかね。",
-            "enText": "A grandma's luggage transportation, guiding a lost child also, \nthe encouragement of the depressed horse girl.",
+            "enText": "First you helped that old lady with her bags, then there \nwas that lost kid… And let's not forget how you cheered \nup that lonely old man.",
             "nextBlock": 14,
             "origClipLength": 241,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 45,
@@ -205,9 +219,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "う～っ、だってみんな困ってたし～！\r\nでも、ここからはちょっと本気で――",
-            "enText": "Because everyone was in trouble! but, from \nhere on, I will be a little more serious",
+            "enText": "I-I mean… I couldn't just ignore them! \nBut I guess we'd better make a run for it…",
             "nextBlock": 15,
             "origClipLength": 195,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 153,
@@ -233,9 +248,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "あっ、待ってキタちゃん！\r\nたいへ～ん！",
-            "enText": "Wait, Kita-chan! it's serious!",
+            "enText": "Ah… wait, Kita! Look over there!",
             "nextBlock": 16,
             "origClipLength": 94,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 39,
@@ -261,9 +277,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "なんだなんだっ！？\r\nトラブルっ！？",
-            "enText": "What is it!? Trouble!?",
+            "enText": "What is it?! Is someone in trouble?!",
             "nextBlock": 17,
             "origClipLength": 71,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 89,
@@ -289,9 +306,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "川の上で……石がぴょんぴょん跳ねてるの！！\r\nあそこの男の子たち、もしかして超能力者なんじゃ！？",
-            "enText": "On the river… the stones are bouncing!! the boys over there \nprobably have superpowers, don't they!?",
+            "enText": "There are stones bouncing all along the river's surface! \nDo those boys have psychic powers?!",
             "nextBlock": 18,
             "origClipLength": 246,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 54,
@@ -321,9 +339,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "がくっ！　あれは水切りっていう遊びだよ～！\r\nうーん、ダイヤちゃんの好奇心も原因な気がする……。",
-            "enText": "Damn it! That's a game called water cutting! Well, I feel like \nDia-chans curiosity is also the cause.",
+            "enText": "Oh, honestly… They're just skipping stones! \nYou know, I think your curiosity might be \nanother thing slowing us down here…",
             "nextBlock": 19,
             "origClipLength": 288,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 93,
@@ -349,9 +368,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "とにかく、今からはよそ見禁止で行こっ！\r\n――“2人”のところへ！",
-            "enText": "Anyway, from now, let's go with a ban on looking \naway. And we will go to the 2 people line.",
+            "enText": "Anyway, no more distractions! Let's keep moving. \nWe've got people to meet!",
             "nextBlock": 20,
             "origClipLength": 156,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 40,
@@ -373,9 +393,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "――というわけで、新入生諸君。\r\nここで改めて、本日行われるレースの開催意図を説明する。",
-            "enText": "That is why new students. Here, I will explain the \nschedule of the race to be held on this day.",
+            "enText": "…And now, for the benefit of our new students, \nallow me to reiterate the purpose of today's race.",
             "nextBlock": 21,
             "origClipLength": 237,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 89,
@@ -401,9 +422,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "はぁ～、ギリギリ間に合ったみたい！\r\nよかったぁ～！",
-            "enText": "oh, it looks like we just made it in time! ,Thank goodness!",
+            "enText": "Phew… Looks like we made it just in time! Thank goodness!",
             "nextBlock": 22,
             "origClipLength": 140,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 188,
@@ -433,9 +455,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "しーっ。会長さんのお話、始まってるみたい。",
-            "enText": "Shh, it seems the president's talk has begun.",
+            "enText": "Shh! The student council president \nhas already begun her speech.",
             "nextBlock": 23,
             "origClipLength": 152,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 147,
@@ -461,9 +484,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "トレセン学園で走る意味……それをデビュー前の諸君に\r\n“実感”してもらうための特別レース――いわば新歓レースだ。",
-            "enText": "The meaning of running at Tracen Academy A special \nrace to make everyone realize their “dreams” before \ndebut-so to speak, it is a new race.",
+            "enText": "$(scale 95)What does it mean to run at Tracen Academy? In order to discover \nthe answer firsthand, all of you who have yet to debut are invited \nto witness a special event — a welcome race, so to speak.",
             "nextBlock": 24,
             "origClipLength": 311,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 14,
@@ -489,9 +513,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "とはいえ、勝負服を纏った一騎当千の傑物集う本気のレースとなる。\r\nその姿に諸君が何を想い、感じるのか……期待しているよ。",
-            "enText": "One rider who wore a winning and losing outfit gathered with the \nbest of racers. It is a genuine race. I am waiting for what you \nthink and feel in that figure.",
+            "enText": "That said, it is bona fide race featuring a coterie of exceptionally \ngifted runners clad in their racewear. I look forward to hearing \nyour thoughts and impressions afterward.",
             "nextBlock": 25,
             "origClipLength": 377,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 344,
@@ -509,9 +534,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "カイッチョー！\r\n話の続きは――ボクたちに任せてよ！",
-            "enText": "President! leave the rest of the story to us!",
+            "enText": "Prez! Let <i>us</i> take over from here!",
             "nextBlock": 26,
             "origClipLength": 178,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 244,
@@ -529,9 +555,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "っ！　この声……！",
-            "enText": "Ohh! This Voice….!",
+            "enText": "Ah! That voice…!",
             "nextBlock": 27,
             "origClipLength": 88,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 89,
@@ -549,9 +576,10 @@
             "jpName": "シンボリルドルフ",
             "enName": "Symboli Rudolf",
             "jpText": "ふっ……どうやら待ちきれない者がいるようだね。\r\nそれでは――彼女らに、“夢”を示してもらおう。",
-            "enText": "It seems that there are people who can't \nwait. Then show them around.",
+            "enText": "Heh… Well, someone's certainly eager. In that case, come show \neveryone exactly how we chase our dreams.",
             "nextBlock": 28,
             "origClipLength": 256,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 63,
@@ -569,9 +597,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "みんなーっ、おっまたせ～！\r\n最強のウマ娘、トウカイテイオー……ボクはここだよ～っ！",
-            "enText": "Hey, everyone, thanks for the wait, your strongest \nhorse girl, Tokai Teio is here.",
+            "enText": "Sorry to keep ya waiting! I'm none other than \nTokai Teio — the strongest racer ever!",
             "nextBlock": 29,
             "origClipLength": 268,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 63,
@@ -605,9 +634,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "じゃじゃーんっ！　どう、この新しい勝負服！\r\n燃えてる感じが眩しくて、カッコいいでしょ～っ♪",
-            "enText": "Ta da, Well then! Do you see these new race clothes! it feels \nlike it's burning, it's cool, isn't it?",
+            "enText": "Ta-daaa! Like my new racewear? It's like I'm a blazing fire \non the track! Pretty cool, huh?♪",
             "nextBlock": 30,
             "origClipLength": 245,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 57,
@@ -625,9 +655,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "まったく、会長はまだお話し中でしたのに……\r\n貴方って本当に目立ちたがりですわね。",
-            "enText": "Oh also, the president was still talking, \nyou really want to stand out.",
+            "enText": "Unbelievable… The president was still talking, you know? \nHow hungry for attention can you be?",
             "nextBlock": 31,
             "origClipLength": 272,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 218,
@@ -653,9 +684,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "そういうマックイーンも、\r\n本当はもっと注目されたいんじゃないの？",
-            "enText": "That kind of McQueen, don't you really \nwant to get more attention?",
+            "enText": "I could ask you the same thing, McQueen. \nI bet you'd kill for some spotlight too.",
             "nextBlock": 32,
             "origClipLength": 151,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 79,
@@ -677,9 +709,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "キミの新しい勝負服もなかなかイカしてるもん。\r\nほらほら、アピールしなくて大丈夫～？",
-            "enText": "Your new race clothes are pretty cool too. \ncome on, are you okay with not appealing?",
+            "enText": "That new racewear of yours <i>is</i> pretty stylish. \nSure ya don't wanna flaunt it a little?",
             "nextBlock": 33,
             "origClipLength": 228,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 81,
@@ -705,9 +738,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "なっ……もう、余計なお世話ですわ！\r\n……いずれにせよ、皆さん私しか見えなくなりますもの。",
-            "enText": "I don't know, It's unnecessary. In any \ncase, everyone will only see me.",
+            "enText": "Wha… That's none of your concern! And I have no need \nto show off. Everyone's eyes will be on me regardless.",
             "nextBlock": 34,
             "origClipLength": 337,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 294,
@@ -733,9 +767,10 @@
             "jpName": "トウカイテイオー",
             "enName": "Tokai Teio",
             "jpText": "へへっ、そーこなくっちゃ！\r\n――負けないよ、マックイーン！",
-            "enText": "Hmm, That is how it is supposed to be,! I won't lose, McQueen.",
+            "enText": "Hehe, that's more like it. But I won't lose to you, McQueen!",
             "nextBlock": 35,
             "origClipLength": 150,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 60,
@@ -757,9 +792,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "……っ？",
-            "enText": "……huh?",
+            "enText": "…?",
             "nextBlock": 36,
             "origClipLength": 44,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 153,
@@ -789,9 +825,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "はあぁぁ～、マックイーンさんカッコいい～……。\r\nキタちゃんもよかったね、大好きなテイオーさんが目の前で！",
-            "enText": "Oh, McQueen-san, you're so cool! Kita-chan is also good, your \nbeloved Teio-san is in front of you.",
+            "enText": "Ohh… McQueen is so cool… Isn't this great, Kita? \nYour beloved Teio is right there in front of you!",
             "nextBlock": 37,
             "origClipLength": 273,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 186,
@@ -817,9 +854,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "あ、う、うん……テイオーさん、すごくカッコいい。\r\nカッコいいんだけど、なんかカッコよすぎて――",
-            "enText": "Oh, uh, yeah, Teio-san, is so cool. It's \ncool, but somehow it's too cool.",
+            "enText": "O-oh, yeah… Teio's super cool. \nIn fact, she's almost… <i>too</i> cool…",
             "nextBlock": 38,
             "origClipLength": 329,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 349,
@@ -849,9 +887,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "あっ、ファンファーレ！\r\nキタちゃん、レースが始まるよ……！",
-            "enText": "Oh, fanfare! Kita-chan, the race is about to begin.",
+            "enText": "Ah, that's the fanfare! Kita, the race is starting!",
             "nextBlock": 39,
             "origClipLength": 147,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 45,
@@ -877,9 +916,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "（――そうして始まったレース。他のウマ娘たちも強いけど、\r\nテイオーさんとマックイーンさんの走りは圧倒的で……！）",
-            "enText": "(Then the race began, the other horse girls are strong, too, \nTeio-san and McQueen's running is overwhelming)",
+            "enText": "(And so, the race begins. The other horsegirls are all fast, \nbut Teio and McQueen are in a league of their own!)",
             "nextBlock": 40,
             "origClipLength": 269,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 45,
@@ -897,9 +937,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "さあ、レースはいよいよ最後の直線！\r\n先頭は変わらずメジロマックイーン！　これは強い！　これは強い！",
-            "enText": "Now, the race is finally at the last straight line! the beginning \nchanges Mejiro McQueen! She is strong! she is strong!",
+            "enText": "Our racers are approaching the final stretch as Mejiro McQueen \nmaintains a sizeable lead! What a show of power!",
             "nextBlock": 41,
             "origClipLength": 210,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 171,
@@ -913,9 +954,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "しかし、トウカイテイオーも来ているぞ！\r\nトウカイテイオーが来た！　その差が2バ身、1バ身――",
-            "enText": "However, Tokai Teio is also coming! the \ndifference is 2 lengths, 1 length.",
+            "enText": "But what's this? Tokai Teio is hot on her heels! Tokai Teio is \nclosing the distance! She's just two… no, one length away!",
             "nextBlock": 42,
             "origClipLength": 210,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 247,
@@ -937,9 +979,10 @@
             "jpName": "2人",
             "enName": "Both",
             "jpText": "並んだぁっっ！！\r\nいけえっ、テイオーさぁんっ！　（マックイーンさぁんっ！）",
-            "enText": "Line up! Go, Teio-san! (McQueen-san!)",
+            "enText": "They're neck and neck! Go, Teio! \nThey're neck and neck! Go, McQueen!",
             "nextBlock": 43,
             "origClipLength": 121,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 239,
@@ -965,9 +1008,10 @@
             "jpName": "2人",
             "enName": "Both",
             "jpText": "はああああああああっっっ！！！！",
-            "enText": "Haaaaaaaaa!!!!",
+            "enText": "<i>Haaaaah!!!</i>",
             "nextBlock": 44,
             "origClipLength": 101,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 140,
@@ -993,9 +1037,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "（その時――風が吹いたの）",
-            "enText": "(That's when the wind blew)",
+            "enText": "(At that moment, I feel a gust of wind.)",
             "nextBlock": 45,
             "origClipLength": 95,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 12,
@@ -1013,9 +1058,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "（いつも通りカッコいいテイオーさんの、\r\nいつも通り強い走りを見てる。だけど……）",
-            "enText": "(I'm always watching the cool Teio-san's strong running. but…. )",
+            "enText": "(Teio's so cool, and her running's as \npowerful as always. But somehow…)",
             "nextBlock": 46,
             "origClipLength": 232,
+            "voiceIdx": 43,
             "pathId": -7832817567419856402,
             "blockIdx": 45
         },
@@ -1023,9 +1069,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "（いつも通り綺麗なマックイーンさんの、\r\nいつも通り強い走りを見てる。だけど……）",
-            "enText": "(I always see the beautiful McQueen running hard. but…. )",
+            "enText": "(McQueen's so wonderful, and her running's as \npowerful as always. But somehow…)",
             "nextBlock": 47,
             "origClipLength": 217,
+            "voiceIdx": 44,
             "pathId": -3488458121847570387,
             "blockIdx": 46
         },
@@ -1033,9 +1080,10 @@
             "jpName": "2人",
             "enName": "Both",
             "jpText": "（いつもよりずっと……胸が熱い！）",
-            "enText": "(My heart is hotter than usual)",
+            "enText": "(This time… I feel more inspired than ever!)",
             "nextBlock": 48,
             "origClipLength": 113,
+            "voiceIdx": 45,
             "pathId": -4483139565429544114,
             "blockIdx": 47
         },
@@ -1043,9 +1091,10 @@
             "jpName": "サトノダイヤモンド",
             "enName": "Satono Diamond",
             "jpText": "『“夢”を示す』――これが、本気のレースなんだ。\r\n私たちが目指していくもの……。",
-            "enText": "This is the real race that shows the “Dreams” \nthis is what we are aiming for….",
+            "enText": "So this is how they chase their dreams. \nIn a genuine, all-out race. What a feeling that must be.",
             "nextBlock": 49,
             "origClipLength": 243,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 96,
@@ -1075,9 +1124,10 @@
             "jpName": "キタサンブラック",
             "enName": "Kitasan Black",
             "jpText": "あんな風に走っていくんだね！\r\nこれから――",
-            "enText": "We will be running like that! from now on.",
+            "enText": "From this point on, we'll be running just like them…",
             "nextBlock": 50,
             "origClipLength": 137,
+            "voiceIdx": 47,
             "animData": [
                 {
                     "origLen": 155,
@@ -1107,9 +1157,10 @@
             "jpName": "2人",
             "enName": "Both",
             "jpText": "憧れの――トレセン学園で！",
-            "enText": "At Tracen Academy",
+            "enText": "At Tracen Academy, the school of our dreams!",
             "nextBlock": 51,
             "origClipLength": 119,
+            "voiceIdx": 48,
             "animData": [
                 {
                     "origLen": 48,
@@ -1139,12 +1190,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "Brand-new Friend",
-            "enText": "",
+            "enText": "Brand New Friends",
             "nextBlock": -1,
             "origClipLength": 122,
+            "voiceIdx": -1,
             "pathId": 5865191968402821115,
             "blockIdx": 51
         }
     ],
-    "modified": 1657259064
+    "modified": 1774182494,
+    "humanTl": true
 }

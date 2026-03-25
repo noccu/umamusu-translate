@@ -92,6 +92,8 @@ class AudioPlayer:
                 stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.a_b' ORDER BY n ESCAPE '\'"
             elif sType == "lyrics":
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.a_b' ORDER BY n"
+            elif sType == "systext":
+                stmt = f"SELECT h FROM a WHERE n LIKE 'sound/v/{storyId.group}%.a_b' ORDER BY n"
             else:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.a_b' ORDER BY n"
             hashes = self._db.execute(stmt).fetchall()
@@ -106,7 +108,7 @@ class AudioPlayer:
                 self.master.status.log(f"Couldn't find audio asset for {storyId} -> {qStoryId}.")
                 return
 
-            (acb_hash,), (awb_hash,) = hashes
+            (acb_hash,), (awb_hash,), *_ = hashes
             acb_asset = GameBundle.fromName(acb_hash, load=False)
             acb_asset.bundleType = "sound"
             if not acb_asset.exists:
@@ -218,27 +220,37 @@ class AudioPlayer:
     def listen(self, event=None):
         file = self.master.nav.cur_file
         block = self.master.nav.cur_block
+        sType = file.type or "story"
         if not const.IS_WIN:
             self.master.status.log("Audio currently only supported on Windows")
             return
-        voice = PlaySegment.fromBlock(file.textBlocks[block], file.textBlocks[block + 1])
-        if not voice:
-            self.master.status.log("Old file version, does not have voice info.")
+
+        if sType == "systext":
+            voice_id = file.textBlocks[block].get("idx")
+            char_id = file.data.get("charId")
+            cue_data = self._mdb.execute(f"SELECT cue_sheet, cue_id from character_system_text WHERE character_id = {char_id} AND voice_id = {voice_id}").fetchone()
+            if cue_data is None:
+                return "break"
+            cue_sheet, cue_id = cue_data
+            voice = PlaySegment(cue_id, None, None)
+            storyId = patch.StoryId("systext", group=cue_sheet, id=char_id, idx=cue_id)
+        else:
+            voice = PlaySegment.fromBlock(file.textBlocks[block], file.textBlocks[block + 1])
+            sid = file.data.get("storyId")
+            if sid is None:
+                self.master.status.log("File has an invalid storyid.")
+                return "break"
+            elif len(sid) < 9 and sType != "lyrics":
+                # Preview type would work but I don't understand
+                # the format/where it gets info unless it's really just awbTracks[15:-1]
+                self.master.status.log("Unsupported type.")
+                return "break"
+            storyId = patch.StoryId.parse(sType, sid)
+
+        if voice is None:
+            self.master.status.log("No voice info found for this block. File version could be old.")
             return "break"
-        storyId = file.data.get("storyId")
-        if not storyId:
-            self.master.status.log("File has an invalid storyid.")
-            return "break"
-        elif len(storyId) < 9 and file.type != "lyrics":
-            # Preview type would work but I don't understand
-            # the format/where it gets info unless it's really just awbTracks[15:-1]
-            self.master.status.log("Unsupported type.")
-            return "break"
-        elif voice is None:
-            self.master.status.log("No voice info found for this block.")
-            return "break"
-        sType = file.type or "story"
-        self.play(patch.StoryId.parse(sType, storyId), voice, sType)
+        self.play(storyId, voice, sType)
         return "break"
 
 # ACB tries to load the linked or embedded AWB and fails. Turn it off.

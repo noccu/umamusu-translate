@@ -2,7 +2,7 @@ import json
 from pathlib import PurePath, Path
 import shutil
 
-from common import utils, patch, logger
+from common import utils, patch, logger, constants as const
 from common.types import TranslationFile
 
 ROOT = PurePath("src")
@@ -11,7 +11,7 @@ LOCALIFY_DATA_DIR = Path("localify") / "localized_data"
 HASH_FILE_STATIC = LOCALIFY_DATA_DIR / "static.json"
 HASH_FILE_DYNAMIC = LOCALIFY_DATA_DIR / "dynamic.json"
 CONFIG_FILE = Path("localify") / "config.json"
-TL_FILE = PurePath("translations") / "localify" / "ui.json"
+TL_FILE = const.TRANSLATION_FOLDER / "localify" / "ui.json"
 STRING_BLACKLIST = ("現在の予約レース",)
 
 

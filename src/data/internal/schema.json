@@ -73,7 +73,8 @@
             "home",
             "race",
             "lyrics",
-            "preview"
+            "preview",
+            "systext"
           ]
         },
         "bundle": {
@@ -88,7 +89,15 @@
           "maxLength": 14,
           "pattern": "^[0-9]{4,14}$"
         },
+        "charId": {
+          "type": "integer",
+          "minimum": 1000
+        },
         "title": {
+          "type": "string",
+          "minLength": 0
+        },
+        "enTitle": {
           "type": "string",
           "minLength": 0
         },

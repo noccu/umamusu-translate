@@ -147,7 +147,7 @@ def replace(text: str, mode, extra_rep=False):
     if REPLACEMENT_DATA is None:
         REPLACEMENT_DATA = utils.readJson("src/data/replacer.json")
         for rep in REPLACEMENT_DATA:
-            rep["re"] = re.compile(rep["re"], flags=re.IGNORECASE)
+            rep["re"] = re.compile(rep["re"], flags=re.IGNORECASE + re.MULTILINE)
     for rep in REPLACEMENT_DATA:
         if mode == "limit" and "limit" in rep:
             continue

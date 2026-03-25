@@ -92,7 +92,7 @@ class FileManager:
         for ch, file in enumerate(targets):
             if saveAll and not isinstance(file, TranslationFile):
                 continue
-            if self.master.options.markHuman.get():
+            if self.master.options.markHuman.get() and file.type != "mdb":
                 file.data["humanTl"] = True
             file.save()
             # Prevent message spam

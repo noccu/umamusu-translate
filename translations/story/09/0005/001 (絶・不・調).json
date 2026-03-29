@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "NSKIVR73QNWC6COWUEUCYDVEAZ7KFKPA",
+    "version": 6,
+    "bundle": "EY5H6VLBCDCWERE2STPJP2O5RVXC7A2L",
     "type": "story",
     "storyId": "090005001",
     "title": "絶・不・調",
+    "enTitle": "Feeling Awful",
     "text": [
         {
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "お立ち台に扇子にボディコン！　これがバブルの輝きよぉ～！\r\nフーーーッ！",
-            "enText": "Standing on a stand, a fan, and a bodycon! \nThis is the glow of the bubble! Whoooo!",
+            "enText": "Dance platforms, fans, and form-fitting outfits! \nThis is the glamour of the bubble, girls! Woooo!",
             "nextBlock": 2,
             "origClipLength": 222,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 233,
@@ -45,9 +47,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "ここが、『バブリーランド』……！",
-            "enText": "Here's \"Bubblyland\" ……!",
+            "enText": "So <i>this</i> is Bubblyland…!",
             "nextBlock": 3,
             "origClipLength": 88,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 233,
@@ -76,6 +79,7 @@
             "enText": "",
             "nextBlock": 4,
             "origClipLength": 341,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 13,
@@ -101,9 +105,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "時は、1か月前。学内模擬レースに遡る。",
-            "enText": "The time was one month ago. It goes \nback to an on-campus mock race.",
+            "enText": "One month ago, during a practice race at the academy…",
             "nextBlock": 5,
             "origClipLength": 69,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 40,
@@ -139,11 +144,12 @@
         },
         {
             "jpName": "素直なウマ娘",
-            "enName": "Honest Horsegirl",
+            "enName": "Honest Umamusume",
             "jpText": "スカーレットさんとスペさんが、ワーストワンツー……！？",
-            "enText": "Scarlett and Spee are the worst one-two ……!",
+            "enText": "Scarlet and Spe came in dead last?!",
             "nextBlock": 6,
             "origClipLength": 133,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 145,
@@ -167,11 +173,12 @@
         },
         {
             "jpName": "情報ツウなウマ娘",
-            "enName": "",
+            "enName": "Well-informed Umamusume",
             "jpText": "スカーレットさんは熱があったらしいけど、スペさんは\r\nなんでだろう。ていうか、なんかぽっちゃりしたような……？",
-            "enText": "I heard Ms. Scarlett had a fever, but I wonder why Ms. Spe? I \nmean, she looks kind of chubby ……?",
+            "enText": "I know Scarlet recently had a fever, but I wonder why Spe \ndid so poorly? Actually… she looks like she might've gained \nsome weight, but…",
             "nextBlock": 7,
             "origClipLength": 294,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 305,
@@ -195,11 +202,12 @@
         },
         {
             "jpName": "2人",
-            "enName": "Both",
+            "enName": "Spe and Scarlet",
             "jpText": "……うっそぉ……！",
-            "enText": "…… oh my gosh ……!",
+            "enText": "Nooooo!",
             "nextBlock": 8,
             "origClipLength": 57,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 42,
@@ -225,9 +233,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "はぁ、はぁ、はぁ……！\r\nもう、あんな走りしちゃダメだ！　もっと、もっとがんばらなきゃ！",
-            "enText": "Ha, ha, ha. ……! I can't run like that \nanymore! I have to try harder!",
+            "enText": "<i>Huff… Huff… Huff!</i> I can't afford to run like that anymore! \nI have to work even harder!",
             "nextBlock": 9,
             "origClipLength": 225,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 23,
@@ -245,9 +254,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "――って！　もう1か月経つのに全然調子戻らないよ！\r\nどうしたらいいべか、お母ちゃん！",
-            "enText": "―Oh my god! It's already been a month and I'm not getting back on \ntrack! What should I do, Mother!",
+            "enText": "Gah! It's been a month already, but I still can't get out \nof my slump! What should I do, Mom?!",
             "nextBlock": 10,
             "origClipLength": 222,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 244,
@@ -263,11 +273,12 @@
         },
         {
             "jpName": "スペの母親",
-            "enName": "",
+            "enName": "Spe's Mother",
             "jpText": "『したっけ、1回ちゃんとゆっくりしなって！\r\nアンタ、聞いた感じだと休みなくトレーニングしてんだろ？』",
-            "enText": "I told you to take it easy for once! You've been training without \na break from what I hear, haven't you?",
+            "enText": "Listen, you need to step back and take it easy! \nFrom what you've been tellin' me, you've been \ntraining nonstop, right?",
             "nextBlock": 11,
             "origClipLength": 256,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 268,
@@ -281,9 +292,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "ちゃ、ちゃんと休んでるよ！\r\nしっかり寝てるし、ゆっくりお風呂にも浸かってるし――",
-            "enText": "I'm resting! I'm sleeping well, I'm soaking in the bathtub…",
+            "enText": "I-I <i>have</i> been resting properly! I sleep well, take relaxing baths…",
             "nextBlock": 12,
             "origClipLength": 193,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 268,
@@ -299,11 +311,12 @@
         },
         {
             "jpName": "スペの母親",
-            "enName": "",
+            "enName": "Spe's Mother",
             "jpText": "『そういうんじゃなくて！　誰かと遊んだり、どっか出かけたり\r\nリフレッシュするってことさ。やってないっしょ？』",
-            "enText": "It's not about that! It's about playing with someone, going out, \nand getting refreshed. You're not doing that, are you?",
+            "enText": "That's not what I mean! I mean going out and having fun \nwith your friends to refresh yourself. You haven't been \ndoing that, have you?",
             "nextBlock": 13,
             "origClipLength": 259,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 270,
@@ -319,11 +332,12 @@
         },
         {
             "jpName": "スペの母親",
-            "enName": "",
+            "enName": "Spe's Mother",
             "jpText": "『騙されたと思ってさ、1回遊んでみな？　パーッと全部忘れる\r\nってのが、案外解決の糸口になったりするもんなのよ』",
-            "enText": "You'll be fooled. Forgetting everything \nat once can be a clue to a solution.",
+            "enText": "Just trust me! Give it a try. Let go of aaall your worries for \na while and you might just find that it solves your problem.",
             "nextBlock": 14,
             "origClipLength": 291,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 303,
@@ -341,9 +355,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "それは、そうかもしれないけど……。",
-            "enText": "That may be true, though. ……",
+            "enText": "I… I suppose that's true…",
             "nextBlock": 15,
             "origClipLength": 110,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 121,
@@ -361,9 +376,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "で、でもさ、全然走れるようになってないのに\r\n遊ぶなんて、そんなの、サボってるみたいで……！",
-            "enText": "And, but, you know, playing when you can't run at all, that's \nlike slacking off. ……!",
+            "enText": "B-But if I go and hang out with friends now before getting \nmy running back on track, I'd just be slacking off…!",
             "nextBlock": 16,
             "origClipLength": 259,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 248,
@@ -381,9 +397,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "ママから、贈り物？\r\nなにかしら。",
-            "enText": "A gift from Mom? I wonder what it is.",
+            "enText": "Mama sent me something? I wonder what it is.",
             "nextBlock": 17,
             "origClipLength": 106,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 23,
@@ -409,9 +426,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "『水着を贈ります。最近、忙しそうね。\r\nたまには、海やプールへ遊びに行ってね。ママより』",
-            "enText": "I'll send you a swimsuit. You seem to be busy these days. Please \ngo to the beach or pool once in a while. From Mom",
+            "enText": "\"I hope you like the swimsuit I got you. You've been so \nbusy lately. Take some time to visit the beach or pool \nonce in a while, dear. Love, Mama.\"",
             "nextBlock": 18,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 131,
@@ -425,9 +443,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "へえ！　かわいい水着。遊びに行ってね、か。\r\n嬉しいけど……でも、急にどうしたんだろ。",
-            "enText": "Hehe! Cute swimsuit. Go play, huh? I'm glad to hear that…… but I \nwonder what's going on all of a sudden.",
+            "enText": "Wow! What a cute swimsuit! \"Visit the beach or pool,\" huh? \nI'm glad she's thinking of me, but I wonder why the sudden gift.",
             "nextBlock": 19,
             "origClipLength": 310,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 318,
@@ -445,9 +464,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "ママ、仕事で忙しいし、\r\nいつもアタシのことはアタシに任せてるのに――あ。",
-            "enText": "Mom, you're busy with work, and you always \nleave me to take care of myself.",
+            "enText": "She's so busy with work and usually leaves me \nto my own business, so why… Oh…",
             "nextBlock": 20,
             "origClipLength": 240,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 251,
@@ -465,9 +485,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "（……もしかして、模擬レースで結果がダメダメだったこと、\r\n知ってるの？）",
-            "enText": "(…… Do you know, by any chance, that the results of the mock race \nwere not good enough?)",
+            "enText": "(Could it be she knows how horribly I did \nin the recent practice race?!)",
             "nextBlock": 21,
             "origClipLength": 139,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 176,
@@ -485,9 +506,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "（それで、自己管理が甘いって思われたとか……？\r\nううん、考えすぎよ。そんなことある、わけ……）",
-            "enText": "(And you thought I had too much self control or ……? No, you're \nthinking too much. That's not possible. ……)",
+            "enText": "(Maybe she thinks I'm doing a poor job of taking care of myself \nbecause of that…? No, I'm overthinking things. There's no way \nshe could've…)",
             "nextBlock": 22,
             "origClipLength": 280,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 291,
@@ -505,9 +527,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "…………。",
-            "enText": "…………",
+            "enText": "……",
             "nextBlock": 23,
             "origClipLength": 88,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 4,
@@ -521,9 +544,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "う～～っ、\r\n次こそ絶対、レースで1番になったって報告してみせなきゃ！",
-            "enText": "Ugh～～, next time I'll be sure to report \nthat I came in first in the race!",
+            "enText": "<i>Ngh!</i> I'll definitely win the next race and make sure \nshe knows I got first place!",
             "nextBlock": 24,
             "origClipLength": 183,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 45,
@@ -541,9 +565,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "はぁ……。昨日は結局、ケンカになっちゃった……。",
-            "enText": "Huh.…… I ended up in a fight yesterday. ……",
+            "enText": "<i>Sigh…</i> I can't believe I ended up arguing with Mom yesterday…",
             "nextBlock": 25,
             "origClipLength": 176,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 29,
@@ -569,9 +594,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "って、せっかくグラウンドに来てるのに時間もったいない！\r\n切り替え、切り替え！　今日はけっぱるぞー！",
-            "enText": "I'm wasting my time! Switch it up, switch it up! Today we're \ngoing to make a clean sweep!",
+            "enText": "Ugh, what am I doing, wasting my time out here \non the racetrack? I've gotta focus! I'm going to \nnail training today!",
             "nextBlock": 26,
             "origClipLength": 240,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 34,
@@ -589,9 +615,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "やっぱりいた！\r\nあの、よかったら併走しませんか？",
-            "enText": "I knew you were there! Um, would you like to run with me?",
+            "enText": "I had a feeling she'd be here! \nUm, would you like to run with me?",
             "nextBlock": 27,
             "origClipLength": 148,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 27,
@@ -613,9 +640,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "『――この間の模擬レースから調子が戻らないんです。なにしても\r\n上手くいかなくって。その、スペさんもそうですよね……？』",
-            "enText": "I haven't been able to get back into shape since the mock race \nthe other day. I can't seem to do anything right. I mean, isn't \nit the same with you, Ms. Spee ……?\"",
+            "enText": "\"I haven't been able to get back into shape since \nthe practice race the other day, no matter what I do. \nHas it been the same for you, Spe?\"",
             "nextBlock": 28,
             "origClipLength": 280,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 295,
@@ -637,9 +665,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "『そ、そうです！　考えれば考えるほどフォームとかわかんなく\r\nなっちゃって。前は普通にできてたことのはずなんですけど……』",
-            "enText": "That's right! The more I think about it, the more \nI don't know what the form is. It should have been \nsomething I could do normally before. ……",
+            "enText": "\"Y-Yeah! The more I think about it, the more confused I get \nabout my running form. But everything was fine before…\"",
             "nextBlock": 29,
             "origClipLength": 303,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 172,
@@ -661,9 +690,10 @@
             "jpName": "ダイワスカーレット",
             "enName": "Daiwa Scarlet",
             "jpText": "『わかります。アタシもそんな感じです……。それで、レース\r\nみたいに誰かと競り合えば調子が戻るんじゃないかなって――』",
-            "enText": "I understand. I'm like that too.…… And I thought \nthat if I competed with someone else, like in \na race, I would get back into shape.\"",
+            "enText": "\"I know what you mean. I'm in the same boat. That's why \nI thought challenging someone to a race might help me \nget back into stride, so…\"",
             "nextBlock": 30,
             "origClipLength": 279,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 290,
@@ -685,9 +715,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "（……土煙、足音、スカーレットさんの背中。\r\nうん、そうそう、レースってこんな匂い！　思い出してきた！）",
-            "enText": "(…… dirt smoke, footsteps, Scarlett's back. Yeah, yeah, yeah, \nlace smells like this! I'm starting to remember!)",
+            "enText": "(Clouds of dust, pounding footsteps, someone ahead of me… \nYes, <i>this</i> is what it's like to race! It's all coming back to me!)",
             "nextBlock": 31,
             "origClipLength": 295,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 306,
@@ -705,9 +736,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "（よし！　もうすぐで第4コーナーだ！\r\nしっかり蹴って腕を振って、スカーレットさんに――）",
-            "enText": "（Okay! Almost to the fourth corner! Kick \nhard and wave your arms, Ms. Scarlett―)",
+            "enText": "(All right! We're almost at the fourth corner! All I've gotta do \nnow is work these arms and legs and overtake Scarlet!)",
             "nextBlock": 32,
             "origClipLength": 204,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 215,
@@ -729,9 +761,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "（あれ、ぎゅーんっていかない……！？　腕の振りも、あれ？\r\n私、いつもはどんなフォームで――）",
-            "enText": "(Hey, that's not going to go squeaky ……! What is the swing of the \narms, too? What kind of form do I usually―)",
+            "enText": "(Wait, why aren't I speeding up…?! How am I supposed \nto move my arms again? Just what's my form supposed \nto be when I run?!)",
             "nextBlock": 33,
             "origClipLength": 231,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 242,
@@ -753,9 +786,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "（って、お、追いかけないとどんどん離されちゃう！\r\nギア上げなきゃ――どうやるんだっけ！？）",
-            "enText": "(Oh, I've got to catch up, or they'll keep pulling away! I have \nto gear up―how am I going to do that?)",
+            "enText": "(Ah! The gap between us is going to widen \neven more if I don't hurry! I have to change gears… \nHow do I do that again?!)",
             "nextBlock": 34,
             "origClipLength": 208,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 219,
@@ -777,9 +811,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "（うわわわっ、どうしよう……っ！）",
-            "enText": "(Woah, what am I going to do ……!)",
+            "enText": "(Oh nooo, what should I do?!)",
             "nextBlock": 35,
             "origClipLength": 76,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 87,
@@ -805,9 +840,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "――っ！",
-            "enText": "I'm gonna―!",
+            "enText": "<i>Gah!</i>\n",
             "nextBlock": 36,
             "origClipLength": 39,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 50,
@@ -831,11 +867,12 @@
         },
         {
             "jpName": "2人",
-            "enName": "Both",
+            "enName": "Spe and Scarlet",
             "jpText": "ぜぇ、はぁ……！",
-            "enText": "Geez, haha ……!",
+            "enText": "<i>Pant… Pant…!</i>",
             "nextBlock": 37,
             "origClipLength": 120,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 152,
@@ -861,9 +898,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "ありゃりゃ……フォームもバラバラ。\r\n完っ全に自分の走りを見失っちゃってるわねー。",
-            "enText": "Oh no…… your form is all over the place. I've completely lost \nsight of my own running.",
+            "enText": "My goodness… Their forms are all over the place. \nThey must've lost all sense of their own running styles.",
             "nextBlock": 38,
             "origClipLength": 233,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 15,
@@ -885,9 +923,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "それにあの感じ、気持ちも焦っていろいろ見えなくなっちゃってる\r\nのかしら……。うーん、だとすると――",
-            "enText": "And I wonder if that feeling of being in a hurry is making me \nblind to many things.…… Well, if that's the case―",
+            "enText": "I get the feeling they might've forgotten some other things, \ntoo, in their panic… Hmm, if that's the case…",
             "nextBlock": 39,
             "origClipLength": 321,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 82,
@@ -905,9 +944,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "ヘイ、スペちゃん！　バッドコンディションがあっちゅーまに\r\nバッチグーになる『バブリーランド』に行ってみない！？",
-            "enText": "Hey there, Spetchy! Let's go to \"Bubblieland\" where bad \nconditions can turn into \"batchy goo\" in no time!",
+            "enText": "Hey, Spe! I know a place that'll get you out of your rut and back \nin fantabulous form. Come with me to Bubblyland!",
             "nextBlock": 40,
             "origClipLength": 221,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 149,
@@ -933,9 +973,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "そ、そんな場所があるんですか！？",
-            "enText": "Oh, that's such a place!",
+            "enText": "Th-there's a place like that?!",
             "nextBlock": 41,
             "origClipLength": 73,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 33,
@@ -957,9 +998,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "ええ！　実は、最近スペちゃんとスカーレットちゃんの調子が\r\n悪いってフジちゃんから聞いてたの。だから2人を招待したくって。",
-            "enText": "Yes! Actually, I heard from Fuji that Spee and Scarlett are not \ndoing well lately. That's why I wanted to invite them.",
+            "enText": "You betcha! I heard from Fuji that you and Scarlet haven't \nbeen doing well lately, so I thought we could all go.",
             "nextBlock": 42,
             "origClipLength": 316,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 89,
@@ -985,9 +1027,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "レンタカーは借りたし、スポーツマニアの\r\nチケゾーちゃんも誘ったし、準備はパーペキよ！",
-            "enText": "I've rented a car, I've invited sports fanatic Chikezo to join \nme, and I'm ready to go!",
+            "enText": "I've rented a car and invited our sports fanatic, Tickezo, \nto join us too, so we're all ready to rock 'n' roll!",
             "nextBlock": 43,
             "origClipLength": 193,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 204,
@@ -1013,9 +1056,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "っていってもスカーレットちゃんには、断られちゃったんだけどね！\r\nもうトレーニング内容決めちゃったからって。あはは！",
-            "enText": "But Scarlett turned me down! She said she had already decided on \nthe training program. Ha-ha!",
+            "enText": "That said, Scarlet passed up the offer! She said she's \nalready got a training regimen locked down. Haha!",
             "nextBlock": 44,
             "origClipLength": 292,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 140,
@@ -1041,9 +1085,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "スペちゃんはどうする？\r\n興味、ないかしら？",
-            "enText": "What about you, Spee? Not interested?",
+            "enText": "What about you? You down?",
             "nextBlock": 45,
             "origClipLength": 136,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 147,
@@ -1061,9 +1106,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "（マルゼンさんイチオシの、バッドコンディションが直る\r\nトレーニング施設……。そこなら、もしかしたら私の調子も――！）",
-            "enText": "(Marzen's favorite training facility to fix bad conditions is…… \nMaybe I'll be in good shape there!)",
+            "enText": "(If this training facility that Maruzensky's recommending \nreally can help people get out of their slumps, then maybe \nit'll work for me too!)",
             "nextBlock": 46,
             "origClipLength": 274,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 204,
@@ -1085,9 +1131,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "い、行きます！",
-            "enText": "Yes, I'm coming!",
+            "enText": "C-Count me in!",
             "nextBlock": 47,
             "origClipLength": 50,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 24,
@@ -1109,9 +1156,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そんなわけで――",
-            "enText": "And that's why―",
+            "enText": "And so…",
             "nextBlock": 48,
             "origClipLength": 55,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 66,
@@ -1129,9 +1177,10 @@
             "jpName": "マルゼンスキー",
             "enName": "Maruzensky",
             "jpText": "スペちゃんにチケゾーちゃん、しーっかり掴まっててね！\r\nバブリーランドで、最高の魔法にかかるわよぉ！",
-            "enText": "Hold on tight, Spee and Chikezo! You're in Bubblieland, where the \nmagic is at its best!",
+            "enText": "Spe and Tickezo, you two'd better hold on tight! You're gonna \nexperience the most amazing magic at Bubblyland!",
             "nextBlock": 49,
             "origClipLength": 280,
+            "voiceIdx": 43,
             "animData": [
                 {
                     "origLen": 20,
@@ -1149,9 +1198,10 @@
             "jpName": "スイープトウショウ",
             "enName": "Sweep Tosho",
             "jpText": "魔法ー！？\r\n――バブリーなんとかに、アタシも行く！　アタシも行くわー！",
-            "enText": "Magic! ―Bubbly something or other, I'm coming too! I'm coming too!",
+            "enText": "Magic?! I'm going to that Bubbly whatchamacallit place too! \nNo one can stop me!",
             "nextBlock": 50,
             "origClipLength": 219,
+            "voiceIdx": 44,
             "animData": [
                 {
                     "origLen": 48,
@@ -1173,9 +1223,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そして、連れてこられたのが――",
-            "enText": "And then they brought―",
+            "enText": "And now, having arrived…",
             "nextBlock": 51,
             "origClipLength": 64,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 20,
@@ -1201,9 +1252,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "ここが、『バブリーランド』……！",
-            "enText": "Here's \"Bubblyland\" ……!",
+            "enText": "So this is Bubblyland…!",
             "nextBlock": 52,
             "origClipLength": 86,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 98,
@@ -1229,9 +1281,10 @@
             "jpName": "スペシャルウィーク",
             "enName": "Special Week",
             "jpText": "――って！　ほ、本当にトレーニングできるんですかぁ！？",
-            "enText": "―What? Oh, you can really train?",
+            "enText": "Wait! I-Is it actually possible to do any training here?!",
             "nextBlock": -1,
             "origClipLength": 173,
+            "voiceIdx": 46,
             "animData": [
                 {
                     "origLen": 184,
@@ -1254,5 +1307,6 @@
             "blockIdx": 52
         }
     ],
-    "modified": 1657285579
+    "modified": 1774816115,
+    "humanTl": true
 }

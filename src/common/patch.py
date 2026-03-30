@@ -179,11 +179,11 @@ class Args(argparse.ArgumentParser):
         if a.read_defaults:
             cfg = UmaTlConfig()
             for k, v in cfg.script.items():
-                o = getattr(a, k, None)
-                if o is not None:
-                    t = type(o)
-                    if not isinstance(v, t):
-                        v = t(v)
+                o = next(filter(lambda x: x.dest == k, self._actions), None)
+                if o is None:
+                    continue
+                if o.type is not None and not isinstance(v, o.type):
+                    v = o.type(v)
                 setattr(a, k, v)
         if self.hasDefault and a.story:
             a.story = StoryId.parse(a.type, a.story)

@@ -37,12 +37,14 @@ def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
         if not m:
             continue
         path = Path(m[1])
+        group_idx = 3 if targetType in ("home") else 2
+        id_idx = 4 if targetType in ("home") else 3
         if (
             path.parts[0] != "translations"
             or path.parts[1] != targetType
             or (jsonOnly and not utils.isJson(path.name))
-            or targetGroup and path.parts[2] != targetGroup
-            or targetId and path.parts[3] != targetId
+            or targetGroup and path.parts[group_idx] != targetGroup
+            or targetId and path.parts[id_idx] != targetId
         ):
             continue
         found.append(path)

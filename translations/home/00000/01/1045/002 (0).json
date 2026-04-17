@@ -1,15 +1,16 @@
 {
     "version": 6,
-    "bundle": "V2GOY7KJPWLU2ESSLFDV2ZLLAKK3HHLY",
+    "bundle": "M5TKXBRXVANQYZSQ73VXJCM7ALBLZNDU",
     "type": "home",
     "storyId": "00000011045002",
     "title": "0",
+    "enTitle": "",
     "text": [
         {
             "jpName": "スーパークリーク",
             "enName": "Super Creek",
             "jpText": "あら、トレーナーさん。\nどちらに行かれるんですか～？",
-            "enText": "Hey there, trainer. Where are you going～?",
+            "enText": "Oh, if it isn't Trainer. \nWhere might you be going?",
             "nextBlock": 2,
             "voiceIdx": 0,
             "pathId": 5684845783618215508,
@@ -19,7 +20,7 @@
             "jpName": "スーパークリーク",
             "enName": "Super Creek",
             "jpText": "私はお友だちと待ち合わせを\r\nしているんですが……。",
-            "enText": "I'm meeting up with a friend of mine at ……",
+            "enText": "I'm waiting for a friend of mine, but…",
             "nextBlock": 3,
             "voiceIdx": 1,
             "pathId": -6114848229884116317,
@@ -29,7 +30,7 @@
             "jpName": "スーパークリーク",
             "enName": "Super Creek",
             "jpText": "約束を忘れて寝ていたらしくて。\nふふっ、うっかりさんですよね～。",
-            "enText": "It seems I forgot my appointment and fell \nasleep. Phew, she is careless, isn't she!",
+            "enText": "It seems they forgot we were going out \nand overslept. Hehe, they can be like \nthat sometimes.",
             "nextBlock": 4,
             "voiceIdx": 2,
             "pathId": -9204376495581333983,
@@ -39,12 +40,13 @@
             "jpName": "スーパークリーク",
             "enName": "Super Creek",
             "jpText": "1時間くらいで来るそうなので、\nのんびり待つことにします～。",
-            "enText": "They said they would be here in about an \nhour, so I'll just take it easy and wait.",
+            "enText": "They said it'll take them an hour to get ready,\nso I'm just relaxing while I wait.",
             "nextBlock": -1,
             "voiceIdx": 3,
             "pathId": -112392024287966235,
             "blockIdx": 4
         }
     ],
-    "modified": 1694039717
+    "modified": 1776462254,
+    "humanTl": true
 }

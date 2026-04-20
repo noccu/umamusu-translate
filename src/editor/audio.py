@@ -89,14 +89,18 @@ class AudioPlayer:
         if reloaded := self.curPlaying[0] != storyId:
             if sType == "home":
                 # sound/c/snd_voi_story_00001_02_1054001.acb
-                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.a_b' ORDER BY n ESCAPE '\'"
+                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.a_b' ESCAPE '\' ORDER BY n"
             elif sType == "lyrics":
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.a_b' ORDER BY n"
             elif sType == "systext":
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound/v/{storyId.group}%.a_b' ORDER BY n"
             else:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.a_b' ORDER BY n"
-            hashes = self._db.execute(stmt).fetchall()
+            try:
+                hashes = self._db.execute(stmt).fetchall()
+            except apsw.SQLError as e:
+                print(f"Error executing: {stmt}\n\n{e}")
+                return
             if hashes is None:
                 if sType == "story":
                     idx = int(storyId.idx)

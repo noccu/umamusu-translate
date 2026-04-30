@@ -10,7 +10,7 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "休日。ぶらぶらと街を歩いていると、\nアドマイヤグルーヴを見つけた。",
-            "enText": "On a weekend, I was taking a stroll through the local \nneighborhood when I came across Admire Groove.",
+            "enText": "I was taking a stroll through the local neighborhood \none weekend when I came across Admire Groove.",
             "nextBlock": 2,
             "origClipLength": 88,
             "voiceIdx": -1,
@@ -274,7 +274,7 @@
             "choices": [
                 {
                     "jpText": "もしも言いたいことがあるなら、遠慮は――",
-                    "enText": "$(scale 85)If you need something off your chest, don't hold b—",
+                    "enText": "<size=34>If you need something off your chest, don't hold b—</size>",
                     "nextBlock": 14
                 }
             ],
@@ -295,7 +295,7 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "していませんし、言いたいこともありません。",
-            "enText": "I am not and I have nothing to say.",
+            "enText": "I am not and I have nothing to say to you.",
             "nextBlock": 15,
             "origClipLength": 108,
             "voiceIdx": 8,
@@ -1111,7 +1111,7 @@
             "choices": [
                 {
                     "jpText": "それじゃ、明日も頑張ろう",
-                    "enText": "$(scale 85)Alright, let's put our backs into it again tomorrow.",
+                    "enText": "<size=34>Alright, let's put our backs into it again tomorrow.</size>",
                     "nextBlock": 57
                 }
             ],
@@ -1220,6 +1220,6 @@
             "blockIdx": 60
         }
     ],
-    "modified": 1777484300,
+    "modified": 1777576108,
     "humanTl": true
 }

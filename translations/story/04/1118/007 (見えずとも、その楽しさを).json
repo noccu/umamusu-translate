@@ -354,7 +354,7 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "（この子……利口って言われている犬種よね。\n飼い主の顔を、じっと見て……命令を待っているみたいだけど）",
-            "enText": "(Isn't that dog… one of those clever breeds? Why does it \nkeep eyeing its owner's face… as if awaiting a command.)",
+            "enText": "(Isn't that dog… one of those clever breeds? Why does it look \nlike it's eyeing its owner's face… as if awaiting a command.)",
             "nextBlock": 21,
             "origClipLength": 303,
             "voiceIdx": 11,
@@ -876,7 +876,7 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "……――ほら、帰るわよ。\n貴方には家族が……待っているでしょう。",
-            "enText": "…Well, come on, we're going back. \nYou have… someone waiting for you.",
+            "enText": "…Well, come on, we're going back. \nYou have… a family waiting for you.",
             "nextBlock": 45,
             "origClipLength": 264,
             "voiceIdx": 27,
@@ -1142,7 +1142,7 @@
             "choices": [
                 {
                     "jpText": "……よし、帰ってからも一緒に頑張ろう！",
-                    "enText": "$(scale 85)…Let's continue our hard work when we get back!",
+                    "enText": "<size=34>…Let's continue our hard work when we get back!</size>",
                     "nextBlock": 58
                 }
             ],
@@ -1198,6 +1198,6 @@
             "blockIdx": 59
         }
     ],
-    "modified": 1777484612,
+    "modified": 1777577469,
     "humanTl": true
 }

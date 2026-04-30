@@ -56,7 +56,7 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "私はいったい、なにを恐れてるっていうの……？",
-            "enText": "Whyever should I be fearful of anything…?",
+            "enText": "Whyever should I be fearful of her…?",
             "nextBlock": 4,
             "origClipLength": 131,
             "voiceIdx": 2,
@@ -265,7 +265,7 @@
             "jpName": "エアグルーヴ",
             "enName": "Air Groove",
             "jpText": "……他にそれらしい者もおらんだろう。\n貴様、アドマイヤグルーヴと交流があるな。話しているのを見た。",
-            "enText": "…Do you see another trainer present? You, you've conversed \nwith Admire Groove, haven't you? I saw you two earlier.",
+            "enText": "…Who else would I be addressing? You, you've conversed \nwith Admire Groove, haven't you? I saw you two earlier.",
             "nextBlock": 14,
             "origClipLength": 289,
             "voiceIdx": 8,
@@ -469,7 +469,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "――考え事をしながら眠ったからだろうか。\nまどろみの縁で、奇妙な夢を見た。",
-            "enText": "Perhaps all these thoughts were the reason for the strange \ndream I had as I drifted off to sleep.",
+            "enText": "Perhaps all these thoughts were the reason for the strange \ndream I had when I drifted off to sleep.",
             "nextBlock": 24,
             "origClipLength": 93,
             "voiceIdx": -1,
@@ -537,7 +537,7 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "……。一度全てを失くしかけたとき――\nこの手を掴んでくださったのは、貴方でした。",
-            "enText": "…It was you. When I thought I had lost everything \nI had… you were the one who reached out to me.",
+            "enText": "…When I thought I had lost everything I had… you were \nthe one who reached out to me.",
             "nextBlock": 28,
             "origClipLength": 328,
             "voiceIdx": 17,
@@ -837,7 +837,7 @@
             "choices": [
                 {
                     "jpText": "先って……『エリザベス女王杯』……？",
-                    "enText": "$(scale 95)After it…? You mean the Queen Elizabeth Cup?",
+                    "enText": "<size=38>After it…? You mean the Queen Elizabeth Cup?</size>",
                     "nextBlock": 39
                 }
             ],
@@ -882,14 +882,14 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "……貴方、どうしてそれを――",
-            "enText": "……How did you ——",
+            "enText": "……How do you ——",
             "nextBlock": 41,
             "origClipLength": 132,
             "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "あ、いや……この間、併走してた気が――",
-                    "enText": "$(scale 80)Ah, I… just thought I saw you two race the other day…",
+                    "enText": "<size=32>Ah, I… just thought I saw you two race the other day…</size>",
                     "nextBlock": 41
                 }
             ],
@@ -940,7 +940,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "アドマイヤグルーヴのトリプルティアラと『エリザベス女王杯』。\nその真逆とも言える顛末の夢を偶然見るなんてあるのだろうか。",
-            "enText": "The triple tiara and the Queen Elizabeth Cup appeared \nin both of our dreams. Is it really simply a coincidence \nthat they were so similar…?",
+            "enText": "The triple tiara and the Queen Elizabeth Cup appeared \nin both of our dreams. Is it really simply coincidence \nthat they were so similar…?",
             "nextBlock": 44,
             "origClipLength": 123,
             "voiceIdx": -1,
@@ -1060,7 +1060,7 @@
             "jpName": "ネオユニヴァース",
             "enName": "Neo Universe",
             "jpText": "――アドマイヤグルーヴの“魂”……“CONT”が“喪失”。\n“修復”が……必要。……あなたの“窓”を――閉じないで。",
-            "enText": "CONT with Admire Groove's Soul… Failing. \nRestoration required. …Do not close your Vision Window.",
+            "enText": "CONT of Admire Groove's Soul… Failing. \nRestoration required. …Do not close <i>your</i> Vision Window.",
             "nextBlock": -1,
             "origClipLength": 565,
             "voiceIdx": 35,
@@ -1078,6 +1078,6 @@
             "blockIdx": 49
         }
     ],
-    "modified": 1777483745,
+    "modified": 1777574875,
     "humanTl": true
 }

@@ -44,7 +44,7 @@
             "jpName": "",
             "enName": "",
             "jpText": "正直、何を言われているのかはちっともわからない。\n自分とアドマイヤグルーヴが同時に見ている謎の夢についても。",
-            "enText": "Frankly, I don't have a clue what she's talking about. \nNor what's up with that strange dream I seem to have \nshared with Admire Groove.",
+            "enText": "Frankly, I don't have a clue what she was talking about. \nNor what's up with that strange dream I seem to have \nshared with Admire Groove.",
             "nextBlock": 4,
             "origClipLength": 115,
             "voiceIdx": -1,
@@ -120,7 +120,7 @@
             "choices": [
                 {
                     "jpText": "彼女と戦うつもりなら、目を通してほしい",
-                    "enText": "You should have a look at them, \nif you want to take her on.",
+                    "enText": "<size=30>You should have a look at them, if you want to take her on.</size>",
                     "nextBlock": 7
                 }
             ],
@@ -148,7 +148,7 @@
             "choices": [
                 {
                     "jpText": "役に立たないと思えば、破り捨てて構わない",
-                    "enText": "$(scale 80)If these aren't useful, you can just throw them away.",
+                    "enText": "<size=32>If these aren't useful, you can just throw them away.</size>",
                     "nextBlock": 8
                 }
             ],
@@ -190,19 +190,19 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "――これは……このデータは……。\n私と……彼女の……？",
-            "enText": "This data… It's on both of us…?",
+            "enText": "This data… includes both of us…?",
             "nextBlock": 10,
             "origClipLength": 204,
             "voiceIdx": 4,
             "choices": [
                 {
                     "jpText": "最近の成長分も含めた、現状の戦力比較だ",
-                    "enText": "Comparisons including the very latest \ndevelopments, yes.",
+                    "enText": "<size=30>Comparisons including the very latest developments, yes.</size>",
                     "nextBlock": 10
                 },
                 {
                     "jpText": "最近の成長分も含めた、現状の戦力比較だよ",
-                    "enText": "Comparisons including the very latest \ndevelopments, yes.",
+                    "enText": "<size=30>Comparisons including the very latest developments, yes.</size>",
                     "nextBlock": 10
                 }
             ],
@@ -247,7 +247,7 @@
             "choices": [
                 {
                     "jpText": "どうだろう。身の回りの環境が変わったとか",
-                    "enText": "$(scale 85)Hard to say. Perhaps a change in her environment?",
+                    "enText": "<size=34>Hard to say. Perhaps a change in her environment?</size>",
                     "nextBlock": 12
                 }
             ],
@@ -289,7 +289,7 @@
             "jpName": "アドマイヤグルーヴ",
             "enName": "Admire Groove",
             "jpText": "……それで、貴方はこのデータを見せて私にどうしろと――\nこれは……彼女への、対策……？",
-            "enText": "…So, what do you expect me to gain from this da— \n…Are these countermeasures? Against her…?",
+            "enText": "…So, what do you expect me to gain from this data? \n…Are these countermeasures? Against her…?",
             "nextBlock": 14,
             "origClipLength": 371,
             "voiceIdx": 8,
@@ -417,7 +417,7 @@
             "choices": [
                 {
                     "jpText": "そのためのメニューも全て組んである",
-                    "enText": "$(scale 94)I already drew up a regimen with this in mind.",
+                    "enText": "<size=38>I already drew up a regimen with this in mind.</size>",
                     "nextBlock": 19
                 }
             ],
@@ -626,7 +626,7 @@
             "jpName": "スティルインラブ",
             "enName": "Still in Love",
             "jpText": "……アハハはハハははははッ！！\nもっと、もぉっと！！　愉しみましょぉおぉ！？",
-            "enText": "…𝐀ha𝐡𝐚ha𝐡𝐚h𝐚ha𝐡a!! \nMore, moo𝐨re!! Let us enjoy this to the fulle𝐞eest!",
+            "enText": "…<i>A</i>ha<i>ha</i>ha<i>ha</i>h<i>a</i>ha<i>h</i>a!! \nMore, moo<i>o</i>re!! Let us enjoy this to the fulle<i>e</i>eest!",
             "nextBlock": 28,
             "origClipLength": 296,
             "voiceIdx": 21,
@@ -821,12 +821,12 @@
             "choices": [
                 {
                     "jpText": "（やっぱり、ティアラでの戦いになるのか）",
-                    "enText": "$(scale 85)(So we are indeed heading for a battle at the Tiara.)",
+                    "enText": "<size=34>(So we are indeed heading for a battle at the Tiara.)</size>",
                     "nextBlock": 34
                 },
                 {
                     "jpText": "（やっぱり、ティアラでの戦いになるんだ）",
-                    "enText": "$(scale 85)(So we are indeed heading for a battle at the Tiara.)",
+                    "enText": "<size=34>(So we are indeed heading for a battle at the Tiara.)</size>",
                     "nextBlock": 34
                 }
             ],
@@ -903,12 +903,12 @@
             "choices": [
                 {
                     "jpText": "情報収集と分析役に、俺を使わないか？",
-                    "enText": "You could use someone to gather \nand analyse info, right?",
+                    "enText": "<size=30>You could use someone to gather and analyse info, right?</size>",
                     "nextBlock": 37
                 },
                 {
                     "jpText": "情報収集と分析役に、私を使わない？",
-                    "enText": "You could use someone to gather \nand analyse info, right?",
+                    "enText": "<size=30>You could use someone to gather and analyse info, right?</size>",
                     "nextBlock": 37
                 }
             ],
@@ -1019,12 +1019,12 @@
             "choices": [
                 {
                     "jpText": "君の目的が、彼女との決着だけというなら",
-                    "enText": "$(scale 95)If your sole goal is to settle things with her…",
+                    "enText": "<size=38>If your sole goal is to settle things with her…</size>",
                     "nextBlock": 42
                 },
                 {
                     "jpText": "貴方の目的が、彼女との決着だけというなら",
-                    "enText": "$(scale 95)If your sole goal is to settle things with her…",
+                    "enText": "<size=38>If your sole goal is to settle things with her…</size>",
                     "nextBlock": 42
                 }
             ],
@@ -1048,7 +1048,7 @@
             "choices": [
                 {
                     "jpText": "契約は、それまでだけだって構わない",
-                    "enText": "$(scale 80)Then I don't mind if our contract ends at that point.",
+                    "enText": "<size=34>Then I don't mind if our contract ends at that point.</size>",
                     "nextBlock": 43
                 }
             ],
@@ -1283,6 +1283,6 @@
             "blockIdx": 53
         }
     ],
-    "modified": 1777479807,
+    "modified": 1777577489,
     "humanTl": true
 }

@@ -163,6 +163,12 @@ def replace(text: str, mode, extra_rep=False):
             lambda m: "-".join(m[1] * int(len(m[0][1:]) / 2 + 1)),
             text
         )
+        # Fix digit formatting
+        text = re.sub(
+            r"(?:\d+,)+",
+            lambda m: re.sub(r"[,']", " ", m[0]),
+            text
+        )
 
     return text
 

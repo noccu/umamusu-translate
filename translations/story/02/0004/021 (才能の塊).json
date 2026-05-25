@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "FFWGPGDRTJF7J6WWEM2H24IQI6ZBJA4Q",
+    "version": 6,
+    "bundle": "NMD2YGMZE2NLXTIMZS2IXQ5NB3PIFOCX",
     "type": "story",
     "storyId": "020004021",
     "title": "才能の塊",
+    "enTitle": "",
     "text": [
         {
             "jpName": "",
             "enName": "",
             "jpText": "ナリタブライアンが驚異の勝ち方をしてみせた『皐月賞』から\r\n遡ること数か月前――",
-            "enText": "A few months before the “SatsukiShou” when \nNarita Brian showed how to win wondersー",
+            "enText": "Back when I first met Narita Brian, several months before her \nastonishing win in the Satsuki Sho…",
             "nextBlock": 2,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "pathId": 8214807138508763097,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "彼女の走りを初めて見た時の印象は……“ぎこちない”だった。",
-            "enText": "The first time I saw her run… was awkward.",
+            "enText": "Her running was, in a word, \"restrained.\"",
             "nextBlock": 3,
             "origClipLength": 82,
+            "voiceIdx": -1,
             "pathId": 5371377367756587102,
             "blockIdx": 2
         },
@@ -29,9 +32,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふぅ……ふぅ……。",
-            "enText": "Heh… heh…",
+            "enText": "<i>Huff… Puff…</i>",
             "nextBlock": 4,
             "origClipLength": 91,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 60,
@@ -57,9 +61,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ひゃあ～……し～んど～い……！",
-            "enText": "Phewah… It's tough…!",
+            "enText": "Gaaah… This's haaard!",
             "nextBlock": 5,
             "origClipLength": 173,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 185,
@@ -85,18 +90,19 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "うんうん、2人ともいい走りだっ！\r\n次のレースに向けて頑張れ！",
-            "enText": "Yeah-yeah, you 2 it was a good run! Good luck in the next race!",
+            "enText": "Good run, you two! Keep it up! You'll be ready for the next race in no \ntime!",
             "nextBlock": 6,
             "origClipLength": 175,
+            "voiceIdx": 2,
             "choices": [
                 {
                     "jpText": "君も走ろうな……",
-                    "enText": "You have to run, too…",
+                    "enText": "You should be running too…",
                     "nextBlock": 6
                 },
                 {
                     "jpText": "貴方も走ろうね……",
-                    "enText": "You have to run, too…",
+                    "enText": "You should be running too…",
                     "nextBlock": 6
                 }
             ],
@@ -133,9 +139,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "走るだけじゃ得られないものだってあんだろーがっ！\r\nたとえば～……ぱっと思いつかねぇけどよ！",
-            "enText": "You can't get anything by just running! For \nexample～… I can't even think of it!",
+            "enText": "There's some things you can't get just by running! What that is \nexactly… I'll tell you when I think of it!",
             "nextBlock": 7,
             "origClipLength": 191,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 203,
@@ -169,9 +176,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "まあ、とにかく今日のトレーニングはここまでにしようか。\r\nみんなお疲れ様。",
-            "enText": "Well anyway, let's stop here for today. Good work, everyone.",
+            "enText": "Uhhh, okay then. Anyway, that's enough training for today. Good job, \neveryone.",
             "nextBlock": 8,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 60,
@@ -205,9 +213,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "おっしゃ～！　飯だ飯だっ！\r\nんじゃな、トレーナー！",
-            "enText": "Alrighty～! Dinner-Dinner! See ya, Trainer!",
+            "enText": "Whoo-hoo! Time to eat! Later, alligator!",
             "nextBlock": 9,
             "origClipLength": 148,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 160,
@@ -249,9 +258,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……お疲れさま、トレーナーさん。",
-            "enText": "Thank you for your hard work, Trainer-san.",
+            "enText": "Thank you, Trainer.",
             "nextBlock": 10,
             "origClipLength": 77,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 60,
@@ -277,9 +287,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "また明日ね、トレーナーさん……って、あれ？\r\nあそこにいるのは……。",
-            "enText": "See you tomorrow, Trainer-san… ah, huh? The one over there…",
+            "enText": "See you tomorrow… Huh? Over there, is that…",
             "nextBlock": 11,
             "origClipLength": 220,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 102,
@@ -305,9 +316,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "ウイニングチケットの見つめる先には、\r\n淡々とトレーニングに打ち込む1人のウマ娘がいた。",
-            "enText": "Where Winning Ticket looked, there was a Horse Girl who fully \ndevoted herself to training.",
+            "enText": "I follow Winning Ticket's gaze and find a racer training tirelessly.",
             "nextBlock": 12,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 18,
@@ -325,9 +337,10 @@
             "jpName": "？？？",
             "enName": "???",
             "jpText": "ふぅ～……。",
-            "enText": "Fu～…",
+            "enText": "<i>Exhale…</i>",
             "nextBlock": 13,
             "origClipLength": 46,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 133,
@@ -345,9 +358,10 @@
             "jpName": "？？？",
             "enName": "???",
             "jpText": "……ふっ！！",
-            "enText": "…Ah!!",
+            "enText": "Hup!",
             "nextBlock": 14,
             "origClipLength": 69,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 58,
@@ -365,9 +379,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "しなやかな体と、力強い踏み込み――",
-            "enText": "A supple body and a strong stepー",
+            "enText": "She moves flexibly, with powerful strides.",
             "nextBlock": 15,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 81,
@@ -381,9 +396,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "パッと見ると悪くない走りだが、どことなくチグハグというか\r\n何か噛み合っていないという印象を受けた。",
-            "enText": "When I looked at it, I got the impression that it was not a bad \nrun, but it still lacked something somewhere.",
+            "enText": "It's not bad running at first glance, but something isn't quite in sync.",
             "nextBlock": 16,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 65,
@@ -397,13 +413,14 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "あの子、ハヤヒデの妹で“ナリタブライアン”って言うんだ。",
-            "enText": "This girl is the younger sister of Hayahide, \nand she's called Narita Brian.",
+            "enText": "That's Hayahide's little sister, Narita Brian.",
             "nextBlock": 17,
             "origClipLength": 160,
+            "voiceIdx": 9,
             "choices": [
                 {
                     "jpText": "ビワハヤヒデの妹……？",
-                    "enText": "Biwa Hayahide's sister…?",
+                    "enText": "Hayahide's sister?",
                     "nextBlock": 17
                 }
             ],
@@ -420,9 +437,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うん、でもなんで1人でトレーニングしてんだろ……。\r\nチームのみんなと一緒じゃないのかな？",
-            "enText": "Yeah, but why is she training alone… Isn't \nshe with everyone on her team?",
+            "enText": "Yeah, but why's she out here training alone? Shouldn't she be with \nthe rest of her team?",
             "nextBlock": 18,
             "origClipLength": 226,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 111,
@@ -440,9 +458,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "チームってことは、もう彼女はデビューを？",
-            "enText": "Team means, has she already made her debut?",
+            "enText": "Her team… So she's debuted already?",
             "nextBlock": 19,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -456,9 +475,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "たしかこれまで5戦走って勝ちは2つだったかな。\r\n悪い成績じゃないんだけど、物足りない気もする。",
-            "enText": "If I recall correctly, she ran 5 races so far and won 2. It's not \na bad result, but it feels like it's not enough.",
+            "enText": "Yeah, she's run five races, I think, with two wins so far. It's not bad, \nbut I get the feeling it could be better.",
             "nextBlock": 20,
             "origClipLength": 253,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 93,
@@ -476,9 +496,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "だってハヤヒデが言ってたんだよね、\r\nブライアンは“才能の塊”だって。",
-            "enText": "Because Hayahide said that Brian is a “Mass of talent”.",
+            "enText": "After all, Hayahide gushes over Brian — she calls her a huuuge heap of \ntalent!",
             "nextBlock": 21,
             "origClipLength": 179,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 78,
@@ -496,9 +517,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "才能の塊……。",
-            "enText": "Mass of talent…",
+            "enText": "A heap of talent, huh?",
             "nextBlock": 22,
             "origClipLength": 54,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 66,
@@ -516,9 +538,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "実力の長けたビワハヤヒデが“才能の塊”と評価する妹――",
-            "enText": "Her sister who is highly skilled is evaluating \nher as a “Mass of talent”ー",
+            "enText": "The analytical Biwa Hayahide, a heap of talent in her own right, \nwould praise her sister that much?",
             "nextBlock": 23,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 25,
@@ -532,29 +555,32 @@
             "jpName": "",
             "enName": "",
             "jpText": "ナリタブライアンがどんなレースをするのか興味が湧く中、\r\nその姿を見たのは意外な場所でのことだった。",
-            "enText": "I got curious about what kind of race will Narita Brian do, but I \nfound the answer in an unexpected place.",
+            "enText": "Hearing that alone would've piqued my interest, but then… Not long \nafter, I find Narita Brian again in an unexpected place.",
             "nextBlock": 24,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "pathId": 3070373103302227263,
             "blockIdx": 23
         },
         {
             "jpName": "中堅トレーナーA",
-            "enName": "Average Trainer A",
+            "enName": "Experienced Trainer A",
             "jpText": "今回の“選抜レース”は、なかなかに実力のある子が揃ってるな。\r\n誰をスカウトするか慎重に決めないと。",
-            "enText": "In this “Selection Race”, there are quite few talented girls. You \nhave to carefully decide who to scout.",
+            "enText": "There are some major athletes at these tryouts. I've really gotta think \nthings through before scouting anyone.",
             "nextBlock": 25,
             "origClipLength": 269,
+            "voiceIdx": 13,
             "pathId": -5273470598192586612,
             "blockIdx": 24
         },
         {
             "jpName": "中堅トレーナーB",
-            "enName": "Average Trainer B",
+            "enName": "Experienced Trainer B",
             "jpText": "……あら？　次のレースに出るナリタブライアンって\r\nすでにデビューしていたような……。",
-            "enText": "…Oh? Appearing in the next race is Narita \nBrian, who has already made her debut…",
+            "enText": "Hm? Narita Brian's up next, but didn't she debut already?",
             "nextBlock": 26,
             "origClipLength": 186,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 60,
@@ -570,11 +596,12 @@
         },
         {
             "jpName": "中堅トレーナーA",
-            "enName": "Average Trainer A",
+            "enName": "Experienced Trainer A",
             "jpText": "チームを辞めたらしいですよ。\r\nトレーナーとそりが合わなかったとかで。",
-            "enText": "It seems that she quit her team. The trainer didn't fit her.",
+            "enText": "I heard she dropped out of her team. Things weren't working out with \nher trainer.",
             "nextBlock": 27,
             "origClipLength": 143,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 155,
@@ -592,9 +619,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "“選抜レース”とは、まだチームに所属していないウマ娘たちが\r\nトレーナーにスカウトされることを目的としたレースだ。",
-            "enText": "A “Selection Race” is a race that is aimed at Horse Girls who are \nnot yet in a team to be scouted by a trainer.",
+            "enText": "Tryouts are where racers who don't have a team yet try to be scouted \nby a trainer.",
             "nextBlock": 28,
             "origClipLength": 119,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 20,
@@ -608,9 +636,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "（チームを辞めたから、前も1人でトレーニングをしていたのか。\r\nでも、いったいなんで……）",
-            "enText": "(Since she quit the team, she was training alone before. But, \nwhat the hell is it…)",
+            "enText": "(Now I get why she was training on her own, but what happened with \nher trainer that made her quit?)",
             "nextBlock": 29,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "pathId": 7793655802656425838,
             "blockIdx": 28
         },
@@ -618,9 +647,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "（チームを辞めたから、前も1人でトレーニングをしていたんだ。\r\nでも、いったいなんで……）",
-            "enText": "(Since she quit the team, she was training alone before. But, \nwhat the hell is it…)",
+            "enText": "(Now I get why she was training on her own, but what happened with \nher trainer that made her quit?)",
             "nextBlock": 30,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "pathId": 9205115508821861570,
             "blockIdx": 29
         },
@@ -628,9 +658,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "そんなことを考えている間に、\r\nナリタブライアンの走るレースが始まったのだが――",
-            "enText": "While I was thinking about such a thing, \nNarita Brian's race has startedー",
+            "enText": "While I'm still pondering that, Brian's race begins.",
             "nextBlock": 31,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "pathId": -4388716701843943040,
             "blockIdx": 30
         },
@@ -638,9 +669,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ナリタブライアン、先頭から5バ身ほど遅れてゴール！\r\nスパートの脚を残せなかったか！？",
-            "enText": "Narita Brian is 5 lengths away from the goal! She couldn't leave \nthe spurt's leg behind!?",
+            "enText": "And Narita Brian finishes five lengths behind first! Did she lose all her \nenergy before the last sprint?!",
             "nextBlock": 32,
             "origClipLength": 201,
+            "voiceIdx": 16,
             "pathId": 2382737192183346945,
             "blockIdx": 31
         },
@@ -648,19 +680,21 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "すでにトゥインクル・シリーズで2勝という実績があるだけに、\r\nなんとも信じがたい結果となりました！",
-            "enText": "She already has a record of 2 wins in the Twinkle \nSeries, so it is hard to believe!",
+            "enText": "With two Twinkle Series wins under her belt, it's hard to believe her \nresult today!",
             "nextBlock": 33,
             "origClipLength": 195,
+            "voiceIdx": 17,
             "pathId": 8463123365337540939,
             "blockIdx": 32
         },
         {
             "jpName": "中堅トレーナーA",
-            "enName": "Average Trainer A",
+            "enName": "Experienced Trainer A",
             "jpText": "見事な走りだったよ！\r\nぜひともウチのチームで走ってみないか！？",
-            "enText": "It was a great run! Why don't you run with our team!?",
+            "enText": "That was a great run! I'd love to have you on our team!",
             "nextBlock": 34,
             "origClipLength": 147,
+            "voiceIdx": 18,
             "pathId": 9171233468006805214,
             "blockIdx": 33
         },
@@ -668,9 +702,10 @@
             "jpName": "ウマ娘A",
             "enName": "Horsegirl A",
             "jpText": "は、はいっ！！\r\nこちらこそ、よろしくお願いしますっ！！",
-            "enText": "Y-Yes!! Same here, glad to be working with you!!",
+            "enText": "Y-Yes! I'd love to join!",
             "nextBlock": 35,
             "origClipLength": 125,
+            "voiceIdx": 19,
             "pathId": -3984000752459821500,
             "blockIdx": 34
         },
@@ -678,9 +713,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トレーナーたちが走り終わったウマ娘に声をかける中、\r\n俺も1人のウマ娘の元へ向かった。",
-            "enText": "While the trainers called out to the Horse Girls who finished \nrunning, I also headed to 1 Horse Girl.",
+            "enText": "Seeing the other trainers approaching horsegirls, I head over to \nthe racer who caught my interest.",
             "nextBlock": 36,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "pathId": -3742259234523404190,
             "blockIdx": 35
         },
@@ -688,9 +724,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "トレーナーたちが走り終わったウマ娘に声をかける中、\r\n私も1人のウマ娘の元へ向かった。",
-            "enText": "While the trainers called out to the Horse Girls who finished \nrunning, I also headed to 1 Horse Girl.",
+            "enText": "Seeing the other trainers approaching horsegirls, I head over to \nthe racer who caught my interest.",
             "nextBlock": 37,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "pathId": -5717390406742079382,
             "blockIdx": 36
         },
@@ -698,9 +735,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "…………。",
-            "enText": "……",
+            "enText": "…",
             "nextBlock": 38,
             "origClipLength": 39,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 89,
@@ -714,9 +752,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ナリタブライアン、ちょっといいかな。",
-            "enText": "Narita Brian, can I have a minute?",
+            "enText": "Hey, Narita Brian. Mind if we talk?",
             "nextBlock": 39,
             "origClipLength": 68,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -730,9 +769,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……とてもスカウトされるような内容ではなかったと思うが。",
-            "enText": "…I don't think my performance was anything worth scouting over.",
+            "enText": "I don't think I did anything today worthy of being scouted.",
             "nextBlock": 40,
             "origClipLength": 116,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 50,
@@ -750,9 +790,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "彼女の言う通り、レースではスパートの伸びを欠き、\r\nこれといった見せ場は作れなかった。",
-            "enText": "As she said, the race lacked the stretch of the spurt and I could \nnot see a place where she could show this.",
+            "enText": "She's right — she didn't display much of a performance and lost speed \nnear the end.",
             "nextBlock": 41,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 113,
@@ -770,9 +811,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "しかし、それは以前にも感じた“ぎこちなさ”が\r\n関係しているのではないかと思い、声をかけてみたのだった。",
-            "enText": "However, I thought that it might be related to the “Awkwardness” \nthat I felt before, and I tried to call it out.",
+            "enText": "Yet I can't help but think that awkward running form of hers is to \nblame. And I have to know if I'm right.",
             "nextBlock": 42,
             "origClipLength": 112,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 124,
@@ -790,9 +832,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "体のしなりや、バネの強さは申し分ない。\r\nそれにフォームも完璧だ。",
-            "enText": "The strength of the body and the step \nis perfect. And the form is perfect.",
+            "enText": "Your flexibility and momentum were good. Perfect form as well.",
             "nextBlock": 43,
             "origClipLength": 88,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 124,
@@ -810,9 +853,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "体のしなりや、バネの強さは申し分ない。\r\nそれにフォームも完璧。",
-            "enText": "The strength of the body and the step \nis perfect. And the form is perfect.",
+            "enText": "Your flexibility and momentum were good. Perfect form as well.",
             "nextBlock": 44,
             "origClipLength": 86,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 124,
@@ -830,9 +874,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "でも、それらがうまいこと噛み合ってないんじゃないかと思って。",
-            "enText": "But I thought they didn't match up well.",
+            "enText": "But I think those pieces aren't fitting together well.",
             "nextBlock": 45,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 124,
@@ -850,9 +895,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "…………。",
-            "enText": "……",
+            "enText": "…",
             "nextBlock": 46,
             "origClipLength": 40,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 52,
@@ -870,9 +916,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "キレイすぎるフォームが、逆に君の力を押し留めて\r\nしまっているのかもしれない。",
-            "enText": "Your form is too beautiful, that it keeps your power down. I \nthink it's a good idea to have a look at it.",
+            "enText": "Your form's <i>too</i> textbook. It's holding back your power.",
             "nextBlock": 47,
             "origClipLength": 129,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -890,9 +937,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "キレイすぎるフォームが、逆に貴方の力を押し留めて\r\nしまっているのかもしれない。",
-            "enText": "Your form is too beautiful, that it keeps your power down. I \nthink it's a good idea to have a look at it.",
+            "enText": "Your form's <i>too</i> textbook. It's holding back your power.",
             "nextBlock": 48,
             "origClipLength": 129,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 89,
@@ -910,9 +958,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "もっと自由に、力に任せて走ってみるのはどうかな。",
-            "enText": "How about running more freely and leaving the rest to the wind?",
+            "enText": "Try running more freely, and let your strength guide you.",
             "nextBlock": 49,
             "origClipLength": 76,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 107,
@@ -930,9 +979,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……自由に……力に任せて。",
-            "enText": "….Freely… Leave it to the wind…",
+            "enText": "More freely… as my strength guides me.",
             "nextBlock": 50,
             "origClipLength": 107,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 60,
@@ -950,9 +1000,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……ふっ！！",
-            "enText": "….Ah!!",
+            "enText": "Hup!",
             "nextBlock": 51,
             "origClipLength": 101,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 41,
@@ -970,9 +1021,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "……っ！？",
-            "enText": "…!?",
+            "enText": "…?!",
             "nextBlock": 52,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "pathId": 9181237137701844357,
             "blockIdx": 51
         },
@@ -980,9 +1032,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "その走りは、こちらの想定をはるかに超えていた。",
-            "enText": "That run was far beyond my expectations.",
+            "enText": "Whatever I was expecting, it wasn't this.",
             "nextBlock": 53,
             "origClipLength": 75,
+            "voiceIdx": -1,
             "pathId": 7137374931201538001,
             "blockIdx": 52
         },
@@ -990,9 +1043,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "極端と言えるほどに沈み込んだフォームは、\r\nまるで獲物を捕らえる猛禽類にすら見えるほどで――",
-            "enText": "The form, which is so subdued that it can be said to be extreme, \nnow looks like even a fierce predator capturing his preyー",
+            "enText": "Her stance is so low, she looks like an animal on the hunt.",
             "nextBlock": 54,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "pathId": -5582897220446493718,
             "blockIdx": 53
         },
@@ -1000,19 +1054,21 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "はああああ～～っ！！",
-            "enText": "Haaaa～～!!",
+            "enText": "Haaaaah!",
             "nextBlock": 55,
             "origClipLength": 106,
+            "voiceIdx": 25,
             "pathId": -5680934027674350226,
             "blockIdx": 54
         },
         {
             "jpName": "中堅トレーナーB",
-            "enName": "Average Trainer B",
+            "enName": "Experienced Trainer B",
             "jpText": "え……っ？　な、なに……あの走り……！？",
-            "enText": "Eh…!? Wh-What… is that run…!?",
+            "enText": "Huh? Wh-What's up with that run?!",
             "nextBlock": 56,
             "origClipLength": 106,
+            "voiceIdx": 26,
             "pathId": -2582065865101122772,
             "blockIdx": 55
         },
@@ -1020,9 +1076,10 @@
             "jpName": "ウマ娘B",
             "enName": "Horsegirl B",
             "jpText": "すご……どんどん加速してる……！？",
-            "enText": "Amazing… It's accelerating more and more…!?",
+            "enText": "Wow… And she keeps getting faster!",
             "nextBlock": 57,
             "origClipLength": 92,
+            "voiceIdx": 27,
             "pathId": 6290934908588249987,
             "blockIdx": 56
         },
@@ -1030,9 +1087,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "はは……っ、たしかに“才能の塊”だ……。",
-            "enText": "Hahaha… I'm sure now it's a “Mass of talent”.",
+            "enText": "Haha… She really is a heap of talent.",
             "nextBlock": 58,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "pathId": 6629290743934898927,
             "blockIdx": 57
         },
@@ -1040,9 +1098,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "はは……っ、たしかに“才能の塊”だね……。",
-            "enText": "Hahaha… I'm sure now it's a “Mass of talent”.",
+            "enText": "Haha… She really is a heap of talent.",
             "nextBlock": 59,
             "origClipLength": 72,
+            "voiceIdx": -1,
             "pathId": 6083783494426094728,
             "blockIdx": 58
         },
@@ -1050,9 +1109,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "さっきの走りをレースでやっていたら、\r\n間違いなく1着だっただろうな。",
-            "enText": "If she was racing like that in the previous run, she would \ndefinitely have won first place.",
+            "enText": "If you ran like that in the race, you would've placed first for sure.",
             "nextBlock": 60,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 131,
@@ -1066,9 +1126,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "さっきの走りをレースでやっていたら、\r\n間違いなく1着だっただろうね。",
-            "enText": "If she was racing like that in the previous run, she would \ndefinitely have won first place.",
+            "enText": "If you ran like that in the race, you would've placed first for sure.",
             "nextBlock": 61,
             "origClipLength": 90,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 131,
@@ -1082,9 +1143,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "まだ意識しすぎているところがある。\r\nこれから慣らしていけば、もっと速く走れそうだ。",
-            "enText": "There are still places that are too conscious. If I get used to \nit from now on, I'll be able to run faster.",
+            "enText": "I still have to think about it too much. Once I get the hang of it, I'll be \neven faster.",
             "nextBlock": 62,
             "origClipLength": 214,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 154,
@@ -1098,9 +1160,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "あれ以上に速く……とんでもないな、君は。",
-            "enText": "Faster than that… that's outrageous, you.",
+            "enText": "Even faster than that? Well, can't say I'm not looking forward to it.",
             "nextBlock": 63,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -1114,9 +1177,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "あれ以上に速く……とんでもないね、貴方は。",
-            "enText": "Faster than that… that's outrageous, you.",
+            "enText": "Even faster than that? Well, can't say I'm not looking forward to it.",
             "nextBlock": 64,
             "origClipLength": 72,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -1130,9 +1194,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ところで、なんでチームを抜けたんだ？\r\n2勝しているならトレーナーからも評価されていただろう？",
-            "enText": "By the way, why did you leave the team? If you had already won 2 \ntimes, wouldn't the trainer have appreciated it?",
+            "enText": "If you don't mind me asking, why'd you leave your team? Your trainer \nmust've been proud that you racked up two wins.",
             "nextBlock": 65,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 118,
@@ -1150,9 +1215,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ところで、なんでチームを抜けたの？\r\n2勝しているならトレーナーからも評価されていたでしょ？",
-            "enText": "By the way, why did you leave the team? If you had already won 2 \ntimes, wouldn't the trainer have appreciated it?",
+            "enText": "If you don't mind me asking, why'd you leave your team? Your trainer \nmust've been proud that you racked up two wins.",
             "nextBlock": 66,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 118,
@@ -1170,9 +1236,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……もっと走りたいからだ。",
-            "enText": "…It's because I want to run more.",
+            "enText": "Because I want to run more.",
             "nextBlock": 67,
             "origClipLength": 59,
+            "voiceIdx": 29,
             "choices": [
                 {
                     "jpText": "もっと？",
@@ -1197,9 +1264,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "私の成績が安定しないのは、\r\n気持ちの整えができていないからだと言われた。",
-            "enText": "I was told that the reason my achievements were not stable was \nbecause I was not able to adjust my feelings.",
+            "enText": "Apparently I don't get consistent results because I don't know how to \nkeep my composure.",
             "nextBlock": 68,
             "origClipLength": 181,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 193,
@@ -1213,9 +1281,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "だからしばらくレースから離れてみようと。",
-            "enText": "So you should leave racing for a while.",
+            "enText": "So they said I needed to take a break from racing.",
             "nextBlock": 69,
             "origClipLength": 110,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 122,
@@ -1233,9 +1302,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "気持ちの整え……。",
-            "enText": "Adjustment of feelings…",
+            "enText": "Composure, huh…",
             "nextBlock": 70,
             "origClipLength": 56,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 122,
@@ -1253,9 +1323,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "恐らくそれは、勝負に挑む際の“昂り”を\r\n上手くコントロールできていない、ということだろう。",
-            "enText": "Perhaps it means that you are not able \nto control the “you” in a race.",
+            "enText": "She must not have a good handle on her excitement when she's \ncompeting.",
             "nextBlock": 71,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 122,
@@ -1273,9 +1344,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "気合いを入れることは大事だが、展開を読んだり\r\n仕掛けどころを判断する冷静さはレースに不可欠だ。",
-            "enText": "It is important to put your spirit in, but the \ncalmness to judge unforeseen situations and to \nread the development is essential to a race.",
+            "enText": "It's important to be hyped up, but a racer also needs to keep cool \nwhen making critical, split-second decisions.",
             "nextBlock": 72,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 122,
@@ -1293,9 +1365,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "だが、そんな話は受け入れられない。",
-            "enText": "However, such a story can't be accepted.",
+            "enText": "But I didn't accept that explanation or their decision.",
             "nextBlock": 73,
             "origClipLength": 109,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 122,
@@ -1313,9 +1386,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "トレーナーが言いたいことなどわかっている。\r\nそのうえで私は拒否した、それだけだ。",
-            "enText": "As a trainer yourself you know what I mean. \nAnd then I refused, that's all.",
+            "enText": "I understand <i>why</i> my trainer made that call, but I simply disagree. \nNothing more, nothing less.",
             "nextBlock": 74,
             "origClipLength": 228,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 89,
@@ -1333,9 +1407,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "走りたい――実にシンプルな理由でありつつも、\r\nチームを抜けるほどに彼女は気持ちが強いのだ。",
-            "enText": "I want to runーIt's really such a simple reason, she has strong \nfeelings enough to get out of the team.",
+            "enText": "Wanting to run is as simple as it gets, and she's certainly strong-willed \nto leave her team over that.",
             "nextBlock": 75,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 117,
@@ -1353,9 +1428,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "そして気持ちを体現するほどの実力が、彼女にはある……！",
-            "enText": "And she has the ability to embody her feelings!",
+            "enText": "And she has the ability to turn that passion into raw physical power!",
             "nextBlock": 76,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -1373,9 +1449,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "今からだと『京都ジュニアステークス』に間に合うな。\r\nそのあとはすぐにＧⅠの『朝日杯FS』もある。",
-            "enText": "From now, there isn't enough time for the “Kyoto Junior Stakes”. \nAfter that, there is also the “Asahi Cup FS” immediately after.",
+            "enText": "If we start now, we could still make the Kyoto Junior Stakes. There's \nthe G1 Asahi Hai Futurity Stakes too.",
             "nextBlock": 77,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 120,
@@ -1393,9 +1470,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "今からだと『京都ジュニアステークス』に間に合うね。\r\nそのあとはすぐにＧⅠの『朝日杯FS』もある。",
-            "enText": "From now, there isn't enough time for the “Kyoto Junior Stakes”. \nAfter that, there is also the “Asahi Cup FS” immediately after.",
+            "enText": "If we start now, we could still make the Kyoto Junior Stakes. There's \nthe G1 Asahi Hai Futurity Stakes too.",
             "nextBlock": 78,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 120,
@@ -1413,9 +1491,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……なんの話だ？",
-            "enText": "…What are you talking about?",
+            "enText": "What's that supposed to mean?",
             "nextBlock": 79,
             "origClipLength": 49,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 89,
@@ -1429,18 +1508,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "おそらく君の場合、走りたい気持ちを抑えるのではなく\r\n素直にレースへぶつけるべきだと思う。だから――",
-            "enText": "Probably in your case, I think you should be honest with racing \nrather than suppressing your desire to run. Soー",
+            "enText": "Rather than hold back your desire to run, I think it'd be better to \nchannel it through more races. So…",
             "nextBlock": 80,
             "origClipLength": 110,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "ブライアン、ウチのチームで走らないか？",
-                    "enText": "Brian, would you like to run for our team?",
+                    "enText": "Would you like to race on my team?",
                     "nextBlock": 81
                 },
                 {
                     "jpText": "ブライアン、ウチのチームで走らない？",
-                    "enText": "Brian, would you like to run for our team?",
+                    "enText": "Would you like to race on my team?",
                     "nextBlock": 81
                 }
             ],
@@ -1457,18 +1537,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "おそらく貴方の場合、走りたい気持ちを抑えるのではなく\r\n素直にレースへぶつけるべきだと思う。だから――",
-            "enText": "Probably in your case, I think you should be honest with racing \nrather than suppressing your desire to run. Soー",
+            "enText": "Rather than hold back your desire to run, I think it'd be better to \nchannel it through more races. So…",
             "nextBlock": 81,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "ブライアン、ウチのチームで走らないか？",
-                    "enText": "Brian, would you like to run for our team?",
+                    "enText": "Would you like to race on my team?",
                     "nextBlock": 81
                 },
                 {
                     "jpText": "ブライアン、ウチのチームで走らない？",
-                    "enText": "Brian, would you like to run for our team?",
+                    "enText": "Would you like to race on my team?",
                     "nextBlock": 81
                 }
             ],
@@ -1485,9 +1566,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……そういえば今日はスカウトされるために走ったんだった。\r\nレースより、そのあとの走りの印象が強くて忘れていた。",
-            "enText": "…Speaking of which, I ran to be scouted today. The impression of \nthe run after that was so strong that I forgot.",
+            "enText": "Oh right, I was at the tryouts to get scouted. The run just now was so \nmuch more impactful, I forgot why I was even here.",
             "nextBlock": 82,
             "origClipLength": 300,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 255,
@@ -1505,9 +1587,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "あの走り、次はレースで試してみよう！",
-            "enText": "Let's try that run next time in a race!",
+            "enText": "Let's try out that new running style in the next race!",
             "nextBlock": 83,
             "origClipLength": 68,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 60,
@@ -1525,9 +1608,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "ああ、存分に走らせてもらおう……！",
-            "enText": "Yeah, let them run to their full potential…!",
+            "enText": "You got it. I'll take any chance I can get to run!",
             "nextBlock": 84,
             "origClipLength": 124,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 119,
@@ -1545,9 +1629,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして、チームシリウスの新しいメンバーとして\r\nナリタブライアンが加わることになり――",
-            "enText": "Thus, Narita Brian joined as a new member of team <Sirius>ー",
+            "enText": "And so, Narita Brian becomes the newest member of Team Sirius.",
             "nextBlock": 85,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 23,
@@ -1565,13 +1650,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "すぐに彼女の底知れぬ“才能”を目撃することとなる。",
-            "enText": "Soon we will be able to witness the “talent” of this girl.",
+            "enText": "I'll soon get to see exactly how boundless her talent really is.",
             "nextBlock": -1,
             "origClipLength": 77,
+            "voiceIdx": -1,
             "pathId": 4615451720928694888,
             "blockIdx": 85
         }
     ],
-    "modified": 1673055076,
+    "modified": 1779906827,
     "humanTl": true
 }

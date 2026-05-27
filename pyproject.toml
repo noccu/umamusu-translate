@@ -24,7 +24,7 @@ Repository = "https://github.com/noccu/umamusu-translate.git"
 
 [tool.ruff]
 line-length = 110
-target-version = "py39"
+target-version = "py313"
 src = ["src"]
 preview = true
 

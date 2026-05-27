@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "SV6OVJIGNYA7JAAJICT5WIAY2RAUQPHZ",
+    "version": 6,
+    "bundle": "RNA7TPJLZQROGJJQA2LZE6X7PKNG4HU3",
     "type": "story",
     "storyId": "020003133",
     "title": "アタシたちのダービー",
+    "enTitle": "",
     "text": [
         {
             "jpName": "歓声",
-            "enName": "Cheers",
+            "enName": "Vociferations",
             "jpText": "（ワアアアアアァァァァァ！！）",
-            "enText": "(Cheers!!)",
+            "enText": "Wooooo!",
             "nextBlock": 2,
             "origClipLength": 100,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 111,
@@ -35,11 +37,12 @@
         },
         {
             "jpName": "歓声",
-            "enName": "Cheers",
+            "enName": "Vociferations",
             "jpText": "チーケーゾー！　チーケーゾー！",
-            "enText": "Tickezou! Tickezou!",
+            "enText": "TIC-KE-ZO! TIC-KE-ZO!",
             "nextBlock": 3,
             "origClipLength": 108,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 80,
@@ -65,9 +68,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ゴール後、ダービー覇者に向けてスタンドから\r\n『チケゾーコール』が鳴り響いた。",
-            "enText": "After the goal, from the stand to the \nwinner “Tickezou call” was heard.",
+            "enText": "The ecstatic chants of the new champion's name ring out toward the \ntrack.",
             "nextBlock": 4,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 58,
@@ -93,9 +97,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "うっは、すっげぇな……。",
-            "enText": "Woah, this is amazing…",
+            "enText": "Hah! You hearing this?",
             "nextBlock": 5,
             "origClipLength": 107,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 45,
@@ -125,9 +130,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "当然ですわ、最高のダービーだったのですから。",
-            "enText": "Of course, it was the greatest Derby.",
+            "enText": "I expected no less. That was an outstanding Derby!",
             "nextBlock": 6,
             "origClipLength": 117,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 74,
@@ -153,9 +159,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ううううう……ダービー……！\nアタシが……ダービーを、ダービーを……！",
-            "enText": "Sob… Derby…! My own… Derby, Derby…!",
+            "enText": "Aaah… The Derby! I won the… I won the…",
             "nextBlock": 7,
             "origClipLength": 327,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 15,
@@ -197,9 +204,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "ったく、まんまと抜け出されちゃったね。",
-            "enText": "Geez, you just got out of here.",
+            "enText": "Geez, you beat me fair and square.",
             "nextBlock": 8,
             "origClipLength": 108,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 119,
@@ -233,9 +241,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "あそこしかない、まさにヴィクトリーロードを\r\nお前は駆け抜けたわけだ。",
-            "enText": "There's only one, that's the victory road you ran through.",
+            "enText": "It was the only possible path. Yours was truly the road to victory.",
             "nextBlock": 9,
             "origClipLength": 164,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 128,
@@ -269,9 +278,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "タイシン、ハヤヒデっ！！",
-            "enText": "Taishin, Hayahide!!",
+            "enText": "Taishin! Hayahide!",
             "nextBlock": 10,
             "origClipLength": 64,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 42,
@@ -301,9 +311,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "サイコーのレースだった……サイコーのダービーだったよ！\r\nアタシたちのダービーは！",
-            "enText": "It was the best race ever… It was the \nbest Derby ever! Our own Derby!",
+            "enText": "That was the best race… The best Derby ever! And it was ours!",
             "nextBlock": 11,
             "origClipLength": 205,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 46,
@@ -337,9 +348,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "だが、次はこうはいかないぞ。\r\n『菊花賞』では私が背中を見せる番だ。",
-            "enText": "However, this is not going to happen next. It's my turn to show \nmy back in the “Kikkashou”.",
+            "enText": "But it won't go this way next time. In the Kikuka Sho, it'll be my turn \nto win.",
             "nextBlock": 12,
             "origClipLength": 200,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 148,
@@ -365,9 +377,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "うん、アタシたちのゴールはダービーじゃない。\nこのあともレースはいくつもあるんだから。",
-            "enText": "Yeah, Our goal is not the Derby. There are many races after this.",
+            "enText": "Yeah, our goal isn't just the Derby. There's still plenty of races to go.",
             "nextBlock": 13,
             "origClipLength": 199,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 210,
@@ -401,9 +414,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "もっちろん！　これからも3人で走り続けよう！\r\nよーし！　目指せっ、ダービーのその先ぃ～～～！",
-            "enText": "Of course! Let's continue running with the three of us from now \non! Alright! Aim, beyond the Derby～～～!",
+            "enText": "Totally! And we'll run them all together! Let's go for it! To what's \nbeyond the Derby!",
             "nextBlock": 14,
             "origClipLength": 310,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 61,
@@ -437,9 +451,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ウイニングチケットを称える声は、\r\nレース場内の地下バ道にまで鳴り響いていた。",
-            "enText": "The voices honoring Winning Ticket echoed \nin the underground bar in the racetrack.",
+            "enText": "The cheers for Winning Ticket from outside can be heard through the \nwhole length of the runners' tunnel.",
             "nextBlock": 15,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 16,
@@ -469,9 +484,10 @@
             "jpName": "駿川たづな",
             "enName": "Hayakawa Tazuna",
             "jpText": "すごいコールですね。\nレース場のどこにいても聞こえるほどに。",
-            "enText": "It's a great call. You can hear it anywhere on the racetrack.",
+            "enText": "That's quite a chant. You can hear it across the entire racetrack.",
             "nextBlock": 16,
             "origClipLength": 149,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 118,
@@ -489,9 +505,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "チケゾーの想いが、応援してくれる人たちにも\r\n伝わったのかもしれませんね。",
-            "enText": "It may be that Tickezou's feelings were conveyed \nto the people who supported her.",
+            "enText": "I think Tickezo's enthusiasm may have spread to all her fans.",
             "nextBlock": 17,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 61,
@@ -509,13 +526,14 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "あ、トレーナーさ～～～～んっ！！",
-            "enText": "Ah, Trainer-san～!!",
+            "enText": "Ah, Traineeer!",
             "nextBlock": 18,
             "origClipLength": 109,
+            "voiceIdx": 12,
             "choices": [
                 {
                     "jpText": "おめでとう、チケゾー！",
-                    "enText": "Congratulations, Tickezou!",
+                    "enText": "Congratulations, Tickezo!",
                     "nextBlock": 18
                 }
             ],
@@ -540,9 +558,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "やったよアタシ！　ダービーに勝てたっ！！\n今でも夢みたいだよぉ～！",
-            "enText": "I did it! I won the Derby!! Even now \nit still feels like a dream～!",
+            "enText": "I did it! I won the Derby! It feels like I'm dreaming!",
             "nextBlock": 19,
             "origClipLength": 199,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 63,
@@ -572,9 +591,10 @@
             "jpName": "駿川たづな",
             "enName": "Hayakawa Tazuna",
             "jpText": "おめでとうございます、ウイニングチケットさん。\r\nふふふっ、もっと声援を受けていたかったんじゃないですか？",
-            "enText": "Congratulations, Winning Ticket-san. Ehehe, \ndidn't you want to get more cheering?",
+            "enText": "Congratulations, Winning Ticket. Hehe, are you sure you didn't want \nto take in more of that applause?",
             "nextBlock": 20,
             "origClipLength": 212,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 150,
@@ -600,9 +620,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "えへへ、そうなんだけど、\nこのあとインタビューもあるしね。",
-            "enText": "Ehehe, that may be right, but there \nwill be an interview after this.",
+            "enText": "Hehe, sure, but there's interviews to do.",
             "nextBlock": 21,
             "origClipLength": 158,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 58,
@@ -628,9 +649,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "それにさ、コールはこれで終わりじゃない。\nこれからもいっぱい聞けるチャンスがあるんだから！",
-            "enText": "Besides, that's not the end of the goal. I have a chance to get a \nlot of calls from now on!",
+            "enText": "And, you know, this won't be the last I hear it. There's gonna be tons \nof chances in the future!",
             "nextBlock": 22,
             "origClipLength": 214,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 83,
@@ -656,9 +678,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そう、『ダービー制覇』という夢を果たしても\r\nこれで終わりじゃない。",
-            "enText": "Yes, “Winning the Derby” no matter what dream \nyou fulfill, this is not the end.",
+            "enText": "Yes. She fulfilled her dream of conquering the Derby, but this isn't \nthe end.",
             "nextBlock": 23,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 23,
@@ -684,13 +707,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "ウイニングチケットのレース――ドラマはまだ続くのだから。",
-            "enText": "Winning Ticket races will still continueーBecause \nthe drama is still going on.",
+            "enText": "Because her story will go on.",
             "nextBlock": 24,
             "origClipLength": 81,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "この先もたくさんコールを受けよう！",
-                    "enText": "Let's get a lot of calls in the future!",
+                    "enText": "Make them chant your name again and again!",
                     "nextBlock": 24
                 }
             ],
@@ -715,9 +739,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うんっ！　一緒にがんばろうね、トレーナーさん！",
-            "enText": "Yeah! Let's do our best together, Trainer-san!",
+            "enText": "Yeah! Let's make it happen together!",
             "nextBlock": 25,
             "origClipLength": 110,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 31,
@@ -743,9 +768,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "さあ、たづなさん！　インタビュー受けに行こ！\nダービー前は取材お断りだったから、その分も応えないと！",
-            "enText": "Then, Tazuna-san! Let's go to the interview! I refused the \ninterview before the Derby, so I have to respond to that!",
+            "enText": "All right, Ms. Tazuna! Let's get to those interviews! I gotta make up \nfor missing the prerace press conference!",
             "nextBlock": 26,
             "origClipLength": 240,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 148,
@@ -771,9 +797,10 @@
             "jpName": "インタビュアー",
             "enName": "Interviewer",
             "jpText": "それでは、みごとダービーを制覇しました、\r\nウイニングチケットさんです！",
-            "enText": "Then, the winner of the amazing Derby, Winning Ticket-san!!",
+            "enText": "And now, the racer who won the Derby in spectacular fashion — please \nwelcome Winning Ticket!",
             "nextBlock": 27,
             "origClipLength": 162,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 19,
@@ -799,9 +826,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "えへへ、ありがとうございますっ！",
-            "enText": "Ehehe, thank you so much!",
+            "enText": "Heehee, thank you very much!",
             "nextBlock": 28,
             "origClipLength": 96,
+            "voiceIdx": 20,
             "pathId": -7977031636932108948,
             "blockIdx": 27
         },
@@ -809,9 +837,10 @@
             "jpName": "インタビュアー",
             "enName": "Interviewer",
             "jpText": "まずはレース後の大きなコール、\nどのようなお気持ちで聞いていましたか？",
-            "enText": "After the race's big call, what kind \nof feeling were you listening to?",
+            "enText": "First, hearing the audience chant your name after the race — how did it \nmake you feel?",
             "nextBlock": 29,
             "origClipLength": 146,
+            "voiceIdx": 21,
             "pathId": 6049260598606952588,
             "blockIdx": 28
         },
@@ -819,9 +848,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "サイコーのダービーにしたいと全力全開だったので、\r\nそれがみんなにも伝わったんだって、うれしくなりました！",
-            "enText": "I wanted to make it a great Derby, so I was happy that it was \ntransmitted to everyone!",
+            "enText": "I gave my all to make this the best Derby ever, so I was really happy \nthat everyone watching picked up on it!",
             "nextBlock": 30,
             "origClipLength": 245,
+            "voiceIdx": 22,
             "pathId": 8840326436441094831,
             "blockIdx": 29
         },
@@ -829,9 +859,10 @@
             "jpName": "インタビュアー",
             "enName": "Interviewer",
             "jpText": "“BNW”と言われるライバルとの戦いで、\r\n勝利をものにしたカギはなんだったのでしょうか？",
-            "enText": "What was the key to winning the battle \nagainst your rivals called “BNW”?",
+            "enText": "You raced against your BNW rivals today. What was the key to your \nvictory?",
             "nextBlock": 31,
             "origClipLength": 186,
+            "voiceIdx": 23,
             "pathId": 7086212834467842492,
             "blockIdx": 30
         },
@@ -839,9 +870,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "もちろんトレーニングをたくさんしたっていうのも\nあるんですけど……。",
-            "enText": "Of course there was a lot of training involved…",
+            "enText": "I trained a whole lot, for sure, but what really motivated me…",
             "nextBlock": 32,
             "origClipLength": 130,
+            "voiceIdx": 24,
             "pathId": 6936246740994141616,
             "blockIdx": 31
         },
@@ -849,9 +881,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ダービーに対する想いと、友と書いてライバルとの約束に\r\nサイコーの形で応えたいって想い、それから――",
-            "enText": "My feelings for the Derby and my desire to write as a friend and \nrespond to my promises with my rivals in a great way, and thenー",
+            "enText": "Was my dream of winning the Derby, and the promise I made with my \nbestie rivals. That, and…",
             "nextBlock": 33,
             "origClipLength": 284,
+            "voiceIdx": 25,
             "pathId": -2819837109584092269,
             "blockIdx": 32
         },
@@ -859,9 +892,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "アタシをずっと支えてくれたトレーナーさんを、\r\nぜったい“ダービートレーナー”にするんだって気持ちです！",
-            "enText": "My feelings to make the trainer who supported \nme so much into a “Derby Trainer”!",
+            "enText": "I really wanted to make my trainer a Derby trainer for being so \nsupportive all this time!",
             "nextBlock": 34,
             "origClipLength": 199,
+            "voiceIdx": 26,
             "pathId": -3645194281320595769,
             "blockIdx": 33
         },
@@ -869,9 +903,10 @@
             "jpName": "インタビュアー",
             "enName": "Interviewer",
             "jpText": "それでは最後に、ダービーを勝利したお気持ちを一言！",
-            "enText": "And last, a word of your feelings for winning the Derby!",
+            "enText": "One last thing. A message from the Derby winner!",
             "nextBlock": 35,
             "origClipLength": 128,
+            "voiceIdx": 27,
             "pathId": -2848061551494704841,
             "blockIdx": 34
         },
@@ -879,13 +914,14 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "アタシが、このサイコーのダービーを勝利したウマ娘、\r\nウイニングチケットですっ！！",
-            "enText": "I'm the Horse Girl who won this great Derby, Winning Ticket!!",
+            "enText": "My name's Winning Ticket, and I'm the winner of the greatest Derby \never!",
             "nextBlock": -1,
             "origClipLength": 237,
+            "voiceIdx": 28,
             "pathId": 2175293413376870633,
             "blockIdx": 35
         }
     ],
-    "humanTl": true,
-    "modified": 1673055076
+    "modified": 1779899224,
+    "humanTl": true
 }

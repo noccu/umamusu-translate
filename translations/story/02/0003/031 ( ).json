@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "Z2KIN6ELHE7QAA6X66RJHREMKHPQLYGR",
+    "version": 6,
+    "bundle": "GULJFFWGE5EH2KBU523J2S5K3V47OWFS",
     "type": "story",
     "storyId": "020003031",
     "title": " ",
+    "enTitle": "",
     "text": [
         {
             "jpName": "",
             "enName": "",
             "jpText": "ウイニングチケットのデビュー戦当日――",
-            "enText": "On the day of Winning Tickets debut match",
+            "enText": "Today is Winning Ticket's debut race, a special day for the fledgling \nrunner.",
             "nextBlock": 2,
             "origClipLength": 69,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 81,
@@ -45,9 +47,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "トレーナーさん、それに2人ともっ！\n函館まで応援に来てくれてありがどぉ～～っ！！",
-            "enText": "Trainer-san, and the both of you! Thank \nyou for coming to support me～～!!",
+            "enText": "Hey, guys! Thanks sooo much for coming all the way to Hakodate to \nroot for me!",
             "nextBlock": 3,
             "origClipLength": 254,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 266,
@@ -81,9 +84,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "気にすんなって。同じチームの仲間じゃねーか！",
-            "enText": "Don't worry about it. We are partners in the same team!",
+            "enText": "Of course! We'd do anything for a teammate!",
             "nextBlock": 4,
             "origClipLength": 116,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 129,
@@ -113,9 +117,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "チームメイトの晴れ舞台ですもの。\r\n今日来られなかった方々の分も、精いっぱい応援いたしますわ。",
-            "enText": "It is my teammates spring stage. Even for those who could not \ncome today, I will support you with all my might.",
+            "enText": "This is your time to shine. And we'll cheer enough to make up for the \nmembers who couldn't come.",
             "nextBlock": 5,
             "origClipLength": 224,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 236,
@@ -145,9 +150,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "走り終わったら楽しい夕食だ！　ホタテにサザエの壺焼きっ！\nカニとウニとイクラの三色丼ーっ！",
-            "enText": "And when you're done we will have a fun dinner! Grilled \nScallops and more scallops! Three-color rice bowl \nof crab and sea urchin with salmon roe!",
+            "enText": "We'll hafta have one heck of a dinner after the race! Scallops and sea \nsnails! Rice bowls with crab, sea urchin, and salmon roe!",
             "nextBlock": 6,
             "origClipLength": 254,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 47,
@@ -177,9 +183,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "メロンパフェっ！　メロンパフェもお忘れなくっ！",
-            "enText": "Melon parfait! Don't forget about melon parfait!",
+            "enText": "And melon parfaits! Don't forget the melon parfaits!",
             "nextBlock": 7,
             "origClipLength": 112,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 50,
@@ -205,9 +212,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "……ホントはそれが目当てなんじゃ。",
-            "enText": "… So that's your real objective.",
+            "enText": "Uh… So the food's why you really came?",
             "nextBlock": 8,
             "origClipLength": 122,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 184,
@@ -233,9 +241,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "な、なにを言ってますのっ！？　食事はオマケですわ！\nとにかく今は集中です！　集中っ！",
-            "enText": "Wh, what are you saying!? The meal is a bonus! Anyway, now you \nshould focus! concentrate!",
+            "enText": "Wh-What ever do you mean?! A fine meal is simply a bonus! Never \nmind that — you need to concentrate!",
             "nextBlock": 9,
             "origClipLength": 253,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 90,
@@ -265,18 +274,19 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "っと、そうだね。集中集中っと……。\nそれじゃあトレーナーさん、行ってきます！",
-            "enText": "That's right. concentrate, concentrate. \nWell then, Trainer-san, I'll be going!",
+            "enText": "Oh, right. Focus, focus… All righty, Trainer, I'm off!",
             "nextBlock": 10,
             "origClipLength": 206,
+            "voiceIdx": 7,
             "choices": [
                 {
                     "jpText": "頑張ってこい！",
-                    "enText": "Good luck!",
+                    "enText": "Go get 'em!",
                     "nextBlock": 10
                 },
                 {
                     "jpText": "頑張って！",
-                    "enText": "Good luck!",
+                    "enText": "Go get 'em!",
                     "nextBlock": 10
                 }
             ],
@@ -309,9 +319,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うんっ！　ここからダービーへの道が始まるんだもん！\n絶対に勝ってくるっ！",
-            "enText": "Yeah! The road to the Derby begins \nfrom here! I will definitely win!",
+            "enText": "Okay! This is my first step on the road to the Derby! I've got this win \ndown!",
             "nextBlock": 11,
             "origClipLength": 179,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 227,
@@ -337,9 +348,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "大きな夢に向かって、1歩目を踏み出したウイニングチケット。\r\nそして――",
-            "enText": "Winning Ticket took her first step \ntowards the big dream. And thenー",
+            "enText": "Ticket heads toward her big dream, fully confident in her victory.",
             "nextBlock": 12,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 121,
@@ -373,9 +385,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うおおおおおお！！！！\r\n負～け～たぁぁぁぁぁぁっ！！",
-            "enText": "Waaaaaa!!!! I lost～!!",
+            "enText": "Uwaaaaagh! I looooost!",
             "nextBlock": 13,
             "origClipLength": 206,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 121,
@@ -401,9 +414,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "うっさ！\r\nもう何度目？　負けたーって叫ぶの。",
-            "enText": "Shut up! How many more times are you going to yell that you lost?",
+            "enText": "Shut it! How many times are you gonna wail about losing?",
             "nextBlock": 14,
             "origClipLength": 140,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 178,
@@ -429,9 +443,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ううう……冷たいなぁ～。アタシたち入学以来の友だちなんだから、\r\n慰めてくれてもいいのに～。",
-            "enText": "Hee… How cold～. We've been friends since we entered the school, \nyou can at least comfort me～.",
+            "enText": "<i>Sob…</i> Don't be so mean. We've been friends since we started at the \nacademy. Can't you at least comfort me a little?",
             "nextBlock": 15,
             "origClipLength": 236,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 91,
@@ -453,9 +468,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "慰めたってどうせ泣きわめくでしょ。",
-            "enText": "Even if I comfort you, you'll cry and scream anyway.",
+            "enText": "You'd still end up crying about it even if I did.",
             "nextBlock": 16,
             "origClipLength": 86,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 107,
@@ -481,9 +497,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "だってさぁ～、ダービーへのスタート地点だよ？\nまだまだ道のりは長いのに、まさか最初で躓くなんて～……。",
-            "enText": "Well, this is the starting point for the Derby, \nright? Even though I've got a long way to go, \nI can't believe I lost at my first race.",
+            "enText": "Well, yeah — because this is my start toward the Derby, you know? \nThe road's still so long, and I stumbled on the first step…",
             "nextBlock": 17,
             "origClipLength": 260,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 80,
@@ -513,9 +530,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "まあ、あれだけ張り切っていたワケだし、\r\n気持ちはわからないでもない。",
-            "enText": "Well, after seeing how excited you were, it's not like I don't \nknow where you're coming from.",
+            "enText": "Yes, you had such high hopes. I can comprehend how you must feel.",
             "nextBlock": 18,
             "origClipLength": 148,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 60,
@@ -541,9 +559,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "でしょ！？\r\nこれでダービーに出られなかったらどうしよ～～～～！！！",
-            "enText": "Right!? What should I do if I can't \nget in the Derby because of this?",
+            "enText": "Riiight?! What am I gonna do if this means I can never get into the \nDerby?!",
             "nextBlock": 19,
             "origClipLength": 145,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 49,
@@ -565,9 +584,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "ああ～～もうっ！　デビュー戦に負けたって、\r\nダービーに出られないワケじゃないでしょ！",
-            "enText": "Oh～～Geez! Even If you lose your debut game, it's not a reason you \ncan't go to the Derby!",
+            "enText": "Enough already! Losing your debut race doesn't mean your dreams are \ncrushed!",
             "nextBlock": 20,
             "origClipLength": 179,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 161,
@@ -597,9 +617,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "アタシだってデビュー戦は負けたけど、\r\n今にみてろって思ってるし。",
-            "enText": "I lost my debut match too, that's why I \nthink you should start looking ahead.",
+            "enText": "I lost <i>my</i> debut, but I'm still gonna show everyone one day.",
             "nextBlock": 21,
             "origClipLength": 146,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 221,
@@ -629,9 +650,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "そう、ここから挽回していけばいい。\n落ち込むのは本当に夢が断たれた時にしておけ。",
-            "enText": "Right, you can start again from here. If you really want to be \ndepressed, just leave it to when your dreams are broken.",
+            "enText": "Precisely. You need to recover your footing. Save the despair for \nwhen your dream is truly quashed.",
             "nextBlock": 22,
             "origClipLength": 224,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 313,
@@ -661,9 +683,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "おおおお……タイシンの不屈の魂っ！　ハヤヒデの静かながら\r\n燃え上がる闘志っ！　アタシも泣いていられない！",
-            "enText": "Wooo… Taishin's unyielding spirit! Hayahide's quiet and burning \nspirit! I can't stop here!",
+            "enText": "Oooh, you've got an unstoppable spirit, Taishin! And Hayahide, you \nstay cool on the outside and burn for a fight on the inside! I won't stay \nhere crying!",
             "nextBlock": 23,
             "origClipLength": 276,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 23,
@@ -689,9 +712,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ダービー目指すなら、立ち止まっちゃダメだよね！\nありがとう、やっぱ持つべきは友だぁ～～うおおお～～んっ！！",
-            "enText": "If you're aiming for the Derby, you can't stop here! Thank you, \nafter all, you should have a friends ～～Waaa～!!",
+            "enText": "I can't stop if I wanna win the Derby! Thanks, you two! Nothing's \nbetter than having friends by y-your… Uwaaaaah!",
             "nextBlock": 24,
             "origClipLength": 366,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 105,
@@ -717,9 +741,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "結局泣いてるじゃん！　うっさいなーもう！",
-            "enText": "In the end you're crying after all! Shut up, Geez!",
+            "enText": "See, you ended up crying anyway! Can't you just be quiet?",
             "nextBlock": 25,
             "origClipLength": 121,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 165,
@@ -741,9 +766,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "でも、この単純さがチケットのいいところでもある。\r\n私たちも負けていられないな。",
-            "enText": "But, this simplicity is also one of the good qualities about \nTicket. We can't afford to lose too.",
+            "enText": "Her emotions are also her strength. We'd do well to learn from that.",
             "nextBlock": 26,
             "origClipLength": 216,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 266,
@@ -769,9 +795,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "チームでのトレーニングの時間――",
-            "enText": "At teams training timeー",
+            "enText": "The team is all together, putting some needed training time in.",
             "nextBlock": 27,
             "origClipLength": 65,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 16,
@@ -821,9 +848,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ぬおおおお～～！\nダービーっ！！！！",
-            "enText": "Waaaa～～! Derby!!!!",
+            "enText": "Nnnraaagh! To the Derbyyy!",
             "nextBlock": 28,
             "origClipLength": 159,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 213,
@@ -857,9 +885,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "普通ならレース後のトレーニングは軽めに済ますものなのだが、\r\nウイニングチケットはまるでレース前かのように全力で走っていた。",
-            "enText": "Usually, the training after a race is light, but Winning Ticket \nwas running with all her might as if it was right before a race.",
+            "enText": "Post-race training is usually light, but Winning Ticket is running with \nall her might as if she has an upcoming race.",
             "nextBlock": 29,
             "origClipLength": 125,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 179,
@@ -881,9 +910,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふわぁ～……チケットさん、すごい気合い……。",
-            "enText": "Wow… Ticket-san is so fired up.",
+            "enText": "Goodness… Ticket has so much energy…",
             "nextBlock": 30,
             "origClipLength": 140,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 132,
@@ -909,9 +939,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "昨日の今日で落ち込んでるかと思ったけど\n異様に元気だな、アイツ。",
-            "enText": "I thought she would be depressed today after yesterday's race but \nshe is surprisingly cheerful, this girl.",
+            "enText": "I thought she'd still be reeling after yesterday. That's some weird \nenthusiasm.",
             "nextBlock": 31,
             "origClipLength": 144,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 159,
@@ -937,9 +968,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "お友だちに励まされたと、おっしゃってましたわ。\r\nチケットさんの夢を理解してくださる、素敵なご友人ですのね。",
-            "enText": "She said she was encouraged by her friends. Ticket -san has \nwonderful friends who understand her dreams.",
+            "enText": "She said her friends helped lift her spirits. What wonderful people \nthey must be to understand her dream.",
             "nextBlock": 32,
             "origClipLength": 257,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 99,
@@ -965,9 +997,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "たしかにダービーを目指すのであれば、\n少しの躓きなど気にしてはいられない。",
-            "enText": "If you are aiming for the Derby, you can't slack off.",
+            "enText": "It wouldn't make sense for us to dwell on a single setback when our \nsights are set on the Derby.",
             "nextBlock": 33,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 240,
@@ -989,9 +1022,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "下を向かず、夢に向かって走り続ける彼女に、\r\nこちらもしっかりと応えなければ……！",
-            "enText": "I have to respond firmly to her who runs towards her dreams!",
+            "enText": "Since she's still running toward her dream with her head held high, I \nhave to do all I can to help her achieve it!",
             "nextBlock": 34,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 240,
@@ -1013,9 +1047,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "チケゾー！　腕の振りを大きく！",
-            "enText": "Tickezou! Swing your arms!",
+            "enText": "Tickezo! Swing those arms harder!",
             "nextBlock": 35,
             "origClipLength": 64,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 14,
@@ -1041,9 +1076,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "はいいいいいいい！！！！",
-            "enText": "Yes!!!!",
+            "enText": "'Kaaay!",
             "nextBlock": 36,
             "origClipLength": 60,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 109,
@@ -1057,9 +1093,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "歩幅を意識するんだ！\n最後まで力を出し切るようにっ！！",
-            "enText": "Be aware of your stride! let's save the power until the end!!",
+            "enText": "Pay attention to your stride! Keep pushing it till the very end!",
             "nextBlock": 37,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 109,
@@ -1073,9 +1110,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "歩幅を意識して！\r\n最後まで力を出し切るようにっ！！",
-            "enText": "Be aware of your stride! let's save the power until the end!!",
+            "enText": "Pay attention to your stride! Keep pushing it till the very end!",
             "nextBlock": 38,
             "origClipLength": 78,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 109,
@@ -1089,9 +1127,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "歩幅あああああああ！！\n力を出し切るううぅ～～！！！！",
-            "enText": "Stride length Waaaaaa!! Let's get out of here～～!!",
+            "enText": "Pushing iiiiit! To the very eeend!",
             "nextBlock": 39,
             "origClipLength": 203,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 93,
@@ -1109,9 +1148,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "はぁ……はぁ……ふぅ～……。\r\nよし、終わり！　お疲れ様でしたーっ！",
-            "enText": "Ahh… ahh… ahh. Alright, it's over! Thank you for your hard work!",
+            "enText": "<i>Huff… Huff…</i> Phew! Finished! Thanks, Trainer!",
             "nextBlock": 40,
             "origClipLength": 286,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 60,
@@ -1129,9 +1169,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "お疲れ様。\r\nしっかりアイシングして、疲労を残さないようにな。",
-            "enText": "Good work. Rest well, so as not to leave fatigue.",
+            "enText": "Good work. Don't forget to ice up to get rid of that fatigue.",
             "nextBlock": 41,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 123,
@@ -1145,9 +1186,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "お疲れ様。\r\nしっかりアイシングして、疲労を残さないようにね。",
-            "enText": "Good work. Rest well, so as not to leave fatigue.",
+            "enText": "Good work. Don't forget to ice up to get rid of that fatigue.",
             "nextBlock": 42,
             "origClipLength": 85,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 125,
@@ -1161,9 +1203,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うん！\nでも、もうちょっと走ろうかなぁ～って思ってるんだ。",
-            "enText": "Yeah! But, I'm thinking about running a little more.",
+            "enText": "Right! But I thought I'd run just a little bit longer.",
             "nextBlock": 43,
             "origClipLength": 151,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 106,
@@ -1181,9 +1224,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "デビュー戦は負けちゃったけど、友だちに励まされたり、\r\nトレーナーさんからも熱いコーチングを受けてさ……。",
-            "enText": "I lost my debut match, but I was encouraged by my friends, and I \nreceived firm coaching from my trainer.",
+            "enText": "I might have lost my debut race, but my friends have helped me get \nover it, and your passionate coaching has me all fired up again…",
             "nextBlock": 44,
             "origClipLength": 212,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 282,
@@ -1201,9 +1245,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "なんていうか、あの負けも無駄じゃなかったなって。\n前よりもさらにダービーに対する想いが大きくなったんだ！",
-            "enText": "I mean, that loss was not in vain. My feelings \nfor the Derby have grown even more!",
+            "enText": "It feels like that loss wasn't for nothing. My drive for the Derby's \ngotten <i>even stronger!</i>",
             "nextBlock": 45,
             "origClipLength": 268,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 270,
@@ -1221,9 +1266,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "おもしれーヤツだなぁ。\r\n嫌いじゃねーぞ、オマエみたいなの。",
-            "enText": "You're one interesting girl. I don't hate people like you.",
+            "enText": "What an oddball. But you're my kind of oddball.",
             "nextBlock": 46,
             "origClipLength": 144,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 112,
@@ -1245,9 +1291,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "この熱に、トレーナーさんもお応えしないとですわね。",
-            "enText": "To this passion, Trainer-san you have to respond too.",
+            "enText": "You have to keep up with her passion, Trainer. Can you do it?",
             "nextBlock": 47,
             "origClipLength": 142,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 200,
@@ -1273,18 +1320,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "もちろん、そのつもりだ。前向きに走るウマ娘を\r\n引き留めるトレーナーはいない……だから。",
-            "enText": "Of course, that's what I'm going to do. There's no trainer who \nwill hold back a Horse Girl who is running towards her dream.",
+            "enText": "No worries. That's exactly what I intend to do. A trainer never holds \nback a racer from pushing forward. Which is why…",
             "nextBlock": 48,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "チケゾー、次のレースは来週だ！",
-                    "enText": "Tickezou, your next race is next week!",
+                    "enText": "Tickezo! You're racing again next week!",
                     "nextBlock": 49
                 },
                 {
                     "jpText": "チケゾー、次のレースは来週だよ！",
-                    "enText": "Tickezou, your next race is next week!",
+                    "enText": "Tickezo! You're racing again next week!",
                     "nextBlock": 49
                 }
             ],
@@ -1313,18 +1361,19 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "もちろん、そのつもりだよ。前向きに走るウマ娘を\r\n引き留めるトレーナーはいない……だから。",
-            "enText": "Of course, that's what I'm going to do. There's no trainer who \nwill hold back a Horse Girl who is running towards her dream.",
+            "enText": "No worries. That's exactly what I intend to do. A trainer never holds \nback a racer from pushing forward. Which is why…",
             "nextBlock": 49,
             "origClipLength": 103,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "チケゾー、次のレースは来週だ！",
-                    "enText": "Tickezou, your next race is next week!",
+                    "enText": "Tickezo! You're racing again next week!",
                     "nextBlock": 49
                 },
                 {
                     "jpText": "チケゾー、次のレースは来週だよ！",
-                    "enText": "Tickezou, your next race is next week!",
+                    "enText": "Tickezo! You're racing again next week!",
                     "nextBlock": 49
                 }
             ],
@@ -1356,6 +1405,7 @@
             "enText": "Huh?",
             "nextBlock": 50,
             "origClipLength": 22,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 78,
@@ -1381,9 +1431,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "まさかの連闘ですのっ！？\r\n思った以上に大変ですのよ、あれは！！",
-            "enText": "Don't tell me, it's the series race!? It's \nharder than you think, that is!!",
+            "enText": "Consecutive races?! That much passion could be dangerous!",
             "nextBlock": 51,
             "origClipLength": 163,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 176,
@@ -1409,9 +1460,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "もちろん体調は優先する。\r\nけど今のチケゾーならきっと――",
-            "enText": "Of course, physical condition is a priority. \nbut if it's Tickezou, I'm sureー",
+            "enText": "Obviously your health takes priority. But I think you've got this.",
             "nextBlock": 52,
             "origClipLength": 82,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 40,
@@ -1437,9 +1489,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "う……うおおおお～っ！！　走るよアタシっ！！",
-            "enText": "W… Waaaa!! I'll run!!",
+            "enText": "Ah… AAAGH! I'm gonna <i>RACE!</i>",
             "nextBlock": 53,
             "origClipLength": 142,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 60,
@@ -1461,13 +1514,14 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ダービーっていう目標に向かって難関にぶつかっていく！\nこれがトレーナーと二人三脚するって事なんだね！",
-            "enText": "I will hit a lot of difficult challenges towards my Derby goal! \nThis means that me and the trainer are going to work together!",
+            "enText": "I'm gonna face this challenge head-on and push through to the \nDerby! And we'll do it as a team, Trainer!",
             "nextBlock": 54,
             "origClipLength": 246,
+            "voiceIdx": 38,
             "choices": [
                 {
                     "jpText": "一緒に勝とう！",
-                    "enText": "Let's win together!",
+                    "enText": "Yeah, we'll win it together!",
                     "nextBlock": 54
                 }
             ],
@@ -1496,9 +1550,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "勝～～～つ！！",
-            "enText": "let's win～!!",
+            "enText": "Yeeeeaaah!",
             "nextBlock": 55,
             "origClipLength": 56,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 60,
@@ -1520,9 +1575,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "……なんかトレーナーも“熱血”が入ってんな。",
-            "enText": "… It seems that the trainer also has “Hot blood”.",
+            "enText": "Now Trainer's all fired up.",
             "nextBlock": 56,
             "origClipLength": 103,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 62,
@@ -1544,9 +1600,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "チケットさんの影響でしょう。\nお2人がどのような物語を紡ぐのか、楽しみですわ。",
-            "enText": "It would be the influence of Ticket-san. It's fun to see what the \nfuture holds for the 2 of them.",
+            "enText": "Doubtless due to Ticket's influence. I'm rather excited to see how \ntheir story unfolds.",
             "nextBlock": 57,
             "origClipLength": 215,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 227,
@@ -1576,9 +1633,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "負けから始まったウイニングチケットの物語――",
-            "enText": "The story of Winning Ticket that began with a lossー",
+            "enText": "Winning Ticket's story began with a loss…",
             "nextBlock": 58,
             "origClipLength": 73,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 227,
@@ -1604,9 +1662,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "しかし、それは確実にゴールに向かって\n進み始めていた。",
-            "enText": "But it was definitely starting to move towards the goal.",
+            "enText": "But she's only just starting out toward her goal.",
             "nextBlock": 59,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 227,
@@ -1632,9 +1691,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "ウイニングチケットが来た！\nウイニングチケット今、1着でゴール！",
-            "enText": "Here comes Winning Ticket! Winning Ticket \nnow, first to cross the goal!",
+            "enText": "And it's Winning Ticket! Winning Ticket wins the race!",
             "nextBlock": 60,
             "origClipLength": 167,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 28,
@@ -1660,9 +1720,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ワアアア～～～～ッ！！）",
-            "enText": "(Cheers～～～～!!)",
+            "enText": "Wooooo!",
             "nextBlock": 61,
             "origClipLength": 61,
+            "voiceIdx": -1,
             "pathId": -5231832795241561635,
             "blockIdx": 60
         },
@@ -1670,13 +1731,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "2週続けてのレースという苦難を乗り越え、\r\nウイニングチケットは初勝利を収めた。",
-            "enText": "After 2 weeks of racing, Winning Ticket won for the first time.",
+            "enText": "Winning Ticket overcomes the stress of racing two weeks in a row and \nclaims her first victory!",
             "nextBlock": -1,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "pathId": 2179453359461235938,
             "blockIdx": 61
         }
     ],
-    "modified": 1673055076,
+    "modified": 1779906241,
     "humanTl": true
 }

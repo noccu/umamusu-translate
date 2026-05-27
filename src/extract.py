@@ -446,7 +446,7 @@ def main(_args: patch.Args = None):
                         nSkipped -= exportAsset(None, file, db)
                     except Exception:
                         nFailed += 1
-                        logger.error(f"Failed in file {i} of {type}: {file}")
+                        logger.error(f"Failed in file {i} of {type}: {file}", exc_info=True)
         finally:
             db.close()
             logger.closeFile()
@@ -456,13 +456,14 @@ def main(_args: patch.Args = None):
             f"from {const.GAME_ASSET_ROOT} to {args.dst}"
         )
         q = queryDB(storyId=StoryId(args.type, args.set, args.group, args.id, args.idx))
-        nTotal = nSkipped = len(q)
+        nTotal = len(q)
         print(f"Found {nTotal} files.")
         for bundle, path, bundle_key in q:
             try:
-                nSkipped -= exportAsset(bundle, path, bundle_key=bundle_key)
+                nSkipped += exportAsset(bundle, path, bundle_key=bundle_key) ^ 1
             except Exception:
                 nFailed += 1
+                logger.error(f"Failed at {PurePath(path).stem}", exc_info=True)
     restore.META_DB.execute("COMMIT")
     nSuccess = nTotal - nSkipped - nFailed
     print(f"Processing finished. Extracted: {nSuccess}, Skipped: {nSkipped}, Errors: {nFailed}")

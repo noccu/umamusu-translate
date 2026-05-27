@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "EKQTPPXUPTBHBDMC2KF6CZM5QXM3EYYS",
+    "version": 6,
+    "bundle": "3VHP5CRRQGH3MBOPN4GZJV7NONBZNJT3",
     "type": "story",
     "storyId": "020002061",
     "title": "ブルボンさんについてく！　菊花賞",
+    "enTitle": "",
     "text": [
         {
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "無敗の三冠ウマ娘に向けて、\r\nミホノブルボンがここ、京都レース場に姿を現しました！",
-            "enText": "Towards the Triple crown horse girl, Mihono Bourbon appears here \nat the Keito racetrack!",
+            "enText": "And here's undefeated Triple Crown hopeful Mihono Bourbon, \nmaking her appearance at Kyoto Racecourse!",
             "nextBlock": 2,
             "origClipLength": 239,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 81,
@@ -23,11 +25,12 @@
         },
         {
             "jpName": "歓声",
-            "enName": "Cheers",
+            "enName": "Vociferations",
             "jpText": "（ワアアァァァーッ！！）",
-            "enText": "(Cheering!!)",
+            "enText": "<i>Cheers!</i>",
             "nextBlock": 3,
             "origClipLength": 60,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 176,
@@ -41,9 +44,10 @@
             "jpName": "観客A",
             "enName": "Spectator A",
             "jpText": "ミホノブルボーンっ！　三冠ウマ娘誕生の瞬間を見せてくれー！",
-            "enText": "Mihono Bourbon! show me the moment of \nthe Triple Crown horse girl's birth!",
+            "enText": "Mihono Bourbon! Show us the birth of a Triple Crown legend!",
             "nextBlock": 4,
             "origClipLength": 202,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 264,
@@ -61,9 +65,10 @@
             "jpName": "観客B",
             "enName": "Spectator B",
             "jpText": "勝利を信じてるぞーっ！！",
-            "enText": "I believe in your victory!",
+            "enText": "We believe in you!",
             "nextBlock": 5,
             "origClipLength": 73,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 176,
@@ -81,9 +86,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "『菊花賞』――\nついにライスシャワーとミホノブルボンの対決の日がやってきた。",
-            "enText": "The (Kikkashou). The day of the confrontation between Rice Shower \nand Mihono Bourbon has finally arrived.",
+            "enText": "Rice Shower versus Mihono Bourbon. This Kikuka Sho will settle their \nrivalry once and for all.",
             "nextBlock": 6,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 60,
@@ -105,9 +111,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ブルボンさん……ついてく……ついてく……。\nそれで……ついていって……。",
-            "enText": "Bourbon-san… Follow her… Follow her. Then… Overtake her.",
+            "enText": "Just keep following Bourbon… Just keep following… Just follow, and \nthen…",
             "nextBlock": 7,
             "origClipLength": 220,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 214,
@@ -129,9 +136,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "ライスシャワーさん……。\n随分と私をマークされているようですね。",
-            "enText": "Rice Shower-san. It seems that you have marked me quite a bit.",
+            "enText": "Rice Shower… I see you already have me marked.",
             "nextBlock": 8,
             "origClipLength": 149,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 197,
@@ -149,9 +157,10 @@
             "jpName": "ミホノブルボン",
             "enName": "Mihono Bourbon",
             "jpText": "それでも私は1着でゴールします。",
-            "enText": "Still, I will win first place.",
+            "enText": "No matter. I will be first across the finish.",
             "nextBlock": 9,
             "origClipLength": 110,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 197,
@@ -169,9 +178,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……ライスも、今日こそは負けません。",
-            "enText": "Rice too, will not lose today.",
+            "enText": "…Not today. I won't lose again.",
             "nextBlock": 10,
             "origClipLength": 103,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 50,
@@ -193,9 +203,10 @@
             "jpName": "前髪ぱっつんのウマ娘",
             "enName": "Horsegirl with Straight-cut Bangs",
             "jpText": "ライスさん！　ファイトですー！",
-            "enText": "Rice-san! Do your best!",
+            "enText": "Rice! You got this!",
             "nextBlock": 11,
             "origClipLength": 74,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 17,
@@ -229,9 +240,10 @@
             "jpName": "黒髪ボブのウマ娘",
             "enName": "Horsegirl with Black Bob-cut",
             "jpText": "『菊花賞』、芝の3000mなら、\r\n長距離が得意なライスさんにチャンスがあるよね？",
-            "enText": "The (Kikkashou). its 3000m in turf, there is a chance for Rice, \nwho is good at long distance, right?",
+            "enText": "The Kikuka Sho. 3 000 meters on turf. Long distance is Rice's \nstrength, which means she has a chance, right?",
             "nextBlock": 12,
             "origClipLength": 166,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 64,
@@ -253,9 +265,10 @@
             "jpName": "タレ目のウマ娘",
             "enName": "Droopy-eyed Horsegirl",
             "jpText": "だけど～、あのブルボンさんが\r\nなにも対策を練ってないわけがないよ～。",
-            "enText": "However, there is no reason that Bourbon \nhas not planned any countermeasures.",
+            "enText": "Yeah, but there's no way Bourbon doesn't have something up her \nsleeve.",
             "nextBlock": 13,
             "origClipLength": 177,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 94,
@@ -273,9 +286,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "なあトレーナー、ライスにはなんて指示したんだ？",
-            "enText": "Hey, Trainer, what did you tell Rice?",
+            "enText": "Hey Trainer, what'd you tell Rice?",
             "nextBlock": 14,
             "origClipLength": 102,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 161,
@@ -301,9 +315,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ブルボンについていって、追い抜く。",
-            "enText": "Follow Bourbon and overtake.",
+            "enText": "I told her to keep following Bourbon, then pass her.",
             "nextBlock": 15,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 94,
@@ -329,9 +344,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "うん…………。\nって、それだけかよ！",
-            "enText": "Hmm…… Hey, that's all!",
+            "enText": "Uh-huh… Wait, that's it?!",
             "nextBlock": 16,
             "origClipLength": 119,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 50,
@@ -357,9 +373,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "あながち間違いじゃありませんわ。\r\nライスさんの“ついていく力”は、本物ですから。",
-            "enText": "It's not a mistake. Rice-san's power to follow is the real deal.",
+            "enText": "Hard to find fault with that advice. Her ability to stalk a leader is \nsecond to none.",
             "nextBlock": 17,
             "origClipLength": 205,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 154,
@@ -381,9 +398,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "……ただ、心配なのはむしろブルボンさん本人よりも\n勝った時に周りの方々が――",
-            "enText": "However, rather than Bourbon herself, I'm worried about how the \nfans will react, when Rice wins they might――",
+            "enText": "…If anything, I'm less concerned about <i>if</i> she can beat Bourbon, and \nmore about how the crowd will—",
             "nextBlock": 18,
             "origClipLength": 268,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 60,
@@ -407,11 +425,12 @@
         },
         {
             "jpName": "歓声",
-            "enName": "Cheers",
+            "enName": "Vociferations",
             "jpText": "（ワアアァァァーッ！！）",
-            "enText": "(Cheering!!)",
+            "enText": "<i>Cheers!</i>",
             "nextBlock": 19,
             "origClipLength": 60,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 53,
@@ -433,9 +452,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "メジロマックイーンの言葉を遮るかのように、\r\nスタート前の大歓声がレース場に響き渡った。",
-            "enText": "As if to block Mejiro McQueen's words, The cheers before the \nstart echoed in the race field.",
+            "enText": "McQueen is cut off by another tidal wave of cheers. It's almost time.",
             "nextBlock": 20,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 60,
@@ -453,9 +473,10 @@
             "jpName": "実況",
             "enName": "Commentator",
             "jpText": "クラシックレース最後の栄誉をかけて、\r\n『菊花賞』が今、スタートです！！",
-            "enText": "it's now the start of The Kikkashou Award \nfor the last glory of the classic race.",
+            "enText": "The crowning glory of the Classics is on the line here in the Kikuka \nSho. And it all starts now!",
             "nextBlock": -1,
             "origClipLength": 202,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 252,
@@ -470,6 +491,6 @@
             "blockIdx": 20
         }
     ],
-    "humanTl": true,
-    "modified": 1673055076
+    "modified": 1779910070,
+    "humanTl": true
 }

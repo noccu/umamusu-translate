@@ -7,24 +7,59 @@
             "common": null,
             "miscellaneous": null,
             "uma-title": 5,
-            "char-name": [6, 77, 78, 170, 182],
+            "char-name": [
+                6,
+                77,
+                78,
+                170,
+                182
+            ],
             "item-name": 23,
             "item-desc": 24,
             "item-groups": 133,
-            "skill-name": [47, {"spec": 147, "sql":"\"index\" BETWEEN 2000100 and 3000100"}],
+            "skill-name": [
+                47,
+                {
+                    "spec": 147,
+                    "sql": "\"index\" BETWEEN 2000100 and 3000100"
+                }
+            ],
             "skill-desc": 48,
-            "race-name": {"spec": [28, 29, 32, 33, 36, 111, 218], "sql": "\"index\" not BETWEEN 20000 and 30000"},
-            "race-tracks": [31, 35],
-            "event-titles": [189, 214],
+            "race-name": {
+                "spec": [
+                    28,
+                    29,
+                    32,
+                    33,
+                    36,
+                    111,
+                    218
+                ],
+                "sql": "\"index\" not BETWEEN 20000 and 30000"
+            },
+            "race-tracks": [
+                31,
+                35
+            ],
+            "event-titles": [
+                189,
+                214
+            ],
             "story-titles-mainstory": 94,
             "story-titles-annivstory": 222,
             "story-titles-events": 191,
             "story-titles-umas": 92,
             "story-titles-career": 181,
-            "scenario-names": [119, 237],
+            "scenario-names": [
+                119,
+                237
+            ],
             "trainer-title": 65,
             "trainer-title-requirements": 66,
-            "missions": [67, 190],
+            "missions": [
+                67,
+                190
+            ],
             "support-title": 76,
             "advice": 97,
             "uma-epithet": 130,
@@ -45,11 +80,17 @@
             "campaigns": 187,
             "campaigns-desc": 188,
             "gacha-info": 13,
-            "gacha-names": [26, 327],
+            "gacha-names": [
+                26,
+                327
+            ],
             "presents-desc": 64,
             "item-uma-pieces": 113,
             "uma-profile-intro": 163,
-            "uma-profile-tagline": {"spec": 144, "tlg": true},
+            "uma-profile-tagline": {
+                "spec": 144,
+                "tlg": true
+            },
             "uma-profile-weight": 9,
             "uma-profile-shoesize": 168,
             "uma-profile-strengths": 164,
@@ -62,11 +103,26 @@
             "special-transfer-desc": 216,
             "special-transfer-requirements": 217,
             "special-transfer-thanks": 220,
-            "4koma-titles": {"spec": 69, "tlg": true, "sql": "\"index\" < 8000"},
-            "tazuna-tips": {"spec": 69, "tlg": true, "sql": "\"index\" BETWEEN 8000 AND 8999"},
-            "uma-secrets": {"spec": 69, "tlg": true, "sql": "\"index\" > 8999"},
+            "4koma-titles": {
+                "spec": 69,
+                "tlg": true,
+                "sql": "\"index\" < 8000"
+            },
+            "tazuna-tips": {
+                "spec": 69,
+                "tlg": true,
+                "sql": "\"index\" BETWEEN 8000 AND 8999"
+            },
+            "uma-secrets": {
+                "spec": 69,
+                "tlg": true,
+                "sql": "\"index\" > 8999"
+            },
             "support-effect-unique-name": 150,
-            "support-effect-name": [151, 294],
+            "support-effect-name": [
+                151,
+                294
+            ],
             "support-effect-desc": 154,
             "support-full-name": 75,
             "tutorial-text": 3,
@@ -78,7 +134,11 @@
             "scenario-item-desc-long": 226,
             "scenario-item-desc-short": 238,
             "mob-name": 59,
-            "scenario-effects": [198, 199, 200],
+            "scenario-effects": [
+                198,
+                199,
+                200
+            ],
             "lesson-names": 209,
             "lesson-talent-bonus": 207,
             "lesson-live-bonus": 208,
@@ -90,13 +150,21 @@
             "meek-challenges": 267,
             "stroll-locations": 268,
             "valentine-gift-names": 273,
-            "valentine-gift-notes": [271, 272],
-            "knowledge-effects": [296],
+            "valentine-gift-notes": [
+                271,
+                272
+            ],
+            "knowledge-effects": [
+                296
+            ],
             "knowledge-buffs": 298,
             "skill-evolve-cond": 290,
             "exchange-names": 39,
             "cashshop-names": 49,
-            "cashshop-desc": {"spec": 96, "sql": "\"index\" < 101"},
+            "cashshop-desc": {
+                "spec": 96,
+                "sql": "\"index\" < 101"
+            },
             "outfits": 14,
             "outfits-desc": 15,
             "live-names": 16,
@@ -105,25 +173,62 @@
             "training-comments": 139,
             "error-desc": 1,
             "error-name": 2,
-            "training-names": [55, 138],
+            "training-names": [
+                55,
+                138
+            ],
             "hall-posters": 196,
-            "ev-sakura-power-areas": [304, 309],
+            "ev-sakura-power-areas": [
+                304,
+                309
+            ],
             "loh-messages": 297,
             "effect-fields": 293,
-            "misc-events": [274, 283, 282, 281, 280, 279, 284, 285, 286, 287, 288, 289, 253, 251, 248, 233],
+            "misc-events": [
+                274,
+                283,
+                282,
+                281,
+                280,
+                279,
+                284,
+                285,
+                286,
+                287,
+                288,
+                289,
+                253,
+                251,
+                248,
+                233
+            ],
             "special-gacha": 277,
             "loh-requirements": 275,
             "double-requirements": 257,
             "grand-live": 250,
             "special-missions": 252,
-            "fuji-showtime": [246, 244, 245, 239, 236, 235, 234],
+            "fuji-showtime": [
+                246,
+                244,
+                245,
+                239,
+                236,
+                235,
+                234
+            ],
             "scenario-messages": 240,
             "cm-magazine-questions": 231,
             "cm-magazine-comments": 232,
             "cm-magazine-headers": 230,
             "foreign-apts": 310,
-            "foreign-apt-effects": [317, 318],
-            "foreign-apt-effects-colored": [311, 314],
+            "foreign-apt-effects": [
+                317,
+                318
+            ],
+            "foreign-apt-effects-colored": [
+                311,
+                314
+            ],
             "foreign-apt-reqs": 313,
             "larc-challenges": 315,
             "larc-challenge-debuffs": 316,
@@ -131,16 +236,29 @@
             "ssmatch-effects": 322,
             "uaf-heatup-effects": 330,
             "uaf-epithets": 345,
-            "gff-dishes": [332, 349, 359],
+            "gff-dishes": [
+                332,
+                349,
+                359
+            ],
             "gff-dishes-desc": 353,
-            "gff-effects": [333, 358],
-            "gff-messages": [354, 352],
+            "gff-effects": [
+                333,
+                358
+            ],
+            "gff-messages": [
+                354,
+                352
+            ],
             "gff-produce": 331,
             "gff-produce-lv": 334,
             "bc-goal-comments": 454
         },
         "overrides": {
-            "skill_data": ["skill-desc", "alt/skill-desc"]
+            "skill_data": [
+                "skill-desc",
+                "alt/skill-desc"
+            ]
         }
     },
     {
@@ -169,12 +287,12 @@
             "eishin": 1037,
             "tazuna": 9001,
             "doto": 1058,
-			"Rob Roy": 1047,
-			"Dober": 1059,
-			"Tarumae": 1099,
-			"Taishin": 1050,
-			"Ardan": 1071,
-			"Fine" : 1022,
+            "Rob Roy": 1047,
+            "Dober": 1059,
+            "Tarumae": 1099,
+            "Taishin": 1050,
+            "Ardan": 1071,
+            "Fine": 1022,
             "grass": 1011,
             "bakushin": 1041,
             "cheval_grand": 1089,

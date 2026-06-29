@@ -352,5 +352,10 @@
     {
         "re": "\\n *$",
         "repl": ""
+    },
+    {
+        "re": "(\\d+) ?m(?=\\W)",
+        "repl": "\\1 m",
+        "comment": "Correct SI value-unit formatting."
     }
 ]

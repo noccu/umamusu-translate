@@ -50,7 +50,7 @@ class TextBox(tk.Text):
     DEFAULT_HEIGHT = 4
     SUPPORTED_TAGS = ("color", "b", "i", "size")
     TAG_RE = r"<(/?)((" f"(?:{'|'.join(SUPPORTED_TAGS)})" r"+)=?([#a-z\d{}]+)?)>"
-    HACHIMI_FORMAT_RE = r"^(\$)\(((\w+)(?: ([^\) ]+))?)\)"
+    HACHIMI_FORMAT_RE = r"(\$)\(((\w+)(?: ([^\) ]+))?)\)"
 
     # todo: maybe move color to post_init and pass through init itself to tk
     def __init__(self, parent, size: tuple[int] = (None, None), editable:bool = False, font: fonts.Font = None, **kwargs) -> None:
@@ -90,25 +90,29 @@ class TextBox(tk.Text):
         elif text == "":  # shortcut
             clearText(self)
             return
-        tagList = list()
+
+        # Add the cleaned text
+        setText(self, re.sub(f"{TextBox.TAG_RE}|{TextBox.HACHIMI_FORMAT_RE}", "", text, flags=re.IGNORECASE), append, tag)
+
+        # Apply tags
+        tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         offset = 0
         openedTags = dict()
         for m in re.finditer(f"{TextBox.TAG_RE}|{TextBox.HACHIMI_FORMAT_RE}", text, flags=re.IGNORECASE):
             is_close, full_tag, tag_name, tag_val, is_hachimi, hc_full_tag, hc_tag_name, hc_tag_val = m.groups()
             if is_hachimi:
-                # Hachimi tags always apply to the whole text.
-                tag = {"name": hc_full_tag, "value": hc_tag_val, "start": m.start() - offset, "end": len(text) - offset}
                 if hc_tag_name == "scale":
                     new_size = round(self.font.cget("size") * (int(hc_tag_val) / 100))
                     new_size_font = fonts.createFrom(self, self.font, new_size)
                     self.tag_config(hc_full_tag, font=new_size_font)
-                tagList.append(tag)
+                # Hachimi tags always apply to the whole text.
+                self.tag_add(hc_full_tag, f"{tagBase}+{m.start() - offset}c", f"{tagBase}+{len(text) - offset}c")
             else:
                 if is_close:
-                    openedTags[tag_name]["end"] = m.start() - offset
+                    tgt_tag = openedTags[tag_name]
+                    self.tag_add(tgt_tag['name'], f"{tagBase}+{tgt_tag['start']}c", f"{tagBase}+{m.start() - offset}c")
                 else:
-                    tagList.append({"name": full_tag, "value": tag_val, "start": m.start() - offset})
-                    openedTags[tag_name] = tagList[-1]
+                    openedTags[tag_name] = {"name": full_tag, "value": tag_val, "start": m.start() - offset}
                     if tag_name == "color":
                         self.color.define(tag_val)
                     elif tag_name == "size" and full_tag not in self.tag_names():
@@ -118,12 +122,6 @@ class TextBox(tk.Text):
                         self.tag_config(full_tag, font=newSizeFont)
             offset += len(m[0])
 
-        tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
-        # Add the cleaned text
-        setText(self, re.sub(f"{TextBox.TAG_RE}|{TextBox.HACHIMI_FORMAT_RE}", "", text, flags=re.IGNORECASE), append, tag)
-        # Apply tags
-        for toTag in tagList:
-            self.tag_add(toTag["name"], f"{tagBase}+{toTag['start']}c", f"{tagBase}+{toTag['end']}c")
         if not self._editable:
             self.setActive(False)
 

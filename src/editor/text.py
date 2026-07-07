@@ -50,7 +50,7 @@ class TextBox(tk.Text):
     DEFAULT_HEIGHT = 4
     SUPPORTED_TAGS = ("color", "b", "i", "size")
     TAG_RE = r"<(/?)((" f"(?:{'|'.join(SUPPORTED_TAGS)})" r"+)=?([#a-z\d{}]+)?)>"
-    HACHIMI_FORMAT_RE = r"^\$\(((\w+)(?: ([^\) ]+))?)\)"
+    HACHIMI_FORMAT_RE = r"^(\$)\(((\w+)(?: ([^\) ]+))?)\)"
 
     # todo: maybe move color to post_init and pass through init itself to tk
     def __init__(self, parent, size: tuple[int] = (None, None), editable:bool = False, font: fonts.Font = None, **kwargs) -> None:
@@ -93,33 +93,30 @@ class TextBox(tk.Text):
         tagList = list()
         offset = 0
         openedTags = dict()
-        for m in re.finditer(TextBox.TAG_RE, text, flags=re.IGNORECASE):
-            isClose, fullTag, tagName, tagVal = m.groups()
-            if isClose:
-                openedTags[tagName]["end"] = m.start() - offset
+        for m in re.finditer(f"{TextBox.TAG_RE}|{TextBox.HACHIMI_FORMAT_RE}", text, flags=re.IGNORECASE):
+            is_close, full_tag, tag_name, tag_val, is_hachimi, hc_full_tag, hc_tag_name, hc_tag_val = m.groups()
+            if is_hachimi:
+                # Hachimi tags always apply to the whole text.
+                tag = {"name": hc_full_tag, "value": hc_tag_val, "start": m.start() - offset, "end": len(text) - offset}
+                if hc_tag_name == "scale":
+                    new_size = round(self.font.cget("size") * (int(hc_tag_val) / 100))
+                    new_size_font = fonts.createFrom(self, self.font, new_size)
+                    self.tag_config(hc_full_tag, font=new_size_font)
+                tagList.append(tag)
             else:
-                tagList.append({"name": fullTag, "value": tagVal, "start": m.start() - offset})
-                openedTags[tagName] = tagList[-1]
-                if tagName == "color":
-                    self.color.define(tagVal)
-                elif tagName == "size" and fullTag not in self.tag_names():
-                    ratio = int(tagVal) / 40 #todo: story content, need to generalize
-                    newSize = round(self.font.cget("size") * ratio)
-                    newSizeFont = fonts.createFrom(self, self.font, newSize)
-                    self.tag_config(fullTag, font=newSizeFont)
+                if is_close:
+                    openedTags[tag_name]["end"] = m.start() - offset
+                else:
+                    tagList.append({"name": full_tag, "value": tag_val, "start": m.start() - offset})
+                    openedTags[tag_name] = tagList[-1]
+                    if tag_name == "color":
+                        self.color.define(tag_val)
+                    elif tag_name == "size" and full_tag not in self.tag_names():
+                        ratio = int(tag_val) / 40 #todo: story content, need to generalize
+                        newSize = round(self.font.cget("size") * ratio)
+                        newSizeFont = fonts.createFrom(self, self.font, newSize)
+                        self.tag_config(full_tag, font=newSizeFont)
             offset += len(m[0])
-        # Repeat for Hachimi formatting templates.
-        offset = 0
-        for m in re.finditer(TextBox.HACHIMI_FORMAT_RE, text, flags=re.IGNORECASE):
-            full_tag, name, val = m.groups()
-            # Hachimi tags always apply to the whole text.
-            tag = {"name": full_tag, "value": val, "start": m.start() - offset, "end": len(text) - offset}
-            if name == "scale":
-                new_size = round(self.font.cget("size") * (int(val) / 100))
-                new_size_font = fonts.createFrom(self, self.font, new_size)
-                self.tag_config(full_tag, font=new_size_font)
-            offset += len(m[0])
-            tagList.append(tag)
 
         tagBase = self.index(f"{tk.END}-1c") if append else "1.0"
         # Add the cleaned text

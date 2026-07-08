@@ -350,7 +350,8 @@
         "repl": "\\1\\2…"
     },
     {
-        "re": "\\n *$",
+        "name": "Empty ending lines",
+        "re": "(?-m:\\n *$)",
         "repl": ""
     },
     {

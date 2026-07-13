@@ -93,8 +93,8 @@
     },
     {
         "name": "Trailing spaces",
-        "re": " +$",
-        "repl": ""
+        "re": " {2,}$",
+        "repl": " "
     },
     {
         "re": " *(?<!>)\\n *",

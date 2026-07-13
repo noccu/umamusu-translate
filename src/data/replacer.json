@@ -111,8 +111,8 @@
         "repl": ""
     },
     {
-        "re": "(\\d+) ?m(?=\\W)",
-        "repl": "\\1 m",
+        "re": "(\\d+) ?(m?[mg]){1,2}(?=\\W)",
+        "repl": "\\1 \\2",
         "comment": "Correct SI value-unit formatting."
     }
 ]

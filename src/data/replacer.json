@@ -21,12 +21,19 @@
         "repl": "Selection Race"
     },
     {
+        "comment": "Collapse various period strings to ellipsis",
         "re": "(?: ?\\.){2,4}(?= )|(?:\\.){2,4}|(?<=\\.{3,3})\\.",
         "repl": "…"
     },
     {
+        "comment": "Attach loose ellipsis",
         "re": " (…+) ",
         "repl": "\\1 "
+    },
+    {
+        "comment": "Break up double-attached ellipsis",
+        "re": "([a-z])…([a-z])",
+        "repl": "\\1… \\2"
     },
     {
         "re": "[,:\\.]?…[,:\\.]?",
@@ -61,11 +68,12 @@
         "repl": "!"
     },
     {
+        "comment": "Unspace special symbols",
         "re": "([\\.?!]) ([♪☆★])",
-        "repl": "\\1\\2",
-        "comment": "Unspace tone symbols"
+        "repl": "\\1\\2"
     },
     {
+        "comment": "Remove periods before special symbols",
         "re": "\\.([♪☆★])",
         "repl": "\\1"
     },
@@ -80,10 +88,7 @@
         "disabled": true
     },
     {
-        "re": "([a-z])…([a-z])",
-        "repl": "\\1… \\2"
-    },
-    {
+        "comment": "Fix newlines in italic tags",
         "re": " ?(\\\\n|\\n)<\/i>",
         "repl": "<\/i>\\1"
     },
@@ -92,7 +97,7 @@
         "repl": "\\1"
     },
     {
-        "name": "Trailing spaces",
+        "comment": "Multiple per-line trailing spaces",
         "re": " {2,}$",
         "repl": " "
     },
@@ -102,17 +107,18 @@
         "disabled": true
     },
     {
+        "comment": "Attach starting ellipsis",
         "re": "^… |(\\n)… |(\\()…",
         "repl": "\\1\\2…"
     },
     {
-        "name": "Empty ending lines",
+        "comment": "Empty ending lines / Trailing spaces",
         "re": "(?-m:\\n *$)",
         "repl": ""
     },
     {
+        "comment": "Correct SI value-unit formatting.",
         "re": "(\\d+) ?(m?[mg]){1,2}(?=\\W)",
-        "repl": "\\1 \\2",
-        "comment": "Correct SI value-unit formatting."
+        "repl": "\\1 \\2"
     }
 ]

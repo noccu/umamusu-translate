@@ -114,6 +114,7 @@ Curren Chan | Complete | [CatNipHoarder] & [Holo]
 Daitaku Helios | Complete | [LotoDS]
 Daiwa Scarlet | Complete | [XiantheMiguel] (commissioned by AhriParty)
 Daiichi Ruby | Complete | [Riersa]
+Daring Heart | Complete | [LotoDS]
 Dream Journey | Complete | [LotoDS]
 Duramente | Complete | [LotoDS]
 Durandal | Complete | [LotoDS]

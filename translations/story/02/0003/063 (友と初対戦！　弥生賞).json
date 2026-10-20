@@ -1,26 +1,28 @@
 {
-    "version": 5,
-    "bundle": "2GWA5RIWWK2M3MW3NDZDYJJ4FUW2K72D",
+    "version": 6,
+    "bundle": "VHV6V2MUO6RBBIGPFIGZAHS2LTGVGLEW",
     "type": "story",
     "storyId": "020003063",
     "title": "友と初対戦！　弥生賞",
+    "enTitle": "",
     "text": [
         {
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "あ、トレーナーさんにハヤヒデー！",
-            "enText": "Huh, Trainer-san and Hayahide!",
+            "enText": "Hey, Trainer! Hayahide! There you are!",
             "nextBlock": 2,
             "origClipLength": 100,
+            "voiceIdx": 0,
             "choices": [
                 {
                     "jpText": "最高のレースだった",
-                    "enText": "It was your best race so far.",
+                    "enText": "That was an amazing race.",
                     "nextBlock": 2
                 },
                 {
                     "jpText": "最高のレースだったよ",
-                    "enText": "It was your best race so far.",
+                    "enText": "That was an amazing race.",
                     "nextBlock": 2
                 }
             ],
@@ -53,9 +55,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "えへへ～、アタシ自身がビックリしちゃった！\r\n弥生賞レコードタイムだって！",
-            "enText": "Hehe～, I even surprised myself! To beat \nthe “Yayoi Prize” record time!",
+            "enText": "Hehehe! I think I even surprised myself! They said it's a new Yayoi \nSho record!",
             "nextBlock": 3,
             "origClipLength": 209,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 66,
@@ -89,9 +92,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "タイシンが追い込んでくるのを見て、\r\nアタシも力が湧いてきたっていうか……。",
-            "enText": "When I saw Taishin come up, some strength \nwelled up from inside me…",
+            "enText": "When I saw Taishin right behind me, I felt this power surging up \ninside of me.",
             "nextBlock": 4,
             "origClipLength": 154,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 70,
@@ -121,9 +125,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "ライバルって、自分でも気づかなかった力を引き出してくれる存在\r\nなんだって、タイシンが教えてくれてぇっ、お～～んおんおん！",
-            "enText": "A rival is a presence that brings out the power \nthat you do not even notice yourself, and Taishin \nwas the one who taught me that, Waaaa!",
+            "enText": "She taught me that a rival can help you draw out a strength in yourself \nyou didn't even… know you h-had… Waaaaah!",
             "nextBlock": 5,
             "origClipLength": 426,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 81,
@@ -157,9 +162,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "まあ、負けたけどさ……\r\nいいレースができたって実感はあったよ。",
-            "enText": "Well,I lost… I feel like I had a good race.",
+            "enText": "I know I lost, but… I ran one heck of a race.",
             "nextBlock": 6,
             "origClipLength": 176,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 98,
@@ -189,9 +195,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "まったく、ズルいな2人とも。\n私も一緒に走れたらと嫉妬したぞ。",
-            "enText": "Geez, It's not fair, both of you. I \nalso wish I could run with you.",
+            "enText": "I can't believe how unfair this is. I'm so envious I didn't get to race \nwith you two.",
             "nextBlock": 7,
             "origClipLength": 207,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 174,
@@ -225,9 +232,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "このままいけば、3人はクラシックレース1戦目の\r\n『皐月賞』でぶつかるはずだ。",
-            "enText": "If this goes on, the 3 girls will surely race in their first \nclassic race together at the “SatsukiShou”.",
+            "enText": "If they keep this up, these three are headed straight for the first race \nof the Classics, the Satsuki Sho.",
             "nextBlock": 8,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 106,
@@ -261,9 +269,10 @@
             "jpName": "ナリタタイシン",
             "enName": "Narita Taishin",
             "jpText": "次は絶対に負けない。\r\nいくらいいレースでも、勝たなきゃ意味ないし。",
-            "enText": "Next time I will make sure I don't lose. No matter how good the \nrace was, there is no point if you don't win.",
+            "enText": "I won't lose the next one. However good a race I give, it's \nmeaningless if I don't win.",
             "nextBlock": 9,
             "origClipLength": 170,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 140,
@@ -297,9 +306,10 @@
             "jpName": "ビワハヤヒデ",
             "enName": "Biwa Hayahide",
             "jpText": "ふふっ、私も必ず『皐月賞』に行く。\r\n今度は3人で走るぞ。",
-            "enText": "haha, I will also make sure to appear at the “SatsukiShou”. And \nthis time we will run together all 3 of us.",
+            "enText": "Hehe, I won't be missing the Satsuki Sho either. Next time, we're in it \ntogether.",
             "nextBlock": 10,
             "origClipLength": 191,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 202,
@@ -333,9 +343,10 @@
             "jpName": "ウイニングチケット",
             "enName": "Winning Ticket",
             "jpText": "うん！　3人で一緒に！",
-            "enText": "Yeah! The 3 of us together!",
+            "enText": "Yeah! Together to the end!",
             "nextBlock": 11,
             "origClipLength": 94,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 40,
@@ -373,9 +384,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "初めてのライバル対決――信頼し合うライバルと走った\r\nウイニングチケットは今までにも増して充実した笑顔を見せていた。",
-            "enText": "First Rival Showdownー Winning Ticket that ran win her rival \nshowed a bigger smile than ever before.",
+            "enText": "The first showdown is over, and — having raced her trusted \nrival — Winning Ticket smiles bigger than ever.",
             "nextBlock": 12,
             "origClipLength": 120,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 131,
@@ -409,9 +421,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "これから一生に一度の大舞台、クラシック戦線が始まり、\nそして目標のダービーが目前にまで迫っている。",
-            "enText": "From now on, the once in a lifetime showdown, the classic front \nbegins and the goal of the Derby is slowly approaching.",
+            "enText": "Now she'll push forward into the Classics and her once-in-a-lifetime \ndream, the Japanese Derby.",
             "nextBlock": -1,
             "origClipLength": 108,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 90,
@@ -442,6 +455,6 @@
             "blockIdx": 12
         }
     ],
-    "humanTl": true,
-    "modified": 1673055076
+    "modified": 1779720004,
+    "humanTl": true
 }

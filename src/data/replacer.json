@@ -1,30 +1,5 @@
 [
     {
-        "re": "\\b(?-i:He)\\b",
-        "repl": "She",
-        "limit": true
-    },
-    {
-        "re": "\\b(?-i:he)\\b",
-        "repl": "she",
-        "limit": true
-    },
-    {
-        "re": "\\b(h|H)i[sm]\\b",
-        "repl": "\\1er",
-        "limit": true
-    },
-    {
-        "re": "himself",
-        "repl": "herself",
-        "limit": true
-    },
-    {
-        "re": "Mr.",
-        "repl": "Ms.",
-        "limit": true
-    },
-    {
         "re": "’",
         "repl": "'"
     },
@@ -37,33 +12,8 @@
         "repl": "a lot"
     },
     {
-        "re": "\\bbaba\\b",
-        "repl": "field",
-        "limit": true
-    },
-    {
-        "re": "\\b[Aa]tashi\\b",
-        "repl": "I",
-        "limit": true
-    },
-    {
         "re": "horse girl|uma ?musu(?:me)",
         "repl": "horsegirl",
-        "limit": true
-    },
-    {
-        "re": "(?:To?re?s+c?ent?|Trespass(?:ing|er)|Tradesmen(?:'s)?)",
-        "repl": "Tracen",
-        "limit": true
-    },
-    {
-        "re": "(?:Gakuen|School)",
-        "repl": "Academy",
-        "limit": true
-    },
-    {
-        "re": "Aohar Cup",
-        "repl": "Aoharu Hai",
         "limit": true
     },
     {
@@ -71,204 +21,22 @@
         "repl": "Selection Race"
     },
     {
-        "re": "make-?(?:out|up) debut",
-        "repl": "debut"
-    },
-    {
-        "re": "(?:Yuuma|Arima) (?:Memorial)",
-        "repl": "Arima Kinen"
-    },
-    {
-        "re": "Emperor's prize",
-        "repl": "Tennou Sho",
-        "limit": true
-    },
-    {
-        "re": "Simboli? ?[lrtn]u?do[rl](?:ph|f)",
-        "repl": "Symboli Rudolf"
-    },
-    {
-        "re": "Si?mboli?",
-        "repl": "Symboli"
-    },
-    {
-        "re": "Chayahide",
-        "repl": "Hayahide"
-    },
-    {
-        "re": "T(?:y|ai)sin",
-        "repl": "Taishin"
-    },
-    {
-        "re": "Ba(?:x|ks)ing?",
-        "repl": "Bakushin"
-    },
-    {
-        "re": "(?:The )?Re?is?[sche ]+(?:ow|au)ers?",
-        "repl": "Rice Shower"
-    },
-    {
-        "re": "MedillomacQueen",
-        "repl": "Mejiro McQueen"
-    },
-    {
-        "re": "Tamamocross",
-        "repl": "Tamamo Cross"
-    },
-    {
-        "re": "(?:my )?balls",
-        "repl": "Tama",
-        "limit": true
-    },
-    {
-        "re": "[CS]h?[iye]+ch?(?:[iye]+)",
-        "repl": "City",
-        "limit": true
-    },
-    {
-        "re": "Gold ?[cs]i(?:ch|t)y",
-        "repl": "Gold City",
-        "limit": true
-    },
-    {
-        "re": "Yuki no Bijin|Yukinobidine",
-        "repl": "Yukino Bijin"
-    },
-    {
-        "re": "Daitak Helios",
-        "repl": "Daitaku Helios"
-    },
-    {
-        "re": "D(?:ai|e)wa ?scarl?ett?",
-        "repl": "Daiwa Scarlet"
-    },
-    {
-        "re": "Hishi[y\\-]?amazon",
-        "repl": "Hishi Amazon"
-    },
-    {
-        "re": "Neycha",
-        "repl": "Nature",
-        "limit": true
-    },
-    {
-        "re": "[Ea]ish?in ?Fl[ua]sh",
-        "repl": "Eishin Flash"
-    },
-    {
-        "re": "Ma(?:ch|t)ikane ?Fuku?(?:ki)?ta(?:r|l)u?",
-        "repl": "Matikanefukukitaru"
-    },
-    {
-        "re": "Fukk?u(?:ki)?talu?",
-        "repl": "Fukukitaru"
-    },
-    {
-        "re": "Sh?inkouindi",
-        "repl": "Shinko Windy"
-    },
-    {
-        "re": "Haluurara|Haru+[rah]+",
-        "repl": "Haru Urara"
-    },
-    {
-        "re": "U[rl]all?a",
-        "repl": "Urara"
-    },
-    {
-        "re": "Gorsh?[iy]n?",
-        "repl": "Golshi",
-        "limit": true
-    },
-    {
-        "re": "Glass Wonder",
-        "repl": "Grass Wonder",
-        "limit": true
-    },
-    {
-        "re": "Te[ye]mu?-?",
-        "repl": "TM",
-        "limit": true
-    },
-    {
-        "re": "([a-zA-Z]{4,})[- ]Oh?(?![,\\-])\\b",
-        "repl": "\\1 O",
-        "limit": true
-    },
-    {
-        "re": "El Condor Passer",
-        "repl": "El Condor Pasa"
-    },
-    {
-        "re": "Michono ?bourbon",
-        "repl": "Mihono Bourbon"
-    },
-    {
-        "re": "Inari ?[wW]an",
-        "repl": "Inari One"
-    },
-    {
-        "re": "Karen",
-        "repl": "Curren",
-        "limit": true
-    },
-    {
-        "re": "og[rl]ycap",
-        "repl": "Oguri Cap"
-    },
-    {
-        "re": "ogry",
-        "repl": "Oguri"
-    },
-    {
-        "re": "\\bSupe\\b",
-        "repl": "Spe",
-        "limit": true
-    },
-    {
-        "re": "the horse ?girl in charge",
-        "repl": "your horsegirl",
-        "limit": true
-    },
-    {
-        "re": "Umadolu",
-        "repl": "Umadol",
-        "limit": true
-    },
-    {
-        "re": "Siraoqui-sama",
-        "repl": "Shiraoki-sama"
-    },
-    {
-        "re": "Supercreek",
-        "repl": "Super Creek"
-    },
-    {
-        "re": "Dobe[rl]+",
-        "repl": "Dober"
-    },
-    {
-        "re": "Mayanotop ?u?e?g[ua]n",
-        "repl": "Mayano Top Gun"
-    },
-    {
-        "re": "Mayanotop",
-        "repl": "Mayano Top"
-    },
-    {
-        "re": "Naritab[ueh]? ?B?Ryan|NARITABU[RIA]+N?(?: Bryan|RIAN)?",
-        "repl": "Narita Brian"
-    },
-    {
+        "comment": "Collapse various period strings to ellipsis",
         "re": "(?: ?\\.){2,4}(?= )|(?:\\.){2,4}|(?<=\\.{3,3})\\.",
         "repl": "…"
     },
     {
+        "comment": "Attach loose ellipsis",
         "re": " (…+) ",
         "repl": "\\1 "
     },
     {
-        "re": "[,:]?…[,:]?",
+        "comment": "Break up double-attached ellipsis",
+        "re": "([a-z])(…+)([a-z])",
+        "repl": "\\1\\2 \\3"
+    },
+    {
+        "re": "[,:\\.]?…[,:\\.]?",
         "repl": "…"
     },
     {
@@ -277,6 +45,10 @@
     },
     {
         "re": "(?<=[a-zA-Z]{4})- (?=[a-zA-Z])",
+        "repl": " — "
+    },
+    {
+        "re": "(?<=[a-zA-Z])—(?=[a-zA-Z])",
         "repl": " — "
     },
     {
@@ -296,9 +68,14 @@
         "repl": "!"
     },
     {
-        "re": " at…",
-        "repl": "…",
-        "limit": true
+        "comment": "Unspace special symbols",
+        "re": "([\\.?!…]) ([♪☆★])",
+        "repl": "\\1\\2"
+    },
+    {
+        "comment": "Remove periods before special symbols",
+        "re": "\\.([♪☆★])",
+        "repl": "\\1"
     },
     {
         "re": "(?<= )i(?=[' ])",
@@ -307,13 +84,11 @@
     },
     {
         "re": "(?<=\\S) {2,}",
-        "repl": " "
+        "repl": " ",
+        "disabled": true
     },
     {
-        "re": "([a-z])…([a-z])",
-        "repl": "\\1… \\2"
-    },
-    {
+        "comment": "Fix newlines in italic tags",
         "re": " ?(\\\\n|\\n)<\/i>",
         "repl": "<\/i>\\1"
     },
@@ -322,16 +97,28 @@
         "repl": "\\1"
     },
     {
-        "re": " *(?<!>)\\n *",
-        "repl": " \\n"
+        "comment": "Multiple per-line trailing spaces",
+        "re": " {2,}$",
+        "repl": " "
     },
     {
-        "name": "Trailing spaces",
-        "re": " {2,}$",
+        "re": " *(?<!>)\\n *",
+        "repl": " \\n",
+        "disabled": true
+    },
+    {
+        "comment": "Attach starting ellipsis",
+        "re": "^… |(\\n)… |(\\()…",
+        "repl": "\\1\\2…"
+    },
+    {
+        "comment": "Empty ending lines / Trailing spaces",
+        "re": "(?-m:\\n *$)",
         "repl": ""
     },
     {
-        "re": "^… |(\\n)… ",
-        "repl": "\\1…"
+        "comment": "Correct SI value-unit formatting.",
+        "re": "(\\d+) ?(m?[mg]){1,2}(?=\\W)",
+        "repl": "\\1 \\2"
     }
 ]

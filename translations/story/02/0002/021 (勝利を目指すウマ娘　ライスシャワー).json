@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "JBVVRPXJ7SLQJTUAFCUQIBGRRYHXPGBH",
+    "version": 6,
+    "bundle": "DXL7EYFDZ5BXEEGUMP4ZUE75V6JNMQ25",
     "type": "story",
     "storyId": "020002021",
     "title": "勝利を目指すウマ娘　ライスシャワー",
+    "enTitle": "",
     "text": [
         {
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "さあ、今日のトレーニングはこのくらいで……って、あら？",
-            "enText": "Now, today's training is about this much, oh?",
+            "enText": "Right, I think that's enough for today's… Hm?",
             "nextBlock": 2,
             "origClipLength": 193,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 155,
@@ -29,9 +31,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "どうかした？　マックイーン。",
-            "enText": "What's wrong, McQueen?",
+            "enText": "Something wrong?",
             "nextBlock": 3,
             "origClipLength": 63,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 155,
@@ -49,9 +52,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "いえ、こちらをじっと見ている方がいるので……。",
-            "enText": "No, there are people who are staring at us.",
+            "enText": "No, but it seems we have a spectator.",
             "nextBlock": 4,
             "origClipLength": 125,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 106,
@@ -69,9 +73,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……あっ！？",
-            "enText": "….Hah!?",
+            "enText": "…Ah!",
             "nextBlock": 5,
             "origClipLength": 50,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 106,
@@ -97,9 +102,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "トレーナーさんのお知り合いですか？",
-            "enText": "Trainer, is that someone you know?",
+            "enText": "An acquaintance of yours, I presume?",
             "nextBlock": 6,
             "origClipLength": 69,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 142,
@@ -117,9 +123,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "いや、違うけど……たしかあの子……。",
-            "enText": "No, but…. I'm sure she is…….",
+            "enText": "Nope. But if I remember correctly…",
             "nextBlock": 7,
             "origClipLength": 68,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 106,
@@ -133,9 +140,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "ふぅ～、今日も1日頑張ったぜー！\r\nこの後はお待ちかね、『マックイーン転がし』の時間だな！",
-            "enText": "Well, I did my best for once today! After \nthis, it's time for McQueen to roll!",
+            "enText": "Phew. Another honest day's work! And now, the event we've all been \nwaiting for — Roll the McQueen!",
             "nextBlock": 8,
             "origClipLength": 287,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 169,
@@ -157,9 +165,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "なんですの！？　そのロクでもない名前の催しは！？\nそんなのやりませんわよ！",
-            "enText": "What is it?!? That's not even the name \nof the event? I won't do that!",
+            "enText": "I beg your pardon?! What a dreadful-sounding name! Whatever it is, \nwe are <i>not</i> doing it!",
             "nextBlock": 9,
             "origClipLength": 191,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 58,
@@ -185,9 +194,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "あっ！？　待てよマックイーンっ！！",
-            "enText": "Ah!? Wait, McQueen!!",
+            "enText": "Hey! Come back here!",
             "nextBlock": 10,
             "origClipLength": 84,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 58,
@@ -201,9 +211,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "…………。",
-            "enText": "………",
+            "enText": "…",
             "nextBlock": 11,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "pathId": -6257667324105282715,
             "blockIdx": 10
         },
@@ -211,9 +222,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "知り合いではないが、彼女のことは知っている。\nいつも最後まで自主トレに励んでいるウマ娘……。",
-            "enText": "I don't know her, but I know how hard she works. The horse girl \nwho is always working hard on self-training until the end.",
+            "enText": "I didn't <i>know</i> her, but I had seen her around. She was always the last \none out practicing.",
             "nextBlock": 12,
             "origClipLength": 105,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 133,
@@ -227,9 +239,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はっ……はっ……はっ……はっ……。",
-            "enText": "Heh… Heh….Heh….Heh….",
+            "enText": "<i>Pant, pant…</i>",
             "nextBlock": 13,
             "origClipLength": 84,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 133,
@@ -243,9 +256,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "やっぱり今日もあの子は\n最後の1人になるまで走り続けている。",
-            "enText": "After all, today she continues to run until \nshe becomes the last person on track.",
+            "enText": "And there she was, running and running, all by herself.",
             "nextBlock": 14,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 133,
@@ -259,9 +273,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "はっ……はっ……あっ！？",
-            "enText": "Heh….Heh….Waah!?",
+            "enText": "<i>Pant, pant…</i> Ah!",
             "nextBlock": 15,
             "origClipLength": 74,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 43,
@@ -275,9 +290,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "（ドサッ！！）",
-            "enText": "(Thud!!)",
+            "enText": "<i>Thud!</i>",
             "nextBlock": 16,
             "origClipLength": 54,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 92,
@@ -291,9 +307,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "うう……いたた……。",
-            "enText": "Heh……Ouch….",
+            "enText": "Hnngh… Ow…",
             "nextBlock": 17,
             "origClipLength": 119,
+            "voiceIdx": 9,
             "animData": [
                 {
                     "origLen": 50,
@@ -307,9 +324,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……こんなにいっぱい走っても、ライスは……。",
-            "enText": "….Even if I run so much, Rice is….",
+            "enText": "All this running, and nothing to show for it…",
             "nextBlock": 18,
             "origClipLength": 124,
+            "voiceIdx": 10,
             "animData": [
                 {
                     "origLen": 141,
@@ -327,9 +345,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "その姿がまるで、『天皇賞』という目標に向かって\r\n懸命に走り続けたメジロマックイーンに被って見えて――",
-            "enText": "It was as if the figure was covered by Mejiro McQueen who \ncontinued to run towards the goal of the “TennouShou (Spring)”.",
+            "enText": "It was like watching McQueen all over again, training for the Tenno \nSho as if her life depended on it.",
             "nextBlock": 19,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 141,
@@ -347,9 +366,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "大丈夫か？",
-            "enText": "Are you okay?",
+            "enText": "You okay?",
             "nextBlock": 20,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 74,
@@ -367,9 +387,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "大丈夫？",
-            "enText": "Are you okay?",
+            "enText": "You okay?",
             "nextBlock": 21,
             "origClipLength": 51,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 74,
@@ -387,9 +408,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "え……あっ……マックイーンさんの、トレーナーさん……。",
-            "enText": "Huh …. ah …McQueen-sans trainer-san….",
+            "enText": "Huh? Oh… You're McQueen's trainer…",
             "nextBlock": 22,
             "origClipLength": 146,
+            "voiceIdx": 11,
             "animData": [
                 {
                     "origLen": 76,
@@ -407,9 +429,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "脚を痛めたなら、もう今日は無理をしない方がいいよ。\nレースに勝ちたいなら、なおさらだ。",
-            "enText": "If you hurt your leg, you better not overdo it today. Even more \nso, if you want to win the race.",
+            "enText": "You shouldn't run through the pain. Not if you want to win your next \nrace.",
             "nextBlock": 23,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 113,
@@ -427,9 +450,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "脚を痛めたなら、もう今日は無理をしない方がいいよ。\r\nレースに勝ちたいなら、なおさらね。",
-            "enText": "If you hurt your leg, you better not overdo it today. Even more \nso, if you want to win the race.",
+            "enText": "You shouldn't run through the pain. Not if you want to win your next \nrace.",
             "nextBlock": 24,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 113,
@@ -447,9 +471,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "たとえ今、頑張ることができなくても\n強い気持ちを持っていれば必ず勝てるから。",
-            "enText": "Even if you can't work hard now, if you \nhave strong feelings, you can win.",
+            "enText": "It sucks you can't do more <i>now,</i> I know. But just hold on to that \nfeeling, and it'll take you to the winner's circle.",
             "nextBlock": 25,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 113,
@@ -467,9 +492,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……う……ううっ……。\nううう～……。",
-            "enText": "Sobbing",
+            "enText": "<i>Sniffle… Sob…</i>",
             "nextBlock": 26,
             "origClipLength": 146,
+            "voiceIdx": 12,
             "animData": [
                 {
                     "origLen": 50,
@@ -483,9 +509,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "えっ！？　な、泣くほど痛いのか！？",
-            "enText": "Eh!? what, it hurts so much that it makes you cry!?",
+            "enText": "Whoa, uh… Didn't think you hurt yourself that badly.",
             "nextBlock": 27,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 79,
@@ -499,9 +526,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "えっ！？　な、泣くほど痛いの！？",
-            "enText": "Eh!? what, it hurts so much that it makes you cry!?",
+            "enText": "Whoa, uh… Didn't think you hurt yourself that badly.",
             "nextBlock": 28,
             "origClipLength": 65,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 79,
@@ -515,9 +543,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ご、ごめんなさい……違うんです……。",
-            "enText": "I'm sorry… it's different.",
+            "enText": "N-No, sorry, it's… it's just…",
             "nextBlock": 29,
             "origClipLength": 106,
+            "voiceIdx": 13,
             "animData": [
                 {
                     "origLen": 81,
@@ -531,9 +560,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "走るのが好きで……でもずっと勝てなくて……。\r\nそんなとき、マックイーンさんのレースを見て……。",
-            "enText": "I like to run, but I can't win. And that's \nwhen I saw McQueen-san's race.",
+            "enText": "I love running… but I just can't seem to win. And when I see McQueen \nrace—",
             "nextBlock": 30,
             "origClipLength": 283,
+            "voiceIdx": 14,
             "animData": [
                 {
                     "origLen": 141,
@@ -551,9 +581,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスだって……勝ちたいっ！",
-            "enText": "Even Rice wants to win!",
+            "enText": "I… I want to win too!",
             "nextBlock": 31,
             "origClipLength": 97,
+            "voiceIdx": 15,
             "animData": [
                 {
                     "origLen": 79,
@@ -571,9 +602,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "『勝ちたい』と思い続けることは難しい。\r\nそんな強さを、ライスシャワーは持っていた――",
-            "enText": "It is actually difficult to keep thinking “I want to win”. But \nRice Shower had such strength.",
+            "enText": "\"I want to win.\" It's easy to say those words once. But to Rice Shower, \nthey were a mantra.",
             "nextBlock": 32,
             "origClipLength": 101,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 113,
@@ -591,9 +623,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ライスがダービーに……。",
-            "enText": "Rice is in the Derby…",
+            "enText": "Me? In the Derby…",
             "nextBlock": 33,
             "origClipLength": 66,
+            "voiceIdx": 16,
             "animData": [
                 {
                     "origLen": 120,
@@ -619,9 +652,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "十分に通用する。\r\n君が必死に走る姿を何度も見てきたんだから間違いないよ。",
-            "enText": "It is enough to pass, I've seen you run so hard over and over.",
+            "enText": "I know you can do it. I've watched you run more than anyone.",
             "nextBlock": 34,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 120,
@@ -643,9 +677,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "十分に通用する。\r\n貴方が必死に走る姿を何度も見てきたんだから間違いない。",
-            "enText": "It is enough to pass, I've seen you run so hard over and over.",
+            "enText": "I know you can do it. I've watched you run more than anyone.",
             "nextBlock": 35,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 120,
@@ -667,9 +702,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "そ、そんな……\r\nライスはそんなすごいウマ娘じゃないよぅ。",
-            "enText": "No, no , Rice is not such a great horse girl.",
+            "enText": "B-But… I'm just not at that level.",
             "nextBlock": 36,
             "origClipLength": 152,
+            "voiceIdx": 17,
             "animData": [
                 {
                     "origLen": 164,
@@ -699,9 +735,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "ライスシャワーが怯えるのもわかる。ダービーといえば\r\nその栄誉のため、しのぎを削った者たちが集うレースだ。",
-            "enText": "I know that Rice Shower can do it. Speaking of the Derby, it is a \nrace where people who have worked hard gather for their \nprosperity (Success).",
+            "enText": "I can't blame her for being intimidated. The Derby draws the fiercest \ncontenders around.",
             "nextBlock": 37,
             "origClipLength": 114,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 164,
@@ -731,13 +768,14 @@
             "jpName": "",
             "enName": "",
             "jpText": "それでも、ライスシャワーにはメジロマックイーンに\r\n着いて走れるだけの実力と、ウマ娘にとってもっとも大事な――",
-            "enText": "However, Rice Shower has the ability to get to Mejiro McQueen and \nrun, Which is important for a horse girl.",
+            "enText": "Still, Rice has the legs to keep up with McQueen. And more \nimportantly…",
             "nextBlock": 38,
             "origClipLength": 116,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "勝ちたい気持ちも持ってるしね",
-                    "enText": "I also have the desire to win.",
+                    "enText": "You still want to win, don't you?",
                     "nextBlock": 38
                 }
             ],
@@ -766,9 +804,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "あ……。",
-            "enText": "Hah……",
+            "enText": "Ah…",
             "nextBlock": 39,
             "origClipLength": 47,
+            "voiceIdx": 18,
             "animData": [
                 {
                     "origLen": 71,
@@ -798,9 +837,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "勝ちたいからこそ頑張れる。\nそしてその頑張りは自信にも繋がる……。",
-            "enText": "I can do my best because I want to win. And \nthat hard work gives self — confidence.",
+            "enText": "That ambition is what leads to hard work. And hard work is what leads \nto confidence.",
             "nextBlock": 40,
             "origClipLength": 88,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 153,
@@ -834,9 +874,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "ライス、ダービー目指して頑張ろう！",
-            "enText": "Rice, let's do our best to aim for the derby!",
+            "enText": "So what do you say? The Derby calls!",
             "nextBlock": 41,
             "origClipLength": 67,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 107,
@@ -866,9 +907,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……う、うん。ライス、やってみる。",
-            "enText": "…heh, yes. Rice, will try.",
+            "enText": "…O-Okay. I'll give it a try.",
             "nextBlock": 42,
             "origClipLength": 119,
+            "voiceIdx": 19,
             "animData": [
                 {
                     "origLen": 154,
@@ -902,9 +944,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "こうして、ダービーに向けての本格的なトレーニングが始まった。",
-            "enText": "In this way, full-scale training for the Derby began.",
+            "enText": "It took a little prodding, but she's taken her first step towards the \nwide world that awaits her.",
             "nextBlock": 43,
             "origClipLength": 84,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 71,
@@ -938,9 +981,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ずっとマックイーンさんについていけばいいの？",
-            "enText": "Should I follow McQueen-san?",
+            "enText": "So all I have to do is follow McQueen?",
             "nextBlock": 44,
             "origClipLength": 117,
+            "voiceIdx": 20,
             "animData": [
                 {
                     "origLen": 287,
@@ -962,9 +1006,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "そう、なにがあっても食らいついていくんだ。",
-            "enText": "Yes, whatever happens, keep following her.",
+            "enText": "Yep. Just follow the leader, no matter what.",
             "nextBlock": 45,
             "origClipLength": 72,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 172,
@@ -986,9 +1031,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "そう、なにがあっても食らいついていって。",
-            "enText": "Yes, whatever happens, keep following her.",
+            "enText": "Yep. Just follow the leader, no matter what.",
             "nextBlock": 46,
             "origClipLength": 71,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 172,
@@ -1010,9 +1056,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ダービーに出走するウマ娘の中で本命視されているのが、\r\nここまで無敗の“ミホノブルボン”さん……。",
-            "enText": "Among the horse girls who is running in the Derby, \nthe one who is regarded as the favorite is, the \nundefeated “Mihono Bourbon” so far.",
+            "enText": "Out of all the contenders for this year's Derby, there's one clear \nfavorite: the undefeated Mihono Bourbon.",
             "nextBlock": 47,
             "origClipLength": 231,
+            "voiceIdx": 21,
             "animData": [
                 {
                     "origLen": 185,
@@ -1038,9 +1085,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "機械のように正確なペースで逃げの展開を打つ、\r\n驚異的な実力者ですわ。",
-            "enText": "She is an extraordinary horse girl who can run at an accurate \nmachine-like pace, Her power is the real deal.",
+            "enText": "She takes the lead and sets a precise pace, rather like a machine. It's \ntruly a sight to behold.",
             "nextBlock": 48,
             "origClipLength": 185,
+            "voiceIdx": 22,
             "animData": [
                 {
                     "origLen": 127,
@@ -1066,9 +1114,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "そんな彼女に勝つためにも、ライスさんには私に離されぬよう\nしっかり着いてきていただきます。",
-            "enText": "In order to win over such a horse girl, Rice-san should be able \nto get away from me, as much as possible.",
+            "enText": "If you're to best her, you'll first need to be able to keep up with me.",
             "nextBlock": 49,
             "origClipLength": 234,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 108,
@@ -1090,9 +1139,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "……わかった。ライスがんばってマックイーンさんについてく。",
-            "enText": "…I Got it. Rice will do her best and follow McQueen-san.",
+            "enText": "…Okay. I'll try my best not to fall behind.",
             "nextBlock": 50,
             "origClipLength": 144,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 156,
@@ -1114,9 +1164,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "先を走るメジロマックイーンに着かず離れず走る。\r\nそれには相応のスタミナと集中力が要求される。",
-            "enText": "It takes a lot of stamina and concentration to get Mejiro McQueen \nlevel, who runs ahead.",
+            "enText": "It's not easy, keeping the perfect stalking distance. It demands both \nstamina and focus, especially against someone like McQueen.",
             "nextBlock": 51,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 18,
@@ -1134,9 +1185,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "始めこそライスシャワーが引き離されることが多かったが、\r\n根気強く続けていき、そして数日後――",
-            "enText": "Rice Shower was often pulled away at the beginning, but continued \npatiently, then a few days later.",
+            "enText": "Rice gets off to a rough start, falling behind time and time again, but \nshe keeps at it. And after a few days…",
             "nextBlock": 52,
             "origClipLength": 106,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 94,
@@ -1150,9 +1202,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "はぁ……はぁ……。",
-            "enText": "Hah… Hah….",
+            "enText": "<i>Pant, pant…</i>",
             "nextBlock": 53,
             "origClipLength": 89,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 45,
@@ -1166,9 +1219,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふうぅ……ふえぇ……。",
-            "enText": "Heh… Heh…",
+            "enText": "<i>Huff… Puff…</i>",
             "nextBlock": 54,
             "origClipLength": 110,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 91,
@@ -1186,9 +1240,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "やったじゃねーかっ！\r\n今日は1度も離されなかったぞ！",
-            "enText": "You did it! you didn't let go of her once today!",
+            "enText": "Hey, look at that! You didn't fall behind a single time today!",
             "nextBlock": 55,
             "origClipLength": 121,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 133,
@@ -1214,13 +1269,14 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ええ、ライスさんのスタミナは必ず武器になりますわ。",
-            "enText": "Yes, Rice's stamina will be her weapon.",
+            "enText": "Well done. That stamina will serve you well.",
             "nextBlock": 56,
             "origClipLength": 151,
+            "voiceIdx": 28,
             "choices": [
                 {
                     "jpText": "食らいついてダービーに勝とう！",
-                    "enText": "Let's win the Derby!",
+                    "enText": "Just like that! That's how you're gonna win the \nDerby!",
                     "nextBlock": 56
                 }
             ],
@@ -1253,9 +1309,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "う、うん！",
-            "enText": "eh, Yes!",
+            "enText": "Y-Yeah!",
             "nextBlock": 57,
             "origClipLength": 45,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 119,
@@ -1285,9 +1342,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "それでは皆さん、ごきげんよう。",
-            "enText": "All right, everyone, good night.",
+            "enText": "Well then, farewell to you all.",
             "nextBlock": 58,
             "origClipLength": 78,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 58,
@@ -1333,9 +1391,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "んじゃな～！",
-            "enText": "See ya!",
+            "enText": "Smell ya later!",
             "nextBlock": 59,
             "origClipLength": 71,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 102,
@@ -1368,6 +1427,7 @@
             "enText": "See you tomorrow!",
             "nextBlock": 60,
             "origClipLength": 44,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 108,
@@ -1381,9 +1441,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ついてく、ついてく……。",
-            "enText": "Follow, Follow…",
+            "enText": "Just keep following, just keep following…",
             "nextBlock": 61,
             "origClipLength": 73,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 108,
@@ -1397,9 +1458,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "…………。",
-            "enText": "……….",
+            "enText": "…",
             "nextBlock": 62,
             "origClipLength": 63,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 100,
@@ -1417,9 +1479,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ついてく、ついてく……。",
-            "enText": "Will follow, Will Follow…",
+            "enText": "Just keep following, just keep following…",
             "nextBlock": 63,
             "origClipLength": 75,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 102,
@@ -1441,9 +1504,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ふぅ……。",
-            "enText": "Hah….",
+            "enText": "<i>Sigh…</i>",
             "nextBlock": 64,
             "origClipLength": 41,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 89,
@@ -1457,9 +1521,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ついてく、ついてく……。",
-            "enText": "Follow, Follow…",
+            "enText": "Just keep following, just keep following…",
             "nextBlock": 65,
             "origClipLength": 78,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 89,
@@ -1477,9 +1542,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "……あの、ライスさん。",
-            "enText": "…that, Rice-san.",
+            "enText": "…Erm, Rice.",
             "nextBlock": 66,
             "origClipLength": 73,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 109,
@@ -1505,9 +1571,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "ふえ？",
-            "enText": "Huh?",
+            "enText": "Hweh?",
             "nextBlock": 67,
             "origClipLength": 29,
+            "voiceIdx": 39,
             "animData": [
                 {
                     "origLen": 89,
@@ -1533,9 +1600,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "今日もまた、一緒に寝ますの？\r\n私生活にまでついてくる意味が、私にはわからないのですが……。",
-            "enText": "Are you going to sleep again with me today? I do not understand \nthe meaning of coming into my private life.",
+            "enText": "Do you mean to sleep beside me again? I'm not sure following me \n<i>everywhere</i> I go will benefit you…",
             "nextBlock": 68,
             "origClipLength": 249,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 227,
@@ -1561,9 +1629,10 @@
             "jpName": "ライスシャワー",
             "enName": "Rice Shower",
             "jpText": "でも、トレーナーさんが『なにがあっても食らいつけ』って\r\n言ってたから……。",
-            "enText": "But, Trainer-san told me ”no matter \nwhat happens” keep following her.",
+            "enText": "B-But Trainer said to follow you, no matter what.",
             "nextBlock": 69,
             "origClipLength": 164,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 176,
@@ -1589,9 +1658,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "（……絶対にこういうことじゃないですわ）",
-            "enText": "(It's definitely not like this.)",
+            "enText": "(…This is most definitely not what Trainer had in mind.)",
             "nextBlock": 70,
             "origClipLength": 95,
+            "voiceIdx": 42,
             "animData": [
                 {
                     "origLen": 80,
@@ -1617,9 +1687,10 @@
             "jpName": "",
             "enName": "",
             "jpText": "それから数日後――ついにトゥインクル・シリーズの祭典\r\n『日本ダービー』の当日を迎えた。",
-            "enText": "A few days later, we celebrated the day of the Twinkle Series \nfestival “Japan Derby” . Now It is the day of the event.",
+            "enText": "After several days of relentless training, the highlight of the Twinkle \nSeries, the Japanese Derby, is finally here.",
             "nextBlock": -1,
             "origClipLength": 102,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 80,
@@ -1638,6 +1709,6 @@
             "blockIdx": 70
         }
     ],
-    "modified": 1673055076,
+    "modified": 1779910072,
     "humanTl": true
 }

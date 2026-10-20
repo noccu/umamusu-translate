@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "UQGPSF6GDPWATB4QZPMXREOEW46T5LXP",
+    "version": 6,
+    "bundle": "6Z66OBWVMFMPMOFNZJRZGQGVV2KT7PKJ",
     "type": "story",
     "storyId": "020004133",
     "title": "烈火",
+    "enTitle": "",
     "text": [
         {
             "jpName": "<username>",
             "enName": "",
             "jpText": "おめでとう、ブライアン。\r\nいい走りだったぞ。",
-            "enText": "Congratulations, Brian. It was a good run.",
+            "enText": "Congrats, Brian. That was some incredible running.",
             "nextBlock": 2,
             "origClipLength": 75,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 28,
@@ -25,9 +27,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "おめでとう、ブライアン。\r\nいい走りだったよ。",
-            "enText": "Congratulations, Brian. It was a good run.",
+            "enText": "Congrats, Brian. That was some incredible running.",
             "nextBlock": 3,
             "origClipLength": 75,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 28,
@@ -41,9 +44,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……そうだな。\r\nこれまで走ってきた中で、1番の走りだったかもしれない。",
-            "enText": "…You're right. From all the races I've run \nso far, this may have been my No. 1.",
+            "enText": "It sure felt like it. That might've been the best I've ever done.",
             "nextBlock": 4,
             "origClipLength": 200,
+            "voiceIdx": 0,
             "animData": [
                 {
                     "origLen": 241,
@@ -61,9 +65,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "なんせここまで勝利への想いを募らせたのは、\r\n初めての事だったからな。",
-            "enText": "After all, it was the first time I was able \nto live my feelings for victory so far",
+            "enText": "After all, it was the most I've ever wanted to win.",
             "nextBlock": 5,
             "origClipLength": 184,
+            "voiceIdx": 1,
             "animData": [
                 {
                     "origLen": 156,
@@ -81,9 +86,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "勝てなかった1つ1つのレースもまた、\r\n君にとって意味のあるものだったんだな。",
-            "enText": "So this 1-in-1 race that you won was that meaningful to you.",
+            "enText": "I think the last couple of races pushed you to grow in a way the \nvictories didn't.",
             "nextBlock": 6,
             "origClipLength": 95,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 163,
@@ -101,9 +107,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "勝てなかった1つ1つのレースもまた、\r\n貴方にとって意味のあるものだったんだね。",
-            "enText": "So this 1-in-1 race that you won was that meaningful to you.",
+            "enText": "I think the last couple of races pushed you to grow in a way the \nvictories didn't.",
             "nextBlock": 7,
             "origClipLength": 97,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 163,
@@ -121,9 +128,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "だが、これで満足するつもりはない。\r\n走ることへの渇望は、今も私を前へと進ませる。",
-            "enText": "However, I'm not going to be satisfied with just this. The desire \nto run still keeps me moving forward.",
+            "enText": "Yeah, but I'm not going to stop here. My urge to run is what I'll use to \npropel me forward.",
             "nextBlock": 8,
             "origClipLength": 320,
+            "voiceIdx": 2,
             "animData": [
                 {
                     "origLen": 165,
@@ -141,9 +149,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "その先にはまだ、追い抜きたい相手が――\r\n姉貴の背中が待っているんだ。",
-            "enText": "There are still opponents who I want to overtakeー My Big-sister's \nback is waiting for me.",
+            "enText": "Ahead of me is where my sister's waiting. She's the person I still need \nto defeat.",
             "nextBlock": 9,
             "origClipLength": 220,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 152,
@@ -161,18 +170,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "そう話すナリタブライアンの目には、\r\nたしかに強く光るものが浮かんでいる。",
-            "enText": "That's right, in Narita Brian's eyes, there \nis something that shines strongly.",
+            "enText": "I can tell she really means it — her eyes shine passionately as she \nspeaks.",
             "nextBlock": 10,
             "origClipLength": 93,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "走り続けるぞ、ブライアン！",
-                    "enText": "Keep running, Brian!",
+                    "enText": "Never stop running, Brian!",
                     "nextBlock": 10
                 },
                 {
                     "jpText": "走り続けるよ、ブライアン！",
-                    "enText": "Keep running, Brian!",
+                    "enText": "Never stop running, Brian!",
                     "nextBlock": 10
                 }
             ],
@@ -193,9 +203,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "……無論だ。",
-            "enText": "…Needless to say.",
+            "enText": "You know I won't.",
             "nextBlock": 11,
             "origClipLength": 62,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 167,
@@ -213,9 +224,10 @@
             "jpName": "ナリタブライアン",
             "enName": "Narita Brian",
             "jpText": "さあ、次のレースは……　まだかっ！",
-            "enText": "Now, the next race… not yet!",
+            "enText": "So, when's my next race? I'm starving!",
             "nextBlock": -1,
             "origClipLength": 227,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 168,
@@ -230,6 +242,6 @@
             "blockIdx": 11
         }
     ],
-    "humanTl": true,
-    "modified": 1673055076
+    "modified": 1779646398,
+    "humanTl": true
 }

@@ -1,15 +1,16 @@
 {
     "version": 6,
-    "bundle": "PFG7L5LCA5SXVRFC7FYEQYWPJGLZ5BXV",
+    "bundle": "46QWSOHYAUL442XD636PHQWTDJ3YUSOQ",
     "type": "home",
     "storyId": "00000021052002",
     "title": "0",
+    "enTitle": "",
     "text": [
         {
             "jpName": "テイエムオペラオー",
-            "enName": "TM Opera O",
+            "enName": "T.M. Opera O",
             "jpText": "ああっ、いけないっ！",
-            "enText": "Oh, no!",
+            "enText": "Ah, what to do!",
             "nextBlock": 2,
             "voiceIdx": 0,
             "pathId": 358881903305736466,
@@ -19,7 +20,7 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "どうしたの、オペちゃん？",
-            "enText": "What's wrong, Opie?",
+            "enText": "What's wrong, Ope?",
             "nextBlock": 3,
             "voiceIdx": 1,
             "pathId": -6919495830206143059,
@@ -27,9 +28,9 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "TM Opera O",
+            "enName": "T.M. Opera O",
             "jpText": "ボクがここに立ってしまっては\nポスターの存在が消えてしまうと\n思ってね！",
-            "enText": "I figured if I stood here, the poster would \njust disappear!",
+            "enText": "I was just bemoaning the fact that\nmy very presence here makes these\nposters simply disappear.",
             "nextBlock": 4,
             "voiceIdx": 2,
             "pathId": 1188781078196485837,
@@ -39,7 +40,7 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "ポスターが消えるの！？\nすごーい！　どうやるの！？",
-            "enText": "The poster disappears! That's \namazing! How do you do that!",
+            "enText": "You can make posters disappear?! Wowie!\nHow're you doing that?!",
             "nextBlock": 5,
             "voiceIdx": 3,
             "pathId": -2235832098632895211,
@@ -47,9 +48,9 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "TM Opera O",
+            "enName": "T.M. Opera O",
             "jpText": "なに、ボクほどの輝きがあれば\n無に帰したも同然さ！",
-            "enText": "No, with a sparkle as bright \nas mine, I'm as good as gone!",
+            "enText": "Why, by standing here, of course!\nMy dazzling countenance outshines all!",
             "nextBlock": 6,
             "voiceIdx": 4,
             "pathId": -5949892317269040865,
@@ -59,7 +60,7 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "輝き？\r\nきらきらすれば消えるってこと？",
-            "enText": "Sparkle? You mean if it \nsparkles, it disappears?",
+            "enText": "Dazzling? You mean light\nmakes them disappear?",
             "nextBlock": 7,
             "voiceIdx": 5,
             "pathId": 1012816177256977853,
@@ -69,7 +70,7 @@
             "jpName": "ハルウララ",
             "enName": "Haru Urara",
             "jpText": "じゃあちょっとウララ、\r\nかいちゅーでんとー持ってこよっかな！",
-            "enText": "Well then, Urara, I'll go get you some candy!",
+            "enText": "Okie-dokie! Then I'll go grab\na flashlight and help!",
             "nextBlock": 8,
             "voiceIdx": 6,
             "pathId": -9164117649199600532,
@@ -77,14 +78,15 @@
         },
         {
             "jpName": "テイエムオペラオー",
-            "enName": "TM Opera O",
+            "enName": "T.M. Opera O",
             "jpText": "……。\r\n懐中電灯……？",
-            "enText": "…… Whiting Electric Light ……?",
+            "enText": "A… A flashlight?",
             "nextBlock": -1,
             "voiceIdx": 7,
             "pathId": 2440051573590470655,
             "blockIdx": 8
         }
     ],
-    "modified": 1694039738
+    "modified": 1780175293,
+    "humanTl": true
 }

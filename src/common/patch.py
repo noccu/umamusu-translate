@@ -37,12 +37,14 @@ def find_git_changed_files(changeType, minStoryId:tuple, jsonOnly=True):
         if not m:
             continue
         path = Path(m[1])
+        group_idx = 3 if targetType in ("home") else 2
+        id_idx = 4 if targetType in ("home") else 3
         if (
             path.parts[0] != "translations"
             or path.parts[1] != targetType
             or (jsonOnly and not utils.isJson(path.name))
-            or targetGroup and path.parts[2] != targetGroup
-            or targetId and path.parts[3] != targetId
+            or targetGroup and path.parts[group_idx] != targetGroup
+            or targetId and path.parts[id_idx] != targetId
         ):
             continue
         found.append(path)
@@ -179,11 +181,11 @@ class Args(argparse.ArgumentParser):
         if a.read_defaults:
             cfg = UmaTlConfig()
             for k, v in cfg.script.items():
-                o = getattr(a, k, None)
-                if o is not None:
-                    t = type(o)
-                    if not isinstance(v, t):
-                        v = t(v)
+                o = next(filter(lambda x: x.dest == k, self._actions), None)
+                if o is None:
+                    continue
+                if o.type is not None and not isinstance(v, o.type):
+                    v = o.type(v)
                 setattr(a, k, v)
         if self.hasDefault and a.story:
             a.story = StoryId.parse(a.type, a.story)
@@ -226,8 +228,9 @@ class UmaTlConfig:
                 self.createDefault()
             UmaTlConfig.core = self.getOrCreateCtx("core")
         # Resolve to make sure it works on both abs and rel paths.
-        cur_script = Path(sys.argv[0])
-        ctx = Path(*cur_script.parts[1:]).with_suffix("").as_posix()
+        cur_script = Path(sys.argv[0]).resolve()
+        cur_script = cur_script.parts[cur_script.parts.index("src") + 1 :]
+        ctx = Path(*cur_script).with_suffix("").as_posix()
         self.script = self.getOrCreateCtx(ctx)
 
     @classmethod

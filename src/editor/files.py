@@ -68,7 +68,7 @@ class FileManager:
             files = src
         else:
             raise NotImplementedError
-        files.sort()
+        files.sort(key=lambda x: str(x.parts[-4:]))
         # todo: Was chapter_dropdown.formattedList
         self.files = files
         # f.name happens to work on both types

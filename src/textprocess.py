@@ -159,10 +159,15 @@ def replace(text: str, mode, extra_rep=False):
     if extra_rep:
         # Fix inconsistent case in stutters.
         text = re.sub(
-            r"([A-Z])(?:-\1)+",
-            lambda m: "-".join(m[1] * int(len(m[0][1:]) / 2 + 1)),
-            text,
-            flags=re.IGNORECASE,
+            r"([A-Z][a-z]?)(?i:-\1)+",
+            lambda m: "-".join(m[1] for _ in range(len(m[0].split("-")))),
+            text
+        )
+        # Fix digit formatting
+        text = re.sub(
+            r"(?:\d+,)+",
+            lambda m: re.sub(r"[,']", " ", m[0]),
+            text
         )
 
     return text

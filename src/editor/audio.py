@@ -89,14 +89,18 @@ class AudioPlayer:
         if reloaded := self.curPlaying[0] != storyId:
             if sType == "home":
                 # sound/c/snd_voi_story_00001_02_1054001.acb
-                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.a_b' ORDER BY n ESCAPE '\'"
+                stmt = rf"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId.set}\_{qStoryId.group}\_{qStoryId.id}{qStoryId.idx}\.a_b' ESCAPE '\' ORDER BY n"
             elif sType == "lyrics":
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound/l/{qStoryId.id}/snd_bgm_live_{qStoryId.id}_chara%.a_b' ORDER BY n"
             elif sType == "systext":
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound/v/{storyId.group}%.a_b' ORDER BY n"
             else:
                 stmt = f"SELECT h FROM a WHERE n LIKE 'sound%{qStoryId}.a_b' ORDER BY n"
-            hashes = self._db.execute(stmt).fetchall()
+            try:
+                hashes = self._db.execute(stmt).fetchall()
+            except apsw.SQLError as e:
+                print(f"Error executing: {stmt}\n\n{e}")
+                return
             if hashes is None:
                 if sType == "story":
                     idx = int(storyId.idx)
@@ -118,7 +122,7 @@ class AudioPlayer:
             if not awb_asset.exists:
                 restore.save(awb_asset, self._restoreArgs)
             self.wavFiles.clear()
-            self.load(str(acb_asset.bundlePath), str(awb_asset.bundlePath))
+            self.load(str(acb_asset.bundlePath), str(awb_asset.bundlePath), sType)
         # New subfile/time
         if voice.timeBased and reloaded:  # lyrics, add all tracks
             for file in self.subFiles.values():
@@ -138,7 +142,7 @@ class AudioPlayer:
         self.curPlaying = (storyId, voice)
         self._playAudio(voice)
 
-    def load(self, acb_path:str, awb_path: str):
+    def load(self, acb_path:str, awb_path: str, s_type:str):
         """Loads the main audio container at path"""
         # Game uses cue sheets, matched to ACB data. This doesn't always map linearly to AWB tracks.
         # We assume ACBs map to a single AWB.
@@ -148,10 +152,13 @@ class AudioPlayer:
         # and returns different data (likely broken), so we work around that.
         sub_files = list(awbFile.getfiles())
         #* Int-indexed dict
-        self.subFiles = {
-            cue_entry["CueId"][1]: sub_files[cue_entry["ReferenceIndex"][1]]
-            for cue_entry in acb_file.payload[0]["CueTable"]
-        }
+        if s_type == "lyrics":
+            self.subFiles = {i: f for i,f in enumerate(sub_files)}
+        else:
+            self.subFiles = {
+                cue_entry["CueId"][1]: sub_files[cue_entry["ReferenceIndex"][1]]
+                for cue_entry in acb_file.payload[0]["CueTable"]
+            }
         self.subkey = awbFile.subkey
         awbFile.stream.close()
 

@@ -7,9 +7,9 @@ NAMES_DICT = None
 
 def loadDict():
     global NAMES_DICT
-    names = utils.readJson("src/data/names.json")
-    umas = utils.readJson("translations/mdb/char-name.json").get("text")
-    misc = utils.readJson("translations/mdb/miscellaneous.json").get("text")
+    names:dict = utils.readJson("src/data/names.json")
+    umas:dict = utils.readJson("translations/mdb/char-name.json").get("text")
+    misc:dict = utils.readJson("translations/mdb/miscellaneous.json").get("text")
     NAMES_DICT = misc.copy()
     NAMES_DICT.update(names)
     NAMES_DICT.update(umas)
@@ -49,6 +49,10 @@ def extract(files: list[utils.Path]):
     utils.writeJson("src/data/names.json", curNames)
     return newNames
 
+def get_name(name:str):
+    if NAMES_DICT is None:
+        loadDict()
+    return NAMES_DICT.get(name)
 
 def parseArgs(args=None):
     ap = patch.Args("Translate many enName fields in Translation Files by lookup")

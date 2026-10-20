@@ -1,17 +1,19 @@
 {
-    "version": 5,
-    "bundle": "K4LHXXG42KX2CXWQ4SL5M25XRHM4G7UP",
+    "version": 6,
+    "bundle": "CKAT23WBRZIGDMUTF35P3ZW2U54VELZO",
     "type": "story",
     "storyId": "020001071",
     "title": "夏だ！　海だ！　無人島で合宿だ！",
+    "enTitle": "",
     "text": [
         {
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "見えてきましたわ。\nあの島がメジロ家の別荘ですの。",
-            "enText": "That's it over there. That island is \nhome to the Mejiro Family's villa.",
+            "enText": "You should be able to see it now. That island is the Mejiro family's \nvacation estate.",
             "nextBlock": 2,
             "origClipLength": 153,
+            "voiceIdx": 0,
             "pathId": -944682378216804954,
             "blockIdx": 1
         },
@@ -19,9 +21,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "島がまるまる別荘かよ！\nだったら遠慮なく穴掘りまくって財宝発掘できるな！",
-            "enText": "That island's full of villas! You know what that means, we can \ndig up some treasure under there!",
+            "enText": "The whole island?! All right, that means we get to dig for treasure \nanywhere we want!",
             "nextBlock": 3,
             "origClipLength": 189,
+            "voiceIdx": 1,
             "pathId": 2684186679357651980,
             "blockIdx": 2
         },
@@ -29,9 +32,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "島を破壊しないでくださいませっ！",
-            "enText": "Please do not destroy the island!",
+            "enText": "Don't you even <i>think</i> about using that shovel!",
             "nextBlock": 4,
             "origClipLength": 76,
+            "voiceIdx": 2,
             "pathId": 4581899665841850442,
             "blockIdx": 3
         },
@@ -39,9 +43,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "チーム＜シリウス＞のメンバーは、\n夏休みを利用して合宿することになった。",
-            "enText": "The members of Team Sirius decided to host a training \ncamp during their summer vacation.",
+            "enText": "Team Sirius is taking advantage of the summer break to conduct a \ntraining camp.",
             "nextBlock": 5,
             "origClipLength": 91,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 122,
@@ -59,9 +64,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "チームのためならと、メジロマックイーンがメジロ家の別荘を\n用意してくれたまではよかったが……。",
-            "enText": "Since it was for the team, Mejiro McQueen allowed us to use the \nMejiro Family's villa. However…",
+            "enText": "Mejiro McQueen was able to negotiate the use of her family's private \nisland for us. However…",
             "nextBlock": 6,
             "origClipLength": 107,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 15,
@@ -79,9 +85,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "いやっほー！！　マジで無人島じゃん！\n遊びたい放題だぜー！",
-            "enText": "Yahoo!! This island's entirely deserted! Now \nwe can have as much fun as we want!",
+            "enText": "Woohoo! This island really <i>is</i> deserted! Now we can play all day!",
             "nextBlock": 7,
             "origClipLength": 197,
+            "voiceIdx": 3,
             "animData": [
                 {
                     "origLen": 233,
@@ -115,9 +122,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "んもう、遊びに来たわけじゃないんですのよ。",
-            "enText": "Jeez, we didn't come here to mess around you know.",
+            "enText": "Come on now, we're not here to play around.",
             "nextBlock": 8,
             "origClipLength": 133,
+            "voiceIdx": 4,
             "animData": [
                 {
                     "origLen": 113,
@@ -135,18 +143,19 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "はしゃぎたくなってしまうのは、\n仕方のないことか……。",
-            "enText": "I guess she can't help but get excited…",
+            "enText": "I can't say that the environment doesn't lend itself to the idea, \nthough.",
             "nextBlock": 9,
             "origClipLength": 80,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "初日くらいは気楽に行こう！",
-                    "enText": "Since it's the first day, let's just take it easy.",
+                    "enText": "Why don't we take it easy on our first day here?",
                     "nextBlock": 9
                 },
                 {
                     "jpText": "初日くらいは気楽に行こう！",
-                    "enText": "Since it's the first day, let's just take it easy.",
+                    "enText": "Why don't we take it easy on our first day here?",
                     "nextBlock": 9
                 }
             ],
@@ -163,9 +172,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "はぁ……。\nトレーナーさんまでそんなこと言って。",
-            "enText": "Haa… Trainer-san, even you're saying things like that?",
+            "enText": "<i>Sigh…</i> I didn't think I would have you saying it too.",
             "nextBlock": 10,
             "origClipLength": 120,
+            "voiceIdx": 5,
             "animData": [
                 {
                     "origLen": 167,
@@ -191,9 +201,10 @@
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "ねえ、アタシたちまで一緒に来ちゃっていいものなの？\nチームメンバーじゃないのに……。",
-            "enText": "Hey, is it really okay for us to have come along? \nWe aren't a part of your team after all…",
+            "enText": "Hey, is it really okay for us to tag along? It's not like we're on your \nteam…",
             "nextBlock": 11,
             "origClipLength": 194,
+            "voiceIdx": 6,
             "animData": [
                 {
                     "origLen": 173,
@@ -223,9 +234,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "マックイーンとトレーナーさんから\n直々のお誘いだし、問題ないですよね！",
-            "enText": "McQueen and Trainer-san invited us, so it won't be a problem!",
+            "enText": "I wouldn't sweat it. They did extend the invite, after all.",
             "nextBlock": 12,
             "origClipLength": 159,
+            "voiceIdx": 7,
             "animData": [
                 {
                     "origLen": 157,
@@ -259,9 +271,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "大勢の方が楽しい合宿になると思ったから\n大歓迎だよ。よろしくな。",
-            "enText": "I figured it would be more fun if more people tagged \nalong, so you're both more than welcome.",
+            "enText": "The more the merrier. Welcome aboard!",
             "nextBlock": 13,
             "origClipLength": 88,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 157,
@@ -291,9 +304,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "大勢の方が楽しい合宿になると思ったから\r\n大歓迎だよ。よろしく。",
-            "enText": "I figured it would be more fun if more people tagged \nalong, so you're both more than welcome.",
+            "enText": "The more the merrier. Welcome aboard!",
             "nextBlock": 14,
             "origClipLength": 86,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 157,
@@ -323,9 +337,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "はい、よろしくお願いします！",
-            "enText": "Thank you very much!",
+            "enText": "Thanks! I'm glad to be aboard!",
             "nextBlock": 15,
             "origClipLength": 74,
+            "voiceIdx": 8,
             "animData": [
                 {
                     "origLen": 157,
@@ -351,9 +366,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "こうして、チーム＜シリウス＞に\nメジロ家2名を加えた合宿が始まった。",
-            "enText": "And thus began the start of Team Sirius' training camp, including \ntwo members of the Mejiro Family.",
+            "enText": "And thus, Team Sirius's summer training camp begins with two extra \nMejiros.",
             "nextBlock": 16,
             "origClipLength": 89,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 36,
@@ -375,9 +391,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "さあ、皆さんもう1周しますわよ！",
-            "enText": "Okay everyone, let's do one more lap!",
+            "enText": "Okay everyone, one more lap!",
             "nextBlock": 17,
             "origClipLength": 94,
+            "voiceIdx": 9,
             "pathId": 4494740261745065656,
             "blockIdx": 16
         },
@@ -385,9 +402,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "マックイーン、もっとスピード上げないと\nあたしが先に行っちゃうよ！",
-            "enText": "McQueen, if you don't pick up the pace I'm going to overtake you!",
+            "enText": "Better speed it up, McQueen. I'm gonna overtake you!",
             "nextBlock": 18,
             "origClipLength": 145,
+            "voiceIdx": 10,
             "pathId": -580885505764176354,
             "blockIdx": 17
         },
@@ -395,9 +413,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "あっ！？　先導するのは私の役割ですのよ！",
-            "enText": "Huh!? It's my job to lead the way though!",
+            "enText": "Hey! I'm supposed to be the pace setter!",
             "nextBlock": 19,
             "origClipLength": 109,
+            "voiceIdx": 11,
             "pathId": -5756559825233478741,
             "blockIdx": 18
         },
@@ -405,9 +424,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "ほらほら、ドーベルも\nもっと飛ばせるでしょ！",
-            "enText": "Hey now, Dober, you need to pick up the pace too!",
+            "enText": "Come on, Dober. You can do better than that!",
             "nextBlock": 20,
             "origClipLength": 120,
+            "voiceIdx": 12,
             "pathId": 2214153175719969234,
             "blockIdx": 19
         },
@@ -415,9 +435,10 @@
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "だ、だって走りに集中できないっていうか\n視線が気になるっていうか……。",
-            "enText": "B-But I can't really focus on running \nright now… everyone's staring…",
+            "enText": "I-I can't seem to concentrate right now. Or maybe I'm just worried \nabout the way everyone sees me…",
             "nextBlock": 21,
             "origClipLength": 189,
+            "voiceIdx": 13,
             "pathId": -3566430943920509398,
             "blockIdx": 20
         },
@@ -425,9 +446,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "気にすることなんて何もないって！\nドーベルはかわいいし！",
-            "enText": "Dober, there's nothing to worry about! \nYou're really cute after all!",
+            "enText": "You don't have anything to worry about! You're cute, you know!",
             "nextBlock": 22,
             "origClipLength": 137,
+            "voiceIdx": 14,
             "pathId": 7461079259994405292,
             "blockIdx": 21
         },
@@ -435,9 +457,10 @@
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "そ、そんなお世辞とかいらないしっ！\n可愛くないのは自分が1番わかってるから！",
-            "enText": "P-Please don't try and compliment me! I know \nbetter than anyone else that I'm not cute!",
+            "enText": "I-I don't need your flattery! I know more than anyone how unlikable I \nam!",
             "nextBlock": 23,
             "origClipLength": 171,
+            "voiceIdx": 15,
             "pathId": 2299097071869517618,
             "blockIdx": 22
         },
@@ -445,9 +468,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ゴールドシップさん！\n貴方はなにをやってますの！？",
-            "enText": "Gold Ship-san! What on Earth are you doing!?",
+            "enText": "Gold Ship?! What on earth are you doing?",
             "nextBlock": 24,
             "origClipLength": 108,
+            "voiceIdx": 16,
             "pathId": 8781979853271843350,
             "blockIdx": 23
         },
@@ -455,9 +479,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "海でトレーニングっつったら、この格好だろ？",
-            "enText": "When training at the beach you've gotta \ndress the part, doncha think?",
+            "enText": "What else would I be doing at a beach?",
             "nextBlock": 25,
             "origClipLength": 103,
+            "voiceIdx": 17,
             "pathId": 3768394080636772976,
             "blockIdx": 24
         },
@@ -465,9 +490,10 @@
             "jpName": "ゴールドシップ",
             "enName": "Gold Ship",
             "jpText": "せっかくの海なんだし、\nここはみっちり体を鍛え上げねえとな！",
-            "enText": "We don't often get to train at the beach so this \nis the perfect time for some intense training!",
+            "enText": "We came all the way out here, so I'm goin' all out on the workout!",
             "nextBlock": 26,
             "origClipLength": 129,
+            "voiceIdx": 18,
             "pathId": 160937746977224493,
             "blockIdx": 25
         },
@@ -475,9 +501,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "みっちり遊ぶようにしか見えませんわ！",
-            "enText": "All I can see is that you're trying to do some intense playing!",
+            "enText": "All I see you \"going all out on\" is playing around!",
             "nextBlock": 27,
             "origClipLength": 88,
+            "voiceIdx": 19,
             "pathId": 247163928770340958,
             "blockIdx": 26
         },
@@ -485,9 +512,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "よーし、ここから一気に加速っ！",
-            "enText": "All right, it's time for me to accelerate!",
+            "enText": "All right, I'm gonna pick up the pace!",
             "nextBlock": 28,
             "origClipLength": 117,
+            "voiceIdx": 20,
             "pathId": -6134716360625430077,
             "blockIdx": 27
         },
@@ -495,9 +523,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ま、待ってください！\n飛ばし過ぎですーっ！！",
-            "enText": "W-Wait up! You're running too fast!!",
+            "enText": "W-Wait! You're going much too fast!",
             "nextBlock": 29,
             "origClipLength": 110,
+            "voiceIdx": 21,
             "pathId": 8277810741201187023,
             "blockIdx": 28
         },
@@ -505,9 +534,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "はぁ……はぁ……はぁ。",
-            "enText": "Haa… Haa… Haa…",
+            "enText": "<i>Pant, pant, pant…</i>",
             "nextBlock": 30,
             "origClipLength": 107,
+            "voiceIdx": 22,
             "choices": [
                 {
                     "jpText": "みんな、お疲れさま",
@@ -548,9 +578,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "あははっ、張り切り過ぎちゃいました。\nまだ合宿初日なのに。",
-            "enText": "I think we may have gone a bit too hard. \nIt is only the first day after all.",
+            "enText": "Haha, I may have gone too hard back there. And it's only the first \nday!",
             "nextBlock": 31,
             "origClipLength": 186,
+            "voiceIdx": 23,
             "animData": [
                 {
                     "origLen": 278,
@@ -584,9 +615,10 @@
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "それにしても、マックイーンはすごいね。\nライアンの意表を突いたスパートにしっかりついていくんだから。",
-            "enText": "That being said, McQueen is truly amazing, isn't she? She managed \nto keep up with your sudden spurt easily.",
+            "enText": "Still, nice going, McQueen. I'm impressed you were able to keep pace \nwith Ryan when she sped up.",
             "nextBlock": 32,
             "origClipLength": 219,
+            "voiceIdx": 24,
             "animData": [
                 {
                     "origLen": 206,
@@ -624,9 +656,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ライアンには負けていられませんわ。\n『宝塚記念』の時には、してやられましたから。",
-            "enText": "I can't lose to Ryan again. She already beat \nme in the Takarazuka Kinen after all.",
+            "enText": "Well, I couldn't very well let her beat me. Not after what happened at \nthe Takarazuka Kinen.",
             "nextBlock": 33,
             "origClipLength": 190,
+            "voiceIdx": 25,
             "animData": [
                 {
                     "origLen": 206,
@@ -656,9 +689,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "実はこの合宿の少し前、上半期を締めくくる大舞台『宝塚記念』に\nメジロマックイーンは1番人気で出走した。",
-            "enText": "For context, prior to this summer camp Mejiro McQueen came into \nthe Takarazuka Kinen, the race that closes off the first half of \nthe year, as the most likely to win.",
+            "enText": "Just a little before the camp started, Mejiro McQueen ran in the \nTakarazuka Kinen, the final major race of the year's first half.",
             "nextBlock": 34,
             "origClipLength": 112,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 206,
@@ -684,9 +718,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "しかし、最高の仕上げで挑んできたメジロライアンを\nかわすことができず、2着という結果に終わったのだった。",
-            "enText": "However, she was unable to fend off Mejiro \nRyan and ended up coming in second.",
+            "enText": "She was the favorite to win, but despite her best efforts, she came \nsecond to a soaring Mejiro Ryan.",
             "nextBlock": 35,
             "origClipLength": 114,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 206,
@@ -716,9 +751,10 @@
             "jpName": "前髪ぱっつんのウマ娘",
             "enName": "Horsegirl with Straight-cut Bangs",
             "jpText": "だけどホント、マックイーンさんの走りには\n魅せられっぱなしです！　トレーニングでも、レースでも！",
-            "enText": "McQueen's running never ceases to amaze me! Whether \nit be during training or during races!",
+            "enText": "But really, McQueen's running never ceases to amaze me! Both in \ntraining and in races!",
             "nextBlock": 36,
             "origClipLength": 200,
+            "voiceIdx": 26,
             "animData": [
                 {
                     "origLen": 212,
@@ -752,9 +788,10 @@
             "jpName": "タレ目のウマ娘",
             "enName": "Droopy-eyed Horsegirl",
             "jpText": "だからぁ～このチームに入ったんだもんね～。",
-            "enText": "Well she is the reason we joined this team～",
+            "enText": "Yeeep. And that's why I joined this team!",
             "nextBlock": 37,
             "origClipLength": 117,
+            "voiceIdx": 27,
             "animData": [
                 {
                     "origLen": 212,
@@ -788,9 +825,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "うう……。\nこのヨイショはいつまで続きますの？",
-            "enText": "Ugh… How long is this going to last?",
+            "enText": "Urgh… How much longer is this adulation going to continue?",
             "nextBlock": 38,
             "origClipLength": 137,
+            "voiceIdx": 28,
             "animData": [
                 {
                     "origLen": 125,
@@ -820,9 +858,10 @@
             "jpName": "メジロドーベル",
             "enName": "Mejiro Dober",
             "jpText": "慕ってもらえるっていうのは、\nちゃんと理由があってこそなんだから。胸張っていいんじゃない？",
-            "enText": "There's a reason that they love you so much. It's \nsomething you can be proud of, you know?",
+            "enText": "Deep admiration is usually earned. Shouldn't you be proud of that?",
             "nextBlock": 39,
             "origClipLength": 193,
+            "voiceIdx": 29,
             "animData": [
                 {
                     "origLen": 89,
@@ -852,9 +891,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "そうそう、堂々と堂々と。マックイーンが褒められると\nなんだかあたしも嬉しくなっちゃうんだ。",
-            "enText": "That's right, you're truly incredible. It makes \nme so happy when people praise you.",
+            "enText": "Yep, don't be afraid to strut your stuff. When I hear you gettin' all \nthose compliments, it puts a smile on my face too!",
             "nextBlock": 40,
             "origClipLength": 232,
+            "voiceIdx": 30,
             "animData": [
                 {
                     "origLen": 137,
@@ -884,9 +924,10 @@
             "jpName": "メジロライアン",
             "enName": "Mejiro Ryan",
             "jpText": "よーし、そんな大人気のマックイーンに\n次も勝てるように、追加で走ってこよっと！",
-            "enText": "Okay then, I'm going to go for another run so I can make sure to \ndefeat the super popular McQueen once again!",
+            "enText": "All right, can't let up if I wanna keep beatin' Mejiro McPopular! I'm \ngoing again!",
             "nextBlock": 41,
             "origClipLength": 213,
+            "voiceIdx": 31,
             "animData": [
                 {
                     "origLen": 231,
@@ -912,9 +953,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "あ、抜け駆けですわよ！\n私だって走ります！",
-            "enText": "Ah, don't go on without me! I'm going for a run too!",
+            "enText": "Don't think you've gotten a head start!",
             "nextBlock": 42,
             "origClipLength": 120,
+            "voiceIdx": 32,
             "animData": [
                 {
                     "origLen": 37,
@@ -944,9 +986,10 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "充実した時間はあっという間に過ぎるもので\n気付けば日も傾く時間になっていた。",
-            "enText": "The sun began to set, and that's when we realized just how late \nit had gotten. Time truly flies when one is having fun.",
+            "enText": "Time flies when you're running fast. And before we know it, the sun \nbegins to set.",
             "nextBlock": 43,
             "origClipLength": 94,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 23,
@@ -963,6 +1006,7 @@
             "enText": "…",
             "nextBlock": 44,
             "origClipLength": 132,
+            "voiceIdx": 33,
             "animData": [
                 {
                     "origLen": 198,
@@ -980,9 +1024,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "どうしたの？\nもうみんな別荘に引き上げてるよ。",
-            "enText": "Is everything alright? Everyone's already \nheaded back to the villa.",
+            "enText": "Is something wrong? Everyone else has gone inside.",
             "nextBlock": 45,
             "origClipLength": 75,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 198,
@@ -1000,9 +1045,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "あ……ええ。\nちょっとメンバーのことを考えてましたの。",
-            "enText": "Ah… I'm fine. I was just thinking about our team's members.",
+            "enText": "Oh? Right. I was just thinking about them all, actually.",
             "nextBlock": 46,
             "origClipLength": 175,
+            "voiceIdx": 34,
             "animData": [
                 {
                     "origLen": 165,
@@ -1020,9 +1066,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "1度はもぬけの殻になったチームに\n今はこうして、メンバーがいます。",
-            "enText": "Just a little while ago we were a shell of our \nformer selves, but now we have new members.",
+            "enText": "Not long ago, this team was a shell of its former self, but now, so \nmany members call it home.",
             "nextBlock": 47,
             "origClipLength": 190,
+            "voiceIdx": 35,
             "animData": [
                 {
                     "origLen": 213,
@@ -1040,9 +1087,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "皆さんは私の走りを見て、\n一緒に走りたいと思ってくれたのですよね。",
-            "enText": "They all saw how I ran, and that made \nthem want to run alongside me.",
+            "enText": "My own running seems to have inspired many. To think that they \nwould wish to run alongside me…",
             "nextBlock": 48,
             "origClipLength": 192,
+            "voiceIdx": 36,
             "animData": [
                 {
                     "origLen": 205,
@@ -1060,9 +1108,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "みんな、心を動かされたんだよ。\n俺やマックイーンがオグリの走りで感動したように。",
-            "enText": "They were all moved by you. Just like \nwe were moved by Oguri's race.",
+            "enText": "You set a fire in their hearts. Kind of like how Oguri Cap inspired us.",
             "nextBlock": 49,
             "origClipLength": 98,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 205,
@@ -1080,9 +1129,10 @@
             "jpName": "<username>",
             "enName": "",
             "jpText": "みんな、心を動かされたんだよ。\r\n私やマックイーンがオグリの走りで感動したように。",
-            "enText": "They were all moved by you. Just like \nwe were moved by Oguri's race.",
+            "enText": "You set a fire in their hearts. Kind of like how Oguri Cap inspired us.",
             "nextBlock": 50,
             "origClipLength": 100,
+            "voiceIdx": -1,
             "animData": [
                 {
                     "origLen": 205,
@@ -1100,9 +1150,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "そう考えると、誇らしいような\n気恥ずかしいような、複雑な気持ちですわ。",
-            "enText": "When I think about it I get mixed feelings. \nOn one hand I'm incredibly proud, but on the \nother hand it's quite embarrassing.",
+            "enText": "Perhaps… That makes me proud, but also a little embarrassed. It's a \ncomplicated feeling.",
             "nextBlock": 51,
             "origClipLength": 232,
+            "voiceIdx": 37,
             "animData": [
                 {
                     "origLen": 109,
@@ -1124,9 +1175,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "春の『天皇賞』を勝って、チームとしての形を\n保つことはできましたが……。",
-            "enText": "We were able to win the Spring Tenno Sho \nand preserve the team, however…",
+            "enText": "For some, winning the spring Tenno Sho and saving a star team would \nbe more than enough…",
             "nextBlock": 52,
             "origClipLength": 173,
+            "voiceIdx": 38,
             "animData": [
                 {
                     "origLen": 204,
@@ -1144,13 +1196,14 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "トレーナーさん、\n私には新たにすべきことができました。",
-            "enText": "Trainer-san, there is still something that I need to do.",
+            "enText": "But for me… it's made me realize I have more that I want to \naccomplish.",
             "nextBlock": 53,
             "origClipLength": 159,
+            "voiceIdx": 39,
             "choices": [
                 {
                     "jpText": "どんなこと？",
-                    "enText": "And what would that be?",
+                    "enText": "For example?",
                     "nextBlock": 53
                 }
             ],
@@ -1167,9 +1220,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "期待してくださる皆さんに\n愛想を尽かされぬよう、これからも走り続けることですわ。",
-            "enText": "I need to continue running so as not to betray the \nexpectations that everyone else has of me.",
+            "enText": "I want to keep running. To live up to everyone's expectations by \nwinning even more races.",
             "nextBlock": 54,
             "origClipLength": 206,
+            "voiceIdx": 40,
             "animData": [
                 {
                     "origLen": 60,
@@ -1187,13 +1241,14 @@
             "jpName": "モノローグ",
             "enName": "",
             "jpText": "笑みを浮かべつつ、それでも瞳からは真剣さがにじみ出ている\nメジロマックイーンの表情に心強さを感じた。",
-            "enText": "The expression on Mejiro McQueen's face, which was smiling yet \nexuding confidence, reassured me.",
+            "enText": "Even more striking than Mejiro McQueen's smile is the determination \ngleaming in her eyes.",
             "nextBlock": 55,
             "origClipLength": 111,
+            "voiceIdx": -1,
             "choices": [
                 {
                     "jpText": "期待してるよ、マックイーン",
-                    "enText": "McQueen, I believe in you.",
+                    "enText": "Then I'll be expecting great things, McQueen.",
                     "nextBlock": 55
                 }
             ],
@@ -1210,9 +1265,10 @@
             "jpName": "メジロマックイーン",
             "enName": "Mejiro McQueen",
             "jpText": "ええ、任せてくださいませ。",
-            "enText": "Of course, you can count on me.",
+            "enText": "Yes, and I have no intention of letting you down.",
             "nextBlock": -1,
             "origClipLength": 81,
+            "voiceIdx": 41,
             "animData": [
                 {
                     "origLen": 49,
@@ -1223,6 +1279,6 @@
             "blockIdx": 55
         }
     ],
-    "humanTl": true,
-    "modified": 1673055076
+    "modified": 1779916891,
+    "humanTl": true
 }

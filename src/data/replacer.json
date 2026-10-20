@@ -32,8 +32,8 @@
     },
     {
         "comment": "Break up double-attached ellipsis",
-        "re": "([a-z])…([a-z])",
-        "repl": "\\1… \\2"
+        "re": "([a-z])(…+)([a-z])",
+        "repl": "\\1\\2 \\3"
     },
     {
         "re": "[,:\\.]?…[,:\\.]?",

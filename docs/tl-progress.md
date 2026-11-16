@@ -119,6 +119,7 @@ Duramente | Complete | [LotoDS]
 Durandal | Complete | [LotoDS]
 Eishin Flash | Complete, In progress, Stalled | MTL, [noccu] (ep 1-2), Admiy
 El Condor Pasa | Complete | [UmaTL] (noccu)☆
+Epiphaneia | Complete | [LotoDS]
 Fine Motion | Complete | [LotoDS]
 Fuji Kiseki | Complete | [Kasey]
 Furioso | Complete | [LotoDS]
